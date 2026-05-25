@@ -55,7 +55,7 @@
 /obj/machinery/atmospherics/pipe/zpipe/down/supply{
 	dir = 4
 	},
-/turf/simulated/open,
+/turf/open_space,
 /area/ishimura/upper/engineering/smes/engine)
 "aaP" = (
 /obj/structure/machinery/power/apc{
@@ -159,7 +159,7 @@
 "abD" = (
 /obj/structure/catwalk,
 /obj/structure/lattice,
-/turf/simulated/open,
+/turf/open_space,
 /area/ishimura/tramdeck/tram/tunnel)
 "abE" = (
 /obj/structure/pipes/vents/pump/on,
@@ -356,7 +356,7 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/turf/simulated/open,
+/turf/open_space,
 /area/ishimura/tramdeck/tram/tunnel)
 "aeJ" = (
 /obj/random/trash,
@@ -413,7 +413,7 @@
 	},
 /obj/structure/window/reinforced/full,
 /obj/structure/grille,
-/turf/simulated/open,
+/turf/open_space,
 /area/ishimura/tramdeck/tram/tunnel)
 "afx" = (
 /obj/structure/cable{
@@ -1219,7 +1219,7 @@
 "asP" = (
 /obj/structure/catwalk,
 /obj/structure/lattice,
-/turf/simulated/open,
+/turf/open_space,
 /area/ishimura/tramdeck/switchingstation/upper)
 "asW" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
@@ -1436,7 +1436,7 @@
 	icon_state = "tramcorner6";
 	dir = 5
 	},
-/turf/simulated/open,
+/turf/open_space,
 /area/ishimura/tramdeck/tram/tunnel)
 "awO" = (
 /obj/structure/window/reinforced/full,
@@ -2263,7 +2263,7 @@
 /obj/structure/prop/fake/railing{
 	dir = 4
 	},
-/turf/simulated/open,
+/turf/open_space,
 /area/ishimura/lower/misc/hallway/aft)
 "aJf" = (
 /obj/structure/pipes/standard/simple/hidden/scrubbers{
@@ -2324,7 +2324,7 @@
 	icon_state = "tramcorner1";
 	dir = 5
 	},
-/turf/simulated/open,
+/turf/open_space,
 /area/ishimura/tramdeck/tram/tunnel)
 "aJR" = (
 /obj/structure/machinery/disposal,
@@ -2658,7 +2658,7 @@
 /obj/structure/ladder{
 	pixel_y = 18
 	},
-/turf/simulated/open,
+/turf/open_space,
 /area/ishimura/lower/maintenance/starboard)
 "aPv" = (
 /obj/structure/cable/green{
@@ -2763,7 +2763,7 @@
 "aPQ" = (
 /obj/structure/lattice,
 /obj/structure/catwalk,
-/turf/simulated/open,
+/turf/open_space,
 /area/ishimura/tramdeck/tram/tunnel)
 "aPS" = (
 /obj/structure/machinery/alarm{
@@ -3356,7 +3356,7 @@
 /turf/simulated/floor/dank/rectangles,
 /area/ishimura/lower/mining/mining_bay)
 "aZs" = (
-/turf/simulated/open,
+/turf/open_space,
 /area/ishimura/tramdeck/tram/maintenance/midmaintenance)
 "aZA" = (
 /obj/structure/cable/green{
@@ -3837,7 +3837,7 @@
 	icon_state = "tramcorner1";
 	dir = 5
 	},
-/turf/simulated/open,
+/turf/open_space,
 /area/ishimura/tramdeck/tram/tunnel)
 "beT" = (
 /turf/simulated/wall/r_wall,
@@ -3880,7 +3880,7 @@
 /obj/structure/machinery/light{
 	dir = 8
 	},
-/turf/simulated/open,
+/turf/open_space,
 /area/ishimura/upper/misc/hallway/central)
 "bfp" = (
 /obj/structure/cable{
@@ -4926,7 +4926,7 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
-/turf/simulated/open,
+/turf/open_space,
 /area/ishimura/tramdeck/tram/maintenance/midmaintenance)
 "bxa" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
@@ -5316,7 +5316,7 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
-/turf/simulated/open,
+/turf/open_space,
 /area/ishimura/tramdeck/tram/tunnel)
 "bFv" = (
 /obj/effect/floor_decal/techfloor{
@@ -5999,7 +5999,7 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
-/turf/simulated/open,
+/turf/open_space,
 /area/ishimura/tramdeck/tram/maintenance/midmaintenance)
 "bNT" = (
 /obj/structure/machinery/door/airlock/ds/maintenance{
@@ -6095,7 +6095,7 @@
 /obj/structure/platform/strata/metal{
 	dir = 4
 	},
-/turf/simulated/open,
+/turf/open_space,
 /area/ishimura/tramdeck/switchingstation/upper)
 "bPl" = (
 /turf/simulated/floor/dank/tech,
@@ -6555,7 +6555,7 @@
 	icon_state = "tramcorner1";
 	dir = 5
 	},
-/turf/simulated/open,
+/turf/open_space,
 /area/ishimura/tramdeck/tram/tunnel)
 "bXt" = (
 /obj/effect/floor_decal/industrial/danger{
@@ -6626,7 +6626,7 @@
 /obj/structure/prop/fake/railing{
 	dir = 1
 	},
-/turf/simulated/open,
+/turf/open_space,
 /area/ishimura/lower/misc/hallway/central)
 "bYq" = (
 /obj/structure/cable/green{
@@ -6973,7 +6973,7 @@
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 9
 	},
-/turf/simulated/open,
+/turf/open_space,
 /area/ishimura/tramdeck/tram/tunnel)
 "cda" = (
 /obj/structure/disposalpipe/segment,
@@ -7535,7 +7535,7 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/turf/simulated/open,
+/turf/open_space,
 /area/ishimura/tramdeck/tram/tunnel)
 "cmZ" = (
 /obj/structure/surface/table/reinforced/prison,
@@ -7924,7 +7924,7 @@
 /obj/structure/machinery/door/airlock/ds/multi_tile/civilian/tram{
 	name = "\improper Tram"
 	},
-/turf/simulated/open,
+/turf/open_space,
 /area/ishimura/tramdeck/tram/tunnel)
 "cuC" = (
 /obj/structure/pipes/vents/scrubber/on{
@@ -8457,7 +8457,7 @@
 "cDq" = (
 /obj/effect/catwalk_plated/dank,
 /obj/structure/lattice,
-/turf/simulated/open,
+/turf/open_space,
 /area/ishimura/tramdeck/tram/station/amidships/north)
 "cDz" = (
 /obj/structure/machinery/light,
@@ -8556,7 +8556,7 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
-/turf/simulated/open,
+/turf/open_space,
 /area/ishimura/tramdeck/tram/tunnel)
 "cFc" = (
 /obj/structure/disposalpipe/segment{
@@ -8889,7 +8889,7 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
-/turf/simulated/open,
+/turf/open_space,
 /area/ishimura/tramdeck/switchingstation/upper)
 "cKl" = (
 /obj/structure/cable/cyan{
@@ -9068,7 +9068,7 @@
 /obj/machinery/atmospherics/pipe/zpipe/down/supply{
 	dir = 1
 	},
-/turf/simulated/open,
+/turf/open_space,
 /area/ishimura/eva/substation/transfer)
 "cNr" = (
 /obj/machinery/power/apc/super/critical{
@@ -9107,7 +9107,7 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
-/turf/simulated/open,
+/turf/open_space,
 /area/ishimura/tramdeck/tram/maintenance/midmaintenance)
 "cNC" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
@@ -9523,7 +9523,7 @@
 	dir = 2;
 	name = "Tram Section Lockdown"
 	},
-/turf/simulated/open,
+/turf/open_space,
 /area/ishimura/tramdeck/tram/maintenance/midmaintenance)
 "cUC" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
@@ -10341,7 +10341,7 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
-/turf/simulated/open,
+/turf/open_space,
 /area/ishimura/tramdeck/tram/tunnel)
 "dgL" = (
 /obj/structure/disposalpipe/segment{
@@ -10440,7 +10440,7 @@
 /obj/structure/machinery/door/firedoor/border_only{
 	dir = 4
 	},
-/turf/simulated/open,
+/turf/open_space,
 /area/ishimura/tramdeck/tram/tunnel)
 "diI" = (
 /obj/structure/machinery/light{
@@ -11201,7 +11201,7 @@
 /obj/structure/platform_decoration/strata/metal{
 	dir = 4
 	},
-/turf/simulated/open,
+/turf/open_space,
 /area/ishimura/tramdeck/switchingstation/upper)
 "dtr" = (
 /obj/structure/grille,
@@ -12347,7 +12347,7 @@
 /area/ishimura/upper/misc/janitorcloset/fore_port)
 "dLU" = (
 /obj/structure/lattice,
-/turf/simulated/open,
+/turf/open_space,
 /area/ishimura/tramdeck/tram/maintenance/midmaintenance)
 "dMn" = (
 /obj/effect/floor_decal/industrial/warning{
@@ -13541,7 +13541,7 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
-/turf/simulated/open,
+/turf/open_space,
 /area/ishimura/tramdeck/switchingstation/upper)
 "egB" = (
 /obj/structure/machinery/cryopod/right,
@@ -13732,7 +13732,7 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
-/turf/simulated/open,
+/turf/open_space,
 /area/ishimura/tramdeck/tram/maintenance/midmaintenance)
 "ekv" = (
 /obj/structure/cable/green{
@@ -14006,7 +14006,7 @@
 	d2 = 8;
 	icon_state = "1-8"
 	},
-/turf/simulated/open,
+/turf/open_space,
 /area/ishimura/tramdeck/tram/station/aft)
 "eoX" = (
 /obj/effect/floor_decal/industrial/hatch/yellow,
@@ -14278,7 +14278,7 @@
 	dir = 1
 	},
 /obj/structure/lattice,
-/turf/simulated/open,
+/turf/open_space,
 /area/ishimura/tramdeck/switchingstation/upper)
 "etN" = (
 /turf/simulated/floor/dank/slides{
@@ -14625,7 +14625,7 @@
 	color = "#cfcf55";
 	plane = -6
 	},
-/turf/simulated/open,
+/turf/open_space,
 /area/ishimura/tramdeck/tram/tunnel)
 "eyz" = (
 /obj/structure/morgue{
@@ -14892,7 +14892,7 @@
 	},
 /obj/structure/pipes/standard/manifold/hidden/supply,
 /obj/structure/pipes/standard/manifold/hidden/scrubbers,
-/turf/simulated/open,
+/turf/open_space,
 /area/ishimura/tramdeck/tram/tunnel)
 "eBA" = (
 /obj/structure/machinery/light{
@@ -15221,7 +15221,7 @@
 	name = "Tram Section Lockdown";
 	dir = 4
 	},
-/turf/simulated/open,
+/turf/open_space,
 /area/ishimura/tramdeck/tram/maintenance/midmaintenance)
 "eGZ" = (
 /obj/structure/machinery/door/firedoor/border_only{
@@ -16721,7 +16721,7 @@
 	d2 = 4;
 	icon_state = "2-4"
 	},
-/turf/simulated/open,
+/turf/open_space,
 /area/ishimura/tramdeck/tram/tunnel)
 "fdx" = (
 /obj/structure/cable/green{
@@ -17569,7 +17569,7 @@
 	icon_state = "tramcorner7";
 	dir = 5
 	},
-/turf/simulated/open,
+/turf/open_space,
 /area/ishimura/tramdeck/tram/tunnel)
 "fse" = (
 /obj/effect/floor_decal/industrial/warning{
@@ -17664,7 +17664,7 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
-/turf/simulated/open,
+/turf/open_space,
 /area/ishimura/tramdeck/tram/tunnel)
 "fub" = (
 /obj/effect/decal/cleanable/blood,
@@ -18193,7 +18193,7 @@
 /obj/structure/pipes/standard/simple/hidden/scrubbers{
 	dir = 4
 	},
-/turf/simulated/open,
+/turf/open_space,
 /area/ishimura/tramdeck/tram/tunnel)
 "fDm" = (
 /obj/effect/floor_decal/industrial/hatch/yellow,
@@ -18320,7 +18320,7 @@
 	dir = 1;
 	pixel_y = -32
 	},
-/turf/simulated/open,
+/turf/open_space,
 /area/ishimura/tramdeck/tram/tunnel)
 "fFg" = (
 /obj/structure/cable/green{
@@ -18418,7 +18418,7 @@
 /obj/structure/prop/fake/railing{
 	dir = 4
 	},
-/turf/simulated/open,
+/turf/open_space,
 /area/ishimura/tramdeck/tram/tunnel)
 "fGJ" = (
 /obj/effect/floor_decal/industrial/outline/yellow,
@@ -18905,7 +18905,7 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/turf/simulated/open,
+/turf/open_space,
 /area/ishimura/tramdeck/tram/tunnel)
 "fPV" = (
 /obj/structure/machinery/suit_storage_unit/standard_unit,
@@ -19139,7 +19139,7 @@
 /obj/machinery/atmospherics/pipe/zpipe/up/supply,
 /obj/machinery/atmospherics/pipe/zpipe/up/scrubbers,
 /obj/structure/lattice,
-/turf/simulated/open,
+/turf/open_space,
 /area/ishimura/tramdeck/tram/maintenance/aftmaintenance)
 "fUe" = (
 /obj/structure/pipes/standard/manifold/fourway/hidden/supply,
@@ -19245,7 +19245,7 @@
 	color = "#cfcf55";
 	plane = -6
 	},
-/turf/simulated/open,
+/turf/open_space,
 /area/ishimura/tramdeck/tram/tunnel)
 "fUZ" = (
 /obj/structure/catwalk,
@@ -19323,7 +19323,7 @@
 /area/ishimura/upper/medical/bpc)
 "fWe" = (
 /obj/structure/prop/fake/railing,
-/turf/simulated/open,
+/turf/open_space,
 /area/ishimura/lower/misc/hallway/aft)
 "fWg" = (
 /obj/structure/pipes/standard/simple/hidden/scrubbers,
@@ -19402,7 +19402,7 @@
 /obj/structure/prop/fake/railing{
 	dir = 4
 	},
-/turf/simulated/open,
+/turf/open_space,
 /area/ishimura/tramdeck/tram/station/forward)
 "fZh" = (
 /obj/structure/closet/emcloset,
@@ -19456,7 +19456,7 @@
 /obj/structure/prop/fake/railing{
 	dir = 1
 	},
-/turf/simulated/open,
+/turf/open_space,
 /area/ishimura/tramdeck/tram/tunnel)
 "gae" = (
 /obj/structure/machinery/alarm{
@@ -19537,7 +19537,7 @@
 	icon_state = "tramcorner1";
 	dir = 5
 	},
-/turf/simulated/open,
+/turf/open_space,
 /area/ishimura/tramdeck/tram/tunnel)
 "gbN" = (
 /obj/structure/machinery/portable_atmospherics/powered/pump,
@@ -19811,7 +19811,7 @@
 	},
 /obj/structure/pipes/standard/simple/hidden/supply,
 /obj/structure/pipes/standard/simple/hidden/scrubbers,
-/turf/simulated/open,
+/turf/open_space,
 /area/ishimura/tramdeck/tram/maintenance/midmaintenance)
 "ggH" = (
 /obj/structure/machinery/door/firedoor/border_only,
@@ -19845,7 +19845,7 @@
 	dir = 1;
 	pixel_y = -32
 	},
-/turf/simulated/open,
+/turf/open_space,
 /area/ishimura/tramdeck/tram/maintenance/midmaintenance)
 "ghG" = (
 /obj/structure/sign/directions/evac{
@@ -21594,7 +21594,7 @@
 /obj/machinery/atmospherics/pipe/zpipe/down/supply,
 /obj/machinery/atmospherics/pipe/zpipe/down/scrubbers,
 /obj/structure/lattice,
-/turf/simulated/open,
+/turf/open_space,
 /area/ishimura/lower/maintenance/starboard)
 "gIi" = (
 /obj/structure/bed/chair/office/light,
@@ -22873,7 +22873,7 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
-/turf/simulated/open,
+/turf/open_space,
 /area/ishimura/tramdeck/switchingstation/upper)
 "heQ" = (
 /obj/structure/bed,
@@ -23447,7 +23447,7 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
-/turf/simulated/open,
+/turf/open_space,
 /area/ishimura/tramdeck/tram/tunnel)
 "hnn" = (
 /obj/structure/machinery/light/small,
@@ -23615,7 +23615,7 @@
 /obj/structure/machinery/door/airlock/ds/maintenance{
 	name = "Abandoned Switching Station"
 	},
-/turf/simulated/open,
+/turf/open_space,
 /area/ishimura/tramdeck/switchingstation/upper)
 "hoH" = (
 /obj/structure/cable{
@@ -23795,7 +23795,7 @@
 /obj/structure/pipes/standard/simple/hidden/scrubbers{
 	dir = 5
 	},
-/turf/simulated/open,
+/turf/open_space,
 /area/ishimura/tramdeck/tram/maintenance/midmaintenance)
 "hqQ" = (
 /obj/structure/machinery/light,
@@ -23821,7 +23821,7 @@
 	icon_state = "tramcorner";
 	dir = 6
 	},
-/turf/simulated/open,
+/turf/open_space,
 /area/ishimura/tramdeck/tram/tunnel)
 "hrc" = (
 /obj/structure/filingcabinet,
@@ -23979,7 +23979,7 @@
 /obj/structure/catwalk,
 /obj/structure/lattice,
 /obj/effect/spider/stickyweb,
-/turf/simulated/open,
+/turf/open_space,
 /area/ishimura/tramdeck/tram/maintenance/midmaintenance)
 "huo" = (
 /obj/structure/disposalpipe/junction/yjunction{
@@ -24037,7 +24037,7 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
-/turf/simulated/open,
+/turf/open_space,
 /area/ishimura/tramdeck/tram/tunnel)
 "hvS" = (
 /obj/structure/machinery/door/firedoor/border_only,
@@ -24960,7 +24960,7 @@
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 4
 	},
-/turf/simulated/open,
+/turf/open_space,
 /area/ishimura/tramdeck/tram/tunnel)
 "hIK" = (
 /obj/structure/cable/white{
@@ -25328,7 +25328,7 @@
 /obj/structure/sign/directions/supply{
 	pixel_y = -34
 	},
-/turf/simulated/open,
+/turf/open_space,
 /area/ishimura/upper/misc/hallway/central)
 "hPB" = (
 /obj/effect/floor_decal/industrial/hatch/yellow,
@@ -25365,7 +25365,7 @@
 	icon_state = "4-8"
 	},
 /obj/structure/prop/fake/railing,
-/turf/simulated/open,
+/turf/open_space,
 /area/ishimura/tramdeck/tram/tunnel)
 "hPS" = (
 /obj/structure/closet/walllocker/emerglocker/west,
@@ -26188,7 +26188,7 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
-/turf/simulated/open,
+/turf/open_space,
 /area/ishimura/tramdeck/tram/tunnel)
 "ibZ" = (
 /obj/structure/surface/table/almayer,
@@ -26416,7 +26416,7 @@
 /area/ishimura/lower/maintenance/port)
 "ifq" = (
 /obj/structure/ladder,
-/turf/simulated/open,
+/turf/open_space,
 /area/ishimura/upper/maintenance/fore_port)
 "ifA" = (
 /obj/structure/bed/chair,
@@ -26509,7 +26509,7 @@
 /area/ishimura/lower/misc/hallway/aft)
 "ihD" = (
 /obj/structure/lattice,
-/turf/simulated/open,
+/turf/open_space,
 /area/ishimura/tramdeck/tram/tunnel)
 "ihN" = (
 /obj/effect/decal/warning_stripes,
@@ -26741,7 +26741,7 @@
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 4
 	},
-/turf/simulated/open,
+/turf/open_space,
 /area/ishimura/tramdeck/tram/tunnel)
 "ilB" = (
 /obj/structure/surface/rack,
@@ -28309,7 +28309,7 @@
 	dir = 8
 	},
 /obj/structure/prop/fake/railing,
-/turf/simulated/open,
+/turf/open_space,
 /area/ishimura/lower/misc/hallway/central)
 "iHO" = (
 /obj/structure/window/reinforced/full{
@@ -28708,7 +28708,7 @@
 	dir = 1
 	},
 /obj/structure/lattice,
-/turf/simulated/open,
+/turf/open_space,
 /area/ishimura/tramdeck/switchingstation/upper)
 "iMn" = (
 /obj/machinery/vending/fitness,
@@ -29281,7 +29281,7 @@
 	dir = 8
 	},
 /obj/structure/lattice,
-/turf/simulated/open,
+/turf/open_space,
 /area/ishimura/tramdeck/switchingstation/upper)
 "iVj" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
@@ -29450,7 +29450,7 @@
 	icon_state = "tramwarning2";
 	dir = 5
 	},
-/turf/simulated/open,
+/turf/open_space,
 /area/ishimura/tramdeck/tram/tunnel)
 "iWN" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
@@ -29483,7 +29483,7 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
-/turf/simulated/open,
+/turf/open_space,
 /area/ishimura/tramdeck/tram/tunnel)
 "iXu" = (
 /obj/structure/window/reinforced/full,
@@ -29725,7 +29725,7 @@
 	},
 /obj/structure/window/reinforced/full,
 /obj/structure/grille,
-/turf/simulated/open,
+/turf/open_space,
 /area/ishimura/tramdeck/tram/tunnel)
 "jay" = (
 /obj/structure/surface/rack,
@@ -29862,7 +29862,7 @@
 /obj/structure/prop/fake/railing{
 	dir = 4
 	},
-/turf/simulated/open,
+/turf/open_space,
 /area/ishimura/lower/misc/hallway/escape_executive)
 "jcG" = (
 /obj/effect/floor_decal/corner/grey{
@@ -30797,7 +30797,7 @@
 	icon_state = "tramcorner7";
 	dir = 5
 	},
-/turf/simulated/open,
+/turf/open_space,
 /area/ishimura/tramdeck/tram/tunnel)
 "jtO" = (
 /obj/structure/machinery/door/airlock/ds/civilian{
@@ -30816,7 +30816,7 @@
 /area/ishimura/upper/research/virology/quarantine)
 "jtY" = (
 /obj/structure/catwalk,
-/turf/simulated/open,
+/turf/open_space,
 /area/ishimura/tramdeck/switchingstation/upper)
 "jtZ" = (
 /obj/structure/machinery/door/airlock/ds/civilian,
@@ -31663,7 +31663,7 @@
 	d2 = 4;
 	icon_state = "1-4"
 	},
-/turf/simulated/open,
+/turf/open_space,
 /area/ishimura/tramdeck/switchingstation/upper)
 "jHU" = (
 /obj/structure/pipes/vents/pump/on{
@@ -31685,7 +31685,7 @@
 	dir = 8
 	},
 /obj/structure/platform/strata/metal,
-/turf/simulated/open,
+/turf/open_space,
 /area/ishimura/tramdeck/switchingstation/upper)
 "jIW" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
@@ -32043,7 +32043,7 @@
 	name = "north bump";
 	pixel_y = 24
 	},
-/turf/simulated/open,
+/turf/open_space,
 /area/ishimura/tramdeck/switchingstation/upper)
 "jNC" = (
 /obj/structure/machinery/door/airlock/ds/external{
@@ -32176,7 +32176,7 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/turf/simulated/open,
+/turf/open_space,
 /area/ishimura/tramdeck/tram/station/aft)
 "jPz" = (
 /obj/structure/dispenser/oxygen,
@@ -33457,7 +33457,7 @@
 /obj/structure/machinery/light/small{
 	dir = 1
 	},
-/turf/simulated/open,
+/turf/open_space,
 /area/ishimura/tramdeck/switchingstation/upper)
 "kkn" = (
 /obj/structure/cable/green{
@@ -33584,7 +33584,7 @@
 /obj/structure/prop/fake/railing{
 	dir = 4
 	},
-/turf/simulated/open,
+/turf/open_space,
 /area/ishimura/tramdeck/tram/station/aft)
 "kna" = (
 /obj/structure/machinery/door/firedoor/border_only{
@@ -34113,7 +34113,7 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
-/turf/simulated/open,
+/turf/open_space,
 /area/ishimura/tramdeck/tram/maintenance/midmaintenance)
 "kuZ" = (
 /turf/simulated/wall/r_wall,
@@ -34452,7 +34452,7 @@
 /obj/structure/machinery/door/airlock/ds/multi_tile/civilian/tram{
 	name = "\improper Tram"
 	},
-/turf/simulated/open,
+/turf/open_space,
 /area/ishimura/tramdeck/tram/tunnel)
 "kAD" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
@@ -34516,7 +34516,7 @@
 /obj/structure/prop/fake/railing{
 	dir = 4
 	},
-/turf/simulated/open,
+/turf/open_space,
 /area/ishimura/lower/misc/hallway/aft)
 "kBI" = (
 /obj/effect/floor_decal/pod,
@@ -34554,7 +34554,7 @@
 	d2 = 8;
 	icon_state = "1-8"
 	},
-/turf/simulated/open,
+/turf/open_space,
 /area/ishimura/tramdeck/tram/tunnel)
 "kCb" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
@@ -34957,7 +34957,7 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/turf/simulated/open,
+/turf/open_space,
 /area/ishimura/tramdeck/tram/station/aft)
 "kJK" = (
 /obj/structure/cable/cyan{
@@ -35160,7 +35160,7 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
-/turf/simulated/open,
+/turf/open_space,
 /area/ishimura/tramdeck/tram/tunnel)
 "kMw" = (
 /obj/structure/mirror,
@@ -35329,7 +35329,7 @@
 /turf/simulated/floor/dank/hardwood,
 /area/ishimura/upper/misc/hangar/reception)
 "kPX" = (
-/turf/simulated/open,
+/turf/open_space,
 /area/ishimura/tramdeck/tram/tunnel)
 "kPY" = (
 /obj/structure/pipes/standard/simple/hidden/scrubbers{
@@ -36195,10 +36195,10 @@
 /obj/structure/prop/fake/railing{
 	dir = 8
 	},
-/turf/simulated/open,
+/turf/open_space,
 /area/ishimura/tramdeck/tram/maintenance/midmaintenance)
 "lfx" = (
-/obj/structure/bed/chair/comfy/captain,
+/obj/structure/bed/chair/comfy/black,
 /turf/simulated/floor/carpet/blue2,
 /area/ishimura/lower/crew/sleepblock/executive)
 "lfC" = (
@@ -36759,7 +36759,7 @@
 	dir = 1;
 	pixel_y = -32
 	},
-/turf/simulated/open,
+/turf/open_space,
 /area/ishimura/tramdeck/tram/tunnel)
 "loC" = (
 /obj/structure/machinery/light{
@@ -37025,7 +37025,7 @@
 /obj/structure/prop/fake/railing{
 	dir = 8
 	},
-/turf/simulated/open,
+/turf/open_space,
 /area/ishimura/tramdeck/tram/maintenance/midmaintenance)
 "lsr" = (
 /obj/structure/catwalk,
@@ -37063,7 +37063,7 @@
 /obj/structure/prop/fake/railing{
 	dir = 1
 	},
-/turf/simulated/open,
+/turf/open_space,
 /area/ishimura/tramdeck/tram/tunnel)
 "lsE" = (
 /obj/effect/floor_decal/spline/fancy/wood{
@@ -37466,7 +37466,7 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
-/turf/simulated/open,
+/turf/open_space,
 /area/ishimura/tramdeck/tram/station/aft)
 "lzr" = (
 /obj/effect/floor_decal/industrial/warning/corner{
@@ -37482,7 +37482,7 @@
 /turf/simulated/floor/dank/golf_brown,
 /area/ishimura/lower/cargo/bay)
 "lzv" = (
-/obj/structure/bed/chair/comfy/purple{
+/obj/structure/bed/chair/comfy/black{
 	dir = 1
 	},
 /obj/effect/landmark/start{
@@ -37962,7 +37962,7 @@
 /obj/structure/platform/strata/metal{
 	dir = 8
 	},
-/turf/simulated/open,
+/turf/open_space,
 /area/ishimura/tramdeck/switchingstation/upper)
 "lFf" = (
 /obj/structure/machinery/door/firedoor/border_only{
@@ -38202,7 +38202,7 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
-/turf/simulated/open,
+/turf/open_space,
 /area/ishimura/tramdeck/tram/station/aft)
 "lJs" = (
 /obj/structure/machinery/floodlight/landing,
@@ -38843,7 +38843,7 @@
 	d2 = 4;
 	icon_state = "2-4"
 	},
-/turf/simulated/open,
+/turf/open_space,
 /area/ishimura/tramdeck/switchingstation/upper)
 "lSm" = (
 /obj/structure/cable{
@@ -39002,7 +39002,7 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
-/turf/simulated/open,
+/turf/open_space,
 /area/ishimura/tramdeck/tram/tunnel)
 "lVz" = (
 /obj/structure/machinery/door/airlock/ds/external/glass{
@@ -39355,7 +39355,7 @@
 	},
 /obj/structure/window/reinforced/full,
 /obj/structure/grille,
-/turf/simulated/open,
+/turf/open_space,
 /area/ishimura/tramdeck/tram/tunnel)
 "mbV" = (
 /obj/structure/cable{
@@ -39469,7 +39469,7 @@
 /obj/structure/prop/fake/railing{
 	dir = 1
 	},
-/turf/simulated/open,
+/turf/open_space,
 /area/ishimura/lower/misc/hallway/central)
 "mdy" = (
 /obj/structure/machinery/alarm{
@@ -39517,7 +39517,7 @@
 /turf/simulated/floor,
 /area/ishimura/tramdeck/tram/maintenance/aftmaintenance)
 "mem" = (
-/turf/simulated/open,
+/turf/open_space,
 /area/ishimura/upper/misc/hallway/central)
 "mes" = (
 /obj/structure/pipes/standard/simple/hidden/scrubbers{
@@ -41080,7 +41080,7 @@
 /obj/structure/pipes/standard/manifold/hidden/scrubbers{
 	dir = 1
 	},
-/turf/simulated/open,
+/turf/open_space,
 /area/ishimura/tramdeck/tram/tunnel)
 "mzL" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
@@ -41407,7 +41407,7 @@
 "mFn" = (
 /obj/effect/catwalk_plated/dank,
 /obj/structure/lattice,
-/turf/simulated/open,
+/turf/open_space,
 /area/ishimura/tramdeck/tram/station/aft)
 "mFx" = (
 /obj/structure/machinery/light{
@@ -41780,7 +41780,7 @@
 	color = "#cfcf55";
 	plane = -6
 	},
-/turf/simulated/open,
+/turf/open_space,
 /area/ishimura/tramdeck/tram/tunnel)
 "mMD" = (
 /obj/structure/disposalpipe/segment{
@@ -41852,7 +41852,7 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
-/turf/simulated/open,
+/turf/open_space,
 /area/ishimura/tramdeck/tram/tunnel)
 "mNB" = (
 /obj/effect/floor_decal/industrial/outline/yellow,
@@ -42050,7 +42050,7 @@
 /obj/structure/machinery/door/airlock/ds/maintenance{
 	name = "Transit Tunnel"
 	},
-/turf/simulated/open,
+/turf/open_space,
 /area/ishimura/tramdeck/tram/tunnel)
 "mPq" = (
 /obj/machinery/mining/drill,
@@ -42182,7 +42182,7 @@
 "mRs" = (
 /obj/structure/ladder,
 /obj/effect/catwalk_plated/dank,
-/turf/simulated/open,
+/turf/open_space,
 /area/ishimura/eva)
 "mRD" = (
 /obj/effect/floor_decal/corner/grey{
@@ -42311,7 +42311,7 @@
 	icon_state = "tramcorner7";
 	dir = 5
 	},
-/turf/simulated/open,
+/turf/open_space,
 /area/ishimura/tramdeck/tram/tunnel)
 "mSM" = (
 /obj/structure/disposalpipe/segment,
@@ -42895,7 +42895,7 @@
 	d2 = 8;
 	icon_state = "2-8"
 	},
-/turf/simulated/open,
+/turf/open_space,
 /area/ishimura/tramdeck/tram/tunnel)
 "nds" = (
 /obj/structure/catwalk,
@@ -43194,7 +43194,7 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
-/turf/simulated/open,
+/turf/open_space,
 /area/ishimura/tramdeck/tram/tunnel)
 "ngC" = (
 /obj/structure/catwalk,
@@ -45452,7 +45452,7 @@
 	icon_state = "4-8"
 	},
 /obj/structure/prop/fake/railing,
-/turf/simulated/open,
+/turf/open_space,
 /area/ishimura/tramdeck/tram/tunnel)
 "nQv" = (
 /obj/structure/closet/firecloset,
@@ -45523,7 +45523,7 @@
 	dir = 4
 	},
 /obj/structure/lattice,
-/turf/simulated/open,
+/turf/open_space,
 /area/ishimura/tramdeck/switchingstation/upper)
 "nSi" = (
 /obj/structure/machinery/light,
@@ -46570,7 +46570,7 @@
 	icon_state = "tramcorner7";
 	dir = 5
 	},
-/turf/simulated/open,
+/turf/open_space,
 /area/ishimura/tramdeck/tram/tunnel)
 "ojO" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
@@ -46728,7 +46728,7 @@
 /obj/structure/machinery/shower{
 	dir = 8
 	},
-/obj/structure/window/reinforced/full/frosted,
+/obj/structure/window/reinforced/full,
 /obj/structure/machinery/door/window/westright,
 /obj/item/towel,
 /turf/simulated/floor/dank/bathr,
@@ -46744,7 +46744,7 @@
 /obj/structure/machinery/shower{
 	dir = 4
 	},
-/obj/structure/window/reinforced/full/frosted,
+/obj/structure/window/reinforced/full,
 /obj/structure/machinery/door/window/eastleft,
 /obj/item/towel,
 /turf/simulated/floor/dank/bathr,
@@ -47633,7 +47633,7 @@
 	icon_state = "0-2"
 	},
 /obj/structure/disposalpipe/down,
-/turf/simulated/open,
+/turf/open_space,
 /area/ishimura/hull)
 "oyQ" = (
 /obj/structure/machinery/telecomms/server/presets/supply,
@@ -47718,7 +47718,7 @@
 /obj/structure/prop/fake/railing{
 	dir = 1
 	},
-/turf/simulated/open,
+/turf/open_space,
 /area/ishimura/tramdeck/tram/tunnel)
 "ozO" = (
 /obj/structure/machinery/disposal,
@@ -47969,7 +47969,7 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
-/turf/simulated/open,
+/turf/open_space,
 /area/ishimura/tramdeck/switchingstation/upper)
 "oDe" = (
 /obj/structure/machinery/door_control/brbutton{
@@ -48460,7 +48460,7 @@
 	icon_state = "tramcorner1";
 	dir = 5
 	},
-/turf/simulated/open,
+/turf/open_space,
 /area/ishimura/tramdeck/tram/tunnel)
 "oKZ" = (
 /obj/structure/disposalpipe/segment{
@@ -48706,7 +48706,7 @@
 	d2 = 8;
 	icon_state = "2-8"
 	},
-/turf/simulated/open,
+/turf/open_space,
 /area/ishimura/tramdeck/tram/maintenance/midmaintenance)
 "oPA" = (
 /obj/structure/machinery/light{
@@ -48790,7 +48790,7 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
-/turf/simulated/open,
+/turf/open_space,
 /area/ishimura/tramdeck/tram/tunnel)
 "oQK" = (
 /obj/structure/surface/rack,
@@ -48918,7 +48918,7 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
-/turf/simulated/open,
+/turf/open_space,
 /area/ishimura/tramdeck/tram/maintenance/midmaintenance)
 "oSi" = (
 /obj/structure/window/reinforced,
@@ -49123,7 +49123,7 @@
 	icon_state = "tramcorner7";
 	dir = 5
 	},
-/turf/simulated/open,
+/turf/open_space,
 /area/ishimura/tramdeck/tram/tunnel)
 "oWx" = (
 /obj/structure/pipes/standard/simple/hidden/scrubbers{
@@ -49280,7 +49280,7 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/turf/simulated/open,
+/turf/open_space,
 /area/ishimura/tramdeck/tram/tunnel)
 "oYa" = (
 /obj/structure/closet/secure_closet/medical2,
@@ -49494,7 +49494,7 @@
 	icon_state = "1-8"
 	},
 /obj/structure/lattice,
-/turf/simulated/open,
+/turf/open_space,
 /area/ishimura/tramdeck/tram/tunnel)
 "paV" = (
 /obj/structure/machinery/light/small,
@@ -49772,7 +49772,7 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
-/turf/simulated/open,
+/turf/open_space,
 /area/ishimura/tramdeck/tram/tunnel)
 "pfM" = (
 /obj/structure/closet,
@@ -49932,7 +49932,7 @@
 /area/ishimura/upper/security/checkpoint)
 "phO" = (
 /obj/structure/ladder,
-/turf/simulated/open,
+/turf/open_space,
 /area/ishimura/upper/engineering/hub)
 "phZ" = (
 /obj/structure/pipes/standard/simple/hidden{
@@ -50103,7 +50103,7 @@
 /obj/structure/prop/fake/railing{
 	dir = 8
 	},
-/turf/simulated/open,
+/turf/open_space,
 /area/ishimura/tramdeck/tram/station/amidships/north)
 "pjM" = (
 /obj/structure/pipes/standard/simple/hidden/scrubbers{
@@ -50275,7 +50275,7 @@
 /area/ishimura/lower/engineering/storage_closet/electronics)
 "plO" = (
 /obj/structure/prop/fake/railing,
-/turf/simulated/open,
+/turf/open_space,
 /area/ishimura/lower/misc/hallway/central)
 "plS" = (
 /obj/structure/pipes/standard/manifold/hidden/scrubbers{
@@ -50402,7 +50402,7 @@
 	color = "#cfcf55";
 	plane = -6
 	},
-/turf/simulated/open,
+/turf/open_space,
 /area/ishimura/tramdeck/tram/tunnel)
 "pno" = (
 /obj/structure/machinery/computer/atmos_alert{
@@ -50757,13 +50757,13 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
-/turf/simulated/open,
+/turf/open_space,
 /area/ishimura/tramdeck/tram/maintenance/midmaintenance)
 "pqY" = (
 /obj/structure/machinery/light/spot{
 	dir = 1
 	},
-/turf/simulated/open,
+/turf/open_space,
 /area/ishimura/tramdeck/tram/maintenance/midmaintenance)
 "prd" = (
 /obj/structure/disposalpipe/segment{
@@ -50917,7 +50917,7 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
-/turf/simulated/open,
+/turf/open_space,
 /area/ishimura/tramdeck/tram/tunnel)
 "puj" = (
 /obj/structure/catwalk,
@@ -51321,7 +51321,7 @@
 /obj/structure/prop/fake/railing{
 	dir = 4
 	},
-/turf/simulated/open,
+/turf/open_space,
 /area/ishimura/tramdeck/tram/tunnel)
 "pAi" = (
 /turf/simulated/floor,
@@ -51503,7 +51503,7 @@
 	icon_state = "4-8"
 	},
 /obj/structure/prop/fake/railing,
-/turf/simulated/open,
+/turf/open_space,
 /area/ishimura/tramdeck/tram/tunnel)
 "pDb" = (
 /obj/structure/cable/green{
@@ -51788,7 +51788,7 @@
 /obj/structure/machinery/light/spot{
 	dir = 4
 	},
-/turf/simulated/open,
+/turf/open_space,
 /area/ishimura/tramdeck/tram/maintenance/midmaintenance)
 "pHG" = (
 /obj/effect/floor_decal/spline/fancy/wood{
@@ -52409,7 +52409,7 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/turf/simulated/open,
+/turf/open_space,
 /area/ishimura/tramdeck/tram/tunnel)
 "pPK" = (
 /obj/structure/surface/table/almayer,
@@ -53215,7 +53215,7 @@
 /obj/structure/sign/directions/supply{
 	pixel_y = 34
 	},
-/turf/simulated/open,
+/turf/open_space,
 /area/ishimura/upper/misc/hallway/central)
 "qen" = (
 /obj/structure/industrial_lift/tram{
@@ -53223,7 +53223,7 @@
 	icon_state = "tramwarning8";
 	dir = 5
 	},
-/turf/simulated/open,
+/turf/open_space,
 /area/ishimura/tramdeck/tram/tunnel)
 "qep" = (
 /obj/structure/machinery/disposal,
@@ -53701,7 +53701,7 @@
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 4
 	},
-/turf/simulated/open,
+/turf/open_space,
 /area/ishimura/tramdeck/tram/tunnel)
 "qof" = (
 /obj/item/device/radio/intercom{
@@ -54771,7 +54771,7 @@
 /obj/structure/machinery/shower{
 	dir = 4
 	},
-/obj/structure/window/reinforced/full/frosted,
+/obj/structure/window/reinforced/full,
 /obj/structure/machinery/door/window/eastleft,
 /obj/structure/pipes/vents/pump/on{
 	dir = 4
@@ -54786,7 +54786,7 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
-/turf/simulated/open,
+/turf/open_space,
 /area/ishimura/tramdeck/tram/maintenance/midmaintenance)
 "qEN" = (
 /obj/structure/cable/green{
@@ -54813,7 +54813,7 @@
 /obj/structure/disposalpipe/down,
 /obj/machinery/atmospherics/pipe/zpipe/down/supply,
 /obj/machinery/atmospherics/pipe/zpipe/down/scrubbers,
-/turf/simulated/open,
+/turf/open_space,
 /area/space)
 "qFj" = (
 /obj/structure/window/reinforced/full,
@@ -54962,7 +54962,7 @@
 /obj/structure/prop/fake/railing{
 	dir = 1
 	},
-/turf/simulated/open,
+/turf/open_space,
 /area/ishimura/tramdeck/tram/tunnel)
 "qGU" = (
 /obj/structure/machinery/door/firedoor/border_only,
@@ -55717,7 +55717,7 @@
 	icon_state = "4-8"
 	},
 /obj/structure/prop/fake/railing,
-/turf/simulated/open,
+/turf/open_space,
 /area/ishimura/tramdeck/tram/tunnel)
 "qTa" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
@@ -55983,7 +55983,7 @@
 	d2 = 8;
 	icon_state = "1-8"
 	},
-/turf/simulated/open,
+/turf/open_space,
 /area/ishimura/tramdeck/tram/maintenance/midmaintenance)
 "qWg" = (
 /obj/structure/pipes/standard/simple/hidden/scrubbers,
@@ -56009,7 +56009,7 @@
 	},
 /obj/machinery/atmospherics/pipe/zpipe/down/supply,
 /obj/machinery/atmospherics/pipe/zpipe/down/scrubbers,
-/turf/simulated/open,
+/turf/open_space,
 /area/ishimura/tramdeck/tram/maintenance/midmaintenance)
 "qWp" = (
 /obj/effect/decal/cleanable/cobweb,
@@ -56453,7 +56453,7 @@
 /obj/structure/prop/fake/railing{
 	dir = 8
 	},
-/turf/simulated/open,
+/turf/open_space,
 /area/ishimura/tramdeck/tram/station/forward)
 "rei" = (
 /obj/item/storage/box/detergent{
@@ -56481,7 +56481,7 @@
 /turf/simulated/floor/plating,
 /area/ishimura/upper/maintenance/fore_port)
 "rep" = (
-/obj/structure/bed/chair/comfy/red{
+/obj/structure/bed/chair/comfy/black{
 	dir = 4
 	},
 /obj/effect/landmark/start{
@@ -57036,7 +57036,7 @@
 	dir = 4
 	},
 /obj/structure/prop/fake/railing,
-/turf/simulated/open,
+/turf/open_space,
 /area/ishimura/tramdeck/tram/tunnel)
 "rnA" = (
 /obj/structure/cable/cyan{
@@ -57148,7 +57148,7 @@
 /obj/structure/disposalpipe/junction/yjunction{
 	dir = 1
 	},
-/turf/simulated/open,
+/turf/open_space,
 /area/ishimura/tramdeck/tram/tunnel)
 "rpu" = (
 /obj/structure/cable/green{
@@ -57390,7 +57390,7 @@
 "rsl" = (
 /obj/structure/catwalk,
 /obj/structure/lattice,
-/turf/simulated/open,
+/turf/open_space,
 /area/ishimura/tramdeck/tram/station/aft)
 "rsr" = (
 /obj/structure/morgue,
@@ -58748,7 +58748,7 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
-/turf/simulated/open,
+/turf/open_space,
 /area/ishimura/tramdeck/tram/tunnel)
 "rON" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
@@ -59019,7 +59019,7 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
-/turf/simulated/open,
+/turf/open_space,
 /area/ishimura/tramdeck/tram/maintenance/midmaintenance)
 "rTk" = (
 /obj/effect/floor_decal/corner/grey,
@@ -59027,7 +59027,7 @@
 /area/ishimura/upper/medical)
 "rTm" = (
 /obj/structure/lattice,
-/turf/simulated/open,
+/turf/open_space,
 /area/ishimura/tramdeck/switchingstation/upper)
 "rTw" = (
 /obj/structure/reagent_dispensers/fueltank,
@@ -59488,7 +59488,7 @@
 	d2 = 4;
 	icon_state = "0-4"
 	},
-/turf/simulated/open,
+/turf/open_space,
 /area/ishimura/tramdeck/tram/tunnel)
 "saD" = (
 /obj/item/storage/toolbox/mechanical{
@@ -59581,11 +59581,11 @@
 	d2 = 4;
 	icon_state = "1-4"
 	},
-/turf/simulated/open,
+/turf/open_space,
 /area/ishimura/tramdeck/tram/station/aft)
 "sbQ" = (
 /obj/structure/catwalk,
-/turf/simulated/open,
+/turf/open_space,
 /area/ishimura/tramdeck/tram/maintenance/midmaintenance)
 "sbU" = (
 /obj/structure/machinery/door/firedoor/border_only,
@@ -60047,7 +60047,7 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/turf/simulated/open,
+/turf/open_space,
 /area/ishimura/tramdeck/tram/tunnel)
 "siA" = (
 /turf/simulated/floor/dank/slides{
@@ -60162,7 +60162,7 @@
 /obj/structure/prop/fake/railing{
 	dir = 1
 	},
-/turf/simulated/open,
+/turf/open_space,
 /area/ishimura/lower/misc/hallway/aft)
 "sld" = (
 /obj/structure/cable/green{
@@ -61065,7 +61065,7 @@
 	d2 = 4;
 	icon_state = "2-4"
 	},
-/turf/simulated/open,
+/turf/open_space,
 /area/ishimura/tramdeck/tram/maintenance/midmaintenance)
 "szs" = (
 /obj/effect/floor_decal/industrial/outline/yellow,
@@ -61120,7 +61120,7 @@
 	d2 = 8;
 	icon_state = "2-8"
 	},
-/turf/simulated/open,
+/turf/open_space,
 /area/ishimura/tramdeck/tram/tunnel)
 "sAb" = (
 /obj/machinery/atmospherics/pipe/manifold/visible/black{
@@ -61170,7 +61170,7 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
-/turf/simulated/open,
+/turf/open_space,
 /area/ishimura/tramdeck/switchingstation/upper)
 "sBd" = (
 /obj/structure/cable/green{
@@ -61308,7 +61308,7 @@
 "sEx" = (
 /obj/structure/catwalk,
 /obj/structure/lattice,
-/turf/simulated/open,
+/turf/open_space,
 /area/ishimura/tramdeck/tram/maintenance/midmaintenance)
 "sEz" = (
 /obj/structure/workbench,
@@ -61469,7 +61469,7 @@
 /obj/structure/prop/fake/railing{
 	dir = 4
 	},
-/turf/simulated/open,
+/turf/open_space,
 /area/ishimura/tramdeck/tram/tunnel)
 "sHW" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
@@ -61894,7 +61894,7 @@
 /obj/structure/prop/fake/railing{
 	dir = 8
 	},
-/turf/simulated/open,
+/turf/open_space,
 /area/ishimura/tramdeck/tram/maintenance/midmaintenance)
 "sOw" = (
 /obj/structure/window/reinforced/full,
@@ -63265,13 +63265,13 @@
 	icon_state = "tramcorner7";
 	dir = 5
 	},
-/turf/simulated/open,
+/turf/open_space,
 /area/ishimura/tramdeck/tram/tunnel)
 "tlV" = (
 /obj/structure/catwalk,
 /obj/structure/lattice,
 /obj/structure/closet/emcloset,
-/turf/simulated/open,
+/turf/open_space,
 /area/ishimura/tramdeck/tram/tunnel)
 "tmb" = (
 /obj/structure/pipes/standard/simple/hidden/scrubbers{
@@ -63615,7 +63615,7 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
-/turf/simulated/open,
+/turf/open_space,
 /area/ishimura/tramdeck/tram/maintenance/midmaintenance)
 "tro" = (
 /obj/structure/disposalpipe/segment,
@@ -63724,7 +63724,7 @@
 /obj/machinery/atmospherics/pipe/zpipe/down/scrubbers,
 /obj/machinery/atmospherics/pipe/zpipe/down/supply,
 /obj/structure/lattice,
-/turf/simulated/open,
+/turf/open_space,
 /area/ishimura/lower/maintenance/starboard)
 "tsK" = (
 /obj/item/staff/broom,
@@ -63749,7 +63749,7 @@
 /obj/structure/prop/fake/railing{
 	dir = 1
 	},
-/turf/simulated/open,
+/turf/open_space,
 /area/ishimura/tramdeck/tram/tunnel)
 "tsX" = (
 /obj/effect/floor_decal/corner/grey/three_quarters{
@@ -63878,7 +63878,7 @@
 	dir = 2;
 	name = "Tram Section Lockdown"
 	},
-/turf/simulated/open,
+/turf/open_space,
 /area/ishimura/tramdeck/switchingstation/upper)
 "twb" = (
 /obj/structure/noticeboard{
@@ -64167,7 +64167,7 @@
 /obj/structure/pipes/standard/simple/hidden/scrubbers{
 	dir = 10
 	},
-/turf/simulated/open,
+/turf/open_space,
 /area/ishimura/tramdeck/tram/maintenance/midmaintenance)
 "tEf" = (
 /obj/structure/cable/green{
@@ -64227,7 +64227,7 @@
 /obj/structure/prop/fake/railing{
 	dir = 1
 	},
-/turf/simulated/open,
+/turf/open_space,
 /area/ishimura/tramdeck/tram/tunnel)
 "tEy" = (
 /obj/structure/pipes/vents/scrubber/on,
@@ -64330,7 +64330,7 @@
 /obj/structure/machinery/light/spot{
 	dir = 8
 	},
-/turf/simulated/open,
+/turf/open_space,
 /area/ishimura/tramdeck/tram/maintenance/midmaintenance)
 "tFD" = (
 /obj/structure/disposalpipe/segment{
@@ -64838,7 +64838,7 @@
 "tNP" = (
 /obj/effect/catwalk_plated/dank,
 /obj/structure/lattice,
-/turf/simulated/open,
+/turf/open_space,
 /area/ishimura/tramdeck/tram/station/forward)
 "tNV" = (
 /obj/effect/floor_decal/industrial/warning{
@@ -64920,7 +64920,7 @@
 	dir = 4
 	},
 /obj/structure/catwalk,
-/turf/simulated/open,
+/turf/open_space,
 /area/ishimura/tramdeck/tram/tunnel)
 "tRd" = (
 /obj/structure/surface/table/almayer,
@@ -65060,7 +65060,7 @@
 /obj/structure/prop/fake/railing{
 	dir = 4
 	},
-/turf/simulated/open,
+/turf/open_space,
 /area/ishimura/lower/misc/hallway/escape_executive)
 "tTF" = (
 /obj/structure/machinery/power/apc{
@@ -65176,7 +65176,7 @@
 /obj/structure/prop/fake/railing{
 	dir = 8
 	},
-/turf/simulated/open,
+/turf/open_space,
 /area/ishimura/lower/misc/hallway/escape_executive)
 "tVH" = (
 /obj/structure/machinery/light,
@@ -65237,7 +65237,7 @@
 	dir = 1
 	},
 /obj/structure/lattice,
-/turf/simulated/open,
+/turf/open_space,
 /area/ishimura/lower/maintenance/port)
 "tWH" = (
 /turf/simulated/wall/r_wall,
@@ -65808,7 +65808,7 @@
 /obj/structure/prop/fake/railing{
 	dir = 1
 	},
-/turf/simulated/open,
+/turf/open_space,
 /area/ishimura/tramdeck/tram/tunnel)
 "ufv" = (
 /obj/structure/machinery/light{
@@ -66049,7 +66049,7 @@
 /obj/structure/prop/fake/railing{
 	dir = 8
 	},
-/turf/simulated/open,
+/turf/open_space,
 /area/ishimura/tramdeck/tram/station/aft)
 "ujr" = (
 /obj/structure/disposalpipe/segment{
@@ -66637,7 +66637,7 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
-/turf/simulated/open,
+/turf/open_space,
 /area/ishimura/tramdeck/tram/tunnel)
 "urK" = (
 /obj/structure/foamedmetal,
@@ -67785,7 +67785,7 @@
 	d2 = 4;
 	icon_state = "0-2"
 	},
-/turf/simulated/open,
+/turf/open_space,
 /area/ishimura/upper/engineering/smes/engine)
 "uHP" = (
 /obj/structure/cable{
@@ -67976,7 +67976,7 @@
 /obj/structure/machinery/door/airlock/ds/maintenance{
 	name = "Switching Track"
 	},
-/turf/simulated/open,
+/turf/open_space,
 /area/ishimura/tramdeck/tram/maintenance/midmaintenance)
 "uKt" = (
 /obj/structure/machinery/light,
@@ -68265,7 +68265,7 @@
 /obj/structure/prop/fake/railing{
 	dir = 4
 	},
-/turf/simulated/open,
+/turf/open_space,
 /area/ishimura/tramdeck/tram/station/amidships/north)
 "uOE" = (
 /obj/effect/floor_decal/techfloor,
@@ -68303,7 +68303,7 @@
 /obj/structure/platform/strata/metal{
 	dir = 4
 	},
-/turf/simulated/open,
+/turf/open_space,
 /area/ishimura/tramdeck/switchingstation/upper)
 "uPl" = (
 /obj/structure/pipes/standard/simple/hidden/scrubbers,
@@ -68387,7 +68387,7 @@
 	icon_state = "tramcorner7";
 	dir = 5
 	},
-/turf/simulated/open,
+/turf/open_space,
 /area/ishimura/tramdeck/tram/tunnel)
 "uQI" = (
 /obj/structure/cable{
@@ -68737,7 +68737,7 @@
 	icon_state = "tramcorner8";
 	dir = 5
 	},
-/turf/simulated/open,
+/turf/open_space,
 /area/ishimura/tramdeck/tram/tunnel)
 "uWU" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
@@ -68810,7 +68810,7 @@
 	d2 = 8;
 	icon_state = "2-8"
 	},
-/turf/simulated/open,
+/turf/open_space,
 /area/ishimura/tramdeck/switchingstation/upper)
 "uYD" = (
 /obj/structure/catwalk,
@@ -68833,7 +68833,7 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
-/turf/simulated/open,
+/turf/open_space,
 /area/ishimura/tramdeck/tram/tunnel)
 "uYI" = (
 /obj/structure/machinery/alarm{
@@ -69163,7 +69163,7 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
-/turf/simulated/open,
+/turf/open_space,
 /area/ishimura/tramdeck/tram/tunnel)
 "vee" = (
 /obj/structure/filingcabinet,
@@ -70252,7 +70252,7 @@
 	d2 = 8;
 	icon_state = "1-8"
 	},
-/turf/simulated/open,
+/turf/open_space,
 /area/ishimura/tramdeck/switchingstation/upper)
 "vuD" = (
 /obj/item/reagent_containers/food/snacks/old/taco,
@@ -70575,7 +70575,7 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
-/turf/simulated/open,
+/turf/open_space,
 /area/ishimura/tramdeck/tram/maintenance/midmaintenance)
 "vza" = (
 /obj/structure/cable/cyan,
@@ -71092,7 +71092,7 @@
 	icon_state = "tramcorner5";
 	dir = 5
 	},
-/turf/simulated/open,
+/turf/open_space,
 /area/ishimura/tramdeck/tram/tunnel)
 "vFp" = (
 /obj/structure/disposalpipe/segment,
@@ -71600,7 +71600,7 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/turf/simulated/open,
+/turf/open_space,
 /area/ishimura/tramdeck/tram/tunnel)
 "vNG" = (
 /obj/structure/window/reinforced{
@@ -71635,7 +71635,7 @@
 /obj/structure/prop/fake/railing{
 	dir = 1
 	},
-/turf/simulated/open,
+/turf/open_space,
 /area/ishimura/tramdeck/tram/tunnel)
 "vOT" = (
 /obj/effect/floor_decal/industrial/outline/yellow,
@@ -72132,7 +72132,7 @@
 	d2 = 4;
 	icon_state = "1-4"
 	},
-/turf/simulated/open,
+/turf/open_space,
 /area/ishimura/tramdeck/tram/tunnel)
 "vVE" = (
 /obj/structure/surface/rack,
@@ -72214,7 +72214,7 @@
 /turf/simulated/floor/dank/mono,
 /area/ishimura/tramdeck/tram/misc/auxcargostor)
 "vWx" = (
-/obj/structure/bed/chair/comfy/yellow,
+/obj/structure/bed/chair/comfy/black,
 /obj/effect/landmark/start{
 	name = "Chief Engineer"
 	},
@@ -73500,7 +73500,7 @@
 	d1 = 32;
 	icon_state = "0-2"
 	},
-/turf/simulated/open,
+/turf/open_space,
 /area/space)
 "wpj" = (
 /obj/structure/disposalpipe/segment{
@@ -73590,7 +73590,7 @@
 	icon_state = "4-8"
 	},
 /obj/structure/prop/fake/railing,
-/turf/simulated/open,
+/turf/open_space,
 /area/ishimura/tramdeck/tram/tunnel)
 "wqH" = (
 /turf/simulated/floor/dank/golf_brown,
@@ -73869,7 +73869,7 @@
 "wvB" = (
 /obj/structure/platform_decoration/strata/metal,
 /obj/structure/lattice,
-/turf/simulated/open,
+/turf/open_space,
 /area/ishimura/tramdeck/switchingstation/upper)
 "wvJ" = (
 /obj/effect/floor_decal/industrial/outline/yellow,
@@ -74175,7 +74175,7 @@
 /obj/structure/pipes/standard/simple/hidden/scrubbers{
 	dir = 4
 	},
-/turf/simulated/open,
+/turf/open_space,
 /area/ishimura/tramdeck/tram/maintenance/midmaintenance)
 "wBn" = (
 /obj/effect/floor_decal/dank/mono_half{
@@ -74210,7 +74210,7 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/turf/simulated/open,
+/turf/open_space,
 /area/ishimura/tramdeck/tram/station/aft)
 "wBX" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
@@ -75142,7 +75142,7 @@
 	dir = 5
 	},
 /obj/structure/tramwall,
-/turf/simulated/open,
+/turf/open_space,
 /area/ishimura/tramdeck/tram/tunnel)
 "wQZ" = (
 /obj/structure/machinery/light,
@@ -75408,7 +75408,7 @@
 /obj/structure/prop/fake/railing{
 	dir = 1
 	},
-/turf/simulated/open,
+/turf/open_space,
 /area/ishimura/lower/misc/hallway/central)
 "wWh" = (
 /obj/effect/floor_decal/corner/grey/three_quarters,
@@ -75900,7 +75900,7 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
-/turf/simulated/open,
+/turf/open_space,
 /area/ishimura/tramdeck/tram/maintenance/midmaintenance)
 "xbs" = (
 /obj/structure/surface/rack,
@@ -76398,7 +76398,7 @@
 	dir = 4
 	},
 /obj/structure/prop/fake/railing,
-/turf/simulated/open,
+/turf/open_space,
 /area/ishimura/tramdeck/tram/tunnel)
 "xke" = (
 /obj/structure/reagent_dispensers/fueltank,
@@ -76491,7 +76491,7 @@
 	dir = 4
 	},
 /obj/structure/machinery/light/spot,
-/turf/simulated/open,
+/turf/open_space,
 /area/ishimura/tramdeck/tram/maintenance/midmaintenance)
 "xll" = (
 /obj/item/device/radio/intercom{
@@ -76534,7 +76534,7 @@
 /turf/simulated/floor/dank/grater,
 /area/ishimura/lower/crew/sleepblock/commons)
 "xmd" = (
-/turf/simulated/open,
+/turf/open_space,
 /area/ishimura/tramdeck/switchingstation/upper)
 "xmr" = (
 /obj/structure/machinery/light/small,
@@ -77309,7 +77309,7 @@
 	dir = 1
 	},
 /obj/structure/lattice,
-/turf/simulated/open,
+/turf/open_space,
 /area/ishimura/tramdeck/tram/tunnel)
 "xBH" = (
 /obj/structure/pipes/vents/pump/on{
@@ -77520,7 +77520,7 @@
 	},
 /obj/structure/window/reinforced/full,
 /obj/structure/grille,
-/turf/simulated/open,
+/turf/open_space,
 /area/ishimura/tramdeck/tram/tunnel)
 "xEJ" = (
 /obj/structure/surface/rack,
@@ -77645,7 +77645,7 @@
 	icon_state = "tramcorner1";
 	dir = 5
 	},
-/turf/simulated/open,
+/turf/open_space,
 /area/ishimura/tramdeck/tram/tunnel)
 "xFP" = (
 /obj/structure/closet/secure_closet/engineering_welding,
@@ -77749,7 +77749,7 @@
 	icon_state = "0-2"
 	},
 /obj/structure/lattice,
-/turf/simulated/open,
+/turf/open_space,
 /area/ishimura/tramdeck/tram/maintenance/midmaintenance)
 "xHE" = (
 /turf/simulated/wall/r_wall,
@@ -77779,7 +77779,7 @@
 	name = "Tram Section Lockdown";
 	dir = 4
 	},
-/turf/simulated/open,
+/turf/open_space,
 /area/ishimura/tramdeck/tram/tunnel)
 "xIf" = (
 /obj/structure/bed/chair{
@@ -78108,7 +78108,7 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
-/turf/simulated/open,
+/turf/open_space,
 /area/ishimura/tramdeck/tram/tunnel)
 "xMB" = (
 /obj/structure/pipes/standard/manifold/hidden/supply{
@@ -78130,7 +78130,7 @@
 	dir = 8
 	},
 /obj/structure/lattice,
-/turf/simulated/open,
+/turf/open_space,
 /area/ishimura/tramdeck/switchingstation/upper)
 "xMV" = (
 /obj/structure/disposalpipe/junction{
@@ -79023,7 +79023,7 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
-/turf/simulated/open,
+/turf/open_space,
 /area/ishimura/tramdeck/tram/tunnel)
 "ybb" = (
 /obj/structure/machinery/power/apc{
@@ -79931,7 +79931,7 @@
 /area/ishimura/tramdeck/tram/undertunnel/utars)
 "ylX" = (
 /obj/structure/ladder,
-/turf/simulated/open,
+/turf/open_space,
 /area/ishimura/lower/maintenance/port)
 
 (1,1,1) = {"

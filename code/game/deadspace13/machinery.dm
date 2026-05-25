@@ -18,7 +18,7 @@
 	name = "Marker"
 	desc = "<span class='minorwarning'>It fills you with fear and paranoia...</span>"
 	icon = 'icons/obj/marker_giant.dmi'
-	icon_state = "marker_giant_dormant"
+	icon_state = "marker_giant_active_anim"
 	pixel_x = -32
 	density = TRUE
 	anchored = TRUE
@@ -154,3 +154,19 @@
 	icon_state = "deadspace_workbench"
 	density = TRUE
 	anchored = TRUE
+
+/obj/machinery/mining
+	icon = 'icons/obj/mining_drill.dmi'
+	anchored = 0
+	density = 1
+	layer = 4.08 //So it draws over mobs in the tile north of it.
+
+/obj/machinery/mining/drill
+	name = "mining drill head"
+	desc = "An enormous drill."
+	icon_state = "mining_drill"
+
+/obj/machinery/mining/brace
+	name = "mining drill brace"
+	desc = "A machinery brace for an industrial drill. It looks easily two feet thick."
+	icon_state = "mining_brace"
