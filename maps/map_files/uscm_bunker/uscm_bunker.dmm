@@ -74,17 +74,6 @@
 /obj/structure/machinery/power/apc/almayer/east,
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/hangar)
-"aj" = (
-/obj/structure/machinery/door/poddoor/shutters/almayer{
-	dir = 4;
-	id = "squadarmory2";
-	name = "\improper Gear Lockers"
-	},
-/turf/open/floor/almayer/test_floor4,
-/area/golden_arrow/platoonprep)
-"ak" = (
-/turf/open/floor/almayer/test_floor4,
-/area/golden_arrow/platoonprep)
 "ap" = (
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
@@ -2272,7 +2261,7 @@
 	layer = 1.9
 	},
 /obj/structure/machinery/door/poddoor/almayer/closed{
-	layer = 3.3;
+	layer = 3.4;
 	id = "squadblastdoor2";
 	name = "First Platoon Ready Bay Blast Door";
 	dir = 8
@@ -2877,14 +2866,6 @@
 	},
 /turf/open/floor/almayer/cargo,
 /area/golden_arrow/platoonprep)
-"qq" = (
-/obj/structure/machinery/door/poddoor/almayer{
-	dir = 4;
-	name = "\improper Storage Bay Blast Door";
-	id = "storagebay1"
-	},
-/turf/open/space/basic,
-/area/golden_arrow/hangar)
 "qs" = (
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
@@ -3348,7 +3329,7 @@
 	layer = 1.9
 	},
 /obj/structure/machinery/door/poddoor/almayer/closed{
-	layer = 3.3;
+	layer = 3.4;
 	id = "squadblastdoor2";
 	name = "First Platoon Ready Bay Blast Door";
 	dir = 8
@@ -13092,8 +13073,8 @@ Ku
 JO
 qv
 Ku
-ak
-aj
+qv
+qv
 Ku
 kz
 nd
@@ -14671,7 +14652,7 @@ LI
 es
 es
 UB
-qq
+es
 LI
 Tr
 Rb
