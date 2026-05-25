@@ -20,10 +20,6 @@
 	//This is false when the tank is empty, and also false when the contained organ has finished its growth and is just being maintained
 	var/forming = FALSE
 
-	//The growth tank can only contain certain kinds of reagents, got to remain pure
-	var/list/valid_reagents = list(/datum/reagent/nutriment/biomass,
-	/datum/reagent/nutriment/stemcells)	//TODO: Add stem cells and blood to this
-
 	var/growth_rate = 1.2	//This many units of refined biomass are added to the forming organ each tick
 
 	var/efficiency = 0.9	//Some of the biomass is wasted

@@ -118,7 +118,6 @@ var/list/flooring_types
 	descriptor = "plating"
 	icon = 'icons/turf/flooring/plating.dmi'
 	icon_base = "plating"
-	build_type = /obj/item/stack/material/steel //|  TURF_HAS_INNER_CORNERS
 	can_paint = 1
 	plating_type = /decl/flooring/reinforced/plating/under
 	is_plating = TRUE
@@ -144,7 +143,6 @@ var/list/flooring_types
 	icon = 'icons/turf/flooring/plating.dmi'
 	descriptor = "support beams"
 	icon_base = "under"
-	build_type = /obj/item/stack/material/steel //Same type as the normal plating, we'll use can_build_floor to control it
 	can_paint = 1
 	plating_type = /decl/flooring/reinforced/plating/hull
 	is_plating = TRUE
@@ -159,7 +157,6 @@ var/list/flooring_types
 	descriptor = "outer hull"
 	icon = 'icons/turf/flooring/hull.dmi'
 	icon_base = "hullcenter"
-	build_type = /obj/item/stack/material/plasteel
 	has_base_range = 35
 	//try_update_icon = 0
 	plating_type = null
@@ -354,7 +351,6 @@ var/list/flooring_types
 	desc = "Heavily reinforced with steel plating."
 	icon = 'icons/turf/flooring/tiles.dmi'
 	icon_base = "reinforced"
-	build_type = /obj/item/stack/material/steel
 	build_cost = 1
 	build_time = 30
 	apply_thermal_conductivity = 0.025

@@ -79,50 +79,6 @@
 	icon_closed = "toolcloset"
 	icon_opened = "toolclosetopen"
 
-/obj/structure/closet/toolcloset/New()
-	..()
-	new /obj/random/tool(src)
-	new /obj/random/tool(src)
-	new /obj/random/tool(src)
-	new /obj/random/loot/often(src)
-	new /obj/random/tool_upgrade(src) //Guaranteeed toolmod
-	if(prob(50))
-		new /obj/random/tool_upgrade(src)//Good chance for another
-	if(prob(10))
-		new /obj/random/tool_upgrade(src)//Small chance for a third
-
-	if(prob(40))
-		new /obj/item/clothing/suit/storage/hazardvest(src)
-	if(prob(50))
-		new /obj/item/flashlight(src)
-	if(prob(50))
-		new /obj/item/tool/screwdriver(src)
-	if(prob(50))
-		new /obj/item/tool/wrench(src)
-	if(prob(50))
-		new /obj/item/tool/weldingtool(src)
-	if(prob(50))
-		new /obj/item/tool/crowbar(src)
-	if(prob(50))
-		new /obj/item/tool/wirecutters(src)
-	if(prob(50))
-		new /obj/item/t_scanner(src)
-	if(prob(20))
-		new /obj/item/storage/belt/utility(src)
-	if(prob(30))
-		new /obj/item/stack/cable_coil/random(src)
-	if(prob(30))
-		new /obj/item/stack/cable_coil/random(src)
-	if(prob(30))
-		new /obj/item/stack/cable_coil/random(src)
-	if(prob(20))
-		new /obj/item/tool/multitool(src)
-	if(prob(5))
-		new /obj/item/clothing/gloves/insulated(src)
-	if(prob(40))
-		new /obj/item/clothing/head/hardhat(src)
-
-
 /obj/structure/net/net_wall
 	icon_state = "net_w"
 	density = 1

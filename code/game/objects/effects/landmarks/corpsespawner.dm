@@ -72,7 +72,7 @@
 
 /obj/effect/landmark/corpsespawner/security
 	name = "Corpse - Security Guard, Wey-Yu"
-	equip_path = /datum/equipment_preset/colonist/corpse/security
+	equip_path = /datum/equipment_preset/corpse/security
 
 /obj/effect/landmark/corpsespawner/security/liaison
 	name = "Corporate Liaison"
