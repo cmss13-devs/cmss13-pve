@@ -1192,7 +1192,7 @@
 	},
 /area/lv624/ground/jungle/north_east_jungle)
 "bxh" = (
-/obj/item/ammo_casing{
+/obj/effect/decal/ammo_casing{
 	dir = 5;
 	icon_state = "cartridge_10";
 	layer = 2.97
@@ -1237,7 +1237,7 @@
 /turf/open/auto_turf/strata_grass/layer0_mud,
 /area/lv624/ground/caves)
 "bAo" = (
-/obj/item/ammo_casing{
+/obj/effect/decal/ammo_casing{
 	icon_state = "cartridge_10"
 	},
 /obj/structure/machinery/light/small{
@@ -2332,7 +2332,7 @@
 "cMy" = (
 /obj/item/stool,
 /obj/effect/decal/cleanable/dirt,
-/obj/item/ammo_casing/bullet{
+/obj/effect/decal/ammo_casing/bullet{
 	pixel_x = -12;
 	dir = 5
 	},
@@ -2639,11 +2639,11 @@
 /area/whiskey_outpost/inside/supply)
 "dhp" = (
 /obj/structure/surface/rack,
-/obj/item/weapon/gun/rifle/m4ra/pve{
+/obj/item/weapon/gun/rifle/m49a/pve{
 	pixel_y = 6;
 	pixel_x = -2
 	},
-/obj/item/weapon/gun/rifle/m4ra/pve{
+/obj/item/weapon/gun/rifle/m49a/pve{
 	pixel_y = -2;
 	pixel_x = -3
 	},
@@ -2660,25 +2660,25 @@
 /obj/item/explosive/plastic,
 /obj/item/explosive/plastic,
 /obj/item/explosive/plastic/breaching_charge,
-/obj/item/ammo_magazine/rifle/m4ra/pve,
-/obj/item/ammo_magazine/rifle/m4ra/pve,
-/obj/item/ammo_magazine/rifle/m4ra/pve,
-/obj/item/ammo_magazine/rifle/m4ra/pve,
-/obj/item/ammo_magazine/rifle/m4ra/pve,
-/obj/item/ammo_magazine/rifle/m4ra/pve,
-/obj/item/ammo_magazine/rifle/m4ra/pve,
-/obj/item/ammo_magazine/rifle/m4ra/pve,
-/obj/item/ammo_magazine/rifle/m4ra/pve,
-/obj/item/ammo_magazine/rifle/m4ra/pve,
-/obj/item/ammo_magazine/rifle/m4ra/pve,
-/obj/item/ammo_magazine/rifle/m4ra/pve,
-/obj/item/ammo_magazine/rifle/m4ra/pve,
-/obj/item/ammo_magazine/rifle/m4ra/pve,
-/obj/item/ammo_magazine/rifle/m4ra/pve,
-/obj/item/ammo_magazine/rifle/m4ra/pve,
-/obj/item/ammo_magazine/rifle/m4ra/pve,
-/obj/item/ammo_magazine/rifle/m4ra/pve,
-/obj/item/ammo_magazine/rifle/m4ra/pve,
+/obj/item/ammo_magazine/rifle/m49a/custom/pve,
+/obj/item/ammo_magazine/rifle/m49a/custom/pve,
+/obj/item/ammo_magazine/rifle/m49a/custom/pve,
+/obj/item/ammo_magazine/rifle/m49a/custom/pve,
+/obj/item/ammo_magazine/rifle/m49a/custom/pve,
+/obj/item/ammo_magazine/rifle/m49a/custom/pve,
+/obj/item/ammo_magazine/rifle/m49a/custom/pve,
+/obj/item/ammo_magazine/rifle/m49a/custom/pve,
+/obj/item/ammo_magazine/rifle/m49a/custom/pve,
+/obj/item/ammo_magazine/rifle/m49a/custom/pve,
+/obj/item/ammo_magazine/rifle/m49a/custom/pve,
+/obj/item/ammo_magazine/rifle/m49a/custom/pve,
+/obj/item/ammo_magazine/rifle/m49a/custom/pve,
+/obj/item/ammo_magazine/rifle/m49a/custom/pve,
+/obj/item/ammo_magazine/rifle/m49a/custom/pve,
+/obj/item/ammo_magazine/rifle/m49a/custom/pve,
+/obj/item/ammo_magazine/rifle/m49a/custom/pve,
+/obj/item/ammo_magazine/rifle/m49a/custom/pve,
+/obj/item/ammo_magazine/rifle/m49a/custom/pve,
 /turf/open/floor/prison{
 	dir = 10;
 	icon_state = "floor_marked"
@@ -3155,7 +3155,7 @@
 	},
 /area/lv624/ground/jungle/north_east_jungle)
 "dCX" = (
-/obj/item/ammo_casing{
+/obj/effect/decal/ammo_casing{
 	icon_state = "cartridge_3_1";
 	layer = 2
 	},
@@ -6160,7 +6160,7 @@
 	},
 /area/lv624/ground/jungle/north_east_jungle)
 "gOG" = (
-/obj/item/ammo_casing{
+/obj/effect/decal/ammo_casing{
 	icon_state = "cartridge_10";
 	pixel_x = 4
 	},
@@ -6655,7 +6655,7 @@
 /turf/open/auto_turf/strata_grass/layer1,
 /area/lv624/ground/jungle/north_east_jungle)
 "hnN" = (
-/obj/item/ammo_casing/bullet{
+/obj/effect/decal/ammo_casing/bullet{
 	pixel_x = -8
 	},
 /turf/open/floor{
@@ -7998,7 +7998,7 @@
 /turf/open/gm,
 /area/lv624/ground/jungle/north_east_jungle)
 "iIW" = (
-/obj/item/ammo_casing{
+/obj/effect/decal/ammo_casing{
 	icon_state = "cartridge_2_1";
 	layer = 2
 	},
@@ -9830,7 +9830,7 @@
 /turf/open/floor/plating/plating_catwalk/prison,
 /area/whiskey_outpost/inside/bunker/pillbox/one)
 "kXj" = (
-/obj/item/ammo_casing{
+/obj/effect/decal/ammo_casing{
 	icon_state = "cartridge_5"
 	},
 /turf/open/gm,
@@ -10100,7 +10100,7 @@
 	pixel_x = 4;
 	pixel_y = 17
 	},
-/obj/item/storage/box/uscm_mre{
+/obj/item/ammo_box/magazine/misc/mre{
 	pixel_x = -9;
 	pixel_y = -2
 	},
@@ -10517,7 +10517,7 @@
 	},
 /area/lv624/ground/jungle/north_east_jungle)
 "lHs" = (
-/obj/item/ammo_casing{
+/obj/effect/decal/ammo_casing{
 	icon_state = "cartridge_2_1";
 	layer = 2
 	},
@@ -11041,7 +11041,7 @@
 /obj/structure/machinery/microwave{
 	pixel_y = 6
 	},
-/obj/item/storage/box/uscm_mre{
+/obj/item/ammo_box/magazine/misc/mre{
 	pixel_x = 1;
 	pixel_y = -8
 	},
@@ -11536,7 +11536,7 @@
 /turf/open/auto_turf/strata_grass/layer0_mud,
 /area/lv624/ground/caves)
 "mRR" = (
-/obj/item/ammo_casing{
+/obj/effect/decal/ammo_casing{
 	dir = 5;
 	icon_state = "cartridge_10"
 	},
@@ -12760,7 +12760,7 @@
 /turf/open/floor,
 /area/whiskey_outpost/inside/bunker)
 "okb" = (
-/obj/item/ammo_casing{
+/obj/effect/decal/ammo_casing{
 	dir = 5;
 	icon_state = "cartridge_9";
 	pixel_x = 3;
@@ -13883,7 +13883,7 @@
 /area/whiskey_outpost/inside/bunker)
 "ptX" = (
 /obj/structure/surface/table/reinforced/prison,
-/obj/item/reagent_container/food/snacks/packaged_meal{
+/obj/item/reagent_container/food/snacks/microwavable/packaged_burger{
 	pixel_x = 9
 	},
 /obj/item/tool/lighter/random{
@@ -17009,10 +17009,10 @@
 /area/lv624/ground/jungle/north_east_jungle)
 "sGV" = (
 /obj/structure/surface/table/almayer,
-/obj/item/storage/box/guncase/flamer/fuel{
+/obj/item/storage/box/guncase/heavy/fuel{
 	pixel_y = 8
 	},
-/obj/item/storage/box/guncase/flamer/fuel,
+/obj/item/storage/box/guncase/heavy/fuel,
 /turf/open/floor/prison{
 	dir = 1;
 	icon_state = "darkredfull2"
@@ -17399,7 +17399,7 @@
 	pixel_x = -5;
 	pixel_y = 13
 	},
-/obj/item/storage/box/uscm_mre{
+/obj/item/ammo_box/magazine/misc/mre{
 	pixel_x = -5;
 	pixel_y = 6
 	},
@@ -17880,7 +17880,7 @@
 /obj/structure/machinery/microwave{
 	pixel_y = 2
 	},
-/obj/item/storage/box/uscm_mre{
+/obj/item/ammo_box/magazine/misc/mre{
 	pixel_x = -4;
 	pixel_y = 12
 	},

@@ -822,7 +822,7 @@
 /obj/structure/cable/green{
 	d1 = 16;
 	d2 = 0;
-	icon_state = "16-0"
+	icon_state = "0-8"
 	},
 /obj/structure/cable/green{
 	d2 = 4;
@@ -9063,7 +9063,7 @@
 /obj/structure/cable/white{
 	d1 = 4;
 	d2 = 8;
-	icon_state = "32-8"
+	icon_state = "0-2"
 	},
 /obj/machinery/atmospherics/pipe/zpipe/down/supply{
 	dir = 1
@@ -19134,7 +19134,7 @@
 /obj/structure/cable/green{
 	d1 = 32;
 	d2 = 2;
-	icon_state = "32-2"
+	icon_state = "0-2"
 	},
 /obj/machinery/atmospherics/pipe/zpipe/up/supply,
 /obj/machinery/atmospherics/pipe/zpipe/up/scrubbers,
@@ -21589,7 +21589,7 @@
 /obj/structure/disposalpipe/down,
 /obj/structure/cable/green{
 	d2 = 2;
-	icon_state = "32-2"
+	icon_state = "0-2"
 	},
 /obj/machinery/atmospherics/pipe/zpipe/down/supply,
 /obj/machinery/atmospherics/pipe/zpipe/down/scrubbers,
@@ -29083,7 +29083,7 @@
 /obj/structure/cable/green{
 	d1 = 16;
 	d2 = 0;
-	icon_state = "16-0"
+	icon_state = "0-8"
 	},
 /obj/structure/cable/green{
 	d2 = 8;
@@ -32206,7 +32206,7 @@
 /obj/structure/cable/green{
 	d1 = 16;
 	d2 = 0;
-	icon_state = "16-0"
+	icon_state = "0-8"
 	},
 /obj/structure/machinery/light/small/red{
 	dir = 1
@@ -47630,7 +47630,7 @@
 /obj/structure/cable/green{
 	d1 = 32;
 	d2 = 2;
-	icon_state = "32-2"
+	icon_state = "0-2"
 	},
 /obj/structure/disposalpipe/down,
 /turf/simulated/open,
@@ -51205,7 +51205,7 @@
 /obj/structure/cable/green{
 	d1 = 16;
 	d2 = 0;
-	icon_state = "16-0"
+	icon_state = "0-8"
 	},
 /obj/structure/cable/green{
 	d2 = 8;
@@ -51276,7 +51276,7 @@
 /obj/structure/cable/green{
 	d1 = 16;
 	d2 = 0;
-	icon_state = "16-0"
+	icon_state = "0-8"
 	},
 /turf/simulated/floor,
 /area/ishimura/tramdeck/tram/maintenance/midmaintenance)
@@ -56005,7 +56005,7 @@
 /obj/structure/lattice,
 /obj/structure/cable/green{
 	d2 = 2;
-	icon_state = "32-2"
+	icon_state = "0-2"
 	},
 /obj/machinery/atmospherics/pipe/zpipe/down/supply,
 /obj/machinery/atmospherics/pipe/zpipe/down/scrubbers,
@@ -65228,7 +65228,7 @@
 	},
 /obj/structure/cable/green{
 	d1 = 32;
-	icon_state = "32-1"
+	icon_state = "0-2"
 	},
 /obj/machinery/atmospherics/pipe/zpipe/down/scrubbers{
 	dir = 1
@@ -67778,12 +67778,12 @@
 /obj/structure/cable/green{
 	d1 = 16;
 	d2 = 0;
-	icon_state = "16-0"
+	icon_state = "0-8"
 	},
 /obj/structure/cable/green{
 	d1 = 32;
 	d2 = 4;
-	icon_state = "32-4"
+	icon_state = "0-2"
 	},
 /turf/simulated/open,
 /area/ishimura/upper/engineering/smes/engine)
@@ -72070,7 +72070,7 @@
 /obj/structure/cable/white{
 	d1 = 16;
 	d2 = 0;
-	icon_state = "16-0"
+	icon_state = "0-8"
 	},
 /obj/structure/cable/white{
 	d2 = 8;
@@ -73498,7 +73498,7 @@
 /obj/structure/lattice,
 /obj/structure/cable/green{
 	d1 = 32;
-	icon_state = "32-1"
+	icon_state = "0-2"
 	},
 /turf/simulated/open,
 /area/space)
@@ -77746,7 +77746,7 @@
 /obj/structure/cable/green{
 	d1 = 32;
 	d2 = 2;
-	icon_state = "32-2"
+	icon_state = "0-2"
 	},
 /obj/structure/lattice,
 /turf/simulated/open,
@@ -78985,7 +78985,7 @@
 /obj/structure/cable{
 	d1 = 16;
 	d2 = 0;
-	icon_state = "16-0"
+	icon_state = "0-8"
 	},
 /turf/simulated/floor/plating,
 /area/ishimura/lower/engineering/substation/port)
