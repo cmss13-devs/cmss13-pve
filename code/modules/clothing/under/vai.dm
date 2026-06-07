@@ -31,7 +31,7 @@
 	icon_state = "greenflower"
 	worn_state = "greenflower"
 
-/obj/item/clothing/head/helmet/marine/sof/vai
+/obj/item/clothing/head/helmet/marine/covert/vai
 	name = "\improper M09 Custom Helmet"
 	desc = "Partially due to old stocks, partially due to preference. USCM MARSOC commando ballistic helmet, customized and updated to mission requirements."
 	icon_state = "marsoc_helmet"
