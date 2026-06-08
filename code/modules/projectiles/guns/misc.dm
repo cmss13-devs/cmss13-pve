@@ -351,22 +351,28 @@
 	requires_harness = FALSE
 
 /obj/item/weapon/gun/pkp/iff/para/handle_starting_attachment()
-	..()
-	var/obj/item/attachable/attachie = new /obj/item/attachable/pkpbarrel/para(src)
-	attachie.flags_attach_features &= ~ATTACH_REMOVABLE
-	attachie.Attach(src)
-	update_attachable(attachie.slot)
+	var/obj/item/attachable/B = new /obj/item/attachable/pkpbarrel/para(src)
+	B.flags_attach_features &= ~ATTACH_REMOVABLE
+	B.Attach(src)
+	update_attachable(B.slot)
 
-	var/obj/item/attachable/pkpstock = new /obj/item/attachable/stock/pkpstock/para(src)
-	pkpstock.flags_attach_features &= ~ATTACH_REMOVABLE
-	pkpstock.Attach(src)
-	update_attachable(pkpstock.slot)
+	var/obj/item/attachable/S = new /obj/item/attachable/stock/pkpstock/para(src)
+	S.flags_attach_features &= ~ATTACH_REMOVABLE
+	S.Attach(src)
+	update_attachable(S.slot)
+
+	//invisible mag harness
+	var/obj/item/attachable/magnetic_harness/I = new(src)
+	I.hidden = TRUE
+	I.flags_attach_features &= ~ATTACH_REMOVABLE
+	I.Attach(src)
+	update_attachable(I.slot)
 
 /obj/item/weapon/gun/pkp/iff/para/set_gun_config_values()
 	..()
-	accuracy_mult = BASE_ACCURACY_MULT + HIT_ACCURACY_MULT_TIER_2
-	fa_max_scatter = SCATTER_AMOUNT_TIER_5
-	// gotta be a price for not needing the harness
+	accuracy_mult = BASE_ACCURACY_MULT + HIT_ACCURACY_MULT_TIER_1
+	fa_max_scatter = SCATTER_AMOUNT_TIER_4
+	damage_falloff_mult = 1.25
 
 /obj/item/weapon/gun/pkp/iff/para/preloaded
 	current_mag = /obj/item/ammo_magazine/pkp/standard_fmj
