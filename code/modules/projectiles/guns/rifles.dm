@@ -1477,11 +1477,6 @@
 		/obj/item/attachable/verticalgrip/upp,
 		/obj/item/attachable/flashlight/grip/upp,
 		/obj/item/attachable/burstfire_assembly,
-		/obj/item/attachable/attached_gun/flamer,
-		/obj/item/attachable/attached_gun/flamer/advanced,
-		/obj/item/attachable/attached_gun/extinguisher,
-		/obj/item/attachable/attached_gun/grenade/type71,
-		/obj/item/attachable/attached_gun/grenade/type71/preloaded,
 		/obj/item/attachable/lasersight, // Side Rail
 		/obj/item/attachable/lasersight/upp,
 		/obj/item/attachable/flashlight,
@@ -1501,7 +1496,7 @@
 	damage_falloff_mult = 1.5
 
 /obj/item/weapon/gun/rifle/type71/carbine/set_gun_attachment_offsets()
-	attachable_offset = list("muzzle_x" = 33, "muzzle_y" = 17,"rail_x" = 15, "rail_y" = 22, "under_x" = 25, "under_y" = 13, "stock_x" = 15, "stock_y" = 13, "side_rail_x" = 21, "side_rail_y" = 18, "sling_x" = 13, "sling_y" = 21)
+	attachable_offset = list("muzzle_x" = 33, "muzzle_y" = 17,"rail_x" = 15, "rail_y" = 22, "under_x" = 25, "under_y" = 14, "stock_x" = 15, "stock_y" = 13, "side_rail_x" = 21, "side_rail_y" = 18, "sling_x" = 13, "sling_y" = 21)
 
 /obj/item/weapon/gun/rifle/type71/carbine/unloaded
 	current_mag = null
