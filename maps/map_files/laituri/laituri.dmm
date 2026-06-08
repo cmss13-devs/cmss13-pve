@@ -6667,7 +6667,7 @@
 /turf/open/floor/corsat/plate,
 /area/golden_arrow/prep_hallway)
 "wg" = (
-/obj/structure/gun_rack/type71/carbine,
+/obj/structure/gun_rack/type71/carbine/recon,
 /turf/open/floor/strata/floor3/east,
 /area/golden_arrow/prep_hallway)
 "wh" = (

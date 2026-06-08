@@ -138,6 +138,41 @@
 	desc = "A generic UPP Support synthetic"
 	path = /datum/equipment_preset/upp/synth
 
+/datum/human_ai_equipment_preset/upp/forecon/rifleman
+	name = "UPP Recon Rifleman"
+	desc = "Light Infantry UPP soldier. These guys are equipped well enough to fight most forces."
+	path = /datum/equipment_preset/upp/rifleman/forecon
+
+/datum/human_ai_equipment_preset/upp/forecon/rto
+	name = "UPP Recon RTO"
+	desc = "Light Infantry UPP soldier, but with a radio backpack. These guys are equipped well enough to fight most forces."
+	path = /datum/equipment_preset/upp/rto/forecon
+
+/datum/human_ai_equipment_preset/upp/forecon/machinegunner
+	name = "UPP Recon Machinegunner"
+	desc = "Light Infantry UPP soldier, but armed with a GPMG."
+	path = /datum/equipment_preset/upp/machinegunner/forecon
+
+/datum/human_ai_equipment_preset/upp/forecon/machinegunner_heap
+	name = "UPP Recon Machinegunner (HEAP)"
+	desc = "Light Infantry UPP soldier, but armed with a GPMG firing HEAP rounds."
+	path = /datum/equipment_preset/upp/machinegunner/forecon/heap
+
+/datum/human_ai_equipment_preset/upp/forecon/medic
+	name = "UPP Recon Sanitar"
+	desc = "The guy who tries to keep the rest of the team alive. Comes equipped with medical supplies, though they don’t always live long enough to do treatment."
+	path = /datum/equipment_preset/upp/sanitar/forecon
+
+/datum/human_ai_equipment_preset/upp/forecon/sergeant
+	name = "UPP Assistant Recon Squad Sergeant"
+	desc = "The assistant leader of a UPP recon squad. Functionally very similar to recon riflemen."
+	path = /datum/equipment_preset/upp/squadlead/forecon
+
+/datum/human_ai_equipment_preset/upp/forecon/platoon_sergeant
+	name = "UPP Recon Squad Sergeant"
+	desc = "The leader of a UPP recon squad. Functionally very similar to recon riflemen."
+	path = /datum/equipment_preset/upp/squadlead/forecon
+
 /datum/human_ai_equipment_preset/upp/combat_android
 	name = "UPP Combat Android"
 	desc = "The UPP never signed documents pretaining to the legality of combat androids but GMs should be mindful not to overuse them, Dressed like a standard"
