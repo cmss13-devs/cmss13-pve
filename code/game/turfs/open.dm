@@ -461,7 +461,7 @@
 	if(rand(0,15) == 0)
 		icon_state = "desert[pick("0","1","2","3")]"
 
-/turf/open/gm/dirt/desert0
+/turf/open/gm/dirt/desert0	
 	icon_state = "desert0"
 
 /turf/open/gm/dirt/desert1
