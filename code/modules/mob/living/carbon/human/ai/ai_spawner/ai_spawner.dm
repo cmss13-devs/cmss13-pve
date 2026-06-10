@@ -268,7 +268,8 @@ GLOBAL_LIST_EMPTY(pre_start_humanAI)
 							add_preset(ai_human.assigned_equipment_preset.type, "ALT added preset.", update_ui = TRUE)
 					return
 				//so it is a left click
-				SpawnHuman(user, params, object)
+				if(isturf(get_turf(object)))
+					SpawnHuman(user, params, object)
 
 /datum/human_ai_spawner_menu/proc/SpawnHuman(mob/user, params, atom/object)
 	var/faction_of_preset
@@ -398,7 +399,8 @@ GLOBAL_LIST_EMPTY(pre_start_humanAI)
 		for(var/comp in ai_human.datum_components )
 			var/monster = ai_human.datum_components[comp]
 			if(istype(ai_human.datum_components[comp], /datum/component/human_ai))
-				ai_human.datum_components[comp].Initialize()
+				var/datum/component/human_ai/ai = ai_human.datum_components[comp]
+				ai.Initialize()
 
 
 
