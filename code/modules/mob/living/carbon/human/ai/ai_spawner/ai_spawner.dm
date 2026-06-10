@@ -397,7 +397,6 @@ GLOBAL_LIST_EMPTY(pre_start_humanAI)
 
 	for(var/mob/living/carbon/human/ai_human in GLOB.pre_start_humanAI)
 		for(var/comp in ai_human.datum_components )
-			var/monster = ai_human.datum_components[comp]
 			if(istype(ai_human.datum_components[comp], /datum/component/human_ai))
 				var/datum/component/human_ai/ai = ai_human.datum_components[comp]
 				ai.Initialize()

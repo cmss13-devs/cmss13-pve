@@ -211,7 +211,7 @@
 
 	SSticker.mode.toggleable_flags ^= MODE_HUMAN_AI_TWEAKS
 	message_admins("[src] has [MODE_HAS_TOGGLEABLE_FLAG(MODE_HUMAN_AI_TWEAKS) ? "toggled Human AI tweaks on" : "toggled Human AI tweaks off"].")
-
+/*
 /client/proc/import_human_ai_preset_dictictonary()
 	set name = "Import Human AI Presets Dictionary"
 	set category = "Game Master.HumanAI"
@@ -228,3 +228,4 @@
 		for(var/list/preset_data in faction_list)
 			preset_data["path"] = text2path(preset_data["path"])
 	the_beast = new()
+*/
