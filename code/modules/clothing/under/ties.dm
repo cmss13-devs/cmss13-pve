@@ -1917,6 +1917,13 @@
 	flags_atom = NO_SNOW_TYPE
 	slot = ACCESSORY_SLOT_M3UTILITY
 
+/obj/item/clothing/accessory/storage/webbing/m3/m40/upp
+	name = "\improper Type 82 Pattern Grenade Webbing"
+	desc = "A set of UPP webbing outfitted with small pouches specifically shaped to carry grenades, hand or impact."
+	icon_state = "upp_webbing_grenade"
+	flags_atom = NO_SNOW_TYPE
+	slot = ACCESSORY_SLOT_M3UTILITY
+
 //===========================//CUSTOM RMC ARMOR WEBBING\\================================\\
 
 /obj/item/clothing/accessory/storage/webbing/m3/uppsmall/rmc

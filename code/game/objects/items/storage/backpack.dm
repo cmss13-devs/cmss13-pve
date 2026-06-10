@@ -1154,6 +1154,22 @@ GLOBAL_LIST_EMPTY_TYPED(radio_packs, /obj/item/storage/backpack/marine/satchel/r
 	max_fuel = 180
 	max_storage_space = 12
 
+/obj/item/storage/backpack/marine/upp
+	name = "\improper UCBP4 combat backpack"
+	desc = "A UPP military standard-issue Union Combat Backpack MK4. Very robust and heavy, it's bulky profile provides ample space for all the gear necessary for time spent in the field."
+	icon_state = "marinepack_upp"
+	item_state = "marinepack_upp"
+	max_storage_space = 24
+	bag_open_time = 3 SECONDS
+
+/obj/item/storage/backpack/marine/upp/medic
+	name = "\improper UCBP4-M sanitar backpack"
+	desc = "A UPP military standard-issue Union Combat Backpack MK4. Very robust and heavy, this variant of the bulky MK4 has been modified for UPP medical personnel usage, allowing for quick access."
+	icon_state = "marinepack_medic_upp"
+	item_state = "marinepack_medic_upp"
+	max_storage_space = 21
+	worn_accessible = TRUE
+
 /obj/item/storage/backpack/marine/satchel/scout_cloak/upp
 	name = "\improper V86 Thermal Cloak"
 	desc = "A thermo-optic camouflage cloak commonly used by UPP commando units."

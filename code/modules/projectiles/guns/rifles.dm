@@ -1390,6 +1390,7 @@
 	wield_delay = WIELD_DELAY_FAST
 	attachable_allowed = list(
 		/obj/item/attachable/magnetic_harness, // Rail
+		/obj/item/attachable/sling,
 		/obj/item/attachable/scope,
 		/obj/item/attachable/scope/pve,
 		/obj/item/attachable/scope/upp,
@@ -1457,6 +1458,7 @@
 
 	attachable_allowed = list(
 		/obj/item/attachable/magnetic_harness, // Rail
+		/obj/item/attachable/sling,
 		/obj/item/attachable/scope,
 		/obj/item/attachable/scope/pve,
 		/obj/item/attachable/scope/upp,
