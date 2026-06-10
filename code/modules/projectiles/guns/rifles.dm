@@ -1390,7 +1390,6 @@
 	wield_delay = WIELD_DELAY_FAST
 	attachable_allowed = list(
 		/obj/item/attachable/magnetic_harness, // Rail
-		/obj/item/attachable/sling,
 		/obj/item/attachable/scope,
 		/obj/item/attachable/scope/pve,
 		/obj/item/attachable/scope/upp,
@@ -1458,7 +1457,6 @@
 
 	attachable_allowed = list(
 		/obj/item/attachable/magnetic_harness, // Rail
-		/obj/item/attachable/sling,
 		/obj/item/attachable/scope,
 		/obj/item/attachable/scope/pve,
 		/obj/item/attachable/scope/upp,
@@ -1489,7 +1487,7 @@
 	set_burst_delay(FIRE_DELAY_TIER_11)
 	accuracy_mult = BASE_ACCURACY_MULT + HIT_ACCURACY_MULT_TIER_3
 	accuracy_mult_unwielded = BASE_ACCURACY_MULT - HIT_ACCURACY_MULT_TIER_6
-	burst_scatter_mult = SCATTER_AMOUNT_TIER_10
+	burst_scatter_mult = SCATTER_AMOUNT_TIER_9
 	scatter = SCATTER_AMOUNT_TIER_7
 	damage_mult = BASE_BULLET_DAMAGE_MULT
 	scatter_unwielded = SCATTER_AMOUNT_TIER_5
@@ -1504,7 +1502,7 @@
 	flags_gun_features = GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK|GUN_AMMO_COUNTER|GUN_TRIGGER_SAFETY
 
 /obj/item/weapon/gun/rifle/type71/carbine/recon
-	starting_attachment_types = list(/obj/item/attachable/stock/type71, /obj/item/attachable/verticalgrip/upp, /obj/item/attachable/sling)
+	starting_attachment_types = list(/obj/item/attachable/stock/type71, /obj/item/attachable/verticalgrip/upp, /obj/item/attachable/lasersight/upp)
 
 /obj/item/weapon/gun/rifle/type71/carbine/recon/unloaded
 	current_mag = null

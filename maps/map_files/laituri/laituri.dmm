@@ -6660,10 +6660,12 @@
 /obj/structure/closet/crate/secure/upp,
 /obj/item/ammo_box/magazine/nade_box/upp,
 /obj/item/ammo_box/magazine/nade_box/upp,
-/obj/item/ammo_box/magazine/nade_box/upp,
 /obj/structure/surface/table/reinforced/almayer_B,
 /obj/item/ammo_box/magazine/nade_box/upp/ugl,
-/obj/item/ammo_box/magazine/nade_box/upp/ugl,
+/obj/item/storage/box/packet/high_explosive/upp/impact,
+/obj/item/storage/box/packet/high_explosive/upp/incend,
+/obj/item/storage/box/packet/high_explosive/upp/smoke,
+/obj/item/storage/box/packet/high_explosive/upp/ap,
 /turf/open/floor/corsat/plate,
 /area/golden_arrow/prep_hallway)
 "wf" = (
