@@ -171,7 +171,7 @@
 /datum/human_ai_equipment_preset/upp/forecon/platoon_sergeant
 	name = "UPP Recon Squad Sergeant"
 	desc = "The leader of a UPP recon squad. Functionally very similar to recon riflemen."
-	path = /datum/equipment_preset/upp/squadlead/forecon
+	path = /datum/equipment_preset/upp/navallead/forecon
 
 /datum/human_ai_equipment_preset/upp/combat_android
 	name = "UPP Combat Android"

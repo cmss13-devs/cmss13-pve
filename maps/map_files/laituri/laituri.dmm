@@ -279,6 +279,23 @@
 /obj/structure/foamed_metal/iron,
 /turf/closed/wall/upp_wall/grey/hull,
 /area/golden_arrow/hangar)
+"aA" = (
+/obj/structure/machinery/door_control{
+	name = "Airlock Hanger Access";
+	id = "hangerairlock-interior-port";
+	pixel_x = -26;
+	pixel_y = 7
+	},
+/turf/open/floor/strata/floor3/east,
+/area/golden_arrow/hangar)
+"aB" = (
+/obj/item/paper/laituri{
+	pixel_x = -5;
+	pixel_y = -5;
+	anchored = 1
+	},
+/turf/closed/wall/upp_wall/grey,
+/area/golden_arrow/hangar)
 "bn" = (
 /obj/structure/prop/invuln/lattice_prop{
 	dir = 8;
@@ -7403,6 +7420,9 @@
 	desc = "The CosmosStal 12 Bogatyr Power Loader is a commercial mechanized exoskeleton used for lifting heavy materials and objects based on the Caterpillar P-5000, first designed in January 29, 2025 by the Weyland Corporation. An old but trusted design used in warehouses, constructions and military ships everywhere.";
 	dir = 1
 	},
+/obj/structure/machinery/light/small/red{
+	light_range = 5
+	},
 /turf/open/floor/mech_bay_recharge_floor,
 /area/golden_arrow/hangar)
 "xI" = (
@@ -7419,6 +7439,9 @@
 /obj/item/rappel_harness/extract/nauk,
 /obj/item/rappel_harness/extract/nauk,
 /obj/item/rappel_harness/extract/nauk,
+/obj/structure/extinguisher_cabinet/alt{
+	pixel_x = -32
+	},
 /turf/open/floor/corsat/plate,
 /area/golden_arrow/hangar)
 "xJ" = (
@@ -7644,9 +7667,11 @@
 /area/golden_arrow/hangar)
 "yf" = (
 /obj/structure/machinery/power/apc/almayer/hardened/south,
-/obj/structure/machinery/light/small/red{
-	dir = 4;
-	light_range = 5
+/obj/structure/machinery/door_control{
+	name = "Airlock Hanger Access";
+	id = "hangerairlock-interior-starboard";
+	pixel_x = 28;
+	pixel_y = 7
 	},
 /turf/open/floor/strata/floor3/east,
 /area/golden_arrow/hangar)
@@ -8206,14 +8231,12 @@
 /turf/open/floor/plating/plating_catwalk/prison,
 /area/golden_arrow/hangar)
 "zi" = (
-/obj/structure/machinery/door_control{
-	name = "Airlock Hanger Access";
-	id = "hangerairlock-interior-port";
-	pixel_x = -26;
-	pixel_y = -2
-	},
 /obj/structure/extinguisher_cabinet/alt{
 	pixel_y = 32
+	},
+/obj/structure/machinery/light/small/red{
+	light_range = 5;
+	dir = 8
 	},
 /turf/open/floor/strata/floor3/east,
 /area/golden_arrow/hangar)
@@ -8271,14 +8294,12 @@
 /turf/open/floor/strata/floor3/east,
 /area/golden_arrow/hangar)
 "zn" = (
-/obj/structure/machinery/door_control{
-	name = "Airlock Hanger Access";
-	id = "hangerairlock-interior-starboard";
-	pixel_x = 28;
-	pixel_y = -2
+/obj/structure/noticeboard{
+	pixel_y = 27
 	},
-/obj/structure/extinguisher_cabinet/alt{
-	pixel_y = 32
+/obj/structure/machinery/light/small/red{
+	dir = 4;
+	light_range = 5
 	},
 /turf/open/floor/strata/floor3/east,
 /area/golden_arrow/hangar)
@@ -12205,7 +12226,7 @@ mI
 mI
 zi
 yA
-xZ
+aA
 mI
 wp
 xr
@@ -12358,7 +12379,7 @@ zA
 yl
 yl
 nL
-DL
+xZ
 xC
 xs
 xk
@@ -14330,7 +14351,7 @@ DL
 DL
 DL
 mI
-mI
+aB
 zn
 yG
 yf

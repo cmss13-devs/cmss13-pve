@@ -524,9 +524,9 @@
 /datum/equipment_preset/upp/rifleman
 	name = "UPP Squad Rifleman (Equipped, Type 71)"
 	flags = EQUIPMENT_PRESET_EXTRA|EQUIPMENT_PRESET_MARINE
-	assignment = JOB_SQUAD_MARINE
+	assignment = JOB_SQUAD_MARINE_UPP
 	role_comm_title = "RFN"
-	rank = JOB_SQUAD_MARINE
+	rank = JOB_SQUAD_MARINE_UPP
 	paygrades = list(PAY_SHORT_UE1 = JOB_PLAYTIME_TIER_0)
 	skills = /datum/skills/pfc
 	access = list(ACCESS_UPP_GENERAL)
@@ -635,7 +635,7 @@
 	flags = EQUIPMENT_PRESET_EXTRA|EQUIPMENT_PRESET_MARINE
 	assignment = JOB_SQUAD_MARINE_FORECON_UPP
 	role_comm_title = "RFN"
-	rank = JOB_SQUAD_MARINE
+	rank = JOB_SQUAD_MARINE_FORECON_UPP
 	paygrades = list(PAY_SHORT_UE3 = JOB_PLAYTIME_TIER_0)
 	skills = /datum/skills/pfc/recon
 	access = list(ACCESS_UPP_GENERAL)
@@ -678,7 +678,7 @@
 	flags = EQUIPMENT_PRESET_EXTRA|EQUIPMENT_PRESET_MARINE
 	assignment = JOB_SQUAD_UPP_RTO
 	role_comm_title = "RTO"
-	rank = JOB_SQUAD_MARINE
+	rank = JOB_SQUAD_UPP_RTO
 	paygrades = list(PAY_SHORT_UE2 = JOB_PLAYTIME_TIER_0)
 	skills = /datum/skills/pfc
 	access = list(ACCESS_UPP_GENERAL)
@@ -755,7 +755,7 @@
 	flags = EQUIPMENT_PRESET_EXTRA|EQUIPMENT_PRESET_MARINE
 	assignment = JOB_SQUAD_RTO_FORECON_UPP
 	role_comm_title = "RTO"
-	rank = JOB_SQUAD_MARINE
+	rank = JOB_SQUAD_RTO_FORECON_UPP
 	paygrades = list(PAY_SHORT_UE4 = JOB_PLAYTIME_TIER_0)
 	skills = /datum/skills/pfc
 	access = list(ACCESS_UPP_GENERAL)
@@ -936,6 +936,39 @@
 	var/uppvetsidearm = prob(50) ? /obj/item/storage/belt/gun/type47/t73 : /obj/item/storage/belt/gun/type47/np92
 	new_human.equip_to_slot_or_del(new uppvetsidearm, WEAR_WAIST) // 50/50 np92 or t73
 
+
+//*****************************************************************************************************/
+
+/datum/equipment_preset/upp/machinegunner/heap
+	name = "UPP Squad Machinegunner (Equipped, HEAP)"
+
+/datum/equipment_preset/upp/machinegunner/heap/load_gear(mob/living/carbon/human/new_human)
+
+	new_human.undershirt = "Naval Infantry Telnyashka"
+	//face
+	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/almayer/marine/solardevils/upp, WEAR_L_EAR)
+	if(SSmapping.configs[GROUND_MAP].environment_traits[MAP_COLD])
+		new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/rebreather/scarf, WEAR_FACE)
+	//head
+	add_upp_head(new_human)
+	//uniform
+	add_upp_uniform(new_human)
+	//jacket
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/marine/smartgunner/upp, WEAR_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/pkp/iff, WEAR_J_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/pkp, WEAR_IN_JACKET)
+	//limbs
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/upp, WEAR_FEET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine, WEAR_HANDS)
+	//pockets
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate, WEAR_L_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/general/medium, WEAR_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/pkp, WEAR_IN_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/pkp, WEAR_IN_R_STORE)
+	//waist
+	var/uppvetsidearm = prob(50) ? /obj/item/storage/belt/gun/type47/t73 : /obj/item/storage/belt/gun/type47/np92
+	new_human.equip_to_slot_or_del(new uppvetsidearm, WEAR_WAIST) // 50/50 np92 or t73
+
 //*****************************************************************************************************/
 
 /datum/equipment_preset/upp/machinegunner/forecon
@@ -971,40 +1004,6 @@
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/general/medium, WEAR_R_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/pkp/standard_fmj, WEAR_IN_R_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/pkp/standard_fmj, WEAR_IN_R_STORE)
-	//waist
-	var/uppvetsidearm = prob(50) ? /obj/item/storage/belt/gun/type47/t73 : /obj/item/storage/belt/gun/type47/np92
-	new_human.equip_to_slot_or_del(new uppvetsidearm, WEAR_WAIST) // 50/50 np92 or t73
-
-//*****************************************************************************************************/
-
-//*****************************************************************************************************/
-
-/datum/equipment_preset/upp/machinegunner/heap
-	name = "UPP Squad Machinegunner (Equipped, HEAP)"
-
-/datum/equipment_preset/upp/machinegunner/heap/load_gear(mob/living/carbon/human/new_human)
-
-	new_human.undershirt = "Naval Infantry Telnyashka"
-	//face
-	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/almayer/marine/solardevils/upp, WEAR_L_EAR)
-	if(SSmapping.configs[GROUND_MAP].environment_traits[MAP_COLD])
-		new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/rebreather/scarf, WEAR_FACE)
-	//head
-	add_upp_head(new_human)
-	//uniform
-	add_upp_uniform(new_human)
-	//jacket
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/marine/smartgunner/upp, WEAR_JACKET)
-	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/pkp/iff, WEAR_J_STORE)
-	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/pkp, WEAR_IN_JACKET)
-	//limbs
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/upp, WEAR_FEET)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine, WEAR_HANDS)
-	//pockets
-	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate, WEAR_L_STORE)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/general/medium, WEAR_R_STORE)
-	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/pkp, WEAR_IN_R_STORE)
-	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/pkp, WEAR_IN_R_STORE)
 	//waist
 	var/uppvetsidearm = prob(50) ? /obj/item/storage/belt/gun/type47/t73 : /obj/item/storage/belt/gun/type47/np92
 	new_human.equip_to_slot_or_del(new uppvetsidearm, WEAR_WAIST) // 50/50 np92 or t73
@@ -1088,8 +1087,8 @@
 	flags = EQUIPMENT_PRESET_EXTRA|EQUIPMENT_PRESET_MARINE
 	paygrades = list(PAY_SHORT_UE4 = JOB_PLAYTIME_TIER_0, PAY_SHORT_UE5 = JOB_PLAYTIME_TIER_1)
 	access = list(ACCESS_UPP_GENERAL, ACCESS_UPP_TLPREP)
-	assignment = JOB_SQUAD_TEAM_LEADER
-	rank = JOB_SQUAD_TEAM_LEADER
+	assignment = JOB_SQUAD_TEAM_LEADER_UPP
+	rank = JOB_SQUAD_TEAM_LEADER_UPP
 	faction_group = list(FACTION_UPP)
 	faction = FACTION_UPP
 	role_comm_title = "SQSGT"
@@ -1132,7 +1131,7 @@
 	paygrades = list(PAY_SHORT_UE6 = JOB_PLAYTIME_TIER_0)
 	access = list(ACCESS_UPP_GENERAL, ACCESS_UPP_TLPREP)
 	assignment = JOB_SQUAD_TEAM_LEADER_FORECON_UPP
-	rank = JOB_SQUAD_TEAM_LEADER
+	rank = JOB_SQUAD_TEAM_LEADER_FORECON_UPP
 	faction_group = list(FACTION_UPP)
 	faction = FACTION_UPP
 	skills = /datum/skills/tl/recon
@@ -1175,9 +1174,9 @@
 /datum/equipment_preset/upp/navallead
 	name = "UPP Platoon Sergeant (Equipped)"
 	flags = EQUIPMENT_PRESET_EXTRA|EQUIPMENT_PRESET_MARINE
-	assignment = JOB_SQUAD_LEADER
+	assignment = JOB_SQUAD_LEADER_UPP
 	role_comm_title = "PLTSGT"
-	rank = JOB_SQUAD_LEADER
+	rank = JOB_SQUAD_LEADER_UPP
 	paygrades = list(PAY_SHORT_UE6 = JOB_PLAYTIME_TIER_0, PAY_SHORT_UE7 = JOB_PLAYTIME_TIER_1)
 	skills = /datum/skills/SL
 	languages = list(LANGUAGE_RUSSIAN, LANGUAGE_ENGLISH, LANGUAGE_CHINESE)
@@ -1222,7 +1221,7 @@
 	flags = EQUIPMENT_PRESET_EXTRA|EQUIPMENT_PRESET_MARINE
 	assignment = JOB_SQUAD_LEADER_FORECON_UPP
 	role_comm_title = "RSS"
-	rank = JOB_SQUAD_LEADER
+	rank = JOB_SQUAD_LEADER_FORECON_UPP
 	paygrades = list(PAY_SHORT_UE7 = JOB_PLAYTIME_TIER_0)
 	skills = /datum/skills/SL
 	languages = list(LANGUAGE_RUSSIAN, LANGUAGE_ENGLISH, LANGUAGE_CHINESE)
