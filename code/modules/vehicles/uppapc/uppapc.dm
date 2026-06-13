@@ -111,6 +111,7 @@
 	else if(seat == VEHICLE_GUNNER)
 		add_verb(M.client, list(
 			/obj/vehicle/multitile/proc/cycle_hardpoint,
+			/obj/vehicle/multitile/proc/toggle_apc_gyrostabilizer,
 		))
 
 /obj/vehicle/multitile/apc/uppapc/remove_seated_verbs(mob/living/M, seat)
@@ -131,6 +132,7 @@
 	else if(seat == VEHICLE_GUNNER)
 		remove_verb(M.client, list(
 			/obj/vehicle/multitile/proc/cycle_hardpoint,
+			/obj/vehicle/multitile/proc/toggle_apc_gyrostabilizer,
 		))
 
 //Called when players try to move vehicle
@@ -191,7 +193,7 @@
 		/obj/vehicle/multitile/proc/toggle_door_lock,
 		/obj/vehicle/multitile/proc/activate_horn,
 		/obj/vehicle/multitile/proc/cycle_hardpoint,
-		/obj/vehicle/multitile/proc/toggle_gyrostabilizer,
+		/obj/vehicle/multitile/proc/toggle_apc_gyrostabilizer,
 	))
 
 /obj/vehicle/multitile/apc/uppapc/solo/remove_seated_verbs(mob/living/M, seat)
@@ -205,7 +207,7 @@
 		/obj/vehicle/multitile/proc/toggle_door_lock,
 		/obj/vehicle/multitile/proc/activate_horn,
 		/obj/vehicle/multitile/proc/cycle_hardpoint,
-		/obj/vehicle/multitile/proc/toggle_gyrostabilizer,
+		/obj/vehicle/multitile/proc/toggle_apc_gyrostabilizer,
 	))
 	SStgui.close_user_uis(M, src)
 
