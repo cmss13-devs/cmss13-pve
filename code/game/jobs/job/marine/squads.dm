@@ -335,6 +335,32 @@
 	usable = TRUE
 	locked = TRUE
 
+//############################### Armour Squads
+/datum/squad/marine/armour
+	name = SQUAD_ARMOUR
+	equipment_color = "#b32ace"
+	chat_color = "#b32ace"
+	minimap_color = "#b32ace"
+	access = list(ACCESS_MARINE_ALPHA)
+	radio_freq = ARMOUR_FREQ
+	minimap_color = MINIMAP_SQUAD_CHARLIE
+	use_stripe_overlay = FALSE
+	usable = TRUE
+
+/datum/squad/marine/armour/New()
+	. = ..()
+
+	UnregisterSignal(SSdcs, COMSIG_GLOB_PLATOON_NAME_CHANGE, PROC_REF(rename_platoon))
+
+/datum/squad/marine/upp/armour
+	name = SQUAD_ARMOUR_UPP
+	equipment_color = "#ce742a"
+	chat_color = "#ce742a"
+	minimap_color = "#ce742a"
+	access = list(ACCESS_MARINE_ALPHA)
+	radio_freq = UPP_ARMOUR_FREQ
+	usable = TRUE
+
 //############################### UPP Squads
 /datum/squad/upp
 	name = "Root"

@@ -44,6 +44,10 @@
 			if(JOB_FORECON_RIFLEMAN) marine_rk = null
 			if(JOB_FORECON_CO) marine_rk = "co"
 
+		// armour squad
+			if(JOB_SQUAD_ARMOUR_GUNNER) marine_rk = "tl"
+			if(JOB_SQUAD_ARMOUR_LEADER) marine_rk = "leader"
+
 		if(squad.squad_leader == current_human)
 			switch(squad.squad_type)
 				if("Section") marine_rk = "leader_a"
@@ -97,6 +101,9 @@
 				marine_rk = "vo"
 				border_rk = "command"
 			if(JOB_SO)
+				marine_rk = "wo_co"
+				border_rk = "command"
+			if(JOB_SQUAD_ARMOUR_COMMANDER)
 				marine_rk = "wo_co"
 				border_rk = "command"
 			if(JOB_AUXILIARY_OFFICER)
