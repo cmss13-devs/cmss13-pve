@@ -23,8 +23,6 @@
 			hud_icon_state = "mp"
 		if(JOB_UPP_LT_OFFICER, JOB_SO)
 			hud_icon_state = "lt"
-		if(JOB_SQUAD_ARMOUR_COMMANDER_UPP)
-			hud_icon_state = "lt"
 		if(JOB_UPP_SRLT_OFFICER)
 			hud_icon_state = "slt"
 		if(JOB_UPP_KPT_OFFICER)
@@ -102,6 +100,7 @@
 		switch(GET_DEFAULT_ROLE(_role))
 			if(JOB_SQUAD_ARMOUR_GUNNER_UPP) hud_icon_state = "tl"
 			if(JOB_SQUAD_ARMOUR_LEADER_UPP) hud_icon_state = "leader"
+			if(JOB_SQUAD_ARMOUR_COMMANDER_UPP) hud_icon_state = "wo_xo"
 		if(squad.fireteam_leaders["SQ1"] == H || squad.fireteam_leaders["SQ2"] == H || squad.fireteam_leaders["SQ3"] == H)
 			H.langchat_styles = "langchat_smaller_bolded"
 		else
