@@ -1,8 +1,8 @@
 // XM99A, The quintesential phased plasma rifle in the 40 watt range
 
 /obj/item/weapon/gun/lasgun
-	name = "\improper Lasgun"
-	desc = "An experimental directed energy weapon system designed by Armat, the XM99A is a long-range prototype rifle that fires super-heated blasts of plasma."
+	name = "\improper M36 Kantrael Pattern Lasgun"
+	desc = "The M36 Kantrael lasgun is one of if not the most common lasgun pattern within the reaches of the Imperium. Used by the likes of the Cadians before being used by the rest of the galaxy, it can be seen in the hands of a guardsman, a traitor and even the lowest scum."
 	icon = 'icons/obj/items/weapons/guns/guns_by_faction/uscm.dmi'
 	icon_state = "lasgun"
 	item_state = "lasgun"
@@ -19,18 +19,17 @@
 	unload_sound = 'sound/weapons/handling/nsg23_unload.ogg'
 	current_mag = /obj/item/ammo_magazine/lasgun
 	force = 12
-	wield_delay = WIELD_DELAY_SLOW
+	wield_delay = WIELD_DELAY_NORMAL
 	attachable_allowed = list(
 	)
 	flags_gun_features = GUN_WIELDED_FIRING_ONLY|GUN_AMMO_COUNTER
 	flags_item = TWOHANDED
-	start_automatic = TRUE
 
 	var/obj/effect/ebeam/lasgun_beam_type = /obj/effect/ebeam/laser/lasgun
 	///world.time value, to prevent a lightshow without actually firing
 	var/beam_cooldown = 0
 	///Delay before another beam can start again, in tenths of seconds
-	var/beam_delay = 5
+	var/beam_delay = 10
 
 
 // Stolen from the rocket-launcher code to prevent the +1 shot in the plasma rifle
@@ -78,7 +77,7 @@
 
 	else
 		to_chat(user, SPAN_NOTICE("You begin reloading [src]. Hold still..."))
-		if(do_after(user, 10, INTERRUPT_ALL, BUSY_ICON_FRIENDLY))
+		if(do_after(user, 4, INTERRUPT_ALL, BUSY_ICON_FRIENDLY))
 			user.drop_inv_item_on_ground(lasgun)
 			current_mag = lasgun
 			lasgun.forceMove(src)
@@ -114,13 +113,14 @@
 
 /obj/item/weapon/gun/lasgun/set_gun_config_values()
 	..()
-	set_fire_delay(FIRE_DELAY_TIER_5)
-	set_burst_amount(BURST_AMOUNT_TIER_1)
+	set_fire_delay(FIRE_DELAY_TIER_8)
+	set_burst_amount(BURST_AMOUNT_TIER_3)
+	set_burst_delay(FIRE_DELAY_TIER_8)
 	accuracy_mult = BASE_ACCURACY_MULT * 3
 	scatter = SCATTER_AMOUNT_TIER_8
 	damage_mult = BASE_BULLET_DAMAGE_MULT
 	recoil = RECOIL_AMOUNT_TIER_5
-	set_fire_delay(FIRE_DELAY_TIER_11)
+	set_fire_delay(FIRE_DELAY_TIER_8)
 
 
 /obj/item/weapon/gun/lasgun/handle_fire(atom/target, mob/living/user, params, reflex = FALSE, dual_wield, check_for_attachment_fire, akimbo, fired_by_akimbo)
@@ -131,6 +131,26 @@
 		return
 	if(current_mag.current_rounds <= 0)
 		return
-	lasgun_beam = target.beam(user, "light_beam", 'icons/effects/beam.dmi', time = 0.7 SECONDS, maxdistance = 30, beam_type = lasgun_beam_type, always_turn = TRUE)
+	lasgun_beam = target.beam(user, "laser_beam", 'icons/effects/beam.dmi', time = 0.7 SECONDS, maxdistance = 30, beam_type = lasgun_beam_type, always_turn = TRUE)
 	animate(lasgun_beam.visuals, alpha = 255, time = 0.7 SECONDS, color = COLOR_RED, luminosity = 3 , easing = SINE_EASING|EASE_OUT)
 	. = ..()
+
+/obj/item/weapon/gun/lasgun/laspistol
+	name = "\improper Accatran pattern Mk.III Laspistol"
+	desc = "The MK.III Accatran laspistol is a common sidearm for the Imperium's officers and NCOs. It is relitively weak compared to the lasgun, but is still a deadly weapon in the right hands."
+	icon_state = "laspistol"
+	item_state = "laspistol"
+	muzzle_flash_lum = 5
+	flags_equip_slot = SLOT_WAIST
+	w_class = SIZE_MEDIUM
+	indestructible = 1
+	current_mag = /obj/item/ammo_magazine/lasgun/laspistol
+	force = 12
+	wield_delay = WIELD_DELAY_VERY_FAST
+	attachable_allowed = list(
+	)
+	flags_gun_features = GUN_CAN_POINTBLANK|GUN_ONE_HAND_WIELDED|GUN_AMMO_COUNTER
+	flags_item = null
+
+	beam_cooldown = 0
+	beam_delay = 10

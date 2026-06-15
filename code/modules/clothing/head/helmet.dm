@@ -1965,3 +1965,24 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	)
 	item_state = "rmc_helm2"
 	desc = "A common helmet used by various blue-collar professions in the TWE."
+
+
+//40k
+
+/obj/item/clothing/head/helmet/marine/veteran/guard
+	name = "\improper Imperial Guard helmet"
+	desc = "A High-cut ballistic helmet. Designed by Lindenthal-Ehrenfeld Militärindustrie it is intended to be used by Royal Marines Commando as part of the kestrel armour system."
+	icon_state = "helmet_guard"
+	item_state = "helmet_guard"
+	armor_melee = CLOTHING_ARMOR_MEDIUM
+	armor_bullet = CLOTHING_ARMOR_MEDIUMHIGH
+	armor_energy = CLOTHING_ARMOR_MEDIUM
+	armor_laser = CLOTHING_ARMOR_MEDIUM
+	armor_bomb = CLOTHING_ARMOR_MEDIUM
+	armor_bio = CLOTHING_ARMOR_LOW
+	armor_internaldamage = CLOTHING_ARMOR_LOW
+	min_cold_protection_temperature = ICE_PLANET_MIN_COLD_PROT
+	flags_inventory = BLOCKSHARPOBJ
+	flags_inv_hide = NO_FLAGS
+	flags_marine_helmet = NO_FLAGS
+	flags_atom = NO_NAME_OVERRIDE|NO_SNOW_TYPE

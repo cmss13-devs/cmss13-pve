@@ -320,16 +320,15 @@
 
 /datum/ammo/energy/lasgun
 	name = "lasgun bolt"
-	icon_state = "arcane_barrage"
-	flags_ammo_behavior = AMMO_ENERGY|AMMO_HITS_TARGET_TURF|AMMO_ANTISTRUCT
-	headshot_state = HEADSHOT_OVERLAY_HEAVY
+	icon_state = "laser_new"
+	flags_ammo_behavior = AMMO_ENERGY|AMMO_HITS_TARGET_TURF
+	headshot_state = HEADSHOT_OVERLAY_MEDIUM
 	damage = 80
 	damage_type = BURN
 	penetration = ARMOR_PENETRATION_TIER_4//Lasgun penetrates armor very well
 	accurate_range = 20
 	effective_range_max = 11
 	max_range = 20
-	var/vehicle_slowdown_time = 2 SECONDS
 	shell_speed = AMMO_SPEED_TIER_HITSCAN
 	scatter = SCATTER_AMOUNT_NONE
 	accuracy = HIT_ACCURACY_MULT_TIER_10
@@ -337,19 +336,19 @@
 	ammo_glowing = TRUE
 	bullet_light_color = COLOR_RED
 
-/datum/ammo/energy/plasma/set_bullet_traits()
+/datum/ammo/energy/lasgun/set_bullet_traits()
 	. = ..()
 	LAZYADD(traits_to_give, list(
-		BULLET_TRAIT_ENTRY(/datum/element/bullet_trait_incendiary, /datum/reagent/napalm/deathsquad),
 		BULLET_TRAIT_ENTRY(/datum/element/bullet_trait_penetrating/weak)
 	))
 
-/datum/ammo/energy/plasma/on_hit_mob(mob/M,obj/projectile/P)
-	if(M.mob_size >= MOB_SIZE_BIG)
-		var/mob/living/L = M
-		L.apply_armoured_damage(damage*1.6, ARMOR_ENERGY, BURN, null, penetration)
-	burst(get_turf(M),P,damage_type, 1 , 5)
-
-/datum/ammo/energy/plasma/on_near_target(turf/T, obj/projectile/P)
-	burst(get_turf(T),P,damage_type, 1 , 5)
-	return 1
+/datum/ammo/energy/lasgun/weak
+	name = "weak lasgun bolt"
+	headshot_state = HEADSHOT_OVERLAY_LIGHT
+	damage = 55
+	damage_type = BURN
+	penetration = ARMOR_PENETRATION_TIER_2
+	accurate_range = 14
+	effective_range_max = 8
+	max_range = 14
+	accuracy = HIT_ACCURACY_MULT_TIER_8

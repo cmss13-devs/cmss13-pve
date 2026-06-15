@@ -902,11 +902,11 @@
 	item_icons = list(
 		WEAR_JACKET = 'icons/mob/humans/onmob/suit_1.dmi'
 	)
-	icon_state = "merc_medium"
-	item_state = "merc_medium"
+	icon_state = "armor_guard"
+	item_state = "armor_guard"
 	armor_melee = CLOTHING_ARMOR_MEDIUMLOW
-	armor_bullet = CLOTHING_ARMOR_MEDIUM
-	armor_laser = CLOTHING_ARMOR_LOW
+	armor_bullet = CLOTHING_ARMOR_MEDIUMHIGH
+	armor_laser = CLOTHING_ARMOR_MEDIUM
 	armor_energy = CLOTHING_ARMOR_LOW
 	armor_bomb = CLOTHING_ARMOR_MEDIUMLOW
 	armor_bio = CLOTHING_ARMOR_MEDIUM
