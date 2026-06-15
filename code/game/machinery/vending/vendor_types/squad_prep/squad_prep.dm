@@ -650,10 +650,8 @@
 		list("L165 Gunbelt", round(scale * 10), /obj/item/storage/belt/gun/l905, VENDOR_ITEM_REGULAR),
 
 		list("POUCHES", -1, null, null, null),
-		list("Flare Pouch (Full)", floor(scale * 5), /obj/item/storage/pouch/flare/rmc/full, VENDOR_ITEM_REGULAR),
-		list("Tactical Medical Pouch (full)", floor(scale * 5), /obj/item/storage/pouch/medical/socmed/not_op, VENDOR_ITEM_REGULAR), //Flares...
+		list("Flare Pouch (Full)", floor(scale * 5), /obj/item/storage/pouch/flare/rmc/full, VENDOR_ITEM_REGULAR), //Moved the tool pouch and medpouch to the other vendor since they're full.
 		list("Large Magazine Pouch", floor(scale * 5), /obj/item/storage/pouch/magazine/large, VENDOR_ITEM_REGULAR),
-		list("Tactical Tool Pouch", floor(scale * 5), /obj/item/storage/pouch/tools/tactical, VENDOR_ITEM_REGULAR),
 		list("Large Pistol Magazine Pouch", floor(scale * 5), /obj/item/storage/pouch/magazine/pistol/large, VENDOR_ITEM_REGULAR),
 		list("Pistol Pouch", floor(scale * 5), /obj/item/storage/pouch/pistol, VENDOR_ITEM_REGULAR),
 		list("Sling Pouch", floor(scale * 2), /obj/item/storage/pouch/sling, VENDOR_ITEM_REGULAR),
@@ -1087,6 +1085,7 @@
 		list("MRE Box", round(scale * 1), /obj/item/ammo_box/magazine/misc/mre/fsr, VENDOR_ITEM_REGULAR),
 
 		list("MEDICAL", -1, null, null),
+		list("Tactical Medical Pouch (full)", round(scale * 5), /obj/item/storage/pouch/medical/socmed/not_op, VENDOR_ITEM_REGULAR),
 		list("Gauze", round(scale * 15), /obj/item/stack/medical/bruise_pack, VENDOR_ITEM_REGULAR),
 		list("Ointment", round(scale * 15), /obj/item/stack/medical/ointment, VENDOR_ITEM_REGULAR),
 		list("Splints", round(scale * 15), /obj/item/stack/medical/splint, VENDOR_ITEM_REGULAR),
@@ -1097,17 +1096,14 @@
 		list("Tramadol Injector", round(scale * 15), /obj/item/reagent_container/hypospray/autoinjector/tramadol/skillless, VENDOR_ITEM_REGULAR),
 
 		list("TOOLS", -1, null, null),
+		list("Tactical Tool Pouch", round(scale * 5), /obj/item/storage/pouch/tools/tactical, VENDOR_ITEM_REGULAR),
 		list("Entrenching Tool (ET)", round(scale * 2), /obj/item/tool/shovel/etool/folded, VENDOR_ITEM_REGULAR),
-		list("Screwdriver", round(scale * 5), /obj/item/tool/screwdriver, VENDOR_ITEM_REGULAR),
-		list("Wirecutters", round(scale * 5), /obj/item/tool/wirecutters, VENDOR_ITEM_REGULAR),
-		list("Crowbar", round(scale * 5), /obj/item/tool/crowbar, VENDOR_ITEM_REGULAR),
-		list("Wrench", round(scale * 5), /obj/item/tool/wrench, VENDOR_ITEM_REGULAR),
+		list("Screwdriver", round(scale * 3), /obj/item/tool/screwdriver, VENDOR_ITEM_REGULAR),
+		list("Wirecutters", round(scale * 3), /obj/item/tool/wirecutters, VENDOR_ITEM_REGULAR),
+		list("Crowbar", round(scale * 3), /obj/item/tool/crowbar, VENDOR_ITEM_REGULAR),
+		list("Wrench", round(scale * 3), /obj/item/tool/wrench, VENDOR_ITEM_REGULAR),
 		list("Multitool", round(scale * 1), /obj/item/device/multitool, VENDOR_ITEM_REGULAR),
 		list("Welding Tool", round(scale * 1), /obj/item/tool/weldingtool, VENDOR_ITEM_REGULAR),
-
-		list("EXPLOSIVES", -1, null, null),
-		list("Plastic Explosives", round(scale * 2), /obj/item/explosive/plastic, VENDOR_ITEM_REGULAR),
-		list("Breaching Charge", round(scale * 2), /obj/item/explosive/plastic/breaching_charge, VENDOR_ITEM_REGULAR),
 
 		list("FLARE AND LIGHT", -1, null, null),
 		list("Combat Flashlight", round(scale * 5), /obj/item/device/flashlight/combat, VENDOR_ITEM_REGULAR),
@@ -1119,29 +1115,30 @@
 
 		list("SIDEARMS", -1, null, null), //forecon loves their pistols
 		list("M48A4 Service Pistol", round(scale * 5), /obj/item/weapon/gun/pistol/m1911/socom, VENDOR_ITEM_REGULAR),
+		list("ES-4 electrostatic pistol", round(scale * 5), /obj/item/weapon/gun/pistol/es4, VENDOR_ITEM_REGULAR),
 		list("VP70 Combat Pistol", round(scale * 5), /obj/item/weapon/gun/pistol/vp70, VENDOR_ITEM_REGULAR),
-		list("M44 Combat Revolver", round(scale * 5), /obj/item/weapon/gun/revolver/m44, VENDOR_ITEM_REGULAR),
 		list("M4A3 Service Pistol", round(scale * 5), /obj/item/weapon/gun/pistol/m4a3, VENDOR_ITEM_REGULAR),
 		list("VP78 pistol", round(scale * 5), /obj/item/weapon/gun/pistol/vp78, VENDOR_ITEM_REGULAR),
+		list("Beretta 92FS pistol", round(scale * 5), /obj/item/weapon/gun/pistol/b92fs, VENDOR_ITEM_REGULAR),
 		list("M82F Flare Gun", round(scale * 3), /obj/item/weapon/gun/flare, VENDOR_ITEM_REGULAR),
+
 
 		list("SIDEARM AMMUNITION", -1, null, null),
 		list("M1911 Magazine (.45)", round(scale * 20), /obj/item/ammo_magazine/pistol/m1911, VENDOR_ITEM_REGULAR),
+		list("ES4 Stun Magazine (9mm)", round(scale * 20), /obj/item/ammo_magazine/pistol/es4, VENDOR_ITEM_REGULAR),
 		list("VP70 Magazine (9mm)", round(scale * 20), /obj/item/ammo_magazine/pistol/vp70, VENDOR_ITEM_REGULAR),
-		list("M44 Speedloader (.44)", round(scale * 20), /obj/item/ammo_magazine/revolver, VENDOR_ITEM_REGULAR),
+		list("Beretta 92FS Magazine (9mm)", round(scale * 20), /obj/item/ammo_magazine/pistol/b92fs, VENDOR_ITEM_REGULAR),
 		list("M4A3 Magazine (9mm)", round(scale * 20), /obj/item/ammo_magazine/pistol, VENDOR_ITEM_REGULAR),
 		list("VP78 magazine (9mm)", round(scale * 20), /obj/item/ammo_magazine/pistol/vp78, VENDOR_ITEM_REGULAR),
 
 		list("MISCELLANEOUS", -1, null, null),
-		list("Extinguisher", round(scale * 5), /obj/item/tool/extinguisher, VENDOR_ITEM_REGULAR),
-		list("Fire Extinguisher (Portable)", round(scale * 1), /obj/item/tool/extinguisher/mini, VENDOR_ITEM_REGULAR),
+		list("Fire Extinguisher (Portable)", round(scale * 2), /obj/item/tool/extinguisher/mini, VENDOR_ITEM_REGULAR),
 		list("Roller Bed", round(scale * 2), /obj/item/roller, VENDOR_ITEM_REGULAR),
-		list("Machete Scabbard (Full)", round(scale * 5), /obj/item/storage/large_holster/machete/full, VENDOR_ITEM_REGULAR),
 		list("Binoculars", round(scale * 1), /obj/item/device/binoculars, VENDOR_ITEM_REGULAR),
 		list("Spare PDT/L Battle Buddy Kit", round(scale * 3), /obj/item/storage/box/pdt_kit/advanced, VENDOR_ITEM_REGULAR),
 		list("Rail Flashlight", round(scale * 5), /obj/item/attachable/flashlight, VENDOR_ITEM_REGULAR),
 		list("Two-point Sling", round(scale * 5), /obj/item/attachable/sling, VENDOR_ITEM_REGULAR),
-		list("M13 Fighting Knife", round(scale * 5), /obj/item/weapon/knife/marine, VENDOR_ITEM_REGULAR),
+		list("KA-BAR utility knife", round(scale * 5), /obj/item/weapon/knife/marine/kabar, VENDOR_ITEM_REGULAR),
 		)
 
 //--------------SQUAD ATTACHMENTS VENDOR--------------
