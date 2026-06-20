@@ -67,9 +67,6 @@ em {font-style: normal; font-weight: bold;}
 .pvstradio {color: #9b0612;}
 .ciaradio {color: #e6754c;}
 
-.armourradio {color: #b32ace;}
-.upparmourradio {color: #ce742a;}
-
 .medium { font-size: 2}
 .big { font-size: 2}
 .large { font-size: 3}
