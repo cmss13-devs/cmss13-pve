@@ -884,7 +884,7 @@
 /obj/item/clothing/suit/marine/light/old
 	name = "M118 APPS armored vest"
 	desc = "Advanced Personnel Protective System armored vest, featuring Namco: Guardian Gel! liquid armor, made to protect the troops from incoming projectiles up to intermediate cartridges."
-	desc_lore = "The M118 APPS was introduced as the 'armour of the future' when presented to the 2148 procurement trials by the Newholt Advanced Materials Corporation under the name of \"Newholt Future Combat Armor\". The components of the NFCA were already considered 'field tested' when they arrived for trial, thanks to their extensive popularity among law enforcement and private security outfits within Sol and the Core Systems."
+	desc_lore = "The M118 APPS was introduced as the 'armor of the future' when presented to the 2148 procurement trials by the Newholt Advanced Materials Corporation under the name of \"Newholt Future Combat Armor\". The components of the NFCA were already considered 'field tested' when they arrived for trial, thanks to their extensive popularity among law enforcement and private security outfits within Sol and the Core Systems."
 	icon_state = "oldmarinevest"
 	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE
 	flags_marine_armor = NO_FLAGS

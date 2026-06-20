@@ -898,6 +898,16 @@ Defined in conflicts.dm of the #defines folder.
 	original_state = "m20a_flashlight"
 	original_attach = "m20a_flashlight_a"
 
+/obj/item/attachable/flashlight/lw317
+	name = "integrated flashlight"
+	desc = "shouldnt be seeing this. . ."
+	icon = 'icons/obj/items/weapons/guns/attachments/rail.dmi'
+	icon_state = "lw317_flashlight"
+	slot = "special"
+	attach_icon = "lw317_flashlight_a"
+	original_state = "lw317_flashlight"
+	original_attach = "lw317_flashlight_a"
+
 /obj/item/attachable/flashlight/grip //Grip Light is here because it is a child object. Having it further down might cause a future coder a headache.
 	name = "underbarrel flashlight grip"
 	desc = "Holy smokes RO man, they put a grip on a flashlight! \nReduces recoil and scatter by a tiny amount. Boosts accuracy by a tiny amount. Works as a light source."
@@ -1348,6 +1358,8 @@ Defined in conflicts.dm of the #defines folder.
 /obj/item/attachable/scope/mini/army
 	desc = "An ARMAT S4 scope, type designation AN/PVQ-45. 2x magnification optic, increases accuracy while scoped, decreases RoF and increased wield speed."
 	zoom_offset = 4
+
+/obj/item/attachable/scope/mini/canc
 
 //Mini-scope for the scout rifle
 
@@ -2626,6 +2638,13 @@ Defined in conflicts.dm of the #defines folder.
 	icon_state = "abr40stock_tac"
 	attach_icon = "abr40stock_tac_a"
 
+/obj/item/attachable/stock/carbine/wood/canc
+	name = "\improper Type 40 \"wooden\" stock"
+	desc = "The default \"wooden\" stock for the Type 40 marksman rifle, the CANC modification of the  L42A battle rifle. Theoretically compatible with an L42. Can't be removed."
+	icon_state = "type40_a"
+	attach_icon = "type40_a"
+	flags_attach_features = NO_FLAGS
+
 /obj/item/attachable/stock/rifle/marksman
 	name = "\improper M41A marksman stock"
 	icon_state = "m4markstock"
@@ -3760,6 +3779,7 @@ Defined in conflicts.dm of the #defines folder.
 	max_rounds = 5
 	current_rounds = 5
 	ammo = /datum/ammo/bullet/shotgun/buckshot/masterkey
+	var/accepted_ammo = /datum/ammo/bullet/shotgun/buckshot
 	slot = "under"
 	pixel_shift_y = 18
 	fire_sound = 'sound/weapons/gun_shotgun_u7.ogg'
@@ -3784,7 +3804,7 @@ Defined in conflicts.dm of the #defines folder.
 
 /obj/item/attachable/attached_gun/shotgun/reload_attachment(obj/item/ammo_magazine/handful/mag, mob/user)
 	if(istype(mag) && mag.flags_magazine & AMMUNITION_HANDFUL)
-		if(mag.default_ammo == /datum/ammo/bullet/shotgun/buckshot)
+		if(mag.default_ammo == accepted_ammo)
 			if(current_rounds >= max_rounds)
 				to_chat(user, SPAN_WARNING("[src] is full."))
 			else
@@ -3803,13 +3823,18 @@ Defined in conflicts.dm of the #defines folder.
 	current_rounds = 0
 
 /obj/item/attachable/attached_gun/shotgun/m20a
-	name = "\improper U3 underbarrel shotgun"
-	desc = "An ARMAT U3 tactical shotgun. Integrated into the M20A Harrington rifle. Only capable of loading up to five buckshot shells."
+	name = "\improper U3 16-gauge overslung shotgun"
+	desc = "An ARMAT U3 tactical shotgun. Integrated into the M20A Harrington rifle. Only capable of loading up to five 16g buckshot shells."
 	icon_state = "masterkey"
 	attach_icon = "masterkey_a"
+	max_rounds = 5
+	current_rounds = 5
 	flags_attach_features = ATTACH_ACTIVATION|ATTACH_PROJECTILE|ATTACH_RELOADABLE|ATTACH_WEAPON
 	hidden = TRUE
-
+	ammo = /datum/ammo/bullet/shotgun/buckshot/light
+	accepted_ammo = /datum/ammo/bullet/shotgun/buckshot/light
+	fire_sound = 'sound/weapons/gun_shotgun_xm51.ogg'
+	attachment_firing_delay = 6
 
 /obj/item/attachable/attached_gun/shotgun/m20a/set_bullet_traits()
 	return

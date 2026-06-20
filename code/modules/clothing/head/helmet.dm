@@ -1043,6 +1043,25 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	icon_state = "canc"
 	flags_inv_hide = HIDEEARS|HIDETOPHAIR
 
+/obj/item/clothing/head/helmet/marine/veteran/canc/old
+	name = "\improper Type 60 helmet"
+	desc = "Outdated CANC kettle helmet. At least it's not as heavy."
+	icon_state = "canc_old"
+	flags_inv_hide = HIDEEARS|HIDETOPHAIR
+	armor_melee = CLOTHING_ARMOR_MEDIUMHIGH
+	armor_bullet = CLOTHING_ARMOR_MEDIUMLOW
+	armor_energy = CLOTHING_ARMOR_MEDIUMLOW
+	armor_bio = CLOTHING_ARMOR_MEDIUMLOW
+
+/obj/item/clothing/head/helmet/marine/veteran/canc/ghillie
+	name = "'Bashe' ghillie hood"
+	desc = "A simple camouflaged cloth hood."
+	icon_state = "ghillie_canc"
+	armor_melee = CLOTHING_ARMOR_LOW
+	armor_bullet = CLOTHING_ARMOR_LOW
+	armor_energy = CLOTHING_ARMOR_LOW
+	armor_bio = CLOTHING_ARMOR_LOW
+
 /obj/item/clothing/head/helmet/marine/veteran/pmc
 	name = "\improper Kame combat helmet"
 	desc = "Standard issue high molecular density polymer combat helmet used by Weyland Yutani's elite tactical teams. Designed by Weyland-Yutani, initially as a hard hat, the project was eventually retrofitted into a cheap, reliable combat helmet system that incorporates a tactical camera, IFF signal transponder, and heads up display lens. Also features white/black hot IR viewing modes from the camera system."
@@ -1651,6 +1670,12 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	name = "\improper UL3 MSS peaked cap"
 	desc = "Standard issue peaked cap of the Ministry of Space Security."
 	icon_state = "upp_peaked_mss"
+
+/obj/item/clothing/head/uppcap/canc
+	name = "\improper CANC officer peaked cap"
+	desc = "Standard issue peaked service cap of the CANC's military."
+	icon_state = "canc_peaked"
+
 
 /obj/item/clothing/head/uppcap/ushanka
 	name = "\improper UL2 ushanka"

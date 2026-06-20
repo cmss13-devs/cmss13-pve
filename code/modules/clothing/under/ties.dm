@@ -1435,6 +1435,13 @@
 /obj/item/clothing/accessory/pads/greaves/standard
 	flags_atom = NO_SNOW_TYPE
 
+/obj/item/clothing/accessory/pads/greaves/canc
+	name = "Type 12 greaves"
+	desc = "CANC-made greaves for their NEWEST armor system."
+	icon_state = "canc_greaves"
+	item_state = "canc_greaves"
+	flags_atom = NO_SNOW_TYPE
+
 /obj/item/clothing/accessory/pads/kneepads
 	name = "\improper M3 Kneepads"
 	desc = "Attachable supplementary armor for the M3 armor system. High impact ruggedized outer shell and polymer internals protect from shrapnel as well as low power ballistics."

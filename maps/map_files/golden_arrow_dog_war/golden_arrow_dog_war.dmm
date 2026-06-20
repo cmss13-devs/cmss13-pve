@@ -2109,10 +2109,9 @@
 /obj/structure/target{
 	name = "ready line Ronald"
 	},
-/obj/item/clothing/head/helmet/marine/veteran/UPP/old{
-	icon = 'icons/mob/humans/onmob/head_1.dmi';
-	pixel_x = 0;
-	pixel_y = -2
+/obj/item/clothing/head/helmet/marine/veteran/canc/old{
+	pixel_x = -1;
+	pixel_y = 8
 	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/hangar)
@@ -4333,9 +4332,13 @@
 /turf/open/floor/almayer/test_floor5,
 /area/golden_arrow/engineering)
 "Em" = (
-/obj/structure/closet/crate/green,
-/obj/item/storage/box/guncase/shotgunpump,
-/obj/item/storage/box/guncase/shotgunpump,
+/obj/structure/largecrate/supply/weapons/m20a2{
+	desc = "A supply crate containing two unloaded M20A2 rifles, a variant of 'Harrington' rifle with an integrated shotgun. You can see a scratched 'DO NOT STACK' sticker on the side."
+	},
+/obj/structure/largecrate/supply/ammo/shotgun/sixteen{
+	pixel_x = 0;
+	pixel_y = 16
+	},
 /turf/open/floor/almayer/test_floor5,
 /area/golden_arrow/supply)
 "En" = (
@@ -5080,6 +5083,10 @@
 /area/golden_arrow/squad_one)
 "Iw" = (
 /obj/structure/surface/table/almayer,
+/obj/item/paper{
+	info = "We've a delivery of these newer A2 rifles, yet to be unboxed. Make sure your men have a go at them in the cargo bay.";
+	icon_state = "paper_words"
+	},
 /turf/open/floor/almayer,
 /area/golden_arrow/platoon_sergeant)
 "Ix" = (
@@ -6058,10 +6065,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/almayer,
 /area/golden_arrow/squad_two)
-"PB" = (
-/obj/structure/window/framed/almayer/hull,
-/turf/open/floor/almayer/test_floor4,
-/area/golden_arrow/hangar)
 "PE" = (
 /obj/structure/surface/table/almayer,
 /obj/structure/machinery/computer/general_air_control/large_tank_control{
@@ -16001,7 +16004,7 @@ Cr
 Cr
 Cr
 Dj
-PB
+ca
 wR
 Qk
 pl
@@ -16153,7 +16156,7 @@ Cr
 Cr
 Cr
 Dj
-PB
+ca
 wR
 Dc
 KO
@@ -16305,7 +16308,7 @@ Cr
 Cr
 Cr
 Dj
-PB
+ca
 wR
 Dc
 KO
@@ -16913,7 +16916,7 @@ Cr
 Cr
 Cr
 Dj
-PB
+ca
 wR
 Dc
 nm
@@ -17065,7 +17068,7 @@ Cr
 Cr
 Cr
 Dj
-PB
+ca
 wR
 Dc
 AP
@@ -17217,7 +17220,7 @@ Cr
 Cr
 Cr
 Dj
-PB
+ca
 wR
 Dc
 wR
@@ -17825,7 +17828,7 @@ Cr
 Cr
 Cr
 Dj
-PB
+ca
 wR
 Dc
 wR
@@ -17977,7 +17980,7 @@ Cr
 Cr
 Cr
 Dj
-PB
+ca
 wR
 Dc
 to
@@ -18129,7 +18132,7 @@ Cr
 Cr
 Cr
 Dj
-PB
+ca
 wR
 Dc
 AP
@@ -18737,7 +18740,7 @@ Cr
 Cr
 Cr
 Dj
-PB
+ca
 wR
 Dc
 KO
@@ -18889,7 +18892,7 @@ Cr
 Cr
 Cr
 Dj
-PB
+ca
 wR
 Dc
 KO
@@ -19041,7 +19044,7 @@ Cr
 Cr
 Cr
 Dj
-PB
+ca
 wR
 Dc
 wR
