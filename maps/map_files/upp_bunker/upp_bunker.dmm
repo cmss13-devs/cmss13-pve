@@ -559,6 +559,12 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/strata/multi_tiles/southeast,
 /area/golden_arrow/engineering)
+"bb" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "cargo_arrow"
+	},
+/turf/open/floor/strata/multi_tiles/west,
+/area/golden_arrow/briefing)
 "bc" = (
 /obj/structure/prop/invuln/lattice_prop{
 	icon_state = "lattice3";
@@ -974,6 +980,9 @@
 /obj/structure/sign/safety/cryo{
 	pixel_y = -26;
 	pixel_x = 7
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "cargo_arrow"
 	},
 /turf/open/floor/strata/multi_tiles/southeast,
 /area/golden_arrow/briefing)
@@ -2110,6 +2119,10 @@
 "eV" = (
 /obj/structure/extinguisher_cabinet/alt{
 	pixel_x = -32
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "cargo_arrow";
+	dir = 4
 	},
 /turf/open/floor/strata/multi_tiles/west,
 /area/golden_arrow/briefing)
@@ -9572,7 +9585,7 @@ eK
 gX
 ZS
 eF
-ZS
+bb
 eK
 fz
 fr

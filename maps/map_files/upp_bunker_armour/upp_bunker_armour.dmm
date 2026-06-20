@@ -308,6 +308,12 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/strata/multi_tiles,
 /area/golden_arrow/engineering)
+"aF" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "cargo_arrow"
+	},
+/turf/open/floor/strata/multi_tiles/west,
+/area/golden_arrow/briefing)
 "aG" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "E"
@@ -897,6 +903,9 @@
 /obj/structure/sign/safety/cryo{
 	pixel_y = -26;
 	pixel_x = 7
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "cargo_arrow"
 	},
 /turf/open/floor/strata/multi_tiles/southeast,
 /area/golden_arrow/briefing)
@@ -3045,6 +3054,10 @@
 /obj/structure/sign/safety/bathunisex{
 	pixel_y = -6;
 	pixel_x = -19
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "cargo_arrow";
+	dir = 4
 	},
 /turf/open/floor/strata/multi_tiles/west,
 /area/golden_arrow/briefing)
@@ -8036,7 +8049,7 @@ eK
 gX
 ZS
 eF
-ZS
+aF
 eK
 ZS
 jf

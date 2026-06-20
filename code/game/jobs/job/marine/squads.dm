@@ -757,7 +757,7 @@
 			assignment = JOB_SQUAD_ARMOUR_GUNNER
 			num_tl++
 			M.important_radio_channels += radio_freq
-			var/squad_number = (num_tl > 3) ? pick(2, 3) : num_tl
+			var/squad_number = (num_tl > 2) ? pick(2, 3) : num_tl
 			assign_fireteam("SQ[squad_number]", M)
 			assign_ft_leader("SQ[squad_number]", M)
 		if(JOB_SQUAD_ARMOUR_COMMANDER)
@@ -768,7 +768,6 @@
 			assignment = JOB_SQUAD_ARMOUR_LEADER
 			M.important_radio_channels += radio_freq
 			num_leaders++
-			num_tl++
 			squad_leader = M
 			SStracking.set_leader(tracking_id, M)
 			SStracking.start_tracking("marine_sl", M)
@@ -784,7 +783,7 @@
 			assignment = JOB_SQUAD_ARMOUR_GUNNER_UPP
 			num_tl++
 			M.important_radio_channels += radio_freq
-			var/squad_number = (num_tl > 3) ? pick(2, 3) : num_tl
+			var/squad_number = (num_tl > 2) ? pick(2, 3) : num_tl
 			assign_fireteam("SQ[squad_number]", M)
 			assign_ft_leader("SQ[squad_number]", M)
 		if(JOB_SQUAD_ARMOUR_COMMANDER_UPP)
@@ -795,7 +794,6 @@
 			assignment = JOB_SQUAD_ARMOUR_LEADER_UPP
 			M.important_radio_channels += radio_freq
 			num_leaders++
-			num_tl++
 			squad_leader = M
 			SStracking.set_leader(tracking_id, M)
 			SStracking.start_tracking("marine_sl", M)

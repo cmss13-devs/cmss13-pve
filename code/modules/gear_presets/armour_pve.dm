@@ -24,7 +24,7 @@
 /datum/equipment_preset/uscm/armour/leader
 	name = "USCM Armor, Element Sergeant"
 	paygrades = list(PAY_SHORT_ME6 = JOB_PLAYTIME_TIER_0)
-	role_comm_title = "SqdrnSgt"
+	role_comm_title = "ElmntSgt"
 	access = list(ACCESS_MARINE_PREP, ACCESS_MARINE_LEADER, ACCESS_MARINE_DROPSHIP)
 	assignment = JOB_SQUAD_ARMOUR_LEADER
 	rank = JOB_SQUAD_ARMOUR_LEADER

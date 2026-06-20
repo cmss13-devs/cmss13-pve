@@ -773,7 +773,7 @@
 	assignment = JOB_SQUAD_ARMOUR_COMMANDER
 	rank = JOB_SQUAD_ARMOUR_COMMANDER
 	paygrades = list(PAY_SHORT_MO2 = JOB_PLAYTIME_TIER_0)
-	role_comm_title = "SqdrnCO"
+	role_comm_title = "ElmntCO"
 	skills = /datum/skills/vehicle_crew/commander
 
 /datum/equipment_preset/uscm_ship/so/upp/armour
