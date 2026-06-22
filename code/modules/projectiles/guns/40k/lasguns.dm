@@ -6,7 +6,7 @@
 	icon = 'icons/obj/items/weapons/guns/guns_by_faction/uscm.dmi'
 	icon_state = "lasgun"
 	item_state = "lasgun"
-	muzzleflash_iconstate  = "muzzle_flash_blue"
+	muzzleflash_iconstate  = "muzzle_flash_red"
 	muzzle_flash_color = COLOR_RED
 	muzzle_flash_lum = 5
 	w_class = SIZE_LARGE
@@ -113,14 +113,15 @@
 
 /obj/item/weapon/gun/lasgun/set_gun_config_values()
 	..()
-	set_fire_delay(FIRE_DELAY_TIER_8)
+	set_fire_delay(FIRE_DELAY_TIER_5)
 	set_burst_amount(BURST_AMOUNT_TIER_3)
-	set_burst_delay(FIRE_DELAY_TIER_8)
-	accuracy_mult = BASE_ACCURACY_MULT * 3
-	scatter = SCATTER_AMOUNT_TIER_8
+	set_burst_delay(FIRE_DELAY_TIER_6)
+	accuracy_mult = BASE_ACCURACY_MULT + HIT_ACCURACY_MULT_TIER_4
+	scatter = SCATTER_AMOUNT_TIER_6
+	burst_scatter_mult = SCATTER_AMOUNT_TIER_6
 	damage_mult = BASE_BULLET_DAMAGE_MULT
 	recoil = RECOIL_AMOUNT_TIER_5
-	set_fire_delay(FIRE_DELAY_TIER_8)
+	set_fire_delay(FIRE_DELAY_TIER_2)
 
 
 /obj/item/weapon/gun/lasgun/handle_fire(atom/target, mob/living/user, params, reflex = FALSE, dual_wield, check_for_attachment_fire, akimbo, fired_by_akimbo)
@@ -131,8 +132,8 @@
 		return
 	if(current_mag.current_rounds <= 0)
 		return
-	lasgun_beam = target.beam(user, "laser_beam", 'icons/effects/beam.dmi', time = 0.7 SECONDS, maxdistance = 30, beam_type = lasgun_beam_type, always_turn = TRUE)
-	animate(lasgun_beam.visuals, alpha = 255, time = 0.7 SECONDS, color = COLOR_RED, luminosity = 3 , easing = SINE_EASING|EASE_OUT)
+	lasgun_beam = target.beam(user, "las_beam", 'icons/effects/beam.dmi', time = 0.4 SECONDS, maxdistance = 30, beam_type = lasgun_beam_type, always_turn = TRUE)
+	animate(lasgun_beam.visuals, alpha = 255, time = 0.4 SECONDS, color = COLOR_RED, luminosity = 3 , easing = SINE_EASING|EASE_OUT)
 	. = ..()
 
 /obj/item/weapon/gun/lasgun/laspistol
@@ -154,3 +155,15 @@
 
 	beam_cooldown = 0
 	beam_delay = 10
+
+/obj/item/weapon/gun/lasgun/laspistol/set_gun_config_values()
+	..()
+	set_fire_delay(FIRE_DELAY_TIER_5)
+	set_burst_amount(BURST_AMOUNT_TIER_3)
+	set_burst_delay(FIRE_DELAY_TIER_6)
+	accuracy_mult = BASE_ACCURACY_MULT + HIT_ACCURACY_MULT_TIER_4
+	accuracy_mult_unwielded = BASE_ACCURACY_MULT
+	scatter = SCATTER_AMOUNT_TIER_6
+	damage_mult = BASE_BULLET_DAMAGE_MULT
+	recoil = RECOIL_AMOUNT_TIER_5
+	set_fire_delay(FIRE_DELAY_TIER_2)

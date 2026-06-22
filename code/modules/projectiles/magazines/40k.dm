@@ -2,7 +2,7 @@
 // Lasgun Powerpacks
 
 /obj/item/ammo_magazine/lasgun
-	name = "\improper Lasgun Powerpack"
+	name = "\improper lasgun powerpack"
 	desc = ""
 	caliber = "18 megathule"
 	icon_state = "lasgun_ammo"
@@ -13,7 +13,7 @@
 	gun_type = /obj/item/weapon/gun/lasgun
 
 /obj/item/ammo_magazine/lasgun/laspistol
-	name = "\improper Laspistol Powerpack"
+	name = "\improper laspistol powerpack"
 	desc = ""
 	icon_state = "laspistol_ammo"
 	max_rounds = 20

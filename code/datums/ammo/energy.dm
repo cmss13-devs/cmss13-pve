@@ -323,7 +323,7 @@
 	icon_state = "laser_new"
 	flags_ammo_behavior = AMMO_ENERGY|AMMO_HITS_TARGET_TURF
 	headshot_state = HEADSHOT_OVERLAY_MEDIUM
-	damage = 80
+	damage = 55
 	damage_type = BURN
 	penetration = ARMOR_PENETRATION_TIER_4//Lasgun penetrates armor very well
 	accurate_range = 20
@@ -345,9 +345,9 @@
 /datum/ammo/energy/lasgun/weak
 	name = "weak lasgun bolt"
 	headshot_state = HEADSHOT_OVERLAY_LIGHT
-	damage = 55
+	damage = 30
 	damage_type = BURN
-	penetration = ARMOR_PENETRATION_TIER_2
+	penetration = ARMOR_PENETRATION_TIER_4
 	accurate_range = 14
 	effective_range_max = 8
 	max_range = 14
