@@ -520,3 +520,15 @@
 
 /turf/closed/shuttle/dropship4/WY/StarGlider/transparent
 	opacity = FALSE
+
+/turf/closed/shuttle/dropship_clf
+	icon = 'icons/turf/dropship_clf.dmi'
+	icon_state = "1"
+
+/turf/closed/shuttle/dropship_clf/Fire
+	name = "\improper UD-9M 'Dogbite'"
+	desc = "The UD-9M 'Dogbite' is a repurposed utility dropship, originally designed for short-haul cargo operations across colonial systems. Stolen and heavily modified by the Colonial Liberation Front, it's now a rugged smuggler and strike craft, capable of dropping a full fireteam through tight patrol nets. Its hull is scarred with gunfire, rust, and graffiti — a patchwork of rebellion held together by grit and stolen parts."
+	icon_state = "1"
+
+/turf/closed/shuttle/dropship_clf/Fire/transparent
+	opacity = FALSE

@@ -46,6 +46,7 @@
 #define MAP_WHITE_ANTRE_RESEARCH_FACILITY "White Antre Research Facility"
 #define MAP_CONAM_81_ABYSSAL "Con-Am 81 'Abyssal'"
 #define MAP_CAPE_RIVER "Cape River Mining Colony"
+#define MAP_LV1021_FALCONS_FURY "LV-1021: Operation Falcon's Fury"
 #define MAP_CHINOOK "Chinook 91 GSO" //admin level
 #define MAP_DERELICT_ALMAYER "Derelict Almayer"
 #define MAP_TAIPEI_STATION "Taipei Station"

@@ -821,7 +821,7 @@
 	basestate = "wood_teal_rwindow"
 	window_frame = /obj/structure/window_frame/wood/teal
 
-//Strata windows
+//Sorokyne Strata windows
 
 /obj/structure/window/framed/strata
 	name = "window"

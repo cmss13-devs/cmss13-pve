@@ -748,12 +748,6 @@
 	icon_state = "boilersuit_steel"
 	worn_state = "boilersuit_steel"
 
-/obj/item/clothing/under/colonist/clf
-	name = "\improper Colonial Liberation Front uniform"
-	desc = "A stylish grey-green jumpsuit - standard issue for colonists. This version appears to have the symbol of the Colonial Liberation Front emblazoned in select areas."
-	icon_state = "clf_uniform"
-	worn_state = "clf_uniform"
-	sensor_faction = FACTION_CLF
 
 /obj/item/clothing/under/colonist/prison_boiler
 	name = "\improper prisoner boiler uniform"
@@ -777,6 +771,48 @@
 	worn_state = "wy_davisone"
 	has_sensor = UNIFORM_HAS_SENSORS
 	sensor_faction = FACTION_MARINE
+
+// CLF Uniforms
+
+/obj/item/clothing/under/colonist/clf
+	name = "\improper Colonial Liberation Front uniform"
+	desc = "A stylish grey-green jumpsuit - standard issue for colonists. This version appears to have the symbol of the Colonial Liberation Front emblazoned in select areas."
+	icon = 'icons/obj/items/clothing/uniforms/uniforms_by_faction/CLF.dmi'
+	item_icons = list(
+		WEAR_BODY = 'icons/mob/humans/onmob/clothing/uniforms/uniforms_by_faction/CLF.dmi',
+	)
+	icon_state = "clf_uniform"
+	worn_state = "clf_uniform"
+
+/obj/item/clothing/under/colonist/clf/operative
+	name = "\improper Colonial Liberation Front Combat Clothes"
+	desc = "A stylish Brown-Green mix of Hunting and Sports Clothes - standard issue for Frontier colonists. This version appears to have the symbol of the Colonial Liberation Front emblazoned in select areas."
+	icon_state = "clf_fighter"
+	worn_state = "clf_fighter"
+	flags_jumpsuit = UNIFORM_SLEEVE_ROLLABLE|UNIFORM_JACKET_REMOVABLE
+
+/obj/item/clothing/under/colonist/clf/medic
+	name = "\improper Colonial Liberation Front Medic Clothes"
+	desc = "A stylish Light Blue-White mix of Hunting and Sports Clothes - standard issue for Frontier colonists. This version appears to have the symbol of the Colonial Liberation Front emblazoned in select areas."
+	icon_state = "clf_medic"
+	worn_state = "clf_medic"
+	flags_jumpsuit = UNIFORM_SLEEVE_ROLLABLE|UNIFORM_JACKET_REMOVABLE
+
+/obj/item/clothing/under/colonist/clf/leader
+	name = "\improper Colonial Liberation Front Clothes"
+	desc = "A stylish Dark blue mix of Military Clothes - standard issue for Frontier colonists. This version appears to have the symbol of the Colonial Liberation Front emblazoned in select areas, shows the rank of the leaders on the shoulder."
+	icon_state = "clf_leader"
+	worn_state = "clf_leader"
+	flags_jumpsuit = UNIFORM_SLEEVE_ROLLABLE|UNIFORM_JACKET_REMOVABLE
+
+/obj/item/clothing/under/colonist/clf/canc
+	name = "\improper CANC fatigues"
+	desc = "It's a set of standard-issue CANC combat fatigues featuring venlar armor inserts at critical areas to protect from blades and low caliber ballistics."
+	icon_state = "canc_uniform"
+	worn_state = "canc_uniform"
+	flags_jumpsuit = UNIFORM_SLEEVE_ROLLABLE|UNIFORM_JACKET_REMOVABLE
+
+//--
 
 /obj/item/clothing/under/colonist/white_service
 	name = "white service uniform"

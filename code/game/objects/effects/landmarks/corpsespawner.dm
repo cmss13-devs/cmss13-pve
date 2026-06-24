@@ -76,6 +76,42 @@
 	name = "Shaft Miner"
 	equip_path = /datum/equipment_preset/corpse/miner
 
+/obj/effect/landmark/corpsespawner/clf/lv1021
+	name = "LV1021 - Colonial Liberation Front Soldier"
+	equip_path = /datum/equipment_preset/corpse/clf_lv1021
+
+/obj/effect/landmark/corpsespawner/clf/veteran
+	name = "LV1021 - Colonial Liberation Front Veteran"
+	equip_path = /datum/equipment_preset/corpse/clf_veteran
+
+/obj/effect/landmark/corpsespawner/clf/burst
+	name = "Burst Colonial Liberation Front Soldier"
+	equip_path = /datum/equipment_preset/corpse/clf/burst
+
+/obj/effect/landmark/corpsespawner/upp
+	name = "Union of Progressive Peoples Soldier"
+	equip_path = /datum/equipment_preset/corpse/upp
+
+/obj/effect/landmark/corpsespawner/upp/burst
+	name = "Burst Union of Progressive Peoples Soldier"
+	equip_path = /datum/equipment_preset/corpse/upp/burst
+
+/obj/effect/landmark/corpsespawner/pmc
+	name = "Weyland-Yutani PMC (Standard)"
+	equip_path = /datum/equipment_preset/corpse/pmc
+
+/obj/effect/landmark/corpsespawner/pmc/burst
+	name = "Burst Weyland-Yutani PMC (Standard)"
+	equip_path = /datum/equipment_preset/corpse/pmc/burst
+
+/obj/effect/landmark/corpsespawner/freelancer
+	name = "Freelancer"
+	equip_path = /datum/equipment_preset/corpse/freelancer
+
+/obj/effect/landmark/corpsespawner/freelancer/burst
+	name = "Burst Freelancer"
+	equip_path = /datum/equipment_preset/corpse/freelancer/burst
+
 //FORECON
 /obj/effect/landmark/corpsespawner/forecon_spotter
 	name = "USCM Reconnaissance Spotter"

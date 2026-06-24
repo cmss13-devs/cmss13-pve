@@ -823,6 +823,9 @@
 	unacidable = TRUE
 	light_color = LIGHT_COLOR_FLARE
 	var/obj/docking_port/stationary/marine_dropship/linked_port = null
+	var/icon_on = "landingstripe0_on"
+	var/icon_off = "landingstripe_off"
+	var/light_strength = 2
 
 //Don't allow blowing those up, so Marine nades don't fuck them
 /obj/structure/machinery/landinglight/ex_act(severity)
@@ -889,3 +892,21 @@
 /obj/structure/machinery/landinglight/ds2/spoke/turn_on()
 	icon_state = initial(icon_state) + "1"
 	set_light(3)
+
+/obj/structure/machinery/landinglight/delayone
+	icon_state = "landingstripe1"
+	icon_on = "landingstripe1_on"
+
+/obj/structure/machinery/landinglight/delaytwo
+	icon_state = "landingstripe2"
+	icon_on = "landingstripe2_on"
+
+/obj/structure/machinery/landinglight/delaythree
+	icon_state = "landingstripe3"
+	icon_on = "landingstripe3_on"
+
+/obj/structure/machinery/landinglight/spoke
+	icon_state = "lz_spoke_light_off"
+	icon_on = "lz_spoke_light_on"
+	icon_off = "lz_spoke_light_off"
+	light_strength = 3
