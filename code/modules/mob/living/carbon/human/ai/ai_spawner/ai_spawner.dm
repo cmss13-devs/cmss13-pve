@@ -390,7 +390,7 @@ GLOBAL_LIST_EMPTY(pre_start_humanAI)
 					faction_tags.faction_group = list(selected_faction)
 	if(spawn_ai && !ai_human.ckey)
 		ai_human.AddComponent(/datum/component/human_ai) //ai human might not be AI. those who know
-		ai_human.get_ai_brain().appraise_inventory(armor = TRUE)
+		//ai_human.get_ai_brain().appraise_inventory(armor = TRUE)
 
 /datum/human_ai_spawner_menu/proc/post_round_start()
 	SIGNAL_HANDLER
