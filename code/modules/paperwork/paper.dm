@@ -627,6 +627,10 @@
 	info = "<center> <br> <b><small>Con-Amalagated Corporation</b></small> <br> <b><large>Orders For Liaison: Con-AM 81 'Abyssal'</large></b> <br> <small>No.02</small></center> <hr> <br> Date: 2182 <br> <b><large>On Recovery Of Unidentified Craft<large></b>  <hr> We have recieved your Captains communique regarding the recovery of a possible xenocraft. Its transfer into Con-Am secure custody is considered priority 1. We are dispatching a Con-Am Security Service force to your station to transfer it off-station.<br><br> Your directive is to ensure its safe harbour until the recovery team arrives. You must render every effort to ensure the safety of the craft. You and your crew will be well rewarded for your efforts.  <hr><small><i>FOR SANCTIONED USE ONLY</i></small>"
 
 
+/obj/item/paper/laituri
+	name = "PARADROP STORAGE NOTICE!"
+	info = "Since we have had several incidents of shuttles flying without adequate equipment, hopefully this makes it clear - the paradrop equipment and a GREEN crate with parachutes are aft of the shuttles rear bay doors, that is to say the room directly port of you currently! There is powerloader equipment nearby, handy eh? If you are instead rappelling, there is a BLACK crate of rappel equipment stored behind you in this area you're currently standing in, it is very hard to miss. Get your act together!"
+
 /obj/item/paper/crumpled
 	name = "paper scrap"
 	icon_state = "scrap"
