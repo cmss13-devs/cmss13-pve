@@ -1992,7 +1992,7 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	flags_marine_helmet = HELMET_GARB_OVERLAY
 
 /obj/item/clothing/head/helmet/marine/veteran/royal_marine/cag/nv
-	built_in_visors = list(/obj/item/device/helmet_visor/night_vision/marine_raider)
+	built_in_visors = list(new /obj/item/device/helmet_visor/night_vision/marine_raider)
 
 #undef HELMET_GARB_RELAY_ICON_STATE
 //=USASF & ARMY=\\
