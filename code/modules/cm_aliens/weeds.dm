@@ -35,8 +35,6 @@
 /obj/effect/alien/weeds/Initialize(mapload, obj/effect/alien/weeds/node/node, use_node_strength=TRUE, do_spread=TRUE)
 	. = ..()
 
-	if(istype(linked_hive, /datum/hive_status/mutated))
-		icon = 'icons/mob/xenonids/weeds.dmi'
 	if(node)
 		linked_hive = node.linked_hive
 		if(use_node_strength)
@@ -246,7 +244,7 @@
 
 			qdel(W)
 
-		if(!istype(T, /turf/closed/wall/resin) && T.density && !istype(linked_hive, /datum/hive_status/mutated))
+		if(!istype(T, /turf/closed/wall/resin) && T.density)
 			if(istype(T, /turf/closed/wall))
 				weeds.Add(new /obj/effect/alien/weeds/weedwall(T, node))
 				continue
@@ -288,12 +286,10 @@
 				return FALSE
 
 		if(istype(O, /obj/structure/window/framed))
-			if(!istype(linked_hive, /datum/hive_status/mutated))
-				new /obj/effect/alien/weeds/weedwall/window(T, parent)
+			new /obj/effect/alien/weeds/weedwall/window(T, parent)
 			return FALSE
 		else if(istype(O, /obj/structure/window_frame))
-			if(!istype(linked_hive, /datum/hive_status/mutated))
-				new /obj/effect/alien/weeds/weedwall/frame(T, parent)
+			new /obj/effect/alien/weeds/weedwall/frame(T, parent)
 			return FALSE
 		else if(istype(O, /obj/structure/machinery/door) && O.density && (!(O.flags_atom & ON_BORDER) || O.dir != direction))
 			return FALSE
@@ -315,8 +311,7 @@
 
 /obj/effect/alien/weeds/update_icon()
 	overlays.Cut()
-	if(istype(linked_hive, /datum/hive_status/mutated))
-		icon = 'icons/mob/xenonids/weeds.dmi'
+
 	var/my_dir = 0
 	for(var/check_dir in GLOB.cardinals)
 		var/turf/check = get_step(src, check_dir)

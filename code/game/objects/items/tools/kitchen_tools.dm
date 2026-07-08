@@ -218,7 +218,7 @@
 	name = "rolling pin"
 	desc = "Used to knock out the Bartender."
 	icon_state = "rolling_pin"
-	force = 15
+	force = 8
 	throwforce = 10
 	throw_speed = SPEED_FAST
 	throw_range = 7

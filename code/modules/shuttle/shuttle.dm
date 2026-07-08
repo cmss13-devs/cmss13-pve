@@ -202,7 +202,6 @@
 
 	var/datum/map_template/shuttle/roundstart_template
 	var/json_key
-	var/admin_only = FALSE
 
 /obj/docking_port/stationary/register(replace = FALSE)
 	. = ..()

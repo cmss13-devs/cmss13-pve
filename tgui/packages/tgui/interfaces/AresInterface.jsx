@@ -191,15 +191,15 @@ const MainMenu = (props) => {
             </Stack.Item>
             <Stack.Item>
               <Button
-                tooltip="Request bioscan."
-                icon="satellite-dish"
+                tooltip="Access the Bioscan records."
+                icon="eye"
                 ml="auto"
                 px="2rem"
                 width="25vw"
                 bold
-                onClick={() => act('bioscan')}
+                onClick={() => act('page_bioscans')}
               >
-                Bioscan
+                Bioscan Logs
               </Button>
             </Stack.Item>
             <Stack.Item>

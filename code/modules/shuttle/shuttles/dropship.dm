@@ -141,20 +141,6 @@
 /obj/docking_port/mobile/marine_dropship/upp/get_transit_path_type()
 	return /turf/open/space/transit/dropship/upp
 
-/obj/docking_port/mobile/marine_dropship/yautja
-	name = "Deduith'Aup"
-	id = "yautjadropship"
-	width = 11
-	height = 13
-
-	dwidth = 5
-	dheight = 6
-	ignition_sound = 'sound/effects/yautja_dropship_startup.ogg'
-	ignitionTime = 150
-
-/obj/docking_port/mobile/marine_dropship/yautja/get_transit_path_type()
-	return /turf/open/space/transit/dropship/yautja
-
 /obj/docking_port/mobile/marine_dropship/cyclone
 	name = "Cyclone"
 	id = DROPSHIP_CYCLONE
@@ -477,7 +463,3 @@
 /datum/map_template/shuttle/tripoli
 	name = "Tripoli"
 	shuttle_id = DROPSHIP_TRIPOLI
-
-/datum/map_template/shuttle/yautja
-	name = "Deduith'Aup"
-	shuttle_id = "yautjadropship"

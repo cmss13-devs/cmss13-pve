@@ -20,7 +20,7 @@
 	throw_speed = SPEED_FAST
 	tracks_target = FALSE
 
-	default_ai_action = TRUE
+	default_ai_action = FALSE
 
 	var/direct_hit_damage = 60
 	var/frontal_armor = 15

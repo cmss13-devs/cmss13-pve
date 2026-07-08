@@ -29,10 +29,6 @@
 	icon_state = "exterior_door_unique"
 	dir = SOUTH
 
-/obj/structure/interior_exit/vehicle/van/right/truck
-	name = "Truck right door"
-	icon_state = "exterior_door_unique_truck"
-
 /obj/structure/interior_exit/vehicle/van/backleft
 	name = "Van back exit"
 	icon = 'icons/obj/vehicles/interiors/van.dmi'
