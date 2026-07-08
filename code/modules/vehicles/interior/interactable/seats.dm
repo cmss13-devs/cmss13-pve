@@ -90,7 +90,7 @@
 	name = "gunner's seat"
 	desc = "Comfortable seat for a gunner."
 	seat = VEHICLE_GUNNER
-	required_skill = SKILL_VEHICLE_LARGE
+	required_skill = SKILL_VEHICLE_CREWMAN
 
 /obj/structure/bed/chair/comfy/vehicle/gunner/do_buckle(mob/target, mob/user)
 	// Gunning always requires crewman-level skill

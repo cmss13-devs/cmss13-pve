@@ -22,12 +22,8 @@
 	if(brain.tied_human.r_hand?.flags_item & NODROP)
 		return 0
 
-	if(brain.civilian)
-		return 0
-
 	if(!brain.primary_weapon)
 		return 16
-
 
 	return 11
 

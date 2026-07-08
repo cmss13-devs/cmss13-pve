@@ -305,10 +305,6 @@
 	shuttle_tag = DROPSHIP_UPP
 	dir = SOUTH
 
-/turf/open/space/transit/dropship/yautja
-	shuttle_tag = "yautjadropship"
-	dir = SOUTH
-
 /turf/open/space/transit/south
 	dir = SOUTH
 

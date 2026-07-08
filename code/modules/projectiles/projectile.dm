@@ -91,8 +91,6 @@
 	var/damage_boosted = 0
 	var/last_damage_mult = 1
 
-	var/silent = FALSE
-
 /obj/projectile/Initialize(mapload, datum/cause_data/cause_data)
 	. = ..()
 	path = list()
@@ -233,8 +231,6 @@
 	if(!suppress_light)
 		if(ammo.ammo_glowing)
 			set_light(1.5, 3, ammo.bullet_light_color)
-	else
-		silent = TRUE
 
 	//If we have the right kind of ammo, we can fire several projectiles at once.
 	if(ammo.bonus_projectiles_amount && ammo.bonus_projectiles_type)
