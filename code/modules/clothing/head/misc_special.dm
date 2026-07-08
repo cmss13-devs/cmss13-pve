@@ -143,3 +143,18 @@
 		set_light_on(TRUE)
 	else
 		set_light_on(FALSE)
+
+/obj/item/clothing/head/xenos
+	name = "???"
+	icon = 'icons/mob/humans/onmob/xeno_hats.dmi'
+	item_icons = list(
+		WEAR_HEAD = 'icons/mob/humans/onmob/xeno_hats.dmi'
+	)
+	flags_item = NODROP
+	flags_inventory = COVEREYES|COVERMOUTH
+	flags_inv_hide = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|HIDEALLHAIR
+	flags_armor_protection = BODY_FLAG_HEAD|BODY_FLAG_EYES
+
+/obj/item/clothing/head/xenos/drone
+	icon_state = "drone_mask"
+	item_state = "drone_mask"

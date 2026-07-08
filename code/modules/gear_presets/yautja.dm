@@ -108,6 +108,24 @@
 	default_cape_type = PRED_YAUTJA_QUARTER_CAPE
 	clan_rank = CLAN_RANK_BLOODED_INT
 
+/datum/equipment_preset/yautja/blooded/enforcer
+	name = "Yautja Enforcer"
+
+/datum/equipment_preset/yautja/blooded/enforcer/load_gear(mob/living/carbon/human/new_human, client/mob_client)
+	. = ..()
+	new /obj/item/weapon/gun/energy/yautja/plasmapistol(get_turf(new_human))
+	qdel(new_human.wear_mask)
+
+/datum/equipment_preset/yautja/blooded/enforcer/load_name(mob/living/carbon/human/new_human, randomise)
+	. = ..()
+	var/new_name = "[pick("Bo", "Pau", "Ba", "I", "Bhe", "Thi", "Hai", "Ni", "Yahti", "A")]'[pick("ta", "tu", "taulb", "dath", "cha", "thaadth", "dqeidh", "than", "stabp", "dtuan", "wankeb")]"
+	new_human.change_real_name(new_human, new_name)
+
+/datum/equipment_preset/yautja/blooded/enforcer/load_race(mob/living/carbon/human/new_human, client/mob_client)
+	. = ..()
+	new_human.skin_color = pick("tan", "green", "purple", "red", "blue", "black")
+	new_human.h_style = pick("Standard", "Short Thick", "Straight Thin", "Long Tied", "Short Thin", "Long Curved", "Long Straight", "Long Wide", "Short Wide")
+	new_human.regenerate_icons()
 // ELITE
 /datum/equipment_preset/yautja/elite
 	name = "Yautja Elite"

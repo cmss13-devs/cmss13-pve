@@ -535,6 +535,22 @@
 	default_ammo = /datum/ammo/energy/plasma
 	gun_type = /obj/item/weapon/gun/XM99
 
+/obj/item/ammo_magazine/laser
+	name = "\improper RXF-M5 battery"
+	desc = "An energy efficient power source for use with RXF-M5 EVA laser pistols."
+	caliber = "40W"
+	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/colony.dmi'
+	icon_state = "rxf_cell"
+	w_class = SIZE_SMALL
+	flags_magazine = NO_FLAGS //It's a battery, can't yank bullets or shells outa this
+	max_rounds = 50
+	default_ammo = /datum/ammo/energy/rxf
+	gun_type = /obj/item/weapon/gun/XM99/laser
+
+/obj/item/ammo_magazine/plasma/m99
+	max_rounds = 20
+	desc = "A hybrid battery cell and CdTe-pellet magazine designed to fit the M99A series of phased plasma pulse rifles. Advanced version with higher energy cap. Do not puncture or put in a microwave."
+
 // The "round-remover" power/fuel cell for the XM99
 /obj/item/ammo_magazine/plasma/gibber
 	name = "\improper XM99A1 lithium battery drum"

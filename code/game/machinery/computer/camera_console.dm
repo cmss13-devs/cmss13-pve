@@ -426,4 +426,55 @@
 	name = "\improper 'Tripoli' camera controls"
 	network = list(CAMERA_NET_TRIPOLI, CAMERA_NET_LASER_TARGETS)
 
+/obj/structure/machinery/computer/cameras/overwatch
+	name = "tactical net laptop"
+	desc = "Shows the feed from chosen ones' helmets."
+	icon = 'icons/obj/structures/machinery/computer.dmi'
+	icon_state = "remoteflightcomp"
+	density = FALSE
+	layer = UPPER_ITEM_LAYER
+	needs_power = FALSE
+	density = FALSE
+	circuit = null
+	var/source_type = /obj/item/device/tactical_camera_laptop
+	network = list("Overwatch")
+
+/obj/structure/machinery/computer/cameras/overwatch/MouseDrop(over_object)
+	if(over_object == usr && Adjacent(usr))
+		usr.visible_message(SPAN_NOTICE("[usr] starts shutting down and packing up [src]."), \
+		SPAN_NOTICE("You begin to shut down and pack up [src]..."))
+		do_after(usr, 3 SECONDS, INTERRUPT_NO_NEEDHAND, BUSY_ICON_FRIENDLY, src)
+		playsound(usr, 'sound/machines/terminal_off.ogg', 25, FALSE)
+		collapse()
+
+/obj/structure/machinery/computer/cameras/overwatch/proc/collapse(mob/living/carbon/human/user)
+	var/obj/item/device/tactical_camera_laptop/laptop = new source_type(loc)
+	if(istype(user))
+		user.visible_message(SPAN_NOTICE("[user] shuts down and packs up [src]."),
+			SPAN_NOTICE("You quickly shut down and pack up [src]."))
+		user.put_in_active_hand(laptop)
+	qdel(src)
+
+/obj/item/device/tactical_camera_laptop
+	name = "\improper tactical net laptop"
+	desc = "A laptop connected to tactical camera feed, all packed into an ultra-tough carry case."
+	icon = 'icons/obj/structures/machinery/computer.dmi'
+	icon_state = "remoteflightcomp_cl"
+	w_class = SIZE_SMALL
+	unacidable = TRUE
+	has_special_table_placement = TRUE
+
+/obj/item/device/tactical_camera_laptop/set_to_table(obj/structure/surface/target)
+	if (do_after(usr, 1 SECONDS, INTERRUPT_NO_NEEDHAND, BUSY_ICON_GENERIC))
+		var/obj/structure/machinery/computer/cameras/overwatch/deployed = new(target.loc)
+		usr.visible_message(SPAN_NOTICE("[usr] sets up [deployed]."), \
+			SPAN_NOTICE("You quickly set up [deployed] on the table."))
+		qdel(src)
+	else
+		to_chat(usr, SPAN_WARNING("You fail to setup the [src]"))
+
+/obj/item/device/flight_laptop/ex_act()
+	return
+
+
 #undef DEFAULT_MAP_SIZE

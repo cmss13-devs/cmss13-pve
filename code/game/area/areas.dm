@@ -82,6 +82,7 @@
 	/// Doesn't need to be set for areas/Z levels that are marked as admin-only
 	var/block_game_interaction = FALSE
 
+	var/gravity_slowdown = 0
 	// Day-Night settings
 	var/daytime_affected = TRUE
 

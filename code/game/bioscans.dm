@@ -159,3 +159,8 @@ GLOBAL_DATUM_INIT(bioscan_data, /datum/bioscan_data, new)
 		current_mob << sound(get_sfx("queen"), wait = 0, volume = 50)
 		to_chat(current_mob, title)
 		to_chat(current_mob, content)
+
+/proc/fake_bioscan()
+	var/name = "[MAIN_AI_SYSTEM] Bioscan Status"
+	var/input = "Bioscan complete.\n\nSensors indicate [GLOB.xenos_per_mission-GLOB.xenos_died] unknown lifeform signatures located in the operation area."
+	marine_announcement(input, name, 'sound/AI/bioscan.ogg', logging = ARES_LOG_NONE)

@@ -74,6 +74,11 @@
 	if(option == SGT_VARIANT)
 		gear_preset = gear_preset_secondary
 
+/datum/job/marine/tl/ai/guard
+	title = JOB_SQUAD_TEAM_LEADER_GUARD
+	gear_preset = /datum/equipment_preset/uscm/tl/guard
+	job_options = null
+
 /obj/effect/landmark/start/marine/tl/upp
 	name = JOB_SQUAD_TEAM_LEADER_UPP
 	squad = SQUAD_UPP
@@ -107,6 +112,10 @@
 	squad = SQUAD_LRRP
 	job = /datum/job/marine/tl/ai/forecon
 
+/obj/effect/landmark/start/marine/tl/guard
+	name = JOB_SQUAD_TEAM_LEADER_GUARD
+	squad = "Colonial Guard"
+	job = /datum/job/marine/tl/ai/guard
 //-- RMC Platoon --//
 //Section/squad leader & team leader//
 

@@ -630,3 +630,15 @@
 		tonkturret.add_hardpoint(new /obj/item/hardpoint/primary/cannon)
 		tonkturret.add_hardpoint(new /obj/item/hardpoint/secondary/m56cupola)
 		break
+
+//PRESET: guard emplaced tank
+/obj/effect/vehicle_spawner/tank/fixed/guard/load_hardpoints(obj/vehicle/multitile/tank/V)
+	V.add_hardpoint(new /obj/item/hardpoint/support/weapons_sensor)
+	V.add_hardpoint(new /obj/item/hardpoint/holder/tank_turret)
+	for(var/obj/item/hardpoint/holder/tank_turret/TT in V.hardpoints)
+		TT.add_hardpoint(new /obj/item/hardpoint/primary/cannon)
+		TT.add_hardpoint(new /obj/item/hardpoint/secondary/m56cupola)
+		TT.rotate(90)
+		break
+	V.icon = 'icons/obj/vehicles/tank_desert.dmi'
+	V.update_icon()

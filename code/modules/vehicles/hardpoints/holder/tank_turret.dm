@@ -203,6 +203,7 @@
 				if(WEST)
 					user.client.pixel_x = -1 * AM.view_tile_offset * 32
 					user.client.pixel_y = 0
+	owner.update_icon()
 
 /obj/item/hardpoint/holder/tank_turret/try_fire(atom/target, mob/living/user, params)
 	var/turf/L

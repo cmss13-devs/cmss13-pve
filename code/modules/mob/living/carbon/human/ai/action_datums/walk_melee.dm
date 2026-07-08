@@ -15,6 +15,9 @@
 	if(!brain.tried_reload && (brain.primary_weapon || length(brain.secondary_weapons)))
 		return 0
 
+	if(brain.civilian)
+		return 0
+
 	return 3
 
 /datum/ai_action/walk_melee/trigger_action()

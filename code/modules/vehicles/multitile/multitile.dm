@@ -171,6 +171,8 @@
 
 	var/move_on_turn = FALSE
 
+	var/one_man_army = FALSE
+
 /obj/vehicle/multitile/Initialize()
 	. = ..()
 

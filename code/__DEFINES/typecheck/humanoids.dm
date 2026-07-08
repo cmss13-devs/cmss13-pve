@@ -8,6 +8,7 @@
 #define ishumansynth_strict(A)   (ishuman(A) && (istype(A?:species, /datum/species/human) || istype(A?:species, /datum/species/synthetic)))
 
 #define iszombie(A) (ishuman(A) && istype(A?:species, /datum/species/zombie))
+#define isskeleton(A) (ishuman(A) && istype(A?:species, /datum/species/skeleton))
 #define ismonkey(A) (ishuman(A) && istype(A?:species, /datum/species/monkey))
 #define isyautja(A) (ishuman(A) && istype(A?:species, /datum/species/yautja))
 #define isresearcher(A) (ishuman(A) && A.job == "Researcher")

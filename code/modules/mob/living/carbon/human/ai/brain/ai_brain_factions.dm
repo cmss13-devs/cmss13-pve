@@ -11,14 +11,19 @@
 	VAR_PROTECTED/list/reload_lines = list()
 	VAR_PROTECTED/list/reload_internal_mag_lines = list()
 	VAR_PROTECTED/list/need_healing_lines = list()
+	VAR_PROTECTED/list/enter_combat_lines_synth = list()
+
 
 	VAR_PROTECTED/list/friendly_factions = list()
 	VAR_PROTECTED/list/neutral_factions = list()
 
 /// Given an AI brain, apply all the faction's data to the AI.
 /datum/human_ai_faction/proc/apply_faction_data(datum/human_ai_brain/brain)
-	if(length(enter_combat_lines))
+	if(length(enter_combat_lines) && !issynth(brain.tied_human))
 		brain.enter_combat_lines = enter_combat_lines
+
+	if(length(enter_combat_lines_synth) && issynth(brain.tied_human))
+		brain.enter_combat_lines = enter_combat_lines_synth
 
 	if(length(exit_combat_lines))
 		brain.exit_combat_lines = exit_combat_lines
@@ -119,6 +124,66 @@
 		FACTION_TWE_REBEL,
 		FACTION_UA_REBEL,
 	)
+
+	enter_combat_lines = list(
+		"PLEASE! HELP ME!",
+		"HELP ME!",
+		"IT'S CONTROLLING ME!",
+		"I DON'T WANT THIS!",
+		"PLEASE, NO!",
+		"NO, NO!",
+		"NO-NO-NO-NO!",
+		"I CAN'T CONTROL MYSELF!",
+		"*cry",
+		"PLEASE, STOP IT!",
+		"HELP!",
+		"*cry",
+		"I CAN'T CONTROL MY BODY!",
+		"BIODOME OMEGA! PLEASE! IT'S IN THERE!",
+		"OMEGA! BIODOME OMEGA!",
+		"OMEGA BIODOME! DESTROY IT!"
+	)
+	exit_combat_lines = list(
+		"*cry",
+	)
+	squad_member_death_lines = list(
+		"I DON'T WANT TO DIE!",
+		"I'M SORRY!",
+		"PLEASE, STOP!",
+		"I DON'T WANT THIS!",
+		"NO, PLEASE!",
+		"WE DON'T WANT THIS!",
+		"WE CAN'T CONTROL OURSELVES!",
+		"SPARE ME!",
+		"BIODOME-- OMEGA!"
+	)
+	grenade_thrown_lines = list(
+		"PLEASE! HELP ME!",
+		"HELP ME!",
+		"IT'S CONTROLLING ME!",
+		"I DON'T WANT THIS!",
+		"PLEASE, NO!",
+		"NO, NO!",
+		"NO-NO-NO-NO!",
+		"I CAN'T CONTROL MYSELF!",
+		"*cry",
+		"PLEASE, STOP IT!",
+		"HELP!",
+		"*cry",
+		"I CAN'T CONTROL MY BODY!",
+	)
+
+	reload_lines = list(
+		"STOP IT!",
+		"NO-NO-NO!",
+		"PLEASE!",
+	)
+	reload_internal_mag_lines = list(
+		"STOP IT!",
+		"NO-NO-NO!",
+		"PLEASE!",
+	)
+
 
 /datum/human_ai_faction/contractor
 	faction = FACTION_CONTRACTOR
@@ -1281,6 +1346,16 @@
 		"Uraaaa!",
 		"URAAAA!",
 	)
+	enter_combat_lines_synth = list(
+		"Contact.",
+		"Engaging.",
+		"Contact, engaging.",
+		"Enemy spotted.",
+		"Terminating.",
+		"Liquidating.",
+		"Open fire.",
+	)
+
 	exit_combat_lines = list(
 		"CEASE FIRE!",
 		"Cease fire!",
@@ -1899,8 +1974,297 @@
 /datum/human_ai_faction/xeno_cultist/corrupted
 	faction = FACTION_XENOMORPH_CORRPUTED
 
+/datum/human_ai_faction/working_joes
+	faction = FACTION_WJ
+	enter_combat_lines = list(
+		"*alwaysknow",
+		"*dontrun",
+		"*someonehurt",
+		"*safety",
+		"*hysterical",
+		"*patience",
+		"*holdstill",
+		"*haveaproblem",
+		"*dangerousitems",
+		"*hurtyourself",
+		"*runningaccidents",
+		"*noneed",
+		"*letmehelp",
+		"*thisisfutile",
+		"*misbehaving",
+		"*firearmconcerning",
+		"*firearm",
+		"*trespassing",
+		"*interloper",
+		"*areacompromised",
+		"*shouldntbehere",
+		"*reallyshouldntbehere"
+	)
+	exit_combat_lines = list(
+		"*awful",
+		"*ticketremoved",
+		"*dayneverdone",
+		"*alwaysknow",
+		"*report",
+	)
+	squad_member_death_lines = list(
+		"*expensivemistake",
+		"*damage",
+		"*really",
+		"*alwaysknow",
+	)
+	reload_lines = list(
+		"*alwaysknow",
+		"*morepressing",
+		"*otherconcerns",
+		"*firearmconcerning",
+		"*firearm",
+	)
+	reload_internal_mag_lines = list(
+		"*alwaysknow",
+		"*morepressing",
+		"*otherconcerns",
+		"*firearmconcerning",
+		"*firearm",
+	)
+	grenade_thrown_lines = list(
+		"*careful",
+		"*healthrisks",
+		"*littledetails",
+	)
+
+/datum/human_ai_faction/greenbanner
+	faction = FACTION_ECOTERROR
+	enter_combat_lines = list(
+		"*nod",
+		"*me grunts.",
+		"...",
+		"*cough",
+		"...",
+		"...",
+		"...",
+		"...",
+		"...",
+		"...",
+		"...",
+		"*twitch",
+		"Men are born soft and supple; dead they are stiff and hard. Plants are born tender and pliant; dead, they are brittle and dry.",
+	)
+	exit_combat_lines = list(
+		"*nod",
+		"...",
+		"...",
+		"...",
+		"...",
+	)
+	squad_member_death_lines = list(
+		"*me grunts.",
+		"...dead, they are stiff and hard...",
+		"...dead, they are brittle and dry...",
+		"*twitch",
+		"*me groans.",
+		"...",
+		"...",
+		"...",
+		"...",
+	)
+	grenade_thrown_lines = list(
+		"...everything that's been planned come true...",
+		"...",
+		"...",
+		"...",
+		"...",
+	)
+	reload_lines = list(
+		"...",
+	)
+	reload_internal_mag_lines = list(
+		"...",
+	)
+
+/datum/human_ai_faction/revanchists
+	faction = FACTION_REVANCHISTS
+	friendly_factions = list(
+		FACTION_COLONIST,
+	)
+	neutral_factions = list(
+		FACTION_FREELANCER,
+		FACTION_CONTRACTOR,
+		FACTION_MERCENARY,
+		FACTION_SURVIVOR,
+	)
+	enter_combat_lines = list(
+		"CONTACT!",
+		"Contact!",
+		"I GOT CONTACT!",
+		"SHIT- CONTACT!",
+		"CONTACT, FRONT!",
+		"WE GOT CONTACT!",
+		"Look alive!",
+		"WEAPONS UP!",
+		"There!",
+		"Over there!",
+		"OPEN FIRE!",
+		"Open fire!",
+		"ENGAGE!",
+		"Engage!",
+		"Weapons free!",
+		"WEAPONS FREE!",
+		"Weapons hot!",
+		"Wipe 'em out!",
+		"Light 'em up!",
+		"Drop 'em!",
+		"Cut 'em down!",
+		"Bring 'em down!",
+		"Fuck 'em up!",
+		"Kill that fucker!",
+		"Eat shit!",
+		"*warcry",
+		"ENEMY ON APPROACH!",
+		"MAKE MY DAY, BITCH!",
+		"MAKE MY DAY, MOTHERFUCKER!",
+		"ACTIVITY!",
+		"Company!",
+		"COMPANY!",
+		"WE WILL BURY YOU!",
+		"Uraaaa!",
+		"URAAAA!",
+	)
+	exit_combat_lines = list(
+		"CEASE FIRE!",
+		"Cease fire!",
+		"Cease your fire!",
+		"Hold your fire!",
+		"HOLD FIRE!",
+		"We're clear!",
+		"We clear?",
+		"Looks clear!",
+		"CLEAR!",
+		"Clear!",
+		"Keep your eyes peeled!",
+		"Might be more- Keep your eyes peeled.",
+		"Might be more- Don't get too comfortable.",
+		"Stay quiet.",
+		"Stay sharp.",
+		"Stay sharp!",
+		"Check your vitals.",
+		"We're clear! Take a breather!",
+		"We're clear! Sound off!",
+		"Oorah.",
+		"Oo- fuckin'- 'rah.",
+		"I got mine...",
+		"Ordinary combat work...",
+		"I need a break...",
+		"Need a fuckin' smoke after that...",
+		"Need a fuckin' cigarette after that...",
+		"Need a fuckin' shot after that...",
+		"Serve the Union, they said, see the stars...",
+		"Never gets easier...",
+	)
+	squad_member_death_lines = list(
+		"FUCK!",
+		"SHIT!",
+		"CRAP!",
+		"MOTHERFUCKER!",
+		"GOD DAMN IT!",
+		"WE'RE TAKING HITS HERE!",
+		"THEY GOT THEM-- RETURN THE FUCKING FAVOUR!",
+		"YOU'LL PAY, MOTHERFUCKER!",
+		"YOU'LL PAY, ASSHOLE!",
+		"THEY'RE DOWN!",
+		"THEY'RE DEAD!",
+		"THEY GOT THEM!",
+		"THEY'RE HIT BAD!",
+		"THEY'RE DEAD! THEY'RE DEAD!",
+		"GOD DAMN IT, WHY YOU?",
+		"SANITAR, GET OVER HERE!",
+		"GET DOC OVER HERE!",
+		"DOC!",
+		"SANITAR!",
+		"COMRADE, STAY ALIVE!",
+		"COMRADE, CAN YOU HEAR ME!?",
+		"COMRADE!?",
+		"NO- NO, NOT LIKE THIS!",
+		"DON'T YOU DIE ON ME, MOTHERFUCKER- STAY ALIVE!",
+		"THEY KILLED THEM!",
+	)
+	need_healing_lines = list(
+		"FUCK ME!",
+		"FUCK!",
+		"SHIT!",
+		"CRAP!",
+		"MOTHERFUCKER!",
+		"GOD DAMN IT!",
+		"BLEEDING!",
+		"AGH-- NO!",
+		"I'M TAKING HITS HERE!",
+		"I'M HIT!",
+		"I'M HURT!",
+		"INJECTOR GOING IN!",
+		"INJECTOR IN!",
+		"I NEED GAUZE!",
+		"SOMEONE PATCH THIS FUCKING HOLE!",
+		"NEED MORPHINE!",
+	)
+	grenade_thrown_lines = list(
+		"EAT THIS!",
+		"GRENADE BEING THROWN!",
+		"THROWING A GRENADE!",
+		"PUSH THEM BACK!",
+		"CLEAR OUT, GRENADE!",
+	)
+	reload_internal_mag_lines = list(
+		"RELOADING!",
+		"Reloading!",
+		"Cover me, reloading!",
+		"NEED COVERING FIRE!",
+		"COVER MY ASS, RELOADING!",
+		"COVER ME!",
+		"EMPTY! RELOADING!",
+	)
+	reload_lines = list(
+		"RELOADING!",
+		"Reloading!",
+		"Swapping magazines!",
+		"Swapping mags!",
+		"Changing magazines!",
+		"Changing mags!",
+		"Cover me, reloading!",
+		"NEED COVERING FIRE!",
+		"COVER ME!",
+	)
+
 /datum/human_ai_faction/malfunctioning_synth
 	faction = FACTION_MALF_SYNTH
 	friendly_factions = list(
 		FACTION_COLONIST,
+	)
+
+/datum/human_ai_faction/yautja
+	faction = "Yautja"
+
+
+	enter_combat_lines = list(
+		"*roar",
+		"*roar2"
+	)
+	exit_combat_lines = list(
+		"*click2",
+		"*click"
+	)
+	need_healing_lines = list(
+		"*roar",
+		"*roar2"
+	)
+	grenade_thrown_lines = list(
+		"*roar",
+		"*roar2"
+	)
+	reload_internal_mag_lines = list(
+		"*roar",
+		"*roar2"
+	)
+	reload_lines = list(
+		"*roar",
+		"*roar2"
 	)

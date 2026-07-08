@@ -8,91 +8,95 @@
 	icon_state = "pwall"
 	},
 /area/space)
+"aac" = (
+/turf/open/floor/corsat/marked,
+/area/bigredv2/caves/lambda/xenobiology)
+"aad" = (
+/obj/docking_port/stationary/trijent_elevator{
+	airlock_area = /area/shuttle/elevator3/ground;
+	airlock_exit = "elevator";
+	elevator_network = "Omicorn";
+	height = 5;
+	width = 8;
+	name = "Upper Eta";
+	id = "Upper_Omicorn";
+	roundstart_template = /datum/map_template/shuttle/trijent_elevator/ice_elevator/omicorn
+	},
+/turf/open/floor/plating/icefloor/warnplate/southwest,
+/area/shuttle/elevator3/ground)
 "aae" = (
 /turf/closed/wall/solaris/reinforced,
 /area/bigredv2/outside/space_port)
 "aaf" = (
-/obj/structure/showcase,
-/turf/open/floor/carpet6_2/west,
-/area/bigredv2/caves/eta/living)
+/turf/open/floor/plating/icefloor/warnplate,
+/area/shuttle/elevator3/ground)
+"aag" = (
+/turf/open/floor/plating/icefloor/warnplate/southeast,
+/area/shuttle/elevator3/ground)
 "aah" = (
 /turf/open/floor/plating,
 /area/bigredv2/outside/space_port)
 "aai" = (
-/obj/structure/surface/table,
-/obj/item/book/manual/nuclear,
-/turf/open/floor/wood,
-/area/bigredv2/caves/eta/living)
+/turf/open/floor/plating/icefloor/warnplate/west,
+/area/shuttle/elevator3/ground)
 "aaj" = (
-/obj/structure/bookcase/manuals/research_and_development,
-/obj/item/storage/fancy/vials/random,
-/turf/open/floor/wood,
-/area/bigredv2/caves/eta/living)
+/turf/open/floor/plating/icefloor,
+/area/shuttle/elevator3/ground)
+"aak" = (
+/turf/open/floor/plating/icefloor/warnplate/east,
+/area/shuttle/elevator3/ground)
+"aal" = (
+/turf/open/floor/plating/icefloor/warnplate/northwest,
+/area/shuttle/elevator3/ground)
+"aam" = (
+/turf/open/floor/plating/icefloor/warnplate/north,
+/area/shuttle/elevator3/ground)
+"aan" = (
+/turf/open/floor/plating/icefloor/warnplate/northeast,
+/area/shuttle/elevator3/ground)
 "aao" = (
 /turf/closed/wall/solaris/rock,
 /area/bigredv2/caves)
+"aap" = (
+/turf/open/floor/darkpurple2/east,
+/area/bigredv2/caves/lambda/xenobiology)
 "aaq" = (
 /obj/structure/sign/safety/hazard,
 /turf/closed/wall/solaris/reinforced,
 /area/bigredv2/outside/space_port)
+"aar" = (
+/obj/structure/machinery/computer/shuttle/elevator_controller/elevator_call/trijent{
+	shuttleId = "ice_classic_shuttle3";
+	dockId = "Upper_Dorms";
+	pixel_y = 32
+	},
+/turf/open/floor/darkpurple2/north,
+/area/bigredv2/caves/lambda/xenobiology)
+"aas" = (
+/turf/open/floor/darkpurple2/northeast,
+/area/bigredv2/caves/lambda/xenobiology)
+"aat" = (
+/turf/open/floor/plating/icefloor/warnplate/southeast,
+/area/shuttle/elevator2/ground)
+"aau" = (
+/turf/open/floor/plating/icefloor/warnplate/east,
+/area/shuttle/elevator2/ground)
+"aav" = (
+/turf/open/floor/plating/icefloor/warnplate/northwest,
+/area/shuttle/elevator2/ground)
 "aaw" = (
 /turf/closed/wall/solaris,
 /area/bigredv2/outside/space_port)
-"aaz" = (
-/obj/structure/showcase{
-	desc = "A stand with a plastic display of some kind of weird machine.";
-	icon_state = "coinpress0"
-	},
-/turf/open/floor/carpet10_8/west,
-/area/bigredv2/caves/eta/living)
-"aaA" = (
-/obj/structure/pipes/standard/simple/hidden/green,
-/obj/effect/landmark/crap_item,
-/obj/effect/landmark/structure_spawner/setup/distress/xeno_weed_node,
-/turf/open/floor/wood,
-/area/bigredv2/caves/eta/living)
-"aaB" = (
-/obj/structure/machinery/light{
-	dir = 1
-	},
-/obj/structure/closet/cabinet,
-/obj/item/disk/nuclear,
-/obj/item/weapon/gun/pistol/vp70,
-/obj/structure/pipes/vents/pump/on,
-/turf/open/floor/wood,
-/area/bigredv2/caves/eta/living)
-"aaC" = (
-/obj/structure/machinery/light{
-	dir = 1
-	},
-/obj/structure/closet/cabinet,
-/obj/item/clothing/accessory/armband,
-/obj/structure/pipes/vents/pump/on,
-/turf/open/floor/wood,
-/area/bigredv2/caves/eta/living)
-"aaD" = (
-/obj/structure/machinery/light{
-	dir = 4
-	},
-/turf/open/floor/darkred2/southeast,
-/area/bigredv2/caves/eta/research)
-"aaE" = (
-/obj/structure/machinery/light{
-	dir = 8
-	},
-/obj/structure/machinery/teleport/station,
-/turf/open/floor/dark,
-/area/bigredv2/caves/eta/research)
+"aax" = (
+/turf/open/floor/plating/icefloor/warnplate/north,
+/area/shuttle/elevator2/ground)
+"aay" = (
+/turf/open/floor/plating/icefloor/warnplate/northeast,
+/area/shuttle/elevator2/ground)
 "aaF" = (
 /obj/structure/machinery/camera/autoname/lz_camera,
 /turf/open/floor/plating,
 /area/bigredv2/outside/space_port)
-"aaG" = (
-/obj/structure/pipes/standard/simple/hidden/supply{
-	dir = 1
-	},
-/turf/open/floor/delivery,
-/area/bigredv2/caves/lambda/xenobiology)
 "aaH" = (
 /obj/structure/cargo_container/grant/left,
 /turf/open/floor/plating,
@@ -105,77 +109,10 @@
 /obj/structure/cargo_container/grant/right,
 /turf/open/floor/plating,
 /area/bigredv2/outside/space_port)
-"aaK" = (
-/turf/open/floor/darkpurplecorners2/east,
-/area/bigredv2/caves/lambda/xenobiology)
-"aaL" = (
-/turf/open/floor/darkyellow2/north,
-/area/bigredv2/caves/lambda/xenobiology)
-"aaM" = (
-/obj/structure/foamed_metal,
-/turf/open/floor/darkyellow2/north,
-/area/bigredv2/caves/lambda/xenobiology)
-"aaN" = (
-/obj/structure/foamed_metal,
-/turf/open/floor/dark,
-/area/bigredv2/caves/lambda/xenobiology)
-"aaO" = (
-/obj/structure/surface/table/reinforced,
-/obj/structure/machinery/door/window{
-	dir = 2
-	},
-/obj/structure/foamed_metal,
-/obj/structure/machinery/door/poddoor/shutters/almayer{
-	id = "chem_lock";
-	name = "\improper Chemistry Lockdown"
-	},
-/turf/open/floor/whiteyellowfull,
-/area/bigredv2/caves/lambda/xenobiology)
-"aaP" = (
-/obj/structure/machinery/smartfridge/chemistry,
-/turf/open/floor/plating,
-/area/bigredv2/caves/lambda/xenobiology)
-"aaQ" = (
-/turf/open/floor/whiteyellow,
-/area/bigredv2/caves/lambda/xenobiology)
-"aaR" = (
-/obj/structure/machinery/light,
-/obj/item/storage/fancy/vials/random,
-/turf/open/floor/plating/platingdmg3/west,
-/area/bigredv2/caves/lambda/xenobiology)
-"aaS" = (
-/obj/structure/surface/table/reinforced,
-/obj/structure/machinery/reagentgrinder,
-/turf/open/floor/whiteyellow/southeast,
-/area/bigredv2/caves/lambda/xenobiology)
-"aaT" = (
-/obj/effect/landmark/structure_spawner/setup/distress/xeno_weed_node,
-/turf/open/floor/plating/platingdmg2/west,
-/area/bigredv2/caves/lambda/xenobiology)
 "aaU" = (
 /obj/effect/decal/cleanable/blood/gibs/core,
 /turf/open/floor/plating,
 /area/bigredv2/outside/space_port)
-"aaV" = (
-/obj/effect/decal/cleanable/blood/oil,
-/turf/open/floor/whiteyellowcorner/east,
-/area/bigredv2/caves/lambda/xenobiology)
-"aaW" = (
-/obj/structure/closet/secure_closet/chemical,
-/turf/open/floor/whiteyellow/northeast,
-/area/bigredv2/caves/lambda/xenobiology)
-"aaX" = (
-/obj/structure/machinery/chem_dispenser,
-/turf/open/floor/whiteyellow/northwest,
-/area/bigredv2/caves/lambda/xenobiology)
-"aaY" = (
-/obj/structure/machinery/chem_dispenser,
-/turf/open/floor/whiteyellow/north,
-/area/bigredv2/caves/lambda/xenobiology)
-"aaZ" = (
-/obj/structure/machinery/chem_master,
-/turf/open/floor/whiteyellow/northeast,
-/area/bigredv2/caves/lambda/xenobiology)
 "abc" = (
 /obj/effect/decal/cleanable/blood/oil,
 /turf/open/floor/plating,
@@ -4965,7 +4902,7 @@
 /obj/structure/machinery/door/airlock/multi_tile/almayer/medidoor/colony{
 	name = "\improper Lambda Lab Break Room"
 	},
-/turf/open/floor/delivery,
+/turf/open/floor/darkpurple2/west,
 /area/bigredv2/caves/lambda/xenobiology)
 "ceF" = (
 /obj/structure/pipes/standard/simple/hidden/green{
@@ -9031,10 +8968,8 @@
 /turf/open/jungle/impenetrable,
 /area/bigredv2/caves/eta/living)
 "fFj" = (
-/obj/item/device/mass_spectrometer/adv,
-/obj/structure/foamed_metal,
-/turf/open/floor/whiteyellow,
-/area/bigredv2/caves/lambda/xenobiology)
+/turf/open/floor/plating/icefloor/warnplate,
+/area/shuttle/elevator2/ground)
 "fFx" = (
 /turf/open/mars_cave/mars_cave_22,
 /area/bigredv2/caves/eta/research)
@@ -9811,7 +9746,7 @@
 /area/bigredv2/outside/virology)
 "gni" = (
 /obj/structure/pipes/vents/scrubber/on,
-/turf/open/floor/darkpurplecorners2/east,
+/turf/open/floor/darkpurple2/east,
 /area/bigredv2/caves/lambda/xenobiology)
 "gno" = (
 /obj/structure/sign/safety/medical{
@@ -10377,9 +10312,18 @@
 /turf/open/mars/mars_dirt_11,
 /area/bigredv2/outside/c)
 "gID" = (
-/obj/structure/foamed_metal,
-/turf/open/floor/whiteyellow/southwest,
-/area/bigredv2/caves/lambda/xenobiology)
+/obj/docking_port/stationary/trijent_elevator{
+	height = 5;
+	width = 8;
+	id = "Upper_Dorms";
+	name = "Upper Lambda";
+	roundstart_template = /datum/map_template/shuttle/trijent_elevator/ice_elevator/dorm;
+	airlock_exit = "elevator";
+	elevator_network = "dorm";
+	airlock_area = /area/shuttle/elevator2/ground
+	},
+/turf/open/floor/plating/icefloor/warnplate/southwest,
+/area/shuttle/elevator2/ground)
 "gIH" = (
 /obj/structure/machinery/power/apc/power/north,
 /obj/structure/cable{
@@ -12507,8 +12451,8 @@
 /turf/open/floor/plating,
 /area/bigredv2/caves/mining)
 "iAn" = (
-/turf/open/floor/whiteyellow/west,
-/area/bigredv2/caves/lambda/xenobiology)
+/turf/open/floor/plating/icefloor/warnplate/west,
+/area/shuttle/elevator2/ground)
 "iAr" = (
 /turf/open/mars_cave/mars_dirt_7,
 /area/bigredv2/outside/s)
@@ -12776,11 +12720,8 @@
 /turf/open/floor/darkblue2/north,
 /area/bigredv2/outside/admin_building)
 "iNS" = (
-/obj/structure/bed/chair/office/dark{
-	dir = 1
-	},
-/turf/open/floor/whiteyellowfull,
-/area/bigredv2/caves/lambda/xenobiology)
+/turf/open/floor/plating/icefloor,
+/area/shuttle/elevator2/ground)
 "iOu" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/delivery,
@@ -12823,7 +12764,7 @@
 /obj/structure/pipes/standard/manifold/hidden/supply{
 	dir = 4
 	},
-/turf/open/floor/darkpurplecorners2,
+/turf/open/floor/darkpurple2/east,
 /area/bigredv2/caves/lambda/xenobiology)
 "iQf" = (
 /obj/structure/bed/chair{
@@ -14268,11 +14209,8 @@
 /turf/open/floor/asteroidwarning/east,
 /area/bigredv2/outside/telecomm/n_cave)
 "kas" = (
-/obj/structure/machinery/door/airlock/almayer/research/glass/colony{
-	dir = 1;
-	name = "\improper Lambda Lab Chemistry Lab"
-	},
-/turf/open/floor/delivery,
+/obj/structure/machinery/door/airlock/multi_tile/elevator/access/dormatory,
+/turf/open/floor/corsat/marked,
 /area/bigredv2/caves/lambda/xenobiology)
 "kaY" = (
 /obj/structure/bed/chair/wood/normal,
@@ -24276,7 +24214,6 @@
 	pixel_y = -32
 	},
 /obj/structure/machinery/light,
-/obj/effect/landmark/structure_spawner/setup/distress/xeno_weed_node,
 /turf/open/floor/darkpurple2,
 /area/bigredv2/caves/lambda/xenobiology)
 "sKz" = (
@@ -24513,7 +24450,7 @@
 	dir = 4;
 	pixel_x = -30
 	},
-/turf/open/floor/darkpurplecorners2/west,
+/turf/open/floor/darkpurple2/west,
 /area/bigredv2/caves/lambda/xenobiology)
 "sTe" = (
 /obj/effect/decal/cleanable/dirt,
@@ -25918,7 +25855,7 @@
 /obj/structure/machinery/light{
 	dir = 8
 	},
-/turf/open/floor/darkpurplecorners2/west,
+/turf/closed/wall/solaris/reinforced,
 /area/bigredv2/caves/lambda/xenobiology)
 "ucb" = (
 /obj/structure/machinery/light,
@@ -54808,13 +54745,13 @@ aCh
 aCh
 aBA
 aBA
-aBA
-aDX
-aDX
-aDX
-aDX
-aDX
-aDX
+adZ
+adZ
+adZ
+adZ
+adZ
+adZ
+adZ
 iVL
 rZy
 aDX
@@ -55025,13 +54962,13 @@ mag
 mag
 fDE
 eIW
-mFQ
-aDX
-jaL
+adZ
+aal
 aai
-fnV
-pcB
-aDX
+aai
+aai
+aad
+adZ
 iVL
 nkd
 aDX
@@ -55242,13 +55179,13 @@ sWH
 sWH
 sWH
 sWH
-vtN
-aDX
+adZ
+aam
 aaj
-jaL
-duF
-jaL
-aDX
+aaj
+aaj
+aaf
+adZ
 iVL
 hBw
 aDX
@@ -55459,13 +55396,13 @@ mPY
 oRm
 sWH
 sWH
-vtN
-aDX
-aaB
-utY
-sMI
-utY
-xfU
+adZ
+aam
+aaj
+aaj
+aaj
+aaf
+aac
 glp
 kRR
 xfU
@@ -55676,13 +55613,13 @@ mqP
 vvw
 sWH
 iUx
-vtN
-aDX
-jaL
-jaL
-jaL
-jaL
-aDX
+adZ
+aam
+aaj
+aaj
+aaj
+aaf
+aac
 iVL
 nkd
 aDX
@@ -55893,13 +55830,13 @@ mWD
 jzP
 lmr
 nac
-aaD
-aDX
-tfy
-jaL
-jaL
+adZ
+aam
+aaj
+aaj
+aaj
 aaf
-aDX
+aac
 iVL
 rZy
 aDX
@@ -56110,14 +56047,14 @@ aCh
 aCh
 aCh
 aCh
-aBA
-aDX
-aDX
-aDX
-aDX
-aDX
-aDX
-qRZ
+adZ
+aam
+aaj
+aaj
+aaj
+aaf
+aac
+iVL
 nvm
 aDX
 aDX
@@ -56327,14 +56264,14 @@ nTx
 sPF
 qzL
 mFQ
-aaE
-aDX
-tfy
-jaL
-jaL
-aaz
-aDX
-iVL
+adZ
+aam
+aaj
+aaj
+aaj
+aaf
+adZ
+qRZ
 nkd
 aDX
 tNa
@@ -56544,13 +56481,13 @@ sWH
 sWH
 iUx
 xSQ
-sWH
-aDX
-jaL
-jaL
-jaL
-jaL
-aDX
+adZ
+aan
+aak
+aak
+aak
+aag
+adZ
 wLt
 nkd
 aDX
@@ -56761,13 +56698,13 @@ iUx
 iUx
 sWH
 vtN
-aBA
-aDX
-aaC
-utY
-aaA
-utY
-xfU
+adZ
+adZ
+adZ
+adZ
+adZ
+adZ
+adZ
 glp
 kRR
 xfU
@@ -69408,12 +69345,12 @@ eGt
 eGt
 eGt
 eGt
-aao
-aao
 adZ
 adZ
 adZ
-aaP
+adZ
+adZ
+adZ
 adZ
 ueI
 xCz
@@ -69625,14 +69562,14 @@ eGt
 eGt
 eGt
 eGt
-aao
-aao
 adZ
-aaX
+aav
+iAn
+iAn
 iAn
 gID
-aaO
-aaL
+adZ
+unk
 tlz
 adZ
 aao
@@ -69842,14 +69779,14 @@ eGt
 eGt
 eGt
 eGt
-eGt
-aao
 adZ
-aaY
+aax
+iNS
+iNS
 iNS
 fFj
-aaO
-aaM
+adZ
+jfo
 mTl
 adZ
 aao
@@ -70059,14 +69996,14 @@ eGt
 eGt
 eGt
 eGt
-eGt
-aao
 adZ
-aaY
-aaT
-aaQ
+aax
+iNS
+iNS
+iNS
+fFj
 kas
-aaN
+jfo
 wQX
 adZ
 aao
@@ -70276,14 +70213,14 @@ eGt
 eGt
 hJx
 eGt
-aao
-aao
 adZ
-aaZ
-aaV
-aaR
-adZ
-jfo
+aax
+iNS
+iNS
+iNS
+fFj
+aac
+unk
 htb
 adZ
 aao
@@ -70493,17 +70430,17 @@ eGt
 eGt
 eGt
 eGt
-aao
-aao
 adZ
-adZ
-aaW
-aaS
-adZ
-jfo
+aax
+iNS
+iNS
+iNS
+fFj
+aac
+unk
 wQX
 adZ
-adZ
+aao
 aao
 adZ
 hRj
@@ -70710,18 +70647,18 @@ eGt
 eGt
 eGt
 eGt
+adZ
+aax
+iNS
+iNS
+iNS
+fFj
+aac
+unk
+mTl
+adZ
 aao
 aao
-aao
-adZ
-adZ
-adZ
-adZ
-jfo
-iZJ
-gnT
-adZ
-adZ
 adZ
 txS
 fyg
@@ -70927,16 +70864,16 @@ eGt
 eGt
 eGt
 eGt
-eGt
-eGt
-aao
-aao
-aao
-aao
 adZ
+aax
+iNS
+iNS
+iNS
+fFj
 adZ
-aaK
-iZJ
+aar
+mTl
+adZ
 ubN
 adZ
 adZ
@@ -71144,17 +71081,17 @@ aao
 eGt
 eGt
 eGt
-eGt
-eGt
-eGt
-iba
-ixS
-aao
-aao
 adZ
+aay
+aau
+aau
+aau
+aat
 adZ
-aaK
-vJV
+unk
+gnT
+dVs
+dVs
 sTc
 cew
 mRP
@@ -71361,19 +71298,19 @@ aao
 eGt
 eGt
 eGt
-eGt
-eGt
-eGt
-ehQ
-eGt
-ixS
-aao
-aao
 adZ
 adZ
+adZ
+adZ
+adZ
+adZ
+adZ
+aas
+aap
+aap
 gni
 iPM
-aaG
+eMx
 eMx
 eMx
 eMx

@@ -67,6 +67,8 @@ GLOBAL_LIST_EMPTY(human_ai_brains)
 	/// If TRUE, the AI will not move at all
 	var/hold_position = FALSE
 
+	var/civilian = FALSE
+
 /datum/human_ai_brain/New(mob/living/carbon/human/tied_human)
 	. = ..()
 	src.tied_human = tied_human
@@ -85,6 +87,9 @@ GLOBAL_LIST_EMPTY(human_ai_brains)
 	setup_detection_radius()
 	appraise_inventory()
 	tied_human.a_intent_change(INTENT_DISARM)
+	civilian = tied_human?.assigned_equipment_preset.ai_civilian
+	if(civilian)
+		cover_without_gun = TRUE
 
 /datum/human_ai_brain/Destroy(force, ...)
 	GLOB.human_ai_brains -= src
@@ -252,6 +257,9 @@ GLOBAL_LIST_EMPTY(human_ai_brains)
 	if(istype(entering, /obj/projectile))
 		var/obj/projectile/bullet = entering
 
+		if(bullet.silent)
+			return
+
 		enter_combat()
 
 		if(length(neutral_factions))
@@ -333,6 +341,9 @@ GLOBAL_LIST_EMPTY(human_ai_brains)
 /datum/human_ai_brain/proc/on_shot(datum/source, damage_result, ammo_flags, obj/projectile/bullet)
 	SIGNAL_HANDLER
 	if(tied_human.client)
+		return
+
+	if(bullet.silent)
 		return
 
 	enter_combat()

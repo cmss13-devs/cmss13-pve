@@ -188,3 +188,13 @@
 	attack_verb = list("poked")
 	flags_equip_slot = NO_FLAGS
 	has_user_lock = FALSE
+
+/obj/item/weapon/baton/on/Initialize()
+	. = ..()
+	status = 1
+	update_icon()
+
+/obj/item/weapon/baton/cattleprod/on/Initialize()
+	. = ..()
+	status = 1
+	update_icon()

@@ -17,6 +17,9 @@
 	if(!primary_weapon)
 		return FALSE
 
+	if(istype(primary_weapon, /obj/item/weapon/gun/energy/yautja/plasmapistol))
+		return FALSE
+
 	if(primary_weapon.in_chamber)
 		return FALSE
 

@@ -12,7 +12,8 @@
 
 	if(get_dist(brain.tied_human, brain.active_grenade_found) > 4)
 		return 0
-
+	if(brain.civilian)
+		return 0
 	return 50
 
 /datum/ai_action/throw_back_nade/Destroy(force, ...)

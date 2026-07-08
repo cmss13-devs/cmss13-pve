@@ -74,6 +74,9 @@
 		. = 1
 
 /obj/item/clean_blood()
+	if(HAS_TRAIT(src, TRAIT_PHEROMONES_COVERED))
+		color = initial(color)
+		REMOVE_TRAIT(src, TRAIT_PHEROMONES_COVERED, TRAIT_SOURCE_ADMIN)
 	if(!blood_color)
 		return 0
 	blood_color = null

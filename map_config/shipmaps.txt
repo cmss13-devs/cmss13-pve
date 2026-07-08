@@ -33,6 +33,12 @@ endmap
 map golden_arrow_classic
 endmap
 
+map golden_arrow_support
+endmap
+
+map louise
+endmap
+
 map uscss_obsidian_falk
 endmap
 

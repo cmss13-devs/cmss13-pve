@@ -13,3 +13,7 @@
 /datum/faction/rebels/canc
 	name = "Chinese Asian Nation Cooperative Loyalists"
 	faction_tag = FACTION_CANC
+
+/datum/faction/rebels/gbm
+	name = "Green Banner Movement"
+	faction_tag = FACTION_ECOTERROR

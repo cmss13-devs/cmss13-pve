@@ -1,5 +1,36 @@
 /datum/human_ai_squad_preset/clf
 	faction = "Insurrectionists"
+/*
+/datum/human_ai_squad_preset/clf/jovian
+	name = "Jovian Squad"
+	desc = "A small squad of UJL."
+	ai_to_spawn = list(
+		/datum/equipment_preset/jovian = 3,
+	)
+
+/datum/human_ai_squad_preset/clf/shotgun
+	name = "Jovian Squad+Shotgun"
+	desc = "A small squad of UJL."
+	ai_to_spawn = list(
+		/datum/equipment_preset/jovian = 2,
+		/datum/equipment_preset/jovian/shotgunner = 1
+	)
+
+/datum/human_ai_squad_preset/clf/gbm
+	name = "Green Banner Squad"
+	desc = "A small squad of GBM."
+	ai_to_spawn = list(
+		/datum/equipment_preset/other/ecoterrorist/soldier = 3,
+	)
+
+/datum/human_ai_squad_preset/clf/gbm
+	name = "Green Banner Squad+Shotgun"
+	desc = "A small squad of UJL."
+	ai_to_spawn = list(
+		/datum/equipment_preset/other/ecoterrorist/soldier = 2,
+		/datum/equipment_preset/other/ecoterrorist/shotgunner = 1
+	)
+
 
 /datum/human_ai_squad_preset/clf/patrol
 	name = "TWE Rebel, Patrol"
@@ -87,10 +118,44 @@
 		/datum/equipment_preset/rebel/soldier = 2,
 		/datum/equipment_preset/rebel/medic = 1,
 	)
-
+*/
 /datum/human_ai_squad_preset/clf/canc
-	name = "CANC Rebel, Patrol"
+	name = "CANC Rebel, Rifles"
 	ai_to_spawn = list(
 		/datum/equipment_preset/canc/remnant/leader = 1,
 		/datum/equipment_preset/canc/remnant = 2,
+	)
+
+/datum/human_ai_squad_preset/clf/canc/smg
+	name = "CANC Rebel, SMGs"
+	ai_to_spawn = list(
+		/datum/equipment_preset/canc/remnant/leader = 1,
+		/datum/equipment_preset/canc/remnant/smg = 2,
+	)
+
+/datum/human_ai_squad_preset/clf/canc/bigknife
+	name = "CANC Rebel, Big Knife Society"
+	ai_to_spawn = list(
+		/datum/equipment_preset/canc/remnant/bigknife = 2,
+	)
+
+/datum/human_ai_squad_preset/clf/canc/warcrime
+	name = "CANC Rebel, Gas+SMG"
+	ai_to_spawn = list(
+		/datum/equipment_preset/canc/remnant/warcrimer = 1,
+		/datum/equipment_preset/canc/remnant/smg = 1,
+	)
+
+/datum/human_ai_squad_preset/clf/canc/medic
+	name = "CANC Rebel, Medic+SMG"
+	ai_to_spawn = list(
+		/datum/equipment_preset/canc/medic = 1,
+		/datum/equipment_preset/canc/remnant/smg = 1,
+	)
+
+
+/datum/human_ai_squad_preset/clf/canc/machinegunner
+	name = "CANC Rebel, MG"
+	ai_to_spawn = list(
+		/datum/equipment_preset/canc/machinegunner = 1,
 	)

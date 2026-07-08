@@ -44,6 +44,7 @@
 	var/metallic = TRUE
 	/// Lower limit of damage beyond which the barricade cannot be fixed by welder. Compared to damage_state. If null it can be repaired at any damage_state.
 	var/welder_lower_damage_limit = null
+	var/has_offset = TRUE
 
 /obj/structure/barricade/Initialize(mapload, mob/user)
 	. = ..()
@@ -79,6 +80,8 @@
 			. += SPAN_WARNING("It's crumbling apart, just a few more blows will tear it apart.")
 
 /obj/structure/barricade/update_icon()
+	if(!has_offset)
+		return
 	overlays.Cut()
 	if(!closed)
 		if(can_change_dmg_state)

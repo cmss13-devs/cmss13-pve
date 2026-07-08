@@ -31,6 +31,9 @@
 	if(brain.should_reload())
 		return 0
 
+	if(brain.civilian)
+		return 0
+
 	return 10
 
 /datum/ai_action/fire_at_target/Destroy(force, ...)

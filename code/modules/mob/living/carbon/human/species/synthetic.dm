@@ -133,3 +133,23 @@
 	bloodsplatter_type = /obj/effect/temp_visual/dir_setting/bloodsplatter/human
 
 	blood_color = BLOOD_COLOR_HUMAN
+
+// Synth used for W-Y Deathsquads
+/datum/species/synthetic/colonial/terminator
+	name = "Terminator"
+	name_plural = "Terminator Synthetics"
+	uses_skin_color = FALSE
+	special_body_types = FALSE
+	mob_inherent_traits = list(TRAIT_SUPER_STRONG, TRAIT_IRON_TEETH)
+
+	hair_color = "#000000"
+	icobase = 'icons/mob/humans/species/r_terminator.dmi'
+	deform = 'icons/mob/humans/species/r_terminator.dmi'
+
+
+	knock_down_reduction = 5
+	stun_reduction = 5
+
+	inherent_verbs = null
+
+	total_health = 100 //same health as regular humans

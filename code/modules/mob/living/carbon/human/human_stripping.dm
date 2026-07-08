@@ -33,6 +33,38 @@ GLOBAL_LIST_INIT(strippable_human_items, create_strippable_list(list(
 	key = STRIPPABLE_ITEM_BACK
 	item_slot = SLOT_BACK
 
+/datum/strippable_item/mob_item_slot/back/get_alternate_action(atom/source, mob/user)
+	var/obj/item/storage/storage = get_item(source)
+	if (!istype(storage))
+		return
+	if (!ishuman(source))
+		return
+	return "open_storage"
+
+/datum/strippable_item/mob_item_slot/back/alternate_action(atom/source, mob/user)
+	if(!ishuman(source))
+		return
+	var/mob/living/carbon/human/sourcehuman = source
+	if(user.action_busy || user.is_mob_incapacitated() || !source.Adjacent(user))
+		return
+
+	sourcehuman.attack_log += text("\[[time_stamp()]\] <font color='orange'>Had their backpack opened by [key_name(user)]</font>")
+	user.attack_log += text("\[[time_stamp()]\] <font color='red'>Attempted to open [key_name(src)]'s backpack</font>")
+	user.visible_message(SPAN_DANGER("<B>[user] is trying to open [sourcehuman]'s \the [sourcehuman.back]</B>."), null, null, 3)
+
+	var/timer = 1 SECONDS
+	if(sourcehuman.stat == CONSCIOUS)
+		timer = 5 SECONDS
+	if(istype(sourcehuman.back, /obj/item/storage/backpack/marine))
+		timer = 0.5 SECONDS
+	if(!do_after(user, timer, INTERRUPT_ALL, BUSY_ICON_GENERIC, sourcehuman, INTERRUPT_MOVED, BUSY_ICON_GENERIC))
+		return
+
+	if(!istype(sourcehuman.back, /obj/item/storage))
+		return
+	var/obj/item/storage/storage = sourcehuman.back
+	storage.open(user)
+
 /datum/strippable_item/mob_item_slot/mask
 	key = STRIPPABLE_ITEM_MASK
 	item_slot = SLOT_FACE
@@ -248,13 +280,104 @@ GLOBAL_LIST_INIT(strippable_human_items, create_strippable_list(list(
 	key = STRIPPABLE_ITEM_BELT
 	item_slot = SLOT_WAIST
 
+/datum/strippable_item/mob_item_slot/belt/get_alternate_action(atom/source, mob/user)
+	var/obj/item/storage/storage = get_item(source)
+	if (!istype(storage))
+		return
+	if (!ishuman(source))
+		return
+	return "open_storage"
+
+/datum/strippable_item/mob_item_slot/belt/alternate_action(atom/source, mob/user)
+	if(!ishuman(source))
+		return
+	var/mob/living/carbon/human/sourcehuman = source
+	if(user.action_busy || user.is_mob_incapacitated() || !source.Adjacent(user))
+		return
+
+	sourcehuman.attack_log += text("\[[time_stamp()]\] <font color='orange'>Had their belt opened by [key_name(user)]</font>")
+	user.attack_log += text("\[[time_stamp()]\] <font color='red'>Attempted to open [key_name(src)]'s belt</font>")
+	user.visible_message(SPAN_DANGER("<B>[user] is trying to open [sourcehuman]'s \the [sourcehuman.belt]</B>."), null, null, 3)
+
+	var/timer = 1 SECONDS
+	if(sourcehuman.stat == timer)
+		timer = 5 SECONDS
+	if(!do_after(user, timer, INTERRUPT_ALL, BUSY_ICON_GENERIC, sourcehuman, INTERRUPT_MOVED, BUSY_ICON_GENERIC))
+		return
+
+	if(!istype(sourcehuman.belt, /obj/item/storage))
+		return
+	var/obj/item/storage/storage = sourcehuman.belt
+	storage.open(user)
+
+
 /datum/strippable_item/mob_item_slot/pocket/left
 	key = STRIPPABLE_ITEM_LPOCKET
 	item_slot = SLOT_STORE
 
+/datum/strippable_item/mob_item_slot/pocket/left/get_alternate_action(atom/source, mob/user)
+	var/obj/item/storage/storage = get_item(source)
+	if (!istype(storage))
+		return
+	if (!ishuman(source))
+		return
+	return "open_storage"
+
+/datum/strippable_item/mob_item_slot/pocket/left/alternate_action(atom/source, mob/user)
+	if(!ishuman(source))
+		return
+	var/mob/living/carbon/human/sourcehuman = source
+	if(user.action_busy || user.is_mob_incapacitated() || !source.Adjacent(user))
+		return
+
+	sourcehuman.attack_log += text("\[[time_stamp()]\] <font color='orange'>Had their left pouch opened by [key_name(user)]</font>")
+	user.attack_log += text("\[[time_stamp()]\] <font color='red'>Attempted to open [key_name(src)]'s left pouch</font>")
+	user.visible_message(SPAN_DANGER("<B>[user] is trying to open [sourcehuman]'s \the [sourcehuman.l_store]</B>."), null, null, 3)
+
+	var/timer = 1 SECONDS
+	if(sourcehuman.stat == CONSCIOUS)
+		timer = 5 SECONDS
+	if(!do_after(user, timer, INTERRUPT_ALL, BUSY_ICON_GENERIC, sourcehuman, INTERRUPT_MOVED, BUSY_ICON_GENERIC))
+		return
+
+	if(!istype(sourcehuman.l_store, /obj/item/storage))
+		return
+	var/obj/item/storage/storage = sourcehuman.l_store
+	storage.open(user)
+
 /datum/strippable_item/mob_item_slot/pocket/right
 	key = STRIPPABLE_ITEM_RPOCKET
 	item_slot = SLOT_STORE
+
+/datum/strippable_item/mob_item_slot/pocket/right/get_alternate_action(atom/source, mob/user)
+	var/obj/item/storage/storage = get_item(source)
+	if (!istype(storage))
+		return
+	if (!ishuman(source))
+		return
+	return "open_storage"
+
+/datum/strippable_item/mob_item_slot/pocket/right/alternate_action(atom/source, mob/user)
+	if(!ishuman(source))
+		return
+	var/mob/living/carbon/human/sourcehuman = source
+	if(user.action_busy || user.is_mob_incapacitated() || !source.Adjacent(user))
+		return
+
+	sourcehuman.attack_log += text("\[[time_stamp()]\] <font color='orange'>Had their right pouch opened by [key_name(user)]</font>")
+	user.attack_log += text("\[[time_stamp()]\] <font color='red'>Attempted to open [key_name(src)]'s right pouch</font>")
+	user.visible_message(SPAN_DANGER("<B>[user] is trying to open [sourcehuman]'s \the [sourcehuman.r_store]</B>."), null, null, 3)
+
+	var/timer = 1 SECONDS
+	if(sourcehuman.stat == CONSCIOUS)
+		timer = 5 SECONDS
+	if(!do_after(user, timer, INTERRUPT_ALL, BUSY_ICON_GENERIC, sourcehuman, INTERRUPT_MOVED, BUSY_ICON_GENERIC))
+		return
+
+	if(!istype(sourcehuman.r_store, /obj/item/storage))
+		return
+	var/obj/item/storage/storage = sourcehuman.r_store
+	storage.open(user)
 
 /datum/strippable_item/mob_item_slot/hand/left
 	key = STRIPPABLE_ITEM_LHAND

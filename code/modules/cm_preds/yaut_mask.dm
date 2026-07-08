@@ -46,6 +46,9 @@
 	///A list of all intrinsic mask actions
 	var/list/mask_actions = list(/datum/action/predator_action/mask/zoom, /datum/action/predator_action/mask/visor)
 
+	var/zoom_x = 11
+	var/zoom_y = 12
+
 /obj/item/clothing/mask/gas/yautja/New(location, mask_number = rand(1,12), armor_material = "ebony", legacy = "None")
 	..()
 	forceMove(location)
@@ -116,7 +119,7 @@
 	if(!usr || usr.stat)
 		return
 
-	zoom(usr, 11, 12)
+	zoom(usr, zoom_x, zoom_y)
 	update_zoom_action(src, usr)
 	if(zoom)
 		RegisterSignal(src, COMSIG_ITEM_UNZOOM, PROC_REF(update_zoom_action))
@@ -139,7 +142,7 @@
 	var/mob/living/carbon/human/user = usr
 	if(!istype(user))
 		return
-	if(!HAS_TRAIT(user, TRAIT_YAUTJA_TECH) && !user.hunter_data.thralled)
+	if(!HAS_TRAIT(user, TRAIT_YAUTJA_TECH) && !thrall)
 		to_chat(user, SPAN_WARNING("You have no idea how to work this thing!"))
 		return
 	if(src != user.wear_mask) //sanity
@@ -233,6 +236,8 @@
 	)
 	item_state_slots = list(WEAR_FACE = "thrall_mask")
 	thrall = TRUE
+	zoom_x = 6
+	zoom_y = 7
 
 /obj/item/clothing/mask/gas/yautja/thrall/toggle_zoom()
 	set category = "Thrall.Utility"

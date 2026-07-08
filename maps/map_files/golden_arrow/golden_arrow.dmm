@@ -715,9 +715,6 @@
 /turf/open/floor/almayer,
 /area/golden_arrow/motor_pool)
 "abv" = (
-/obj/effect/landmark/start/marine/smartgunner/alpha,
-/obj/effect/landmark/late_join/alpha,
-/obj/effect/landmark/late_join,
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/cryo_cells)
 "abw" = (
@@ -761,6 +758,12 @@
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/hangar)
+"abB" = (
+/obj/effect/landmark/late_join,
+/obj/effect/landmark/late_join/alpha,
+/obj/effect/landmark/start/marine/alpha,
+/turf/open/floor/plating/plating_catwalk,
+/area/golden_arrow/cryo_cells)
 "abC" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "N";
@@ -775,16 +778,10 @@
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/motor_pool)
-"abF" = (
-/obj/effect/landmark/start/marine/leader/alpha,
-/obj/effect/landmark/late_join/alpha,
+"abE" = (
 /obj/effect/landmark/late_join,
-/turf/open/floor/plating/plating_catwalk,
-/area/golden_arrow/cryo_cells)
-"abG" = (
-/obj/effect/landmark/start/marine/medic/alpha,
 /obj/effect/landmark/late_join/alpha,
-/obj/effect/landmark/late_join,
+/obj/effect/landmark/start/marine/smartgunner/alpha,
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/cryo_cells)
 "abH" = (
@@ -797,11 +794,6 @@
 	},
 /turf/open/floor/almayer/cargo_arrow/north,
 /area/golden_arrow/hangar)
-"abI" = (
-/obj/effect/landmark/start/marine/leader/alpha,
-/obj/effect/landmark/late_join/alpha,
-/turf/open/floor/plating/plating_catwalk,
-/area/golden_arrow/cryo_cells)
 "abJ" = (
 /turf/open/floor/almayer/edge/smooth/corner/east,
 /area/golden_arrow/hangar)
@@ -832,12 +824,6 @@
 	},
 /turf/open/floor/almayer/test_floor4,
 /area/golden_arrow/hangar)
-"abN" = (
-/obj/effect/landmark/start/bridge,
-/obj/effect/landmark/late_join/alpha,
-/obj/effect/landmark/late_join,
-/turf/open/floor/plating/plating_catwalk,
-/area/golden_arrow/cryo_cells)
 "abO" = (
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
@@ -1176,7 +1162,7 @@
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/hangar)
 "acV" = (
-/obj/effect/landmark/start/bridge,
+/obj/effect/landmark/start/marine/tl/alpha,
 /obj/effect/landmark/late_join/alpha,
 /obj/effect/landmark/late_join,
 /obj/structure/prop/invuln/overhead_pipe{
@@ -5813,6 +5799,12 @@
 	},
 /turf/open/floor/almayer,
 /area/golden_arrow/motor_pool)
+"asK" = (
+/obj/effect/landmark/late_join,
+/obj/effect/landmark/late_join/alpha,
+/obj/effect/landmark/start/bridge,
+/turf/open/floor/plating/plating_catwalk,
+/area/golden_arrow/cryo_cells)
 "asL" = (
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
@@ -6400,6 +6392,9 @@
 	dir = 8;
 	light_power = 0.7
 	},
+/obj/effect/landmark/late_join,
+/obj/effect/landmark/late_join/alpha,
+/obj/effect/landmark/start/marine/leader/alpha,
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/cryo_cells)
 "avb" = (
@@ -12622,6 +12617,9 @@
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 8
 	},
+/obj/effect/landmark/late_join,
+/obj/effect/landmark/late_join/alpha,
+/obj/effect/landmark/start/marine/smartgunner/alpha,
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/cryo_cells)
 "aPM" = (
@@ -14620,6 +14618,9 @@
 /obj/structure/pipes/vents/scrubber{
 	dir = 4
 	},
+/obj/effect/landmark/start/marine/alpha,
+/obj/effect/landmark/late_join/alpha,
+/obj/effect/landmark/late_join,
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/cryo_cells)
 "aWX" = (
@@ -24814,25 +24815,25 @@ aEG
 aEG
 aWh
 aEZ
-abF
+abv
 aQQ
-abN
-abF
+abv
+asK
 aAU
-abI
-abG
-acV
-abF
-aPL
 aFy
 abv
-azh
+acV
+abv
+aPL
+abv
+abB
+abv
 azh
 abh
-aFy
+abE
 abv
-azh
-azh
+abB
+abv
 aUY
 aWh
 aEG
