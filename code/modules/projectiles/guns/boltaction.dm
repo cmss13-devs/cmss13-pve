@@ -135,7 +135,7 @@
 		/obj/item/attachable/stock/hunting/karabiner,
 	)
 
-/obj/item/weapon/gun/boltaction/set_gun_config_values()
+/obj/item/weapon/gun/boltaction/kar98k/set_gun_config_values()
 	..()
 	set_burst_amount(0)
 	set_fire_delay(FIRE_DELAY_TIER_4)

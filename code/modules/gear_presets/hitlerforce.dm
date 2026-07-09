@@ -1,6 +1,6 @@
 /datum/equipment_preset/hitlerforce
 
-	name = "Wehrmacht Heer"// we are RETURNING TO CASTLE WOLFENSTEIN
+	name = "German Heer"// we are RETURNING TO CASTLE WOLFENSTEIN
 	faction = FACTION_WW2_GERMAN
 	faction_group = list(
 		FACTION_WW2_GERMAN,
@@ -49,4 +49,12 @@
 	new_human.b_eyes = colors[eye_color][3]
 	new_human.h_style = pick("Undercut, Top", "Partly Shaved", "CIA", "Mulder", "Medium Fade", "High Fade", "Pixie Cut Left", "Pixie Cut Right", "Coffee House Cut")
 
-
+/datum/equipment_preset/hitlerforce/regulars
+	name = "Heer Rifleman"
+	flags = EQUIPMENT_PRESET_EXTRA
+	assignment = "German Heer"
+	role_comm_title = null
+	paygrades = list(
+		PAY_SHORT_UE1 = JOB_PLAYTIME_TIER_0
+	)
+	skills = /datum/skills/pfc
