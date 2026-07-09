@@ -16,4 +16,9 @@
 	access = get_access(ACCESS_LIST_CLF_BASE) //TODO: tell scotty to configure the security on the map for CLF access..
 
 /datum/equipment_preset/mercenary/load_name(mob/living/carbon/human/new_human)
+	new_human.gender = MALE //rip to whoever it was.
+	var/datum/preferences/A = new()
+	A.randomize_appearance(new_human)
+	var/random_name
+
 
