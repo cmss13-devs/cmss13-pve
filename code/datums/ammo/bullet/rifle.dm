@@ -593,6 +593,9 @@
 	stamina_damage = 15
 	shell_casing = /obj/effect/decal/ammo_casing/cartridge
 
+/datum/ammo/bullet/rifle/karabiner/on_hit_mob(mob/M,obj/projectile/P)
+	slam_back(M, P, 3)
+
 /datum/ammo/bullet/rifle/mar40
 	name = "8.8x29 rifle bullet"
 	damage = 45
