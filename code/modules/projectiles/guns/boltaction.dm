@@ -124,7 +124,7 @@
 /obj/item/weapon/gun/boltaction/kar98k
 	name = "Karabiner 98k"
 	desc = "A 7.92mm bolt action rifle with five round internal magazine."
-	flags_gun_features = NULL
+	flags_gun_features = null
 	indestructible = FALSE
 	attachable_allowed = list(
 		/obj/item/attachable/bayonet,

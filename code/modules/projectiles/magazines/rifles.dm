@@ -524,10 +524,22 @@
 	gun_type = /obj/item/weapon/gun/boltaction
 	w_class = SIZE_SMALL
 
+/obj/item/ammo_magazine/rifle/boltaction/kar98k
+	name = "Karabiner 98k stripper clip"
+	desc = "A five round reusable stripper clip for the 7.92mm Karabiner 98k. Standard issue throughout the Wehrmacht's riflemen."
+	caliber = "7.92mm"
+	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/event.dmi'
+	icon_state = "kar98mag"
+	default_ammo = /datum/ammo/bullet/rifle/karabiner
+	max_rounds = 5
+	current_rounds = 5
+	gun_type = /obj/item/weapon/gun/boltaction/kar98k
+
 /obj/item/ammo_magazine/internal/rifle
 	name = "internal clip"
 	desc = "Integral part of the mechanism."
-	default_ammo = /datum/ammo/bullet/rifle
+	caliber = "7.92mm"
+	default_ammo = /datum/ammo/bullet/rifle/karabiner
 	max_rounds = 5
 	current_rounds = 5
 	chamber_closed = 1 //assuming condition zero ready to rumble
