@@ -36,3 +36,15 @@
 
 /// REBC, Rebel Commander "REBC"
 #define PAY_SHORT_REBC "REBC"
+
+/// TRA, Traitor
+#define PAY_SHORT_TRA "TRA"
+
+/// TRA-G, Traitor Guardsman
+#define PAY_SHORT_TRAG "TRA-G"
+
+/// TRA-E, Traitor Enforcer
+#define PAY_SHORT_TRAE "TRA-E"
+
+/// TRA-O, Traitor Officer
+#define PAY_SHORT_TRAO "TRA-O"

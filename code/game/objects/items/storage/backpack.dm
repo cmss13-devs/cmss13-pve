@@ -1256,6 +1256,13 @@ GLOBAL_LIST_EMPTY_TYPED(radio_packs, /obj/item/storage/backpack/marine/satchel/r
 	networks_receive = list(FACTION_MARINE, FACTION_ARMY)
 	networks_transmit = list(FACTION_MARINE, FACTION_ARMY)
 
+/obj/item/storage/backpack/marine/satchel/rto/vox
+	name = "\improper Imperial Guard Voxcaster Pack"
+	desc = "A heavy-duty voxcaster pack, used for communications between Imperial Guard elements in the field and higher command elements."
+	networks_receive = list(FACTION_IMPERIAL_GUARD, FACTION_KASRKIN)
+	networks_transmit = list(FACTION_IMPERIAL_GUARD, FACTION_KASRKIN)
+	max_storage_space = 8
+
 /obj/item/storage/backpack/marine/medic/army
 	name = "\improper Army combat medic backpack"
 	desc = "A standard-issue backpack worn by US Army medics."

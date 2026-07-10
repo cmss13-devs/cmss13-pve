@@ -1315,10 +1315,12 @@
 	storage_slots = 7
 	can_hold = list(
 		/obj/item/weapon/gun/pistol,
+		/obj/item/weapon/gun/lasgun/laspistol,
 		/obj/item/ammo_magazine/pistol,
 		/obj/item/ammo_magazine/pistol/heavy,
 		/obj/item/ammo_magazine/pistol/heavy/super,
 		/obj/item/ammo_magazine/pistol/heavy/super/highimpact,
+		/obj/item/ammo_magazine/lasgun/laspistol,
 	)
 	cant_hold = list(
 		/obj/item/weapon/gun/pistol/smart,

@@ -457,6 +457,19 @@ GLOBAL_LIST_INIT(job_command_roles, JOB_COMMAND_ROLES_LIST)
 
 #define DUTCH_JOB_LIST list(JOB_DUTCH_ARNOLD, JOB_DUTCH_RIFLEMAN, JOB_DUTCH_MINIGUNNER, JOB_DUTCH_FLAMETHROWER, JOB_DUTCH_MEDIC)
 
+//-------- 40k Imperial Guard --------//
+#define JOB_IMP_CONSCRIPT "Imperial Guard Conscript"
+#define JOB_IMP_GUARDSMAN "Imperial Guard Guardsman"
+#define JOB_IMP_VOX_OPERATOR "Imperial Guard Vox Operator"
+#define JOB_IMP_TL "Imperial Guard Team Leader"
+#define JOB_IMP_SPECIALIST "Imperial Guard Specialist"
+#define JOB_IMP_SL "Imperial Guard Squad Leader"
+#define JOB_IMP_LT "Imperial Guard Lieutenant"
+#define JOB_IMP_CPT "Imperial Guard Captain"
+#define JOB_IMP_MJR "Imperial Guard Major"
+
+#define IMPERIAL_GUARD_JOB_LIST list(JOB_IMP_CONSCRIPT, JOB_IMP_GUARDSMAN, JOB_IMP_VOX_OPERATOR, JOB_IMP_TL, JOB_IMP_SPECIALIST, JOB_IMP_SL, JOB_IMP_LT, JOB_IMP_CPT, JOB_IMP_MJR)
+
 #define JOB_PREDATOR "Predator"
 #define JOB_XENOMORPH    "Xenomorph"
 #define JOB_XENOMORPH_QUEEN  "Queen"

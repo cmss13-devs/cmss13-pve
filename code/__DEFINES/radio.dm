@@ -80,3 +80,7 @@
 
 #define RADIO_CHANNEL_YAUTJA "Yautja"
 
+//40k frequencies
+#define RADIO_CHANNEL_IMP_GUARD "Imperial Guard"
+#define RADIO_CHANNEL_KASRKIN "Kasrkin"
+#define RADIO_CHANNEL_TRAITOR "Traitor Guard"

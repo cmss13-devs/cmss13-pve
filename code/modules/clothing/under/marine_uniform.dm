@@ -1341,5 +1341,10 @@
 	icon_state = "uniform_guard"
 	item_state = "uniform_guard"
 	worn_state = "uniform_guard"
-	desc = "Standard-issue Army uniform in a two-tone desert/temperate color scheme, complete with venlar armor inserts at critical areas to protect from blades and ballistics."
 	flags_atom = NO_SNOW_TYPE|NO_NAME_OVERRIDE
+
+/obj/item/clothing/under/marine/veteran/guard/traitor
+	name = "\improper traitor guard combat uniform"
+	icon_state = "uniform_guard_heretic"
+	item_state = "uniform_guard_heretic"
+	worn_state = "uniform_guard_heretic"

@@ -893,23 +893,3 @@
 	slowdown = SLOWDOWN_ARMOR_HEAVY
 	time_to_unequip = 20
 	time_to_equip = 20
-
-
-//40k
-/obj/item/clothing/suit/storage/marine/veteran/guard
-	name = "guard armour"
-	icon = 'icons/obj/items/clothing/cm_suits.dmi'
-	item_icons = list(
-		WEAR_JACKET = 'icons/mob/humans/onmob/suit_1.dmi'
-	)
-	icon_state = "armor_guard"
-	item_state = "armor_guard"
-	armor_melee = CLOTHING_ARMOR_MEDIUMLOW
-	armor_bullet = CLOTHING_ARMOR_MEDIUMHIGH
-	armor_laser = CLOTHING_ARMOR_MEDIUM
-	armor_energy = CLOTHING_ARMOR_LOW
-	armor_bomb = CLOTHING_ARMOR_MEDIUMLOW
-	armor_bio = CLOTHING_ARMOR_MEDIUM
-	armor_rad = CLOTHING_ARMOR_NONE
-	armor_internaldamage = CLOTHING_ARMOR_MEDIUM
-	flags_armor_protection = BODY_FLAG_CHEST|BODY_FLAG_ARMS|BODY_FLAG_GROIN

@@ -1,4 +1,4 @@
-// XM99A, The quintesential phased plasma rifle in the 40 watt range
+// Lasguns - Basic
 
 /obj/item/weapon/gun/lasgun
 	name = "\improper M36 Kantrael Pattern Lasgun"
@@ -8,20 +8,18 @@
 	item_state = "lasgun"
 	muzzleflash_iconstate  = "muzzle_flash_red"
 	muzzle_flash_color = COLOR_RED
-	muzzle_flash_lum = 5
+	muzzle_flash_lum = 3
 	w_class = SIZE_LARGE
 	flags_equip_slot = SLOT_BACK|SLOT_SUIT_STORE
 	unacidable = TRUE
-	map_specific_decoration = TRUE
+	map_specific_decoration = FALSE
 	indestructible = 1
-	fire_sound = 'sound/weapons/Laser4.ogg'
+	fire_sound = 'sound/weapons/lasgun_fire.ogg'
 	reload_sound = 'sound/weapons/handling/nsg23_reload.ogg'
 	unload_sound = 'sound/weapons/handling/nsg23_unload.ogg'
 	current_mag = /obj/item/ammo_magazine/lasgun
 	force = 12
 	wield_delay = WIELD_DELAY_NORMAL
-	attachable_allowed = list(
-	)
 	flags_gun_features = GUN_WIELDED_FIRING_ONLY|GUN_AMMO_COUNTER
 	flags_item = TWOHANDED
 
@@ -31,8 +29,12 @@
 	///Delay before another beam can start again, in tenths of seconds
 	var/beam_delay = 10
 
+	attachable_allowed = list(
+		/obj/item/attachable/sling,
+		/obj/item/attachable/bayonet,
+		/obj/item/attachable/lasersight,
+	)
 
-// Stolen from the rocket-launcher code to prevent the +1 shot in the plasma rifle
 /obj/item/weapon/gun/lasgun/load_into_chamber(mob/user)
 	return ready_in_chamber()
 
@@ -108,20 +110,16 @@
 		current_mag = null
 		update_icon()
 
-/obj/item/weapon/gun/lasgun/set_gun_attachment_offsets()
-	attachable_offset = list("muzzle_x" = 39, "muzzle_y" = 17,"rail_x" = 11, "rail_y" = 21, "under_x" = 19, "under_y" = 14, "stock_x" = 19, "stock_y" = 14, "side_rail_x" = 23, "side_rail_y" = 17)
-
 /obj/item/weapon/gun/lasgun/set_gun_config_values()
 	..()
-	set_fire_delay(FIRE_DELAY_TIER_5)
+	set_fire_delay(FIRE_DELAY_TIER_6)
 	set_burst_amount(BURST_AMOUNT_TIER_3)
-	set_burst_delay(FIRE_DELAY_TIER_6)
+	set_burst_delay(FIRE_DELAY_TIER_7)
 	accuracy_mult = BASE_ACCURACY_MULT + HIT_ACCURACY_MULT_TIER_4
 	scatter = SCATTER_AMOUNT_TIER_6
 	burst_scatter_mult = SCATTER_AMOUNT_TIER_6
 	damage_mult = BASE_BULLET_DAMAGE_MULT
 	recoil = RECOIL_AMOUNT_TIER_5
-	set_fire_delay(FIRE_DELAY_TIER_2)
 
 
 /obj/item/weapon/gun/lasgun/handle_fire(atom/target, mob/living/user, params, reflex = FALSE, dual_wield, check_for_attachment_fire, akimbo, fired_by_akimbo)
@@ -136,16 +134,20 @@
 	animate(lasgun_beam.visuals, alpha = 255, time = 0.4 SECONDS, color = COLOR_RED, luminosity = 3 , easing = SINE_EASING|EASE_OUT)
 	. = ..()
 
+/obj/item/weapon/gun/lasgun/set_gun_attachment_offsets()
+	attachable_offset = list("muzzle_x" = 32, "muzzle_y" = 18,"rail_x" = 12, "rail_y" = 23, "under_x" = 23, "under_y" = 13, "stock_x" = 24, "stock_y" = 14, "side_rail_x" = 23, "side_rail_y" = 16)
+
 /obj/item/weapon/gun/lasgun/laspistol
 	name = "\improper Accatran pattern Mk.III Laspistol"
 	desc = "The MK.III Accatran laspistol is a common sidearm for the Imperium's officers and NCOs. It is relitively weak compared to the lasgun, but is still a deadly weapon in the right hands."
 	icon_state = "laspistol"
 	item_state = "laspistol"
-	muzzle_flash_lum = 5
+	muzzle_flash_lum = 2
 	flags_equip_slot = SLOT_WAIST
 	w_class = SIZE_MEDIUM
 	indestructible = 1
 	current_mag = /obj/item/ammo_magazine/lasgun/laspistol
+	fire_sound = 'sound/weapons/laspistol_fire.ogg'
 	force = 12
 	wield_delay = WIELD_DELAY_VERY_FAST
 	attachable_allowed = list(
@@ -156,14 +158,112 @@
 	beam_cooldown = 0
 	beam_delay = 10
 
+	attachable_allowed = list(
+		/obj/item/attachable/lasersight,
+	)
+
+/obj/item/weapon/gun/lasgun/laspistol/set_gun_attachment_offsets()
+	attachable_offset = list("muzzle_x" = 32, "muzzle_y" = 18,"rail_x" = 12, "rail_y" = 23, "under_x" = 23, "under_y" = 13, "stock_x" = 24, "stock_y" = 14, "side_rail_x" = 23, "side_rail_y" = 16)
+
 /obj/item/weapon/gun/lasgun/laspistol/set_gun_config_values()
 	..()
-	set_fire_delay(FIRE_DELAY_TIER_5)
-	set_burst_amount(BURST_AMOUNT_TIER_3)
-	set_burst_delay(FIRE_DELAY_TIER_6)
+	set_fire_delay(FIRE_DELAY_TIER_8)
+	set_burst_amount(BURST_AMOUNT_TIER_1)
 	accuracy_mult = BASE_ACCURACY_MULT + HIT_ACCURACY_MULT_TIER_4
 	accuracy_mult_unwielded = BASE_ACCURACY_MULT
 	scatter = SCATTER_AMOUNT_TIER_6
 	damage_mult = BASE_BULLET_DAMAGE_MULT
 	recoil = RECOIL_AMOUNT_TIER_5
-	set_fire_delay(FIRE_DELAY_TIER_2)
+
+/obj/item/weapon/gun/lasgun/heretic
+
+	desc = "The M36 Kantrael lasgun is one of if not the most common lasgun pattern within the reaches of the Imperium. Used by the likes of the Cadians before being used by the rest of the galaxy, it can be seen in the hands of a guardsman, a traitor and even the lowest scum. This one specifically has been cobbled together by a traitor."
+	icon_state = "lasgun_heretic"
+	item_state = "lasgun_heretic"
+
+/obj/item/weapon/gun/lasgun/heretic/set_gun_config_values()
+	..()
+	set_fire_delay(FIRE_DELAY_TIER_5)
+	set_burst_amount(BURST_AMOUNT_TIER_3)
+	set_burst_delay(FIRE_DELAY_TIER_7)
+	accuracy_mult = BASE_ACCURACY_MULT
+	scatter = SCATTER_AMOUNT_TIER_6
+	burst_scatter_mult = SCATTER_AMOUNT_TIER_6
+	damage_mult = BASE_BULLET_DAMAGE_MULT
+	recoil = RECOIL_AMOUNT_TIER_5
+
+/obj/item/weapon/gun/lasgun/laspistol/heretic
+
+	desc = "The MK.III Accatran laspistol is a common sidearm for the Imperium's officers and NCOs. It is relitively weak compared to the lasgun, but is still a deadly weapon in the right hands. This one has been painted black and is often seen use by traitor forces."
+	icon_state = "laspistol_heretic"
+	item_state = "laspistol_heretic"
+
+/obj/item/weapon/gun/lasgun/laspistol/heretic/set_gun_config_values()
+	..()
+	set_fire_delay(FIRE_DELAY_TIER_6)
+	set_burst_amount(BURST_AMOUNT_TIER_1)
+	accuracy_mult = BASE_ACCURACY_MULT
+	accuracy_mult_unwielded = BASE_ACCURACY_MULT
+	scatter = SCATTER_AMOUNT_TIER_6
+	damage_mult = BASE_BULLET_DAMAGE_MULT
+	recoil = RECOIL_AMOUNT_TIER_5
+
+/obj/item/weapon/gun/lasgun/hellgun
+
+	name = "\improper UTI-48 Pattern Light Hellgun"
+	desc = "The UTI-48 Pattern Light Hellgun is an uncommon hellgun pattern that, instead of using a backpack-based charging system, uses charge packs similar to standard lasguns, though it is still a hellgun and has the same destructive power as a standard hellgun. It is mainly seen in the hands of elite Imperial Guard units."
+	icon_state = "hellgun"
+	item_state = "hellgun"
+	current_mag = /obj/item/ammo_magazine/lasgun/hellgun
+
+	attachable_allowed = list(
+		/obj/item/attachable/hellgunbarrel,
+		/obj/item/attachable/bayonet,
+		/obj/item/attachable/scope/hellgun,
+	)
+	starting_attachment_types = list(
+		/obj/item/attachable/hellgunbarrel,
+		/obj/item/attachable/scope/hellgun,
+	)
+
+/obj/item/weapon/gun/lasgun/hellgun/set_gun_attachment_offsets()
+	attachable_offset = list("muzzle_x" = 32, "muzzle_y" = 16,"rail_x" = 16, "rail_y" = 17, "under_x" = 23, "under_y" = 13, "stock_x" = 24, "stock_y" = 14, "side_rail_x" = 23, "side_rail_y" = 16)
+
+/obj/item/weapon/gun/lasgun/hellgun/set_gun_config_values()
+	..()
+	set_fire_delay(FIRE_DELAY_TIER_7)
+	set_burst_amount(BURST_AMOUNT_TIER_3)
+	set_burst_delay(FIRE_DELAY_TIER_8)
+	accuracy_mult = BASE_ACCURACY_MULT + HIT_ACCURACY_MULT_TIER_4
+	scatter = SCATTER_AMOUNT_TIER_6
+	burst_scatter_mult = SCATTER_AMOUNT_TIER_6
+	damage_mult = BASE_BULLET_DAMAGE_MULT
+	recoil = RECOIL_AMOUNT_TIER_5
+
+/obj/item/weapon/gun/lasgun/hellgun/volleygun
+
+	name = "\improper UTI-49 Pattern Light Volleygun"
+	desc = "The UTI-49 Pattern Light Volleygun is an uncommon volleygun pattern that, instead of using a backpack-based charging system, uses charge packs similar to standard lasguns, though it is still a volleygun and has the same destructive power as a standard volleygun. It is mainly seen in the hands of elite Imperial Guard units."
+	icon_state = "volleygun"
+	current_mag = /obj/item/ammo_magazine/lasgun/hellgun/volleygun
+	start_automatic = TRUE
+
+	attachable_allowed = list(
+		/obj/item/attachable/volleygunbarrel,
+	)
+	starting_attachment_types = list(
+		/obj/item/attachable/volleygunbarrel,
+	)
+
+/obj/item/weapon/gun/lasgun/hellgun/volleygun/set_gun_config_values()
+	..()
+	set_fire_delay(FIRE_DELAY_TIER_8)
+	set_burst_amount(BURST_AMOUNT_TIER_1)
+	accuracy_mult = BASE_ACCURACY_MULT + HIT_ACCURACY_MULT_TIER_4
+	scatter = SCATTER_AMOUNT_TIER_6
+	burst_scatter_mult = SCATTER_AMOUNT_TIER_6
+	damage_mult = BASE_BULLET_DAMAGE_MULT
+	recoil = RECOIL_AMOUNT_TIER_5
+
+/obj/item/weapon/gun/lasgun/hellgun/volleygun/set_gun_attachment_offsets()
+	attachable_offset = list("muzzle_x" = 48, "muzzle_y" = 16,"rail_x" = 12, "rail_y" = 23, "under_x" = 23, "under_y" = 13, "stock_x" = 24, "stock_y" = 14, "side_rail_x" = 23, "side_rail_y" = 16)

@@ -514,3 +514,94 @@
 	flags_inv_hide = NO_FLAGS
 	siemens_coefficient = 0.6
 	flags_armor_protection = BODY_FLAG_CHEST|BODY_FLAG_ARMS
+
+//40k
+/obj/item/clothing/suit/storage/guard
+	name = "imperial guardsman armor"
+	icon = 'icons/obj/items/clothing/cm_suits.dmi'
+	item_icons = list(
+		WEAR_JACKET = 'icons/mob/humans/onmob/suit_1.dmi'
+	)
+	icon_state = "armor_guard"
+	item_state = "armor_guard"
+	armor_melee = CLOTHING_ARMOR_MEDIUMLOW
+	armor_bullet = CLOTHING_ARMOR_MEDIUMHIGH
+	armor_laser = CLOTHING_ARMOR_MEDIUM
+	armor_energy = CLOTHING_ARMOR_MEDIUM
+	armor_bomb = CLOTHING_ARMOR_MEDIUMLOW
+	armor_bio = CLOTHING_ARMOR_MEDIUM
+	armor_rad = CLOTHING_ARMOR_NONE
+	armor_internaldamage = CLOTHING_ARMOR_MEDIUM
+	flags_armor_protection = BODY_FLAG_CHEST|BODY_FLAG_ARMS|BODY_FLAG_GROIN
+
+/obj/item/clothing/suit/storage/guard/elite
+	name = "stormtrooper carapace armor"
+	icon_state = "armor_elite"
+	item_state = "armor_elite"
+	armor_melee = CLOTHING_ARMOR_HIGH
+	armor_bullet = CLOTHING_ARMOR_VERYHIGH
+	armor_laser = CLOTHING_ARMOR_MEDIUMHIGH
+	armor_energy = CLOTHING_ARMOR_HIGH
+	armor_bomb = CLOTHING_ARMOR_HIGH
+	armor_bio = CLOTHING_ARMOR_MEDIUM
+	armor_rad = CLOTHING_ARMOR_NONE
+	armor_internaldamage = CLOTHING_ARMOR_MEDIUM
+	flags_armor_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN|BODY_FLAG_LEGS|BODY_FLAG_FEET|BODY_FLAG_ARMS|BODY_FLAG_HANDS
+	flags_inventory = BLOCK_KNOCKDOWN
+	time_to_unequip = 8
+	time_to_equip = 8
+
+/obj/item/clothing/suit/storage/guard/whiteshield
+	name = "flak armour vest"
+	icon_state = "armor_whiteshield"
+	item_state = "armor_whiteshield"
+	armor_melee = CLOTHING_ARMOR_MEDIUMLOW
+	armor_bullet = CLOTHING_ARMOR_MEDIUM
+	armor_laser = CLOTHING_ARMOR_MEDIUMLOW
+	armor_energy = CLOTHING_ARMOR_LOW
+	armor_bomb = CLOTHING_ARMOR_LOW
+	flags_armor_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN
+
+/obj/item/clothing/suit/storage/guard/traitor
+	name = "traitor guardsman armor"
+	icon_state = "armor_guard_heretic"
+	item_state = "armor_guard_heretic"
+	armor_melee = CLOTHING_ARMOR_MEDIUMLOW
+	armor_bullet = CLOTHING_ARMOR_MEDIUM
+	armor_laser = CLOTHING_ARMOR_MEDIUMLOW
+	armor_energy = CLOTHING_ARMOR_MEDIUM
+	armor_bomb = CLOTHING_ARMOR_LOW
+
+/obj/item/clothing/suit/storage/guard/elite/traitor
+	name = "traitor elite armor"
+	icon_state = "armor_elite_heretic"
+	item_state = "armor_elite_heretic"
+
+/obj/item/clothing/suit/storage/militia/heretic
+	name = "makeshift steel armor"
+	icon = 'icons/obj/items/clothing/cm_suits.dmi'
+	item_icons = list(
+		WEAR_JACKET = 'icons/mob/humans/onmob/suit_1.dmi'
+	)
+	icon_state = "armor_heretic"
+	item_state = "armor_heretic"
+	armor_melee = CLOTHING_ARMOR_LOW
+	armor_bullet = CLOTHING_ARMOR_MEDIUMLOW
+	armor_laser = CLOTHING_ARMOR_MEDIUMLOW
+	armor_energy = CLOTHING_ARMOR_MEDIUMLOW
+	armor_bomb = CLOTHING_ARMOR_LOW
+	armor_bio = CLOTHING_ARMOR_LOW
+	armor_rad = CLOTHING_ARMOR_NONE
+	armor_internaldamage = CLOTHING_ARMOR_MEDIUM
+	flags_armor_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN
+
+/obj/item/clothing/suit/storage/militia/heretic/cuirass
+	name = "makeshift steel cuirass"
+	icon_state = "armor_heretic_cuirass"
+	item_state = "armor_heretic_cuirass"
+	flags_armor_protection = BODY_FLAG_CHEST
+
+/obj/item/clothing/suit/storage/militia/heretic/lead
+	icon_state = "armor_heretic_lead"
+	item_state = "armor_heretic_lead"
+	flags_armor_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN|BODY_FLAG_ARMS

@@ -507,6 +507,10 @@
 	flags_gun_features = /obj/item/weapon/gun/smg/bizon/upp::flags_gun_features | GUN_TRIGGER_SAFETY
 	starting_attachment_types = list(/obj/item/attachable/reflex/upp, /obj/item/attachable/flashlight)
 
+/obj/item/weapon/gun/smg/bizon/upp/stub
+	name = "\improper M87 Arkadas stub submachinegun"
+	desc = "An older stub-submachinegun, mainly only ever used within hive cities by gangers and criminals. Not particularly accurate, but it'll do the job in a pinch."
+
 //-------------------------------------------------------
 //GENERIC UZI //Based on the uzi submachinegun, of course.
 

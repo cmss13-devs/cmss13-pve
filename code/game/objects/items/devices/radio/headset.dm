@@ -1385,3 +1385,26 @@
 	frequency = MERC_FREQ
 	initial_keys = list(/obj/item/device/encryptionkey/colony)
 	ignore_z = TRUE
+
+/obj/item/device/radio/headset/distress/imperial/imperial_guard
+	name = "\improper Imperial Guard personal vox headset"
+	desc = "A robust headset used by members of the Imperial Guard. Built to outlast those it's issued to. Featured channels include: ; - Imperial Guard, :o - Colony."
+	frequency = IMP_GUARD_FREQ
+	initial_keys = list(/obj/item/device/encryptionkey/imperial_guard)
+	has_hud = TRUE
+	hud_type = list(MOB_HUD_FACTION_ARMY, MOB_HUD_FACTION_MARINE, MOB_HUD_FACTION_NAVY)
+
+/obj/item/device/radio/headset/distress/imperial/kasrkin
+	name = "\improper Kasrkin personal vox headset"
+	desc = "A robust headset used by members of the Kasrkin. Built to outlast those it's issued to. Featured channels include: ; - Kasrkin, :o - Colony."
+	frequency = KASRKIN_FREQ
+	initial_keys = list(/obj/item/device/encryptionkey/kasrkin)
+	has_hud = TRUE
+	hud_type = list(MOB_HUD_FACTION_ARMY, MOB_HUD_FACTION_MARINE, MOB_HUD_FACTION_NAVY)
+
+/obj/item/device/radio/headset/distress/imperial/traitor
+	name = "\improper Traitor Guard personal vox headset"
+	desc = "A robust headset used by members of the Traitor Guard. Built to outlast those it's issued to. Featured channels include: ; - Traitor Guard, :o - Colony."
+	frequency = TRAITOR_FREQ
+	initial_keys = list(/obj/item/device/encryptionkey/traitor)
+	has_hud = FALSE
