@@ -942,7 +942,7 @@
 
 	. = TRUE
 	bullet_message(P, damaging = damage)
-	if(damage_result)
+	if(damage)
 		apply_damage(damage, P.ammo.damage_type, P.def_zone, 0, 0, P)
 		P.play_hit_effect(src)
 
