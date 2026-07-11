@@ -264,6 +264,10 @@
 	var/bonus_damage_cap_increase = 300
 	/// multiplies the default drain of 5 holo stacks per second by this amount
 	var/stack_loss_multiplier = 2
+	effective_range_min = EFFECTIVE_RANGE_MIN_TIER_10
+	effective_range_max = EFFECTIVE_RANGE_MAX_TIER_10
+	damage_falloff = 0
+	damage_buildup = DAMAGE_BUILDUP_TIER_3
 
 /datum/ammo/bullet/rifle/heavy/holo_target/on_hit_mob(mob/hit_mob, obj/projectile/bullet)
 	. = ..()

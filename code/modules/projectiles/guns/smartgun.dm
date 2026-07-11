@@ -592,7 +592,7 @@
 
 /obj/item/weapon/gun/smartgun/rmc
 	name = "\improper L58A3 smartgun"
-	desc = "The actual firearm in the L58A3 'Smart' General Purpose Machine Gun System. A heavily modified variant of the UA's M56 system that fires gyrojet-assisted 10x28mm rounds, it is used by the Three World Empires Royal Marines Commando units to offer supporting fire for their sections.\nYou may toggle firing restrictions by using a special action.\nAlt-click it to open the feed cover and allow for reloading."
+	desc = "The actual firearm in the L58A3 'Smart' General Purpose Machine Gun System. A heavily modified variant of the UA's M56 system that fires gyrojet-assisted 10x28mm rounds, meaning the projectiles hit harder the further they've travelled. It is used by the Three World Empires Royal Marines Commando units to offer supporting fire for their sections.\nYou may toggle firing restrictions by using a special action.\nAlt-click it to open the feed cover and allow for reloading."
 	current_mag = /obj/item/ammo_magazine/smartgun/holo_targeting
 	ammo = /obj/item/ammo_magazine/smartgun/holo_targeting
 	ammo_primary = /datum/ammo/bullet/rifle/heavy/holo_target //Toggled ammo type
@@ -633,7 +633,7 @@
 		scatter = SCATTER_AMOUNT_TIER_6
 		recoil = RECOIL_AMOUNT_TIER_3
 	damage_mult = BASE_BULLET_DAMAGE_MULT
-	damage_buildup_mult = DAMAGE_BUILDUP_TIER_2
+	damage_buildup_mult = DAMAGE_BUILDUP_TIER_3
 
 //For the RMC ship, giving them access to weapons early but no ammo
 /obj/item/weapon/gun/smartgun/rmc/unloaded
