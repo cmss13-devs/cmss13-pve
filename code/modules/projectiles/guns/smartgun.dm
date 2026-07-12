@@ -633,7 +633,6 @@
 		scatter = SCATTER_AMOUNT_TIER_6
 		recoil = RECOIL_AMOUNT_TIER_3
 	damage_mult = BASE_BULLET_DAMAGE_MULT
-	damage_buildup_mult = DAMAGE_BUILDUP_TIER_3
 
 //For the RMC ship, giving them access to weapons early but no ammo
 /obj/item/weapon/gun/smartgun/rmc/unloaded
