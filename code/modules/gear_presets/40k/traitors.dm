@@ -60,12 +60,32 @@
 		add_cultist_mask(new_human)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/veteran/guard/traitor(new_human), WEAR_BODY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/civilian/knife(new_human), WEAR_FEET)
-	if(prob(35))
-		add_cultist_mask(new_human)
 
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/guard/traitor(new_human), WEAR_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/marine/veteran/guard/traitor(new_human), WEAR_JACKET)
 
 	add_traitor_guardsman_ranged(new_human)
+
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate(new_human), WEAR_L_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/flare/full, WEAR_R_STORE)
+
+/datum/equipment_preset/traitors/guard/flamer
+	name = "Traitor Guardsman (Flamer)"
+
+/datum/equipment_preset/traitors/guard/flamer/load_gear(mob/living/carbon/human/new_human)
+	new_human.equip_to_slot_or_del(new headset_type(new_human), WEAR_L_EAR)
+	if(prob(65))
+		new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/veteran/guard/traitor(new_human), WEAR_HEAD)
+	else
+		add_cultist_mask(new_human)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/veteran/guard/traitor(new_human), WEAR_BODY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/civilian/knife(new_human), WEAR_FEET)
+
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/marine/veteran/guard/traitor(new_human), WEAR_JACKET)
+
+	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/flamer/imperial(new_human), WEAR_J_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/general_belt(new_human), WEAR_WAIST)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/flamer_tank/imperial(new_human), WEAR_IN_BELT)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/flamer_tank/imperial(new_human), WEAR_IN_BELT)
 
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate(new_human), WEAR_L_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/flare/full, WEAR_R_STORE)
@@ -91,7 +111,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/tool/crowbar/tactical(new_human), WEAR_IN_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/box/mre(new_human),WEAR_IN_BACK)
 
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/guard/elite/traitor(new_human), WEAR_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/marine/veteran/guard/elite/traitor(new_human), WEAR_JACKET)
 
 	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/lasgun/heretic(new_human), WEAR_J_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/marine(new_human), WEAR_WAIST)

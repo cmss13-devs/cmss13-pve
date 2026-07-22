@@ -48,3 +48,9 @@
 
 /// TRA-O, Traitor Officer
 #define PAY_SHORT_TRAO "TRA-O"
+
+/// CMR, Commissar
+#define PAY_SHORT_CMR "CMR"
+
+/// ENGINSEER, Enginseer
+#define PAY_SHORT_ENGINSEER "ENGINSEER"

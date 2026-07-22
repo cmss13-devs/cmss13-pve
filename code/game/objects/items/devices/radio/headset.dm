@@ -1392,7 +1392,7 @@
 	frequency = IMP_GUARD_FREQ
 	initial_keys = list(/obj/item/device/encryptionkey/imperial_guard)
 	has_hud = TRUE
-	hud_type = list(MOB_HUD_FACTION_ARMY, MOB_HUD_FACTION_MARINE, MOB_HUD_FACTION_NAVY)
+	hud_type = list(MOB_HUD_FACTION_IMPERIAL)
 
 /obj/item/device/radio/headset/distress/imperial/kasrkin
 	name = "\improper Kasrkin personal vox headset"
@@ -1400,7 +1400,7 @@
 	frequency = KASRKIN_FREQ
 	initial_keys = list(/obj/item/device/encryptionkey/kasrkin)
 	has_hud = TRUE
-	hud_type = list(MOB_HUD_FACTION_ARMY, MOB_HUD_FACTION_MARINE, MOB_HUD_FACTION_NAVY)
+	hud_type = list(MOB_HUD_FACTION_IMPERIAL)
 
 /obj/item/device/radio/headset/distress/imperial/traitor
 	name = "\improper Traitor Guard personal vox headset"

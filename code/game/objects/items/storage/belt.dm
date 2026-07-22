@@ -1439,6 +1439,11 @@
 	for(var/i = 1 to storage_slots - 1)
 		new /obj/item/ammo_magazine/pistol/b92fs(src)
 
+/obj/item/storage/belt/gun/m4a3/laspistol/fill_preset_inventory()
+	handle_item_insertion(new /obj/item/weapon/gun/lasgun/laspistol())
+	for(var/i = 1 to storage_slots - 1)
+		new /obj/item/ammo_magazine/lasgun/laspistol(src)
+
 /obj/item/storage/belt/gun/m4a3/nailgun
 	name = "customized nailgun holster"
 	desc = "Combination of a M276 pistol holster and engineering toolbelt that have been cannibalized into a unique belt that can holster a compact nailgun and two spare nailgun magazines."

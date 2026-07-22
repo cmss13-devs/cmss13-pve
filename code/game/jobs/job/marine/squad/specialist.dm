@@ -79,3 +79,18 @@
 	name = JOB_TWE_RMC_MARKSMAN
 	squad = SQUAD_RMC
 	job = /datum/job/marine/specialist/ai/rmc
+
+/datum/job/marine/specialist/ai/imperial
+	total_positions = 2
+	spawn_positions = 2
+	title = JOB_IMPPLAT_SPECIALIST
+	flags_startup_parameters = ROLE_ADD_TO_DEFAULT|ROLE_ADD_TO_SQUAD
+	gear_preset = /datum/equipment_preset/uscm/imperial/specialist
+	supervisors = "the team leader and squad leader"
+	entry_message_body = "You are a specialist of the Astra Militarum, better known as the Imperial Guard. Depending on your weapon, you'll be assisting the squad in order to increase their potential firepower and strength.<br><b>You remember that you've stored your personal gear and uniform in the locker rooms, and that your specialist equipment can be located in the armoury.</b>"
+	prime_priority = FALSE
+
+/obj/effect/landmark/start/marine/specialist/imperial
+	name = JOB_IMPPLAT_SPECIALIST
+	squad = SQUAD_IMPPLT
+	job = /datum/job/marine/specialist/ai/imperial

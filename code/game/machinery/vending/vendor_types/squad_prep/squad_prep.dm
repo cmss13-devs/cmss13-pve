@@ -373,7 +373,7 @@
 		list("Imperial Guard Uniform", round(scale * 15), /obj/item/clothing/under/marine/veteran/guard, VENDOR_ITEM_REGULAR),
 		list("Combat Gloves", round(scale * 15), /obj/item/clothing/gloves/marine, VENDOR_ITEM_REGULAR),
 		list("Imperial Radio Headset", round(scale * 15), /obj/item/device/radio/headset/distress/imperial/imperial_guard, VENDOR_ITEM_REGULAR),
-		list("Mk3 TOCU Headcam", floor(scale * 15), /obj/item/device/overwatch_camera, VENDOR_ITEM_REGULAR),
+		list("Headcam", floor(scale * 15), /obj/item/device/overwatch_camera, VENDOR_ITEM_REGULAR),
 
 		list("WEBBINGS", -1, null, null),
 		list("Black Webbing Vest", round(scale * 4), /obj/item/clothing/accessory/storage/black_vest, VENDOR_ITEM_REGULAR),
@@ -383,17 +383,14 @@
 
 		list("ARMOR", -1, null, null),
 		list("Guardsman Helmet", round(scale * 15), /obj/item/clothing/head/helmet/marine/veteran/guard, VENDOR_ITEM_REGULAR),
-		list("Guardsman Armor", round(scale * 15), /obj/item/clothing/suit/storage/guard, VENDOR_ITEM_REGULAR),
-		list("Guardsman Light Armor", round(scale * 10), /obj/item/clothing/suit/storage/guard/whiteshield, VENDOR_ITEM_REGULAR),
+		list("Guardsman Armor", round(scale * 15), /obj/item/clothing/suit/storage/marine/veteran/guard, VENDOR_ITEM_REGULAR),
+		list("Guardsman Light Armor", round(scale * 10), /obj/item/clothing/suit/storage/marine/veteran/guard/whiteshield, VENDOR_ITEM_REGULAR),
 
 		list("BACKPACK", -1, null, null, null),
 		list("Lightweight IMP Backpack", floor(scale * 15), /obj/item/storage/backpack/marine, VENDOR_ITEM_REGULAR),
 		list("Technician Backpack", floor(scale * 15), /obj/item/storage/backpack/marine/tech, VENDOR_ITEM_REGULAR),
 		list("USCM Satchel", floor(scale * 15), /obj/item/storage/backpack/marine/satchel, VENDOR_ITEM_REGULAR),
 		list("USCM Technical Satchel", floor(scale * 15), /obj/item/storage/backpack/marine/satchel/tech, VENDOR_ITEM_REGULAR),
-
-		list("RESTRICTED BACKPACKS", -1, null, null),
-		list("Radio Telephone Backpack", round(max(1,(scale * 0.5))), /obj/item/storage/backpack/marine/satchel/rto/vox, VENDOR_ITEM_REGULAR),
 
 		list("BELTS", -1, null, null),
 		list("M276 Pattern Ammo Load Rig", round(scale * 15), /obj/item/storage/belt/marine, VENDOR_ITEM_REGULAR),
@@ -424,7 +421,6 @@
 		list("Balaclava", round(scale * 15), /obj/item/clothing/mask/rebreather/scarf, VENDOR_ITEM_REGULAR),
 
 		list("MISCELLANEOUS", -1, null, null, null),
-		list("Ballistic goggles", round(scale * 10), /obj/item/clothing/glasses/mgoggles, VENDOR_ITEM_REGULAR),
 		list("Firearm Lubricant", round(scale * 15), /obj/item/prop/helmetgarb/gunoil, VENDOR_ITEM_REGULAR),
 		)
 
@@ -1121,6 +1117,10 @@
 		list("Laspistol", round(scale * 2), /obj/item/weapon/gun/lasgun/laspistol, VENDOR_ITEM_REGULAR),
 		list("M4A3 Service Pistol", round(scale * 2), /obj/item/weapon/gun/pistol/m4a3/stub, VENDOR_ITEM_REGULAR),
 		list("M82F Flare Gun", round(scale * 1), /obj/item/weapon/gun/flare, VENDOR_ITEM_REGULAR),
+
+		list("AMMUNITION", -1, null, null),
+		list("Stub Pistol Magazine (9mm)", round(scale * 20), /obj/item/ammo_magazine/pistol, VENDOR_ITEM_REGULAR),
+		list("Laspistol Magazine (9mm)", round(scale * 20), /obj/item/ammo_magazine/lasgun/laspistol, VENDOR_ITEM_REGULAR),
 
 		list("MISCELLANEOUS", -1, null, null),
 		list("Extinguisher", round(scale * 5), /obj/item/tool/extinguisher, VENDOR_ITEM_REGULAR),

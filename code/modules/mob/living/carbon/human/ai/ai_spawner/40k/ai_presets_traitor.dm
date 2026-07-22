@@ -18,6 +18,11 @@
 	desc = "Traitor guard with standard equipment."
 	path = /datum/equipment_preset/traitors/guard
 
+/datum/human_ai_equipment_preset/traitor/guard/flamer
+	name = "Traitor Guard (Flamer)"
+	desc = "Traitor guard with a flamer."
+	path = /datum/equipment_preset/traitors/guard/flamer
+
 /datum/human_ai_equipment_preset/traitor/guard/enforcer
 	name = "Traitor Guard Enforcer"
 	desc = "Traitor guard enforcer with standard equipment."

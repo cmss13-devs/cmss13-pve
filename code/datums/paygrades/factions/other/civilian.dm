@@ -71,3 +71,14 @@
 	name = "Traitor Officer"
 	prefix = "LT."
 	officer_grade = GRADE_OFFICER
+
+/datum/paygrade/civilian/commissar
+	paygrade = PAY_SHORT_CMR
+	name = "Imperial Commissar"
+	prefix = "Commissar."
+	officer_grade = GRADE_OFFICER
+
+/datum/paygrade/civilian/enginseer
+	paygrade = PAY_SHORT_ENGINSEER
+	name = "Mechanicus Enginseer"
+	prefix = "Eng."

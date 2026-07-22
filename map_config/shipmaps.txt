@@ -41,3 +41,6 @@ endmap
 
 map hms_brynhild
 endmap
+
+map outpost_tertius_decimus
+endmap

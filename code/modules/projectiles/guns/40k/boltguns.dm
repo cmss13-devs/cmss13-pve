@@ -25,5 +25,5 @@
 	scatter_unwielded = SCATTER_AMOUNT_TIER_8
 	scatter = SCATTER_AMOUNT_TIER_9
 	damage_mult = BASE_BULLET_DAMAGE_MULT
-	recoil = RECOIL_AMOUNT_TIER_4
+	recoil = RECOIL_AMOUNT_TIER_2
 	recoil_unwielded = RECOIL_AMOUNT_TIER_1

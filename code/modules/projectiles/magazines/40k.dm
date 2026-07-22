@@ -63,11 +63,11 @@
 
 /obj/item/ammo_magazine/plasmagun
 	name = "\improper plasmagun powerpack"
-	desc = ""
+	desc = "A plasmagun powerpack, able to fit inside most forms of plasma-weaponry."
 	caliber = "plasma"
 	icon_state = "plasma_ammo"
 	w_class = SIZE_MEDIUM
 	flags_magazine = NO_FLAGS
-	max_rounds = 9
+	max_rounds = 4
 	default_ammo = /datum/ammo/energy/plasmagun
 	gun_type = /obj/item/weapon/gun/plasmagun

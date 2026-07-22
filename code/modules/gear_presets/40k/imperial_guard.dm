@@ -5,7 +5,6 @@
 	faction = FACTION_IMPERIAL_GUARD
 	faction_group = list(FACTION_IMPERIAL_GUARD)
 	languages = list(LANGUAGE_ENGLISH)
-	idtype = /obj/item/card/id/data
 	var/headset_type = /obj/item/device/radio/headset/distress/imperial/imperial_guard
 	idtype = /obj/item/card/id/dogtag
 
@@ -42,6 +41,7 @@
 	assignment = JOB_IMP_CONSCRIPT
 	rank = JOB_IMP_CONSCRIPT
 	paygrades = list(PAY_SHORT_ME1 = JOB_PLAYTIME_TIER_0)
+	access = list(ACCESS_MARINE_PREP)
 	role_comm_title = "Cns."
 	flags = EQUIPMENT_PRESET_EXTRA
 	skills = /datum/skills/trooper
@@ -52,7 +52,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/veteran/guard(new_human), WEAR_BODY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/civilian(new_human), WEAR_FEET)
 
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/guard/whiteshield(new_human), WEAR_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/marine/veteran/guard/whiteshield(new_human), WEAR_JACKET)
 
 	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/lasgun(new_human), WEAR_J_STORE)
 
@@ -70,6 +70,7 @@
 	assignment = JOB_IMP_GUARDSMAN
 	rank = JOB_IMP_GUARDSMAN
 	paygrades = list(PAY_SHORT_ME2 = JOB_PLAYTIME_TIER_0)
+	access = list(ACCESS_MARINE_PREP)
 	flags = EQUIPMENT_PRESET_EXTRA
 	role_comm_title = "Grd."
 	skills = /datum/skills/pfc
@@ -77,11 +78,13 @@
 /datum/equipment_preset/imperial_guard/guardsman/load_gear(mob/living/carbon/human/new_human)
 	new_human.equip_to_slot_or_del(new headset_type(new_human), WEAR_L_EAR)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/veteran/guard(new_human), WEAR_HEAD)
+	if(prob(25))
+		new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/balaclava(new_human), WEAR_FACE)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/veteran/guard(new_human), WEAR_BODY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/civilian/knife(new_human), WEAR_FEET)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine(new_human), WEAR_HANDS)
 
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/guard(new_human), WEAR_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/marine/veteran/guard(new_human), WEAR_JACKET)
 
 	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/lasgun(new_human), WEAR_J_STORE)
 
@@ -104,9 +107,49 @@
 	assignment = JOB_IMP_TL
 	rank = JOB_IMP_TL
 	paygrades = list(PAY_SHORT_ME4 = JOB_PLAYTIME_TIER_0)
+	access = list(ACCESS_MARINE_PREP, ACCESS_MARINE_TL_PREP)
 	flags = EQUIPMENT_PRESET_EXTRA
 	role_comm_title = "TL."
 	skills = /datum/skills/tl
+
+/datum/equipment_preset/imperial_guard/medicae
+	name = "Imperial Guard Medicae"
+	assignment = JOB_IMP_MEDICAE
+	rank = JOB_IMP_MEDICAE
+	paygrades = list(PAY_SHORT_ME3 = JOB_PLAYTIME_TIER_0)
+	access = list(ACCESS_MARINE_PREP, ACCESS_MARINE_MEDPREP, ACCESS_MARINE_MEDBAY)
+	flags = EQUIPMENT_PRESET_EXTRA
+	role_comm_title = "Med."
+	skills = /datum/skills/combat_medic_pve
+
+/datum/equipment_preset/imperial_guard/medicae/load_gear(mob/living/carbon/human/new_human)
+	new_human.equip_to_slot_or_del(new headset_type(new_human), WEAR_L_EAR)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/veteran/guard(new_human), WEAR_HEAD)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/veteran/guard(new_human), WEAR_BODY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/civilian/knife(new_human), WEAR_FEET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine(new_human), WEAR_HANDS)
+	if(prob(25))
+		new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/balaclava(new_human), WEAR_FACE)
+
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/marine/veteran/guard(new_human), WEAR_JACKET)
+
+	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/lasgun(new_human), WEAR_J_STORE)
+
+	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/medical/lifesaver/full(new_human), WEAR_WAIST)
+
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate(new_human), WEAR_L_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/magazine, WEAR_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/lasgun, WEAR_IN_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/lasgun, WEAR_IN_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/lasgun, WEAR_IN_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine/satchel(new_human), WEAR_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/tool/crowbar/tactical(new_human), WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/box/mre(new_human), WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/tool/surgery/surgical_line(new_human), WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/tool/surgery/synthgraft(new_human), WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/firstaid/softpack/regular(new_human), WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/firstaid/softpack/adv(new_human), WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/device/healthanalyzer/soul(new_human), WEAR_IN_BACK)
 
 /datum/equipment_preset/imperial_guard/specialist/flamer
 	name = "Imperial Guard Specialist (Flamer)"
@@ -114,6 +157,7 @@
 	rank = JOB_IMP_SPECIALIST
 	paygrades = list(PAY_SHORT_ME3 = JOB_PLAYTIME_TIER_0)
 	flags = EQUIPMENT_PRESET_EXTRA
+	access = list(ACCESS_MARINE_PREP, ACCESS_MARINE_SPECPREP)
 	role_comm_title = "Spc."
 	skills = /datum/skills/pfc
 
@@ -123,8 +167,10 @@
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/veteran/guard(new_human), WEAR_BODY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/civilian/knife(new_human), WEAR_FEET)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine(new_human), WEAR_HANDS)
+	if(prob(25))
+		new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/balaclava(new_human), WEAR_FACE)
 
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/guard(new_human), WEAR_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/marine/veteran/guard(new_human), WEAR_JACKET)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/holster(new_human), WEAR_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/lasgun/laspistol(new_human), WEAR_IN_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/lasgun/laspistol(new_human), WEAR_IN_ACCESSORY)
@@ -148,6 +194,7 @@
 	assignment = JOB_IMP_SPECIALIST
 	rank = JOB_IMP_SPECIALIST
 	paygrades = list(PAY_SHORT_ME3 = JOB_PLAYTIME_TIER_0)
+	access = list(ACCESS_MARINE_PREP, ACCESS_MARINE_SPECPREP)
 	flags = EQUIPMENT_PRESET_EXTRA
 	role_comm_title = "Spc."
 	skills = /datum/skills/pfc
@@ -158,8 +205,10 @@
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/veteran/guard(new_human), WEAR_BODY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/civilian/knife(new_human), WEAR_FEET)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine(new_human), WEAR_HANDS)
+	if(prob(25))
+		new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/balaclava(new_human), WEAR_FACE)
 
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/guard(new_human), WEAR_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/marine/veteran/guard(new_human), WEAR_JACKET)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/holster(new_human), WEAR_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/lasgun/laspistol(new_human), WEAR_IN_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/lasgun/laspistol(new_human), WEAR_IN_ACCESSORY)
@@ -178,11 +227,51 @@
 	new_human.equip_to_slot_or_del(new /obj/item/tool/crowbar/tactical(new_human), WEAR_IN_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/box/mre(new_human),WEAR_IN_BACK)
 
+/datum/equipment_preset/imperial_guard/specialist/rocket
+	name = "Imperial Guard Specialist (Rocket Launcher)"
+	assignment = JOB_IMP_SPECIALIST
+	rank = JOB_IMP_SPECIALIST
+	paygrades = list(PAY_SHORT_ME3 = JOB_PLAYTIME_TIER_0)
+	access = list(ACCESS_MARINE_PREP, ACCESS_MARINE_SPECPREP)
+	flags = EQUIPMENT_PRESET_EXTRA
+	role_comm_title = "Spc."
+	skills = /datum/skills/pfc
+
+/datum/equipment_preset/imperial_guard/specialist/rocket/load_gear(mob/living/carbon/human/new_human)
+	new_human.equip_to_slot_or_del(new headset_type(new_human), WEAR_L_EAR)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/veteran/guard(new_human), WEAR_HEAD)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/veteran/guard(new_human), WEAR_BODY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/civilian/knife(new_human), WEAR_FEET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine(new_human), WEAR_HANDS)
+	if(prob(25))
+		new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/balaclava(new_human), WEAR_FACE)
+
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/marine/veteran/guard(new_human), WEAR_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/holster(new_human), WEAR_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/lasgun/laspistol(new_human), WEAR_IN_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/lasgun/laspistol(new_human), WEAR_IN_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/lasgun/laspistol(new_human), WEAR_IN_ACCESSORY)
+
+	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/launcher/rocket/imperial(new_human), WEAR_J_STORE)
+
+	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/general_belt(new_human), WEAR_WAIST)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rocket/imperial/at(new_human), WEAR_IN_BELT)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rocket/imperial/at(new_human), WEAR_IN_BELT)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rocket/imperial(new_human), WEAR_IN_BELT)
+
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate(new_human), WEAR_L_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/explosive/full/imperial(new_human), WEAR_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine/satchel(new_human), WEAR_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/box/flare(new_human), WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/tool/crowbar/tactical(new_human), WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/box/mre(new_human),WEAR_IN_BACK)
+
 /datum/equipment_preset/imperial_guard/vox_operator
 	name = "Imperial Guard Vox Operator"
 	assignment = JOB_IMP_VOX_OPERATOR
 	rank = JOB_IMP_VOX_OPERATOR
 	paygrades = list(PAY_SHORT_ME4 = JOB_PLAYTIME_TIER_0)
+	access = list(ACCESS_MARINE_PREP, ACCESS_MARINE_SPECPREP)
 	flags = EQUIPMENT_PRESET_EXTRA
 	role_comm_title = "Vox."
 	skills = /datum/skills/tl
@@ -193,8 +282,10 @@
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/veteran/guard(new_human), WEAR_BODY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/civilian/knife(new_human), WEAR_FEET)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine(new_human), WEAR_HANDS)
+	if(prob(25))
+		new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/balaclava(new_human), WEAR_FACE)
 
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/guard(new_human), WEAR_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/marine/veteran/guard(new_human), WEAR_JACKET)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/droppouch(new_human), WEAR_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/box/flare(new_human), WEAR_IN_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/tool/crowbar/tactical(new_human), WEAR_IN_ACCESSORY)
@@ -218,6 +309,7 @@
 	assignment = JOB_IMP_SL
 	rank = JOB_IMP_SL
 	paygrades = list(PAY_SHORT_ME5 = JOB_PLAYTIME_TIER_0)
+	access = list(ACCESS_MARINE_PREP, ACCESS_MARINE_LEADER, ACCESS_MARINE_DROPSHIP)
 	flags = EQUIPMENT_PRESET_EXTRA
 	role_comm_title = "Sl."
 	skills = /datum/skills/SL
@@ -228,8 +320,10 @@
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/veteran/guard(new_human), WEAR_BODY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/civilian/knife(new_human), WEAR_FEET)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine(new_human), WEAR_HANDS)
+	if(prob(25))
+		new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/balaclava(new_human), WEAR_FACE)
 
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/guard(new_human), WEAR_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/marine/veteran/guard(new_human), WEAR_JACKET)
 
 	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/gun/m4a3(new_human), WEAR_WAIST)
 	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/lasgun/laspistol(new_human), WEAR_IN_BELT)
@@ -252,3 +346,106 @@
 	new_human.equip_to_slot_or_del(new /obj/item/storage/box/flare(new_human), WEAR_IN_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/tool/crowbar/tactical(new_human), WEAR_IN_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/box/mre(new_human),WEAR_IN_BACK)
+
+/datum/equipment_preset/imperial_guard/lt
+	name = "Imperial Guard Platoon Leader"
+	assignment = JOB_IMP_LT
+	rank = JOB_IMP_LT
+	paygrades = list(PAY_SHORT_MO2 = JOB_PLAYTIME_TIER_0)
+	access = list(ACCESS_MARINE_PREP, ACCESS_MARINE_DROPSHIP, ACCESS_MARINE_LEADER, ACCESS_MARINE_COMMAND)
+	flags = EQUIPMENT_PRESET_EXTRA
+	role_comm_title = "Lt."
+	skills = /datum/skills/lt
+
+/datum/equipment_preset/imperial_guard/lt/load_gear(mob/living/carbon/human/new_human)
+	new_human.equip_to_slot_or_del(new headset_type(new_human), WEAR_L_EAR)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/cmcap/imperial(new_human), WEAR_HEAD)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/veteran/guard(new_human), WEAR_BODY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/civilian/knife(new_human), WEAR_FEET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine(new_human), WEAR_HANDS)
+
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/marine/veteran/guard(new_human), WEAR_JACKET)
+
+	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/gun/m4a3(new_human), WEAR_WAIST)
+	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/lasgun/laspistol(new_human), WEAR_IN_BELT)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/lasgun/laspistol(new_human), WEAR_IN_BELT)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/lasgun/laspistol(new_human), WEAR_IN_BELT)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/lasgun/laspistol(new_human), WEAR_IN_BELT)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/lasgun/laspistol(new_human), WEAR_IN_BELT)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/lasgun/laspistol(new_human), WEAR_IN_BELT)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/lasgun/laspistol(new_human), WEAR_IN_BELT)
+
+	new_human.equip_to_slot_or_del(new /obj/item/weapon/chainsword(new_human), WEAR_J_STORE)
+
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate(new_human), WEAR_L_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/magazine/pistol(new_human), WEAR_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/lasgun/laspistol(new_human), WEAR_IN_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/lasgun/laspistol(new_human), WEAR_IN_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/lasgun/laspistol(new_human), WEAR_IN_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/lasgun/laspistol(new_human), WEAR_IN_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine/satchel(new_human), WEAR_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/box/flare(new_human), WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/tool/crowbar/tactical(new_human), WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/box/mre(new_human),WEAR_IN_BACK)
+
+/datum/equipment_preset/imperial_guard/commissar
+	name = "Imperial Commissar"
+	assignment = JOB_IMP_CMR
+	rank = JOB_IMP_CMR
+	paygrades = list(PAY_SHORT_CMR = JOB_PLAYTIME_TIER_0)
+	access = list(ACCESS_MARINE_PREP, ACCESS_MARINE_DROPSHIP, ACCESS_MARINE_LEADER, ACCESS_MARINE_COMMAND)
+	flags = EQUIPMENT_PRESET_EXTRA
+	role_comm_title = "Commissar."
+	skills = /datum/skills/lt
+
+/datum/equipment_preset/imperial_guard/commissar/load_gear(mob/living/carbon/human/new_human)
+	new_human.equip_to_slot_or_del(new headset_type(new_human), WEAR_L_EAR)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/cmcap/commissar(new_human), WEAR_HEAD)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/veteran/guard(new_human), WEAR_BODY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/civilian/knife(new_human), WEAR_FEET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine(new_human), WEAR_HANDS)
+
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/commissar(new_human), WEAR_JACKET)
+
+	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/pistol/boltpistol(new_human), WEAR_WAIST)
+
+	new_human.equip_to_slot_or_del(new /obj/item/weapon/powersword(new_human), WEAR_J_STORE)
+
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate(new_human), WEAR_L_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/magazine/pistol(new_human), WEAR_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/pistol/boltpistol(new_human), WEAR_IN_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/pistol/boltpistol(new_human), WEAR_IN_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/pistol/boltpistol(new_human), WEAR_IN_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/pistol/boltpistol(new_human), WEAR_IN_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine/satchel(new_human), WEAR_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/box/flare(new_human), WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/tool/crowbar/tactical(new_human), WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/box/mre(new_human),WEAR_IN_BACK)
+
+/datum/equipment_preset/imperial_guard/enginseer
+	name = "Mechanicus Enginseer"
+	assignment = JOB_IMP_ENGI
+	rank = JOB_IMP_ENGI
+	paygrades = list(PAY_SHORT_ENGINSEER = JOB_PLAYTIME_TIER_0)
+	access = list(ACCESS_MARINE_PREP, ACCESS_MARINE_ENGPREP, ACCESS_CIVILIAN_ENGINEERING)
+	flags = EQUIPMENT_PRESET_EXTRA
+	role_comm_title = "Enginseer."
+	skills = /datum/skills/combat_engineer
+
+/datum/equipment_preset/imperial_guard/enginseer/load_gear(mob/living/carbon/human/new_human)
+	new_human.equip_to_slot_or_del(new headset_type(new_human), WEAR_L_EAR)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/cmcap/enginseer(new_human), WEAR_HEAD)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/veteran/guard(new_human), WEAR_BODY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/tool_webbing/equipped(new_human), WEAR_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/civilian/knife(new_human), WEAR_FEET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine(new_human), WEAR_HANDS)
+
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/enginseer(new_human), WEAR_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/gun/m4a3(new_human), WEAR_WAIST)
+	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/lasgun/laspistol(new_human), WEAR_IN_BELT)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/lasgun/laspistol(new_human), WEAR_IN_BELT)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/lasgun/laspistol(new_human), WEAR_IN_BELT)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/lasgun/laspistol(new_human), WEAR_IN_BELT)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/lasgun/laspistol(new_human), WEAR_IN_BELT)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/lasgun/laspistol(new_human), WEAR_IN_BELT)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/lasgun/laspistol(new_human), WEAR_IN_BELT)

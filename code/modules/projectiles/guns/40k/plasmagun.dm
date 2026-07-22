@@ -30,6 +30,8 @@
 	flags_item = TWOHANDED
 	var/datum/ammo/ammo_standard = /datum/ammo/energy/plasmagun
 	var/datum/ammo/ammo_overcharged = /datum/ammo/energy/plasmagun/overcharged
+	var/detonating = FALSE
+	var/overcharged = FALSE
 
 /obj/item/weapon/gun/plasmagun/Initialize(mapload, ...)
 	ammo_standard = GLOB.ammo_list[ammo_standard] //Gun initialize calls replace_ammo() so we need to set these first.
@@ -131,12 +133,12 @@
 	var/obj/item/weapon/gun/plasmagun/G = holder_item
 	G.overcharge(usr)
 
-/datum/action/item_action/smartgun/overcharge/proc/update_icon()
+/datum/action/item_action/plasmagun/overcharge/proc/update_icon()
 	var/obj/item/weapon/gun/plasmagun/G = holder_item
 	if(G.ammo == G.ammo_standard)
 		action_icon_state = "ammo_swap_normal"
 	else if(G.ammo == G.ammo_overcharged)
-		action_icon_state = "ammo_swap_ap"
+		action_icon_state = "ammo_swap_pen"
 	else
 		action_icon_state = "ammo_swap_normal"
 	button.overlays.Cut()
@@ -145,11 +147,13 @@
 /obj/item/weapon/gun/plasmagun/proc/overcharge(mob/user)
 	if(ammo == ammo_standard)
 		ammo = ammo_overcharged
-		to_chat(user, "[icon2html(src, usr)] You changed \the [src]'s firemode. You now fire overcharged projectiles. These rounds are highly destructive but take longer to recharge, and have the chance to overhead the weapon if fired too many times in a row.")
+		overcharged = TRUE
+		to_chat(user, "[icon2html(src, usr)] You changed \the [src]'s firemode. You now fire overcharged projectiles. These rounds are highly destructive but take longer to recharge, and have the chance to overheat the weapon if fired too many times in a row.")
 		balloon_alert(user, "firing overcharged")
 		set_fire_delay(350)
 	else
 		ammo = ammo_standard
+		overcharged = FALSE
 		to_chat(user, "[icon2html(src, usr)] You changed \the [src]'s firemode. You now fire standard projectiles. These rounds takes less time to operate but hold less destructive potential.")
 		balloon_alert(user, "firing standard")
 		set_fire_delay(200)
@@ -162,6 +166,20 @@
 	..()
 	if(old_ammo)
 		ammo = old_ammo
+
+/obj/item/weapon/gun/plasmagun/Fire(atom/target, mob/living/user, params, reflex, dual_wield)
+	if(overcharged == TRUE && detonating == FALSE && prob(10))
+		user.visible_message(SPAN_HIGHDANGER("The plasmagun begins to overheats, and projects deadly hot plasma into it's surroundings!"), SPAN_HIGHDANGER("You can feel the plasmagun in-hand begin to overheat. Uh oh..."))
+		playsound(user, 'sound/weapons/gun_plasma_explode.ogg', 100, 1)
+		addtimer(CALLBACK(src, PROC_REF(detonate), FALSE), 5 SECONDS)
+		detonating = TRUE
+	else
+		return ..()
+
+/obj/item/weapon/gun/plasmagun/proc/detonate(mob/living/user)
+	var/datum/cause_data/cause_data = create_cause_data(initial(name), user)
+	cell_explosion(loc, 60, 60, EXPLOSION_FALLOFF_SHAPE_LINEAR, null, cause_data)
+	detonating = FALSE
 
 /obj/item/weapon/gun/plasmagun/set_gun_attachment_offsets()
 	attachable_offset = list("muzzle_x" = 39, "muzzle_y" = 17,"rail_x" = 11, "rail_y" = 21, "under_x" = 19, "under_y" = 14, "stock_x" = 19, "stock_y" = 14, "side_rail_x" = 23, "side_rail_y" = 17)
@@ -198,4 +216,13 @@
 	accuracy_mult_unwielded = BASE_ACCURACY_MULT
 	scatter = SCATTER_AMOUNT_TIER_6
 	damage_mult = BASE_BULLET_DAMAGE_MULT
-	recoil = RECOIL_AMOUNT_TIER_3
+	recoil = RECOIL_AMOUNT_TIER_2
+
+/obj/item/weapon/gun/plasmagun/pistol/Fire(atom/target, mob/living/user, params, reflex, dual_wield)
+	if(overcharged == TRUE && detonating == FALSE && prob(100))
+		user.visible_message(SPAN_HIGHDANGER("The plasmapistol begins to overheats, and projects deadly hot plasma into it's surroundings!"), SPAN_HIGHDANGER("You can feel the plasmagun in-hand begin to overheat. Uh oh..."))
+		playsound(user, 'sound/weapons/gun_plasma_explode.ogg', 100, 1)
+		addtimer(CALLBACK(src, PROC_REF(detonate), FALSE), 5 SECONDS)
+		detonating = TRUE
+	else
+		return ..()

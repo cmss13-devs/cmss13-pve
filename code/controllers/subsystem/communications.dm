@@ -150,9 +150,9 @@ Radiochat range: 1441 to 1489 (most devices refuse to be tune to other frequency
 #define COLONY_FREQ 1469
 
 //40k frequencies
-#define IMP_GUARD_FREQ 1480
-#define KASRKIN_FREQ 1481
-#define TRAITOR_FREQ 1482
+#define IMP_GUARD_FREQ 1520
+#define KASRKIN_FREQ 1521
+#define TRAITOR_FREQ 1522
 
 #define AI_FREQ 1500
 
