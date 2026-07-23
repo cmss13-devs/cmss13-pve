@@ -64,6 +64,9 @@
 /atom/movable/screen/text/screen_text/picture/starting/twe
 	image_to_play = "twe"
 
+/atom/movable/screen/text/screen_text/picture/starting/imperial
+	image_to_play = "twe"
+
 /atom/movable/screen/text/screen_text/hypersleep_status
 	maptext_height = 480
 	maptext_width = 480
