@@ -54,6 +54,10 @@
 	name = "Command Tank"
 	interior_id = "tank_command"
 
+/datum/map_template/interior/tank_solo
+	name = "Tank (Solo)"
+	interior_id = "tank_solo"
+
 /datum/map_template/interior/upptank
 	name = "UPP Tank"
 	interior_id = "upptank"
@@ -65,6 +69,10 @@
 /datum/map_template/interior/ridgeway
 	name = "Ridgeway Tank"
 	interior_id = "ridgeway"
+
+/datum/map_template/interior/upptank_solo
+	name = "UPP Tank (Solo)"
+	interior_id = "upptank_solo"
 
 /datum/map_template/interior/aev
 	name = "AEV"
@@ -136,15 +144,3 @@
 /datum/map_template/interior/uppapc
 	name = "ZSL-68"
 	interior_id = "uppapc"
-
-/datum/map_template/interior/twe_tank
-	name = "FV150 Cavalry Tank"
-	interior_id = "twe_tank"
-
-/datum/map_template/interior/twe_apc
-	name = "Type 200/FCV Light APC"
-	interior_id = "twe_apc"
-
-/datum/map_template/interior/twe_apc/command
-	name = "Type 200/FCV-C Command Light APC"
-	interior_id = "twe_command_apc"
