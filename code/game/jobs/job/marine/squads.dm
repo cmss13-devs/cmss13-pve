@@ -474,9 +474,15 @@
 	use_stripe_overlay = FALSE
 	equipment_color = "#62a759"
 	chat_color = "#62a759"
-	minimap_color = "#62a759"
+	minimap_color = MINIMAP_SQUAD_INTEL
 	usable = TRUE
 	squad_type = "Squad"
+
+/datum/squad/imperial/secondary
+	name = SQUAD_IMPPLT_2
+	chat_color = "#fe7b2e"
+	minimap_color = MINIMAP_SQUAD_FOXTROT
+	usable = FALSE
 
 /datum/squad/marine/imperial/New()
 	. = ..()

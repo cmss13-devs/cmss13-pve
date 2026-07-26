@@ -259,6 +259,8 @@
 	bound_height = 64
 	light_pixel_x = 16
 	light_pixel_y = 16
+	minimap_type = MINIMAP_FLAG_IMPERIAL_GUARD
+	faction = FACTION_IMPERIAL_GUARD
 
 //Nonpower using props
 

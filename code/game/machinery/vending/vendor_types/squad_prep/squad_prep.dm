@@ -373,7 +373,6 @@
 		list("Imperial Guard Uniform", round(scale * 15), /obj/item/clothing/under/marine/veteran/guard, VENDOR_ITEM_REGULAR),
 		list("Combat Gloves", round(scale * 15), /obj/item/clothing/gloves/marine, VENDOR_ITEM_REGULAR),
 		list("Imperial Radio Headset", round(scale * 15), /obj/item/device/radio/headset/distress/imperial/imperial_guard, VENDOR_ITEM_REGULAR),
-		list("Headcam", floor(scale * 15), /obj/item/device/overwatch_camera, VENDOR_ITEM_REGULAR),
 
 		list("WEBBINGS", -1, null, null),
 		list("Black Webbing Vest", round(scale * 4), /obj/item/clothing/accessory/storage/black_vest, VENDOR_ITEM_REGULAR),
@@ -389,8 +388,8 @@
 		list("BACKPACK", -1, null, null, null),
 		list("Lightweight IMP Backpack", floor(scale * 15), /obj/item/storage/backpack/marine, VENDOR_ITEM_REGULAR),
 		list("Technician Backpack", floor(scale * 15), /obj/item/storage/backpack/marine/tech, VENDOR_ITEM_REGULAR),
-		list("USCM Satchel", floor(scale * 15), /obj/item/storage/backpack/marine/satchel, VENDOR_ITEM_REGULAR),
-		list("USCM Technical Satchel", floor(scale * 15), /obj/item/storage/backpack/marine/satchel/tech, VENDOR_ITEM_REGULAR),
+		list("Satchel", floor(scale * 15), /obj/item/storage/backpack/marine/satchel, VENDOR_ITEM_REGULAR),
+		list("Technical Satchel", floor(scale * 15), /obj/item/storage/backpack/marine/satchel/tech, VENDOR_ITEM_REGULAR),
 
 		list("BELTS", -1, null, null),
 		list("M276 Pattern Ammo Load Rig", round(scale * 15), /obj/item/storage/belt/marine, VENDOR_ITEM_REGULAR),

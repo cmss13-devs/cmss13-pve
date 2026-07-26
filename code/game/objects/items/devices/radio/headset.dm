@@ -382,6 +382,8 @@
 			marker_flags = MINIMAP_FLAG_PMC
 		else if(hud_type == MOB_HUD_FACTION_CLF)
 			marker_flags = MINIMAP_FLAG_CLF
+		else if(hud_type == MOB_HUD_FACTION_IMPERIAL)
+			marker_flags = MINIMAP_FLAG_IMPERIAL_GUARD
 
 	if(wearer.undefibbable)
 		set_undefibbable_on_minimap(z_level, marker_flags)

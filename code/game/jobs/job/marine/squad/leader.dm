@@ -131,7 +131,6 @@ OverrideTimelock(/datum/job/marine/leader, list(
 	job_options = null
 	supervisors = "the squad leader"
 	entry_message_body = "You are a squad leader of the Astra Militarum, better known as the Imperial Guard. You are responsible for your imperial guard squad, who are the first and last line of defence for the Imperium.</b>"
-	prime_priority = TRUE
 
 /obj/effect/landmark/start/marine/leader/imperial
 	name = JOB_IMPPLAT_LEADER

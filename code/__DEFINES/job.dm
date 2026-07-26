@@ -24,6 +24,7 @@
 #define SQUAD_LRRP "Snake Eaters"
 #define SQUAD_LRRP_2 "Ocelot Grapplers"
 #define SQUAD_IMPPLT "Cadian Alpha Squad"
+#define SQUAD_IMPPLT_2 "Cadian Bravo Squad"
 
 // Job name defines
 #define JOB_SQUAD_MARINE "Rifleman"
