@@ -1869,13 +1869,13 @@
 		/obj/item/attachable/flashlight,
 	)
 
-	flags_gun_features = GUN_CAN_POINTBLANK|GUN_AMMO_COUNTER
+	flags_gun_features = GUN_CAN_POINTBLANK
 	wield_delay = WIELD_DELAY_VERY_FAST
 	aim_slowdown = SLOWDOWN_ADS_QUICK
 	start_automatic = TRUE
 
 /obj/item/weapon/gun/rifle/r81m1a/set_gun_attachment_offsets()
-	attachable_offset = list("muzzle_x" = 46, "muzzle_y" = 20,"rail_x" = 11, "rail_y" = 21, "under_x" = 27, "under_y" = 15, "stock_x" = 24, "stock_y" = 13, "side_rail_x" = 24, "side_rail_y" = 18, "special_x" = 30, "special_y" = 16)
+	attachable_offset = list("muzzle_x" = 46, "muzzle_y" = 20,"rail_x" = 11, "rail_y" = 21, "under_x" = 27, "under_y" = 15, "stock_x" = 24, "stock_y" = 13, "side_rail_x" = 24, "side_rail_y" = 18, "special_x" = 33, "special_y" = 15)
 
 /obj/item/weapon/gun/rifle/r81m1a/set_gun_config_values()
 	..()
@@ -1902,7 +1902,7 @@
 
 /obj/item/weapon/gun/rifle/r81m1a/unloaded
 	current_mag = null
-	flags_gun_features = GUN_CAN_POINTBLANK|GUN_AMMO_COUNTER|GUN_TRIGGER_SAFETY
+	flags_gun_features = GUN_CAN_POINTBLANK|GUN_TRIGGER_SAFETY
 
 // R81M1B Marksman Rifle
 /obj/item/weapon/gun/rifle/r81m1a/m1b
@@ -1915,11 +1915,11 @@
 		/obj/item/attachable/flashlight,
 	)
 
-	starting_attachment_types = list(/obj/item/attachable/stock/r81_sniper, /obj/item/attachable/scope/variable_zoom/fal)
+	starting_attachment_types = list(/obj/item/attachable/scope/variable_zoom/fal)
 	start_automatic = FALSE
 
 /obj/item/weapon/gun/rifle/r81m1a/m1b/set_gun_attachment_offsets()
-	attachable_offset = list("muzzle_x" = 33, "muzzle_y" = 19,"rail_x" = 17, "rail_y" = 19, "under_x" = 33, "under_y" = 13, "stock_x" = 19, "stock_y" = 16, "side_rail_x" = 28, "side_rail_y" = 18, "special_x" = 36, "special_y" = 19)
+	attachable_offset = list("muzzle_x" = 33, "muzzle_y" = 19,"rail_x" = 18, "rail_y" = 15, "under_x" = 33, "under_y" = 13, "stock_x" = 19, "stock_y" = 16, "side_rail_x" = 28, "side_rail_y" = 18, "special_x" = 35, "special_y" = 15)
 
 /obj/item/weapon/gun/rifle/r81m1a/m1b/set_gun_config_values()
 	..()
@@ -1958,7 +1958,7 @@
 		/obj/item/attachable/flashlight,
 	)
 
-	flags_gun_features = GUN_CAN_POINTBLANK|GUN_AMMO_COUNTER
+	flags_gun_features = GUN_CAN_POINTBLANK
 	wield_delay = WIELD_DELAY_VERY_FAST
 	aim_slowdown = SLOWDOWN_ADS_QUICK
 	start_automatic = TRUE
@@ -1983,10 +1983,6 @@
 	..()
 	var/obj/item/attachable/r81m1a_barrel/short/integrated = new(src)
 	integrated.flags_attach_features &= ~ATTACH_REMOVABLE
-	var/obj/item/attachable/old_barrel = attachments[integrated.slot]
-	if(old_barrel)
-		old_barrel.Detach(detaching_gub = src, drop_attachment = FALSE)
-		qdel(old_barrel)
 	integrated.Attach(src)
 	update_attachable(integrated.slot)
 
@@ -2005,15 +2001,15 @@
 	)
 	current_mag = /obj/item/ammo_magazine/rifle/r81m1/drum
 
-	flags_gun_features = GUN_CAN_POINTBLANK|GUN_AMMO_COUNTER
+	flags_gun_features = GUN_CAN_POINTBLANK
 	wield_delay = WIELD_DELAY_NORMAL
 	aim_slowdown = SLOWDOWN_ADS_QUICK
 	start_automatic = TRUE
 
-	starting_attachment_types = list(/obj/item/attachable/bipod/r81, /obj/item/attachable/stock/r81_saw, /obj/item/attachable/scope/mini/r81)
+	starting_attachment_types = list(/obj/item/attachable/bipod/r81, /obj/item/attachable/scope/mini/r81)
 
 /obj/item/weapon/gun/rifle/r81m1a/m1d/set_gun_attachment_offsets()
-	attachable_offset = list("muzzle_x" = 43, "muzzle_y" = 17,"rail_x" = 7, "rail_y" = 16, "under_x" = 32, "under_y" = 13, "stock_x" = 22, "stock_y" = 15, "side_rail_x" = 28, "side_rail_y" = 18, "special_x" = 34, "special_y" = 16)
+	attachable_offset = list("muzzle_x" = 43, "muzzle_y" = 17,"rail_x" = 16, "rail_y" = 17, "under_x" = 28, "under_y" = 15, "stock_x" = 22, "stock_y" = 15, "side_rail_x" = 28, "side_rail_y" = 18, "special_x" = 31, "special_y" = 17)
 
 /obj/item/weapon/gun/rifle/r81m1a/m1d/set_gun_config_values()
 	..()

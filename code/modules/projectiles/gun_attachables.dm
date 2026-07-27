@@ -2525,31 +2525,6 @@ Defined in conflicts.dm of the #defines folder.
 /obj/item/attachable/stock/ar10/New()//no stats, its cosmetic
 	..()
 
-/obj/item/attachable/stock/r81_saw
-	name = "\improper R81M1D stock"
-	desc = "You kinda need this to even use the gun properly."
-	icon = 'icons/obj/items/weapons/guns/attachments/attachments_pr.dmi'
-	attach_icon = "fal_saw_stock"
-	wield_delay_mod = WIELD_DELAY_MIN
-	flags_attach_features = NO_FLAGS
-	hud_offset_mod = 3
-
-/obj/item/attachable/stock/r81_saw/New()//no stats, its cosmetic
-	..()
-
-/obj/item/attachable/stock/r81_sniper
-	name = "\improper R81M1B stock"
-	desc = "You kinda need this to even use the gun properly."
-	icon = 'icons/obj/items/weapons/guns/attachments/attachments_pr.dmi'
-	icon_state = "fal_sniper_stock"
-	attach_icon = "fal_sniper_stock"
-	wield_delay_mod = WIELD_DELAY_MIN
-	flags_attach_features = NO_FLAGS
-	hud_offset_mod = 3
-
-/obj/item/attachable/stock/r81_sniper/New()
-	..()
-
 /obj/item/attachable/stock/m79
 	name = "\improper M79 hardened polykevlon stock"
 	desc = "Helps to mitigate the recoil of launching a 40mm grenade. Fits only to the M79."
