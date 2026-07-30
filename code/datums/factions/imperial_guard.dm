@@ -29,11 +29,11 @@
 	if(istype(squad, /datum/squad/marine/imperial))
 		var/squad_clr = H.assigned_squad.equipment_color
 		switch(GET_DEFAULT_ROLE(_role))
-			if(JOB_IMPPLAT_MEDICAE) hud_icon_state = "med"
-			if(JOB_IMPPLAT_SPECIALIST) hud_icon_state = "spec"
-			if(JOB_IMPPLAT_FTL) hud_icon_state = "tl"
-			if(JOB_IMPPLAT_VOX) hud_icon_state = "vox"
-			if(JOB_IMPPLAT_LEADER) hud_icon_state = "leader"
+			if(JOB_SQUAD_MEDIC) hud_icon_state = "med"
+			if(JOB_SQUAD_SPECIALIST) hud_icon_state = "spec"
+			if(JOB_SQUAD_TEAM_LEADER) hud_icon_state = "tl"
+			if(JOB_SQUAD_RTO) hud_icon_state = "vox"
+			if(JOB_SQUAD_LEADER) hud_icon_state = "leader"
 		if(squad.fireteam_leaders["SQ1"] == H || squad.fireteam_leaders["SQ2"] == H)
 			H.langchat_styles = "langchat_smaller_bolded"
 		else

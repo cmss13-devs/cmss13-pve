@@ -220,19 +220,19 @@
 	new /obj/item/clothing/shoes/marine/civilian/knife(src)
 
 /obj/structure/closet/secure_closet/marine_personal/imperial/rifleman
-	job = JOB_IMPPLAT_STANDARD
+	job = JOB_SQUAD_MARINE
 
 /obj/structure/closet/secure_closet/marine_personal/imperial/specialist
-	job = JOB_IMPPLAT_SPECIALIST
+	job = JOB_SQUAD_SPECIALIST
 
 /obj/structure/closet/secure_closet/marine_personal/imperial/medic
-	job = JOB_IMPPLAT_MEDICAE
+	job = JOB_SQUAD_MEDIC
 
 /obj/structure/closet/secure_closet/marine_personal/imperial/vox
-	job = JOB_IMPPLAT_VOX
+	job = JOB_SQUAD_RTO
 
 /obj/structure/closet/secure_closet/marine_personal/imperial/tl
-	job = JOB_IMPPLAT_FTL
+	job = JOB_SQUAD_TEAM_LEADER
 
 /obj/structure/closet/secure_closet/marine_personal/imperial/sl
-	job = JOB_IMPPLAT_LEADER
+	job = JOB_SQUAD_LEADER

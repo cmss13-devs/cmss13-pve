@@ -20,7 +20,7 @@
 	current_mag = /obj/item/ammo_magazine/lasgun
 	force = 12
 	wield_delay = WIELD_DELAY_NORMAL
-	flags_gun_features = GUN_WIELDED_FIRING_ONLY|GUN_AMMO_COUNTER
+	flags_gun_features = GUN_WIELDED_FIRING_ONLY|GUN_AMMO_COUNTER|GUN_CAN_POINTBLANK
 	flags_item = TWOHANDED
 
 	var/obj/effect/ebeam/lasgun_beam_type = /obj/effect/ebeam/laser/lasgun

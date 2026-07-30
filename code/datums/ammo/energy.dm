@@ -325,7 +325,7 @@
 	headshot_state = HEADSHOT_OVERLAY_MEDIUM
 	damage = 55
 	damage_type = BURN
-	penetration = ARMOR_PENETRATION_TIER_4//Lasgun penetrates armor very well
+	penetration = ARMOR_PENETRATION_TIER_1
 	accurate_range = 20
 	effective_range_max = 11
 	max_range = 20
@@ -336,18 +336,11 @@
 	ammo_glowing = TRUE
 	bullet_light_color = COLOR_RED
 
-/datum/ammo/energy/lasgun/set_bullet_traits()
-	. = ..()
-	LAZYADD(traits_to_give, list(
-		BULLET_TRAIT_ENTRY(/datum/element/bullet_trait_penetrating/weak)
-	))
-
 /datum/ammo/energy/lasgun/weak
 	name = "weak lasgun bolt"
 	headshot_state = HEADSHOT_OVERLAY_LIGHT
 	damage = 30
 	damage_type = BURN
-	penetration = ARMOR_PENETRATION_TIER_2
 	accurate_range = 14
 	effective_range_max = 8
 	max_range = 14
@@ -359,6 +352,7 @@
 	flags_ammo_behavior = AMMO_ENERGY|AMMO_HITS_TARGET_TURF
 	headshot_state = HEADSHOT_OVERLAY_HEAVY
 	damage = 80
+	penetration = ARMOR_PENETRATION_TIER_3
 	scatter = SCATTER_AMOUNT_NONE
 	accuracy = HIT_ACCURACY_MULT_TIER_10
 	damage_falloff = DAMAGE_FALLOFF_TIER_1

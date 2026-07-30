@@ -215,7 +215,7 @@
 		var/mob/living/carbon/human/human = user
 		var/obj/item/card/id/card = human.get_idcard()
 		if(card)
-			if(human.job != JOB_IMP_SPECIALIST)
+			if(human.job != JOB_SQUAD_SPECIALIST)
 				to_chat(user, SPAN_WARNING("You aren't the right occupation for this locker."))
 				return
 			equipment_giver(user)
