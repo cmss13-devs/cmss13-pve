@@ -45,6 +45,12 @@
 	item_state = "flamer_ammo"
 	max_rounds = 250
 
+/obj/item/ammo_magazine/flamer_tank/imperial/weak
+	name = "incinerator tank (Weak)"
+	caliber = "Impure Napalm"
+	flamer_chem = "weaknapalm"
+	max_range = 5
+
 //-------------------------------------------------------
 // Boltpistol magazines
 

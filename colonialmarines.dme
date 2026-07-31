@@ -2128,6 +2128,7 @@
 #include "code\modules\mob\living\carbon\human\ai\squad_spawner\squad_upp.dm"
 #include "code\modules\mob\living\carbon\human\ai\squad_spawner\squad_uscm.dm"
 #include "code\modules\mob\living\carbon\human\ai\squad_spawner\squad_wy.dm"
+#include "code\modules\mob\living\carbon\human\ai\squad_spawner\40k\squad_traitor.dm"
 #include "code\modules\mob\living\carbon\human\life\handle_breath.dm"
 #include "code\modules\mob\living\carbon\human\life\handle_chemicals_in_body.dm"
 #include "code\modules\mob\living\carbon\human\life\handle_disabilities.dm"

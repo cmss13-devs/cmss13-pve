@@ -6,3 +6,6 @@
 	unload_sound = 'sound/weapons/handling/flamer_unload.ogg'
 	reload_sound = 'sound/weapons/handling/flamer_reload.ogg'
 	current_mag = /obj/item/ammo_magazine/flamer_tank/imperial
+
+/obj/item/weapon/gun/flamer/imperial/weak
+	current_mag = /obj/item/ammo_magazine/flamer_tank/imperial/weak

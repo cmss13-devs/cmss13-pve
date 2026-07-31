@@ -77,6 +77,14 @@
 	},
 /turf/open/gm/dirt2,
 /area/tertius_decimus/exterior)
+"an" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/item/ammo_box/magazine/nade_box/imperial,
+/obj/item/ammo_box/magazine/nade_box/imperial/smoke{
+	pixel_y = 7
+	},
+/turf/open/floor/strata/floor3/east,
+/area/tertius_decimus/armory)
 "ap" = (
 /obj/structure/platform_decoration/kutjevo{
 	dir = 1
@@ -1423,13 +1431,6 @@
 	},
 /turf/open/floor/interior/wood,
 /area/interior)
-"tj" = (
-/obj/item/ammo_box/magazine/nade_box/imperial,
-/obj/item/ammo_box/magazine/nade_box/imperial/smoke{
-	pixel_y = 7
-	},
-/turf/open/floor/strata/floor3/east,
-/area/tertius_decimus/armory)
 "tt" = (
 /obj/item/lightstick/red/spoke/planted{
 	layer = 3.1;
@@ -7236,7 +7237,7 @@ IK
 IK
 rK
 or
-IK
+an
 IK
 WQ
 yS
@@ -7351,7 +7352,7 @@ bX
 IK
 IK
 WQ
-tj
+Xy
 tz
 iw
 WQ

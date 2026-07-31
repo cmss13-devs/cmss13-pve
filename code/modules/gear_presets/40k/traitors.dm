@@ -82,7 +82,7 @@
 
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/marine/veteran/guard/traitor(new_human), WEAR_JACKET)
 
-	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/flamer/imperial(new_human), WEAR_J_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/flamer/imperial/weak(new_human), WEAR_J_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/general_belt(new_human), WEAR_WAIST)
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/flamer_tank/imperial(new_human), WEAR_IN_BELT)
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/flamer_tank/imperial(new_human), WEAR_IN_BELT)

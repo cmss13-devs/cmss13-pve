@@ -476,6 +476,7 @@
 	chat_color = "#62a759"
 	minimap_color = MINIMAP_SQUAD_INTEL
 	usable = TRUE
+	faction = FACTION_IMPERIAL_GUARD
 	squad_type = "Squad"
 
 /datum/squad/marine/imperial/secondary

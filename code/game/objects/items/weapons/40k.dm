@@ -20,7 +20,7 @@
 		"You hear an ominous click, and the sudden buzz of a chainsword.")
 		icon_state = "chainsword_active"
 		w_class = SIZE_MEDIUM
-		force = MELEE_FORCE_VERY_STRONG
+		force = 120
 		attack_verb = list("slashed", "stabbed", "maimed")
 		playsound(user, 'sound/weapons/chainsword_startup.ogg', 25, sound_range = 5)
 	else
@@ -59,7 +59,7 @@
 		"You hear an ominous click, and the hum of the powersword starting up.")
 		icon_state = "powersword_active"
 		w_class = SIZE_MEDIUM
-		force = 120
+		force = 235
 		attack_verb = list("slashed", "stabbed", "maimed")
 		playsound(user, 'sound/weapons/powersword_startup.ogg', 25, sound_range = 5)
 	else
