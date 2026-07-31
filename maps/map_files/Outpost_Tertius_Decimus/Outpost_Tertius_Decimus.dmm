@@ -1,9 +1,47 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"aa" = (
+/obj/structure/platform/kutjevo,
+/obj/item/lightstick/red/spoke/planted,
+/turf/open/auto_turf/strata_grass/layer0_mud_alt,
+/area/tertius_decimus/exterior)
+"ab" = (
+/turf/open/gm/dirt2,
+/area/interior)
+"ac" = (
+/turf/open/auto_turf/strata_grass/layer0_mud_alt,
+/area/interior)
 "ad" = (
 /obj/structure/barricade/razorwire{
 	dir = 4
 	},
 /turf/open/auto_turf/strata_grass/layer0_mud,
+/area/tertius_decimus/exterior)
+"ae" = (
+/obj/item/lightstick/red/spoke/planted,
+/turf/open/auto_turf/strata_grass/layer0_mud,
+/area/tertius_decimus/exterior)
+"af" = (
+/obj/structure/barricade/sandbags/wired{
+	dir = 1;
+	icon_state = "sandbag_0"
+	},
+/turf/open/gm/dirt2,
+/area/interior)
+"ag" = (
+/obj/structure/platform/kutjevo,
+/obj/item/lightstick/red/spoke/planted,
+/turf/open/auto_turf/strata_grass/layer0_mud,
+/area/tertius_decimus/exterior)
+"ah" = (
+/obj/structure/platform_decoration/kutjevo/rock{
+	dir = 1
+	},
+/obj/item/lightstick/red/spoke/planted,
+/turf/open/auto_turf/strata_grass/layer0_mud_alt,
+/area/tertius_decimus/exterior)
+"ai" = (
+/obj/item/lightstick/red/spoke/planted,
+/turf/open/auto_turf/strata_grass/layer0,
 /area/tertius_decimus/exterior)
 "aj" = (
 /obj/structure/barricade/razorwire{
@@ -11,6 +49,17 @@
 	},
 /turf/open/auto_turf/strata_grass/layer0_mud_alt,
 /area/tertius_decimus/exterior)
+"ak" = (
+/obj/structure/barricade/metal/plasteel/wired{
+	dir = 1
+	},
+/obj/structure/machinery/m56d_hmg/auto{
+	dir = 1;
+	desc = "An emplaced heavy stubber used for defence and often is seen use by Imperial Guard Heavy Weapons teams. <B> Click its sprite while behind it without holding anything to man it. Click-drag on NON-GRAB intent to disassemble the gun, GRAB INTENT to remove ammo magazines.</B>";
+	name = "Heavy Stubber"
+	},
+/turf/open/floor/strata/floor3/east,
+/area/tertius_decimus/pillbox)
 "al" = (
 /obj/structure/barricade/razorwire,
 /turf/open/auto_turf/strata_grass/layer0,
@@ -53,7 +102,9 @@
 	dir = 4
 	},
 /obj/structure/machinery/m56d_hmg/auto{
-	dir = 4
+	dir = 4;
+	desc = "An emplaced heavy stubber used for defence and often is seen use by Imperial Guard Heavy Weapons teams. <B> Click its sprite while behind it without holding anything to man it. Click-drag on NON-GRAB intent to disassemble the gun, GRAB INTENT to remove ammo magazines.</B>";
+	name = "Heavy Stubber"
 	},
 /turf/open/floor/strata/floor3/east,
 /area/tertius_decimus/pillbox)
@@ -474,8 +525,11 @@
 /area/tertius_decimus/exterior)
 "gB" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/machinery/m56d_hmg/auto,
 /obj/structure/barricade/metal/plasteel/wired,
+/obj/structure/machinery/m56d_hmg/auto{
+	desc = "An emplaced heavy stubber used for defence and often is seen use by Imperial Guard Heavy Weapons teams. <B> Click its sprite while behind it without holding anything to man it. Click-drag on NON-GRAB intent to disassemble the gun, GRAB INTENT to remove ammo magazines.</B>";
+	name = "Heavy Stubber"
+	},
 /turf/open/floor/strata/floor3/east,
 /area/tertius_decimus/pillbox)
 "gC" = (
@@ -1046,6 +1100,8 @@
 	dir = 8
 	},
 /obj/structure/machinery/m56d_hmg/auto{
+	desc = "An emplaced heavy stubber used for defence and often is seen use by Imperial Guard Heavy Weapons teams. <B> Click its sprite while behind it without holding anything to man it. Click-drag on NON-GRAB intent to disassemble the gun, GRAB INTENT to remove ammo magazines.</B>";
+	name = "Heavy Stubber";
 	dir = 8
 	},
 /turf/open/floor/strata/floor3/east,
@@ -1603,6 +1659,8 @@
 	dir = 1
 	},
 /obj/structure/machinery/m56d_hmg/auto{
+	desc = "An emplaced heavy stubber used for defence and often is seen use by Imperial Guard Heavy Weapons teams. <B> Click its sprite while behind it without holding anything to man it. Click-drag on NON-GRAB intent to disassemble the gun, GRAB INTENT to remove ammo magazines.</B>";
+	name = "Heavy Stubber";
 	dir = 1
 	},
 /turf/open/floor/strata/floor3/east,
@@ -1624,13 +1682,6 @@
 	pixel_y = 13
 	},
 /turf/open/auto_turf/strata_grass/layer0,
-/area/tertius_decimus/exterior)
-"xn" = (
-/obj/structure/platform/kutjevo,
-/obj/structure/machinery/floodlight{
-	light_on = 1
-	},
-/turf/open/auto_turf/strata_grass/layer0_mud_alt,
 /area/tertius_decimus/exterior)
 "xv" = (
 /obj/structure/closet/secure_closet/marine_personal/imperial/tl{
@@ -1708,7 +1759,9 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/machinery/m56d_hmg/auto{
-	dir = 4
+	dir = 4;
+	desc = "An emplaced heavy stubber used for defence and often is seen use by Imperial Guard Heavy Weapons teams. <B> Click its sprite while behind it without holding anything to man it. Click-drag on NON-GRAB intent to disassemble the gun, GRAB INTENT to remove ammo magazines.</B>";
+	name = "Heavy Stubber"
 	},
 /turf/open/floor/strata/floor3/east,
 /area/tertius_decimus/pillbox)
@@ -2548,7 +2601,10 @@
 /area/tertius_decimus/generators)
 "Kd" = (
 /obj/structure/barricade/metal/plasteel/wired,
-/obj/structure/machinery/m56d_hmg/auto,
+/obj/structure/machinery/m56d_hmg/auto{
+	desc = "An emplaced heavy stubber used for defence and often is seen use by Imperial Guard Heavy Weapons teams. <B> Click its sprite while behind it without holding anything to man it. Click-drag on NON-GRAB intent to disassemble the gun, GRAB INTENT to remove ammo magazines.</B>";
+	name = "Heavy Stubber"
+	},
 /turf/open/floor/strata/floor3/east,
 /area/tertius_decimus/pillbox)
 "Kh" = (
@@ -5191,6 +5247,7 @@ Jh
 Jh
 Jh
 Jh
+Ai
 Jh
 Jh
 Jh
@@ -5207,8 +5264,7 @@ Jh
 Jh
 Jh
 Jh
-Jh
-Jh
+Ai
 Jh
 Jh
 Jh
@@ -5646,7 +5702,7 @@ uk
 uk
 KT
 Pt
-Jh
+Ai
 Jh
 Jh
 Jh
@@ -5664,7 +5720,7 @@ Jh
 Jh
 Jh
 Jh
-Jh
+Ai
 Jh
 Jh
 Jh
@@ -5679,7 +5735,7 @@ Jh
 Jh
 Jh
 Jh
-Jh
+Ai
 Jh
 Jh
 Jh
@@ -6686,7 +6742,7 @@ Kt
 uk
 uk
 Jh
-bD
+ah
 KG
 IN
 KB
@@ -6862,7 +6918,7 @@ FD
 qb
 qP
 qd
-Jh
+Ai
 Kt
 Jh
 FD
@@ -7033,7 +7089,7 @@ BG
 Jh
 Jh
 Jh
-Jh
+Ai
 Jh
 Jh
 Jh
@@ -7041,7 +7097,7 @@ FD
 qb
 Yu
 YW
-Jh
+Ai
 Jh
 Pt
 Jh
@@ -7622,7 +7678,7 @@ Jh
 Jh
 pk
 Pt
-Pt
+ai
 Jh
 Kt
 Kt
@@ -7633,7 +7689,7 @@ YW
 Jh
 Kt
 Kt
-FD
+aa
 qb
 YW
 Jh
@@ -7978,7 +8034,7 @@ qb
 YW
 Jh
 Kt
-FD
+aa
 qb
 ap
 mB
@@ -8196,7 +8252,7 @@ Pt
 Jh
 WO
 WO
-FD
+aa
 qb
 Yu
 YW
@@ -8785,7 +8841,7 @@ FD
 qb
 Yu
 YW
-Kt
+ae
 pk
 Pt
 jm
@@ -8797,7 +8853,7 @@ Kt
 Pt
 FA
 lH
-Yu
+ab
 ka
 EA
 Va
@@ -8914,7 +8970,7 @@ Pt
 Pt
 FA
 qb
-Yu
+ab
 pq
 pq
 pq
@@ -9031,7 +9087,7 @@ Pt
 FA
 lH
 Yu
-Jh
+ac
 ka
 qv
 Mb
@@ -9039,7 +9095,7 @@ Yu
 Yu
 Jh
 Yu
-Yu
+ab
 qv
 qv
 ZE
@@ -9146,7 +9202,7 @@ Jh
 Jh
 Vt
 lH
-Yu
+ab
 ti
 XW
 cL
@@ -9156,7 +9212,7 @@ Yu
 If
 Yu
 qa
-Yu
+ab
 pq
 pq
 pq
@@ -9263,7 +9319,7 @@ Jh
 Jh
 Vt
 qb
-Yu
+ab
 pq
 pq
 pq
@@ -9273,7 +9329,7 @@ wH
 Yu
 tx
 Jh
-Yu
+ab
 qv
 qv
 pq
@@ -9380,12 +9436,12 @@ Pt
 Pt
 Vt
 qb
-Yu
+ab
 QP
 xv
 qG
 Yu
-Yu
+ab
 XH
 pq
 xh
@@ -9497,12 +9553,12 @@ Pt
 Kt
 FA
 qb
-Yu
+ab
 ip
 ip
 ZE
 Yu
-Yu
+ab
 KM
 pq
 uJ
@@ -9600,7 +9656,7 @@ Jh
 Pt
 WO
 WO
-FD
+aa
 qb
 Yu
 YW
@@ -9614,12 +9670,12 @@ Pt
 Kt
 FA
 qb
-Yu
+ab
 pq
 pq
 pq
 Yu
-Yu
+ab
 vQ
 pq
 bE
@@ -9731,12 +9787,12 @@ Jh
 Kt
 FA
 LE
-Yu
+ab
 ip
 ip
 pq
 Yu
-Yu
+ab
 Dp
 pq
 Jh
@@ -10086,7 +10142,7 @@ Kt
 FA
 qb
 Jh
-Jh
+ac
 mS
 fc
 Va
@@ -10141,7 +10197,7 @@ Kt
 Jh
 Jh
 Jh
-FD
+wM
 qb
 Yu
 YW
@@ -10189,7 +10245,7 @@ FD
 qb
 Yu
 YW
-Jh
+Ai
 Kt
 Kt
 FD
@@ -10203,7 +10259,7 @@ Kt
 jm
 qb
 Yu
-Yu
+ab
 pq
 pq
 pq
@@ -10320,7 +10376,7 @@ eU
 Ee
 qb
 Yu
-Yu
+ab
 cn
 mS
 Mb
@@ -10427,7 +10483,7 @@ Pt
 QX
 Pt
 Jh
-Jh
+Ai
 Jh
 FD
 qb
@@ -10483,7 +10539,7 @@ Jh
 Pt
 Pt
 Jh
-FD
+aa
 qb
 YW
 Jh
@@ -10551,7 +10607,7 @@ qb
 YW
 Kt
 FA
-qb
+af
 nn
 sk
 mG
@@ -10668,7 +10724,7 @@ qb
 YW
 Kt
 Vt
-qb
+af
 vJ
 Qk
 pq
@@ -11138,7 +11194,7 @@ Jh
 Pt
 Jh
 Jh
-Kt
+ae
 Kt
 Pt
 Pt
@@ -11422,7 +11478,7 @@ Jh
 Pt
 Pt
 Jh
-xn
+wM
 qb
 qP
 Ua
@@ -11470,7 +11526,7 @@ Kt
 Kt
 Pt
 PB
-xb
+ak
 hT
 rB
 Hc
@@ -11955,7 +12011,7 @@ Kt
 Pt
 aj
 ad
-UF
+ag
 qb
 YW
 Jh
@@ -12309,7 +12365,7 @@ Pt
 jm
 qb
 YW
-Jh
+Ai
 Kt
 Kt
 Kt

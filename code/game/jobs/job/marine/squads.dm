@@ -467,7 +467,7 @@
 	name = "Boa"
 //###############################
 
-/datum/squad/imperial
+/datum/squad/marine/imperial
 	name = SQUAD_IMPPLT
 	access = list(ACCESS_MARINE_ALPHA)
 	radio_freq = IMP_GUARD_FREQ
@@ -478,7 +478,7 @@
 	usable = TRUE
 	squad_type = "Squad"
 
-/datum/squad/imperial/secondary
+/datum/squad/marine/imperial/secondary
 	name = SQUAD_IMPPLT_2
 	chat_color = "#fe7b2e"
 	minimap_color = MINIMAP_SQUAD_FOXTROT
