@@ -744,6 +744,9 @@
 	tied_reagents = null
 	. = ..()
 
+/obj/flamer_fire/check_ai_special_blockers()
+	return TRUE
+
 /obj/flamer_fire/initialize_pass_flags(datum/pass_flags_container/PF)
 	..()
 	if (PF)

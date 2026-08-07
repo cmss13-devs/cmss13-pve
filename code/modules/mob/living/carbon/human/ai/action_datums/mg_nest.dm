@@ -24,7 +24,7 @@
 	if(brain.healing_someone)
 		return 0
 
-	return 12
+	return ACTION_WEIGHT_MG_NEST
 
 /datum/ai_action/machinegunner_nest/Added()
 	initial_view = brain.view_distance

@@ -46,6 +46,9 @@
 			else
 				S?.be_replaced()
 
+/mob/living/check_ai_special_blockers()
+	return TRUE
+
 /mob/living/proc/initialize_pain()
 	pain = new /datum/pain(src)
 

@@ -26,7 +26,7 @@
 	if(!density)
 		return 0
 
-	return OBJECT_PENALTY
+	return INFINITY
 
 /obj/structure/human_ai_act(mob/living/carbon/human/ai_human, datum/human_ai_brain/brain)
 	if(climbable)
@@ -118,6 +118,9 @@
 
 	brain.holster_primary()
 	var/obj/item/crowbar = brain.get_tool_from_equipment_map(TRAIT_TOOL_CROWBAR)
+	if(!crowbar)
+		return
+	brain.holster_primary()
 	brain.equip_item_from_equipment_map(HUMAN_AI_TOOLS, crowbar)
 	ai_human.do_click(src, "", list())
 	brain.store_item(crowbar, brain.storage_has_room(crowbar), HUMAN_AI_TOOLS)
@@ -184,6 +187,24 @@
 		return
 
 	return SENTRY_PENALTY
+
+/////////////////////////////
+//      WINDOW FRAME       //
+/////////////////////////////
+
+/obj/structure/window_frame/human_ai_obstacle(mob/living/carbon/human/ai_human, datum/human_ai_brain/brain, direction, turf/target)
+	. = ..()
+	if(!.)
+		return
+
+	return WINDOW_FRAME_PENALTY
+
+/obj/structure/window/framed/human_ai_obstacle(mob/living/carbon/human/ai_human, datum/human_ai_brain/brain, direction, turf/target)
+	. = ..()
+	if(!.)
+		return
+
+	return WINDOW_PENALTY
 
 /////////////////////////////
 //       BARRICADES        //
