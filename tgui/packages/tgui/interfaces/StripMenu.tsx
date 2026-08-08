@@ -36,6 +36,18 @@ const CornerText = (props: {
   );
 };
 
+type StorageAction = {
+  icon: string;
+  text: string;
+};
+
+const STORAGE_ACTIONS: Record<string, StorageAction> = {
+  open_storage: {
+    icon: 'briefcase',
+    text: 'Open Storage',
+  },
+};
+
 type AlternateAction = {
   icon: string;
   text: string;
@@ -61,6 +73,10 @@ const ALTERNATE_ACTIONS: Record<string, AlternateAction> = {
     icon: 'mask-face',
     text: 'Toggle internals',
   },
+  /*open_storage: {
+    icon: 'briefcase',
+    text: 'Open storage',
+  },*/
 };
 
 type Slot = {
@@ -216,6 +232,7 @@ type StripMenuItem =
           icon: string;
           name: string;
           alternate: string;
+          storage: string;
         }
       | {
           obscured: ObscuringLevel;
@@ -297,6 +314,7 @@ export const StripMenu = (props) => {
 
                   let alternateAction: AlternateAction | undefined;
 
+                  let storageAction: StorageAction | undefined;
                   let content;
                   let tooltip;
 
@@ -304,6 +322,7 @@ export const StripMenu = (props) => {
                     tooltip = slot.displayName;
                   } else if ('name' in item) {
                     alternateAction = ALTERNATE_ACTIONS[item.alternate];
+                    storageAction = STORAGE_ACTIONS[item.storage];
                     tooltip = item.name;
                   } else if ('obscured' in item) {
                     tooltip = `obscured ${slot.displayName}`;
@@ -364,6 +383,15 @@ export const StripMenu = (props) => {
                             className="StripMenu__alternativeaction"
                           >
                             <Icon name={alternateAction.icon} />
+                          </Button>
+                        )}
+                        {storageAction !== undefined && (
+                          <Button
+                            onClick={() => act('storage', { key: keyAtSpot })}
+                            tooltip={storageAction.text}
+                            className="StripMenu__storageaction"
+                          >
+                            <Icon name={storageAction.icon} />
                           </Button>
                         )}
                       </Box>
