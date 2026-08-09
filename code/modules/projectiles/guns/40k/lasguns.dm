@@ -259,7 +259,7 @@
 
 /obj/item/weapon/gun/lasgun/volleygun/set_gun_config_values()
 	..()
-	set_fire_delay(FIRE_DELAY_TIER_8)
+	set_fire_delay(FIRE_DELAY_TIER_9)
 	set_burst_amount(BURST_AMOUNT_TIER_1)
 	accuracy_mult = BASE_ACCURACY_MULT + HIT_ACCURACY_MULT_TIER_4
 	scatter = SCATTER_AMOUNT_TIER_6

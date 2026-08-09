@@ -594,3 +594,6 @@
 	new /obj/item/ammo_magazine/lasgun/volleygun(src)
 	new /obj/item/ammo_magazine/lasgun/volleygun(src)
 	new /obj/item/ammo_magazine/lasgun/volleygun(src)
+	new /obj/item/ammo_magazine/lasgun/volleygun(src)
+	new /obj/item/ammo_magazine/lasgun/volleygun(src)
+	new /obj/item/ammo_magazine/lasgun/volleygun(src)
