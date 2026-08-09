@@ -587,7 +587,7 @@
 /obj/item/storage/box/spec/imperial_volleygun
 	name = "\improper Volleygun equipment case"
 	desc = "A large case containing a heavy-weapon, namely an Imperial Guard volleygun and ammo."
-	kit_overlay = "hmg"
+	kit_overlay = "spotter"
 
 /obj/item/storage/box/spec/imperial_volleygun/fill_preset_inventory()
 	new /obj/item/weapon/gun/lasgun/volleygun(src)
