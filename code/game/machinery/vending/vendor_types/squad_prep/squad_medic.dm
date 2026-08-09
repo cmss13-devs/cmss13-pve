@@ -432,7 +432,7 @@ GLOBAL_LIST_INIT(cm_vending_clothing_imp_medic, list(
 	name = "\improper Imperial Guard Medical Gear Rack"
 	desc = "A rack of medical equipment for any medic's needs."
 	req_access = list(ACCESS_MARINE_MEDBAY)
-	vendor_role = list(JOB_IMPPLAT_MEDICAE)
+	vendor_role = list(JOB_SQUAD_MEDIC)
 
 /obj/structure/machinery/cm_vending/clothing/medic/imp/get_listed_products(mob/user)
 	return GLOB.cm_vending_clothing_imp_medic
@@ -463,4 +463,4 @@ GLOBAL_LIST_INIT(cm_vending_clothing_imp_medic, list(
 /obj/structure/machinery/cm_vending/gear/medic_chemical/imp
 	name = "\improper Imperial Guard Squad Medical Chemical Rack"
 	req_access = list(ACCESS_MARINE_MEDBAY)
-	vendor_role = list(JOB_IMPPLAT_MEDICAE)
+	vendor_role = list(JOB_SQUAD_MEDIC)

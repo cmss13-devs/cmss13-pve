@@ -71,34 +71,6 @@
 	new_human.equip_to_slot_or_del(new /obj/item/tool/crowbar/tactical(new_human), WEAR_IN_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/box/mre(new_human),WEAR_IN_BACK)
 
-/datum/equipment_preset/kasrkin/rifleman/volleygunner
-	name = "Kasrkin Volleygunner"
-
-/datum/equipment_preset/kasrkin/rifleman/volleygunner/load_gear(mob/living/carbon/human/new_human)
-	new_human.equip_to_slot_or_del(new headset_type(new_human), WEAR_L_EAR)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/veteran/guard/elite(new_human), WEAR_HEAD)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/veteran/guard(new_human), WEAR_BODY)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/civilian/knife(new_human), WEAR_FEET)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine(new_human), WEAR_HANDS)
-
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/marine/veteran/guard/elite(new_human), WEAR_JACKET)
-
-	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/lasgun/hellgun/volleygun(new_human), WEAR_J_STORE)
-
-	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/marine(new_human), WEAR_WAIST)
-	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/lasgun/hellgun/volleygun(new_human), WEAR_IN_BELT)
-	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/lasgun/hellgun/volleygun(new_human), WEAR_IN_BELT)
-	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/lasgun/hellgun/volleygun(new_human), WEAR_IN_BELT)
-	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/lasgun/hellgun/volleygun(new_human), WEAR_IN_BELT)
-	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/lasgun/hellgun/volleygun(new_human), WEAR_IN_BELT)
-
-	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate(new_human), WEAR_L_STORE)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/explosive/full/imperial(new_human), WEAR_R_STORE)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine/satchel(new_human), WEAR_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/box/flare(new_human), WEAR_IN_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/tool/crowbar/tactical(new_human), WEAR_IN_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/box/mre(new_human),WEAR_IN_BACK)
-
 /datum/equipment_preset/kasrkin/rifleman/tl
 	name = "Kasrkin Team Leader"
 	assignment = JOB_KASR_TL

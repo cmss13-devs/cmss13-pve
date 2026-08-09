@@ -583,3 +583,14 @@
 	new /obj/item/ammo_magazine/flamer_tank/imperial(src)
 	new /obj/item/ammo_magazine/flamer_tank/imperial(src)
 	new /obj/item/tool/extinguisher/mini(src)
+
+/obj/item/storage/box/spec/imperial_volleygun
+	name = "\improper Volleygun equipment case"
+	desc = "A large case containing a heavy-weapon, namely an Imperial Guard volleygun and ammo."
+	kit_overlay = "hmg"
+
+/obj/item/storage/box/spec/imperial_volleygun/fill_preset_inventory()
+	new /obj/item/weapon/gun/lasgun/volleygun(src)
+	new /obj/item/ammo_magazine/lasgun/volleygun(src)
+	new /obj/item/ammo_magazine/lasgun/volleygun(src)
+	new /obj/item/ammo_magazine/lasgun/volleygun(src)

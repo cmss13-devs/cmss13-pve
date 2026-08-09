@@ -8,7 +8,7 @@
 	icon_state = "lasgun_ammo"
 	w_class = SIZE_MEDIUM
 	flags_magazine = NO_FLAGS //It's a battery, can't yank bullets or shells outa this
-	max_rounds = 50
+	max_rounds = 100
 	default_ammo = /datum/ammo/energy/lasgun
 	gun_type = /obj/item/weapon/gun/lasgun
 
@@ -17,7 +17,7 @@
 	desc = "A powerpack that powers most standard laspistols."
 	icon_state = "laspistol_ammo"
 	w_class = SIZE_SMALL
-	max_rounds = 20
+	max_rounds = 45
 	default_ammo = /datum/ammo/energy/lasgun/weak
 	gun_type = /obj/item/weapon/gun/lasgun/laspistol
 
@@ -26,16 +26,16 @@
 	desc = "A powerpack that powers most standard hellguns."
 	icon_state = "hellgun_ammo"
 	w_class = SIZE_MEDIUM
-	max_rounds = 65
+	max_rounds = 85
 	default_ammo = /datum/ammo/energy/lasgun/hellgun
 	gun_type = /obj/item/weapon/gun/lasgun/hellgun
 
-/obj/item/ammo_magazine/lasgun/hellgun/volleygun
+/obj/item/ammo_magazine/lasgun/volleygun
 	name = "\improper volleygun powerpack"
 	desc = "A powerpack that powers most standard volleyguns."
 	icon_state = "volleygun_ammo"
-	max_rounds = 150
-	gun_type = /obj/item/weapon/gun/lasgun/hellgun/volleygun
+	max_rounds = 250
+	gun_type = /obj/item/weapon/gun/lasgun/volleygun
 
 //-------------------------------------------------------
 // Flamer Fuel Tanks

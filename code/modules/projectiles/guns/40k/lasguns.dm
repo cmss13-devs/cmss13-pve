@@ -34,6 +34,7 @@
 		/obj/item/attachable/bayonet,
 		/obj/item/attachable/lasersight,
 	)
+	start_automatic = TRUE
 
 /obj/item/weapon/gun/lasgun/load_into_chamber(mob/user)
 	return ready_in_chamber()
@@ -78,8 +79,8 @@
 		return
 
 	else
-		to_chat(user, SPAN_NOTICE("You begin reloading [src]. Hold still..."))
-		if(do_after(user, 4, INTERRUPT_ALL, BUSY_ICON_FRIENDLY))
+		to_chat(user, SPAN_NOTICE("You begin reloading [src]."))
+		if(do_after(user, 0, INTERRUPT_ALL, BUSY_ICON_FRIENDLY))
 			user.drop_inv_item_on_ground(lasgun)
 			current_mag = lasgun
 			lasgun.forceMove(src)
@@ -112,7 +113,7 @@
 
 /obj/item/weapon/gun/lasgun/set_gun_config_values()
 	..()
-	set_fire_delay(FIRE_DELAY_TIER_6)
+	set_fire_delay(FIRE_DELAY_TIER_5)
 	set_burst_amount(BURST_AMOUNT_TIER_3)
 	set_burst_delay(FIRE_DELAY_TIER_7)
 	accuracy_mult = BASE_ACCURACY_MULT + HIT_ACCURACY_MULT_TIER_4
@@ -161,6 +162,7 @@
 	attachable_allowed = list(
 		/obj/item/attachable/lasersight,
 	)
+	start_automatic = FALSE
 
 /obj/item/weapon/gun/lasgun/laspistol/set_gun_attachment_offsets()
 	attachable_offset = list("muzzle_x" = 32, "muzzle_y" = 18,"rail_x" = 12, "rail_y" = 23, "under_x" = 23, "under_y" = 13, "stock_x" = 24, "stock_y" = 14, "side_rail_x" = 23, "side_rail_y" = 16)
@@ -240,12 +242,12 @@
 	damage_mult = BASE_BULLET_DAMAGE_MULT
 	recoil = RECOIL_AMOUNT_TIER_5
 
-/obj/item/weapon/gun/lasgun/hellgun/volleygun
+/obj/item/weapon/gun/lasgun/volleygun
 
 	name = "\improper UTI-49 Pattern Light Volleygun"
-	desc = "The UTI-49 Pattern Light Volleygun is an uncommon volleygun pattern that, instead of using a backpack-based charging system, uses charge packs similar to standard lasguns, though it is still a volleygun and has the same destructive power as a standard volleygun. It is mainly seen in the hands of elite Imperial Guard units."
+	desc = "The UTI-49 Pattern Light Volleygun is an uncommon volleygun pattern that, instead of using a backpack-based charging system, uses charge packs similar to standard lasguns, though it is still a volleygun and has the same destructive power as a standard volleygun. It is mainly seen in the hands of Imperial Guard units."
 	icon_state = "volleygun"
-	current_mag = /obj/item/ammo_magazine/lasgun/hellgun/volleygun
+	current_mag = /obj/item/ammo_magazine/lasgun/volleygun
 	start_automatic = TRUE
 
 	attachable_allowed = list(
@@ -255,7 +257,7 @@
 		/obj/item/attachable/volleygunbarrel,
 	)
 
-/obj/item/weapon/gun/lasgun/hellgun/volleygun/set_gun_config_values()
+/obj/item/weapon/gun/lasgun/volleygun/set_gun_config_values()
 	..()
 	set_fire_delay(FIRE_DELAY_TIER_8)
 	set_burst_amount(BURST_AMOUNT_TIER_1)
@@ -265,5 +267,5 @@
 	damage_mult = BASE_BULLET_DAMAGE_MULT
 	recoil = RECOIL_AMOUNT_TIER_5
 
-/obj/item/weapon/gun/lasgun/hellgun/volleygun/set_gun_attachment_offsets()
+/obj/item/weapon/gun/lasgun/volleygun/set_gun_attachment_offsets()
 	attachable_offset = list("muzzle_x" = 48, "muzzle_y" = 16,"rail_x" = 12, "rail_y" = 23, "under_x" = 23, "under_y" = 13, "stock_x" = 24, "stock_y" = 14, "side_rail_x" = 23, "side_rail_y" = 16)
