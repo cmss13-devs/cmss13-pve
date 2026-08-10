@@ -1,0 +1,2518 @@
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"ah" = (
+/obj/item/reagent_container/food/drinks/flask/canteen/empty{
+	pixel_x = -7;
+	pixel_y = 10
+	},
+/obj/item/reagent_container/food/drinks/flask/canteen/empty{
+	pixel_x = -9;
+	pixel_y = 1
+	},
+/obj/item/reagent_container/food/drinks/flask/canteen/empty{
+	pixel_x = 8;
+	pixel_y = 1
+	},
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/engineering)
+"aU" = (
+/obj/structure/machinery/door/airlock/upp_utility{
+	dir = 1
+	},
+/turf/open/floor/corsat/marked,
+/area/golden_arrow/engineering)
+"aW" = (
+/obj/structure/machinery/landinglight/ds1/delaythree{
+	dir = 4
+	},
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/hangar)
+"be" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "door_warning"
+	},
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/engineering)
+"bh" = (
+/obj/effect/landmark/observer_start,
+/turf/open/floor/plating/plating_catwalk/prison,
+/area/golden_arrow/engineering)
+"bq" = (
+/obj/structure/cable/heavyduty/north_south,
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/hangar)
+"bw" = (
+/obj/structure/machinery/landinglight/ds1/delaytwo{
+	dir = 4
+	},
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/hangar)
+"bK" = (
+/obj/structure/surface/table/almayer,
+/obj/item/storage/toolbox/electrical{
+	pixel_y = 10
+	},
+/obj/structure/pipes/standard/simple/hidden/supply,
+/turf/open/floor/almayer,
+/area/golden_arrow/engineering)
+"bR" = (
+/obj/structure/machinery/landinglight/ds1{
+	dir = 1
+	},
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/hangar)
+"co" = (
+/obj/structure/machinery/power/apc/almayer/east,
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/engineering)
+"cy" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/machinery/landinglight/ds1{
+	dir = 1
+	},
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/hangar)
+"cB" = (
+/obj/structure/machinery/light/small/red{
+	dir = 1
+	},
+/obj/structure/bed/bedroll{
+	dir = 4
+	},
+/obj/effect/landmark/late_join,
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/effect/landmark/start/marine/tl/imperial,
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/engineering)
+"cF" = (
+/obj/structure/machinery/landinglight/ds1{
+	dir = 8
+	},
+/obj/structure/machinery/floodlight/landing/floor{
+	color = "#dae2ff";
+	light_color = "#dae2ff"
+	},
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/hangar)
+"cW" = (
+/obj/structure/machinery/light/small/red,
+/obj/structure/largecrate/random/barrel/true_random,
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/engineering)
+"da" = (
+/obj/structure/machinery/power/reactor{
+	name = "\improper S-52 fusion reactor 17"
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/engineering)
+"dm" = (
+/obj/structure/bed/bedroll{
+	dir = 1
+	},
+/obj/effect/landmark/late_join,
+/obj/effect/landmark/start/marine/specialist/imperial,
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/engineering)
+"dG" = (
+/obj/structure/machinery/landinglight/ds1{
+	dir = 4
+	},
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/hangar)
+"dK" = (
+/obj/structure/machinery/camera/autoname/golden_arrow{
+	dir = 4;
+	name = "ship-grade camera"
+	},
+/obj/structure/sign/safety/high_voltage{
+	pixel_x = -16;
+	pixel_y = 6
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
+	},
+/turf/open/floor/plating/plating_catwalk,
+/area/golden_arrow/engineering)
+"dM" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/pipes/standard/simple/hidden/supply,
+/obj/structure/cable/heavyduty{
+	icon_state = "1-4-8"
+	},
+/turf/open/floor/almayer/plating_striped,
+/area/golden_arrow/engineering)
+"dQ" = (
+/obj/structure/machinery/power/terminal{
+	dir = 4
+	},
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
+	},
+/turf/open/floor/plating,
+/area/golden_arrow/engineering)
+"ea" = (
+/obj/structure/machinery/light/small/red{
+	dir = 1
+	},
+/obj/structure/cable/heavyduty/west_east,
+/turf/open/floor/plating/plating_catwalk/prison,
+/area/golden_arrow/engineering)
+"ez" = (
+/obj/structure/machinery/landinglight/ds1/delaytwo{
+	dir = 8
+	},
+/obj/structure/largecrate/random/barrel/true_random,
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/hangar)
+"eA" = (
+/obj/structure/surface/table/reinforced/black,
+/obj/item/storage/backpack/marine/satchel/rto/vox{
+	pixel_x = -9;
+	pixel_y = 4
+	},
+/obj/item/device/binoculars{
+	pixel_x = 6;
+	pixel_y = 3
+	},
+/turf/open/floor/plating/plating_catwalk/prison,
+/area/golden_arrow/engineering)
+"eT" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/machinery/landinglight/ds1/delaytwo{
+	dir = 8
+	},
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/hangar)
+"eX" = (
+/obj/structure/machinery/light/small/red{
+	dir = 8
+	},
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/hangar)
+"fm" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
+	},
+/turf/open/floor/almayer/plating_striped/north,
+/area/golden_arrow/engineering)
+"fF" = (
+/obj/structure/machinery/landinglight/ds1/delaythree,
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/hangar)
+"fT" = (
+/obj/structure/machinery/cm_vending/sorted/cargo_guns/squad/imperial,
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/engineering)
+"gf" = (
+/obj/structure/machinery/power/terminal{
+	dir = 4
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
+	},
+/turf/open/floor/plating/plating_catwalk,
+/area/golden_arrow/engineering)
+"gj" = (
+/obj/structure/closet/secure_closet/marine_personal/imperial/specialist{
+	pixel_x = -7
+	},
+/obj/structure/closet/secure_closet/marine_personal/imperial/specialist{
+	pixel_x = 7
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "cargo"
+	},
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/engineering)
+"gt" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "door_warning"
+	},
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/engineering)
+"gR" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "door_warning";
+	dir = 1
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "door_warning"
+	},
+/obj/structure/machinery/light/small/red{
+	dir = 8
+	},
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/engineering)
+"gS" = (
+/obj/structure/largecrate/random/case/small,
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/hangar)
+"gW" = (
+/obj/structure/machinery/landinglight/ds1/delaythree{
+	dir = 8
+	},
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/hangar)
+"hc" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/machinery/landinglight/ds1/delaythree{
+	dir = 4
+	},
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/hangar)
+"hF" = (
+/obj/structure/largecrate/random/case/double,
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/hangar)
+"hZ" = (
+/obj/structure/machinery/landinglight/ds1/delaytwo,
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/hangar)
+"iJ" = (
+/obj/docking_port/stationary/marine_dropship/golden_arrow_hangar,
+/turf/open/floor/plating,
+/area/golden_arrow/hangar)
+"iV" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/machinery/landinglight/ds1/delayone{
+	dir = 4
+	},
+/obj/structure/machinery/floodlight/landing/floor{
+	color = "#dae2ff";
+	light_color = "#dae2ff"
+	},
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/hangar)
+"jg" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/sign/safety/high_voltage{
+	pixel_x = 32;
+	pixel_y = 6
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
+	},
+/turf/open/floor/plating/plating_catwalk,
+/area/golden_arrow/engineering)
+"jh" = (
+/obj/item/tool/wet_sign{
+	pixel_y = 14;
+	pixel_x = -14
+	},
+/obj/item/tool/wet_sign{
+	pixel_y = 10;
+	pixel_x = -17
+	},
+/obj/item/tool/wet_sign{
+	pixel_y = 6;
+	pixel_x = -13
+	},
+/obj/item/tool/wet_sign{
+	pixel_y = 2;
+	pixel_x = -15
+	},
+/obj/item/tool/wet_sign{
+	pixel_y = -2;
+	pixel_x = -13
+	},
+/obj/item/tool/wet_sign{
+	pixel_y = 16;
+	pixel_x = 1
+	},
+/turf/open/floor/almayer/plating/northeast,
+/area/golden_arrow/engineering)
+"jy" = (
+/obj/structure/largecrate/random/case/small,
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/engineering)
+"kG" = (
+/obj/item/stack/catwalk{
+	pixel_x = -6;
+	pixel_y = 4
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
+	},
+/turf/open/floor/almayer/plating_striped/north,
+/area/golden_arrow/engineering)
+"kT" = (
+/obj/structure/bed/bedroll{
+	dir = 4
+	},
+/obj/effect/landmark/late_join,
+/obj/effect/landmark/start/marine/leader/imperial,
+/turf/open/floor/plating/plating_catwalk/prison,
+/area/golden_arrow/engineering)
+"lB" = (
+/obj/structure/machinery/landinglight/ds1/delaythree{
+	dir = 4
+	},
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/hangar)
+"lZ" = (
+/obj/structure/machinery/light/small/red,
+/obj/structure/cable/heavyduty/west_east,
+/turf/open/floor/plating/plating_catwalk/prison,
+/area/golden_arrow/engineering)
+"no" = (
+/obj/structure/machinery/landinglight/ds1/delaytwo{
+	dir = 4
+	},
+/obj/structure/bed/bedroll{
+	dir = 4
+	},
+/obj/effect/landmark/late_join,
+/obj/effect/landmark/start/marine/imperial,
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/hangar)
+"ns" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "door_warning";
+	dir = 8
+	},
+/obj/structure/largecrate/random/case/double,
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/engineering)
+"nv" = (
+/obj/structure/machinery/landinglight/ds1,
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/hangar)
+"nE" = (
+/obj/structure/machinery/landinglight/ds1/delayone{
+	dir = 1
+	},
+/obj/structure/largecrate/random/barrel/true_random,
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/hangar)
+"nK" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/item/reagent_container/food/drinks/flask/canteen/empty{
+	pixel_x = -7;
+	pixel_y = 10
+	},
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/engineering)
+"od" = (
+/obj/structure/largecrate/random/barrel/true_random,
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/engineering)
+"ol" = (
+/obj/structure/bed/bedroll{
+	dir = 4
+	},
+/obj/effect/landmark/late_join,
+/obj/effect/landmark/start/marine/imperial,
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/engineering)
+"oH" = (
+/obj/structure/closet/secure_closet/marine_personal/imperial/rifleman{
+	pixel_x = -7
+	},
+/obj/structure/closet/secure_closet/marine_personal/imperial/rifleman{
+	pixel_x = 7
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/warning_stripes{
+	icon_state = "cargo"
+	},
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/engineering)
+"qa" = (
+/obj/structure/machinery/cm_vending/clothing/medic/imp,
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/engineering)
+"qr" = (
+/obj/structure/machinery/power/terminal{
+	dir = 8
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
+	},
+/turf/open/floor/plating/plating_catwalk,
+/area/golden_arrow/engineering)
+"qt" = (
+/obj/structure/machinery/cm_vending/sorted/tech/electronics_storage,
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/engineering)
+"qx" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/engineering)
+"qE" = (
+/obj/structure/machinery/landinglight/ds1/delayone,
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/hangar)
+"qI" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/light/small/red,
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/engineering)
+"qN" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/light/small/red{
+	dir = 1
+	},
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/engineering)
+"qP" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "door_warning";
+	dir = 8
+	},
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/hangar)
+"re" = (
+/obj/structure/machinery/landinglight/ds1/delayone{
+	dir = 8
+	},
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/hangar)
+"rT" = (
+/obj/structure/machinery/door/poddoor/almayer/blended,
+/turf/closed/wall/upp_wall/grey/hull,
+/area/golden_arrow/engineering)
+"rU" = (
+/obj/structure/machinery/cm_vending/gear/medic_chemical/imp,
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/engineering)
+"su" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/warning_stripes{
+	icon_state = "cargo_arrow";
+	dir = 8
+	},
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/engineering)
+"sE" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/light/small/red,
+/obj/item/reagent_container/food/drinks/flask/canteen/empty{
+	pixel_x = 8;
+	pixel_y = 1
+	},
+/obj/item/reagent_container/food/drinks/flask/canteen/empty{
+	pixel_x = -7;
+	pixel_y = 10
+	},
+/obj/item/reagent_container/food/drinks/flask/canteen/empty{
+	pixel_x = -9;
+	pixel_y = 1
+	},
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/engineering)
+"sR" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/engineering)
+"to" = (
+/obj/structure/machinery/light/small/red{
+	dir = 1
+	},
+/obj/structure/bed/bedroll{
+	dir = 4
+	},
+/obj/effect/landmark/late_join,
+/obj/effect/landmark/start/marine/imperial,
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/engineering)
+"tx" = (
+/obj/structure/largecrate/random/case/double,
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/hangar)
+"tF" = (
+/obj/structure/surface/table/reinforced/black,
+/obj/item/ammo_box/magazine/lasgun{
+	pixel_y = 9
+	},
+/obj/item/ammo_box/magazine/lasgun,
+/turf/open/floor/plating/plating_catwalk/prison,
+/area/golden_arrow/engineering)
+"tS" = (
+/obj/structure/machinery/landinglight/ds1{
+	dir = 8
+	},
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/hangar)
+"ua" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "NW-out";
+	pixel_y = 1
+	},
+/obj/structure/machinery/floodlight/landing/floor{
+	color = "#dae2ff";
+	light_color = "#dae2ff"
+	},
+/obj/structure/largecrate/random/barrel/true_random,
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/hangar)
+"uv" = (
+/obj/structure/surface/table/reinforced/black,
+/obj/item/weapon/chainsword,
+/turf/open/floor/plating/plating_catwalk/prison,
+/area/golden_arrow/engineering)
+"vi" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/machinery/landinglight/ds1/delayone{
+	dir = 8
+	},
+/obj/structure/machinery/floodlight/landing/floor{
+	color = "#dae2ff";
+	light_color = "#dae2ff"
+	},
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/hangar)
+"vI" = (
+/obj/structure/machinery/landinglight/ds1{
+	dir = 1
+	},
+/obj/structure/largecrate/random/barrel/true_random,
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/hangar)
+"wf" = (
+/obj/structure/closet/secure_closet/marine_personal/imperial/rifleman{
+	pixel_x = 7
+	},
+/obj/structure/closet/secure_closet/marine_personal/imperial/rifleman{
+	pixel_x = -7
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/warning_stripes{
+	icon_state = "cargo"
+	},
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/engineering)
+"wo" = (
+/obj/structure/machinery/light/small/red{
+	dir = 4
+	},
+/obj/structure/largecrate/random/case/double,
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/hangar)
+"wq" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "door_warning";
+	dir = 1
+	},
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/engineering)
+"xe" = (
+/turf/open/floor/plating/plating_catwalk/prison,
+/area/golden_arrow/hangar)
+"xp" = (
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/engineering)
+"xv" = (
+/obj/structure/machinery/landinglight/ds1{
+	dir = 4
+	},
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/hangar)
+"xO" = (
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/hangar)
+"xP" = (
+/obj/structure/machinery/light/small/red,
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/hangar)
+"xU" = (
+/obj/structure/machinery/landinglight/ds1/delaytwo{
+	dir = 1
+	},
+/obj/structure/surface/table/reinforced/black,
+/obj/item/storage/fancy/candle_box{
+	pixel_x = 8;
+	pixel_y = 13
+	},
+/obj/item/storage/fancy/candle_box{
+	pixel_x = -8;
+	pixel_y = 13
+	},
+/obj/item/storage/fancy/candle_box{
+	pixel_y = 6;
+	pixel_x = 3
+	},
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/hangar)
+"xV" = (
+/obj/structure/cable/heavyduty/west_east,
+/turf/open/floor/plating/plating_catwalk/prison,
+/area/golden_arrow/engineering)
+"yj" = (
+/obj/structure/gun_rack/lasgun,
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/engineering)
+"yk" = (
+/obj/structure/machinery/landinglight/ds1{
+	dir = 4
+	},
+/obj/structure/machinery/floodlight/landing/floor{
+	color = "#dae2ff";
+	light_color = "#dae2ff"
+	},
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/hangar)
+"yx" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "cargo_arrow";
+	dir = 8
+	},
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/engineering)
+"yZ" = (
+/obj/item/tool/warning_cone,
+/obj/structure/pipes/vents/pump{
+	dir = 1
+	},
+/turf/open/floor/almayer,
+/area/golden_arrow/engineering)
+"zl" = (
+/obj/structure/surface/table/almayer,
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/item/storage/belt/utility/full{
+	pixel_y = 12
+	},
+/obj/item/storage/belt/utility/full{
+	pixel_y = 2;
+	pixel_x = 2
+	},
+/obj/structure/machinery/light/small/red,
+/obj/structure/pipes/standard/simple/hidden/supply,
+/turf/open/floor/almayer,
+/area/golden_arrow/engineering)
+"zA" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "door_warning";
+	dir = 4
+	},
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/engineering)
+"zF" = (
+/obj/structure/surface/table/reinforced/black,
+/obj/item/tool/shovel/etool/upp/folded{
+	pixel_x = 4
+	},
+/obj/item/tool/shovel/etool/upp/folded,
+/turf/open/floor/plating/plating_catwalk/prison,
+/area/golden_arrow/engineering)
+"zP" = (
+/obj/structure/machinery/light/small/red,
+/obj/structure/largecrate/random/case,
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/engineering)
+"zZ" = (
+/obj/structure/surface/table/reinforced/black,
+/obj/item/facepaint/black{
+	pixel_x = -4;
+	pixel_y = 4
+	},
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/engineering)
+"Aa" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "SW-out"
+	},
+/obj/structure/machinery/floodlight/landing/floor{
+	color = "#dae2ff";
+	light_color = "#dae2ff"
+	},
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/hangar)
+"Ah" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/machinery/landinglight/ds1/delayone{
+	dir = 4
+	},
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/hangar)
+"Ax" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/turf/open/floor/plating/plating_catwalk/prison,
+/area/golden_arrow/engineering)
+"Ba" = (
+/obj/structure/largecrate/random/case/small,
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/hangar)
+"Bc" = (
+/obj/structure/machinery/power/terminal{
+	dir = 8
+	},
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
+	},
+/turf/open/floor/plating/plating_catwalk,
+/area/golden_arrow/engineering)
+"Cj" = (
+/obj/structure/machinery/landinglight/ds1{
+	dir = 8
+	},
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/hangar)
+"CG" = (
+/obj/structure/machinery/light/small/red{
+	dir = 4
+	},
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/engineering)
+"Dj" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "door_warning";
+	dir = 8
+	},
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/engineering)
+"Dy" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/plating/plating_catwalk/prison,
+/area/golden_arrow/engineering)
+"DA" = (
+/obj/structure/cable/heavyduty/west_east,
+/turf/open/floor/plating/plating_catwalk/prison,
+/area/golden_arrow/hangar)
+"DY" = (
+/obj/structure/machinery/landinglight/ds1/delaythree{
+	dir = 4
+	},
+/obj/structure/machinery/floodlight/landing/floor{
+	color = "#dae2ff";
+	light_color = "#dae2ff"
+	},
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/hangar)
+"Ff" = (
+/obj/structure/machinery/landinglight/ds1/delayone{
+	dir = 1
+	},
+/obj/structure/surface/table/reinforced/black,
+/obj/item/paper_bin{
+	pixel_y = 8;
+	pixel_x = -7
+	},
+/obj/item/tool/pen{
+	pixel_y = 1;
+	pixel_x = 7
+	},
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/hangar)
+"Fn" = (
+/obj/structure/largecrate/random/case/double,
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/engineering)
+"Fz" = (
+/obj/structure/machinery/landinglight/ds1/delayone{
+	dir = 4
+	},
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/hangar)
+"FK" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/machinery/landinglight/ds1/delayone,
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/hangar)
+"Gb" = (
+/turf/open/floor/plating,
+/area/golden_arrow/hangar)
+"Gd" = (
+/turf/open/floor/plating/plating_catwalk/prison,
+/area/golden_arrow/engineering)
+"Gw" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/machinery/landinglight/ds1,
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/hangar)
+"GE" = (
+/obj/structure/machinery/light/small/red,
+/obj/structure/bed/bedroll{
+	dir = 1
+	},
+/obj/effect/landmark/late_join,
+/obj/effect/landmark/start/marine/tl/imperial,
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/engineering)
+"GS" = (
+/obj/structure/closet/secure_closet/marine_personal/imperial/tl{
+	pixel_x = 7
+	},
+/obj/structure/closet/secure_closet/marine_personal/imperial/tl{
+	pixel_x = -7
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/warning_stripes{
+	icon_state = "cargo"
+	},
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/engineering)
+"GV" = (
+/obj/structure/machinery/landinglight/ds1/delaytwo{
+	dir = 1
+	},
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/hangar)
+"GX" = (
+/obj/structure/machinery/landinglight/ds1,
+/obj/structure/machinery/floodlight/landing/floor{
+	color = "#dae2ff";
+	light_color = "#dae2ff"
+	},
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/hangar)
+"GY" = (
+/obj/structure/janitorialcart,
+/obj/item/tool/mop{
+	pixel_y = -8
+	},
+/obj/effect/decal/cleanable/cobweb2,
+/turf/open/floor/almayer/plating/northeast,
+/area/golden_arrow/engineering)
+"GZ" = (
+/obj/structure/machinery/landinglight/ds1/delaytwo{
+	dir = 8
+	},
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/hangar)
+"Hh" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "cargo_arrow";
+	dir = 4
+	},
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/engineering)
+"Hj" = (
+/obj/structure/machinery/light/small/red{
+	dir = 1
+	},
+/obj/structure/largecrate/random/case/double,
+/obj/structure/cable/heavyduty/west_east,
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/turf/open/floor/plating/plating_catwalk/prison,
+/area/golden_arrow/engineering)
+"Hk" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "door_warning"
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/engineering)
+"HR" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/warning_stripes{
+	icon_state = "cargo_arrow";
+	dir = 4
+	},
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/engineering)
+"IB" = (
+/obj/structure/machinery/power/terminal{
+	dir = 4
+	},
+/obj/item/tool/warning_cone{
+	pixel_y = 3;
+	pixel_x = -7
+	},
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
+	},
+/turf/open/floor/plating/plating_catwalk,
+/area/golden_arrow/engineering)
+"IN" = (
+/obj/structure/machinery/landinglight/ds1/delaythree{
+	dir = 8
+	},
+/obj/structure/machinery/floodlight/landing/floor{
+	color = "#dae2ff";
+	light_color = "#dae2ff"
+	},
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/hangar)
+"Jh" = (
+/obj/structure/machinery/prop/almayer/CICmap/table/imperial,
+/obj/structure/cable/heavyduty/north_south,
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/hangar)
+"Ku" = (
+/obj/structure/machinery/landinglight/ds1/delaythree{
+	dir = 1
+	},
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/hangar)
+"KF" = (
+/obj/structure/closet/crate/freezer,
+/obj/item/reagent_container/blood/OMinus,
+/obj/item/reagent_container/blood/OMinus,
+/obj/structure/machinery/light/small/red{
+	dir = 8
+	},
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/engineering)
+"KL" = (
+/obj/structure/closet/secure_closet/marine_personal/imperial/medic{
+	pixel_x = -7
+	},
+/obj/structure/closet/secure_closet/marine_personal/imperial/rifleman{
+	pixel_x = 7
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/warning_stripes{
+	icon_state = "cargo"
+	},
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/engineering)
+"Ln" = (
+/obj/structure/machinery/light/small/red,
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/engineering)
+"Lp" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/item/reagent_container/food/drinks/flask/canteen/empty{
+	pixel_x = 8;
+	pixel_y = 1
+	},
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/engineering)
+"Lz" = (
+/obj/structure/machinery/power/smes/buildable,
+/obj/structure/machinery/power/smes/buildable{
+	pixel_y = 16;
+	layer = 4.5
+	},
+/turf/open/floor/almayer/test_floor4,
+/area/golden_arrow/engineering)
+"LD" = (
+/obj/structure/machinery/door/airlock/multi_tile/strata{
+	dir = 1
+	},
+/turf/open/floor/corsat/marked,
+/area/golden_arrow/engineering)
+"LP" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "2-8"
+	},
+/turf/open/floor/almayer/plating_striped,
+/area/golden_arrow/engineering)
+"Mj" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/machinery/landinglight/ds1{
+	dir = 8
+	},
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/hangar)
+"MN" = (
+/obj/structure/machinery/light/small/red,
+/obj/structure/cable/heavyduty/west_east,
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/turf/open/floor/plating/plating_catwalk/prison,
+/area/golden_arrow/engineering)
+"MO" = (
+/obj/structure/machinery/light/small/red,
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/turf/open/floor/almayer/plating_striped/north,
+/area/golden_arrow/engineering)
+"MU" = (
+/obj/structure/closet/secure_closet/engineering_electrical{
+	req_one_access = null
+	},
+/obj/structure/pipes/standard/simple/hidden/supply,
+/turf/open/floor/almayer,
+/area/golden_arrow/engineering)
+"Nr" = (
+/obj/structure/cable/heavyduty/west_east,
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/turf/open/floor/plating/plating_catwalk/prison,
+/area/golden_arrow/engineering)
+"Nw" = (
+/obj/structure/bed/bedroll{
+	dir = 4
+	},
+/obj/effect/landmark/late_join,
+/obj/effect/landmark/start/marine/imperial,
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/hangar)
+"NW" = (
+/obj/structure/cable/heavyduty/west_east,
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/turf/open/floor/plating/plating_catwalk/prison,
+/area/golden_arrow/hangar)
+"NY" = (
+/obj/structure/machinery/cm_vending/sorted/tech/tool_storage,
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/engineering)
+"Of" = (
+/obj/structure/machinery/cm_vending/sorted/uniform_supply/squad_prep/imperial,
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/engineering)
+"Po" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/machinery/landinglight/ds1/delaytwo{
+	dir = 4
+	},
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/hangar)
+"PA" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/turf/open/floor/plating/plating_catwalk/prison,
+/area/golden_arrow/hangar)
+"PR" = (
+/obj/structure/surface/table/reinforced/black,
+/obj/effect/decal/cleanable/dirt,
+/obj/item/reagent_container/glass/rag{
+	pixel_x = -5;
+	pixel_y = -1
+	},
+/obj/item/tool/weldingtool/simple{
+	pixel_x = 11;
+	pixel_y = 5
+	},
+/obj/item/tool/candle/tall{
+	pixel_y = 18;
+	pixel_x = -10
+	},
+/obj/item/storage/box/matches{
+	pixel_x = -5;
+	pixel_y = 13
+	},
+/turf/open/floor/plating/plating_catwalk/prison,
+/area/golden_arrow/engineering)
+"Qo" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/pipes/standard/simple/hidden/supply,
+/turf/closed/wall/almayer/outer,
+/area/golden_arrow/engineering)
+"Qq" = (
+/obj/structure/closet/toolcloset{
+	pixel_x = -7;
+	pixel_y = 11
+	},
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/closet/secure_closet/engineering_welding{
+	pixel_x = 7;
+	pixel_y = 11
+	},
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/engineering)
+"Qv" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/pipes/standard/simple/hidden/supply,
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
+	},
+/turf/open/floor/almayer/plating/northeast,
+/area/golden_arrow/engineering)
+"QW" = (
+/obj/structure/bed/bedroll{
+	dir = 1
+	},
+/obj/effect/landmark/late_join,
+/obj/effect/landmark/start/marine/medic/imperial,
+/turf/open/floor/plating/plating_catwalk/prison,
+/area/golden_arrow/engineering)
+"Rp" = (
+/obj/structure/surface/table/reinforced/black,
+/obj/item/ammo_box/magazine/lasgun{
+	pixel_x = -14;
+	pixel_y = 10
+	},
+/obj/item/ammo_box/magazine/lasgun{
+	pixel_x = -14
+	},
+/obj/item/ammo_box/magazine/lasgun{
+	pixel_x = 7;
+	pixel_y = 10
+	},
+/obj/item/ammo_box/magazine/lasgun{
+	pixel_x = 7
+	},
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/engineering)
+"RY" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/machinery/landinglight/ds1/delayone{
+	dir = 8
+	},
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/hangar)
+"Ss" = (
+/turf/closed/wall/upp_wall/grey/hull,
+/area/golden_arrow/engineering)
+"Sw" = (
+/obj/structure/machinery/cm_vending/sorted/cargo_guns/squad/imperial,
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/engineering)
+"SW" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "2-4"
+	},
+/turf/open/floor/almayer/plating_striped,
+/area/golden_arrow/engineering)
+"SY" = (
+/obj/structure/surface/table/reinforced/black,
+/obj/item/ammo_box/magazine/nade_box/imperial,
+/obj/item/ammo_box/magazine/nade_box/imperial/smoke{
+	pixel_y = 7
+	},
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/turf/open/floor/plating/plating_catwalk/prison,
+/area/golden_arrow/engineering)
+"Tm" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "door_warning";
+	dir = 8
+	},
+/obj/structure/largecrate/random/barrel/true_random,
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/hangar)
+"Ts" = (
+/obj/structure/machinery/telecomms/relay/preset/tower,
+/turf/open/floor/almayer,
+/area/golden_arrow/engineering)
+"Uv" = (
+/turf/open/floor/corsat/marked,
+/area/golden_arrow/engineering)
+"UK" = (
+/obj/structure/closet/secure_closet/marine_personal/imperial/sl{
+	pixel_x = 7
+	},
+/obj/structure/closet/secure_closet/marine_personal/imperial/vox{
+	pixel_x = -7
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "cargo"
+	},
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/engineering)
+"UP" = (
+/obj/structure/surface/table/reinforced/black,
+/obj/item/storage/firstaid/softpack/burn{
+	pixel_x = 9;
+	pixel_y = 12
+	},
+/obj/item/device/healthanalyzer/soul{
+	pixel_x = -7;
+	pixel_y = 4
+	},
+/obj/item/storage/firstaid/softpack/brute{
+	pixel_x = 6;
+	pixel_y = -3
+	},
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/engineering)
+"Vf" = (
+/obj/structure/bed/bedroll{
+	dir = 1
+	},
+/obj/effect/landmark/late_join,
+/obj/effect/landmark/start/marine/vox,
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/hangar)
+"Vu" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/machinery/landinglight/ds1{
+	dir = 4
+	},
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/hangar)
+"Vw" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "SE-out";
+	pixel_x = 1
+	},
+/obj/structure/machinery/floodlight/landing/floor{
+	color = "#dae2ff";
+	light_color = "#dae2ff"
+	},
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/hangar)
+"Vz" = (
+/obj/structure/machinery/landinglight/ds1/delayone{
+	dir = 1
+	},
+/obj/structure/machinery/floodlight/landing/floor{
+	color = "#dae2ff";
+	light_color = "#dae2ff"
+	},
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/hangar)
+"VU" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "NE-out";
+	pixel_x = 1;
+	pixel_y = 1
+	},
+/obj/structure/machinery/floodlight/landing/floor{
+	color = "#dae2ff";
+	light_color = "#dae2ff"
+	},
+/obj/structure/largecrate/random/barrel/true_random,
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/hangar)
+"Wi" = (
+/obj/structure/machinery/cm_vending/sorted/uniform_supply/squad_prep/imperial,
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/engineering)
+"WE" = (
+/obj/structure/machinery/light/small/red{
+	dir = 1
+	},
+/obj/structure/largecrate/random/case/double,
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/engineering)
+"Xg" = (
+/obj/structure/largecrate/random/barrel/true_random,
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/hangar)
+"Xl" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/hangar)
+"XE" = (
+/obj/structure/machinery/landinglight/ds1/delaythree{
+	dir = 8
+	},
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/hangar)
+"XH" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "door_warning";
+	dir = 1
+	},
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/engineering)
+"Yi" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/machinery/landinglight/ds1/delaythree{
+	dir = 1
+	},
+/obj/structure/surface/table/reinforced/black,
+/obj/item/tool/shovel/etool/upp/folded,
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/hangar)
+"YH" = (
+/obj/structure/machinery/light/small/red{
+	dir = 1
+	},
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/engineering)
+"Zc" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/machinery/landinglight/ds1/delaythree{
+	dir = 8
+	},
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/hangar)
+"Zd" = (
+/obj/structure/machinery/landinglight/ds1/delayone{
+	dir = 4
+	},
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/hangar)
+"Zk" = (
+/obj/structure/closet/secure_closet/job_locker/imperial_specialist{
+	pixel_x = -8
+	},
+/obj/structure/closet/secure_closet/job_locker/imperial_specialist{
+	pixel_x = 8
+	},
+/obj/structure/machinery/light/small/red{
+	dir = 1
+	},
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/engineering)
+"Zt" = (
+/obj/structure/pipes/standard/simple/hidden/supply,
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
+	},
+/turf/closed/wall/upp_wall/grey/hull,
+/area/golden_arrow/engineering)
+"ZP" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/machinery/landinglight/ds1/delaythree,
+/turf/open/floor/corsat/plate,
+/area/golden_arrow/hangar)
+
+(1,1,1) = {"
+Ss
+Ss
+Ss
+Ss
+Ss
+Ss
+Ss
+Ss
+Ss
+Ss
+Ss
+Ss
+Ss
+Ss
+Ss
+Ss
+Ss
+Ss
+Ss
+Ss
+Ss
+Ss
+Ss
+Ss
+Ss
+Ss
+Ss
+Ss
+Ss
+Ss
+"}
+(2,1,1) = {"
+Ss
+da
+da
+da
+da
+da
+da
+Ss
+Ss
+Ss
+Ss
+Ss
+Ss
+Ss
+Ss
+Ss
+Ss
+Ss
+Ss
+Ss
+Ss
+Ss
+Ss
+Ss
+zA
+zA
+Ss
+Ss
+Ss
+Ss
+"}
+(3,1,1) = {"
+Ss
+da
+da
+da
+da
+da
+da
+Ss
+Ss
+Ss
+Ss
+Ss
+Ss
+Ss
+Ss
+Ss
+Ss
+Ss
+Ss
+Ss
+Ss
+Ss
+Ss
+Ss
+Uv
+LD
+Ss
+Ss
+Ss
+Ss
+"}
+(4,1,1) = {"
+Ss
+da
+da
+Ts
+da
+da
+da
+Ss
+Ss
+Ss
+Ss
+Ss
+Ss
+Ss
+Ss
+Ss
+Ss
+Ss
+Ss
+Ss
+Wi
+Sw
+Wi
+Ss
+ns
+Dj
+Ss
+NY
+qt
+Ss
+"}
+(5,1,1) = {"
+Ss
+da
+da
+da
+da
+da
+da
+Ss
+Ss
+Ss
+Ss
+Ss
+Ss
+Ss
+Ss
+Ss
+Ss
+Ss
+Ss
+cB
+qx
+xp
+Ln
+Ss
+Hj
+MN
+Ss
+to
+cW
+Ss
+"}
+(6,1,1) = {"
+Ss
+da
+da
+da
+da
+da
+da
+Ss
+Ss
+Ss
+Ss
+Ss
+Ss
+Ss
+Ss
+Ss
+Ss
+Ss
+yj
+nK
+Gd
+kT
+xp
+Ss
+Nr
+Nr
+Ss
+ah
+xp
+Ss
+"}
+(7,1,1) = {"
+Ss
+Ss
+Ss
+Ss
+Ss
+Ss
+Ss
+Ss
+Ss
+Ss
+Ss
+Ss
+Ss
+wf
+oH
+UK
+Ss
+Ss
+yj
+xp
+zF
+eA
+qx
+Ss
+qx
+qx
+Ss
+od
+xp
+Ss
+"}
+(8,1,1) = {"
+Ss
+Ss
+Ss
+Lz
+Lz
+Ss
+Lz
+Lz
+Ss
+Ss
+Ss
+Ss
+qN
+su
+yx
+yx
+qI
+Ss
+Ss
+Gd
+tF
+uv
+qx
+Ss
+xV
+Nr
+Ss
+od
+qx
+Ss
+"}
+(9,1,1) = {"
+Ss
+jh
+SW
+Bc
+qr
+dK
+qr
+qr
+fm
+Ss
+Ss
+Ss
+sR
+Gd
+Gd
+Dy
+Hk
+aU
+wq
+bh
+PR
+SY
+qx
+Ss
+xV
+xV
+Ss
+qx
+qx
+Ss
+"}
+(10,1,1) = {"
+Zt
+Qv
+dM
+MU
+zl
+Qo
+bK
+yZ
+MO
+Ss
+Ss
+Ss
+YH
+Hh
+HR
+HR
+sE
+Ss
+zZ
+xp
+Gd
+Ax
+gt
+aU
+wq
+be
+aU
+XH
+dm
+Ss
+"}
+(11,1,1) = {"
+Ss
+GY
+LP
+gf
+gf
+jg
+IB
+dQ
+kG
+Ss
+Ss
+Ss
+Ss
+gj
+GS
+KL
+Ss
+Ss
+Rp
+xp
+QW
+Ax
+Lp
+Ss
+xV
+xV
+Ss
+dm
+jy
+Ss
+"}
+(12,1,1) = {"
+Ss
+Ss
+Ss
+Lz
+Lz
+Ss
+Lz
+Lz
+Ss
+Ss
+Ss
+Ss
+Ss
+Ss
+Ss
+Ss
+Ss
+Ss
+Ss
+Zk
+xp
+qx
+GE
+Ss
+ea
+lZ
+Ss
+WE
+zP
+Ss
+"}
+(13,1,1) = {"
+Ss
+Ss
+Ss
+Ss
+Ss
+Ss
+Ss
+Ss
+Ss
+Ss
+Ss
+Ss
+Ss
+Ss
+Ss
+Ss
+Ss
+Ss
+Ss
+Ss
+Of
+fT
+Wi
+Ss
+xp
+ol
+Ss
+Qq
+Fn
+Ss
+"}
+(14,1,1) = {"
+Ss
+Ss
+Ss
+Ss
+Ss
+Ss
+Ss
+Ss
+Ss
+Ss
+Ss
+Ss
+Ss
+Ss
+Ss
+Ss
+Ss
+KF
+UP
+Ss
+Ss
+Ss
+Ss
+Ss
+xV
+xV
+Ss
+Ss
+Ss
+Ss
+"}
+(15,1,1) = {"
+Ss
+Ss
+Ss
+Ss
+Ss
+Ss
+Ss
+Ss
+Ss
+Ss
+Ss
+Ss
+Ss
+Ss
+Ss
+Ss
+qa
+qx
+qx
+gt
+aU
+gR
+aU
+wq
+xV
+xV
+Ss
+Ss
+Ss
+Ss
+"}
+(16,1,1) = {"
+Ss
+Ss
+Ss
+Ss
+Ss
+Ss
+Ss
+Ss
+Ss
+Ss
+Ss
+Ss
+Ss
+Ss
+Ss
+Ss
+rU
+CG
+co
+Ss
+Ss
+Ss
+Ss
+Ss
+zA
+zA
+Ss
+Ss
+Ss
+Ss
+"}
+(17,1,1) = {"
+Ss
+Ss
+Ss
+Ss
+Ss
+Ss
+Ss
+Ss
+Ss
+Ss
+Ss
+Ss
+Ss
+Ss
+Ss
+Ss
+Ss
+Ss
+Ss
+Ss
+Ss
+Ss
+Ss
+Ss
+Uv
+LD
+Ss
+Ss
+Ss
+Ss
+"}
+(18,1,1) = {"
+Ss
+Vw
+bw
+lB
+Vu
+Ah
+Po
+DY
+dG
+Ah
+Po
+hc
+yk
+Zd
+Po
+lB
+dG
+iV
+bw
+aW
+xv
+Fz
+no
+VU
+Tm
+qP
+Ss
+Ss
+Ss
+Ss
+"}
+(19,1,1) = {"
+rT
+qE
+Gb
+Gb
+Gb
+Gb
+Gb
+Gb
+Gb
+Gb
+Gb
+Gb
+Gb
+Gb
+Gb
+Gb
+Gb
+Gb
+Gb
+Gb
+Gb
+Gb
+Gb
+vI
+xO
+xO
+eX
+Ss
+Ss
+Ss
+"}
+(20,1,1) = {"
+rT
+nv
+Gb
+Gb
+Gb
+Gb
+Gb
+Gb
+Gb
+Gb
+Gb
+Gb
+Gb
+Gb
+Gb
+Gb
+Gb
+Gb
+Gb
+Gb
+Gb
+Gb
+Gb
+Ff
+DA
+DA
+Xl
+Nw
+Ss
+Ss
+"}
+(21,1,1) = {"
+rT
+ZP
+Gb
+Gb
+Gb
+Gb
+Gb
+Gb
+Gb
+Gb
+Gb
+Gb
+Gb
+Gb
+Gb
+Gb
+Gb
+Gb
+Gb
+Gb
+Gb
+Gb
+Gb
+xU
+DA
+DA
+PA
+Ba
+tx
+Ss
+"}
+(22,1,1) = {"
+rT
+hZ
+Gb
+Gb
+Gb
+Gb
+Gb
+Gb
+Gb
+Gb
+Gb
+Gb
+Gb
+Gb
+Gb
+Gb
+Gb
+Gb
+Gb
+Gb
+Gb
+Gb
+Gb
+Yi
+DA
+DA
+PA
+Xl
+tx
+Ss
+"}
+(23,1,1) = {"
+rT
+qE
+Gb
+Gb
+Gb
+Gb
+Gb
+Gb
+Gb
+Gb
+Gb
+Gb
+Gb
+Gb
+Gb
+Gb
+Gb
+Gb
+Gb
+Gb
+Gb
+Gb
+Gb
+cy
+xO
+xO
+Xl
+Xl
+xP
+Ss
+"}
+(24,1,1) = {"
+rT
+GX
+Gb
+Gb
+Gb
+Gb
+Gb
+Gb
+Gb
+Gb
+Gb
+Gb
+iJ
+Gb
+Gb
+Gb
+Gb
+Gb
+Gb
+Gb
+Gb
+Gb
+Gb
+Vz
+xO
+xO
+Jh
+bq
+bq
+Ss
+"}
+(25,1,1) = {"
+rT
+fF
+Gb
+Gb
+Gb
+Gb
+Gb
+Gb
+Gb
+Gb
+Gb
+Gb
+Gb
+Gb
+Gb
+Gb
+Gb
+Gb
+Gb
+Gb
+Gb
+Gb
+Gb
+GV
+xO
+xO
+xO
+xO
+xP
+Ss
+"}
+(26,1,1) = {"
+rT
+hZ
+Gb
+Gb
+Gb
+Gb
+Gb
+Gb
+Gb
+Gb
+Gb
+Gb
+Gb
+Gb
+Gb
+Gb
+Gb
+Gb
+Gb
+Gb
+Gb
+Gb
+Gb
+Ku
+NW
+DA
+xe
+xO
+gS
+Ss
+"}
+(27,1,1) = {"
+rT
+FK
+Gb
+Gb
+Gb
+Gb
+Gb
+Gb
+Gb
+Gb
+Gb
+Gb
+Gb
+Gb
+Gb
+Gb
+Gb
+Gb
+Gb
+Gb
+Gb
+Gb
+Gb
+bR
+NW
+DA
+xe
+gS
+hF
+Ss
+"}
+(28,1,1) = {"
+rT
+Gw
+Gb
+Gb
+Gb
+Gb
+Gb
+Gb
+Gb
+Gb
+Gb
+Gb
+Gb
+Gb
+Gb
+Gb
+Gb
+Gb
+Gb
+Gb
+Gb
+Gb
+Gb
+bR
+NW
+DA
+hF
+hF
+Ss
+Ss
+"}
+(29,1,1) = {"
+rT
+fF
+Gb
+Gb
+Gb
+Gb
+Gb
+Gb
+Gb
+Gb
+Gb
+Gb
+Gb
+Gb
+Gb
+Gb
+Gb
+Gb
+Gb
+Gb
+Gb
+Gb
+Gb
+nE
+Xl
+Vf
+wo
+Ss
+Ss
+Ss
+"}
+(30,1,1) = {"
+Ss
+Aa
+GZ
+re
+Mj
+Zc
+GZ
+vi
+Cj
+Zc
+GZ
+re
+cF
+XE
+eT
+RY
+Cj
+IN
+eT
+re
+tS
+gW
+ez
+ua
+Xg
+Xl
+Ss
+Ss
+Ss
+Ss
+"}
+(31,1,1) = {"
+Ss
+Ss
+Ss
+Ss
+Ss
+Ss
+Ss
+Ss
+Ss
+Ss
+Ss
+Ss
+Ss
+Ss
+Ss
+Ss
+Ss
+Ss
+Ss
+Ss
+Ss
+Ss
+Ss
+Ss
+Ss
+Ss
+Ss
+Ss
+Ss
+Ss
+"}
