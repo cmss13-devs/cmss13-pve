@@ -1724,7 +1724,7 @@
 
 	var/prefix = SPAN_PURPLE("IMPORTANT ACTION: ")
 
-	msg = SPAN_BIGNOTICE("[prefix][key_name(src, 1)] [ADMIN_SM(src)] [ADMIN_JMP_USER(src)]: [msg]")
+	msg = SPAN_BIGNOTICE("[prefix][key_name(src, 1)] [ADMIN_SM(src)] [ADMIN_JMP_USER(src)] [ADMIN_PP(src)]: [msg]")
 	log_admin(msg)
 	for(var/client/admin in GLOB.admins)
 		if(AHOLD_IS_MOD(admin.admin_holder))
