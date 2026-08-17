@@ -97,3 +97,12 @@
 	turf_overlay_icon_state = "splash"
 	ambience = 'sound/ambience/strata/strata_snowstorm.ogg'
 	lightning_chance = 5
+
+/datum/weather_event/heavy_rain/infinite/water
+	name = "Underwater"
+	length = INFINITY
+	turf_overlay_icon_state = "splash"
+	lightning_chance = 10
+	ambience = null
+	turf_overlay_alpha = 200
+	layer
