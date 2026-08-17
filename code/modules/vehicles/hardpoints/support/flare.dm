@@ -98,6 +98,3 @@
 	allowed_seat = VEHICLE_GUNNER
 
 	use_muzzle_flash = FALSE
-
-/obj/item/hardpoint/support/flare_launcher/upptank/solo
-	allowed_seat = VEHICLE_DRIVER

@@ -37,6 +37,3 @@
 
 	scatter = 0
 	fire_delay = 10.0 SECONDS
-
-/obj/item/hardpoint/primary/cannon/railgun/solo
-	allowed_seat = VEHICLE_DRIVER

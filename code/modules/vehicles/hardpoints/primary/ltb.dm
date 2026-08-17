@@ -51,6 +51,3 @@
 		"4" = list(95, -4),
 		"8" = list(-95, -4)
 	)
-
-/obj/item/hardpoint/primary/cannon/solo
-	allowed_seat = VEHICLE_DRIVER

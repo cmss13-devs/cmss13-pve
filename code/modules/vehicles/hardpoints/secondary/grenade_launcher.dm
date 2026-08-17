@@ -43,6 +43,3 @@
 		return NONE
 
 	return ..()
-
-/obj/item/hardpoint/secondary/grenade_launcher/solo
-	allowed_seat = VEHICLE_DRIVER

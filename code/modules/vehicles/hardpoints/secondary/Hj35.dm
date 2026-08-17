@@ -67,9 +67,3 @@
 		"4" = list(39, 0),
 		"8" = list(-5, 10)
 	)
-
-/obj/item/hardpoint/secondary/hj35launcher/solo
-	allowed_seat = VEHICLE_DRIVER
-
-/obj/item/hardpoint/secondary/hj35launcher/upptank/solo
-	allowed_seat = VEHICLE_DRIVER

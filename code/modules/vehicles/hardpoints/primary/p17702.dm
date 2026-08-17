@@ -36,6 +36,3 @@
 
 	scatter = 0
 	fire_delay = 4 SECONDS
-
-/obj/item/hardpoint/primary/cannon/p17702/solo
-	allowed_seat = VEHICLE_DRIVER

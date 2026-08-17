@@ -37,6 +37,3 @@
 		return NONE
 
 	return ..()
-
-/obj/item/hardpoint/primary/flamer/solo
-	allowed_seat = VEHICLE_DRIVER

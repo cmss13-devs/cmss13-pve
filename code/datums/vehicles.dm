@@ -54,10 +54,6 @@
 	name = "Command Tank"
 	interior_id = "tank_command"
 
-/datum/map_template/interior/tank_solo
-	name = "Tank (Solo)"
-	interior_id = "tank_solo"
-
 /datum/map_template/interior/upptank
 	name = "UPP Tank"
 	interior_id = "upptank"
@@ -69,10 +65,6 @@
 /datum/map_template/interior/ridgeway
 	name = "Ridgeway Tank"
 	interior_id = "ridgeway"
-
-/datum/map_template/interior/upptank_solo
-	name = "UPP Tank (Solo)"
-	interior_id = "upptank_solo"
 
 /datum/map_template/interior/aev
 	name = "AEV"
