@@ -1,0 +1,17597 @@
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"aa" = (
+/obj/structure/platform/kutjevo,
+/obj/item/lightstick/red/spoke/planted,
+/turf/open/auto_turf/strata_grass/layer0_mud_alt,
+/area/tertius_decimus/exterior)
+"ab" = (
+/turf/open/gm/dirt2,
+/area/interior)
+"ac" = (
+/turf/open/auto_turf/strata_grass/layer0_mud_alt,
+/area/interior)
+"ad" = (
+/obj/structure/barricade/razorwire{
+	dir = 4
+	},
+/turf/open/auto_turf/strata_grass/layer0_mud,
+/area/tertius_decimus/exterior)
+"ae" = (
+/obj/item/lightstick/red/spoke/planted,
+/turf/open/auto_turf/strata_grass/layer0_mud,
+/area/tertius_decimus/exterior)
+"af" = (
+/obj/structure/barricade/sandbags/wired{
+	dir = 1;
+	icon_state = "sandbag_0"
+	},
+/turf/open/gm/dirt2,
+/area/interior)
+"ag" = (
+/obj/structure/platform/kutjevo,
+/obj/item/lightstick/red/spoke/planted,
+/turf/open/auto_turf/strata_grass/layer0_mud,
+/area/tertius_decimus/exterior)
+"ah" = (
+/obj/structure/platform_decoration/kutjevo/rock{
+	dir = 1
+	},
+/obj/item/lightstick/red/spoke/planted,
+/turf/open/auto_turf/strata_grass/layer0_mud_alt,
+/area/tertius_decimus/exterior)
+"ai" = (
+/obj/item/lightstick/red/spoke/planted,
+/turf/open/auto_turf/strata_grass/layer0,
+/area/tertius_decimus/exterior)
+"aj" = (
+/obj/structure/barricade/razorwire{
+	dir = 4
+	},
+/turf/open/auto_turf/strata_grass/layer0_mud_alt,
+/area/tertius_decimus/exterior)
+"ak" = (
+/obj/structure/barricade/metal/plasteel/wired{
+	dir = 1
+	},
+/obj/structure/machinery/m56d_hmg/auto{
+	dir = 1;
+	desc = "An emplaced heavy stubber used for defence and often is seen use by Imperial Guard Heavy Weapons teams. <B> Click its sprite while behind it without holding anything to man it. Click-drag on NON-GRAB intent to disassemble the gun, GRAB INTENT to remove ammo magazines.</B>";
+	name = "Heavy Stubber"
+	},
+/turf/open/floor/strata/floor3/east,
+/area/tertius_decimus/pillbox)
+"al" = (
+/obj/structure/barricade/razorwire,
+/turf/open/auto_turf/strata_grass/layer0,
+/area/tertius_decimus/exterior)
+"am" = (
+/obj/structure/platform_decoration/kutjevo/rock{
+	dir = 1
+	},
+/obj/structure/platform/kutjevo{
+	dir = 8
+	},
+/obj/structure/barricade/sandbags/wired{
+	dir = 8;
+	icon_state = "sandbag_0"
+	},
+/turf/open/gm/dirt2,
+/area/tertius_decimus/exterior)
+"an" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/item/ammo_box/magazine/nade_box/imperial,
+/obj/item/ammo_box/magazine/nade_box/imperial/smoke{
+	pixel_y = 7
+	},
+/turf/open/floor/strata/floor3/east,
+/area/tertius_decimus/armory)
+"ap" = (
+/obj/structure/platform_decoration/kutjevo{
+	dir = 1
+	},
+/turf/open/gm/dirt2,
+/area/tertius_decimus/exterior)
+"aq" = (
+/obj/item/lightstick/red/spoke/planted,
+/turf/open/gm/dirt2,
+/area/tertius_decimus/shuttles/drop_main)
+"ar" = (
+/obj/structure/machinery/floodlight/landing{
+	name = "floodlight"
+	},
+/turf/open/auto_turf/strata_grass/layer0,
+/area/tertius_decimus/exterior)
+"av" = (
+/obj/structure/platform_decoration/kutjevo/rock,
+/turf/open/auto_turf/strata_grass/layer0_mud_alt,
+/area/tertius_decimus/exterior)
+"az" = (
+/obj/structure/barricade/metal/plasteel/wired{
+	dir = 4
+	},
+/obj/structure/machinery/m56d_hmg/auto{
+	dir = 4;
+	desc = "An emplaced heavy stubber used for defence and often is seen use by Imperial Guard Heavy Weapons teams. <B> Click its sprite while behind it without holding anything to man it. Click-drag on NON-GRAB intent to disassemble the gun, GRAB INTENT to remove ammo magazines.</B>";
+	name = "Heavy Stubber"
+	},
+/turf/open/floor/strata/floor3/east,
+/area/tertius_decimus/pillbox)
+"aA" = (
+/obj/structure/machinery/cm_vending/sorted/uniform_supply/squad_prep/imperial,
+/turf/open/floor/strata/floor3/east,
+/area/tertius_decimus/armory)
+"aL" = (
+/obj/structure/platform/kutjevo/rock{
+	dir = 8
+	},
+/obj/structure/machinery/camera/autoname/golden_arrow{
+	name = "camera";
+	network = list("Outpost_Tertius");
+	c_tag = "Command Bunker External (East)";
+	dir = 4
+	},
+/turf/open/auto_turf/strata_grass/layer0_mud_alt,
+/area/tertius_decimus/exterior)
+"aN" = (
+/obj/structure/barricade/razorwire{
+	dir = 8
+	},
+/turf/open/auto_turf/strata_grass/layer0_mud_alt,
+/area/tertius_decimus/exterior)
+"aR" = (
+/obj/item/lightstick/red/spoke/planted{
+	layer = 3.1;
+	pixel_y = 24;
+	pixel_x = 10
+	},
+/turf/open/auto_turf/strata_grass/layer0_mud_alt,
+/area/tertius_decimus/exterior)
+"aS" = (
+/obj/structure/platform/kutjevo{
+	dir = 4
+	},
+/obj/structure/platform/kutjevo,
+/obj/structure/barricade/sandbags/wired{
+	dir = 4;
+	icon_state = "sandbag_0"
+	},
+/obj/structure/barricade/sandbags/wired{
+	icon_state = "sandbag_0";
+	pixel_y = -7
+	},
+/turf/open/gm/dirt2,
+/area/tertius_decimus/exterior)
+"bd" = (
+/obj/structure/barricade/metal/plasteel/wired{
+	dir = 4
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/strata/floor3/east,
+/area/tertius_decimus/pillbox)
+"by" = (
+/obj/structure/platform_decoration/kutjevo/rock{
+	dir = 8
+	},
+/turf/open/auto_turf/strata_grass/layer0_mud_alt,
+/area/tertius_decimus/exterior)
+"bz" = (
+/obj/structure/platform/kutjevo/rock,
+/obj/structure/machinery/floodlight/landing{
+	name = "floodlight"
+	},
+/turf/open/auto_turf/strata_grass/layer0_mud_alt,
+/area/tertius_decimus/exterior)
+"bA" = (
+/obj/structure/platform_decoration/kutjevo/rock{
+	dir = 4
+	},
+/obj/structure/barricade/razorwire{
+	dir = 4
+	},
+/turf/open/auto_turf/strata_grass/layer0_mud_alt,
+/area/tertius_decimus/exterior)
+"bD" = (
+/obj/structure/platform_decoration/kutjevo/rock{
+	dir = 1
+	},
+/turf/open/auto_turf/strata_grass/layer0_mud_alt,
+/area/tertius_decimus/exterior)
+"bE" = (
+/obj/item/weapon/twohanded/folded_metal_chair,
+/turf/open/auto_turf/strata_grass/layer0_mud_alt,
+/area/tertius_decimus/exterior)
+"bK" = (
+/obj/effect/decal/cleanable/blood/oil,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/strata/floor3/east,
+/area/tertius_decimus/generators)
+"bW" = (
+/obj/structure/bed/chair,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/strata/floor3/east,
+/area/tertius_decimus/command)
+"bX" = (
+/obj/structure/surface/table/reinforced/black,
+/obj/item/ammo_box/magazine/lasgun{
+	pixel_x = -14;
+	pixel_y = 10
+	},
+/obj/item/ammo_box/magazine/lasgun{
+	pixel_x = -14
+	},
+/obj/item/ammo_box/magazine/lasgun{
+	pixel_x = 7;
+	pixel_y = 10
+	},
+/obj/item/ammo_box/magazine/lasgun{
+	pixel_x = 7
+	},
+/turf/open/floor/strata/floor3/east,
+/area/tertius_decimus/armory)
+"bY" = (
+/obj/structure/machinery/cm_vending/sorted/medical/wall_med/limited{
+	pixel_y = 27
+	},
+/turf/open/floor/strata/floor3/east,
+/area/tertius_decimus/command)
+"cn" = (
+/obj/structure/bed/bedroll,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/landmark/start/marine/medic/imperial,
+/obj/effect/landmark/late_join,
+/turf/open/floor/interior/wood,
+/area/interior)
+"co" = (
+/obj/structure/platform/kutjevo/rock{
+	dir = 4
+	},
+/obj/structure/machinery/storm_siren{
+	dir = 8
+	},
+/turf/open/auto_turf/strata_grass/layer0_mud,
+/area/tertius_decimus/exterior)
+"cq" = (
+/obj/structure/surface/table/reinforced/black,
+/obj/item/facepaint/black{
+	pixel_x = -4;
+	pixel_y = 4
+	},
+/turf/open/floor/strata/floor3/east,
+/area/tertius_decimus/armory)
+"cI" = (
+/obj/structure/barricade/sandbags/wired{
+	icon_state = "sandbag_0";
+	pixel_y = -7
+	},
+/obj/structure/platform/kutjevo{
+	dir = 4
+	},
+/obj/structure/barricade/sandbags/wired{
+	dir = 4;
+	icon_state = "sandbag_0"
+	},
+/obj/structure/platform/kutjevo,
+/obj/structure/surface/table/woodentable/poor,
+/obj/item/tool/candle/tall{
+	pixel_y = 18;
+	pixel_x = -10
+	},
+/turf/open/gm/dirt2,
+/area/tertius_decimus/exterior)
+"cL" = (
+/obj/structure/tent/big,
+/obj/structure/closet/secure_closet/marine_personal/imperial/sl{
+	pixel_x = 7
+	},
+/obj/structure/closet/secure_closet/marine_personal/imperial/vox{
+	pixel_x = -7
+	},
+/turf/open/floor/interior/wood,
+/area/interior)
+"cS" = (
+/obj/structure/barricade/sandbags/wired{
+	dir = 8;
+	icon_state = "sandbag_0"
+	},
+/obj/structure/platform/kutjevo{
+	dir = 8
+	},
+/turf/open/gm/dirt2,
+/area/tertius_decimus/exterior)
+"do" = (
+/obj/structure/platform/kutjevo/rock,
+/obj/structure/platform/kutjevo/rock{
+	dir = 8
+	},
+/turf/open/auto_turf/strata_grass/layer0,
+/area/tertius_decimus/exterior)
+"dx" = (
+/obj/structure/machinery/cm_vending/sorted/medical/wall_med/limited{
+	pixel_x = -30
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/camera/autoname/golden_arrow{
+	name = "camera";
+	network = list("Outpost_Tertius");
+	c_tag = "Armory";
+	dir = 4
+	},
+/turf/open/floor/plating/plating_catwalk/strata,
+/area/tertius_decimus/armory)
+"dE" = (
+/obj/structure/machinery/light/small/red{
+	dir = 1
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/strata/floor3/east,
+/area/tertius_decimus/armory)
+"dR" = (
+/obj/structure/barricade/sandbags/wired{
+	dir = 4;
+	icon_state = "sandbag_0"
+	},
+/obj/structure/barricade/sandbags/wired{
+	icon_state = "sandbag_0";
+	pixel_y = -7
+	},
+/obj/item/lightstick/red/spoke/planted{
+	layer = 3.1;
+	pixel_y = 13
+	},
+/turf/open/auto_turf/strata_grass/layer0_mud_alt,
+/area/tertius_decimus/exterior)
+"dW" = (
+/obj/structure/largecrate/random/secure{
+	pixel_x = 3;
+	layer = 2
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/strata/floor3/east,
+/area/tertius_decimus/generators)
+"eb" = (
+/obj/structure/platform_decoration/kutjevo{
+	dir = 4
+	},
+/turf/open/gm/dirt2,
+/area/tertius_decimus/exterior)
+"eh" = (
+/obj/structure/platform/kutjevo/rock,
+/obj/structure/platform/kutjevo/rock{
+	dir = 4
+	},
+/obj/structure/platform_decoration/kutjevo/rock,
+/turf/open/auto_turf/strata_grass/layer0_mud_alt,
+/area/tertius_decimus/exterior)
+"ei" = (
+/turf/open/floor/strata/floor3/east,
+/area/tertius_decimus/command)
+"em" = (
+/obj/structure/platform/kutjevo/rock{
+	dir = 1
+	},
+/obj/structure/platform/kutjevo/rock,
+/turf/open/auto_turf/strata_grass/layer0_mud_alt,
+/area/tertius_decimus/exterior)
+"en" = (
+/obj/structure/platform/kutjevo/rock{
+	dir = 4
+	},
+/obj/structure/machinery/camera/autoname/golden_arrow{
+	name = "camera";
+	network = list("Outpost_Tertius");
+	c_tag = "Pillbox (NW)";
+	dir = 8
+	},
+/turf/open/auto_turf/strata_grass/layer0_mud_alt,
+/area/tertius_decimus/exterior)
+"ey" = (
+/obj/structure/largecrate/random/secure,
+/obj/structure/largecrate/random/secure{
+	pixel_y = 15
+	},
+/turf/open/floor/strata/floor3/east,
+/area/tertius_decimus/generators)
+"eA" = (
+/turf/open/floor/strata/floor3/east,
+/area/tertius_decimus/generators)
+"eB" = (
+/obj/structure/platform/kutjevo/rock,
+/obj/structure/barricade/sandbags/wired{
+	dir = 4;
+	icon_state = "sandbag_0"
+	},
+/turf/open/auto_turf/strata_grass/layer0_mud_alt,
+/area/tertius_decimus/exterior)
+"eI" = (
+/obj/structure/machinery/floodlight{
+	light_on = 1
+	},
+/turf/open/auto_turf/strata_grass/layer0_mud_alt,
+/area/tertius_decimus/exterior)
+"eQ" = (
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/item/tool/candle/tall{
+	pixel_y = 20;
+	pixel_x = 11
+	},
+/turf/open/floor/strata/floor3/east,
+/area/tertius_decimus/command)
+"eU" = (
+/obj/structure/platform_decoration/kutjevo,
+/turf/open/auto_turf/strata_grass/layer0,
+/area/tertius_decimus/exterior)
+"eX" = (
+/obj/structure/platform/kutjevo/rock{
+	dir = 8
+	},
+/obj/structure/platform/kutjevo/rock,
+/turf/open/auto_turf/strata_grass/layer0_mud_alt,
+/area/tertius_decimus/exterior)
+"eY" = (
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/structure/machinery/light/small/red{
+	dir = 8
+	},
+/obj/item/tool/candle/tall{
+	pixel_y = 20;
+	pixel_x = 11
+	},
+/turf/open/floor/strata/floor3/east,
+/area/tertius_decimus/command)
+"fb" = (
+/obj/structure/machinery/power/apc/almayer/north,
+/turf/open/floor/plating/plating_catwalk/strata,
+/area/tertius_decimus/generators)
+"fc" = (
+/obj/structure/bed/bedroll,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/landmark/start/marine/leader/imperial,
+/obj/effect/landmark/late_join,
+/turf/open/floor/interior/wood,
+/area/interior)
+"fk" = (
+/obj/structure/barricade/metal/plasteel/wired,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/strata/floor3/east,
+/area/tertius_decimus/pillbox)
+"fI" = (
+/obj/structure/machinery/cm_vending/sorted/medical/wall_med/limited{
+	name = "Emergency NanoMed";
+	pixel_x = 30
+	},
+/obj/structure/machinery/light/small/red{
+	dir = 1
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/strata/floor3/east,
+/area/tertius_decimus/pillbox)
+"fM" = (
+/obj/structure/platform/kutjevo{
+	dir = 8
+	},
+/obj/structure/platform/kutjevo,
+/obj/structure/barricade/sandbags/wired{
+	dir = 8;
+	icon_state = "sandbag_0"
+	},
+/obj/structure/barricade/sandbags/wired{
+	icon_state = "sandbag_0";
+	pixel_y = -7
+	},
+/turf/open/gm/dirt2,
+/area/tertius_decimus/exterior)
+"fS" = (
+/obj/structure/platform/kutjevo/rock{
+	dir = 1
+	},
+/turf/open/auto_turf/strata_grass/layer0_mud,
+/area/tertius_decimus/exterior)
+"gc" = (
+/obj/structure/platform_decoration/kutjevo/rock{
+	dir = 4
+	},
+/turf/open/auto_turf/strata_grass/layer0_mud_alt,
+/area/tertius_decimus/exterior)
+"gg" = (
+/obj/structure/platform/stair_cut{
+	icon_state = "kutjevo_platform_sm_stair"
+	},
+/obj/structure/stairs/perspective{
+	dir = 8;
+	icon_state = "p_stair_ew_full_cap";
+	layer = 3.5
+	},
+/obj/structure/barricade/sandbags/wired{
+	dir = 1;
+	icon_state = "sandbag_0"
+	},
+/turf/open/gm/dirt2,
+/area/tertius_decimus/exterior)
+"gp" = (
+/obj/structure/platform_decoration/kutjevo/rock,
+/obj/structure/barricade/razorwire{
+	dir = 4
+	},
+/turf/open/auto_turf/strata_grass/layer0_mud_alt,
+/area/tertius_decimus/exterior)
+"gt" = (
+/obj/structure/platform/kutjevo/rock,
+/obj/structure/platform/kutjevo/rock{
+	dir = 1
+	},
+/turf/open/auto_turf/strata_grass/layer0,
+/area/tertius_decimus/exterior)
+"gA" = (
+/obj/structure/platform/kutjevo/rock,
+/obj/structure/platform/kutjevo/rock{
+	dir = 1
+	},
+/obj/structure/machinery/storm_siren,
+/turf/open/auto_turf/strata_grass/layer0_mud_alt,
+/area/tertius_decimus/exterior)
+"gB" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/barricade/metal/plasteel/wired,
+/obj/structure/machinery/m56d_hmg/auto{
+	desc = "An emplaced heavy stubber used for defence and often is seen use by Imperial Guard Heavy Weapons teams. <B> Click its sprite while behind it without holding anything to man it. Click-drag on NON-GRAB intent to disassemble the gun, GRAB INTENT to remove ammo magazines.</B>";
+	name = "Heavy Stubber"
+	},
+/turf/open/floor/strata/floor3/east,
+/area/tertius_decimus/pillbox)
+"gC" = (
+/obj/structure/bed/chair,
+/turf/open/gm/dirt2,
+/area/tertius_decimus/exterior)
+"gD" = (
+/obj/structure/platform/kutjevo/rock{
+	dir = 1
+	},
+/obj/structure/machinery/camera/autoname/golden_arrow{
+	name = "camera";
+	network = list("Outpost_Tertius");
+	c_tag = "Pillbox (SE)"
+	},
+/turf/open/auto_turf/strata_grass/layer0_mud_alt,
+/area/tertius_decimus/exterior)
+"gE" = (
+/obj/docking_port/stationary/marine_dropship/golden_arrow_hangar{
+	roundstart_template = null;
+	name = "Primary Landing Zone"
+	},
+/turf/open/gm/dirt2,
+/area/tertius_decimus/shuttles/drop_main)
+"gJ" = (
+/obj/structure/machinery/light/small/red,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/strata/floor3/east,
+/area/tertius_decimus/generators)
+"gL" = (
+/obj/structure/platform_decoration/kutjevo/rock{
+	dir = 1
+	},
+/turf/open/gm/dirt2,
+/area/tertius_decimus/exterior)
+"gO" = (
+/obj/structure/platform/kutjevo/rock,
+/obj/structure/platform/kutjevo/rock{
+	dir = 8
+	},
+/turf/open/auto_turf/strata_grass/layer0_mud_alt,
+/area/tertius_decimus/exterior)
+"gQ" = (
+/obj/structure/platform/kutjevo/rock{
+	dir = 8
+	},
+/obj/structure/machinery/storm_siren{
+	dir = 4
+	},
+/turf/open/auto_turf/strata_grass/layer0_mud,
+/area/tertius_decimus/exterior)
+"gU" = (
+/obj/structure/machinery/light/small/red{
+	dir = 1
+	},
+/obj/structure/surface/rack{
+	color = "#8B9490"
+	},
+/obj/item/tool/shovel/etool/upp/folded,
+/obj/item/tool/shovel/etool/upp/folded,
+/obj/item/tool/shovel/etool/upp/folded,
+/obj/item/tool/shovel/etool/upp/folded,
+/obj/item/tool/shovel/etool/upp/folded,
+/obj/item/tool/shovel/etool/upp/folded,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/strata/floor3/east,
+/area/tertius_decimus/generators)
+"ha" = (
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/structure/machinery/computer3,
+/turf/open/floor/strata/floor3/east,
+/area/tertius_decimus/command)
+"hc" = (
+/obj/structure/platform/kutjevo/rock{
+	dir = 1
+	},
+/obj/structure/platform_decoration/kutjevo/rock{
+	dir = 1
+	},
+/turf/open/auto_turf/strata_grass/layer0_mud_alt,
+/area/tertius_decimus/exterior)
+"hh" = (
+/obj/structure/barricade/metal/plasteel/wired{
+	dir = 4
+	},
+/obj/structure/barricade/metal/plasteel/wired,
+/turf/open/floor/strata/floor3/east,
+/area/tertius_decimus/command)
+"hj" = (
+/obj/structure/platform/kutjevo,
+/obj/structure/platform/kutjevo{
+	dir = 4
+	},
+/obj/structure/barricade/sandbags/wired{
+	dir = 4;
+	icon_state = "sandbag_0"
+	},
+/obj/structure/barricade/sandbags/wired{
+	icon_state = "sandbag_0";
+	pixel_y = -7
+	},
+/turf/open/gm/dirt2,
+/area/tertius_decimus/exterior)
+"hN" = (
+/obj/structure/platform_decoration/kutjevo/rock{
+	dir = 8
+	},
+/obj/structure/platform/kutjevo,
+/turf/open/auto_turf/strata_grass/layer0_mud,
+/area/tertius_decimus/exterior)
+"hP" = (
+/obj/structure/stairs/perspective{
+	dir = 8;
+	icon_state = "p_stair_full"
+	},
+/obj/structure/platform/kutjevo,
+/obj/structure/barricade/sandbags/wired{
+	icon_state = "sandbag_0";
+	pixel_y = -7
+	},
+/turf/open/auto_turf/strata_grass/layer0_mud_alt,
+/area/tertius_decimus/exterior)
+"hT" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/strata/floor3/east,
+/area/tertius_decimus/pillbox)
+"hX" = (
+/obj/structure/surface/table/reinforced/black,
+/obj/item/storage/firstaid/softpack/burn{
+	pixel_x = 9;
+	pixel_y = 12
+	},
+/obj/item/device/healthanalyzer/soul{
+	pixel_x = -7;
+	pixel_y = 4
+	},
+/obj/item/storage/firstaid/softpack/brute{
+	pixel_x = 6;
+	pixel_y = -3
+	},
+/turf/open/floor/strata/floor3/east,
+/area/tertius_decimus/armory)
+"ip" = (
+/obj/structure/bed/bedroll,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/landmark/start/marine/imperial,
+/obj/effect/landmark/late_join,
+/turf/open/floor/interior/wood,
+/area/interior)
+"iw" = (
+/obj/structure/closet/secure_closet/job_locker/imperial_specialist{
+	pixel_x = -8
+	},
+/obj/structure/closet/secure_closet/job_locker/imperial_specialist{
+	pixel_x = 8
+	},
+/turf/open/floor/strata/floor3/east,
+/area/tertius_decimus/armory)
+"iD" = (
+/obj/structure/platform/kutjevo,
+/obj/structure/platform/kutjevo{
+	dir = 8
+	},
+/obj/structure/barricade/sandbags/wired{
+	dir = 8;
+	icon_state = "sandbag_0"
+	},
+/obj/structure/barricade/sandbags/wired{
+	icon_state = "sandbag_0";
+	pixel_y = -7
+	},
+/turf/open/gm/dirt2,
+/area/tertius_decimus/exterior)
+"iH" = (
+/obj/structure/barricade/metal/plasteel/wired,
+/turf/open/floor/strata/floor3/east,
+/area/tertius_decimus/pillbox)
+"iI" = (
+/obj/structure/platform/kutjevo,
+/obj/structure/barricade/razorwire{
+	dir = 4
+	},
+/turf/open/auto_turf/strata_grass/layer0_mud,
+/area/tertius_decimus/exterior)
+"iU" = (
+/obj/structure/machinery/door/airlock/upp_utility{
+	dir = 1
+	},
+/turf/open/floor/strata/floor3/east,
+/area/tertius_decimus/pillbox)
+"jb" = (
+/obj/structure/barricade/sandbags/wired{
+	dir = 1;
+	icon_state = "sandbag_0"
+	},
+/obj/structure/barricade/sandbags/wired{
+	dir = 4;
+	icon_state = "sandbag_0"
+	},
+/obj/item/lightstick/red/spoke/planted,
+/turf/open/auto_turf/strata_grass/layer0_mud,
+/area/tertius_decimus/exterior)
+"ji" = (
+/obj/structure/barricade/sandbags/wired{
+	dir = 1;
+	icon_state = "sandbag_0"
+	},
+/obj/structure/barricade/sandbags/wired{
+	dir = 4;
+	icon_state = "sandbag_0"
+	},
+/turf/open/auto_turf/strata_grass/layer0_mud_alt,
+/area/tertius_decimus/exterior)
+"jm" = (
+/obj/structure/platform/kutjevo,
+/turf/open/auto_turf/strata_grass/layer0,
+/area/tertius_decimus/exterior)
+"jZ" = (
+/obj/structure/platform_decoration/kutjevo/rock{
+	dir = 8
+	},
+/obj/structure/platform_decoration/kutjevo/rock,
+/turf/open/auto_turf/strata_grass/layer0_mud_alt,
+/area/tertius_decimus/exterior)
+"ka" = (
+/obj/structure/bed/bedroll,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/landmark/start/marine/specialist/imperial,
+/obj/effect/landmark/late_join,
+/turf/open/floor/interior/wood,
+/area/interior)
+"ky" = (
+/obj/effect/decal/cleanable/blood/oil,
+/turf/open/floor/strata/floor3/east,
+/area/tertius_decimus/generators)
+"kF" = (
+/obj/structure/platform/kutjevo/rock{
+	dir = 1
+	},
+/obj/structure/platform/kutjevo,
+/turf/open/auto_turf/strata_grass/layer0_mud_alt,
+/area/tertius_decimus/exterior)
+"kM" = (
+/obj/structure/platform_decoration/kutjevo/rock{
+	dir = 8
+	},
+/obj/structure/platform_decoration/kutjevo/rock{
+	dir = 1
+	},
+/turf/open/auto_turf/strata_grass/layer0_mud_alt,
+/area/tertius_decimus/exterior)
+"lv" = (
+/obj/structure/platform_decoration/kutjevo/rock,
+/turf/open/auto_turf/strata_grass/layer0,
+/area/tertius_decimus/exterior)
+"lz" = (
+/obj/structure/machinery/light/small/red{
+	dir = 8
+	},
+/obj/structure/surface/rack{
+	color = "#8B9490"
+	},
+/obj/item/ammo_box/magazine/m2c,
+/turf/open/floor/strata/floor3/east,
+/area/tertius_decimus/pillbox)
+"lH" = (
+/obj/structure/platform/kutjevo{
+	dir = 8
+	},
+/obj/structure/barricade/sandbags/wired{
+	dir = 1;
+	icon_state = "sandbag_0"
+	},
+/obj/structure/barricade/sandbags/wired{
+	dir = 8;
+	icon_state = "sandbag_0"
+	},
+/turf/open/gm/dirt2,
+/area/tertius_decimus/exterior)
+"lU" = (
+/obj/structure/platform_decoration/kutjevo/rock{
+	dir = 1
+	},
+/obj/item/lightstick/red/spoke/planted,
+/turf/open/auto_turf/strata_grass/layer0,
+/area/tertius_decimus/exterior)
+"mm" = (
+/obj/structure/machinery/cm_vending/sorted/medical/wall_med/limited{
+	pixel_y = 28
+	},
+/obj/structure/machinery/light/small/red{
+	dir = 8
+	},
+/turf/open/floor/strata/floor3/east,
+/area/tertius_decimus/pillbox)
+"mu" = (
+/obj/structure/barricade/metal/plasteel/wired{
+	dir = 1
+	},
+/turf/open/floor/strata/floor3/east,
+/area/tertius_decimus/command)
+"mz" = (
+/obj/structure/platform/kutjevo/rock{
+	dir = 4
+	},
+/obj/structure/platform/kutjevo/rock,
+/turf/open/auto_turf/strata_grass/layer0_mud,
+/area/tertius_decimus/exterior)
+"mB" = (
+/obj/structure/platform/kutjevo{
+	dir = 8
+	},
+/obj/structure/barricade/sandbags/wired{
+	dir = 8;
+	icon_state = "sandbag_0"
+	},
+/turf/open/gm/dirt2,
+/area/tertius_decimus/exterior)
+"mC" = (
+/obj/structure/platform_decoration/kutjevo{
+	dir = 8
+	},
+/obj/structure/platform_decoration/kutjevo,
+/turf/open/gm/dirt2,
+/area/tertius_decimus/exterior)
+"mD" = (
+/obj/structure/platform_decoration/kutjevo/rock{
+	dir = 1
+	},
+/obj/item/lightstick/red/spoke/planted,
+/turf/open/auto_turf/strata_grass/layer0_mud,
+/area/tertius_decimus/exterior)
+"mG" = (
+/obj/structure/tent/med,
+/obj/structure/surface/table/woodentable/poor,
+/obj/item/roller{
+	pixel_x = 9;
+	pixel_y = 14
+	},
+/obj/item/reagent_container/blood/saline{
+	pixel_x = 6;
+	pixel_y = 3
+	},
+/obj/item/storage/box/syringes{
+	pixel_x = -5;
+	pixel_y = 14
+	},
+/obj/item/device/flashlight/pen,
+/obj/item/clothing/accessory/stethoscope,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/interior/wood,
+/area/interior)
+"mS" = (
+/obj/structure/bed/bedroll,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/landmark/start/marine/tl/imperial,
+/obj/effect/landmark/late_join,
+/turf/open/floor/interior/wood,
+/area/interior)
+"mX" = (
+/obj/structure/platform_decoration/kutjevo/rock{
+	dir = 8
+	},
+/obj/structure/platform_decoration/kutjevo/rock{
+	dir = 4
+	},
+/obj/structure/stairs/perspective,
+/obj/structure/platform/kutjevo{
+	dir = 4
+	},
+/obj/structure/platform/kutjevo{
+	dir = 8
+	},
+/turf/open/gm/dirt2,
+/area/tertius_decimus/exterior)
+"mZ" = (
+/obj/structure/blocker/fog,
+/turf/open/auto_turf/strata_grass/layer0_mud_alt,
+/area/tertius_decimus/exterior)
+"nc" = (
+/obj/structure/platform/kutjevo/rock{
+	dir = 1
+	},
+/obj/structure/machinery/storm_siren,
+/turf/open/auto_turf/strata_grass/layer0,
+/area/tertius_decimus/exterior)
+"nn" = (
+/obj/structure/bed/roller,
+/obj/item/prop/colony/usedbandage{
+	dir = 9;
+	pixel_x = 8;
+	pixel_y = 3
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/interior/wood,
+/area/interior)
+"nq" = (
+/obj/structure/platform_decoration/kutjevo/rock{
+	dir = 8
+	},
+/obj/structure/barricade/razorwire{
+	dir = 8
+	},
+/turf/open/auto_turf/strata_grass/layer0_mud,
+/area/tertius_decimus/exterior)
+"nA" = (
+/obj/structure/platform/kutjevo,
+/obj/structure/platform/kutjevo{
+	dir = 8
+	},
+/obj/structure/barricade/sandbags/wired{
+	icon_state = "sandbag_0";
+	pixel_y = -7
+	},
+/turf/open/gm/dirt2,
+/area/tertius_decimus/exterior)
+"nC" = (
+/obj/structure/platform_decoration/kutjevo/rock{
+	dir = 8
+	},
+/obj/structure/barricade/razorwire{
+	dir = 8
+	},
+/turf/open/auto_turf/strata_grass/layer0_mud_alt,
+/area/tertius_decimus/exterior)
+"nD" = (
+/obj/structure/machinery/door/poddoor/shutters/almayer{
+	dir = 4
+	},
+/turf/open/gm/dirt2,
+/area/tertius_decimus/generators)
+"nH" = (
+/obj/structure/platform/kutjevo/rock{
+	dir = 8
+	},
+/obj/structure/platform/stair_cut{
+	icon_state = "kutjevo_platform_sm_stair"
+	},
+/obj/structure/barricade/sandbags/wired{
+	dir = 1;
+	icon_state = "sandbag_0";
+	layer = 3.1
+	},
+/obj/structure/machinery/light/small/red{
+	dir = 8
+	},
+/turf/open/auto_turf/strata_grass/layer0_mud_alt,
+/area/tertius_decimus/exterior)
+"nJ" = (
+/obj/structure/machinery/light/small/red,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/strata/floor3/east,
+/area/tertius_decimus/command)
+"nK" = (
+/obj/structure/barricade/metal/plasteel/wired{
+	dir = 4
+	},
+/turf/open/floor/strata/floor3/east,
+/area/tertius_decimus/pillbox)
+"nU" = (
+/obj/structure/machinery/door/poddoor/shutters/almayer{
+	dir = 4;
+	id = "prep";
+	name = "\improper Equipment Room Shutter"
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	pixel_x = 2
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "W";
+	pixel_x = -1
+	},
+/turf/open/floor/corsat/marked,
+/area/tertius_decimus/armory)
+"nW" = (
+/obj/structure/machinery/door_control/brbutton{
+	pixel_y = 27;
+	id = "vehicle_bay"
+	},
+/turf/open/floor/strata/floor3/east,
+/area/tertius_decimus/generators)
+"nY" = (
+/obj/structure/platform/kutjevo,
+/obj/structure/barricade/sandbags/wired{
+	icon_state = "sandbag_0";
+	pixel_y = -7
+	},
+/obj/structure/platform/kutjevo{
+	dir = 4
+	},
+/obj/structure/barricade/sandbags/wired{
+	dir = 4;
+	icon_state = "sandbag_0"
+	},
+/turf/open/gm/dirt2,
+/area/tertius_decimus/exterior)
+"od" = (
+/obj/structure/bed/chair{
+	dir = 1
+	},
+/turf/open/floor/strata/floor3/east,
+/area/tertius_decimus/command)
+"or" = (
+/obj/structure/surface/table/reinforced/black,
+/obj/structure/machinery/light/small/red{
+	dir = 4
+	},
+/obj/item/weapon/chainsword,
+/obj/item/tool/candle/tall{
+	pixel_y = 18;
+	pixel_x = -10
+	},
+/obj/item/reagent_container/food/drinks/plasticcup{
+	pixel_y = 19;
+	pixel_x = 6
+	},
+/turf/open/floor/strata/floor3/east,
+/area/tertius_decimus/armory)
+"ow" = (
+/obj/structure/prop/brazier/frame/full/campfire/smolder,
+/turf/open/auto_turf/strata_grass/layer0_mud_alt,
+/area/tertius_decimus/exterior)
+"oF" = (
+/obj/structure/platform/kutjevo/rock{
+	dir = 1
+	},
+/obj/structure/machinery/camera/autoname/golden_arrow{
+	name = "camera";
+	network = list("Outpost_Tertius");
+	c_tag = "Command Bunker External (West)"
+	},
+/turf/open/auto_turf/strata_grass/layer0_mud_alt,
+/area/tertius_decimus/exterior)
+"oN" = (
+/obj/structure/machinery/light/small/red{
+	dir = 8
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/strata/floor3/east,
+/area/tertius_decimus/command)
+"oP" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/power/apc/almayer/north,
+/turf/open/floor/strata/floor3/east,
+/area/tertius_decimus/pillbox)
+"oS" = (
+/obj/structure/stairs/perspective{
+	icon_state = "p_stair_ew_full_cap"
+	},
+/obj/structure/platform/stair_cut/alt{
+	icon_state = "kutjevo_platform_sm_stair_alt"
+	},
+/obj/structure/barricade/sandbags/wired{
+	dir = 1;
+	icon_state = "sandbag_0"
+	},
+/turf/open/auto_turf/strata_grass/layer0_mud_alt,
+/area/tertius_decimus/exterior)
+"pk" = (
+/obj/structure/barricade/razorwire{
+	dir = 1
+	},
+/turf/open/auto_turf/strata_grass/layer0_mud,
+/area/tertius_decimus/exterior)
+"pn" = (
+/obj/structure/barricade/metal/plasteel/wired{
+	dir = 8
+	},
+/obj/structure/machinery/m56d_hmg/auto{
+	desc = "An emplaced heavy stubber used for defence and often is seen use by Imperial Guard Heavy Weapons teams. <B> Click its sprite while behind it without holding anything to man it. Click-drag on NON-GRAB intent to disassemble the gun, GRAB INTENT to remove ammo magazines.</B>";
+	name = "Heavy Stubber";
+	dir = 8
+	},
+/turf/open/floor/strata/floor3/east,
+/area/tertius_decimus/pillbox)
+"pq" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/interior/wood,
+/area/interior)
+"pG" = (
+/turf/closed/wall/strata_ice/jungle,
+/area/tertius_decimus/exterior)
+"pM" = (
+/obj/structure/platform/kutjevo/rock,
+/obj/structure/platform/kutjevo/rock{
+	dir = 1
+	},
+/obj/structure/platform/kutjevo/rock{
+	dir = 8
+	},
+/turf/open/auto_turf/strata_grass/layer0_mud_alt,
+/area/tertius_decimus/exterior)
+"pN" = (
+/obj/structure/platform/kutjevo/rock{
+	dir = 8
+	},
+/obj/structure/barricade/sandbags/wired{
+	icon_state = "sandbag_0";
+	pixel_y = -7
+	},
+/obj/structure/machinery/light/small/red{
+	dir = 8
+	},
+/turf/open/auto_turf/strata_grass/layer0_mud_alt,
+/area/tertius_decimus/exterior)
+"pT" = (
+/obj/structure/barricade/sandbags/wired{
+	dir = 1;
+	icon_state = "sandbag_0";
+	layer = 3.1
+	},
+/obj/structure/platform/kutjevo{
+	dir = 8
+	},
+/obj/structure/barricade/sandbags/wired{
+	dir = 8;
+	icon_state = "sandbag_0"
+	},
+/turf/open/gm/dirt2,
+/area/tertius_decimus/exterior)
+"pW" = (
+/obj/structure/barricade/razorwire,
+/turf/open/auto_turf/strata_grass/layer0_mud_alt,
+/area/tertius_decimus/exterior)
+"qa" = (
+/obj/item/weapon/twohanded/folded_metal_chair,
+/turf/open/gm/dirt2,
+/area/tertius_decimus/exterior)
+"qb" = (
+/obj/structure/barricade/sandbags/wired{
+	dir = 1;
+	icon_state = "sandbag_0"
+	},
+/turf/open/gm/dirt2,
+/area/tertius_decimus/exterior)
+"qd" = (
+/obj/structure/platform/kutjevo,
+/obj/structure/platform/kutjevo{
+	dir = 4
+	},
+/obj/structure/barricade/sandbags/wired{
+	icon_state = "sandbag_0";
+	pixel_y = -7
+	},
+/obj/structure/barricade/sandbags/wired{
+	dir = 4;
+	icon_state = "sandbag_0"
+	},
+/turf/open/gm/dirt2,
+/area/tertius_decimus/exterior)
+"qk" = (
+/obj/structure/barricade/sandbags/wired{
+	dir = 1;
+	icon_state = "sandbag_0"
+	},
+/obj/structure/barricade/sandbags/wired{
+	dir = 8;
+	icon_state = "sandbag_0"
+	},
+/turf/open/gm/dirt2,
+/area/tertius_decimus/exterior)
+"qo" = (
+/obj/structure/barricade/metal/plasteel/wired{
+	dir = 1
+	},
+/turf/open/floor/strata/floor3/east,
+/area/tertius_decimus/pillbox)
+"qv" = (
+/obj/structure/bed/bedroll,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/landmark/late_join,
+/turf/open/floor/interior/wood,
+/area/interior)
+"qG" = (
+/obj/structure/closet/secure_closet/marine_personal/imperial/medic{
+	pixel_x = -7
+	},
+/obj/structure/closet/secure_closet/marine_personal/imperial/rifleman{
+	pixel_x = 7
+	},
+/turf/open/floor/interior/wood,
+/area/interior)
+"qO" = (
+/turf/open/gm/dirt2,
+/area/tertius_decimus/shuttles/drop_main)
+"qP" = (
+/obj/structure/platform_decoration/kutjevo,
+/turf/open/gm/dirt2,
+/area/tertius_decimus/exterior)
+"qZ" = (
+/obj/structure/platform/kutjevo/rock,
+/obj/structure/machinery/camera/autoname/golden_arrow{
+	name = "camera";
+	network = list("Outpost_Tertius");
+	c_tag = "Pillbox (NE)";
+	dir = 1
+	},
+/turf/open/auto_turf/strata_grass/layer0,
+/area/tertius_decimus/exterior)
+"rb" = (
+/turf/open/floor/plating/plating_catwalk/strata,
+/area/tertius_decimus/pillbox)
+"rh" = (
+/obj/structure/platform_decoration/kutjevo/rock{
+	dir = 1
+	},
+/obj/structure/barricade/razorwire{
+	dir = 4
+	},
+/turf/open/auto_turf/strata_grass/layer0_mud_alt,
+/area/tertius_decimus/exterior)
+"rn" = (
+/obj/structure/platform_decoration/kutjevo/rock,
+/obj/structure/barricade/razorwire{
+	dir = 8
+	},
+/turf/open/auto_turf/strata_grass/layer0_mud,
+/area/tertius_decimus/exterior)
+"rs" = (
+/obj/structure/platform/kutjevo/rock,
+/turf/open/auto_turf/strata_grass/layer0,
+/area/tertius_decimus/exterior)
+"rA" = (
+/turf/open/floor/plating/plating_catwalk/strata,
+/area/tertius_decimus/generators)
+"rB" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/plating/plating_catwalk/strata,
+/area/tertius_decimus/pillbox)
+"rK" = (
+/obj/structure/surface/table/reinforced/black,
+/obj/item/ammo_box/magazine/lasgun{
+	pixel_y = 9
+	},
+/obj/item/ammo_box/magazine/lasgun,
+/turf/open/floor/strata/floor3/east,
+/area/tertius_decimus/armory)
+"rN" = (
+/obj/structure/platform_decoration/kutjevo/rock,
+/obj/structure/platform/kutjevo/rock{
+	dir = 1
+	},
+/turf/open/auto_turf/strata_grass/layer0_mud_alt,
+/area/tertius_decimus/exterior)
+"sc" = (
+/obj/structure/platform_decoration/kutjevo/rock{
+	dir = 8
+	},
+/obj/structure/barricade/razorwire{
+	dir = 4
+	},
+/turf/open/auto_turf/strata_grass/layer0_mud_alt,
+/area/tertius_decimus/exterior)
+"sk" = (
+/obj/item/prop/colony/usedbandage{
+	dir = 4;
+	pixel_y = 7
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/item/device/flashlight/lantern{
+	on = 1;
+	pixel_y = -5;
+	pixel_x = -4
+	},
+/turf/open/floor/interior/wood,
+/area/interior)
+"sn" = (
+/obj/structure/platform_decoration/kutjevo/rock{
+	dir = 4
+	},
+/turf/open/gm/dirt2,
+/area/tertius_decimus/exterior)
+"so" = (
+/obj/structure/platform/kutjevo/rock,
+/obj/structure/platform/kutjevo/rock{
+	dir = 1
+	},
+/obj/structure/platform/kutjevo/rock{
+	dir = 4
+	},
+/turf/open/auto_turf/strata_grass/layer0_mud_alt,
+/area/tertius_decimus/exterior)
+"sr" = (
+/obj/structure/machinery/cm_vending/sorted/tech/electronics_storage,
+/turf/open/floor/strata/floor3/east,
+/area/tertius_decimus/generators)
+"sx" = (
+/obj/structure/largecrate/random/secure,
+/obj/structure/largecrate/random/secure,
+/obj/structure/largecrate/random/secure{
+	pixel_y = 15
+	},
+/turf/open/floor/strata/floor3/east,
+/area/tertius_decimus/generators)
+"sC" = (
+/obj/structure/platform/kutjevo/rock{
+	dir = 8
+	},
+/turf/open/auto_turf/strata_grass/layer0,
+/area/tertius_decimus/exterior)
+"sF" = (
+/obj/item/storage/bag/trash{
+	pixel_x = -8;
+	pixel_y = 16
+	},
+/obj/item/storage/bag/trash{
+	pixel_y = 12
+	},
+/turf/open/auto_turf/strata_grass/layer0_mud_alt,
+/area/tertius_decimus/exterior)
+"sG" = (
+/obj/structure/platform/kutjevo/rock,
+/obj/structure/machinery/storm_siren{
+	dir = 1
+	},
+/turf/open/auto_turf/strata_grass/layer0_mud_alt,
+/area/tertius_decimus/exterior)
+"sH" = (
+/obj/structure/platform/kutjevo/rock{
+	dir = 4
+	},
+/obj/structure/machinery/camera/autoname/golden_arrow{
+	name = "camera";
+	network = list("Outpost_Tertius");
+	c_tag = "Pillbox (SW)";
+	dir = 8
+	},
+/turf/open/auto_turf/strata_grass/layer0_mud_alt,
+/area/tertius_decimus/exterior)
+"sL" = (
+/obj/structure/platform/kutjevo/rock{
+	dir = 4
+	},
+/obj/structure/barricade/sandbags/wired{
+	icon_state = "sandbag_0";
+	pixel_y = -7
+	},
+/turf/open/auto_turf/strata_grass/layer0_mud_alt,
+/area/tertius_decimus/exterior)
+"sT" = (
+/obj/structure/barricade/sandbags/wired{
+	dir = 1;
+	icon_state = "sandbag_0"
+	},
+/obj/structure/platform/kutjevo{
+	dir = 4
+	},
+/obj/structure/barricade/sandbags/wired{
+	dir = 4;
+	icon_state = "sandbag_0"
+	},
+/turf/open/gm/dirt2,
+/area/tertius_decimus/exterior)
+"ta" = (
+/obj/structure/platform/kutjevo/rock{
+	dir = 4
+	},
+/obj/structure/barricade/sandbags/wired{
+	dir = 1;
+	icon_state = "sandbag_0";
+	layer = 3.1
+	},
+/turf/open/auto_turf/strata_grass/layer0_mud_alt,
+/area/tertius_decimus/exterior)
+"tb" = (
+/obj/structure/platform_decoration/kutjevo/rock{
+	dir = 4
+	},
+/turf/open/auto_turf/strata_grass/layer0,
+/area/tertius_decimus/exterior)
+"tf" = (
+/obj/structure/barricade/sandbags/wired{
+	icon_state = "sandbag_0";
+	pixel_y = -7
+	},
+/turf/open/auto_turf/strata_grass/layer0_mud_alt,
+/area/tertius_decimus/exterior)
+"tg" = (
+/obj/structure/platform/kutjevo/rock{
+	dir = 1
+	},
+/turf/open/auto_turf/strata_grass/layer0_mud_alt,
+/area/tertius_decimus/exterior)
+"ti" = (
+/obj/structure/closet/secure_closet/marine_personal/imperial/rifleman{
+	pixel_x = 7
+	},
+/obj/structure/closet/secure_closet/marine_personal/imperial/rifleman{
+	pixel_x = -7
+	},
+/turf/open/floor/interior/wood,
+/area/interior)
+"tt" = (
+/obj/item/lightstick/red/spoke/planted{
+	layer = 3.1;
+	pixel_y = 13
+	},
+/turf/open/auto_turf/strata_grass/layer0_mud,
+/area/tertius_decimus/exterior)
+"tx" = (
+/obj/effect/landmark/observer_start,
+/turf/open/auto_turf/strata_grass/layer0_mud_alt,
+/area/tertius_decimus/exterior)
+"tz" = (
+/turf/closed/wall/upp_wall/grey,
+/area/tertius_decimus/armory)
+"tC" = (
+/obj/structure/barricade/metal/plasteel/wired{
+	dir = 8
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/strata/floor3/east,
+/area/tertius_decimus/command)
+"ub" = (
+/obj/structure/platform/stair_cut/alt{
+	icon_state = "kutjevo_platform_sm_stair_alt"
+	},
+/obj/structure/stairs/perspective{
+	icon_state = "p_stair_ew_full_cap"
+	},
+/obj/structure/barricade/sandbags/wired{
+	dir = 1;
+	icon_state = "sandbag_0"
+	},
+/turf/open/gm/dirt2,
+/area/tertius_decimus/exterior)
+"uk" = (
+/obj/structure/barricade/razorwire{
+	dir = 8
+	},
+/turf/open/auto_turf/strata_grass/layer0_mud,
+/area/tertius_decimus/exterior)
+"ul" = (
+/obj/structure/barricade/metal/plasteel/wired{
+	dir = 1
+	},
+/obj/structure/barricade/metal/plasteel/wired{
+	dir = 4
+	},
+/turf/open/floor/strata/floor3/east,
+/area/tertius_decimus/command)
+"uB" = (
+/obj/structure/machinery/light/small/red{
+	dir = 1
+	},
+/obj/structure/surface/rack{
+	color = "#8B9490"
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/item/ammo_box/magazine/m2c,
+/turf/open/floor/strata/floor3/east,
+/area/tertius_decimus/pillbox)
+"uE" = (
+/obj/structure/platform_decoration/kutjevo{
+	dir = 8
+	},
+/turf/open/gm/dirt2,
+/area/tertius_decimus/exterior)
+"uI" = (
+/obj/structure/stairs/perspective{
+	dir = 8;
+	icon_state = "p_stair_full"
+	},
+/turf/open/auto_turf/strata_grass/layer0_mud_alt,
+/area/tertius_decimus/exterior)
+"uJ" = (
+/obj/structure/surface/table/woodentable/poor,
+/obj/item/reagent_container/food/drinks/flask/canteen/empty{
+	pixel_x = -3;
+	pixel_y = 12
+	},
+/obj/item/reagent_container/food/drinks/flask/canteen/empty{
+	pixel_x = 5;
+	pixel_y = 8
+	},
+/obj/item/reagent_container/food/drinks/flask/canteen/empty{
+	pixel_x = 7;
+	pixel_y = 5
+	},
+/obj/item/reagent_container/food/drinks/flask/canteen/empty{
+	pixel_x = -7;
+	pixel_y = 10
+	},
+/obj/item/reagent_container/food/drinks/flask/canteen/empty{
+	pixel_x = 8;
+	pixel_y = 1
+	},
+/obj/item/reagent_container/food/drinks/flask/canteen/empty{
+	pixel_x = -9;
+	pixel_y = 1
+	},
+/obj/item/reagent_container/food/drinks/flask/canteen/empty{
+	pixel_y = 7
+	},
+/obj/item/reagent_container/food/drinks/flask/canteen/empty,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/interior/wood,
+/area/interior)
+"uP" = (
+/obj/structure/platform/kutjevo/rock{
+	dir = 4
+	},
+/obj/structure/platform/kutjevo/rock,
+/turf/open/auto_turf/strata_grass/layer0_mud_alt,
+/area/tertius_decimus/exterior)
+"uQ" = (
+/obj/structure/reagent_dispensers/fueltank,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/blood/oil,
+/turf/open/floor/strata/floor3/east,
+/area/tertius_decimus/generators)
+"vg" = (
+/obj/structure/platform/kutjevo/rock{
+	dir = 8
+	},
+/obj/structure/platform/kutjevo/rock,
+/turf/open/auto_turf/strata_grass/layer0_mud,
+/area/tertius_decimus/exterior)
+"vj" = (
+/obj/structure/barricade/sandbags/wired{
+	dir = 1;
+	icon_state = "sandbag_0"
+	},
+/obj/structure/barricade/sandbags/wired{
+	dir = 8;
+	icon_state = "sandbag_0"
+	},
+/obj/item/lightstick/red/spoke/planted,
+/turf/open/auto_turf/strata_grass/layer0_mud_alt,
+/area/tertius_decimus/exterior)
+"vt" = (
+/obj/structure/platform/kutjevo{
+	dir = 4
+	},
+/obj/structure/barricade/sandbags/wired{
+	dir = 4;
+	icon_state = "sandbag_0"
+	},
+/obj/structure/barricade/sandbags/wired{
+	dir = 1;
+	icon_state = "sandbag_0";
+	layer = 3.1
+	},
+/turf/open/gm/dirt2,
+/area/tertius_decimus/exterior)
+"vu" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/prop/invuln/lattice_prop{
+	icon_state = "lattice3";
+	pixel_y = 6;
+	layer = 5.2
+	},
+/obj/structure/prop/invuln/overhead_pipe{
+	icon = 'icons/obj/structures/props/almayer_props.dmi';
+	icon_state = "wallpipe_3";
+	pixel_y = 22
+	},
+/turf/open/floor/strata/floor3/east,
+/area/tertius_decimus/command)
+"vz" = (
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/structure/machinery/light/small/red{
+	dir = 4
+	},
+/turf/open/floor/strata/floor3/east,
+/area/tertius_decimus/command)
+"vJ" = (
+/obj/structure/bed/roller,
+/obj/item/prop/colony/usedbandage{
+	dir = 8;
+	pixel_x = -4;
+	pixel_y = -6
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/interior/wood,
+/area/interior)
+"vQ" = (
+/obj/structure/reagent_dispensers/watertank,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/interior/wood,
+/area/interior)
+"vW" = (
+/obj/structure/platform/kutjevo/rock{
+	dir = 8
+	},
+/obj/structure/machinery/floodlight/landing{
+	name = "floodlight"
+	},
+/turf/open/auto_turf/strata_grass/layer0_mud_alt,
+/area/tertius_decimus/exterior)
+"wv" = (
+/obj/structure/machinery/power/apc/almayer/west,
+/turf/open/floor/strata/floor3/east,
+/area/tertius_decimus/pillbox)
+"wH" = (
+/obj/item/lightstick/red/spoke/planted{
+	layer = 3.1;
+	pixel_y = 24;
+	pixel_x = 10
+	},
+/turf/open/gm/dirt2,
+/area/tertius_decimus/exterior)
+"wM" = (
+/obj/structure/platform/kutjevo,
+/obj/structure/machinery/floodlight/landing{
+	name = "floodlight"
+	},
+/turf/open/auto_turf/strata_grass/layer0_mud_alt,
+/area/tertius_decimus/exterior)
+"wW" = (
+/obj/structure/machinery/door/poddoor/shutters/almayer{
+	dir = 4;
+	id = "vehicle_bay"
+	},
+/turf/open/gm/dirt2,
+/area/tertius_decimus/generators)
+"xb" = (
+/obj/structure/barricade/metal/plasteel/wired{
+	dir = 1
+	},
+/obj/structure/machinery/m56d_hmg/auto{
+	desc = "An emplaced heavy stubber used for defence and often is seen use by Imperial Guard Heavy Weapons teams. <B> Click its sprite while behind it without holding anything to man it. Click-drag on NON-GRAB intent to disassemble the gun, GRAB INTENT to remove ammo magazines.</B>";
+	name = "Heavy Stubber";
+	dir = 1
+	},
+/turf/open/floor/strata/floor3/east,
+/area/tertius_decimus/pillbox)
+"xg" = (
+/obj/structure/platform/kutjevo/rock{
+	dir = 4
+	},
+/turf/open/auto_turf/strata_grass/layer0_mud,
+/area/tertius_decimus/exterior)
+"xh" = (
+/obj/structure/tent/reqs,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/interior/wood,
+/area/interior)
+"xi" = (
+/obj/item/lightstick/red/spoke/planted{
+	layer = 3.1;
+	pixel_y = 13
+	},
+/turf/open/auto_turf/strata_grass/layer0,
+/area/tertius_decimus/exterior)
+"xv" = (
+/obj/structure/closet/secure_closet/marine_personal/imperial/tl{
+	pixel_x = 7
+	},
+/obj/structure/closet/secure_closet/marine_personal/imperial/tl{
+	pixel_x = -7
+	},
+/turf/open/floor/interior/wood,
+/area/interior)
+"xy" = (
+/obj/structure/machinery/power/smes/buildable,
+/turf/open/floor/plating/plating_catwalk/strata,
+/area/tertius_decimus/generators)
+"xC" = (
+/obj/structure/machinery/power/apc/almayer/east,
+/turf/open/floor/plating/plating_catwalk/strata,
+/area/tertius_decimus/command)
+"xF" = (
+/obj/structure/platform_decoration/kutjevo/rock{
+	dir = 4
+	},
+/obj/structure/platform/kutjevo,
+/turf/open/auto_turf/strata_grass/layer0_mud_alt,
+/area/tertius_decimus/exterior)
+"xH" = (
+/obj/structure/platform/kutjevo/rock{
+	dir = 8
+	},
+/obj/structure/platform/stair_cut{
+	icon_state = "kutjevo_platform_sm_stair"
+	},
+/obj/structure/barricade/sandbags/wired{
+	dir = 1;
+	icon_state = "sandbag_0";
+	layer = 3.1
+	},
+/turf/open/auto_turf/strata_grass/layer0_mud_alt,
+/area/tertius_decimus/exterior)
+"xI" = (
+/obj/structure/platform/kutjevo{
+	dir = 4
+	},
+/obj/structure/barricade/sandbags/wired{
+	dir = 4;
+	icon_state = "sandbag_0"
+	},
+/obj/structure/barricade/sandbags/wired{
+	dir = 1;
+	icon_state = "sandbag_0"
+	},
+/turf/open/gm/dirt2,
+/area/tertius_decimus/exterior)
+"xO" = (
+/obj/structure/barricade/sandbags/wired{
+	dir = 8;
+	icon_state = "sandbag_0"
+	},
+/turf/open/auto_turf/strata_grass/layer0_mud_alt,
+/area/tertius_decimus/exterior)
+"xX" = (
+/obj/structure/closet/toolcloset{
+	pixel_x = -7;
+	pixel_y = 11
+	},
+/obj/structure/closet/secure_closet/engineering_welding{
+	pixel_x = 7;
+	pixel_y = 11
+	},
+/turf/open/floor/strata/floor3/east,
+/area/tertius_decimus/generators)
+"xY" = (
+/obj/structure/barricade/metal/plasteel/wired{
+	dir = 4
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/m56d_hmg/auto{
+	dir = 4;
+	desc = "An emplaced heavy stubber used for defence and often is seen use by Imperial Guard Heavy Weapons teams. <B> Click its sprite while behind it without holding anything to man it. Click-drag on NON-GRAB intent to disassemble the gun, GRAB INTENT to remove ammo magazines.</B>";
+	name = "Heavy Stubber"
+	},
+/turf/open/floor/strata/floor3/east,
+/area/tertius_decimus/pillbox)
+"ye" = (
+/obj/structure/platform_decoration/kutjevo/rock,
+/obj/structure/platform_decoration/kutjevo/rock{
+	dir = 1
+	},
+/obj/structure/stairs/perspective{
+	dir = 1
+	},
+/obj/structure/platform/kutjevo{
+	dir = 8
+	},
+/obj/structure/platform/kutjevo{
+	dir = 4
+	},
+/turf/open/gm/dirt2,
+/area/tertius_decimus/exterior)
+"yx" = (
+/obj/structure/machinery/power/apc/almayer/north,
+/turf/open/floor/strata/floor3/east,
+/area/tertius_decimus/pillbox)
+"yz" = (
+/obj/structure/platform/kutjevo,
+/obj/structure/stairs/perspective{
+	dir = 4;
+	icon_state = "p_stair_full"
+	},
+/obj/structure/barricade/sandbags/wired{
+	icon_state = "sandbag_0";
+	pixel_y = -7
+	},
+/turf/open/gm/dirt2,
+/area/tertius_decimus/exterior)
+"yB" = (
+/obj/structure/machinery/power/apc/almayer/south,
+/turf/open/floor/strata/floor3/east,
+/area/tertius_decimus/pillbox)
+"yF" = (
+/obj/structure/surface/rack{
+	color = "#8B9490"
+	},
+/obj/effect/spawner/random/tool,
+/turf/open/floor/strata/floor3/east,
+/area/tertius_decimus/generators)
+"yL" = (
+/obj/structure/platform/kutjevo/rock{
+	dir = 1
+	},
+/obj/structure/platform/kutjevo,
+/obj/structure/barricade/sandbags/wired{
+	dir = 8;
+	icon_state = "sandbag_0"
+	},
+/turf/open/auto_turf/strata_grass/layer0_mud_alt,
+/area/tertius_decimus/exterior)
+"yP" = (
+/obj/structure/platform_decoration/kutjevo/rock{
+	dir = 1
+	},
+/turf/open/auto_turf/strata_grass/layer0,
+/area/tertius_decimus/exterior)
+"yQ" = (
+/obj/structure/machinery/cm_vending/sorted/medical/wall_med/limited{
+	pixel_x = -30
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/plating/plating_catwalk/strata,
+/area/tertius_decimus/command)
+"yS" = (
+/obj/structure/closet/crate/freezer,
+/obj/item/reagent_container/blood/OMinus,
+/obj/item/reagent_container/blood/OMinus,
+/turf/open/floor/strata/floor3/east,
+/area/tertius_decimus/armory)
+"yV" = (
+/obj/structure/platform/kutjevo/rock,
+/obj/structure/platform/kutjevo/rock{
+	dir = 4
+	},
+/turf/open/auto_turf/strata_grass/layer0_mud_alt,
+/area/tertius_decimus/exterior)
+"yW" = (
+/obj/structure/machinery/cm_vending/sorted/tech/tool_storage,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/strata/floor3/east,
+/area/tertius_decimus/generators)
+"zd" = (
+/obj/structure/surface/table/reinforced/black,
+/obj/item/storage/backpack/marine/satchel/rto/vox{
+	pixel_x = -9;
+	pixel_y = 4
+	},
+/obj/item/device/binoculars{
+	pixel_x = 6;
+	pixel_y = 3
+	},
+/turf/open/floor/strata/floor3/east,
+/area/tertius_decimus/armory)
+"zs" = (
+/obj/structure/platform_decoration/kutjevo/rock{
+	dir = 1
+	},
+/turf/open/auto_turf/strata_grass/layer0_mud,
+/area/tertius_decimus/exterior)
+"zz" = (
+/obj/structure/barricade/sandbags/wired{
+	dir = 1;
+	icon_state = "sandbag_0"
+	},
+/obj/structure/barricade/sandbags/wired{
+	dir = 8;
+	icon_state = "sandbag_0"
+	},
+/obj/item/lightstick/red/spoke/planted,
+/turf/open/auto_turf/strata_grass/layer0_mud,
+/area/tertius_decimus/exterior)
+"zT" = (
+/obj/structure/platform/kutjevo/rock{
+	dir = 1
+	},
+/obj/structure/platform/kutjevo/rock{
+	dir = 8
+	},
+/turf/open/auto_turf/strata_grass/layer0_mud_alt,
+/area/tertius_decimus/exterior)
+"Ac" = (
+/obj/structure/platform_decoration/kutjevo/rock{
+	dir = 4
+	},
+/obj/structure/platform_decoration/kutjevo/rock{
+	dir = 1
+	},
+/obj/structure/stairs/perspective{
+	dir = 8;
+	icon_state = "p_stair_ew_full_cap";
+	layer = 3.5
+	},
+/obj/structure/platform/stair_cut{
+	icon_state = "kutjevo_platform_sm_stair"
+	},
+/turf/open/gm/dirt2,
+/area/tertius_decimus/exterior)
+"Ai" = (
+/obj/item/lightstick/red/spoke/planted,
+/turf/open/auto_turf/strata_grass/layer0_mud_alt,
+/area/tertius_decimus/exterior)
+"Ao" = (
+/obj/structure/platform/kutjevo,
+/obj/structure/barricade/sandbags/wired{
+	icon_state = "sandbag_0";
+	pixel_y = -7
+	},
+/turf/open/auto_turf/strata_grass/layer0_mud_alt,
+/area/tertius_decimus/exterior)
+"Ap" = (
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/structure/machinery/light/small/red{
+	dir = 8
+	},
+/obj/item/storage/box/matches{
+	pixel_x = -5;
+	pixel_y = 5
+	},
+/obj/item/storage/box/matches{
+	pixel_x = -5;
+	pixel_y = 9
+	},
+/turf/open/floor/strata/floor3/east,
+/area/tertius_decimus/command)
+"Au" = (
+/obj/structure/barricade/sandbags/wired{
+	dir = 8;
+	icon_state = "sandbag_0"
+	},
+/obj/structure/barricade/sandbags/wired{
+	icon_state = "sandbag_0";
+	pixel_y = -7
+	},
+/turf/open/auto_turf/strata_grass/layer0_mud_alt,
+/area/tertius_decimus/exterior)
+"Av" = (
+/obj/structure/machinery/prop/almayer/CICmap/table/imperial,
+/turf/open/floor/strata/floor3/east,
+/area/tertius_decimus/command)
+"AD" = (
+/obj/structure/machinery/floodlight/landing,
+/turf/open/auto_turf/strata_grass/layer0_mud_alt,
+/area/tertius_decimus/shuttles/drop_main)
+"AT" = (
+/obj/structure/machinery/light/small/red{
+	dir = 4
+	},
+/turf/open/floor/plating/plating_catwalk/strata,
+/area/tertius_decimus/command)
+"Bc" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/prop/invuln/lattice_prop{
+	icon_state = "lattice3";
+	pixel_y = 6;
+	layer = 5.2
+	},
+/obj/structure/prop/invuln/overhead_pipe{
+	icon = 'icons/obj/structures/props/almayer_props.dmi';
+	icon_state = "wallpipe_3";
+	pixel_y = 22
+	},
+/turf/open/floor/plating/plating_catwalk/strata,
+/area/tertius_decimus/command)
+"Bj" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/prop/invuln/lattice_prop{
+	icon_state = "lattice3";
+	pixel_y = 6;
+	layer = 5.2
+	},
+/obj/structure/prop/invuln/lattice_prop{
+	icon_state = "lattice1";
+	pixel_y = -10;
+	layer = 5.2
+	},
+/obj/structure/prop/invuln/overhead_pipe{
+	icon = 'icons/obj/structures/props/almayer_props.dmi';
+	icon_state = "wallpipe_3";
+	pixel_y = 22
+	},
+/obj/structure/prop/invuln/overhead_pipe{
+	icon = 'icons/obj/structures/props/almayer_props.dmi';
+	icon_state = "wallpipe_2";
+	pixel_y = -10
+	},
+/turf/open/floor/strata/floor3/east,
+/area/tertius_decimus/command)
+"Bn" = (
+/obj/structure/platform/kutjevo/rock{
+	dir = 8
+	},
+/obj/structure/machinery/storm_siren{
+	dir = 4
+	},
+/obj/structure/machinery/floodlight/landing{
+	name = "floodlight"
+	},
+/turf/open/auto_turf/strata_grass/layer0_mud_alt,
+/area/tertius_decimus/exterior)
+"Bu" = (
+/obj/structure/platform/kutjevo/rock{
+	dir = 4
+	},
+/obj/structure/machinery/storm_siren{
+	dir = 8
+	},
+/turf/open/auto_turf/strata_grass/layer0_mud_alt,
+/area/tertius_decimus/exterior)
+"Bx" = (
+/obj/item/lightstick/red/spoke/planted,
+/turf/open/auto_turf/strata_grass/layer0_mud_alt,
+/area/tertius_decimus/shuttles/drop_main)
+"Bz" = (
+/obj/structure/machinery/door/airlock/upp_utility,
+/turf/open/floor/strata/floor3/east,
+/area/tertius_decimus/generators)
+"BG" = (
+/obj/structure/barricade/sandbags/wired{
+	dir = 1;
+	icon_state = "sandbag_0"
+	},
+/obj/structure/barricade/sandbags/wired{
+	dir = 8;
+	icon_state = "sandbag_0"
+	},
+/turf/open/auto_turf/strata_grass/layer0_mud_alt,
+/area/tertius_decimus/exterior)
+"BK" = (
+/obj/structure/barricade/sandbags/wired{
+	dir = 4;
+	icon_state = "sandbag_0"
+	},
+/obj/structure/platform/kutjevo{
+	dir = 4
+	},
+/turf/open/gm/dirt2,
+/area/tertius_decimus/exterior)
+"Cd" = (
+/obj/structure/platform/kutjevo/rock{
+	dir = 4
+	},
+/turf/open/gm/dirt2,
+/area/tertius_decimus/exterior)
+"Ce" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/strata/floor3/east,
+/area/tertius_decimus/generators)
+"Cg" = (
+/obj/structure/platform/kutjevo,
+/obj/structure/stairs/perspective{
+	dir = 8;
+	icon_state = "p_stair_full"
+	},
+/obj/structure/barricade/sandbags/wired{
+	icon_state = "sandbag_0";
+	pixel_y = -7
+	},
+/turf/open/gm/dirt2,
+/area/tertius_decimus/exterior)
+"Cr" = (
+/obj/structure/platform/kutjevo/rock{
+	dir = 4
+	},
+/obj/structure/platform/stair_cut/alt{
+	icon_state = "kutjevo_platform_sm_stair_alt"
+	},
+/obj/structure/barricade/sandbags/wired{
+	dir = 1;
+	icon_state = "sandbag_0";
+	layer = 3.1
+	},
+/turf/open/auto_turf/strata_grass/layer0_mud_alt,
+/area/tertius_decimus/exterior)
+"Cs" = (
+/obj/structure/machinery/light/small/red,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/strata/floor3/east,
+/area/tertius_decimus/armory)
+"CX" = (
+/obj/structure/machinery/light/small/red{
+	dir = 1
+	},
+/turf/open/floor/strata/floor3/east,
+/area/tertius_decimus/armory)
+"Dl" = (
+/obj/structure/machinery/floodlight{
+	light_on = 1
+	},
+/turf/open/auto_turf/strata_grass/layer0_mud,
+/area/tertius_decimus/exterior)
+"Dp" = (
+/obj/structure/surface/table/woodentable/poor,
+/obj/item/stack/sheet/wood/medium_stack{
+	pixel_x = -1;
+	pixel_y = 15
+	},
+/obj/item/storage/box/matches{
+	pixel_x = 3;
+	pixel_y = 4
+	},
+/obj/item/storage/box/matches{
+	pixel_x = -5;
+	pixel_y = 5
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/item/storage/fancy/candle_box,
+/obj/item/storage/fancy/candle_box,
+/turf/open/floor/interior/wood,
+/area/interior)
+"Dt" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/cm_vending/gear/medic_chemical/imp{
+	density = 0;
+	pixel_x = 28
+	},
+/turf/open/floor/strata/floor3/east,
+/area/tertius_decimus/armory)
+"Dz" = (
+/obj/structure/platform/kutjevo/rock,
+/obj/structure/platform/kutjevo/rock{
+	dir = 1
+	},
+/turf/open/auto_turf/strata_grass/layer0_mud_alt,
+/area/tertius_decimus/exterior)
+"DF" = (
+/obj/structure/machinery/light/small/red,
+/obj/structure/surface/rack{
+	color = "#8B9490"
+	},
+/obj/item/ammo_box/magazine/m2c,
+/turf/open/floor/strata/floor3/east,
+/area/tertius_decimus/pillbox)
+"DI" = (
+/obj/structure/machinery/door/airlock/multi_tile/upp_utility{
+	dir = 1
+	},
+/turf/open/floor/strata/floor3/east,
+/area/tertius_decimus/command)
+"DR" = (
+/obj/structure/machinery/light/small/red,
+/obj/structure/largecrate/supply/supplies/sandbags,
+/obj/structure/largecrate/supply/supplies/sandbags{
+	pixel_x = 3;
+	pixel_y = 16
+	},
+/turf/open/floor/strata/floor3/east,
+/area/tertius_decimus/generators)
+"DS" = (
+/obj/structure/machinery/power/reactor{
+	desc = "A S-52 Fusion Reactor."
+	},
+/turf/open/floor/shiva/radiator_tile2,
+/area/tertius_decimus/generators)
+"DY" = (
+/obj/structure/barricade/sandbags/wired{
+	dir = 1;
+	icon_state = "sandbag_0";
+	layer = 3.1
+	},
+/obj/structure/barricade/sandbags/wired{
+	dir = 4;
+	icon_state = "sandbag_0"
+	},
+/obj/structure/platform/kutjevo{
+	dir = 4
+	},
+/obj/structure/surface/table/woodentable/poor,
+/obj/item/tool/candle/tall{
+	pixel_y = -4;
+	pixel_x = -10
+	},
+/turf/open/gm/dirt2,
+/area/tertius_decimus/exterior)
+"Ee" = (
+/obj/structure/platform/kutjevo{
+	dir = 4
+	},
+/obj/structure/platform/kutjevo,
+/turf/open/auto_turf/strata_grass/layer0,
+/area/tertius_decimus/exterior)
+"Ef" = (
+/obj/structure/platform/kutjevo/rock{
+	dir = 1
+	},
+/obj/structure/machinery/storm_siren,
+/turf/open/auto_turf/strata_grass/layer0_mud_alt,
+/area/tertius_decimus/exterior)
+"El" = (
+/obj/structure/prop/static_tank/fuel{
+	desc = "It contains a large amount of highly flamable liquid promethium fuel";
+	name = "Promethium tank"
+	},
+/turf/open/floor/strata/floor3/east,
+/area/tertius_decimus/generators)
+"Ey" = (
+/obj/effect/decal/cleanable/blood/oil/streak,
+/turf/open/floor/strata/floor3/east,
+/area/tertius_decimus/generators)
+"EA" = (
+/obj/structure/bed/bedroll,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/landmark/start/marine/vox,
+/obj/effect/landmark/late_join,
+/turf/open/floor/interior/wood,
+/area/interior)
+"ED" = (
+/obj/structure/machinery/light/small/red{
+	dir = 1
+	},
+/turf/open/floor/strata/floor3/east,
+/area/tertius_decimus/generators)
+"EG" = (
+/obj/structure/barricade/metal/plasteel/wired{
+	dir = 8
+	},
+/obj/structure/barricade/metal/plasteel/wired{
+	dir = 1
+	},
+/turf/open/floor/strata/floor3/east,
+/area/tertius_decimus/command)
+"EK" = (
+/obj/structure/barricade/razorwire{
+	dir = 4
+	},
+/turf/open/auto_turf/strata_grass/layer0,
+/area/tertius_decimus/exterior)
+"EL" = (
+/obj/structure/platform/kutjevo,
+/obj/structure/barricade/sandbags/wired{
+	icon_state = "sandbag_0";
+	pixel_y = -7
+	},
+/obj/structure/platform/kutjevo{
+	dir = 8
+	},
+/obj/structure/barricade/sandbags/wired{
+	dir = 8;
+	icon_state = "sandbag_0"
+	},
+/turf/open/gm/dirt2,
+/area/tertius_decimus/exterior)
+"ER" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/plating/plating_catwalk/strata,
+/area/tertius_decimus/pillbox)
+"EU" = (
+/obj/structure/platform/kutjevo/rock{
+	dir = 4
+	},
+/turf/open/auto_turf/strata_grass/layer0,
+/area/tertius_decimus/exterior)
+"EY" = (
+/obj/structure/barricade/metal/plasteel/wired{
+	dir = 8
+	},
+/turf/open/floor/strata/floor3/east,
+/area/tertius_decimus/pillbox)
+"Fd" = (
+/obj/structure/barricade/sandbags/wired{
+	dir = 4;
+	icon_state = "sandbag_0"
+	},
+/turf/open/auto_turf/strata_grass/layer0_mud_alt,
+/area/tertius_decimus/exterior)
+"Fe" = (
+/obj/structure/bed/chair,
+/turf/open/auto_turf/strata_grass/layer0_mud,
+/area/tertius_decimus/exterior)
+"Fi" = (
+/obj/structure/platform/kutjevo/rock{
+	dir = 1
+	},
+/obj/structure/platform/kutjevo,
+/turf/open/auto_turf/strata_grass/layer0_mud,
+/area/tertius_decimus/exterior)
+"Fj" = (
+/turf/closed/wall/upp_wall/grey,
+/area/tertius_decimus/pillbox)
+"Fp" = (
+/obj/structure/platform/kutjevo,
+/obj/structure/platform/kutjevo{
+	dir = 8
+	},
+/obj/structure/barricade/sandbags/wired{
+	icon_state = "sandbag_0";
+	pixel_y = -7
+	},
+/obj/structure/barricade/sandbags/wired{
+	dir = 8;
+	icon_state = "sandbag_0"
+	},
+/turf/open/gm/dirt2,
+/area/tertius_decimus/exterior)
+"FA" = (
+/obj/structure/platform/kutjevo,
+/obj/structure/barricade/razorwire{
+	dir = 1
+	},
+/turf/open/auto_turf/strata_grass/layer0_mud_alt,
+/area/tertius_decimus/exterior)
+"FC" = (
+/obj/structure/bed/chair{
+	dir = 1
+	},
+/turf/open/gm/dirt2,
+/area/tertius_decimus/exterior)
+"FD" = (
+/obj/structure/platform/kutjevo,
+/turf/open/auto_turf/strata_grass/layer0_mud_alt,
+/area/tertius_decimus/exterior)
+"FE" = (
+/obj/structure/machinery/cm_vending/sorted/medical/wall_med/limited{
+	pixel_y = -28
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/strata/floor3/east,
+/area/tertius_decimus/command)
+"FI" = (
+/obj/structure/machinery/light/small/red{
+	dir = 4
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/plating/plating_catwalk/strata,
+/area/tertius_decimus/command)
+"FV" = (
+/obj/structure/bed/chair{
+	dir = 4
+	},
+/turf/open/gm/dirt2,
+/area/tertius_decimus/exterior)
+"Gb" = (
+/obj/structure/platform/kutjevo/rock{
+	dir = 4
+	},
+/obj/structure/machinery/camera/autoname/golden_arrow{
+	name = "camera";
+	network = list("Outpost_Tertius");
+	c_tag = "Command Bunker External (West)";
+	dir = 8
+	},
+/turf/open/auto_turf/strata_grass/layer0_mud_alt,
+/area/tertius_decimus/exterior)
+"Gf" = (
+/obj/structure/platform_decoration/kutjevo/rock{
+	dir = 4
+	},
+/obj/item/lightstick/red/spoke/planted,
+/turf/open/auto_turf/strata_grass/layer0_mud_alt,
+/area/tertius_decimus/exterior)
+"Gn" = (
+/obj/structure/prop/brazier/frame/full/campfire/smolder,
+/turf/open/auto_turf/strata_grass/layer0_mud,
+/area/tertius_decimus/exterior)
+"Go" = (
+/obj/structure/platform/kutjevo/rock,
+/obj/structure/machinery/camera/autoname/golden_arrow{
+	dir = 1;
+	name = "camera";
+	network = list("Outpost_Tertius");
+	c_tag = "Command Bunker External (North)"
+	},
+/turf/open/auto_turf/strata_grass/layer0_mud_alt,
+/area/tertius_decimus/exterior)
+"GP" = (
+/obj/structure/platform_decoration/kutjevo/rock,
+/turf/open/auto_turf/strata_grass/layer0_mud,
+/area/tertius_decimus/exterior)
+"GS" = (
+/obj/structure/platform_decoration/kutjevo/rock{
+	dir = 8
+	},
+/obj/structure/platform_decoration/kutjevo/rock,
+/obj/structure/platform/stair_cut/alt{
+	icon_state = "kutjevo_platform_sm_stair_alt"
+	},
+/obj/structure/stairs/perspective{
+	icon_state = "p_stair_ew_full_cap"
+	},
+/obj/structure/platform/kutjevo,
+/turf/open/gm/dirt2,
+/area/tertius_decimus/exterior)
+"GT" = (
+/obj/structure/platform/kutjevo,
+/obj/structure/barricade/razorwire{
+	dir = 4
+	},
+/turf/open/auto_turf/strata_grass/layer0_mud_alt,
+/area/tertius_decimus/exterior)
+"GW" = (
+/obj/structure/platform/kutjevo/rock{
+	dir = 8
+	},
+/obj/structure/machinery/camera/autoname/golden_arrow{
+	dir = 4;
+	name = "ship-grade camera";
+	network = list("Chapaev");
+	c_tag = "Briefing Room, Floor"
+	},
+/turf/open/auto_turf/strata_grass/layer0_mud_alt,
+/area/tertius_decimus/exterior)
+"Hc" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/strata/floor3/east,
+/area/tertius_decimus/pillbox)
+"Hd" = (
+/obj/structure/machinery/power/reactor{
+	name = "\improper U.R.A.L.O.I.D. thermonuclear generator";
+	desc = "ProgMash produced generator made for heavy use by frontier colonies."
+	},
+/turf/open/floor/plating/plating_catwalk/strata,
+/area/tertius_decimus/generators)
+"Hg" = (
+/obj/structure/platform_decoration/kutjevo/rock,
+/obj/structure/platform_decoration/kutjevo/rock{
+	dir = 8
+	},
+/turf/open/auto_turf/strata_grass/layer0_mud_alt,
+/area/tertius_decimus/exterior)
+"Ho" = (
+/obj/structure/machinery/door/poddoor/shutters/almayer{
+	dir = 4;
+	id = "prep";
+	name = "\improper Equipment Room Shutter"
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "W";
+	pixel_x = -1
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	pixel_x = 2
+	},
+/turf/open/floor/corsat/marked,
+/area/tertius_decimus/armory)
+"Hp" = (
+/obj/structure/machinery/light/small/red{
+	dir = 4
+	},
+/obj/structure/surface/rack{
+	color = "#8B9490"
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/item/ammo_box/magazine/m2c,
+/turf/open/floor/strata/floor3/east,
+/area/tertius_decimus/pillbox)
+"HD" = (
+/obj/structure/prop/invuln/lattice_prop{
+	icon_state = "lattice2";
+	pixel_y = 5;
+	layer = 5.2
+	},
+/turf/closed/wall/upp_wall/grey,
+/area/tertius_decimus/command)
+"HF" = (
+/obj/structure/platform/kutjevo/rock{
+	dir = 1
+	},
+/obj/structure/platform/kutjevo/rock{
+	dir = 4
+	},
+/turf/open/auto_turf/strata_grass/layer0_mud,
+/area/tertius_decimus/exterior)
+"HM" = (
+/obj/structure/platform_decoration/kutjevo/rock{
+	dir = 8
+	},
+/turf/open/auto_turf/strata_grass/layer0,
+/area/tertius_decimus/exterior)
+"If" = (
+/obj/structure/bed/chair{
+	dir = 8
+	},
+/turf/open/gm/dirt2,
+/area/tertius_decimus/exterior)
+"Ij" = (
+/obj/structure/machinery/light/small/red{
+	dir = 8
+	},
+/turf/open/floor/strata/floor3/east,
+/area/tertius_decimus/command)
+"Iq" = (
+/obj/structure/platform/kutjevo/rock{
+	dir = 4
+	},
+/obj/structure/platform/kutjevo/rock{
+	dir = 1
+	},
+/turf/open/auto_turf/strata_grass/layer0_mud_alt,
+/area/tertius_decimus/exterior)
+"Iv" = (
+/turf/open/auto_turf/strata_grass/layer0_mud_alt,
+/area/tertius_decimus/shuttles/drop_main)
+"Iz" = (
+/obj/structure/barricade/sandbags/wired{
+	dir = 8;
+	icon_state = "sandbag_0"
+	},
+/obj/structure/barricade/sandbags/wired{
+	icon_state = "sandbag_0";
+	pixel_y = -7
+	},
+/obj/item/lightstick/red/spoke/planted{
+	layer = 3.1;
+	pixel_y = 13
+	},
+/turf/open/auto_turf/strata_grass/layer0_mud_alt,
+/area/tertius_decimus/exterior)
+"IJ" = (
+/obj/structure/platform/kutjevo/rock,
+/obj/structure/barricade/sandbags/wired{
+	dir = 8;
+	icon_state = "sandbag_0"
+	},
+/turf/open/auto_turf/strata_grass/layer0_mud_alt,
+/area/tertius_decimus/exterior)
+"IK" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/strata/floor3/east,
+/area/tertius_decimus/armory)
+"IN" = (
+/obj/structure/platform_decoration/kutjevo/rock{
+	dir = 1
+	},
+/obj/structure/platform_decoration/kutjevo/rock{
+	dir = 4
+	},
+/obj/structure/stairs/perspective{
+	dir = 8;
+	icon_state = "p_stair_ew_full_cap";
+	layer = 3.5
+	},
+/obj/structure/platform/stair_cut{
+	icon_state = "kutjevo_platform_sm_stair"
+	},
+/turf/open/gm/dirt2,
+/area/tertius_decimus/exterior)
+"IP" = (
+/obj/structure/platform/kutjevo/rock{
+	dir = 4
+	},
+/obj/structure/machinery/storm_siren{
+	dir = 8
+	},
+/obj/structure/machinery/floodlight/landing{
+	name = "floodlight"
+	},
+/turf/open/auto_turf/strata_grass/layer0_mud_alt,
+/area/tertius_decimus/exterior)
+"IW" = (
+/obj/structure/machinery/floodlight/landing{
+	name = "floodlight"
+	},
+/turf/open/auto_turf/strata_grass/layer0_mud,
+/area/tertius_decimus/exterior)
+"Jh" = (
+/turf/open/auto_turf/strata_grass/layer0_mud_alt,
+/area/tertius_decimus/exterior)
+"Jz" = (
+/obj/structure/platform/kutjevo/rock,
+/obj/structure/platform_decoration/kutjevo/rock{
+	dir = 4
+	},
+/turf/open/auto_turf/strata_grass/layer0_mud,
+/area/tertius_decimus/exterior)
+"JO" = (
+/obj/structure/machinery/light/small/red,
+/obj/structure/surface/rack{
+	color = "#8B9490"
+	},
+/obj/effect/spawner/random/toolbox,
+/turf/open/floor/strata/floor3/east,
+/area/tertius_decimus/generators)
+"JU" = (
+/obj/structure/machinery/cm_vending/sorted/medical/wall_med/limited{
+	name = "Emergency NanoMed";
+	pixel_x = 30
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/item/reagent_container/glass/bucket/mopbucket{
+	pixel_x = 10;
+	pixel_y = 13
+	},
+/obj/item/tool/mop{
+	pixel_x = 12;
+	pixel_y = 22
+	},
+/turf/open/floor/strata/floor3/east,
+/area/tertius_decimus/generators)
+"Kd" = (
+/obj/structure/barricade/metal/plasteel/wired,
+/obj/structure/machinery/m56d_hmg/auto{
+	desc = "An emplaced heavy stubber used for defence and often is seen use by Imperial Guard Heavy Weapons teams. <B> Click its sprite while behind it without holding anything to man it. Click-drag on NON-GRAB intent to disassemble the gun, GRAB INTENT to remove ammo magazines.</B>";
+	name = "Heavy Stubber"
+	},
+/turf/open/floor/strata/floor3/east,
+/area/tertius_decimus/pillbox)
+"Kh" = (
+/obj/structure/platform_decoration/kutjevo/rock{
+	dir = 4
+	},
+/turf/open/auto_turf/strata_grass/layer0_mud,
+/area/tertius_decimus/exterior)
+"Kt" = (
+/turf/open/auto_turf/strata_grass/layer0_mud,
+/area/tertius_decimus/exterior)
+"Ku" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/plating/plating_catwalk/strata,
+/area/tertius_decimus/generators)
+"Kv" = (
+/turf/open/floor/plating/plating_catwalk/strata,
+/area/tertius_decimus/command)
+"KB" = (
+/obj/structure/platform/kutjevo/rock{
+	dir = 8
+	},
+/obj/structure/barricade/sandbags/wired{
+	dir = 1;
+	icon_state = "sandbag_0";
+	layer = 3.1
+	},
+/obj/structure/platform/stair_cut{
+	icon_state = "kutjevo_platform_sm_stair"
+	},
+/turf/open/auto_turf/strata_grass/layer0_mud_alt,
+/area/tertius_decimus/exterior)
+"KG" = (
+/obj/structure/platform/kutjevo/rock{
+	dir = 8
+	},
+/obj/structure/barricade/sandbags/wired{
+	icon_state = "sandbag_0";
+	pixel_y = -7
+	},
+/turf/open/auto_turf/strata_grass/layer0_mud_alt,
+/area/tertius_decimus/exterior)
+"KJ" = (
+/obj/structure/platform_decoration/kutjevo,
+/obj/structure/bed/chair{
+	dir = 1
+	},
+/turf/open/auto_turf/strata_grass/layer0_mud_alt,
+/area/tertius_decimus/exterior)
+"KL" = (
+/obj/structure/machinery/cm_vending/sorted/medical/wall_med/limited{
+	pixel_x = -30
+	},
+/obj/structure/machinery/light/small/red,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/strata/floor3/east,
+/area/tertius_decimus/pillbox)
+"KM" = (
+/obj/structure/largecrate/supply/supplies/mre,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/interior/wood,
+/area/interior)
+"KS" = (
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/item/tool/candle/tall{
+	pixel_y = 1;
+	pixel_x = 11
+	},
+/turf/open/floor/strata/floor3/east,
+/area/tertius_decimus/command)
+"KT" = (
+/obj/structure/barricade/razorwire{
+	dir = 8
+	},
+/turf/open/auto_turf/strata_grass/layer0,
+/area/tertius_decimus/exterior)
+"KX" = (
+/obj/structure/barricade/sandbags/wired{
+	dir = 1;
+	icon_state = "sandbag_0"
+	},
+/obj/structure/barricade/sandbags/wired{
+	dir = 4;
+	icon_state = "sandbag_0"
+	},
+/obj/item/lightstick/red/spoke/planted,
+/turf/open/auto_turf/strata_grass/layer0_mud_alt,
+/area/tertius_decimus/exterior)
+"Lf" = (
+/obj/structure/platform_decoration/kutjevo/rock{
+	dir = 1
+	},
+/obj/structure/platform/kutjevo/rock{
+	dir = 1
+	},
+/turf/open/auto_turf/strata_grass/layer0_mud_alt,
+/area/tertius_decimus/exterior)
+"Lg" = (
+/obj/structure/barricade/metal/plasteel/wired{
+	dir = 1
+	},
+/obj/structure/barricade/metal/plasteel/wired{
+	dir = 4
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/strata/floor3/east,
+/area/tertius_decimus/command)
+"Li" = (
+/obj/structure/platform/stair_cut/alt{
+	icon_state = "kutjevo_platform_sm_stair_alt"
+	},
+/obj/structure/stairs/perspective{
+	icon_state = "p_stair_ew_full_cap"
+	},
+/turf/open/gm/dirt2,
+/area/tertius_decimus/exterior)
+"Lx" = (
+/obj/structure/barricade/sandbags/wired{
+	dir = 1;
+	icon_state = "sandbag_0"
+	},
+/obj/structure/barricade/sandbags/wired{
+	dir = 4;
+	icon_state = "sandbag_0"
+	},
+/turf/open/auto_turf/strata_grass/layer0_mud,
+/area/tertius_decimus/exterior)
+"LE" = (
+/obj/structure/platform/kutjevo{
+	dir = 4
+	},
+/obj/structure/barricade/sandbags/wired{
+	dir = 1;
+	icon_state = "sandbag_0"
+	},
+/obj/structure/barricade/sandbags/wired{
+	dir = 4;
+	icon_state = "sandbag_0"
+	},
+/turf/open/gm/dirt2,
+/area/tertius_decimus/exterior)
+"LH" = (
+/obj/structure/machinery/cm_vending/sorted/cargo_guns/squad/imperial,
+/turf/open/floor/strata/floor3/east,
+/area/tertius_decimus/armory)
+"LL" = (
+/turf/closed/wall/upp_wall/grey,
+/area/tertius_decimus/generators)
+"LY" = (
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/structure/machinery/light/small/red{
+	dir = 4
+	},
+/obj/structure/machinery/door_control/brbutton/alt{
+	pixel_y = 4;
+	id = "prep"
+	},
+/turf/open/floor/strata/floor3/east,
+/area/tertius_decimus/command)
+"Mb" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/item/device/flashlight/lantern{
+	on = 1
+	},
+/turf/open/floor/interior/wood,
+/area/interior)
+"Ms" = (
+/obj/effect/decal/cleanable/blood/oil,
+/turf/open/floor/plating/plating_catwalk/strata,
+/area/tertius_decimus/generators)
+"Mv" = (
+/obj/structure/machinery/door/airlock/upp_utility,
+/turf/open/floor/strata/floor3/east,
+/area/tertius_decimus/armory)
+"Mw" = (
+/obj/structure/platform/kutjevo/rock{
+	dir = 8
+	},
+/obj/structure/machinery/camera/autoname/golden_arrow{
+	name = "camera";
+	network = list("Outpost_Tertius");
+	c_tag = "Pillbox (E)";
+	dir = 4
+	},
+/turf/open/auto_turf/strata_grass/layer0_mud_alt,
+/area/tertius_decimus/exterior)
+"ME" = (
+/obj/structure/machinery/power/apc/almayer/east,
+/turf/open/floor/strata/floor3/east,
+/area/tertius_decimus/pillbox)
+"MI" = (
+/obj/structure/largecrate/random/secure{
+	pixel_x = -3;
+	pixel_y = -2;
+	layer = 2
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/strata/floor3/east,
+/area/tertius_decimus/generators)
+"MM" = (
+/obj/structure/platform/kutjevo/rock{
+	dir = 8
+	},
+/turf/open/auto_turf/strata_grass/layer0_mud_alt,
+/area/tertius_decimus/exterior)
+"MN" = (
+/obj/structure/machinery/power/apc/almayer/east,
+/turf/open/floor/strata/floor3/east,
+/area/tertius_decimus/armory)
+"Nd" = (
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/item/tool/candle/tall{
+	pixel_y = 1;
+	pixel_x = -11
+	},
+/turf/open/floor/strata/floor3/east,
+/area/tertius_decimus/command)
+"Nl" = (
+/obj/structure/barricade/razorwire,
+/turf/open/auto_turf/strata_grass/layer0_mud,
+/area/tertius_decimus/exterior)
+"NM" = (
+/obj/structure/platform_decoration/kutjevo/rock,
+/obj/structure/platform_decoration/kutjevo/rock{
+	dir = 8
+	},
+/obj/structure/stairs/perspective{
+	icon_state = "p_stair_ew_full_cap"
+	},
+/obj/structure/platform/kutjevo,
+/obj/structure/platform/stair_cut/alt{
+	icon_state = "kutjevo_platform_sm_stair_alt"
+	},
+/turf/open/gm/dirt2,
+/area/tertius_decimus/exterior)
+"Od" = (
+/obj/structure/platform/kutjevo{
+	dir = 4
+	},
+/obj/structure/barricade/sandbags/wired{
+	dir = 4;
+	icon_state = "sandbag_0"
+	},
+/obj/structure/surface/table/woodentable/poor,
+/obj/item/storage/bible{
+	pixel_y = 3;
+	name = "the imperial creed";
+	desc = "A writen book that goes in-depth about the Imperial Creed, and it's precepts within the Imperial Cult. Any good guardsman should know this inside and out."
+	},
+/turf/open/gm/dirt2,
+/area/tertius_decimus/exterior)
+"OL" = (
+/obj/structure/barricade/metal/plasteel/wired{
+	dir = 1
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/strata/floor3/east,
+/area/tertius_decimus/pillbox)
+"Po" = (
+/obj/structure/reagent_dispensers/watertank,
+/obj/structure/machinery/light/small/red{
+	dir = 4
+	},
+/turf/open/floor/strata/floor3/east,
+/area/tertius_decimus/generators)
+"Pt" = (
+/turf/open/auto_turf/strata_grass/layer0,
+/area/tertius_decimus/exterior)
+"Py" = (
+/obj/structure/largecrate/random/case/double{
+	pixel_x = -2;
+	pixel_y = -1
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/item/storage/fancy/candle_box{
+	pixel_x = 8;
+	pixel_y = 13
+	},
+/obj/item/storage/fancy/candle_box{
+	pixel_x = -8;
+	pixel_y = 13
+	},
+/obj/structure/machinery/power/apc/almayer/south,
+/turf/open/floor/strata/floor3/east,
+/area/tertius_decimus/generators)
+"PB" = (
+/obj/structure/platform/kutjevo/rock,
+/turf/open/auto_turf/strata_grass/layer0_mud_alt,
+/area/tertius_decimus/exterior)
+"PD" = (
+/obj/structure/machinery/telecomms/relay/preset/tower,
+/turf/open/floor/plating/plating_catwalk/strata,
+/area/tertius_decimus/generators)
+"PG" = (
+/obj/structure/platform/kutjevo/rock,
+/obj/structure/machinery/storm_siren{
+	dir = 1
+	},
+/turf/open/auto_turf/strata_grass/layer0_mud,
+/area/tertius_decimus/exterior)
+"PO" = (
+/obj/structure/platform_decoration/kutjevo/rock{
+	dir = 8
+	},
+/obj/structure/platform_decoration/kutjevo/rock,
+/turf/open/auto_turf/strata_grass/layer0_mud,
+/area/tertius_decimus/exterior)
+"PP" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/strata/floor3/east,
+/area/tertius_decimus/command)
+"PQ" = (
+/obj/structure/surface/table/reinforced/black,
+/obj/effect/decal/cleanable/dirt,
+/obj/item/reagent_container/glass/rag{
+	pixel_x = -5;
+	pixel_y = -1
+	},
+/obj/item/tool/weldingtool/simple{
+	pixel_x = 11;
+	pixel_y = 5
+	},
+/obj/item/tool/candle/tall{
+	pixel_y = 18;
+	pixel_x = -10
+	},
+/obj/item/storage/box/matches{
+	pixel_x = -5;
+	pixel_y = 13
+	},
+/turf/open/floor/strata/floor3/east,
+/area/tertius_decimus/armory)
+"PU" = (
+/obj/structure/barricade/metal/plasteel/wired,
+/turf/open/floor/strata/floor3/east,
+/area/tertius_decimus/command)
+"PV" = (
+/turf/closed/shuttle{
+	dir = 1;
+	icon_state = "pwall"
+	},
+/area/space)
+"Qe" = (
+/obj/structure/platform/kutjevo{
+	dir = 8
+	},
+/obj/structure/barricade/sandbags/wired{
+	dir = 8;
+	icon_state = "sandbag_0"
+	},
+/obj/structure/barricade/sandbags/wired{
+	dir = 1;
+	icon_state = "sandbag_0";
+	layer = 3.1
+	},
+/turf/open/gm/dirt2,
+/area/tertius_decimus/exterior)
+"Qg" = (
+/obj/structure/platform/kutjevo/rock{
+	dir = 8
+	},
+/obj/structure/machinery/storm_siren{
+	dir = 4
+	},
+/turf/open/auto_turf/strata_grass/layer0_mud_alt,
+/area/tertius_decimus/exterior)
+"Qk" = (
+/obj/item/storage/bag/trash{
+	pixel_x = 7;
+	pixel_y = 14
+	},
+/obj/item/prop/colony/usedbandage{
+	dir = 5;
+	pixel_y = 4
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/interior/wood,
+/area/interior)
+"Qs" = (
+/obj/structure/platform/kutjevo{
+	dir = 8
+	},
+/obj/structure/barricade/sandbags/wired{
+	dir = 1;
+	icon_state = "sandbag_0";
+	layer = 3.1
+	},
+/obj/structure/barricade/sandbags/wired{
+	dir = 8;
+	icon_state = "sandbag_0"
+	},
+/turf/open/gm/dirt2,
+/area/tertius_decimus/exterior)
+"Qu" = (
+/obj/structure/machinery/floodlight/landing{
+	name = "floodlight"
+	},
+/turf/open/auto_turf/strata_grass/layer0_mud_alt,
+/area/tertius_decimus/exterior)
+"QH" = (
+/obj/structure/platform/kutjevo/rock,
+/obj/structure/machinery/storm_siren{
+	dir = 1
+	},
+/turf/open/auto_turf/strata_grass/layer0,
+/area/tertius_decimus/exterior)
+"QP" = (
+/obj/structure/closet/secure_closet/marine_personal/imperial/specialist{
+	pixel_x = -7
+	},
+/obj/structure/closet/secure_closet/marine_personal/imperial/specialist{
+	pixel_x = 7
+	},
+/turf/open/floor/interior/wood,
+/area/interior)
+"QT" = (
+/obj/structure/platform/kutjevo/rock{
+	dir = 1
+	},
+/obj/structure/platform/kutjevo,
+/obj/structure/barricade/sandbags/wired{
+	dir = 4;
+	icon_state = "sandbag_0"
+	},
+/turf/open/auto_turf/strata_grass/layer0_mud_alt,
+/area/tertius_decimus/exterior)
+"QW" = (
+/obj/structure/platform_decoration/kutjevo/rock{
+	dir = 8
+	},
+/obj/item/lightstick/red/spoke/planted,
+/turf/open/auto_turf/strata_grass/layer0_mud,
+/area/tertius_decimus/exterior)
+"QX" = (
+/obj/structure/barricade/razorwire{
+	dir = 1
+	},
+/turf/open/auto_turf/strata_grass/layer0,
+/area/tertius_decimus/exterior)
+"Rd" = (
+/obj/structure/platform/kutjevo/rock{
+	dir = 1
+	},
+/obj/structure/platform/kutjevo/rock,
+/obj/structure/machinery/storm_siren,
+/turf/open/auto_turf/strata_grass/layer0_mud_alt,
+/area/tertius_decimus/exterior)
+"Ro" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/cm_vending/clothing/medic/imp{
+	density = 0;
+	pixel_x = 28
+	},
+/turf/open/floor/strata/floor3/east,
+/area/tertius_decimus/armory)
+"Rv" = (
+/obj/structure/barricade/sandbags/wired{
+	dir = 1;
+	icon_state = "sandbag_0"
+	},
+/obj/structure/barricade/sandbags/wired{
+	dir = 4;
+	icon_state = "sandbag_0"
+	},
+/obj/structure/platform/kutjevo{
+	dir = 4
+	},
+/turf/open/gm/dirt2,
+/area/tertius_decimus/exterior)
+"RF" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/strata/floor3/east,
+/area/tertius_decimus/command)
+"Sa" = (
+/obj/structure/barricade/sandbags/wired{
+	dir = 8;
+	icon_state = "sandbag_0"
+	},
+/turf/open/auto_turf/strata_grass/layer0_mud,
+/area/tertius_decimus/exterior)
+"Sd" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/plating/plating_catwalk/strata,
+/area/tertius_decimus/command)
+"Sk" = (
+/obj/structure/barricade/sandbags/wired{
+	dir = 1;
+	icon_state = "sandbag_0"
+	},
+/turf/open/auto_turf/strata_grass/layer0_mud,
+/area/tertius_decimus/exterior)
+"Sm" = (
+/obj/structure/platform/kutjevo/rock,
+/obj/structure/platform_decoration/kutjevo/rock{
+	dir = 8
+	},
+/turf/open/auto_turf/strata_grass/layer0_mud_alt,
+/area/tertius_decimus/exterior)
+"SL" = (
+/obj/structure/barricade/sandbags/wired{
+	dir = 1;
+	icon_state = "sandbag_0"
+	},
+/turf/open/auto_turf/strata_grass/layer0_mud_alt,
+/area/tertius_decimus/exterior)
+"SZ" = (
+/obj/structure/platform/kutjevo,
+/obj/structure/barricade/razorwire{
+	dir = 8
+	},
+/turf/open/auto_turf/strata_grass/layer0_mud,
+/area/tertius_decimus/exterior)
+"Ta" = (
+/obj/structure/prop/invuln/lattice_prop{
+	icon_state = "lattice3";
+	pixel_y = 6;
+	layer = 5.2
+	},
+/obj/structure/prop/invuln/overhead_pipe{
+	icon = 'icons/obj/structures/props/almayer_props.dmi';
+	icon_state = "wallpipe_3";
+	pixel_y = 22
+	},
+/turf/open/floor/strata/floor3/east,
+/area/tertius_decimus/command)
+"Tb" = (
+/obj/structure/platform/kutjevo/rock{
+	dir = 8
+	},
+/obj/structure/platform/kutjevo/rock{
+	dir = 1
+	},
+/turf/open/auto_turf/strata_grass/layer0_mud_alt,
+/area/tertius_decimus/exterior)
+"Tg" = (
+/obj/structure/machinery/cm_vending/sorted/medical/wall_med/limited{
+	pixel_y = -28
+	},
+/obj/structure/machinery/light/small/red{
+	dir = 4
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/strata/floor3/east,
+/area/tertius_decimus/pillbox)
+"Tp" = (
+/obj/structure/platform/kutjevo/rock,
+/obj/structure/platform_decoration/kutjevo/rock{
+	dir = 4
+	},
+/turf/open/auto_turf/strata_grass/layer0_mud_alt,
+/area/tertius_decimus/exterior)
+"Tt" = (
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/structure/machinery/computer/cameras/almayer/vehicle{
+	network = list("Outpost_Tertius");
+	name = "Camera system";
+	desc = "Used to access the various cameras on the outpost."
+	},
+/turf/open/floor/strata/floor3/east,
+/area/tertius_decimus/command)
+"TC" = (
+/obj/structure/platform/kutjevo/rock{
+	dir = 1
+	},
+/obj/structure/machinery/floodlight/landing{
+	name = "floodlight"
+	},
+/turf/open/auto_turf/strata_grass/layer0_mud_alt,
+/area/tertius_decimus/exterior)
+"TD" = (
+/obj/item/lightstick/red/spoke/planted,
+/turf/open/gm/dirt2,
+/area/tertius_decimus/exterior)
+"TP" = (
+/turf/open/floor/plating/plating_catwalk/strata,
+/area/tertius_decimus/armory)
+"TZ" = (
+/obj/structure/platform/kutjevo/rock{
+	dir = 8
+	},
+/turf/open/gm/dirt2,
+/area/tertius_decimus/exterior)
+"Ua" = (
+/obj/structure/platform/kutjevo{
+	dir = 4
+	},
+/obj/structure/barricade/sandbags/wired{
+	dir = 4;
+	icon_state = "sandbag_0"
+	},
+/turf/open/gm/dirt2,
+/area/tertius_decimus/exterior)
+"Uv" = (
+/obj/structure/platform/kutjevo/rock{
+	dir = 1
+	},
+/obj/structure/platform/kutjevo/rock{
+	dir = 4
+	},
+/turf/open/auto_turf/strata_grass/layer0_mud_alt,
+/area/tertius_decimus/exterior)
+"Ux" = (
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/structure/machinery/faxmachine,
+/turf/open/floor/strata/floor3/east,
+/area/tertius_decimus/command)
+"Uz" = (
+/obj/structure/platform_decoration/kutjevo/rock,
+/obj/structure/platform/kutjevo{
+	dir = 4
+	},
+/obj/structure/barricade/sandbags/wired{
+	dir = 4;
+	icon_state = "sandbag_0"
+	},
+/turf/open/gm/dirt2,
+/area/tertius_decimus/exterior)
+"UF" = (
+/obj/structure/platform/kutjevo,
+/turf/open/auto_turf/strata_grass/layer0_mud,
+/area/tertius_decimus/exterior)
+"UK" = (
+/obj/structure/barricade/metal/plasteel/wired{
+	dir = 8
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/strata/floor3/east,
+/area/tertius_decimus/pillbox)
+"UL" = (
+/obj/structure/barricade/metal/plasteel/wired{
+	dir = 8
+	},
+/obj/structure/barricade/metal/plasteel/wired,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/strata/floor3/east,
+/area/tertius_decimus/command)
+"UX" = (
+/obj/structure/platform/kutjevo{
+	dir = 4
+	},
+/obj/structure/barricade/sandbags/wired{
+	dir = 1;
+	icon_state = "sandbag_0";
+	layer = 3.1
+	},
+/obj/structure/barricade/sandbags/wired{
+	dir = 4;
+	icon_state = "sandbag_0"
+	},
+/turf/open/gm/dirt2,
+/area/tertius_decimus/exterior)
+"Va" = (
+/obj/structure/tent/big,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/interior/wood,
+/area/interior)
+"Vr" = (
+/obj/structure/machinery/light/small/red{
+	dir = 1
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/power/apc/almayer/north,
+/turf/open/floor/strata/floor3/east,
+/area/tertius_decimus/generators)
+"Vt" = (
+/obj/structure/platform/kutjevo,
+/obj/structure/barricade/razorwire{
+	dir = 1
+	},
+/turf/open/auto_turf/strata_grass/layer0_mud,
+/area/tertius_decimus/exterior)
+"Vx" = (
+/obj/structure/machinery/door/airlock/upp_utility,
+/turf/open/floor/strata/floor3/east,
+/area/tertius_decimus/pillbox)
+"VB" = (
+/obj/structure/platform_decoration/kutjevo,
+/obj/structure/bed/chair{
+	dir = 8
+	},
+/turf/open/gm/dirt2,
+/area/tertius_decimus/exterior)
+"VK" = (
+/obj/effect/decal/cleanable/blood/oil/streak,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/plating/plating_catwalk/strata,
+/area/tertius_decimus/generators)
+"Wc" = (
+/obj/structure/platform_decoration/kutjevo{
+	dir = 1
+	},
+/obj/structure/bed/chair{
+	dir = 4
+	},
+/turf/open/gm/dirt2,
+/area/tertius_decimus/exterior)
+"Wd" = (
+/obj/structure/platform/kutjevo/rock{
+	dir = 8
+	},
+/turf/open/auto_turf/strata_grass/layer0_mud,
+/area/tertius_decimus/exterior)
+"Wh" = (
+/obj/structure/platform_decoration/kutjevo/rock,
+/obj/structure/barricade/razorwire{
+	dir = 8
+	},
+/turf/open/auto_turf/strata_grass/layer0_mud_alt,
+/area/tertius_decimus/exterior)
+"Wj" = (
+/obj/structure/platform/kutjevo/rock{
+	dir = 4
+	},
+/turf/open/auto_turf/strata_grass/layer0_mud_alt,
+/area/tertius_decimus/exterior)
+"Wq" = (
+/obj/structure/machinery/door/airlock/upp_utility{
+	dir = 1
+	},
+/turf/open/floor/strata/floor3/east,
+/area/tertius_decimus/command)
+"Wz" = (
+/obj/structure/barricade/metal/plasteel/wired{
+	dir = 4
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/strata/floor3/east,
+/area/tertius_decimus/command)
+"WB" = (
+/obj/structure/machinery/light/small/red,
+/turf/open/floor/strata/floor3/east,
+/area/tertius_decimus/command)
+"WO" = (
+/obj/structure/barricade/razorwire{
+	dir = 1
+	},
+/turf/open/auto_turf/strata_grass/layer0_mud_alt,
+/area/tertius_decimus/exterior)
+"WQ" = (
+/turf/open/floor/strata/floor3/east,
+/area/tertius_decimus/armory)
+"WR" = (
+/obj/structure/blocker/fog,
+/turf/open/auto_turf/strata_grass/layer0_mud,
+/area/tertius_decimus/exterior)
+"WZ" = (
+/obj/structure/platform/kutjevo,
+/obj/structure/barricade/sandbags/wired{
+	icon_state = "sandbag_0";
+	pixel_y = -7
+	},
+/obj/structure/barricade/sandbags/wired{
+	dir = 1;
+	icon_state = "sandbag_0";
+	layer = 3.1
+	},
+/turf/open/gm/dirt2,
+/area/tertius_decimus/exterior)
+"Xc" = (
+/obj/structure/prop/static_tank/water{
+	desc = "It contains non-potable water. A label on the side instructs you to boil before consumption. It stinks of chemicals"
+	},
+/obj/structure/machinery/camera/autoname/golden_arrow{
+	name = "camera";
+	network = list("Outpost_Tertius");
+	c_tag = "Engineering Bunker";
+	dir = 8
+	},
+/turf/open/floor/strata/floor3/east,
+/area/tertius_decimus/generators)
+"Xi" = (
+/obj/structure/platform_decoration/kutjevo/rock,
+/obj/item/lightstick/red/spoke/planted,
+/turf/open/auto_turf/strata_grass/layer0_mud_alt,
+/area/tertius_decimus/exterior)
+"Xj" = (
+/obj/structure/platform/kutjevo{
+	dir = 8
+	},
+/obj/structure/barricade/sandbags/wired{
+	dir = 8;
+	icon_state = "sandbag_0"
+	},
+/obj/structure/barricade/sandbags/wired{
+	dir = 1;
+	icon_state = "sandbag_0"
+	},
+/turf/open/gm/dirt2,
+/area/tertius_decimus/exterior)
+"Xy" = (
+/obj/structure/gun_rack/lasgun,
+/turf/open/floor/strata/floor3/east,
+/area/tertius_decimus/armory)
+"XE" = (
+/turf/open/floor/strata/floor3/east,
+/area/tertius_decimus/pillbox)
+"XH" = (
+/obj/structure/surface/table/woodentable/poor,
+/obj/item/ammo_box/magazine/misc/mre{
+	pixel_x = 5;
+	pixel_y = 15
+	},
+/obj/item/reagent_container/food/drinks/flask/canteen/empty{
+	pixel_x = -6;
+	pixel_y = 10
+	},
+/obj/item/reagent_container/food/drinks/flask/canteen/empty{
+	pixel_x = 7;
+	pixel_y = 2
+	},
+/obj/item/reagent_container/food/drinks/flask/canteen/empty{
+	pixel_y = 2
+	},
+/obj/item/reagent_container/food/drinks/flask/canteen/empty{
+	pixel_x = -5;
+	pixel_y = 7
+	},
+/obj/item/reagent_container/food/drinks/flask/canteen/empty{
+	pixel_x = -5
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/interior/wood,
+/area/interior)
+"XW" = (
+/obj/structure/closet/secure_closet/marine_personal/imperial/rifleman{
+	pixel_x = -7
+	},
+/obj/structure/closet/secure_closet/marine_personal/imperial/rifleman{
+	pixel_x = 7
+	},
+/turf/open/floor/interior/wood,
+/area/interior)
+"Yf" = (
+/turf/closed/wall/upp_wall/grey,
+/area/tertius_decimus/command)
+"Yh" = (
+/obj/structure/machinery/door/airlock/multi_tile/upp_utility,
+/turf/open/floor/strata/floor3/east,
+/area/tertius_decimus/command)
+"Ym" = (
+/obj/structure/platform/kutjevo/rock,
+/turf/open/auto_turf/strata_grass/layer0_mud,
+/area/tertius_decimus/exterior)
+"Yq" = (
+/obj/structure/barricade/sandbags/wired{
+	dir = 1;
+	icon_state = "sandbag_0";
+	layer = 3.1
+	},
+/turf/open/gm/dirt2,
+/area/tertius_decimus/exterior)
+"Yu" = (
+/turf/open/gm/dirt2,
+/area/tertius_decimus/exterior)
+"YD" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/plating/plating_catwalk/strata,
+/area/tertius_decimus/armory)
+"YF" = (
+/obj/structure/platform_decoration/kutjevo/rock{
+	dir = 8
+	},
+/turf/open/auto_turf/strata_grass/layer0_mud,
+/area/tertius_decimus/exterior)
+"YQ" = (
+/obj/structure/machinery/light/small/red{
+	dir = 1
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/strata/floor3/east,
+/area/tertius_decimus/command)
+"YT" = (
+/obj/structure/platform_decoration/kutjevo/rock{
+	dir = 4
+	},
+/obj/structure/platform_decoration/kutjevo/rock{
+	dir = 1
+	},
+/turf/open/auto_turf/strata_grass/layer0_mud_alt,
+/area/tertius_decimus/exterior)
+"YW" = (
+/obj/structure/platform/kutjevo,
+/obj/structure/barricade/sandbags/wired{
+	icon_state = "sandbag_0";
+	pixel_y = -7
+	},
+/turf/open/gm/dirt2,
+/area/tertius_decimus/exterior)
+"Zg" = (
+/obj/structure/platform/kutjevo/rock{
+	dir = 4
+	},
+/obj/structure/machinery/camera/autoname/golden_arrow{
+	name = "camera";
+	network = list("Outpost_Tertius");
+	c_tag = "Armory External";
+	dir = 8
+	},
+/turf/open/auto_turf/strata_grass/layer0,
+/area/tertius_decimus/exterior)
+"Zh" = (
+/obj/structure/platform_decoration/kutjevo{
+	dir = 1
+	},
+/obj/structure/platform_decoration/kutjevo,
+/turf/open/gm/dirt2,
+/area/tertius_decimus/exterior)
+"Zn" = (
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/item/paper_bin,
+/obj/item/tool/pen{
+	pixel_y = 1;
+	pixel_x = 7
+	},
+/obj/item/tool/pen{
+	pixel_x = -10;
+	pixel_y = 9
+	},
+/turf/open/floor/strata/floor3/east,
+/area/tertius_decimus/command)
+"Zp" = (
+/obj/structure/barricade/sandbags/wired{
+	dir = 4;
+	icon_state = "sandbag_0"
+	},
+/turf/open/auto_turf/strata_grass/layer0_mud,
+/area/tertius_decimus/exterior)
+"ZD" = (
+/obj/structure/platform_decoration/kutjevo/rock{
+	dir = 8
+	},
+/obj/structure/platform/kutjevo,
+/turf/open/auto_turf/strata_grass/layer0_mud_alt,
+/area/tertius_decimus/exterior)
+"ZE" = (
+/obj/structure/tent/big,
+/obj/effect/decal/cleanable/dirt,
+/obj/item/device/flashlight/lantern{
+	on = 1
+	},
+/turf/open/floor/interior/wood,
+/area/interior)
+"ZL" = (
+/obj/structure/platform_decoration/kutjevo/rock,
+/obj/item/lightstick/red/spoke/planted,
+/turf/open/auto_turf/strata_grass/layer0,
+/area/tertius_decimus/exterior)
+
+(1,1,1) = {"
+PV
+PV
+PV
+PV
+PV
+PV
+PV
+PV
+PV
+PV
+PV
+PV
+PV
+PV
+PV
+PV
+PV
+PV
+PV
+PV
+PV
+PV
+PV
+PV
+PV
+PV
+PV
+PV
+PV
+PV
+PV
+PV
+PV
+PV
+PV
+PV
+PV
+PV
+PV
+PV
+PV
+PV
+PV
+PV
+PV
+PV
+PV
+PV
+PV
+PV
+PV
+PV
+PV
+PV
+PV
+PV
+PV
+PV
+PV
+PV
+PV
+PV
+PV
+PV
+PV
+PV
+PV
+PV
+PV
+PV
+PV
+PV
+PV
+PV
+PV
+PV
+PV
+PV
+PV
+PV
+PV
+PV
+PV
+PV
+PV
+PV
+PV
+PV
+PV
+PV
+PV
+PV
+PV
+PV
+PV
+PV
+PV
+PV
+PV
+PV
+PV
+PV
+PV
+PV
+PV
+PV
+PV
+PV
+PV
+PV
+PV
+PV
+PV
+PV
+PV
+"}
+(2,1,1) = {"
+PV
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+PV
+"}
+(3,1,1) = {"
+PV
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+PV
+"}
+(4,1,1) = {"
+PV
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+PV
+"}
+(5,1,1) = {"
+PV
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+PV
+"}
+(6,1,1) = {"
+PV
+pG
+pG
+pG
+pG
+pG
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+PV
+"}
+(7,1,1) = {"
+PV
+pG
+pG
+pG
+pG
+pG
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+PV
+"}
+(8,1,1) = {"
+PV
+pG
+pG
+pG
+pG
+pG
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+PV
+"}
+(9,1,1) = {"
+PV
+pG
+pG
+pG
+pG
+pG
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+WR
+WR
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+PV
+"}
+(10,1,1) = {"
+PV
+pG
+pG
+pG
+pG
+pG
+mZ
+mZ
+mZ
+mZ
+Jh
+Jh
+Jh
+Kt
+Kt
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Pt
+Pt
+Pt
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Pt
+Pt
+Pt
+Jh
+Jh
+Jh
+Jh
+Pt
+Pt
+Pt
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Pt
+Pt
+Jh
+Jh
+mZ
+mZ
+mZ
+mZ
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+PV
+"}
+(11,1,1) = {"
+PV
+pG
+pG
+pG
+pG
+pG
+mZ
+mZ
+mZ
+mZ
+Jh
+Jh
+Jh
+Kt
+Kt
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Pt
+Jh
+Pt
+Pt
+Pt
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Kt
+Jh
+Jh
+Jh
+Jh
+Jh
+Pt
+Pt
+Jh
+Jh
+Jh
+Kt
+Kt
+Jh
+Jh
+Pt
+Pt
+Pt
+Pt
+Pt
+Jh
+Jh
+Jh
+Pt
+Jh
+Jh
+Jh
+Kt
+Kt
+Kt
+Jh
+Pt
+Pt
+Pt
+Pt
+Jh
+Jh
+Pt
+Pt
+Pt
+Pt
+Pt
+Pt
+Pt
+Pt
+Pt
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Pt
+Pt
+Pt
+Pt
+Jh
+mZ
+mZ
+mZ
+mZ
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+PV
+"}
+(12,1,1) = {"
+PV
+pG
+pG
+pG
+pG
+pG
+mZ
+mZ
+mZ
+mZ
+Jh
+Kt
+Jh
+Kt
+Kt
+Jh
+Jh
+Jh
+Jh
+Pt
+Pt
+Pt
+Jh
+Jh
+Jh
+Pt
+Pt
+Pt
+Pt
+Pt
+Kt
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Kt
+Kt
+Kt
+Jh
+Pt
+Pt
+Kt
+Kt
+Jh
+Jh
+Kt
+Kt
+Kt
+Kt
+Jh
+Jh
+Jh
+Jh
+Jh
+Pt
+Jh
+Jh
+Jh
+Pt
+Pt
+Pt
+Kt
+Kt
+Jh
+Jh
+Pt
+Pt
+Pt
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Kt
+Kt
+Kt
+Kt
+Pt
+Pt
+Pt
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Pt
+Pt
+Pt
+mZ
+mZ
+mZ
+mZ
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+PV
+"}
+(13,1,1) = {"
+PV
+pG
+pG
+pG
+pG
+pG
+mZ
+mZ
+mZ
+mZ
+Jh
+Kt
+Kt
+Kt
+Kt
+Pt
+Pt
+Pt
+Pt
+Pt
+Pt
+Jh
+Jh
+Kt
+Kt
+Jh
+Jh
+Jh
+Pt
+Pt
+Kt
+Kt
+Jh
+Jh
+Jh
+Jh
+aN
+aN
+aN
+aN
+aN
+aN
+aN
+aN
+aN
+uk
+KT
+KT
+KT
+uk
+uk
+uk
+uk
+uk
+uk
+aN
+aN
+uk
+aN
+aN
+aN
+aN
+aN
+aN
+uk
+uk
+uk
+uk
+KT
+KT
+KT
+aN
+aN
+aN
+KT
+aN
+aN
+aN
+aN
+aN
+aN
+aN
+aN
+aN
+aN
+uk
+uk
+aN
+aN
+aN
+aN
+aN
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Pt
+Jh
+mZ
+mZ
+mZ
+mZ
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+PV
+"}
+(14,1,1) = {"
+PV
+pG
+pG
+pG
+pG
+pG
+mZ
+mZ
+mZ
+mZ
+Jh
+Pt
+Pt
+Kt
+Kt
+Jh
+Pt
+Pt
+Pt
+Jh
+Jh
+Kt
+Kt
+Kt
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Kt
+Kt
+Kt
+Kt
+Jh
+Jh
+aN
+aN
+aN
+aN
+aN
+aN
+aN
+aN
+aN
+KT
+KT
+aN
+aN
+aN
+aN
+uk
+uk
+uk
+aN
+aN
+aN
+aN
+aN
+aN
+aN
+aN
+uk
+uk
+uk
+uk
+uk
+uk
+uk
+aN
+aN
+aN
+aN
+aN
+aN
+aN
+aN
+aN
+aN
+aN
+uk
+uk
+uk
+aN
+aN
+aN
+uk
+uk
+aN
+aN
+aN
+aN
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Pt
+Pt
+mZ
+mZ
+mZ
+mZ
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+PV
+"}
+(15,1,1) = {"
+PV
+pG
+pG
+pG
+pG
+pG
+mZ
+mZ
+mZ
+mZ
+Jh
+Jh
+Pt
+Pt
+Kt
+Jh
+Pt
+Jh
+Jh
+Kt
+Kt
+Kt
+Kt
+Jh
+aN
+aN
+aN
+aN
+aN
+aN
+aN
+uk
+uk
+uk
+aN
+aN
+vj
+xO
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Ai
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Ai
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Pt
+Pt
+Pt
+Kt
+Kt
+Pt
+Pt
+Pt
+Pt
+Pt
+Pt
+Jh
+xO
+Iz
+pW
+pW
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Pt
+mZ
+mZ
+mZ
+mZ
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+PV
+"}
+(16,1,1) = {"
+PV
+pG
+pG
+pG
+pG
+pG
+mZ
+mZ
+mZ
+mZ
+Jh
+Jh
+Jh
+Pt
+Kt
+Jh
+Pt
+Jh
+Kt
+Kt
+Pt
+Kt
+Jh
+Jh
+aN
+aN
+aN
+aN
+aN
+aN
+aN
+aN
+uk
+uk
+uk
+aN
+SL
+Jh
+Jh
+Jh
+FD
+Xj
+mB
+mB
+mB
+mB
+mB
+mB
+mB
+mB
+mB
+mB
+mB
+mB
+mB
+mB
+mB
+mB
+mB
+mB
+mB
+mB
+mB
+mB
+mB
+mB
+mB
+mB
+mB
+mB
+mB
+mB
+mB
+mB
+mB
+iD
+Jh
+Jh
+Pt
+Pt
+Pt
+Kt
+Jh
+Jh
+Jh
+Pt
+Pt
+Pt
+Pt
+Jh
+Jh
+tf
+pW
+pW
+Kt
+Kt
+Kt
+Jh
+Jh
+Jh
+Jh
+Jh
+mZ
+mZ
+mZ
+mZ
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+PV
+"}
+(17,1,1) = {"
+PV
+pG
+pG
+pG
+pG
+pG
+mZ
+mZ
+mZ
+mZ
+Jh
+Jh
+Jh
+Kt
+Pt
+Kt
+Jh
+Jh
+Kt
+Kt
+Pt
+Jh
+WO
+WO
+vj
+xO
+Jh
+Jh
+Pt
+Pt
+Pt
+Jh
+Jh
+Kt
+Kt
+Kt
+Jh
+Jh
+Pt
+Jh
+FD
+qb
+Yu
+Yu
+Yu
+Yu
+Yu
+Yu
+Yu
+Yu
+Yu
+Yu
+Yu
+Yu
+Yu
+Yu
+Yu
+Yu
+Yu
+Yu
+Yu
+Yu
+Yu
+Yu
+Yu
+Yu
+Yu
+Yu
+Yu
+Yu
+Yu
+Yu
+Yu
+Yu
+Yu
+YW
+Jh
+uk
+uk
+uk
+aN
+av
+Wj
+IP
+by
+Jh
+av
+Bu
+sH
+by
+Jh
+Jh
+pW
+Nl
+Kt
+Pt
+Kt
+Kt
+Jh
+Jh
+Jh
+Jh
+mZ
+mZ
+mZ
+mZ
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+PV
+"}
+(18,1,1) = {"
+PV
+pG
+pG
+pG
+pG
+pG
+mZ
+mZ
+mZ
+mZ
+Jh
+Jh
+Jh
+Kt
+Kt
+Pt
+Jh
+Jh
+Kt
+Pt
+Pt
+Jh
+WO
+WO
+SL
+Kt
+Kt
+Jh
+Pt
+Pt
+Pt
+Pt
+Jh
+Jh
+Jh
+Kt
+Kt
+Jh
+Pt
+Pt
+FD
+LE
+Ua
+Ua
+Ua
+Ua
+Ua
+Ua
+Ua
+Yu
+qP
+Ua
+Ua
+Ua
+Ua
+Ua
+Ua
+Ua
+Ua
+Ua
+Ua
+Ua
+Ua
+Ua
+Ua
+Ua
+Ua
+Ua
+Yu
+qP
+Ua
+Ua
+Ua
+Ua
+Ua
+hj
+Jh
+Kt
+Kt
+Jh
+Jh
+PB
+Fj
+Fj
+Iq
+Wj
+eh
+Fj
+Fj
+tg
+aN
+Jh
+pW
+Nl
+Kt
+Pt
+Pt
+Kt
+Jh
+Jh
+Jh
+Jh
+mZ
+mZ
+mZ
+mZ
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+PV
+"}
+(19,1,1) = {"
+PV
+pG
+pG
+pG
+pG
+pG
+mZ
+mZ
+mZ
+mZ
+Jh
+Jh
+Jh
+Kt
+Kt
+Pt
+Jh
+Kt
+Kt
+Pt
+Pt
+Jh
+WO
+WO
+Kt
+Kt
+GP
+Wj
+IP
+by
+Jh
+av
+Bu
+en
+by
+aN
+aN
+uk
+uk
+KT
+Pt
+Ai
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+wM
+qb
+YW
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Ai
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+FD
+qb
+YW
+Jh
+Jh
+Jh
+Jh
+Ai
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+sG
+Fj
+Fj
+UK
+pn
+UK
+Fj
+Fj
+nc
+Pt
+Pt
+pW
+Nl
+Kt
+Pt
+Pt
+Pt
+Kt
+Jh
+Jh
+Jh
+mZ
+mZ
+mZ
+mZ
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+PV
+"}
+(20,1,1) = {"
+PV
+pG
+pG
+pG
+pG
+pG
+mZ
+mZ
+mZ
+mZ
+Jh
+Jh
+Jh
+Kt
+Jh
+Pt
+Jh
+Jh
+Jh
+Pt
+Pt
+Jh
+WO
+WO
+Kt
+uk
+PB
+Fj
+Fj
+Uv
+Wj
+yV
+Fj
+Fj
+tg
+Jh
+Kt
+Kt
+Kt
+Jh
+Pt
+Jh
+aN
+aN
+Jh
+Jh
+aN
+aN
+FD
+qb
+YW
+Jh
+aN
+aN
+FD
+lH
+mB
+mB
+mB
+mB
+mB
+mB
+mB
+mB
+mB
+Fp
+Qu
+FD
+qb
+YW
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Pt
+Pt
+Pt
+bD
+eX
+qo
+rB
+hT
+rB
+fk
+zT
+gc
+Jh
+Jh
+pW
+Nl
+Kt
+Pt
+Pt
+Pt
+Kt
+Jh
+Jh
+Jh
+mZ
+mZ
+mZ
+mZ
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+PV
+"}
+(21,1,1) = {"
+PV
+pG
+pG
+pG
+pG
+pG
+mZ
+mZ
+mZ
+mZ
+Jh
+Jh
+Jh
+Kt
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+WO
+WO
+Jh
+Jh
+sG
+Fj
+Fj
+EY
+pn
+EY
+Fj
+Fj
+Ef
+Kt
+Kt
+Jh
+Kt
+Pt
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+FD
+qb
+YW
+Jh
+Jh
+Jh
+FD
+qb
+qP
+Ua
+Ua
+Ua
+Ua
+Ua
+Ua
+Ua
+Yu
+YW
+Jh
+FD
+qb
+YW
+Jh
+Jh
+uk
+KT
+uk
+KT
+Kt
+Kt
+Jh
+Jh
+Pt
+Pt
+PB
+qo
+XE
+ER
+Hc
+Kd
+tg
+Jh
+Kt
+Kt
+pW
+Nl
+Kt
+Kt
+Kt
+Pt
+Kt
+Jh
+Jh
+Jh
+mZ
+mZ
+mZ
+mZ
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+PV
+"}
+(22,1,1) = {"
+PV
+pG
+pG
+pG
+pG
+pG
+mZ
+mZ
+mZ
+mZ
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+WO
+WO
+Jh
+Pt
+bD
+gO
+qo
+rB
+hT
+rB
+iH
+zT
+gc
+Jh
+Jh
+Jh
+aN
+aN
+aN
+FD
+Xj
+mB
+mB
+mB
+mB
+mB
+mB
+Yu
+ap
+mB
+mB
+mB
+mB
+Yu
+YW
+Jh
+Jh
+Jh
+Jh
+Kt
+Jh
+FD
+qb
+YW
+Jh
+FD
+qb
+YW
+Jh
+Jh
+Jh
+Pt
+Pt
+Pt
+Pt
+Kt
+aN
+aN
+Pt
+lv
+uP
+qo
+rB
+hT
+rB
+iH
+Uv
+by
+Kt
+Kt
+pW
+pW
+Jh
+Jh
+Jh
+Jh
+Kt
+Jh
+Jh
+Jh
+mZ
+mZ
+mZ
+mZ
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+PV
+"}
+(23,1,1) = {"
+PV
+pG
+pG
+pG
+pG
+pG
+mZ
+mZ
+mZ
+mZ
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Pt
+Kt
+Kt
+Kt
+WO
+WO
+Pt
+Pt
+Jh
+PB
+xb
+XE
+ER
+hT
+iH
+tg
+Jh
+Jh
+Pt
+Pt
+Jh
+Jh
+Jh
+FD
+qb
+qP
+Ua
+Ua
+Ua
+Ua
+Ua
+Ua
+Ua
+Ua
+Ua
+Ua
+Ua
+Ua
+qd
+Jh
+aN
+aN
+GP
+xg
+by
+FD
+qb
+YW
+Jh
+FD
+qb
+YW
+Jh
+Jh
+Jh
+Jh
+Kt
+Pt
+Pt
+Kt
+Jh
+Pt
+Pt
+PB
+Fj
+Fj
+Hp
+hT
+Tg
+Fj
+Fj
+tg
+Kt
+Kt
+pW
+pW
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+mZ
+mZ
+mZ
+mZ
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+PV
+"}
+(24,1,1) = {"
+PV
+pG
+pG
+pG
+pG
+pG
+mZ
+mZ
+mZ
+mZ
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Kt
+Kt
+Pt
+Kt
+Kt
+Kt
+WO
+WO
+Pt
+Pt
+av
+yV
+qo
+rB
+hT
+rB
+fk
+Uv
+by
+Pt
+Pt
+Jh
+Jh
+Jh
+Kt
+FD
+qb
+YW
+Kt
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Kt
+Jh
+IW
+Pt
+av
+mz
+LL
+tg
+FD
+qb
+YW
+Jh
+FD
+qb
+YW
+Jh
+aN
+aN
+Jh
+Kt
+uk
+uk
+uk
+Jh
+Jh
+Jh
+PB
+Fj
+Fj
+Fj
+oP
+Fj
+Fj
+Fj
+tg
+uk
+Jh
+pW
+pW
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+mZ
+mZ
+mZ
+mZ
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+PV
+"}
+(25,1,1) = {"
+PV
+pG
+pG
+pG
+pG
+pG
+mZ
+mZ
+mZ
+mZ
+Jh
+Jh
+Jh
+Jh
+Kt
+Kt
+Kt
+Pt
+Kt
+Kt
+Kt
+Jh
+WO
+WO
+Pt
+Pt
+PB
+Fj
+Fj
+Hp
+hT
+Tg
+Fj
+Fj
+tg
+aN
+aN
+aN
+uk
+Kt
+Kt
+FD
+qb
+YW
+uk
+aN
+Pt
+Pt
+Pt
+Pt
+aN
+uk
+Pt
+Pt
+aN
+uk
+uk
+Pt
+Pt
+rs
+LL
+LL
+tg
+UF
+qb
+YW
+Jh
+FD
+qb
+YW
+Jh
+Pt
+Pt
+Jh
+Jh
+Kt
+Kt
+Jh
+Jh
+Jh
+Jh
+bD
+MM
+eX
+Fj
+Vx
+Fj
+Tb
+MM
+gc
+Kt
+Jh
+pW
+pW
+Jh
+Jh
+Jh
+Pt
+Jh
+Jh
+Jh
+Jh
+mZ
+mZ
+mZ
+mZ
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+PV
+"}
+(26,1,1) = {"
+PV
+pG
+pG
+pG
+pG
+pG
+mZ
+mZ
+mZ
+mZ
+Jh
+Jh
+Jh
+Kt
+Kt
+Kt
+Pt
+Pt
+Kt
+Kt
+Jh
+Jh
+WO
+WO
+Jh
+Jh
+PB
+Fj
+Fj
+Fj
+yx
+Fj
+Fj
+Fj
+tg
+Jh
+Jh
+Kt
+Kt
+Pt
+Jh
+FD
+qb
+YW
+Jh
+Jh
+Pt
+Pt
+Pt
+Kt
+GP
+co
+Wj
+Zg
+EU
+Bu
+by
+Pt
+Jh
+PB
+LL
+DS
+tg
+UF
+qb
+ap
+mB
+mB
+Yu
+ap
+Fp
+Jh
+Pt
+Pt
+Jh
+Jh
+Jh
+Jh
+Jh
+aN
+aN
+uk
+Kt
+bD
+KG
+Ac
+xH
+gc
+Jh
+Kt
+Kt
+Jh
+Jh
+Au
+aN
+Jh
+Jh
+Jh
+Pt
+Pt
+Jh
+Jh
+mZ
+mZ
+mZ
+mZ
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+PV
+"}
+(27,1,1) = {"
+PV
+pG
+pG
+pG
+pG
+pG
+mZ
+mZ
+mZ
+mZ
+Jh
+Jh
+Kt
+Pt
+Pt
+Pt
+Pt
+Kt
+Kt
+Jh
+Jh
+Jh
+WO
+WO
+Kt
+Kt
+zs
+MM
+gO
+Fj
+Vx
+Fj
+zT
+MM
+gc
+Jh
+Kt
+Kt
+Pt
+Pt
+Jh
+FD
+qb
+YW
+Jh
+Jh
+Kt
+Pt
+Pt
+Kt
+Ym
+tz
+tz
+tz
+tz
+tz
+tg
+Pt
+Kt
+Ym
+LL
+DS
+tg
+FD
+qb
+qP
+Ua
+Ua
+Ua
+Yu
+YW
+Qu
+Jh
+Pt
+Pt
+Jh
+Jh
+Jh
+Jh
+Pt
+Pt
+Kt
+Kt
+FD
+Xj
+eb
+iD
+Jh
+Kt
+Kt
+Kt
+Jh
+Jh
+Jh
+Au
+pW
+pW
+Jh
+Jh
+Pt
+Pt
+Jh
+mZ
+mZ
+mZ
+mZ
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+PV
+"}
+(28,1,1) = {"
+PV
+pG
+pG
+pG
+pG
+pG
+mZ
+mZ
+mZ
+mZ
+Jh
+Jh
+Pt
+Pt
+Pt
+Pt
+Kt
+Kt
+Jh
+Jh
+Jh
+Jh
+WO
+WO
+Kt
+uk
+uk
+Jh
+ah
+KG
+IN
+KB
+gc
+Jh
+Jh
+Pt
+Kt
+Kt
+Pt
+FD
+lH
+mB
+Yu
+YW
+Jh
+uk
+uk
+uk
+Xi
+Wj
+yV
+tz
+aA
+LH
+aA
+tz
+Iq
+xg
+QW
+PB
+LL
+LL
+fS
+FD
+qb
+YW
+Jh
+Jh
+FD
+qb
+ap
+mB
+mB
+mB
+mB
+mB
+mB
+iD
+Jh
+Pt
+Kt
+Kt
+Kt
+FD
+qb
+Yu
+YW
+Jh
+uk
+uk
+FD
+lH
+mB
+iD
+Jh
+pW
+pW
+Jh
+Jh
+Pt
+Pt
+Jh
+mZ
+mZ
+mZ
+mZ
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+PV
+"}
+(29,1,1) = {"
+PV
+pG
+pG
+pG
+pG
+pG
+mZ
+mZ
+mZ
+mZ
+Jh
+Jh
+Pt
+Kt
+Kt
+Kt
+Jh
+Jh
+Jh
+Jh
+Jh
+aN
+BG
+xO
+Jh
+Kt
+Kt
+Jh
+FD
+Xj
+eb
+Fp
+Jh
+Kt
+Kt
+Pt
+Kt
+Kt
+Jh
+FD
+qb
+qP
+Ua
+qd
+Jh
+Jh
+Jh
+Jh
+PB
+tz
+tz
+tz
+dE
+IK
+Cs
+tz
+tz
+tz
+tg
+bD
+eX
+LL
+fS
+FD
+qb
+YW
+Kt
+Kt
+FD
+xI
+Ua
+Yu
+Yu
+qP
+Ua
+Ua
+Yu
+YW
+Jh
+Kt
+Kt
+Jh
+Jh
+FD
+qb
+qP
+qd
+Ai
+Kt
+Jh
+FD
+qb
+Yu
+YW
+Jh
+pW
+pW
+Jh
+Jh
+Pt
+Jh
+Jh
+mZ
+mZ
+mZ
+mZ
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+PV
+"}
+(30,1,1) = {"
+PV
+pG
+pG
+pG
+pG
+pG
+mZ
+mZ
+mZ
+mZ
+Jh
+Jh
+Pt
+Kt
+Kt
+Jh
+Jh
+Jh
+Jh
+Jh
+WO
+BG
+Jh
+Jh
+Jh
+Jh
+Kt
+Jh
+FD
+qb
+Yu
+YW
+Kt
+Kt
+Pt
+Pt
+aN
+aN
+aN
+FD
+qb
+YW
+Jh
+eI
+Jh
+Jh
+av
+Wj
+yV
+tz
+Xy
+Xy
+TP
+TP
+YD
+PQ
+zd
+tz
+Iq
+Wj
+kM
+MM
+Kh
+FD
+qb
+YW
+Jh
+Pt
+Kt
+Jh
+FD
+LE
+uE
+hj
+Jh
+FD
+qb
+ap
+mB
+mB
+mB
+mB
+mB
+mB
+Yu
+YW
+Jh
+Jh
+Jh
+Jh
+FD
+qb
+Yu
+YW
+Jh
+pW
+pW
+Kt
+Jh
+Pt
+Kt
+Jh
+mZ
+mZ
+mZ
+mZ
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+PV
+"}
+(31,1,1) = {"
+PV
+pG
+pG
+pG
+pG
+pG
+mZ
+mZ
+mZ
+mZ
+Jh
+Pt
+Pt
+Jh
+Jh
+Jh
+Jh
+aN
+aN
+aN
+BG
+Jh
+Jh
+Jh
+Ai
+Jh
+Jh
+Jh
+FD
+qb
+Yu
+YW
+Ai
+Jh
+Pt
+Jh
+Jh
+Jh
+Jh
+FD
+qb
+YW
+Jh
+Pt
+Jh
+Pt
+sG
+tz
+tz
+tz
+CX
+WQ
+YD
+TP
+TP
+IK
+Cs
+tz
+tz
+tz
+Ef
+Pt
+Jh
+FD
+qb
+YW
+Jh
+Pt
+Pt
+GP
+Bu
+sL
+Li
+Cr
+co
+hN
+xI
+Ua
+Ua
+Ua
+Ua
+Ua
+Ua
+Ua
+Yu
+YW
+Jh
+Jh
+Jh
+Jh
+FD
+qb
+Yu
+YW
+Jh
+pW
+pW
+Kt
+Jh
+Pt
+Jh
+Jh
+mZ
+mZ
+mZ
+mZ
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+PV
+"}
+(32,1,1) = {"
+PV
+pG
+pG
+pG
+pG
+pG
+mZ
+mZ
+mZ
+mZ
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+aN
+aN
+aN
+SL
+FD
+Xj
+mB
+mB
+mB
+mB
+mB
+mB
+Yu
+Yu
+ap
+mB
+mB
+mB
+Fp
+Jh
+Kt
+Jh
+FD
+qb
+YW
+Jh
+Pt
+Pt
+Pt
+PB
+tz
+cq
+WQ
+IK
+IK
+rK
+or
+an
+IK
+WQ
+yS
+hX
+tz
+fS
+Pt
+Pt
+FD
+qb
+YW
+Jh
+Pt
+Xi
+yV
+LL
+LL
+Bz
+LL
+LL
+HF
+QW
+Kt
+av
+Wj
+by
+Jh
+Jh
+FD
+qb
+YW
+Kt
+Kt
+Jh
+Jh
+FD
+qb
+Yu
+YW
+Jh
+pW
+pW
+Jh
+Kt
+Pt
+Jh
+Jh
+mZ
+mZ
+mZ
+mZ
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+PV
+"}
+(33,1,1) = {"
+PV
+pG
+pG
+pG
+pG
+pG
+mZ
+mZ
+mZ
+mZ
+Jh
+Jh
+Jh
+Jh
+Jh
+WO
+WO
+BG
+Jh
+Jh
+Jh
+FD
+qb
+qP
+Ua
+Ua
+Ua
+Ua
+Ua
+Ua
+Ua
+Ua
+Ua
+Ua
+Yu
+YW
+Jh
+Kt
+Jh
+FD
+qb
+YW
+Jh
+Jh
+Pt
+Kt
+PB
+tz
+bX
+IK
+IK
+WQ
+Xy
+tz
+iw
+WQ
+WQ
+Ro
+Dt
+tz
+tg
+GP
+xg
+ZD
+qb
+YW
+Pt
+lv
+yV
+LL
+LL
+xX
+ky
+Py
+LL
+LL
+Uv
+jZ
+uP
+LL
+tg
+uk
+uk
+UF
+qb
+YW
+Jh
+Kt
+Kt
+Kt
+FD
+qb
+Yu
+YW
+Jh
+pW
+pW
+Jh
+Pt
+Pt
+Jh
+Jh
+mZ
+mZ
+mZ
+mZ
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+PV
+"}
+(34,1,1) = {"
+PV
+pG
+pG
+pG
+pG
+pG
+mZ
+mZ
+mZ
+mZ
+Jh
+Jh
+Jh
+Jh
+Jh
+WO
+WO
+FD
+Xj
+mB
+Fp
+FD
+qb
+YW
+Jh
+Jh
+Pt
+Pt
+Jh
+Jh
+Jh
+Kt
+Kt
+FD
+qb
+YW
+Jh
+Pt
+Kt
+FD
+qb
+YW
+Jh
+Kt
+Pt
+Kt
+PB
+tz
+tz
+tz
+Ho
+Ho
+tz
+tz
+tz
+nU
+nU
+tz
+tz
+tz
+rN
+mz
+LL
+kF
+qb
+YW
+Jh
+PG
+LL
+LL
+gU
+Ku
+Ku
+Ku
+DR
+LL
+LL
+Rd
+LL
+LL
+tg
+Pt
+Kt
+UF
+qb
+ap
+mB
+mB
+mB
+mB
+mB
+Yu
+Yu
+YW
+Jh
+pW
+pW
+Jh
+Kt
+Pt
+Jh
+Jh
+mZ
+mZ
+mZ
+mZ
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+PV
+"}
+(35,1,1) = {"
+PV
+pG
+pG
+pG
+pG
+pG
+mZ
+mZ
+mZ
+mZ
+Jh
+Jh
+Jh
+Jh
+Jh
+WO
+WO
+FD
+qb
+Yu
+ap
+mB
+Yu
+YW
+Jh
+Kt
+pk
+Pt
+Pt
+Kt
+Kt
+Kt
+Pt
+jm
+qb
+YW
+Jh
+Pt
+Pt
+FD
+qb
+YW
+Jh
+Jh
+Pt
+Pt
+QH
+tz
+tz
+tz
+WQ
+IK
+YD
+dx
+YD
+WQ
+IK
+tz
+tz
+tz
+gA
+LL
+LL
+kF
+qb
+YW
+Kt
+PB
+LL
+yW
+ky
+Ku
+rA
+rA
+MI
+ey
+LL
+em
+LL
+DS
+tg
+Pt
+Pt
+UF
+LE
+Ua
+Ua
+Ua
+Ua
+Ua
+Ua
+Yu
+Yu
+YW
+Jh
+pW
+pW
+Jh
+Kt
+Pt
+Jh
+Jh
+mZ
+mZ
+mZ
+mZ
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+PV
+"}
+(36,1,1) = {"
+PV
+pG
+pG
+pG
+pG
+pG
+mZ
+mZ
+mZ
+mZ
+Jh
+Jh
+Jh
+Kt
+Jh
+WO
+WO
+FD
+qb
+Yu
+qP
+Ua
+Ua
+qd
+Jh
+Jh
+pk
+Pt
+ai
+Jh
+Kt
+Kt
+Jh
+jm
+qb
+YW
+Jh
+Kt
+Kt
+aa
+qb
+YW
+Jh
+uk
+uk
+aN
+yP
+MM
+gO
+tz
+CX
+MN
+YD
+YD
+TP
+WQ
+Cs
+tz
+zT
+MM
+Tp
+LL
+DS
+kF
+qb
+YW
+av
+yV
+LL
+sr
+JU
+Xc
+Po
+uQ
+dW
+sx
+LL
+em
+LL
+DS
+fS
+Kt
+Pt
+Pt
+Jh
+Jh
+Jh
+Kt
+Jh
+Jh
+wM
+qb
+Yu
+YW
+Jh
+pW
+pW
+Kt
+Kt
+Pt
+Jh
+Jh
+mZ
+mZ
+mZ
+mZ
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+PV
+"}
+(37,1,1) = {"
+PV
+pG
+pG
+pG
+pG
+pG
+mZ
+mZ
+mZ
+mZ
+Jh
+Jh
+Kt
+Jh
+Jh
+WO
+WO
+FD
+qb
+Yu
+YW
+Dl
+Pt
+Pt
+Jh
+Kt
+pk
+Pt
+jm
+Xj
+mB
+mB
+mB
+mB
+Yu
+YW
+Jh
+Kt
+Kt
+FD
+qb
+YW
+Jh
+Pt
+Kt
+Pt
+Kt
+Jh
+PB
+tz
+tz
+tz
+WQ
+IK
+IK
+tz
+tz
+tz
+tg
+Jh
+Ym
+LL
+DS
+kF
+qb
+YW
+PB
+LL
+LL
+LL
+LL
+LL
+LL
+LL
+LL
+LL
+LL
+em
+LL
+LL
+tg
+Pt
+Pt
+aN
+aN
+aN
+Pt
+Pt
+Nl
+Kt
+FD
+qb
+Yu
+YW
+Jh
+pW
+pW
+Kt
+Jh
+Pt
+Jh
+Jh
+mZ
+mZ
+mZ
+mZ
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+PV
+"}
+(38,1,1) = {"
+PV
+pG
+pG
+pG
+pG
+pG
+mZ
+mZ
+mZ
+mZ
+Jh
+Pt
+Pt
+Kt
+Pt
+WO
+WO
+FD
+qb
+Yu
+YW
+Kt
+Pt
+Pt
+Pt
+Pt
+Kt
+Kt
+FD
+qb
+qP
+Ua
+Ua
+Ua
+Yu
+YW
+Jh
+Kt
+Kt
+FD
+qb
+YW
+Jh
+Jh
+Pt
+Pt
+Pt
+Kt
+mD
+MM
+gO
+tz
+tz
+IK
+tz
+tz
+zT
+MM
+Gf
+Kt
+PB
+LL
+LL
+Fi
+qb
+YW
+PB
+LL
+El
+El
+El
+El
+El
+El
+El
+El
+LL
+hc
+eX
+LL
+tg
+Pt
+Kt
+Kt
+Kt
+Pt
+Pt
+Pt
+Nl
+Pt
+FD
+qb
+Yu
+YW
+Jh
+pW
+pW
+Kt
+Jh
+Pt
+Jh
+Jh
+mZ
+mZ
+mZ
+mZ
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+PV
+"}
+(39,1,1) = {"
+PV
+pG
+pG
+pG
+pG
+pG
+mZ
+mZ
+mZ
+mZ
+Jh
+Jh
+Pt
+Pt
+Pt
+WO
+WO
+FD
+qb
+Yu
+YW
+Jh
+Jh
+pk
+Jh
+Pt
+Pt
+Jh
+FD
+qb
+YW
+Jh
+Kt
+aa
+qb
+ap
+mB
+mB
+mB
+mB
+Yu
+ap
+mB
+mB
+mB
+Fp
+Jh
+aN
+aN
+Kt
+Ym
+tz
+tz
+Mv
+tz
+tz
+fS
+Kt
+Pt
+Pt
+bD
+eX
+LL
+Fi
+qb
+YW
+Ym
+LL
+LL
+LL
+LL
+LL
+LL
+LL
+LL
+LL
+LL
+tg
+zs
+Wd
+gc
+Jh
+Jh
+Jh
+Kt
+Kt
+pW
+Jh
+Pt
+Pt
+FD
+qb
+Yu
+YW
+Jh
+pW
+pW
+Kt
+Jh
+Kt
+Jh
+Jh
+mZ
+mZ
+mZ
+mZ
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+PV
+"}
+(40,1,1) = {"
+PV
+pG
+pG
+pG
+pG
+pG
+mZ
+mZ
+mZ
+mZ
+Jh
+Jh
+Kt
+Pt
+Jh
+WO
+WO
+FD
+qb
+Yu
+YW
+Pt
+Pt
+pk
+Kt
+Kt
+Kt
+Jh
+FD
+qb
+YW
+Jh
+Kt
+FD
+LE
+Ua
+Ua
+Yu
+qP
+Ua
+Ua
+Ua
+Ua
+Ua
+Yu
+YW
+Jh
+Jh
+Jh
+Kt
+zs
+Bn
+pN
+Ac
+nH
+Qg
+gc
+Pt
+Pt
+Pt
+Jh
+bD
+MM
+xF
+qb
+YW
+mD
+Qg
+MM
+Wd
+Wd
+MM
+MM
+MM
+Wd
+Wd
+gQ
+Gf
+UF
+Xj
+mB
+mB
+mB
+mB
+iD
+Jh
+al
+Pt
+Pt
+Kt
+FD
+qb
+Yu
+YW
+Jh
+pW
+pW
+Kt
+Jh
+Kt
+Jh
+Jh
+mZ
+mZ
+mZ
+mZ
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+PV
+"}
+(41,1,1) = {"
+PV
+pG
+pG
+pG
+pG
+pG
+mZ
+mZ
+mZ
+mZ
+Jh
+Kt
+Pt
+Pt
+Jh
+WO
+WO
+aa
+qb
+Yu
+YW
+Pt
+Pt
+pk
+Kt
+Jh
+Kt
+Kt
+FD
+qb
+YW
+Kt
+Kt
+Pt
+Kt
+Kt
+FD
+qb
+YW
+Jh
+Jh
+Jh
+Jh
+wM
+qb
+ap
+mB
+mB
+mB
+Fp
+Jh
+FD
+Qe
+eb
+iD
+Jh
+Jh
+Pt
+Pt
+Kt
+UF
+lH
+mB
+mB
+Yu
+ap
+mB
+mB
+mB
+mB
+mB
+mB
+mB
+mB
+mB
+mB
+mB
+mB
+mB
+Yu
+qP
+Ua
+Ua
+Yu
+YW
+Jh
+Kt
+Pt
+Jh
+Kt
+FD
+qb
+Yu
+YW
+Jh
+pW
+pW
+Kt
+Kt
+Jh
+Jh
+Jh
+mZ
+mZ
+mZ
+mZ
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+PV
+"}
+(42,1,1) = {"
+PV
+pG
+pG
+pG
+pG
+pG
+mZ
+mZ
+mZ
+mZ
+Jh
+Kt
+Kt
+Pt
+Jh
+WO
+WO
+FD
+qb
+Yu
+YW
+Pt
+Pt
+Pt
+Pt
+Jh
+Jh
+Jh
+FD
+qb
+YW
+Kt
+Jh
+Pt
+Pt
+Jh
+UF
+qb
+YW
+Jh
+Kt
+Kt
+Jh
+FD
+LE
+Ua
+Ua
+Ua
+Ua
+ap
+mB
+mB
+Yu
+Yu
+YW
+Jh
+Jh
+Jh
+Kt
+Kt
+UF
+qb
+qP
+Ua
+Ua
+Ua
+Ua
+Ua
+Ua
+Ua
+Ua
+Ua
+Ua
+Ua
+Ua
+Ua
+Yu
+qP
+Ua
+Ua
+hj
+Jh
+FD
+qb
+ap
+mB
+mB
+mB
+mB
+mB
+mB
+Yu
+Yu
+YW
+Jh
+pW
+pW
+Kt
+Kt
+Jh
+Jh
+Jh
+mZ
+mZ
+mZ
+mZ
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+PV
+"}
+(43,1,1) = {"
+PV
+pG
+pG
+pG
+pG
+pG
+mZ
+mZ
+mZ
+mZ
+Jh
+Kt
+Kt
+Pt
+Pt
+WO
+WO
+FD
+qb
+Yu
+YW
+Jh
+Kt
+pk
+jm
+lH
+mB
+mB
+mB
+Yu
+YW
+Kt
+Pt
+Pt
+Pt
+aN
+SZ
+gg
+yz
+aN
+aN
+Kt
+Kt
+Kt
+Pt
+Pt
+Jh
+Jh
+FD
+Yq
+qP
+Ua
+Ua
+Yu
+ap
+mB
+mB
+mB
+mB
+mB
+mB
+Yu
+YW
+Jh
+Kt
+Kt
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+FD
+qb
+YW
+Jh
+GP
+xg
+by
+FD
+xI
+Ua
+Ua
+Ua
+Ua
+Ua
+Ua
+Ua
+Yu
+Yu
+YW
+Jh
+pW
+pW
+Kt
+Kt
+Jh
+Jh
+Jh
+mZ
+mZ
+mZ
+mZ
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+PV
+"}
+(44,1,1) = {"
+PV
+pG
+pG
+pG
+pG
+pG
+mZ
+mZ
+mZ
+mZ
+Jh
+Kt
+Kt
+Jh
+Pt
+WO
+WO
+FD
+qb
+Yu
+YW
+Jh
+Kt
+pk
+UF
+qb
+qP
+Ua
+Ua
+Ua
+qd
+Jh
+FA
+Xj
+mB
+mB
+mB
+eb
+ap
+mB
+fM
+aN
+aN
+Jh
+Pt
+Kt
+Kt
+Pt
+FD
+Yq
+YW
+Jh
+FD
+vt
+Ua
+Ua
+Ua
+Ua
+Ua
+Ua
+Ua
+Ua
+hj
+Jh
+uk
+uk
+Pt
+Jh
+Kt
+Jh
+Kt
+Jh
+Jh
+Pt
+Pt
+FD
+qb
+YW
+lv
+mz
+LL
+tg
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+FD
+qb
+Yu
+YW
+Jh
+pW
+pW
+Kt
+Kt
+Jh
+Jh
+Jh
+mZ
+mZ
+mZ
+mZ
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+PV
+"}
+(45,1,1) = {"
+PV
+pG
+pG
+pG
+pG
+pG
+mZ
+mZ
+mZ
+mZ
+Jh
+Kt
+Kt
+Kt
+Jh
+WO
+WO
+FD
+qb
+Yu
+YW
+Jh
+Jh
+WO
+UF
+qb
+YW
+Qu
+Jh
+Jh
+Pt
+Jh
+FA
+qb
+Yu
+Yu
+Yu
+wH
+Yu
+Kt
+Wc
+mB
+fM
+xi
+Pt
+Kt
+Kt
+Pt
+FD
+Yq
+YW
+Pt
+Pt
+Pt
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Pt
+Pt
+Pt
+uk
+aN
+aN
+GP
+Wj
+by
+Nl
+Pt
+FD
+qb
+YW
+rs
+LL
+LL
+tg
+Kt
+Pt
+Pt
+Jh
+Jh
+Kt
+Pt
+Nl
+FD
+qb
+Yu
+YW
+Jh
+pW
+pW
+Jh
+Jh
+Jh
+Jh
+Jh
+mZ
+mZ
+mZ
+mZ
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+PV
+"}
+(46,1,1) = {"
+PV
+pG
+pG
+pG
+pG
+pG
+mZ
+mZ
+mZ
+mZ
+Jh
+Jh
+Kt
+Kt
+Jh
+WO
+WO
+FD
+qb
+Yu
+YW
+ae
+pk
+Pt
+jm
+qb
+YW
+Jh
+Kt
+Kt
+Pt
+FA
+lH
+ab
+ka
+EA
+Va
+Yu
+Fe
+Kt
+Jh
+Yu
+ap
+mB
+fM
+aN
+aN
+Pt
+UF
+Yq
+YW
+Jh
+Pt
+Pt
+Kt
+Kt
+ZL
+EU
+Bu
+nC
+uk
+rn
+Gb
+Wj
+nq
+aN
+Wh
+Bu
+Wj
+Hg
+uP
+LL
+tg
+pW
+Jh
+FD
+qb
+YW
+PB
+LL
+DS
+tg
+Pt
+Pt
+Pt
+Jh
+Kt
+Pt
+Pt
+Nl
+FD
+qb
+Yu
+YW
+Jh
+pW
+pW
+Jh
+Pt
+Pt
+Jh
+Jh
+mZ
+mZ
+mZ
+mZ
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+PV
+"}
+(47,1,1) = {"
+PV
+pG
+pG
+pG
+pG
+pG
+mZ
+mZ
+mZ
+mZ
+Jh
+Jh
+Jh
+Kt
+Jh
+WO
+WO
+FD
+qb
+Yu
+YW
+Kt
+pk
+Pt
+jm
+qb
+YW
+Kt
+Kt
+Pt
+Pt
+FA
+qb
+ab
+pq
+pq
+pq
+Yu
+Yu
+ow
+Jh
+FC
+Yu
+Yu
+ap
+mB
+fM
+pW
+UF
+Yq
+YW
+aN
+uk
+aN
+uk
+Pt
+rs
+Yf
+Yf
+HF
+PO
+yV
+Yf
+Yf
+Uv
+jZ
+yV
+Yf
+Yf
+gt
+LL
+LL
+tg
+Jh
+Jh
+FD
+qb
+YW
+PB
+LL
+DS
+tg
+Pt
+Kt
+Kt
+Jh
+Jh
+Pt
+Pt
+Nl
+FD
+qb
+Yu
+YW
+Jh
+pW
+pW
+Pt
+Pt
+Pt
+Pt
+Jh
+mZ
+mZ
+mZ
+mZ
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+PV
+"}
+(48,1,1) = {"
+PV
+pG
+pG
+pG
+pG
+pG
+mZ
+mZ
+mZ
+mZ
+Jh
+Pt
+Jh
+Kt
+Kt
+WO
+WO
+FD
+qb
+Yu
+YW
+Jh
+pk
+Kt
+FD
+qb
+YW
+Kt
+Pt
+Pt
+FA
+lH
+Yu
+ac
+ka
+qv
+Mb
+Yu
+Yu
+Jh
+Yu
+ab
+qv
+qv
+ZE
+Yu
+YW
+pW
+FD
+Yq
+YW
+Jh
+Jh
+Jh
+Jh
+Pt
+PB
+Yf
+Yf
+Yf
+so
+Yf
+Yf
+Yf
+Yf
+so
+Yf
+Yf
+Yf
+Dz
+LL
+DS
+tg
+Jh
+Jh
+FD
+qb
+YW
+PB
+LL
+LL
+tg
+Jh
+Jh
+Jh
+Jh
+pW
+Jh
+Pt
+Pt
+FD
+qb
+Yu
+YW
+Jh
+pW
+pW
+Jh
+Jh
+Pt
+Pt
+Jh
+mZ
+mZ
+mZ
+mZ
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+PV
+"}
+(49,1,1) = {"
+PV
+pG
+pG
+pG
+pG
+pG
+mZ
+mZ
+mZ
+mZ
+Jh
+Pt
+Pt
+Kt
+Kt
+WO
+WO
+FD
+qb
+Yu
+YW
+Jh
+Jh
+Kt
+FD
+qb
+YW
+Jh
+Jh
+Vt
+lH
+ab
+ti
+XW
+cL
+Kt
+Kt
+Yu
+If
+Yu
+qa
+ab
+pq
+pq
+pq
+Yu
+YW
+Nl
+FD
+Yq
+ap
+mB
+mB
+mB
+mB
+mB
+am
+TZ
+Yh
+PP
+tC
+Ij
+yQ
+Kv
+oN
+tC
+PP
+Yf
+zT
+Jz
+LL
+DS
+tg
+Jh
+Kt
+FD
+qb
+YW
+zs
+vg
+LL
+tg
+Jh
+Kt
+Kt
+Jh
+pW
+Jh
+Kt
+Pt
+FD
+qb
+Yu
+YW
+Jh
+pW
+pW
+Jh
+Jh
+Jh
+Jh
+Jh
+mZ
+mZ
+mZ
+mZ
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+PV
+"}
+(50,1,1) = {"
+PV
+pG
+pG
+pG
+pG
+pG
+mZ
+mZ
+mZ
+mZ
+Jh
+Jh
+Pt
+Jh
+Kt
+WO
+WO
+FD
+qb
+Yu
+ap
+mB
+mB
+mB
+mB
+Yu
+YW
+Jh
+Jh
+Vt
+qb
+ab
+pq
+pq
+pq
+Jh
+Yu
+wH
+Yu
+tx
+Jh
+ab
+qv
+qv
+pq
+Yu
+YW
+Nl
+UF
+Yq
+qP
+Ua
+Ua
+Ua
+qP
+Ua
+Uz
+Cd
+ei
+PP
+PP
+PP
+PP
+PP
+PP
+PP
+ei
+Yf
+Uv
+Sm
+LL
+LL
+tg
+Pt
+pW
+FD
+qb
+YW
+Jh
+zs
+Wd
+gc
+Jh
+IW
+Jh
+Kt
+pW
+Pt
+Jh
+Jh
+FD
+qb
+Yu
+YW
+Jh
+pW
+pW
+Jh
+Jh
+Kt
+Jh
+Jh
+mZ
+mZ
+mZ
+mZ
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+PV
+"}
+(51,1,1) = {"
+PV
+pG
+pG
+pG
+pG
+pG
+mZ
+mZ
+mZ
+mZ
+Jh
+Kt
+Kt
+Pt
+Kt
+WO
+WO
+FD
+qb
+Yu
+qP
+Ua
+Ua
+Ua
+Ua
+Yu
+YW
+Pt
+Pt
+Vt
+qb
+ab
+QP
+xv
+qG
+Yu
+ab
+XH
+pq
+xh
+Jh
+Jh
+Yu
+Yu
+Yu
+qP
+aS
+Pt
+jm
+Yq
+YW
+Jh
+Jh
+FD
+WZ
+Jh
+PB
+Yf
+Yf
+Sd
+AT
+ei
+ei
+PP
+PP
+FI
+Kv
+Yf
+Yf
+Lf
+eX
+LL
+tg
+Pt
+pW
+FD
+qb
+ap
+mB
+mB
+mB
+mB
+mB
+iD
+Jh
+Pt
+Pt
+Pt
+Jh
+Jh
+FD
+qb
+Yu
+YW
+Jh
+pW
+pW
+Jh
+Jh
+Kt
+Jh
+Jh
+mZ
+mZ
+mZ
+mZ
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+PV
+"}
+(52,1,1) = {"
+PV
+pG
+pG
+pG
+pG
+pG
+mZ
+mZ
+mZ
+mZ
+Jh
+Kt
+Jh
+Pt
+Pt
+WO
+WO
+FD
+qb
+Yu
+YW
+Jh
+Jh
+Jh
+FD
+qb
+YW
+Pt
+Kt
+FA
+qb
+ab
+ip
+ip
+ZE
+Yu
+ab
+KM
+pq
+uJ
+sF
+qa
+Yu
+Yu
+qP
+aS
+ar
+Pt
+jm
+Yq
+YW
+Pt
+jm
+pT
+ap
+EL
+QH
+Yf
+Yf
+Yf
+Yf
+Yf
+ei
+DI
+Yf
+Yf
+Yf
+Yf
+Yf
+tg
+bD
+MM
+Kh
+Pt
+pW
+UF
+LE
+Ua
+Ua
+Ua
+Ua
+Ua
+Yu
+YW
+Jh
+Jh
+Pt
+Pt
+Pt
+Kt
+FD
+qb
+Yu
+YW
+Jh
+pW
+pW
+Jh
+Kt
+Jh
+Kt
+Jh
+mZ
+mZ
+mZ
+mZ
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+PV
+"}
+(53,1,1) = {"
+PV
+pG
+pG
+pG
+pG
+pG
+mZ
+mZ
+mZ
+mZ
+Jh
+Kt
+Kt
+Jh
+Pt
+WO
+WO
+aa
+qb
+Yu
+YW
+Jh
+WO
+Jh
+FD
+qb
+YW
+Pt
+Kt
+FA
+qb
+ab
+pq
+pq
+pq
+Yu
+ab
+vQ
+pq
+bE
+Jh
+Kt
+FV
+qP
+aS
+pW
+Kt
+Kt
+UF
+Yq
+YW
+Pt
+jm
+Yq
+Yu
+YW
+yP
+do
+Yf
+Yf
+eY
+Kv
+ei
+ei
+Kv
+Ap
+Yf
+Yf
+zT
+gc
+Kt
+Kt
+Jh
+Pt
+Kt
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+FD
+qb
+YW
+Jh
+Jh
+Pt
+Jh
+Pt
+Jh
+FD
+qb
+Yu
+YW
+Jh
+pW
+pW
+Jh
+Kt
+Jh
+Kt
+Jh
+mZ
+mZ
+mZ
+mZ
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+PV
+"}
+(54,1,1) = {"
+PV
+pG
+pG
+pG
+pG
+pG
+mZ
+mZ
+mZ
+mZ
+Jh
+Kt
+Kt
+Kt
+Jh
+WO
+WO
+FD
+qb
+Yu
+YW
+Jh
+WO
+Kt
+FD
+qb
+YW
+Jh
+Kt
+FA
+LE
+ab
+ip
+ip
+pq
+Yu
+ab
+Dp
+pq
+Jh
+Gn
+Kt
+Jh
+Ao
+pW
+Jh
+Jh
+Kt
+FD
+Yq
+YW
+Pt
+UF
+Yq
+Yu
+YW
+Jh
+PB
+Yf
+ha
+od
+ei
+PP
+ei
+ei
+bW
+KS
+Yf
+tg
+Jh
+Jh
+Jh
+Jh
+Kt
+Kt
+Jh
+Jh
+Jh
+Kt
+Jh
+Jh
+FD
+qb
+YW
+Jh
+Jh
+Pt
+Kt
+Nl
+Kt
+FD
+qb
+Yu
+YW
+Jh
+pW
+pW
+Kt
+Jh
+Kt
+Kt
+Jh
+mZ
+mZ
+mZ
+mZ
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+PV
+"}
+(55,1,1) = {"
+PV
+pG
+pG
+pG
+pG
+pG
+mZ
+mZ
+mZ
+mZ
+Jh
+Jh
+Jh
+Kt
+Kt
+WO
+WO
+FD
+qb
+Yu
+YW
+Jh
+WO
+Kt
+FD
+qb
+YW
+Jh
+Kt
+Jh
+FA
+LE
+Yu
+Yu
+Yu
+Jh
+Jh
+Yu
+Yu
+gC
+Yu
+Jh
+KJ
+aS
+jm
+Qs
+mB
+mB
+mB
+Yu
+YW
+Pt
+FD
+DY
+Od
+cI
+Jh
+PB
+Yf
+ha
+ei
+PP
+ei
+Av
+ei
+ei
+Ux
+Yf
+tg
+Kt
+Kt
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+pW
+Pt
+Pt
+Kt
+FD
+qb
+YW
+Jh
+Pt
+Jh
+Jh
+Nl
+Kt
+FD
+qb
+Yu
+YW
+Jh
+pW
+pW
+Kt
+Jh
+Kt
+Jh
+Jh
+mZ
+mZ
+mZ
+mZ
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+PV
+"}
+(56,1,1) = {"
+PV
+pG
+pG
+pG
+pG
+pG
+mZ
+mZ
+mZ
+mZ
+Jh
+Jh
+Jh
+Jh
+Jh
+WO
+WO
+FD
+qb
+Yu
+YW
+Jh
+Kt
+WO
+FD
+qb
+YW
+Pt
+Pt
+Pt
+tt
+FA
+LE
+Yu
+Kt
+Kt
+aR
+Yu
+Yu
+Yu
+Yu
+ow
+YW
+pW
+jm
+Yq
+qP
+Ua
+Ua
+Ua
+hj
+Jh
+Jh
+Kt
+Kt
+av
+Wj
+yV
+Yf
+eQ
+ei
+ei
+ei
+ei
+ei
+ei
+Zn
+Yf
+Uv
+Wj
+YF
+Kt
+pW
+Jh
+Jh
+Kt
+Pt
+pW
+Pt
+Pt
+Pt
+FD
+qb
+YW
+Kt
+Kt
+Kt
+Jh
+pW
+Jh
+FD
+qb
+Yu
+YW
+Jh
+pW
+pW
+Kt
+Kt
+Kt
+Jh
+Jh
+mZ
+mZ
+mZ
+mZ
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+PV
+"}
+(57,1,1) = {"
+PV
+pG
+pG
+pG
+pG
+pG
+mZ
+mZ
+mZ
+mZ
+Jh
+Jh
+Jh
+Jh
+Jh
+WO
+WO
+FD
+qb
+Yu
+YW
+Jh
+Kt
+Kt
+FD
+qb
+YW
+Jh
+Pt
+Pt
+Kt
+Kt
+FA
+qb
+Jh
+ac
+mS
+fc
+Va
+Yu
+If
+Yu
+YW
+pW
+jm
+Yq
+YW
+Jh
+Jh
+Jh
+Jh
+Pt
+aN
+uk
+uk
+Go
+Yf
+Yf
+Yf
+Tt
+od
+ei
+ei
+ei
+PP
+bW
+Nd
+Yf
+Yf
+Yf
+oF
+Kt
+pW
+Pt
+Pt
+Kt
+Pt
+pW
+Jh
+Kt
+Pt
+FD
+qb
+YW
+Jh
+Jh
+Kt
+Jh
+Jh
+Jh
+wM
+qb
+Yu
+YW
+Jh
+pW
+pW
+Jh
+Kt
+Kt
+Jh
+Jh
+mZ
+mZ
+mZ
+mZ
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+PV
+"}
+(58,1,1) = {"
+PV
+pG
+pG
+pG
+pG
+pG
+mZ
+mZ
+mZ
+mZ
+Jh
+Kt
+Jh
+Jh
+Jh
+WO
+WO
+FD
+qb
+Yu
+YW
+Ai
+Kt
+Kt
+FD
+qb
+ap
+mB
+mB
+Fp
+Jh
+Kt
+jm
+qb
+Yu
+ab
+pq
+pq
+pq
+Yu
+Yu
+VB
+aS
+Pt
+jm
+Yq
+YW
+Jh
+Jh
+Jh
+Jh
+Pt
+Pt
+Pt
+Jh
+sG
+Yf
+Yf
+Yf
+Yf
+vz
+Sd
+ei
+ei
+xC
+LY
+Yf
+Yf
+Yf
+Yf
+Ef
+Jh
+pW
+Pt
+Pt
+Pt
+Pt
+Jh
+Jh
+Kt
+Jh
+FD
+qb
+YW
+Jh
+Kt
+Kt
+Pt
+Pt
+Jh
+FD
+qb
+Yu
+YW
+Jh
+pW
+pW
+Jh
+Kt
+Kt
+Jh
+Jh
+mZ
+mZ
+mZ
+mZ
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+PV
+"}
+(59,1,1) = {"
+PV
+pG
+pG
+pG
+pG
+pG
+mZ
+mZ
+mZ
+mZ
+Kt
+Kt
+Jh
+Jh
+Jh
+WO
+WO
+FD
+LE
+Ua
+qd
+Jh
+WO
+Pt
+jm
+LE
+Ua
+Ua
+Yu
+YW
+Jh
+eU
+Ee
+qb
+Yu
+ab
+cn
+mS
+Mb
+Yu
+Yu
+YW
+pW
+Kt
+FD
+Yq
+YW
+Jh
+Kt
+Kt
+Kt
+WO
+Pt
+Pt
+av
+yV
+mu
+oN
+FE
+Yf
+Yf
+Yf
+ei
+DI
+Yf
+Yf
+Yf
+bY
+Ij
+PU
+Uv
+by
+Jh
+aN
+aN
+Jh
+Pt
+Jh
+Pt
+Jh
+Jh
+FD
+qb
+YW
+Jh
+Kt
+Kt
+Pt
+Jh
+Pt
+FD
+qb
+Yu
+YW
+Jh
+pW
+pW
+Jh
+Kt
+Kt
+Jh
+Jh
+mZ
+mZ
+mZ
+mZ
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+PV
+"}
+(60,1,1) = {"
+PV
+pG
+pG
+pG
+pG
+pG
+mZ
+mZ
+mZ
+mZ
+Kt
+Kt
+Jh
+Jh
+Jh
+WO
+WO
+Jh
+Jh
+Jh
+Jh
+Pt
+QX
+Pt
+Jh
+Ai
+Jh
+FD
+qb
+YW
+Jh
+jm
+qk
+Yu
+Yu
+Yu
+Yu
+Yu
+Yu
+Yu
+Yu
+YW
+Nl
+Kt
+FD
+Yq
+YW
+Jh
+Kt
+Kt
+pk
+pk
+Kt
+av
+yV
+EG
+PP
+PP
+PP
+Yf
+PP
+PP
+ei
+ei
+ei
+ei
+Yf
+PP
+PP
+PP
+UL
+Uv
+by
+Kt
+Jh
+pW
+Jh
+Jh
+Pt
+Pt
+Jh
+aa
+qb
+YW
+Jh
+Jh
+Pt
+pW
+Jh
+Kt
+FD
+qb
+Yu
+YW
+Jh
+pW
+pW
+Jh
+Pt
+Kt
+Jh
+Jh
+mZ
+mZ
+mZ
+mZ
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+PV
+"}
+(61,1,1) = {"
+PV
+pG
+pG
+pG
+pG
+pG
+mZ
+mZ
+mZ
+mZ
+Kt
+uk
+uk
+aN
+uk
+zz
+Sa
+Jh
+Jh
+Kt
+Jh
+Pt
+QX
+Pt
+Jh
+Jh
+WO
+FD
+qb
+YW
+Kt
+FA
+af
+nn
+sk
+mG
+Yu
+qP
+Ua
+uE
+qP
+aS
+Nl
+Kt
+FD
+Yq
+YW
+Jh
+Jh
+Jh
+WO
+Xi
+Wj
+yV
+EG
+PP
+PP
+PP
+PP
+Wq
+ei
+PP
+Sd
+Kv
+ei
+PP
+Wq
+ei
+ei
+PP
+PP
+UL
+Uv
+Wj
+QW
+Nl
+Pt
+Pt
+Pt
+Pt
+Pt
+FD
+qb
+YW
+Jh
+Jh
+Pt
+pW
+Jh
+Kt
+FD
+qb
+Yu
+YW
+Jh
+pW
+pW
+Jh
+Pt
+Jh
+Jh
+Jh
+mZ
+mZ
+mZ
+mZ
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+PV
+"}
+(62,1,1) = {"
+PV
+pG
+pG
+pG
+pG
+pG
+mZ
+mZ
+mZ
+mZ
+Jh
+aN
+aN
+uk
+uk
+Sk
+Kt
+Kt
+pk
+Kt
+Pt
+Pt
+Jh
+Jh
+Jh
+Jh
+WO
+FD
+qb
+YW
+Kt
+Vt
+af
+vJ
+Qk
+pq
+Yu
+YW
+FD
+ub
+Cg
+Pt
+Pt
+Pt
+FD
+Yq
+YW
+Pt
+Pt
+Jh
+WO
+PB
+Yf
+Yf
+ei
+PP
+Sd
+Sd
+PP
+HD
+Ta
+Ta
+Bc
+Bc
+vu
+Bj
+Yf
+PP
+Sd
+Kv
+PP
+PP
+Yf
+Yf
+tg
+Kt
+Jh
+Pt
+Pt
+Kt
+Pt
+FD
+qb
+YW
+Jh
+Jh
+Jh
+pW
+Kt
+Kt
+FD
+qb
+Yu
+YW
+Jh
+pW
+pW
+Kt
+Pt
+Jh
+Jh
+Jh
+mZ
+mZ
+mZ
+mZ
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+PV
+"}
+(63,1,1) = {"
+PV
+pG
+pG
+pG
+pG
+pG
+mZ
+mZ
+mZ
+mZ
+WO
+vj
+Sa
+Kt
+Kt
+Kt
+Kt
+Kt
+pk
+Kt
+Pt
+Jh
+Kt
+Kt
+Kt
+Kt
+pk
+FD
+qb
+YW
+Jh
+Vt
+LE
+Ua
+Ua
+Ua
+Ua
+aS
+FD
+qb
+ap
+mB
+mB
+mB
+mB
+Yu
+YW
+Pt
+Pt
+Kt
+WO
+rs
+Yf
+Yf
+PP
+ei
+Sd
+Kv
+WB
+Yf
+YQ
+PP
+PP
+PP
+PP
+nJ
+Yf
+YQ
+Sd
+Sd
+PP
+ei
+Yf
+Yf
+tg
+Jh
+Jh
+Jh
+Kt
+Kt
+Pt
+FD
+qb
+YW
+Kt
+Pt
+Jh
+Kt
+Pt
+Kt
+FD
+qb
+Yu
+YW
+Jh
+pW
+pW
+Kt
+Pt
+Pt
+Pt
+Jh
+mZ
+mZ
+mZ
+mZ
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+PV
+"}
+(64,1,1) = {"
+PV
+pG
+pG
+pG
+pG
+pG
+mZ
+mZ
+mZ
+mZ
+WO
+SL
+Pt
+WO
+Jh
+Jh
+Jh
+Kt
+pk
+Jh
+Pt
+Jh
+Jh
+Kt
+pk
+Kt
+Kt
+FD
+qb
+YW
+Pt
+Pt
+aj
+aj
+Pt
+Pt
+Pt
+ad
+iI
+qb
+qP
+Ua
+Ua
+Ua
+Ua
+Yu
+YW
+Jh
+Pt
+Kt
+WO
+yP
+sC
+gO
+ul
+PP
+RF
+PP
+PP
+Yf
+Yf
+Yf
+Wz
+Wz
+Yf
+Yf
+Yf
+ei
+ei
+PP
+PP
+hh
+zT
+MM
+gc
+pW
+Pt
+Pt
+Jh
+Kt
+Jh
+FD
+qb
+YW
+Kt
+Pt
+Pt
+Pt
+Pt
+Jh
+FD
+qb
+Yu
+YW
+Jh
+pW
+pW
+Kt
+Kt
+Pt
+Pt
+Jh
+mZ
+mZ
+mZ
+mZ
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+PV
+"}
+(65,1,1) = {"
+PV
+pG
+pG
+pG
+pG
+pG
+mZ
+mZ
+mZ
+mZ
+WO
+Jh
+Pt
+av
+Wj
+Bu
+by
+Jh
+av
+Wj
+Wj
+by
+Jh
+Kt
+pk
+Kt
+Kt
+UF
+qb
+YW
+Pt
+Pt
+Kt
+Kt
+Kt
+Kt
+Pt
+Pt
+UF
+qb
+YW
+Qu
+Jh
+Kt
+UF
+qb
+YW
+Jh
+Pt
+Kt
+pk
+WO
+Jh
+bD
+gO
+Lg
+PP
+ei
+hh
+pM
+Yf
+zT
+MM
+MM
+gO
+Yf
+pM
+ul
+PP
+PP
+hh
+zT
+gc
+Jh
+Kt
+Nl
+Jh
+Pt
+Pt
+Pt
+Jh
+FD
+qb
+YW
+Kt
+Kt
+Pt
+Pt
+Pt
+Pt
+UF
+qb
+Yu
+YW
+Jh
+pW
+pW
+Kt
+Jh
+Pt
+Pt
+Jh
+mZ
+mZ
+mZ
+mZ
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+PV
+"}
+(66,1,1) = {"
+PV
+pG
+pG
+pG
+pG
+pG
+mZ
+mZ
+mZ
+mZ
+WO
+Jh
+Pt
+qZ
+Fj
+Fj
+Iq
+Wj
+yV
+Fj
+Fj
+tg
+Jh
+Jh
+WO
+Jh
+Kt
+UF
+qb
+YW
+Jh
+Pt
+Jh
+Jh
+ae
+Kt
+Pt
+Pt
+FD
+qb
+YW
+Pt
+Pt
+Pt
+UF
+qb
+YW
+Jh
+Kt
+Pt
+Kt
+WO
+Jh
+Jh
+yP
+gO
+Yf
+Yf
+zT
+YT
+MM
+bA
+aj
+aj
+rh
+aL
+YT
+gO
+Yf
+Yf
+zT
+gc
+Kt
+Kt
+Kt
+pW
+Pt
+Pt
+Kt
+Jh
+Jh
+FD
+qb
+Yu
+mB
+mB
+Fp
+Jh
+Kt
+Kt
+UF
+qb
+Yu
+YW
+Jh
+pW
+pW
+Pt
+Pt
+Pt
+Jh
+Jh
+mZ
+mZ
+mZ
+mZ
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+PV
+"}
+(67,1,1) = {"
+PV
+pG
+pG
+pG
+pG
+pG
+mZ
+mZ
+mZ
+mZ
+WO
+Kt
+Kt
+QH
+Fj
+Fj
+UK
+UK
+UK
+Fj
+Fj
+Iq
+by
+Jh
+Jh
+Jh
+Jh
+FD
+qb
+ap
+mB
+mB
+mB
+mB
+mB
+mB
+mB
+mB
+mB
+Yu
+YW
+Pt
+Kt
+Pt
+jm
+qb
+YW
+Jh
+Kt
+Pt
+Pt
+aj
+ad
+aj
+Pt
+rs
+Yf
+Yf
+tg
+aj
+ad
+Kt
+Jh
+Pt
+Jh
+ad
+aj
+PB
+Yf
+Yf
+tg
+Kt
+Pt
+Pt
+Jh
+pW
+Kt
+Pt
+Jh
+Jh
+Jh
+FD
+sT
+Ua
+Ua
+Yu
+ap
+mB
+mB
+mB
+mB
+Yu
+Yu
+YW
+Jh
+pW
+pW
+Pt
+Pt
+Pt
+Jh
+Jh
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+pG
+pG
+pG
+PV
+"}
+(68,1,1) = {"
+PV
+pG
+pG
+pG
+pG
+pG
+mZ
+mZ
+mZ
+mZ
+WO
+Jh
+Kt
+yP
+gO
+OL
+rB
+XE
+ER
+KL
+Fj
+Fj
+QT
+lH
+mB
+mB
+Fp
+wM
+qb
+qP
+Ua
+Ua
+Ua
+Yu
+qP
+Ua
+Ua
+Ua
+Ua
+Ua
+hj
+Pt
+Pt
+Kt
+jm
+qb
+YW
+Jh
+Kt
+Kt
+Kt
+Jh
+Kt
+Pt
+Pt
+lU
+MM
+Qg
+gc
+Jh
+Pt
+Pt
+Pt
+Pt
+Jh
+Kt
+Kt
+bD
+Qg
+MM
+Gf
+Pt
+Pt
+Kt
+Jh
+pW
+Kt
+Kt
+Pt
+Kt
+Jh
+Pt
+Pt
+Jh
+wM
+qb
+qP
+Ua
+Ua
+Ua
+Ua
+Yu
+Yu
+YW
+Jh
+pW
+pW
+Jh
+Jh
+Jh
+Jh
+Jh
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+pG
+pG
+pG
+PV
+"}
+(69,1,1) = {"
+PV
+pG
+pG
+pG
+pG
+pG
+mZ
+mZ
+mZ
+mZ
+WO
+Kt
+Kt
+Pt
+PB
+ak
+hT
+rB
+Hc
+hT
+ME
+iU
+mX
+Yu
+Yu
+Yu
+ap
+mB
+Yu
+YW
+Jh
+Jh
+FD
+qb
+YW
+Kt
+Jh
+Kt
+Kt
+Jh
+Jh
+Jh
+aj
+ad
+FD
+qb
+ap
+mB
+mB
+mB
+iD
+Jh
+Jh
+Pt
+Pt
+Kt
+Jh
+Jh
+Jh
+Jh
+Kt
+Pt
+Pt
+aj
+aj
+aj
+Kt
+Kt
+Kt
+Jh
+Jh
+Pt
+ad
+aj
+aj
+Jh
+Jh
+Kt
+Pt
+Jh
+Pt
+Pt
+Pt
+Kt
+FD
+qb
+YW
+Jh
+Jh
+Jh
+FD
+LE
+Ua
+nY
+Jh
+Jh
+Iz
+aN
+aN
+aN
+aN
+Jh
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+pG
+pG
+pG
+PV
+"}
+(70,1,1) = {"
+PV
+pG
+pG
+pG
+pG
+pG
+mZ
+mZ
+mZ
+mZ
+WO
+Kt
+Jh
+av
+yV
+qo
+rB
+hT
+rb
+DF
+Fj
+Fj
+yL
+Rv
+Ua
+Yu
+qP
+Ua
+Ua
+hj
+Jh
+Jh
+FD
+qb
+YW
+Jh
+ad
+aj
+ad
+Jh
+Kt
+Kt
+Jh
+Kt
+FD
+LE
+Ua
+Ua
+Ua
+Yu
+YW
+Jh
+Jh
+Jh
+Kt
+Kt
+Kt
+Jh
+aj
+aj
+aj
+Kt
+Kt
+Jh
+Jh
+Pt
+Pt
+Pt
+Pt
+aj
+aj
+Jh
+Jh
+Kt
+Jh
+Kt
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Kt
+Kt
+FD
+qb
+YW
+Jh
+pW
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+aN
+aN
+aN
+aN
+Jh
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+pG
+pG
+pG
+PV
+"}
+(71,1,1) = {"
+PV
+pG
+pG
+pG
+pG
+pG
+mZ
+mZ
+mZ
+mZ
+WO
+Kt
+Jh
+sG
+Fj
+Fj
+bd
+xY
+bd
+Fj
+Fj
+Tb
+gc
+Jh
+FD
+qb
+YW
+Jh
+Jh
+Jh
+Kt
+Kt
+UF
+qb
+YW
+Jh
+Kt
+Kt
+Jh
+Jh
+Kt
+Jh
+Jh
+Kt
+Jh
+Jh
+Jh
+Kt
+FD
+qb
+YW
+Jh
+Jh
+Jh
+Jh
+Jh
+Pt
+Pt
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Pt
+Pt
+Jh
+Jh
+Jh
+Jh
+Jh
+Kt
+Pt
+Pt
+Jh
+FD
+Xj
+mB
+mB
+mB
+mB
+mB
+mB
+Yu
+YW
+Jh
+pW
+Kt
+Kt
+Kt
+Nl
+Kt
+Kt
+Kt
+Jh
+Jh
+Jh
+Jh
+Iz
+pW
+pW
+Jh
+Jh
+Jh
+Jh
+mZ
+mZ
+mZ
+mZ
+pG
+pG
+pG
+PV
+"}
+(72,1,1) = {"
+PV
+pG
+pG
+pG
+pG
+pG
+mZ
+mZ
+mZ
+mZ
+WO
+Kt
+Kt
+bz
+Fj
+Fj
+Tb
+MM
+gO
+Fj
+Fj
+tg
+Jh
+Jh
+FD
+qb
+YW
+Jh
+aj
+EK
+Jh
+Kt
+FD
+qb
+YW
+Jh
+Jh
+Jh
+Pt
+Pt
+aj
+aj
+aj
+Kt
+ad
+aj
+aj
+Kt
+UF
+qb
+YW
+Jh
+Kt
+Kt
+Jh
+Pt
+Pt
+Pt
+FD
+Xj
+mB
+mB
+mB
+mB
+mB
+mB
+mB
+mB
+mB
+mB
+mB
+Fp
+Jh
+Jh
+Pt
+Kt
+Jh
+FD
+qb
+qP
+Ua
+Ua
+Ua
+Ua
+Ua
+Yu
+YW
+Jh
+Kt
+Kt
+Kt
+Kt
+Nl
+Kt
+Pt
+Pt
+Pt
+Pt
+Pt
+Jh
+Jh
+pW
+pW
+Jh
+Jh
+Jh
+Jh
+mZ
+mZ
+mZ
+mZ
+pG
+pG
+pG
+PV
+"}
+(73,1,1) = {"
+PV
+pG
+pG
+pG
+pG
+pG
+mZ
+mZ
+mZ
+mZ
+WO
+Kt
+Kt
+bD
+MM
+Qg
+gc
+Jh
+bD
+MM
+MM
+gc
+WO
+Jh
+FD
+qb
+YW
+Kt
+Kt
+Pt
+aj
+ad
+ag
+qb
+YW
+Jh
+Jh
+Pt
+Pt
+Pt
+Kt
+Jh
+Pt
+Jh
+Kt
+Kt
+Jh
+Kt
+UF
+qb
+YW
+Jh
+Kt
+Kt
+Jh
+Jh
+Pt
+Jh
+UF
+qb
+qP
+Ua
+Ua
+Ua
+Ua
+Ua
+Ua
+Ua
+Ua
+Ua
+Yu
+YW
+Jh
+Jh
+Pt
+Pt
+Jh
+FD
+qb
+YW
+Jh
+Jh
+Jh
+Jh
+FD
+qb
+YW
+Jh
+Jh
+Jh
+av
+Wj
+Wj
+by
+Pt
+lv
+Bu
+Wj
+YF
+Kt
+Jh
+pW
+Nl
+Jh
+Jh
+Jh
+Jh
+mZ
+mZ
+mZ
+mZ
+pG
+pG
+pG
+PV
+"}
+(74,1,1) = {"
+PV
+pG
+pG
+pG
+pG
+pG
+mZ
+mZ
+mZ
+mZ
+WO
+Sk
+Kt
+QX
+Pt
+Pt
+Pt
+Jh
+WO
+Jh
+Jh
+Jh
+pk
+Kt
+FD
+qb
+YW
+Kt
+Kt
+Pt
+Pt
+Pt
+UF
+qb
+YW
+Jh
+Jh
+Pt
+Pt
+Pt
+Kt
+Jh
+Pt
+Pt
+Pt
+Kt
+Jh
+Jh
+FD
+qb
+ap
+mB
+mB
+mB
+Fp
+Jh
+Kt
+Kt
+FD
+qb
+YW
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+wM
+qb
+YW
+Jh
+Kt
+Kt
+Kt
+Jh
+FD
+qb
+YW
+Jh
+Jh
+Jh
+Jh
+FD
+qb
+ap
+mB
+Fp
+Jh
+PB
+Fj
+Fj
+Uv
+Wj
+yV
+Fj
+Fj
+TC
+Kt
+Kt
+pW
+Nl
+Kt
+Jh
+Jh
+Jh
+mZ
+mZ
+mZ
+mZ
+pG
+pG
+pG
+PV
+"}
+(75,1,1) = {"
+PV
+pG
+pG
+pG
+pG
+pG
+mZ
+mZ
+mZ
+mZ
+WO
+jb
+Fd
+Jh
+Pt
+Pt
+Kt
+Jh
+Jh
+Jh
+Jh
+Pt
+QX
+Kt
+FD
+qb
+YW
+Kt
+Jh
+Kt
+Pt
+Pt
+FD
+qb
+YW
+Jh
+Jh
+Jh
+Jh
+Kt
+Kt
+Jh
+Kt
+Pt
+Pt
+Pt
+Jh
+Jh
+FD
+LE
+Ua
+Ua
+Ua
+Yu
+YW
+Jh
+Kt
+Jh
+FD
+qb
+YW
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+FD
+qb
+YW
+Jh
+Jh
+Jh
+Kt
+Kt
+UF
+qb
+YW
+Jh
+Jh
+Jh
+Kt
+FD
+xI
+Ua
+Yu
+YW
+av
+yV
+Fj
+Fj
+EY
+EY
+EY
+Fj
+Fj
+Ef
+Pt
+Kt
+pW
+Nl
+Kt
+Kt
+Jh
+Jh
+mZ
+mZ
+mZ
+mZ
+pG
+pG
+pG
+PV
+"}
+(76,1,1) = {"
+PV
+pG
+pG
+pG
+pG
+pG
+mZ
+mZ
+mZ
+mZ
+Jh
+aj
+aj
+aj
+aj
+aj
+ad
+SL
+Jh
+Kt
+Pt
+Pt
+Kt
+pk
+FD
+qb
+YW
+Jh
+ad
+ad
+Jh
+Pt
+jm
+qb
+YW
+Ai
+Kt
+Kt
+Kt
+Kt
+Kt
+Jh
+Kt
+Kt
+Kt
+Jh
+aj
+ad
+Kt
+Jh
+Jh
+Jh
+FD
+qb
+YW
+Jh
+Kt
+Jh
+FD
+qb
+YW
+Jh
+ad
+ad
+ad
+aj
+Jh
+Jh
+Jh
+FD
+qb
+ap
+mB
+mB
+mB
+mB
+mB
+mB
+Yu
+YW
+Jh
+aj
+aj
+ad
+Jh
+Jh
+FD
+qb
+YW
+eB
+Fj
+Fj
+uB
+rB
+hT
+rB
+fk
+zT
+gc
+Pt
+Kt
+pW
+Nl
+Kt
+Kt
+Jh
+Jh
+mZ
+mZ
+mZ
+mZ
+pG
+pG
+pG
+PV
+"}
+(77,1,1) = {"
+PV
+pG
+pG
+pG
+pG
+pG
+mZ
+mZ
+mZ
+mZ
+Jh
+aj
+aj
+aj
+aj
+ad
+aj
+KX
+Fd
+Kt
+Pt
+Kt
+Kt
+WO
+FD
+qb
+YW
+Jh
+Pt
+Pt
+Jh
+Kt
+UF
+qb
+YW
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Kt
+Kt
+Jh
+Jh
+Kt
+Kt
+Pt
+Pt
+Kt
+FD
+qb
+YW
+Kt
+Kt
+Jh
+FD
+qb
+YW
+Jh
+Kt
+Kt
+Kt
+Kt
+ad
+aj
+aj
+FD
+xI
+Ua
+Ua
+Yu
+qP
+Ua
+Ua
+Ua
+Ua
+qd
+Jh
+Kt
+Kt
+Kt
+Kt
+Jh
+FD
+qb
+Zh
+ye
+iU
+wv
+hT
+XE
+rB
+hT
+gB
+tg
+Jh
+Pt
+Kt
+pW
+pW
+Kt
+Kt
+Kt
+Jh
+mZ
+mZ
+mZ
+mZ
+pG
+pG
+pG
+PV
+"}
+(78,1,1) = {"
+PV
+pG
+pG
+pG
+pG
+pG
+mZ
+mZ
+mZ
+mZ
+Jh
+Jh
+Jh
+Jh
+Kt
+Kt
+Kt
+WO
+WO
+Jh
+Kt
+Kt
+Kt
+WO
+FD
+qb
+YW
+Jh
+Pt
+aj
+ad
+Kt
+UF
+qb
+ap
+mB
+mB
+mB
+mB
+mB
+mB
+mB
+mB
+mB
+mB
+mB
+iD
+Kt
+Kt
+Pt
+aj
+ad
+UF
+qb
+YW
+Kt
+Jh
+Jh
+FD
+qb
+YW
+Jh
+Jh
+Pt
+Pt
+Jh
+Kt
+Kt
+Jh
+Jh
+Kt
+Jh
+FD
+qb
+YW
+Jh
+Jh
+Jh
+Jh
+Jh
+Pt
+Pt
+Pt
+Kt
+Kt
+Kt
+FD
+xI
+qd
+IJ
+Fj
+Fj
+fI
+rb
+hT
+rB
+iH
+Uv
+HM
+Pt
+Kt
+pW
+pW
+Kt
+Kt
+Kt
+Jh
+mZ
+mZ
+mZ
+mZ
+pG
+pG
+pG
+PV
+"}
+(79,1,1) = {"
+PV
+pG
+pG
+pG
+pG
+pG
+mZ
+mZ
+mZ
+mZ
+Pt
+Pt
+Jh
+Kt
+Kt
+Kt
+Jh
+WO
+WO
+Jh
+Jh
+Jh
+Jh
+Jh
+FD
+qb
+YW
+Pt
+Pt
+Kt
+Kt
+wM
+Xj
+Yu
+qP
+Ua
+Ua
+Ua
+Ua
+mC
+Ua
+Ua
+Ua
+Ua
+Ua
+Yu
+YW
+Pt
+Pt
+Pt
+Kt
+Kt
+UF
+qb
+ap
+mB
+mB
+mB
+mB
+Yu
+YW
+Jh
+Jh
+EK
+EK
+Pt
+Pt
+Kt
+Jh
+Jh
+Jh
+Kt
+UF
+qb
+YW
+Jh
+aj
+aj
+ad
+Pt
+Pt
+Jh
+Jh
+Kt
+Kt
+Kt
+Kt
+Jh
+Jh
+Jh
+gO
+Fj
+Fj
+nK
+bd
+bd
+Fj
+Fj
+nc
+Kt
+Kt
+pW
+pW
+Jh
+Kt
+Kt
+Kt
+mZ
+mZ
+mZ
+mZ
+pG
+pG
+pG
+PV
+"}
+(80,1,1) = {"
+PV
+pG
+pG
+pG
+pG
+pG
+mZ
+mZ
+mZ
+mZ
+Jh
+Pt
+Pt
+Pt
+Pt
+Pt
+Jh
+WO
+WO
+FD
+Xj
+mB
+mB
+mB
+mB
+Yu
+ap
+mB
+mB
+mB
+mB
+mB
+Yu
+qP
+hj
+av
+Bu
+Wj
+sL
+GS
+ta
+Wj
+Bu
+by
+FD
+qb
+YW
+Pt
+Pt
+Kt
+Kt
+Jh
+wM
+qb
+qP
+Ua
+Ua
+Ua
+Ua
+Ua
+qd
+Jh
+Jh
+Jh
+Pt
+Pt
+Pt
+Jh
+Jh
+Jh
+Jh
+Jh
+UF
+qb
+YW
+Jh
+Kt
+Kt
+Pt
+Pt
+Jh
+Jh
+Jh
+aj
+ad
+ad
+Kt
+Kt
+Jh
+Jh
+PB
+Fj
+Fj
+zT
+MM
+gO
+Fj
+Fj
+gD
+Kt
+Jh
+pW
+pW
+Jh
+Jh
+Kt
+Kt
+mZ
+mZ
+mZ
+mZ
+pG
+pG
+pG
+PV
+"}
+(81,1,1) = {"
+PV
+pG
+pG
+pG
+pG
+pG
+mZ
+mZ
+mZ
+mZ
+Jh
+Pt
+Pt
+Pt
+Pt
+Pt
+Jh
+WO
+WO
+FD
+qb
+Yu
+Yu
+Yu
+Yu
+Yu
+Yu
+Yu
+Yu
+Yu
+Yu
+Yu
+Yu
+YW
+av
+yV
+LL
+LL
+LL
+Bz
+LL
+LL
+LL
+Iq
+ZD
+qb
+ap
+mB
+mB
+mB
+mB
+mB
+mB
+Yu
+YW
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Pt
+Pt
+Jh
+aj
+aj
+aj
+Jh
+Jh
+FD
+qb
+YW
+Jh
+Kt
+Kt
+Kt
+Kt
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Pt
+Pt
+Pt
+yP
+sC
+MM
+gc
+Jh
+bD
+Qg
+MM
+gc
+Jh
+Jh
+pW
+pW
+Jh
+Jh
+Jh
+Jh
+mZ
+mZ
+mZ
+mZ
+pG
+pG
+pG
+PV
+"}
+(82,1,1) = {"
+PV
+pG
+pG
+pG
+pG
+pG
+mZ
+mZ
+mZ
+mZ
+Jh
+Jh
+Pt
+Pt
+Pt
+Pt
+Jh
+WO
+WO
+FD
+xI
+Ua
+Ua
+Ua
+Ua
+Ua
+Ua
+Ua
+Ua
+Ua
+Ua
+Yu
+Yu
+YW
+PB
+LL
+LL
+LL
+eA
+eA
+Ce
+LL
+LL
+LL
+kF
+LE
+Yu
+qP
+Ua
+Ua
+Ua
+Ua
+Yu
+Yu
+YW
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+aj
+aj
+ad
+Kt
+Kt
+Jh
+Jh
+Kt
+Jh
+Jh
+Jh
+FD
+qb
+YW
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Pt
+Pt
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Au
+pW
+pW
+Jh
+Jh
+mZ
+mZ
+mZ
+mZ
+pG
+pG
+pG
+PV
+"}
+(83,1,1) = {"
+PV
+pG
+pG
+pG
+pG
+pG
+mZ
+mZ
+mZ
+mZ
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+WO
+WO
+ji
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+FD
+Yq
+Yu
+YW
+sG
+LL
+LL
+Vr
+rA
+Ku
+VK
+JO
+LL
+LL
+Ef
+FD
+qb
+YW
+Jh
+Jh
+Jh
+FD
+qb
+Yu
+YW
+Jh
+aj
+ad
+aj
+aj
+Jh
+Jh
+Jh
+Jh
+Kt
+ad
+aj
+Jh
+Jh
+Kt
+Kt
+Jh
+FD
+qb
+ap
+mB
+mB
+mB
+mB
+mB
+mB
+mB
+mB
+mB
+mB
+mB
+mB
+mB
+mB
+mB
+mB
+mB
+mB
+mB
+mB
+mB
+cS
+cS
+cS
+cS
+cS
+Fp
+Jh
+pW
+pW
+Jh
+Jh
+mZ
+mZ
+mZ
+mZ
+pG
+pG
+pG
+PV
+"}
+(84,1,1) = {"
+PV
+pG
+pG
+pG
+pG
+pG
+mZ
+mZ
+mZ
+mZ
+Jh
+Jh
+Jh
+Kt
+Kt
+Kt
+Kt
+Kt
+Jh
+aj
+aj
+aj
+aj
+aj
+aj
+ad
+ad
+ad
+Sk
+Jh
+FD
+Yq
+Yu
+YW
+bD
+gO
+LL
+eA
+Ku
+Ku
+Ku
+yF
+LL
+Tb
+gc
+FD
+qb
+YW
+Jh
+ad
+aj
+FD
+LE
+mC
+qd
+Jh
+Jh
+Pt
+Pt
+Pt
+Kt
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Pt
+Pt
+Jh
+FD
+qb
+Yu
+Yu
+Yu
+Yu
+Yu
+Yu
+Yu
+Yu
+Yu
+Yu
+Yu
+Yu
+Yu
+Yu
+Yu
+Yu
+Yu
+Yu
+Yu
+Yu
+Yu
+Yu
+Yu
+Yu
+Yu
+Yu
+Yu
+YW
+Jh
+pW
+pW
+Jh
+Jh
+mZ
+mZ
+mZ
+mZ
+pG
+pG
+pG
+PV
+"}
+(85,1,1) = {"
+PV
+pG
+pG
+pG
+pG
+pG
+mZ
+mZ
+mZ
+mZ
+Jh
+Jh
+Jh
+Jh
+Jh
+Kt
+Kt
+Kt
+Jh
+aj
+aj
+aj
+aj
+aj
+ad
+ad
+ad
+ad
+Lx
+Zp
+FD
+Yq
+Yu
+YW
+Jh
+PB
+LL
+eA
+Ms
+Ku
+Ku
+eA
+LL
+tg
+Jh
+FD
+qb
+YW
+Jh
+Kt
+Kt
+av
+sL
+NM
+ta
+by
+Jh
+Jh
+Pt
+Pt
+Pt
+Pt
+Jh
+Jh
+Jh
+Jh
+Jh
+Pt
+EK
+EK
+aj
+aj
+FD
+qb
+Yu
+qP
+Ua
+Ua
+Ua
+Ua
+Ua
+Ua
+Ua
+Ua
+Ua
+Ua
+Ua
+Ua
+Ua
+Ua
+Ua
+Ua
+Ua
+Ua
+Ua
+uE
+Yu
+qP
+BK
+BK
+BK
+qd
+Jh
+pW
+pW
+Jh
+Jh
+mZ
+mZ
+mZ
+mZ
+pG
+pG
+pG
+PV
+"}
+(86,1,1) = {"
+PV
+pG
+pG
+pG
+pG
+pG
+mZ
+mZ
+mZ
+mZ
+Jh
+Pt
+Pt
+Pt
+Jh
+Jh
+Pt
+Kt
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Kt
+Kt
+pk
+pk
+FD
+Yq
+Yu
+YW
+Jh
+PB
+LL
+Ce
+Ku
+Ku
+Ku
+bK
+LL
+tg
+Jh
+FD
+qb
+YW
+Jh
+av
+Wj
+uP
+Fj
+Vx
+Fj
+Iq
+Wj
+by
+Jh
+Pt
+Pt
+Pt
+aj
+aj
+aj
+ad
+Kt
+Pt
+Pt
+Pt
+Jh
+Jh
+FD
+qb
+Yu
+YW
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+FD
+oS
+uI
+hP
+Jh
+Jh
+Jh
+Jh
+Jh
+pW
+pW
+Jh
+Jh
+mZ
+mZ
+mZ
+mZ
+pG
+pG
+pG
+PV
+"}
+(87,1,1) = {"
+PV
+pG
+pG
+pG
+pG
+pG
+mZ
+mZ
+mZ
+mZ
+Jh
+Jh
+Pt
+Pt
+Pt
+Jh
+Jh
+Pt
+Pt
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+pk
+pk
+FD
+Yq
+Yu
+YW
+gp
+yV
+LL
+nW
+Ku
+Ku
+Ku
+Ce
+LL
+Iq
+sc
+GT
+qb
+YW
+Jh
+PB
+Fj
+Fj
+Fj
+yB
+Fj
+Fj
+Fj
+tg
+Jh
+Jh
+Jh
+Kt
+Jh
+Jh
+Jh
+Kt
+Jh
+Pt
+Pt
+Pt
+Jh
+Kt
+FD
+qb
+Yu
+YW
+Iv
+Iv
+Bx
+qO
+qO
+qO
+qO
+qO
+qO
+qO
+qO
+qO
+aq
+qO
+qO
+qO
+qO
+qO
+qO
+qO
+qO
+qO
+qO
+Bx
+Iv
+Jh
+Jh
+Jh
+Au
+aN
+Jh
+mZ
+mZ
+mZ
+mZ
+pG
+pG
+pG
+PV
+"}
+(88,1,1) = {"
+PV
+pG
+pG
+pG
+pG
+pG
+mZ
+mZ
+mZ
+mZ
+Jh
+Pt
+Pt
+Pt
+Jh
+Jh
+Kt
+Kt
+Pt
+Pt
+Pt
+Pt
+Pt
+Kt
+Jh
+Jh
+Kt
+Jh
+WO
+WO
+FD
+Yq
+Yu
+YW
+PB
+LL
+LL
+Ey
+Ku
+Ms
+Ku
+Ce
+LL
+LL
+tg
+FD
+qb
+YW
+Jh
+PB
+Fj
+Fj
+mm
+XE
+lz
+Fj
+Fj
+tg
+Jh
+aj
+aj
+Jh
+Jh
+Kt
+Kt
+Jh
+Pt
+Pt
+Kt
+Kt
+Kt
+Kt
+FD
+qb
+Yu
+YW
+Iv
+AD
+qO
+qO
+qO
+qO
+qO
+qO
+qO
+qO
+qO
+qO
+qO
+qO
+qO
+qO
+qO
+qO
+qO
+qO
+qO
+qO
+qO
+qO
+AD
+Jh
+Jh
+Jh
+Jh
+Au
+pW
+mZ
+mZ
+mZ
+mZ
+pG
+pG
+pG
+PV
+"}
+(89,1,1) = {"
+PV
+pG
+pG
+pG
+pG
+pG
+mZ
+mZ
+mZ
+mZ
+Jh
+Pt
+Jh
+Jh
+Kt
+Kt
+Kt
+Kt
+Jh
+Jh
+Pt
+Pt
+Pt
+Kt
+Jh
+Jh
+Pt
+Kt
+WO
+WO
+FD
+Yq
+Yu
+YW
+sG
+LL
+LL
+ED
+Ce
+Ce
+Ce
+gJ
+LL
+LL
+Ef
+FD
+qb
+YW
+Jh
+bD
+eX
+qo
+rb
+XE
+rb
+iH
+Tb
+gc
+Jh
+Jh
+Jh
+Jh
+Jh
+Kt
+Jh
+Jh
+Pt
+Jh
+Kt
+Kt
+Kt
+Kt
+FD
+qb
+Yu
+YW
+Bx
+qO
+qO
+qO
+qO
+qO
+qO
+qO
+qO
+qO
+qO
+qO
+qO
+qO
+qO
+qO
+qO
+qO
+qO
+qO
+qO
+qO
+qO
+qO
+qO
+Ai
+Jh
+Jh
+Jh
+Jh
+pW
+mZ
+mZ
+mZ
+mZ
+pG
+pG
+pG
+PV
+"}
+(90,1,1) = {"
+PV
+pG
+pG
+pG
+pG
+pG
+mZ
+mZ
+mZ
+mZ
+Jh
+Jh
+Jh
+Kt
+Kt
+Kt
+Jh
+Kt
+Jh
+Jh
+Kt
+Kt
+Kt
+Kt
+Jh
+Jh
+Pt
+Jh
+WO
+WO
+FD
+Yq
+Yu
+YW
+bD
+gO
+LL
+LL
+wW
+nD
+nD
+LL
+LL
+Tb
+gc
+FD
+qb
+ap
+nA
+Jh
+PB
+qo
+XE
+rb
+XE
+iH
+tg
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Kt
+Kt
+Jh
+FD
+qb
+Yu
+YW
+Iv
+qO
+qO
+qO
+qO
+qO
+qO
+qO
+qO
+qO
+qO
+qO
+qO
+qO
+qO
+qO
+qO
+qO
+qO
+qO
+qO
+qO
+qO
+qO
+qO
+Yu
+Yu
+Yu
+Jh
+Jh
+pW
+mZ
+mZ
+mZ
+mZ
+pG
+pG
+pG
+PV
+"}
+(91,1,1) = {"
+PV
+pG
+pG
+pG
+pG
+pG
+mZ
+mZ
+mZ
+mZ
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Pt
+Jh
+WO
+WO
+FD
+Yq
+Yu
+ap
+Fp
+bD
+MM
+GW
+sn
+Yu
+gL
+vW
+MM
+gc
+Jh
+FD
+qb
+Yu
+YW
+av
+uP
+qo
+rb
+XE
+rb
+iH
+Iq
+by
+FD
+Xj
+mB
+mB
+mB
+mB
+mB
+mB
+mB
+mB
+mB
+mB
+mB
+mB
+mB
+Yu
+Yu
+YW
+Iv
+qO
+qO
+qO
+qO
+qO
+qO
+qO
+qO
+qO
+qO
+qO
+qO
+qO
+qO
+qO
+qO
+qO
+qO
+qO
+qO
+qO
+qO
+qO
+qO
+Yu
+Yu
+Yu
+Yu
+Jh
+pW
+mZ
+mZ
+mZ
+mZ
+pG
+pG
+pG
+PV
+"}
+(92,1,1) = {"
+PV
+pG
+pG
+pG
+pG
+pG
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+Jh
+Pt
+Kt
+pk
+pk
+FD
+Yq
+Yu
+Yu
+YW
+Jh
+Jh
+Jh
+Yu
+Yu
+Yu
+Jh
+FD
+Xj
+mB
+mB
+Yu
+Yu
+YW
+sG
+Fj
+Fj
+nK
+az
+nK
+Fj
+Fj
+Ef
+FD
+qb
+Yu
+Yu
+Yu
+Yu
+Yu
+Yu
+Yu
+Yu
+Yu
+Yu
+Yu
+Yu
+Yu
+Yu
+Yu
+YW
+Iv
+qO
+qO
+qO
+qO
+qO
+qO
+qO
+qO
+qO
+qO
+qO
+qO
+qO
+qO
+qO
+qO
+qO
+qO
+qO
+qO
+qO
+qO
+qO
+qO
+Yu
+Yu
+Yu
+Yu
+Jh
+pW
+mZ
+mZ
+mZ
+mZ
+pG
+pG
+pG
+PV
+"}
+(93,1,1) = {"
+PV
+pG
+pG
+pG
+pG
+pG
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+Jh
+Pt
+Pt
+pk
+pk
+FD
+UX
+Ua
+Ua
+qd
+Jh
+Jh
+Jh
+Yu
+Yu
+Yu
+Jh
+FD
+qb
+Yu
+Yu
+Yu
+Yu
+YW
+PB
+Fj
+Fj
+Tb
+MM
+eX
+Fj
+Fj
+tg
+FD
+xI
+Ua
+Ua
+Ua
+Ua
+Ua
+Ua
+Ua
+Ua
+Ua
+Ua
+Ua
+Ua
+Ua
+Ua
+Ua
+nY
+Iv
+qO
+qO
+qO
+qO
+qO
+qO
+qO
+qO
+qO
+qO
+qO
+qO
+qO
+qO
+qO
+qO
+qO
+qO
+qO
+qO
+qO
+qO
+qO
+qO
+Yu
+Yu
+Yu
+Yu
+Jh
+pW
+mZ
+mZ
+mZ
+mZ
+pG
+pG
+pG
+PV
+"}
+(94,1,1) = {"
+PV
+pG
+pG
+pG
+pG
+pG
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+Jh
+Pt
+Pt
+pk
+pk
+ji
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Yu
+Yu
+Yu
+Jh
+FD
+xI
+Ua
+Ua
+Ua
+Ua
+qd
+bD
+MM
+Bn
+tb
+Pt
+yP
+Qg
+Mw
+gc
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Pt
+Pt
+Jh
+Jh
+Bx
+qO
+qO
+qO
+qO
+qO
+qO
+qO
+qO
+qO
+qO
+qO
+gE
+qO
+qO
+qO
+qO
+qO
+qO
+qO
+qO
+qO
+qO
+qO
+qO
+Yu
+Yu
+Yu
+Yu
+Jh
+pW
+mZ
+mZ
+mZ
+mZ
+pG
+pG
+pG
+PV
+"}
+(95,1,1) = {"
+PV
+pG
+pG
+pG
+pG
+pG
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+Jh
+Jh
+Pt
+Jh
+Jh
+aj
+aj
+EK
+EK
+aj
+SL
+Jh
+Jh
+Yu
+Yu
+Yu
+Fd
+Fd
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Pt
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+aj
+aj
+aj
+aj
+aj
+aj
+aj
+aj
+aj
+aj
+ad
+ad
+aj
+aj
+EK
+EK
+Pt
+Iv
+qO
+qO
+qO
+qO
+qO
+qO
+qO
+qO
+qO
+qO
+qO
+qO
+qO
+qO
+qO
+qO
+qO
+qO
+qO
+qO
+qO
+qO
+qO
+qO
+Yu
+Yu
+Yu
+Yu
+Jh
+pW
+mZ
+mZ
+mZ
+mZ
+pG
+pG
+pG
+PV
+"}
+(96,1,1) = {"
+PV
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+mZ
+mZ
+mZ
+mZ
+Jh
+Jh
+Kt
+Jh
+Jh
+EK
+EK
+EK
+aj
+aj
+ji
+Fd
+Fd
+Yu
+Yu
+Yu
+Yu
+Yu
+aj
+aj
+aj
+aj
+aj
+aj
+Jh
+Jh
+aj
+aj
+aj
+aj
+aj
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Kt
+Kt
+Kt
+Kt
+Jh
+Jh
+Pt
+Iv
+qO
+qO
+qO
+qO
+qO
+qO
+qO
+qO
+qO
+qO
+qO
+qO
+qO
+qO
+qO
+qO
+qO
+qO
+qO
+qO
+qO
+qO
+qO
+qO
+Yu
+Yu
+Yu
+Yu
+Jh
+pW
+mZ
+mZ
+mZ
+mZ
+pG
+pG
+pG
+PV
+"}
+(97,1,1) = {"
+PV
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+mZ
+mZ
+mZ
+mZ
+Jh
+Jh
+Kt
+Jh
+Jh
+Pt
+Jh
+Jh
+Jh
+Jh
+WO
+Jh
+Jh
+Yu
+Yu
+Yu
+Yu
+Yu
+Yu
+Yu
+Yu
+Yu
+Yu
+Yu
+Yu
+Yu
+Yu
+Yu
+Yu
+Yu
+Yu
+Yu
+Yu
+Yu
+Yu
+Yu
+Yu
+Yu
+Yu
+Yu
+Yu
+Ai
+Jh
+Jh
+Kt
+Kt
+Kt
+Kt
+Kt
+Kt
+Jh
+Iv
+qO
+qO
+qO
+qO
+qO
+qO
+qO
+qO
+qO
+qO
+qO
+qO
+qO
+qO
+qO
+qO
+qO
+qO
+qO
+qO
+qO
+qO
+qO
+qO
+Yu
+Yu
+Yu
+Yu
+Jh
+pW
+mZ
+mZ
+mZ
+mZ
+pG
+pG
+pG
+PV
+"}
+(98,1,1) = {"
+PV
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+mZ
+mZ
+mZ
+mZ
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Kt
+Jh
+Jh
+Kt
+WO
+Jh
+Jh
+Yu
+Yu
+Yu
+Yu
+Yu
+Yu
+Yu
+Yu
+Yu
+Yu
+Yu
+Yu
+Yu
+Yu
+Yu
+Yu
+Yu
+Yu
+Yu
+Yu
+Yu
+Yu
+Yu
+Yu
+Yu
+Yu
+Yu
+Yu
+Yu
+Jh
+Jh
+Pt
+Pt
+Kt
+Kt
+Kt
+Jh
+Jh
+Iv
+qO
+qO
+qO
+qO
+qO
+qO
+qO
+qO
+qO
+qO
+qO
+qO
+qO
+qO
+qO
+qO
+qO
+qO
+qO
+qO
+qO
+qO
+qO
+qO
+Yu
+Yu
+Yu
+Yu
+Jh
+pW
+mZ
+mZ
+mZ
+mZ
+pG
+pG
+pG
+PV
+"}
+(99,1,1) = {"
+PV
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+mZ
+mZ
+mZ
+mZ
+Jh
+Jh
+Jh
+Jh
+Kt
+Kt
+Kt
+Kt
+Kt
+Jh
+pk
+Pt
+Jh
+Jh
+Yu
+Yu
+Yu
+Yu
+Yu
+Yu
+Yu
+Yu
+Yu
+Yu
+Yu
+Yu
+TD
+Yu
+Yu
+Yu
+Yu
+Yu
+Yu
+Yu
+Yu
+Yu
+Yu
+Yu
+Yu
+Yu
+Yu
+Yu
+Jh
+Jh
+Pt
+Pt
+Pt
+Pt
+Kt
+Kt
+Jh
+Bx
+qO
+qO
+qO
+qO
+qO
+qO
+qO
+qO
+qO
+qO
+qO
+qO
+qO
+qO
+qO
+qO
+qO
+qO
+qO
+qO
+qO
+qO
+qO
+qO
+Ai
+Yu
+Yu
+Yu
+Jh
+pW
+mZ
+mZ
+mZ
+mZ
+pG
+pG
+pG
+PV
+"}
+(100,1,1) = {"
+PV
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+mZ
+mZ
+mZ
+mZ
+Jh
+Jh
+Jh
+Kt
+Kt
+Kt
+Kt
+Kt
+Kt
+Jh
+pk
+Pt
+Pt
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Yu
+Yu
+Yu
+Yu
+Kt
+Kt
+Pt
+Pt
+Jh
+Pt
+Pt
+Pt
+Kt
+Iv
+AD
+qO
+qO
+qO
+qO
+qO
+qO
+qO
+qO
+qO
+qO
+qO
+qO
+qO
+qO
+qO
+qO
+qO
+qO
+qO
+qO
+qO
+qO
+AD
+Jh
+Yu
+Yu
+Yu
+Jh
+pW
+mZ
+mZ
+mZ
+mZ
+pG
+pG
+pG
+PV
+"}
+(101,1,1) = {"
+PV
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+xy
+xy
+xy
+xy
+xy
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+mZ
+mZ
+mZ
+mZ
+Jh
+Jh
+Kt
+Kt
+Kt
+Pt
+Pt
+Kt
+Jh
+Jh
+pk
+jb
+Pt
+Pt
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Kt
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Yu
+Yu
+Yu
+Yu
+Jh
+Kt
+Kt
+Jh
+Pt
+Pt
+Jh
+Pt
+Pt
+Iv
+Iv
+Bx
+qO
+qO
+qO
+qO
+qO
+qO
+qO
+qO
+qO
+aq
+qO
+qO
+qO
+qO
+qO
+qO
+qO
+qO
+qO
+qO
+Bx
+Iv
+Jh
+Yu
+Yu
+Yu
+Jh
+pW
+mZ
+mZ
+mZ
+mZ
+pG
+pG
+pG
+PV
+"}
+(102,1,1) = {"
+PV
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+Hd
+Hd
+Hd
+Hd
+Hd
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+mZ
+mZ
+mZ
+mZ
+Jh
+Jh
+Kt
+Pt
+Pt
+Pt
+Pt
+Kt
+Jh
+Jh
+Kt
+ad
+aj
+EK
+ad
+ad
+ad
+ad
+aj
+aj
+aj
+aj
+aj
+aj
+aj
+ad
+ad
+aj
+aj
+aj
+aj
+aj
+ad
+aj
+aj
+KX
+Jh
+Jh
+Yu
+Yu
+Yu
+Yu
+Jh
+Jh
+Kt
+Kt
+Jh
+Jh
+Pt
+Pt
+Jh
+Jh
+aj
+aj
+aj
+aj
+aj
+aj
+aj
+aj
+aj
+aj
+aj
+aj
+aj
+aj
+aj
+aj
+aj
+aj
+aj
+aj
+aj
+aj
+Jh
+Jh
+Jh
+Yu
+Yu
+Yu
+Jh
+pW
+mZ
+mZ
+mZ
+mZ
+pG
+pG
+pG
+PV
+"}
+(103,1,1) = {"
+PV
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+Hd
+Hd
+PD
+LL
+fb
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+mZ
+mZ
+mZ
+mZ
+Jh
+Jh
+Kt
+Pt
+Pt
+Pt
+Pt
+Kt
+Jh
+Jh
+Kt
+Kt
+Jh
+Jh
+Kt
+Kt
+Kt
+Kt
+Jh
+Jh
+Jh
+Jh
+Jh
+Kt
+Kt
+Jh
+Kt
+Kt
+Kt
+Kt
+Kt
+Kt
+Kt
+Jh
+Jh
+WO
+Jh
+Jh
+Yu
+Yu
+Yu
+Yu
+Yu
+Yu
+Yu
+Kt
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Yu
+Yu
+Yu
+Jh
+pW
+mZ
+mZ
+mZ
+mZ
+pG
+pG
+pG
+PV
+"}
+(104,1,1) = {"
+PV
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+Hd
+Hd
+Hd
+Hd
+Hd
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+mZ
+mZ
+mZ
+mZ
+Jh
+Kt
+Kt
+Pt
+Pt
+Pt
+Kt
+Jh
+Jh
+Jh
+Kt
+Kt
+Jh
+Jh
+Jh
+Kt
+Kt
+Kt
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Pt
+Pt
+Pt
+Jh
+Jh
+Jh
+Jh
+WO
+Jh
+Jh
+Yu
+Yu
+Yu
+Yu
+Yu
+Yu
+Yu
+Yu
+Yu
+Yu
+Yu
+Yu
+Yu
+Yu
+Yu
+Yu
+Yu
+Yu
+Yu
+Yu
+Yu
+Yu
+Yu
+Yu
+Yu
+Yu
+Yu
+Yu
+Yu
+Yu
+Yu
+Yu
+Yu
+Yu
+Yu
+Yu
+Yu
+Yu
+Yu
+Yu
+Yu
+Yu
+Jh
+pW
+mZ
+mZ
+mZ
+mZ
+pG
+pG
+pG
+PV
+"}
+(105,1,1) = {"
+PV
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+xy
+xy
+xy
+xy
+xy
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+mZ
+mZ
+mZ
+mZ
+Jh
+Kt
+Kt
+Pt
+Pt
+Kt
+Kt
+Jh
+Jh
+Pt
+Pt
+Pt
+Pt
+Pt
+Pt
+Kt
+Kt
+Kt
+Jh
+Jh
+Jh
+Pt
+Pt
+Pt
+Jh
+Jh
+Jh
+Pt
+Pt
+Pt
+Pt
+Pt
+Jh
+Jh
+Jh
+WO
+Jh
+Jh
+Jh
+Yu
+Yu
+Yu
+Yu
+Yu
+Yu
+Yu
+Yu
+Yu
+Yu
+Yu
+Yu
+Yu
+Yu
+Yu
+Yu
+Yu
+Yu
+Yu
+Yu
+Yu
+Yu
+Yu
+Yu
+Yu
+Yu
+Yu
+Yu
+Yu
+Yu
+Yu
+Yu
+Yu
+Yu
+Yu
+Yu
+Yu
+Yu
+Yu
+Yu
+Yu
+Jh
+pW
+mZ
+mZ
+mZ
+mZ
+pG
+pG
+pG
+PV
+"}
+(106,1,1) = {"
+PV
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+mZ
+mZ
+mZ
+mZ
+Jh
+Kt
+Kt
+Pt
+Kt
+Kt
+Kt
+Jh
+Pt
+Pt
+Pt
+Pt
+Pt
+Pt
+Pt
+Pt
+Pt
+Kt
+Jh
+Jh
+Jh
+Pt
+Pt
+Pt
+Pt
+Jh
+Jh
+Pt
+Pt
+Pt
+Pt
+Pt
+Jh
+Jh
+Jh
+pk
+Jh
+Jh
+Jh
+Jh
+Yu
+Yu
+Yu
+Yu
+Yu
+Yu
+Yu
+Yu
+Yu
+Yu
+Yu
+Yu
+Yu
+Yu
+Yu
+Yu
+Yu
+Yu
+Yu
+Yu
+Yu
+Yu
+Yu
+Yu
+Yu
+Yu
+Yu
+Yu
+Yu
+Yu
+Yu
+Yu
+Yu
+Yu
+Yu
+Yu
+Yu
+Yu
+Yu
+Jh
+Jh
+pW
+mZ
+mZ
+mZ
+mZ
+pG
+pG
+pG
+PV
+"}
+(107,1,1) = {"
+PV
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+mZ
+mZ
+mZ
+mZ
+Kt
+Kt
+Kt
+Kt
+Kt
+Kt
+Kt
+Jh
+Pt
+Pt
+Pt
+Pt
+Pt
+Pt
+Pt
+Pt
+Pt
+Jh
+Jh
+Jh
+Pt
+Pt
+Pt
+Pt
+Pt
+Pt
+Pt
+Pt
+Pt
+Pt
+Jh
+Jh
+Jh
+Jh
+Jh
+WO
+Kt
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Pt
+Pt
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+pW
+mZ
+mZ
+mZ
+mZ
+pG
+pG
+pG
+PV
+"}
+(108,1,1) = {"
+PV
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+mZ
+mZ
+mZ
+mZ
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Pt
+Pt
+Pt
+Pt
+Pt
+Jh
+Jh
+Jh
+Jh
+Jh
+Pt
+Pt
+Pt
+Jh
+Jh
+Pt
+Pt
+Pt
+Jh
+Jh
+Jh
+Jh
+Jh
+Kt
+pk
+KX
+Kt
+Kt
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Pt
+Pt
+Pt
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Pt
+Pt
+Pt
+Pt
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+dR
+pW
+mZ
+mZ
+mZ
+mZ
+pG
+pG
+pG
+PV
+"}
+(109,1,1) = {"
+PV
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+mZ
+mZ
+mZ
+mZ
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+Jh
+ad
+ad
+ad
+ad
+aj
+aj
+aj
+aj
+aj
+aj
+aj
+aj
+aj
+aj
+aj
+EK
+EK
+EK
+EK
+aj
+aj
+aj
+aj
+aj
+aj
+aj
+aj
+aj
+aj
+aj
+aj
+aj
+aj
+aj
+aj
+aj
+aj
+aj
+aj
+aj
+aj
+aj
+aj
+aj
+aj
+Jh
+mZ
+mZ
+mZ
+mZ
+pG
+pG
+pG
+PV
+"}
+(110,1,1) = {"
+PV
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+pG
+pG
+pG
+PV
+"}
+(111,1,1) = {"
+PV
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+pG
+pG
+pG
+PV
+"}
+(112,1,1) = {"
+PV
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+pG
+pG
+pG
+PV
+"}
+(113,1,1) = {"
+PV
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+mZ
+pG
+pG
+pG
+PV
+"}
+(114,1,1) = {"
+PV
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+PV
+"}
+(115,1,1) = {"
+PV
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+PV
+"}
+(116,1,1) = {"
+PV
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+PV
+"}
+(117,1,1) = {"
+PV
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+PV
+"}
+(118,1,1) = {"
+PV
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+PV
+"}
+(119,1,1) = {"
+PV
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+PV
+"}
+(120,1,1) = {"
+PV
+PV
+PV
+PV
+PV
+PV
+PV
+PV
+PV
+PV
+PV
+PV
+PV
+PV
+PV
+PV
+PV
+PV
+PV
+PV
+PV
+PV
+PV
+PV
+PV
+PV
+PV
+PV
+PV
+PV
+PV
+PV
+PV
+PV
+PV
+PV
+PV
+PV
+PV
+PV
+PV
+PV
+PV
+PV
+PV
+PV
+PV
+PV
+PV
+PV
+PV
+PV
+PV
+PV
+PV
+PV
+PV
+PV
+PV
+PV
+PV
+PV
+PV
+PV
+PV
+PV
+PV
+PV
+PV
+PV
+PV
+PV
+PV
+PV
+PV
+PV
+PV
+PV
+PV
+PV
+PV
+PV
+PV
+PV
+PV
+PV
+PV
+PV
+PV
+PV
+PV
+PV
+PV
+PV
+PV
+PV
+PV
+PV
+PV
+PV
+PV
+PV
+PV
+PV
+PV
+PV
+PV
+PV
+PV
+PV
+PV
+PV
+PV
+PV
+PV
+"}

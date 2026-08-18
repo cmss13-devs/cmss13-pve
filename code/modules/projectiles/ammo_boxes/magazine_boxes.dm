@@ -1404,3 +1404,24 @@
 
 /obj/item/ammo_box/magazine/mar50/empty
 	empty = TRUE
+
+//-----------------------Lasgun Powercell Box-----------------------
+
+/obj/item/ammo_box/magazine/lasgun
+	name = "lasgun powercell box (Lasgun Powercells x 16)"
+	icon_state = "base_fn"
+	flags_equip_slot = SLOT_BACK
+	overlay_ammo_type = ""
+	overlay_gun_type = "_las"
+	overlay_content = "_fn"
+	num_of_magazines = 16
+	magazine_type = /obj/item/ammo_magazine/lasgun
+
+/obj/item/ammo_box/magazine/lasgun/update_icon()
+	if(overlays)
+		overlays.Cut()
+	overlays += image(icon, icon_state = "[icon_state]_lid") //adding lid
+	overlays += image(text_markings_icon, icon_state = "text[overlay_gun_type]") //adding text
+
+/obj/item/ammo_box/magazine/lasgun/empty
+	empty = TRUE

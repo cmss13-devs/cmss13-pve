@@ -149,6 +149,11 @@ Radiochat range: 1441 to 1489 (most devices refuse to be tune to other frequency
 //Civilian channels
 #define COLONY_FREQ 1469
 
+//40k frequencies
+#define IMP_GUARD_FREQ 1520
+#define KASRKIN_FREQ 1521
+#define TRAITOR_FREQ 1522
+
 #define AI_FREQ 1500
 
 #define MAX_FREE_FREQ 1599 // -------------------------------------------------
@@ -221,6 +226,10 @@ GLOBAL_LIST_INIT(radiochannels, list(
 
 	RADIO_CHANNEL_REBEL_UA = PFA_FREQ,
 	RADIO_CHANNEL_REBEL_TWE = JSC_FREQ,
+
+	RADIO_CHANNEL_IMP_GUARD = IMP_GUARD_FREQ,
+	RADIO_CHANNEL_KASRKIN = KASRKIN_FREQ,
+	RADIO_CHANNEL_TRAITOR = TRAITOR_FREQ,
 ))
 
 // Response Teams
@@ -243,6 +252,12 @@ GLOBAL_LIST_INIT(radiochannels, list(
 
 //Depts - used for colors in headset.dm, as well as deciding what the marine comms tower can listen into
 #define DEPT_FREQS list(COMM_FREQ, MED_FREQ, ENG_FREQ, SEC_FREQ, SENTRY_FREQ, ALPHA_FREQ, BRAVO_FREQ, CHARLIE_FREQ, DELTA_FREQ, ECHO_FREQ, CRYO_FREQ, REQ_FREQ, JTAC_FREQ, INTEL_FREQ, WY_FREQ, ASF_FREQ, ARM_FREQ)
+
+// Imperial Guard Frequencies
+#define IMP_GUARD_FREQS list(IMP_GUARD_FREQ, KARKIN_FREQ)
+
+// Traitor Frequencies
+#define TRAITOR_FREQS list(TRAITOR_FREQ)
 
 #define TRANSMISSION_WIRE 0
 #define TRANSMISSION_RADIO 1
@@ -325,6 +340,9 @@ SUBSYSTEM_DEF(radio)
 		"[CLF_MED_FREQ]" = "opformed",
 		"[PFA_FREQ]" = "pfaradio",
 		"[JSC_FREQ]" = "jscradio",
+		"[IMP_GUARD_FREQ]" = "guardradio",
+		"[KASRKIN_FREQ]" = "hcradio",
+		"[TRAITOR_FREQ]" = "syndradio"
 	)
 
 /datum/controller/subsystem/radio/proc/add_object(obj/device as obj, new_frequency as num, filter = null as text|null)

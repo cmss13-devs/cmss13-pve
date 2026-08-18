@@ -3,6 +3,7 @@
 #define CLF_COMMAND_ANNOUNCE "CLF Command Announcement"
 #define PMC_COMMAND_ANNOUNCE "PMC Command Announcement"
 #define TWE_COMMAND_ANNOUNCE "Royal Marines Command Announcement"
+#define IMPERIAL_COMMAND_ANNOUNCE "Imperial Guard Command Announcement"
 #define QUEEN_ANNOUNCE "The words of the Queen reverberate in your head..."
 #define QUEEN_MOTHER_ANNOUNCE "Queen Mother Psychic Directive"
 #define XENO_GENERAL_ANNOUNCE "You sense something unusual..." //general xeno announcement that don't involve Queen, for nuke for example

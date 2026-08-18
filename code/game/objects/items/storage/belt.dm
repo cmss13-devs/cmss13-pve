@@ -616,6 +616,7 @@
 		/obj/item/ammo_magazine/revolver,
 		/obj/item/ammo_magazine/sniper,
 		/obj/item/ammo_magazine/handful,
+		/obj/item/ammo_magazine/lasgun,
 		/obj/item/explosive/grenade,
 		/obj/item/explosive/mine,
 		/obj/item/reagent_container/food/snacks,
@@ -1314,10 +1315,12 @@
 	storage_slots = 7
 	can_hold = list(
 		/obj/item/weapon/gun/pistol,
+		/obj/item/weapon/gun/lasgun/laspistol,
 		/obj/item/ammo_magazine/pistol,
 		/obj/item/ammo_magazine/pistol/heavy,
 		/obj/item/ammo_magazine/pistol/heavy/super,
 		/obj/item/ammo_magazine/pistol/heavy/super/highimpact,
+		/obj/item/ammo_magazine/lasgun/laspistol,
 	)
 	cant_hold = list(
 		/obj/item/weapon/gun/pistol/smart,
@@ -1435,6 +1438,11 @@
 	handle_item_insertion(new /obj/item/weapon/gun/pistol/b92fs())
 	for(var/i = 1 to storage_slots - 1)
 		new /obj/item/ammo_magazine/pistol/b92fs(src)
+
+/obj/item/storage/belt/gun/m4a3/laspistol/fill_preset_inventory()
+	handle_item_insertion(new /obj/item/weapon/gun/lasgun/laspistol())
+	for(var/i = 1 to storage_slots - 1)
+		new /obj/item/ammo_magazine/lasgun/laspistol(src)
 
 /obj/item/storage/belt/gun/m4a3/nailgun
 	name = "customized nailgun holster"

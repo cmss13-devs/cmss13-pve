@@ -198,3 +198,48 @@
 	new /obj/item/ammo_magazine/smartgun/holo_targeting(src)
 	new /obj/item/ammo_magazine/smartgun/holo_targeting(src)
 	new /obj/item/clothing/glasses/night/m56_goggles/rmc(src)
+
+/obj/structure/closet/secure_closet/job_locker/imperial_specialist
+	name = "specialist locker"
+	req_access = list(ACCESS_MARINE_SPECPREP)
+	var/claimed = FALSE
+	var/role_lock = TRUE
+
+/obj/structure/closet/secure_closet/job_locker/imperial_specialist/togglelock(mob/living/user)
+	if(!allowed(user))
+		to_chat(user, SPAN_WARNING("You do not have access to the contents of this locker."))
+		return
+	if(claimed)
+		return ..()
+	if(role_lock && ishuman(user))
+		var/mob/living/carbon/human/human = user
+		var/obj/item/card/id/card = human.get_idcard()
+		if(card)
+			if(human.job != JOB_SQUAD_SPECIALIST)
+				to_chat(user, SPAN_WARNING("You aren't the right occupation for this locker."))
+				return
+			equipment_giver(user)
+		else if(!role_lock && ishuman(user))
+			equipment_giver(user)
+
+/obj/structure/closet/secure_closet/job_locker/imperial_specialist/proc/equipment_giver(mob/living/user)
+	var/static/list/spec_equipment_list = list(
+		"Rocket launcher kit" = /obj/item/storage/box/spec/imperial_launcher,
+		"Plasmagun kit" = /obj/item/storage/box/spec/imperial_plasma,
+		"Flamer Kit" = /obj/item/storage/box/spec/imperial_flamer,
+		"Volleygun Kit" = /obj/item/storage/box/spec/imperial_volleygun,
+		)
+
+	var/chosen_kit = tgui_input_list(user, "Equipment Selection", "Select your equipment", spec_equipment_list)
+
+	if(!chosen_kit)
+		to_chat(user, SPAN_WARNING("You decide to think on it."))
+		return
+
+	if(claimed)
+		to_chat(user, SPAN_WARNING("You already got a kit!"))
+		return
+
+	chosen_kit = spec_equipment_list[chosen_kit]
+	claimed = TRUE
+	new chosen_kit(src)

@@ -39,6 +39,9 @@
 /atom/movable/screen/text/screen_text/picture/gamma_troop
 	image_to_play = "gamma_troop"
 
+/atom/movable/screen/text/screen_text/picture/imperial_guard
+	image_to_play = "cadian_first"
+
 /atom/movable/screen/text/screen_text/picture/starting
 	layer = ABOVE_INTRO_LAYER
 	plane = FULLSCREEN_PLANE
@@ -63,6 +66,9 @@
 
 /atom/movable/screen/text/screen_text/picture/starting/twe
 	image_to_play = "twe"
+
+/atom/movable/screen/text/screen_text/picture/starting/imperial
+	image_to_play = "guard"
 
 /atom/movable/screen/text/screen_text/hypersleep_status
 	maptext_height = 480

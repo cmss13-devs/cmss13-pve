@@ -411,6 +411,7 @@
 		/obj/item/ammo_magazine/revolver,
 		/obj/item/ammo_magazine/sniper,
 		/obj/item/ammo_magazine/handful,
+		/obj/item/ammo_magazine/lasgun,
 		/obj/item/explosive/grenade,
 		/obj/item/explosive/mine,
 		/obj/item/reagent_container/food/snacks,
@@ -449,6 +450,7 @@
 		/obj/item/ammo_magazine/pistol,
 		/obj/item/ammo_magazine/pistol/heavy,
 		/obj/item/ammo_magazine/revolver,
+		/obj/item/ammo_magazine/lasgun/laspistol,
 	)
 
 /obj/item/storage/pouch/magazine/pistol/large
@@ -656,6 +658,10 @@
 /obj/item/storage/pouch/explosive/emp_dutch/fill_preset_inventory()
 	for(var/i = 1 to storage_slots)
 		new /obj/item/explosive/grenade/empgrenade/dutch(src)
+
+/obj/item/storage/pouch/explosive/full/imperial/fill_preset_inventory()
+	for(var/i = 1 to storage_slots)
+		new /obj/item/explosive/grenade/high_explosive/m15/imperial(src)
 
 /obj/item/storage/pouch/medical
 	name = "medical pouch"

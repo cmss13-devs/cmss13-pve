@@ -1965,3 +1965,77 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	)
 	item_state = "rmc_helm2"
 	desc = "A common helmet used by various blue-collar professions in the TWE."
+
+
+//40k
+
+/obj/item/clothing/head/helmet/marine/veteran/guard
+	name = "\improper imperial Guard helmet"
+	icon_state = "helmet_guard"
+	item_state = "helmet_guard"
+	armor_melee = CLOTHING_ARMOR_MEDIUM
+	armor_bullet = CLOTHING_ARMOR_MEDIUMHIGH
+	armor_energy = CLOTHING_ARMOR_MEDIUM
+	armor_laser = CLOTHING_ARMOR_MEDIUM
+	armor_bomb = CLOTHING_ARMOR_MEDIUM
+	armor_bio = CLOTHING_ARMOR_LOW
+	armor_internaldamage = CLOTHING_ARMOR_LOW
+	min_cold_protection_temperature = ICE_PLANET_MIN_COLD_PROT
+	flags_inventory = BLOCKSHARPOBJ
+	flags_inv_hide = NO_FLAGS
+	flags_marine_helmet = NO_FLAGS
+	flags_atom = NO_NAME_OVERRIDE|NO_SNOW_TYPE
+
+/obj/item/clothing/head/helmet/marine/veteran/guard/elite
+	name = "\improper kasrkin Elite helmet"
+	icon_state = "helmet_elite"
+	item_state = "helmet_elite"
+	armor_melee = CLOTHING_ARMOR_HIGH
+	armor_bullet = CLOTHING_ARMOR_VERYHIGH
+	armor_laser = CLOTHING_ARMOR_MEDIUMHIGH
+	armor_energy = CLOTHING_ARMOR_HIGH
+	armor_bomb = CLOTHING_ARMOR_HIGH
+	armor_bio = CLOTHING_ARMOR_MEDIUM
+	armor_rad = CLOTHING_ARMOR_NONE
+	armor_internaldamage = CLOTHING_ARMOR_MEDIUM
+	min_cold_protection_temperature = ICE_PLANET_MIN_COLD_PROT
+	flags_inventory = COVEREYES|COVERMOUTH|BLOCKSHARPOBJ|BLOCKGASEFFECT|FULL_DECAP_PROTECTION
+	flags_inv_hide = HIDEEARS|HIDEEYES|HIDEFACE|HIDEMASK|HIDEALLHAIR
+	flags_marine_helmet = HELMET_DAMAGE_OVERLAY
+	flags_atom = NO_NAME_OVERRIDE|NO_SNOW_TYPE
+
+/obj/item/clothing/head/helmet/marine/veteran/guard/traitor
+	name = "\improper traitor Guard helmet"
+	icon_state = "helmet_guard_heretic"
+	item_state = "helmet_guard_heretic"
+	armor_melee = CLOTHING_ARMOR_MEDIUMLOW
+	armor_bullet = CLOTHING_ARMOR_MEDIUM
+	armor_laser = CLOTHING_ARMOR_MEDIUMLOW
+	armor_energy = CLOTHING_ARMOR_MEDIUM
+	armor_bomb = CLOTHING_ARMOR_LOW
+
+/obj/item/clothing/head/helmet/marine/veteran/guard/elite/traitor
+	name = "\improper traitor Elite helmet"
+	icon_state = "helmet_elite_heretic"
+	item_state = "helmet_elite_heretic"
+
+/obj/item/clothing/head/helmet/marine/veteran/heretic
+	name = "\improper makeshift heretic helmet"
+	icon_state = "helmet_heretic_a"
+	item_state = "helmet_heretic_a"
+	armor_melee = CLOTHING_ARMOR_MEDIUMLOW
+	armor_bullet = CLOTHING_ARMOR_MEDIUM
+	armor_energy = CLOTHING_ARMOR_MEDIUMLOW
+	armor_laser = CLOTHING_ARMOR_MEDIUMLOW
+	armor_bomb = CLOTHING_ARMOR_LOW
+	armor_bio = CLOTHING_ARMOR_LOW
+	armor_internaldamage = CLOTHING_ARMOR_LOW
+	min_cold_protection_temperature = ICE_PLANET_MIN_COLD_PROT
+	flags_inventory = BLOCKSHARPOBJ
+	flags_inv_hide = HIDEEARS|HIDEEYES|HIDEFACE|HIDEMASK|HIDEALLHAIR
+	flags_marine_helmet = NO_FLAGS
+	flags_atom = NO_NAME_OVERRIDE|NO_SNOW_TYPE
+
+/obj/item/clothing/head/helmet/marine/veteran/heretic/b
+	icon_state = "helmet_heretic_b"
+	item_state = "helmet_heretic_b"

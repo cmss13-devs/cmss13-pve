@@ -347,6 +347,19 @@
 			return /datum/equipment_preset/royal_marine/troopsergeant
 		if(JOB_TWE_RMC_LIEUTENANT)
 			return /datum/equipment_preset/royal_marine/lieuteant
+//Imperial Guard Squad
+		if(JOB_IMPPLAT_LEADER)
+			return /datum/equipment_preset/imperial_guard/sl
+		if(JOB_IMPPLAT_FTL)
+			return /datum/equipment_preset/imperial_guard/guardsman/tl
+		if(JOB_IMPPLAT_MEDICAE)
+			return /datum/equipment_preset/imperial_guard/medicae
+		if(JOB_IMPPLAT_VOX)
+			return /datum/equipment_preset/imperial_guard/vox_operator
+		if(JOB_IMPPLAT_STANDARD)
+			return /datum/equipment_preset/imperial_guard/guardsman
+		if(JOB_IMPPLAT_SPECIALIST)
+			return /datum/equipment_preset/imperial_guard/specialist/plasma
 
 	return /datum/equipment_preset/uscm/private_equipped
 

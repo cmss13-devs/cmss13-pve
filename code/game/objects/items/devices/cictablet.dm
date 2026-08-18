@@ -197,3 +197,14 @@
 	announcement_faction = FACTION_TWE
 	req_access = list(ACCESS_TWE_LEADERSHIP)
 	minimap_type = MINIMAP_FLAG_TWE
+
+/obj/item/device/cotablet/imperial
+
+	desc = "A special device used by platoon commanders."
+
+	tablet_name = "Imperial Guard Field Commander's Tablet"
+
+	announcement_title = IMPERIAL_COMMAND_ANNOUNCE
+	announcement_faction = FACTION_IMPERIAL_GUARD
+	req_access = list(ACCESS_MARINE_LEADER)
+	minimap_type = MINIMAP_FLAG_IMPERIAL_GUARD

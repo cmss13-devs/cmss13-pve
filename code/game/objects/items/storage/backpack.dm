@@ -598,6 +598,14 @@ GLOBAL_LIST_EMPTY_TYPED(radio_packs, /obj/item/storage/backpack/marine/satchel/r
 /obj/item/storage/backpack/marine/satchel/rto/io
 	phone_category = PHONE_IO
 
+/obj/item/storage/backpack/marine/satchel/rto/vox
+	name = "\improper Imperial Guard Voxcaster Pack"
+	desc = "A heavy-duty voxcaster pack, used for communications between Imperial Guard elements in the field and higher command elements."
+	networks_receive = list(FACTION_IMPERIAL_GUARD)
+	networks_transmit = list(FACTION_IMPERIAL_GUARD)
+	max_storage_space = 8
+	phone_category = PHONE_GUARD
+
 /obj/item/storage/backpack/marine/smock
 	name = "\improper M3 sniper's smock"
 	desc = "A specially-designed smock with pockets for all your sniper needs."

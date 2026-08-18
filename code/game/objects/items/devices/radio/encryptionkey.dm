@@ -429,3 +429,18 @@
 	name = "\improper Mercenary Radio Encryption Key"
 	icon_state = "stripped_key"
 	channels = list(RADIO_CHANNEL_MERC = TRUE, RADIO_CHANNEL_COLONY = TRUE)
+
+/obj/item/device/encryptionkey/imperial_guard
+	name = "\improper Imperial Guard Radio Encryption Key"
+	icon_state = "stripped_key"
+	channels = list(RADIO_CHANNEL_IMP_GUARD = TRUE, RADIO_CHANNEL_COLONY = TRUE)
+
+/obj/item/device/encryptionkey/kasrkin
+	name = "\improper Kasrkin Radio Encryption Key"
+	icon_state = "stripped_key"
+	channels = list(RADIO_CHANNEL_KASRKIN = TRUE, RADIO_CHANNEL_COLONY = TRUE)
+
+/obj/item/device/encryptionkey/traitor
+	name = "\improper Traitor Guard Radio Encryption Key"
+	icon_state = "stripped_key"
+	channels = list(RADIO_CHANNEL_TRAITOR = TRUE, RADIO_CHANNEL_COLONY = TRUE)

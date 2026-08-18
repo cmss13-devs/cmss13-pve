@@ -217,3 +217,15 @@
 
 /obj/structure/gun_rack/nsg/Empty
 	initial_stored = 0
+
+/obj/structure/gun_rack/lasgun
+	name = "imperial guard lasgun rack"
+	icon_state = "lasgun"
+	desc = "A gun rack designed to hold up to five lasguns."
+	max_stored = 5
+	initial_stored = 5
+	allowed_type = /obj/item/weapon/gun/lasgun
+	populate_type = /obj/item/weapon/gun/lasgun
+
+/obj/structure/gun_rack/lasgun/Empty
+	initial_stored = 0.

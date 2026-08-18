@@ -862,3 +862,41 @@
 		/obj/item/prop/helmetgarb/helmet_nvg/cosmetic = "icon_state",
 		/obj/item/prop/helmetgarb/helmet_nvg/marsoc = "icon_state",
 	)
+
+/obj/item/clothing/head/cmcap/commissar
+	name = "commissar's peaked cap"
+	desc = "A commissar's peaked cap, which is a symbol of authority and fear. No step back."
+	icon_state = "commissar_cap"
+	item_state = "commissar_cap"
+	icon = 'icons/obj/items/clothing/cm_hats.dmi'
+	flags_marine_hat = HAT_GARB_OVERLAY
+	flags_atom = NO_NAME_OVERRIDE|NO_SNOW_TYPE
+	item_icons = list(
+		WEAR_HEAD = 'icons/mob/humans/onmob/head_1.dmi'
+	)
+
+/obj/item/clothing/head/cmcap/imperial
+	name = "officer's peaked cap"
+	desc = "An officer's peaked cap, which is a symbol of leadership and stragegy. Onwards!"
+	icon_state = "officer_cap"
+	item_state = "officer_cap"
+	icon = 'icons/obj/items/clothing/cm_hats.dmi'
+	flags_marine_hat = HAT_GARB_OVERLAY
+	flags_atom = NO_NAME_OVERRIDE|NO_SNOW_TYPE
+	item_icons = list(
+		WEAR_HEAD = 'icons/mob/humans/onmob/head_1.dmi'
+	)
+
+/obj/item/clothing/head/cmcap/enginseer
+	name = "enginseer's hood"
+	desc = "A large hood that overlaps the shoulders, worn by enginseers and other members of the mechanicus."
+	icon_state = "enginseer_hood"
+	item_state = "enginseer_hood"
+	icon = 'icons/obj/items/clothing/cm_hats.dmi'
+	flags_marine_hat = HAT_GARB_OVERLAY
+	flags_atom = NO_NAME_OVERRIDE|NO_SNOW_TYPE
+	flags_inventory = COVEREYES|COVERMOUTH|BLOCKSHARPOBJ|BLOCKGASEFFECT
+	flags_inv_hide = HIDEEARS|HIDEEYES|HIDEFACE|HIDEMASK|HIDEALLHAIR
+	item_icons = list(
+		WEAR_HEAD = 'icons/mob/humans/onmob/head_1.dmi'
+	)

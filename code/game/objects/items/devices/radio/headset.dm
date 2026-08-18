@@ -382,6 +382,8 @@
 			marker_flags = MINIMAP_FLAG_PMC
 		else if(hud_type == MOB_HUD_FACTION_CLF)
 			marker_flags = MINIMAP_FLAG_CLF
+		else if(hud_type == MOB_HUD_FACTION_IMPERIAL)
+			marker_flags = MINIMAP_FLAG_IMPERIAL_GUARD
 
 	if(wearer.undefibbable)
 		set_undefibbable_on_minimap(z_level, marker_flags)
@@ -1385,3 +1387,26 @@
 	frequency = MERC_FREQ
 	initial_keys = list(/obj/item/device/encryptionkey/colony)
 	ignore_z = TRUE
+
+/obj/item/device/radio/headset/distress/imperial/imperial_guard
+	name = "\improper Imperial Guard personal vox headset"
+	desc = "A robust headset used by members of the Imperial Guard. Built to outlast those it's issued to. Featured channels include: ; - Imperial Guard, :o - Colony."
+	frequency = IMP_GUARD_FREQ
+	initial_keys = list(/obj/item/device/encryptionkey/imperial_guard)
+	has_hud = TRUE
+	hud_type = list(MOB_HUD_FACTION_IMPERIAL)
+
+/obj/item/device/radio/headset/distress/imperial/kasrkin
+	name = "\improper Kasrkin personal vox headset"
+	desc = "A robust headset used by members of the Kasrkin. Built to outlast those it's issued to. Featured channels include: ; - Kasrkin, :o - Colony."
+	frequency = KASRKIN_FREQ
+	initial_keys = list(/obj/item/device/encryptionkey/kasrkin)
+	has_hud = TRUE
+	hud_type = list(MOB_HUD_FACTION_IMPERIAL)
+
+/obj/item/device/radio/headset/distress/imperial/traitor
+	name = "\improper Traitor Guard personal vox headset"
+	desc = "A robust headset used by members of the Traitor Guard. Built to outlast those it's issued to. Featured channels include: ; - Traitor Guard, :o - Colony."
+	frequency = TRAITOR_FREQ
+	initial_keys = list(/obj/item/device/encryptionkey/traitor)
+	has_hud = FALSE

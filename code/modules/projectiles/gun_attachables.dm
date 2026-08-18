@@ -619,6 +619,24 @@ Defined in conflicts.dm of the #defines folder.
 	pixel_shift_x = 14
 	hud_offset_mod = -4
 
+/obj/item/attachable/hellgunbarrel
+	name = "hellgun barrel"
+	icon = 'icons/obj/items/weapons/guns/attachments/barrel.dmi'
+	icon_state = "hellgun_barrel"
+	desc = "A heavy barrel. CANNOT BE REMOVED."
+	slot = "muzzle"
+	flags_attach_features = NO_FLAGS
+	hud_offset_mod = -4
+
+/obj/item/attachable/volleygunbarrel
+	name = "volleygun barrel"
+	icon = 'icons/obj/items/weapons/guns/attachments/barrel.dmi'
+	icon_state = "volleygun_barrel"
+	desc = "A heavy barrel. CANNOT BE REMOVED."
+	slot = "muzzle"
+	flags_attach_features = NO_FLAGS
+	hud_offset_mod = -4
+
 // Mateba barrels
 
 /obj/item/attachable/mateba
@@ -1422,6 +1440,15 @@ Defined in conflicts.dm of the #defines folder.
 	icon_state = "slavicscope"
 	attach_icon = "slavicscope"
 	desc = "Oppa! How did you get this off glorious Stalin weapon? Blyat, put back on and do job tovarish. Yankee is not shoot self no?"
+
+/obj/item/attachable/scope/hellgun
+	name = "hellgun sight"
+	desc = "You shouldn't be seeing this!"
+	icon_state = "hellgunscope"
+	attach_icon = "hellgunscope_a"
+	zoom_offset = 3
+	zoom_viewsize = 7
+	allows_movement = TRUE
 
 /obj/item/attachable/vulture_scope // not a subtype of scope because it uses basically none of the scope's features
 	name = "\improper M707 \"Vulture\" scope"
@@ -2699,6 +2726,18 @@ Defined in conflicts.dm of the #defines folder.
 	icon = 'icons/obj/items/weapons/guns/attachments/barrel.dmi'
 	icon_state = "uppmg_barrel"
 	attach_icon = "uppmg_barrel"
+	slot = "muzzle"
+	wield_delay_mod = WIELD_DELAY_NONE
+	flags_attach_features = NO_FLAGS
+	melee_mod = 0
+	size_mod = 0
+
+/obj/item/attachable/imperial_launcher_breech
+	name = "Imperial launcher breech"
+	desc = "This isn't supposed to be separated from the gun, how'd this happen?"
+	icon = 'icons/obj/items/weapons/guns/attachments/barrel.dmi'
+	icon_state = "imperial_launcher_barrel"
+	attach_icon = "imperial_launcher_barrel"
 	slot = "muzzle"
 	wield_delay_mod = WIELD_DELAY_NONE
 	flags_attach_features = NO_FLAGS

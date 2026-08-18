@@ -158,6 +158,37 @@
 	squad = SQUAD_RMC
 	job = /datum/job/marine/standard/ai/rmc
 
+/datum/job/marine/standard/ai/imperial
+	title = JOB_IMPPLAT_STANDARD
+	gear_preset = /datum/equipment_preset/uscm/imperial
+	job_options = null
+	total_positions = 4
+	spawn_positions = 4
+	supervisors = "the squad leader and team leader"
+	entry_message_body = "You are a rank and file guardsman of the Astra Militarum, better known as the Imperial Guard. You are the frontlines of the imperium, easily disposable and trained just enough to only die within a few hours of your deployment on average. Glory to the Imperium of Man!</b>"
+	prime_priority = FALSE
+
+/obj/effect/landmark/start/marine/imperial
+	name = JOB_IMPPLAT_STANDARD
+	squad = SQUAD_IMPPLT
+	job = /datum/job/marine/standard/ai/imperial
+
+/datum/job/marine/standard/ai/vox
+	total_positions = 1
+	spawn_positions = 1
+	title = JOB_IMPPLAT_VOX
+	gear_preset = /datum/equipment_preset/uscm/imperial/vox
+	job_options = list(null)
+	supervisors = "the squad leader"
+	entry_message_body = "You are a vox operator of the Astra Militarum, better known as the Imperial Guard. Second in command of the average squad, the Vox Operator is in charge of communication between the overall platoon element and the squad.</b>"
+
+	prime_priority = FALSE
+
+/obj/effect/landmark/start/marine/vox
+	name = JOB_IMPPLAT_VOX
+	squad = SQUAD_IMPPLT
+	job = /datum/job/marine/standard/ai/vox
+
 #undef CPL_VARIANT
 #undef LCPL_VARIANT
 #undef PFC_VARIANT

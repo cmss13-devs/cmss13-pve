@@ -1,0 +1,8 @@
+{
+    "map_name": "Lance of Asricus",
+    "map_path": "map_files/Lance_of_Asricus",
+    "map_file": "Lance_of_Asricus.dmm",
+    "webmap_url": "GoldenArrow",
+    "traits": [{"Marine Main Ship": true}],
+    "platoon": "/datum/squad/marine/imperial"
+}

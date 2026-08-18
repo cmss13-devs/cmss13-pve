@@ -211,3 +211,28 @@
 
 /obj/structure/closet/secure_closet/marine_personal/rmc/troop_commander
 	job = JOB_TWE_RMC_LIEUTENANT
+
+// ==Imperial Guard== //
+
+/obj/structure/closet/secure_closet/marine_personal/imperial/spawn_gear()
+	new /obj/item/clothing/under/marine/veteran/guard(src)
+	new /obj/item/device/radio/headset/distress/imperial/imperial_guard(src)
+	new /obj/item/clothing/shoes/marine/civilian/knife(src)
+
+/obj/structure/closet/secure_closet/marine_personal/imperial/rifleman
+	job = JOB_SQUAD_MARINE
+
+/obj/structure/closet/secure_closet/marine_personal/imperial/specialist
+	job = JOB_SQUAD_SPECIALIST
+
+/obj/structure/closet/secure_closet/marine_personal/imperial/medic
+	job = JOB_SQUAD_MEDIC
+
+/obj/structure/closet/secure_closet/marine_personal/imperial/vox
+	job = JOB_SQUAD_RTO
+
+/obj/structure/closet/secure_closet/marine_personal/imperial/tl
+	job = JOB_SQUAD_TEAM_LEADER
+
+/obj/structure/closet/secure_closet/marine_personal/imperial/sl
+	job = JOB_SQUAD_LEADER

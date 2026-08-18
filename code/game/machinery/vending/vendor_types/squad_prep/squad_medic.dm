@@ -386,6 +386,57 @@ GLOBAL_LIST_INIT(cm_vending_chemical_medic, list(
 		list("Smart Refill Tank", 40, /obj/item/reagent_container/glass/minitank, null, VENDOR_ITEM_REGULAR),
 	))
 
+// Imperial med-vendor
+
+/obj/effect/essentials_set/impmedic
+	spawned_gear_list = list(
+		/obj/item/storage/surgical_case/regular,
+		/obj/item/device/healthanalyzer/soul,
+		/obj/item/tool/surgery/synthgraft,
+		/obj/item/device/flashlight/pen,
+		/obj/item/clothing/accessory/stethoscope,
+	)
+
+GLOBAL_LIST_INIT(cm_vending_clothing_imp_medic, list(
+		list("MEDICAL SET (MANDATORY)", 0, null, null, null),
+		list("Essential Medical Set", 0, /obj/effect/essentials_set/impmedic, MARINE_CAN_BUY_ESSENTIALS, VENDOR_ITEM_MANDATORY),
+
+		list("OVERWATCH & HUD EQUIPMENT (CHOOSE 1)", 0, null, null, null),
+		list("Mark 2 Battle Medic sight", 0, /obj/item/clothing/glasses/night/medhud/no_nvg, MARINE_CAN_BUY_GLASSES, VENDOR_ITEM_REGULAR),
+
+		list("ARMOR (CHOOSE 1)", 0, null, null, null),
+		list("Guard Armor", 0, /obj/item/clothing/suit/storage/marine/veteran/guard, MARINE_CAN_BUY_ARMOR, VENDOR_ITEM_RECOMMENDED),
+
+		list("BACKPACK (CHOOSE 1)", 0, null, null, null),
+		list("Medical Backpack", 0, /obj/item/storage/backpack/marine/medic/standard, MARINE_CAN_BUY_BACKPACK, VENDOR_ITEM_REGULAR),
+		list("Medical Satchel", 0, /obj/item/storage/backpack/marine/satchel/medic/standard, MARINE_CAN_BUY_BACKPACK, VENDOR_ITEM_RECOMMENDED),
+
+		list("BELT (CHOOSE 1)", 0, null, null, null),
+		list("Lifesaver Bag (Full)", 0, /obj/item/storage/belt/medical/lifesaver/standard/full, MARINE_CAN_BUY_BELT, VENDOR_ITEM_RECOMMENDED),
+		list("Medical Storage Rig (Full)", 0, /obj/item/storage/belt/medical/full, MARINE_CAN_BUY_BELT, VENDOR_ITEM_RECOMMENDED),
+
+		list("POUCHES (CHOOSE 2)", 0, null, null, null),
+		list("Autoinjector Pouch", 0, /obj/item/storage/pouch/autoinjector, MARINE_CAN_BUY_POUCH, VENDOR_ITEM_REGULAR),
+		list("Medical Kit Pouch", 0, /obj/item/storage/pouch/medkit, MARINE_CAN_BUY_POUCH, VENDOR_ITEM_RECOMMENDED),
+		list("Pressurized Reagent Canister Pouch (Bicaridine)", 0, /obj/item/storage/pouch/pressurized_reagent_canister/bicaridine, MARINE_CAN_BUY_POUCH, VENDOR_ITEM_RECOMMENDED),
+		list("Pressurized Reagent Canister Pouch (Kelotane)", 0, /obj/item/storage/pouch/pressurized_reagent_canister/kelotane, MARINE_CAN_BUY_POUCH, VENDOR_ITEM_RECOMMENDED),
+		list("Pressurized Reagent Canister Pouch (Tricordrazine)", 0, /obj/item/storage/pouch/pressurized_reagent_canister/tricordrazine, MARINE_CAN_BUY_POUCH, VENDOR_ITEM_RECOMMENDED),
+		list("Vial Pouch (Full)", 0, /obj/item/storage/pouch/vials/full, MARINE_CAN_BUY_POUCH, VENDOR_ITEM_REGULAR),
+
+		list("ACCESSORIES (CHOOSE 1)", 0, null, null, null),
+		list("Drop Pouch", 0, /obj/item/clothing/accessory/storage/droppouch, MARINE_CAN_BUY_ACCESSORY, VENDOR_ITEM_REGULAR),
+		list("Shoulder Holster", 0, /obj/item/clothing/accessory/storage/holster, MARINE_CAN_BUY_ACCESSORY, VENDOR_ITEM_REGULAR),
+	))
+
+/obj/structure/machinery/cm_vending/clothing/medic/imp
+	name = "\improper Imperial Guard Medical Gear Rack"
+	desc = "A rack of medical equipment for any medic's needs."
+	req_access = list(ACCESS_MARINE_MEDBAY)
+	vendor_role = list(JOB_SQUAD_MEDIC)
+
+/obj/structure/machinery/cm_vending/clothing/medic/imp/get_listed_products(mob/user)
+	return GLOB.cm_vending_clothing_imp_medic
+
 /obj/structure/machinery/cm_vending/gear/medic_chemical
 	name = "\improper ColMarTech Squad Medical Chemical Rack"
 	desc = "An automated gear rack for specialized chemicals for the hospital corpsman."
@@ -408,3 +459,8 @@ GLOBAL_LIST_INIT(cm_vending_chemical_medic, list(
 	req_access = list(ACCESS_TWE_MEDPREP)
 	vendor_theme = VENDOR_THEME_COMPANY
 	vendor_role = list(JOB_TWE_RMC_MEDIC)
+
+/obj/structure/machinery/cm_vending/gear/medic_chemical/imp
+	name = "\improper Imperial Guard Squad Medical Chemical Rack"
+	req_access = list(ACCESS_MARINE_MEDBAY)
+	vendor_role = list(JOB_SQUAD_MEDIC)

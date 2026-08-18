@@ -1852,3 +1852,106 @@ GLOBAL_LIST_INIT(rebel_ua_pistols, list(
 		/obj/item/clothing/glasses/sunglasses/aviator,
 	)
 	new_human.equip_to_slot_or_del(new helmeteyewearpath, WEAR_IN_HELMET)
+
+//-----------------------------
+// 40k Presets
+
+/datum/equipment_preset/proc/add_cultist_mask(mob/living/carbon/human/new_human)
+	var/random_mask = rand(0,4)
+	switch(random_mask)
+		if(0)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/gas/military/upp(new_human), WEAR_FACE)
+
+		if(1)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/rebreather/scarf/tacticalmask/tan(new_human), WEAR_FACE)
+
+		if(2)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/skull(new_human), WEAR_FACE)
+
+		if(3)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/veteran/heretic(new_human), WEAR_HEAD)
+
+		if(4)
+			new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/veteran/heretic/b(new_human), WEAR_HEAD)
+
+/datum/equipment_preset/proc/add_cultist_uniform(mob/living/carbon/human/new_human)
+	if(!istype(new_human))
+		return
+	var/random_cultist_uniform = pick(
+		/obj/item/clothing/under/colonist/wy_davisone,
+		/obj/item/clothing/under/rank/synthetic/utility/yellow,
+		/obj/item/clothing/under/marine/officer/engi,
+		/obj/item/clothing/under/colonist/boilersuit/grey,
+		/obj/item/clothing/under/colonist/clf,
+	)
+	new_human.equip_to_slot_or_del(new random_cultist_uniform, WEAR_BODY)
+
+/datum/equipment_preset/proc/add_cultist_armour(mob/living/carbon/human/new_human)
+	if(!istype(new_human))
+		return
+	var/random_cultist_armour = pick(
+		/obj/item/clothing/suit/storage/militia/heretic,
+		/obj/item/clothing/suit/storage/militia/heretic/cuirass,
+		/obj/item/clothing/suit/storage/militia/heretic/lead,
+	)
+	new_human.equip_to_slot_or_del(new random_cultist_armour, WEAR_JACKET)
+
+/datum/equipment_preset/proc/add_cultist_pistol(mob/living/carbon/human/new_human)
+	var/random_weapon = rand(0,3)
+	switch(random_weapon)
+		if(0)
+			new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/pistol/holdout/stub(new_human), WEAR_WAIST)
+			new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/pistol/holdout(new_human), WEAR_L_STORE)
+
+		if(1)
+			new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/pistol/m1911/stub(new_human), WEAR_WAIST)
+			new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/pistol/m1911(new_human), WEAR_L_STORE)
+
+		if(2)
+			new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/revolver/m44/stub(new_human), WEAR_WAIST)
+			new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/revolver(new_human), WEAR_L_STORE)
+
+		if(3)
+			new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/pistol/m4a3/stub(new_human), WEAR_WAIST)
+			new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/pistol(new_human), WEAR_L_STORE)
+
+/datum/equipment_preset/proc/add_cultist_rifle(mob/living/carbon/human/new_human)
+	var/random_weapon = rand(0,1)
+	switch(random_weapon)
+		if(0)
+			new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/mar40/stub(new_human), WEAR_BACK)
+			new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/general_belt(new_human), WEAR_WAIST)
+			new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/mar40(new_human), WEAR_IN_BELT)
+			new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/mar40(new_human), WEAR_IN_BELT)
+
+		if(1)
+			new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/smg/bizon/upp/stub(new_human), WEAR_J_STORE)
+			new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/general_belt(new_human), WEAR_WAIST)
+			new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/smg/bizon(new_human), WEAR_IN_BELT)
+			new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/smg/bizon(new_human), WEAR_IN_BELT)
+
+
+/datum/equipment_preset/proc/add_traitor_guardsman_ranged(mob/living/carbon/human/new_human)
+	var/random_weapon = rand(0,3)
+	switch(random_weapon)
+		if(0,1)
+			new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/mar40/stub(new_human), WEAR_BACK)
+			new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/general_belt(new_human), WEAR_WAIST)
+			new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/mar40(new_human), WEAR_IN_BELT)
+			new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/mar40(new_human), WEAR_IN_BELT)
+			new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/mar40(new_human), WEAR_IN_BELT)
+			new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/mar40(new_human), WEAR_IN_BELT)
+
+		if(2)
+			new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/lasgun/laspistol/heretic(new_human), WEAR_J_STORE)
+			new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/general_belt(new_human), WEAR_WAIST)
+			new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/lasgun/laspistol(new_human), WEAR_IN_BELT)
+			new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/lasgun/laspistol(new_human), WEAR_IN_BELT)
+			new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/lasgun/laspistol(new_human), WEAR_IN_BELT)
+
+		if(3)
+			new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/lasgun/heretic(new_human), WEAR_BACK)
+			new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/general_belt(new_human), WEAR_WAIST)
+			new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/lasgun(new_human), WEAR_IN_BELT)
+			new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/lasgun(new_human), WEAR_IN_BELT)
+			new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/lasgun(new_human), WEAR_IN_BELT)
