@@ -6,7 +6,7 @@
 	if(!brain.tied_human.on_fire || iszombie(brain.tied_human))
 		return 0
 
-	return 14
+	return ACTION_WEIGHT_RESIST_BURNING
 
 /datum/ai_action/resist_burning/trigger_action()
 	. = ..()

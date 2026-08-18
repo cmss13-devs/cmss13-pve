@@ -1,7 +1,7 @@
 /// Types of click intercepts used by /datum/game_master variable current_click_intercept_action
 #define SPAWN_CLICK_INTERCEPT_ACTION "spawn_click_intercept_action"
 
-//GLOBAL_LIST_EMPTY(human_ai_equipment_presets)
+GLOBAL_LIST_EMPTY(pre_start_humanAI)
 
 /datum/human_ai_spawner_menu
 	var/static/list/lazy_ui_data = list()
@@ -27,6 +27,7 @@
 
 /datum/human_ai_spawner_menu/New()
 	usr.client.click_intercept = src
+	RegisterSignal(SSdcs, COMSIG_GLOB_MODE_POSTSETUP, PROC_REF(post_round_start))
 	if(!length(lazy_ui_data))
 		for(var/datum/human_ai_equipment_preset/preset_type as anything in subtypesof(/datum/human_ai_equipment_preset))
 			if(!preset_type::name || !preset_type::path)
@@ -126,7 +127,7 @@
 	data["presets"] = lazy_ui_data
 	//data["defense_presets"]
 	data["selectable_factions"] = FACTION_LIST_HUMANOID + "Normal Hive"
-	data["equipment_settings"] = list("Full Equipment", "No Weapons", "Birthday Suit")
+	data["equipment_settings"] = list("Full Equipment", "Gas Mask/CBRN", "No Weapons", "Birthday Suit")
 	data["species_settings"] = SYNTH_TYPES + SPECIES_HUMAN + SPECIES_ZOMBIE
 	return data
 
@@ -210,14 +211,15 @@
 		if("create_ai")
 			if(!params["path"])
 				return
-
-			if(spawn_click_intercept)
+			selected_equipment = params["selected_equipment"]
+			selected_faction = params["selected_faction"]
+			if(params["spawn_now"]) //a right click spawns RIGHT NOW without click interrupts
+				SpawnHuman(usr, null, get_turf(usr))
+				return
+			if(spawn_click_intercept) //otherwise its like GM panel
 				spawn_click_intercept = FALSE
 				current_click_intercept_action = FALSE
 				return
-
-			selected_equipment = params["selected_equipment"]
-			selected_faction = params["selected_faction"]
 			spawn_click_intercept = TRUE
 			current_click_intercept_action = SPAWN_CLICK_INTERCEPT_ACTION
 			usr.client.click_intercept = src
@@ -265,99 +267,141 @@
 						if(ai_human.assigned_equipment_preset)
 							add_preset(ai_human.assigned_equipment_preset.type, "ALT added preset.", update_ui = TRUE)
 					return
+				//so it is a left click
+				if(isturf(get_turf(object)))
+					SpawnHuman(user, params, object)
 
-				var/faction_of_preset
-				var/datum/equipment_preset/gotten_path = text2path(current_path)
-				var/randomise_appearance = TRUE
-				var/mob/living/carbon/human/ai_human
+/datum/human_ai_spawner_menu/proc/SpawnHuman(mob/user, params, atom/object)
+	var/faction_of_preset
+	var/datum/equipment_preset/gotten_path = text2path(current_path)
+	var/randomise_appearance = TRUE
+	var/mob/living/carbon/human/ai_human
 
-				if(!outfit)
-					ai_human = new()
-				else
-					randomise_appearance = FALSE
-					if(!ishuman(object))
-						var/mob/living/carbon/human/selected = object
-						selected = selected.change_mob_type(/mob/living/carbon/human, null, null, TRUE, "Human")
-						object = selected
-						if(!ishuman(selected))
-							return
-					ai_human = object
+	if(!outfit)
+		ai_human = new()
+	else
+		randomise_appearance = FALSE
+		if(!ishuman(object))
+			var/mob/living/carbon/human/selected = object
+			selected = selected.change_mob_type(/mob/living/carbon/human, null, null, TRUE, "Human")
+			object = selected
+			if(!ishuman(selected))
+				return
+		ai_human = object
 
-					for(var/item in ai_human.get_equipped_items(TRUE))
-						qdel(item)
-				arm_equipment(ai_human, gotten_path, randomise_appearance, FALSE, mob_client = ai_human.client)
-				if(selected_equipment == "No Weapons")
-					ai_human.strip_weapons()
-				else if(selected_equipment == "Birthday Suit")
-					ai_human.strip_all()
+		for(var/item in ai_human.get_equipped_items(TRUE))
+			qdel(item)
+	if(SSticker.current_state == 1) //round hasn't started yet so brain won't be there
+		GLOB.pre_start_humanAI.Add(ai_human)
+	//	return
+	arm_equipment(ai_human, gotten_path, randomise_appearance, FALSE, mob_client = ai_human.client)
+	if(selected_equipment == "No Weapons")
+		ai_human.strip_weapons()
+	else if(selected_equipment == "Gas Mask/CBRN")
+		if(!istype(ai_human.wear_mask, /obj/item/clothing/mask/gas))
+			qdel(ai_human.wear_mask)
+		if(gotten_path::faction in FACTION_LIST_UA)
+			ai_human.w_uniform.swap_with(/obj/item/clothing/under/marine/pve_mopp)
+			ai_human.equip_to_slot_or_del(new /obj/item/clothing/mask/gas/pve_mopp, WEAR_FACE)
+		else if(gotten_path::faction in FACTION_LIST_WY)
+			ai_human.equip_to_slot_or_del(new /obj/item/clothing/mask/gas/pmc, WEAR_FACE)
+			if(istype(ai_human.w_uniform, /obj/item/clothing/under/marine/veteran/pmc))
+				ai_human.w_uniform.icon_state = "bio"
+				ai_human.w_uniform.item_state = "bio_suit"
+				ai_human.w_uniform.worn_state = "bio"
+				ai_human.w_uniform.flags_jumpsuit = FALSE
+				ai_human.w_uniform.flags_inventory = 64
+				LAZYSET(ai_human.w_uniform.item_icons, WEAR_BODY, 'icons/mob/humans/onmob/suit_0.dmi')
+				ai_human.w_uniform.item_state_slots = null
+				ai_human.update_inv_w_uniform()
+				ai_human.w_uniform.icon = 'icons/obj/items/clothing/suits.dmi'
+				ai_human.w_uniform.name = "Biological Protection Undersuit"
+				ai_human.w_uniform.armor_bio = 15
+				ai_human.w_uniform.gas_transfer_coefficient = 0.02
+				ai_human.w_uniform.permeability_coefficient = 0.4
+		else
+			ai_human.equip_to_slot_or_del(new /obj/item/clothing/mask/gas, WEAR_FACE)
+	else if(selected_equipment == "Birthday Suit")
+		ai_human.strip_all()
+	ai_human.face_dir(user.dir)
+	ai_human.forceMove(get_turf(object))
 
-				ai_human.face_dir(user.dir)
-				ai_human.forceMove(get_turf(object))
 
-				if(paradrop)
-					ai_human.paradrop()
-				if(species == "Zombie") //setting species to zombie throws off all of these
-					ai_human.strip_weapons()
-					if(!prob(zombie_outer_wear_chance) || !zombie_outer_wear)
-						qdel(ai_human.head)
-						qdel(ai_human.gloves)
-						if(!istype(ai_human.r_hand, /obj/item/weapon/zombie_claws))
-							qdel(ai_human.l_hand)
-						if(!istype(ai_human.r_hand, /obj/item/weapon/zombie_claws))
-							qdel(ai_human.r_hand)
-						qdel(ai_human.head)
-						qdel(ai_human.glasses)
-						qdel(ai_human.wear_mask)
-					else
-						if(!ai_human.head) //this supposed helmeted zombie has NO helmet! NOTHING.
-							var/helmetpath = pick(
-								/obj/item/clothing/head/helmet/marine,
-								/obj/item/clothing/head/helmet/marine/reporter,
-								/obj/item/clothing/head/helmet/riot,
-								/obj/item/clothing/head/helmet/riot,
-								/obj/item/clothing/head/helmet/construction,
-								/obj/item/clothing/head/helmet/construction,
-								/obj/item/clothing/head/militia/bucket,
-								/obj/item/clothing/head/welding,
-								/obj/item/clothing/head/welding,
-								/obj/item/clothing/head/hardhat,
-								/obj/item/clothing/head/hardhat/dblue,
-								/obj/item/clothing/head/hardhat/red,
-								/obj/item/clothing/head/hardhat/white,
-								)
-							ai_human.head = new helmetpath(ai_human)
-						INVOKE_NEXT_TICK(ai_human, TYPE_PROC_REF(/mob/living/carbon/human, equip_to_slot_or_del), ai_human.head, WEAR_HEAD)
-						qdel(ai_human.gloves)
-						qdel(ai_human.l_hand)
-						qdel(ai_human.r_hand)
-						qdel(ai_human.head)
-						qdel(ai_human.glasses)
-						qdel(ai_human.wear_mask)
-				if(species != ai_human.species) //might be redundant
-					ai_human.set_species(species)
-					if(issynth(ai_human))
-						ai_human.set_skills(/datum/skills/synthetic)
-				if(selected_faction != faction_of_preset)
-					ai_human.faction = selected_faction
-					var/obj/item/card/id/faction_tags = ai_human.wear_id
-					if(faction_tags)
-						faction_tags.faction = selected_faction
-					if(selected_faction in FACTION_LIST_UA)
-						ai_human.faction_group = FACTION_LIST_UA
-						if(faction_tags)
-							faction_tags.faction_group = FACTION_LIST_UA
-					else
-						if(selected_faction == FACTION_TWE)
-							ai_human.faction_group = FACTION_LIST_TWE
-							if(faction_tags)
-								faction_tags.faction_group = FACTION_LIST_TWE
-						else
-							ai_human.faction_group = list(selected_faction)
-							if(faction_tags)
-								faction_tags.faction_group = list(selected_faction)
-				if(spawn_ai && !ai_human.ckey)
-					ai_human.AddComponent(/datum/component/human_ai) //ai human might not be AI. those who know
-					ai_human.get_ai_brain().appraise_inventory(armor = TRUE)
+	if(paradrop)
+		ai_human.paradrop()
+	if(species == "Zombie") //setting species to zombie throws off all of these
+		ai_human.strip_weapons()
+		if(!prob(zombie_outer_wear_chance) || !zombie_outer_wear)
+			qdel(ai_human.head)
+			qdel(ai_human.gloves)
+			if(!istype(ai_human.r_hand, /obj/item/weapon/zombie_claws))
+				qdel(ai_human.l_hand)
+			if(!istype(ai_human.r_hand, /obj/item/weapon/zombie_claws))
+				qdel(ai_human.r_hand)
+			qdel(ai_human.head)
+			qdel(ai_human.glasses)
+			qdel(ai_human.wear_mask)
+		else
+			if(!ai_human.head) //this supposed helmeted zombie has NO helmet! NOTHING.
+				var/helmetpath = pick(
+					/obj/item/clothing/head/helmet/marine,
+					/obj/item/clothing/head/helmet/marine/reporter,
+					/obj/item/clothing/head/helmet/riot,
+					/obj/item/clothing/head/helmet/riot,
+					/obj/item/clothing/head/helmet/construction,
+					/obj/item/clothing/head/helmet/construction,
+					/obj/item/clothing/head/militia/bucket,
+					/obj/item/clothing/head/welding,
+					/obj/item/clothing/head/welding,
+					/obj/item/clothing/head/hardhat,
+					/obj/item/clothing/head/hardhat/dblue,
+					/obj/item/clothing/head/hardhat/red,
+					/obj/item/clothing/head/hardhat/white,
+					)
+				ai_human.head = new helmetpath(ai_human)
+			INVOKE_NEXT_TICK(ai_human, TYPE_PROC_REF(/mob/living/carbon/human, equip_to_slot_or_del), ai_human.head, WEAR_HEAD)
+			qdel(ai_human.gloves)
+			qdel(ai_human.l_hand)
+			qdel(ai_human.r_hand)
+			qdel(ai_human.head)
+			qdel(ai_human.glasses)
+			qdel(ai_human.wear_mask)
+	if(species != ai_human.species) //might be redundant
+		ai_human.set_species(species)
+		if(issynth(ai_human))
+			ai_human.set_skills(/datum/skills/synthetic)
+	if(selected_faction != faction_of_preset)
+		ai_human.faction = selected_faction
+		var/obj/item/card/id/faction_tags = ai_human.wear_id
+		if(faction_tags)
+			faction_tags.faction = selected_faction
+		if(selected_faction in FACTION_LIST_UA)
+			ai_human.faction_group = FACTION_LIST_UA
+			if(faction_tags)
+				faction_tags.faction_group = FACTION_LIST_UA
+		else
+			if(selected_faction == FACTION_TWE)
+				ai_human.faction_group = FACTION_LIST_TWE
+				if(faction_tags)
+					faction_tags.faction_group = FACTION_LIST_TWE
+			else
+				ai_human.faction_group = list(selected_faction)
+				if(faction_tags)
+					faction_tags.faction_group = list(selected_faction)
+	if(spawn_ai && !ai_human.ckey)
+		ai_human.AddComponent(/datum/component/human_ai) //ai human might not be AI. those who know
+		//ai_human.get_ai_brain().appraise_inventory(armor = TRUE)
+
+/datum/human_ai_spawner_menu/proc/post_round_start()
+	SIGNAL_HANDLER
+
+	for(var/mob/living/carbon/human/ai_human in GLOB.pre_start_humanAI)
+		for(var/comp in ai_human.datum_components )
+			if(istype(ai_human.datum_components[comp], /datum/component/human_ai))
+				var/datum/component/human_ai/ai = ai_human.datum_components[comp]
+				ai.Initialize()
+
+
 
 /client/proc/open_human_ai_spawner_panel()
 	set name = "Create Human AI"
@@ -368,8 +412,7 @@
 
 	if(!SSticker.mode)
 		to_chat(src, SPAN_WARNING("The round hasn't started yet!"))
-		return
-
+	//	return
 	if(human_spawn_menu)
 		human_spawn_menu.tgui_interact(mob)
 		return

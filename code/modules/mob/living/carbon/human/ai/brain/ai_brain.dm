@@ -67,6 +67,8 @@ GLOBAL_LIST_EMPTY(human_ai_brains)
 	/// If TRUE, the AI will not move at all
 	var/hold_position = FALSE
 
+	var/last_stand = FALSE
+
 /datum/human_ai_brain/New(mob/living/carbon/human/tied_human)
 	. = ..()
 	src.tied_human = tied_human
@@ -194,6 +196,7 @@ GLOBAL_LIST_EMPTY(human_ai_brains)
 		UnregisterSignal(current_target, COMSIG_MOB_DEATH)
 		UnregisterSignal(current_target, COMSIG_MOVABLE_MOVED)
 	current_target = null
+	target_deviations = 0
 
 /datum/human_ai_brain/proc/update_target_pos()
 	if(current_target)
@@ -216,6 +219,7 @@ GLOBAL_LIST_EMPTY(human_ai_brains)
 /datum/human_ai_brain/proc/on_target_move(atom/oldloc, dir, forced)
 	SIGNAL_HANDLER
 	update_target_pos()
+	update_path_to_target(get_turf(current_target))
 
 /datum/human_ai_brain/proc/on_human_delete(datum/source, force)
 	SIGNAL_HANDLER
