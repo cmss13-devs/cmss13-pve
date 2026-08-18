@@ -79,7 +79,6 @@
 		return
 
 	else
-		to_chat(user, SPAN_NOTICE("You begin reloading [src]."))
 		if(do_after(user, 0, INTERRUPT_ALL, BUSY_ICON_FRIENDLY))
 			user.drop_inv_item_on_ground(lasgun)
 			current_mag = lasgun
@@ -124,7 +123,6 @@
 
 
 /obj/item/weapon/gun/lasgun/handle_fire(atom/target, mob/living/user, params, reflex = FALSE, dual_wield, check_for_attachment_fire, akimbo, fired_by_akimbo)
-
 	var/datum/beam/lasgun_beam
 	if(!current_mag)
 		click_empty(user)

@@ -215,7 +215,7 @@
 	name = "lasgun beam"
 	alpha = 255
 	strength = EYE_PROTECTION_FLASH
-	probability = 2
+	probability = 0
 
 /obj/effect/ebeam/Destroy()
 	owner = null

@@ -321,7 +321,7 @@
 /datum/ammo/energy/lasgun
 	name = "lasgun bolt"
 	icon_state = "laser_new"
-	flags_ammo_behavior = AMMO_ENERGY|AMMO_HITS_TARGET_TURF
+	flags_ammo_behavior = AMMO_ENERGY
 	headshot_state = HEADSHOT_OVERLAY_MEDIUM
 	damage = 55
 	damage_type = BURN
@@ -336,6 +336,12 @@
 	ammo_glowing = TRUE
 	bullet_light_color = COLOR_RED
 
+/datum/ammo/energy/lasgun/set_bullet_traits()
+	. = ..()
+	LAZYADD(traits_to_give, list(
+		BULLET_TRAIT_ENTRY(/datum/element/bullet_trait_penetrating/weak)
+	))
+
 /datum/ammo/energy/lasgun/weak
 	name = "weak lasgun bolt"
 	headshot_state = HEADSHOT_OVERLAY_LIGHT
@@ -349,7 +355,7 @@
 /datum/ammo/energy/lasgun/hellgun
 	name = "hellgun bolt"
 	icon_state = "laser_new"
-	flags_ammo_behavior = AMMO_ENERGY|AMMO_HITS_TARGET_TURF
+	flags_ammo_behavior = AMMO_ENERGY
 	headshot_state = HEADSHOT_OVERLAY_HEAVY
 	damage = 80
 	penetration = ARMOR_PENETRATION_TIER_3
