@@ -1,0 +1,165 @@
+2025-02-01:
+  AmoryBlaine:
+  - rscadd: M39 rebranded as M77 'Viper 9'
+  - balance: M39 given pistol ammo
+  - bugfix: Increases volume of all weapons to 60, a few guns were apparently incredibly
+      quiet for some reason.
+  - rscadd: UPP flamethrower
+  BonniePandora:
+  - rscadd: Adds the M42A2 Suppressed Scoped Rifle
+  - qol: Changes all instances of the M4RA into the M49A, to be in-line with the naming
+      conventions of other USCM weapons
+  - spellcheck: Typo in flare-grenade desc fixed
+  - imageadd: Sprite for the M42A2 barrel
+  - imageadd: The missing in-hand sprite for the M42A returns.
+  - qol: Xenos grab-response tailswipes no longer WEAKEN, instead applying STUTTER
+  - balance: As above
+  Zonespace27:
+  - admin: Fixed the Human AI Squad Spawner occasionally not populating.
+2025-02-04:
+  AmoryBlaine:
+  - balance: UPP preset squad options made balanced
+  - balance: 10x31 replaced and rebalanced into 10x27
+  BonniePandora:
+  - qol: If you examine a radio that is on your person it's menu listing all frequencies
+      will now pop up.
+  - qol: Dropship autopilot settings can be modified during refuel/recharge
+  - qol: You can now use the 'check status' verb and any stethoscope you might have
+      attached to your uniform directly by examining an adjacent human.
+  - qol: Toy mechs will now fit into small-item-limted storage.
+  Drathek:
+  - bugfix: Fix cursor getting stuck on when disabling custom cursors
+  - bugfix: Fix gun cursor getting stuck on when unwielding immediately after shooting
+  - bugfix: Fix xeno action queue (not used) not respecting custom cursor preference
+  - bugfix: Fix railgun (not used) not respecting custom cursor setting
+  - bugfix: Fix railgun (not used) not unregistering a signal correctly
+  - bugfix: Fix custom cursor resetting when vaulting over barricades
+  - bugfix: some random preference verbs weren't saving the preference
+  - refactor: Refactored gun getters for custom icons to vars and some gun var ordering
+2025-02-10:
+  Zonespace27:
+  - admin: Human AI Spawner panel now isn't strangely spaced.
+  - admin: Human AI Management panel's functionality is now fully restored.
+2025-02-11:
+  AmoryBlaine:
+  - bugfix: type 80 knife onmob mistake rectified
+  - balance: shotgun stun ranges dropped
+  BonniePandora:
+  - maptweak: Garrow cargo bay now has a pair of smoke grenade boxes
+2025-02-12:
+  AndroBetel:
+  - rscadd: Custom items now spawn in your lockers most of the time.
+  Warfan1815:
+  - rscadd: Adds the topographic ribbon and the topographic honor ribbon as in-game
+      rewards for the 2025 mapjam
+  - imageadd: adds the topographic ribbon and the topographic honor ribbon as ties.dmi
+      sprites
+  nauticall:
+  - rscadd: Adds a PVE-style HPR gun case.
+  - imageadd: Resprites the HPR and magazines to be more inline with PvE sprites.
+2025-02-13:
+  AmoryBlaine:
+  - admin: Added USCM AI squads and equipment presets.
+2025-02-16:
+  ICA-usernameisunavailable:
+  - rscadd: Adds 15 new hairstyles.
+2025-02-19:
+  Zonespace27:
+  - rscdel: Human AI no longer try to heal each other.
+2025-02-20:
+  AlanParkerMasters:
+  - bugfix: fixes surviving in a nuke on the same Z-level by hopping in a vehicle
+  AmoryBlaine:
+  - rscadd: More compression suits
+  AmoryBlaine, KoishiVibe:
+  - rscadd: Real names to things referencing real things and pepsi, the drink, and
+      better BOOTS issues
+  BonniePandora:
+  - rscadd: Corporal rank variant to the squad leader role
+  - rscdel: Squad sergeant as a USCM role title is gone in favour of the generalised
+      Squad Leader instead. UPP retain it as their E4 equiv reads as 'Junior sergeant'
+      or something to that effect
+  - qol: New players will automatically be set to the lower rank option on jobs until
+      they change it. Existing players should be unaffected by this
+  - ui: References to Squad Sergeant in the UIs replaced with Squad Leader instead
+  - code_imp: Code for the above stuff added/edited as needed
+  - qol: answering an emote such as high-five no longer requires targeting a specific
+      limb.
+  - qol: Removed client window side padding to prevent accidental dragging
+  Ivan_The_Red:
+  - rscadd: Lore-accurate UPP handbook
+  The32bitguy:
+  - bugfix: Stop Atom Narrates sticking around forever if the thing being narrated
+      was destroy. Mostly turfs.
+  - bugfix: Animals no longer can be targeted by sentry guns while inside a container.
+  mikoka wei:
+  - rscadd: Better 92FS
+  nauticall:
+  - rscadd: Added an ammo box of special buckshot ammo. Admin/GM spawn only.
+  - imageadd: Made ammo boxes more distinguishable by adding stripes and recoloring
+      some boxes.
+2025-02-21:
+  AlanParkerMasters:
+  - qol: changes the fuel efficiency of campfires and makes them slightly louder
+  BonniePandora:
+  - rscadd: Replaces the M46C with the XM46A, a sidegrade to the M41A that was too
+      expensive for mainstream adoption.
+  - rscdel: As above, the C version is gone
+  - bugfix: Ammends the items the small pouch can carry, so the MARSOC preset actually
+      gets their spare shotgun shells on spawn-in
+  - code_imp: Gutted the CO ID-lock from the M46 rifle, leaving just the IFF system
+      in place with adjustments
+  - imageadd: New sprites for the M46, bringing it in-line with the current pallete
+      used by the M41A
+  - imagedel: Removes the old sprites for the M46
+  DexterDude:
+  - rscadd: New movielike MD noises
+  The32bitguy:
+  - rscadd: Added employment record computers to the Golden Arrow, Chapaev and Rover.
+      Added security record computers to the Chapeav and Rover.
+  - bugfix: Fixed record length being truncated due to an oversight.
+2025-02-23:
+  AlanParkerMasters:
+  - qol: candles last longer
+  AmoryBlaine:
+  - rscadd: Custom Armor & Webbing for UPP
+  - bugfix: ethnicity code moved further up
+  Spear:
+  - rscadd: Portuguese, French and Filipino
+2025-02-24:
+  The32bitguy:
+  - bugfix: Reverses a fix to force narrate that made langchat unable to overlap
+2025-02-25:
+  AmoryBlaine:
+  - rscadd: neckerchiefs
+  DimDimich, AndroBetal, Verbs, AmoryBlaine:
+  - rscadd: Entirely new Chapaev map, UPP doors and walls, various storage containers,
+      new curtains, ect a lot of things
+  Drathek HarryOB:
+  - code_imp: Update most tooling including changes to hooks, mapmerge, additional
+      grep checks, additional maplints, and additional workflows
+  - code_imp: 516 Compat
+  - code_imp: Added more OD pragmas and code fixes pertaining to them
+  - maptweak: Fixed duplicate platforms on several maps
+  - maptweak: Fixed plane edits on Golden Arrow and Almayer
+2025-02-27:
+  Amoryblaine:
+  - rscadd: Renamed space milk to milk, added chocolate milk, named the gin Tanqueray
+      after the bottle design
+  AndroBetel:
+  - rscadd: SHARP rifle
+  private-tristan:
+  - rscadd: GMs can now toggle barricade building, preventing anyone from making barricades
+      or using sandbags.
+  tyeagg:
+  - rscadd: tracer projectile support
+  - rscadd: tracer magazine for m41amk1
+  - rscadd: tracers for smartgun and vehicle weapons
+  - imageadd: new bullet sprites
+  - imageadd: new muzzle flash sprites
+2025-02-28:
+  Warfan1815:
+  - rscadd: 'Adds functionality to personal vanity closets whereby they can select
+      which spawn tile they can be the closet for.
+
+      \:cl:'

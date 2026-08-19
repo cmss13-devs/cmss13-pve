@@ -1,0 +1,198 @@
+2025-05-06:
+  KoishiVibe:
+  - rscadd: Descriptions for Army and Tactical versions
+  - balance: Bipods no longer have an RPM effect. This creates its own issues probably,
+      but it means full auto has no more weird interactions.
+  - bugfix: Gave Army and Tactical their attachments properly
+  - bugfix: Full Auto doesn't have weird interactions with the bipod anymore.
+  - code_imp: Tore out the fire rate modifications of the bipod
+  Yorkoh:
+  - bugfix: added UA Rebel, TWE Rebel and CANC (aka UPP Rebel) to the IFF faction
+      list for Defense Creator
+  - bugfix: edited sentry IFF list to replace CLF with UA Rebel, TWE Rebel and CANC
+      sentry IFF
+  sippykot:
+  - rscdel: skill checks for putting medkits and engineer kits in backpacks
+  - rscdel: skill checks for using medkit and engineer kit pouches
+2025-05-08:
+  BonniePandora:
+  - qol: Various faction interaction tweaks for hAI
+  - bugfix: Ponytail 10 hair sprite fixed
+2025-05-09:
+  AndroBetel:
+  - rscadd: Adds acid runner
+  - imageadd: Animated acid runner sprites by Pandora
+  Drathek:
+  - code_imp: DMI merge hook will now try to retain positioning of sprites when handling
+      some conflicts
+  MistChristmas:
+  - qol: 'OW Touch ups: Scrolling, use Steps for coords. More in-line with PvP.'
+  The32bitguy:
+  - balance: Blood restoring medicine no longer depends on a minimum threshold of
+      nutrition.
+2025-05-17:
+  Drathek Harry Watermelon914:
+  - ui: Fixed the ping relay buttons not displaying anything when clicked on the first
+      time. Now Button.Confirm.confirmContent will only replace children if it is
+      truthy.
+  - bugfix: Mouse 4/5 is now ignored for firing and vehicles
+  - bugfix: Vendor vend buttons now only respond to left click
+  - code_imp: All mouse modifiers in code have been macroified
+  - ui: Button has a new prop allowAnyClick which can allow any click to cause an
+      onClick otherwise it will only occur for left click
+  - code_imp: Code no longer uses proc redefinitions with a few exceptions for global
+      macros
+  - balance: Changes to increase shotgun knockback in an Amory PR now works
+  - bugfix: Fixed various things like all backpacks (instead of just JIMA flags) processing
+  - bugfix: human ai now have an intended implementation for pod doors
+  - bugfix: fixed some incorrectly typed colonist/colonist/... equipment_presets
+  - bugfix: working engi joe now loads the race intended to be loaded
+  - bugfix: Pipes retain their dir when picked up, no longer go invisible when re-anchored,
+      and reconnect when re-anchored.
+  - qol: 'Adds a new preference option for activating xeno abilities: Right click.
+      Prevents the context menu from opening whenever you have an ability active,
+      and the ability can then be triggered with right click. Context menu can still
+      be forced open by holding shift before right clicking, even if the ability is
+      active.'
+  - rscadd: Dropship airlocks that force close now also throw objects (and vehicles)
+      out of their way
+  - rscadd: Airlocks can crush more xeno structures if they somehow got placed there
+  - bugfix: Fix doors sometimes ignoring force call (namely dropship airlocks)
+  - bugfix: Fix doors not checking their turfs correctly (for example it wouldn't
+      throw mobs in its own turf)
+  - refactor: Refactor some door code
+  - bugfix: Fix vehicles in airlocks not being handled correctly (never autoclosing
+      again)
+  - rscadd: Dense structures (and coffins) now prevent machinery doors from closing.
+  - bugfix: Fixed an edgecase with pushing vehicles by dropship launch would incorrectly
+      push west if it was only 1 tile in.
+  - bugfix: tgui windows closing should no longer cause sticky keys
+  - bugfix: fixes sticky keys (even more)
+  MistChristmas:
+  - bugfix: Messages ending in '!' and '?' change the verb from 'says' to 'shouts/yells/exclaims'
+      or 'asks' again or their language equivalent.
+  - rscadd: Scandinavian Language is now pickable as an character trait.
+  Yorkoh:
+  - rscadd: Buttons in the GM panel to spawn specific grenades/flares under "Throwables"
+2025-05-20:
+  BonniePandora:
+  - rscadd: US flag armor graffiti (in loadout selection now too)
+  - rscadd: UPP AT gunner gear preset
+  - qol: Various UPP presets that were missing them get MREs & can openers now
+  - imageadd: New UPP posters & gas mask. New can opener sprites
+  MistChristmas:
+  - rscadd: Scrolling to the GM Faction Manager
+  - bugfix: Sentry UI scrolling to use Section scrolling, allows the sentry tabs to
+      be squished more in the case of a shit ton of sentries, otherwise cleans up
+      a bunch of stuff in Faction Manager.
+2025-05-22:
+  AlanParkerMasters:
+  - rscadd: flashlights, lamps, candles don't rotate when thrown
+  - bugfix: adds size property for a box of zip cuffs (Medium)
+2025-05-23:
+  AndroBetel:
+  - rscadd: Heirloom weapon preference to character creation. At the start of the
+      round, one of the marines (not counting pltco) will have their gun spawn in
+      the armory.
+  - rscadd: Humanitarian Daily Ration for GMs to spawn
+  BonniePandora:
+  - bugfix: M07 grenades can no longer kill people
+  - bugfix: M108 canister grenades are now the right caliber
+  - balance: Tweaks the claymores to be much fairer weapons, no longer having the
+      potential to wipe out most of a platoon/section at full health in one go.
+  - code_imp: Sanatizes the mine code somewhat
+  - qol: High CQC skills will only floor someone trying to heal you if they aren't
+      of the same faction _and_ you're on harm intent
+  - balance: As above, this is also something pertaining to balance
+  - rscadd: WY security have a chance to spawn with a corporate cap instead of a helmet
+  The32bitguy:
+  - rscadd: Internal Bleeding now instead starts as Arterial Bleeding, that sprays
+      blood with a visual, audible and chatlog indication
+  - qol: Arterial Bleeds now show on help-intent self examine.
+  - balance: Arterial Bleeds can have the spraying component mitigated by applying
+      gauze or a trauma kit, turning them into a slower version of the old Internal
+      Bleeding effect.
+  - balance: Iron Pills have 7.5u of sugar in them.
+  - balance: The IB treatment step now takes 7.5 seconds instead of 5 seconds.
+  - soundadd: The sound for the above blood spray.
+  - imageadd: The icons for each possible direction of the blood spray, to avoid overlays
+      inheriting the turfs direction for their icon, due to blood optimization.
+  Yorkoh:
+  - qol: swapped the Create Humans - ERT default selection around in their pop ups
+  banana-battery:
+  - rscadd: added a little alcove tucked away in the Arrow's cargo-bay
+2025-05-25:
+  AlanParkerMasters:
+  - maptweak: revamps Golden Arrow showers/washrooms
+  AndroBetel:
+  - qol: Swiss army knife changes state when clicked with off hand
+  - bugfix: Razor no longer gets stuck in your pockets
+  Drathek:
+  - code_imp: CI now caches/installs Byond, spacemandmm, rust, bootstrap, node, and
+      yarn differently for Github actions
+  Ediblebomb:
+  - rscadd: The M41A's UBGL now has actual chambering mechanics.
+  - qol: The M41A's UBGL now loads with the pump forward and chambers the last inserted
+      round when you pump it, instead of the first.
+  - spellcheck: Replaces all mentions of the word breech for the M41A's UBGL, as it
+      isn't a breechloader.
+  SpartanBobby:
+  - rscadd: Added Table-Barricade props. An optical illusion for mappers and GMs to
+      place for setup purposes
+  - rscadd: Portable barricades and security barriers to GM defense panel along with
+      table-cades
+  The32bitguy:
+  - bugfix: Advanced Build Mode copy now respects copying to where you click rather
+      than the copied objects original location.
+  Yorkoh:
+  - balance: reduced xeno death acid spray to radius 1 (was 2)
+  - rscadd: drone acid_blood_damage = 25 (it was default 15)
+  - balance: soldier acid_blood_damage = 30 (it was 35)
+  - balance: Aggression required for Fling is now 70, from 35.
+  - balance: ai_prob_chance for Fling is now 25, from 70.
+  - balance: cooldown for Fling is now 10 seconds, from 8.
+  - balance: Aggression required for Tail Stab is now 50, from 70.
+  - balance: ai_prob_chance for Tail Stab is now 40, from 65.
+  - balance: cooldown for Tail Stab is now 15 seconds, from 11.
+  - bugfix: The32bitguy's acid turf fixes, to stop shuttles melting to acid
+  - bugfix: Bone Resin Walls are now unacidable
+  - balance: reduced Soldier movement speed from -1 to -0.9
+  - balance: edited Soldier "no hive" aggression base from 50 to 40
+  - balance: edited Soldier pull_multiplier from 0.2 to 0.4
+  - ui: Upload is now default for Source pop-up
+  - ui: No is now default for showing players the filename pop-up
+  - ui: Atmospheric is now default for sound type pop-up
+  - rscadd: Added Civilian Squad of Operations to all 4 subgroups (UA, UA LatAm, UPP
+      and TWE)
+  - qol: Did a pass at updating all the squad makeups to make sure the right prop
+      was being made the squad leader
+  - bugfix: Removed the Admin from the UPP Civilian squad, and replaced with another
+      civilian
+  - ui: added scrolling bar to human squad spawner
+  - bugfix: thanks to Pandora's help, redefined something so that the UA Rebel squad
+      appears properly
+  - rscadd: Added a new squad faction to the spawner; contractors. Base and covert
+      variants.
+  - spellcheck: edited Heirloom player statement
+2025-05-26:
+  BonniePandora:
+  - rscadd: Casing ejection for weapons that use cased ammo
+  - rscadd: Guns can be set to start on burst-fire, provided they're set up for it.
+  - rscadd: L54, M9 & VP78 added as loadout options
+  - rscadd: Various army presets have had their M4A3 swapped for an M9 instead
+2025-05-27:
+  AlanParkerMasters:
+  - maptweak: fixes AI hallway flooring
+2025-05-28:
+  Git-Nivrak:
+  - code_imp: Humans now check for death on updatehealth, meaning they die as soon
+      as they cross the -200 health mark.
+  The32bitguy:
+  - rscadd: GMs can make overhead chat longer.
+2025-05-29:
+  The32bitguy:
+  - bugfix: Human AI now check if a vehicle is in their friendly or neutral factions
+      before targeting.
+2025-05-31:
+  AndroBetel:
+  - rscadd: Chinese bayonets to UPP origins loadout.
