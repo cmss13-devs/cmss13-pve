@@ -1,0 +1,4 @@
+author: "Drathek"
+delete-after: True
+changes:
+  - code_imp: "Added a script that can compile changelogs in a date aware manner"
