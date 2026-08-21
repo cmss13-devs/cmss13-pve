@@ -273,7 +273,7 @@ Backend Timer Delayed/Looping Procs
 	if(!(decisecond % 10))
 		if(decisecond != end_decisecond)
 			airlock.icon_state = "[transition]_[decisecond * 0.1]s"
-	for(var/turf/open/floor/hangar_airlock/T as anything in airlock_turf_lists["[decisecond]"])
+	for(var/turf/open/floor/hangar_airlock/T in airlock_turf_lists["[decisecond]"]) // cannot use as anything here due to dropship tile list swapping
 		T.open = open
 		for(var/atom/movable/AM in T.contents)
 			if(!AM.anchored)
