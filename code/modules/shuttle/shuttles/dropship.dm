@@ -371,9 +371,9 @@
 	if(!in_flight())
 		return
 	var/flight_time_left = timeLeft(1)
-	if(flight_time_left >= DROPSHIP_TURBULENCE_PERIOD*2 && !(flight_time_left == INFINITY))
-		addtimer(CALLBACK(src, TYPE_PROC_REF(/obj/docking_port/mobile/marine_dropship, turbulence)), (rand(DROPSHIP_TURBULENCE_PERIOD, max((flight_time_left/2), DROPSHIP_TURBULENCE_PERIOD))))
-	if(!prob(DROPSHIP_TURBULENCE_PROBABILITY))
+	if(flight_time_left >= DROPSHIP_TURBULENCE_PERIOD*1.5 && !(flight_time_left == INFINITY))
+		addtimer(CALLBACK(src, TYPE_PROC_REF(/obj/docking_port/mobile/marine_dropship, turbulence)), DROPSHIP_TURBULENCE_PERIOD)
+	if(!prob(25 + (50 - (50 * flight_time_left / DROPSHIP_TRANSIT_DURATION)))) // gets more likely closer to landing
 		return
 
 	var/list/affected_list = turbulence_sort_affected()

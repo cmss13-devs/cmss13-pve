@@ -305,10 +305,10 @@ Backend Timer Delayed/Looping Procs
 	docked_mobile.initiate_docking(src)
 	for(var/list in inner_airlock_turf_lists)
 		list = null
-		inner_airlock_turf_lists = null
+	inner_airlock_turf_lists = null
 	for(var/list in outer_airlock_turf_lists)
 		list = null
-		outer_airlock_turf_lists = null
+	outer_airlock_turf_lists = null
 	end_of_interaction()
 
 /obj/docking_port/stationary/marine_dropship/airlock/inner/proc/delayed_disengage_clamps()
@@ -441,14 +441,12 @@ New Backend Procs
 			if(!open_inner_airlock)
 				addtimer(CALLBACK(src, TYPE_PROC_REF(/obj/docking_port/stationary/marine_dropship/airlock/inner, update_inner_airlock), TRUE, TRUE), number_to_call * DROPSHIP_AIRLOCK_MAX_THEORETICAL_UPDATE_PERIOD)
 				number_to_call += 1
-			if(lowered_dropship)
+			if(!lowered_dropship)
 				addtimer(CALLBACK(src, TYPE_PROC_REF(/obj/docking_port/stationary/marine_dropship/airlock/inner, update_dropship_height), FALSE, TRUE), number_to_call * DROPSHIP_AIRLOCK_MAX_THEORETICAL_UPDATE_PERIOD)
 				number_to_call += 1
-			if(open_inner_airlock)
 				addtimer(CALLBACK(src, TYPE_PROC_REF(/obj/docking_port/stationary/marine_dropship/airlock/inner, update_inner_airlock), FALSE, TRUE), number_to_call * DROPSHIP_AIRLOCK_MAX_THEORETICAL_UPDATE_PERIOD)
 				number_to_call += 1
-			if(playing_airlock_alarm)
-				addtimer(CALLBACK(src, TYPE_PROC_REF(/obj/docking_port/stationary/marine_dropship/airlock/inner, update_airlock_alarm), FALSE, TRUE), number_to_call * DROPSHIP_AIRLOCK_MAX_THEORETICAL_UPDATE_PERIOD)
+			addtimer(CALLBACK(src, TYPE_PROC_REF(/obj/docking_port/stationary/marine_dropship/airlock/inner, update_airlock_alarm), FALSE, TRUE), number_to_call * DROPSHIP_AIRLOCK_MAX_THEORETICAL_UPDATE_PERIOD)
 
 		if(DROPSHIP_AIRLOCK_GO_DOWN)
 			if(lowered_dropship)
@@ -464,19 +462,15 @@ New Backend Procs
 				if(!open_inner_airlock)
 					addtimer(CALLBACK(src, TYPE_PROC_REF(/obj/docking_port/stationary/marine_dropship/airlock/inner, update_inner_airlock), TRUE, TRUE), number_to_call * DROPSHIP_AIRLOCK_MAX_THEORETICAL_UPDATE_PERIOD)
 					number_to_call += 1
-				if(lowered_dropship)
+				if(!lowered_dropship)
 					addtimer(CALLBACK(src, TYPE_PROC_REF(/obj/docking_port/stationary/marine_dropship/airlock/inner, update_dropship_height), TRUE, TRUE), number_to_call * DROPSHIP_AIRLOCK_MAX_THEORETICAL_UPDATE_PERIOD)
 					number_to_call += 1
-				if(open_inner_airlock)
 					addtimer(CALLBACK(src, TYPE_PROC_REF(/obj/docking_port/stationary/marine_dropship/airlock/inner, update_inner_airlock), FALSE, TRUE), number_to_call * DROPSHIP_AIRLOCK_MAX_THEORETICAL_UPDATE_PERIOD)
 					number_to_call += 1
-			if(playing_airlock_alarm)
 				addtimer(CALLBACK(src, TYPE_PROC_REF(/obj/docking_port/stationary/marine_dropship/airlock/inner, update_airlock_alarm), FALSE, TRUE), number_to_call * DROPSHIP_AIRLOCK_MAX_THEORETICAL_UPDATE_PERIOD)
 				number_to_call += 1
-			if(!open_outer_airlock)
 				addtimer(CALLBACK(src, TYPE_PROC_REF(/obj/docking_port/stationary/marine_dropship/airlock/inner, update_outer_airlock), TRUE, TRUE), number_to_call * DROPSHIP_AIRLOCK_MAX_THEORETICAL_UPDATE_PERIOD)
 				number_to_call += 1
-			if(!disengaged_clamps)
 				addtimer(CALLBACK(src, TYPE_PROC_REF(/obj/docking_port/stationary/marine_dropship/airlock/inner, update_clamps), TRUE, TRUE), number_to_call * DROPSHIP_AIRLOCK_MAX_THEORETICAL_UPDATE_PERIOD)
 
 	return number_to_call * DROPSHIP_AIRLOCK_MAX_THEORETICAL_UPDATE_PERIOD
@@ -583,7 +577,11 @@ New Backend Procs
 	if(registered)
 		unregister()
 	linked_inner.disengaged_clamps = FALSE
-	linked_inner.lowered_dropship = TRUE
+	if(!linked_inner.lowered_dropship) // if it arrived from outside not from being lowered
+		for(var/list in linked_inner.outer_airlock_turf_lists)
+			list = null
+		linked_inner.outer_airlock_turf_lists = null
+		linked_inner.lowered_dropship = TRUE
 	SSfz_transitions.fire()
 	handle_obscuring_shuttle_turfs()
 	if(!istype(arriving_shuttle, /obj/docking_port/mobile/marine_dropship))
