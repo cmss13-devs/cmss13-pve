@@ -273,7 +273,7 @@ Backend Timer Delayed/Looping Procs
 	if(!(decisecond % 10))
 		if(decisecond != end_decisecond)
 			airlock.icon_state = "[transition]_[decisecond * 0.1]s"
-	for(var/turf/open/floor/hangar_airlock/T in airlock_turf_lists["[decisecond]"]) // cannot use as anything here due to dropship tile list swapping
+	for(var/turf/open/floor/hangar_airlock/T in airlock_turf_lists["[decisecond]"]) // due to dropship turf swapping shenaningans this cannot be as anything
 		T.open = open
 		for(var/atom/movable/AM in T.contents)
 			if(!AM.anchored)
@@ -288,12 +288,6 @@ Backend Timer Delayed/Looping Procs
 		for(var/obj/effect/hangar_airlock/height_mask/qdeling_height_mask as anything in dropship_height_masks)
 			dropship_height_masks -= qdeling_height_mask
 			qdel(qdeling_height_mask)
-		for(var/list as anything in inner_airlock_turf_lists)
-			list = null
-		inner_airlock_turf_lists = null
-		for(var/list as anything in outer_airlock_turf_lists)
-			list = null
-		outer_airlock_turf_lists = null
 		end_of_interaction()
 		return
 	var/alpha_reiteration = (DROPSHIP_AIRLOCK_HEIGHT_TRANSITION - COOLDOWN_TIMELEFT(src, dropship_airlock_cooldown)) * 2
@@ -303,12 +297,6 @@ Backend Timer Delayed/Looping Procs
 
 /obj/docking_port/stationary/marine_dropship/airlock/inner/proc/delayed_height_increase()
 	docked_mobile.initiate_docking(src)
-	for(var/list in inner_airlock_turf_lists)
-		list = null
-	inner_airlock_turf_lists = null
-	for(var/list in outer_airlock_turf_lists)
-		list = null
-	outer_airlock_turf_lists = null
 	end_of_interaction()
 
 /obj/docking_port/stationary/marine_dropship/airlock/inner/proc/delayed_disengage_clamps()
@@ -546,6 +534,12 @@ New Backend Procs
 			dropship_part_height_mask.color = "#000000"
 			dropship_height_masks += dropship_part_height_mask
 
+/obj/docking_port/stationary/marine_dropship/airlock/inner/on_departure(obj/docking_port/mobile/departing_shuttle)
+	. = ..()
+	for(var/list/turf_list as anything in inner_airlock_turf_lists)
+		for(var/turf/open/floor/hangar_airlock/airlock_turf as anything in turf_list)
+			airlock_turf.open = open_inner_airlock
+
 /obj/docking_port/stationary/marine_dropship/airlock/outer/Initialize(mapload)
 	. = ..()
 	GLOB.dropship_airlock_docking_ports.Add(src)
@@ -577,11 +571,7 @@ New Backend Procs
 	if(registered)
 		unregister()
 	linked_inner.disengaged_clamps = FALSE
-	if(!linked_inner.lowered_dropship) // if it arrived from outside not from being lowered
-		for(var/list in linked_inner.outer_airlock_turf_lists)
-			list = null
-		linked_inner.outer_airlock_turf_lists = null
-		linked_inner.lowered_dropship = TRUE
+	linked_inner.lowered_dropship = TRUE
 	SSfz_transitions.fire()
 	handle_obscuring_shuttle_turfs()
 	if(!istype(arriving_shuttle, /obj/docking_port/mobile/marine_dropship))
@@ -589,6 +579,12 @@ New Backend Procs
 	var/obj/docking_port/mobile/marine_dropship/arriving_dropship = arriving_shuttle
 	if((src == arriving_dropship.automated_hangar || src == arriving_dropship.automated_lz) && arriving_dropship.automated_delay && !linked_inner.processing)
 		linked_inner.automatic_process(DROPSHIP_AIRLOCK_GO_UP)
+
+/obj/docking_port/stationary/marine_dropship/airlock/outer/on_departure(obj/docking_port/mobile/departing_shuttle)
+	. = ..()
+	for(var/list/turf_list as anything in linked_inner.outer_airlock_turf_lists)
+		for(var/turf/open/floor/hangar_airlock/airlock_turf as anything in turf_list)
+			airlock_turf.open = linked_inner.open_inner_airlock
 
 /*#############################################################################
 Airlock Appearance Effects
