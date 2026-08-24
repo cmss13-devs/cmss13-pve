@@ -404,6 +404,12 @@ If that changes, may need a slight refactor.
 /obj/structure/ladder/maintenance/update_icon()
 	return
 
+/obj/structure/ladder/tall
+	name = "exceptionally long ladder"
+	desc = "A very long metal ladder. Looks like it would take a while to climb."
+	climb_time = 30 SECONDS
+	climb_sound = 'sound/machines/long_ladder.ogg'
+
 #undef LADDER_LOCKED
 #undef LADDER_UNLOCKED
 #undef LADDER_OPEN
