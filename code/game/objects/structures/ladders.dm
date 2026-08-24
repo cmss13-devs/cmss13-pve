@@ -22,6 +22,8 @@
 	var/is_watching = WATCHING_NOTHING
 	var/obj/structure/machinery/camera/cam
 	var/busy = FALSE //Ladders are wonderful creatures, only one person can use it at a time
+	var/climb_time = 2 SECONDS
+	var/climb_sound = null
 
 /obj/structure/ladder/Initialize(mapload, ...)
 	. = ..()
@@ -104,21 +106,28 @@
 	else return //just in case
 
 	step(user, get_dir(user, src))
-	user.visible_message(SPAN_NOTICE("[user] starts climbing [ladder_dir_name] [src]."),
-	SPAN_NOTICE("You start climbing [ladder_dir_name] [src]."))
+	if(climb_sound)
+		playsound_client(user.client, climb_sound, src, 10)
+		user.Root(climb_time) // You aren't getting off Mr Bones Wild Ride, bucko
+		user.visible_message(SPAN_NOTICE("[user] starts climbing [ladder_dir_name] [src], focussing wholly on the climb ahead. Pulling them off the ladder would be a bad idea..."), //Different message with hint for others to not grab & bring them up
+		SPAN_NOTICE("You start climbing [ladder_dir_name] [src]. Wow, that's a long way to go..."))
+	else
+		user.visible_message(SPAN_NOTICE("[user] starts climbing [ladder_dir_name] [src]."),
+		SPAN_NOTICE("You start climbing [ladder_dir_name] [src]."))
 	busy = TRUE
-	if(do_after(user, 20, INTERRUPT_INCAPACITATED|INTERRUPT_OUT_OF_RANGE|INTERRUPT_RESIST, BUSY_ICON_GENERIC, src, INTERRUPT_NONE))
+	if(do_after(user, climb_time, INTERRUPT_INCAPACITATED|INTERRUPT_OUT_OF_RANGE|INTERRUPT_RESIST, BUSY_ICON_GENERIC, src, INTERRUPT_NONE))
 		if(ladder_dest.state == LADDER_LOCKED) //The ladder they are climbing to is a hatch and is locked.
 			to_chat(user, SPAN_WARNING("There is a bolted hatch blocking your progress!"))
 		else if(state <= LADDER_UNLOCKED) //The ladder hatch somehow closed while they were climbing. Shouldn't happen, but can happen.
 			to_chat(user, SPAN_WARNING("The hatch suddenly closed before you could climb it!"))
-		else
+		else if(!user.is_mob_incapacitated() && get_dist(user, src) <= 1 && !user.blinded && user.body_position != LYING_DOWN && !user.buckled && !user.anchored)
 			visible_message(SPAN_NOTICE("[user] climbs [ladder_dir_name] [src].")) //Hack to give a visible message to the people here without duplicating user message
 			user.visible_message(SPAN_NOTICE("[user] climbs [ladder_dir_name] [src]."),
 			SPAN_NOTICE("You climb [ladder_dir_name] [src]."))
 			user.trainteleport(ladder_dest.loc)
 			if(!ladder_dest.open_hatch(user))
 				ladder_dest.add_fingerprint(user) //Fingerprints are added by the open proc, elsewise we add them here.
+			user.SetRoot(0) //Unstick the poor sod
 	busy = FALSE
 	add_fingerprint(user)
 
