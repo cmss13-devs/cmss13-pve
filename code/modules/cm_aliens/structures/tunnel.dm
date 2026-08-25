@@ -295,10 +295,9 @@
 
 			user.visible_message(SPAN_NOTICE("[user] starts to seal [src]!"), SPAN_NOTICE("You begin sealing [src]!"))
 
-			var/weldtime = 50
-			for(sealing_welder)
-				if(!HAS_TRAIT(W, TRAIT_TOOL_BLOWTORCH))
-					weldtime = 70
+			var/weldtime = 70
+			if(HAS_TRAIT(W, TRAIT_TOOL_BLOWTORCH))
+				weldtime = 50
 
 			if(user.action_busy || !do_after(user, TUNNEL_COLLAPSING_TIME * ((100 - weldtime) * 0.01), INTERRUPT_ALL, BUSY_ICON_BUILD))
 				return
