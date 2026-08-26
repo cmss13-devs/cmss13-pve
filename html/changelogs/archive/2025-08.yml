@@ -1,0 +1,323 @@
+2025-08-01:
+  BonniePandora:
+  - balance: T73 and M1911 damage upped slightly
+  - balance: .38 revolver and .44 automag have had damage lowered
+  - balance: .38 revolver no longer has a chance to send rounds careening off into
+      the next post-code due to accuracy debuffs
+  - bugfix: NP92 now chambers the advertised 9x18mm, rather than 9x19mm
+  - qol: No more weird ranks as equipped rifleman or SG presets
+  - bugfix: Removed the weird variable rank stuff left present on the forecon PFC
+      preset
+  Yorkoh:
+  - balance: cocoons now only have 2x web health vs 4x
+  - bugfix: updated how webs check for flame dmg by not referencing temperature and
+      instead referencing BURN_LEVEL_TIER
+2025-08-02:
+  Ediblebomb:
+  - qol: The swiss army knife now selects tools from a menu instead of at random
+  Max-023:
+  - rscadd: Gun Oil, Bedrolls, and Compasses now available in the USCM squad vendors
+2025-08-03:
+  AndroBetel:
+  - bugfix: CANC troopers always get their rifles now
+  Ediblebomb:
+  - code_imp: Makes smoke code affect procs work based off of what parts of your body
+      are actually protected, rather than being a mess with nothing standardized whatsoever
+  MistChristmas:
+  - maptweak: GArrow - Disposals should all be piped properly, and not spit at you.
+      Phone + Airlock consistency across nightmare inserts
+  - bugfix: Disposals losing icon_state with nightmare inserts
+  Valiant1st:
+  - rscadd: Added the USA flag shoulder patch. Adds to the custom loadout option.
+  - imageadd: USA flag shoulder patch icons.
+  dimdimich1996:
+  - rscadd: UPP APC, UPP Tank, UPP Van
+2025-08-04:
+  MistChristmas, Drathek:
+  - bugfix: Some Coder Lang-Server stuff
+2025-08-05:
+  AndroBetel:
+  - admin: Gamemasters can set LOOC cooldown now.
+  CactusMouth:
+  - rscadd: Adds the Territorial Guardsmen variants.
+  - code_imp: Territorials found under the GM HAI segment.
+  Max-023:
+  - bugfix: Fixes M5 gasmask onmob.
+  Merrgear:
+  - rscadd: Adds shotgun holster belt to loadout
+  - balance: Tweaks XM51 belt to fit the m120 and Ithica
+  The32bitguy:
+  - rscadd: Type 88-I/IFF SVD. Gun cases with and without HEAP and flak magazines.
+  - rscadd: OG-60 UPP GL. Gun cases loaded with and without grenades.
+  - rscadd: Generic looking M39 and M42A guncases.
+  - rscadd: UPP radio headset key pocket cases.
+  - rscadd: PKP/QYJ-72 weak wall penetrating and super tracer/lingering tracer magazines.
+  - rscadd: Type 64 gun cases with and without HEAP magazines. Adds AP and wall-penetrating
+      magazines.
+  - rscadd: Type 71 rubber and wall-penetrating magazines.
+  - rscadd: AG80 rubber, AP and HEAP magazines.
+  - rscadd: Adds 40mm airburst buckshot canister grenades for the UPP grenade launcher,
+      VShG-80 Assault-Grenade. Adds 40mm explosive incendiary grenades too, VTBG-44
+      Thermobaric Grenade.
+  - rscadd: B-Gel flamer tank guncase for UPP.
+  - rscadd: Random old UPP weapon guncase.
+  - rscadd: A super PACMAN generator crate.
+  - rscadd: Heavy flechette box.
+  - rscadd: Ammo boxes for most of the new ammo types.
+  - rscadd: HJRA-12 now has a x2 scope instead of an integrated magnetic harness
+  - balance: UPP Sentry guns now have 350 rounds per drum.. Fixes the oversight that
+      caused them to have 200.
+  - balance: The Type 64 can use some more attachments. The Type 64, Type 71 and AG80
+      can now use the PVE TV scope.
+  - balance: The UPP MG pistol belt has a limit of four PKP ammo boxes.
+  - balance: All storage clothing that holds magazines now share the same types of
+      things they can hold for consistency, based off the magazine belt.
+  - balance: Mortar shell belts and backpacks can now hold more shells. 4 to 8 and
+      8 to 12. The mortar shell belt can hold all revolvers instead of only the M44,
+      and binoculars if you want.
+  - balance: The light UPP sentry is not omni-directional, and now has the fire rate
+      of a standard sentry with a 0.5 damage multiplier.
+  - bugfix: Special heavy buckshot no longer appears to be the same ammo as regular.
+      Tweaked some values to make it statistically distinct too.
+  - bugfix: The KS29 stock can go back into it's box.
+  - bugfix: The Type71 and AG80 can have their GLs attached back onto them now. Previously
+      if the GL had ever spawned preloaded then it couldn't.
+  - bugfix: The light UPP sentry now has it's icon.
+  - imageadd: Icons for Type 64, PKP, Type 88 magazine bands, UPP M92, heavy flechette
+      box, UPP guncases, radio key case and grenade boxes.
+  Yorkoh:
+  - balance: Upped weight class of Large ammo box
+2025-08-06:
+  Merrgear:
+  - rscadd: Adds a new raider team leader preset and changes team members to be lower
+      rank
+  - bugfix: The XM38 raider shotgun no longer comes with attachments it shouldn't
+      have
+  - bugfix: fixed loadout shotgun belt
+2025-08-07:
+  MistChristmas:
+  - bugfix: AI Inv appraisal checks for pockets before looking through them, and checks
+      for storage webbing before that.
+2025-08-08:
+  Blacklist897:
+  - rscadd: You can choose a stocked or stockless version of the ithica, now with
+      less shitcode
+  MistChristmas:
+  - rscadd: Tac Reloads respect Auto Eject Magazine To Hand Preference
+  - rscadd: Small tweak so CIA and SOF Encryption key gets the SOF channel.
+2025-08-12:
+  Blacklist897:
+  - rscadd: smartgunners can now holster flamethrowers and the m-79 on their back
+  CactusMouth:
+  - code_imp: Fixed UACG Faction dynamic
+  Ediblebomb:
+  - balance: You can no longer put other stuff on smartgun harnesses, that's where
+      the gun goes silly.
+  Max-023:
+  - rscadd: New options for armor paints
+  MistChristmas:
+  - rscadd: Throat Slitting; To do so, the target must be grabbed, you must be on
+      grab intent, and you need to be behind the target OR they're either lying down
+      for any reason or buckled. You can't do this to friendly factions, and your
+      weapon needs to be knife sharp and deadly enough. I.E Marine knife or better.
+      But not fire axe.
+  - rscadd: Harm Intent overriding PBs is now an opt in preference
+  - bugfix: 'Shotguns don''t adhere to PB Override. Sort of "fix" an oversight where
+      Grab Intent: One of the PB intents now, didn''t get click drag override. By
+      moving the PB intent to Disarm instead!'
+  - ui: Dropship Control, Ares Interface/Other Ares Interface and Tactical Map touch
+      ups.
+  - bugfix: Disables Dropships/Shuttles on the Flight Control UI if they are disabled
+      from something like Shuttle Manipulator
+  - balance: AP Himat now doesn't make 600 Shrapnel over 1 second. Lowered to 160
+      Shrapnel over 5 seconds.
+  - balance: ' SHARP Flechette lowered to 12 "shrapnel" buffed damage to 80 to compensate.'
+  - bugfix: Fix because 600 Shrapnel in one second tends to derail the MC. And lag
+      out the server. Binos with no connected HIMATs trying to swap doesn't runtime.
+  - bugfix: UPP Airburst incendiary will no longer explode if thrown at something
+  - balance: Designators can no longer CAS-lase onto regions that are impervious to
+      CAS or OBs, even if stood out in the open looking into it
+  Yorkoh:
+  - balance: Swapped Golden Arrow 2x Smartgun rounds boxes for 4x drums, moved the
+      boxes to a hidden area only the GM can open
+  - balance: Swapped Rover 1x Smartgunrounds box for 2x drums, moved the box to a
+      hidden area only the GM can open
+  - maptweak: chapaev stuff moved around
+  - rscadd: ' UPP Naval Inf AT team to squad preset'
+  - balance: Naval Inf and TG AT loadouts edited to account for using pistol secondary
+      & some other fluff kit being accounted for in storage
+  - balance: TG AT loadout no longer has a Type71 so they prioritise using their launcher
+  - bugfix: TG AT Squad team now has AT as lead
+2025-08-15:
+  Lakynet:
+  - mapadd: Adding LV-624 Bosenmori Basho
+  - mapadd: Big Red Revamp
+  - mapadd: Sekhmet Swamp added.
+2025-08-18:
+  BonniePandora:
+  - rscadd: A19 explosive; a replacement for the now-removed A19 impact rounds, which
+      will knockback and slow targets whilst also dealing splash damage
+  - qol: Moves the A19 DU ammunition & magazines to be subtypes of the specialist
+      A19 ammo
+  - balance: The M49A6 has recieved a _slight_ baseline boost to damage, along with
+      the ability to load all kinds of A19 ammo.
+  - balance: The A6 guncase comes with a mix of A19 magazines now, rather than being
+      purely DU
+  - balance: The A19 DU rounds now deal toxin damage over time, capping at 15 tox
+      per hit currently
+  - balance: The A19 incen rounds have had their fire reagent swapped to a high-damage
+      low-burntime compound instead of typical UT-napthal
+  - bugfix: Fixes an issue with the A6 guncase overlays
+  - spellcheck: Caught a few R2 references left in the code, they now properly reference
+      the A6 instead
+  - imageadd: Redone sprite for the M49A5 custom battle rifle
+  - maptweak: The Rover has gotten a table with an A6 guncase in place of the wooden
+      crate containing the rifle & mags it had prior.
+  - maptweak: The classic Garrow's DU mags have been replaced with the new typepath'd
+      version
+  Ediblebomb:
+  - maptweak: Removes the Platoon Commander and Platoon Sergeant bunks from the Chapaev
+  Yorkoh:
+  - rscadd: added laika cig packet to loadout selection
+  - balance: UPP faction can't access all food and drinks from UA/TWE.
+  - balance: single cigarette, cigar and classic cigar are all -1 cheaper loadout
+  - balance: UPP faction also can't access all the smoking stuff
+  - balance: PDT now costs 1 in loadout, down from 3 (they are in the vendors anyway)
+  - balance: Loadout PDT is using the advanced PDT which has the TGUI pop-up, not
+      the basic version that posts it's tracking to chat
+  - rscadd: signal tracker TGUI item
+  - rscadd: signal tracker radar code
+  lordloko:
+  - rscadd: Added more lore tidbits. 63 in total.
+  - spellcheck: Fixes some typos and wrong information from old tidbits
+2025-08-19:
+  AndroBetel:
+  - rscadd: Adds three-hole balaclava to UPP loadout menu.
+  BonniePandora:
+  - rscadd: New map that opens a tacmap scan of the groundmap rather than a wiki-page
+      image
+  - spellcheck: Sorted a few Taipei typos in the map code
+  - maptweak: Rover's security & employment records console in the SLs room are no
+      longer access-locked
+  - qol: Weed nodes are no longer visible to players nor distinctly named
+  - rscadd: Scout-Sniper (Shooter), Scout-Sniper (AMR Shooter) & Scout-Sniper (Spotter)
+      specialist kits in favour of the old scout, sniper & sniper(AMR) kits
+  - rscadd: New attachment for the M49A5, a targeting relay that functions like a
+      mini-scope
+  - rscadd: New NVG goggles for the regular & AMR marksman to use
+  - rscadd: A SHARP operator specialist kit
+  - qol: Scout & spotter binocs were merged into one
+  - qol: Last of the item locks on specialist equipment are gone
+  - balance: The pyro armor provides a permanent fire immunity when worn. Brute resist
+      may need tweaked downwards to give some manner of weakness
+  - balance: The ghillie armor now allows you to move whilst camoflaged & works as
+      a cloak, but you'll still become visible if you fire whilst hidden too frequently.
+      The scout cloak offers similar features but with less efficient stealth performance
+  - imageadd: New icons for the AMR, spotter and SHARP operator spec kits
+  KoishiVibe:
+  - rscadd: New prepared meal descriptions.
+  - rscadd: Rebrands and adds more protein bars!
+  - rscadd: vendors now have cups and drink mix
+  - rscdel: Old prepared meal descriptions
+  lordloko, Valiant1st:
+  - rscadd: added new Brazilian-themed preset props with their own, exclusive flavor.
+  - code_imp: changed hai spawner to say that they are "Hispanic" and not "Spanish"
+      CMBs and UACG
+  - imageadd: added some new patch icons (by Valiant1st)
+  - imageadd: added Brazilian flag icons (by Valiant1st)
+2025-08-21:
+  Yorkoh:
+  - mapadd: adds Redemption Valley
+  - balance: regular firstaid storage is now weight class Large
+  - balance: soft pouch firstaid storage defined as (aka remains as) weight class
+      Medium
+  - rscadd: regular, advanced, fire, o2, synth, rad and surgical softpouches with
+      color variants for their icons based on the existing colorways
+  - rscadd: upp specific softpack sprites and the UPP gear presets reference this
+      now
+  - bugfix: added names and descriptions to all softpack variants to make it clearer
+      when examining them what their contents are (as there are only four color pixels
+      available on the icon to denote their use)
+  - bugfix: Synth, Squad Leader and Medic vendors now dispense the softpacks (idk
+      if the latter two are even relevant to us though)
+  - bugfix: references to storage devices that previously wouldn't allow FAKs now
+      don't allow their softpack variant
+  - bugfix: all presets that referenced a FAK now reference their new softpack variant
+  - maptweak: Chapeav Medical Prep gets +2 standard-issue UPP sprited softpack first-aid
+      kits (had none before)
+  - maptweak: Golden Arrow Medical Prep gets +1 standard-issue softpack first-aid
+      kit
+  - maptweak: Rover Medical Prep gets +1 standard-issue softpack first-aid kit
+  - maptweak: Firefly Medical Prep gets a standard-issue softpack first-aid kit (had
+      none before)
+2025-08-23:
+  CactusMouth:
+  - rscadd: Adds the Bomb Vest
+  - soundadd: added custom sound for the bomb vest going off
+  - imageadd: added the icons for the bomb vest
+  Dimdimich1996, AndroBetel:
+  - rscadd: RFVS-37 automated machinegun, UPP smartgun equivalent.
+  The32bitguy:
+  - rscadd: Added UPP Gunner hAi preset without HEAP loaded. It is now the default.
+  - bugfix: hAi can reload the PKP/QYJ-72.
+  Yorkoh:
+  - maptweak: fixed all the cave rope drop teleporters to be their correct version
+      (noob/lazy mapper)
+  - maptweak: fixed the valley ruins open voids to have some closed voids so xenos
+      aren't just scrambling over open ground. Some lite ruin adjustments to account
+      for this.
+  - maptweak: added closed voids to the clifftop overlook & added some new teleporters
+      to the ledge there so it feels more like you're looking out over a drop.
+2025-08-24:
+  CactusMouth:
+  - rscadd: Black Dragoons, their equipment and arms.
+  - imageadd: Added the sprites for the armour + weapons for the Black Dragoons
+  SpartanBobby, Soullessmagpie:
+  - mapadd: USCSS Obsidian Falk PMC shipmap
+  - mapadd: USCSS Onyx Karain PMC shipmap (PMC lowpop)
+  - rscadd: Azure-16 PMC lowpop Strike Taskforce
+  - rscadd: NSG/PVE
+  Yorkoh:
+  - mapadd: adds Binhai Supply Station
+2025-08-25:
+  BonniePandora:
+  - rscadd: New command-variants of the Longstreet (M34A3 Hampton) and the Cheetah
+      (2B model) added with functional commander seats
+  - qol: Keybinds can be assigned to various vehicle-related verbs
+  - balance: The maximum speeds of armored vehicles were adjusted, the ARC being the
+      speediest, then the APC, with the AEV being just slightly faster than the tank.
+  - balance: The AEV comes with a pintle M56 RWS & incen smoke discharger as standard
+      now
+  - balance: Armored vehicles take less damage from clawing, bullets, brute and (to
+      a lesser degree) explosions, but will take much more damage from acid sources
+      such as boilers or acid-rounies
+  - balance: several tank weapons got a PvE-balance-pass to make them better suite
+      the sandbox we typically have
+  - balance: AT-launchers have had their damage tweaked to be a bit less lethal to
+      infantry whilst still presenting a threat to vehicles
+  - balance: Many of the vehicle weapons had their arcs of fire and maximum stored
+      magazines/tanks/clips tweaked
+  - bugfix: Tanks shouldn't brick themselves when moving with broken tracks any longer
+  - bugfix: Tank artillery module no longer leaves you in a permanently zoomed-out
+      view
+  - mapadd: interior maps for command-variant tanks
+2025-08-29:
+  BonniePandora:
+  - rscadd: Much better RMC across the board (updated armor, presets, guns, skills)
+  - rscadd: RMC Troop (playable unit)
+  - rscadd: New DMR for the RMC, sprites done by Dimdi
+  - balance: NSG buffed to be a viable weapon system
+  - balance: RMC skills tweaked so they're better at medical overall but worse at
+      engineering compared to USCM (Their sapper is on par with CM Combat-Engi however)
+  - rscdel: Goodbye old TWE naval ranks
+  - bugfix: Preset previews now display proper portraits
+  - mapadd: The HMS Brynhild shipmap & the Gibraltar dropship
+  - soundadd: New NSG firing sounds, based off the L1A1 & L1A2 LMG
+  - soundadd: New sounds for the RMC DMR based off the JSDF Type 64
+2025-08-31:
+  BonniePandora:
+  - rscadd: New squad datums
+  - qol: Enabling of extra squad datums from roundstart
+  - bugfix: Latespawn props shouldn't auto-assign to the base squad now
+  - bugfix: Old origins shouldn't linger and prevent eligability for UA loadout things
+  - code_imp: Adds a sanitisation check for the origins.

@@ -5,3 +5,4 @@ Pillow==11.0.0
 # changelogs
 PyYaml==6.0.1
 beautifulsoup4==4.9.3
+PyGithub==2.9.1

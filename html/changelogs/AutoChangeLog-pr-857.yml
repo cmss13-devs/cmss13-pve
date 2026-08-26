@@ -1,4 +1,0 @@
-author: "BonniePandora"
-delete-after: True
-changes:
-  - maptweak: "Fixes for Otogi so github checks & the mapmerge tool don't complain"

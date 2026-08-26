@@ -1,5 +1,0 @@
-author: "Yorkoh"
-delete-after: True
-changes:
-  - bugfix: "added UA Rebel, TWE Rebel and CANC (aka UPP Rebel) to the IFF faction list for Defense Creator"
-  - bugfix: "edited sentry IFF list to replace CLF with UA Rebel, TWE Rebel and CANC sentry IFF"
