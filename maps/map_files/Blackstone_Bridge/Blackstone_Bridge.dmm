@@ -1,4 +1,40 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"aaa" = (
+/mob/living/simple_animal/hostile/retaliate/giant_lizard,
+/turf/open/gm/grass/grass1,
+/area/whiskey_outpost/blackstone/outside/jungle/south_west)
+"aab" = (
+/mob/living/simple_animal/hostile/retaliate/giant_lizard,
+/turf/open/jungle,
+/area/whiskey_outpost/blackstone/outside/jungle/far_west)
+"aac" = (
+/mob/living/simple_animal/hostile/retaliate/giant_lizard,
+/turf/open/jungle/vines,
+/area/whiskey_outpost/blackstone/outside/jungle/south_east)
+"aad" = (
+/mob/living/simple_animal/hostile/retaliate/giant_lizard,
+/turf/open/jungle,
+/area/whiskey_outpost/blackstone/outside/jungle/south_east)
+"aae" = (
+/obj/structure/machinery/door_control/brbutton{
+	pixel_x = 0;
+	pixel_y = 9;
+	id = "south_west_hatch";
+	normaldoorcontrol = 4;
+	name = "south-west hatch-control"
+	},
+/turf/closed/wall/rock/brown,
+/area/whiskey_outpost/blackstone/underground/mountain)
+"aaf" = (
+/obj/structure/machinery/door_control/brbutton{
+	pixel_x = 0;
+	pixel_y = 9;
+	id = "south_east_hatch";
+	normaldoorcontrol = 4;
+	name = "south-east hatch-control"
+	},
+/turf/closed/wall/rock/brown,
+/area/whiskey_outpost/blackstone/underground/mountain)
 "aag" = (
 /obj/structure/platform{
 	layer = 3.1
@@ -8,9 +44,32 @@
 	icon_state = "asteroidfloor"
 	},
 /area/whiskey_outpost/blackstone/outside/outpost/north)
+"aah" = (
+/obj/structure/machinery/door_control/brbutton{
+	pixel_x = 9;
+	pixel_y = 0;
+	id = "west_hatch";
+	normaldoorcontrol = 4;
+	name = "west hatch-control"
+	},
+/turf/closed/wall/rock/brown,
+/area/whiskey_outpost/blackstone/underground/mountain)
+"aai" = (
+/turf/open/floor/corsat/arrow_south,
+/area/whiskey_outpost/blackstone/underground/mountain)
 "aaj" = (
 /turf/open/gm/grass/grassbeach/north,
 /area/whiskey_outpost/blackstone/outside/jungle/north)
+"aak" = (
+/mob/living/simple_animal/hostile/UPP{
+	name = "The Puppetmaster"
+	},
+/turf/open/floor/corsat/plate,
+/area/whiskey_outpost/blackstone/underground/mountain)
+"aal" = (
+/obj/structure/machinery/power/apc/uscm_ground,
+/turf/open/floor/corsat/plate,
+/area/whiskey_outpost/blackstone/underground/mountain)
 "aam" = (
 /obj/structure/disposalpipe/junction,
 /turf/open/floor/prison{
@@ -18,6 +77,42 @@
 	icon_state = "darkred2"
 	},
 /area/whiskey_outpost/blackstone/inside/outpost_south)
+"aan" = (
+/turf/open/floor/corsat/plate,
+/area/whiskey_outpost/blackstone/underground/mountain)
+"aao" = (
+/obj/structure/machinery/door_control/brbutton{
+	pixel_x = -9;
+	pixel_y = 0;
+	id = "east_hatch";
+	normaldoorcontrol = 4;
+	name = "east hatch-control"
+	},
+/turf/closed/wall/rock/brown,
+/area/whiskey_outpost/blackstone/underground/mountain)
+"aap" = (
+/turf/open/floor/corsat/arrow_north,
+/area/whiskey_outpost/blackstone/underground/mountain)
+"aaq" = (
+/obj/structure/machinery/door_control/brbutton{
+	pixel_x = 0;
+	pixel_y = -7;
+	id = "north_west_hatch";
+	normaldoorcontrol = 4;
+	name = "north-west hatch-control"
+	},
+/turf/closed/wall/rock/brown,
+/area/whiskey_outpost/blackstone/underground/mountain)
+"aar" = (
+/obj/structure/machinery/door_control/brbutton{
+	pixel_x = 0;
+	pixel_y = -7;
+	id = "landingzone_hatch";
+	normaldoorcontrol = 4;
+	name = "LZ hatch-control"
+	},
+/turf/closed/wall/rock/brown,
+/area/whiskey_outpost/blackstone/underground/mountain)
 "aas" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison{
@@ -37680,7 +37775,7 @@ cOO
 iTg
 iTg
 cOO
-ulr
+aab
 ulr
 iTg
 ulr
@@ -44755,7 +44850,7 @@ xvv
 xvv
 xvv
 upz
-upz
+aaa
 sFx
 kYr
 kYr
@@ -56667,7 +56762,7 @@ ijr
 glV
 ijr
 ijr
-ijr
+aac
 glV
 ijr
 glV
@@ -56686,7 +56781,7 @@ fSn
 fSn
 fSn
 fSn
-fSn
+aah
 fSn
 fSn
 fSn
@@ -56886,10 +56981,10 @@ kYr
 (138,1,1) = {"
 fSn
 fSn
-fSn
-fSn
-fSn
-fSn
+aaq
+aap
+aai
+aae
 fSn
 fSn
 fSn
@@ -57089,8 +57184,8 @@ kYr
 fSn
 fSn
 fSn
-fSn
-fSn
+aan
+aak
 fSn
 fSn
 fSn
@@ -57290,9 +57385,9 @@ kYr
 (140,1,1) = {"
 fSn
 fSn
-fSn
-fSn
-fSn
+aar
+aap
+aal
 fSn
 fSn
 fSn
@@ -57493,8 +57588,8 @@ kYr
 fSn
 fSn
 fSn
-fSn
-fSn
+aan
+aan
 fSn
 fSn
 fSn
@@ -57695,9 +57790,9 @@ kYr
 fSn
 fSn
 fSn
-fSn
-fSn
-fSn
+aan
+aai
+aaf
 fSn
 fSn
 fSn
@@ -57898,7 +57993,7 @@ fSn
 fSn
 fSn
 fSn
-fSn
+aao
 fSn
 fSn
 fSn
@@ -58872,7 +58967,7 @@ lHH
 kYr
 kYr
 wJm
-wJm
+aad
 wJm
 lMM
 ijr

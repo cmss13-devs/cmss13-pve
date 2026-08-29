@@ -5,25 +5,25 @@
 	new /obj/item/clothing/shoes/marine/knife(src)
 
 /obj/structure/closet/secure_closet/marine_personal/uscm_ground/rifleman
-	job = JOB_USCM_GROUND_SQUAD_MARINE
+	job = JOB_SQUAD_MARINE
 
 /obj/structure/closet/secure_closet/marine_personal/uscm_ground/smartgunner
-	job = JOB_USCM_GROUND_SQUAD_SMARTGUNNER
+	job = JOB_SQUAD_SMARTGUN
 
 /obj/structure/closet/secure_closet/marine_personal/uscm_ground/corpsman
-	job = JOB_USCM_GROUND_SQUAD_MEDIC
+	job = JOB_SQUAD_MEDIC
 
 /obj/structure/closet/secure_closet/marine_personal/uscm_ground/engineer
-	job = JOB_USCM_GROUND_SQUAD_ENGI
+	job = JOB_SQUAD_ENGI
 
 /obj/structure/closet/secure_closet/marine_personal/uscm_ground/specialist
-	job = JOB_USCM_GROUND_SQUAD_SPECIALIST
+	job = JOB_SQUAD_SPECIALIST
 
 /obj/structure/closet/secure_closet/marine_personal/uscm_ground/squad_leader
-	job = JOB_USCM_GROUND_SQUAD_TEAM_LEADER
+	job = JOB_SQUAD_TEAM_LEADER
 
 /obj/structure/closet/secure_closet/marine_personal/uscm_ground/section_leader
-	job = JOB_USCM_GROUND_SQUAD_LEADER
+	job = JOB_SQUAD_LEADER
 
 /obj/structure/closet/secure_closet/marine_personal/uscm_ground/section_leader/spawn_gear()
 	new /obj/item/clothing/under/marine(src)
@@ -31,10 +31,10 @@
 	new /obj/item/device/radio/headset/almayer/marine/solardevils/uscm_ground(src)
 
 /obj/structure/closet/secure_closet/marine_personal/uscm_ground/outpost_officer
-	job = JOB_USCM_GROUND_CO
+	job = JOB_CO
 
 /obj/structure/closet/secure_closet/marine_personal/uscm_ground/outpost_officer/adjutant
-	job = JOB_USCM_GROUND_AO
+	job = JOB_XO
 
 /obj/structure/closet/secure_closet/marine_personal/outpost_officer/spawn_gear()
 	new /obj/item/clothing/under/marine(src)
