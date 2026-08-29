@@ -558,6 +558,18 @@
 	dir = 1
 	},
 /obj/structure/surface/table/almayer,
+/obj/item/prop/helmetgarb/gunoil{
+	pixel_x = 12;
+	pixel_y = 11
+	},
+/obj/item/storage/box/packet/m15{
+	pixel_x = -3;
+	pixel_y = 9
+	},
+/obj/item/weapon/gun/launcher/grenade/m81/m79/modified{
+	pixel_x = 2;
+	pixel_y = -5
+	},
 /turf/open/floor/prison{
 	dir = 1;
 	icon_state = "darkred2"
@@ -9108,10 +9120,6 @@
 /area/whiskey_outpost/blackstone/underground/crab_shack)
 "hqb" = (
 /obj/structure/surface/table/almayer,
-/obj/item/prop/helmetgarb/gunoil{
-	pixel_x = 12;
-	pixel_y = 3
-	},
 /obj/structure/machinery/door_control{
 	id = "armoryspecialequipment";
 	name = "toggle armory shutters";
@@ -10594,9 +10602,12 @@
 	pixel_x = 0;
 	pixel_y = 25
 	},
-/obj/effect/landmark/personal_weapon,
 /obj/structure/machinery/camera/autoname/uscm_ground{
 	dir = 4
+	},
+/obj/item/storage/box/guncase/heavy/shotgun{
+	pixel_x = 0;
+	pixel_y = -7
 	},
 /turf/open/floor/prison{
 	dir = 8;
