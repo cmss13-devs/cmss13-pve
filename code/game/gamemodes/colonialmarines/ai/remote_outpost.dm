@@ -13,7 +13,8 @@
 		/datum/squad/marine/delta,
 	)
 
-	role_mappings = list(JOB_USCM_GROUND_CO,
+	role_mappings = list(
+		JOB_USCM_GROUND_CO,
 		JOB_USCM_GROUND_AO,
 		JOB_USCM_GROUND_SYNTH,
 		JOB_USCM_GROUND_SQUAD_LEADER,

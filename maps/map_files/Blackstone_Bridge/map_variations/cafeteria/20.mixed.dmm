@@ -56,11 +56,15 @@
 	pixel_y = 11
 	},
 /obj/item/reagent_container/food/drinks/drinkingglass/cola{
-	pixel_x = 7;
+	pixel_x = 12;
 	pixel_y = 5
 	},
 /obj/item/storage/box/condimentbottles{
 	pixel_y = -8
+	},
+/obj/item/reagent_container/food/snacks/microwavable/donkpocket{
+	pixel_x = -2;
+	pixel_y = 10
 	},
 /turf/template_noop,
 /area/template_noop)
@@ -139,10 +143,6 @@
 /obj/item/reagent_container/food/snacks/boiledspagetti{
 	pixel_x = 4;
 	pixel_y = 12
-	},
-/obj/item/reagent_container/food/snacks/donkpocket{
-	pixel_x = -8;
-	pixel_y = 3
 	},
 /turf/template_noop,
 /area/template_noop)
