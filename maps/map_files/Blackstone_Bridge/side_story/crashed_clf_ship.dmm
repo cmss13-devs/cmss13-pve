@@ -41,9 +41,7 @@
 /turf/open/shuttle/dropship/can_surgery/light_grey_top,
 /area/template_noop)
 "hz" = (
-/turf/open/floor{
-	icon_state = "wall_thermite"
-	},
+/turf/open/floor/wall_thermite,
 /area/template_noop)
 "ij" = (
 /obj/item/stack/cable_coil/cut,
@@ -56,11 +54,6 @@
 "jE" = (
 /obj/structure/girder,
 /turf/open/floor/plating,
-/area/template_noop)
-"jQ" = (
-/turf/open/shuttle/dropship{
-	icon_state = "rasputin15"
-	},
 /area/template_noop)
 "ks" = (
 /turf/closed/shuttle/ert{
@@ -409,7 +402,7 @@ NJ
 Ec
 UT
 Gb
-jQ
+aa
 Gb
 Ae
 oU

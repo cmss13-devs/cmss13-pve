@@ -990,15 +990,6 @@
 	},
 /turf/open/floor/prison/sterile_white,
 /area/whiskey_outpost/blackstone/inside/visitor_dormitory)
-"aMf" = (
-/obj/structure/platform{
-	dir = 4
-	},
-/turf/open/floor{
-	dir = 1;
-	icon_state = "asteroidfloor"
-	},
-/area/whiskey_outpost/blackstone/outside/outpost/south)
 "aMV" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "0-4"
@@ -1351,9 +1342,7 @@
 /obj/structure/cable/heavyduty{
 	icon_state = "1-2"
 	},
-/turf/open/gm/dirt{
-	icon_state = "desert0"
-	},
+/turf/open/gm/dirt/desert0,
 /area/whiskey_outpost/blackstone/outside/outpost_beach/west)
 "bfo" = (
 /obj/structure/cable/heavyduty{
@@ -2384,9 +2373,7 @@
 /area/whiskey_outpost/blackstone/inside/visitor_dormitory)
 "cfO" = (
 /obj/structure/bed/roller,
-/turf/open/floor{
-	icon_state = "white"
-	},
+/turf/open/floor/white,
 /area/whiskey_outpost/blackstone/inside/medbay)
 "cgf" = (
 /obj/effect/decal/cleanable/dirt,
@@ -3491,9 +3478,7 @@
 /obj/effect/decal/medical_decals{
 	icon_state = "triagedecaldir"
 	},
-/turf/open/floor{
-	icon_state = "white"
-	},
+/turf/open/floor/white,
 /area/whiskey_outpost/blackstone/inside/medbay)
 "deE" = (
 /obj/structure/barricade/handrail{
@@ -5082,10 +5067,7 @@
 /obj/structure/machinery/camera/autoname/uscm_ground{
 	dir = 4
 	},
-/turf/open/floor{
-	dir = 8;
-	icon_state = "whitegreen"
-	},
+/turf/open/floor/whitegreen/west,
 /area/whiskey_outpost/blackstone/inside/medbay)
 "eDI" = (
 /obj/effect/landmark/start/researcher,
@@ -5557,9 +5539,7 @@
 /area/whiskey_outpost/blackstone/outside/outpost_beach/west)
 "eYj" = (
 /obj/structure/curtain,
-/turf/open/floor{
-	icon_state = "white"
-	},
+/turf/open/floor/white,
 /area/whiskey_outpost/blackstone/inside/medbay)
 "eYK" = (
 /obj/structure/prop/ice_colony/tiger_rug{
@@ -6413,9 +6393,7 @@
 	dir = 4
 	},
 /obj/structure/disposalpipe/segment,
-/turf/open/asphalt{
-	icon_state = "tile"
-	},
+/turf/open/asphalt/tile,
 /area/whiskey_outpost/blackstone/outside/central_road)
 "fQH" = (
 /obj/structure/platform_decoration{
@@ -8898,9 +8876,7 @@
 	dir = 8
 	},
 /obj/effect/decal/cleanable/dirt,
-/turf/open/asphalt/cement_sunbleached{
-	icon_state = "cement_sunbleached11"
-	},
+/turf/open/asphalt/cement_sunbleached/cement_sunbleached6,
 /area/whiskey_outpost/blackstone/outside/landing_zone)
 "ixF" = (
 /obj/structure/machinery/colony_floodlight{
@@ -10809,9 +10785,7 @@
 /area/whiskey_outpost/blackstone/outside/bridge/south)
 "kqz" = (
 /obj/structure/machinery/iv_drip,
-/turf/open/floor{
-	icon_state = "white"
-	},
+/turf/open/floor/white,
 /area/whiskey_outpost/blackstone/inside/medbay)
 "kqF" = (
 /obj/structure/barricade/handrail{
@@ -11898,9 +11872,7 @@
 	dir = 8;
 	icon_state = "pipe-c"
 	},
-/turf/open/asphalt{
-	icon_state = "tile"
-	},
+/turf/open/asphalt/tile,
 /area/whiskey_outpost/blackstone/outside/central_road)
 "lpf" = (
 /obj/structure/machinery/light/small{
@@ -12880,16 +12852,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/wood,
 /area/whiskey_outpost/blackstone/outside/outpost_beach/mine)
-"mjG" = (
-/obj/effect/decal/remains/human{
-	desc = "They look like human remains, but the size doesn't match up. These remains are much larger.";
-	pixel_y = 2;
-	pixel_x = 1
-	},
-/turf/open/gm/dirt{
-	icon_state = "desert_dug"
-	},
-/area/whiskey_outpost/blackstone/underground/excavation_site)
 "mll" = (
 /obj/structure/surface/table/woodentable/fancy,
 /obj/item/paper_bin{
@@ -14483,10 +14445,7 @@
 /obj/structure/platform_decoration{
 	dir = 8
 	},
-/turf/open/floor{
-	dir = 5;
-	icon_state = "asteroidwarning"
-	},
+/turf/open/floor/asteroidwarning/northeast,
 /area/whiskey_outpost/blackstone/outside/outpost/south)
 "nOu" = (
 /obj/structure/barricade/metal/wired{
@@ -18400,10 +18359,7 @@
 /area/whiskey_outpost/blackstone/outside/outpost_beach/west)
 "sdZ" = (
 /obj/structure/curtain,
-/turf/open/floor{
-	dir = 8;
-	icon_state = "whitegreen"
-	},
+/turf/open/floor/whitegreen/west,
 /area/whiskey_outpost/blackstone/inside/medbay)
 "sek" = (
 /turf/open/gm/coast/north,
@@ -18445,12 +18401,6 @@
 "seU" = (
 /turf/open/jungle/shrubs,
 /area/whiskey_outpost/blackstone/outside/jungle/southern/west)
-"seZ" = (
-/obj/effect/decal/cleanable/dirt,
-/turf/open/asphalt{
-	icon_state = "tile"
-	},
-/area/whiskey_outpost/blackstone/outside/central_road)
 "sfr" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/machinery/light/small{
@@ -18528,12 +18478,6 @@
 	},
 /turf/open/floor/prison/floor_plate,
 /area/whiskey_outpost/blackstone/inside/senior_enlisted_west)
-"sij" = (
-/turf/open/floor{
-	dir = 1;
-	icon_state = "asteroidfloor"
-	},
-/area/whiskey_outpost/blackstone/outside/outpost/east)
 "siF" = (
 /obj/structure/flora/jungle/vines/heavy,
 /turf/closed/wall/wood,
@@ -22930,16 +22874,8 @@
 /area/whiskey_outpost/blackstone/inside/bunks)
 "wqx" = (
 /obj/effect/decal/cleanable/dirt,
-/turf/open/asphalt/cement_sunbleached{
-	icon_state = "cement11"
-	},
+/turf/open/asphalt/cement/cement11,
 /area/whiskey_outpost/blackstone/outside/landing_zone)
-"wqH" = (
-/obj/effect/decal/sand_overlay/sand5,
-/turf/open/asphalt{
-	icon_state = "tile"
-	},
-/area/whiskey_outpost/blackstone/outside/central_road)
 "wrl" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/disposalpipe/segment{
@@ -24344,9 +24280,7 @@
 /turf/open/asphalt/tile,
 /area/whiskey_outpost/blackstone/outside/dorms_island)
 "xDS" = (
-/turf/open/floor{
-	icon_state = "white"
-	},
+/turf/open/floor/white,
 /area/whiskey_outpost/blackstone/inside/medbay)
 "xEg" = (
 /obj/effect/decal/warning_stripes{
@@ -25078,9 +25012,7 @@
 /obj/structure/cable/heavyduty{
 	icon_state = "1-8"
 	},
-/turf/open/floor{
-	icon_state = "white"
-	},
+/turf/open/floor/white,
 /area/whiskey_outpost/blackstone/inside/medbay)
 
 (1,1,1) = {"
@@ -43931,7 +43863,7 @@ juP
 jZf
 spp
 aaH
-aMf
+aaH
 wBR
 rnK
 cmO
@@ -44775,8 +44707,8 @@ bJZ
 nUJ
 mgj
 vNa
-seZ
-wqH
+aax
+aav
 woY
 woY
 nqv
@@ -48776,7 +48708,7 @@ aqB
 fDY
 aaI
 yet
-sij
+aaI
 htI
 htI
 aaF
@@ -54305,7 +54237,7 @@ cCJ
 koc
 xjS
 aTB
-mjG
+aaN
 lHH
 lHH
 gQb
