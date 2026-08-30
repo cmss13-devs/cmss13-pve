@@ -11,10 +11,7 @@
 /obj/structure/surface/table/reinforced/prison{
 	color = "#6b675e"
 	},
-/turf/open/floor/strata{
-	color = "#5e5d5d";
-	icon_state = "multi_tiles"
-	},
+/turf/open/floor/strata/grey_multi_tiles,
 /area/whiskey_outpost/blackstone/underground/excavation_site)
 "B" = (
 /turf/template_noop,
@@ -30,20 +27,14 @@
 	dir = 8
 	},
 /obj/structure/platform_decoration/mineral/sandstone/runed,
-/turf/open/floor/corsat{
-	dir = 1;
-	icon_state = "squareswood"
-	},
+/turf/open/floor/corsat/squareswood,
 /area/whiskey_outpost/blackstone/underground/excavation_site)
 "D" = (
 /obj/structure/platform/mineral/sandstone/runed{
 	dir = 1
 	},
 /obj/structure/platform/mineral/sandstone/runed,
-/turf/open/floor/corsat{
-	dir = 1;
-	icon_state = "squareswood"
-	},
+/turf/open/floor/corsat/squareswood,
 /area/whiskey_outpost/blackstone/underground/excavation_site)
 "E" = (
 /obj/structure/showcase{
@@ -60,10 +51,7 @@
 /obj/structure/platform/mineral/sandstone/runed{
 	dir = 4
 	},
-/turf/open/floor/corsat{
-	dir = 1;
-	icon_state = "squareswood"
-	},
+/turf/open/floor/corsat/squareswood,
 /area/whiskey_outpost/blackstone/underground/excavation_site)
 "I" = (
 /turf/closed/wall/mineral/sandstone/runed,
@@ -80,10 +68,7 @@
 	dir = 1;
 	color = "#b29082"
 	},
-/turf/open/floor/corsat{
-	dir = 1;
-	icon_state = "squareswood"
-	},
+/turf/open/floor/corsat/squareswood,
 /area/whiskey_outpost/blackstone/underground/excavation_site)
 
 (1,1,1) = {"

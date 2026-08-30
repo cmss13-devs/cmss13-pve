@@ -30,9 +30,7 @@
 /turf/open/floor/engine/cult,
 /area/whiskey_outpost/blackstone/underground/western_caves/church)
 "dL" = (
-/turf/open/gm/dirt{
-	icon_state = "desert3"
-	},
+/turf/open/gm/dirt/desert3,
 /area/whiskey_outpost/blackstone/underground/western_caves/center)
 "ej" = (
 /obj/effect/decal/cleanable/dirt,

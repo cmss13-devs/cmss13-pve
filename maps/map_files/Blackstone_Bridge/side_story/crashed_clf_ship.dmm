@@ -1,4 +1,7 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"aa" = (
+/turf/open/shuttle/dropship/can_surgery/medium_grey_single_wide_up_to_down,
+/area/template_noop)
 "aZ" = (
 /obj/item/ammo_magazine/rifle/m16/ap{
 	pixel_x = -8
@@ -27,21 +30,15 @@
 	pixel_x = -8
 	},
 /obj/item/stack/rods,
-/turf/open/shuttle/dropship{
-	icon_state = "rasputin15"
-	},
+/turf/open/shuttle/dropship/can_surgery/medium_grey_single_wide_up_to_down,
 /area/template_noop)
 "eX" = (
 /obj/structure/bed/chair/dropship/passenger,
-/turf/open/shuttle/dropship{
-	icon_state = "rasputin15"
-	},
+/turf/open/shuttle/dropship/can_surgery/medium_grey_single_wide_up_to_down,
 /area/template_noop)
 "fV" = (
 /obj/item/stack/rods,
-/turf/open/shuttle/dropship{
-	icon_state = "floor8"
-	},
+/turf/open/shuttle/dropship/can_surgery/light_grey_top,
 /area/template_noop)
 "hz" = (
 /turf/open/floor{
@@ -50,9 +47,7 @@
 /area/template_noop)
 "ij" = (
 /obj/item/stack/cable_coil/cut,
-/turf/open/shuttle/dropship{
-	icon_state = "rasputin15"
-	},
+/turf/open/shuttle/dropship/can_surgery/medium_grey_single_wide_up_to_down,
 /area/template_noop)
 "jv" = (
 /obj/effect/spawner/gibspawner/human,
@@ -74,18 +69,14 @@
 /area/template_noop)
 "lO" = (
 /obj/structure/surface/rack,
-/turf/open/shuttle/dropship{
-	icon_state = "rasputin15"
-	},
+/turf/open/shuttle/dropship/can_surgery/medium_grey_single_wide_up_to_down,
 /area/template_noop)
 "mF" = (
 /obj/item/weapon/gun/rifle/mar40/lmg{
 	pixel_x = 1;
 	pixel_y = 2
 	},
-/turf/open/shuttle/dropship{
-	icon_state = "rasputin6"
-	},
+/turf/open/shuttle/dropship/can_surgery/light_grey_top_left,
 /area/template_noop)
 "nD" = (
 /obj/structure/largecrate/black_market/clf_supplies{
@@ -107,9 +98,7 @@
 /area/template_noop)
 "oU" = (
 /obj/effect/decal/cleanable/blood,
-/turf/open/shuttle/dropship{
-	icon_state = "rasputin15"
-	},
+/turf/open/shuttle/dropship/can_surgery/medium_grey_single_wide_up_to_down,
 /area/template_noop)
 "pv" = (
 /turf/closed/shuttle/ert{
@@ -139,24 +128,18 @@
 	pixel_y = 3
 	},
 /obj/item/prop/almayer/flight_recorder/colony,
-/turf/open/shuttle/dropship{
-	icon_state = "rasputin7"
-	},
+/turf/open/shuttle/dropship/can_surgery/light_grey_top_right,
 /area/template_noop)
 "zj" = (
 /obj/effect/decal/cleanable/blood/oil,
 /obj/item/stack/cable_coil/cut,
-/turf/open/floor{
-	icon_state = "platingdmg1"
-	},
+/turf/open/floor/plating/platingdmg1,
 /area/template_noop)
 "Ae" = (
 /obj/structure/bed/chair/dropship/passenger{
 	dir = 4
 	},
-/turf/open/shuttle/dropship{
-	icon_state = "rasputin15"
-	},
+/turf/open/shuttle/dropship/can_surgery/medium_grey_single_wide_up_to_down,
 /area/template_noop)
 "AB" = (
 /turf/closed/shuttle/ert{
@@ -165,9 +148,7 @@
 /area/template_noop)
 "Be" = (
 /obj/effect/decal/cleanable/blood,
-/turf/open/shuttle/dropship{
-	icon_state = "rasputin3"
-	},
+/turf/open/shuttle/dropship/can_surgery/light_grey_single_wide_up_to_down,
 /area/template_noop)
 "BV" = (
 /turf/closed/shuttle/ert{
@@ -179,30 +160,22 @@
 	req_access = null;
 	req_access_txt = "260"
 	},
-/turf/open/shuttle/dropship{
-	icon_state = "rasputin3"
-	},
+/turf/open/shuttle/dropship/can_surgery/light_grey_single_wide_up_to_down,
 /area/template_noop)
 "Cz" = (
 /obj/item/stack/sheet/metal,
-/turf/open/shuttle/dropship{
-	icon_state = "rasputin15"
-	},
+/turf/open/shuttle/dropship/can_surgery/medium_grey_single_wide_up_to_down,
 /area/template_noop)
 "CK" = (
 /obj/item/stack/rods,
 /obj/effect/decal/cleanable/blood/oil,
 /obj/item/stack/cable_coil/cut,
-/turf/open/shuttle/dropship{
-	icon_state = "rasputin3"
-	},
+/turf/open/shuttle/dropship/can_surgery/light_grey_single_wide_up_to_down,
 /area/template_noop)
 "DQ" = (
 /obj/structure/blocker/invisible_wall,
 /obj/structure/computerframe,
-/turf/open/shuttle/dropship{
-	icon_state = "rasputin15"
-	},
+/turf/open/shuttle/dropship/can_surgery/medium_grey_single_wide_up_to_down,
 /area/template_noop)
 "Ec" = (
 /turf/open/jungle/clear,
@@ -235,9 +208,7 @@
 /turf/open/jungle/clear,
 /area/template_noop)
 "Gb" = (
-/turf/open/floor{
-	icon_state = "platingdmg1"
-	},
+/turf/open/floor/plating/platingdmg1,
 /area/template_noop)
 "Gf" = (
 /turf/closed/shuttle/ert{
@@ -253,35 +224,27 @@
 /obj/item/storage/backpack/general_belt{
 	pixel_y = 3
 	},
-/turf/open/shuttle/dropship{
-	icon_state = "rasputin3"
-	},
+/turf/open/shuttle/dropship/can_surgery/light_grey_single_wide_up_to_down,
 /area/template_noop)
 "HE" = (
 /obj/structure/largecrate/black_market/clf_supplies,
 /turf/open/jungle/clear,
 /area/template_noop)
 "It" = (
-/turf/open/shuttle/dropship{
-	icon_state = "rasputin3"
-	},
+/turf/open/shuttle/dropship/can_surgery/light_grey_single_wide_up_to_down,
 /area/template_noop)
 "JB" = (
 /obj/item/ammo_magazine/rifle/mar40/lmg{
 	pixel_x = -7;
 	pixel_y = -4
 	},
-/turf/open/shuttle/dropship{
-	icon_state = "rasputin3"
-	},
+/turf/open/shuttle/dropship/can_surgery/light_grey_single_wide_up_to_down,
 /area/template_noop)
 "LN" = (
 /obj/structure/bed/chair/dropship/passenger{
 	dir = 8
 	},
-/turf/open/shuttle/dropship{
-	icon_state = "rasputin15"
-	},
+/turf/open/shuttle/dropship/can_surgery/medium_grey_single_wide_up_to_down,
 /area/template_noop)
 "Mw" = (
 /turf/closed/shuttle/ert{
@@ -310,9 +273,7 @@
 	pixel_x = 1;
 	pixel_y = 2
 	},
-/turf/open/shuttle/dropship{
-	icon_state = "rasputin15"
-	},
+/turf/open/shuttle/dropship/can_surgery/medium_grey_single_wide_up_to_down,
 /area/template_noop)
 "OU" = (
 /obj/structure/prop/invuln/fire{
@@ -323,10 +284,7 @@
 	},
 /area/template_noop)
 "QN" = (
-/turf/open/floor{
-	dir = 8;
-	icon_state = "damaged3"
-	},
+/turf/open/floor/damaged3,
 /area/template_noop)
 "RS" = (
 /obj/item/stack/rods,
@@ -337,9 +295,7 @@
 	pixel_x = 1;
 	pixel_y = 2
 	},
-/turf/open/shuttle/dropship{
-	icon_state = "rasputin3"
-	},
+/turf/open/shuttle/dropship/can_surgery/light_grey_single_wide_up_to_down,
 /area/template_noop)
 "Ux" = (
 /obj/structure/prop/invuln/fire{
@@ -488,7 +444,7 @@ It
 It
 Tf
 QN
-jQ
+aa
 ZW
 aZ
 QN
@@ -512,8 +468,8 @@ DQ
 rJ
 eX
 eX
-jQ
-jQ
+aa
+aa
 eX
 fV
 Be
@@ -544,7 +500,7 @@ tL
 It
 JB
 Gb
-jQ
+aa
 OT
 Cz
 zj
@@ -566,11 +522,11 @@ Ec
 Ec
 UT
 lO
-jQ
+aa
 LN
-jQ
+aa
 LN
-jQ
+aa
 eS
 Gf
 cw

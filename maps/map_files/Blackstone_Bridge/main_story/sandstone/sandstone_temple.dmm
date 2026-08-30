@@ -42,10 +42,7 @@
 /obj/structure/machinery/door/airlock/sandstone/runed{
 	name = "Strange Temple"
 	},
-/turf/open/floor/corsat{
-	dir = 1;
-	icon_state = "squareswood"
-	},
+/turf/open/floor/corsat/squareswood,
 /area/whiskey_outpost/blackstone/outside/jungle/sandstone_temple)
 "dw" = (
 /obj/structure/platform_decoration/mineral/sandstone/runed{
@@ -161,10 +158,7 @@
 /turf/open/floor/sandstone/runed,
 /area/whiskey_outpost/blackstone/outside/jungle/sandstone_temple)
 "nu" = (
-/turf/open/floor/corsat{
-	dir = 1;
-	icon_state = "squareswood"
-	},
+/turf/open/floor/corsat/squareswood,
 /area/whiskey_outpost/blackstone/outside/jungle/sandstone_temple)
 "nA" = (
 /obj/item/stack/yautja_rope,
@@ -336,10 +330,7 @@
 	name = "Alien Harpoon";
 	pixel_x = -4
 	},
-/turf/open/floor/corsat{
-	dir = 1;
-	icon_state = "squareswood"
-	},
+/turf/open/floor/corsat/squareswood,
 /area/whiskey_outpost/blackstone/outside/jungle/sandstone_temple)
 "AC" = (
 /turf/closed/wall/mineral/sandstone/runed,
@@ -364,10 +355,7 @@
 /obj/structure/machinery/door/airlock/sandstone/runed/destroyable{
 	id = "blackstone_temple"
 	},
-/turf/open/floor/corsat{
-	dir = 1;
-	icon_state = "squareswood"
-	},
+/turf/open/floor/corsat/squareswood,
 /area/whiskey_outpost/blackstone/outside/jungle/sandstone_temple)
 "Hx" = (
 /obj/structure/platform/mineral/sandstone/runed{
@@ -408,10 +396,7 @@
 	pixel_x = 6;
 	pixel_y = 10
 	},
-/turf/open/floor/corsat{
-	dir = 1;
-	icon_state = "squareswood"
-	},
+/turf/open/floor/corsat/squareswood,
 /area/whiskey_outpost/blackstone/outside/jungle/sandstone_temple)
 "IH" = (
 /obj/item/clothing/suit/armor/yautja_flavor{
@@ -438,10 +423,7 @@
 	name = "Alien Harpoon";
 	pixel_x = 6
 	},
-/turf/open/floor/strata{
-	color = "#5e5d5d";
-	icon_state = "multi_tiles"
-	},
+/turf/open/floor/strata/grey_multi_tiles,
 /area/whiskey_outpost/blackstone/outside/jungle/sandstone_temple)
 "Jp" = (
 /obj/structure/platform/mineral/sandstone/runed,
@@ -482,10 +464,7 @@
 	icon_state = "Synthetic_Template";
 	name = "Eternal guardian"
 	},
-/turf/open/floor/strata{
-	color = "#5e5d5d";
-	icon_state = "multi_tiles"
-	},
+/turf/open/floor/strata/grey_multi_tiles,
 /area/whiskey_outpost/blackstone/outside/jungle/sandstone_temple)
 "NS" = (
 /obj/structure/platform_decoration/mineral/sandstone/runed{
@@ -555,10 +534,7 @@
 	dir = 4;
 	icon_state = "p_stair_full"
 	},
-/turf/open/floor/corsat{
-	dir = 1;
-	icon_state = "squareswood"
-	},
+/turf/open/floor/corsat/squareswood,
 /area/whiskey_outpost/blackstone/underground)
 "Sw" = (
 /obj/structure/surface/table/reinforced/prison{
@@ -572,10 +548,7 @@
 	pixel_x = -7;
 	pixel_y = 5
 	},
-/turf/open/floor/corsat{
-	dir = 1;
-	icon_state = "squareswood"
-	},
+/turf/open/floor/corsat/squareswood,
 /area/whiskey_outpost/blackstone/outside/jungle/sandstone_temple)
 "Up" = (
 /obj/structure/platform/mineral/sandstone/runed{
@@ -627,10 +600,7 @@
 	pixel_y = 2;
 	pixel_x = -3
 	},
-/turf/open/floor/corsat{
-	dir = 1;
-	icon_state = "squareswood"
-	},
+/turf/open/floor/corsat/squareswood,
 /area/whiskey_outpost/blackstone/outside/jungle/sandstone_temple)
 "Yx" = (
 /obj/effect/decal/remains/human{
