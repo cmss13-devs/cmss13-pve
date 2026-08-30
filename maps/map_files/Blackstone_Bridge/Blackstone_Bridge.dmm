@@ -7153,10 +7153,7 @@
 /area/whiskey_outpost/blackstone/outside/outpost_beach/west)
 "gGJ" = (
 /obj/structure/machinery/recharge_station,
-/turf/open/floor/prison{
-	dir = 10;
-	icon_state = "floor_marked"
-	},
+/turf/open/floor/prison/floor_marked,
 /area/whiskey_outpost/blackstone/inside/warehouse)
 "gGW" = (
 /obj/item/lightstick/red/planted,
@@ -10519,10 +10516,7 @@
 /obj/structure/cable/heavyduty{
 	icon_state = "1-2"
 	},
-/turf/open/floor/prison{
-	dir = 10;
-	icon_state = "floor_plate"
-	},
+/turf/open/floor/prison/floor_plate,
 /area/whiskey_outpost/blackstone/inside/armory)
 "kdL" = (
 /obj/effect/decal/sand_overlay/sand5{
@@ -10926,10 +10920,7 @@
 	dir = 4;
 	id = "blackstonecrate"
 	},
-/turf/open/floor/prison{
-	dir = 10;
-	icon_state = "floor_plate"
-	},
+/turf/open/floor/prison/floor_plate,
 /area/whiskey_outpost/blackstone/inside/warehouse)
 "kvu" = (
 /obj/structure/disposalpipe/segment{
@@ -16825,10 +16816,7 @@
 	pixel_y = 7
 	},
 /obj/item/tool/wrench,
-/turf/open/floor/prison{
-	dir = 10;
-	icon_state = "floor_plate"
-	},
+/turf/open/floor/prison/floor_plate,
 /area/whiskey_outpost/blackstone/inside/armory)
 "qjO" = (
 /obj/structure/closet/crate/miningcar{
@@ -17408,10 +17396,7 @@
 	dir = 4;
 	id = "blackstonecrate"
 	},
-/turf/open/floor/prison{
-	dir = 10;
-	icon_state = "floor_plate"
-	},
+/turf/open/floor/prison/floor_plate,
 /area/whiskey_outpost/blackstone/inside/warehouse)
 "qYm" = (
 /turf/open/jungle,
