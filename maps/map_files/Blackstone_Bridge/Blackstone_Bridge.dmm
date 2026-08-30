@@ -1083,10 +1083,7 @@
 	pixel_y = 25;
 	pixel_x = 7
 	},
-/turf/open/floor/prison{
-	dir = 10;
-	icon_state = "floor_plate"
-	},
+/turf/open/floor/prison/floor_plate,
 /area/whiskey_outpost/blackstone/inside/warehouse/checkpoint)
 "aPy" = (
 /obj/structure/surface/table/woodentable/fancy,
@@ -5199,9 +5196,7 @@
 	dir = 8
 	},
 /obj/item/shard,
-/turf/open/asphalt/cement_sunbleached{
-	icon_state = "cement_sunbleached13"
-	},
+/turf/open/asphalt/cement_sunbleached/cement_sunbleached13,
 /area/whiskey_outpost/blackstone/outside/outpost_beach/mine)
 "eJh" = (
 /obj/structure/surface/table/reinforced/prison,
@@ -6333,10 +6328,7 @@
 /turf/open/asphalt/tile,
 /area/whiskey_outpost/blackstone/outside/perimeter_defense)
 "fMZ" = (
-/turf/open/floor/prison{
-	dir = 8;
-	icon_state = "cell_stripe"
-	},
+/turf/open/floor/prison/cell_stripe/west,
 /area/whiskey_outpost/blackstone/inside/warehouse)
 "fNl" = (
 /obj/structure/flora/bush/ausbushes/genericbush{
@@ -7422,9 +7414,7 @@
 /area/whiskey_outpost/blackstone/outside/perimeter_defense)
 "gVK" = (
 /obj/effect/decal/cleanable/dirt,
-/turf/open/asphalt/cement_sunbleached{
-	icon_state = "cement_sunbleached3"
-	},
+/turf/open/asphalt/cement_sunbleached/cement_sunbleached3,
 /area/whiskey_outpost/blackstone/outside/outpost_beach/mine)
 "gVN" = (
 /obj/structure/barricade/handrail{
@@ -9409,10 +9399,7 @@
 "iYm" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/machinery/door/airlock/uscm_ground/warehouse,
-/turf/open/floor/prison{
-	dir = 10;
-	icon_state = "floor_plate"
-	},
+/turf/open/floor/prison/floor_plate,
 /area/whiskey_outpost/blackstone/inside/pillbox/two)
 "iYE" = (
 /obj/structure/machinery/colony_floodlight{
@@ -9616,9 +9603,7 @@
 /obj/effect/decal/sand_overlay/sand5{
 	dir = 1
 	},
-/turf/open/asphalt/cement_sunbleached{
-	icon_state = "cement_sunbleached18"
-	},
+/turf/open/asphalt/cement_sunbleached/cement_sunbleached18,
 /area/whiskey_outpost/blackstone/outside/outpost_beach/mine)
 "jjK" = (
 /turf/open/gm/dirtgrassborder/grassdirt_corner2/south_west,
@@ -10844,9 +10829,7 @@
 /obj/effect/decal/sand_overlay/sand5{
 	dir = 5
 	},
-/turf/open/asphalt/cement_sunbleached{
-	icon_state = "cement_sunbleached16"
-	},
+/turf/open/asphalt/cement_sunbleached/cement_sunbleached16,
 /area/whiskey_outpost/blackstone/outside/outpost_beach/mine)
 "krO" = (
 /obj/effect/decal/cleanable/dirt,
@@ -11892,9 +11875,7 @@
 	dir = 1
 	},
 /obj/item/stack/rods,
-/turf/open/asphalt/cement_sunbleached{
-	icon_state = "cement_sunbleached18"
-	},
+/turf/open/asphalt/cement_sunbleached/cement_sunbleached18,
 /area/whiskey_outpost/blackstone/outside/outpost_beach/mine)
 "loB" = (
 /obj/effect/decal/sand_overlay/sand5{
@@ -12018,9 +11999,7 @@
 /area/whiskey_outpost/blackstone/inside/commander_quarters)
 "lsC" = (
 /obj/effect/decal/cleanable/dirt,
-/turf/open/asphalt/cement_sunbleached{
-	icon_state = "cement_sunbleached2"
-	},
+/turf/open/asphalt/cement_sunbleached/cement_sunbleached2,
 /area/whiskey_outpost/blackstone/outside/outpost_beach/mine)
 "ltj" = (
 /turf/open/jungle/clear,
@@ -12414,9 +12393,7 @@
 /obj/item/clothing/head/hardhat{
 	pixel_y = -8
 	},
-/turf/open/asphalt/cement_sunbleached{
-	icon_state = "cement_sunbleached20"
-	},
+/turf/open/asphalt/cement_sunbleached/cement_sunbleached20,
 /area/whiskey_outpost/blackstone/outside/outpost_beach/mine)
 "lLg" = (
 /turf/open/floor/prison/sterile_white,
@@ -16800,9 +16777,7 @@
 	dir = 4
 	},
 /obj/effect/decal/cleanable/dirt,
-/turf/open/asphalt/cement_sunbleached{
-	icon_state = "cement_sunbleached12"
-	},
+/turf/open/asphalt/cement_sunbleached/cement_sunbleached12,
 /area/whiskey_outpost/blackstone/outside/outpost_beach/mine)
 "qgO" = (
 /obj/effect/decal/sand_overlay/sand5{
@@ -17723,12 +17698,6 @@
 "rmz" = (
 /turf/open/gm/river,
 /area/whiskey_outpost/blackstone/outside/jungle/perimeter_entrance/east)
-"rmC" = (
-/turf/open/floor/prison{
-	dir = 10;
-	icon_state = "floor_plate"
-	},
-/area/whiskey_outpost/blackstone/inside/warehouse/checkpoint)
 "rnh" = (
 /obj/structure/machinery/light/small,
 /obj/structure/gun_rack/flamer{
@@ -18518,10 +18487,7 @@
 	icon_state = "1-2"
 	},
 /obj/structure/machinery/door/airlock/uscm_ground/warehouse,
-/turf/open/floor/prison{
-	dir = 10;
-	icon_state = "floor_plate"
-	},
+/turf/open/floor/prison/floor_plate,
 /area/whiskey_outpost/blackstone/inside/pillbox/two)
 "shq" = (
 /obj/structure/platform,
@@ -19198,9 +19164,7 @@
 /obj/effect/decal/sand_overlay/sand5{
 	dir = 8
 	},
-/turf/open/asphalt/cement_sunbleached{
-	icon_state = "cement_sunbleached1"
-	},
+/turf/open/asphalt/cement_sunbleached/cement_sunbleached1,
 /area/whiskey_outpost/blackstone/outside/outpost_beach/mine)
 "sPO" = (
 /obj/structure/platform/stair_cut/alt,
@@ -19228,10 +19192,7 @@
 	icon_state = "1-2"
 	},
 /obj/structure/machinery/door/airlock/uscm_ground/general,
-/turf/open/floor/prison{
-	dir = 10;
-	icon_state = "floor_plate"
-	},
+/turf/open/floor/prison/floor_plate,
 /area/whiskey_outpost/blackstone/inside/pillbox/one)
 "sSp" = (
 /obj/effect/decal/sand_overlay/sand5{
@@ -21676,9 +21637,7 @@
 /obj/effect/decal/sand_overlay/sand5{
 	dir = 8
 	},
-/turf/open/asphalt/cement_sunbleached{
-	icon_state = "cement_sunbleached13"
-	},
+/turf/open/asphalt/cement_sunbleached/cement_sunbleached13,
 /area/whiskey_outpost/blackstone/outside/outpost_beach/mine)
 "vlg" = (
 /obj/effect/decal/sand_overlay/sand5{
@@ -21803,10 +21762,7 @@
 /turf/open/floor/plating,
 /area/whiskey_outpost/blackstone/underground/maintenance/north_east)
 "vpw" = (
-/turf/open/floor/prison{
-	dir = 4;
-	icon_state = "cell_stripe"
-	},
+/turf/open/floor/prison/cell_stripe/east,
 /area/whiskey_outpost/blackstone/inside/warehouse)
 "vpT" = (
 /obj/structure/bed/roller,
@@ -23381,9 +23337,7 @@
 /area/whiskey_outpost/blackstone/inside/warehouse)
 "wIw" = (
 /obj/effect/decal/cleanable/dirt,
-/turf/open/asphalt/cement_sunbleached{
-	icon_state = "cement_sunbleached14"
-	},
+/turf/open/asphalt/cement_sunbleached/cement_sunbleached14,
 /area/whiskey_outpost/blackstone/outside/outpost_beach/mine)
 "wIL" = (
 /obj/item/trash/chips,
@@ -44008,7 +43962,7 @@ aaB
 aaz
 kzW
 aaB
-rmC
+aaA
 oUP
 dSo
 dSo

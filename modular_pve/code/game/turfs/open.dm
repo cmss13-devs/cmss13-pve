@@ -7,6 +7,9 @@
 /turf/open/asphalt/cement/cement8
 	icon_state = "cement8"
 
+/turf/open/asphalt/cement/cement11
+	icon_state = "cement11"
+
 /turf/open/asphalt/cement/cement16
 	icon_state = "cement16"
 
