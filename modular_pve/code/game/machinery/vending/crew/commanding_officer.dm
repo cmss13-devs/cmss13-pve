@@ -15,7 +15,7 @@ GLOBAL_LIST_INIT(cm_vending_clothing_outpost_commanding_officer, list(
 		list("Beret, Green", 0, /obj/item/clothing/head/beret/cm, MARINE_CAN_BUY_HELMET, VENDOR_ITEM_RECOMMENDED),
 		list("Beret, Tan", 0, /obj/item/clothing/head/beret/cm/tan, MARINE_CAN_BUY_HELMET, VENDOR_ITEM_RECOMMENDED),
 		list("Patrol Cap", 0, /obj/item/clothing/head/cmcap, MARINE_CAN_BUY_HELMET, VENDOR_ITEM_RECOMMENDED),
-		list("Officer Cap", 0, /obj/item/clothing/head/cmcap/bridge, MARINE_CAN_BUY_HELMET, VENDOR_ITEM_RECOMMENDED),
+		list("Operations Cap", 0, /obj/item/clothing/head/cmcap/bridge, MARINE_CAN_BUY_HELMET, VENDOR_ITEM_RECOMMENDED),
 		list("Service Peaked Cap", 0, /obj/item/clothing/head/marine/peaked/service, MARINE_CAN_BUY_HELMET, VENDOR_ITEM_RECOMMENDED),
 
 		list("BAGS (CHOOSE 1)", 0, null, null, null),
@@ -23,8 +23,8 @@ GLOBAL_LIST_INIT(cm_vending_clothing_outpost_commanding_officer, list(
 		list("Secure Satchel", 0, /obj/item/storage/backpack/satchel/lockable, MARINE_CAN_BUY_BACKPACK, VENDOR_ITEM_MANDATORY),
 
 		list("COMBAT EQUIPMENT", 0, null, null, null),
-		list("Commanding Officer's M3 Armor", 0, /obj/item/clothing/suit/marine/light, MARINE_CAN_BUY_ARMOR, VENDOR_ITEM_MANDATORY),
-		list("Commanding Officer's M10 Helmet", 0, /obj/item/clothing/head/helmet/marine/rto, MARINE_CAN_BUY_HELMET, VENDOR_ITEM_MANDATORY),
+		list("Commanding Officer's M3 Armor", 0, /obj/item/clothing/suit/marine/light, MARINE_CAN_BUY_COMBAT_ARMOR, VENDOR_ITEM_MANDATORY),
+		list("Commanding Officer's M10 Helmet", 0, /obj/item/clothing/head/helmet/marine/rto, MARINE_CAN_BUY_COMBAT_HELMET, VENDOR_ITEM_MANDATORY),
 		list("Combat Gloves", 0, /obj/item/clothing/gloves/marine, MARINE_CAN_BUY_GLOVES, VENDOR_ITEM_MANDATORY),
 		list("Marine Combat Boots", 0, /obj/item/clothing/shoes/marine/knife, MARINE_CAN_BUY_SHOES, VENDOR_ITEM_MANDATORY),
 

@@ -2741,6 +2741,8 @@
 #include "modular_pve\code\game\objects\items\devices\radio\intercom.dm"
 #include "modular_pve\code\game\objects\items\storage\belt.dm"
 #include "modular_pve\code\game\objects\structures\crates_lockers\closets\secure\marine_personal.dm"
+#include "modular_pve\code\game\turfs\floor_types.dm"
+#include "modular_pve\code\game\turfs\open.dm"
 #include "modular_pve\code\modules\cm_marine\overwatch.dm"
 #include "modular_pve\code\modules\cm_marine\smartgun_mount.dm"
 #include "modular_pve\code\modules\cm_marine\equipment\kit_boxes.dm"
