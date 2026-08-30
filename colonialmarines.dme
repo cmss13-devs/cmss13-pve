@@ -2731,6 +2731,7 @@
 #include "modular_pve\code\game\machinery\doors\multi_tile.dm"
 #include "modular_pve\code\game\machinery\doors\poddoor.dm"
 #include "modular_pve\code\game\machinery\doors\runed_sandstone.dm"
+#include "modular_pve\code\game\machinery\vending\crew\commanding_officer.dm"
 #include "modular_pve\code\game\machinery\vending\crew\synthetic.dm"
 #include "modular_pve\code\game\machinery\vending\squad_prep\squad_engineer.dm"
 #include "modular_pve\code\game\machinery\vending\squad_prep\squad_prep.dm"
@@ -2747,4 +2748,5 @@
 #include "modular_pve\code\modules\cm_phone\phone_base.dm"
 #include "modular_pve\code\modules\gear_presets\uscm_ground.dm"
 #include "modular_pve\code\modules\power\apc.dm"
+#include "modular_pve\code\modules\projectiles\guns\shotguns.dm"
 // END_INCLUDE

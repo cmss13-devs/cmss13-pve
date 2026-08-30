@@ -120,6 +120,23 @@
 	icon_state = "darkredfull2"
 	},
 /area/whiskey_outpost/blackstone/inside/outpost_central)
+"aat" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/item/ammo_box/magazine/m56d,
+/turf/open/asphalt{
+	icon_state = "tile"
+	},
+/area/whiskey_outpost/blackstone/outside/perimeter_defense)
+"aau" = (
+/obj/structure/machinery/door/window/northleft{
+	req_access_txt = "13";
+	access_modified = 1
+	},
+/turf/open/floor/prison{
+	icon_state = "darkbrown3";
+	dir = 1
+	},
+/area/whiskey_outpost/blackstone/inside/warehouse)
 "aaw" = (
 /obj/item/weapon/gun/pistol/m4a3,
 /obj/structure/window_frame/colony/reinforced,
@@ -165,6 +182,10 @@
 /obj/structure/largecrate/random/mini/small_case{
 	pixel_x = -1;
 	pixel_y = 9
+	},
+/obj/item/ammo_box/magazine/m56d{
+	pixel_x = 17;
+	pixel_y = 12
 	},
 /obj/structure/machinery/camera/autoname/uscm_ground{
 	dir = 4
@@ -1002,13 +1023,12 @@
 /turf/open/gm/river,
 /area/whiskey_outpost/blackstone/outside/jungle/perimeter_entrance/west)
 "aKY" = (
-/obj/structure/closet/secure_closet/cmdcabinet{
-	pixel_y = 24;
-	access_modified = 1;
-	req_access = list(63)
-	},
 /obj/item/book/codebook{
 	name = "USCM Outpost 29 Code Book"
+	},
+/obj/structure/closet/secure_closet/cmdcabinet{
+	pixel_x = 0;
+	pixel_y = 24
 	},
 /turf/open/floor/prison{
 	icon_state = "darkredcorners2";
@@ -3200,7 +3220,7 @@
 	name = "loading bay shutters";
 	pixel_x = -21;
 	pixel_y = 9;
-	req_one_access_txt = "2;21"
+	req_one_access_txt = "2;13"
 	},
 /turf/open/floor/prison{
 	dir = 10;
@@ -8490,9 +8510,11 @@
 /area/whiskey_outpost/blackstone/inside/pillbox/three)
 "gRL" = (
 /obj/structure/machinery/cm_vending/sorted/medical{
-	pixel_y = 18;
-	density = 0
+	pixel_y = 0;
+	density = 0;
+	pixel_x = 0
 	},
+/obj/structure/medical_supply_link/green,
 /turf/open/floor{
 	dir = 5;
 	icon_state = "whitegreen"
@@ -8874,7 +8896,7 @@
 	name = "checkpoint glass door"
 	},
 /obj/structure/machinery/door/window/eastleft{
-	req_access_txt = "68";
+	req_access_txt = "13";
 	name = "checkpoint glass door"
 	},
 /obj/structure/machinery/door/poddoor/shutters/almayer/open{
@@ -9129,6 +9151,14 @@
 	req_access_txt = "12"
 	},
 /obj/effect/decal/cleanable/dirt,
+/obj/item/ammo_box/rounds/smartgun{
+	pixel_x = 10;
+	pixel_y = 4
+	},
+/obj/item/ammo_box/rounds/smartgun{
+	pixel_x = 6;
+	pixel_y = 18
+	},
 /turf/open/floor/prison{
 	dir = 8;
 	icon_state = "darkred2"
@@ -9879,9 +9909,6 @@
 "hXQ" = (
 /obj/structure/machinery/optable,
 /obj/structure/machinery/light,
-/obj/item/tank/anesthetic{
-	pixel_x = 6
-	},
 /turf/open/floor{
 	icon_state = "whitegreen"
 	},
@@ -10600,14 +10627,14 @@
 /obj/structure/surface/table/almayer,
 /obj/item/storage/box/guncase/heavy/m49a_pve{
 	pixel_x = 0;
-	pixel_y = 25
+	pixel_y = 28
 	},
 /obj/structure/machinery/camera/autoname/uscm_ground{
 	dir = 4
 	},
 /obj/item/storage/box/guncase/heavy/shotgun{
-	pixel_x = 0;
-	pixel_y = -7
+	pixel_x = 1;
+	pixel_y = 9
 	},
 /turf/open/floor/prison{
 	dir = 8;
@@ -10903,7 +10930,10 @@
 	},
 /area/whiskey_outpost/blackstone/outside/dorms_island)
 "iXi" = (
-/obj/item/storage/box/m56d_hmg,
+/obj/item/storage/box/m56d_hmg{
+	pixel_x = 0;
+	pixel_y = -2
+	},
 /turf/open/floor/prison{
 	dir = 10;
 	icon_state = "floor_plate"
@@ -11917,14 +11947,14 @@
 	id = "highwaycheckpoint1";
 	name = "toggle north shutters";
 	access_modified = 1;
-	req_access_txt = "68"
+	req_access_txt = "13"
 	},
 /obj/structure/machinery/door_control{
 	pixel_x = -8;
 	pixel_y = 5;
 	id = "highwaycheckpoint2";
 	name = "toggle south shutters'";
-	req_access_txt = "68";
+	req_access_txt = "13";
 	access_modified = 1
 	},
 /obj/structure/machinery/door_control{
@@ -11933,7 +11963,7 @@
 	pixel_x = -8;
 	pixel_y = -2;
 	access_modified = 1;
-	req_access_txt = "68"
+	req_access_txt = "13"
 	},
 /obj/item/tool/pen{
 	pixel_x = 6;
@@ -12307,7 +12337,11 @@
 	},
 /area/whiskey_outpost/blackstone/outside/outpost/east)
 "kev" = (
-/obj/structure/machinery/cm_vending/gear/medic,
+/obj/structure/machinery/cm_vending/clothing/medic{
+	pixel_y = 0;
+	density = 0;
+	pixel_x = 0
+	},
 /turf/open/floor{
 	dir = 4;
 	icon_state = "whitegreen"
@@ -12965,7 +12999,8 @@
 "kEy" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/machinery/power/apc/uscm_ground{
-	dir = 1
+	dir = 1;
+	needs_power = 0
 	},
 /obj/structure/cable/heavyduty{
 	icon_state = "0-8"
@@ -14002,12 +14037,7 @@
 /turf/open/asphalt,
 /area/whiskey_outpost/blackstone/outside/bridge/north)
 "lrO" = (
-/obj/structure/machinery/cm_vending/clothing/dress{
-	req_access = null;
-	req_one_access = null;
-	req_access_txt = "63";
-	access_modified = 1
-	},
+/obj/structure/machinery/cm_vending/clothing/commanding_officer/uscm_ground,
 /turf/open/floor/wood,
 /area/whiskey_outpost/blackstone/inside/commander_quarters)
 "lsC" = (
@@ -14785,7 +14815,7 @@
 	name = "checkpoint glass door"
 	},
 /obj/structure/machinery/door/window/eastleft{
-	req_access_txt = "68";
+	req_access_txt = "13";
 	name = "checkpoint glass door"
 	},
 /obj/structure/machinery/door/poddoor/shutters/almayer/open{
@@ -20340,7 +20370,7 @@
 /obj/structure/surface/table/almayer,
 /obj/item/storage/box/guncase/heavy/hpr{
 	pixel_x = -1;
-	pixel_y = 12
+	pixel_y = 14
 	},
 /turf/open/floor/prison{
 	dir = 8;
@@ -24655,10 +24685,10 @@
 	},
 /area/whiskey_outpost/blackstone/outside/outpost_beach/west)
 "uJK" = (
-/obj/item/storage/box/explosive_mines,
 /obj/effect/decal/sand_overlay/sand5{
 	dir = 4
 	},
+/obj/item/storage/box/explosive_mines,
 /turf/open/asphalt{
 	icon_state = "tile"
 	},
@@ -25906,16 +25936,13 @@
 /turf/open/gm/dirt,
 /area/whiskey_outpost/blackstone/outside/central_road)
 "vJf" = (
-/obj/structure/machinery/cm_vending/sorted/medical/blood{
-	req_access = null;
-	req_one_access = null;
-	req_access_txt = "53";
-	access_modified = 1;
-	allow_supply_link_restock = 1
-	},
 /obj/structure/machinery/camera/autoname/uscm_ground{
 	dir = 4
 	},
+/obj/structure/machinery/cm_vending/sorted/medical/blood{
+	allow_supply_link_restock = 1
+	},
+/obj/structure/medical_supply_link/green,
 /turf/open/floor{
 	dir = 8;
 	icon_state = "whitegreen"
@@ -26331,7 +26358,7 @@
 	name = "toggle vehicle entrance shutters";
 	pixel_x = -5;
 	pixel_y = -2;
-	req_access_txt = "68";
+	req_access_txt = "13";
 	access_modified = 1
 	},
 /obj/structure/machinery/door_control{
@@ -26339,7 +26366,7 @@
 	name = "toggle vehicle vestibule shutters";
 	pixel_x = 5;
 	pixel_y = -2;
-	req_access_txt = "68";
+	req_access_txt = "13";
 	access_modified = 1
 	},
 /obj/structure/machinery/door_control{
@@ -26348,7 +26375,7 @@
 	pixel_x = -5;
 	pixel_y = 5;
 	access_modified = 1;
-	req_access_txt = "68"
+	req_access_txt = "13"
 	},
 /obj/structure/machinery/light/small,
 /obj/item/tool/stamp/ro{
@@ -26365,7 +26392,7 @@
 	pixel_x = 5;
 	pixel_y = 5;
 	access_modified = 1;
-	req_access_txt = "68"
+	req_access_txt = "13"
 	},
 /turf/open/floor/prison,
 /area/whiskey_outpost/blackstone/inside/warehouse/checkpoint)
@@ -52050,7 +52077,7 @@ irW
 xvO
 kpx
 fPE
-gly
+aat
 mTa
 qWC
 jbP
@@ -54047,7 +54074,7 @@ rHS
 mEX
 nLq
 vxb
-eOs
+aau
 xas
 ffk
 eKk
