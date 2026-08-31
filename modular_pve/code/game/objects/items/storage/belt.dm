@@ -12,3 +12,7 @@
 	new /obj/item/tool/wirecutters/tactical(src)
 	new /obj/item/stack/cable_coil(src,30,pick("red","yellow","orange"))
 	new /obj/item/device/multitool(src)
+
+/obj/item/storage/belt/marine/m39/heap/fill_preset_inventory()
+	for(var/i = 1 to storage_slots)
+		new /obj/item/ammo_magazine/smg/m39/heap (src)

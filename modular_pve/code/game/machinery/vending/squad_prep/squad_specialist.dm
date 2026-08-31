@@ -2,6 +2,8 @@ GLOBAL_LIST_INIT(cm_vending_gear_spec_outpost, list(
 		list("WEAPONS SPECIALIST SETS (Pick One)", 0, null, null, null),
 		list("B18 Future Warrior Set", 1, /obj/item/storage/box/spec/B18/outpost, MARINE_CAN_BUY_ESSENTIALS, VENDOR_ITEM_REGULAR),
 		list("Sonic Harpoon Operator Set", 1, /obj/item/storage/box/spec/sharp_operator, MARINE_CAN_BUY_ESSENTIALS, VENDOR_ITEM_REGULAR),
+		list("Experimental Equipment Set", 1, /obj/item/storage/box/spec/plasma, MARINE_CAN_BUY_ESSENTIALS, VENDOR_ITEM_REGULAR),
+		list("Bulwark Breacher Set", 1, /obj/item/storage/box/spec/bulwark, MARINE_CAN_BUY_ESSENTIALS, VENDOR_ITEM_REGULAR),
 ))
 
 //A special...specialist vendor with actual inventory instead of points. We're old school here. Could maybe even rig it for tokens in the future.
