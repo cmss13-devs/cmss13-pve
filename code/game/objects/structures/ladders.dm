@@ -309,12 +309,16 @@
 The following procs are made general as to cut down on type checking, since it's not really needed. Could make them children specific to hatch, but it should never come up.
 If that changes, may need a slight refactor.
 */
-/obj/structure/ladder/proc/toggle_lock(trigger_signal)
-	if(!unlock_hatch(trigger_signal))
-		lock_hatch(trigger_signal) //If it doesn't match the first one, we will do the second.
+/obj/structure/ladder/proc/toggle_lock()
+	if(state == LADDER_UNLOCKED)
+		lock_hatch() //If it doesn't match the first one, we will do the second.
+	if(state == LADDER_OPEN)
+		return
+	else
+		unlock_hatch()
 
-/obj/structure/ladder/proc/unlock_hatch(trigger_signal)
-	if(state == LADDER_LOCKED && trigger_signal == id)
+/obj/structure/ladder/proc/unlock_hatch()
+	if(state == LADDER_LOCKED)
 		name = "unlocked hatch"
 		desc = "A tightly closed hatch. It has been unlocked and can now be opened."
 		state = LADDER_UNLOCKED
@@ -322,8 +326,8 @@ If that changes, may need a slight refactor.
 		update_icon()
 		return TRUE
 
-/obj/structure/ladder/proc/lock_hatch(trigger_signal)
-	if(state > LADDER_LOCKED && trigger_signal == id)
+/obj/structure/ladder/proc/lock_hatch()
+	if(state > LADDER_LOCKED)
 		if(state == LADDER_OPEN)
 			visible_message(SPAN_NOTICE("[src] closes!"), SPAN_NOTICE("Something closes nearby!"))
 			playsound(src, 'sound/effects/hydraulic_close.ogg', 25, FALSE)

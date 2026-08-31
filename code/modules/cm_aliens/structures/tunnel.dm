@@ -282,22 +282,22 @@
 
 /obj/structure/tunnel/maint_tunnel/attackby(obj/item/W as obj, mob/user as mob)
 	if(!isxeno(user))
-		if(istype(W, /obj/item/tool/shovel))
+		if(istype(W, /obj/item/tool/weldingtool))
 			var/obj/item/tool/weldingtool/sealing_welder = W
 
 			if(!sealing_welder.welding == 1)
 				return
 
-			if(!sealing_welder.reagents == 0)
+			if(sealing_welder.reagents == 0)
 				return
 
 			playsound(user.loc, 'sound/items/weldingtool_on.ogg', 40, 1, 6)
 
 			user.visible_message(SPAN_NOTICE("[user] starts to seal [src]!"), SPAN_NOTICE("You begin sealing [src]!"))
 
-			var/weldtime = 70
-			if(HAS_TRAIT(W, TRAIT_TOOL_BLOWTORCH))
-				weldtime = 50
+			var/weldtime = 50
+			if(HAS_TRAIT(sealing_welder, TRAIT_TOOL_BLOWTORCH))
+				weldtime = 70
 
 			if(user.action_busy || !do_after(user, TUNNEL_COLLAPSING_TIME * ((100 - weldtime) * 0.01), INTERRUPT_ALL, BUSY_ICON_BUILD))
 				return
