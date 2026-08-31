@@ -6,8 +6,6 @@
 	taskbar_icon = 'icons/taskbar/gml_wo.png'
 	var/game_started = FALSE
 
-	flags_round_type = MODE_INFESTATION|MODE_NEW_SPAWN|MODE_NO_XENO_EVOLVE
-
 	var/list/squad_limit = list(
 		/datum/squad/marine/charlie,
 		/datum/squad/marine/delta,
@@ -125,7 +123,6 @@ GLOBAL_LIST_INIT(outpost_jobs, list(/datum/squad/marine/charlie = list(/datum/jo
 
 /datum/game_mode/remote_outpost/post_setup()
 	set_lz_resin_allowed(TRUE)
-	spawn_personal_weapon()
 	update_RO_controllers()
 	return ..()
 
@@ -167,44 +164,5 @@ GLOBAL_LIST_INIT(outpost_jobs, list(/datum/squad/marine/charlie = list(/datum/jo
 		SSitem_cleanup.wait = 1 MINUTES
 		SSitem_cleanup.next_fire = 1 MINUTES
 		spawn(0)
-			//Deleting Almayer, for performance!
+			//Deleting shipmap, for performance!
 			SSitem_cleanup.delete_almayer()
-
-/datum/game_mode/remote_outpost/proc/spawn_personal_weapon()
-	var/datum/squad/squad = locate() in GLOB.RoleAuthority.squads
-	if(!squad || squad.faction != FACTION_MARINE || !squad.marines_list.len > 0)
-		return
-	if(!GLOB.personal_weapon.len)
-		return
-	var/mob/living/carbon/human/marine
-	var/chosen_weapon
-	var/iteration = 0 //10 marines with no personal weapon selected? its more likely than you think!
-	var/list/temporary_list = squad.marines_list
-	while(!chosen_weapon && iteration < squad.marines_list.len)
-		iteration++
-		marine = pick(temporary_list)
-		if(!squad.marines_list.Find(marine))
-			chosen_weapon = "bugged"
-			break
-		if(marine.job == JOB_SO) //get outta here butter bars
-			temporary_list.Remove(marine)
-			continue
-		if(!marine.client)
-			temporary_list.Remove(marine)
-			continue
-		if(marine.client.prefs.personal_weapon == "None")
-			temporary_list.Remove(marine)
-			continue
-		chosen_weapon = marine.client.prefs.personal_weapon
-	if(!isnull(chosen_weapon)) //Probably highly unlikely that all marines have it set to None but uhhhhh you never know.
-		if(chosen_weapon == "bugged")
-			log_debug("Chosen Weapon selected a bugged marine.")
-		else
-			var/obj/item/storage/box/personalcase/pcase = new(get_turf(pick(GLOB.personal_weapon)))
-			pcase.assign_owner(marine.real_name)
-			addtimer(CALLBACK(GLOBAL_PROC, GLOBAL_PROC_REF(to_chat), marine, SPAN_NOTICE("You remember that you've successfully snuck in your <b>heirloom weapon</b> into the outpost: <b>[marine.client.prefs.personal_weapon]</b>. It's in the armory.")), 5 SECONDS)
-			var/the_gun = GLOB.personal_weapons_list[chosen_weapon]
-			new the_gun(pcase)
-			for(var/obj/effect/landmark/personal_weapon/PW in GLOB.personal_weapon)
-				qdel(PW)
-	temporary_list = null
