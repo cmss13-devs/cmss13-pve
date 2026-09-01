@@ -5,5 +5,5 @@
 	icon_state = "ballisticshield"
 	item_state = "ballisticshield"
 	base_icon_state = "ballisticshield"
-	passive_block = 60
+	passive_block = 75
 	readied_block = 90

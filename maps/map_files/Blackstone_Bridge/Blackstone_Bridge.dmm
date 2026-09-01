@@ -204,6 +204,13 @@
 	},
 /turf/open/gm/dirt/desert_dug,
 /area/whiskey_outpost/blackstone/underground/excavation_site)
+"aaO" = (
+/obj/structure/sign/poster{
+	pixel_y = 3;
+	pixel_x = 9
+	},
+/turf/closed/wall/r_wall,
+/area/whiskey_outpost/blackstone/inside/bunks)
 "aaU" = (
 /turf/open/jungle,
 /area/whiskey_outpost/blackstone/outside/jungle/southern)
@@ -1400,7 +1407,7 @@
 	name = "\improper Outpost Lockdown"
 	},
 /turf/open/floor/prison/darkredfull2,
-/area/whiskey_outpost/blackstone/inside/bunks)
+/area/whiskey_outpost/blackstone/inside/outpost_central)
 "bhi" = (
 /obj/structure/sign/poster/safety{
 	pixel_x = 17;
@@ -8534,7 +8541,7 @@
 /turf/open/floor/prison/darkyellowcorners2/west,
 /area/whiskey_outpost/blackstone/inside/warehouse)
 "icv" = (
-/obj/structure/machinery/cm_vending/sorted/spec/uscm_ground,
+/obj/structure/machinery/cm_vending/gear/spec/uscm_ground,
 /turf/open/floor/prison/darkred2/east,
 /area/whiskey_outpost/blackstone/inside/armory/weapons)
 "icw" = (
@@ -14397,11 +14404,12 @@
 /turf/open/floor/prison/darkbrown3/north,
 /area/whiskey_outpost/blackstone/inside/pillbox/two)
 "nMc" = (
-/obj/structure/sign/poster{
-	pixel_y = 31;
-	pixel_x = -5
-	},
 /obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/cm_vending/clothing/marine_px/snowflake{
+	pixel_x = 0;
+	pixel_y = 28;
+	density = 0
+	},
 /turf/open/floor/loadingarea/west,
 /area/whiskey_outpost/blackstone/inside/bunks)
 "nNs" = (
@@ -46833,7 +46841,7 @@ hpI
 hpI
 hET
 pTZ
-pTZ
+aaO
 pTZ
 nMc
 pPJ
