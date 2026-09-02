@@ -172,7 +172,7 @@
 
 	fire_sound = 'sound/weapons/gun_mg.ogg'
 	cocked_sound = 'sound/weapons/gun_m60_cocked.ogg'
-	current_mag = /obj/item/ammo_magazine/pkp
+	current_mag = /obj/item/ammo_magazine/pkp/standard_fmj
 	w_class = SIZE_LARGE
 	force = 30 //the image of a upp machinegunner beating someone to death with a gpmg makes me laugh
 	start_semiauto = FALSE
