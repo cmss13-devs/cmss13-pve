@@ -125,6 +125,8 @@ Player Interactablility Procs
 	processing = TRUE
 	if(!inner_airlock_turf_lists)
 		get_inner_airlock_turf_lists()
+	if(!outer_airlock_turf_lists)
+		linked_outer.get_outer_airlock_turf_lists()
 	if(open)
 		SSfz_transitions.toggle_selective_update(open, dropship_airlock_id) // start updating the projectors
 		linked_outer.handle_obscuring_shuttle_turfs()
@@ -269,10 +271,9 @@ Backend Timer Delayed/Looping Procs
 		airlock.icon_state = "[transition]"
 		end_of_interaction()
 		return
-	var/decisecond = (end_decisecond - COOLDOWN_TIMELEFT(src, dropship_airlock_cooldown))
-	if(!(decisecond % 10))
-		if(decisecond != end_decisecond)
-			airlock.icon_state = "[transition]_[decisecond * 0.1]s"
+	var/decisecond = trunc(open ? (end_decisecond - COOLDOWN_TIMELEFT(src, dropship_airlock_cooldown)) : (COOLDOWN_TIMELEFT(src, dropship_airlock_cooldown)))
+	if(!(decisecond % 10) && (decisecond != end_decisecond) && decisecond)
+		airlock.icon_state = "[transition]_[decisecond * 0.1]s"
 	for(var/turf/open/floor/hangar_airlock/T in airlock_turf_lists["[decisecond]"]) // due to dropship turf swapping shenaningans this cannot be as anything
 		T.open = open
 		for(var/atom/movable/AM in T.contents)
@@ -330,8 +331,13 @@ New Backend Procs
 			new /obj/effect/hangar_airlock/height_mask/static_alpha(turf)
 
 /obj/docking_port/stationary/marine_dropship/airlock/inner/proc/omnibus_airlock_transition(airlock_type, open, airlock_turf_lists, obj/effect/hangar_airlock/airlock, end_decisecond)
-	var/transition = open ? "open" : "close"
-	airlock.icon_state = "[transition]_0s"
+	var/transition
+	if(open)
+		transition = "open"
+		airlock.icon_state = "open_0s"
+	else
+		transition = "close"
+		airlock.icon_state = "close_5s"
 
 	omnibus_sound_play('sound/machines/centrifuge.ogg')
 
