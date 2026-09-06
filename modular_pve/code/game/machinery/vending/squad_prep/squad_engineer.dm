@@ -64,7 +64,7 @@ GLOBAL_LIST_INIT(cm_vending_gear_engi_outpost, list(
 		list("EXPLOSIVES", 0, null, null, null),
 		list("M77 HIAM Incendiary Grenade Packet (x5 grenades)", 10, /obj/item/storage/box/packet/incendiary, null, VENDOR_ITEM_REGULAR),
 		list("M60 WPSI Phosphorus Grenade Packet (x5 grenades)", 10, /obj/item/storage/box/packet/phosphorus, null, VENDOR_ITEM_REGULAR),
-		list("M20A2P Mine Box (x5 mines)", 10, /obj/item/storage/box/explosive_mines/pmc, null, VENDOR_ITEM_REGULAR),
+		list("M20A2 Mine Box (x5 mines)", 10, /obj/item/storage/box/explosive_mines, null, VENDOR_ITEM_REGULAR),
 		list("G2 Electroshock Grenade Packet (x3 grenades)",  10, /obj/item/storage/box/packet/sebb, null, VENDOR_ITEM_REGULAR),
 	))
 

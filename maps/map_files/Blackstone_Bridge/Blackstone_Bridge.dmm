@@ -215,9 +215,58 @@
 /obj/structure/sign/poster/blacklight,
 /turf/closed/wall/r_wall,
 /area/whiskey_outpost/blackstone/inside/armory/weapons)
+"aaQ" = (
+/obj/structure/surface/table,
+/obj/structure/cable/heavyduty{
+	icon_state = "1-4"
+	},
+/turf/open/floor/prison/sterile_white,
+/area/whiskey_outpost/blackstone/inside/cafeteria)
+"aaR" = (
+/obj/structure/surface/table,
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
+	},
+/turf/open/floor/prison/sterile_white,
+/area/whiskey_outpost/blackstone/inside/cafeteria)
+"aaS" = (
+/obj/structure/surface/table,
+/obj/structure/machinery/power/apc/uscm_ground{
+	dir = 4
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "0-8"
+	},
+/turf/open/floor/prison/sterile_white,
+/area/whiskey_outpost/blackstone/inside/cafeteria)
+"aaT" = (
+/obj/structure/surface/table,
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
+	},
+/turf/open/floor/prison/sterile_white,
+/area/whiskey_outpost/blackstone/inside/cafeteria)
 "aaU" = (
 /turf/open/jungle,
 /area/whiskey_outpost/blackstone/outside/jungle/southern)
+"aaV" = (
+/obj/structure/gun_rack/m41/unloaded,
+/obj/item/storage/box/attachments{
+	pixel_x = -10;
+	pixel_y = 21
+	},
+/turf/open/floor/prison/darkredfull2,
+/area/whiskey_outpost/blackstone/inside/armory/weapons)
+"aaW" = (
+/obj/structure/machinery/door_control/brbutton{
+	pixel_x = 0;
+	pixel_y = -7;
+	id = "tunnel_gate_lz";
+	normaldoorcontrol = 4;
+	name = "LZ Tunnel control"
+	},
+/turf/closed/wall/rock/brown,
+/area/whiskey_outpost/blackstone/underground/mountain)
 "aby" = (
 /obj/structure/platform_decoration{
 	dir = 4
@@ -510,12 +559,6 @@
 	pixel_y = 3
 	},
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/machinery/power/apc/uscm_ground{
-	dir = 4
-	},
-/obj/structure/cable/heavyduty{
-	icon_state = "0-8"
-	},
 /turf/open/floor/prison/sterile_white,
 /area/whiskey_outpost/blackstone/inside/cafeteria)
 "arr" = (
@@ -650,7 +693,7 @@
 /turf/closed/wall/r_wall,
 /area/whiskey_outpost/blackstone/inside/senior_enlisted_east)
 "awc" = (
-/turf/open/floor/prison/darkredcorners2/southwest,
+/turf/open/floor/prison/darkredcorners2,
 /area/whiskey_outpost/blackstone/inside/armory/weapons)
 "awp" = (
 /obj/effect/decal/cleanable/dirt,
@@ -714,7 +757,7 @@
 /area/whiskey_outpost/blackstone/outside/perimeter_defense)
 "ayQ" = (
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/prison/darkredcorners2/southwest,
+/turf/open/floor/prison/darkredcorners2,
 /area/whiskey_outpost/blackstone/inside/armory/weapons)
 "ayU" = (
 /obj/item/stack/sheet/metal,
@@ -3081,6 +3124,9 @@
 	},
 /obj/structure/machinery/camera/autoname/uscm_ground{
 	dir = 1
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
 	},
 /turf/open/floor/prison/sterile_white,
 /area/whiskey_outpost/blackstone/inside/cafeteria)
@@ -6900,13 +6946,6 @@
 /obj/structure/barricade/sandbags,
 /turf/open/gm/dirtgrassborder/grassdirt_corner2/south_east,
 /area/whiskey_outpost/blackstone/outside/perimeter_defense)
-"gsb" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/cable/heavyduty{
-	icon_state = "4-8"
-	},
-/turf/open/floor/prison/sterile_white,
-/area/whiskey_outpost/blackstone/inside/cafeteria)
 "gss" = (
 /turf/open/gm/dirtgrassborder/grassdirt_corner/south_east,
 /area/whiskey_outpost/blackstone/outside/landing_zone)
@@ -7328,9 +7367,6 @@
 /obj/structure/bed/chair{
 	pixel_x = 1;
 	pixel_y = 3
-	},
-/obj/structure/cable/heavyduty{
-	icon_state = "4-8"
 	},
 /turf/open/floor/prison/sterile_white,
 /area/whiskey_outpost/blackstone/inside/cafeteria)
@@ -8196,6 +8232,9 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/machinery/light,
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
+	},
 /turf/open/floor/prison/sterile_white,
 /area/whiskey_outpost/blackstone/inside/cafeteria)
 "hKn" = (
@@ -9055,12 +9094,6 @@
 	},
 /turf/open/floor/whitegreencorner,
 /area/whiskey_outpost/blackstone/inside/medbay)
-"iHu" = (
-/obj/structure/cable/heavyduty{
-	icon_state = "4-8"
-	},
-/turf/open/floor/prison/sterile_white,
-/area/whiskey_outpost/blackstone/inside/cafeteria)
 "iHI" = (
 /obj/structure/platform{
 	dir = 8
@@ -11060,11 +11093,18 @@
 /turf/open/floor/prison/darkredfull2,
 /area/whiskey_outpost/blackstone/inside/outpost_south)
 "kAS" = (
-/obj/item/device/binoculars/range/designator{
-	pixel_y = 2;
-	pixel_x = -8
-	},
 /obj/structure/surface/table/reinforced/black,
+/obj/structure/phone_base/uscm_ground/rotary/no_dnd{
+	name = "\improper CIC telephone";
+	phone_category = "Operations";
+	phone_id = "Combat Information Center";
+	pixel_x = -8;
+	pixel_y = 9
+	},
+/obj/item/device/binoculars/range/designator{
+	pixel_y = 4;
+	pixel_x = 7
+	},
 /turf/open/floor/prison/darkredfull2,
 /area/whiskey_outpost/blackstone/inside/combat_information_center)
 "kCa" = (
@@ -12493,7 +12533,7 @@
 "lNS" = (
 /obj/structure/bed/chair,
 /obj/structure/cable/heavyduty{
-	icon_state = "1-4"
+	icon_state = "1-2"
 	},
 /turf/open/floor/prison/sterile_white,
 /area/whiskey_outpost/blackstone/inside/cafeteria)
@@ -12524,10 +12564,6 @@
 	},
 /turf/open/asphalt/tile,
 /area/whiskey_outpost/blackstone/outside/outpost_beach/mine)
-"lQE" = (
-/obj/structure/platform,
-/turf/open/gm/river/deep,
-/area/whiskey_outpost/blackstone/outside/river/west)
 "lQQ" = (
 /turf/open/gm/grass/grassbeach/south,
 /area/whiskey_outpost/blackstone/outside/jungle/perimeter_entrance/east)
@@ -13686,13 +13722,12 @@
 /area/whiskey_outpost/blackstone/underground/western_caves/south)
 "neh" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/machinery/vending/cigarette{
-	pixel_y = 0;
-	density = 0;
-	pixel_x = 4
-	},
 /obj/structure/machinery/vending/cola{
 	pixel_x = -18;
+	pixel_y = 0
+	},
+/obj/structure/machinery/vending/cigarette/koorlander{
+	pixel_x = 4;
 	pixel_y = 0
 	},
 /turf/open/floor/asteroidwarning/north,
@@ -14141,12 +14176,6 @@
 /obj/item/device/flashlight/lamp/green{
 	pixel_x = -9;
 	pixel_y = -2
-	},
-/obj/structure/phone_base/uscm_ground/rotary/no_dnd{
-	name = "\improper CIC telephone";
-	phone_category = "Operations";
-	phone_id = "Combat Information Center";
-	pixel_x = 6
 	},
 /obj/structure/surface/table/reinforced/black,
 /turf/open/floor/prison/darkredfull2,
@@ -14665,8 +14694,9 @@
 /area/whiskey_outpost/blackstone/inside/outpost_north)
 "nZd" = (
 /obj/structure/surface/rack,
-/obj/item/weapon/gun/rifle/m41aMK1{
-	pixel_y = -4
+/obj/item/ammo_box/magazine/m56d{
+	pixel_x = 1;
+	pixel_y = 0
 	},
 /turf/open/floor/plating/plating_catwalk/prison,
 /area/whiskey_outpost/blackstone/inside/pillbox/three)
@@ -15001,8 +15031,7 @@
 /obj/structure/surface/rack,
 /obj/item/ammo_box/magazine/m56b{
 	pixel_x = 0;
-	pixel_y = -8;
-	num_of_magazines = 4
+	pixel_y = -8
 	},
 /obj/item/ammo_box/magazine/m56d{
 	pixel_x = 0;
@@ -16003,8 +16032,8 @@
 	},
 /obj/structure/surface/table/reinforced/black,
 /obj/structure/machinery/prop/almayer/CICmap/arc{
-	pixel_x = -10;
-	pixel_y = 13
+	pixel_x = -12;
+	pixel_y = 17
 	},
 /turf/open/floor/prison/darkredfull2,
 /area/whiskey_outpost/blackstone/inside/combat_information_center)
@@ -22910,10 +22939,7 @@
 	dir = 4
 	},
 /obj/structure/surface/rack,
-/obj/effect/landmark/wo_supplies/storage/machete,
-/obj/effect/landmark/wo_supplies/storage/machete{
-	pixel_y = 6
-	},
+/obj/item/ammo_box/magazine/m56d,
 /turf/open/floor/plating/plating_catwalk/prison,
 /area/whiskey_outpost/blackstone/inside/pillbox/four)
 "wrO" = (
@@ -37228,7 +37254,7 @@ fdn
 luU
 fdn
 fdn
-lQE
+uMA
 vkk
 sNf
 qNh
@@ -37430,7 +37456,7 @@ fdn
 fdn
 pxe
 uay
-lQE
+uMA
 vkk
 xOQ
 sNf
@@ -37632,7 +37658,7 @@ fdn
 fdn
 fdn
 fdn
-lQE
+uMA
 vkk
 sNf
 xOQ
@@ -37834,7 +37860,7 @@ fdn
 fdn
 grn
 fdn
-lQE
+uMA
 vkk
 xOQ
 sNf
@@ -38036,7 +38062,7 @@ fdn
 pxe
 pxe
 fdn
-lQE
+uMA
 vkk
 sNf
 sNf
@@ -42636,7 +42662,7 @@ jdf
 lMO
 ddn
 jAV
-fAt
+aaV
 tCK
 otx
 mFI
@@ -47908,8 +47934,8 @@ lLg
 cWd
 piL
 lNS
-eLw
-eLw
+aaT
+aaQ
 hOD
 ves
 lmj
@@ -48109,7 +48135,7 @@ cys
 eLw
 gfj
 ezl
-gsb
+cgf
 xUG
 hJZ
 hOD
@@ -48311,7 +48337,7 @@ ozx
 eLw
 gfj
 ezl
-iHu
+lLg
 dhb
 cQm
 hOD
@@ -48515,7 +48541,7 @@ cOS
 cgf
 gSG
 eLw
-eLw
+aaR
 hOD
 vnb
 cEF
@@ -48717,7 +48743,7 @@ dle
 voE
 arg
 eLw
-eLw
+aaS
 hOD
 eVx
 cEF
@@ -53525,8 +53551,8 @@ kYr
 (142,1,1) = {"
 fSn
 fSn
-fSn
-aan
+aaW
+aap
 aai
 aaf
 fSn
