@@ -250,10 +250,11 @@
 /turf/open/jungle,
 /area/whiskey_outpost/blackstone/outside/jungle/southern)
 "aaV" = (
-/obj/structure/gun_rack/m41/unloaded,
-/obj/item/storage/box/attachments{
-	pixel_x = -10;
-	pixel_y = 21
+/obj/structure/surface/table/almayer,
+/obj/item/storage/box/guncase/heavy/sentry,
+/obj/item/storage/box/guncase/heavy/sentry{
+	pixel_x = 0;
+	pixel_y = 13
 	},
 /turf/open/floor/prison/darkredfull2,
 /area/whiskey_outpost/blackstone/inside/armory/weapons)
@@ -267,6 +268,220 @@
 	},
 /turf/closed/wall/rock/brown,
 /area/whiskey_outpost/blackstone/underground/mountain)
+"aaX" = (
+/turf/open/asphalt/tile,
+/area/whiskey_outpost/blackstone/outside/outpost/north)
+"aaY" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/prison/darkred2/southeast,
+/area/whiskey_outpost/blackstone/inside/armory/weapons)
+"aaZ" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/cm_vending/clothing/marine_px/snowflake,
+/turf/open/floor/prison/floor_plate,
+/area/whiskey_outpost/blackstone/inside/armory)
+"aba" = (
+/obj/structure/surface/table/almayer,
+/obj/item/ammo_box/magazine/vp70{
+	pixel_x = -9;
+	pixel_y = 7
+	},
+/obj/item/ammo_box/magazine/vp70{
+	pixel_x = -7;
+	pixel_y = -10
+	},
+/obj/item/ammo_box/magazine/m4a3{
+	pixel_x = 8;
+	pixel_y = -4
+	},
+/obj/item/ammo_box/magazine/m4a3{
+	pixel_x = 9;
+	pixel_y = 8
+	},
+/obj/structure/machinery/light{
+	dir = 8
+	},
+/turf/open/floor/prison/darkredfull2,
+/area/whiskey_outpost/blackstone/inside/armory/weapons)
+"abb" = (
+/turf/open/floor/prison/darkred2/southeast,
+/area/whiskey_outpost/blackstone/inside/armory/weapons)
+"abc" = (
+/obj/structure/surface/table/almayer,
+/obj/item/storage/box/guncase/heavy/fuel{
+	pixel_x = 0;
+	pixel_y = 14
+	},
+/obj/item/ammo_box/rounds/smartgun{
+	pixel_x = 5;
+	pixel_y = -5
+	},
+/turf/open/floor/prison/darkredfull2,
+/area/whiskey_outpost/blackstone/inside/armory/weapons)
+"abd" = (
+/obj/structure/machinery/cm_vending/sorted/cargo_guns/squad,
+/turf/open/floor/prison/darkredfull2,
+/area/whiskey_outpost/blackstone/inside/armory/weapons)
+"abe" = (
+/turf/open/floor/prison/darkred2/east,
+/area/whiskey_outpost/blackstone/inside/armory/weapons)
+"abf" = (
+/obj/structure/surface/table/almayer,
+/obj/item/ammo_box/magazine/shotgun/buckshot{
+	pixel_x = 4;
+	pixel_y = 8
+	},
+/obj/item/ammo_box/magazine/shotgun,
+/obj/structure/machinery/light{
+	dir = 4
+	},
+/turf/open/floor/prison/darkredfull2,
+/area/whiskey_outpost/blackstone/inside/armory/weapons)
+"abg" = (
+/obj/structure/sign/poster{
+	desc = "YOU ALWAYS KNOW A WORKING JOE. YOU ALWAYS KNOW A WORKING JOE. YOU ALWAYS KNOW A WORKING JOE. YOU ALWAYS KNOW A WORKING JOE. YOU ALWAYS KNOW A WORKING JOE.";
+	icon_state = "poster11";
+	name = "YOU ALWAYS KNOW A WORKING JOE.";
+	pixel_x = 0;
+	pixel_y = 7;
+	serial_number = 11
+	},
+/turf/closed/wall/r_wall,
+/area/whiskey_outpost/blackstone/inside/armory/weapons)
+"abh" = (
+/obj/structure/largecrate/supply/ammo/m41amk1{
+	pixel_x = 0;
+	pixel_y = 0
+	},
+/turf/open/floor/prison/darkred2,
+/area/whiskey_outpost/blackstone/inside/armory/weapons)
+"abi" = (
+/obj/structure/surface/table/almayer,
+/obj/item/ammo_box/magazine/mk1{
+	pixel_x = 2;
+	pixel_y = 10
+	},
+/obj/item/ammo_box/magazine/mk1{
+	pixel_x = -2;
+	pixel_y = -5
+	},
+/obj/structure/machinery/camera/autoname/uscm_ground{
+	dir = 4
+	},
+/turf/open/floor/prison/darkredfull2,
+/area/whiskey_outpost/blackstone/inside/armory/weapons)
+"abj" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/prison/darkred2/north,
+/area/whiskey_outpost/blackstone/inside/armory/weapons)
+"abk" = (
+/obj/structure/machinery/door/poddoor/shutters/almayer{
+	dir = 4;
+	name = "Copperheads armory shutters";
+	id = "copperheadsarmory"
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/prison/cell_stripe/east,
+/area/whiskey_outpost/blackstone/inside/armory/weapons)
+"abl" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/prison,
+/area/whiskey_outpost/blackstone/inside/armory)
+"abm" = (
+/obj/structure/barricade/handrail{
+	dir = 4;
+	pixel_x = 3;
+	pixel_y = 0
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/prison/darkredfull2,
+/area/whiskey_outpost/blackstone/inside/armory/weapons)
+"abn" = (
+/obj/structure/closet/secure_closet/smartgunner{
+	name = "copperheads squad two smartgunner locker";
+	req_access_txt = "14;17;40";
+	req_one_access = list()
+	},
+/turf/open/floor/prison/darkredfull2,
+/area/whiskey_outpost/blackstone/inside/armory/weapons)
+"abo" = (
+/obj/structure/machinery/cm_vending/gear/engi/uscm_ground,
+/turf/open/floor/prison/floor_plate,
+/area/whiskey_outpost/blackstone/inside/armory/weapons)
+"abp" = (
+/obj/structure/machinery/cm_vending/gear/spec/uscm_ground,
+/obj/item/ammo_box/magazine/shotgun/flechette{
+	pixel_x = -7;
+	pixel_y = 17
+	},
+/turf/open/floor/prison/floor_plate,
+/area/whiskey_outpost/blackstone/inside/armory/weapons)
+"abq" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/prison/floor_plate,
+/area/whiskey_outpost/blackstone/inside/armory)
+"abr" = (
+/obj/structure/closet/secure_closet/smartgunner{
+	name = "rattlesnakes squad one smartgunner locker";
+	req_access_txt = "14;18;39";
+	req_one_access = list()
+	},
+/turf/open/floor/prison/darkbrownfull2,
+/area/whiskey_outpost/blackstone/inside/armory/weapons)
+"abs" = (
+/obj/structure/closet/secure_closet/smartgunner{
+	name = "rattlesnakes squad two smartgunner locker";
+	req_access_txt = "14;18;40";
+	req_one_access = list()
+	},
+/turf/open/floor/prison/darkbrownfull2,
+/area/whiskey_outpost/blackstone/inside/armory/weapons)
+"abt" = (
+/obj/structure/gun_rack/m41/unloaded{
+	initial_stored = 4
+	},
+/turf/open/floor/prison/darkbrownfull2,
+/area/whiskey_outpost/blackstone/inside/armory/weapons)
+"abu" = (
+/obj/structure/sign/safety/ammunition{
+	pixel_x = 0;
+	pixel_y = 6
+	},
+/obj/structure/sign/safety/storage{
+	pixel_x = 14;
+	pixel_y = 6
+	},
+/obj/structure/sign/safety/restrictedarea{
+	pixel_x = 0;
+	pixel_y = -8
+	},
+/turf/closed/wall/r_wall,
+/area/whiskey_outpost/blackstone/inside/armory/weapons)
+"abv" = (
+/obj/structure/machinery/light{
+	dir = 8
+	},
+/turf/open/floor/prison/floor_plate,
+/area/whiskey_outpost/blackstone/inside/armory)
+"abw" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/bed/chair{
+	dir = 1
+	},
+/turf/open/floor/prison/floor_plate,
+/area/whiskey_outpost/blackstone/inside/armory)
+"abx" = (
+/obj/structure/machinery/light{
+	dir = 8
+	},
+/turf/open/floor/prison/darkbrownfull2,
+/area/whiskey_outpost/blackstone/inside/armory/weapons)
 "aby" = (
 /obj/structure/platform_decoration{
 	dir = 4
@@ -276,6 +491,105 @@
 	},
 /turf/open/gm/dirt,
 /area/whiskey_outpost/blackstone/outside/outpost/north)
+"abz" = (
+/turf/open/floor/prison/darkbrown2/southwest,
+/area/whiskey_outpost/blackstone/inside/armory/weapons)
+"abA" = (
+/obj/structure/surface/table/almayer,
+/obj/structure/machinery/recharger{
+	pixel_y = 5
+	},
+/obj/item/cell/high{
+	pixel_x = -5;
+	pixel_y = 12
+	},
+/turf/open/floor/prison/floor_plate,
+/area/whiskey_outpost/blackstone/inside/armory)
+"abB" = (
+/obj/structure/surface/table/almayer,
+/obj/item/storage/fancy/cigarettes/lucky_strikes{
+	pixel_x = 6;
+	pixel_y = 16
+	},
+/obj/item/ashtray/glass{
+	pixel_x = 3;
+	pixel_y = -4
+	},
+/obj/item/trash/cigbutt{
+	pixel_x = 3;
+	pixel_y = 6
+	},
+/obj/item/trash/cigbutt{
+	pixel_x = -9;
+	pixel_y = 10
+	},
+/obj/item/storage/box/pdt_kit{
+	pixel_x = -10;
+	pixel_y = 18
+	},
+/turf/open/floor/prison/floor_plate,
+/area/whiskey_outpost/blackstone/inside/armory)
+"abC" = (
+/obj/structure/surface/table/almayer,
+/obj/item/ammo_box/magazine/m49a{
+	pixel_x = -8;
+	pixel_y = -7
+	},
+/obj/item/weapon/gun/rifle/m49a{
+	pixel_x = 0;
+	pixel_y = 5
+	},
+/obj/structure/machinery/camera/autoname/uscm_ground{
+	dir = 4
+	},
+/turf/open/floor/prison/darkbrownfull2,
+/area/whiskey_outpost/blackstone/inside/armory/weapons)
+"abD" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/prison/darkbrown2/west,
+/area/whiskey_outpost/blackstone/inside/armory/weapons)
+"abE" = (
+/obj/structure/sign/banners/colonial_marines_flag{
+	pixel_x = 0;
+	pixel_y = 25
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/prison/floor_plate,
+/area/whiskey_outpost/blackstone/inside/armory)
+"abF" = (
+/obj/structure/surface/table/almayer,
+/obj/item/prop/helmetgarb/trimmed_wire{
+	pixel_x = 7
+	},
+/obj/item/device/cassette_tape/nam{
+	layer = 2.9;
+	pixel_x = 8;
+	pixel_y = 9
+	},
+/obj/item/reagent_container/food/drinks/coffeecup/wy{
+	desc = "A matte gray coffee mug bearing the Weyland-Yutani logo on its front. Looks like someone spat in it.";
+	name = "dip cup";
+	pixel_x = -8;
+	pixel_y = 9
+	},
+/obj/item/tool/hand_labeler{
+	pixel_x = -7;
+	pixel_y = -6
+	},
+/turf/open/floor/prison/floor_plate,
+/area/whiskey_outpost/blackstone/inside/armory)
+"abG" = (
+/obj/structure/machinery/light{
+	dir = 1
+	},
+/obj/structure/surface/table/almayer,
+/obj/item/map/blackstone_bridge,
+/obj/item/newspaper{
+	pixel_x = -9;
+	pixel_y = 7
+	},
+/turf/open/floor/prison/floor_plate,
+/area/whiskey_outpost/blackstone/inside/armory)
 "abH" = (
 /obj/structure/largecrate/random/mini/small_case/c{
 	pixel_x = -7;
@@ -294,18 +608,203 @@
 	},
 /turf/open/floor/prison/floor_plate,
 /area/whiskey_outpost/blackstone/inside/warehouse)
+"abI" = (
+/obj/structure/surface/table/almayer,
+/obj/item/storage/box/guncase/heavy/sentry{
+	pixel_x = 1;
+	pixel_y = 13
+	},
+/obj/item/storage/box/guncase/heavy/sentry{
+	pixel_x = -2;
+	pixel_y = 0
+	},
+/turf/open/floor/prison/darkbrownfull2,
+/area/whiskey_outpost/blackstone/inside/armory/weapons)
+"abJ" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/prison/darkbrowncorners2/north,
+/area/whiskey_outpost/blackstone/inside/armory/weapons)
+"abK" = (
+/obj/structure/largecrate/supply/ammo/m41amk1{
+	pixel_x = 0;
+	pixel_y = 14
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/prison/darkbrown2/north,
+/area/whiskey_outpost/blackstone/inside/armory/weapons)
 "abL" = (
 /obj/item/stack/sheet/mineral/sandstone/large_stack,
 /turf/open/gm/dirt,
 /area/whiskey_outpost/blackstone/underground/excavation_site)
+"abM" = (
+/obj/structure/largecrate/supply/ammo/m41amk1,
+/obj/structure/largecrate/supply/ammo/m41amk1{
+	pixel_x = -3;
+	pixel_y = 15
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/prison/darkbrown2/north,
+/area/whiskey_outpost/blackstone/inside/armory/weapons)
+"abN" = (
+/turf/open/floor/prison/darkbrown2/north,
+/area/whiskey_outpost/blackstone/inside/armory/weapons)
+"abO" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/prison/darkbrowncorners2/east,
+/area/whiskey_outpost/blackstone/inside/armory/weapons)
 "abP" = (
 /obj/structure/pipes/standard/simple/visible,
 /turf/open/floor/plating,
 /area/whiskey_outpost/blackstone/underground/maintenance/south_east)
+"abQ" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/prison/darkbrown2/northeast,
+/area/whiskey_outpost/blackstone/inside/armory/weapons)
+"abR" = (
+/obj/structure/surface/table/almayer,
+/obj/item/ammo_box/magazine/nade_box/smoke{
+	pixel_x = -11;
+	pixel_y = 10
+	},
+/obj/item/ammo_box/magazine/nade_box/flare{
+	pixel_x = -5;
+	pixel_y = 0
+	},
+/obj/item/ammo_box/magazine/nade_box/smoke/red{
+	pixel_x = 8;
+	pixel_y = 8
+	},
+/turf/open/floor/prison/darkbrownfull2,
+/area/whiskey_outpost/blackstone/inside/armory/weapons)
+"abS" = (
+/turf/open/floor/prison/darkbrown2/east,
+/area/whiskey_outpost/blackstone/inside/armory/weapons)
+"abT" = (
+/obj/structure/surface/table/almayer,
+/obj/item/storage/box/guncase/heavy/fuel,
+/obj/item/ammo_box/rounds/smartgun{
+	pixel_x = 5;
+	pixel_y = 15
+	},
+/obj/structure/machinery/light{
+	dir = 4
+	},
+/turf/open/floor/prison/darkbrownfull2,
+/area/whiskey_outpost/blackstone/inside/armory/weapons)
+"abU" = (
+/obj/structure/machinery/cm_vending/sorted/uniform_supply/squad_prep/uscm_ground,
+/turf/open/floor/prison/darkbrownfull2,
+/area/whiskey_outpost/blackstone/inside/armory/weapons)
+"abV" = (
+/obj/structure/surface/table/almayer,
+/obj/item/ammo_box/magazine/vp70{
+	pixel_x = 6;
+	pixel_y = -5
+	},
+/obj/item/ammo_box/magazine/vp70{
+	pixel_x = -8;
+	pixel_y = -4
+	},
+/obj/item/ammo_box/magazine/m4a3{
+	pixel_x = -10;
+	pixel_y = 9
+	},
+/obj/item/ammo_box/magazine/m4a3{
+	pixel_x = 7;
+	pixel_y = 10
+	},
+/obj/structure/machinery/light{
+	dir = 8
+	},
+/turf/open/floor/prison/darkbrownfull2,
+/area/whiskey_outpost/blackstone/inside/armory/weapons)
+"abW" = (
+/obj/structure/machinery/cm_vending/sorted/cargo_guns/squad,
+/turf/open/floor/prison/darkbrownfull2,
+/area/whiskey_outpost/blackstone/inside/armory/weapons)
+"abX" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/prison/darkbrown2/east,
+/area/whiskey_outpost/blackstone/inside/armory/weapons)
 "abY" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating,
 /area/whiskey_outpost/blackstone/underground/maintenance/north_east)
+"abZ" = (
+/obj/structure/machinery/cm_vending/sorted/cargo_guns/squad,
+/obj/structure/machinery/light{
+	dir = 4
+	},
+/turf/open/floor/prison/darkbrownfull2,
+/area/whiskey_outpost/blackstone/inside/armory/weapons)
+"aca" = (
+/obj/structure/surface/table/almayer,
+/obj/item/ammo_box/magazine/nade_box{
+	pixel_x = 4;
+	pixel_y = 9
+	},
+/obj/item/ammo_box/magazine/nade_box{
+	pixel_x = -5;
+	pixel_y = 0
+	},
+/obj/item/ammo_box/magazine/nade_box{
+	pixel_x = -12;
+	pixel_y = 8
+	},
+/turf/open/floor/prison/darkbrownfull2,
+/area/whiskey_outpost/blackstone/inside/armory/weapons)
+"acb" = (
+/obj/structure/surface/table/almayer,
+/obj/item/ammo_box/magazine/mk1/large{
+	pixel_x = 1;
+	pixel_y = -2
+	},
+/obj/item/ammo_box/magazine/mk1/large{
+	pixel_x = 1;
+	pixel_y = -2
+	},
+/obj/item/ammo_box/magazine/mk1/large{
+	pixel_x = -2;
+	pixel_y = 9
+	},
+/obj/item/ammo_box/magazine/mk1/large{
+	pixel_x = -6;
+	pixel_y = -5
+	},
+/turf/open/floor/prison/darkbrownfull2,
+/area/whiskey_outpost/blackstone/inside/armory/weapons)
+"acc" = (
+/obj/structure/surface/table/almayer,
+/obj/item/storage/box/guncase/heavy/motiondetectors{
+	pixel_x = 0;
+	pixel_y = -1
+	},
+/obj/item/storage/box/packet/m15{
+	pixel_x = 4;
+	pixel_y = 15
+	},
+/turf/open/floor/prison/darkbrownfull2,
+/area/whiskey_outpost/blackstone/inside/armory/weapons)
+"acd" = (
+/obj/structure/surface/table/almayer,
+/obj/item/ammo_magazine/smartgun{
+	pixel_x = -9;
+	pixel_y = -7
+	},
+/obj/item/ammo_magazine/smartgun{
+	pixel_x = -10;
+	pixel_y = 9
+	},
+/obj/item/ammo_magazine/smartgun{
+	pixel_x = 8;
+	pixel_y = -7
+	},
+/obj/item/ammo_magazine/smartgun{
+	pixel_x = 8;
+	pixel_y = 9
+	},
+/turf/open/floor/prison/darkbrownfull2,
+/area/whiskey_outpost/blackstone/inside/armory/weapons)
 "acp" = (
 /obj/item/lightstick/red/planted,
 /turf/open/gm/dirt,
@@ -623,23 +1122,16 @@
 /turf/open/gm/dirt,
 /area/whiskey_outpost/blackstone/outside/perimeter_defense)
 "aup" = (
-/obj/structure/machinery/light/small{
-	dir = 1
-	},
 /obj/structure/surface/table/almayer,
-/obj/item/prop/helmetgarb/gunoil{
-	pixel_x = 12;
-	pixel_y = 11
+/obj/item/ammo_box/magazine/shotgun/buckshot{
+	pixel_x = 5;
+	pixel_y = 6
 	},
-/obj/item/storage/box/packet/m15{
-	pixel_x = -3;
-	pixel_y = 9
+/obj/item/ammo_box/magazine/shotgun{
+	pixel_x = -5;
+	pixel_y = -1
 	},
-/obj/item/weapon/gun/launcher/grenade/m81/m79/modified{
-	pixel_x = 2;
-	pixel_y = -5
-	},
-/turf/open/floor/prison/darkred2/north,
+/turf/open/floor/prison/darkbrownfull2,
 /area/whiskey_outpost/blackstone/inside/armory/weapons)
 "auO" = (
 /obj/structure/machinery/landinglight/ds2/delaytwo{
@@ -1172,14 +1664,6 @@
 /obj/structure/blocker/forcefield/multitile_vehicles,
 /turf/open/gm/coast/beachcorner2/north_east,
 /area/whiskey_outpost/blackstone/outside/river/west)
-"aRM" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/item/ammo_box/magazine/mk1{
-	pixel_x = -8;
-	pixel_y = -6
-	},
-/turf/open/floor/prison/darkredfull2,
-/area/whiskey_outpost/blackstone/inside/armory)
 "aSw" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "1-4"
@@ -1541,12 +2025,6 @@
 /obj/item/lightstick/red/planted,
 /turf/open/jungle,
 /area/whiskey_outpost/blackstone/outside/jungle/southern)
-"bkj" = (
-/obj/structure/cable/heavyduty{
-	icon_state = "4-8"
-	},
-/turf/open/floor/prison/darkredcorners2/west,
-/area/whiskey_outpost/blackstone/inside/armory)
 "bkS" = (
 /turf/open/gm/dirt/desert2,
 /area/whiskey_outpost/blackstone/outside/jungle/southern)
@@ -1789,12 +2267,8 @@
 /turf/open/gm/river,
 /area/whiskey_outpost/blackstone/outside/jungle/north/west)
 "byt" = (
-/obj/structure/machinery/door/poddoor/shutters/almayer{
-	dir = 4;
-	name = "armory shutters";
-	id = "armoryspecialequipment"
-	},
-/turf/open/floor/prison/cell_stripe/east,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/prison/darkred2/northwest,
 /area/whiskey_outpost/blackstone/inside/armory/weapons)
 "byu" = (
 /obj/structure/machinery/cryopod{
@@ -2188,12 +2662,6 @@
 	},
 /turf/open/floor/asteroidfloor,
 /area/whiskey_outpost/blackstone/inside/bunks)
-"bVy" = (
-/obj/structure/cable/heavyduty{
-	icon_state = "4-8"
-	},
-/turf/open/floor/prison/darkred2,
-/area/whiskey_outpost/blackstone/inside/armory/weapons)
 "bWo" = (
 /obj/structure/largecrate/supply/supplies/sandbags,
 /obj/structure/sign/poster{
@@ -2236,15 +2704,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/prison/darkred2/east,
 /area/whiskey_outpost/blackstone/inside/armory/weapons)
-"bYH" = (
-/obj/structure/stairs/perspective{
-	icon_state = "p_stair_full"
-	},
-/obj/structure/platform{
-	dir = 8
-	},
-/turf/open/floor/prison/darkredfull2,
-/area/whiskey_outpost/blackstone/outside/outpost/north)
 "bZn" = (
 /obj/structure/bed/roller,
 /turf/open/gm/dirt,
@@ -3299,17 +3758,6 @@
 	},
 /turf/open/floor/prison/sterile_white,
 /area/whiskey_outpost/blackstone/inside/visitor_dormitory)
-"cXP" = (
-/obj/structure/surface/table/almayer,
-/obj/structure/machinery/recharger{
-	pixel_y = 5
-	},
-/obj/item/cell/high{
-	pixel_x = -5;
-	pixel_y = 12
-	},
-/turf/open/floor/plating/plating_catwalk/prison,
-/area/whiskey_outpost/blackstone/inside/armory)
 "cXV" = (
 /obj/structure/sign/poster{
 	desc = "One of those hot, tanned babes back the beaches of good ol' Earth.";
@@ -3488,17 +3936,11 @@
 /turf/open/gm/dirt,
 /area/whiskey_outpost/blackstone/outside/outpost_beach/east)
 "ddn" = (
-/obj/structure/machinery/light/small,
-/obj/structure/surface/rack,
-/obj/item/ammo_box/magazine/nade_box{
-	pixel_x = -1;
-	pixel_y = -1
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/machinery/light{
+	dir = 8
 	},
-/obj/item/ammo_box/magazine/nade_box{
-	pixel_x = -2;
-	pixel_y = 4
-	},
-/turf/open/floor/prison/floor_marked,
+/turf/open/floor/prison/darkredfull2,
 /area/whiskey_outpost/blackstone/inside/armory/weapons)
 "ddL" = (
 /turf/open/floor/wood,
@@ -3732,15 +4174,6 @@
 /obj/item/book/manual/engineering_construction,
 /turf/open/gm/dirt,
 /area/whiskey_outpost/blackstone/outside/perimeter_defense)
-"doT" = (
-/obj/structure/closet/secure_closet/smartgunner{
-	name = "rattlesnakes squad one smartgunner locker";
-	req_access_txt = "14;18;39";
-	req_one_access = list()
-	},
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/prison/darkbrownfull2,
-/area/whiskey_outpost/blackstone/inside/armory/weapons)
 "dpj" = (
 /obj/structure/bed,
 /obj/structure/mirror{
@@ -3939,17 +4372,13 @@
 /area/whiskey_outpost/blackstone/underground/mountain/maintenance)
 "dwl" = (
 /obj/structure/surface/table/almayer,
-/obj/item/ammo_box/magazine/vp70{
+/obj/item/storage/box/guncase/heavy/shotgun{
+	pixel_x = -4;
+	pixel_y = 16
+	},
+/obj/item/storage/box/guncase/heavy/m49a_pve{
 	pixel_x = -2;
-	pixel_y = 2
-	},
-/obj/item/ammo_box/magazine/vp70{
-	pixel_x = -1;
-	pixel_y = -8
-	},
-/obj/item/ammo_box/magazine/vp70{
-	pixel_x = -1;
-	pixel_y = -3
+	pixel_y = 0
 	},
 /turf/open/floor/prison/darkredfull2,
 /area/whiskey_outpost/blackstone/inside/armory/weapons)
@@ -4181,14 +4610,8 @@
 /turf/open/floor/whitegreenfull,
 /area/whiskey_outpost/blackstone/inside/medbay)
 "dFG" = (
-/obj/structure/surface/table/almayer,
-/obj/item/storage/box/pdt_kit{
-	pixel_x = 7;
-	pixel_y = 9
-	},
-/obj/item/prop/helmetgarb/helmet_nvg/cosmetic{
-	pixel_y = 5;
-	pixel_x = -5
+/obj/structure/machinery/light{
+	dir = 8
 	},
 /turf/open/floor/plating/plating_catwalk/prison,
 /area/whiskey_outpost/blackstone/inside/armory)
@@ -4554,26 +4977,6 @@
 	},
 /turf/open/floor/prison/cell_stripe/north,
 /area/whiskey_outpost/blackstone/inside/pillbox/four)
-"eeG" = (
-/obj/structure/surface/table/almayer,
-/obj/item/ammo_box/magazine/nade_box/smoke/red{
-	pixel_x = -21;
-	pixel_y = 7
-	},
-/obj/item/ammo_box/magazine/m4a3{
-	pixel_x = 4;
-	pixel_y = -6
-	},
-/obj/item/ammo_box/magazine/m4a3{
-	pixel_x = 1;
-	pixel_y = 8
-	},
-/obj/item/ammo_box/magazine/m4a3{
-	pixel_x = 6;
-	pixel_y = 0
-	},
-/turf/open/floor/prison/darkredfull2,
-/area/whiskey_outpost/blackstone/inside/armory/weapons)
 "eeR" = (
 /obj/structure/platform_decoration{
 	dir = 4
@@ -4749,19 +5152,6 @@
 	},
 /turf/open/floor/plating,
 /area/whiskey_outpost/blackstone/underground/maintenance/north_east)
-"ekM" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/machinery/light/small{
-	dir = 1
-	},
-/obj/structure/machinery/power/apc/uscm_ground{
-	dir = 1
-	},
-/obj/structure/cable/heavyduty{
-	icon_state = "0-2"
-	},
-/turf/open/floor/prison/darkred2/north,
-/area/whiskey_outpost/blackstone/inside/armory/weapons)
 "elb" = (
 /obj/structure/platform{
 	dir = 8
@@ -4808,7 +5198,7 @@
 "enf" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/cable/heavyduty{
-	icon_state = "0-4"
+	icon_state = "4-8"
 	},
 /turf/open/floor/plating/plating_catwalk/prison,
 /area/whiskey_outpost/blackstone/inside/armory)
@@ -5317,9 +5707,6 @@
 	},
 /turf/open/floor/prison/floor_marked,
 /area/whiskey_outpost/blackstone/inside/warehouse)
-"eKp" = (
-/turf/open/floor/prison/darkredcorners2/north,
-/area/whiskey_outpost/blackstone/inside/armory/weapons)
 "eLa" = (
 /obj/structure/platform_decoration,
 /turf/open/gm/dirt,
@@ -5406,10 +5793,6 @@
 /turf/open/gm/dirt,
 /area/whiskey_outpost/blackstone/outside/dorms_island)
 "ePf" = (
-/obj/item/prop/colony/folded_bedroll{
-	pixel_x = 7;
-	pixel_y = 20
-	},
 /obj/structure/machinery/light/small{
 	dir = 4
 	},
@@ -5417,7 +5800,17 @@
 	pixel_x = -9;
 	pixel_y = 31
 	},
-/obj/structure/machinery/cm_vending/sorted/uniform_supply/squad_prep/uscm_ground,
+/obj/structure/machinery/cm_vending/sorted/uniform_supply/squad_prep/uscm_ground{
+	pixel_x = 0;
+	pixel_y = 2
+	},
+/obj/structure/machinery/door/poddoor/shutters/almayer{
+	dir = 2;
+	name = "Rattlesnakes armory shutters";
+	id = "rattlesnakesarmory";
+	pixel_x = 0;
+	pixel_y = 0
+	},
 /turf/open/floor/prison/darkbrownfull2,
 /area/whiskey_outpost/blackstone/inside/senior_enlisted_east)
 "ePl" = (
@@ -5513,16 +5906,6 @@
 "eSZ" = (
 /turf/closed/wall/strata_ice/jungle/destructible,
 /area/whiskey_outpost/blackstone/outside/jungle/southern/west)
-"eTo" = (
-/obj/structure/bed/chair{
-	dir = 8;
-	pixel_y = 3
-	},
-/obj/structure/cable/heavyduty{
-	icon_state = "4-8"
-	},
-/turf/open/floor/prison/floor_plate,
-/area/whiskey_outpost/blackstone/inside/armory)
 "eTH" = (
 /obj/structure/flora/jungle/alienplant1,
 /turf/open/gm/river,
@@ -6104,19 +6487,6 @@
 	},
 /turf/open/gm/dirtgrassborder/west,
 /area/whiskey_outpost/blackstone/outside/perimeter_defense)
-"fzw" = (
-/obj/structure/largecrate/supply/ammo/m41amk1,
-/obj/structure/largecrate/supply/ammo/m41amk1{
-	pixel_x = 1;
-	pixel_y = 10
-	},
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/spawner/prop_gun/m41aMK1{
-	pixel_y = 15;
-	pixel_x = -1
-	},
-/turf/open/floor/prison/darkredfull2,
-/area/whiskey_outpost/blackstone/inside/armory)
 "fzC" = (
 /obj/effect/decal/sand_overlay/sand5{
 	dir = 4
@@ -6154,7 +6524,15 @@
 	pixel_x = 8;
 	pixel_y = 23
 	},
-/obj/structure/machinery/cm_vending/sorted/uniform_supply/squad_prep/uscm_ground,
+/obj/structure/machinery/cm_vending/sorted/uniform_supply/squad_prep/uscm_ground{
+	pixel_x = 0;
+	pixel_y = 2
+	},
+/obj/structure/machinery/door/poddoor/shutters/almayer{
+	dir = 2;
+	name = "Copperheads armory shutters";
+	id = "copperheadsarmory"
+	},
 /turf/open/floor/prison/floor_plate,
 /area/whiskey_outpost/blackstone/inside/senior_enlisted_west)
 "fBO" = (
@@ -6177,17 +6555,14 @@
 /area/whiskey_outpost/blackstone/outside/jungle/north)
 "fBV" = (
 /obj/effect/decal/cleanable/dirt,
+/obj/structure/surface/table/almayer,
+/obj/item/tool/wrench,
+/obj/item/storage/toolbox/mechanical{
+	pixel_x = 1;
+	pixel_y = 7
+	},
 /turf/open/floor/plating/plating_catwalk/prison,
 /area/whiskey_outpost/blackstone/inside/armory)
-"fCv" = (
-/obj/structure/closet/secure_closet/squad_sergeant{
-	name = "rattlesnakes squad two leader locker";
-	req_access_txt = "18;32;39";
-	req_one_access = list()
-	},
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/prison/darkbrown2/southeast,
-/area/whiskey_outpost/blackstone/inside/armory/weapons)
 "fDb" = (
 /obj/structure/disposalpipe/segment,
 /turf/open/floor/prison/floor_plate,
@@ -6358,9 +6733,6 @@
 	},
 /turf/open/floor/plating/warnplate/north,
 /area/whiskey_outpost/blackstone/underground/maintenance/engineering)
-"fLY" = (
-/turf/open/floor/prison/darkred2/northeast,
-/area/whiskey_outpost/blackstone/inside/armory)
 "fMD" = (
 /obj/effect/decal/sand_overlay/sand5{
 	dir = 5
@@ -6456,9 +6828,6 @@
 /turf/open/asphalt/tile,
 /area/whiskey_outpost/blackstone/outside/central_road)
 "fQH" = (
-/obj/structure/platform_decoration{
-	dir = 4
-	},
 /obj/structure/cable/heavyduty{
 	icon_state = "1-2"
 	},
@@ -6657,12 +7026,6 @@
 	},
 /turf/open/floor/asteroidfloor,
 /area/whiskey_outpost/blackstone/outside/outpost/west)
-"gdO" = (
-/obj/item/device/radio/intercom/uscm_ground{
-	pixel_x = -26
-	},
-/turf/open/floor/prison/darkred2/northwest,
-/area/whiskey_outpost/blackstone/inside/armory)
 "gdY" = (
 /turf/open/gm/dirt,
 /area/whiskey_outpost/blackstone/outside/jungle/jungle_pass)
@@ -7317,8 +7680,16 @@
 /turf/open/gm/coast/beachcorner2/south_east,
 /area/whiskey_outpost/blackstone/outside/river/south_east)
 "gPT" = (
-/turf/open/floor/prison/darkred2/west,
-/area/whiskey_outpost/blackstone/inside/armory)
+/obj/structure/machinery/door/airlock/multi_tile/uscm_ground/armory/weapons{
+	name = "\improper Copperheads Weapon Storage"
+	},
+/obj/structure/machinery/door/poddoor/shutters/almayer{
+	dir = 4;
+	name = "Copperheads armory shutters";
+	id = "copperheadsarmory"
+	},
+/turf/open/floor/prison/cell_stripe/east,
+/area/whiskey_outpost/blackstone/inside/armory/weapons)
 "gQb" = (
 /turf/closed/wall/strata_ice/jungle,
 /area/whiskey_outpost/blackstone/underground)
@@ -7881,25 +8252,12 @@
 /turf/closed/wall/rock/brown/destructible,
 /area/whiskey_outpost/blackstone/underground/crab_shack)
 "hqb" = (
-/obj/structure/surface/table/almayer,
-/obj/effect/decal/cleanable/dirt,
-/obj/item/ammo_box/rounds/smartgun{
-	pixel_x = -5;
-	pixel_y = 14
+/obj/structure/barricade/handrail{
+	dir = 4;
+	pixel_x = 3;
+	pixel_y = 0
 	},
-/obj/structure/machinery/door_control{
-	id = "armoryspecialequipment";
-	name = "toggle armory shutters";
-	pixel_x = -6;
-	pixel_y = -2;
-	access_modified = 1;
-	req_access_txt = "12"
-	},
-/obj/item/weapon/gun/rifle/m49a{
-	pixel_x = 0;
-	pixel_y = 5
-	},
-/turf/open/floor/prison/darkred2/west,
+/turf/open/floor/prison/darkbrownfull2,
 /area/whiskey_outpost/blackstone/inside/armory/weapons)
 "hqf" = (
 /obj/effect/decal/sand_overlay/sand5,
@@ -8208,7 +8566,10 @@
 /turf/open/asphalt/cement_sunbleached/cement_sunbleached13,
 /area/whiskey_outpost/blackstone/outside/outpost_beach/east)
 "hIt" = (
-/turf/open/floor/prison/darkredcorners2/north,
+/obj/item/trash/cigbutt{
+	pixel_x = -18
+	},
+/turf/open/floor/prison/floor_plate,
 /area/whiskey_outpost/blackstone/inside/armory)
 "hIz" = (
 /obj/structure/machinery/landinglight/ds2{
@@ -8586,8 +8947,15 @@
 /turf/open/floor/prison/darkyellowcorners2/west,
 /area/whiskey_outpost/blackstone/inside/warehouse)
 "icv" = (
-/obj/structure/machinery/cm_vending/gear/spec/uscm_ground,
-/turf/open/floor/prison/darkred2/east,
+/obj/structure/gun_rack/mk221{
+	pixel_x = 8;
+	pixel_y = 0
+	},
+/obj/structure/gun_rack/flamer{
+	pixel_x = -9;
+	pixel_y = 0
+	},
+/turf/open/floor/prison/darkbrownfull2,
 /area/whiskey_outpost/blackstone/inside/armory/weapons)
 "icw" = (
 /turf/open/gm/dirt,
@@ -8830,6 +9198,14 @@
 	dir = 1
 	},
 /obj/structure/machinery/camera/autoname/uscm_ground,
+/obj/structure/machinery/door_control{
+	id = "copperheadsarmory";
+	name = "toggle Copperheads armory shutters";
+	pixel_x = -6;
+	pixel_y = -2;
+	access_modified = 1;
+	req_access_txt = "12"
+	},
 /turf/open/floor/prison/floor_plate,
 /area/whiskey_outpost/blackstone/inside/senior_enlisted_west)
 "irs" = (
@@ -8956,9 +9332,6 @@
 /turf/open/asphalt/cement/cement1,
 /area/whiskey_outpost/blackstone/underground/mountain/tunnel)
 "iCA" = (
-/obj/structure/bed/chair{
-	dir = 1
-	},
 /obj/structure/cable/heavyduty{
 	icon_state = "1-2"
 	},
@@ -9123,23 +9496,15 @@
 /turf/open/floor/asteroidfloor,
 /area/whiskey_outpost/blackstone/outside/outpost/north)
 "iIA" = (
-/obj/structure/machinery/door/airlock/multi_tile/uscm_ground/armory/prep,
-/turf/open/floor/prison/darkred2,
+/obj/structure/gun_rack/m41/unloaded,
+/obj/structure/machinery/light{
+	dir = 1
+	},
+/turf/open/floor/prison/darkredfull2,
 /area/whiskey_outpost/blackstone/inside/armory/weapons)
 "iIS" = (
-/obj/structure/surface/table/almayer,
-/obj/structure/machinery/camera/autoname/uscm_ground{
-	dir = 4
-	},
-/obj/item/storage/box/guncase/heavy/shotgun{
-	pixel_x = 0;
-	pixel_y = 14
-	},
-/obj/item/ammo_box/rounds/smartgun{
-	pixel_x = 4;
-	pixel_y = -7
-	},
-/turf/open/floor/prison/darkred2/west,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/prison/darkbrown2,
 /area/whiskey_outpost/blackstone/inside/armory/weapons)
 "iJm" = (
 /obj/structure/platform,
@@ -9507,7 +9872,7 @@
 /obj/structure/extinguisher_cabinet/alt{
 	pixel_y = 28
 	},
-/turf/open/floor/prison/darkred2/north,
+/turf/open/floor/prison/floor_plate,
 /area/whiskey_outpost/blackstone/inside/armory)
 "jbP" = (
 /obj/effect/decal/sand_overlay/sand5{
@@ -9522,13 +9887,8 @@
 /turf/open/asphalt/cement/cement4,
 /area/whiskey_outpost/blackstone/underground/mountain/tunnel)
 "jdf" = (
-/obj/structure/surface/rack,
-/obj/item/ammo_box/magazine/nade_box,
-/obj/item/ammo_box/magazine/nade_box{
-	pixel_x = 4;
-	pixel_y = 5
-	},
-/turf/open/floor/prison/floor_marked,
+/obj/structure/machinery/cm_vending/clothing/engi/uscm_ground,
+/turf/open/floor/prison/floor_plate,
 /area/whiskey_outpost/blackstone/inside/armory/weapons)
 "jds" = (
 /turf/open/jungle,
@@ -9749,10 +10109,6 @@
 	},
 /turf/open/floor/prison/floor_plate,
 /area/whiskey_outpost/blackstone/inside/outpost_south)
-"jpN" = (
-/obj/structure/machinery/cm_vending/gear/engi/uscm_ground,
-/turf/open/floor/prison/darkred2/east,
-/area/whiskey_outpost/blackstone/inside/armory/weapons)
 "jqa" = (
 /obj/structure/sink{
 	dir = 8;
@@ -9904,12 +10260,6 @@
 	},
 /turf/open/floor/plating/warnplate/northeast,
 /area/whiskey_outpost/blackstone/inside/maintenance_closet)
-"jwv" = (
-/obj/structure/cable/heavyduty{
-	icon_state = "1-4"
-	},
-/turf/open/floor/prison/darkred2,
-/area/whiskey_outpost/blackstone/inside/armory/weapons)
 "jww" = (
 /obj/structure/stairs/perspective{
 	icon_state = "p_stair_sn_full_cap";
@@ -10492,18 +10842,6 @@
 /obj/item/tool/crowbar,
 /turf/open/floor/prison/floor_marked,
 /area/whiskey_outpost/blackstone/inside/warehouse)
-"kaB" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/item/ammo_box/magazine/m49a{
-	pixel_x = -8;
-	pixel_y = -7
-	},
-/obj/item/ammo_box/magazine/mk1{
-	pixel_x = -8;
-	pixel_y = 10
-	},
-/turf/open/floor/prison/darkredfull2,
-/area/whiskey_outpost/blackstone/inside/armory)
 "kba" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/cable/heavyduty{
@@ -10557,7 +10895,6 @@
 /turf/open/gm/coast/west,
 /area/whiskey_outpost/blackstone/outside/river/east)
 "kdG" = (
-/obj/structure/surface/table/almayer,
 /obj/item/prop/helmetgarb/gunoil{
 	pixel_x = 7;
 	pixel_y = 6
@@ -10568,6 +10905,7 @@
 /obj/structure/cable/heavyduty{
 	icon_state = "1-2"
 	},
+/obj/structure/surface/table/almayer,
 /turf/open/floor/prison/floor_plate,
 /area/whiskey_outpost/blackstone/inside/armory)
 "kdL" = (
@@ -10816,8 +11154,9 @@
 /turf/open/gm/dirt,
 /area/whiskey_outpost/blackstone/outside/perimeter_defense)
 "kpU" = (
-/obj/structure/sign/safety/ammunition,
-/turf/closed/wall/r_wall,
+/obj/structure/gun_rack/m41/unloaded,
+/obj/structure/machinery/light,
+/turf/open/floor/prison/darkbrownfull2,
 /area/whiskey_outpost/blackstone/inside/armory/weapons)
 "kpW" = (
 /obj/effect/decal/cleanable/dirt,
@@ -10937,26 +11276,10 @@
 /turf/open/gm/dirt,
 /area/whiskey_outpost/blackstone/outside/dorms_island)
 "kuN" = (
-/obj/structure/surface/table/almayer,
-/obj/item/storage/fancy/cigarettes/lucky_strikes{
-	pixel_x = 6;
-	pixel_y = 16
-	},
-/obj/item/ashtray/glass{
-	pixel_x = 3;
-	pixel_y = -4
-	},
-/obj/item/trash/cigbutt{
-	pixel_x = -9;
-	pixel_y = 10
-	},
-/obj/item/trash/cigbutt{
-	pixel_x = 3;
-	pixel_y = 6
-	},
 /obj/structure/cable/heavyduty{
 	icon_state = "1-2"
 	},
+/obj/structure/bed/chair,
 /turf/open/floor/plating/plating_catwalk/prison,
 /area/whiskey_outpost/blackstone/inside/armory)
 "kuV" = (
@@ -10992,9 +11315,7 @@
 /turf/open/asphalt/tile,
 /area/whiskey_outpost/blackstone/outside/outpost_beach)
 "kvY" = (
-/obj/structure/cable/heavyduty{
-	icon_state = "1-2-8"
-	},
+/obj/structure/cable/heavyduty/north_south,
 /turf/open/floor/prison/floor_plate,
 /area/whiskey_outpost/blackstone/inside/armory)
 "kwc" = (
@@ -11009,14 +11330,20 @@
 /turf/open/gm/dirt,
 /area/whiskey_outpost/blackstone/outside/river/west)
 "kwW" = (
-/obj/structure/bed/chair{
-	can_buckle = 0;
-	dir = 4;
-	pixel_x = 2;
+/obj/structure/sign/safety/ammunition{
+	pixel_x = 15;
+	pixel_y = -8
+	},
+/obj/structure/sign/safety/storage{
+	pixel_x = 0;
+	pixel_y = -8
+	},
+/obj/structure/sign/safety/restrictedarea{
+	pixel_x = 0;
 	pixel_y = 6
 	},
-/turf/open/floor/prison/darkredcorners2/west,
-/area/whiskey_outpost/blackstone/inside/armory)
+/turf/closed/wall/r_wall,
+/area/whiskey_outpost/blackstone/inside/armory/weapons)
 "kxi" = (
 /obj/structure/barricade/sandbags/wired{
 	dir = 1;
@@ -11066,14 +11393,6 @@
 	},
 /turf/open/floor/prison/cell_stripe,
 /area/whiskey_outpost/blackstone/inside/warehouse)
-"kzb" = (
-/obj/structure/machinery/cm_vending/sorted/uniform_supply/squad_prep/uscm_ground,
-/obj/structure/sign/banners/colonial_marines_flag{
-	pixel_x = 0;
-	pixel_y = 25
-	},
-/turf/open/floor/prison/darkredfull2,
-/area/whiskey_outpost/blackstone/inside/armory)
 "kzx" = (
 /obj/structure/platform_decoration{
 	dir = 4
@@ -11419,11 +11738,9 @@
 /turf/open/floor/prison/floor_plate,
 /area/whiskey_outpost/blackstone/inside/warehouse)
 "kSC" = (
-/obj/structure/machinery/light{
-	dir = 8
-	},
-/turf/open/floor/prison/darkred2/west,
-/area/whiskey_outpost/blackstone/inside/armory)
+/obj/structure/gun_rack/m41/unloaded,
+/turf/open/floor/prison/darkbrownfull2,
+/area/whiskey_outpost/blackstone/inside/armory/weapons)
 "kSR" = (
 /obj/structure/machinery/autolathe,
 /obj/structure/machinery/camera/autoname/uscm_ground,
@@ -11502,11 +11819,11 @@
 /turf/open/gm/coast/beachcorner2/south_west,
 /area/whiskey_outpost/blackstone/outside/river/west)
 "kWp" = (
-/obj/structure/platform{
-	dir = 8
-	},
 /obj/structure/cable/heavyduty{
 	icon_state = "1-2"
+	},
+/obj/structure/platform_decoration{
+	dir = 4
 	},
 /turf/open/asphalt/tile,
 /area/whiskey_outpost/blackstone/outside/outpost/north)
@@ -11520,18 +11837,6 @@
 	},
 /turf/open/asphalt/tile,
 /area/whiskey_outpost/blackstone/outside/outpost/north)
-"kWU" = (
-/obj/structure/surface/table/almayer,
-/obj/item/device/cassette_tape/nam{
-	layer = 2.9;
-	pixel_x = -6;
-	pixel_y = 7
-	},
-/obj/item/prop/helmetgarb/trimmed_wire{
-	pixel_x = 7
-	},
-/turf/open/floor/prison/floor_plate,
-/area/whiskey_outpost/blackstone/inside/armory)
 "kWV" = (
 /obj/structure/desertdam/decals/road_edge{
 	icon_state = "road_edge_decal2"
@@ -11592,15 +11897,6 @@
 	},
 /turf/open/asphalt/cement_sunbleached/cement_sunbleached13,
 /area/whiskey_outpost/blackstone/outside/landing_zone)
-"lav" = (
-/obj/structure/machinery/light/small{
-	dir = 1
-	},
-/obj/structure/gun_rack/m41/unloaded{
-	initial_stored = 4
-	},
-/turf/open/floor/prison/darkredfull2,
-/area/whiskey_outpost/blackstone/inside/armory/weapons)
 "lbt" = (
 /obj/structure/platform{
 	dir = 8
@@ -11680,19 +11976,22 @@
 /turf/closed/wall/r_wall,
 /area/whiskey_outpost/blackstone/outside/landing_zone)
 "lgL" = (
-/obj/structure/machinery/light/small,
 /obj/structure/surface/table/almayer,
-/obj/item/ammo_box/magazine/nade_box/smoke{
-	pixel_x = -13;
-	pixel_y = -3
+/obj/item/ammo_magazine/smartgun{
+	pixel_x = -9;
+	pixel_y = -7
 	},
-/obj/item/ammo_box/magazine/nade_box/smoke{
-	pixel_x = -11;
-	pixel_y = 10
+/obj/item/ammo_magazine/smartgun{
+	pixel_x = -9;
+	pixel_y = 8
 	},
-/obj/item/ammo_box/magazine/nade_box/smoke/green{
+/obj/item/ammo_magazine/smartgun{
 	pixel_x = 9;
-	pixel_y = -3
+	pixel_y = -7
+	},
+/obj/item/ammo_magazine/smartgun{
+	pixel_x = 9;
+	pixel_y = 8
 	},
 /turf/open/floor/prison/darkredfull2,
 /area/whiskey_outpost/blackstone/inside/armory/weapons)
@@ -11784,19 +12083,7 @@
 /turf/open/gm/dirt,
 /area/whiskey_outpost/blackstone/outside/perimeter_defense)
 "ljL" = (
-/obj/structure/surface/table/almayer,
-/obj/item/ammo_box/magazine/mk1/large{
-	pixel_x = -5;
-	pixel_y = -7
-	},
-/obj/item/ammo_box/magazine/mk1/large{
-	pixel_x = -3;
-	pixel_y = 6
-	},
-/obj/item/ammo_box/magazine/mk1/large{
-	pixel_x = 1;
-	pixel_y = -2
-	},
+/obj/structure/machinery/cm_vending/sorted/uniform_supply/squad_prep/uscm_ground,
 /turf/open/floor/prison/darkredfull2,
 /area/whiskey_outpost/blackstone/inside/armory/weapons)
 "ljU" = (
@@ -12280,15 +12567,6 @@
 /obj/structure/blocker/forcefield/multitile_vehicles,
 /turf/open/gm/coast/north,
 /area/whiskey_outpost/blackstone/outside/river/south_east)
-"lCV" = (
-/obj/structure/platform_decoration{
-	dir = 4
-	},
-/obj/effect/decal/sand_overlay/sand5{
-	dir = 4
-	},
-/turf/open/asphalt/tile,
-/area/whiskey_outpost/blackstone/outside/outpost/north)
 "lDh" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/barricade/handrail/strata{
@@ -12358,10 +12636,6 @@
 "lHl" = (
 /turf/open/floor/asteroidwarning/southeast,
 /area/whiskey_outpost/blackstone/outside/outpost/south)
-"lHu" = (
-/obj/structure/sign/safety/restrictedarea,
-/turf/closed/wall/r_wall,
-/area/whiskey_outpost/blackstone/inside/armory/weapons)
 "lHG" = (
 /obj/structure/machinery/m56d_hmg/mg_turret/whiskey_pve,
 /turf/open/floor/asteroidwarning,
@@ -12375,6 +12649,14 @@
 	pixel_x = -2;
 	pixel_y = 3;
 	dir = 4
+	},
+/obj/structure/machinery/door_control{
+	id = "rattlesnakesarmory";
+	name = "toggle Rattlesnakes armory shutters";
+	pixel_x = 10;
+	pixel_y = -7;
+	access_modified = 1;
+	req_access_txt = "12"
 	},
 /turf/open/floor/prison/darkbrownfull2,
 /area/whiskey_outpost/blackstone/inside/senior_enlisted_east)
@@ -12429,9 +12711,6 @@
 /obj/structure/prop/ice_colony/ground_wire,
 /turf/open/gm/dirt,
 /area/whiskey_outpost/blackstone/underground/excavation_site)
-"lLt" = (
-/turf/open/floor/prison/cell_stripe,
-/area/whiskey_outpost/blackstone/inside/armory)
 "lLw" = (
 /obj/structure/disposalpipe/segment,
 /obj/structure/machinery/door/poddoor/almayer/open{
@@ -12484,16 +12763,8 @@
 /turf/open/jungle/shrubs,
 /area/whiskey_outpost/blackstone/outside/jungle/south_east)
 "lMO" = (
-/obj/structure/surface/rack,
-/obj/item/ammo_box/magazine/nade_box/flare{
-	pixel_x = 10;
-	pixel_y = -6
-	},
-/obj/item/ammo_box/magazine/nade_box/flare{
-	pixel_x = 0;
-	pixel_y = 6
-	},
-/turf/open/floor/prison/floor_marked,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/prison/darkredfull2,
 /area/whiskey_outpost/blackstone/inside/armory/weapons)
 "lMR" = (
 /obj/structure/disposalpipe/segment,
@@ -13018,10 +13289,6 @@
 	},
 /turf/open/gm/coast/south,
 /area/whiskey_outpost/blackstone/outside/river/south_east)
-"mtd" = (
-/obj/item/trash/cigbutt,
-/turf/open/floor/prison/floor_plate,
-/area/whiskey_outpost/blackstone/inside/armory)
 "mth" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "1-2"
@@ -13041,21 +13308,8 @@
 /turf/open/floor,
 /area/whiskey_outpost/blackstone/inside/visitor_dormitory/room_one)
 "mwy" = (
-/obj/structure/surface/rack,
-/obj/item/storage/box/packet/hefa{
-	pixel_y = 7;
-	pixel_x = -3
-	},
-/obj/structure/machinery/light/small{
-	dir = 1
-	},
-/obj/item/explosive/plastic/breaching_charge,
-/obj/item/explosive/plastic/breaching_charge,
-/obj/item/explosive/plastic,
-/obj/item/explosive/plastic,
-/obj/item/explosive/plastic,
-/obj/item/explosive/plastic/breaching_charge,
-/turf/open/floor/prison/floor_marked,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/prison/darkbrownfull2,
 /area/whiskey_outpost/blackstone/inside/armory/weapons)
 "mwB" = (
 /obj/effect/decal/medical_decals{
@@ -13077,18 +13331,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/asphalt/tile,
 /area/whiskey_outpost/blackstone/outside/perimeter_defense)
-"mwW" = (
-/obj/structure/closet/secure_closet/squad_sergeant{
-	name = "copperheads squad one leader locker";
-	req_one_access = list();
-	req_access_txt = "17;32;39"
-	},
-/turf/open/floor/prison/darkred2/southwest,
-/area/whiskey_outpost/blackstone/inside/armory/weapons)
-"mxz" = (
-/obj/structure/sign/safety/storage,
-/turf/closed/wall/r_wall,
-/area/whiskey_outpost/blackstone/inside/armory/weapons)
 "mxB" = (
 /obj/structure/pipes/standard/simple/visible,
 /obj/structure/machinery/door/airlock/almayer/maint/sealed{
@@ -13214,17 +13456,13 @@
 /turf/open/asphalt,
 /area/whiskey_outpost/blackstone/outside/outpost_beach/east)
 "mAp" = (
-/obj/structure/machinery/light/small{
-	dir = 1;
-	pixel_x = -17;
-	pixel_y = 1
+/obj/structure/surface/table/almayer,
+/obj/item/storage/box/guncase/heavy/hpr,
+/obj/item/weapon/gun/launcher/grenade/m81/m79/modified{
+	pixel_x = -3;
+	pixel_y = 8
 	},
-/obj/structure/closet/secure_closet/smartgunner{
-	name = "copperheads squad two smartgunner locker";
-	req_access_txt = "14;17;40";
-	req_one_access = list()
-	},
-/turf/open/floor/prison/darkredfull2,
+/turf/open/floor/prison/darkbrownfull2,
 /area/whiskey_outpost/blackstone/inside/armory/weapons)
 "mBq" = (
 /obj/structure/barricade/handrail/strata{
@@ -13298,11 +13536,18 @@
 /area/whiskey_outpost/blackstone/outside/outpost_beach/west)
 "mFI" = (
 /obj/structure/surface/table/almayer,
-/obj/item/prop/helmetgarb/gunoil{
-	pixel_x = 15;
-	pixel_y = 6
+/obj/item/ammo_box/magazine/nade_box{
+	pixel_x = 5;
+	pixel_y = 10
 	},
-/obj/item/storage/box/guncase/heavy/motiondetectors,
+/obj/item/ammo_box/magazine/nade_box{
+	pixel_x = -9;
+	pixel_y = -1
+	},
+/obj/item/ammo_box/magazine/nade_box{
+	pixel_x = 8;
+	pixel_y = -2
+	},
 /turf/open/floor/prison/darkredfull2,
 /area/whiskey_outpost/blackstone/inside/armory/weapons)
 "mGU" = (
@@ -13432,7 +13677,8 @@
 "mOz" = (
 /obj/structure/surface/table/almayer,
 /obj/item/prop/helmetgarb/chaplain_patch{
-	pixel_y = 6
+	pixel_y = 11;
+	pixel_x = 2
 	},
 /obj/structure/cable/heavyduty{
 	icon_state = "1-2"
@@ -13441,14 +13687,21 @@
 	pixel_x = 5;
 	pixel_y = -1
 	},
+/obj/item/prop/helmetgarb/helmet_nvg/cosmetic{
+	pixel_y = 0;
+	pixel_x = -8
+	},
 /turf/open/floor/prison/floor_plate,
 /area/whiskey_outpost/blackstone/inside/armory)
 "mOM" = (
 /turf/closed/wall/mineral/sandstone/runed,
 /area/whiskey_outpost/blackstone/underground/excavation_site)
 "mPA" = (
-/turf/open/floor/prison/darkred2,
-/area/whiskey_outpost/blackstone/inside/armory)
+/obj/structure/gun_rack/m41/unloaded{
+	initial_stored = 3
+	},
+/turf/open/floor/prison/darkredfull2,
+/area/whiskey_outpost/blackstone/inside/armory/weapons)
 "mPF" = (
 /obj/structure/disposalpipe/segment,
 /obj/structure/cable/heavyduty{
@@ -13519,13 +13772,8 @@
 /turf/open/asphalt,
 /area/whiskey_outpost/blackstone/outside/bridge/south)
 "mUm" = (
-/obj/structure/machinery/light/small{
-	dir = 1
-	},
-/obj/structure/gun_rack/m41/unloaded{
-	initial_stored = 3
-	},
-/turf/open/floor/prison/darkredfull2,
+/obj/structure/largecrate/supply/ammo/m41amk1,
+/turf/open/floor/prison/darkred2,
 /area/whiskey_outpost/blackstone/inside/armory/weapons)
 "mUw" = (
 /obj/structure/closet/crate{
@@ -14005,6 +14253,10 @@
 	pixel_x = 10;
 	pixel_y = 0
 	},
+/obj/item/prop/colony/folded_bedroll{
+	pixel_x = 10;
+	pixel_y = 22
+	},
 /turf/open/floor/prison/darkbrownfull2,
 /area/whiskey_outpost/blackstone/inside/senior_enlisted_east)
 "nqZ" = (
@@ -14174,10 +14426,26 @@
 	name = "\improper USCM rubber stamp"
 	},
 /obj/item/device/flashlight/lamp/green{
-	pixel_x = -9;
+	pixel_x = -10;
 	pixel_y = -2
 	},
 /obj/structure/surface/table/reinforced/black,
+/obj/structure/machinery/door_control{
+	id = "copperheadsarmory";
+	name = "toggle Copperheads armory shutters";
+	pixel_x = -1;
+	pixel_y = -2;
+	access_modified = 1;
+	req_access_txt = "12"
+	},
+/obj/structure/machinery/door_control{
+	id = "rattlesnakesarmory";
+	name = "toggle Rattlesnakes armory shutters";
+	pixel_x = 8;
+	pixel_y = -2;
+	access_modified = 1;
+	req_access_txt = "12"
+	},
 /turf/open/floor/prison/darkredfull2,
 /area/whiskey_outpost/blackstone/inside/combat_information_center)
 "nAi" = (
@@ -14380,9 +14648,6 @@
 /area/whiskey_outpost/blackstone/inside/pillbox/four)
 "nJB" = (
 /obj/structure/machinery/light/small,
-/obj/structure/cable/heavyduty{
-	icon_state = "4-8"
-	},
 /turf/open/floor/prison/floor_plate,
 /area/whiskey_outpost/blackstone/inside/armory)
 "nJT" = (
@@ -14906,10 +15171,6 @@
 /area/whiskey_outpost/blackstone/outside/outpost_beach/east)
 "ood" = (
 /obj/structure/surface/table/almayer,
-/obj/effect/spawner/random/powercell{
-	pixel_x = 1;
-	pixel_y = 7
-	},
 /obj/structure/machinery/cm_vending/sorted/medical/wall_med{
 	pixel_y = 25
 	},
@@ -14917,7 +15178,19 @@
 	pixel_x = -5;
 	pixel_y = -6
 	},
-/turf/open/floor/prison/darkred2/north,
+/obj/item/prop{
+	desc = "A handful of rounds to reload on the go.";
+	icon = 'icons/obj/items/weapons/guns/handful.dmi';
+	icon_state = "bullet_2";
+	name = "handful of pistol bullets (9mm)";
+	pixel_x = -10;
+	pixel_y = 4
+	},
+/obj/effect/spawner/random/powercell{
+	pixel_x = 4;
+	pixel_y = 9
+	},
+/turf/open/floor/prison/floor_plate,
 /area/whiskey_outpost/blackstone/inside/armory)
 "ooj" = (
 /obj/effect/landmark/late_join,
@@ -15101,12 +15374,7 @@
 /turf/open/gm/dirt,
 /area/whiskey_outpost/blackstone/underground/excavation_site)
 "oyU" = (
-/obj/structure/closet/secure_closet/squad_sergeant{
-	name = "copperheads squad two leader locker";
-	req_one_access = list();
-	req_access_txt = "17;32;40"
-	},
-/turf/open/floor/prison/darkred2/northwest,
+/turf/open/floor/prison/darkbrown2/northwest,
 /area/whiskey_outpost/blackstone/inside/armory/weapons)
 "ozp" = (
 /obj/structure/prop/wooden_cross{
@@ -15431,19 +15699,6 @@
 /obj/structure/reagent_dispensers/watertank,
 /turf/open/floor/plating,
 /area/whiskey_outpost/blackstone/outside/bridge/pitstop)
-"oQI" = (
-/obj/structure/machinery/light/small{
-	dir = 1;
-	pixel_x = 15;
-	pixel_y = 0
-	},
-/obj/structure/closet/secure_closet/smartgunner{
-	name = "rattlesnakes squad two smartgunner locker";
-	req_access_txt = "14;18;40";
-	req_one_access = list()
-	},
-/turf/open/floor/prison/darkbrownfull2,
-/area/whiskey_outpost/blackstone/inside/armory/weapons)
 "oQQ" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -16423,12 +16678,14 @@
 /turf/open/gm/grass/grassbeach/west,
 /area/whiskey_outpost/blackstone/outside/jungle/perimeter_entrance)
 "pKd" = (
-/obj/structure/machinery/light{
-	dir = 1
+/obj/structure/machinery/door/poddoor/shutters/almayer{
+	dir = 4;
+	name = "Rattlesnakes armory shutters";
+	id = "rattlesnakesarmory"
 	},
-/obj/structure/machinery/cm_vending/sorted/uniform_supply/squad_prep/uscm_ground,
-/turf/open/floor/prison/darkredfull2,
-/area/whiskey_outpost/blackstone/inside/armory)
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/prison/cell_stripe/east,
+/area/whiskey_outpost/blackstone/inside/armory/weapons)
 "pKg" = (
 /obj/structure/prop/wooden_cross,
 /turf/open/jungle,
@@ -16487,13 +16744,13 @@
 /turf/open/floor/prison/darkbrown3,
 /area/whiskey_outpost/blackstone/inside/warehouse/checkpoint)
 "pPs" = (
-/obj/structure/stairs/perspective{
-	icon_state = "p_stair_full"
-	},
 /obj/structure/platform{
+	dir = 1
+	},
+/obj/effect/decal/sand_overlay/sand5{
 	dir = 4
 	},
-/turf/open/floor/prison/darkredfull2,
+/turf/open/asphalt/tile,
 /area/whiskey_outpost/blackstone/outside/outpost/north)
 "pPH" = (
 /turf/open/gm/dirtgrassborder/grassdirt_corner2/north_east,
@@ -16870,15 +17127,6 @@
 /obj/item/lightstick/red/planted,
 /turf/open/jungle,
 /area/whiskey_outpost/blackstone/outside/jungle/north/west)
-"qjL" = (
-/obj/structure/surface/table/almayer,
-/obj/item/storage/toolbox/mechanical{
-	pixel_x = 1;
-	pixel_y = 7
-	},
-/obj/item/tool/wrench,
-/turf/open/floor/prison/floor_plate,
-/area/whiskey_outpost/blackstone/inside/armory)
 "qjO" = (
 /obj/structure/closet/crate/miningcar{
 	layer = 3.1;
@@ -16988,28 +17236,9 @@
 	},
 /turf/open/auto_turf/strata_grass/layer1,
 /area/whiskey_outpost/blackstone/underground/western_caves/center)
-"qqT" = (
-/obj/structure/machinery/light{
-	dir = 4
-	},
-/obj/structure/machinery/cm_vending/clothing/engi/uscm_ground,
-/turf/open/floor/prison/darkred2/east,
-/area/whiskey_outpost/blackstone/inside/armory/weapons)
 "qsi" = (
 /turf/open/gm/grass/grassbeach/north,
 /area/whiskey_outpost/blackstone/outside/jungle/southern/west)
-"qsr" = (
-/obj/structure/surface/table/almayer,
-/obj/item/storage/box/guncase/heavy/fuel{
-	pixel_x = -1;
-	pixel_y = -1
-	},
-/obj/item/storage/box/guncase/heavy/fuel{
-	pixel_x = -1;
-	pixel_y = 10
-	},
-/turf/open/floor/prison/darkredfull2,
-/area/whiskey_outpost/blackstone/inside/armory/weapons)
 "qsC" = (
 /obj/structure/machinery/camera/autoname/uscm_ground{
 	dir = 1
@@ -17153,18 +17382,7 @@
 /turf/open/asphalt/cement_sunbleached/cement_sunbleached14,
 /area/whiskey_outpost/blackstone/outside/landing_zone)
 "qzW" = (
-/obj/structure/surface/table/almayer,
-/obj/structure/cable/heavyduty{
-	icon_state = "4-8"
-	},
-/obj/item/newspaper{
-	pixel_x = -9;
-	pixel_y = 7
-	},
-/obj/item/map/blackstone_bridge,
-/obj/structure/cable/heavyduty{
-	icon_state = "2-4"
-	},
+/obj/structure/cable/heavyduty/east_south,
 /turf/open/floor/prison/floor_plate,
 /area/whiskey_outpost/blackstone/inside/armory)
 "qAi" = (
@@ -17218,12 +17436,6 @@
 /obj/structure/window/framed/colony,
 /turf/open/floor/plating,
 /area/whiskey_outpost/blackstone/inside/visitor_dormitory)
-"qGq" = (
-/obj/item/trash/cigbutt{
-	pixel_x = -18
-	},
-/turf/open/floor/prison,
-/area/whiskey_outpost/blackstone/inside/armory)
 "qHa" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/machinery/cryopod{
@@ -17349,10 +17561,10 @@
 /turf/open/gm/dirt,
 /area/whiskey_outpost/blackstone/outside/perimeter_defense)
 "qPJ" = (
-/obj/structure/platform_decoration{
-	dir = 8
-	},
 /obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/sand_overlay/sand5/corner5{
+	dir = 1
+	},
 /turf/open/asphalt/tile,
 /area/whiskey_outpost/blackstone/outside/outpost/north)
 "qQz" = (
@@ -17374,21 +17586,6 @@
 	},
 /turf/open/floor/prison/darkbrownfull2,
 /area/whiskey_outpost/blackstone/inside/warehouse)
-"qQK" = (
-/obj/structure/machinery/light{
-	dir = 8
-	},
-/obj/structure/surface/table/almayer,
-/obj/item/storage/box/guncase/heavy/hpr{
-	pixel_x = -1;
-	pixel_y = 14
-	},
-/obj/item/storage/box/guncase/heavy/m49a_pve{
-	pixel_x = 0;
-	pixel_y = -2
-	},
-/turf/open/floor/prison/darkred2/west,
-/area/whiskey_outpost/blackstone/inside/armory/weapons)
 "qQN" = (
 /obj/item/trash/burger,
 /obj/structure/barricade/handrail/strata{
@@ -17708,16 +17905,11 @@
 /turf/open/gm/river,
 /area/whiskey_outpost/blackstone/outside/jungle/perimeter_entrance/east)
 "rnh" = (
-/obj/structure/machinery/light/small,
-/obj/structure/gun_rack/flamer{
-	pixel_x = -11;
-	pixel_y = 0
+/obj/structure/cable/heavyduty/east,
+/obj/structure/machinery/power/apc/uscm_ground{
+	dir = 1
 	},
-/obj/structure/gun_rack/mk221{
-	pixel_x = 6;
-	pixel_y = 0
-	},
-/turf/open/floor/prison/darkredfull2,
+/turf/open/floor/prison/darkred2/north,
 /area/whiskey_outpost/blackstone/inside/armory/weapons)
 "rnk" = (
 /obj/structure/sign/poster/propaganda{
@@ -17787,17 +17979,6 @@
 /obj/structure/machinery/cryopod,
 /turf/open/floor,
 /area/whiskey_outpost/blackstone/inside/visitor_dormitory/room_one)
-"rpt" = (
-/obj/item/prop{
-	desc = "A handful of rounds to reload on the go.";
-	icon = 'icons/obj/items/weapons/guns/handful.dmi';
-	icon_state = "bullet_2";
-	name = "handful of pistol bullets (9mm)";
-	pixel_x = -8;
-	pixel_y = 9
-	},
-/turf/open/floor/prison,
-/area/whiskey_outpost/blackstone/inside/armory)
 "rpz" = (
 /turf/open/floor/prison/darkredfull2,
 /area/whiskey_outpost/blackstone/inside/combat_information_center)
@@ -17883,15 +18064,8 @@
 /turf/open/gm/dirt,
 /area/whiskey_outpost/blackstone/underground/excavation_site)
 "ryC" = (
-/obj/structure/surface/table/almayer,
-/obj/item/reagent_container/food/drinks/coffeecup/wy{
-	desc = "A matte gray coffee mug bearing the Weyland-Yutani logo on its front. Looks like someone spat in it.";
-	name = "dip cup";
-	pixel_x = -4;
-	pixel_y = 8
-	},
-/obj/item/tool/hand_labeler{
-	pixel_x = 8
+/obj/structure/machinery/camera/autoname/uscm_ground{
+	dir = 4
 	},
 /turf/open/floor/prison/floor_plate,
 /area/whiskey_outpost/blackstone/inside/armory)
@@ -17911,14 +18085,7 @@
 /turf/open/floor/sandstone,
 /area/whiskey_outpost/blackstone/underground/excavation_site)
 "rzs" = (
-/obj/structure/machinery/light/small,
-/obj/structure/surface/table/almayer,
-/obj/item/storage/box/guncase/heavy/sentry{
-	pixel_x = 1;
-	pixel_y = 10
-	},
-/obj/item/storage/box/guncase/heavy/sentry,
-/turf/open/floor/prison/darkredfull2,
+/turf/open/floor/prison/darkred2/southwest,
 /area/whiskey_outpost/blackstone/inside/armory/weapons)
 "rzw" = (
 /turf/closed/wall/rock/brown/destructible,
@@ -18397,6 +18564,10 @@
 /obj/item/stack/sheet/cardboard/full_stack{
 	pixel_x = -5;
 	pixel_y = 7
+	},
+/obj/effect/spawner/prop_gun/m41aMK1{
+	pixel_y = -4;
+	pixel_x = 9
 	},
 /turf/open/floor/prison/floor_plate,
 /area/whiskey_outpost/blackstone/inside/armory)
@@ -19116,6 +19287,15 @@
 /obj/structure/cable/heavyduty{
 	icon_state = "1-2-8"
 	},
+/obj/structure/surface/table/almayer,
+/obj/item/prop/magazine/dirty/torn/alt{
+	pixel_x = 8;
+	pixel_y = 2
+	},
+/obj/item/prop/helmetgarb/spent_buckshot{
+	pixel_x = -7;
+	pixel_y = 7
+	},
 /turf/open/floor/plating/plating_catwalk/prison,
 /area/whiskey_outpost/blackstone/inside/armory)
 "sLL" = (
@@ -19315,6 +19495,12 @@
 /obj/structure/cable/heavyduty{
 	icon_state = "4-8"
 	},
+/obj/structure/bed/chair{
+	can_buckle = 0;
+	dir = 4;
+	pixel_x = 2;
+	pixel_y = 6
+	},
 /turf/open/floor/plating/plating_catwalk/prison,
 /area/whiskey_outpost/blackstone/inside/armory)
 "sXi" = (
@@ -19404,15 +19590,6 @@
 	},
 /turf/open/floor,
 /area/whiskey_outpost/blackstone/inside/visitor_dormitory/room_two)
-"taN" = (
-/obj/structure/surface/table/almayer,
-/obj/item/prop/magazine/dirty/torn/alt,
-/obj/item/prop/helmetgarb/spent_slug{
-	pixel_x = 14;
-	pixel_y = -4
-	},
-/turf/open/floor/prison/floor_plate,
-/area/whiskey_outpost/blackstone/inside/armory)
 "taP" = (
 /obj/structure/disposalpipe/segment,
 /obj/structure/machinery/light{
@@ -19901,12 +20078,18 @@
 /turf/open/floor/prison/floor_plate,
 /area/whiskey_outpost/blackstone/inside/warehouse)
 "tzK" = (
-/obj/structure/machinery/light/small,
 /obj/structure/surface/table/almayer,
-/obj/item/storage/box/guncase/heavy/sentry,
-/obj/item/storage/box/guncase/heavy/sentry{
-	pixel_x = 0;
-	pixel_y = 10
+/obj/item/ammo_box/magazine/mk1/large{
+	pixel_x = -3;
+	pixel_y = 6
+	},
+/obj/item/ammo_box/magazine/mk1/large{
+	pixel_x = 4;
+	pixel_y = -8
+	},
+/obj/item/ammo_box/magazine/mk1/large{
+	pixel_x = 13;
+	pixel_y = 8
 	},
 /turf/open/floor/prison/darkredfull2,
 /area/whiskey_outpost/blackstone/inside/armory/weapons)
@@ -19973,7 +20156,20 @@
 /turf/open/floor/asteroidfloor,
 /area/whiskey_outpost/blackstone/outside/outpost/east)
 "tCK" = (
-/turf/open/floor/prison/darkred2/northwest,
+/obj/structure/surface/table/almayer,
+/obj/item/ammo_box/magazine/nade_box/smoke{
+	pixel_x = 0;
+	pixel_y = 11
+	},
+/obj/item/ammo_box/magazine/nade_box/flare{
+	pixel_x = -9;
+	pixel_y = -2
+	},
+/obj/item/ammo_box/magazine/nade_box/smoke/green{
+	pixel_x = 8;
+	pixel_y = -1
+	},
+/turf/open/floor/prison/darkredfull2,
 /area/whiskey_outpost/blackstone/inside/armory/weapons)
 "tCN" = (
 /obj/effect/decal/sand_overlay/sand5{
@@ -20338,12 +20534,6 @@
 	},
 /turf/open/asphalt/tile,
 /area/whiskey_outpost/blackstone/outside/outpost/north)
-"tWg" = (
-/obj/structure/machinery/door/airlock/multi_tile/uscm_ground/armory{
-	dir = 4
-	},
-/turf/open/floor/prison/cell_stripe,
-/area/whiskey_outpost/blackstone/inside/armory)
 "tYn" = (
 /turf/open/gm/dirtgrassborder/east,
 /area/whiskey_outpost/blackstone/underground/western_caves/south)
@@ -20601,11 +20791,6 @@
 	},
 /turf/open/asphalt/tile,
 /area/whiskey_outpost/blackstone/outside/mortar_pit)
-"uoO" = (
-/obj/structure/machinery/camera/autoname/uscm_ground,
-/obj/structure/gun_rack/m41/unloaded,
-/turf/open/floor/prison/darkredfull2,
-/area/whiskey_outpost/blackstone/inside/armory/weapons)
 "uoS" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/carpet13_5,
@@ -20934,7 +21119,7 @@
 /obj/structure/bed/chair/comfy{
 	dir = 1
 	},
-/obj/effect/landmark/start/marine/leader/uscm_ground,
+/obj/effect/landmark/start/marine/leader/uscm_ground/copperheads,
 /turf/open/floor/prison/floor_plate,
 /area/whiskey_outpost/blackstone/inside/senior_enlisted_west)
 "uGv" = (
@@ -21001,22 +21186,6 @@
 	},
 /turf/open/gm/dirtgrassborder/grassdirt_corner/south_east,
 /area/whiskey_outpost/blackstone/outside/perimeter_defense)
-"uJl" = (
-/obj/structure/surface/table/almayer,
-/obj/item/ammo_box/magazine/mk1/large{
-	pixel_x = 6;
-	pixel_y = -5
-	},
-/obj/item/ammo_box/magazine/mk1/large{
-	pixel_x = -4;
-	pixel_y = -1
-	},
-/obj/item/ammo_box/magazine/mk1/large{
-	pixel_x = 3;
-	pixel_y = 8
-	},
-/turf/open/floor/prison/darkredfull2,
-/area/whiskey_outpost/blackstone/inside/armory/weapons)
 "uJq" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/closet/hydrant{
@@ -21358,9 +21527,13 @@
 /turf/open/floor/prison/floor_plate,
 /area/whiskey_outpost/blackstone/inside/outpost_central)
 "vbC" = (
-/obj/structure/machinery/cm_vending/sorted/uniform_supply/squad_prep/uscm_ground,
-/obj/structure/machinery/camera/autoname/uscm_ground,
-/turf/open/floor/prison/darkredfull2,
+/obj/structure/bed/chair{
+	can_buckle = 0;
+	dir = 4;
+	pixel_x = 2;
+	pixel_y = 6
+	},
+/turf/open/floor/prison/floor_plate,
 /area/whiskey_outpost/blackstone/inside/armory)
 "vbE" = (
 /obj/structure/stairs/perspective{
@@ -21448,12 +21621,6 @@
 	},
 /turf/open/asphalt,
 /area/whiskey_outpost/blackstone/inside/eastern_checkpoint)
-"vek" = (
-/obj/structure/gun_rack/m41/unloaded{
-	initial_stored = 4
-	},
-/turf/open/floor/prison/darkredfull2,
-/area/whiskey_outpost/blackstone/inside/armory/weapons)
 "ven" = (
 /obj/structure/machinery/colony_floodlight{
 	name = "outpost floodlight"
@@ -21491,9 +21658,6 @@
 /obj/structure/blocker/forcefield/multitile_vehicles,
 /turf/open/gm/coast/east,
 /area/whiskey_outpost/blackstone/outside/river/south_east)
-"veI" = (
-/turf/open/floor/prison/darkredcorners2/east,
-/area/whiskey_outpost/blackstone/inside/armory)
 "vfl" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/cable/heavyduty{
@@ -22170,14 +22334,6 @@
 /obj/structure/machinery/m56d_hmg/mg_turret/whiskey_pve/folding,
 /turf/open/floor/plating/plating_catwalk/prison,
 /area/whiskey_outpost/blackstone/inside/pillbox/three)
-"vLU" = (
-/obj/structure/closet/secure_closet/squad_sergeant{
-	name = "rattlesnakes squad two leader locker";
-	req_access_txt = "18;32;40";
-	req_one_access = list()
-	},
-/turf/open/floor/prison/darkbrown2/northeast,
-/area/whiskey_outpost/blackstone/inside/armory/weapons)
 "vMc" = (
 /obj/item/tool/soap{
 	pixel_x = 4;
@@ -22338,9 +22494,6 @@
 /obj/structure/machinery/fuelcell_recycler/full,
 /turf/open/floor/plating,
 /area/whiskey_outpost/blackstone/underground/maintenance/engineering)
-"vSL" = (
-/turf/open/floor/prison/darkred2/west,
-/area/whiskey_outpost/blackstone/inside/armory/weapons)
 "vSQ" = (
 /obj/structure/desertdam/decals/road_edge{
 	icon_state = "road_edge_decal3"
@@ -22579,18 +22732,6 @@
 	},
 /turf/open/gm/dirt,
 /area/whiskey_outpost/blackstone/underground/western_caves/center)
-"weF" = (
-/obj/structure/largecrate/supply/ammo/m41amk1,
-/obj/structure/largecrate/supply/ammo/m41amk1{
-	pixel_x = -1;
-	pixel_y = 10
-	},
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/machinery/light{
-	dir = 8
-	},
-/turf/open/floor/prison/darkredfull2,
-/area/whiskey_outpost/blackstone/inside/armory)
 "weN" = (
 /obj/structure/surface/table,
 /obj/item/stack/barbed_wire{
@@ -22711,33 +22852,6 @@
 	},
 /turf/closed/wall/strata_ice/jungle,
 /area/whiskey_outpost/blackstone/outside/impassable)
-"wkS" = (
-/obj/structure/surface/table/almayer{
-	pixel_x = 0;
-	pixel_y = 0
-	},
-/obj/structure/machinery/door_control{
-	id = "armoryspecialequipment";
-	name = "toggle armory shutters";
-	pixel_x = -6;
-	pixel_y = 10;
-	access_modified = 1;
-	req_access_txt = "12"
-	},
-/obj/item/prop/helmetgarb/gunoil{
-	pixel_x = -10;
-	pixel_y = -4
-	},
-/obj/item/prop{
-	desc = "A handful of rounds to reload on the go.";
-	icon = 'icons/obj/items/weapons/guns/handful.dmi';
-	icon_state = "bullet_2";
-	name = "handful of pistol bullets (9mm)";
-	pixel_x = -5;
-	pixel_y = 1
-	},
-/turf/open/floor/prison/darkredfull2,
-/area/whiskey_outpost/blackstone/inside/armory/weapons)
 "wlb" = (
 /obj/structure/platform_decoration{
 	dir = 8
@@ -22953,11 +23067,11 @@
 /turf/open/jungle,
 /area/whiskey_outpost/blackstone/outside/digsite_wilderness)
 "wst" = (
-/obj/structure/machinery/door/airlock/multi_tile/uscm_ground/armory/weapons,
-/obj/structure/cable/heavyduty{
-	icon_state = "4-8"
+/obj/structure/machinery/cm_vending/sorted/cargo_guns/squad,
+/obj/structure/machinery/light{
+	dir = 4
 	},
-/turf/open/floor/prison/darkred2,
+/turf/open/floor/prison/darkredfull2,
 /area/whiskey_outpost/blackstone/inside/armory/weapons)
 "wsB" = (
 /obj/structure/prop/invuln/overhead_pipe{
@@ -23590,9 +23704,8 @@
 /turf/open/gm/grass/grassbeach/west,
 /area/whiskey_outpost/blackstone/outside/jungle/north/east)
 "wTu" = (
-/obj/structure/machinery/cm_vending/sorted/cargo_guns/squad,
-/turf/open/floor/prison/darkredfull2,
-/area/whiskey_outpost/blackstone/inside/armory)
+/turf/open/floor/prison/darkbrowncorners2/north,
+/area/whiskey_outpost/blackstone/inside/armory/weapons)
 "wTB" = (
 /obj/structure/pipes/standard/simple/visible,
 /turf/open/floor/plating,
@@ -23865,8 +23978,16 @@
 /turf/open/gm/dirtgrassborder/grassdirt_corner2/north_east,
 /area/whiskey_outpost/blackstone/outside/central_road)
 "xhd" = (
-/turf/open/floor/prison/darkred2/north,
-/area/whiskey_outpost/blackstone/inside/armory)
+/obj/structure/machinery/door/airlock/multi_tile/uscm_ground/armory/weapons{
+	name = "\improper Rattlesnakes Weapon Storage"
+	},
+/obj/structure/machinery/door/poddoor/shutters/almayer{
+	dir = 4;
+	name = "Rattlesnakes armory shutters";
+	id = "rattlesnakesarmory"
+	},
+/turf/open/floor/prison/cell_stripe/east,
+/area/whiskey_outpost/blackstone/inside/armory/weapons)
 "xhV" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/cable/heavyduty{
@@ -24016,17 +24137,6 @@
 "xmI" = (
 /turf/open/floor/prison/darkred2,
 /area/whiskey_outpost/blackstone/inside/outpost_north)
-"xmZ" = (
-/obj/structure/sign/poster{
-	desc = "YOU ALWAYS KNOW A WORKING JOE. YOU ALWAYS KNOW A WORKING JOE. YOU ALWAYS KNOW A WORKING JOE. YOU ALWAYS KNOW A WORKING JOE. YOU ALWAYS KNOW A WORKING JOE.";
-	icon_state = "poster11";
-	name = "YOU ALWAYS KNOW A WORKING JOE.";
-	pixel_x = -4;
-	pixel_y = 31;
-	serial_number = 11
-	},
-/turf/open/floor/prison/darkred2/north,
-/area/whiskey_outpost/blackstone/inside/armory/weapons)
 "xne" = (
 /obj/structure/prop/invuln/overhead_pipe{
 	pixel_y = -15
@@ -24692,31 +24802,6 @@
 	},
 /turf/open/floor/wood,
 /area/whiskey_outpost/blackstone/outside/outpost_beach/mine)
-"xVu" = (
-/obj/structure/machinery/light/small,
-/obj/structure/surface/table/almayer,
-/obj/item/ammo_box/magazine/shotgun/buckshot{
-	pixel_x = 6;
-	pixel_y = -3
-	},
-/obj/item/ammo_box/magazine/shotgun/buckshot{
-	pixel_x = 4;
-	pixel_y = 8
-	},
-/obj/item/ammo_box/magazine/shotgun{
-	pixel_x = -20;
-	pixel_y = 7
-	},
-/obj/item/ammo_box/magazine/shotgun{
-	pixel_x = -19;
-	pixel_y = -1
-	},
-/obj/item/ammo_box/magazine/shotgun/flechette{
-	pixel_x = -11;
-	pixel_y = -9
-	},
-/turf/open/floor/prison/darkredfull2,
-/area/whiskey_outpost/blackstone/inside/armory/weapons)
 "xVI" = (
 /turf/closed/wall/r_wall,
 /area/whiskey_outpost/blackstone/inside/outpost_south)
@@ -24724,12 +24809,6 @@
 /obj/structure/machinery/m56d_hmg/mg_turret/whiskey_pve/folding,
 /turf/open/floor/prison/darkbrown3/north,
 /area/whiskey_outpost/blackstone/inside/pillbox/one)
-"xWU" = (
-/obj/structure/machinery/light/small{
-	dir = 8
-	},
-/turf/open/floor/prison/darkred2/west,
-/area/whiskey_outpost/blackstone/inside/armory)
 "xXS" = (
 /obj/effect/decal/sand_overlay/sand5/corner5{
 	dir = 4
@@ -24814,7 +24893,7 @@
 /obj/structure/bed/chair/comfy{
 	dir = 8
 	},
-/obj/effect/landmark/start/marine/leader/uscm_ground,
+/obj/effect/landmark/start/marine/leader/uscm_ground/rattlesnakes,
 /turf/open/floor/prison/darkbrownfull2,
 /area/whiskey_outpost/blackstone/inside/senior_enlisted_east)
 "yaJ" = (
@@ -24976,7 +25055,8 @@
 "ygN" = (
 /obj/structure/surface/table/almayer,
 /obj/item/prop/helmetgarb/spent_flech{
-	pixel_x = 6
+	pixel_x = 8;
+	pixel_y = 2
 	},
 /obj/structure/machinery/power/apc/uscm_ground{
 	dir = 4
@@ -42448,12 +42528,12 @@ abY
 dre
 lUo
 wSR
-fSn
-fSn
-fSn
-fSn
-fSn
-fSn
+pFL
+jAV
+jAV
+jAV
+jAV
+jAV
 jAV
 jAV
 jAV
@@ -42651,20 +42731,20 @@ dre
 lUo
 wSR
 pFL
-jAV
-jAV
-jAV
-jAV
-fSn
-jAV
+aca
+abV
+abR
+abI
+abC
+abx
 mwy
 jdf
 lMO
 ddn
-jAV
+abi
 aaV
 tCK
-otx
+aba
 mFI
 jAV
 wyq
@@ -42853,20 +42933,20 @@ voX
 lUo
 wSR
 pFL
-jAV
+acb
 oyU
-mwW
-jAV
-jAV
-jAV
+abD
+abD
+abD
+abz
+mwy
+abo
+lMO
 byt
-byt
-byt
-byt
-jAV
-lav
-agL
-buq
+spS
+spS
+spS
+otx
 tzK
 jAV
 wyq
@@ -43055,21 +43135,21 @@ gBF
 lUo
 wSR
 pFL
-jqL
-bDj
-lMj
-vSL
-qQK
+acc
+mNv
+lLD
+qqI
+qqI
 iIS
 hqb
-spS
-otx
-wkS
-jAV
-fAt
-bDj
-qlE
-uJl
+abp
+abm
+agL
+qqI
+qqI
+qqI
+buq
+tCO
 jAV
 wyq
 gPz
@@ -43258,19 +43338,19 @@ lUo
 wSR
 pFL
 mAp
-bDj
+abQ
+abS
+abJ
 qqI
-lLD
-qqI
-lLD
-lLD
-qqI
-buq
-xVu
+iIS
+abr
 jAV
-uoO
-agL
-qlE
+jqL
+bDj
+lLD
+ayQ
+abe
+abb
 dwl
 jAV
 wyq
@@ -43459,20 +43539,20 @@ lUo
 lUo
 wSR
 pFL
-aaP
+acd
 aup
-qqI
-qqI
+abT
+abK
 lLD
-qqI
-qqI
-lLD
-buq
-qsr
+iIS
+abs
 jAV
-mUm
+abn
 agL
-qlE
+qqI
+mUm
+abf
+abc
 lgL
 jAV
 wyq
@@ -43661,21 +43741,21 @@ dre
 lUo
 wSR
 pFL
-oQI
-mNv
-qqI
-lLD
-lLD
-qqI
-qqI
-qqI
-lMj
-rnh
 jAV
-fAt
-agL
-qlE
-eeG
+jAV
+aaP
+abM
+qqI
+iIS
+jAV
+jAV
+jAV
+rnh
+lLD
+abh
+abg
+jAV
+jAV
 jAV
 wyq
 gPz
@@ -43863,20 +43943,20 @@ dre
 lUo
 wSR
 pFL
-doT
-mNv
-ayQ
-bYC
-qqT
-jpN
+abU
+abW
+abU
+abN
+qqI
+iIS
 icv
-eKp
-awc
-yfA
 jAV
-vek
-agL
+yfA
+abj
+qqI
 qlE
+ljL
+abd
 ljL
 jAV
 wyq
@@ -44065,20 +44145,20 @@ dre
 lUo
 wSR
 pFL
-jAV
-vLU
-fCv
-swv
-swv
-jAV
+oyU
+abD
+abD
+abO
+qqI
+iIS
 kpU
-agL
+jAV
 iIA
-lHu
-jAV
-jAV
-ekM
-jwv
+abj
+qqI
+lMj
+spS
+spS
 rzs
 jAV
 pFM
@@ -44267,24 +44347,24 @@ voX
 lUo
 wSR
 pFL
-jAV
-jAV
-jAV
-swv
-kzb
-gdO
+abQ
+abX
+abS
+wTu
+qqI
+iIS
 kSC
-veI
+jAV
 mPA
-weF
-fzw
+abj
+qqI
+awc
+abe
+bYC
+aaY
 jAV
-xmZ
-bVy
-tCO
-jAV
-wQI
-iOv
+gwp
+hCH
 jSw
 tQy
 qDk
@@ -44468,25 +44548,25 @@ abY
 voX
 lUo
 wSR
-fSn
-fSn
-fSn
-fSn
-swv
+pFL
+abU
+abZ
+abU
+abQ
 wTu
-xhd
-rhh
-dYD
-mPA
-aRM
-kaB
-kpU
-agL
-wst
-mxz
+iIS
+abt
 jAV
+fAt
+abj
+awc
+abb
+ljL
+wst
+ljL
 jAV
 gwp
+hCH
 jSw
 tQy
 eiL
@@ -44670,25 +44750,25 @@ voX
 lUo
 lUo
 wSR
-fSn
-fSn
-fSn
-fSn
-swv
+pFL
+jAV
+jAV
+jAV
+jAV
 pKd
 xhd
-dYD
-mtd
+abu
+jAV
 kwW
+abk
 gPT
-gPT
-kSC
-veI
-bkj
-xWU
-tWg
-bYH
-lCV
+jAV
+jAV
+jAV
+jAV
+jAV
+gwp
+kdL
 llu
 tQy
 dLv
@@ -44877,18 +44957,18 @@ fSn
 fSn
 fSn
 swv
-wTu
-xhd
-dYD
+abE
+rhh
+abv
 ryC
 dFG
 enf
 vgw
 rhh
 rhh
-gLY
-rhh
-lLt
+dYD
+aaZ
+swv
 pPs
 qPJ
 aKu
@@ -45080,19 +45160,19 @@ fSn
 fSn
 swv
 vbC
-xhd
-dYD
-kWU
-cXP
+rhh
+rhh
+rhh
+vgw
 sXf
-qjL
-taN
+dYD
+dYD
 dYD
 nJB
 swv
 swv
-swv
 cHm
+aaX
 nLJ
 dbC
 iIp
@@ -45281,9 +45361,9 @@ fSn
 fSn
 fSn
 swv
-wTu
-xhd
-rhh
+abF
+abA
+abw
 qzW
 kuN
 sLE
@@ -45483,10 +45563,10 @@ fSn
 fSn
 fSn
 swv
-pKd
-xhd
+abG
+abB
 dYD
-eTo
+gLY
 vgw
 fBV
 cez
@@ -45685,12 +45765,12 @@ fSn
 fSn
 fSn
 swv
-wTu
-fLY
+nXX
+dYD
 hIt
-gLY
-spt
-rpt
+abq
+abl
+emo
 nXX
 emo
 uzZ
@@ -45891,8 +45971,8 @@ swv
 swv
 jbd
 gLY
-qGq
-spt
+abl
+abl
 dYD
 spt
 mWK
