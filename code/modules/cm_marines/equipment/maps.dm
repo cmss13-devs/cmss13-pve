@@ -156,7 +156,7 @@ GLOBAL_LIST_INIT(mapless_maps, list(MAP_RUNTIME, MAP_CHINOOK, MAIN_SHIP_DEFAULT_
 
 /obj/item/map/taipei
 	name = "\improper Taipei Way-Station map"
-	desc = "A labelled print out of the anterior scan of Taipei Station, An unassuming waystation."
+	desc = "A labelled print out of the interior scan of Taipei Station, an unassuming waystation."
 	html_link = "images/f/f2/Taipei.png"
 	color = "cyan"
 
