@@ -6,12 +6,12 @@
 		return
 
 	var/list/lightturfs
-	var/light_str = tgui_input_number(usr, "Set the light power.", "Daytime Brightness", 0.3, timeout=1 HOURS, integer_only=FALSE)
+	var/light_str = tgui_input_number(usr, "Set the light power.", "Daytime Brightness", 0.3, timeout=10 MINUTES, integer_only=FALSE)
 	var/daytime_color = input(usr, "Please select the color to use.", "Daytime Color") as color|null
-	var/z_to_affect = tgui_input_number(usr, "What Z to affect? (3 is usually ship)", "Daytime Brightness", 2, world.maxz, 1, 1 HOURS, integer_only=TRUE)
+	var/z_to_affect = tgui_input_number(usr, "What Z to affect? (3 is usually ship)", "Daytime Brightness", 2, world.maxz, 1, 10 MINUTES, integer_only=TRUE)
 	var/is_shipmap = is_mainship_level(z_to_affect)
 	var/confirmation_msg = is_shipmap ? "Are you sure you wish to change daytime on the shipmap to this settings? This should probably only be used on shipmaps that are ostensibly ground maps." : "Are you sure you wish to change daytime on the map to this settings?"
-	var/confirm = tgui_alert(usr, confirmation_msg, "Confirm", list("Yes", "No"), 1 HOURS)
+	var/confirm = tgui_alert(usr, confirmation_msg, "Confirm", list("Yes", "No"), 10 MINUTES)
 	if(confirm != "Yes" || !z_to_affect)
 		return
 
@@ -32,12 +32,12 @@
 	if(!check_rights(R_ADMIN))
 		return
 
-	var/light_alpha = tgui_input_number(usr, "Set the light alpha.", "Daytime Brightness", 85, 255, 0, timeout=1 HOURS, integer_only=FALSE)
+	var/light_alpha = tgui_input_number(usr, "Set the light alpha.", "Daytime Brightness", 85, 255, 0, timeout=10 MINUTES, integer_only=FALSE)
 	var/daytime_color = input(usr, "Please select the color to use.", "Daytime Color") as color|null
-	var/z_to_affect = tgui_input_number(usr, "What Z to affect? (3 is usually ship)", "Daytime Brightness", 2, world.maxz, 1, 1 HOURS, integer_only=TRUE)
+	var/z_to_affect = tgui_input_number(usr, "What Z to affect? (3 is usually ship)", "Daytime Brightness", 2, world.maxz, 1, 10 MINUTES, integer_only=TRUE)
 	var/is_shipmap = is_mainship_level(z_to_affect)
 	var/confirmation_msg = is_shipmap ? "Are you sure you wish to change daytime on the shipmap to this settings? This should probably only be used on shipmaps that are ostensibly ground maps." : "Are you sure you wish to change daytime on the map to this settings?"
-	var/confirm = tgui_alert(usr, confirmation_msg, "Confirm", list("Yes", "No"), 1 HOURS)
+	var/confirm = tgui_alert(usr, confirmation_msg, "Confirm", list("Yes", "No"), 10 MINUTES)
 	if(confirm != "Yes" || !z_to_affect)
 		return
 
