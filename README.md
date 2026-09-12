@@ -4,7 +4,7 @@
 <hr />
 
 <p align="center">
-	<a href="https://github.com/cmss13-devs/cmss13-pve/actions?query=workflow%3A%22CI+Suite%22"><img src="https://github.com/cmss13-devs-pve/cmss13/workflows/CI%20Suite/badge.svg"></a>
+	<a href="https://github.com/cmss13-devs/cmss13-pve/actions?query=workflow%3A%22CI+Suite%22"><img src="https://github.com/cmss13-devs/cmss13-pve/workflows/CI%20Suite/badge.svg"></a>
  	<a href="https://github.com/cmss13-devs/cmss13-pve/actions/workflows/generate_documentation.yml"><img src="https://github.com/cmss13-devs/cmss13-pve/actions/workflows/generate_documentation.yml/badge.svg"></a>
 </p>
 

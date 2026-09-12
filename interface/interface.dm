@@ -3,10 +3,10 @@
 	set name = "wiki"
 	set desc = "Visit the wiki."
 	set hidden = TRUE
-	if( CONFIG_GET(string/wikiurl) )
+	if( CONFIG_GET(string/wikiurl_home_page) || CONFIG_GET(string/wikiurl) )
 		if(tgui_alert(src, "This will open the wiki in your browser. Are you sure?", "Confirm", list("Yes", "No")) != "Yes")
 			return
-		src << link(CONFIG_GET(string/wikiurl))
+		src << link(CONFIG_GET(string/wikiurl_home_page) || CONFIG_GET(string/wikiurl))
 	else
 		to_chat(src, SPAN_DANGER("The wiki URL is not set in the server configuration."))
 	return

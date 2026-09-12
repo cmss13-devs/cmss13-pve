@@ -66,3 +66,159 @@
       135u.
   - balance: syringes are slower without training BUT USABLE. with training they are
       much faster.
+2025-01-16:
+  AmoryBlaine:
+  - bugfix: Helmet cover layering, cigarette garb sprites
+2025-01-17:
+  AmoryBlaine:
+  - rscadd: USA flag
+  BonniePandora:
+  - rscadd: Adds in a new method of remotely calling in the dropship; a movielike
+      laptop in a carry case that has it's own internal power supply
+  - balance: Standalone remote-flight computers now rely upon area power
+  - imageadd: Sprites for the above, item, deployed & off/inactive and deployed &
+      on/active
+  SpartanBobby:
+  - rscadd: Changed the APC storage container to be able to fit more stuff
+  The32bitguy:
+  - rscdel: Coffee only makes a human jittery at a critical-OD threshold, not from
+      a consecutive > 20 units.
+2025-01-18:
+  SpartanBobby:
+  - maptweak: Adds mug to LTs office
+2025-01-19:
+  Amory:
+  - rscadd: New description to XM88 chambering text
+  - qol: Andro is made happy
+  AmoryBlaine:
+  - rscadd: slower cigarette puffs
+  AndroBetel:
+  - rscadd: Removes most christmas decorators, adds santa hats to loadout, available
+      during christmas
+  - rscadd: Pulling large crates resets their offset.
+  DexterDude:
+  - config: stalebot 14 days before stale and 14 before closing
+  KoishiVibe:
+  - rscadd: clf and colonists now have several different language possibilities, but
+      are very likely to have English or Spanish.
+  - rscadd: marshals know english and are likely to know spanish, alongside a couple
+      others.
+2025-01-20:
+  AmoryBlaine:
+  - rscadd: plain medic helmet
+  - rscdel: essentials, armor, MRE from medic vendor
+  - rscdel: Unwanted wheels on maps
+  DexterDude:
+  - code_imp: 'Reverts #585'
+2025-01-21:
+  AmoryBlaine:
+  - bugfix: pushing by certain simple mobs
+  BonniePandora:
+  - rscadd: AN/RVS-52 CCD Television Sight System attachment
+  - rscadd: Two-point sling (cosmetic only) attachment
+  - imageadd: New sprite for the B8, ported from PVP so the old one could be used
+      for the new scope
+  - maptweak: Scope added to the SctSrg storage bay for the Garrow
+  - maptweak: Scope added to the assistant squad leader room for the Rover (SL's room
+      was too full of crap)
+  - rscadd: Adds the M230 LLRB & M72A2 HIPF grenades and a WP mortar shell
+  - rscadd: UPP smoke grenades, along with a rifle-mounted grenade launcher & impact
+      rounds for it.
+  - rscadd: A new generic teargas grenade, along with a marine equiv
+  - rscdel: The old M66 teargas code has been removed
+  - admin: Added the WP mortar rounds to the fire support menu
+  - qol: Grenade packets can be folded flat once emptied
+  - qol: Packet sprites overhauled with overlays & such on a base sprite
+  - balance: The M60 WPSI & M77 HIAM now both have dual-fusing functionality. M60
+      WPSI generates shrapnel on detonation
+  - balance: Smoke effects from grenades and the new mortar shell linger much longer
+      than they did previously
+  - balance: Frag mortar shells are no longer woefully shit
+  - balance: Many grenades had their blast radius & shrapnel radius adjusted to not
+      be quite so hyperlethal in CQC
+  - spellcheck: '''box of flashlight'' -> ''box of flashlights'' in gear vendor'
+  - imageadd: Sprite for the M72A2 grenade, M66 teargas grenade & WP mortar shell
+  - maptweak: The Chapev recieves one rifle-GL per squad along with rounds for it
+      in the vendors, & some boxes of smokes grenades in the cargo bay.
+  The32bitguy:
+  - bugfix: Sentry Guns no longer target Sentry Gun Laptops
+2025-01-22:
+  AmoryBlaine:
+  - rscadd: Everyone can hang bodies.
+  - qol: Easier to utilize flaying.
+  - bugfix: Lore accurate UPP handbook
+  Dimdimich1996:
+  - rscadd: New Strata doors
+  The32bitguy:
+  - rscadd: Adds the Soldier, a new xeno caste for GMs to use. A high lethality, fast
+      xenomorph with crowd control abilities and the motivation to attack human characters
+      in a critical condition.
+  - code_imp: Swaps the order of sanity checks in the Headbite xeno ability
+  - bugfix: Stops flares shot into the sky with the Unique-Action from being able
+      to be melted or destroyed.
+  - ui: Raised character limit of flavour texts from 1024 to 3072.
+  - ui: Raised character limit of character records from 3072 to 10240.
+  - ui: The input box of the Set Pose IC verb is larger.
+  - rscadd: Brain damage no longer causes movements while the human is grabbed.
+  - bugfix: Brain damage no longer causes movements in Critical Pain.
+  Zenith:
+  - rscadd: American flag banner, updated flag banners
+  mesnomer:
+  - qol: Headgear accessory slots can now contain most glasses and goggles
+2025-01-25:
+  AmoryBlaine:
+  - rscadd: M13 fighting knife as standard boot knife, Bowie and KA-BAR fighting knives.
+  - rscdel: M5 bayonet as standard boot knife.
+  - rscadd: UPP Laika cigarettes and vending machine
+  BonniePandora:
+  - rscadd: Weapons now have custom crosshairs. They're optional and can be turned
+      off in the preferences menu.
+2025-01-26:
+  ? Zonespace (Code), Danilcus (Code), Zenith (Many voicelines), Unknown920 (Weakflamer
+    code), Nauticall (Army squad presets), Aimless (Marine conversations), Amory (Voicelines)
+  : - rscadd: Added Human AI to the game. Find their tools in the Game Master tab.
+    - bugfix: CLF rifles, shotguns, and SMGs were considered sidearms.
+    - bugfix: Fixed runtimes with admin-spawned marines.
+    - balance: Nanopaste no longer requires gun usage to allow for synths to self-apply
+        it.
+2025-01-27:
+  AmoryBlaine:
+  - rscadd: UPP Food Trays, Food Vendors
+2025-01-29:
+  BonniePandora:
+  - rscadd: Liquid bottle versions of IA, MB & KD are available in the corpsman advanced
+      medications vendor
+  - balance: Hypospray vials upped from 30u capacity to 60u
+  - balance: King no longer delivers the big steppy on contact with non-xenomorph
+      mobs
+  - imageadd: Wounded icon-states for the king are added
+  KoishiVibe:
+  - rscadd: Changed the sprite of the E2. Now it's able to fit _stock attachments!_
+      It also just has the regular old folding stock by default now.
+  - rscadd: Adds a new sprite for the integrated bipod of the E2
+  - rscadd: New E2 flavortext.
+  - qol: E2 is now Semi/4RB/FA as it should be.
+  - balance: The M41AE2 is now more similar to the M41A. It is less capable on the
+      move, but once its bipod is down it can take full advantage of the 300rnd clipsize
+      with stable full auto firing.
+  - balance: The M41AE2 can now be onehanded! Hit accuracy is near zero, don't do
+      this unless things are increeeeeedibly desperate.
+  - balance: Magazine boxes now hold 4. As a result their detonation is basically
+      catastrophic.
+  - bugfix: Fixes the FA bug with the E2
+  - code_imp: Adds exception for the E2 to the RPM booster of the bipod
+  - code_imp: Adds some attachment modifiers for fa_max_scatter and fa_scatter_peak.
+      Linear.
+  - maptweak: Replaces the E2 holotarget spawn on LV522 Forecon with a regular ammo
+      spawn.
+2025-01-30:
+  BonniePandora:
+  - qol: Nuclear detonations no longer blow out your eardrums & induce earthquakes
+      for all
+  - qol: The roundstart alert of "ARES ONLINE" that was insufferably loud is gone
+      in favour of a silent alert from TITAN
+  - soundadd: new nuclear klaxon sound effect
+  dimdimich1996:
+  - rscadd: UPP motion detector
+  mesnomer:
+  - soundadd: Added new pulse rifle sound. Old file is still in code.

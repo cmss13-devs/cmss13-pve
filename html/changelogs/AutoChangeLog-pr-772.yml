@@ -1,4 +1,0 @@
-author: "AlanParkerMasters"
-delete-after: True
-changes:
-  - bugfix: "fixes surviving in a nuke on the same Z-level by hopping in a vehicle"
