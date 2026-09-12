@@ -3353,7 +3353,7 @@ Defined in conflicts.dm of the #defines folder.
 	desc = "Standard pump action underslung grenade launcher. Fits the M41A, four round tube, chambers one."
 	icon_state = "grenade-mk1"
 	attach_icon = "grenade-mk1_a"
-	flags_attach_features = ATTACH_ACTIVATION|ATTACH_RELOADABLE|ATTACH_WEAPON|ATTACH_REMOVABLE
+	flags_attach_features = ATTACH_ACTIVATION|ATTACH_RELOADABLE|ATTACH_WEAPON
 	current_rounds = 0
 	max_rounds = 4
 	max_range = 10
@@ -3491,7 +3491,8 @@ Defined in conflicts.dm of the #defines folder.
 /obj/item/attachable/attached_gun/grenade/mk1/m120
 	name = "\improper PN/c 30mm underslung grenade launcher"
 	desc = "Compact variant of the PN pump action underslung grenade launcher. Fits the M120 shotgun, two round tube, chambers one."
-	flags_attach_features = ATTACH_ACTIVATION|ATTACH_RELOADABLE|ATTACH_WEAPON
+	attachment_firing_delay = 15
+	flags_attach_features = ATTACH_ACTIVATION|ATTACH_RELOADABLE|ATTACH_WEAPON|ATTACH_REMOVABLE
 	max_rounds = 3
 
 /obj/item/attachable/attached_gun/grenade/m203 //M16 GL, only DD have it.
