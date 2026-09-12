@@ -2076,7 +2076,7 @@ Defined in conflicts.dm of the #defines folder.
 
 /obj/item/attachable/stock/tactical
 	name = "\improper M120 tactical stock"
-	desc = "A metal stock made for the M120 tactical shotgun."
+	desc = "Alloy-reinforced polymer stock for the M120 tactical shotgun. Solid and well built."
 	icon_state = "tactical_stock"
 	hud_offset_mod = 6
 
@@ -3353,7 +3353,7 @@ Defined in conflicts.dm of the #defines folder.
 	desc = "Standard pump action underslung grenade launcher. Fits the M41A, four round tube, chambers one."
 	icon_state = "grenade-mk1"
 	attach_icon = "grenade-mk1_a"
-	flags_attach_features = ATTACH_ACTIVATION|ATTACH_RELOADABLE|ATTACH_WEAPON
+	flags_attach_features = ATTACH_ACTIVATION|ATTACH_RELOADABLE|ATTACH_WEAPON|ATTACH_REMOVABLE
 	current_rounds = 0
 	max_rounds = 4
 	max_range = 10
