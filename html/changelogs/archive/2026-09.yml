@@ -1,0 +1,5 @@
+2026-09-10:
+  Drathek:
+  - config: Added a WIKIURL_HOME_PAGE config that can override WIKIURL for the wiki
+      button
+  - bugfix: Foldout maps now do not attempt to load maps if the map has no url set
