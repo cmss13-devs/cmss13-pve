@@ -1,5 +1,0 @@
-author: "Redbyte Drathek"
-delete-after: True
-changes:
-  - bugfix: "USCM Uniform now appears with the correct name on the vendors"
-  - code_imp: "Updated some code regarding dress vendor and snowflake vendor to satisfy new checks"
