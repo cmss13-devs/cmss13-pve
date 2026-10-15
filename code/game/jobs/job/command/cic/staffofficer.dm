@@ -107,6 +107,7 @@ OverrideTimelock(/datum/job/command/bridge, list(
 	title = JOB_SQUAD_ARMOUR_COMMANDER
 	flags_startup_parameters = ROLE_ADD_TO_DEFAULT|ROLE_ADD_TO_SQUAD
 	gear_preset = /datum/equipment_preset/uscm_ship/so/armour
+	gear_preset_secondary = /datum/equipment_preset/uscm_ship/so/armour/lesser_rank
 	job_options = list(SECOND_LT_VARIANT = "2ndLt", FIRST_LT_VARIANT = "1stLt")
 	supervisors = "USCM Company Command"
 	entry_message_body = "Your job is to conduct the briefing for the Element, lead the operation from within the command vehicle, and listen to your superior officers.</a> You are in charge of the Element for the current operation and are supported by your Company Command.<br>They will give your orders VIA the telephone in your quarters once they are ready.<br><b>You remember that you've stored your personal gear and uniform in the locker rooms.</b><br>Your job involves heavy roleplay, requires you to behave like an officer and to stay in character at all times."
@@ -120,6 +121,7 @@ OverrideTimelock(/datum/job/command/bridge, list(
 	title = JOB_SQUAD_ARMOUR_COMMANDER_UPP
 	flags_startup_parameters = ROLE_ADD_TO_DEFAULT|ROLE_ADD_TO_SQUAD
 	gear_preset = /datum/equipment_preset/uscm_ship/so/upp/armour
+	gear_preset_secondary = /datum/equipment_preset/uscm_ship/so/upp/armour/lesser_rank
 	job_options = list(JR_LT_VARIANT = "JrLT", SR_LT_VARIANT = "SrLT")
 	supervisors = "UPP Armed Collective Company Command"
 	entry_message_body = "Your job is to conduct the briefing for the group, lead the operation from within the command vehicle, and listen to your superior officers.</a> You are in charge of the group for the current operation and are supported by your Company Command.<br>They will give your orders VIA the telephone in your quarters once they are ready.<br><b>You remember that you've stored your personal gear and uniform in the locker rooms.</b><br>Your job involves heavy roleplay, requires you to behave like an officer and to stay in character at all times."

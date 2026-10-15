@@ -150,9 +150,16 @@
 	total_positions = 3
 	spawn_positions = 3
 	gear_preset = /datum/equipment_preset/uscm/armour
+	gear_preset_secondary = /datum/equipment_preset/uscm/armour/lesser_rank
 	job_options = list(LCPL_VARIANT = "LCPL", CPL_VARIANT = "CPL")
 	supervisors = "the vehicle gunner, Element Sergeant and Element Commander"
 	entry_message_body = "You are a driver for a USCM Armor element. Your task is caring for your assigned vehicle, following orders given to your vehicle to carry out and listening to your vehicle's gunner.<br><b>You remember that you've stored your personal gear and uniform in the locker rooms, and that your equipment can be located in the armory.</b>"
+
+/datum/job/marine/standard/ai/armour/handle_job_options(option)
+	if(option != LCPL_VARIANT)
+		gear_preset = initial(gear_preset)
+	else
+		gear_preset = gear_preset_secondary
 
 /obj/effect/landmark/start/marine/armour
 	name =  JOB_SQUAD_ARMOUR_DRIVER
@@ -164,9 +171,16 @@
 	total_positions = 3
 	spawn_positions = 3
 	gear_preset = /datum/equipment_preset/uscm/upp/armour
+	gear_preset_secondary = /datum/equipment_preset/uscm/upp/armour/lesser_rank
 	job_options = list(SR_PVT_VARIANT = "SrPVT", CPL_VARIANT = "CPL")
 	supervisors = "the vehicle gunner, Group Sergeant and Group Commander"
 	entry_message_body = "You are a driver for a UPP Armed Collective Armor element. Your task is caring for your assigned vehicle, following orders given to your vehicle to carry out and listening to your vehicle's gunner.<br><b>You remember that you've stored your personal gear and uniform in the locker rooms, and that your equipment can be located in the armoury.</b>"
+
+/datum/job/marine/standard/ai/upp/armour/handle_job_options(option)
+	if(option != SR_PVT_VARIANT)
+		gear_preset = initial(gear_preset)
+	else
+		gear_preset = gear_preset_secondary
 
 /obj/effect/landmark/start/marine/upp/armour
 	name =  JOB_SQUAD_ARMOUR_DRIVER_UPP

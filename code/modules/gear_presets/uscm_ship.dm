@@ -776,6 +776,10 @@
 	role_comm_title = "ElmntCO"
 	skills = /datum/skills/vehicle_crew/commander
 
+/datum/equipment_preset/uscm_ship/so/armour/lesser_rank
+	name = parent_type::name + " (Lesser Rank)"
+	paygrades = list(PAY_SHORT_MO1 = JOB_PLAYTIME_TIER_0)
+
 /datum/equipment_preset/uscm_ship/so/upp/armour
 	name = "UPP Armour, Group Commander"
 	assignment = JOB_SQUAD_ARMOUR_COMMANDER_UPP
@@ -785,6 +789,10 @@
 	languages = list(LANGUAGE_RUSSIAN, LANGUAGE_ENGLISH, LANGUAGE_CHINESE)
 	role_comm_title = "GrpCO"
 	skills = /datum/skills/vehicle_crew/commander
+
+/datum/equipment_preset/uscm_ship/so/upp/armour/lesser_rank
+	name = parent_type::name + " (Lesser Rank)"
+	paygrades = list(PAY_SHORT_UO1 = JOB_PLAYTIME_TIER_0)
 
 //*****************************************************************************************************/
 

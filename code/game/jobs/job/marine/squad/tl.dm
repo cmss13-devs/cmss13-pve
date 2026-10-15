@@ -113,9 +113,16 @@
 	total_positions = 2
 	spawn_positions = 2
 	gear_preset = /datum/equipment_preset/uscm/armour/gunner
+	gear_preset_secondary = /datum/equipment_preset/uscm/armour/gunner/lesser_rank
 	job_options = list(CPL_VARIANT = "CPL", SGT_VARIANT = "SGT")
 	supervisors = "the Element Commander, and Element Sergeant"
 	entry_message_body = "You are a gunner for a USCM Armor element. Your task is leading your assigned vehicle, following orders given to your vehicle to carry out and having your assigned driver get your vehicle rolling.<br><b>You remember that you've stored your personal gear and uniform in the locker rooms, and that your equipment can be located in the armory.</b>"
+
+/datum/job/marine/tl/ai/armour/handle_job_options(option)
+	if(option != CPL_VARIANT)
+		gear_preset = initial(gear_preset)
+	else
+		gear_preset = gear_preset_secondary
 
 /obj/effect/landmark/start/marine/tl/armour
 	name = JOB_SQUAD_ARMOUR_GUNNER
@@ -127,9 +134,16 @@
 	total_positions = 2
 	spawn_positions = 2
 	gear_preset = /datum/equipment_preset/uscm/upp/armour/gunner
+	gear_preset_secondary = /datum/equipment_preset/uscm/upp/armour/gunner/lesser_rank
 	job_options = list(JSGT_VARIANT = "JrSGT", SGT_VARIANT = "SGT")
 	supervisors = "the Group Commander, and Group Sergeant"
 	entry_message_body = "You are a gunner for a UPP Armed Collective Armor element. Your task is leading your assigned vehicle, following orders given to your vehicle to carry out and having your assigned driver get your vehicle rolling.<br><b>You remember that you've stored your personal gear and uniform in the locker rooms, and that your equipment can be located in the armoury.</b>"
+
+/datum/job/marine/tl/ai/upp/armour/handle_job_options(option)
+	if(option != JSGT_VARIANT)
+		gear_preset = initial(gear_preset)
+	else
+		gear_preset = gear_preset_secondary
 
 /obj/effect/landmark/start/marine/tl/upp/armour
 	name = JOB_SQUAD_ARMOUR_GUNNER_UPP

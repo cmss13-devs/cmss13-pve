@@ -116,6 +116,7 @@ OverrideTimelock(/datum/job/marine/leader, list(
 /datum/job/marine/leader/ai/armour
 	title = JOB_SQUAD_ARMOUR_LEADER
 	gear_preset = /datum/equipment_preset/uscm/armour/leader
+	gear_preset_secondary = /datum/equipment_preset/uscm/armour/leader/lesser_rank
 	flags_startup_parameters = ROLE_ADD_TO_DEFAULT|ROLE_ADD_TO_SQUAD
 	job_options = list(SSGT_VARIANT = "SSGT", GYSGT_VARIANT = "GYSGT")
 	supervisors = "the Element Commander"
@@ -129,6 +130,7 @@ OverrideTimelock(/datum/job/marine/leader, list(
 /datum/job/marine/leader/ai/upp/armour
 	title = JOB_SQUAD_ARMOUR_LEADER_UPP
 	gear_preset = /datum/equipment_preset/uscm/upp/armour/leader
+	gear_preset_secondary = /datum/equipment_preset/uscm/upp/armour/leader/lesser_rank
 	flags_startup_parameters = ROLE_ADD_TO_DEFAULT|ROLE_ADD_TO_SQUAD
 	job_options = list(SRSGT_VARIANT = "SrSGT", SGTMJR_VARIANT = "SGTMJR")
 	supervisors = "the Group Commander"
