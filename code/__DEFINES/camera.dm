@@ -1,6 +1,5 @@
 // Networks
 #define CAMERA_NET_ALMAYER "Almayer"
-#define CAMERA_NET_GOLDEN_ARROW "Golden Arrow"
 #define CAMERA_NET_CONTAINMENT "Containment"
 #define CAMERA_NET_CONTAINMENT_HIDDEN "Containment Hidden"
 #define CAMERA_NET_RESEARCH "Research"
@@ -8,12 +7,8 @@
 #define CAMERA_NET_ALAMO "Alamo"
 #define CAMERA_NET_NORMANDY "Normandy"
 #define CAMERA_NET_SAIPAN "Saipan"
-#define CAMERA_NET_MIDWAY "Midway"
-#define CAMERA_NET_CYCLONE "Cyclone"
-#define CAMERA_NET_TORNADO "Tornado"
-#define CAMERA_NET_TYPHOON "Typhoon"
-#define CAMERA_NET_TRIPOLI "Tripoli"
-#define CAMERA_NET_GIBRALTAR "Gibraltar"
+#define CAMERA_NET_MORANA "Morana"
+#define CAMERA_NET_DEVANA "Devana"
 #define CAMERA_NET_COLONY "Colony"
 #define CAMERA_NET_ARES "ARES"
 
@@ -26,6 +21,8 @@
 #define CAMERA_NET_LANDING_ZONES "Landing Zones"
 #define CAMERA_NET_LASER_TARGETS "Laser Targets"
 #define CAMERA_NET_CORRESPONDENT "Combat Correspondent Live"
+
+#define CAMERA_NET_WY "WY"
 
 #define CAMERA_NET_POWER_ALARMS "Power Alarms"
 #define CAMERA_NET_ATMOSPHERE_ALARMS "Atmosphere Alarms"

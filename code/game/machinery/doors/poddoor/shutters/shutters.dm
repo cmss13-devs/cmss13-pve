@@ -57,6 +57,8 @@
 	if(autoclose)
 		addtimer(CALLBACK(src, PROC_REF(autoclose)), 15 SECONDS, TIMER_UNIQUE|TIMER_OVERRIDE|TIMER_NO_HASH_WAIT)
 
+	SEND_SIGNAL(src, COMSIG_DOOR_OPEN)
+
 /obj/structure/machinery/door/poddoor/shutters/close(forced = FALSE)
 	if(operating)
 		return FALSE
@@ -78,13 +80,7 @@
 		return
 
 	operating = DOOR_OPERATING_IDLE
-
-/obj/structure/machinery/door/poddoor/shutters/attack_alien(mob/living/carbon/xenomorph/M)
-	if(density && !operating)
-		INVOKE_ASYNC(src, PROC_REF(pry_open), M)
-		return XENO_ATTACK_ACTION
-	else
-		. = ..(M)
+	SEND_SIGNAL(src, COMSIG_DOOR_CLOSE)
 
 /obj/structure/machinery/door/poddoor/shutters/almayer
 	icon = 'icons/obj/structures/doors/blastdoors_shutters.dmi'
@@ -101,19 +97,65 @@
 	. = ..()
 	relativewall_neighbours()
 
-/obj/structure/machinery/door/poddoor/shutters/almayer/yautja
-	name = "Armory Shutter"
-	id = "Yautja Armory"
+/obj/structure/machinery/door/poddoor/shutters/almayer/red
+	icon_state = "shutterred1"
+	base_icon_state = "shutterred"
+
+/obj/structure/machinery/door/poddoor/shutters/almayer/red/open
+	density = FALSE
+
+/obj/structure/machinery/door/poddoor/yautja
+	name = "Yautja Shutter"
+	desc = "A heavily reinforced metal-alloy door, designed to be virtually indestructible—nothing can penetrate its defenses."
+	icon = 'icons/obj/structures/doors/hunter/hunter_shutter.dmi'
+	icon_state = "hdoor1"
+	base_icon_state = "hdoor"
+	unslashable = TRUE
+	emp_proof = TRUE
+	openspeed = 6
+
+/obj/structure/machinery/door/poddoor/yautja/open
+	density = FALSE
+
+/obj/structure/machinery/door/poddoor/yautja/open/turf_plane
+	name = "Emergency Shutter"
+	density = FALSE
+	unslashable = TRUE
+	emp_proof = TRUE
+	unacidable = TRUE
+	breakable = FALSE
+	explo_proof = TRUE
+
+/obj/structure/machinery/door/poddoor/yautja/hunting_grounds
+	name = "Preserve Shutter"
+	id = "Yautja Preserve"
 	needs_power = FALSE
 	unacidable = TRUE
-	indestructible = TRUE
+	unslashable = TRUE
+	breakable = FALSE
+	explo_proof = TRUE
 
-/obj/structure/machinery/door/poddoor/shutters/almayer/yautja/Initialize()
+/obj/structure/machinery/door/poddoor/yautja/hunting_grounds/Initialize()
+	. = ..()
+	RegisterSignal(SSdcs, COMSIG_GLOB_YAUTJA_PRESERVE_OPENED, PROC_REF(open))
+	RegisterSignal(SSdcs, COMSIG_GLOB_YAUTJA_PRESERVE_CLOSED, PROC_REF(close))
+
+/obj/structure/machinery/door/poddoor/yautja/armory
+	name = "Armory Shutter"
+
+/obj/structure/machinery/door/poddoor/yautja/armory/Initialize()
 	. = ..()
 	RegisterSignal(SSdcs, COMSIG_GLOB_YAUTJA_ARMORY_OPENED, PROC_REF(open))
 
 /obj/structure/machinery/door/poddoor/shutters/almayer/containment
 	unacidable = TRUE
+
+/obj/structure/machinery/door/poddoor/shutters/almayer/containment/attack_alien(mob/living/carbon/xenomorph/M)
+	if(isqueen(M) && density && !operating)
+		INVOKE_ASYNC(src, PROC_REF(pry_open), M)
+		return XENO_ATTACK_ACTION
+	else
+		. = ..(M)
 
 /obj/structure/machinery/door/poddoor/shutters/almayer/containment/pry_open(mob/living/carbon/xenomorph/X, time = 4 SECONDS)
 	. = ..()
@@ -127,7 +169,7 @@
 //transit shutters used by marine dropships
 /obj/structure/machinery/door/poddoor/shutters/transit
 	name = "Transit shutters"
-	desc = "Safety shutters to prevent dangerous depressurization during flight"
+	desc = "Safety shutters to prevent dangerous depressurization during flight."
 	icon = 'icons/obj/structures/doors/blastdoors_shutters.dmi'
 	unacidable = TRUE
 
@@ -154,14 +196,13 @@
 	id = "bot_uniforms"
 	unacidable = TRUE
 	unslashable = TRUE
-
-/obj/structure/machinery/door/poddoor/shutters/almayer/uniform_vendors/ex_act(severity)
-		return
+	emp_proof = TRUE
+	explo_proof = TRUE
 
 /obj/structure/machinery/door/poddoor/shutters/almayer/uniform_vendors/attackby(obj/item/attacking_item, mob/user)
-	if(HAS_TRAIT(attacking_item, TRAIT_TOOL_CROWBAR))
+	if(HAS_TRAIT(attacking_item, TRAIT_TOOL_CROWBAR) || attacking_item.pry_capable)
 		return
-	..()
+	. = ..()
 
 /obj/structure/machinery/door/poddoor/shutters/almayer/uniform_vendors/antitheft
 	name = "Anti-Theft Shutters"
@@ -186,20 +227,35 @@
 
 //make a subtype for CL office so it as a proper name.
 /obj/structure/machinery/door/poddoor/shutters/almayer/cl
-		name = "\improper Corporate Liaison Privacy Shutters"
+	name = "\improper Corporate Liaison Privacy Shutters"
+	needs_power = FALSE
+	use_power = FALSE
+
 //adding a subtype for CL office to use to secure access to cl office.
 /obj/structure/machinery/door/poddoor/shutters/almayer/cl/office
-/obj/structure/machinery/door/poddoor/shutters/almayer/cl/office/door
-	id = "cl_office_door"
-/obj/structure/machinery/door/poddoor/shutters/almayer/cl/office/window
+
+/obj/structure/machinery/door/poddoor/shutters/almayer/cl/office/lobby_door
+	id = "cl_lobby_door"
+
+/obj/structure/machinery/door/poddoor/shutters/almayer/cl/office/office_door
+	id = "cl_office_door_s"
+
+/obj/structure/machinery/door/poddoor/shutters/almayer/cl/office/lobby_window
+	id = "cl_lobby_windows"
+
+/obj/structure/machinery/door/poddoor/shutters/almayer/cl/office/office_window
 	id = "cl_office_windows"
+
 //adding a subtype for CL quarter to use to secure access to cl quarter.(including seperation with the office)
 /obj/structure/machinery/door/poddoor/shutters/almayer/cl/quarter
+
 /obj/structure/machinery/door/poddoor/shutters/almayer/cl/quarter/backdoor
 	id = "cl_quarter_maintenance"
 	dir = 4
+
 /obj/structure/machinery/door/poddoor/shutters/almayer/cl/quarter/door
 	id = "cl_quarter_door"
 	dir = 4
+
 /obj/structure/machinery/door/poddoor/shutters/almayer/cl/quarter/window
 	id = "cl_quarter_windows"

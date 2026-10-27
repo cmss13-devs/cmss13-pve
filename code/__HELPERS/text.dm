@@ -30,9 +30,9 @@
 		text = replacetext(text, char, repl_chars[char])
 	return text
 
-///Helper for only alphanumeric characters plus common punctuation, spaces, underscore and hyphen _ -.
+///Helper for only alphanumeric characters plus common punctuation, spaces, underscore, hyphen, plus, vertical bar _ -+|.
 /proc/replace_non_alphanumeric_plus(text)
-	var/regex/alphanumeric = regex(@{"[^a-z0-9 ,.?!\-_&]"}, "gi")
+	var/regex/alphanumeric = regex(@{"[^a-z0-9 ,.'?!|\-+_&]"}, "gi")
 	return alphanumeric.Replace(text, "")
 
 /proc/readd_quotes(text)
@@ -59,7 +59,7 @@
 //Runs sanitize and strip_html_simple
 //I believe strip_html_simple() is required to run first to prevent '<' from displaying as '&lt;' after sanitize() calls byond's html_encode()
 /proc/strip_html(text, limit=MAX_MESSAGE_LEN)
-	return copytext((sanitize(strip_html_simple(text, limit))), 1, limit)
+	return copytext((sanitize(strip_html_simple(text))), 1, limit)
 
 //Runs byond's sanitization proc along-side strip_html_simple
 //I believe strip_html_simple() is required to run first to prevent '<' from displaying as '&lt;' that html_encode() would cause
@@ -68,16 +68,23 @@
 
 //Returns null if there is any bad text in the string
 /proc/reject_bad_text(text, max_length=512)
-	if(length(text) > max_length) return //message too long
+	if(length(text) > max_length)
+		return //message too long
 	var/non_whitespace = 0
 	for(var/i=1, i<=length(text), i++)
 		switch(text2ascii(text,i))
-			if(62,60,92,47) return //rejects the text if it contains these bad characters: <, >, \ or /
-			if(127 to 255) return //rejects weird letters like �
-			if(0 to 31) return //more weird stuff
-			if(32) continue //whitespace
-			else non_whitespace = 1
-	if(non_whitespace) return text //only accepts the text if it has some non-spaces
+			if(62,60,92,47)
+				return //rejects the text if it contains these bad characters: <, >, \ or /
+			if(127 to 255)
+				return //rejects weird letters like �
+			if(0 to 31)
+				return //more weird stuff
+			if(32)
+				continue //whitespace
+			else
+				non_whitespace = 1
+	if(non_whitespace)
+		return text //only accepts the text if it has some non-spaces
 
 // Used to get a sanitized input.
 /proc/stripped_input(mob/user, message = "", title = "", default = "", max_length=MAX_MESSAGE_LEN)
@@ -329,15 +336,15 @@
 // Returns the location of the atom as a string in the following format:
 // "Area Name (X, Y, Z)"
 // Mainly used for logging
-/proc/get_location_in_text(atom/A, include_jmp_link = TRUE)
+/proc/get_location_in_text(atom/locating_atom, include_jmp_link = TRUE)
 	var/message
-	if(!A.loc)
+	if(!locating_atom.loc)
 		message = "Invalid location"
 	else
 		if(include_jmp_link)
-			message = "<a href='byond://?_src_=admin_holder;[HrefToken(forceGlobal = TRUE)];adminplayerobservecoodjump=1;X=[A.x];Y=[A.y];Z=[A.z]'>[get_area(A)]</a> ([A.x], [A.y], [A.z])"
+			message = "[ADMIN_JUMP_COORDS(locating_atom.x, locating_atom.y, locating_atom.z)] ([locating_atom.x], [locating_atom.y], [locating_atom.z])"
 		else
-			message = "[get_area(A)] ([A.x], [A.y], [A.z])"
+			message = "[get_area(locating_atom)] ([locating_atom.x], [locating_atom.y], [locating_atom.z])"
 	return message
 
 //Adds 'char' ahead of 'text' until there are 'count' characters total

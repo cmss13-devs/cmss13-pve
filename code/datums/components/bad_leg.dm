@@ -24,7 +24,7 @@
 	if(!istype(parent_human))
 		return COMPONENT_INCOMPATIBLE
 
-	var/chosen_leg = forced_limb ? forced_limb : "l_leg" // always left leg by default first because i'm lazy and dont know how to add options to quirks
+	var/chosen_leg = forced_limb ? forced_limb : "l_leg" // always left leg by default first because i'm lazy and don't know how to add options to quirks
 	affected_limb = parent_human.get_limb(chosen_leg)
 	if(!affected_limb || affected_limb.status & LIMB_ROBOT)
 		chosen_leg = "r_leg"
@@ -64,7 +64,7 @@
 	if(parent_human.stat || parent_human.buckled && !HAS_TRAIT(parent_human, TRAIT_USING_WHEELCHAIR) || parent_human.is_mob_incapacitated() || parent_human.is_mob_restrained())
 		return
 
-	if(parent_human.throwing == TRUE)
+	if(HAS_TRAIT(parent_human, TRAIT_LAUNCHED))
 		return // unaffected on throws
 
 	if(HAS_TRAIT(parent_human, TRAIT_USING_WHEELCHAIR))

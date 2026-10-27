@@ -2,7 +2,7 @@
 /obj/effect/attach_point
 	name = "equipment attach point"
 	desc = "A place where heavy equipment can be installed with a powerloader."
-	icon = 'icons/obj/structures/props/almayer_props.dmi'
+	icon = 'icons/obj/structures/props/almayer/almayer_props.dmi'
 	icon_state = "equip_base"
 	unacidable = TRUE
 	anchored = TRUE
@@ -58,6 +58,7 @@
 	installed_equipment = ds_equipment
 	ds_equipment.ship_base = src
 	ds_equipment.plane = plane
+	ds_equipment.setDir(src.dir)
 
 	for(var/obj/docking_port/mobile/marine_dropship/shuttle in SSshuttle.mobile)
 		if(shuttle.id == ship_tag)

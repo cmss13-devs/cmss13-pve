@@ -72,7 +72,8 @@
 	botcard = new(src)
 	if(GLOB.RoleAuthority)
 		var/datum/job/ctequiv = GLOB.RoleAuthority.roles_by_name[JOB_CARGO_TECH]
-		if(ctequiv) botcard.access = ctequiv.get_access()
+		if(ctequiv)
+			botcard.access = ctequiv.get_access()
 
 	cell = new(src)
 	cell.charge = 2000
@@ -128,7 +129,7 @@
 			updateDialog()
 	else if(HAS_TRAIT(I, TRAIT_TOOL_SCREWDRIVER))
 		if(locked)
-			to_chat(user, SPAN_NOTICE(" The maintenance hatch cannot be opened or closed while the controls are locked."))
+			to_chat(user, SPAN_NOTICE("The maintenance hatch cannot be opened or closed while the controls are locked."))
 			return
 
 		open = !open
@@ -149,7 +150,7 @@
 				SPAN_NOTICE("You repair [src]!")
 			)
 		else
-			to_chat(user, SPAN_NOTICE(" [src] does not need a repair!"))
+			to_chat(user, SPAN_NOTICE("[src] does not need a repair!"))
 	else if(load && ismob(load))  // chance to knock off rider
 		if(prob(1+I.force * 2))
 			unload(0)
@@ -157,7 +158,7 @@
 		else
 			to_chat(user, "You hit [src] with \the [I] but to no effect.")
 	else
-		..()
+		. = ..()
 	return
 
 
@@ -260,7 +261,7 @@
 		else
 			dat += "The bot is in maintenance mode and cannot be controlled.<BR>"
 
-	show_browser(user, dat, "Mulebot [suffix ? "([suffix])" : ""]", "mulebot", width = 350, height = 500)
+	show_browser(user, dat, "Mulebot [suffix ? "([suffix])" : ""]", "mulebot", "size=350x500")
 	return
 
 // returns the wire panel text
@@ -395,31 +396,31 @@
 					var/wirebit = text2num(href_list["wire"])
 					wires &= ~wirebit
 				else
-					to_chat(usr, SPAN_NOTICE(" You need wirecutters!"))
+					to_chat(usr, SPAN_NOTICE("You need wirecutters!"))
 			if("wiremend")
 				var/obj/item/held_item = usr.get_held_item()
 				if (held_item && HAS_TRAIT(held_item, TRAIT_TOOL_WIRECUTTERS))
 					var/wirebit = text2num(href_list["wire"])
 					wires |= wirebit
 				else
-					to_chat(usr, SPAN_NOTICE(" You need wirecutters!"))
+					to_chat(usr, SPAN_NOTICE("You need wirecutters!"))
 
 			if("wirepulse")
 				var/obj/item/held_item = usr.get_held_item()
 				if (held_item && HAS_TRAIT(held_item, TRAIT_TOOL_MULTITOOL))
 					switch(href_list["wire"])
 						if("1","2")
-							to_chat(usr, SPAN_NOTICE(" [icon2html(src, usr)] The charge light flickers."))
+							to_chat(usr, SPAN_NOTICE("[icon2html(src, usr)] The charge light flickers."))
 						if("4")
-							to_chat(usr, SPAN_NOTICE(" [icon2html(src, usr)] The external warning lights flash briefly."))
+							to_chat(usr, SPAN_NOTICE("[icon2html(src, usr)] The external warning lights flash briefly."))
 						if("8")
-							to_chat(usr, SPAN_NOTICE(" [icon2html(src, usr)] The load platform clunks."))
+							to_chat(usr, SPAN_NOTICE("[icon2html(src, usr)] The load platform clunks."))
 						if("16", "32")
-							to_chat(usr, SPAN_NOTICE(" [icon2html(src, usr)] The drive motor whines briefly."))
+							to_chat(usr, SPAN_NOTICE("[icon2html(src, usr)] The drive motor whines briefly."))
 						else
-							to_chat(usr, SPAN_NOTICE(" [icon2html(src, usr)] You hear a radio crackle."))
+							to_chat(usr, SPAN_NOTICE("[icon2html(src, usr)] You hear a radio crackle."))
 				else
-					to_chat(usr, SPAN_NOTICE(" You need a multitool!"))
+					to_chat(usr, SPAN_NOTICE("You need a multitool!"))
 
 
 
@@ -492,7 +493,7 @@
 		var/mob/M = C
 		if(M.client)
 			M.client.perspective = EYE_PERSPECTIVE
-			M.client.eye = src
+			M.client.set_eye(src)
 
 	mode = 0
 	send_status()
@@ -514,7 +515,7 @@
 		var/mob/M = load
 		if(M.client)
 			M.client.perspective = MOB_PERSPECTIVE
-			M.client.eye = src
+			M.client.set_eye(src)
 
 
 	if(dirn)
@@ -530,7 +531,8 @@
 	// with items dropping as mobs are loaded
 
 	for(var/atom/movable/AM in src)
-		if(AM == cell || AM == botcard) continue
+		if(AM == cell || AM == botcard)
+			continue
 
 		AM.forceMove(loc)
 		AM.layer = initial(AM.layer)
@@ -539,7 +541,7 @@
 			var/mob/M = AM
 			if(M.client)
 				M.client.perspective = MOB_PERSPECTIVE
-				M.client.eye = src
+				M.client.set_eye(src)
 	mode = 0
 
 
@@ -569,7 +571,8 @@
 			if(3)
 				process_bot()
 
-	if(refresh) updateDialog()
+	if(refresh)
+		updateDialog()
 
 /obj/structure/machinery/bot/mulebot/proc/process_bot()
 	switch(mode)
@@ -613,7 +616,8 @@
 
 
 					var/moved = step_towards(src, next) // attempt to move
-					if(cell) cell.use(1)
+					if(cell)
+						cell.use(1)
 					if(moved) // successful move
 						blockcount = 0
 						path -= loc
@@ -765,27 +769,10 @@
 /obj/structure/machinery/bot/mulebot/alter_health()
 	return get_turf(src)
 
-
-// called from mob/living/carbon/human/Crossed()
-// when mulebot is in the same loc
-/obj/structure/machinery/bot/mulebot/proc/RunOver(mob/living/carbon/human/H)
-	src.visible_message(SPAN_DANGER("[src] drives over [H]!"))
-	playsound(src.loc, 'sound/effects/splat.ogg', 25, 1)
-
-	var/damage = rand(5,15)
-	H.apply_damage(2*damage, BRUTE, "head")
-	H.apply_damage(2*damage, BRUTE, "chest")
-	H.apply_damage(0.5*damage, BRUTE, "l_leg")
-	H.apply_damage(0.5*damage, BRUTE, "r_leg")
-	H.apply_damage(0.5*damage, BRUTE, "l_arm")
-	H.apply_damage(0.5*damage, BRUTE, "r_arm")
-
-	H.add_splatter_floor(loc, 1)
-	bloodiness += 4
-
 // player on mulebot attempted to move
 /obj/structure/machinery/bot/mulebot/relaymove(mob/user)
-	if(user.is_mob_incapacitated(TRUE)) return
+	if(user.is_mob_incapacitated(TRUE))
+		return
 	if(load == user)
 		unload(0)
 
@@ -878,7 +865,8 @@
 
 	var/datum/radio_frequency/frequency = SSradio.return_frequency(freq)
 
-	if(!frequency) return
+	if(!frequency)
+		return
 
 
 

@@ -15,7 +15,7 @@
 		return
 
 	if(!istype(old_loc, /turf/open/space))
-		var/turf/projected = get_ranged_target_turf(crosser.loc, dir, 10)
+		var/turf/projected = get_ranged_target_turf(crosser, dir, 10)
 
 		INVOKE_ASYNC(crosser, TYPE_PROC_REF(/atom/movable, throw_atom), projected, 50, SPEED_FAST, null, TRUE)
 
@@ -24,7 +24,7 @@
 /turf/open/space/transit/proc/handle_crosser(atom/movable/crosser)
 	if(QDELETED(crosser))
 		return
-	if(crosser.can_paradrop()) //let's not delete people who arent meant to be deleted... This shouldn't happen normally, but if it does, congratulations, you gamed the system
+	if(crosser.can_paradrop()) //let's not delete people who aren't meant to be deleted... This shouldn't happen normally, but if it does, congratulations, you gamed the system
 		return
 	qdel(crosser)
 
@@ -51,6 +51,8 @@
 		var/turf/location = get_turf(dropship.paradrop_signal.signal_loc)
 		for(var/turf/turf as anything in RANGE_TURFS(crosser.get_paradrop_scatter(), location))
 			var/area/turf_area = get_area(turf)
+			if(istype(turf, /turf/open/space))
+				continue
 			if(!turf_area || CEILING_IS_PROTECTED(turf_area.ceiling, CEILING_PROTECTION_TIER_1))
 				continue
 			if(turf.density)
@@ -82,7 +84,7 @@
 	for(var/area/maybe_this_area in potential_areas)
 		if(CEILING_IS_PROTECTED(maybe_this_area.ceiling, CEILING_PROTECTION_TIER_1)) // prevents out of bounds too
 			continue
-		if(istype(maybe_this_area, /area/space)) // make sure its not space, just in case
+		if(istype(maybe_this_area, /area/space)) // make sure it's not space, just in case
 			continue
 
 		var/turf/open/possible_turf = null
@@ -93,8 +95,8 @@
 			if(!istype(possible_turf) || is_blocked_turf(possible_turf) || istype(possible_turf, /turf/open/space))
 				continue
 
-		if(!istype(possible_turf) || is_blocked_turf(possible_turf) || istype(possible_turf, /turf/open/space))
-			continue // couldnt find one in 10 loops, check another area
+		if(!istype(possible_turf) || is_blocked_turf(possible_turf) || istype(possible_turf, /turf/open/space) || istype(possible_turf, /turf/open/slippery))
+			continue // couldn't find one in 10 loops, check another area
 
 		// we found a good turf, lets drop em
 		if(crosser.can_paradrop())
@@ -106,7 +108,7 @@
 	//we didn't find a turf to drop them... This shouldn't happen usually
 	if(crosser.can_paradrop()) //don't delete them if they were supposed to paradrop
 		to_chat(crosser, SPAN_BOLDWARNING("Your harness got stuck and you got thrown back in the dropship."))
-		var/turf/projected = get_ranged_target_turf(crosser.loc, turn(dir, 180), 15)
+		var/turf/projected = get_ranged_target_turf(crosser, turn(dir, 180), 15)
 		INVOKE_ASYNC(crosser, TYPE_PROC_REF(/atom/movable, throw_atom), projected, 50, SPEED_FAST, null, TRUE)
 		return
 	return ..() // they couldn't be dropped, just delete them
@@ -145,14 +147,12 @@
 		COMSIG_LIVING_PREIGNITION
 	), PROC_REF(cancel_fire))
 	var/image/cables = image('icons/obj/structures/droppod_32x64.dmi', src, "chute_cables_static")
-	cables.appearance_flags = KEEP_APART|RESET_TRANSFORM
 	overlays += cables
 	var/image/chute = image('icons/obj/structures/droppod_64x64.dmi', src, "chute_static")
 
 	chute.pixel_x -= 16
 	chute.pixel_y += 16
-	chute.appearance_flags = KEEP_APART|RESET_TRANSFORM
-	ADD_TRAIT(src, TRAIT_CLOAKED, TRAIT_SOURCE_PARADROPPING)
+
 	overlays += chute
 	pixel_z = 360
 	forceMove(target)
@@ -165,8 +165,6 @@
 	..()
 	if(client)
 		playsound_client(client, 'sound/items/fulton.ogg', src, 50, 1) //for some reason you don't hear the sound while dropping, maybe because of force move?
-	Stun(999)
-	addtimer(CALLBACK(src, PROC_REF(SetStun), 0, TRUE), 3.5 SECONDS)
 
 /atom/movable/proc/clear_parachute(image/cables, image/chute)
 	if(QDELETED(src))
@@ -185,7 +183,6 @@
 		if(atom == src)
 			continue
 		atom.Cross(src)
-	REMOVE_TRAIT(src, TRAIT_CLOAKED, TRAIT_SOURCE_PARADROPPING)
 
 /atom/movable/proc/clear_active_explosives()
 	for(var/obj/item/explosive/explosive in contents)
@@ -204,7 +201,7 @@
 
 /obj/handle_airdrop(turf/target, dropship_name)
 	..()
-	if(!indestructible && prob(30)) // throwing objects from the air is not always a good idea
+	if(!explo_proof && prob(30)) // throwing objects from the air is not always a good idea
 		deconstruct(FALSE)
 
 /obj/structure/closet/handle_airdrop(turf/target, dropship_name) // good idea but no
@@ -218,7 +215,7 @@
 	..()
 	if(QDELETED(src))
 		return
-	if(!indestructible && w_class < SIZE_MEDIUM) //tiny and small items will be lost, good riddance
+	if(!explo_proof && w_class < SIZE_MEDIUM) //tiny and small items will be lost, good riddance
 		deconstruct(FALSE)
 		return
 	explosion_throw(200) // give it a bit of a kick
@@ -273,36 +270,12 @@
 	shuttle_tag = DROPSHIP_SAIPAN
 	dir = SOUTH
 
-/turf/open/space/transit/dropship/midway
-	shuttle_tag = DROPSHIP_MIDWAY
+/turf/open/space/transit/dropship/morana
+	shuttle_tag = DROPSHIP_MORANA
 	dir = SOUTH
 
-/turf/open/space/transit/dropship/cyclone
-	shuttle_tag = DROPSHIP_CYCLONE
-	dir = SOUTH
-
-/turf/open/space/transit/dropship/tornado
-	shuttle_tag = DROPSHIP_TORNADO
-	dir = SOUTH
-
-/turf/open/space/transit/dropship/typhoon
-	shuttle_tag = DROPSHIP_TYPHOON
-	dir = SOUTH
-
-/turf/open/space/transit/dropship/tripoli
-	shuttle_tag = DROPSHIP_TRIPOLI
-	dir = SOUTH
-
-/turf/open/space/transit/dropship/pmc
-	shuttle_tag = DROPSHIP_PMC
-	dir = SOUTH
-
-/turf/open/space/transit/dropship/gibraltar
-	shuttle_tag = DROPSHIP_GIBRALTAR
-	dir = SOUTH
-
-/turf/open/space/transit/dropship/upp
-	shuttle_tag = DROPSHIP_UPP
+/turf/open/space/transit/dropship/devana
+	shuttle_tag = DROPSHIP_DEVANA
 	dir = SOUTH
 
 /turf/open/space/transit/south
@@ -330,6 +303,9 @@
 	if(auto_space_icon)
 		icon_state = "speedspace_ns_[get_transit_state(src)]"
 		transform = turn(matrix(), get_transit_angle(src))
+	else
+		// Undo change in /turf/open/space/Initialize
+		icon_state = initial(icon_state)
 
 /proc/get_transit_state(turf/T)
 	var/p = 9

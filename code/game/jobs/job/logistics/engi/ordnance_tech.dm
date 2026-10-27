@@ -1,10 +1,10 @@
 //Ordnance Technician
 /datum/job/logistics/otech
 	title = JOB_ORDNANCE_TECH
-	total_positions = 3
-	spawn_positions = 3
-	allow_additional = 1
-	scaled = 1
+	total_positions = 0
+	spawn_positions = 0
+	allow_additional = 0
+	scaled = 0
 	supervisors = "the chief engineer"
 	selection_class = "job_ot"
 	flags_startup_parameters = ROLE_ADD_TO_DEFAULT
@@ -25,6 +25,10 @@
 	else
 		total_positions_so_far = positions
 	return positions
+
+AddTimelock(/datum/job/logistics/otech, list(
+	JOB_ENGINEER_ROLES = 1 HOURS
+))
 
 /obj/effect/landmark/start/otech
 	name = JOB_ORDNANCE_TECH

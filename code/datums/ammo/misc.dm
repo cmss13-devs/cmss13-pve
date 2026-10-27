@@ -49,28 +49,24 @@
 	drop_flame(get_turf(P), P.weapon_cause_data)
 
 /datum/ammo/flamethrower/tank_flamer
-	flags_ammo_behavior = AMMO_IGNORE_ARMOR|AMMO_IGNORE_COVER|AMMO_FLAME|AMMO_HITS_TARGET_TURF
-	flamer_reagent_id = "utnapthal"
+	flamer_reagent_id = "highdamagenapalm"
 	max_range = 8
-	damage = 50
-	shell_speed = AMMO_SPEED_TIER_4
+	shell_speed = 1.5
 
 /datum/ammo/flamethrower/tank_flamer/drop_flame(turf/turf, datum/cause_data/cause_data)
 	if(!istype(turf))
 		return
 
-	var/datum/reagent/napalm/ut/reagent = new()
-	new /obj/flamer_fire(turf, cause_data, reagent, 2)
+	var/datum/reagent/napalm/high_damage/reagent = new()
+	new /obj/flamer_fire(turf, cause_data, reagent, 1)
 
 	var/datum/effect_system/smoke_spread/landingsmoke = new /datum/effect_system/smoke_spread
-	landingsmoke.set_up(1, 0, turf, null, 3, cause_data)
+	landingsmoke.set_up(1, 0, turf, null, 4, cause_data)
 	landingsmoke.start()
 	landingsmoke = null
 
-	max_range = 8
-
 /datum/ammo/flamethrower/sentry_flamer
-	flags_ammo_behavior = AMMO_IGNORE_ARMOR|AMMO_IGNORE_COVER|AMMO_FLAME
+	flags_ammo_behavior = AMMO_IGNORE_ARMOR|AMMO_IGNORE_COVER|AMMO_FLAME|AMMO_NO_DEFLECT
 	flamer_reagent_id = "napalmx"
 
 	accuracy = HIT_ACCURACY_TIER_8
@@ -87,21 +83,11 @@
 /datum/ammo/flamethrower/sentry_flamer/glob
 	max_range = 14
 	accurate_range = 10
-	var/datum/effect_system/smoke_spread/phosphorus/smoke
-
-/datum/ammo/flamethrower/sentry_flamer/glob/New()
-	. = ..()
-	smoke = new()
 
 /datum/ammo/flamethrower/sentry_flamer/glob/drop_flame(turf/T, datum/cause_data/cause_data)
 	if(!istype(T))
 		return
-	smoke.set_up(1, 0, T, new_cause_data = cause_data)
-	smoke.start()
-
-/datum/ammo/flamethrower/sentry_flamer/glob/Destroy()
-	qdel(smoke)
-	return ..()
+	do_smoke(loca = T, cause_data = cause_data)
 
 /datum/ammo/flamethrower/sentry_flamer/mini
 	name = "normal fire"
@@ -112,12 +98,6 @@
 	var/datum/reagent/napalm/ut/R = new()
 	R.durationfire = BURN_TIME_INSTANT
 	new /obj/flamer_fire(T, cause_data, R, 0)
-
-/datum/ammo/flamethrower/pve/drop_flame(turf/T, datum/cause_data/cause_data)
-	if(!istype(T))
-		return
-	var/datum/reagent/reagent = GLOB.chemical_reagents_list[flamer_reagent_id]
-	new /obj/flamer_fire(T, cause_data, reagent, 1)
 
 /datum/ammo/flamethrower/sentry_flamer/wy
 	name = "sticky fire"
@@ -148,6 +128,12 @@
 	LAZYADD(traits_to_give, list(
 		BULLET_TRAIT_ENTRY(/datum/element/bullet_trait_incendiary, stacks = 2.5)
 	))
+/datum/ammo/flare/no_ignite
+	max_range = 21
+
+/datum/ammo/flare/no_ignite/set_bullet_traits()
+	return
+
 
 /datum/ammo/flare/on_hit_mob(mob/M,obj/projectile/P)
 	drop_flare(get_turf(M), P, P.firer)
@@ -185,6 +171,144 @@
 		var/obj/item/weapon/gun/flare/flare_gun_fired_from = fired_projectile.shot_from
 		flare_gun_fired_from.last_signal_flare_name = signal_flare.name
 
+/datum/ammo/arrow
+	name = "inert arrow"
+	ping = null //no bounce off.
+	damage_type = BRUTE
+	icon_state = "arrow"
+
+	damage = 110
+	penetration = 20
+	accuracy = HIT_ACCURACY_TIER_3
+	max_range = 14
+	shell_speed = AMMO_SPEED_TIER_3
+	flags_ammo_behavior = AMMO_SPECIAL_EMBED
+	shrapnel_chance = SHRAPNEL_CHANCE_TIER_10
+	shrapnel_type = /obj/item/arrow
+	handful_type = /obj/item/arrow
+	sound_hit = 'sound/weapons/pierce.ogg'
+	var/activated = FALSE
+	var/loaded_icon = "loaded"
+	var/arrow_icon = "arrow_expl"
+
+/datum/ammo/arrow/dynamic
+	name = "inert dynamic arrow"
+	arrow_icon = "arrow_inert"
+	shrapnel_type = /obj/item/arrow/dynamic_warhead
+	handful_type = /obj/item/arrow/dynamic_warhead
+
+/datum/ammo/arrow/on_embed(mob/embedded_mob, obj/limb/target_organ, silent = FALSE)
+	if(!ishumansynth_strict(embedded_mob) || !istype(target_organ))
+		return
+	target_organ.embed(new shrapnel_type)
+
+/datum/ammo/arrow/proc/drop_arrow(turf/T, obj/projectile/fired_projectile)
+	var/obj/item/arrow/arrow = new handful_type(T)
+	var/matrix/rotation = matrix()
+	rotation.Turn(fired_projectile.angle - 90)
+	arrow.apply_transform(rotation)
+
+/datum/ammo/arrow/on_hit_mob(mob/mob,obj/projectile/projectile)
+	mob.apply_effect(1, STUN)
+	mob.apply_effect(3, DAZE)
+	if(!ishumansynth_strict(mob))
+		drop_arrow(get_turf(mob), projectile)
+	pushback(mob, projectile, 7)
+
+/datum/ammo/arrow/on_hit_obj(obj/object,obj/projectile/projectile)
+	drop_arrow(get_turf(projectile), projectile)
+
+/datum/ammo/arrow/on_hit_turf(turf/turf, obj/projectile/projectile)
+	if(turf.density && isturf(projectile.loc))
+		drop_arrow(projectile.loc, projectile)
+	else
+		drop_arrow(turf, projectile)
+
+/datum/ammo/arrow/do_at_max_range(obj/projectile/projectile, mob/firer)
+	drop_arrow(get_turf(projectile), projectile)
+
+/datum/ammo/arrow/snare
+	name = "snare arrow"
+	damage = 30
+	penetration = 15
+	max_range = 7
+	shrapnel_type = /obj/item/arrow/snare
+	handful_type = /obj/item/arrow/snare
+	loaded_icon = "trap"
+	arrow_icon = "arrow_trap"
+
+/datum/ammo/arrow/snare/on_hit_mob(mob/mob, obj/projectile/projectile)
+	mob.apply_effect(1, STUN)
+	mob.apply_effect(3, DAZE)
+	var/obj/item/arrow/snare/arrow = new(get_turf(mob))
+	var/matrix/rotation = matrix()
+	rotation.Turn(projectile.angle - 90)
+	arrow.apply_transform(rotation)
+	arrow.trigger_snare(mob)
+	pushback(mob, projectile, 2)
+
+/datum/ammo/arrow/expl
+	name = "activated explosive arrow"
+	activated = TRUE
+	handful_type = /obj/item/arrow/expl_active
+	damage_type = BURN
+	flags_ammo_behavior = AMMO_HITS_TARGET_TURF
+	shrapnel_chance = 0
+	loaded_icon = "expl"
+	arrow_icon = "arrow_expl_active"
+
+/datum/ammo/arrow/expl/dynamic
+	name = "explosive dynamic arrow"
+	handful_type = /obj/item/arrow/dynamic_warhead
+
+/datum/ammo/arrow/expl/on_hit_mob(mob/mob,obj/projectile/projectile)
+	cell_explosion(get_turf(mob), 150, 50, EXPLOSION_FALLOFF_SHAPE_LINEAR, null, projectile.weapon_cause_data)
+	do_smoke(loca = mob)
+
+/datum/ammo/arrow/expl/on_hit_obj(obj/object,obj/projectile/projectile)
+	cell_explosion(get_turf(projectile), 150, 50, EXPLOSION_FALLOFF_SHAPE_LINEAR, null, projectile.weapon_cause_data)
+	do_smoke(projectile)
+/datum/ammo/arrow/expl/on_hit_turf(turf/turf, obj/projectile/projectile)
+	if(turf.density && isturf(projectile.loc))
+		cell_explosion(get_turf(projectile), 150, 50, EXPLOSION_FALLOFF_SHAPE_LINEAR, null, projectile.weapon_cause_data)
+		do_smoke(projectile)
+	else
+		cell_explosion(turf, 150, 50, EXPLOSION_FALLOFF_SHAPE_LINEAR, null, projectile.weapon_cause_data)
+		do_smoke(loca = turf)
+
+/datum/ammo/arrow/expl/do_at_max_range(obj/projectile/projectile, mob/firer)
+	cell_explosion(get_turf(projectile), 150, 50, EXPLOSION_FALLOFF_SHAPE_LINEAR, null, projectile.weapon_cause_data)
+	do_smoke(projectile)
+
+/datum/ammo/arrow/emp
+	name = "activated EMP arrow"
+	activated = TRUE
+	handful_type = /obj/item/arrow/emp/active
+	damage_type = BURN
+	flags_ammo_behavior = AMMO_HITS_TARGET_TURF
+	shrapnel_chance = 0
+	loaded_icon = "emp"
+	arrow_icon = "arrow_emp_active"
+
+/datum/ammo/arrow/emp/dynamic
+	name = "EMP dynamic arrow"
+	handful_type = /obj/item/arrow/dynamic_warhead
+
+/datum/ammo/arrow/emp/on_hit_mob(mob/mob,obj/projectile/projectile)
+	empulse(projectile, 1, 4)
+
+/datum/ammo/arrow/emp/on_hit_obj(obj/object,obj/projectile/projectile)
+	empulse(projectile, 1, 4)
+
+/datum/ammo/arrow/emp/on_hit_turf(turf/turf, obj/projectile/projectile)
+	if(turf.density && isturf(projectile.loc))
+		empulse(projectile.loc, 1, 4)
+	else
+		empulse(projectile, 1, 4)
+
+/datum/ammo/arrow/emp/do_at_max_range(obj/projectile/projectile, mob/firer)
+	empulse(projectile, 1, 4)
+
 /datum/ammo/flare/starshell
 	name = "starshell ash"
 	icon_state = "starshell_bullet"
@@ -195,7 +319,7 @@
 /datum/ammo/flare/starshell/set_bullet_traits()
 	LAZYADD(traits_to_give, list(
 		BULLET_TRAIT_ENTRY(/datum/element/bullet_trait_iff),
-		BULLET_TRAIT_ENTRY(/datum/element/bullet_trait_incendiary, stacks = 1)
+		BULLET_TRAIT_ENTRY(/datum/element/bullet_trait_incendiary, stacks = 2)
 	))
 
 /datum/ammo/souto
@@ -219,7 +343,8 @@
 			target_organ.embed(new can_type)
 
 /datum/ammo/souto/on_hit_mob(mob/M, obj/projectile/P)
-	if(!M || M == P.firer) return
+	if(!M || M == P.firer)
+		return
 	if(M.throw_mode && !M.get_active_hand()) //empty active hand and we're in throw mode. If so we catch the can.
 		if(!M.is_mob_incapacitated()) // People who are not able to catch cannot catch.
 			if(length(P.contents) == 1)
@@ -270,7 +395,7 @@
 
 	damage = 15
 	accuracy = HIT_ACCURACY_TIER_3
-	max_range = 9
+	max_range = 6
 
 /datum/ammo/grenade_container/on_hit_mob(mob/M,obj/projectile/P)
 	drop_nade(P)
@@ -288,7 +413,7 @@
 	var/turf/T = get_turf(P)
 	var/obj/item/explosive/grenade/G = new nade_type(T)
 	G.visible_message(SPAN_WARNING("\A [G] lands on [T]!"))
-	G.det_time = 0.5 SECONDS
+	G.det_time = 10
 	G.cause_data = P.weapon_cause_data
 	G.activate()
 
@@ -299,15 +424,6 @@
 	name = "smoke grenade shell"
 	nade_type = /obj/item/explosive/grenade/smokebomb
 	icon_state = "smoke_shell"
-
-/datum/ammo/grenade_container/smoke/upp
-	name = "smoke grenade shell"
-	nade_type = /obj/item/explosive/grenade/smokebomb/upp
-	icon_state = "smoke_shell"
-
-/datum/ammo/grenade_container/incen
-	name = "incendiary smoke grenade shell"
-	nade_type = /obj/item/explosive/grenade/phosphorus
 
 /datum/ammo/grenade_container/tank_glauncher
 	max_range = 8
@@ -340,167 +456,28 @@
 	child.hivenumber = hugger_hive
 	INVOKE_ASYNC(child, TYPE_PROC_REF(/obj/item/clothing/mask/facehugger, leap_at_nearest_target))
 
-/*
-//========
-					SHARP Dart Ammo
-//========
-*/
-/datum/ammo/rifle/sharp
-	name = "dart"
-	ping = null //no bounce off.
-	damage_type = BRUTE
-	shrapnel_type = /obj/item/sharp
-	flags_ammo_behavior = AMMO_SPECIAL_EMBED|AMMO_NO_DEFLECT|AMMO_STRIKES_SURFACE_ONLY|AMMO_HITS_TARGET_TURF
-	icon_state = "sonicharpoon"
-	var/embed_object = /obj/item/sharp/explosive
+/datum/ammo/pill
+	name = "syringe"
+	icon_state = "syringe"
+	flags_ammo_behavior = AMMO_IGNORE_ARMOR|AMMO_ALWAYS_FF
 
-	shrapnel_chance = 100
-	accuracy = HIT_ACCURACY_TIER_MAX
-	accurate_range = 12
-	max_range = 7
-	damage = 35
-	shell_speed = AMMO_SPEED_TIER_2
-
-/datum/ammo/rifle/sharp/on_embed(mob/embedded_mob, obj/limb/target_organ)
-	if(!ishuman(embedded_mob))
-		return
-	var/mob/living/carbon/human/humano = embedded_mob
-	if(humano.species.flags & NO_SHRAPNEL)
-		return
-	if(istype(target_organ))
-		target_organ.embed(new embed_object)
-
-/datum/ammo/rifle/sharp/on_hit_obj(obj/O, obj/projectile/P)
-	drop_dart(P.loc, P)
-
-/datum/ammo/rifle/sharp/on_hit_turf(turf/T, obj/projectile/P)
-	drop_dart(T, P)
-
-/datum/ammo/rifle/sharp/do_at_max_range(obj/projectile/P)
-	drop_dart(P.loc, P)
-
-/datum/ammo/rifle/sharp/proc/drop_dart(loc, obj/projectile/P)
-	new embed_object(loc, P.dir)
-
-/datum/ammo/rifle/sharp/explosive
-	name = "9X-E sticky explosive dart"
-
-/datum/ammo/rifle/sharp/explosive/on_hit_mob(mob/living/M, obj/projectile/P)
-	if(!M || M == P.firer) return
-	var/mob/shooter = P.firer
-	shake_camera(M, 2, 1)
-	if(shooter && ismob(shooter))
-		if(!M.get_target_lock(shooter.faction_group))
-			var/obj/item/weapon/gun/rifle/sharp/weapon = P.shot_from
-			if(weapon && weapon.explosion_delay_sharp)
-				addtimer(CALLBACK(src, PROC_REF(delayed_explosion), P, M, shooter), 5 SECONDS)
-			else
-				addtimer(CALLBACK(src, PROC_REF(delayed_explosion), P, M, shooter), 1 SECONDS)
-
-/datum/ammo/rifle/sharp/explosive/drop_dart(loc, obj/projectile/P, mob/shooter)
-	var/signal_explosion = FALSE
-	if(locate(/obj/item/explosive/mine) in get_turf(loc))
-		signal_explosion = TRUE
-	var/obj/item/explosive/mine/sharp/dart = new /obj/item/explosive/mine/sharp(loc)
-	// if no darts on tile, don't arm, explode instead.
-	if(signal_explosion)
-		INVOKE_ASYNC(dart, TYPE_PROC_REF(/obj/item/explosive/mine/sharp, prime), shooter)
-	else
-		dart.anchored = TRUE
-		addtimer(CALLBACK(dart, TYPE_PROC_REF(/obj/item/explosive/mine/sharp, deploy_mine), shooter), 3 SECONDS, TIMER_DELETE_ME)
-		addtimer(CALLBACK(dart, TYPE_PROC_REF(/obj/item/explosive/mine/sharp, disarm)), 1 MINUTES, TIMER_DELETE_ME)
-
-/datum/ammo/rifle/sharp/explosive/proc/delayed_explosion(obj/projectile/P, mob/M, mob/shooter)
-	if(ismob(M))
-		var/explosion_size = 100
-		var/falloff_size = 50
-		var/cause_data = create_cause_data("P9 SHARP Rifle", shooter)
-		cell_explosion(get_turf(M), explosion_size, falloff_size, EXPLOSION_FALLOFF_SHAPE_LINEAR, P.dir, cause_data)
-		M.ex_act(150, P.dir, P.weapon_cause_data, 100)
-		M.apply_effect(2, WEAKEN)
-		M.apply_effect(2, PARALYZE)
-		playsound(get_turf(M), 'sound/weapons/gun_sharp_explode.ogg', 45)
-
-/datum/ammo/rifle/sharp/track
-	name = "9X-T sticky tracker dart"
-	icon_state = "sonicharpoon_tracker"
-	embed_object = /obj/item/sharp/track
-	var/tracker_timer = 1 MINUTES
-
-/datum/ammo/rifle/sharp/track/on_hit_mob(mob/living/M, obj/projectile/P)
-	if(!M || M == P.firer) return
-	shake_camera(M, 2, 1)
-	var/obj/item/weapon/gun/rifle/sharp/weapon = P.shot_from
-	if(weapon)
-		weapon.sharp_tracked_mob_list |= M
-	addtimer(CALLBACK(src, PROC_REF(remove_tracker), M, P), tracker_timer)
-
-/datum/ammo/rifle/sharp/track/proc/remove_tracker(mob/living/M, obj/projectile/P)
-	var/obj/item/weapon/gun/rifle/sharp/weapon = P.shot_from
-	if(weapon)
-		weapon.sharp_tracked_mob_list -= M
-
-/datum/ammo/rifle/sharp/track/infinite
-	tracker_timer = 999 MINUTES
-
-/datum/ammo/rifle/sharp/flechette
-	name = "9X-F flechette dart"
-	icon_state = "sonicharpoon_flechette"
-	embed_object = /obj/item/sharp/flechette
-	shrapnel_type = /datum/ammo/bullet/shotgun/flechette_spread/awesome
-
-/datum/ammo/rifle/sharp/flechette/on_hit_mob(mob/living/M, obj/projectile/P)
-	if(!M || M == P.firer) return
-	var/mob/shooter = P.firer
-	shake_camera(M, 2, 1)
-	if(shooter && ismob(shooter))
-		if(!M.get_target_lock(shooter.faction_group))
-			create_flechette(M.loc, P)
-
-/datum/ammo/rifle/sharp/flechette/on_pointblank(mob/living/M, obj/projectile/P)
-	if(!M) return
-	P.dir = get_dir(P.firer, M)
-
-/datum/ammo/rifle/sharp/flechette/on_hit_obj(obj/O, obj/projectile/P)
-	create_flechette(O.loc, P)
-
-/datum/ammo/rifle/sharp/flechette/on_hit_turf(turf/T, obj/projectile/P)
-	create_flechette(T, P)
-
-/datum/ammo/rifle/sharp/flechette/do_at_max_range(obj/projectile/P)
-	create_flechette(P.loc, P)
-
-/datum/ammo/rifle/sharp/flechette/proc/create_flechette(loc, obj/projectile/P)
-	var/shrapnel_count = 12
-	var/dispersion_angle = 20
-	create_shrapnel(loc, shrapnel_count, P.dir, dispersion_angle, shrapnel_type, P.weapon_cause_data, FALSE, 100)
-	apply_explosion_overlay(loc)
-
-/datum/ammo/rifle/sharp/flechette/proc/apply_explosion_overlay(turf/loc)
-	var/obj/effect/overlay/O = new /obj/effect/overlay(loc)
-	O.name = "grenade"
-	O.icon = 'icons/effects/explosion.dmi'
-	flick("grenade", O)
-	QDEL_IN(O, 7)
-
-/datum/ammo/anti_air
-	name = "anti-air missile"
-	ping = null //no bounce off.
-	damage_type = CLONE //Shouldn't ever hit anyone
-	flags_ammo_behavior = AMMO_MP //As above, ensures it'll miss if it ever travels any distance
-	icon_state = "flare"
 	damage = 0
-	max_range = 1
-	shell_speed = AMMO_SPEED_TIER_HITSCAN
 
-/datum/ammo/anti_air/on_hit_mob(mob/mob, obj/projectile/projectile)
-	return
+/datum/ammo/pill/on_hit_mob(mob/M, obj/projectile/P)
+	. = ..()
 
-/datum/ammo/anti_air/on_hit_obj(obj/object, obj/projectile/projectile)
-	return
+	if(!ishuman(M))
+		return
 
-/datum/ammo/anti_air/on_hit_turf(turf/turf, obj/projectile/projectile)
-	return
+	if(!istype(P, /obj/projectile/pill))
+		return
 
-/datum/ammo/anti_air/do_at_max_range(obj/projectile/projectile)
-	return
+	var/obj/projectile/pill/pill_projectile = P
+
+	if(QDELETED(pill_projectile.source_pill))
+		pill_projectile.source_pill = null
+		return
+
+	var/datum/reagents/pill_reagents = pill_projectile.source_pill.reagents
+
+	pill_reagents.trans_to(M, pill_reagents.total_volume)

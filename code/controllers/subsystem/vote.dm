@@ -38,7 +38,7 @@ SUBSYSTEM_DEF(vote)
 	if(mode)
 		time_remaining = floor((started_time + CONFIG_GET(number/vote_period) - world.time)/10)
 
-		if(time_remaining < 0)
+		if(time_remaining < 0 || length(choices) == 1)
 			result()
 			reset()
 
@@ -69,6 +69,9 @@ SUBSYSTEM_DEF(vote)
 	var/greatest_votes = 0
 	var/total_votes = 0
 	var/list/choices_adjusted = list()
+
+	if(length(choices) == 1)
+		return list(choices[1])
 
 	// First read in the total amount of votes
 	for(var/option in choices)
@@ -183,7 +186,7 @@ SUBSYSTEM_DEF(vote)
 				active_admins = TRUE
 				break
 		if(!active_admins)
-			world.Reboot("Restart vote successful.")
+			world.Reboot()
 		else
 			to_chat(world, "<span style='boltnotice'>Notice:Restart vote will not restart the server automatically because there are active admins on.</span>")
 			message_admins("A restart vote has passed, but there are active admins on with +SERVER, so it has been canceled. If you wish, you may restart the server.")
@@ -356,6 +359,8 @@ SUBSYSTEM_DEF(vote)
 		initiator = initiator_key
 		started_time = world.time
 		on_vote_end = on_end
+		if(length(choices) == 1)
+			return
 		var/text = "[capitalize(mode)] vote started by [initiator]."
 		if(mode == "custom")
 			text += "<br>[question]"
@@ -371,7 +376,7 @@ SUBSYSTEM_DEF(vote)
 				V.set_name("Vote: [question]")
 			C.player_details.player_actions += V
 			if(send_clients_vote)
-				C.mob.vote()
+				C.vote()
 
 		RegisterSignal(SSdcs, COMSIG_GLOB_CLIENT_LOGGED_IN, PROC_REF(handle_client_joining))
 		SStgui.update_uis(src)
@@ -385,15 +390,15 @@ SUBSYSTEM_DEF(vote)
 	// Do not remove more votes than were made for the map
 	return -(min(current_votes, total_vote_adjustment))
 
-/mob/verb/vote()
+CLIENT_VERB(vote)
 	set category = "OOC"
 	set name = "Vote"
 
-	SSvote.tgui_interact(src)
+	SSvote.tgui_interact(mob)
 
 /datum/controller/subsystem/vote/Topic(href, href_list)
 	. = ..()
-	usr.vote()
+	usr.client?.vote()
 
 /datum/controller/subsystem/vote/proc/remove_action_buttons()
 	SEND_GLOBAL_SIGNAL(COMSIG_GLOB_REMOVE_VOTE_BUTTON)
@@ -415,7 +420,7 @@ SUBSYSTEM_DEF(vote)
 
 /datum/action/innate/vote/action_activate()
 	. = ..()
-	owner.vote()
+	owner.client?.vote()
 
 /datum/action/innate/vote/proc/remove_from_client()
 	if(!owner)

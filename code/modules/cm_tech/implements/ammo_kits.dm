@@ -57,12 +57,12 @@
 	. = ..()
 	.[/obj/item/ammo_magazine/smg/m39] = /obj/item/ammo_magazine/smg/m39/incendiary
 	.[/obj/item/ammo_magazine/rifle] = /obj/item/ammo_magazine/rifle/incendiary
-	.[/obj/item/ammo_magazine/rifle/m49a] = /obj/item/ammo_magazine/rifle/m49a/incendiary
+	.[/obj/item/ammo_magazine/rifle/m4ra] = /obj/item/ammo_magazine/rifle/m4ra/incendiary
 	.[/obj/item/ammo_magazine/rifle/l42a] = /obj/item/ammo_magazine/rifle/l42a/incendiary
 	.[/obj/item/ammo_magazine/rifle/m41aMK1] = /obj/item/ammo_magazine/rifle/m41aMK1/incendiary
 	.[/obj/item/ammo_magazine/pistol] =  /obj/item/ammo_magazine/pistol/incendiary
 	.[/obj/item/ammo_magazine/pistol/vp78] =  /obj/item/ammo_magazine/pistol/vp78/incendiary
-	.[/obj/item/ammo_magazine/pistol/vp70] =  /obj/item/ammo_magazine/pistol/vp70/incendiary
+	.[/obj/item/ammo_magazine/pistol/mod88] =  /obj/item/ammo_magazine/pistol/mod88/incendiary
 	.[/obj/item/ammo_magazine/revolver] =  /obj/item/ammo_magazine/revolver/incendiary
 
 /obj/item/storage/box/shotgun
@@ -106,12 +106,12 @@
 	. = ..()
 	.[/obj/item/ammo_magazine/smg/m39] = /obj/item/ammo_magazine/smg/m39/penetrating
 	.[/obj/item/ammo_magazine/rifle] = /obj/item/ammo_magazine/rifle/penetrating
-	.[/obj/item/ammo_magazine/rifle/m49a] = /obj/item/ammo_magazine/rifle/m49a/penetrating
+	.[/obj/item/ammo_magazine/rifle/m4ra] = /obj/item/ammo_magazine/rifle/m4ra/penetrating
 	.[/obj/item/ammo_magazine/rifle/l42a] = /obj/item/ammo_magazine/rifle/l42a/penetrating
 	.[/obj/item/ammo_magazine/rifle/m41aMK1] = /obj/item/ammo_magazine/rifle/m41aMK1/penetrating
 	.[/obj/item/ammo_magazine/pistol] =  /obj/item/ammo_magazine/pistol/penetrating
 	.[/obj/item/ammo_magazine/pistol/vp78] =  /obj/item/ammo_magazine/pistol/vp78/penetrating
-	.[/obj/item/ammo_magazine/pistol/vp70] =  /obj/item/ammo_magazine/pistol/vp70/penetrating
+	.[/obj/item/ammo_magazine/pistol/mod88] =  /obj/item/ammo_magazine/pistol/mod88/penetrating
 	.[/obj/item/ammo_magazine/revolver] =  /obj/item/ammo_magazine/revolver/penetrating
 
 /obj/item/ammo_kit/toxin
@@ -127,5 +127,5 @@
 	.[/obj/item/ammo_magazine/rifle/m41aMK1] = /obj/item/ammo_magazine/rifle/m41aMK1/toxin
 	.[/obj/item/ammo_magazine/pistol] =  /obj/item/ammo_magazine/pistol/toxin
 	.[/obj/item/ammo_magazine/pistol/vp78] =  /obj/item/ammo_magazine/pistol/vp78/toxin
-	.[/obj/item/ammo_magazine/pistol/vp70] =  /obj/item/ammo_magazine/pistol/vp70/toxin
+	.[/obj/item/ammo_magazine/pistol/mod88] =  /obj/item/ammo_magazine/pistol/mod88/toxin
 	.[/obj/item/ammo_magazine/revolver] =  /obj/item/ammo_magazine/revolver/marksman/toxin

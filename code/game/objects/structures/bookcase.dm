@@ -1,12 +1,11 @@
 
 /obj/structure/bookcase
 	name = "bookcase"
-	icon = 'icons/obj/structures/structures.dmi'
+	icon = 'icons/obj/structures/bookshelf.dmi'
 	icon_state = "book-0"
 	anchored = TRUE
 	density = TRUE
 	opacity = TRUE
-	unslashable = TRUE
 
 /obj/structure/bookcase/deconstruct(disassembled)
 	new /obj/item/stack/sheet/metal(loc)
@@ -25,6 +24,16 @@
 	else
 		attack_hand(xeno)
 		return XENO_NONCOMBAT_ACTION
+
+/obj/structure/bookcase/handle_tail_stab(mob/living/carbon/xenomorph/xeno, blunt_stab)
+	if(unslashable)
+		return TAILSTAB_COOLDOWN_NONE
+	playsound(src, 'sound/effects/metalhit.ogg', 25, 1)
+	deconstruct(FALSE)
+	xeno.visible_message(SPAN_DANGER("[xeno] destroys [src] with its tail!"),
+	SPAN_DANGER("We destroy [src] with our tail!"), null, 5, CHAT_TYPE_XENO_COMBAT)
+	xeno.tail_stab_animation(src, blunt_stab)
+	return TAILSTAB_COOLDOWN_NORMAL
 
 /obj/structure/bookcase/Initialize()
 	. = ..()
@@ -48,11 +57,11 @@
 	else if(HAS_TRAIT(O, TRAIT_TOOL_WRENCH))
 		playsound(loc, 'sound/items/Ratchet.ogg', 25, 1)
 		if(do_after(user, 1 SECONDS, INTERRUPT_MOVED, BUSY_ICON_FRIENDLY, src))
-			user.visible_message("[user] deconstructs [src].", \
+			user.visible_message("[user] deconstructs [src].",
 				"You deconstruct [src].", "You hear a noise.")
 			deconstruct(FALSE)
 	else
-		..()
+		. = ..()
 
 /obj/structure/bookcase/attack_hand(mob/user as mob)
 	if(length(contents))
@@ -85,10 +94,10 @@
 			return
 
 /obj/structure/bookcase/update_icon()
-	if(length(contents) < 5)
+	if(length(contents) < 6)
 		icon_state = "book-[length(contents)]"
 	else
-		icon_state = "book-5"
+		icon_state = "book-6"
 
 
 /obj/structure/bookcase/manuals/medical

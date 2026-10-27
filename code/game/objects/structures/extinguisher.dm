@@ -5,9 +5,8 @@
 	icon_state = "extinguisher"
 	anchored = TRUE
 	density = FALSE
-	unslashable = TRUE
 	var/obj/item/tool/extinguisher/has_extinguisher
-	var/opened = 0
+	var/opened = FALSE
 	var/base_icon
 
 /obj/structure/extinguisher_cabinet/Initialize()
@@ -15,6 +14,11 @@
 	base_icon = initial(icon_state)
 	has_extinguisher = new /obj/item/tool/extinguisher()
 	has_extinguisher.forceMove(src)
+
+/obj/structure/extinguisher_cabinet/Destroy()
+	if(has_extinguisher)
+		has_extinguisher = null // it's in contents so it'll be destroyed in the parent call, just null the var
+	return ..()
 
 /obj/structure/extinguisher_cabinet/lifeboat
 	name = "extinguisher cabinet"

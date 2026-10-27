@@ -414,7 +414,7 @@
 /turf/open/floor/cmo,
 /area/adminlevel/ert_station/pizza_station)
 "eI" = (
-/obj/structure/platform/kutjevo/smooth,
+/obj/structure/platform/metal/kutjevo_smooth,
 /turf/open/space/basic,
 /area/space)
 "eK" = (
@@ -443,10 +443,8 @@
 /turf/open/mars_dirt/mars_cave_11,
 /area/space)
 "fb" = (
-/obj/structure/platform/kutjevo/smooth{
-	dir = 8
-	},
-/obj/structure/platform/kutjevo/smooth,
+/obj/structure/platform/metal/kutjevo_smooth/west,
+/obj/structure/platform/metal/kutjevo_smooth,
 /turf/open/space,
 /area/space)
 "fg" = (
@@ -467,17 +465,13 @@
 /turf/open/floor/prison/yellowcorner/east,
 /area/adminlevel/ert_station/pizza_station)
 "fH" = (
-/obj/structure/platform/kutjevo/smooth{
-	dir = 1
-	},
+/obj/structure/platform/metal/kutjevo_smooth/north,
 /obj/structure/barricade/handrail{
 	dir = 1;
 	icon_state = "hr_kutjevo";
 	name = "solar lattice"
 	},
-/obj/structure/platform/kutjevo/smooth{
-	dir = 8
-	},
+/obj/structure/platform/metal/kutjevo_smooth/west,
 /turf/open/space,
 /area/space)
 "fN" = (
@@ -493,9 +487,7 @@
 /turf/open/floor/redyellowfull,
 /area/adminlevel/ert_station/pizza_station)
 "fO" = (
-/obj/structure/platform_decoration/kutjevo{
-	dir = 4
-	},
+/obj/structure/platform_decoration/metal/kutjevo/east,
 /turf/open/space/basic,
 /area/space)
 "gb" = (
@@ -563,9 +555,7 @@
 /turf/open/floor/prison/kitchen,
 /area/adminlevel/ert_station/pizza_station)
 "ha" = (
-/obj/structure/platform_decoration/kutjevo{
-	dir = 1
-	},
+/obj/structure/platform_decoration/metal/kutjevo/north,
 /turf/open/space,
 /area/space)
 "hb" = (
@@ -687,15 +677,9 @@
 /turf/open/floor/prison/yellow/north,
 /area/adminlevel/ert_station/pizza_station)
 "ja" = (
-/obj/structure/platform_decoration/kutjevo{
-	dir = 4
-	},
-/obj/structure/platform/kutjevo/smooth{
-	dir = 1
-	},
-/obj/structure/platform/kutjevo/smooth{
-	dir = 8
-	},
+/obj/structure/platform_decoration/metal/kutjevo/east,
+/obj/structure/platform/metal/kutjevo_smooth/north,
+/obj/structure/platform/metal/kutjevo_smooth/west,
 /obj/structure/barricade/handrail{
 	dir = 1;
 	icon_state = "hr_kutjevo";
@@ -834,9 +818,8 @@
 /turf/open/floor/almayer/test_floor4,
 /area/adminlevel/ert_station/pizza_station)
 "lg" = (
-/turf/closed/shuttle/ert{
-	icon_state = "leftengine_1"
-	},
+/obj/structure/shuttle/part/ert/transparent/left_engine,
+/turf/open/mars_dirt/mars_cave_3,
 /area/adminlevel/ert_station/pizza_station)
 "lv" = (
 /obj/structure/surface/table/almayer,
@@ -872,12 +855,8 @@
 /turf/open/floor/redyellowfull,
 /area/adminlevel/ert_station/pizza_station)
 "lx" = (
-/obj/structure/platform/kutjevo/smooth{
-	dir = 1
-	},
-/obj/structure/platform/kutjevo/smooth{
-	dir = 8
-	},
+/obj/structure/platform/metal/kutjevo_smooth/north,
+/obj/structure/platform/metal/kutjevo_smooth/west,
 /obj/structure/barricade/handrail{
 	dir = 1;
 	icon_state = "hr_kutjevo";
@@ -1158,9 +1137,7 @@
 /turf/open/floor/prison/red/east,
 /area/adminlevel/ert_station/pizza_station)
 "oX" = (
-/obj/structure/platform/kutjevo/smooth{
-	dir = 1
-	},
+/obj/structure/platform/metal/kutjevo_smooth/north,
 /obj/structure/barricade/handrail{
 	dir = 1;
 	icon_state = "hr_kutjevo";
@@ -1248,9 +1225,7 @@
 /turf/open/floor/plating/plating_catwalk,
 /area/adminlevel/ert_station/pizza_station)
 "qq" = (
-/obj/structure/platform/kutjevo/smooth{
-	dir = 4
-	},
+/obj/structure/platform/metal/kutjevo_smooth/east,
 /turf/open/space/basic,
 /area/space)
 "qs" = (
@@ -1301,9 +1276,7 @@
 /turf/open/floor/redyellowfull,
 /area/adminlevel/ert_station/pizza_station)
 "qX" = (
-/obj/structure/platform_decoration/kutjevo{
-	dir = 8
-	},
+/obj/structure/platform_decoration/metal/kutjevo/west,
 /turf/open/space/basic,
 /area/space)
 "rj" = (
@@ -1327,9 +1300,7 @@
 /turf/open/floor/redyellowfull,
 /area/adminlevel/ert_station/pizza_station)
 "rk" = (
-/obj/structure/platform_decoration/kutjevo{
-	dir = 8
-	},
+/obj/structure/platform_decoration/metal/kutjevo/west,
 /obj/structure/lattice,
 /turf/open/space/basic,
 /area/space)
@@ -1539,17 +1510,13 @@
 /turf/open/floor/corsat/retrosquareslight,
 /area/adminlevel/ert_station/pizza_station)
 "tT" = (
-/obj/structure/platform/kutjevo/smooth{
-	dir = 1
-	},
+/obj/structure/platform/metal/kutjevo_smooth/north,
 /obj/structure/barricade/handrail{
 	dir = 1;
 	icon_state = "hr_kutjevo";
 	name = "solar lattice"
 	},
-/obj/structure/platform/kutjevo/smooth{
-	dir = 4
-	},
+/obj/structure/platform/metal/kutjevo_smooth/east,
 /turf/open/space,
 /area/space)
 "tX" = (
@@ -1574,9 +1541,7 @@
 /turf/open/floor/prison/red/west,
 /area/adminlevel/ert_station/pizza_station)
 "uj" = (
-/obj/structure/platform/kutjevo/smooth{
-	dir = 4
-	},
+/obj/structure/platform/metal/kutjevo_smooth/east,
 /turf/open/space,
 /area/space)
 "uo" = (
@@ -1604,10 +1569,8 @@
 /turf/open/floor/cmo,
 /area/adminlevel/ert_station/pizza_station)
 "uK" = (
-/obj/structure/platform/kutjevo/smooth,
-/obj/structure/platform/kutjevo/smooth{
-	dir = 8
-	},
+/obj/structure/platform/metal/kutjevo_smooth,
+/obj/structure/platform/metal/kutjevo_smooth/west,
 /obj/structure/barricade/handrail/kutjevo{
 	layer = 3.01
 	},
@@ -1678,18 +1641,18 @@
 /area/adminlevel/ert_station/pizza_station)
 "vI" = (
 /obj/structure/disposalpipe/segment,
-/obj/item/storage/backpack/marine/satchel{
+/obj/item/prop{
 	desc = "It's the heavy-duty black polymer kind. Time to take out the trash!";
 	icon = 'icons/obj/janitor.dmi';
-	icon_state = "trashbag3";
+	icon_state = "trashbag_full";
 	name = "trash bag";
 	pixel_x = -1;
 	pixel_y = 6
 	},
-/obj/item/storage/backpack/marine/satchel{
+/obj/item/prop{
 	desc = "It's the heavy-duty black polymer kind. Time to take out the trash!";
 	icon = 'icons/obj/janitor.dmi';
-	icon_state = "trashbag3";
+	icon_state = "trashbag_full";
 	name = "trash bag";
 	pixel_x = 3;
 	pixel_y = -2
@@ -1701,7 +1664,7 @@
 /turf/open/floor/prison,
 /area/adminlevel/ert_station/pizza_station)
 "vR" = (
-/obj/structure/platform/kutjevo/smooth,
+/obj/structure/platform/metal/kutjevo_smooth,
 /obj/structure/barricade/handrail/kutjevo{
 	layer = 3.01
 	},
@@ -1731,7 +1694,7 @@
 /turf/open/floor/prison/kitchen,
 /area/adminlevel/ert_station/pizza_station)
 "wb" = (
-/obj/structure/platform/kutjevo/smooth,
+/obj/structure/platform/metal/kutjevo_smooth,
 /turf/open/space,
 /area/space)
 "wi" = (
@@ -1785,7 +1748,7 @@
 /turf/open/floor/prison/red/north,
 /area/adminlevel/ert_station/pizza_station)
 "wD" = (
-/obj/structure/platform_decoration/kutjevo,
+/obj/structure/platform_decoration/metal/kutjevo,
 /obj/structure/lattice,
 /turf/open/space/basic,
 /area/space)
@@ -1838,10 +1801,8 @@
 /turf/open/floor/prison/red/north,
 /area/adminlevel/ert_station/pizza_station)
 "xe" = (
-/obj/structure/platform/kutjevo/smooth,
-/obj/structure/platform/kutjevo/smooth{
-	dir = 8
-	},
+/obj/structure/platform/metal/kutjevo_smooth,
+/obj/structure/platform/metal/kutjevo_smooth/west,
 /turf/open/space/basic,
 /area/space)
 "xh" = (
@@ -1879,7 +1840,7 @@
 /turf/open/floor/redyellowfull,
 /area/adminlevel/ert_station/pizza_station)
 "xp" = (
-/obj/structure/platform/kutjevo/smooth,
+/obj/structure/platform/metal/kutjevo_smooth,
 /obj/structure/disposalpipe/trunk,
 /obj/structure/barricade/handrail/kutjevo{
 	layer = 3.01
@@ -1918,7 +1879,7 @@
 /turf/open/floor/redyellowfull,
 /area/adminlevel/ert_station/pizza_station)
 "yg" = (
-/obj/structure/platform_decoration/kutjevo,
+/obj/structure/platform_decoration/metal/kutjevo,
 /turf/open/space/basic,
 /area/space)
 "yo" = (
@@ -2402,7 +2363,7 @@
 /turf/open/floor/prison/kitchen,
 /area/adminlevel/ert_station/pizza_station)
 "DH" = (
-/obj/structure/platform/kutjevo/smooth,
+/obj/structure/platform/metal/kutjevo_smooth,
 /obj/structure/barricade/handrail/kutjevo{
 	layer = 3.01
 	},
@@ -2413,9 +2374,7 @@
 /turf/open/floor/prison/red/north,
 /area/adminlevel/ert_station/pizza_station)
 "Ee" = (
-/obj/structure/platform/kutjevo/smooth{
-	dir = 8
-	},
+/obj/structure/platform/metal/kutjevo_smooth/west,
 /obj/structure/barricade/handrail/kutjevo{
 	dir = 8;
 	layer = 3.01
@@ -2445,7 +2404,7 @@
 /turf/open/floor/almayer/test_floor4,
 /area/adminlevel/ert_station/pizza_station)
 "EH" = (
-/obj/structure/machinery/vending/cigarette{
+/obj/structure/machinery/vending/cigarette/koorlander/free{
 	pixel_y = 18;
 	layer = 3.01;
 	density = 0
@@ -2515,15 +2474,15 @@
 "Fp" = (
 /obj/structure/closet/crate/freezer,
 /obj/structure/machinery/light/blue,
-/obj/item/reagent_container/food/snacks/microwavable/packaged_burrito,
-/obj/item/reagent_container/food/snacks/microwavable/packaged_burrito,
-/obj/item/reagent_container/food/snacks/microwavable/packaged_burrito,
-/obj/item/reagent_container/food/snacks/microwavable/packaged_hdogs,
-/obj/item/reagent_container/food/snacks/microwavable/packaged_hdogs,
-/obj/item/reagent_container/food/snacks/microwavable/packaged_hdogs,
-/obj/item/reagent_container/food/snacks/microwavable/packaged_burger,
-/obj/item/reagent_container/food/snacks/microwavable/packaged_burger,
-/obj/item/reagent_container/food/snacks/microwavable/packaged_burger,
+/obj/item/reagent_container/food/snacks/packaged_burrito,
+/obj/item/reagent_container/food/snacks/packaged_burrito,
+/obj/item/reagent_container/food/snacks/packaged_burrito,
+/obj/item/reagent_container/food/snacks/packaged_hdogs,
+/obj/item/reagent_container/food/snacks/packaged_hdogs,
+/obj/item/reagent_container/food/snacks/packaged_hdogs,
+/obj/item/reagent_container/food/snacks/packaged_burger,
+/obj/item/reagent_container/food/snacks/packaged_burger,
+/obj/item/reagent_container/food/snacks/packaged_burger,
 /turf/open/floor/prison/floor_marked/southwest,
 /area/adminlevel/ert_station/pizza_station)
 "Fz" = (
@@ -2554,10 +2513,8 @@
 /turf/open/floor/almayer/test_floor4,
 /area/adminlevel/ert_station/pizza_station)
 "FL" = (
-/turf/closed/shuttle/ert{
-	icon_state = "rightengine_1";
-	opacity = 0
-	},
+/obj/structure/shuttle/part/ert/transparent/right_engine,
+/turf/open/mars_dirt/mars_cave_3,
 /area/adminlevel/ert_station/pizza_station)
 "FS" = (
 /obj/structure/machinery/light,
@@ -2634,17 +2591,13 @@
 /turf/open/floor/prison/red,
 /area/adminlevel/ert_station/pizza_station)
 "Gn" = (
-/obj/structure/platform/kutjevo/smooth{
-	dir = 1
-	},
+/obj/structure/platform/metal/kutjevo_smooth/north,
 /obj/structure/barricade/handrail{
 	dir = 1;
 	icon_state = "hr_kutjevo";
 	name = "solar lattice"
 	},
-/obj/structure/platform/kutjevo/smooth{
-	dir = 4
-	},
+/obj/structure/platform/metal/kutjevo_smooth/east,
 /turf/open/space/basic,
 /area/space)
 "Gp" = (
@@ -2683,16 +2636,14 @@
 /area/space)
 "Ha" = (
 /turf/closed/shuttle/ert{
-	icon_state = "stan_leftengine"
+	icon_state = "stan_leftengine_clean"
 	},
 /area/adminlevel/ert_station/pizza_station)
 "Hd" = (
 /turf/open/floor/prison/yellow/east,
 /area/adminlevel/ert_station/pizza_station)
 "Hg" = (
-/obj/structure/platform/kutjevo/smooth{
-	dir = 8
-	},
+/obj/structure/platform/metal/kutjevo_smooth/west,
 /turf/open/space,
 /area/space)
 "HL" = (
@@ -2977,10 +2928,8 @@
 /turf/open/floor/prison/yellow/northwest,
 /area/adminlevel/ert_station/pizza_station)
 "Mz" = (
-/obj/structure/platform/kutjevo/smooth,
-/obj/structure/platform/kutjevo/smooth{
-	dir = 8
-	},
+/obj/structure/platform/metal/kutjevo_smooth,
+/obj/structure/platform/metal/kutjevo_smooth/west,
 /turf/open/space,
 /area/space)
 "MB" = (
@@ -3103,9 +3052,8 @@
 /turf/open/floor/prison,
 /area/adminlevel/ert_station/pizza_station)
 "NJ" = (
-/turf/closed/shuttle/ert{
-	icon_state = "stan20"
-	},
+/obj/structure/shuttle/part/ert/front_left_stan,
+/turf/open/mars_dirt/mars_cave_3,
 /area/adminlevel/ert_station/pizza_station)
 "NN" = (
 /obj/structure/closet/secure_closet/fridge/groceries/stock,
@@ -3130,9 +3078,7 @@
 /turf/open/floor/cmo,
 /area/adminlevel/ert_station/pizza_station)
 "NT" = (
-/obj/structure/platform_decoration/kutjevo{
-	dir = 8
-	},
+/obj/structure/platform_decoration/metal/kutjevo/west,
 /turf/open/space,
 /area/space)
 "NV" = (
@@ -3180,9 +3126,7 @@
 /turf/open/floor/prison/red,
 /area/adminlevel/ert_station/pizza_station)
 "OG" = (
-/obj/structure/platform/kutjevo/smooth{
-	dir = 1
-	},
+/obj/structure/platform/metal/kutjevo_smooth/north,
 /obj/structure/barricade/handrail{
 	dir = 1;
 	icon_state = "hr_kutjevo";
@@ -3195,7 +3139,7 @@
 /turf/open/floor/solarpanel,
 /area/space)
 "OK" = (
-/obj/structure/machinery/vending/cigarette{
+/obj/structure/machinery/vending/cigarette/koorlander/free{
 	pixel_y = 3;
 	layer = 4.15
 	},
@@ -3267,7 +3211,7 @@
 /turf/open/floor/prison/kitchen,
 /area/adminlevel/ert_station/pizza_station)
 "Pq" = (
-/obj/structure/platform/kutjevo/smooth,
+/obj/structure/platform/metal/kutjevo_smooth,
 /obj/structure/lattice,
 /turf/open/space/basic,
 /area/space)
@@ -3283,12 +3227,8 @@
 /turf/open/floor/prison/kitchen,
 /area/adminlevel/ert_station/pizza_station)
 "Py" = (
-/obj/structure/platform/kutjevo/smooth{
-	dir = 1
-	},
-/obj/structure/platform/kutjevo/smooth{
-	dir = 4
-	},
+/obj/structure/platform/metal/kutjevo_smooth/north,
+/obj/structure/platform/metal/kutjevo_smooth/east,
 /obj/structure/barricade/handrail{
 	dir = 1;
 	icon_state = "hr_kutjevo";
@@ -3297,9 +3237,7 @@
 /turf/open/space,
 /area/space)
 "PF" = (
-/obj/structure/platform/kutjevo/smooth{
-	dir = 8
-	},
+/obj/structure/platform/metal/kutjevo_smooth/west,
 /turf/open/space/basic,
 /area/space)
 "PH" = (
@@ -3363,16 +3301,12 @@
 /turf/open/floor/plating,
 /area/adminlevel/ert_station/pizza_station)
 "RC" = (
-/obj/structure/platform_decoration/kutjevo{
-	dir = 1
-	},
+/obj/structure/platform_decoration/metal/kutjevo/north,
 /turf/open/space/basic,
 /area/space)
 "RG" = (
-/obj/structure/platform/kutjevo/smooth{
-	dir = 4
-	},
-/obj/structure/platform/kutjevo/smooth,
+/obj/structure/platform/metal/kutjevo_smooth/east,
+/obj/structure/platform/metal/kutjevo_smooth,
 /turf/open/space/basic,
 /area/space)
 "RN" = (
@@ -3418,9 +3352,7 @@
 /turf/open/floor/redyellowfull,
 /area/adminlevel/ert_station/pizza_station)
 "Sg" = (
-/obj/structure/platform/kutjevo/smooth{
-	dir = 1
-	},
+/obj/structure/platform/metal/kutjevo_smooth/north,
 /obj/structure/barricade/handrail{
 	dir = 1;
 	icon_state = "hr_kutjevo";
@@ -3518,11 +3450,11 @@
 	pixel_y = 28;
 	pixel_x = 16
 	},
-/obj/item/tool/kitchen/utensil/pknife{
+/obj/item/tool/kitchen/utensil/knife/plastic{
 	pixel_x = 13;
 	pixel_y = 1
 	},
-/obj/item/tool/kitchen/utensil/pfork{
+/obj/item/tool/kitchen/utensil/fork/plastic{
 	pixel_x = -5;
 	pixel_y = 5
 	},
@@ -3675,9 +3607,8 @@
 /turf/open/floor/prison/red/west,
 /area/adminlevel/ert_station/pizza_station)
 "Vt" = (
-/turf/closed/shuttle/ert{
-	icon_state = "stan25"
-	},
+/obj/structure/shuttle/part/ert/front_right_stan,
+/turf/open/mars_dirt/mars_cave_3,
 /area/adminlevel/ert_station/pizza_station)
 "Vv" = (
 /obj/docking_port/stationary/emergency_response/idle_port4,
@@ -3828,9 +3759,7 @@
 /turf/open/floor/prison/kitchen,
 /area/adminlevel/ert_station/pizza_station)
 "Xn" = (
-/obj/structure/platform_decoration/kutjevo{
-	dir = 4
-	},
+/obj/structure/platform_decoration/metal/kutjevo/east,
 /turf/open/space,
 /area/space)
 "Xq" = (
@@ -3860,10 +3789,8 @@
 /turf/open/floor/prison/kitchen,
 /area/adminlevel/ert_station/pizza_station)
 "Xw" = (
-/obj/structure/platform/kutjevo/smooth,
-/obj/structure/platform/kutjevo/smooth{
-	dir = 4
-	},
+/obj/structure/platform/metal/kutjevo_smooth,
+/obj/structure/platform/metal/kutjevo_smooth/east,
 /turf/open/space/basic,
 /area/space)
 "Xx" = (
@@ -3946,10 +3873,10 @@
 /area/adminlevel/ert_station/pizza_station)
 "Yj" = (
 /obj/structure/surface/table/reinforced/cloth,
-/obj/item/tool/kitchen/utensil/pknife{
+/obj/item/tool/kitchen/utensil/knife/plastic{
 	pixel_x = -6
 	},
-/obj/item/tool/kitchen/utensil/pfork{
+/obj/item/tool/kitchen/utensil/fork/plastic{
 	pixel_y = 3;
 	pixel_x = -3
 	},
@@ -3974,10 +3901,8 @@
 /turf/open/space,
 /area/space)
 "Yu" = (
-/obj/structure/platform/kutjevo/smooth,
-/obj/structure/platform/kutjevo/smooth{
-	dir = 4
-	},
+/obj/structure/platform/metal/kutjevo_smooth,
+/obj/structure/platform/metal/kutjevo_smooth/east,
 /obj/structure/lattice,
 /turf/open/space/basic,
 /area/space)
@@ -3986,7 +3911,7 @@
 /turf/open/floor/almayer/dark_sterile,
 /area/adminlevel/ert_station/pizza_station)
 "Yw" = (
-/turf/closed/shuttle/ert{
+/turf/closed/shuttle/ert/transparent{
 	icon_state = "stan27"
 	},
 /area/adminlevel/ert_station/pizza_station)
@@ -4004,9 +3929,7 @@
 /turf/open/floor/prison/greenblue/southeast,
 /area/adminlevel/ert_station/pizza_station)
 "YF" = (
-/obj/structure/platform_decoration/kutjevo{
-	dir = 1
-	},
+/obj/structure/platform_decoration/metal/kutjevo/north,
 /obj/structure/lattice,
 /turf/open/space/basic,
 /area/space)

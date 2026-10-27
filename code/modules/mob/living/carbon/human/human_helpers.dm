@@ -9,25 +9,27 @@
 		g = "f"
 	return g
 
-/proc/get_limb_icon_name(datum/species/S, body_size, body_type, gender, limb_name, skin_color)
-	if(S.uses_skin_color)
+/proc/get_limb_icon_name(datum/species/S, body_size, body_type, gender, limb_name, skin_color, body_presentation)
+	if(!body_presentation)
+		body_presentation = gender
+	if(S.flags & HAS_SKIN_COLOR)
 		if(S.special_body_types)
 			switch(limb_name)
 				if("torso")
-					return "[skin_color]_torso_[body_size]_[body_type]"
+					return "[skin_color]_torso_[body_size]_[body_type]_[get_gender_name(body_presentation)]"
 				if("chest")
-					return "[skin_color]_torso_[body_size]_[body_type]"
+					return "[skin_color]_torso_[body_size]_[body_type]_[get_gender_name(body_presentation)]"
 				if("head")
 					return "[skin_color]_[limb_name]"
 				if("groin")
-					return "[skin_color]_[limb_name]_[body_size]"
+					return "[skin_color]_[limb_name]"
 
 		if(!S.special_body_types)
 			switch(limb_name)
 				if("torso")
-					return "[skin_color]_torso_[body_type]_[get_gender_name(gender)]"
+					return "[skin_color]_torso_[body_type]_[get_gender_name(body_presentation)]"
 				if("chest")
-					return "[skin_color]_torso_[body_type]_[get_gender_name(gender)]"
+					return "[skin_color]_torso_[body_type]_[get_gender_name(body_presentation)]"
 				if("head")
 					return "[skin_color]_[limb_name]_[get_gender_name(gender)]"
 				if("groin")
@@ -75,10 +77,10 @@
 	else
 		switch(limb_name)
 			if ("torso")
-				return "[limb_name]_[get_gender_name(gender)]"
+				return "[limb_name]_[get_gender_name(body_presentation)]"
 
 			if ("chest")
-				return "[limb_name]_[get_gender_name(gender)]"
+				return "[limb_name]_[get_gender_name(body_presentation)]"
 
 			if ("head")
 				return "[limb_name]_[get_gender_name(gender)]"
@@ -141,29 +143,14 @@
 				return null
 
 /mob/living/carbon/human/proc/set_limb_icons()
-	var/datum/skin_color/set_skin_color = GLOB.skin_color_list[skin_color]
-	var/datum/body_size/set_body_size = GLOB.body_size_list[body_size]
-	var/datum/body_type/set_body_type = GLOB.body_type_list[body_type]
+	var/datum/skin_color/set_skin_color = GLOB.skin_color_list[skin_color] || GLOB.skin_color_list[SKIN_COLOR_PALE2]
+	var/skin_color_icon = set_skin_color?.icon_name
 
-	var/skin_color_icon
-	var/body_size_icon
-	var/body_type_icon
+	var/datum/body_size/set_body_size = GLOB.body_size_list[body_size] || GLOB.body_size_list[BODY_SIZE_AVERAGE]
+	var/body_size_icon = set_body_size?.icon_name
 
-	if(!set_skin_color)
-		skin_color_icon = "pale2"
-	else
-		skin_color_icon = set_skin_color.icon_name
-
-	if(!set_body_size)
-		body_size_icon = "avg"
-	else
-		body_size_icon = set_body_size.icon_name
-
-
-	if(!set_body_type)
-		body_type_icon = "lean"
-	else
-		body_type_icon = set_body_type.icon_name
+	var/datum/body_type/set_body_type = GLOB.body_type_list[body_type] || GLOB.body_type_list[BODY_TYPE_LEAN]
+	var/body_type_icon = set_body_type?.icon_name
 
 	if(isspeciesyautja(src))
 		skin_color_icon = skin_color
@@ -171,7 +158,7 @@
 		body_type_icon = body_type
 
 	for(var/obj/limb/L as anything in limbs)
-		L.icon_name = get_limb_icon_name(species, body_size_icon, body_type_icon, gender, L.display_name, skin_color_icon)
+		L.icon_name = get_limb_icon_name(species, body_size_icon, body_type_icon, gender, L.display_name, skin_color_icon, body_presentation)
 
 /mob/living/carbon/human/can_inject(mob/user, error_msg, target_zone)
 	if(species?.flags & IS_SYNTHETIC)
@@ -201,7 +188,7 @@
 	if(istype(brain))
 		return TRUE
 	return FALSE
-f
+
 /mob/living/carbon/human/has_eyes()
 	var/datum/internal_organ/eyes = LAZYACCESS(internal_organs_by_name, "eyes")
 	if(istype(eyes) && !eyes.cut_away)
@@ -210,7 +197,7 @@ f
 
 
 /mob/living/carbon/human/is_mob_restrained(check_grab = TRUE)
-	if(check_grab && pulledby && pulledby.grab_level > GRAB_PASSIVE && pulledby.grab_level != GRAB_XENO)
+	if(check_grab && pulledby && pulledby.grab_level >= GRAB_AGGRESSIVE)
 		return TRUE
 	if (handcuffed)
 		return TRUE
@@ -243,13 +230,20 @@ f
 		if(istype(i, /obj/item/device/motiondetector))
 			var/obj/item/device/motiondetector/md = i
 			md.toggle_active(src, old_active = TRUE, forced = TRUE)
-//		if(istype(i, /obj/item/weapon/gun/smartgun))
-//			var/obj/item/weapon/gun/smartgun/sg = i
-//			if(sg.motion_detector)
-//				sg.motion_detector = FALSE
-//				var/datum/action/item_action/smartgun/toggle_motion_detector/TMD = locate(/datum/action/item_action/smartgun/toggle_motion_detector) in sg.actions
-//				TMD.update_icon()
-//				sg.motion_detector()
+		if(istype(i, /obj/item/weapon/gun/smartgun))
+			var/obj/item/weapon/gun/smartgun/sg = i
+			if(sg.motion_detector)
+				sg.motion_detector = FALSE
+				var/datum/action/item_action/smartgun/toggle_motion_detector/TMD = locate(/datum/action/item_action/smartgun/toggle_motion_detector) in sg.actions
+				TMD.update_button_icon()
+				sg.motion_detector()
+		if(istype(i, /obj/item/clothing/suit/storage/marine/medium/rto/intel))
+			var/obj/item/clothing/suit/storage/marine/medium/rto/intel/xm4 = i
+			if(xm4.motion_detector)
+				xm4.motion_detector = FALSE
+				var/datum/action/item_action/intel/toggle_motion_detector/TMD = locate(/datum/action/item_action/intel/toggle_motion_detector) in xm4.actions
+				TMD.update_button_icon()
+				xm4.motion_detector()
 
 /mob/living/carbon/human/proc/disable_headsets()
 	//Disable all radios to reduce radio spam for dead people
@@ -264,6 +258,9 @@ f
 		if(istype(wear_suit, /obj/item/clothing/suit/storage/marine))
 			if(wear_suit.turn_light(src, toggle_on = FALSE))
 				light_off++
+		if(istype(back, /obj/item/storage/backpack/marine/smartpack))
+			if(back.turn_light(src, toggle_on = FALSE))
+				light_off++
 		for(var/obj/item/clothing/head/helmet/marine/H in contents)
 			for(var/obj/item/attachable/flashlight/FL in H.pockets)
 				if(FL.activate_attachment(H, src, TRUE))
@@ -271,25 +268,30 @@ f
 		for(var/obj/item/clothing/head/hardhat/headlamp in contents)
 			if(headlamp.turn_light(src, toggle_on = FALSE))
 				light_off++
+		for(var/obj/item/clothing/head/helmet/marine/veteran/pmc/enclosed/headlight in contents)
+			if(headlight.turn_light(src, toggle_on = FALSE))
+				light_off++
 	if(guns)
 		for(var/obj/item/weapon/gun/G in contents)
 			if(G.turn_off_light(src))
 				light_off++
 	if(flares)
 		for(var/obj/item/device/flashlight/flare/F in contents)
-			if(F.on) goes_out++
+			if(F.on)
+				goes_out++
 			F.turn_off(src)
 	if(misc)
 		for(var/obj/item/device/flashlight/L in contents)
-			if(istype(L, /obj/item/device/flashlight/flare)) continue
+			if(istype(L, /obj/item/device/flashlight/flare))
+				continue
 			if(L.turn_off_light(src))
 				light_off++
 		for(var/obj/item/tool/weldingtool/W in contents)
 			if(W.isOn())
 				W.toggle()
 				goes_out++
-		for(var/obj/item/tool/match/M in contents)
-			M.burn_out(src)
+		for(var/obj/item/tool/match/mob in contents)
+			mob.burn_out(src)
 		for(var/obj/item/tool/lighter/Z in contents)
 			if(Z.turn_off(src))
 				goes_out++
@@ -307,26 +309,27 @@ f
 			to_chat(src, SPAN_NOTICE("Your source of light shorts out."))
 
 
+
 /mob/living/carbon/human/a_intent_change(intent as num)
 	. = ..()
 	if(HAS_TRAIT(src, TRAIT_INTENT_EYES) && (src.stat != DEAD)) //1st gen synths change eye color based on intent. But not when they're dead.
 		switch(a_intent)
-			if(INTENT_HELP) //Green, defalt
-				r_eyes = 0
-				g_eyes = 255
-				b_eyes = 0
+			if(INTENT_HELP) //Green, default
+				r_eyes = species.eyes_help[1]
+				g_eyes = species.eyes_help[2]
+				b_eyes = species.eyes_help[3]
 			if(INTENT_DISARM) //Blue
-				r_eyes = 0
-				g_eyes = 0
-				b_eyes = 255
+				r_eyes = species.eyes_disarm[1]
+				g_eyes = species.eyes_disarm[2]
+				b_eyes = species.eyes_disarm[3]
 			if(INTENT_GRAB) //Orange, since yellow doesn't show at all!
-				r_eyes = 248
-				g_eyes = 243
-				b_eyes = 43
+				r_eyes = species.eyes_grab[1]
+				g_eyes = species.eyes_grab[2]
+				b_eyes = species.eyes_grab[3]
 			if(INTENT_HARM) //RED!
-				r_eyes = 255
-				g_eyes = 0
-				b_eyes = 0
+				r_eyes = species.eyes_harm[1]
+				g_eyes = species.eyes_harm[2]
+				b_eyes = species.eyes_harm[3]
 		update_body()
 
 /mob/living/carbon/human/proc/is_bleeding()
@@ -407,13 +410,13 @@ f
 /mob/living/carbon/human/proc/has_item_in_ears(item)
 	return (item == wear_l_ear) || (item == wear_r_ear)
 
-/mob/living/carbon/human/can_be_pulled_by(mob/M)
+/mob/living/carbon/human/can_be_pulled_by(mob/mob)
 	var/ignores_stripdrag_flag = FALSE
-	if(ishuman(M))
-		var/mob/living/carbon/human/H = M
-		ignores_stripdrag_flag = H.species.ignores_stripdrag_flag
-	if(MODE_HAS_TOGGLEABLE_FLAG(MODE_NO_STRIPDRAG_ENEMY) && !ignores_stripdrag_flag && (stat == DEAD || health < HEALTH_THRESHOLD_CRIT) && !get_target_lock(M.faction_group))
-		to_chat(M, SPAN_WARNING("You can't pull a crit or dead member of another faction!"))
+	if(ishuman(mob))
+		var/mob/living/carbon/human/human = mob
+		ignores_stripdrag_flag = human.species.ignores_stripdrag_flag
+	if(MODE_HAS_MODIFIER(/datum/gamemode_modifier/disable_stripdrag_enemy) && !ignores_stripdrag_flag && (stat == DEAD || health < health_threshold_crit) && !get_target_lock(mob.faction_group) && !(mob.status_flags & PERMANENTLY_DEAD))
+		to_chat(mob, SPAN_WARNING("You can't pull a crit or dead member of another faction!"))
 		return FALSE
 	return TRUE
 

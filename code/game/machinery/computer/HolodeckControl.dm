@@ -35,7 +35,7 @@
 
 /turf/open/floor/holofloor/grass/update_icon()
 	. = ..()
-	if(!broken && !burnt)
+	if(!(turf_flags & TURF_BROKEN) && !(turf_flags & TURF_BURNT))
 		if(!(icon_state in list("grass1", "grass2", "grass3", "grass4")))
 			icon_state = "grass[pick("1", "2", "3", "4")]"
 
@@ -80,26 +80,16 @@
 		return
 
 	if (HAS_TRAIT(W, TRAIT_TOOL_WRENCH))
-		to_chat(user, "It's a holotable!  There are no bolts!")
+		to_chat(user, "It's a holotable! There are no bolts!")
 		return
 
-	..()
+	. = ..()
 
 /obj/structure/surface/table/holotable/wood
 	name = "table"
 	desc = "A square piece of wood standing on four wooden legs. It can not move."
 	icon_state = "woodtable"
 	table_prefix = "wood"
-
-/obj/structure/holostool
-	name = "stool"
-	desc = "Apply butt."
-	icon = 'icons/obj/objects.dmi'
-	icon_state = "stool"
-	anchored = TRUE
-	unslashable = TRUE
-	flags_atom = FPRINT
-
 
 /obj/item/clothing/gloves/boxing/hologlove
 	name = "boxing gloves"
@@ -115,7 +105,6 @@
 	density = TRUE
 	layer = WINDOW_LAYER
 	anchored = TRUE
-	unslashable = TRUE
 	flags_atom = ON_BORDER
 
 /obj/structure/holowindow/initialize_pass_flags(datum/pass_flags_container/PF)
@@ -135,12 +124,13 @@
 /obj/structure/holohoop
 	name = "basketball hoop"
 	desc = "Boom, Shakalaka!"
-	icon = 'icons/obj/structures/props/misc.dmi'
+	icon = 'icons/obj/structures/props/furniture/misc.dmi'
 	icon_state = "hoop"
 	anchored = TRUE
 	density = TRUE
-	unslashable = TRUE
 	throwpass = 1
+
+	var/enable_shimmy = TRUE
 	var/side = ""
 	var/id = ""
 
@@ -170,7 +160,7 @@
 		return
 
 /obj/structure/holohoop/BlockedPassDirs(atom/movable/mover, target_dir)
-	if(istype(mover,/obj/item) && mover.throwing)
+	if(istype(mover,/obj/item) && HAS_TRAIT(mover, TRAIT_LAUNCHED))
 		var/obj/item/I = mover
 		if(istype(I, /obj/projectile))
 			return BLOCKED_MOVEMENT
@@ -180,13 +170,20 @@
 				if(X.id == id)
 					X.score(side)
 					// no break, to update multiple scoreboards
-			visible_message(SPAN_NOTICE("Swish! \the [I] lands in \the [src]."), null, null, 3)
+			visible_message(SPAN_NOTICE("Swish! \The [I] lands in \the [src]."), null, null, 3)
 		else
-			visible_message(SPAN_DANGER("\the [I] bounces off of \the [src]'s rim!"), null, null, 3)
+			visible_message(SPAN_DANGER("\The [I] bounces off of \the [src]'s rim!"), null, null, 3)
 		return NO_BLOCKED_MOVEMENT
 
 	return ..()
 
+/obj/structure/holohoop/noshimmy
+	enable_shimmy = FALSE
+
+/obj/structure/holohoop/Initialize(mapload, ...)
+	. = ..()
+	if (enable_shimmy)
+		AddComponent(/datum/component/shimmy_around, east_offset = -15, west_offset = -15, north_offset = 15, south_offset = 15)
 
 /obj/structure/machinery/readybutton
 	name = "Ready Declaration Device"
@@ -254,18 +251,3 @@
 	for(var/mob/M in currentarea)
 		to_chat(M, "FIGHT!")
 
-//Holorack
-
-/obj/structure/surface/rack/holorack
-	name = "rack"
-	desc = "Different from the Middle Ages version."
-	icon = 'icons/obj/objects.dmi'
-	icon_state = "rack"
-
-/obj/structure/surface/rack/holorack/attack_hand(mob/user as mob)
-	return
-
-/obj/structure/surface/rack/holorack/attackby(obj/item/W as obj, mob/user as mob)
-	if (HAS_TRAIT(W, TRAIT_TOOL_WRENCH))
-		to_chat(user, "It's a holorack!  You can't unwrench it!")
-		return

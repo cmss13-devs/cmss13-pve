@@ -4,9 +4,9 @@
 	name = "\improper miscellaneous equipment box"
 	desc = "A box for miscellaneous equipment."
 	icon_state = "supply_crate"
-	overlay_ammo_type = "blank"
-	overlay_gun_type = "blank"
-	overlay_content = "blank"
+	overlay_ammo_type = "_blank"
+	overlay_gun_type = "_blank"
+	overlay_content = "_blank"
 	can_explode = FALSE
 	limit_per_tile = 4
 
@@ -45,7 +45,7 @@
 	var/offset_x = 1
 	var/offset_y = -6
 
-	var/image/fire_overlay = image(icon, icon_state = will_explode ? "on_fire_explode_overlay" : "on_fire_overlay", pixel_x = offset_x, pixel_y = offset_y)
+	var/image/fire_overlay = image(flames_icon, icon_state = will_explode ? "on_fire_explode_overlay" : "on_fire_overlay", pixel_x = offset_x, pixel_y = offset_y)
 	overlays.Add(fire_overlay)
 
 /obj/item/ammo_box/magazine/misc/explode(severity, datum/cause_data/flame_cause_data)
@@ -82,6 +82,10 @@
 	magazine_type = /obj/item/storage/box/mre/pmc
 	overlay_content = "_colony_mre"
 
+/obj/item/ammo_box/magazine/misc/mre/pmc/Initialize()
+	. = ..()
+	AddElement(/datum/element/corp_label/wy)
+
 /obj/item/ammo_box/magazine/misc/mre/pmc/empty
 	empty = TRUE
 
@@ -91,6 +95,10 @@
 	icon_state = "wy_food_crate"
 	magazine_type = /obj/item/storage/box/mre/wy
 	overlay_content = "_wy_mre"
+
+/obj/item/ammo_box/magazine/misc/mre/wy/Initialize()
+	. = ..()
+	AddElement(/datum/element/corp_label/wy)
 
 /obj/item/ammo_box/magazine/misc/mre/wy/empty
 	empty = TRUE
@@ -113,6 +121,10 @@
 	num_of_magazines = 20
 	overlay_content = "_colony_mre"
 
+/obj/item/ammo_box/magazine/misc/mre/emergency/Initialize()
+	. = ..()
+	AddElement(/datum/element/corp_label/wy)
+
 /obj/item/ammo_box/magazine/misc/mre/emergency/empty
 	empty = TRUE
 
@@ -125,41 +137,22 @@
 /obj/item/ammo_box/magazine/misc/mre/fsr/empty
 	empty = TRUE
 
-/obj/item/ammo_box/magazine/misc/mre/hdr
-	name = "\improper box of HDR rations"
-	desc = "A box of Humanitarian Daily Rations. Give these out to hungry colonist kids, will you?"
-	icon_state = "hdr_food_crate"
-	magazine_type = /obj/item/storage/box/mre/hdr
-	overlay_content = "_hdr_mre"
-
-/obj/item/ammo_box/magazine/misc/mre/hdr/empty
-	empty = TRUE
-
 //------------------------M94 Marking Flare Packs Box--------------------------
 
 /obj/item/ammo_box/magazine/misc/flares
 	name = "\improper box of M94 marking flare packs"
 	desc = "A box of M94 marking flare packs, to brighten up your day."
-	magazine_type = /obj/item/storage/box/flare
+	magazine_type = /obj/item/storage/box/m94
 	num_of_magazines = 10
 	overlay_gun_type = "_m94"
 	overlay_content = "_flares"
-
-/obj/item/ammo_box/magazine/misc/flares/upp
-	name = "\improper box of R52 marking flare packs"
-	desc = "A box of R52 marking flare packs, to brighten up your day."
-	icon_state = "upp_supply_crate_black"
-	magazine_type = /obj/item/storage/box/flare/upp
-	num_of_magazines = 10
-	overlay_gun_type = "_blank"
-	overlay_content = "_flares_upp"
 
 //------------------------M89 Signal Flare Packs Box--------------------------
 
 /obj/item/ammo_box/magazine/misc/flares/signal
 	name = "\improper box of M89 signal flare packs"
 	desc = "A box of M89 signal flare packs, to mark up the way."
-	magazine_type = /obj/item/storage/box/flare/signal
+	magazine_type = /obj/item/storage/box/m94/signal
 	overlay_gun_type = "_m89"
 	overlay_content = "_flares_signal"
 
@@ -174,9 +167,9 @@
 
 /obj/item/ammo_box/magazine/misc/flares/get_severity()
 	var/flare_amount = 0
-	for(var/obj/item/storage/box/flare/flare_box in contents)
+	for(var/obj/item/storage/box/m94/flare_box in contents)
 		flare_amount += length(flare_box.contents)
-	flare_amount = floor(flare_amount / 14) //10 packs, 14 flares each, maximum total of 10 flares we can throw out
+	flare_amount = floor(flare_amount / 8) //10 packs, 8 flares each, maximum total of 10 flares we can throw out
 	return flare_amount
 
 /obj/item/ammo_box/magazine/misc/flares/process_burning(datum/cause_data/flame_cause_data)

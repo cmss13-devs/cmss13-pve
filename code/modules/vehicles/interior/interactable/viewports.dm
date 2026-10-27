@@ -7,7 +7,7 @@
 
 	unacidable = TRUE
 	unslashable = TRUE
-	indestructible = TRUE
+	explo_proof = TRUE
 
 	// The vehicle this seat is tied to
 	var/obj/vehicle/multitile/vehicle = null
@@ -22,6 +22,9 @@
 	M.reset_view(vehicle)
 	give_action(M, /datum/action/human_action/vehicle_unbuckle)
 
+/obj/structure/interior_viewport/wy
+	icon = 'icons/obj/vehicles/interiors/general_wy.dmi'
+
 /obj/structure/interior_viewport/simple
 	name = "viewport"
 	desc = "Hey, I can see my base from here!"
@@ -34,13 +37,3 @@
 	icon = 'icons/obj/vehicles/interiors/van.dmi'
 	icon_state = "windshield_viewport_top"
 	alpha = 80
-
-//anti-air APC's interior console
-/obj/structure/interior_viewport/terminal
-	name = "External Cameras Terminal"
-	desc = "A terminal hooked up to the various sensors of the M579 ADS-C, featuring plenty of flashing buttons and whooping alarms alongside a more rudimentary external-view system."
-	icon_state = "viewport_terminal"
-
-/obj/structure/interior_viewport/terminal/tank
-	name = "Command & Control Terminal"
-	desc = "A terminal hooked up to the various sensors of the M579 ADS-C, featuring plenty of flashing buttons and whooping alarms alongside a more rudimentary external-view system."

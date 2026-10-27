@@ -10,7 +10,7 @@
 /turf/open/floor/whiteyellow/east,
 /area/lv624/lazarus/main_hall)
 "d" = (
-/obj/item/handset{
+/obj/item/phone{
 	desc = "A model of an ancient Earth communication device.";
 	force = 8
 	},
@@ -140,10 +140,10 @@
 	dir = 4
 	},
 /obj/structure/surface/table,
-/obj/item/weapon/gun/revolver/spearhead,
-/obj/item/ammo_magazine/revolver/spearhead,
-/obj/item/ammo_magazine/revolver/spearhead,
-/obj/item/ammo_magazine/revolver/spearhead,
+/obj/item/weapon/gun/revolver/cmb,
+/obj/item/ammo_magazine/revolver/cmb,
+/obj/item/ammo_magazine/revolver/cmb,
+/obj/item/ammo_magazine/revolver/cmb,
 /turf/open/floor/red/northeast,
 /area/lv624/lazarus/security)
 "z" = (
@@ -174,6 +174,10 @@
 /obj/item/reagent_container/food/snacks/sliceable/cheesewheel/mature{
 	pixel_y = -6
 	},
+/turf/open/floor/cult,
+/area/lv624/lazarus/armory)
+"M" = (
+/obj/effect/landmark/objective_landmark/medium,
 /turf/open/floor/cult,
 /area/lv624/lazarus/armory)
 "Q" = (
@@ -234,7 +238,7 @@ i
 k
 p
 p
-p
+M
 A
 i
 "}

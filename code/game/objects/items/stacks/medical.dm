@@ -1,14 +1,18 @@
 /obj/item/stack/medical
 	name = "medical pack"
 	singular_name = "medical pack"
-	icon = 'icons/obj/items/items.dmi'
+	icon = 'icons/obj/items/medical_stacks.dmi'
+	item_icons = list(
+		WEAR_AS_GARB = 'icons/mob/humans/onmob/clothing/helmet_garb/medical.dmi',
+		WEAR_L_HAND = 'icons/mob/humans/onmob/inhands/equipment/medical_lefthand.dmi',
+		WEAR_R_HAND = 'icons/mob/humans/onmob/inhands/equipment/medical_righthand.dmi',
+	)
 	amount = 10
 	max_amount = 10
 	w_class = SIZE_SMALL
 	throw_speed = SPEED_VERY_FAST
 	throw_range = 20
 	attack_speed = 3
-	flags_human_ai = HEALING_ITEM
 	var/heal_brute = 0
 	var/heal_burn = 0
 	var/alien = FALSE
@@ -50,14 +54,12 @@
 		to_chat(user, SPAN_WARNING("This isn't useful at all on a robotic limb."))
 		return 1
 
-	H.UpdateDamageIcon()
-
 /obj/item/stack/medical/bruise_pack
 	name = "roll of gauze"
 	singular_name = "medical gauze"
 	desc = "Some sterile gauze to wrap around bloody stumps and lacerations."
 	icon_state = "brutepack"
-
+	item_state_slots = list(WEAR_AS_GARB = "brutepack (bandages)")
 	stack_id = "bruise pack"
 
 /obj/item/stack/medical/bruise_pack/attack(mob/living/carbon/M as mob, mob/user as mob)
@@ -74,33 +76,13 @@
 				if(!do_after(user, 10, INTERRUPT_NO_NEEDHAND, BUSY_ICON_FRIENDLY, M, INTERRUPT_MOVED, BUSY_ICON_MEDICAL))
 					return 1
 
+
 		if(affecting.get_incision_depth())
 			to_chat(user, SPAN_NOTICE("[M]'s [affecting.display_name] is cut open, you'll need more than a bandage!"))
 			return TRUE
 
 		var/possessive = "[user == M ? "your" : "\the [M]'s"]"
-		var/possessive_their = "[user == M ? user.gender == MALE ? "his" : "her" : "\the [M]'s"]"
-		//Packing Arterial Bleeding
-		var/time_to_take = 4 SECONDS
-		for(var/datum/effects/bleeding/internal/I in affecting.bleeding_effects_list)
-			if(!I.has_been_bandaged)
-				if(M == user)
-					user.visible_message(SPAN_WARNING("[user] fumbles with [src]"), SPAN_WARNING("You fumble with [src]..."))
-					time_to_take = 10 SECONDS
-				if(do_after(user, time_to_take * user.get_skill_duration_multiplier(SKILL_MEDICAL), INTERRUPT_NO_NEEDHAND, BUSY_ICON_FRIENDLY, M, INTERRUPT_MOVED, BUSY_ICON_MEDICAL))
-					if(I.has_been_bandaged)
-						return
-					possessive = "[user == M ? "your" : "\the [M]'s"]"
-					possessive_their = "[user == M ? user.gender == MALE ? "his" : "her" : "\the [M]'s"]"
-					user.affected_message(M,
-					SPAN_HELPFUL("You <b>pack</b> the damaged artery in [possessive] <b>[affecting.display_name]</b>, <b>slowing the bleeding.</b>"),
-					SPAN_HELPFUL("[user] <b>packs</b> the damaged artery in your  <b>[affecting.display_name]</b>, <b>slowing the bleeding.</b>"),
-					SPAN_NOTICE("[user] packs the damaged artery in [possessive_their] [affecting.display_name], <b>slowing the bleeding.</b>"))
-					I.has_been_bandaged = TRUE
-					use(1)
-					return FALSE
-
-
+		var/possessive_their = "[user == M ? user.p_their() : "\the [M]'s"]"
 		switch(affecting.bandage())
 			if(WOUNDS_BANDAGED)
 				user.affected_message(M,
@@ -116,15 +98,12 @@
 				to_chat(user, SPAN_WARNING("There are no wounds on [possessive] [affecting.display_name]."))
 				return TRUE
 
-/obj/item/stack/medical/bruise_pack/ai_use(mob/living/carbon/human/user, datum/human_ai_brain/ai_brain, mob/living/carbon/human/target)
-	for(var/obj/limb/limb as anything in target.limbs)
-		if(QDELETED(src))
-			return
+/obj/item/stack/medical/bruise_pack/random_amount
 
-		if(locate(/datum/effects/bleeding/external) in limb.bleeding_effects_list)
-			user.zone_selected = limb.name
-			attack(target, user)
-			sleep(ai_brain.short_action_delay)
+/obj/item/stack/medical/bruise_pack/random_amount/Initialize(mapload, ...)
+	. = ..()
+	amount = rand(4,10)
+	update_icon()
 
 /obj/item/stack/medical/bruise_pack/two
 	amount = 2
@@ -135,8 +114,8 @@
 	gender = PLURAL
 	singular_name = "ointment"
 	icon_state = "ointment"
+	item_state_slots = list(WEAR_AS_GARB = "ointment")
 	heal_burn = 5
-
 	stack_id = "ointment"
 
 /obj/item/stack/medical/ointment/attack(mob/living/carbon/M as mob, mob/user as mob)
@@ -158,14 +137,16 @@
 			return TRUE
 
 		var/possessive = "[user == M ? "your" : "\the [M]'s"]"
-		var/possessive_their = "[user == M ? user.gender == MALE ? "his" : "her" : "\the [M]'s"]"
+		var/possessive_their = "[user == M ? user.p_their() : "\the [M]'s"]"
 		switch(affecting.salve())
 			if(WOUNDS_BANDAGED)
 				user.affected_message(M,
 					SPAN_HELPFUL("You <b>salve the burns</b> on [possessive] <b>[affecting.display_name]</b>."),
 					SPAN_HELPFUL("[user] <b>salves the burns</b> on your <b>[affecting.display_name]</b>."),
 					SPAN_NOTICE("[user] salves the burns on [possessive_their] [affecting.display_name]."))
+				affecting.status &= ~LIMB_THIRD_DEGREE_BURNS
 				affecting.heal_damage(burn = heal_burn)
+
 				use(1)
 				playsound(user, 'sound/handling/ointment_spreading.ogg', 25, 1, 2)
 			if(WOUNDS_ALREADY_TREATED)
@@ -175,11 +156,19 @@
 				to_chat(user, SPAN_WARNING("There are no burns on [possessive] [affecting.display_name]."))
 				return TRUE
 
+/obj/item/stack/medical/ointment/random_amount
+
+/obj/item/stack/medical/ointment/random_amount/Initialize(mapload, ...)
+	. = ..()
+	amount = rand(4,10)
+	update_icon()
+
 /obj/item/stack/medical/advanced/bruise_pack
 	name = "trauma kit"
 	singular_name = "trauma kit"
 	desc = "A trauma kit for severe injuries."
 	icon_state = "traumakit"
+	item_state = "brutekit"
 	heal_brute = 12
 
 	stack_id = "advanced bruise pack"
@@ -205,26 +194,7 @@
 			return TRUE
 
 		var/possessive = "[user == M ? "your" : "\the [M]'s"]"
-		var/possessive_their = "[user == M ? user.gender == MALE ? "his" : "her" : "\the [M]'s"]"
-		//Packing Arterial Bleeding
-		var/time_to_take = 2.5 SECONDS
-		for(var/datum/effects/bleeding/internal/I in affecting.bleeding_effects_list)
-			if(!I.has_been_bandaged)
-				if(M == user)
-					user.visible_message(SPAN_WARNING("[user] fumbles with [src]"), SPAN_WARNING("You fumble with [src]..."))
-					time_to_take = 5 SECONDS
-				if(do_after(user, time_to_take * user.get_skill_duration_multiplier(SKILL_MEDICAL), INTERRUPT_NO_NEEDHAND, BUSY_ICON_FRIENDLY, M, INTERRUPT_MOVED, BUSY_ICON_MEDICAL))
-					possessive = "[user == M ? "your" : "\the [M]'s"]"
-					possessive_their = "[user == M ? user.gender == MALE ? "his" : "her" : "\the [M]'s"]"
-					user.affected_message(M,
-					SPAN_HELPFUL("You <b>pack</b> the damaged artery in [possessive] <b>[affecting.display_name]</b>, <b>slowing the bleeding.</b>"),
-					SPAN_HELPFUL("[user] <b>packs</b> the damaged artery in your  <b>[affecting.display_name]</b>, <b>slowing the bleeding.</b>"),
-					SPAN_NOTICE("[user] packs the damaged artery in [possessive_their] [affecting.display_name], <b>slowing the bleeding.</b>"))
-					I.has_been_bandaged = TRUE
-					use(1)
-					return FALSE
-
-
+		var/possessive_their = "[user == M ? user.p_their() : "\the [M]'s"]"
 		switch(affecting.bandage(TRUE))
 			if(WOUNDS_BANDAGED)
 				user.affected_message(M,
@@ -243,44 +213,20 @@
 				to_chat(user, SPAN_WARNING("There are no wounds on [possessive] [affecting.display_name]."))
 				return TRUE
 
-/obj/item/stack/medical/advanced/bruise_pack/ai_can_use(mob/living/carbon/human/user, datum/human_ai_brain/ai_brain, mob/living/carbon/human/target)
-	if(issynth(target))
-		return FALSE
+/obj/item/stack/medical/advanced/bruise_pack/upgraded
+	name = "upgraded trauma kit"
+	singular_name = "upgraded trauma kit"
+	stack_id = "upgraded trauma kit"
 
-	for(var/obj/limb/limb as anything in target.limbs)
-		if(locate(/datum/effects/bleeding/external) in limb.bleeding_effects_list)
-			return TRUE
+	icon_state = "traumakit_upgraded"
+	desc = "An upgraded trauma treatment kit. Three times as effective as standard-issue, and non-replenishable. Use sparingly on only the most critical wounds."
 
-		for(var/datum/wound/wound in limb.wounds)
-			if(wound.internal || wound.damage_type == BURN)
-				continue
+	max_amount = 10
+	amount = 10
 
-			if(!(wound.bandaged & (WOUND_BANDAGED|WOUND_SUTURED)))
-				return TRUE
-	return FALSE
-
-/obj/item/stack/medical/advanced/bruise_pack/ai_use(mob/living/carbon/human/user, datum/human_ai_brain/ai_brain, mob/living/carbon/human/target)
-	for(var/obj/limb/limb as anything in target.limbs)
-		if(QDELETED(src))
-			return
-
-		if(locate(/datum/effects/bleeding/external) in limb.bleeding_effects_list)
-			user.zone_selected = limb.name
-			attack(target, user)
-			sleep(ai_brain.short_action_delay)
-			continue
-
-		for(var/datum/wound/wound in limb.wounds)
-			if(wound.internal || wound.damage_type == BURN)
-				continue
-
-			if(QDELETED(src))
-				return
-
-			if(!(wound.bandaged & (WOUND_BANDAGED|WOUND_SUTURED)))
-				user.zone_selected = limb.name
-				attack(target, user)
-				sleep(ai_brain.short_action_delay)
+/obj/item/stack/medical/advanced/bruise_pack/upgraded/Initialize(mapload, ...)
+	. = ..()
+	heal_brute = initial(heal_brute) * 3 // 3x stronger
 
 /obj/item/stack/medical/advanced/bruise_pack/predator
 	name = "mending herbs"
@@ -288,18 +234,9 @@
 	desc = "A poultice made of soft leaves that is rubbed on bruises."
 	icon = 'icons/obj/items/hunter/pred_gear.dmi'
 	icon_state = "brute_herbs"
+	item_state = "brute_herbs"
 	heal_brute = 15
 	stack_id = "mending herbs"
-	alien = TRUE
-
-/obj/item/stack/medical/advanced/ointment/predator
-	name = "soothing herbs"
-	singular_name = "soothing herb"
-	desc = "A poultice made of cold, blue petals that is rubbed on burns."
-	icon = 'icons/obj/items/hunter/pred_gear.dmi'
-	icon_state = "burn_herbs"
-	heal_burn = 15
-	stack_id = "soothing herbs"
 	alien = TRUE
 
 /obj/item/stack/medical/advanced/ointment
@@ -307,6 +244,7 @@
 	singular_name = "burn kit"
 	desc = "A treatment kit for severe burns."
 	icon_state = "burnkit"
+	item_state = "burnkit"
 	heal_burn = 12
 
 	stack_id = "burn kit"
@@ -332,7 +270,7 @@
 			return TRUE
 
 		var/possessive = "[user == M ? "your" : "\the [M]'s"]"
-		var/possessive_their = "[user == M ? user.gender == MALE ? "his" : "her" : "\the [M]'s"]"
+		var/possessive_their = "[user == M ? user.p_their() : "\the [M]'s"]"
 		switch(affecting.salve(TRUE))
 			if(WOUNDS_BANDAGED)
 				user.affected_message(M,
@@ -342,7 +280,9 @@
 				//If a suture datum exists, apply half the damage as grafts. This ensures consistency in healing amounts.
 				if(SEND_SIGNAL(affecting, COMSIG_LIMB_ADD_SUTURES, FALSE, TRUE, heal_amt * 0.5))
 					heal_amt *= 0.5
+				affecting.status &= ~LIMB_THIRD_DEGREE_BURNS
 				affecting.heal_damage(burn = heal_amt)
+
 				use(1)
 			if(WOUNDS_ALREADY_TREATED)
 				to_chat(user, SPAN_WARNING("The burns on [possessive] [affecting.display_name] have already been treated."))
@@ -351,46 +291,54 @@
 				to_chat(user, SPAN_WARNING("There are no burns on [possessive] [affecting.display_name]."))
 				return TRUE
 
-/obj/item/stack/medical/advanced/ointment/ai_can_use(mob/living/carbon/human/user, datum/human_ai_brain/ai_brain, mob/living/carbon/human/target)
-	if(issynth(target))
-		return FALSE
+/obj/item/stack/medical/advanced/ointment/upgraded
+	name = "upgraded burn kit"
+	singular_name = "upgraded burn kit"
+	stack_id = "upgraded burn kit"
 
-	for(var/obj/limb/limb as anything in target.limbs)
-		for(var/datum/wound/wound in limb.wounds)
-			if(wound.internal || wound.damage_type == BRUTE)
-				continue
+	icon_state = "burnkit_upgraded"
+	desc = "An upgraded burn treatment kit. Three times as effective as standard-issue, and non-replenishable. Use sparingly on only the most critical burns."
 
-			if(!(wound.bandaged & (WOUND_BANDAGED|WOUND_SUTURED)))
-				return TRUE
-	return FALSE
+	max_amount = 10
+	amount = 10
 
-/obj/item/stack/medical/advanced/ointment/ai_use(mob/living/carbon/human/user, datum/human_ai_brain/ai_brain, mob/living/carbon/human/target)
-	for(var/obj/limb/limb as anything in target.limbs)
-		for(var/datum/wound/wound in limb.wounds)
-			if(wound.internal || wound.damage_type == BRUTE)
-				continue
+/obj/item/stack/medical/advanced/ointment/upgraded/Initialize(mapload, ...)
+	. = ..()
+	heal_burn = initial(heal_burn) * 3 // 3x stronger
 
-			if(QDELETED(src))
-				return
-
-			if(!(wound.bandaged & (WOUND_BANDAGED|WOUND_SUTURED)))
-				user.zone_selected = limb.name
-				attack(target, user)
-				sleep(ai_brain.short_action_delay)
+/obj/item/stack/medical/advanced/ointment/predator
+	name = "soothing herbs"
+	singular_name = "soothing herb"
+	desc = "A poultice made of cold, blue petals that is rubbed on burns."
+	icon = 'icons/obj/items/hunter/pred_gear.dmi'
+	icon_state = "burn_herbs"
+	item_state = "burn_herbs"
+	heal_burn = 15
+	stack_id = "soothing herbs"
+	alien = TRUE
 
 /obj/item/stack/medical/splint
 	name = "medical splints"
 	singular_name = "medical splint"
 	desc = "A collection of different splints and securing gauze. What, did you think we only broke legs out here?"
 	icon_state = "splint"
+	item_state = "splint"
 	amount = 5
 	max_amount = 5
 	stack_id = "splint"
 
 	var/indestructible_splints = FALSE
 
-/obj/item/stack/medical/splint/attack(mob/living/carbon/M, mob/user, mob/living/carbon/target)
-	if(..()) return 1
+/obj/item/stack/medical/splint/Initialize(mapload, amount)
+	. = ..()
+	if(MODE_HAS_MODIFIER(/datum/gamemode_modifier/indestructible_splints))
+		icon_state = "nanosplint"
+		indestructible_splints = TRUE
+		update_icon()
+
+/obj/item/stack/medical/splint/attack(mob/living/carbon/M, mob/user)
+	if(..())
+		return 1
 
 	if(user.action_busy)
 		return
@@ -416,7 +364,7 @@
 
 		if(M != user)
 			var/possessive = "[user == M ? "your" : "\the [M]'s"]"
-			var/possessive_their = "[user == M ? user.gender == MALE ? "his" : "her" : "\the [M]'s"]"
+			var/possessive_their = "[user == M ? user.p_their() : "\the [M]'s"]"
 			user.affected_message(M,
 				SPAN_HELPFUL("You <b>start splinting</b> [possessive] <b>[affecting.display_name]</b>."),
 				SPAN_HELPFUL("[user] <b>starts splinting</b> your <b>[affecting.display_name]</b>."),
@@ -436,14 +384,25 @@
 			use(1)
 			playsound(user, 'sound/handling/splint1.ogg', 25, 1, 2)
 
+/obj/item/stack/medical/splint/random_amount
 
-/obj/item/stack/medical/splint/ai_use(mob/living/carbon/human/user, datum/human_ai_brain/ai_brain, mob/living/carbon/human/target)
-	for(var/obj/limb/limb as anything in target.limbs)
-		if(QDELETED(src))
-			return
+/obj/item/stack/medical/splint/random_amount/Initialize(mapload, ...)
+	. = ..()
+	amount = rand(2,5)
+	update_icon()
 
-		if(limb.is_broken())
-			user.zone_selected = limb.name
-			attack(target, user)
-			sleep(ai_brain.short_action_delay)
-			continue
+/obj/item/stack/medical/splint/nano
+	name = "nano splints"
+	singular_name = "nano splint"
+
+	icon_state = "nanosplint"
+	desc = "Advanced technology allows these splints to hold bones in place while being flexible and damage-resistant. These aren't plentiful, so use them sparingly on critical areas."
+
+	indestructible_splints = TRUE
+	amount = 5
+	max_amount = 5
+
+	stack_id = "nano splint"
+
+/obj/item/stack/medical/splint/nano/research
+	desc = "Advanced technology allows these splints to hold bones in place while being flexible and damage-resistant. Those are made from durable carbon fiber and don't look cheap, better use them sparingly."

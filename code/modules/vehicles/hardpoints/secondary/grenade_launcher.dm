@@ -7,11 +7,11 @@
 	disp_icon_state = "glauncher"
 	activation_sounds = list('sound/weapons/gun_m92_attachable.ogg')
 
-	health = 2000
-	firing_arc = 120
+	health = 500
+	firing_arc = 90
 
 	ammo = new /obj/item/ammo_magazine/hardpoint/tank_glauncher
-	max_clips = 4
+	max_clips = 3
 
 	use_muzzle_flash = FALSE
 
@@ -23,13 +23,7 @@
 	)
 
 	scatter = 10
-	gun_firemode = GUN_FIREMODE_BURSTFIRE
-	gun_firemode_list = list(
-		GUN_FIREMODE_BURSTFIRE,
-	)
-	burst_amount = 2
-	burst_delay = 0.5 SECONDS
-	extra_delay = 0.5 SECONDS
+	fire_delay = 3.0 SECONDS
 
 /obj/item/hardpoint/secondary/grenade_launcher/set_bullet_traits()
 	..()

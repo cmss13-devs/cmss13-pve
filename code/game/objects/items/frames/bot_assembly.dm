@@ -38,7 +38,7 @@
 
 //Floorbot assemblies
 /obj/item/frame/toolbox_tiles
-	desc = "It's a toolbox with tiles sticking out the top"
+	desc = "It's a toolbox with tiles sticking out the top."
 	name = "tiles and toolbox"
 	icon = 'icons/obj/structures/machinery/aibots.dmi'
 	icon_state = "toolbox_tiles"
@@ -73,7 +73,7 @@
 
 
 /obj/item/frame/toolbox_tiles_sensor
-	desc = "It's a toolbox with tiles sticking out the top and a sensor attached"
+	desc = "It's a toolbox with tiles sticking out the top and a sensor attached."
 	name = "tiles, toolbox and sensor arrangement"
 	icon = 'icons/obj/structures/machinery/aibots.dmi'
 	icon_state = "toolbox_tiles_sensor"
@@ -139,11 +139,11 @@
 	else
 		switch(build_step)
 			if(0)
-				if(istype(W, /obj/item/device/healthanalyzer/soul))
+				if(istype(W, /obj/item/device/healthanalyzer))
 					user.drop_held_item()
 					qdel(W)
 					src.build_step++
-					to_chat(user, SPAN_NOTICE("You add the health scanner to [src]."))
+					to_chat(user, SPAN_NOTICE("You add the health sensor to [src]."))
 					src.name = "First aid/robot arm/health analyzer assembly"
 					src.overlays += image('icons/obj/structures/machinery/aibots.dmi', "na_scanner")
 

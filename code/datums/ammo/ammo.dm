@@ -18,6 +18,8 @@
 	var/sound_shield_hit
 	/// Snipers use this to simulate poor accuracy at close ranges
 	var/accurate_range_min = 0
+	/// Completely prevents shots hitting in this range
+	var/accurate_range_min_strict = 0
 	/// How much the ammo scatters when burst fired, added to gun scatter, along with other mods
 	var/scatter = 0
 	var/stamina_damage = 0
@@ -25,6 +27,8 @@
 	var/damage = 0
 	/// BRUTE, BURN, TOX, OXY, CLONE are the only things that should be in here
 	var/damage_type = BRUTE
+	/// Whether the damage should be deemed environmental (e.g. from a turret)
+	var/damage_enviro = FALSE
 	/// How much armor it ignores before calculations take place
 	var/penetration = 0
 	/// The % chance it will imbed in a human
@@ -70,6 +74,7 @@
 	/// How fast the projectile moves.
 	var/shell_speed = AMMO_SPEED_TIER_1
 
+	///the typepath of the current handful, you only need to worry about this if the guns primary method of reloading are through handfuls, but its good practice to set it
 	var/handful_type = /obj/item/ammo_magazine/handful
 	var/handful_color
 	/// custom handful sprite, for shotgun shells or etc.
@@ -89,20 +94,34 @@
 	/// The flicker that plays when a bullet hits a target. Usually red. Can be nulled so it doesn't show up at all.
 	var/hit_effect_color = "#FF0000"
 
-	/// Changes the freq of firing sound based on ammo type
-	var/firing_freq_offset = FALSE
-
-	/// If the ammo has light
-	var/ammo_glowing = FALSE
-
-	/// Color of the light of the bullet
-	var/bullet_light_color = COLOR_WHITE
-
-	/// Type of empty shell casing
-	var/shell_casing = null
+	/// Whether or not this ammo ignores mobs that are lying down
+	var/hits_lying_mobs = FALSE
 
 /datum/ammo/New()
 	set_bullet_traits()
+
+/**
+ * Does smoke with the awful outdated effect system
+ * Inherits the location and cause from the source projectile,
+ * but exact location and direction can be overriden
+ */
+/datum/ammo/proc/do_smoke(obj/projectile/source, atom/loca, direct = -1, datum/cause_data/cause_data)
+	if(!loca)
+		loca = source?.loc
+	if(!loca)
+		return
+	if(source && direct == -1)
+		direct = reverse_direction(source.dir)
+	if(!cause_data)
+		cause_data = source?.weapon_cause_data
+	var/datum/effect_system/smoke_spread/smoke = new()
+	smoke.set_up(1, loca = get_turf(loca), direct = direct, new_cause_data = cause_data)
+	smoke.start()
+
+/datum/ammo/proc/setup_faction_clash_values()
+	accuracy = (accuracy - 85)/2
+	penetration = min(penetration, 30) //more ap overpenatrates anyway but makes next calculation cleaner
+	accurate_range = min(accurate_range, 10 - penetration/5) //this makes AP ammo better at clsoe range (and techinicly super far range when the hitchance gets bottom caped at 5% hitchance)
 
 /datum/ammo/proc/on_bullet_generation(obj/projectile/generated_projectile, mob/bullet_generator) //NOT used on New(), applied to the projectiles.
 	return
@@ -140,7 +159,7 @@
 /datum/ammo/proc/on_pointblank(mob/living/L, obj/projectile/P, mob/living/user, obj/item/weapon/gun/fired_from)
 	return
 
-/datum/ammo/proc/on_hit_obj(obj/O, obj/projectile/P) //Special effects when hitting objects.
+/datum/ammo/proc/on_hit_obj(obj/target_object, obj/projectile/proj_hit) //Special effects when hitting objects.
 	SHOULD_NOT_SLEEP(TRUE)
 	return
 
@@ -148,6 +167,9 @@
 	return 0 //return 0 means it flies even after being near something. Return 1 means it stops
 
 /datum/ammo/proc/knockback(mob/living/living_mob, obj/projectile/fired_projectile, max_range = 2)
+	for(var/list/traits in fired_projectile.bullet_traits)
+		if(locate(/datum/element/bullet_trait_knockback_disabled) in traits)
+			return
 	if(!living_mob || living_mob == fired_projectile.firer)
 		return
 	if(fired_projectile.distance_travelled > max_range || living_mob.body_position == LYING_DOWN)
@@ -170,7 +192,7 @@
 		playsound(living_mob.loc, "punch", 25, 1)
 		living_mob.visible_message(SPAN_DANGER("[living_mob] slams into an obstacle!"),
 			isxeno(living_mob) ? SPAN_XENODANGER("You slam into an obstacle!") : SPAN_HIGHDANGER("You slam into an obstacle!"), null, 4, CHAT_TYPE_TAKING_HIT)
-		living_mob.apply_damage(MELEE_FORCE_TIER_2)
+		living_mob.apply_damage(MELEE_FORCE_TIER_2, enviro=damage_enviro)
 
 ///The applied effects for knockback(), overwrite to change slow/stun amounts for different ammo datums
 /datum/ammo/proc/knockback_effects(mob/living/living_mob, obj/projectile/fired_projectile)
@@ -187,11 +209,12 @@
 /datum/ammo/proc/slowdown(mob/living/living_mob, obj/projectile/fired_projectile)
 	if(isxeno(living_mob))
 		var/mob/living/carbon/xenomorph/xeno = living_mob
-		if(xeno.caste.tier > 2 || (xeno.caste.tier == 0 && xeno.mob_size >= MOB_SIZE_XENO))
+		if(xeno.caste.tier > 2 || (xeno.caste.tier == 0 && xeno.mob_size >= MOB_SIZE_BIG))
 			return //tier 3 and big tier 0 (like queen) are not affected
 	if(iscarbonsizexeno(living_mob))
 		var/mob/living/carbon/xenomorph/target = living_mob
-		target.apply_effect(4, SUPERSLOW)
+		target.apply_effect(1, SUPERSLOW)
+		target.apply_effect(2, SLOW)
 		to_chat(target, SPAN_XENODANGER("You are slowed by the sudden impact!"))
 	else
 		living_mob.apply_stamina_damage(fired_projectile.ammo.damage, fired_projectile.def_zone, ARMOR_BULLET)
@@ -207,7 +230,8 @@
 	slam_back(target_mob, fired_projectile, max_range)
 
 /datum/ammo/proc/burst(atom/target, obj/projectile/P, damage_type = BRUTE, range = 1, damage_div = 2, show_message = SHOW_MESSAGE_VISIBLE) //damage_div says how much we divide damage
-	if(!target || !P) return
+	if(!target || !P)
+		return
 	for(var/mob/living/carbon/M in orange(range,target))
 		if(P.firer == M)
 			continue
@@ -224,33 +248,46 @@
 			damage = armor_damage_reduction(GLOB.xeno_explosive, damage, total_explosive_resistance , 60, 0, 0.5, XNO.armor_integrity)
 			var/armor_punch = armor_break_calculation(GLOB.xeno_explosive, damage, total_explosive_resistance, 60, 0, 0.5, XNO.armor_integrity)
 			XNO.apply_armorbreak(armor_punch)
-		M.apply_damage(damage,damage_type)
+
+		M.apply_damage(damage, damage_type, enviro=damage_enviro)
 
 		if(XNO && length(XNO.xeno_shields))
 			P.play_shielded_hit_effect(M)
 		else
 			P.play_hit_effect(M)
 
-/datum/ammo/proc/fire_bonus_projectiles(obj/projectile/original_P)
+/datum/ammo/proc/fire_bonus_projectiles(obj/projectile/original_projectile, gun_damage_mult = 1, projectile_max_range_add = 0, bonus_proj_scatter = 0)
 	set waitfor = 0
 
-	var/turf/curloc = get_turf(original_P.shot_from)
-	var/initial_angle = Get_Angle(curloc, original_P.target_turf)
+	var/turf/curloc = get_turf(original_projectile.shot_from)
+	var/turf/cur_target = get_turf(original_projectile.target_turf)
+	var/initial_angle = Get_Angle(curloc, cur_target)
 
 	for(var/i in 1 to bonus_projectiles_amount) //Want to run this for the number of bonus projectiles.
 		var/final_angle = initial_angle
 
-		var/obj/projectile/P = new /obj/projectile(curloc, original_P.weapon_cause_data)
-		P.generate_bullet(GLOB.ammo_list[bonus_projectiles_type]) //No bonus damage or anything.
-		P.accuracy = floor(P.accuracy * original_P.accuracy/initial(original_P.accuracy)) //if the gun changes the accuracy of the main projectile, it also affects the bonus ones.
-		original_P.give_bullet_traits(P)
-		P.bonus_projectile_check = 2 //It's a bonus projectile!
+		var/obj/projectile/extra_projectile = new /obj/projectile(curloc, original_projectile.weapon_cause_data)
+		extra_projectile.generate_bullet(GLOB.ammo_list[bonus_projectiles_type])
+		extra_projectile.damage *= gun_damage_mult
+		extra_projectile.accuracy = floor(extra_projectile.accuracy * original_projectile.accuracy/initial(original_projectile.accuracy)) //if the gun changes the accuracy of the main projectile, it also affects the bonus ones.
+		original_projectile.give_bullet_traits(extra_projectile)
+		extra_projectile.bonus_projectile_check = PROJECTILE_BONUS //It's a bonus projectile!
 
-		var/total_scatter_angle = P.scatter
+		var/total_scatter_angle = extra_projectile.scatter + bonus_proj_scatter
 		final_angle += rand(-total_scatter_angle, total_scatter_angle)
 		var/turf/new_target = get_angle_target_turf(curloc, final_angle, 30)
 
-		P.fire_at(new_target, original_P.firer, original_P.shot_from, P.ammo.max_range, P.ammo.shell_speed, original_P.original) //Fire!
+		if(cur_target.z < new_target.z)
+			var/turf/below = SSmapping.get_turf_below(new_target)
+			if(below)
+				new_target = below
+
+		else if(cur_target.z > new_target.z)
+			var/turf/above = SSmapping.get_turf_above(new_target)
+			if(above)
+				new_target = above
+
+		extra_projectile.fire_at(new_target, original_projectile.firer, original_projectile.shot_from, extra_projectile.ammo.max_range + projectile_max_range_add, extra_projectile.ammo.shell_speed, original_projectile.original, FALSE) //Fire!
 
 /datum/ammo/proc/drop_flame(turf/turf, datum/cause_data/cause_data) // ~Art updated fire 20JAN17
 	if(!istype(turf))

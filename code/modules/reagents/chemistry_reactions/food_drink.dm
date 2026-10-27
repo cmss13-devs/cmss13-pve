@@ -12,10 +12,10 @@
 	result_amount = 1
 
 /datum/chemical_reaction/tofu/on_reaction(datum/reagents/holder, created_volume)
+	. = ..()
 	var/location = get_turf(holder.my_atom)
 	for(var/i = 1, i <= created_volume, i++)
 		new /obj/item/reagent_container/food/snacks/tofu(location)
-
 
 /datum/chemical_reaction/hot_coco
 	name = "Hot Coco"
@@ -130,6 +130,7 @@
 	result_amount = 1
 
 /datum/chemical_reaction/cheesewheel/immature/on_reaction(datum/reagents/holder, created_volume)
+	. = ..()
 	var/location = get_turf(holder.my_atom)
 	new /obj/item/reagent_container/food/snacks/sliceable/cheesewheel/immature(location)
 
@@ -142,6 +143,7 @@
 	result_amount = 1
 
 /datum/chemical_reaction/synthmeat/on_reaction(datum/reagents/holder, created_volume)
+	. = ..()
 	var/location = get_turf(holder.my_atom)
 	new /obj/item/reagent_container/food/snacks/meat/synthmeat(location)
 
@@ -159,66 +161,6 @@
 	result = "hell_ramen"
 	required_reagents = list("hot_ramen" = 6, "hotsauce" = 1)
 	result_amount = 6
-
-/datum/chemical_reaction/banana		//WHO DIDN'T MAKE ALL THE JUICES SUBTYPES OF A PARENT ONE AAAAAA
-	name = "Banana Juice"
-	id = "banana"
-	result = "banana"
-	required_reagents = list("dehydrated_juice" = 1, "water" = 5)
-	result_amount = 5
-
-/datum/chemical_reaction/orangejuice
-	name = "Orange Juice"
-	id = "orangejuice"
-	result = "orangejuice"
-	required_reagents = list("dehydrated_orange_juice" = 1, "water" = 5)
-	result_amount = 5
-
-/datum/chemical_reaction/applejuice
-	name = "Apple Juice"
-	id = "applejuice"
-	result = "applejuice"
-	required_reagents = list("dehydrated_apple_juice" = 1, "water" = 5)
-	result_amount = 5
-
-/datum/chemical_reaction/watermelonjuice
-	name = "Watermelon Juice"
-	id = "watermelonjuice"
-	result = "watermelonjuice"
-	required_reagents = list("dehydrated_watermelon_juice" = 1, "water" = 5)
-	result_amount = 5
-
-/datum/chemical_reaction/grapejuice
-	name = "Grape Juice"
-	id = "grapejuice"
-	result = "grapejuice"
-	required_reagents = list("dehydrated_grape_juice" = 1, "water" = 5)
-	result_amount = 5
-
-/datum/chemical_reaction/pineapplejuice
-	name = "Pineapple Juice"
-	id = "pineapplejuice"
-	result = "pineapplejuice"
-	required_reagents = list("dehydrated_pineapple_juice" = 1, "water" = 5)
-	result_amount = 5
-
-/datum/chemical_reaction/egg
-	name = "Rehydrated Egg Product"
-	id = "egg"
-	result = "egg"
-	required_reagents = list("dehydrated_egg_powder" = 1, "water" = 5)
-	result_amount = 1
-
-/datum/chemical_reaction/egg/on_reaction(datum/reagents/holder, created_volume)
-	var/location = get_turf(holder.my_atom)
-	new /obj/item/reagent_container/food/snacks/egg/dried(location)
-
-/datum/chemical_reaction/milk
-	name = "Rehydrated Milk"
-	id = "milk"
-	result = "milk"
-	required_reagents = list("dehydrated_milk_powder" = 1, "water" = 5)
-	result_amount = 5
 
 /datum/chemical_reaction/electrolyte_grape_beverage
 	name = "Electrolyte Grape Beverage"
@@ -389,6 +331,7 @@
 	required_reagents = list("potato" = 10)
 	required_catalysts = list("enzyme" = 5)
 	result_amount = 10
+
 /datum/chemical_reaction/sake
 	name = "Sake"
 	id = "sake"
@@ -858,11 +801,25 @@
 	required_reagents = list("orangejuice" = 2, "cola" = 1)
 	result_amount = 2
 
+/datum/chemical_reaction/chocolate_milk
+	name = "Chocolate Milk"
+	id = "chocolate_milk"
+	result = "chocolate_milk"
+	required_reagents = list("chocolatesyrup" = 1, "milk" = 4)
+	result_amount = 5
+
 /datum/chemical_reaction/milkshake
 	name = "Milkshake"
 	id = "milkshake"
 	result = "milkshake"
 	required_reagents = list("cream" = 1, "ice" = 2, "milk" = 2)
+	result_amount = 5
+
+/datum/chemical_reaction/milkshake/chocolate
+	name = "Chocolate Milkshake"
+	id = "chocolate_milkshake"
+	result = "chocolate_milkshake"
+	required_reagents = list("cream" = 1, "ice" = 2, "chocolate_milk" = 2)
 	result_amount = 5
 
 /datum/chemical_reaction/rewriter

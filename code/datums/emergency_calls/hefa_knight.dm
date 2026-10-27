@@ -3,7 +3,7 @@
 	name = "HEFA knights"
 	mob_max = 15
 	mob_min = 3
-	arrival_message = "'Prepaerth to surrender thine HEFAs unto the order!'"
+	arrival_message = "'Prepareth to surrender thine HEFAs unto the order!'"
 	objectives = "You are a Brother of the Order of HEFA! You and your fellow brothers must retrieve as many HEFAs as possible!"
 	probability = 0
 	hostility = TRUE
@@ -19,3 +19,6 @@
 
 	arm_equipment(H, /datum/equipment_preset/fun/hefa/melee, FALSE, TRUE)
 	addtimer(CALLBACK(GLOBAL_PROC, GLOBAL_PROC_REF(to_chat), H, SPAN_BOLD("Objectives: [objectives]")), 1 SECONDS)
+
+
+	to_chat(H, SPAN_WARNING(FONT_SIZE_HUGE("YOU ARE [hostility? "HOSTILE":"FRIENDLY"] to the USCM.")))

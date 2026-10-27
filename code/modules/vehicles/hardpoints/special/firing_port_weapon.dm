@@ -1,13 +1,13 @@
 //this is Cupola guns that are fired from the sides of APC by support gunners
 /obj/item/hardpoint/special/firing_port_weapon
 	name = "\improper M56 FPW"
-	desc = "A modified M56B Smartgun installed on the sides of M577 Armored Personnel Carrier as a Firing Port Weapon. Used by support gunners to cover friendly infantry at APC sides."
+	desc = "A modified M56A2 Smartgun installed on the sides of M577 Armored Personnel Carrier as a Firing Port Weapon. Used by support gunners to cover friendly infantry at APC sides."
 
 	icon = 'icons/obj/vehicles/hardpoints/apc.dmi'
 	icon_state = "m56_FPW"
 	disp_icon = "apc"
 	disp_icon_state = ""
-	activation_sounds = list('sound/weapons/gun_smartgun1.ogg', 'sound/weapons/gun_smartgun2.ogg', 'sound/weapons/gun_smartgun3.ogg', 'sound/weapons/gun_smartgun4.ogg')
+	activation_sounds = list('sound/weapons/heavy_weapon_firing_sounds/gun_smartgun1.ogg', 'sound/weapons/heavy_weapon_firing_sounds/gun_smartgun2.ogg', 'sound/weapons/heavy_weapon_firing_sounds/gun_smartgun3.ogg', 'sound/weapons/heavy_weapon_firing_sounds/gun_smartgun4.ogg')
 
 	health = 100
 	firing_arc = 120

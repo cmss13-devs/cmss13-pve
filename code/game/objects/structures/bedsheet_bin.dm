@@ -7,7 +7,11 @@ LINEN BINS
 /obj/item/bedsheet
 	name = "bedsheet"
 	desc = "A surprisingly soft linen bedsheet."
-	icon = 'icons/obj/items/items.dmi'
+	icon = 'icons/obj/items/bedsheets.dmi'
+	item_icons = list(
+		WEAR_L_HAND = 'icons/mob/humans/onmob/inhands/items/bedsheets_lefthand.dmi',
+		WEAR_R_HAND = 'icons/mob/humans/onmob/inhands/items/bedsheets_righthand.dmi',
+	)
 	icon_state = "sheet"
 	item_state = "bedsheet"
 	layer = MOB_LAYER
@@ -75,15 +79,37 @@ LINEN BINS
 /obj/item/bedsheet/brown
 	icon_state = "sheetbrown"
 
+/obj/item/bedsheet/colorable
+	icon_state = "sheetce"
 
+/obj/item/bedsheet/bedroll
+	icon_state = "bedroll_sheet"
 
+/obj/item/bedsheet/bedroll/blue
+	icon_state = "bedroll_sheet"
+	color = "#8cb9e2"
+
+/obj/item/bedsheet/bedroll/red
+	icon_state = "bedroll_sheet"
+	color = "#df4f4f"
+
+/obj/item/bedsheet/bedroll/pink
+	icon_state = "bedroll_sheet"
+	color = "#eaa8b2"
+
+/obj/item/bedsheet/bedroll/green
+	icon_state = "bedroll_sheet"
+	color = "#b3e290"
+
+/obj/item/bedsheet/bedroll/yellow
+	icon_state = "bedroll_sheet"
+	color = "#e2df90"
 
 /obj/structure/bedsheetbin
 	name = "linen bin"
 	desc = "A linen bin. It looks rather cosy."
-	icon = 'icons/obj/structures/structures.dmi'
+	icon = 'icons/obj/structures/props/watercloset.dmi'
 	icon_state = "linenbin-full"
-	unslashable = TRUE
 	anchored = TRUE
 	var/amount = 20
 	var/list/sheets = list()
@@ -118,7 +144,7 @@ LINEN BINS
 			sheets.Add(I)
 			amount++
 			to_chat(user, SPAN_NOTICE("You put [I] in [src]."))
-	else if(amount && !hidden && I.w_class < 4) //make sure there's sheets to hide it among, make sure nothing else is hidden in there.
+	else if(amount && !hidden && I.w_class < 4 && !(I.flags_item & ITEM_ABSTRACT)) //make sure there's sheets to hide it among, make sure nothing else is hidden in there.
 		if(user.drop_held_item())
 			I.forceMove(src)
 			hidden = I

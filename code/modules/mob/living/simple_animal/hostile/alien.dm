@@ -2,7 +2,7 @@
 	name = "Drone"
 	var/caste_name = null
 	desc = "A builder of hives. Only drones may evolve into Queens."
-	icon = 'icons/mob/xenos/drone.dmi'
+	icon = 'icons/mob/xenos/castes/tier_1/drone.dmi'
 	icon_gib = "syndicate_gib"
 	layer = BIG_XENO_LAYER
 	response_help = "pokes"
@@ -40,7 +40,7 @@
 	pixel_x = -12
 	old_x = -12
 
-	var/atom/movable/vis_obj/xeno_wounds/wound_icon_holder
+	var/atom/movable/vis_obj/wound_icon_holder
 
 /mob/living/simple_animal/hostile/alien/Initialize()
 	maxHealth = health
@@ -81,6 +81,10 @@
 	. = ..()
 	if(!. || !hivenumber)
 		return
+	if(ismonkey(target)) // So they don't kill Monkeys that Xenos need
+		return FALSE
+	if(ismouse(target)) // Mice and rats are beneath the Xenomorphs notice
+		return FALSE
 	if(istype(target, /mob/living/simple_animal/hostile/alien))
 		var/mob/living/simple_animal/hostile/alien/alien_target = target
 		if(alien_target.hivenumber == hivenumber)
@@ -110,8 +114,9 @@
 
 	wound_icon_holder.layer = layer + 0.01
 	wound_icon_holder.dir = dir
+	wound_icon_holder.icon = icon
 	var/health_threshold = max(ceil((health * 4) / (maxHealth)), 0) //From 0 to 4, in 25% chunks
-	if(health > HEALTH_THRESHOLD_DEAD)
+	if(health > health_threshold_dead)
 		if(health_threshold > 3)
 			wound_icon_holder.icon_state = "none"
 		else if(body_position == LYING_DOWN)
@@ -126,7 +131,7 @@
 	. = ..()
 	if(P.damage)
 		var/splatter_dir = get_dir(P.starting, loc)//loc is the xeno getting hit, P.starting is the turf of where the projectile got spawned
-		new /obj/effect/temp_visual/dir_setting/bloodsplatter/xenosplatter(loc, splatter_dir)
+		new /obj/effect/bloodsplatter/xenosplatter(loc, splatter_dir)
 		if(prob(15))
 			roar_emote()
 
@@ -155,7 +160,7 @@
 /mob/living/simple_animal/hostile/alien/ravager
 	name = "Ravager"
 	desc = "A huge, nasty red alien with enormous scythed claws."
-	icon = 'icons/mob/xenos/ravager.dmi'
+	icon = 'icons/mob/xenos/castes/tier_3/ravager.dmi'
 	melee_damage_lower = XENO_DAMAGE_TIER_5
 	melee_damage_upper = XENO_DAMAGE_TIER_5
 	health = XENO_HEALTH_TIER_7
@@ -168,7 +173,7 @@
 /mob/living/simple_animal/hostile/alien/lurker
 	name = "Lurker"
 	desc = "A fast, powerful backline combatant."
-	icon = 'icons/mob/xenos/lurker.dmi'
+	icon = 'icons/mob/xenos/castes/tier_2/lurker.dmi'
 	melee_damage_lower = XENO_DAMAGE_TIER_3
 	melee_damage_upper = XENO_DAMAGE_TIER_3
 	health = XENO_HEALTH_TIER_3
@@ -177,18 +182,5 @@
 	pixel_x = -12
 	old_x = -12
 
-// Still using old projectile code - commenting this out for now
-// /mob/living/simple_animal/hostile/alien/sentinel
-// name = "alien sentinel"
-// icon_state = "Sentinel Running"
-// icon_living = "Sentinel Running"
-// icon_dead = "Sentinel Dead"
-// health = 120
-// melee_damage_lower = 15
-// melee_damage_upper = 15
-// ranged = 1
-// projectiletype = /obj/projectile/neurotox
-// projectilesound = 'sound/weapons/pierce.ogg'
-/obj/projectile/neurotox
-	damage = 30
-	icon_state = "toxin"
+/mob/living/simple_animal/hostile/alien/no_harm_animal
+	faction_group = list(FACTION_XENOMORPH, FACTION_MONKEY, FACTION_NEUTRAL)

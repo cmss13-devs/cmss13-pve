@@ -49,6 +49,7 @@
 	var/list/data = list()
 
 	var/list/humans = list()
+	var/list/responders = list()
 	var/list/marines = list()
 	var/list/survivors = list()
 	var/list/xenos = list()
@@ -57,6 +58,7 @@
 	var/list/upp = list()
 	var/list/clf = list()
 	var/list/wy = list()
+	var/list/hyperdyne = list()
 	var/list/twe = list()
 	var/list/freelancer = list()
 	var/list/contractor = list()
@@ -65,6 +67,7 @@
 	var/list/marshal = list()
 	var/list/synthetics = list()
 	var/list/predators = list()
+	var/list/hunted = list()
 	var/list/animals = list()
 	var/list/dead = list()
 	var/list/ghosts = list()
@@ -72,6 +75,7 @@
 	var/list/npcs = list()
 	var/list/vehicles = list()
 	var/list/escaped = list()
+	var/list/in_thunderdome = list()
 
 	var/is_admin = FALSE
 	if(user && user.client)
@@ -85,32 +89,48 @@
 
 		serialized["ref"] = REF(poi)
 
-		var/mob/M = poi
-		if(!istype(M))
-			if(isVehicleMultitile(M))
+		var/mob/poi_mob = poi
+		if(!istype(poi_mob))
+			if(isVehicleMultitile(poi_mob))
 				vehicles += list(serialized)
 			else
 				misc += list(serialized)
 			continue
 
-		var/number_of_orbiters = length(M.get_all_orbiters())
+		var/number_of_orbiters = length(poi_mob.get_all_orbiters())
 		if(number_of_orbiters)
 			serialized["orbiters"] = number_of_orbiters
 
-		if(isobserver(M))
+		if(isobserver(poi_mob))
 			ghosts += list(serialized)
 			continue
 
-		if(M.stat == DEAD)
+		var/add_to_infected = FALSE
+		if(poi_mob.status_flags & XENO_HOST)
+			var/obj/item/alien_embryo/embryo = (locate(/obj/item/alien_embryo) in poi_mob)
+			serialized["embryo_hivenumber"] = embryo.hivenumber
+			add_to_infected = TRUE
+
+		if(poi_mob.stat == DEAD)
+			serialized["icon"] = "whiteout" //Skull for the dead
 			dead += list(serialized)
+			if(add_to_infected)
+				infected += list(serialized)
 			continue
 
-		if(M.ckey == null)
+		if(poi_mob.ckey == null)
+			serialized["icon"] = "unknown" //No soul
 			npcs += list(serialized)
+			if(add_to_infected)
+				infected += list(serialized)
 			continue
 
-		if(isliving(M))
-			var/mob/living/player = M
+		if(isliving(poi_mob))
+			var/mob/living/player = poi_mob
+
+			serialized["in_ground"] = is_ground_level(player.z)
+			serialized["in_ship"] = is_mainship_level(player.z)
+
 			serialized["health"] = floor(player.health / player.maxHealth * 100)
 
 			if(isxeno(player))
@@ -119,8 +139,12 @@
 					var/datum/caste_datum/caste = xeno.caste
 					serialized["caste"] = caste.caste_type
 					serialized["icon"] = caste.minimap_icon
+					serialized["background_icon"] = caste.minimap_background
 					serialized["hivenumber"] = xeno.hivenumber
+					serialized["area_name"] = get_area_name(xeno)
 				xenos += list(serialized)
+				if(add_to_infected)
+					infected += list(serialized)
 				continue
 
 			if(ishuman(player))
@@ -128,36 +152,63 @@
 				var/obj/item/card/id/id_card = human.get_idcard()
 				var/datum/species/human_species = human.species
 				var/max_health = human_species.total_health != human.maxHealth ? human_species.total_health : human.maxHealth
+				var/is_survivor = FALSE
 				serialized["health"] = floor(player.health / max_health * 100)
 
 				serialized["job"] = id_card?.assignment ? id_card.assignment : human.job
 				serialized["nickname"] = human.real_name
+				if(human.mob_flags & MUTINY_MUTINEER)
+					serialized["mutiny_status"] = "Mutineer"
+				else if(human.mob_flags & MUTINY_LOYALIST)
+					serialized["mutiny_status"] = "Loyalist"
+				else if(human.mob_flags & MUTINY_NONCOMBAT)
+					serialized["mutiny_status"] = "Non-Combatant"
 
 				var/icon = human.assigned_equipment_preset?.minimap_icon
 				if(islist(icon))
 					for(var/key in icon)
 						icon = key
 						break
+				if(id_card?.minimap_icon_override)
+					icon = id_card.minimap_icon_override
+				if(human.rank_override)
+					icon = human.rank_override
 				serialized["icon"] = icon ? icon : "private"
 
 				if(human.assigned_squad)
-					serialized["background_color"] = human.assigned_squad.equipment_color ? human.assigned_squad.equipment_color : human.assigned_squad.minimap_color
+					serialized["background_icon"] = human.assigned_squad.background_icon
 				else
-					serialized["background_color"] = human.assigned_equipment_preset?.minimap_background
+					serialized["background_icon"] = human.assigned_equipment_preset?.minimap_background
 
-				if(human.status_flags & XENO_HOST)
+				if(istype(get_area(human), /area/tdome))
+					in_thunderdome += list(serialized)
+					continue
+
+				if(issynth(human) && !isinfiltratorsynthetic(human))
+					synthetics += list(serialized)
+
+				if(issurvivorjob(human.job) || (FACTION_SURVIVOR in human.faction_group))
+					survivors += list(serialized)
+					is_survivor = TRUE
+
+				if(add_to_infected)
 					infected += list(serialized)
 
-				if(SSticker.mode.is_in_endgame == TRUE && !is_mainship_level(M.z) && !(human.faction in FACTION_LIST_ERT_ALL))
+				if(human.job in FAX_RESPONDER_JOB_LIST)
+					responders += list(serialized)
+				else if(SSticker.mode.is_in_endgame == TRUE && !is_mainship_level(human.z) && !(human.faction in FACTION_LIST_ERT_ALL) && !(isyautja(human)))
 					escaped += list(serialized)
 				else if(human.faction in FACTION_LIST_WY)
 					wy += list(serialized)
-				else if(issynth(human) && !isinfiltratorsynthetic(human))
-					synthetics += list(serialized)
-				else if(isyautja(human))
+				else if(human.faction in FACTION_LIST_HYPERDYNE)
+					hyperdyne += list(serialized)
+				else if(human.faction in FACTION_LIST_ALL_YAUTJA)
+					serialized["job"] = human.job
 					predators += list(serialized)
 				else if(human.faction in FACTION_LIST_ERT_OTHER)
 					ert_members += list(serialized)
+				else if(human.faction in FACTION_LIST_HUNTED)
+					hunted += list(serialized)
 				else if(human.faction in FACTION_LIST_UPP)
 					upp += list(serialized)
 				else if(human.faction in FACTION_LIST_CLF)
@@ -174,11 +225,9 @@
 					marshal += list(serialized)
 				else if(human.faction in FACTION_LIST_DUTCH)
 					dutch += list(serialized)
-				else if(human.faction in FACTION_LIST_UA)
+				else if(human.faction in FACTION_LIST_MARINE)
 					marines += list(serialized)
-				else if(issurvivorjob(human.job))
-					survivors += list(serialized)
-				else
+				else if(!is_survivor && !issynth(human))
 					humans += list(serialized)
 				continue
 			if(isanimal(player))
@@ -193,7 +242,9 @@
 	data["upp"] = upp
 	data["clf"] = clf
 	data["wy"] = wy
+	data["hyperdyne"] = hyperdyne
 	data["twe"] = twe
+	data["responders"] = responders
 	data["freelancer"] = freelancer
 	data["contractor"] = contractor
 	data["mercenary"] = mercenary
@@ -201,6 +252,7 @@
 	data["marshal"] = marshal
 	data["synthetics"] = synthetics
 	data["predators"] = predators
+	data["hunted"] = hunted
 	data["animals"] = animals
 	data["dead"] = dead
 	data["ghosts"] = ghosts
@@ -208,9 +260,8 @@
 	data["npcs"] = npcs
 	data["vehicles"] = vehicles
 	data["escaped"] = escaped
+	data["in_thunderdome"] = in_thunderdome
 	data["icons"] = GLOB.minimap_icons
-
-	data["main_platoon_name"] = GLOB.main_platoon_name
 
 	return data
 

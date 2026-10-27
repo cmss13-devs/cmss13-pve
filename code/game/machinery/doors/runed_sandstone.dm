@@ -1,33 +1,33 @@
 /obj/structure/machinery/door/airlock/sandstone/runed
 	name = "\improper Runed Sandstone Airlock"
-	icon = 'icons/obj/structures/doors/doorrunedsand.dmi'
+	icon = 'icons/obj/structures/doors/hunter/ancient_temple_door.dmi'
 	mineral = "runed sandstone"
 	no_panel = TRUE
 	not_weldable = TRUE
-	use_power = FALSE
+	use_power = USE_POWER_NONE
 	autoclose = FALSE
 	locked = TRUE
 	icon_state = "door_locked"
 	stat = 0
 	heavy = TRUE
 	masterkey_resist = TRUE
-	openspeed = 4 SECONDS
+	openspeed = 1.7 SECONDS
 	unacidable = TRUE//Walls can still be melted or blown up.
 	damage_cap = HEALTH_WALL_REINFORCED//Strong, but only available to Hunters so no abuse from marines.
-	color = "#b29082"
+	color = null
 
 /obj/structure/machinery/door/airlock/sandstone/runed/proc/can_use(mob/user as mob, loud = 0)
 	if(!in_range(src, user))
-		to_chat(usr, "You cannot operate the door from this far away")
+		to_chat(usr, "You cannot operate the door from this far away.")
 		return FALSE
 
 /obj/structure/machinery/door/airlock/sandstone/runed/attackby(obj/item/W as obj, mob/user as mob)
 // ..()
 	user.set_interaction(src)
-	if (!istype(W, /obj/item/weapon/wristblades || !isyautja(user)))
+	if (!istype(W, /obj/item/weapon/bracer_attachment || !isyautja(user)))
 		return
 
-	if(istype(W, /obj/item/weapon/wristblades))
+	if(istype(W, /obj/item/weapon/bracer_attachment))
 		playsound(user.loc, 'sound/effects/bladeinsert.ogg', 25, 0)
 
 		var/list/options = list()
@@ -125,6 +125,7 @@
 		change_filler_opacity(opacity)
 
 	operating = DOOR_OPERATING_IDLE
+	SEND_SIGNAL(src, COMSIG_DOOR_OPEN)
 
 /obj/structure/machinery/door/airlock/sandstone/runed/close(forced = TRUE)
 	if(operating && !forced)
@@ -175,6 +176,8 @@
 		var/obj/structure/window/killthis = (locate(/obj/structure/window) in turf)
 		if(killthis)
 			killthis.ex_act(EXPLOSION_THRESHOLD_LOW)
+
+	SEND_SIGNAL(src, COMSIG_DOOR_CLOSE)
 
 /obj/structure/machinery/door/airlock/sandstone/runed/lock(forced = FALSE)
 	if(operating && !forced)
@@ -251,3 +254,7 @@
 	name = "\improper Runed Sandstone Airlock"
 	unacidable = FALSE //Destroyable version of the temple doors
 	damage_cap = HEALTH_WALL
+
+/obj/structure/machinery/door/airlock/sandstone/runed/dark
+	icon = 'icons/obj/structures/doors/hunter/colorable_ancient_temple_door.dmi'
+	color = "#4a4641"

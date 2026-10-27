@@ -1,8 +1,12 @@
-GLOBAL_LIST_INIT(mapless_maps, list(MAP_RUNTIME, MAP_CHINOOK, MAIN_SHIP_DEFAULT_NAME) | SHIP_MAP_NAMES)
+GLOBAL_LIST_INIT(mapless_maps, list(MAP_RUNTIME, MAP_CHINOOK, MAIN_SHIP_DEFAULT_NAME, MAP_ROSTOCK, MAP_HUNTERSHIP))
 
 /obj/item/map
 	name = "map"
 	icon = 'icons/obj/items/marine-items.dmi'
+	item_icons = list(
+		WEAR_L_HAND = 'icons/mob/humans/onmob/inhands/equipment/paperwork_lefthand.dmi',
+		WEAR_R_HAND = 'icons/mob/humans/onmob/inhands/equipment/paperwork_righthand.dmi'
+	)
 	icon_state = "map"
 	item_state = "map"
 	throw_speed = SPEED_FAST
@@ -22,7 +26,7 @@ GLOBAL_LIST_INIT(mapless_maps, list(MAP_RUNTIME, MAP_CHINOOK, MAIN_SHIP_DEFAULT_
 
 /obj/item/map/proc/initialize_map()
 	var/wikiurl = CONFIG_GET(string/wikiurl)
-	if(wikiurl && html_link)
+	if(wikiurl)
 		dat = {"
 				<!DOCTYPE html>
 				<html>
@@ -68,14 +72,6 @@ GLOBAL_LIST_INIT(mapless_maps, list(MAP_RUNTIME, MAP_CHINOOK, MAIN_SHIP_DEFAULT_
 	html_link = "images/1/18/Map_icecolony.png"
 	color = "cyan"
 
-/obj/item/map/ice_colony_map/v1
-	name = "\improper Blank Map"
-	html_link = ""
-
-/obj/item/map/ice_colony_map/v2
-	name = "\improper Blank Map"
-	html_link = ""
-
 /obj/item/map/ice_colony_map_v3
 	name = "\improper Shivas Snowball map"
 	desc = "A labelled print out of the anterior scan of the UA colony Shivas Snowball."
@@ -114,7 +110,7 @@ GLOBAL_LIST_INIT(mapless_maps, list(MAP_RUNTIME, MAP_CHINOOK, MAIN_SHIP_DEFAULT_
 
 /obj/item/map/sorokyne_map
 	name = "\improper Sorokyne Strata map"
-	desc = "A map of the Weyland-Yutani colony Sorokyne Outpost, commonly known as Sorokyne Strata."
+	desc = "A map of the UPP colony Sorokyne Outpost, commonly known as Sorokyne Strata."
 	html_link = "images/2/21/Sorokyne_Wiki_Map.jpg" //The fact that this is just a wiki-link makes me sad and amused.
 	color = "cyan"
 
@@ -136,45 +132,41 @@ GLOBAL_LIST_INIT(mapless_maps, list(MAP_RUNTIME, MAP_CHINOOK, MAIN_SHIP_DEFAULT_
 	html_link = "images/b/bb/C_claim.png"
 	color = "cyan"
 
+/obj/item/map/lv759_map
+	name = "\improper LV-759 Map"
+	desc = "An overview of LV-759 schematics."
+	html_link = "images/6/60/LV759_Hybrisa_Prospera.png" //needs proper image still.
+	color = "#005eab"
+
 /obj/item/map/new_varadero
 	name = "\improper New Varadero map"
 	desc = "A labeled blueprint of the UA outpost New Varadero."
 	html_link = "images/9/94/New_Varadero.png"
 	color = "red"
 
-/obj/item/map/almayer
-	name = "\improper USS Almayer map"
-	desc = "A labeled blueprint of the USS Almayer"
-	html_link = "images/5/54/USS_Almayer.png"
+/obj/item/map/tyrargo_rift
+	name = "\improper Tyrargo Rift map"
+	desc = "A labeled blueprint of the UA city Tyrargo Rift."
+	html_link = "images/7/79/Tyrargo_Rift.png"
+
+/obj/item/map/white_antre_map
+	name = "\improper White Antre Research Facility map"
+	desc = "An overview of the White Antre facility schematics."
+	html_link = "images/d/da/White_Antre_Research_Facility.png"
 	color = "cyan"
 
-/obj/item/map/canyon_32b
-	name = "\improper Blank Map"
-	desc = "A blank map, or at least you THINK there should be a map on this piece of laminated paper."
-	html_link = ""
-	color = "white"
-
-/obj/item/map/taipei
-	name = "\improper Taipei Way-Station map"
-	desc = "A labelled print out of the interior scan of Taipei Station, an unassuming waystation."
-	html_link = "images/f/f2/Taipei.png"
-	color = "cyan"
-
-/obj/item/map/oread_map
-	name = "\improper Blank Map" // name = "\improper Oread Garrison map"
-	desc = "A distorted orbital scan of the Oread Garrison"
-	html_link = ""
-	color = "cyan"
+/obj/item/map/galaxy
+	name = "\improper Galaxy map"
+	desc = "A diagrammatic map of the milky way, laid out by sector."
+	html_link = "images/9/9e/Galaxy_Map.png"
+	color = "#005eab"
 
 GLOBAL_LIST_INIT_TYPED(map_type_list, /obj/item/map, setup_all_maps())
 
 /proc/setup_all_maps()
 	return list(
 		MAP_LV_624 = new /obj/item/map/lazarus_landing_map(),
-		MAP_LV_624_REPAIRED = new /obj/item/map/lazarus_landing_map(),
 		MAP_ICE_COLONY = new /obj/item/map/ice_colony_map(),
-		MAP_ICE_COLONY_V1 = new /obj/item/map/ice_colony_map/v1(),
-		MAP_ICE_COLONY_V2 = new /obj/item/map/ice_colony_map/v2(),
 		MAP_ICE_COLONY_V3 = new /obj/item/map/ice_colony_map_v3(),
 		MAP_WHISKEY_OUTPOST = new /obj/item/map/whiskey_outpost_map(),
 		MAP_BIG_RED = new /obj/item/map/big_red_map(),
@@ -185,22 +177,10 @@ GLOBAL_LIST_INIT_TYPED(map_type_list, /obj/item/map, setup_all_maps())
 		MAP_CORSAT = new /obj/item/map/corsat(),
 		MAP_KUTJEVO = new /obj/item/map/kutjevo_map(),
 		MAP_LV522_CHANCES_CLAIM = new /obj/item/map/lv522_map(),
-		MAP_LV522_CHANCES_CLAIM_FORECON = new /obj/item/map/lv522_map(),
+		MAP_LV759_HYBRISA_PROSPERA = new /obj/item/map/lv759_map(),
 		MAP_NEW_VARADERO = new /obj/item/map/new_varadero(),
-		MAP_NEW_VARADERO_REPAIRED = new /obj/item/map/new_varadero(),
-		MAP_DERELICT_ALMAYER = new /obj/item/map/almayer(),
-		MAP_LV295_BLACKSITE = new /obj/item/map/lv522_map(),
-		MAP_SI391_SEKHMET = new /obj/item/map/lazarus_landing_map(),
-		MAP_BMG290_OTOGI_EGRESS_POINT = new /obj/item/map/new_varadero(),
-		MAP_CANYON_32B = new /obj/item/map/canyon_32b(),
-		MAP_BOSENMORI_BASHO = new /obj/item/map/lazarus_landing_map(),
-		MAP_BIG_BLUE = new/obj/item/map/big_red_map(),
-		MAP_CALLIOPE_HIGHWAY = new /obj/item/map/big_red_map(),
-		MAP_CALLIOPE_DESERT_BUS = new /obj/item/map/big_red_map(),
-		MAP_OREAD_GARRISON = new /obj/item/map/oread_map(),
-		MAP_TAIPEI = new /obj/item/map/taipei(),
-		MAP_REDEMPTION_VALLEY = new /obj/item/map/lazarus_landing_map(),
-		MAP_BINHAI_SUPPLY_STATION = new /obj/item/map/FOP_map(),
+		MAP_TYRARGO_RIFT = new /obj/item/map/tyrargo_rift(),
+		MAP_WHITE_ANTRE_RESEARCH_FACILITY = new /obj/item/map/white_antre_map()
 	)
 
 //used by marine equipment machines to spawn the correct map.
@@ -215,7 +195,6 @@ GLOBAL_LIST_INIT_TYPED(map_type_list, /obj/item/map, setup_all_maps())
 		return // "Maps" we don't have maps for so we don't need to throw a runtime for (namely in unit_testing)
 	name = map.name
 	desc = map.desc
-	desc_lore = map.desc_lore
 	html_link = map.html_link
 	color = map.color
 
@@ -230,45 +209,4 @@ GLOBAL_LIST_INIT_TYPED(map_type_list, /obj/item/map, setup_all_maps())
 
 /obj/effect/landmark/map_item/Destroy()
 	GLOB.map_items -= src
-	return ..()
-
-// Tac-map showing map, for those groundmaps which haven't got a proper map(item) made
-/obj/item/tacmap_map
-	name = "\improper sat-scan tablet"
-	desc = "A handheld electronic device which displays an orbital scan of the local area of operations."
-	icon = 'icons/obj/items/devices.dmi'
-	icon_state = "maptablet"
-	item_state = "Cotablet"
-	throw_speed = SPEED_FAST
-	throw_range = 5
-	w_class = SIZE_MEDIUM
-	var/datum/tacmap/map
-	///flags that we want to be shown when you interact with this table
-	var/minimap_type = MINIMAP_FLAG_USCM
-	///The faction that is intended to use this structure (determines type of tacmap used)
-	var/faction = FACTION_MARINE
-
-/obj/item/tacmap_map/Initialize(mapload, ...)
-	. = ..()
-	map = new(src, minimap_type)
-
-/obj/item/tacmap_map/attack_self(mob/user) //Open the map
-	..()
-	user.visible_message(SPAN_NOTICE("[user] looks closely at [src]."))
-	map.tgui_interact(user)
-
-/obj/item/tacmap_map/attack(mob/attacked_mob, mob/user)
-	. = ..()
-
-	if(attacked_mob == user)
-		return
-
-	if(ishuman(attacked_mob))
-		user.visible_message(SPAN_NOTICE("[user] shows [attacked_mob] [src]."),SPAN_NOTICE("You show [attacked_mob] the screen of [src]"))
-		to_chat(attacked_mob, SPAN_NOTICE("[user] shows you the screen of [src]."))
-		map.tgui_interact(attacked_mob)
-		return
-
-/obj/item/tacmap_map/Destroy()
-	QDEL_NULL(map)
 	return ..()

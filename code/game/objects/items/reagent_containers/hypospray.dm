@@ -6,15 +6,18 @@
 	name = "hypospray"
 	desc = "The DeForest Medical Corporation hypospray is a sterile, air-needle autoinjector for rapid administration of drugs to patients."
 	icon = 'icons/obj/items/syringe.dmi'
+	item_icons = list(
+		WEAR_L_HAND = 'icons/mob/humans/onmob/inhands/equipment/medical_lefthand.dmi',
+		WEAR_R_HAND = 'icons/mob/humans/onmob/inhands/equipment/medical_righthand.dmi',
+	)
 	item_state = "hypo"
 	icon_state = "hypo"
 	amount_per_transfer_from_this = 5
 	volume = 30
-	possible_transfer_amounts = list(3, 5, 10, 15, 30)
+	possible_transfer_amounts = list(1,3,5,10,15,20,25,30)
 	flags_atom = FPRINT|OPENCONTAINER
 	flags_equip_slot = SLOT_WAIST
 	flags_item = NOBLUDGEON
-	flags_human_ai = HEALING_ITEM
 	matter = list("plastic" = 1250, "glass" = 250)
 	transparent = TRUE
 	var/skilllock = SKILL_MEDICAL_TRAINED
@@ -32,7 +35,8 @@
 
 /obj/item/reagent_container/hypospray/attack_self(mob/user)
 	..()
-
+	if(HAS_TRAIT(user, TRAIT_HAULED))
+		return
 	if(next_inject > world.time)
 		return
 	next_inject = world.time + inject_cd
@@ -198,17 +202,17 @@
 			return 0
 		if(!M.Adjacent(user))
 			return 0
-	if(M != user && M.stat != DEAD && M.a_intent == INTENT_HARM && !M.is_mob_incapacitated() && M.faction != user.faction && (skillcheck(M, SKILL_CQC, SKILL_CQC_SKILLED) || isyautja(M))) // preds have null skills
-		user.apply_effect(0.5, WEAKEN)
+	if(M != user && M.stat != DEAD && M.a_intent != INTENT_HELP && !M.is_mob_incapacitated() && (skillcheck(M, SKILL_CQC, SKILL_CQC_SKILLED) || isyautja(M))) // preds have null skills
+		user.apply_effect(3, WEAKEN)
 		M.attack_log += text("\[[time_stamp()]\] <font color='orange'>Used CQC skill to stop [key_name(user)] injecting them.</font>")
 		user.attack_log += text("\[[time_stamp()]\] <font color='red'>Was stopped from injecting [key_name(M)] by their cqc skill.</font>")
 		msg_admin_attack("[key_name(user)] got robusted by the CQC of [key_name(M)] in [get_area(user)] ([user.loc.x],[user.loc.y],[user.loc.z]).", user.loc.x, user.loc.y, user.loc.z)
-		M.visible_message(SPAN_DANGER("[M]'s reflexes kick in and knock [user] to the ground before they could use \the [src]'!"), \
+		M.visible_message(SPAN_DANGER("[M]'s reflexes kick in and knock [user] to the ground before they could use \the [src]'!"),
 			SPAN_WARNING("You knock [user] to the ground before they inject you!"), null, 5)
 		playsound(user.loc, 'sound/weapons/thudswoosh.ogg', 25, 1, 7)
 		return 0
 
-	to_chat(user, SPAN_NOTICE(" You inject [M] with [src]."))
+	to_chat(user, SPAN_NOTICE("You inject [M] with [src]."))
 	to_chat(M, SPAN_WARNING("You feel a tiny prick!"))
 	playsound(loc, injectSFX, injectVOL, 1)
 	SEND_SIGNAL(M, COMSIG_LIVING_HYPOSPRAY_INJECTED, src)
@@ -229,7 +233,7 @@
 			to_chat(user, SPAN_NOTICE("[trans] units injected. [reagents.total_volume] units remaining in [src]'s [mag.name]."))
 		else
 			to_chat(user, SPAN_NOTICE("[trans] units injected. [reagents.total_volume] units remaining in [src]."))
-	return TRUE
+	return (ATTACKBY_HINT_NO_AFTERATTACK|ATTACKBY_HINT_UPDATE_NEXT_MOVE)
 
 /obj/item/reagent_container/hypospray/Initialize()
 	. = ..()
@@ -248,8 +252,3 @@
 /obj/item/reagent_container/hypospray/sedative
 	name = "Sedative Hypospray"
 	starting_vial = /obj/item/reagent_container/glass/beaker/vial/sedative
-
-/obj/item/reagent_container/hypospray/kilodermlipo
-	name = "Hypospray (temperature stablization)"
-	desc = "Contains leporazine - used to stabilize body temperature, kelotane and dermaline - used to rapidly heal burns. Filled in a 1:3:2 ratio."
-	starting_vial = /obj/item/reagent_container/glass/beaker/vial/kilodermlipo

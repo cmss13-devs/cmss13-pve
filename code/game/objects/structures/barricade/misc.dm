@@ -110,70 +110,56 @@
 		if("brute")
 			take_damage( I.force * I.demolition_mod * 0.75 )
 
-// Prop flipped tables
+/*----------------------*/
+// HESCO
+/*----------------------*/
 
-/obj/structure/barricade/table
-	name = "table barricade"
-	desc = "A square metal surface resting on four legs. Useful to put stuff on. Can be flipped in emergencies to act as cover."
-	icon = 'icons/obj/structures/barricades.dmi'
-	icon_state = "metalflip"
-	health = 100
-	maxhealth = 100
-	can_change_dmg_state = 0
-	can_wire = FALSE
-	stack_type = /obj/item/stack/sheet/metal
-	stack_amount = 1 
-	destroyed_stack_amount = 1
-	debris = list(/obj/item/stack/sheet/metal)
+/obj/structure/barricade/hesco
+	name = "HESCO barricade"
+	desc = "A sandbag wall. Provides better protection than a makeshift sandbag barricade, but requires specialized equipment to set up."
+	icon_state = "sand_wall"
+	health = 500
+	maxhealth = 500
 	layer = OBJ_LAYER
-	barricade_type = "metalflip"
-	barricade_hitsound = 'sound/effects/metalhit.ogg'
+	stack_type = /obj/item/stack/sandbags
+	debris = list(/obj/item/stack/sandbags)
+	stack_amount = 5
+	color = "#a98c7c"
+	destroyed_stack_amount = 1
+	barricade_hitsound = 'sound/weapons/Genhit.ogg'
+	can_change_dmg_state = 0
+	barricade_type = "sand_wall"
+	can_wire = FALSE
+	repair_materials = list("sandbag" = 1)
+	metallic = FALSE
 
-/obj/structure/barricade/table/attackby(obj/item/W, mob/user)
-	if(HAS_TRAIT(W, TRAIT_TOOL_WRENCH) && !(user.a_intent == INTENT_HELP))
-		user.visible_message(SPAN_NOTICE("[user] starts disassembling [src]."),
-		SPAN_NOTICE("You start disassembling [src]."))
-		playsound(src.loc, 'sound/items/Ratchet.ogg', 25, 1)
-		if(do_after(user, 50 * user.get_skill_duration_multiplier(SKILL_CONSTRUCTION), INTERRUPT_ALL|BEHAVIOR_IMMOBILE, BUSY_ICON_BUILD))
-			user.visible_message(SPAN_NOTICE("[user] disassembles [src]."),
-			SPAN_NOTICE("You disassemble [src]."))
-			deconstruct(TRUE)
+/obj/structure/barricade/hesco/attackby(obj/item/W as obj, mob/user as mob)
+	for(var/obj/effect/xenomorph/acid/A in src.loc)
+		if(A.acid_t == src)
+			to_chat(user, "You can't get near that, it's melting!")
+			return
+	if(istype(W, /obj/item/stack/sandbags))
+		var/obj/item/stack/sandbags/D = W
+		if(health < maxhealth)
+			if(D.get_amount() < 1)
+				to_chat(user, SPAN_WARNING("You need one sandbag to repair [src]."))
+				return
+			visible_message(SPAN_NOTICE("[user] begins to repair [src]."))
+			if(do_after(user, 2 SECONDS, INTERRUPT_ALL, BUSY_ICON_FRIENDLY, src) && health < maxhealth)
+				if (D.use(1))
+					update_health(-0.5*maxhealth)
+					update_damage_state()
+					visible_message(SPAN_NOTICE("[user] clumsily repairs [src]."))
 		return
 
-/obj/structure/barricade/table/wood
-	name = "wooden table barricade"
-	desc = "A square wood surface resting on four legs. Useful to put stuff on. Can be flipped in emergencies to act as cover."
-	icon_state = "woodflip"
-	barricade_hitsound = 'sound/effects/woodhit.ogg'
-	barricade_type = "woodflip"
-	repair_materials = list("wood" = 1)
-	stack_type = /obj/item/stack/sheet/wood
-	debris = list(/obj/item/stack/sheet/wood)
+	if(try_nailgun_usage(W, user))
+		return
 
-/obj/structure/barricade/table/wood/poor
-	name = "poor wooden table barricade"
-	desc = "A semi-poorly constructed wood surface resting on four legs. Useful to put stuff on. Can be flipped in emergencies to act as cover."
-	icon_state = "pwoodflip"
-	barricade_type = "pwoodflip"
+	return ..()
 
-/obj/structure/barricade/table/wood/gambling
-	name = "gambling table barricade"
-	desc = "A curved wood and carpet surface resting on four legs. Used for gambling games. Can be flipped in emergencies to act as cover."
-	icon_state = "gambleflip"
-	barricade_type = "gambleflip"
-
-/obj/structure/barricade/table/reinforced
-	name = "reinforced table barricade"
-	desc = "A square metal surface resting on four legs. This one has side panels, making it useful as a desk, but impossible to flip."
-	icon_state = "reinfflip"
-	barricade_type = "reinfflip"
-
-/obj/structure/barricade/table/almayer
-	desc = "A square metal surface resting on its fat metal bottom. You can't flip something that doesn't have legs."
-	icon_state = "almflip"
-	barricade_type = "almflip"
-
-/obj/structure/barricade/table/prison
-	desc = "A square metal surface resting on four legs. This one has side panels, making it useful as a desk, but impossible to flip."
-	icon_state = "prisonflip"
-	barricade_type = "prisonflip"
+/obj/structure/barricade/hesco/hit_barricade(obj/item/I)
+	switch(I.damtype)
+		if("fire")
+			take_damage( I.force * I.demolition_mod * 1.5 )
+		if("brute")
+			take_damage( I.force * I.demolition_mod * 1.0 )

@@ -3,6 +3,7 @@
 #define STATE_WALL 2
 #define STATE_REINFORCED_WALL 3
 #define STATE_DISPLACED 4
+#define STATE_DESTROYED 5 // this is so they can get destroyed by xenos
 
 #define STATE_SCREWDRIVER 1
 #define STATE_WIRECUTTER 2
@@ -11,6 +12,7 @@
 #define STATE_RODS 5
 
 #define GIRDER_UPGRADE_MATERIAL_COST 5
+#define GIRDER_PLASTEEL_UPGRADE_MATERIAL_COST 8
 
 /obj/structure/girder
 	icon_state = "girder"
@@ -73,8 +75,8 @@
 		icon_state = "girder"
 
 /obj/structure/girder/attackby(obj/item/W, mob/user)
-	for(var/obj/effect/xenomorph/acid/A in src.loc)
-		if(A.acid_t == src)
+	for(var/obj/effect/xenomorph/acid/acid in src.loc)
+		if(acid.acid_t == src)
 			to_chat(user, "You can't get near that, it's melting!")
 			return
 
@@ -114,13 +116,13 @@
 			if(object.density)
 				to_chat(user, SPAN_WARNING("[object] is blocking you from welding [src] together!"))
 				return
-		if(do_after(user,30, INTERRUPT_ALL|BEHAVIOR_IMMOBILE, BUSY_ICON_BUILD))
+		if(do_after(user, 3 SECONDS, INTERRUPT_ALL|BEHAVIOR_IMMOBILE, BUSY_ICON_BUILD))
 			if(QDELETED(src))
 				return
 			to_chat(user, SPAN_NOTICE("You weld the girder together!"))
 			repair()
 			return
-	..()
+	. = ..()
 
 /obj/structure/girder/proc/change_state(obj/item/W, mob/user)
 	switch(state)
@@ -128,7 +130,7 @@
 			if(HAS_TRAIT(W, TRAIT_TOOL_SCREWDRIVER))
 				playsound(loc, 'sound/items/Screwdriver.ogg', 25, 1)
 				to_chat(user, SPAN_NOTICE("Now unsecuring support struts."))
-				if(!do_after(user, 40 * user.get_skill_duration_multiplier(SKILL_CONSTRUCTION), INTERRUPT_ALL|BEHAVIOR_IMMOBILE, BUSY_ICON_BUILD))
+				if(!do_after(user, 4 SECONDS * user.get_skill_duration_multiplier(SKILL_CONSTRUCTION), INTERRUPT_ALL|BEHAVIOR_IMMOBILE, BUSY_ICON_BUILD))
 					return TRUE
 				to_chat(user, SPAN_NOTICE("You unsecured the support struts!"))
 				state = STATE_DISMANTLING
@@ -140,11 +142,11 @@
 					to_chat(user, SPAN_WARNING("No. This area is needed for the dropships and personnel."))
 					return TRUE
 
-				var/obj/item/stack/sheet/metal/M = W
+				var/obj/item/stack/sheet/metal/metal = W
 				to_chat(user, SPAN_NOTICE("You start adding the metal to the internals."))
-				if(!do_after(user, 40 * user.get_skill_duration_multiplier(SKILL_CONSTRUCTION), INTERRUPT_ALL|BEHAVIOR_IMMOBILE, BUSY_ICON_BUILD))
+				if(!do_after(user, 4 SECONDS * user.get_skill_duration_multiplier(SKILL_CONSTRUCTION), INTERRUPT_ALL|BEHAVIOR_IMMOBILE, BUSY_ICON_BUILD))
 					return TRUE
-				if(M.use(GIRDER_UPGRADE_MATERIAL_COST))
+				if(metal.use(GIRDER_UPGRADE_MATERIAL_COST))
 					state = STATE_WALL
 					step_state = STATE_METAL
 					to_chat(user, SPAN_NOTICE("You added the metal to the internals!"))
@@ -157,11 +159,11 @@
 					to_chat(user, SPAN_WARNING("No. This area is needed for the dropships and personnel."))
 					return TRUE
 
-				var/obj/item/stack/sheet/plasteel/P = W
+				var/obj/item/stack/sheet/plasteel/plasteel = W
 				to_chat(user, SPAN_NOTICE("You start adding the plates to the internals."))
-				if(!do_after(user, 40 * user.get_skill_duration_multiplier(SKILL_CONSTRUCTION), INTERRUPT_ALL|BEHAVIOR_IMMOBILE, BUSY_ICON_BUILD))
+				if(!do_after(user, 4 SECONDS * user.get_skill_duration_multiplier(SKILL_CONSTRUCTION), INTERRUPT_ALL|BEHAVIOR_IMMOBILE, BUSY_ICON_BUILD))
 					return TRUE
-				if(P.use(GIRDER_UPGRADE_MATERIAL_COST))
+				if(plasteel.use(GIRDER_PLASTEEL_UPGRADE_MATERIAL_COST))
 					state = STATE_REINFORCED_WALL
 					step_state = STATE_PLASTEEL
 					to_chat(user, SPAN_NOTICE("You added the plates to the internals!"))
@@ -177,6 +179,10 @@
 			return do_reinforced_wall(W, user)
 		if(STATE_DISPLACED)
 			if(HAS_TRAIT(W, TRAIT_TOOL_CROWBAR))
+				var/area/area = get_area(W)
+				if(!area.allow_construction)
+					to_chat(user, SPAN_WARNING("The girder must be secured on a proper surface!"))
+					return
 				var/turf/open/floor = loc
 				if(!floor.allow_construction)
 					to_chat(user, SPAN_WARNING("The girder must be secured on a proper surface!"))
@@ -187,7 +193,7 @@
 					return
 				playsound(loc, 'sound/items/Crowbar.ogg', 25, 1)
 				to_chat(user, SPAN_NOTICE("Now securing the girder..."))
-				if(!do_after(user, 40 * user.get_skill_duration_multiplier(SKILL_CONSTRUCTION), INTERRUPT_ALL|BEHAVIOR_IMMOBILE, BUSY_ICON_BUILD))
+				if(!do_after(user, 4 SECONDS * user.get_skill_duration_multiplier(SKILL_CONSTRUCTION), INTERRUPT_ALL|BEHAVIOR_IMMOBILE, BUSY_ICON_BUILD))
 					return TRUE
 				to_chat(user, SPAN_NOTICE("You secured the girder!"))
 				anchored = TRUE
@@ -204,7 +210,7 @@
 	else if(HAS_TRAIT(W, TRAIT_TOOL_WIRECUTTERS) && step_state == STATE_SCREWDRIVER)
 		playsound(loc, 'sound/items/Wirecutter.ogg', 25, 1)
 		to_chat(user, SPAN_NOTICE("Now removing support struts."))
-		if(!do_after(user, 40 * user.get_skill_duration_multiplier(SKILL_CONSTRUCTION), INTERRUPT_ALL|BEHAVIOR_IMMOBILE, BUSY_ICON_BUILD))
+		if(!do_after(user, 4 SECONDS * user.get_skill_duration_multiplier(SKILL_CONSTRUCTION), INTERRUPT_ALL|BEHAVIOR_IMMOBILE, BUSY_ICON_BUILD))
 			return TRUE
 		to_chat(user, SPAN_NOTICE("You removed the support struts!"))
 		step_state = STATE_WIRECUTTER
@@ -213,7 +219,7 @@
 	else if(HAS_TRAIT(W, TRAIT_TOOL_CROWBAR) && step_state == STATE_WIRECUTTER)
 		playsound(loc, 'sound/items/Crowbar.ogg', 25, 1)
 		to_chat(user, SPAN_NOTICE("Now dislodging the girder..."))
-		if(!do_after(user, 40 * user.get_skill_duration_multiplier(SKILL_CONSTRUCTION), INTERRUPT_ALL|BEHAVIOR_IMMOBILE, BUSY_ICON_BUILD))
+		if(!do_after(user, 4 SECONDS * user.get_skill_duration_multiplier(SKILL_CONSTRUCTION), INTERRUPT_ALL|BEHAVIOR_IMMOBILE, BUSY_ICON_BUILD))
 			return TRUE
 		to_chat(user, SPAN_NOTICE("You dislodged the girder!"))
 		anchored = FALSE
@@ -225,7 +231,7 @@
 	else if(HAS_TRAIT(W, TRAIT_TOOL_WRENCH) && step_state == STATE_WIRECUTTER)
 		to_chat(user, SPAN_NOTICE("You start wrenching it apart."))
 		playsound(loc, 'sound/items/Ratchet.ogg', 25, 1)
-		if(!do_after(user, 40 * user.get_skill_duration_multiplier(SKILL_CONSTRUCTION), INTERRUPT_ALL|BEHAVIOR_IMMOBILE, BUSY_ICON_BUILD))
+		if(!do_after(user, 4 SECONDS * user.get_skill_duration_multiplier(SKILL_CONSTRUCTION), INTERRUPT_ALL|BEHAVIOR_IMMOBILE, BUSY_ICON_BUILD, src))
 			return TRUE
 		to_chat(user, SPAN_NOTICE("You wrenched it apart!"))
 		deconstruct(TRUE)
@@ -245,7 +251,7 @@
 	if(HAS_TRAIT(W, TRAIT_TOOL_SCREWDRIVER) && step_state == STATE_METAL)
 		playsound(loc, 'sound/items/Screwdriver.ogg', 25, 1)
 		to_chat(user, SPAN_NOTICE("You are attaching the metal to the internal structure."))
-		if(!do_after(user, 40 * user.get_skill_duration_multiplier(SKILL_CONSTRUCTION), INTERRUPT_NO_NEEDHAND|BEHAVIOR_IMMOBILE, BUSY_ICON_FRIENDLY, src))
+		if(!do_after(user, 4 SECONDS * user.get_skill_duration_multiplier(SKILL_CONSTRUCTION), INTERRUPT_NO_NEEDHAND|BEHAVIOR_IMMOBILE, BUSY_ICON_FRIENDLY, src))
 			return TRUE
 		to_chat(user, SPAN_NOTICE("You have attached the metal to the internal structure!"))
 		step_state = STATE_SCREWDRIVER
@@ -255,26 +261,30 @@
 		if(!HAS_TRAIT(W, TRAIT_TOOL_BLOWTORCH))
 			to_chat(user, SPAN_WARNING("You need a stronger blowtorch!"))
 			return
-		var/obj/item/tool/weldingtool/WT = W
-		if(WT.remove_fuel(5, user))
+		var/obj/item/tool/weldingtool/welder = W
+		if(welder.remove_fuel(5, user))
 			to_chat(user, SPAN_NOTICE("You start welding the new additions."))
 			playsound(loc, 'sound/items/Welder2.ogg', 25, 1)
-			if(!do_after(user, 50 * user.get_skill_duration_multiplier(SKILL_CONSTRUCTION), INTERRUPT_NO_NEEDHAND|BEHAVIOR_IMMOBILE, BUSY_ICON_FRIENDLY, src))
-				WT.remove_fuel(-5)
+			if(!do_after(user, 5 SECONDS * user.get_skill_duration_multiplier(SKILL_CONSTRUCTION), INTERRUPT_NO_NEEDHAND|BEHAVIOR_IMMOBILE, BUSY_ICON_FRIENDLY, src))
+				welder.remove_fuel(-5)
 				return TRUE
+
+			if(QDELETED(src))
+				return
+
 			to_chat(user, SPAN_NOTICE("You have welded the new additions!"))
 			playsound(loc, 'sound/items/Welder2.ogg', 25, 1)
-			var/turf/T = get_turf(src)
+			var/turf/turf = get_turf(src)
 			if(is_mainship_level(z))
-				T.PlaceOnTop(/turf/closed/wall/almayer)
+				turf.place_on_top(/turf/closed/wall/almayer)
 				SEND_SIGNAL(user, COMSIG_MOB_CONSTRUCT_WALL, /turf/closed/wall/almayer)
 			else
-				T.PlaceOnTop(/turf/closed/wall)
+				turf.place_on_top(/turf/closed/wall)
 				SEND_SIGNAL(user, COMSIG_MOB_CONSTRUCT_WALL, /turf/closed/wall)
-			var/obj/effect/alien/weeds/weeds_in_tile = locate(/obj/effect/alien/weeds) in T
+			var/obj/effect/alien/weeds/weeds_in_tile = locate(/obj/effect/alien/weeds) in turf
 			if(weeds_in_tile)
 				qdel(weeds_in_tile)
-			T.add_fingerprint(user)
+			turf.add_fingerprint(user)
 			qdel(src)
 		return TRUE
 	return FALSE
@@ -284,8 +294,8 @@
 		return FALSE
 
 	if(istype(W, /obj/item/stack/rods) && step_state == STATE_PLASTEEL)
-		var/obj/item/stack/rods/R = W
-		if(R.use(2))
+		var/obj/item/stack/rods/rods = W
+		if(rods.use(2))
 			to_chat(user, SPAN_NOTICE("You strengthened the connection rods."))
 			step_state = STATE_RODS
 		else
@@ -295,7 +305,7 @@
 	if(HAS_TRAIT(W, TRAIT_TOOL_SCREWDRIVER) && step_state == STATE_RODS)
 		playsound(loc, 'sound/items/Screwdriver.ogg', 25, 1)
 		to_chat(user, SPAN_NOTICE("You are attaching the plasteel to the internal structure."))
-		if(!do_after(user, 40 * user.get_skill_duration_multiplier(SKILL_CONSTRUCTION), INTERRUPT_NO_NEEDHAND|BEHAVIOR_IMMOBILE, BUSY_ICON_FRIENDLY, src))
+		if(!do_after(user, 4 SECONDS * user.get_skill_duration_multiplier(SKILL_CONSTRUCTION), INTERRUPT_NO_NEEDHAND|BEHAVIOR_IMMOBILE, BUSY_ICON_FRIENDLY, src))
 			return TRUE
 		to_chat(user, SPAN_NOTICE("You have attached the plasteel to the internal structure!"))
 		step_state = STATE_SCREWDRIVER
@@ -305,41 +315,45 @@
 		if(!HAS_TRAIT(W, TRAIT_TOOL_BLOWTORCH))
 			to_chat(user, SPAN_WARNING("You need a stronger blowtorch!"))
 			return
-		var/obj/item/tool/weldingtool/WT = W
-		if(WT.remove_fuel(5, user))
+		var/obj/item/tool/weldingtool/welder = W
+		if(welder.remove_fuel(5, user))
 			to_chat(user, SPAN_NOTICE("You start welding the new additions."))
 			playsound(loc, 'sound/items/Welder2.ogg', 25, 1)
-			if(!do_after(user, 50 * user.get_skill_duration_multiplier(SKILL_CONSTRUCTION), INTERRUPT_NO_NEEDHAND|BEHAVIOR_IMMOBILE, BUSY_ICON_FRIENDLY, src))
-				WT.remove_fuel(-5)
+			if(!do_after(user, 5 SECONDS * user.get_skill_duration_multiplier(SKILL_CONSTRUCTION), INTERRUPT_NO_NEEDHAND|BEHAVIOR_IMMOBILE, BUSY_ICON_FRIENDLY, src))
+				welder.remove_fuel(-5)
 				return TRUE
+
+			if(QDELETED(src))
+				return
+
 			to_chat(user, SPAN_NOTICE("You have welded the new additions!"))
 			playsound(loc, 'sound/items/Welder2.ogg', 25, 1)
-			var/turf/T = get_turf(src)
+			var/turf/turf = get_turf(src)
 			if(is_mainship_level(z))
-				T.PlaceOnTop(/turf/closed/wall/almayer/reinforced)
+				turf.place_on_top(/turf/closed/wall/almayer/reinforced)
 			else
-				T.PlaceOnTop(/turf/closed/wall/r_wall)
-			var/obj/effect/alien/weeds/weeds_in_tile = locate(/obj/effect/alien/weeds) in T
+				turf.place_on_top(/turf/closed/wall/r_wall)
+			var/obj/effect/alien/weeds/weeds_in_tile = locate(/obj/effect/alien/weeds) in turf
 			if(weeds_in_tile)
 				qdel(weeds_in_tile)
-			T.add_fingerprint(user)
+			turf.add_fingerprint(user)
 			qdel(src)
 		return TRUE
 
 	return FALSE
 
-/obj/structure/girder/bullet_act(obj/projectile/P)
+/obj/structure/girder/bullet_act(obj/projectile/projectile)
 	//Tasers and the like should not damage girders.
-	if(P.ammo.damage_type == HALLOSS || P.ammo.damage_type == TOX || P.ammo.damage_type == CLONE || P.damage == 0)
+	if(projectile.ammo.damage_type == HALLOSS || projectile.ammo.damage_type == TOX || projectile.ammo.damage_type == CLONE || projectile.damage == 0)
 		return FALSE
 	var/dmg = 0
-	if(P.ammo.damage_type == BURN)
-		dmg = P.damage
+	if(projectile.ammo.damage_type == BURN)
+		dmg = projectile.damage
 	else
-		dmg = floor(P.damage * 0.5)
+		dmg = floor(projectile.damage * 0.5)
 	if(dmg)
 		take_damage(dmg)
-		bullet_ping(P)
+		bullet_ping(projectile)
 	if(health <= 0)
 		update_state()
 	return TRUE
@@ -358,12 +372,14 @@
 
 /obj/structure/girder/proc/repair()
 	health = initial(health)
+	state = STATE_STANDARD
 	update_state()
 
 /obj/structure/girder/proc/update_state()
 	if(health <= 0 && density)
 		icon_state = "[icon_state]_damaged"
 		density = FALSE
+		state = STATE_DESTROYED
 
 	else if(health > 0 && !density)
 		var/underscore_position =  findtext(icon_state,"_")
@@ -398,10 +414,50 @@
 	health = 500
 
 
+/obj/structure/girder/attack_alien(mob/living/carbon/xenomorph/xeno)
+	if((xeno.caste && xeno.caste.tier < 2 && xeno.claw_type < CLAW_TYPE_VERY_SHARP) || unacidable)
+		to_chat(xeno, SPAN_WARNING("Our claws aren't sharp enough to damage [src]."))
+		return XENO_NO_DELAY_ACTION
+	xeno.animation_attack_on(src)
+	health -= floor(rand(xeno.melee_damage_lower, xeno.melee_damage_upper) * 0.5)
+	if(health <= 0)
+		xeno.visible_message(SPAN_DANGER("[xeno] smashes [src] apart!"),
+		SPAN_DANGER("We slice [src] apart!"), null, 5, CHAT_TYPE_XENO_COMBAT)
+		playsound(loc, 'sound/effects/metalhit.ogg', 25, TRUE)
+		dismantle()
+	if(state == STATE_DESTROYED)
+		qdel(src)
+	else
+		xeno.visible_message(SPAN_DANGER("[xeno] smashes [src]!"),
+		SPAN_DANGER("We [xeno.slash_verb] [src]!"), null, 5, CHAT_TYPE_XENO_COMBAT)
+		playsound(loc, 'sound/effects/metalhit.ogg', 25, TRUE)
+	return XENO_ATTACK_ACTION
+
+/obj/structure/girder/handle_tail_stab(mob/living/carbon/xenomorph/xeno, blunt_stab)
+	if(xeno.caste && xeno.caste.tier < 2 && xeno.claw_type < CLAW_TYPE_VERY_SHARP)
+		return TAILSTAB_COOLDOWN_NONE
+	if(unacidable || unslashable)
+		return TAILSTAB_COOLDOWN_NONE
+	playsound(src, 'sound/effects/metalhit.ogg', 25, 1)
+	update_health(xeno.melee_damage_upper)
+	health -= xeno.melee_damage_upper
+	if(health <= 0)
+		xeno.visible_message(SPAN_DANGER("[xeno] destroys [src] with its tail!"),
+		SPAN_DANGER("We destroy [src] with our tail!"), null, 5, CHAT_TYPE_XENO_COMBAT)
+		dismantle()
+	if(state == STATE_DESTROYED)
+		qdel(src)
+	else
+		xeno.visible_message(SPAN_DANGER("[xeno] strikes [src] with its tail!"),
+		SPAN_DANGER("We strike [src] with our tail!"), null, 5, CHAT_TYPE_XENO_COMBAT)
+	xeno.tail_stab_animation(src, blunt_stab)
+	return TAILSTAB_COOLDOWN_NORMAL
+
 #undef STATE_STANDARD
 #undef STATE_DISMANTLING
 #undef STATE_WALL
 #undef STATE_REINFORCED_WALL
+#undef STATE_DESTROYED
 
 #undef STATE_SCREWDRIVER
 #undef STATE_WIRECUTTER
@@ -410,3 +466,4 @@
 #undef STATE_RODS
 
 #undef GIRDER_UPGRADE_MATERIAL_COST
+#undef GIRDER_PLASTEEL_UPGRADE_MATERIAL_COST

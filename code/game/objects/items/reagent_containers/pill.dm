@@ -7,7 +7,8 @@
 	var/list/picks
 	var/list/mappings = list()
 	for(var/icon_class in PILL_ICON_CLASSES)
-		if(!picks) picks = init_list_range(PILL_ICON_CHOICES, 1)
+		if(!picks)
+			picks = init_list_range(PILL_ICON_CHOICES, 1)
 		mappings[icon_class] = "pill[pick_n_take(picks)]"
 	// Keep extra as padding for random pills
 	picks += init_list_range(PILL_ICON_CHOICES, 1)
@@ -17,6 +18,10 @@
 /obj/item/reagent_container/pill
 	name = "pill"
 	icon = 'icons/obj/items/chemistry.dmi'
+	item_icons = list(
+		WEAR_L_HAND = 'icons/mob/humans/onmob/inhands/equipment/medical_lefthand.dmi',
+		WEAR_R_HAND = 'icons/mob/humans/onmob/inhands/equipment/medical_righthand.dmi',
+	)
 	icon_state = null
 	item_state = "pill"
 	possible_transfer_amounts = null
@@ -65,7 +70,7 @@
 		if(istype(M, /mob/living/carbon/human))
 			var/mob/living/carbon/human/H = M
 			if(H.species.flags & IS_SYNTHETIC)
-				to_chat(H, SPAN_DANGER("You can't eat [fluff_text]s."))
+				to_chat(H, SPAN_DANGER("You can't eat \the [fluff_text]s."))
 				return
 
 		M.visible_message(SPAN_NOTICE("[user] swallows [src]."),
@@ -74,7 +79,7 @@
 		for(var/datum/reagent/R in reagents.reagent_list)
 			reagents_in_pill += R.name
 		var/contained = english_list(reagents_in_pill)
-		msg_admin_niche("[key_name(user)] swallowed [src] (REAGENTS: [contained]) in [get_area(user)] ([user.loc.x],[user.loc.y],[user.loc.z]).", user.loc.x, user.loc.y, user.loc.z)
+		msg_admin_niche("[key_name(user)] swallowed [src] (REAGENTS: [contained]) in [ADMIN_VERBOSEJMP(user)].")
 		M.drop_inv_item_on_ground(src) //icon update
 		if(reagents && reagents.total_volume)
 			reagents.set_source_mob(user)
@@ -127,26 +132,31 @@
 	return 0
 
 /obj/item/reagent_container/pill/afterattack(obj/target, mob/user, proximity)
-	if(!proximity) return
-
-	if(target.is_open_container() != 0 && target.reagents)
-		if(!target.reagents.total_volume)
-			to_chat(user, SPAN_DANGER("[target] is empty. Can't dissolve [fluff_text]."))
+	if(!proximity)
+		return
+	var/rgt_list_text = get_reagent_list_text()
+	if(target.reagents)
+		if(!target.is_open_container())
+			to_chat(user, SPAN_WARNING("\The [target] has a lid on it. You can't drop \the [fluff_text] in [target] with the lid in the way."))
 			return
-		to_chat(user, SPAN_NOTICE("You dissolve the [fluff_text] in [target]"))
+		if(target.reagents?.total_volume <= 0)
+			to_chat(user, SPAN_WARNING("\The [target] needs to contain some liquid to dissolve pills in it."))
+			return
+		if(target.reagents.total_volume >= target.reagents.maximum_volume)
+			to_chat(user, SPAN_WARNING("\The [target] is full. You cannot dissolve anything else without it overflowing."))
+			return
 
-		var/rgt_list_text = get_reagent_list_text()
-
-		user.attack_log += text("\[[time_stamp()]\] <font color='red'>Spiked \a [target] with a [fluff_text]. Reagents: [rgt_list_text]</font>")
-		msg_admin_attack("[key_name(user)] spiked \a [target] with a [fluff_text] (REAGENTS: [rgt_list_text]) (INTENT: [uppertext(intent_text(user.a_intent))]) in [get_area(user)] ([user.loc.x],[user.loc.y],[user.loc.z]).", user.loc.x, user.loc.y, user.loc.z)
+		var/amount = reagents.total_volume + target.reagents.total_volume
+		var/loss = amount - target.reagents.maximum_volume
 
 		reagents.trans_to(target, reagents.total_volume)
-		for(var/mob/O in viewers(2, user))
-			O.show_message(SPAN_DANGER("[user] puts something in \the [target]."), SHOW_MESSAGE_VISIBLE)
+		user.visible_message(SPAN_NOTICE("[user] drops a [fluff_text] into [target]..."),
+		SPAN_NOTICE("You drop a [fluff_text] into [target][loss > 0 ? " but [target] overflows and takes [loss]u of your pill with it." : "..."]"),
+		SPAN_NOTICE("You hear somebody drop a pill into some liquid."), 2)
 
+		log_interact(user, null, "[key_name(user)] dissolved \the [fluff_text] with [rgt_list_text] into [target][loss > 0 ? "but it overflowed. Losing:[loss]u." : "."]")
 		QDEL_IN(src, 5)
 
-	return
 
 ////////////////////////////////////////////////////////////////////////////////
 /// Pills. END
@@ -154,7 +164,7 @@
 
 //Pills
 /obj/item/reagent_container/pill/antitox
-	pill_desc = "An anti-toxin pill. It neutralizes many common toxins, as well as treating toxin damage"
+	pill_desc = "A Dylovene pill. It neutralizes many common toxins, as well as treating toxin damage."
 	pill_initial_reagents = list("anti_toxin" = 15)
 	pill_icon_class = "atox"
 
@@ -179,15 +189,16 @@
 	pill_initial_reagents = list("kelotane" = 15)
 	pill_icon_class = "kelo"
 
-/obj/item/reagent_container/pill/keloderm
-	pill_desc = "A Kelotane-Dermaline pill. Used to rapidly treat burns."
-	pill_initial_reagents = list("kelotane" = 10, "dermaline" = 10)
-	pill_icon_class = "kelo"
-
 /obj/item/reagent_container/pill/oxycodone
-	pill_desc = "A Oxycodone pill. A powerful painkiller."
-	pill_initial_reagents = list("oxycodone" = 15)
+	pill_desc = "An Oxycodone pill. A powerful painkiller."
+	pill_initial_reagents = list("oxycodone" = 10)
 	pill_icon_class = "oxy"
+
+/obj/item/reagent_container/pill/oxycodone/natural
+	name = "numbing herb"
+	pill_desc = "A powerful painkilling herb, eating it will numb the pain."
+	icon = 'icons/obj/items/harvest.dmi'
+	icon_state = "mtear"
 
 /obj/item/reagent_container/pill/paracetamol
 	pill_desc = "A Paracetamol pill. Painkiller for the ages."
@@ -218,11 +229,6 @@
 	pill_desc = "A Dexalin pill. Used to treat oxygen deprivation."
 	pill_initial_reagents = list("dexalin" = 15)
 	pill_icon_class = "dex"
-
-/obj/item/reagent_container/pill/dexalinplus
-	pill_desc = "A Dexalin+ pill. Used to instantly treat oxygen deprivation."
-	pill_initial_reagents = list("dexalinp" = 10)
-	pill_icon_class = "qc"
 
 /obj/item/reagent_container/pill/spaceacillin
 	pill_desc = "A Spaceacillin pill. Used to slow down viral infections."
@@ -259,20 +265,16 @@
 	pill_initial_reagents = list("alkysine" = 10)
 	pill_icon_class = "alky"
 
-/obj/item/reagent_container/pill/imialk
-	pill_desc = "A pill containing Imidazoline and Alkysine, used to heal brain and ear damage."
-	pill_initial_reagents = list("imidazoline" = 10, "alkysine" = 10)
-	pill_icon_class = "imi"
-
 /obj/item/reagent_container/pill/bicaridine
 	pill_desc = "A Bicaridine pill. Heals brute damage."
 	pill_initial_reagents = list("bicaridine" = 15)
 	pill_icon_class = "bica"
 
-/obj/item/reagent_container/pill/merabica
-	pill_desc = "A Meralyne-Bicaridine pill. Rapidly heals brute damage."
-	pill_initial_reagents = list("bicaridine" = 10, "meralyne" = 10)
-	pill_icon_class = "bica"
+/obj/item/reagent_container/pill/bicaridine/natural
+	name = "healing herb"
+	pill_desc = "A remarkable healing herb, eating it will heal brute damage."
+	icon = 'icons/obj/items/harvest.dmi'
+	icon_state = "shand"
 
 /obj/item/reagent_container/pill/ultrazine
 	pill_desc = "An Ultrazine pill. A highly-potent, long-lasting combination CNS and muscle stimulant. Extremely addictive."
@@ -291,26 +293,8 @@
 	pill_initial_reagents = list("antag_stimulant" = 10)
 	pill_icon_class = "stim"
 
-/obj/item/reagent_container/pill/iron
-	pill_desc = "An iron pill. Used to regenerate blood."
-	pill_initial_reagents = list("iron" = 15, "sugar" = 7.5)
-	pill_icon_class = "spac"
-
-/obj/item/reagent_container/pill/nitrogenwater
-	pill_desc = "A pill containing nitrogen and water. Used to treat Tramadol overdoses."
-	pill_initial_reagents = list("nitrogen" = 15, "water" = 15)
-	pill_icon_class = "spac"
-	color = COLOR_BLUE
-
-/obj/item/reagent_container/pill/carbon
-	pill_desc = "A bulky pill of activated carbon. Commonly thought to be effective in treating posioning, in reality it is inadequate for most cases, especially at this dosage."
-	pill_initial_reagents = list("carbon" = 7.5)
+/obj/item/reagent_container/pill/imialky
+	pill_desc = "An Imidazoline-Alkysine (2:1) pill. Heals brain and eye damage."
+	pill_initial_reagents = list("imidazoline" = 10, "alkysine" = 5)
 	pill_icon_class = "alky"
-	color = "#38352e" //pretty dark but not 100% black
-
-/obj/item/reagent_container/pill/ethylredoxrazine
-	pill_desc = "An ethylredoxrazine pill. Used to treat alcohol poisoning and the related effects of similiar chemical depressants."
-	pill_initial_reagents = list("ethylredoxrazine" = 7.5)
-	pill_icon_class = "alky"
-	color = COLOR_OLIVE
 

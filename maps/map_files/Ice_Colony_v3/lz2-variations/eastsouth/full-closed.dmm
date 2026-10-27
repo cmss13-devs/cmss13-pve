@@ -2,23 +2,7 @@
 "a" = (
 /turf/open/auto_turf/snow/layer4,
 /area/shiva/exterior/cp_lz2)
-"g" = (
-/turf/closed/wall/shiva/prefabricated/reinforced/hull,
-/area/shiva/exterior/lz2_fortress)
-"i" = (
-/turf/closed/wall/shiva/prefabricated/pink,
-/area/shiva/exterior/lz2_fortress)
-"D" = (
-/obj/structure/largecrate/random/mini/ammo,
-/turf/open/floor/shiva/north,
-/area/shiva/exterior/lz2_fortress)
-"F" = (
-/turf/open/floor/shiva/north,
-/area/shiva/exterior/lz2_fortress)
-"K" = (
-/turf/open/floor/shiva/radiator_tile,
-/area/shiva/exterior/lz2_fortress)
-"O" = (
+"b" = (
 /obj/item/clothing/shoes/snow,
 /obj/structure/surface/rack,
 /obj/item/clothing/shoes/snow,
@@ -32,6 +16,22 @@
 /obj/item/tank/emergency_oxygen/engi,
 /obj/item/clothing/mask/rebreather,
 /turf/open/floor/shiva/multi_tiles/east,
+/area/shiva/exterior/lz2_fortress)
+"g" = (
+/turf/closed/wall/shiva/prefabricated/reinforced/hull,
+/area/shiva/interior/oob)
+"h" = (
+/turf/open/floor/shiva/north,
+/area/shiva/exterior/lz2_fortress)
+"i" = (
+/turf/closed/wall/shiva/prefabricated/pink,
+/area/shiva/exterior/lz2_fortress)
+"m" = (
+/turf/open/floor/shiva/radiator_tile,
+/area/shiva/exterior/lz2_fortress)
+"t" = (
+/obj/structure/largecrate/random/mini/ammo,
+/turf/open/floor/shiva/north,
 /area/shiva/exterior/lz2_fortress)
 "P" = (
 /turf/open/auto_turf/snow/layer2,
@@ -47,25 +47,25 @@
 /area/shiva/exterior/cp_lz2)
 
 (1,1,1) = {"
-F
-F
-F
-F
-F
-F
-D
+h
+h
+h
+h
+h
+h
+t
 i
 i
 a
 a
 "}
 (2,1,1) = {"
-O
-O
-K
-K
-O
-O
+b
+b
+m
+m
+b
+b
 i
 i
 i

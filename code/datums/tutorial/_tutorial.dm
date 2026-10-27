@@ -30,6 +30,8 @@ GLOBAL_LIST_EMPTY_TYPED(ongoing_tutorials, /datum/tutorial)
 	var/list/player_bind_dict = list()
 	/// If the tutorial has been completed. This doesn't need to be modified if you call end_tutorial() with a param of TRUE
 	var/completion_marked = FALSE
+	/// The tutorial_id of what tutorial has to be completed before being able to do this tutorial
+	var/required_tutorial
 
 /datum/tutorial/Destroy(force, ...)
 	GLOB.ongoing_tutorials -= src
@@ -83,16 +85,18 @@ GLOBAL_LIST_EMPTY_TYPED(ongoing_tutorials, /datum/tutorial)
 /datum/tutorial/proc/end_tutorial(completed = FALSE)
 	SHOULD_CALL_PARENT(TRUE)
 
-	if(tutorial_mob)
-		remove_action(tutorial_mob, /datum/action/tutorial_end) // Just in case to make sure the client can't try and leave the tutorial while it's mid-cleanup
-		if(tutorial_mob.client?.prefs && (completed || completion_marked))
-			tutorial_mob.client.prefs.completed_tutorials |= tutorial_id
-			tutorial_mob.client.prefs.save_character()
+	var/mob/old_tutorial_mob = tutorial_mob
+	if(old_tutorial_mob)
+		tutorial_mob = null // Clear it out so we don't double end the tutorial on logout via transfer_to
+		remove_action(old_tutorial_mob, /datum/action/tutorial_end) // Just in case to make sure the client can't try and leave the tutorial while it's mid-cleanup
+		if(old_tutorial_mob.client?.prefs && (completed || completion_marked))
+			old_tutorial_mob.client.prefs.completed_tutorials |= tutorial_id
+			old_tutorial_mob.client.prefs.save_preferences()
 		var/mob/new_player/new_player = new
-		if(!tutorial_mob.mind)
-			tutorial_mob.mind_initialize()
+		if(!old_tutorial_mob.mind)
+			old_tutorial_mob.mind_initialize()
 
-		tutorial_mob.mind.transfer_to(new_player)
+		old_tutorial_mob.mind.transfer_to(new_player)
 
 	if(!QDELETED(src))
 		qdel(src)
@@ -180,7 +184,7 @@ GLOBAL_LIST_EMPTY_TYPED(ongoing_tutorials, /datum/tutorial)
 /datum/tutorial/proc/on_logout(datum/source)
 	SIGNAL_HANDLER
 
-	if(tutorial_mob.aghosted)
+	if(!tutorial_mob || tutorial_mob.aghosted)
 		return
 
 	end_tutorial(FALSE)
@@ -257,3 +261,9 @@ GLOBAL_LIST_EMPTY_TYPED(ongoing_tutorials, /datum/tutorial)
 	mappath = "maps/tutorial/tutorial_7x7.dmm"
 	width = 7
 	height = 7
+
+/datum/map_template/tutorial/s15x10/hm
+	name = "Tutorial Zone (15x10) (HM Tutorial)"
+	mappath = "maps/tutorial/tutorial_15x10_hm.dmm"
+	width = 15
+	height = 10

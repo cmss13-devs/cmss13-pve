@@ -73,16 +73,16 @@
 /obj/structure/machinery/washing_machine/attackby(obj/item/W as obj, mob/user as mob)
 	/*if(HAS_TRAIT(W, TRAIT_TOOL_SCREWDRIVER))
 		panel = !panel
-		to_chat(user, SPAN_NOTICE(" you [panel ? "))open" : "close"] the [src]'s maintenance panel"*/
+		to_chat(user, SPAN_NOTICE("you [panel ? "))open" : "close"] the [src]'s maintenance panel"*/
 	if(istype(W,/obj/item/toy/crayon) ||istype(W,/obj/item/tool/stamp))
 		if( state in list( 1, 3, 6 ) )
 			if(!crayon)
 				if(user.drop_inv_item_to_loc(crayon, src))
 					crayon = W
 			else
-				..()
+				. = ..()
 		else
-			..()
+			. = ..()
 
 	else if(istype(W,/obj/item/stack/sheet/hairlesshide) || \
 		istype(W,/obj/item/clothing/under) || \
@@ -103,9 +103,6 @@
 // if ( istype(W,/obj/item/clothing/suit/powered ) )
 // to_chat(user, "This item does not fit.")
 // return
-		if ( istype(W,/obj/item/clothing/suit/cyborg_suit ) )
-			to_chat(user, "This item does not fit.")
-			return
 		if ( istype(W,/obj/item/clothing/suit/bomb_suit ) )
 			to_chat(user, "This item does not fit.")
 			return
@@ -136,11 +133,11 @@
 				if(user.drop_inv_item_to_loc(W, src))
 					state = 3
 			else
-				to_chat(user, SPAN_NOTICE(" You can't put the item in right now."))
+				to_chat(user, SPAN_NOTICE("You can't put the item in right now."))
 		else
-			to_chat(user, SPAN_NOTICE(" The washing machine is full."))
+			to_chat(user, SPAN_NOTICE("The washing machine is full."))
 	else
-		..()
+		. = ..()
 	update_icon()
 
 /obj/structure/machinery/washing_machine/attack_hand(mob/user as mob)
@@ -160,7 +157,7 @@
 			crayon = null
 			state = 1
 		if(5)
-			to_chat(user, SPAN_DANGER("The [src] is busy."))
+			to_chat(user, SPAN_DANGER("[src] is busy."))
 		if(6)
 			state = 7
 		if(7)

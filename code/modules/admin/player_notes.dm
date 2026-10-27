@@ -6,7 +6,8 @@
 	var/savefile/info = new("data/player_saves/[copytext(key, 1, 2)]/[key]/info.sav")
 	var/list/infos
 	info >> infos
-	if(!infos) infos = list()
+	if(!infos)
+		infos = list()
 
 	//Overly complex timestamp creation
 	var/modifyer = "th"
@@ -47,23 +48,26 @@
 	var/savefile/note_list = new("data/player_notes.sav")
 	var/list/note_keys
 	note_list >> note_keys
-	if(!note_keys) note_keys = list()
-	if(!note_keys.Find(key)) note_keys += key
+	if(!note_keys)
+		note_keys = list()
+	if(!note_keys.Find(key))
+		note_keys += key
 	note_list << note_keys
 	qdel(note_list)
 
 
-/proc/notes_del(key, index, mob/user)
+/proc/notes_del(key, index)
 	var/savefile/info = new("data/player_saves/[copytext(key, 1, 2)]/[key]/info.sav")
 	var/list/infos
 	info >> infos
-	if(LAZYLEN(infos) < index) return
+	if(LAZYLEN(infos) < index)
+		return
 
 	var/datum/player_info/item = infos[index]
 	infos.Remove(item)
 	info << infos
 
-	message_admins("[key_name_admin(user)] deleted one of [key]'s notes.")
+	message_admins("[key_name_admin(usr)] deleted one of [key]'s notes.")
 
 	qdel(info)
 

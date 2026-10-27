@@ -23,6 +23,8 @@ Buildable meters
 #define PIPE_MTVALVE 18
 #define PIPE_MANIFOLD4W 19
 #define PIPE_CAP 20
+#define PIPE_UP 21
+#define PIPE_DOWN 22
 
 #define PIPE_GAS_FILTER_M 23
 #define PIPE_GAS_MIXER_T 24
@@ -45,13 +47,17 @@ Buildable meters
 
 /obj/item/pipe
 	name = "pipe"
-	desc = "A pipe"
+	desc = "A pipe."
 	var/pipe_type = 0
 	//var/pipe_dir = 0
 	var/pipename
 	var/connect_types[] = list(1) //1=regular, 2=supply, 3=scrubber
 	force = 7
 	icon = 'icons/obj/pipes/pipe_item.dmi'
+	item_icons = list(
+		WEAR_L_HAND = 'icons/mob/humans/onmob/inhands/equipment/construction_lefthand.dmi',
+		WEAR_R_HAND = 'icons/mob/humans/onmob/inhands/equipment/construction_righthand.dmi',
+	)
 	icon_state = "simple"
 	item_state = "buildpipe"
 	flags_atom = FPRINT|CONDUCT
@@ -274,7 +280,7 @@ Buildable meters
 
 /obj/item/pipe/pickup(mob/user, silent)
 	var/old_dir = dir
-	..()
+	. = ..()
 	setDir(old_dir) // Retain old dir since these rotate in hand
 
 /obj/item/pipe/equipped(mob/user, slot, silent)
@@ -395,19 +401,19 @@ Buildable meters
 
 /obj/item/pipe/attackby(obj/item/W, mob/user)
 	. = ..()
-	if (!HAS_TRAIT(W, TRAIT_TOOL_WRENCH))
+	if(!HAS_TRAIT(W, TRAIT_TOOL_WRENCH))
 		return .
-	if (!isturf(loc))
+	if(!isturf(loc))
 		return TRUE
 	var/turf/turf = loc
 	var/pipelevel = turf.intact_tile ? 2 : 1
 
-	if (pipe_type in list (PIPE_SIMPLE_STRAIGHT, PIPE_SUPPLY_STRAIGHT, PIPE_SCRUBBERS_STRAIGHT, PIPE_HE_STRAIGHT, PIPE_INSULATED_STRAIGHT, PIPE_MVALVE))
+	if(pipe_type in list (PIPE_SIMPLE_STRAIGHT, PIPE_SUPPLY_STRAIGHT, PIPE_SCRUBBERS_STRAIGHT, PIPE_HE_STRAIGHT, PIPE_INSULATED_STRAIGHT, PIPE_MVALVE))
 		if(dir == SOUTH)
 			setDir(NORTH)
 		else if(dir == WEST)
 			setDir(EAST)
-	else if (pipe_type in list(PIPE_MANIFOLD4W, PIPE_SUPPLY_MANIFOLD4W, PIPE_SCRUBBERS_MANIFOLD4W, PIPE_OMNI_MIXER, PIPE_OMNI_FILTER))
+	else if(pipe_type in list(PIPE_MANIFOLD4W, PIPE_SUPPLY_MANIFOLD4W, PIPE_SCRUBBERS_MANIFOLD4W, PIPE_OMNI_MIXER, PIPE_OMNI_FILTER))
 		setDir(SOUTH)
 	var/pipe_dir = get_pipe_dir()
 
@@ -545,6 +551,12 @@ Buildable meters
 		if(PIPE_CAP)
 			new_pipe = new /obj/structure/pipes/standard/cap(loc)
 
+		if(PIPE_UP)
+			new_pipe = new /obj/structure/pipes/multiz/up(loc)
+
+		if(PIPE_DOWN)
+			new_pipe = new /obj/structure/pipes/multiz/down(loc)
+
 		if(PIPE_SUPPLY_CAP)
 			new_pipe = new /obj/structure/pipes/standard/cap/hidden/supply(loc)
 
@@ -591,7 +603,7 @@ Buildable meters
 
 /obj/item/pipe_meter
 	name = "meter"
-	desc = "A meter that can be laid on pipes"
+	desc = "A meter that can be laid on pipes."
 	icon = 'icons/obj/pipes/pipe_item.dmi'
 	icon_state = "meter"
 	item_state = "buildpipe"
@@ -608,7 +620,7 @@ Buildable meters
 		return 1
 	new/obj/structure/machinery/meter( src.loc )
 	playsound(src.loc, 'sound/items/Ratchet.ogg', 25, 1)
-	to_chat(user, SPAN_NOTICE(" You have fastened the meter to the pipe"))
+	to_chat(user, SPAN_NOTICE("You have fastened the meter to the pipe."))
 	qdel(src)
 //not sure why these are necessary
 #undef PIPE_SIMPLE_STRAIGHT

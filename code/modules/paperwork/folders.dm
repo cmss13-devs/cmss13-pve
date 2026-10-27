@@ -3,6 +3,10 @@
 	desc = "A folder."
 	icon = 'icons/obj/items/paper.dmi'
 	icon_state = "folder"
+	item_icons = list(
+		WEAR_L_HAND = 'icons/mob/humans/onmob/inhands/items/books_lefthand.dmi',
+		WEAR_R_HAND = 'icons/mob/humans/onmob/inhands/items/books_righthand.dmi'
+		)
 	w_class = SIZE_SMALL
 	var/updateicon = 0//If they spawn with premade papers, update icon
 
@@ -25,10 +29,6 @@
 /obj/item/folder/black
 	desc = "A black folder."
 	icon_state = "folder_black"
-
-/obj/item/folder/green
-	desc = "A green folder."
-	icon_state = "folder_green"
 
 /obj/item/folder/black_random
 	desc = "A black folder. It is decorated with stripes."
@@ -79,34 +79,31 @@
 	if((usr.stat || usr.is_mob_restrained()))
 		return
 
-	if(src.loc == usr)
+	if(src.loc != usr)
+		return
 
-		if(href_list["remove"])
-			var/obj/item/P = locate(href_list["remove"])
-			if(P && (P.loc == src) && istype(P))
-				P.forceMove(usr.loc)
-				usr.put_in_hands(P)
+	if(href_list["remove"])
+		var/obj/item/attachment = locate(href_list["remove"])
+		if(istype(attachment) && (attachment.loc == src))
+			attachment.forceMove(usr.loc)
+			usr.put_in_hands(attachment)
 
-		else if(href_list["read"])
-			var/obj/item/paper/P = locate(href_list["read"])
-			if(P && (P.loc == src) && istype(P))
-				if(!(istype(usr, /mob/living/carbon/human) || istype(usr, /mob/dead/observer) || isRemoteControlling(usr)))
-					show_browser("<BODY class='paper'>[stars(P.info)][P.stamps]</BODY>", P.name, "[P.name]")
-					onclose(usr, "[P.name]")
-				else
-					show_browser("<BODY class='paper'>[P.info][P.stamps]</BODY>", P.name, "[P.name]")
-					onclose(usr, "[P.name]")
-		else if(href_list["look"])
-			var/obj/item/photo/P = locate(href_list["look"])
-			if(P && (P.loc == src) && istype(P))
-				P.show(usr)
-		else if(href_list["browse"])
-			var/obj/item/paper_bundle/P = locate(href_list["browse"])
-			if(P && (P.loc == src) && istype(P))
-				P.attack_self(usr)
-				onclose(usr, "[P.name]")
+	else if(href_list["read"])
+		var/obj/item/paper/paper = locate(href_list["read"])
+		if(istype(paper) && (paper.loc == src))
+			var/fully_readable = istype(usr, /mob/living/carbon/human) || istype(usr, /mob/dead/observer) || isRemoteControlling(usr)
+			show_browser(usr, "<BODY class='paper'>[fully_readable ? paper.info : stars(paper.info)][paper.stamps]</BODY>", paper.name, "[paper.name]")
+			onclose(usr, "[paper.name]")
+	else if(href_list["look"])
+		var/obj/item/photo/photo = locate(href_list["look"])
+		if(istype(photo) && (photo.loc == src))
+			photo.show(usr)
+	else if(href_list["browse"])
+		var/obj/item/paper_bundle/bundle = locate(href_list["browse"])
+		if(istype(bundle) && (bundle.loc == src))
+			bundle.attack_self(usr)
+			onclose(usr, "[bundle.name]")
 
-		//Update everything
-		attack_self(usr)
-		update_icon()
-	return
+	//Update everything
+	attack_self(usr)
+	update_icon()

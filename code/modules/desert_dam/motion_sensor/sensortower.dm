@@ -1,9 +1,9 @@
 //sensor tower for deser dam. It is there to add the xeno's to the tactical map for marines.
 
 #define SENSORTOWER_BUILDSTATE_WORKING 0
-#define SENSORTOWER_BUILDSTATE_BLOWTORCH 1
+#define SENSORTOWER_BUILDSTATE_WRENCH 1
 #define SENSORTOWER_BUILDSTATE_WIRECUTTERS 2
-#define SENSORTOWER_BUILDSTATE_WRENCH 3
+#define SENSORTOWER_BUILDSTATE_BLOWTORCH 3
 
 /obj/structure/machinery/sensortower
 	name = "\improper experimental sensor tower"
@@ -16,34 +16,39 @@
 	unacidable = TRUE   //NOPE.jpg
 	needs_power = FALSE
 	idle_power_usage = 1000
+	is_on = FALSE  //Is this damn thing on or what?
 	var/buildstate = SENSORTOWER_BUILDSTATE_BLOWTORCH //What state of building it are we on, 0-3, 1 is "broken", the default
-	var/is_on = FALSE  //Is this damn thing on or what?
 	var/fail_rate = 15 //% chance of failure each fail_tick check
-	var/fail_check_ticks = 50 //Check for failure every this many ticks
+	var/fail_check_ticks = 3 //Check for failure every this many ticks
 	//The sensor tower fails more often since it is experimental.
 	var/cur_tick = 0 //Tick updater
 
 	/// weakrefs of xenos temporarily added to the marine minimap
 	var/list/minimap_added = list()
+	var/base_icon = "sensor_"
+	var/tacmap_icon = "sensor_tower"
 
+/obj/structure/machinery/sensortower/Initialize(mapload, ...)
+	. = ..()
+	SSminimaps.add_marker(src, MINIMAP_FLAG_ALL, image('icons/UI_icons/map_blips.dmi', null, tacmap_icon))
 
 /obj/structure/machinery/sensortower/update_icon()
 	..()
 	if(!buildstate && is_on)
 		desc = "A tower with a lot of delicate sensors made to track weather conditions. This one has been adjusted to track biosignatures. It looks like it is online."
-		icon_state = "sensor_"
+		icon_state = "[base_icon]"
 	else if (!buildstate && !is_on)
 		desc = "A tower with a lot of delicate sensors made to track weather conditions. This one has been adjusted to track biosignatures. It looks like it is offline."
-		icon_state = "sensor_off"
+		icon_state = "[base_icon]off"
 	else if(buildstate == SENSORTOWER_BUILDSTATE_BLOWTORCH)
 		desc = "A tower with a lot of delicate sensors made to track weather conditions. This one has been adjusted to track biosignatures. This one is heavily damaged. Use a blowtorch, wirecutters, then a wrench to repair it."
-		icon_state = "sensor_broken"
+		icon_state = "[base_icon]broken"
 	else if(buildstate == SENSORTOWER_BUILDSTATE_WIRECUTTERS)
 		desc = "A tower with a lot of delicate sensors made to track weather conditions. This one has been adjusted to track biosignatures. This one is heavily damaged. Use wirecutters, then a wrench to repair it."
-		icon_state = "sensor_broken"
+		icon_state = "[base_icon]broken"
 	else if(buildstate == SENSORTOWER_BUILDSTATE_WRENCH)
 		desc = "A tower with a lot of delicate sensors made to track weather conditions. This one has been adjusted to track biosignatures. This one is heavily damaged. Use a wrench to repair it."
-		icon_state = "sensor_broken"
+		icon_state = "[base_icon]broken"
 
 /obj/structure/machinery/sensortower/process()
 	if(!is_on || buildstate || !anchored) //Default logic checking
@@ -54,6 +59,10 @@
 		return FALSE
 	checkfailure()
 	add_xenos_to_minimap()
+
+/obj/structure/machinery/sensortower/stop_processing()
+	. = ..()
+	remove_xenos_from_minimap()
 
 /obj/structure/machinery/sensortower/proc/remove_xenos_from_minimap()
 	for(var/mob/living/carbon/xenomorph/current_xeno as anything in GLOB.living_xeno_list)
@@ -93,8 +102,10 @@
 	return FALSE
 
 /obj/structure/machinery/sensortower/attack_hand(mob/user as mob)
-	if(!anchored) return FALSE //Shouldn't actually be possible
-	if(user.is_mob_incapacitated()) return FALSE
+	if(!anchored)
+		return FALSE //Shouldn't actually be possible
+	if(user.is_mob_incapacitated())
+		return FALSE
 	if(!ishuman(user))
 		to_chat(user, SPAN_DANGER("You have no idea how to use that.")) //No xenos or mankeys
 		return FALSE
@@ -126,6 +137,7 @@
 	is_on = TRUE
 	cur_tick = 0
 	update_icon()
+	add_xenos_to_minimap()
 	START_PROCESSING(SSslowobj, src)
 	return TRUE
 
@@ -205,7 +217,7 @@
 	var/turf/cur_loc = M.loc
 
 	playsound(loc, 'sound/effects/metal_creaking.ogg', 25, TRUE)
-	M.visible_message(SPAN_DANGER("[M] starts wrenching apart \the [src]'s panels and reaching inside it!"), \
+	M.visible_message(SPAN_DANGER("[M] starts wrenching apart \the [src]'s panels and reaching inside it!"),
 	SPAN_DANGER("You start wrenching apart \the [src]'s panels and reaching inside it!"), null, 5, CHAT_TYPE_XENO_COMBAT)
 	xeno_attack_delay(M)
 	if(do_after(M, 40, INTERRUPT_ALL, BUSY_ICON_HOSTILE))
@@ -221,25 +233,29 @@
 			cur_tick = 0
 			stop_processing()
 		update_icon()
-		M.visible_message(SPAN_DANGER("[M] pulls apart \the [src]'s panels and breaks all its internal wiring and tubing!"), \
+		msg_admin_niche("[key_name(M)] has destroyed the sensor tower.")
+		M.visible_message(SPAN_DANGER("[M] pulls apart \the [src]'s panels and breaks all its internal wiring and tubing!"),
 		SPAN_DANGER("You pull apart \the [src]'s panels and break all its internal wiring and tubing!"), null, 5, CHAT_TYPE_XENO_COMBAT)
 		playsound(loc, 'sound/effects/meteorimpact.ogg', 25, 1)
 	else
-		M.visible_message(SPAN_DANGER("[M] stops destroying \the [src]'s internal machinery!"), \
+		M.visible_message(SPAN_DANGER("[M] stops destroying \the [src]'s internal machinery!"),
 		SPAN_DANGER("You stop destroying \the [src]'s internal machinery!"), null, 5, CHAT_TYPE_XENO_COMBAT)
 	return XENO_NO_DELAY_ACTION
+
+/obj/structure/machinery/sensortower/handle_tail_stab(mob/living/carbon/xenomorph/xeno, blunt_stab)
+	return TAILSTAB_COOLDOWN_NONE
 
 /* Decreases the buildstate of the sensor tower and switches it off if affected by any explosion.
 Higher severity explosion will damage the sensor tower more
 */
 /obj/structure/machinery/sensortower/ex_act(severity)
-	if(buildstate == SENSORTOWER_BUILDSTATE_WRENCH)
+	if(buildstate >= SENSORTOWER_BUILDSTATE_BLOWTORCH)
 		return
 	switch(severity)
 		if(0 to EXPLOSION_THRESHOLD_LOW)
 			buildstate += 1
 		if(EXPLOSION_THRESHOLD_LOW to EXPLOSION_THRESHOLD_MEDIUM)
-			buildstate = clamp(buildstate + 2, SENSORTOWER_BUILDSTATE_WORKING, SENSORTOWER_BUILDSTATE_WRENCH)
+			buildstate = clamp(buildstate + 2, SENSORTOWER_BUILDSTATE_WORKING, SENSORTOWER_BUILDSTATE_BLOWTORCH)
 		if(EXPLOSION_THRESHOLD_HIGH to INFINITY)
 			buildstate = 3
 	if(is_on)
@@ -248,7 +264,36 @@ Higher severity explosion will damage the sensor tower more
 		stop_processing()
 	update_icon()
 
+/obj/structure/machinery/sensortower/short_range
+	desc = "This tower does not look that powerful, it detects only in short range and does not penetrate floors."
+	icon_state = "sensors_tower_small_broken"
+	var/sensor_radius = 30
+	base_icon = "sensors_tower_small_"
+	tacmap_icon = "sensor_tower_small"
+
+/obj/structure/machinery/sensortower/short_range/add_xenos_to_minimap()
+	for(var/mob/living/carbon/xenomorph/current_xeno as anything in GLOB.living_xeno_list)
+		var/turf/xeno_turf = get_turf(current_xeno)
+		if(!is_ground_level(xeno_turf.z))
+			if(WEAKREF(current_xeno) in minimap_added)
+				SSminimaps.remove_marker(current_xeno)
+				current_xeno.add_minimap_marker()
+				minimap_added -= WEAKREF(current_xeno)
+			continue
+		if(get_dist(current_xeno, src) > sensor_radius)
+			if(WEAKREF(current_xeno) in minimap_added)
+				SSminimaps.remove_marker(current_xeno)
+				current_xeno.add_minimap_marker()
+				minimap_added -= WEAKREF(current_xeno)
+			continue
+
+		SSminimaps.remove_marker(current_xeno)
+		current_xeno.add_minimap_marker(MINIMAP_FLAG_USCM|get_minimap_flag_for_faction(current_xeno.hivenumber))
+		minimap_added += WEAKREF(current_xeno)
+
+
+
 #undef SENSORTOWER_BUILDSTATE_WORKING
-#undef SENSORTOWER_BUILDSTATE_BLOWTORCH
-#undef SENSORTOWER_BUILDSTATE_WIRECUTTERS
 #undef SENSORTOWER_BUILDSTATE_WRENCH
+#undef SENSORTOWER_BUILDSTATE_WIRECUTTERS
+#undef SENSORTOWER_BUILDSTATE_BLOWTORCH

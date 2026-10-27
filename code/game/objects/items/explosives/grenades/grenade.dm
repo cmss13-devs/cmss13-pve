@@ -1,6 +1,3 @@
-#define TIMED_FUSE 0
-#define IMPACT_FUSE 1
-
 /obj/item/explosive/grenade
 	name = "grenade"
 	desc = "A hand-held grenade, with an adjustable timer."
@@ -8,11 +5,14 @@
 	icon = 'icons/obj/items/weapons/grenade.dmi'
 	icon_state = "grenade"
 	item_state = "grenade"
+	item_icons = list(
+		WEAR_L_HAND = 'icons/mob/humans/onmob/inhands/weapons/grenades_lefthand.dmi',
+		WEAR_R_HAND = 'icons/mob/humans/onmob/inhands/weapons/grenades_righthand.dmi',
+	)
 	throw_speed = SPEED_VERY_FAST
 	throw_range = 7
 	flags_atom = FPRINT|CONDUCT
 	flags_equip_slot = SLOT_WAIST
-	flags_human_ai = GRENADE_ITEM
 	hitsound = 'sound/weapons/smash.ogg'
 	allowed_sensors = list(/obj/item/device/assembly/timer)
 	max_container_volume = 60
@@ -22,15 +22,10 @@
 	var/has_arm_sound = TRUE
 	var/underslug_launchable = FALSE
 	var/hand_throwable = TRUE
-	var/caliber = "non-standard"
 	harmful = TRUE //Is it harmful? Are they banned for synths?
 	antigrief_protection = TRUE //Should it be checked by antigrief?
 	ground_offset_x = 7
 	ground_offset_y = 6
-	var/dual_purpose = FALSE
-	var/fuse_type = TIMED_FUSE
-	var/spent_case = null //For smokes & such that leave behind used up cases/shells
-
 
 /obj/item/explosive/grenade/Initialize()
 	. = ..()
@@ -47,6 +42,12 @@
 
 	if(harmful && ishuman(user) && !user.allow_gun_usage)
 		to_chat(user, SPAN_WARNING("Your programming prevents you from using this!"))
+		return FALSE
+	if(harmful && ishuman(user) && MODE_HAS_MODIFIER(/datum/gamemode_modifier/ceasefire))
+		to_chat(user, SPAN_WARNING("You will not break the ceasefire by doing that!"))
+		return FALSE
+
+	if(HAS_TRAIT(user, TRAIT_HAULED)) // If somehow they have a grenade in hand while hauled, we don't want them to prime it
 		return FALSE
 
 	return TRUE
@@ -84,10 +85,19 @@
 
 	cause_data = create_cause_data(initial(name), user)
 
-	user.visible_message(SPAN_WARNING("[user] primes \a [name]!"), \
+	user.visible_message(SPAN_WARNING("[user] primes \a [name]!"),
 	SPAN_WARNING("You prime \a [name]!"))
 	msg_admin_attack("[key_name(user)] primed \a grenade ([name]) in [get_area(src)] ([src.loc.x],[src.loc.y],[src.loc.z]).", src.loc.x, src.loc.y, src.loc.z)
 	user.attack_log += text("\[[time_stamp()]\] <font color='red'> [key_name(user)] primed \a grenade ([name]) at ([src.loc.x],[src.loc.y],[src.loc.z])</font>")
+	if(initial(dangerous))
+		var/nade_sound
+		if(has_species(user, "Human"))
+			nade_sound = user.gender == FEMALE ? get_sfx("female_fragout") : get_sfx("male_fragout")
+		else if(ismonkey(user))
+			nade_sound = sound('sound/voice/monkey_scream.ogg')
+		if(nade_sound)
+			playsound(user, nade_sound, 35)
+
 	var/mob/living/carbon/C = user
 	if(istype(C) && !C.throw_mode)
 		C.toggle_throw_mode(THROW_MODE_NORMAL)
@@ -107,7 +117,7 @@
 	else
 		active = TRUE
 		det_time ? addtimer(CALLBACK(src, PROC_REF(prime)), det_time) : prime()
-	w_class = SIZE_MASSIVE // We cheat a little, primed nades become massive so they cant be stored anywhere
+	w_class = SIZE_MASSIVE // We cheat a little, primed nades become massive so they can't be stored anywhere
 	update_icon()
 
 /obj/item/explosive/grenade/prime(force = FALSE)
@@ -151,23 +161,3 @@
 	walk(src, null, null)
 	..()
 	return
-
-/obj/item/explosive/grenade/ai_can_use(mob/living/carbon/human/user, datum/human_ai_brain/ai_brain)
-	return TRUE
-
-/obj/item/explosive/grenade/ai_use(mob/living/carbon/human/user, datum/human_ai_brain/ai_brain, turf/target_turf)
-	sleep(ai_brain.short_action_delay * ai_brain.action_delay_mult)
-	attack_self(user)
-	user.toggle_throw_mode(THROW_MODE_NORMAL)
-	ai_brain.ensure_primary_hand(src)
-	sleep(det_time * 0.4)
-	if(QDELETED(src) || (loc != user))
-		return
-
-	ai_brain.say_grenade_thrown_line()
-	sleep(det_time * 0.4)
-	if(QDELETED(src) || (loc != user))
-		return
-
-	user.face_atom(target_turf)
-	user.throw_item(target_turf)

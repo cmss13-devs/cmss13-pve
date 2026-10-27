@@ -169,11 +169,12 @@
 	icon = 'icons/mob/humans/species/r_zombie.dmi'
 	icon_state = "claw_l"
 	flags_item = NODROP|DELONDROP|ITEM_ABSTRACT
-	force = MELEE_FORCE_TIER_5
+	force = MELEE_FORCE_TIER_6 //slightly higher than normal
 	w_class = SIZE_MASSIVE
 	sharp = 1
 	attack_verb = list("slashed", "torn", "scraped", "gashed", "ripped")
 	pry_capable = IS_PRY_CAPABLE_FORCE
+	attack_speed = 1 SECONDS
 
 /obj/item/weapon/zombie_claws/attack(mob/living/target, mob/living/carbon/human/user)
 	if(iszombie(target))
@@ -189,7 +190,13 @@
 
 		if(locate(/datum/disease/black_goo) in human.viruses)
 			to_chat(user, SPAN_XENOWARNING("<b>You sense your target is infected.</b>"))
-	target.apply_effect(1, SLOW)
+		else
+			var/bio_protected = max(CLOTHING_ARMOR_HARDCORE - human.getarmor(user.zone_selected, ARMOR_BIO), 0)
+			if(prob(bio_protected))
+				target.AddDisease(new /datum/disease/black_goo)
+				to_chat(user, SPAN_XENOWARNING("<b>You sense your target is now infected.</b>"))
+
+	target.apply_effect(2, SLOW)
 
 /obj/item/weapon/zombie_claws/afterattack(obj/O as obj, mob/user as mob, proximity)
 	if(get_dist(src, O) > 1)
@@ -217,7 +224,8 @@
 
 	else if(istype(O, /obj/structure/mineral_door/resin))
 		var/obj/structure/mineral_door/resin/D = O
-		if(D.isSwitchingStates) return
+		if(D.isSwitchingStates)
+			return
 		if(!D.density || user.action_busy || user.a_intent == INTENT_HARM)
 			return
 		user.visible_message(SPAN_DANGER("[user] jams their [name] into [D] and strains to rip it open."),
@@ -253,7 +261,6 @@
 /obj/item/reagent_container/glass/bottle/labeled_black_goo_cure
 	name = "\"Pathogen\" cure bottle"
 	desc = "The bottle has a biohazard symbol on the front, and has a label, designating its use against Agent A0-3959X.91–15, colloquially known as the \"Black Goo\"."
-	icon_state = "bottle20"
 
 /obj/item/reagent_container/glass/bottle/labeled_black_goo_cure/Initialize()
 	. = ..()
@@ -275,13 +282,17 @@
 /obj/item/clothing/glasses/zombie_eyes
 	name = "zombie eyes"
 	gender = PLURAL
+	icon = 'icons/obj/items/clothing/glasses/misc.dmi'
+	item_icons = list(
+		WEAR_EYES = 'icons/mob/humans/onmob/clothing/glasses/misc.dmi',
+	)
 	icon_state = "stub"
 	item_state = "BLANK"
 	w_class = SIZE_SMALL
 	vision_flags = SEE_MOBS
 	darkness_view = 7
 	flags_item = NODROP|DELONDROP|ITEM_ABSTRACT
-	lighting_alpha = LIGHTING_PLANE_ALPHA_MOSTLY_INVISIBLE
+	lighting_alpha = LIGHTING_PLANE_ALPHA_SOMEWHAT_INVISIBLE
 
 
 /obj/item/storage/fancy/blackgoo

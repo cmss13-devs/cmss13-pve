@@ -29,6 +29,10 @@
 	. = ..()
 	beaker = new /obj/item/reagent_container/glass/beaker/large(src)
 
+/obj/structure/machinery/juicer/Destroy()
+	QDEL_NULL(beaker)
+	return ..()
+
 /obj/structure/machinery/juicer/update_icon()
 	icon_state = "juicer"+num2text(!QDELETED(beaker))
 	return
@@ -82,13 +86,13 @@
 	if (!beaker)
 		beaker_contents = "\The [src] has no beaker attached."
 	else if (!beaker.reagents.total_volume)
-		beaker_contents = "\The [src]  has attached an empty beaker."
+		beaker_contents = "\The [src] has attached an empty beaker."
 		is_beaker_ready = 1
 	else if (beaker.reagents.total_volume < beaker.reagents.maximum_volume)
-		beaker_contents = "\The [src]  has attached a beaker with something."
+		beaker_contents = "\The [src] has attached a beaker with something."
 		is_beaker_ready = 1
 	else
-		beaker_contents = "\The [src]  has attached a beaker and beaker is full!"
+		beaker_contents = "\The [src] has attached a beaker and beaker is full!"
 
 	var/dat = {"
 <b>Processing chamber contains:</b><br>
@@ -156,6 +160,10 @@
 		qdel(O)
 		if (beaker.reagents.total_volume >= beaker.reagents.maximum_volume)
 			break
+
+/obj/structure/machinery/juicer/yautja
+	name = "Gibs Juicer"
+	icon = 'icons/obj/structures/machinery/yautja_machines.dmi'
 
 /obj/structure/closet/crate/juice
 

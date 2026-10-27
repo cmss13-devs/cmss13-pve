@@ -6,6 +6,9 @@
 /// For advanced cases, fail unconditionally but don't return (so a test can return multiple results)
 #define TEST_FAIL(reason) (Fail(reason || "No reason", __FILE__, __LINE__))
 
+/// For advanced cases, to note a warning to be provied in a seperate group but don't return or fail the test
+#define TEST_WARN(reason) (Warn(reason || "No reason", __FILE__, __LINE__))
+
 /// Asserts that a condition is true
 /// If the condition is not true, fails the test
 #define TEST_ASSERT(assertion, reason) if (!(assertion)) { return Fail("Assertion failed: [reason || "No reason"]", __FILE__, __LINE__) }
@@ -55,8 +58,9 @@
 #define TEST_DEFAULT 1
 /// After most test steps, used for tests that run long so shorter issues can be noticed faster
 #define TEST_LONGER 10
-/// This must be the last test to run due to the inherent nature of the test iterating every single tangible atom in the game and qdeleting all of them (while taking long sleeps to make sure the garbage collector fires properly) taking a large amount of time.
-#define TEST_CREATE_AND_DESTROY INFINITY
+/// This must be the second to last test to run due to the inherent nature of the test iterating every single tangible atom in the game and qdeleting all of them (while taking long sleeps to make sure the garbage collector fires properly) taking a large amount of time.
+#define TEST_CREATE_AND_DESTROY SHORT_REAL_LIMIT
+#define TEST_CHECK_RUNTIMES INFINITY
 
 /// Change color to red on ANSI terminal output, if enabled with -DANSICOLORS.
 #ifdef ANSICOLORS
@@ -75,19 +79,39 @@
 #define TRAIT_SOURCE_UNIT_TESTS "unit_tests"
 
 // Unit tests
+#include "abstract_xenomorph.dm"
+#include "areas_unpowered.dm"
 #include "autowiki.dm"
 #include "check_runtimes.dm"
 #include "create_and_destroy.dm"
+#include "duplicate_sprite_accessories.dm"
 #include "emote_panels.dm"
+#include "map_sanity.dm"
 #include "missing_icons.dm"
 #include "resist.dm"
 #include "spawn_humans.dm"
 #include "spritesheets.dm"
+#include "steelcrest_abilities.dm"
 #include "subsystem_init.dm"
 #include "tgui_create_message.dm"
 #include "timer_sanity.dm"
+#include "toggle_crest.dm"
 #include "tutorials.dm"
+#include "weed_tests.dm"
 #include "xeno_strains.dm"
+#include "movement\collisions_can_pass_flags.dm"
+#include "movement\collisions_cardinal.dm"
+#include "movement\collisions_collision_pass_through.dm"
+#include "movement\collisions_diagonal.dm"
+#include "movement\link_blocked_can_pass_flags.dm"
+#include "movement\link_blocked_cardinal.dm"
+#include "movement\link_blocked_diagonal.dm"
+#include "movement\movement_helpers.dm"
+#include "pheromones\transmit_castes.dm"
+#include "pheromones\transmit_hive.dm"
+#include "pheromones\transmit_permutation.dm"
+#include "pheromones\pheromone_helpers.dm"
+#include "helpers\unsorted.dm"
 
 // Unit tests backend
 #include "focus_only_tests.dm"

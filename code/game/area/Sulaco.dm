@@ -5,13 +5,11 @@
 	ambience_exterior = AMBIENCE_ALMAYER
 	ceiling_muffle = FALSE
 
-
 //Drop Pods
 /area/shuttle/drop1
 	//soundscape_playlist = list('sound/soundscape/drum1.ogg')
 	soundscape_interval = 30 //seconds
-	is_resin_allowed = FALSE
-	flags_area = AREA_NOTUNNEL
+	flags_area = AREA_NOBURROW
 	is_landing_zone = TRUE
 	ceiling = CEILING_REINFORCED_METAL
 	base_lighting_alpha = 0
@@ -26,6 +24,7 @@
 	icon_state = "shuttlered"
 	base_muffle = MUFFLE_HIGH
 	base_lighting_alpha = 255
+	is_resin_allowed = FALSE
 
 /area/shuttle/drop1/LV624
 	name = "\improper Dropship Alamo"
@@ -66,8 +65,7 @@
 /area/shuttle/drop2
 	//soundscape_playlist = list('sound/soundscape/drum1.ogg')
 	soundscape_interval = 30 //seconds
-	is_resin_allowed = FALSE
-	flags_area = AREA_NOTUNNEL
+	flags_area = AREA_NOBURROW
 	is_landing_zone = TRUE
 	ceiling = CEILING_REINFORCED_METAL
 	base_lighting_alpha = 0
@@ -82,6 +80,7 @@
 	icon_state = "shuttle"
 	base_muffle = MUFFLE_HIGH
 	base_lighting_alpha = 255
+	is_resin_allowed = FALSE
 
 /area/shuttle/drop2/LV624
 	name = "\improper Dropship Normandy"
@@ -116,115 +115,10 @@
 	name = "\improper Normandy Landing Zone"
 	icon_state = "away2"
 
-/area/shuttle/midway
-	name = "\improper Dropship Midway"
-	icon_state = "shuttlered"
-	base_muffle = MUFFLE_HIGH
-	soundscape_interval = 30
-	is_landing_zone = TRUE
-	ceiling = CEILING_REINFORCED_METAL
-
-/area/shuttle/midway/Enter(atom/movable/O, atom/oldloc)
-	if(istype(O, /obj/structure/barricade))
-		return FALSE
-	return TRUE
-
-/area/shuttle/ds_upp
-	name = "dropship Akademia Nauk"
-	icon_state = "shuttlered"
-	base_muffle = MUFFLE_HIGH
-	soundscape_interval = 30
-	is_landing_zone = TRUE
-	ceiling = CEILING_REINFORCED_METAL
-
-/area/shuttle/ds_upp/Enter(atom/movable/O, atom/oldloc)
-	if(istype(O, /obj/structure/barricade))
-		return FALSE
-	return TRUE
-
-/area/shuttle/cyclone
-	name = "dropship Cyclone"
-	icon_state = "shuttlered"
-	base_muffle = MUFFLE_HIGH
-	soundscape_interval = 30
-	is_landing_zone = TRUE
-	ceiling = CEILING_REINFORCED_METAL
-
-/area/shuttle/cyclone/Enter(atom/movable/O, atom/oldloc)
-	if(istype(O, /obj/structure/barricade))
-		return FALSE
-	return TRUE
-
-/area/shuttle/pmc
-	name = "dropship Cash Flow"
-	icon_state = "shuttlered"
-	base_muffle = MUFFLE_HIGH
-	soundscape_interval = 30
-	is_landing_zone = TRUE
-	ceiling = CEILING_REINFORCED_METAL
-
-/area/shuttle/pmc/Enter(atom/movable/O, atom/oldloc)
-	if(istype(O, /obj/structure/barricade))
-		return FALSE
-	return TRUE
-
-/area/shuttle/tornado
-	name = "command dropship Tornado"
-	icon_state = "shuttlered"
-	base_muffle = MUFFLE_HIGH
-	soundscape_interval = 30
-	is_landing_zone = TRUE
-	ceiling = CEILING_REINFORCED_METAL
-
-/area/shuttle/tornado/Enter(atom/movable/O, atom/oldloc)
-	if(istype(O, /obj/structure/barricade))
-		return FALSE
-	return TRUE
-
-/area/shuttle/typhoon
-	name = "heavy-lift dropship Typhoon"
-	icon_state = "shuttlered"
-	base_muffle = MUFFLE_HIGH
-	soundscape_interval = 30
-	is_landing_zone = TRUE
-	ceiling = CEILING_REINFORCED_METAL
-
-/area/shuttle/typhoon/Enter(atom/movable/O, atom/oldloc)
-	if(istype(O, /obj/structure/barricade))
-		return FALSE
-	return TRUE
-
-/area/shuttle/tripoli
-	name = "dropship Tripoli"
-	icon_state = "shuttlered"
-	base_muffle = MUFFLE_HIGH
-	soundscape_interval = 30
-	is_landing_zone = TRUE
-	ceiling = CEILING_REINFORCED_METAL
-
-/area/shuttle/tripoli/Enter(atom/movable/O, atom/oldloc)
-	if(istype(O, /obj/structure/barricade))
-		return FALSE
-	return TRUE
-
-/area/shuttle/gibraltar
-	name = "\improper Dropship Gibraltar"
-	icon_state = "shuttlered"
-	base_muffle = MUFFLE_HIGH
-	soundscape_interval = 30
-	is_landing_zone = TRUE
-	ceiling = CEILING_REINFORCED_METAL
-
-/area/shuttle/gibraltar/Enter(atom/movable/O, atom/oldloc)
-	if(istype(O, /obj/structure/barricade))
-		return FALSE
-	return TRUE
-
 /area/shuttle/drop3
 	//soundscape_playlist = list('sound/soundscape/drum1.ogg')
 	soundscape_interval = 30 //seconds
-	is_resin_allowed = FALSE
-	flags_area = AREA_NOTUNNEL
+	flags_area = AREA_NOBURROW
 	is_landing_zone = TRUE
 	ceiling = CEILING_REINFORCED_METAL
 	base_lighting_alpha = 0
@@ -273,6 +167,99 @@
 	name = "\improper Saipan Landing Zone"
 	icon_state = "away2"
 
+//UPP DROPSHIP
+
+/area/shuttle/drop_upp/Enter(atom/movable/O, atom/oldloc)
+	if(istype(O, /obj/structure/barricade))
+		return FALSE
+	return TRUE
+
+/area/shuttle/drop_upp
+	soundscape_interval = 30 //seconds
+	flags_area = AREA_NOBURROW
+	is_landing_zone = TRUE
+	ceiling = CEILING_REINFORCED_METAL
+	base_lighting_alpha = 0
+
+/area/shuttle/drop_upp/morana
+	name = "\improper Dropship Morana"
+	icon_state = "shuttle"
+	base_muffle = MUFFLE_HIGH
+	base_lighting_alpha = 255
+
+/area/shuttle/drop_upp/LV624
+	name = "\improper Dropship Morana"
+	ambience_exterior = AMBIENCE_LV624
+	icon_state = "shuttle2"
+
+/area/shuttle/drop_upp/prison
+	name = "\improper Dropship Morana"
+	ambience_exterior = AMBIENCE_PRISON
+	icon_state = "shuttle2"
+
+/area/shuttle/drop_upp/BigRed
+	name = "\improper Dropship Morana"
+	ambience_exterior = AMBIENCE_BIGRED
+	icon_state = "shuttle2"
+
+/area/shuttle/drop_upp/ice_colony
+	name = "\improper Dropship Morana"
+	icon_state = "shuttle2"
+
+/area/shuttle/drop_upp/DesertDam
+	name = "\improper Dropship Morana"
+	ambience_exterior = AMBIENCE_TRIJENT
+	icon_state = "shuttle2"
+
+/area/shuttle/drop_upp/transit
+	ambience_exterior = 'sound/ambience/dropship_ambience_loop.ogg'
+	name = "\improper Dropship Morana Transit"
+	icon_state = "shuttlered"
+
+/area/shuttle/drop_upp/lz_upp
+	name = "\improper Morana Landing Zone"
+	icon_state = "away2"
+
+////
+
+/area/shuttle/drop_upp2/devana
+	name = "\improper Dropship Devana"
+	icon_state = "shuttle"
+	base_muffle = MUFFLE_HIGH
+	base_lighting_alpha = 255
+
+/area/shuttle/drop_upp2/LV624
+	name = "\improper Dropship Devana"
+	ambience_exterior = AMBIENCE_LV624
+	icon_state = "shuttle2"
+
+/area/shuttle/drop_upp2/prison
+	name = "\improper Dropship Devana"
+	ambience_exterior = AMBIENCE_PRISON
+	icon_state = "shuttle2"
+
+/area/shuttle/drop_upp2/BigRed
+	name = "\improper Dropship Devana"
+	ambience_exterior = AMBIENCE_BIGRED
+	icon_state = "shuttle2"
+
+/area/shuttle/drop_upp2/ice_colony
+	name = "\improper Dropship Devana"
+	icon_state = "shuttle2"
+
+/area/shuttle/drop_upp2/DesertDam
+	name = "\improper Dropship Devana"
+	ambience_exterior = AMBIENCE_TRIJENT
+	icon_state = "shuttle2"
+
+/area/shuttle/drop_upp2/transit
+	ambience_exterior = 'sound/ambience/dropship_ambience_loop.ogg'
+	name = "\improper Dropship Devana Transit"
+	icon_state = "shuttlered"
+
+/area/shuttle/drop_upp2/lz_upp
+	name = "\improper Devana Landing Zone"
+	icon_state = "away2"
 
 //DISTRESS SHUTTLES
 

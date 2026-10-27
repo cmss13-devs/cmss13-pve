@@ -37,6 +37,7 @@
 /area/bigredv2/outside/dorms)
 "ai" = (
 /obj/item/reagent_container/food/drinks/bottle/absinthe,
+/obj/effect/landmark/corpsespawner/colonist/random,
 /obj/effect/decal/cleanable/blood,
 /turf/open/floor,
 /area/bigredv2/outside/dorms)
@@ -120,6 +121,7 @@
 /obj/effect/decal/cleanable/blood{
 	icon_state = "xgib4"
 	},
+/obj/effect/landmark/corpsespawner/colonist/random,
 /turf/open/floor/grimy,
 /area/bigredv2/outside/dorms)
 "aB" = (
@@ -291,7 +293,7 @@
 /turf/open/floor,
 /area/bigredv2/outside/dorms)
 "bg" = (
-/obj/structure/machinery/vending/cigarette/colony,
+/obj/structure/machinery/vending/cigarette/wy,
 /obj/structure/pipes/standard/simple/hidden/green{
 	dir = 4
 	},
@@ -367,8 +369,14 @@
 /area/bigredv2/outside/dorms)
 "do" = (
 /obj/effect/decal/cleanable/dirt,
+/obj/effect/landmark/corpsespawner/colonist/random,
 /obj/effect/decal/cleanable/blood,
 /turf/open/floor/grimy,
+/area/bigredv2/outside/dorms)
+"el" = (
+/obj/effect/landmark/corpsespawner/colonist/random,
+/obj/effect/decal/cleanable/blood,
+/turf/open/floor,
 /area/bigredv2/outside/dorms)
 "iE" = (
 /obj/effect/decal/cleanable/blood,
@@ -383,6 +391,7 @@
 /obj/structure/pipes/standard/simple/hidden/green{
 	dir = 4
 	},
+/obj/effect/landmark/corpsespawner/colonist/random,
 /obj/effect/decal/cleanable/blood,
 /turf/open/floor,
 /area/bigredv2/outside/dorms)
@@ -464,7 +473,7 @@ aY
 bi
 "}
 (9,1,1) = {"
-XP
+el
 aj
 au
 aG

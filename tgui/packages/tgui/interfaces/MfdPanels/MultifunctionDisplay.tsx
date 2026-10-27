@@ -1,11 +1,11 @@
 import { classes } from 'common/react';
-import { ReactNode } from 'react';
+import type { ReactNode } from 'react';
+import { useBackend } from 'tgui/backend';
+import { Button, Flex } from 'tgui/components';
+import { Table, TableCell, TableRow } from 'tgui/components/Table';
 
-import { useBackend } from '../../backend';
-import { Button, Flex } from '../../components';
-import { Table, TableCell, TableRow } from '../../components/Table';
 import { CrtPanel } from '../CrtPanel';
-import { ButtonProps } from './types';
+import type { ButtonProps } from './types';
 
 export interface MfdProps {
   readonly panelStateId: string; // eslint-disable-line
@@ -80,7 +80,7 @@ export const VerticalPanel = (props: {
 
 const HexScrew = () => {
   return (
-    <svg viewBox="0 0 10 10" width="30px" height="30px">
+    <svg viewBox="0 0 10 10" width="30px" height="30px" overflow="visible">
       <circle
         cx="5"
         cy="5"

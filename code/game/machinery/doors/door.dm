@@ -9,6 +9,8 @@
 	throwpass = FALSE
 	layer = DOOR_OPEN_LAYER
 	minimap_color = MINIMAP_DOOR
+	dir = EAST //So multitile doors are directioned properly
+
 	var/open_layer = DOOR_OPEN_LAYER
 	var/closed_layer = DOOR_CLOSED_LAYER
 	var/id = ""
@@ -31,7 +33,6 @@
 	/// Resistance to masterkey
 	var/masterkey_resist = FALSE
 	var/masterkey_mod = 0.1
-	dir = EAST //So multitile doors are directioned properly
 
 /obj/structure/machinery/door/Initialize(mapload, ...)
 	. = ..()
@@ -94,7 +95,8 @@
 		return
 	if(ismob(AM))
 		var/mob/M = AM
-		if(world.time - M.last_bumped <= openspeed) return //Can bump-open one airlock per second. This is to prevent shock spam.
+		if(world.time - M.last_bumped <= openspeed)
+			return //Can bump-open one airlock per second. This is to prevent shock spam.
 		M.last_bumped = world.time
 		if(!M.is_mob_restrained() && M.mob_size > MOB_SIZE_SMALL)
 			bumpopen(M)
@@ -151,6 +153,8 @@
 
 /obj/structure/machinery/door/emp_act(severity)
 	. = ..()
+	if(!.)
+		return .
 	if(prob(20/severity) && use_power)
 		open()
 	if(prob(40/severity))
@@ -160,7 +164,7 @@
 				secondsElectrified = 0
 
 /obj/structure/machinery/door/ex_act(severity)
-	if(unacidable)
+	if(explo_proof)
 		return
 
 	if(density)
@@ -221,7 +225,6 @@
 
 	operating = DOOR_OPERATING_OPENING
 	do_animate("opening")
-	icon_state = "door0"
 	set_opacity(FALSE)
 	if(length(filler_turfs))
 		change_filler_opacity(opacity)
@@ -242,6 +245,8 @@
 	if(autoclose)
 		addtimer(CALLBACK(src, PROC_REF(autoclose)), normalspeed ? 15 SECONDS + openspeed : 5 DECISECONDS, TIMER_UNIQUE|TIMER_OVERRIDE|TIMER_NO_HASH_WAIT)
 
+	SEND_SIGNAL(src, COMSIG_DOOR_OPEN)
+
 /obj/structure/machinery/door/proc/close(forced = FALSE)
 	if(density && !operating)
 		return TRUE
@@ -252,9 +257,16 @@
 
 	for(var/turf/turf_tile in locs)
 		for(var/obj/structure/blocking_structure in turf_tile)
-			if(blocking_structure.density || istype(blocking_structure, /obj/structure/closet))
-				addtimer(CALLBACK(src, PROC_REF(close), forced), 6 SECONDS + openspeed, TIMER_UNIQUE|TIMER_OVERRIDE|TIMER_NO_HASH_WAIT)
-				return FALSE
+			if(blocking_structure == src)
+				continue // Don't block ourselves (only applicable when opening)
+			if(!blocking_structure.density && !istype(blocking_structure, /obj/structure/closet))
+				continue // Don't block if non-dense and not a closet (they toggle density)
+			if(blocking_structure.anchored && istype(blocking_structure, /obj/structure/machinery/door))
+				continue // Don't block because of other doors (shutters) also in this location
+
+			// Try again later
+			addtimer(CALLBACK(src, PROC_REF(close), forced), 6 SECONDS + openspeed, TIMER_UNIQUE|TIMER_OVERRIDE|TIMER_NO_HASH_WAIT)
+			return FALSE
 
 	operating = DOOR_OPERATING_CLOSING
 	density = TRUE
@@ -272,7 +284,9 @@
 		set_opacity(TRUE)
 		if(length(filler_turfs))
 			change_filler_opacity(opacity)
+
 	operating = DOOR_OPERATING_IDLE
+	SEND_SIGNAL(src, COMSIG_DOOR_CLOSE)
 
 /obj/structure/machinery/door/proc/requiresID()
 	return TRUE
@@ -294,40 +308,6 @@
 			bound_width = world.icon_size
 			bound_height = width * world.icon_size
 		change_filler_opacity(opacity)
-
-/obj/structure/machinery/door/attack_animal(mob/living/user)
-	. = ..()
-
-	if(!istype(user, /mob/living/simple_animal))
-		return FALSE
-
-	var/mob/living/simple_animal/simple_user = user
-
-	if(!simple_user.squeeze_under)
-		return FALSE
-
-	var/move_dir = get_dir(simple_user, loc)
-	for(var/atom/movable/cycled_atom in get_turf(src))
-		if(cycled_atom != src && cycled_atom.density && cycled_atom.BlockedPassDirs(src, move_dir))
-			to_chat(simple_user, SPAN_WARNING("[cycled_atom] prevents you from squeezing under [src]!"))
-			return FALSE
-
-	if(istype(src, /obj/structure/machinery/door/airlock))
-		var/obj/structure/machinery/door/airlock/current_airlock = src
-		if(current_airlock.locked || current_airlock.welded) //Can't pass through airlocks that have been bolted down or welded
-			to_chat(simple_user, SPAN_WARNING("[current_airlock] is locked down tight. You can't squeeze underneath!"))
-			return FALSE
-
-	simple_user.visible_message(SPAN_WARNING("[simple_user] squeezes underneath [src]!"), \
-	SPAN_WARNING("You squeeze underneath [src]."), max_distance = 5)
-	simple_user.forceMove(src.loc)
-	return TRUE
-
-
-/obj/structure/machinery/door/afterShuttleMove(turf/oldT, list/movement_force, shuttle_dir, shuttle_preferred_direction, move_dir, rotation)
-	. = ..()
-	// Yes, for a split second after departure you can see through rear dropship airlocks, but it's the simplest solution I could've think of
-	handle_multidoor()
 
 /obj/structure/machinery/door/morgue
 	icon = 'icons/obj/structures/doors/doormorgue.dmi'

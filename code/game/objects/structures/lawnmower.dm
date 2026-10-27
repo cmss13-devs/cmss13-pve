@@ -1,13 +1,12 @@
 
 /obj/structure/lawnmower
 	name = "Lawnmower"
-	desc = "An armored vehicle, highly effective at close range combat"
+	desc = "An armored vehicle, highly effective at close range combat."
 	icon = 'icons/obj/structures/mememower.dmi'
 	icon_state = "lawnmower"
 	dir = WEST
 	anchored = FALSE
 	density = TRUE
-	unslashable = TRUE
 	layer = ABOVE_LYING_MOB_LAYER
 
 /obj/structure/lawnmower/Move(atom/NewLoc, dir)

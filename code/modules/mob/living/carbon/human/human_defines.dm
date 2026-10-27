@@ -26,9 +26,10 @@
 	var/g_eyes = 0
 	var/b_eyes = 0
 
-	var/skin_color = "Pale 2" // Skin color
-	var/body_size = "Average" // Body Size
-	var/body_type = "Lean" // Body Buffness
+	var/skin_color = SKIN_COLOR_PALE2 // Skin color
+	var/body_size = BODY_SIZE_AVERAGE // Body Size
+	var/body_type = BODY_TYPE_LEAN // Body Buffness
+	var/body_presentation
 
 	//Skin color
 	var/r_skin = 0
@@ -38,11 +39,11 @@
 	var/lip_style = null //no lipstick by default- arguably misleading, as it could be used for general makeup
 
 	var/age = 30 //Player's age (pure fluff)
-	var/b_type = "A+" //Player's bloodtype
+	blood_type = "A+" //Player's bloodtype
 
 	var/underwear = "Boxers (Camo Conforming)" //Which underwear the player wants
-	var/undershirt = "Undershirt (Tan)" //Which undershirt the player wants.
-	var/backbag = 2 //Which backpack type the player has chosen. Satchel or Backpack.
+	var/undershirt = "Undershirt (Tan) (Camo Conforming)" //Which undershirt the player wants.
+	var/backbag = 2 //Which backpack type the player has chosen. Satchel or Backpack or Chestrig.
 
 	var/datum/species/species //Contains icon generation and language information, set during New().
 
@@ -68,8 +69,6 @@
 
 	var/voice
 
-	var/special_voice = "" // For changing our voice. Used by a symptom.
-
 	var/last_dam = -1 //Used for determining if we need to process all limbs or just some or even none.
 	var/list/limbs_to_process = list()// limbs we check until they are good.
 
@@ -83,11 +82,11 @@
 	//Life variables
 	var/oxygen_alert = 0
 	var/fire_alert = 0
-	var/prev_gender = null // Debug for plural genders
 	var/revive_grace_period = 5 MINUTES //5 minutes
 	var/undefibbable = FALSE //whether the human is dead and past the defibbrillation period.
 
 	var/holo_card_color = "" //which color type of holocard is printed on us
+	var/holo_card_accuracy = HOLOCARD_ACCURACY_HANDHELD // What placed this holocard on the human
 
 	var/list/obj/limb/limbs = list()
 	var/list/internal_organs_by_name = list() // so internal organs have less ickiness too
@@ -114,16 +113,21 @@
 	var/shield_slowdown = 0 // Slowdown from readying shields
 
 	var/datum/equipment_preset/assigned_equipment_preset
+	var/rank_override
 	var/rank_fallback
+	///Used for specialists for their chosen preference on roundstart
+	var/role_title_override
 
 	var/datum/squad/assigned_squad //the squad this human is assigned to
 	var/assigned_fireteam = 0 //the fireteam this human is assigned to
 	var/squad_status = null //var for squad info window. Can be null, "M.I.A" and "K.I.A"
+	var/squad_primary_objective_ungarbled = TRUE
+	var/squad_secondary_objective_ungarbled = TRUE
 
 	//moved from IDs to prevent some exploits and to make points more flexible
-	var/marine_points = MARINE_TOTAL_BUY_POINTS
-	var/marine_snowflake_points = MARINE_TOTAL_SNOWFLAKE_POINTS
-	var/marine_buyable_categories = MARINE_CAN_BUY_ALL
+	var/vendor_points = MARINE_TOTAL_BUY_POINTS
+	var/vendor_snowflake_points = MARINE_TOTAL_SNOWFLAKE_POINTS
+	var/vendor_buyable_categories = MARINE_CAN_BUY_ALL
 
 	var/spawned_corpse = FALSE // For the corpse spawner
 	//taken from blood.dm
@@ -138,8 +142,8 @@
 	var/last_chew = 0
 
 	//taken from human.dm
-	hud_possible = list(HEALTH_HUD, STATUS_HUD, STATUS_HUD_OOC, STATUS_HUD_XENO_INFECTION, STATUS_HUD_XENO_CULTIST, ID_HUD, WANTED_HUD, ORDER_HUD, XENO_HOSTILE_ACID, XENO_HOSTILE_SLOW, XENO_HOSTILE_TAG, XENO_HOSTILE_FREEZE, XENO_EXECUTE, HUNTER_CLAN, HUNTER_HUD, FACTION_HUD, HOLOCARD_HUD)
-	var/embedded_flag //To check if we've need to roll for damage on movement while an item is imbedded in us.
+	hud_possible = list(HEALTH_HUD, STATUS_HUD, STATUS_HUD_OOC, STATUS_HUD_XENO_INFECTION, STATUS_HUD_XENO_CULTIST, ID_HUD, WANTED_HUD, ORDER_HUD, XENO_HOSTILE_ACID, XENO_HOSTILE_SLOW, XENO_HOSTILE_TAG, XENO_HOSTILE_TAG_SPREAD, XENO_HOSTILE_FREEZE, XENO_EXECUTE, HUNTER_CLAN, HUNTER_HUD, FACTION_HUD, HOLOCARD_HUD, NEW_PLAYER_HUD)
+
 	var/allow_gun_usage = TRUE
 	var/melee_allowed = TRUE
 	var/throw_allowed = TRUE
@@ -148,12 +152,14 @@
 	/// A list of all the shrapnel currently embedded in the human
 	var/list/atom/movable/embedded_items = list()
 
-	var/list/synthetic_HUD_toggled = list(FALSE,FALSE)
+	var/list/inherent_huds_toggled = list(INHERENT_HUD_MEDICAL = FALSE, INHERENT_HUD_SECURITY = FALSE, INHERENT_HUD_NEW_PLAYER = FALSE)
 
 	var/default_lighting_alpha = LIGHTING_PLANE_ALPHA_VISIBLE
 
+	//Taken from update_icons
+	var/list/overlays_standing[TOTAL_LAYERS]
 	var/hardcore = FALSE //If TRUE, removes the body upon unrevivable death (for WO)
-	appearance_flags = KEEP_TOGETHER|TILE_BOUND|PIXEL_SCALE|LONG_GLIDE
+	appearance_flags = KEEP_TOGETHER | TILE_BOUND
 	throw_range = 4 // Humans can't be thrown that far
 
 	var/datum/action/human_action/activable/selected_ability
@@ -169,6 +175,18 @@
 
 	/// Stored image references associated with focus-fire.
 	var/image/focused_fire_marker
+
+	// Are we currently using inherent zoom vision?
+	var/is_zoomed = FALSE
+
+	// Xenomorph that is hauling us if we are hauled
+	var/mob/living/carbon/xenomorph/hauling_xeno
+
+	/// Timer to prevent spreading yellow dancer tags from same person.
+	var/last_target_spread_time = 0
+
+	// Haul resist cooldown
+	var/next_haul_resist
 
 /client/var/cached_human_playtime
 

@@ -17,6 +17,7 @@
 
 // Shuttle return values
 #define SHUTTLE_CAN_DOCK "can_dock"
+#define SHUTTLE_HUNTER "unsafe dock"//Only Yautja can use these.
 #define SHUTTLE_NOT_A_DOCKING_PORT "not a docking port"
 #define SHUTTLE_DWIDTH_TOO_LARGE "docking width too large"
 #define SHUTTLE_WIDTH_TOO_LARGE "width too large"
@@ -24,6 +25,7 @@
 #define SHUTTLE_HEIGHT_TOO_LARGE "height too large"
 #define SHUTTLE_ALREADY_DOCKED "we are already docked"
 #define SHUTTLE_SOMEONE_ELSE_DOCKED "someone else docked"
+#define SHUTTLE_DOCK_DISABLED "docking port unresponsive"
 
 //Launching Shuttles to CentCom - used for escape shuttle code
 #define NOLAUNCH -1
@@ -96,8 +98,10 @@
 #define MOBILE_SHUTTLE_ID_ERT2 "ert_pmc_shuttle"
 #define MOBILE_SHUTTLE_ID_ERT3 "ert_upp_shuttle"
 #define MOBILE_SHUTTLE_ID_ERT4 "ert_twe_shuttle"
+#define MOBILE_SHUTTLE_ID_ERT5 "ert_mcaste_shuttle"
 #define MOBILE_SHUTTLE_ID_ERT_SMALL "ert_small_shuttle_north"
 #define MOBILE_SHUTTLE_ID_ERT_BIG "ert_shuttle_big"
+#define MOBILE_SHUTTLE_ID_HUNTER "hunter_shuttle"
 
 #define MOBILE_TRIJENT_ELEVATOR "trijentshuttle2"
 #define STAT_TRIJENT_EMPTY "trijent_empty"
@@ -109,29 +113,26 @@
 
 #define MOBILE_SHUTTLE_LIFEBOAT_PORT "lifeboat-port"
 #define MOBILE_SHUTTLE_LIFEBOAT_STARBOARD "lifeboat-starboard"
-#define MOBILE_SHUTTLE_LIFEBOAT_COMPACT "lifeboat-compact"
+#define MOBILE_SHUTTLE_LIFEBOAT_ROSTOCK "lifeboat-rostock"
 #define MOBILE_SHUTTLE_VEHICLE_ELEVATOR "vehicle_elevator"
 
-#define DROPSHIP_MIDWAY "dropship_midway"
 #define DROPSHIP_ALAMO "dropship_alamo"
 #define DROPSHIP_NORMANDY "dropship_normandy"
 #define DROPSHIP_SAIPAN "dropship_saipan"
-#define DROPSHIP_UPP "dropship_upp"
-#define DROPSHIP_CYCLONE "dropship_cyclone"
-#define DROPSHIP_PMC "dropship_pmc"
-#define DROPSHIP_TORNADO "dropship_tornado"
-#define DROPSHIP_TYPHOON "dropship_typhoon"
-#define DROPSHIP_TRIPOLI "dropship_tripoli"
-#define DROPSHIP_GIBRALTAR "dropship_gibraltar"
+#define DROPSHIP_MORANA "dropship_morana"
+#define DROPSHIP_DEVANA "dropship_devana"
 
 #define ALMAYER_DROPSHIP_LZ1 "almayer-hangar-lz1"
 #define ALMAYER_DROPSHIP_LZ2 "almayer-hangar-lz2"
 
-#define GOLDEN_ARROW_LZ "golden arrow lz"
+#define UPP_DROPSHIP_LZ1 "upp-hangar-lz1"
+#define UPP_DROPSHIP_LZ2 "upp-hangar-lz2"
 
 #define DROPSHIP_FLYBY_ID "special_flight"
 #define DROPSHIP_LZ1 "dropship-lz1"
 #define DROPSHIP_LZ2 "dropship-lz2"
+
+#define YAUTJA_HANGAR_A "yautja-hangar-a"
 
 #define ESCAPE_SHUTTLE "escape-shuttle"
 #define ESCAPE_SHUTTLE_EAST "escape_shuttle_e"
@@ -154,7 +155,4 @@
 #define ADMIN_LANDING_PAD_3 "base-ert3"
 #define ADMIN_LANDING_PAD_4 "base-ert4"
 #define ADMIN_LANDING_PAD_5 "base-ert5"
-
-#define MOBILE_SHUTTLE_SHIPMAP_ELEVATOR_ONE "garrow_vehicle_elevator_one"
-#define MOBILE_SHUTTLE_SHIPMAP_ELEVATOR_TWO "garrow_vehicle_elevator_two"
-#define MOBILE_SHUTTLE_SHIPMAP_ELEVATOR_CARGO "garrow_cargo_elevator"
+#define ADMIN_LANDING_PAD_6 "base-ert6"

@@ -41,12 +41,19 @@
 			return list[index]
 	return
 
-//Checks for specific types in a list
-/proc/is_type_in_list(atom/A, list/L)
-	for(var/type in L)
-		if(istype(A, type))
-			return 1
-	return 0
+///Checks if the needle atom is any type in the type_list
+/proc/is_type_in_list(atom/needle, list/type_list)
+	for(var/type in type_list)
+		if(istype(needle, type))
+			return TRUE
+	return FALSE
+
+///Checks if the needle path derives from any in the path_list
+/proc/is_path_in_list(needle, list/path_list)
+	for(var/path in path_list)
+		if(ispath(needle, path))
+			return TRUE
+	return FALSE
 
 //Removes any null entries from the list
 /proc/listclearnulls(list/list)
@@ -141,8 +148,10 @@
 		var/i
 		while(length(L_o))
 			i = pick(L_o)
-			if(!ref) L_n += i
-			else L_n[i] = L_o[i]
+			if(!ref)
+				L_n += i
+			else
+				L_n[i] = L_o[i]
 			L_o -= i
 
 //Return a list with no duplicate entries
@@ -375,6 +384,45 @@
 	original += result
 	return original
 
+// ===========
+/// Sorts an associative list (not alist!) just like sortAssoc above, but using the assoc values and numerically rather than by text
+/// To clarify, this means you input list(a = 1, b = 8, c = 3) and you get list(a = 1, c = 3, b = 8)
+/// I hate how inefficient this is, but apparently it's the true and tried method in codebase, so...
+/// Note that this EXPECTS the keys to be unique and non numeric to work properly, much like they would be in an alist!
+/proc/sortAssocValNumeric(list/L)
+	if(length(L) < 2)
+		return L
+	var/middle = length(L) / 2 + 1 // Copy is first,second-1
+	return mergeAssocValNumeric(sortAssocValNumeric(L.Copy(0,middle)), sortAssocValNumeric(L.Copy(middle))) //second parameter null = to end of list
+
+/proc/mergeAssocValNumeric(list/L, list/R)
+	var/Li=1
+	var/Ri=1
+	var/Llen = length(L)
+	var/Rlen = length(R)
+	var/list/result = new /list(Rlen + Llen) // Prealloc the list since we're gonna add lots to it
+
+	while(Li <= Llen && Ri <= Rlen)
+		var/Lkey = L[Li]
+		var/Rkey = R[Ri]
+		var/Lval = L[Lkey]
+		var/Rval = R[Rkey]
+
+		if(Lval > Rval) // Numeric boundary for sorting
+			result[Li-1+(Ri++)] = Rkey // We have to add in two steps to preserve assoc structure
+			result[Rkey] = Rval
+		else
+			result[Ri-1+(Li++)] = Lkey
+			result[Lkey] = Lval
+
+	result.len = Li+Ri-2 // Trim extra nulls from prealloc
+
+	if(Li <= Llen)
+		return (result + L.Copy(Li, 0))
+	else
+		return (result + R.Copy(Ri, 0))
+// ============
+
 /// Returns a list of atoms sorted by each entry's distance to `target`.
 /proc/sort_list_dist(list/atom/list_to_sort, atom/target)
 	var/list/distances = list()
@@ -388,22 +436,14 @@
 
 	return sortTim(distances, GLOBAL_PROC_REF(cmp_numeric_asc), TRUE)
 
-//Converts a bitfield to a list of numbers (or words if a wordlist is provided)
-/proc/bitfield2list(bitfield = 0, list/wordlist)
-	var/list/r = list()
-	if(islist(wordlist))
-		var/max = min(length(wordlist),16)
-		var/bit = 1
-		for(var/i=1, i<=max, i++)
-			if(bitfield & bit)
-				r += wordlist[i]
-			bit = bit << 1
-	else
-		for(var/bit=1, bit<=65535, bit = bit << 1)
-			if(bitfield & bit)
-				r += bit
-
-	return r
+///Converts a bitfield to a list of numbers of the bits that are set
+/proc/bitfield2list(bitfield = 0)
+	var/list/result = list()
+	for(var/i = 0, i < 24, i++)
+		var/bit = 1 << i
+		if(bitfield & bit)
+			result += bit
+	return result
 
 /proc/count_by_type(list/L, type)
 	var/i = 0

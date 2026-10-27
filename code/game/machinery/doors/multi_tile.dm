@@ -1,7 +1,7 @@
 //Terribly sorry for the code doubling, but things go derpy otherwise.
 /obj/structure/machinery/door/airlock/multi_tile
 	width = 2
-	damage_cap = 2600 // Bigger = more endurable
+	damage_cap = 650 // Bigger = more endurable
 	assembly_type = /obj/structure/airlock_assembly/multi_tile
 
 /obj/structure/machinery/door/airlock/multi_tile/close(forced = FALSE) //Nasty as hell O(n^2) code but unfortunately necessary
@@ -117,22 +117,13 @@
 	req_access = null
 	req_one_access = list(ACCESS_CIVILIAN_PUBLIC)
 
-/obj/structure/machinery/door/airlock/multi_tile/shuttle
-	name = "Shuttle Podlock"
-	icon = 'icons/obj/structures/doors/1x2blast_vert.dmi'
-	icon_state = "pdoor1"
-	opacity = TRUE
-	openspeed = 12
-	req_access = null
-	not_weldable = 1
-
-
 // ALMAYER
 
 /obj/structure/machinery/door/airlock/multi_tile/almayer
 	name = "\improper Airlock"
-	icon = 'icons/obj/structures/doors/comdoor.dmi' //Tiles with is here FOR SAFETY PURPOSES
+	icon = 'icons/obj/structures/doors/2x1almayerdoor.dmi' //Tiles with is here FOR SAFETY PURPOSES
 	openspeed = 4 //shorter open animation.
+	var/queen_pryable = TRUE
 	tiles_with = list(
 		/obj/structure/window/framed/almayer,
 		/obj/structure/machinery/door/airlock,
@@ -152,6 +143,11 @@
 		SSclues.create_print(get_turf(damaging_mob), damaging_mob, "The fingerprint contains bits of wire and metal specks.")
 	..()
 
+/obj/structure/machinery/door/airlock/multi_tile/almayer/glass
+	icon = 'icons/obj/structures/doors/2x1almayerdoor_glass.dmi'
+	opacity = FALSE
+	glass = TRUE
+
 /obj/structure/machinery/door/airlock/multi_tile/almayer/generic
 	name = "\improper Airlock"
 	icon = 'icons/obj/structures/doors/2x1generic.dmi'
@@ -165,6 +161,9 @@
 	icon = 'icons/obj/structures/doors/2x1generic_solid.dmi'
 	opacity = TRUE
 	glass = FALSE
+
+/obj/structure/machinery/door/airlock/multi_tile/almayer/generic/solid
+	autoname = TRUE
 
 /obj/structure/machinery/door/airlock/multi_tile/almayer/medidoor
 	name = "\improper Medical Airlock"
@@ -232,6 +231,66 @@
 	req_access = null
 	req_one_access = list(ACCESS_CIVILIAN_BRIG, ACCESS_CIVILIAN_COMMAND, ACCESS_WY_COLONIAL)
 
+/obj/structure/machinery/door/airlock/multi_tile/almayer/maint
+	name = "\improper Maintenance Hatch"
+	icon = 'icons/obj/structures/doors/2x1maintdoor.dmi'
+	opacity = TRUE
+	glass = FALSE
+	req_access = list()
+	req_one_access = list(ACCESS_MARINE_COMMAND, ACCESS_MARINE_MAINT)
+
+/obj/structure/machinery/door/airlock/multi_tile/almayer/maint/autoname
+	autoname = TRUE
+
+/obj/structure/machinery/door/airlock/multi_tile/almayer/maint/colony
+	req_access = null
+	req_one_access = list(ACCESS_CIVILIAN_PUBLIC)
+
+/obj/structure/machinery/door/airlock/multi_tile/almayer/maint/colony/autoname
+	autoname = TRUE
+
+/obj/structure/machinery/door/airlock/multi_tile/almayer/maint/reinforced
+	name = "\improper Reinforced Maintenance Hatch"
+	masterkey_resist = TRUE
+
+/obj/structure/machinery/door/airlock/multi_tile/almayer/maint/reinforced/colony
+	req_access = null
+	req_one_access = list(ACCESS_CIVILIAN_PUBLIC)
+
+/obj/structure/machinery/door/airlock/multi_tile/almayer/maint/reinforced/colony/autoname
+	autoname = TRUE
+
+//------Containment 3-tile Doors -----//
+
+/obj/structure/machinery/door/airlock/multi_tile/almayer/containment
+	opacity = TRUE
+	width = 3
+	unslashable = TRUE
+	unacidable = TRUE
+	no_panel = 1
+	not_weldable = 1
+	queen_pryable = TRUE
+
+/obj/structure/machinery/door/airlock/multi_tile/almayer/containment/attack_alien(mob/living/carbon/xenomorph/xeno)
+	if(!IS_XENO_DROPSHIP_CAPABLE(xeno))
+		return ..()
+
+	if(!queen_pryable)
+		return ..()
+
+	if(xeno.action_busy)
+		return
+
+	to_chat(xeno, SPAN_WARNING("You try and force the doors open!"))
+	if(do_after(xeno, 10 SECONDS, INTERRUPT_ALL, BUSY_ICON_HOSTILE))
+		unlock(TRUE)
+		open(TRUE)
+		lock(TRUE)
+
+/obj/structure/machinery/door/airlock/multi_tile/almayer/containment/contshutter
+	name = "\improper Containment Door"
+	icon = 'icons/obj/structures/doors/medical_shutter.dmi'
+
 //------Dropship Cargo Doors -----//
 
 /obj/structure/machinery/door/airlock/multi_tile/almayer/dropshiprear
@@ -241,8 +300,10 @@
 	unacidable = TRUE
 	no_panel = 1
 	not_weldable = 1
-	var/queen_pryable = TRUE
+	queen_pryable = TRUE
 	var/obj/docking_port/mobile/marine_dropship/linked_dropship
+	var/linked_to_turf
+	var/obj/structure/machinery/computer/shuttle/dropship/flight/linked_console
 
 
 /obj/structure/machinery/door/airlock/multi_tile/almayer/dropshiprear/ex_act(severity)
@@ -278,7 +339,7 @@
 		control.status = SHUTTLE_DOOR_UNLOCKED
 		to_chat(user, SPAN_WARNING("You successfully restored the remote connection to [src]."))
 		return
-	..()
+	. = ..()
 
 /obj/structure/machinery/door/airlock/multi_tile/almayer/dropshiprear/unlock(forced = FALSE)
 	if(is_reserved_level(z) && !forced)
@@ -286,7 +347,7 @@
 	return ..()
 
 /obj/structure/machinery/door/airlock/multi_tile/almayer/dropshiprear/attack_alien(mob/living/carbon/xenomorph/xeno)
-	if(xeno.hive_pos != XENO_QUEEN)
+	if(!IS_XENO_DROPSHIP_CAPABLE(xeno))
 		return ..()
 
 	if(!queen_pryable)
@@ -315,7 +376,7 @@
 		return
 
 	to_chat(xeno, SPAN_WARNING("You try and force the doors open!"))
-	if(do_after(xeno, 3 SECONDS, INTERRUPT_ALL, BUSY_ICON_HOSTILE))
+	if(do_after(xeno, 5 SECONDS, INTERRUPT_ALL, BUSY_ICON_HOSTILE))
 		if(control)
 			control.status = SHUTTLE_DOOR_BROKEN
 		unlock(TRUE)
@@ -334,6 +395,14 @@
 	name = "\improper Saipan cargo door"
 	icon = 'icons/obj/structures/doors/dropship3_cargo.dmi'
 
+/obj/structure/machinery/door/airlock/multi_tile/almayer/dropshiprear/upp
+	name = "\improper Morana cargo door"
+	icon = 'icons/obj/structures/doors/dropship_upp_cargo.dmi'
+
+/obj/structure/machinery/door/airlock/multi_tile/almayer/dropshiprear/upp2
+	name = "\improper Devana cargo door"
+	icon = 'icons/obj/structures/doors/dropship_upp_cargo.dmi'
+
 /obj/structure/machinery/door/airlock/multi_tile/almayer/dropshiprear/dropshipside
 	width = 2
 
@@ -349,35 +418,13 @@
 	name = "\improper Saipan crew hatch"
 	icon = 'icons/obj/structures/doors/dropship3_side2.dmi'
 
-/obj/structure/machinery/door/airlock/multi_tile/almayer/dropshiprear/ds4
-	name = "\improper Midway cargo door"
-	icon = 'icons/obj/structures/doors/dropship4_cargo.dmi'
+/obj/structure/machinery/door/airlock/multi_tile/almayer/dropshiprear/dropshipside/upp
+	name = "\improper Morana crew hatch"
+	icon = 'icons/obj/structures/doors/dropship_upp_side2.dmi'
 
-/obj/structure/machinery/door/airlock/multi_tile/almayer/dropshiprear/dropshipside/ds1/midway
-	name = "\improper Midway crew hatch"
-
-/obj/structure/machinery/door/airlock/multi_tile/almayer/dropshiprear/dropshipside/ds2/cyclone
-	name = "\improper Cyclone crew hatch"
-
-/obj/structure/machinery/door/airlock/multi_tile/almayer/dropshiprear/dropshipside/pmc
-	name = "\improper Cash Flow crew hatch"
-	icon = 'icons/obj/structures/doors/dropshippmc_side2.dmi'
-
-/obj/structure/machinery/door/airlock/multi_tile/almayer/dropshiprear/dropshipside/rmc
-	name = "\improper Gibraltar crew hatch"
-	icon = 'icons/obj/structures/doors/dropship_rmc_side2.dmi'
-
-/obj/structure/machinery/door/airlock/multi_tile/almayer/dropshiprear/upp
-	name = "\improper Akademia Nauk cargo door"
-	icon = 'icons/obj/structures/doors/dropshipupp_cargo.dmi'
-
-/obj/structure/machinery/door/airlock/multi_tile/almayer/dropshiprear/pmc
-	name = "\improper Cash Flow cargo door"
-	icon = 'icons/obj/structures/doors/dropshippmc_cargo.dmi'
-
-/obj/structure/machinery/door/airlock/multi_tile/almayer/dropshiprear/rmc
-	name = "\improper Gibraltar cargo door"
-	icon = 'icons/obj/structures/doors/dropship_rmc_cargo.dmi'
+/obj/structure/machinery/door/airlock/multi_tile/almayer/dropshiprear/dropshipside/upp2
+	name = "\improper Devana crew hatch"
+	icon = 'icons/obj/structures/doors/dropship_upp_side2.dmi'
 
 /obj/structure/machinery/door/airlock/multi_tile/almayer/dropshiprear/blastdoor
 	name = "bulkhead blast door"
@@ -495,6 +542,8 @@
 /obj/structure/machinery/door/airlock/multi_tile/elevator/freight
 	name = "\improper Freight Elevator Hatch"
 
+/obj/structure/machinery/door/airlock/multi_tile/elevator/brown
+	icon = 'icons/obj/structures/doors/4x1_elevator_brown.dmi'
 
 /obj/structure/machinery/door/airlock/multi_tile/elevator/access
 	icon = 'icons/obj/structures/doors/4x1_elevator_access.dmi'
@@ -594,37 +643,37 @@
 	name = "\improper Alpha Squad Preparations"
 	icon = 'icons/obj/structures/doors/2x1prepdoor_alpha.dmi'
 	req_access = list(ACCESS_MARINE_PREP)
-	req_one_access = list(ACCESS_MARINE_DATABASE, ACCESS_MARINE_CARGO, ACCESS_MARINE_ALPHA)
+	req_one_access = list(ACCESS_MARINE_GENERAL, ACCESS_MARINE_CARGO, ACCESS_MARINE_ALPHA)
 
 /obj/structure/machinery/door/airlock/multi_tile/almayer/marine/bravo
 	name = "\improper Bravo Squad Preparations"
 	icon = 'icons/obj/structures/doors/2x1prepdoor_bravo.dmi'
 	req_access = list(ACCESS_MARINE_PREP)
-	req_one_access = list(ACCESS_MARINE_DATABASE, ACCESS_MARINE_CARGO, ACCESS_MARINE_BRAVO)
+	req_one_access = list(ACCESS_MARINE_GENERAL, ACCESS_MARINE_CARGO, ACCESS_MARINE_BRAVO)
 
 /obj/structure/machinery/door/airlock/multi_tile/almayer/marine/charlie
 	name = "\improper Charlie Squad Preparations"
 	icon = 'icons/obj/structures/doors/2x1prepdoor_charlie.dmi'
 	req_access = list(ACCESS_MARINE_PREP)
-	req_one_access = list(ACCESS_MARINE_DATABASE, ACCESS_MARINE_CARGO, ACCESS_MARINE_CHARLIE)
+	req_one_access = list(ACCESS_MARINE_GENERAL, ACCESS_MARINE_CARGO, ACCESS_MARINE_CHARLIE)
 
 /obj/structure/machinery/door/airlock/multi_tile/almayer/marine/delta
 	name = "\improper Delta Squad Preparations"
 	icon = 'icons/obj/structures/doors/2x1prepdoor_delta.dmi'
 	req_access = list(ACCESS_MARINE_PREP)
-	req_one_access = list(ACCESS_MARINE_DATABASE, ACCESS_MARINE_CARGO, ACCESS_MARINE_DELTA)
+	req_one_access = list(ACCESS_MARINE_GENERAL, ACCESS_MARINE_CARGO, ACCESS_MARINE_DELTA)
 
 /obj/structure/machinery/door/airlock/multi_tile/almayer/marine/shared
 	name = "\improper Squads Preparations"
 	icon = 'icons/obj/structures/doors/prepdoor.dmi'
-	req_one_access = list(ACCESS_MARINE_PREP, ACCESS_MARINE_DATABASE, ACCESS_MARINE_CARGO, ACCESS_MARINE_ALPHA, ACCESS_MARINE_BRAVO, ACCESS_MARINE_CHARLIE, ACCESS_MARINE_DELTA)
+	req_one_access = list(ACCESS_MARINE_PREP, ACCESS_MARINE_GENERAL, ACCESS_MARINE_CARGO, ACCESS_MARINE_ALPHA, ACCESS_MARINE_BRAVO, ACCESS_MARINE_CHARLIE, ACCESS_MARINE_DELTA)
 	opacity = FALSE
 	glass = TRUE
 
 /obj/structure/machinery/door/airlock/multi_tile/almayer/marine/shared/alpha_bravo
 	name = "\improper Alpha-Bravo Squads Preparations"
 	icon = 'icons/obj/structures/doors/2x1prepdoor_alpha.dmi'
-	req_one_access = list(ACCESS_MARINE_PREP, ACCESS_MARINE_DATABASE, ACCESS_MARINE_CARGO, ACCESS_MARINE_ALPHA, ACCESS_MARINE_BRAVO)
+	req_one_access = list(ACCESS_MARINE_PREP, ACCESS_MARINE_GENERAL, ACCESS_MARINE_CARGO, ACCESS_MARINE_ALPHA, ACCESS_MARINE_BRAVO)
 
 /obj/structure/machinery/door/airlock/multi_tile/almayer/marine/shared/alpha_bravo/yellow
 	icon = 'icons/obj/structures/doors/2x1prepdoor_bravo.dmi'
@@ -632,7 +681,7 @@
 /obj/structure/machinery/door/airlock/multi_tile/almayer/marine/shared/charlie_delta
 	name = "\improper Charlie-Delta Squads Preparations"
 	icon = 'icons/obj/structures/doors/2x1prepdoor_charlie.dmi'
-	req_one_access = list(ACCESS_MARINE_PREP, ACCESS_MARINE_DATABASE, ACCESS_MARINE_CARGO, ACCESS_MARINE_CHARLIE, ACCESS_MARINE_DELTA)
+	req_one_access = list(ACCESS_MARINE_PREP, ACCESS_MARINE_GENERAL, ACCESS_MARINE_CARGO, ACCESS_MARINE_CHARLIE, ACCESS_MARINE_DELTA)
 
 /obj/structure/machinery/door/airlock/multi_tile/almayer/marine/shared/charlie_delta/blue
 	icon = 'icons/obj/structures/doors/2x1prepdoor_delta.dmi'
@@ -654,46 +703,311 @@
 /obj/structure/machinery/door/airlock/multi_tile/almayer/generic2/glass/autoname
 	autoname = TRUE
 
-/obj/structure/machinery/door/airlock/multi_tile/almayer/almayer
-	name = "\improper Airlock"
-	icon = 'icons/obj/structures/doors/2x1almayerdoor.dmi'
+/obj/structure/machinery/door/airlock/multi_tile/almayer/generic2/shuttle
+	name = "\improper Shuttle Airlock"
+	no_panel = TRUE
+	not_weldable = TRUE
+	unslashable = TRUE
+	unacidable = TRUE
 
-/obj/structure/machinery/door/airlock/multi_tile/almayer/almayer/glass
+/obj/structure/machinery/door/airlock/multi_tile/almayer/generic2/shuttle/attack_alien(mob/living/carbon/xenomorph/xeno)
+	if(!IS_XENO_DROPSHIP_CAPABLE(xeno))
+		return ..()
+
+	if(!locked)
+		return ..()
+
+	if(xeno.action_busy)
+		return
+
+	to_chat(xeno, SPAN_NOTICE("You try and force the doors open!"))
+	if(do_after(xeno, 5 SECONDS, INTERRUPT_ALL, BUSY_ICON_HOSTILE))
+		unlock(TRUE)
+		open(TRUE)
+		lock(TRUE)
+
+// Hybrisa
+
+/obj/structure/machinery/door/airlock/multi_tile/hybrisa
+	openspeed = 4
+
+/obj/structure/machinery/door/airlock/multi_tile/hybrisa/generic
+	name = "\improper Airlock"
+	icon = 'icons/obj/structures/doors/hybrisa/hybrisa_2x1generic.dmi'
+	opacity = FALSE
+	glass = TRUE
+	req_access = null
+
+/obj/structure/machinery/door/airlock/multi_tile/hybrisa/generic/autoname
+	req_access = null
+	opacity = FALSE
+	glass = TRUE
+	autoname = TRUE
+
+/obj/structure/machinery/door/airlock/multi_tile/hybrisa/generic_solid
+	name = "\improper Airlock"
+	icon = 'icons/obj/structures/doors/hybrisa/hybrisa_2x1generic_solid.dmi'
+	opacity = TRUE
+	glass = FALSE
+	req_access = null
+
+/obj/structure/machinery/door/airlock/multi_tile/hybrisa/generic_solid/autoname
+	autoname = TRUE
+	opacity = TRUE
+	glass = FALSE
+	req_access = null
+
+// Medical
+
+/obj/structure/machinery/door/airlock/multi_tile/hybrisa/medical
+	name = "\improper Airlock"
+	icon = 'icons/obj/structures/doors/hybrisa/hybrisa_2x1medidoor.dmi'
+	opacity = FALSE
+	glass = TRUE
+	req_access = null
+
+/obj/structure/machinery/door/airlock/multi_tile/hybrisa/medical/autoname
+	autoname = TRUE
+	opacity = FALSE
+	glass = TRUE
+	req_access = null
+
+/obj/structure/machinery/door/airlock/multi_tile/hybrisa/medical_solid
+	name = "\improper Airlock"
+	icon = 'icons/obj/structures/doors/hybrisa/hybrisa_2x1medidoor_solid.dmi'
+	opacity = TRUE
+	glass = FALSE
+	req_access = null
+	req_one_access = list(ACCESS_CIVILIAN_MEDBAY, ACCESS_CIVILIAN_RESEARCH, ACCESS_CIVILIAN_COMMAND, ACCESS_CIVILIAN_PUBLIC)
+
+/obj/structure/machinery/door/airlock/multi_tile/hybrisa/medical_solid/autoname
+	autoname = TRUE
+	opacity = TRUE
+	glass = FALSE
+	req_access = null
+	req_one_access = list(ACCESS_CIVILIAN_MEDBAY, ACCESS_CIVILIAN_RESEARCH, ACCESS_CIVILIAN_COMMAND, ACCESS_CIVILIAN_PUBLIC)
+
+// Personal
+/obj/structure/machinery/door/airlock/multi_tile/hybrisa/personal
+	name = "\improper Airlock"
+	icon = 'icons/obj/structures/doors/hybrisa/hybrisa_2x1personaldoor_glass.dmi'
+	opacity = FALSE
+	glass = TRUE
+	req_access = null
+
+/obj/structure/machinery/door/airlock/multi_tile/hybrisa/personal/autoname
+	autoname = TRUE
+	opacity = FALSE
+	glass = TRUE
+	req_access = null
+
+/obj/structure/machinery/door/airlock/multi_tile/hybrisa/personal_solid
+	name = "\improper Airlock"
+	icon = 'icons/obj/structures/doors/hybrisa/hybrisa_2x1personaldoor.dmi'
+	opacity = TRUE
+	glass = FALSE
+	req_access = null
+	req_one_access = list(ACCESS_CIVILIAN_RESEARCH, ACCESS_CIVILIAN_COMMAND, ACCESS_WY_COLONIAL)
+
+/obj/structure/machinery/door/airlock/multi_tile/hybrisa/personal_solid/autoname
+	autoname = TRUE
+	opacity = TRUE
+	glass = FALSE
+	req_access = null
+	req_one_access = list(ACCESS_CIVILIAN_RESEARCH, ACCESS_CIVILIAN_COMMAND, ACCESS_WY_COLONIAL)
+
+// Personal White
+
+/obj/structure/machinery/door/airlock/multi_tile/hybrisa/personal_white
+	name = "\improper Airlock"
+	icon = 'icons/obj/structures/doors/hybrisa/hybrisa_2x1personaldoor_glass_white.dmi'
+	opacity = FALSE
+	glass = TRUE
+	req_access = null
+	req_one_access = list(ACCESS_CIVILIAN_RESEARCH, ACCESS_CIVILIAN_COMMAND, ACCESS_WY_COLONIAL)
+
+/obj/structure/machinery/door/airlock/multi_tile/hybrisa/personal_white/autoname
+	autoname = TRUE
+	opacity = FALSE
+	glass = TRUE
+	req_access = null
+	req_one_access = list(ACCESS_CIVILIAN_RESEARCH, ACCESS_CIVILIAN_COMMAND, ACCESS_WY_COLONIAL)
+
+
+/obj/structure/machinery/door/airlock/multi_tile/hybrisa/personal_solid_white
+	name = "\improper Airlock"
+	icon = 'icons/obj/structures/doors/hybrisa/hybrisa_2x1personaldoor_white.dmi'
+	opacity = TRUE
+	glass = FALSE
+	req_access = null
+	req_one_access = list(ACCESS_CIVILIAN_RESEARCH, ACCESS_CIVILIAN_COMMAND, ACCESS_WY_COLONIAL)
+
+/obj/structure/machinery/door/airlock/multi_tile/hybrisa/personal_solid_white/autoname
+	autoname = TRUE
+	opacity = TRUE
+	glass = FALSE
+	req_access = null
+	req_one_access = list(ACCESS_CIVILIAN_RESEARCH, ACCESS_CIVILIAN_COMMAND, ACCESS_WY_COLONIAL)
+
+// Black Research Doors
+
+/obj/structure/machinery/door/airlock/multi_tile/hybrisa/black_double
 	icon = 'icons/obj/structures/doors/2x1almayerdoor_glass.dmi'
 	opacity = FALSE
 	glass = TRUE
+	req_one_access = list(ACCESS_CIVILIAN_RESEARCH, ACCESS_CIVILIAN_COMMAND, ACCESS_WY_COLONIAL)
 
-/obj/structure/machinery/door/airlock/multi_tile/strata
-	name = "Secure Airlock"
-	icon = 'icons/obj/structures/doors/strata/strata_2x1.dmi'
+/obj/structure/machinery/door/airlock/multi_tile/hybrisa/black_double/autoname
+	autoname = TRUE
+	opacity = FALSE
+	glass = TRUE
+	req_one_access = list(ACCESS_CIVILIAN_RESEARCH, ACCESS_CIVILIAN_COMMAND, ACCESS_WY_COLONIAL)
+
+/obj/structure/machinery/door/airlock/multi_tile/hybrisa/black_double/solid
+	icon = 'icons/obj/structures/doors/2x1almayerdoor.dmi'
 	opacity = TRUE
 	glass = FALSE
+
+/obj/structure/machinery/door/airlock/multi_tile/hybrisa/black_double/solid/autoname
+	autoname = TRUE
+	opacity = TRUE
+	glass = FALSE
+
+// ------ UPP Multi Ship Doors ------ //
+// --- UPP Generic Door --- //
+
+/obj/structure/machinery/door/airlock/multi_tile/upp
 	openspeed = 4
 
-/obj/structure/machinery/door/airlock/multi_tile/upp_green
-	name = "Airlock"
-	icon = 'icons/obj/structures/doors/upp/2x1upp_green.dmi'
+/obj/structure/machinery/door/airlock/multi_tile/upp/generic
+	name = "\improper Airlock"
+	icon = 'icons/obj/structures/doors/upp/upp_2x1greendoor_glass.dmi'
 	opacity = FALSE
-	glass = FALSE
-
-/obj/structure/machinery/door/airlock/multi_tile/upp_green/glass
-	name = "Glass Airlock"
-	icon = 'icons/obj/structures/doors/upp/2x1upp_glass_green.dmi'
 	glass = TRUE
+	req_access = list(ACCESS_UPP_GENERAL)
 
+/obj/structure/machinery/door/airlock/multi_tile/upp/generic/autoname
+	autoname = TRUE
 
-/obj/structure/machinery/door/airlock/multi_tile/upp_grey
-	name = "Airlock"
-	icon = 'icons/obj/structures/doors/upp/2x1upp_grey.dmi'
+/obj/structure/machinery/door/airlock/multi_tile/upp/generic_solid
+	name = "\improper Airlock"
+	icon = 'icons/obj/structures/doors/upp/upp_2x1greendoor.dmi'
+	opacity = TRUE
+	glass = FALSE
+	req_access = list(ACCESS_UPP_GENERAL)
+
+/obj/structure/machinery/door/airlock/multi_tile/upp/generic_solid/autoname
+	autoname = TRUE
+
+// --- UPP Generic Door --- //
+
+/obj/structure/machinery/door/airlock/multi_tile/upp
+	openspeed = 4
+
+/obj/structure/machinery/door/airlock/multi_tile/upp/generic
+	name = "\improper Airlock"
+	icon = 'icons/obj/structures/doors/upp/upp_2x1greendoor_glass.dmi'
 	opacity = FALSE
-	glass = FALSE
-
-/obj/structure/machinery/door/airlock/multi_tile/upp_grey/glass
-	name = "Glass Airlock"
-	icon = 'icons/obj/structures/doors/upp/2x1upp_glass_grey.dmi'
 	glass = TRUE
+	req_access = list(ACCESS_UPP_GENERAL)
 
-/obj/structure/machinery/door/airlock/multi_tile/upp_utility
-	name = "Airlock"
-	icon = 'icons/obj/structures/doors/upp/2x1upp_utility.dmi'
-	openspeed = 6
+/obj/structure/machinery/door/airlock/multi_tile/upp/generic/autoname
+	autoname = TRUE
+
+/obj/structure/machinery/door/airlock/multi_tile/upp/generic_solid
+	name = "\improper Airlock"
+	icon = 'icons/obj/structures/doors/upp/upp_2x1greendoor.dmi'
+	opacity = TRUE
+	glass = FALSE
+	req_access = list(ACCESS_UPP_GENERAL)
+
+/obj/structure/machinery/door/airlock/multi_tile/upp/generic_solid/autoname
+	autoname = TRUE
+
+// --- UPP Medical Door --- //
+
+/obj/structure/machinery/door/airlock/multi_tile/upp/medical
+	name = "\improper Airlock"
+	icon = 'icons/obj/structures/doors/upp/upp_2x1medigreendoor_glass.dmi'
+	opacity = FALSE
+	glass = TRUE
+	req_one_access = list(ACCESS_UPP_MEDICAL, ACCESS_UPP_LEADERSHIP)
+
+/obj/structure/machinery/door/airlock/multi_tile/upp/medical/autoname
+	autoname = TRUE
+
+/obj/structure/machinery/door/airlock/multi_tile/upp/medical_solid
+	name = "\improper Airlock"
+	icon = 'icons/obj/structures/doors/upp/upp_2x1medigreendoor.dmi'
+	opacity = TRUE
+	glass = FALSE
+	req_one_access = list(ACCESS_UPP_MEDICAL, ACCESS_UPP_LEADERSHIP)
+
+/obj/structure/machinery/door/airlock/multi_tile/upp/medical_solid/autoname
+	autoname = TRUE
+
+// --- UPP Requisition Door --- //
+
+/obj/structure/machinery/door/airlock/multi_tile/upp/req
+	name = "\improper Airlock"
+	icon = 'icons/obj/structures/doors/upp/upp_2x1reqgreendoor_glass.dmi'
+	opacity = FALSE
+	glass = TRUE
+	req_one_access = list(ACCESS_UPP_ENGINEERING, ACCESS_UPP_LEADERSHIP)
+
+/obj/structure/machinery/door/airlock/multi_tile/upp/req/autoname
+	autoname = TRUE
+
+/obj/structure/machinery/door/airlock/multi_tile/upp/req_solid
+	name = "\improper Airlock"
+	icon = 'icons/obj/structures/doors/upp/upp_2x1reqgreendoor.dmi'
+	opacity = TRUE
+	glass = FALSE
+	req_one_access = list(ACCESS_UPP_ENGINEERING, ACCESS_UPP_LEADERSHIP)
+
+/obj/structure/machinery/door/airlock/multi_tile/upp/req_solid/autoname
+	autoname = TRUE
+
+// --- UPP Security Door --- //
+
+/obj/structure/machinery/door/airlock/multi_tile/upp/sec
+	name = "\improper Airlock"
+	icon = 'icons/obj/structures/doors/upp/upp_2x1secgreendoor_glass.dmi'
+	opacity = FALSE
+	glass = TRUE
+	req_one_access = list(ACCESS_UPP_SECURITY, ACCESS_UPP_LEADERSHIP)
+
+/obj/structure/machinery/door/airlock/multi_tile/upp/sec/autoname
+	autoname = TRUE
+
+/obj/structure/machinery/door/airlock/multi_tile/upp/sec_solid
+	name = "\improper Airlock"
+	icon = 'icons/obj/structures/doors/upp/upp_2x1secgreendoor.dmi'
+	opacity = TRUE
+	glass = FALSE
+	req_one_access = list(ACCESS_UPP_SECURITY, ACCESS_UPP_LEADERSHIP)
+
+/obj/structure/machinery/door/airlock/multi_tile/upp/sec_solid/autoname
+	autoname = TRUE
+
+// --- UPP Engineering Door --- //
+
+/obj/structure/machinery/door/airlock/multi_tile/upp/eng
+	name = "\improper Airlock"
+	icon = 'icons/obj/structures/doors/upp/upp_2x1engdoor_glass.dmi'
+	opacity = FALSE
+	glass = TRUE
+	req_one_access = list(ACCESS_UPP_ENGINEERING, ACCESS_UPP_LEADERSHIP)
+
+/obj/structure/machinery/door/airlock/multi_tile/upp/eng/autoname
+	autoname = TRUE
+
+/obj/structure/machinery/door/airlock/multi_tile/upp/eng_solid
+	name = "\improper Airlock"
+	icon = 'icons/obj/structures/doors/upp/upp_2x1enggreendoor.dmi'
+	opacity = TRUE
+	glass = FALSE
+	req_one_access = list(ACCESS_UPP_ENGINEERING, ACCESS_UPP_LEADERSHIP)
+
+/obj/structure/machinery/door/airlock/multi_tile/upp/eng_solid/autoname
+	autoname = TRUE

@@ -212,7 +212,7 @@ export const backendMiddleware = (store) => {
       resumeRenderer();
       startKeyPassthrough();
       // Setup drag
-      setupDrag();
+      setupDrag(payload.config?.window?.fancy);
       // We schedule this for the next tick here because resizing and unhiding
       // during the same tick will flash with a white background.
       setTimeout(() => {

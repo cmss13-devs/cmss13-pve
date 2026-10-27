@@ -11,8 +11,6 @@ GLOBAL_VAR_INIT(enter_allowed, TRUE)
 GLOBAL_LIST_EMPTY(admin_log)
 GLOBAL_LIST_EMPTY(asset_log)
 
-GLOBAL_VAR_INIT(looc_cooldown_time, 30 SECONDS)
-
 // multiplier for watts per tick <> cell storage (eg: 0.02 means if there is a load of 1000 watts, 20 units will be taken from a cell per second)
 //It's a conversion constant. power_used*CELLRATE = charge_provided, or charge_used/CELLRATE = power_provided
 #define CELLRATE 0.006
@@ -58,16 +56,12 @@ GLOBAL_LIST_EMPTY(tagger_locations)
 GLOBAL_LIST_INIT(alphabet_uppercase, list("A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"))
 GLOBAL_LIST_INIT(alphabet_lowercase, list("a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"))
 
-GLOBAL_LIST_INIT(greek_letters, list("Alpha", "Beta", "Gamma", "Delta", "Epsilon", "Zeta", "Eta", "Theta", "Iota", "Kappa", "Lambda", "Mu", "Nu", "Xi", "Omnicron", "Pi", "Rho", "Sigma", "Tau", "Upsilon", "Phi", "Chi", "Psi", "Omega"))
+GLOBAL_LIST_INIT(greek_letters, list("Alpha", "Beta", "Gamma", "Delta", "Epsilon", "Zeta", "Eta", "Theta", "Iota", "Kappa", "Lambda", "Mu", "Nu", "Xi", "Omicron", "Pi", "Rho", "Sigma", "Tau", "Upsilon", "Phi", "Chi", "Psi", "Omega"))
 GLOBAL_LIST_INIT(nato_phonetic_alphabet, list("Alpha", "Bravo", "Charlie", "Delta", "Echo", "Foxtrot", "Golf", "Hotel", "India", "Juliett", "Kilo", "Lima", "Mike", "November", "Oscar", "Papa", "Quebec", "Romeo", "Sierra", "Tango", "Uniform", "Victor", "Whiskey", "X-Ray", "Yankee", "Zulu"))
 
 //Used for autocall procs on ERT
 GLOBAL_VAR_INIT(distress_cancel, FALSE)
 GLOBAL_VAR_INIT(destroy_cancel, FALSE)
-
-// Which lobby art is on display
-// This is updated by the lobby art turf when it initializes
-GLOBAL_VAR_INIT(displayed_lobby_art, -1)
 
 // Last global ID that was assigned to a mob (for round recording purposes)
 GLOBAL_VAR_INIT(last_mob_gid, 0)
@@ -89,7 +83,7 @@ GLOBAL_VAR_INIT(perf_flags, NO_FLAGS)
 
 GLOBAL_LIST_INIT(bitflags, list((1<<0), (1<<1), (1<<2), (1<<3), (1<<4), (1<<5), (1<<6), (1<<7), (1<<8), (1<<9), (1<<10), (1<<11), (1<<12), (1<<13), (1<<14), (1<<15), (1<<16), (1<<17), (1<<18), (1<<19), (1<<20), (1<<21), (1<<22), (1<<23)))
 
-GLOBAL_VAR_INIT(master_mode, "Distress Signal: Lowpop")
+GLOBAL_VAR_INIT(master_mode, GAMEMODE_DISTRESS_SIGNAL)
 
 GLOBAL_VAR_INIT(timezoneOffset, 0)
 
@@ -110,10 +104,6 @@ GLOBAL_VAR_INIT(xeno_flatten_map_icon_cooldown, 0)
 GLOBAL_VAR(uscm_unannounced_map)
 GLOBAL_VAR(xeno_unannounced_map)
 
-//global tacmaps for action button access
-GLOBAL_DATUM_INIT(uscm_tacmap_status, /datum/tacmap/drawing/status_tab_view, new)
-GLOBAL_DATUM_INIT(xeno_tacmap_status, /datum/tacmap/drawing/status_tab_view/xeno, new)
-
 /// List of roles that can be setup for each gamemode
 GLOBAL_LIST_EMPTY(gamemode_roles)
 
@@ -128,8 +118,8 @@ GLOBAL_VAR_INIT(time_offset, setup_offset())
 /proc/setup_offset()
 	return rand(10 MINUTES, 24 HOURS)
 
-/// The last count of possible candidates in the xeno larva queue (updated via get_alien_candidates)
-GLOBAL_VAR(xeno_queue_candidate_count)
+/// The last count of possible candidates in the xeno larva pool (updated via get_alien_candidates)
+GLOBAL_VAR(larva_pool_candidate_count)
 
 //Coordinate obsfucator
 //Used by the rangefinders and linked systems to prevent coords collection/prefiring
@@ -137,5 +127,10 @@ GLOBAL_VAR(xeno_queue_candidate_count)
 GLOBAL_VAR(obfs_x)
 /// A number between -500 and 500.
 GLOBAL_VAR(obfs_y)
+/// A number between -10 and 10
+GLOBAL_VAR(obfs_z)
 
-GLOBAL_VAR_INIT(ai_xeno_weeding, TRUE)
+/// List of giant lizards that are alive.
+GLOBAL_LIST_EMPTY(giant_lizards_alive)
+/// List of FCT Field Camera Tripods
+GLOBAL_LIST_EMPTY_TYPED(deployed_tripod_cameras, /obj/structure/overwatch_camera_tripod)

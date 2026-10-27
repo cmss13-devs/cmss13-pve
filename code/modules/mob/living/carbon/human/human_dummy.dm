@@ -3,6 +3,7 @@
 // subtypes as a basis for non-common-speaking alien foreigners. ~ Z
 
 /mob/living/carbon/human/dummy
+	mob_flags = MOB_ABSTRACT
 	var/in_use = FALSE
 
 /mob/living/carbon/human/dummy/proc/wipe_state()
@@ -82,8 +83,19 @@ GLOBAL_LIST_EMPTY(dummy_mob_list)
 	ADD_TRAIT(src, TRAIT_IMMOBILIZED, TRAIT_SOURCE_TUTORIAL)
 	anchored = TRUE
 
+/mob/living/carbon/human/realistic_dummy/Initialize() // Now comes pre-fitted with Marine gear!! Tutorial realism increased by 400%!!!
+	. = ..()
+	status_flags |= FAKESOUL
+	create_hud()
+	arm_equipment(src, /datum/equipment_preset/uscm/tutorial_rifleman)
+
+/mob/living/carbon/human/realistic_dummy/updatehealth()
+	. = ..()
+	if(health >= 70)
+		SEND_SIGNAL(src, COMSIG_HUMAN_HM_TUTORIAL_TREATED)
+
 /// Professor Dummy, used by CMOs and SEAs to teach new nurses/doctors
 /mob/living/carbon/human/professor_dummy/Initialize()
 	. = ..()
 	create_hud()
-	INVOKE_ASYNC(GLOBAL_PROC, GLOBAL_PROC_REF(arm_equipment), src, /datum/equipment_preset/other/professor_dummy)
+	arm_equipment(src, /datum/equipment_preset/other/professor_dummy)

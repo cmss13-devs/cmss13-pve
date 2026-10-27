@@ -14,24 +14,22 @@
 				universal_understand = FALSE
 			chem_effect_flags = 0
 
-	if(reagents && !(species.flags & NO_CHEM_METABOLIZATION))
-		var/alien = 0
-		if(species && species.reagent_tag)
-			alien = species.reagent_tag
-		reagents.metabolize(src, alien, delta_time)
+	if(!(species.flags & NO_CHEM_METABOLIZATION))
+		reagents?.metabolize(src, species.reagent_tag, delta_time)
 
 	if(status_flags & GODMODE)
 		return 0 //Godmode
 
 	if(!(species.flags & IS_SYNTHETIC))
 		//Nutrition decrease
-		if(nutrition > 0 && stat != 2)
-			nutrition = max (0, nutrition - HUNGER_FACTOR)
+		if(stat != DEAD)
+			nutrition = max(0, nutrition - HUNGER_FACTOR)
 
 
 		handle_trace_chems()
 
-	else nutrition = NUTRITION_NORMAL //synthetics are never hungry
+	else
+		nutrition = NUTRITION_NORMAL //synthetics are never hungry
 
 	return //TODO: DEFERRED
 

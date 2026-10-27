@@ -18,7 +18,7 @@
 		return FALSE
 
 /obj/proc/check_yautja_access(mob/living/carbon/human/yautja)
-	if(!istype(yautja))
+	if(!ishuman(yautja) || !HAS_TRAIT(yautja, TRAIT_YAUTJA_TECH))
 		return FALSE
 	var/obj/item/clothing/gloves/yautja/hunter/bracer = yautja.gloves
 	if(!istype(bracer) || !bracer.embedded_id || !check_access(bracer.embedded_id))
@@ -59,10 +59,13 @@
 /obj/proc/check_access(obj/item/I)
 	//These generations have been moved out of /obj/New() because they were slowing down the creation of objects that never even used the access system.
 	gen_access()
-	if(!islist(req_access)) return 1//something's very wrong
+	if(!islist(req_access))
+		return 1//something's very wrong
 	var/L[] = req_access
-	if(!length(L) && !LAZYLEN(req_one_access)) return 1//no requirements
-	if(!I) return
+	if(!length(L) && !LAZYLEN(req_one_access))
+		return 1//no requirements
+	if(!I)
+		return
 
 	var/list/A = I.GetAccess()
 	for(var/i in req_access)
@@ -78,18 +81,24 @@
 
 /obj/proc/check_access_list(L[])
 	gen_access()
-	if(!req_access  && !req_one_access) return 1
-	if(!islist(req_access)) return 1
+	if(!req_access  && !req_one_access)
+		return 1
+	if(!islist(req_access))
+		return 1
 	if(!length(req_access) && !islist(req_one_access))
 		return TRUE
-	if(!length(req_access) && !LAZYLEN(req_one_access)) return 1
-	if(!islist(L)) return
+	if(!length(req_access) && !LAZYLEN(req_one_access))
+		return 1
+	if(!islist(L))
+		return
 	var/i
 	for(i in req_access)
-		if(!(i in L)) return //doesn't have this access
+		if(!(i in L))
+			return //doesn't have this access
 	if(LAZYLEN(req_one_access))
 		for(i in req_one_access)
-			if(i in L) return 1//has an access from the single access list
+			if(i in L)
+				return 1//has an access from the single access list
 		return
 	return 1
 
@@ -100,21 +109,26 @@
 			return list(ACCESS_ILLEGAL_PIRATE) + get_access(ACCESS_LIST_MARINE_ALL) + get_access(ACCESS_LIST_WY_ALL) + get_access(ACCESS_LIST_COLONIAL_ALL) + get_access(ACCESS_LIST_CLF_ALL) + get_access(ACCESS_LIST_UPP_ALL)
 		if(ACCESS_LIST_MARINE_MAIN)
 			return list(
-				ACCESS_MARINE_SENIOR,
 				ACCESS_MARINE_DATABASE,
+				ACCESS_MARINE_SENIOR,
+				ACCESS_MARINE_GENERAL,
 				ACCESS_MARINE_COMMAND,
+				ACCESS_MARINE_SYNTH,
+				ACCESS_MARINE_ASO,
+				ACCESS_MARINE_SEA,
 				ACCESS_MARINE_CMP,
 				ACCESS_MARINE_BRIG,
 				ACCESS_MARINE_ARMORY,
 				ACCESS_MARINE_CMO,
+				ACCESS_MARINE_FIELD_DOC,
 				ACCESS_MARINE_MEDBAY,
 				ACCESS_MARINE_CHEMISTRY,
 				ACCESS_MARINE_MORGUE,
 				ACCESS_MARINE_RESEARCH,
 				ACCESS_MARINE_CE,
+				ACCESS_MARINE_OT,
 				ACCESS_MARINE_ENGINEERING,
 				ACCESS_MARINE_MAINT,
-				ACCESS_MARINE_OT,
 				ACCESS_MARINE_RO,
 				ACCESS_MARINE_CARGO,
 				ACCESS_MARINE_PREP,
@@ -130,19 +144,16 @@
 				ACCESS_MARINE_DELTA,
 				ACCESS_MARINE_PILOT,
 				ACCESS_MARINE_DROPSHIP,
-				ACCESS_MARINE_SEA,
 				ACCESS_MARINE_KITCHEN,
-				ACCESS_MARINE_SYNTH,
-				ACCESS_MARINE_ASO,
-				ACCESS_MARINE_CHAPLAIN,
 				ACCESS_PRESS,
 			)
 
 		if(ACCESS_LIST_MARINE_ALL)
 			return list(
-				ACCESS_MARINE_CO,
 				ACCESS_MARINE_AI,
 				ACCESS_MARINE_AI_TEMP,
+				ACCESS_MARINE_CO,
+				ACCESS_MARINE_DATABASE_ADMIN,
 			) + get_access(ACCESS_LIST_MARINE_MAIN)
 
 		if(ACCESS_LIST_EMERGENCY_RESPONSE)
@@ -252,6 +263,9 @@
 				ACCESS_WY_ARMORY,
 			) + get_access(ACCESS_LIST_COLONIAL_ALL) + get_access(ACCESS_LIST_EMERGENCY_RESPONSE)
 
+		if(ACCESS_LIST_WY_PPO)
+			return list(ACCESS_WY_SECURITY) + get_access(ACCESS_LIST_MARINE_LIAISON)
+
 		if(ACCESS_LIST_WY_PMC)
 			return list(
 				ACCESS_WY_PMC,
@@ -288,53 +302,6 @@
 				ACCESS_UPP_SENIOR_LEAD,
 			) + get_access(ACCESS_LIST_COLONIAL_ALL) + get_access(ACCESS_LIST_EMERGENCY_RESPONSE)
 
-		if(ACCESS_LIST_UPP_PLATOON)
-			return list(
-				ACCESS_UPP_GENERAL,
-				ACCESS_UPP_MEDICAL,
-				ACCESS_UPP_FLIGHT,
-				ACCESS_UPP_LEADERSHIP,
-				ACCESS_UPP_SENIOR_LEAD,
-				ACCESS_UPP_MEDPREP,
-				ACCESS_UPP_TLPREP,
-				ACCESS_UPP_MACHINEGUN
-			)
-
-		if(ACCESS_LIST_TWE_ALL)
-			return list(
-				ACCESS_WY_GENERAL,
-				ACCESS_TWE_GENERAL,
-				ACCESS_TWE_MEDICAL,
-				ACCESS_TWE_ENGINEERING,
-				ACCESS_TWE_SECURITY,
-				ACCESS_TWE_ARMORY,
-				ACCESS_TWE_FLIGHT,
-				ACCESS_TWE_RESEARCH,
-				ACCESS_TWE_COMMANDO,
-				ACCESS_TWE_LEADERSHIP,
-				ACCESS_TWE_MEDPREP,
-				ACCESS_TWE_ENGPREP,
-				ACCESS_TWE_HEVWEAPPREP,
-				ACCESS_TWE_SNIPERPREP,
-				ACCESS_TWE_TLPREP
-			) + get_access(ACCESS_LIST_COLONIAL_ALL) + get_access(ACCESS_LIST_EMERGENCY_RESPONSE)
-
-		if(ACCESS_LIST_TWE_TROOP)
-			return list(
-				ACCESS_WY_GENERAL,
-				ACCESS_WY_FLIGHT,
-				ACCESS_TWE_ARMORY,
-				ACCESS_TWE_COMMANDO,
-				ACCESS_TWE_LEADERSHIP,
-				ACCESS_TWE_MEDPREP,
-				ACCESS_TWE_ENGPREP,
-				ACCESS_TWE_HEVWEAPPREP,
-				ACCESS_TWE_SNIPERPREP,
-				ACCESS_TWE_TLPREP,
-				ACCESS_TWE_SENIOR_LEAD
-			)
-
-
 /proc/get_region_accesses(code)
 	switch(code)
 		if(0)//Everything
@@ -342,7 +309,7 @@
 		if(1)//Security
 			return list(ACCESS_MARINE_CMP, ACCESS_MARINE_BRIG, ACCESS_MARINE_ARMORY)
 		if(2)//Medbay
-			return list(ACCESS_MARINE_CMO, ACCESS_MARINE_MEDBAY, ACCESS_MARINE_MORGUE, ACCESS_MARINE_CHEMISTRY)
+			return list(ACCESS_MARINE_CMO, ACCESS_MARINE_FIELD_DOC, ACCESS_MARINE_MEDBAY, ACCESS_MARINE_MORGUE, ACCESS_MARINE_CHEMISTRY)
 		if(3)//Research
 			return list(ACCESS_MARINE_RESEARCH, ACCESS_MARINE_CHEMISTRY, ACCESS_MARINE_MORGUE)
 		if(4)//Engineering
@@ -350,8 +317,9 @@
 		if(5)//Command
 			return list(
 				ACCESS_MARINE_SENIOR,
-				ACCESS_MARINE_DATABASE,
 				ACCESS_MARINE_COMMAND,
+				ACCESS_MARINE_GENERAL,
+				ACCESS_MARINE_DATABASE,
 				ACCESS_MARINE_RO,
 				ACCESS_MARINE_CARGO,
 				ACCESS_MARINE_SEA,
@@ -412,6 +380,8 @@
 			return "Armory"
 		if(ACCESS_MARINE_CMO)
 			return "CMO's Office"
+		if(ACCESS_MARINE_FIELD_DOC)
+			return "Field Doctor Supplies"
 		if(ACCESS_MARINE_MEDBAY)
 			return "[MAIN_SHIP_NAME] Medbay"
 		if(ACCESS_MARINE_RESEARCH)
@@ -420,20 +390,26 @@
 			return "[MAIN_SHIP_NAME] Chemistry"
 		if(ACCESS_MARINE_MORGUE)
 			return "[MAIN_SHIP_NAME] Morgue"
+		if(ACCESS_MARINE_ASO)
+			return "ASO's Office"
 		if(ACCESS_MARINE_CE)
 			return "CE's Office"
 		if(ACCESS_MARINE_RO)
-			return "RO's Office"
+			return "QM's Office"
 		if(ACCESS_MARINE_ENGINEERING)
 			return "[MAIN_SHIP_NAME] Engineering"
 		if(ACCESS_MARINE_OT)
 			return "[MAIN_SHIP_NAME] Ordnance Workshop"
+		if(ACCESS_MARINE_GENERAL)
+			return "[MAIN_SHIP_NAME] General Access"
+		if(ACCESS_MARINE_DATABASE)
+			return "[MAIN_SHIP_NAME] Database Access"
+		if(ACCESS_MARINE_DATABASE_ADMIN)
+			return "[MAIN_SHIP_NAME] Database Admin"
 		if(ACCESS_MARINE_SENIOR)
 			return "[MAIN_SHIP_NAME] Senior Command"
 		if(ACCESS_MARINE_CO)
 			return "Commander's Quarters"
-		if(ACCESS_MARINE_DATABASE)
-			return "[MAIN_SHIP_NAME]'s Database"
 		if(ACCESS_MARINE_COMMAND)
 			return "[MAIN_SHIP_NAME] Command"
 		if(ACCESS_MARINE_CREWMAN)
@@ -494,6 +470,8 @@
 			return "AI Access"
 		if(ACCESS_ARES_DEBUG)
 			return "AI Debug"
+		if(ACCESS_PRESS)
+			return "[MAIN_SHIP_NAME] Press"
 
 /proc/get_region_accesses_wy(code)
 	switch(code)

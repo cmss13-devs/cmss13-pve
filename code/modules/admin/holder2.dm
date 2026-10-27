@@ -10,6 +10,8 @@ GLOBAL_PROTECT(href_token)
 	var/rights = 0
 	var/fakekey = null
 
+	var/static/list/cached_admin_tokens = list()
+
 	var/href_token
 
 	var/datum/marked_datum
@@ -28,9 +30,18 @@ GLOBAL_PROTECT(href_token)
 		return
 	rank = initial_rank
 	rights = initial_rights
-	href_token = GenerateToken()
+
+	if(ckey in cached_admin_tokens)
+		href_token = cached_admin_tokens[ckey]
+	else
+		href_token = GenerateToken()
+		cached_admin_tokens[ckey] = href_token
+
 	GLOB.admin_datums[ckey] = src
 	extra_titles = new_extra_titles
+	if(rights & R_PROFILER)
+		log_debug("Adding [ckey] to APP/admin.")
+		world.SetConfig("APP/admin", ckey, "role=admin")
 
 // Letting admins edit their own permission giver is a poor idea
 /datum/admins/vv_edit_var(var_name, var_value)
@@ -41,17 +52,39 @@ GLOBAL_PROTECT(href_token)
 		return FALSE
 	return ..()
 
-/datum/admins/proc/associate(client/C)
-	if(istype(C))
-		owner = C
-		owner.admin_holder = src
-		owner.add_admin_verbs()
-		owner.tgui_say.load()
-		owner.update_special_keybinds()
-		GLOB.admins |= C
-		if(owner.admin_holder.rights & R_PROFILER)
-			if(!world.GetConfig("admin", C.ckey))
-				world.SetConfig("APP/admin", C.ckey, "role = coder")
+/datum/admins/proc/associate_or_deadmin(client/target, force = FALSE)
+	if(!istype(target))
+		return
+
+	if(GLOB.deadmins[target.ckey])
+		add_verb(target, /client/proc/readmin_self)
+		return
+	associate(target, force)
+
+/datum/admins/proc/associate(client/C, force = FALSE)
+	if(!istype(C))
+		return
+
+	if((rights & ~(RL_HARMLESS)) && !force && !check_or_create_twofactor_request(C))
+		addtimer(CALLBACK(src, PROC_REF(associate), C, FALSE), 3 SECONDS)
+		return
+
+	owner = C
+	owner.admin_holder = src
+	owner.add_admin_verbs()
+	owner.tgui_say.load()
+	owner.update_special_keybinds()
+	GLOB.admins |= C
+	GLOB.deadmins[owner.ckey] = FALSE
+
+	if(rights & R_MOD)
+		notify_login()
+
+/datum/admins/proc/notify_login()
+	message_admins("Admin login: [key_name(owner)]")
+
+	var/list/adm = get_admin_counts(R_MOD)
+	REDIS_PUBLISH("byond.access", "type" = "login", "key" = owner.key, "remaining" = length(adm["total"]), "afk" = length(adm["afk"]))
 
 /datum/admins/proc/disassociate()
 	if(owner)
@@ -69,7 +102,8 @@ if it doesn't return 1 and show_msg=1 it will prints a message explaining why th
 generally it would be used like so:
 
 /proc/admin_proc()
-	if(!check_rights(R_ADMIN)) return
+	if(!check_rights(R_ADMIN))
+		return
 	to_world("you have enough rights!")
 
 NOTE: it checks usr! not src! So if you're checking somebody's rank in a proc which they did not call
@@ -106,12 +140,12 @@ you will have to do something like if(client.admin_holder.rights & R_ADMIN) your
 		if(check_client_rights(other, rights_required, show_msg))
 			return TRUE
 		else if(show_msg)
-			to_chat(usr, SPAN_WARNING("You do not have sufficient rights to do that. You require one of the following flags:[rights2text(rights_required," ")]."))
+			to_chat(other, SPAN_WARNING("You do not have sufficient rights to do that. You require one of the following flags:[rights2text(rights_required," ")]."))
 	else
 		if(other.admin_holder)
 			return TRUE
 		else if(show_msg)
-			to_chat(usr, SPAN_WARNING("You are not a holder."))
+			to_chat(other, SPAN_WARNING("You are not a holder."))
 	return FALSE
 
 //probably a bit iffy - will hopefully figure out a better solution
@@ -132,7 +166,7 @@ you will have to do something like if(client.admin_holder.rights & R_ADMIN) your
 		return PROC_BLOCKED
 	if(admin_holder)
 		admin_holder.disassociate()
-		QDEL_NULL(admin_holder)
+		GLOB.deadmins[ckey] = TRUE
 	return TRUE
 
 /client/proc/readmin()

@@ -1,5 +1,6 @@
 GLOBAL_LIST_EMPTY(uscm_highcom_paygrades)
 GLOBAL_LIST_EMPTY(uscm_officer_paygrades)
+GLOBAL_LIST_EMPTY(uscm_sea_paygrades)
 GLOBAL_LIST_EMPTY(wy_highcom_paygrades)
 GLOBAL_LIST_INIT_TYPED(paygrades, /datum/paygrade, setup_paygrades())
 
@@ -20,29 +21,29 @@ GLOBAL_LIST_INIT_TYPED(paygrades, /datum/paygrade, setup_paygrades())
 	var/default_faction
 	/// If the grade refers to an officer equivalent or not.
 	var/officer_grade = GRADE_ENLISTED
+	/// If the grade refers to an senior enlisted advisor grade or not.
+	var/sea_grade
 
 GLOBAL_LIST_INIT(co_paygrades, list(
 	PAY_SHORT_NO6,
 	PAY_SHORT_NO6E,
 	PAY_SHORT_NO6C,
 	PAY_SHORT_NO5,
+	PAY_SHORT_LACNO5,
 	PAY_SHORT_NO4,
 	PAY_SHORT_MO6,
 	PAY_SHORT_MO6E,
 	PAY_SHORT_MO6C,
 	PAY_SHORT_MO5,
-	PAY_SHORT_MO4,
-	PAY_SHORT_AO6,
-	PAY_SHORT_AO6E,
-	PAY_SHORT_AO6C,
-	PAY_SHORT_AO5,
-	PAY_SHORT_AO4
+	PAY_SHORT_MO4
 ))
 
 /datum/paygrade/New()
 	. = ..()
 	switch(default_faction)
 		if(FACTION_MARINE)
+			if(sea_grade)
+				GLOB.uscm_sea_paygrades += paygrade
 			if(officer_grade)
 				GLOB.uscm_officer_paygrades += paygrade
 			if(officer_grade >= GRADE_FLAG)
@@ -60,9 +61,4 @@ GLOBAL_LIST_INIT(co_paygrades, list(
 				log_debug("Duplicate paygrade: '[pg_id]'.")
 			else
 				.[pg_id] = new PG
-
-GLOBAL_LIST_INIT(platco_paygrades, list(
-	PAY_SHORT_MO3,
-	PAY_SHORT_MO2,
-	PAY_SHORT_MO1,
-))
+	GLOB.uscm_sea_paygrades = . & GLOB.uscm_sea_paygrades

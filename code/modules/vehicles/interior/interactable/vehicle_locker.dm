@@ -13,14 +13,14 @@
 
 	unacidable = TRUE
 	unslashable = TRUE
-	indestructible = TRUE
+	explo_proof = TRUE
+
+	var/list/role_restriction = list(JOB_TANK_CREW, JOB_UPP_CREWMAN, JOB_PMC_CREWMAN, JOB_ARMY_TANK)
 
 	var/obj/item/storage/internal/container
-	var/base_icon
 
 /obj/structure/vehicle_locker/Initialize()
 	. = ..()
-	base_icon = icon_state
 	container = new(src)
 	container.storage_slots = null
 	container.max_w_class = SIZE_MEDIUM
@@ -34,10 +34,7 @@
 									/obj/item/storage/pouch,
 									/obj/item/device/motiondetector,
 									/obj/item/ammo_magazine/hardpoint,
-									/obj/item/tool/weldpack,
-									/obj/item/ammo_box,
-									/obj/item/storage/box,
-									/obj/item/storage/toolbox
+									/obj/item/tool/weldpack
 									)
 	flags_atom |= USES_HEARING
 
@@ -48,6 +45,10 @@
 
 	var/mob/living/carbon/human/H = usr
 	if (!ishuman(H) || H.is_mob_restrained())
+		return
+
+	if(!role_restriction.Find(H.job))
+		to_chat(H, SPAN_WARNING("You cannot access \the [name]."))
 		return
 
 	empty(get_turf(H), H)
@@ -79,6 +80,10 @@
 	if(user.get_active_hand())
 		return ..()
 
+	if(!role_restriction.Find(user.job))
+		to_chat(user, SPAN_WARNING("You cannot access \the [name]."))
+		return TRUE
+
 	if(Adjacent(user))
 		container.open(user)
 		return TRUE
@@ -93,6 +98,9 @@
 		return
 	if(user.is_mob_incapacitated())
 		return
+	if(!role_restriction.Find(user.job))
+		to_chat(user, SPAN_WARNING("You cannot access \the [name]."))
+		return
 	if (container.handle_mousedrop(user, over_object))
 		..(over_object)
 
@@ -102,6 +110,9 @@
 	if(user.is_mob_incapacitated())
 		return
 	if(!istype(user))
+		return
+	if(!role_restriction.Find(user.job))
+		to_chat(user, SPAN_WARNING("You cannot access \the [name]."))
 		return
 	return container.attackby(W, user)
 
@@ -116,12 +127,12 @@
 //Cosmetically opens/closes the locker when its storage window is accessed or closed. Only makes sound when not already open/closed.
 /obj/structure/vehicle_locker/on_pocket_open(first_open)
 	if(first_open)
-		icon_state = "[initial(icon_state)]_open"
+		icon_state = icon_state += "_open"
 		playsound(src.loc, 'sound/handling/hinge_squeak1.ogg', 25, TRUE, 3)
 
 /obj/structure/vehicle_locker/on_pocket_close(watchers)
 	if(!watchers)
-		icon_state = "[initial(icon_state)]"
+		icon_state = initial(icon_state)
 		playsound(src.loc, "toolbox", 25, TRUE, 3)
 
 /obj/structure/vehicle_locker/tank
@@ -130,42 +141,13 @@
 	icon = 'icons/obj/vehicles/interiors/tank.dmi'
 	icon_state = "locker"
 
-/obj/structure/vehicle_locker/tank/upp
-	icon = 'icons/obj/vehicles/interiors/upptank.dmi'
-	icon_state = "locker"
-
-/obj/structure/vehicle_locker/tank/upp1
-	name = "storage ammunition"
-	icon = 'icons/obj/vehicles/interiors/upptank.dmi'
-	icon_state = "storage_ammo"
-
-/obj/structure/vehicle_locker/tank/upp2
-	name = "Locker"
-	desc = "Small storage unit allowing vehicle crewmen to store their personal possessions. Only vehicle crewmen can access these."
-	icon = 'icons/obj/vehicles/interiors/upptank.dmi'
-	icon_state = "small_locker"
-
-/obj/structure/vehicle_locker/tank/upp3
-	icon = 'icons/obj/vehicles/interiors/upptank.dmi'
-	icon_state = "small_locker1"
-
-/obj/structure/vehicle_locker/movie
-	name = "storage compartment"
-	desc = "A wide storage unit to allow it's users to store a wide variety of objects, from equipment to weapons and their ammo. Very versatile."
-	icon = 'icons/obj/vehicles/interiors/movie.dmi'
-	icon_state = "locker"
-
 /obj/structure/vehicle_locker/med
 	name = "wall-mounted surgery kit storage"
 	desc = "A small locker that securely stores a full surgical kit. ID-locked to surgeons."
 	icon_state = "locker_med"
+	role_restriction = list(JOB_CMO, JOB_DOCTOR, JOB_RESEARCHER, JOB_SYNTH, JOB_WO_CMO, JOB_WO_DOCTOR, JOB_WO_RESEARCHER, JOB_SEA, JOB_CLF_MEDIC, "Colonial Doctor", "Sorokyne Strata Doctor", JOB_SYNTH, JOB_WO_SYNTH)
 
 	var/has_tray = TRUE
-
-/obj/structure/vehicle_locker/uppvan
-	name = "storage ammunition"
-	icon = 'icons/obj/vehicles/interiors/uppvan.dmi'
-	icon_state = "small_storage"
 
 /obj/structure/vehicle_locker/med/on_pocket_open(first_open)
 	if(first_open)
@@ -215,6 +197,9 @@
 		return
 	if(!istype(user))
 		return
+	if(!role_restriction.Find(user.job))
+		to_chat(user, SPAN_WARNING("You cannot access \the [name]."))
+		return
 	if(istype(W, /obj/item/storage/surgical_tray))
 		add_tray(user, W)
 		return
@@ -230,6 +215,10 @@
 	if(user.get_active_hand())
 		return ..()
 
+	if(!role_restriction.Find(user.job))
+		to_chat(user, SPAN_WARNING("You cannot access \the [name]."))
+		return TRUE
+
 	if(!has_tray)
 		to_chat(user, SPAN_WARNING("\The [name] doesn't have a surgical tray installed!"))
 		return TRUE
@@ -243,6 +232,9 @@
 	if(!istype(user))
 		return
 	if(user.is_mob_incapacitated())
+		return
+	if(!role_restriction.Find(user.job))
+		to_chat(user, SPAN_WARNING("You cannot access \the [name]."))
 		return
 	if(!has_tray)
 		to_chat(user, SPAN_WARNING("\The [name] doesn't have a surgical tray installed!"))
@@ -262,6 +254,10 @@
 	var/mob/living/carbon/human/H = usr
 
 	if(H.is_mob_incapacitated())
+		return
+
+	if(!role_restriction.Find(H.job))
+		to_chat(H, SPAN_WARNING("You cannot access \the [name]."))
 		return
 
 	remove_tray(H)
@@ -308,46 +304,6 @@
 	update_icon()
 	H.visible_message(SPAN_NOTICE("[H] installs \the [tray] into \the [src]."), SPAN_NOTICE("You install \the [tray] into \the [src]."))
 
-// canteen
-
-/obj/structure/vehicle_locker/cabinet
-	name = "cabinet"
-	desc = "A cabinet securely fastened to the wall, capable of storing a variety of smaller items."
-	icon = 'icons/obj/structures/props/almayer_props.dmi'
-	icon_state = "cabinet"
-	layer = ABOVE_MOB_LAYER
-
-/obj/structure/vehicle_locker/cabinet/Initialize()
-	. = ..()
-	container = new(src)
-	container.storage_slots = 12
-	container.max_w_class = SIZE_TINY
-	container.w_class = SIZE_MASSIVE
-	container.use_sound = null
-	container.bypass_w_limit = list(
-		/obj/item/reagent_container/glass,
-		/obj/item/reagent_container/food,
-		/obj/item/tool/kitchen,
-	)
-
-/obj/structure/vehicle_locker/cabinet/cups
-	name = "cups cabinet"
-
-/obj/structure/vehicle_locker/cabinet/cups/Initialize()
-	. = ..()
-	for(var/i in 1 to 12)
-		new /obj/item/reagent_container/food/drinks/plasticcup(container)
-
-/obj/structure/vehicle_locker/cabinet/cups/flip
-	icon_state = "cabinet2"
-
-/obj/structure/vehicle_locker/cabinet/utensils
-	name = "utensils cabinet"
-
-/obj/structure/vehicle_locker/cabinet/utensils/Initialize()
-	. = ..()
-	for(var/i in 1 to 12)
-		new /obj/item/tool/kitchen/utensil/fork(container)
-
-/obj/structure/vehicle_locker/cabinet/utensils/flip
-	icon_state = "cabinet2"
+/obj/structure/vehicle_locker/pmc
+	icon = 'icons/obj/vehicles/interiors/general_wy.dmi'
+	role_restriction = list(JOB_PMC_LEAD_INVEST, JOB_PMC_LEADER, JOB_PMC_SYNTH, JOB_WY_COMMANDO_LEADER, JOB_PMC_CREWMAN)

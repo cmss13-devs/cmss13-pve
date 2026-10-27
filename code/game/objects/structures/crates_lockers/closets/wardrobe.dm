@@ -67,7 +67,7 @@
 	new /obj/item/clothing/suit/nun(src)
 	new /obj/item/clothing/head/nun_hood(src)
 	new /obj/item/clothing/suit/holidaypriest(src)
-	new /obj/item/clothing/under/wedding/bride_white(src)
+	new /obj/item/clothing/under/wedding(src)
 	new /obj/item/storage/backpack/cultpack (src)
 	new /obj/item/storage/fancy/candle_box(src)
 	new /obj/item/storage/fancy/candle_box(src)
@@ -173,7 +173,7 @@
 
 
 /obj/structure/closet/wardrobe/pjs
-	name = "Pajama wardrobe"
+	name = "pajama wardrobe"
 	icon_state = "white"
 	icon_closed = "white"
 	icon_opened = "white_open"
@@ -201,16 +201,12 @@
 	. = ..()
 	new /obj/item/clothing/under/rank/scientist(src)
 	new /obj/item/clothing/under/rank/scientist(src)
-	new /obj/item/clothing/under/rank/scientist(src)
-	new /obj/item/clothing/suit/storage/labcoat(src)
-	new /obj/item/clothing/suit/storage/labcoat(src)
-	new /obj/item/clothing/suit/storage/labcoat(src)
+	new /obj/item/clothing/suit/storage/labcoat/science(src)
+	new /obj/item/clothing/suit/storage/labcoat/science(src)
 	new /obj/item/clothing/shoes/white(src)
 	new /obj/item/clothing/shoes/white(src)
-	new /obj/item/clothing/shoes/white(src)
-	new /obj/item/clothing/shoes/slippers
-	new /obj/item/clothing/shoes/slippers
-	new /obj/item/clothing/shoes/slippers
+	new /obj/item/clothing/mask/surgical(src)
+	new /obj/item/clothing/mask/surgical(src)
 	return
 
 
@@ -243,12 +239,29 @@
 	. = ..()
 	new /obj/item/clothing/under/rank/chemist(src)
 	new /obj/item/clothing/under/rank/chemist(src)
-	new /obj/item/clothing/shoes/white(src)
-	new /obj/item/clothing/shoes/white(src)
 	new /obj/item/clothing/suit/storage/labcoat/chemist(src)
 	new /obj/item/clothing/suit/storage/labcoat/chemist(src)
-	return
+	new /obj/item/clothing/shoes/white(src)
+	new /obj/item/clothing/shoes/white(src)
+	new /obj/item/clothing/mask/surgical(src)
+	new /obj/item/clothing/mask/surgical(src)
 
+/obj/structure/closet/wardrobe/morgue
+	name = "morgue wardrobe"
+	icon_state = "black"
+	icon_closed = "black"
+	icon_opened = "black_open"
+
+/obj/structure/closet/wardrobe/morgue/Initialize()
+	. = ..()
+	new /obj/item/clothing/under/rank/medical/morgue(src)
+	new /obj/item/clothing/under/rank/medical/morgue(src)
+	new /obj/item/clothing/head/surgery/morgue(src)
+	new /obj/item/clothing/head/surgery/morgue(src)
+	new /obj/item/clothing/shoes/morgue(src)
+	new /obj/item/clothing/shoes/morgue(src)
+	new /obj/item/clothing/suit/storage/labcoat(src)
+	new /obj/item/clothing/suit/storage/labcoat(src)
 
 /obj/structure/closet/wardrobe/genetics_white
 	name = "genetics wardrobe"
@@ -264,6 +277,8 @@
 	new /obj/item/clothing/shoes/white(src)
 	new /obj/item/clothing/suit/storage/labcoat/genetics(src)
 	new /obj/item/clothing/suit/storage/labcoat/genetics(src)
+	new /obj/item/clothing/mask/surgical(src)
+	new /obj/item/clothing/mask/surgical(src)
 	return
 
 
@@ -295,18 +310,22 @@
 /obj/structure/closet/wardrobe/medic_white/Initialize()
 	. = ..()
 	new /obj/item/clothing/under/rank/medical(src)
-	new /obj/item/clothing/under/rank/medical(src)
-	new /obj/item/clothing/under/rank/medical/lightblue(src)
+	new /obj/item/clothing/under/rank/medical/green(src)
 	new /obj/item/clothing/under/rank/medical/blue(src)
 	new /obj/item/clothing/under/rank/medical/lightblue(src)
-	new /obj/item/clothing/under/rank/medical/green(src)
 	new /obj/item/clothing/under/rank/medical/purple(src)
-	new /obj/item/clothing/shoes/white(src)
+	new /obj/item/clothing/under/rank/medical/morgue(src)
+	new /obj/item/clothing/under/rank/medical/white(src)
+	new /obj/item/clothing/head/surgery/green(src)
+	new /obj/item/clothing/head/surgery/blue(src)
+	new /obj/item/clothing/head/surgery/lightblue(src)
+	new /obj/item/clothing/head/surgery/purple(src)
+	new /obj/item/clothing/head/surgery/morgue(src)
+	new /obj/item/clothing/head/surgery/white(src)
 	new /obj/item/clothing/shoes/white(src)
 	new /obj/item/clothing/suit/storage/labcoat(src)
-	new /obj/item/clothing/suit/storage/labcoat(src)
-	new /obj/item/clothing/mask/surgical(src)
-	new /obj/item/clothing/mask/surgical(src)
+	new /obj/item/clothing/suit/storage/labcoat/short(src)
+	new /obj/item/clothing/suit/storage/labcoat/long(src)
 	return
 
 
@@ -351,12 +370,6 @@
 	new /obj/item/clothing/shoes/leather(src)
 	return
 
-/obj/structure/closet/wardrobe/tactical
-	name = "tactical equipment"
-	icon_state = "syndicate1"
-	icon_closed = "syndicate1"
-	icon_opened = "syndicate1_open"
-
 /obj/structure/closet/wardrobe/suit
 	name = "suit locker"
 	icon_state = "black"
@@ -376,4 +389,3 @@
 	new /obj/item/clothing/under/suit_jacket/female(src)
 	new /obj/item/clothing/under/suit_jacket/really_black(src)
 	new /obj/item/clothing/under/suit_jacket/red(src)
-	new /obj/item/clothing/under/scratch(src)

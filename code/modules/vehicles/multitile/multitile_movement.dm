@@ -34,17 +34,6 @@
 	if(health <= 0)
 		return FALSE
 
-	// Checking if treads/wheels are installed
-	if(!(locate(/obj/item/hardpoint/locomotion) in hardpoints))
-		return FALSE
-
-	var/obj/item/hardpoint/locomotion/mover
-	if(locate(mover) in hardpoints)
-		if(mover.health >= 1)
-			return TRUE
-		else
-			return FALSE
-
 	return pre_movement(direction)
 
 // This determines what type of movement to execute
@@ -91,6 +80,9 @@
 		move_next_sound_play = world.time + 10
 
 	last_move_dir = direction
+
+	if(force && (health <= 0)) // Broken and forced movement (currently only xenos)
+		interior.drop_human_bodies(old_turf)
 
 	return TRUE
 
@@ -174,12 +166,12 @@
 		if(T in old_turfs)
 			continue
 
-		if(!T.Enter(src))
+		if(!T.Enter(src, loc))
 			can_move = FALSE
 
 	// Crashed with something that stopped us
 	if(!can_move)
-		move_momentum = trunc(move_momentum/2)
+		move_momentum = floor(move_momentum/2)
 		update_next_move()
 		interior_crash_effect()
 
@@ -271,10 +263,10 @@
 		return
 
 	// Not enough momentum for anything serious
-	if(abs(move_momentum) < 1)
+	if(abs(move_momentum) <= 1)
 		return
 
-	var/fling_distance = ceil(abs(move_momentum)/move_max_momentum) * 2
+	var/fling_distance = ceil(move_momentum/move_max_momentum) * 2
 	var/turf/target = interior.get_middle_turf()
 
 	for (var/x in 0 to fling_distance-1)
@@ -292,7 +284,7 @@
 			if(isliving(A))
 				var/mob/living/M = A
 
-				shake_camera(M, 2, ceil(abs(move_momentum)/move_max_momentum) * 1)
+				shake_camera(M, 2, ceil(move_momentum/move_max_momentum) * 1)
 				if(!M.buckled)
 					M.apply_effect(1, STUN)
 					M.apply_effect(2, WEAKEN)

@@ -27,9 +27,11 @@
 
 /datum/internal_organ/process()
 	if(!owner && !organ_holder)
+		if(QDELETED(src))
+			stack_trace("[src] is still processing without an owner nor an organ_holder!")
+			return PROCESS_KILL
 		qdel(src)
-
-	return FALSE
+		return PROCESS_KILL
 
 /datum/internal_organ/proc/rejuvenate()
 	damage=0
@@ -77,7 +79,7 @@
 		src.damage += amount
 
 	var/obj/limb/parent = owner.get_limb(parent_limb)
-	if(!silent)
+	if(!silent && amount > 0)
 		owner.custom_pain("Something inside your [parent.display_name] hurts a lot.", 1)
 	set_organ_status()
 
@@ -147,7 +149,10 @@
 	robotic_type = /obj/item/organ/lungs/prosthetic
 
 /datum/internal_organ/lungs/process()
-	..()
+	. = ..()
+	if(. == PROCESS_KILL)
+		return // Parent implemention qdeleted us
+
 	if(owner.chem_effect_flags & CHEM_EFFECT_ORGAN_STASIS)
 		return
 	if(organ_status >= ORGAN_BRUISED)
@@ -174,7 +179,9 @@
 	robotic_type = /obj/item/organ/liver/prosthetic
 
 /datum/internal_organ/liver/process()
-	..()
+	. = ..()
+	if(. == PROCESS_KILL)
+		return // Parent implemention qdeleted us
 
 	if(owner.life_tick % PROCESS_ACCURACY == 0)
 
@@ -232,7 +239,10 @@
 	robotic_type = /obj/item/organ/kidneys/prosthetic
 
 /datum/internal_organ/kidneys/process()
-	..()
+	. = ..()
+	if(. == PROCESS_KILL)
+		return // Parent implemention qdeleted us
+
 	//Deal toxin damage if damaged
 	if(owner.chem_effect_flags & CHEM_EFFECT_ORGAN_STASIS)
 		return
@@ -254,15 +264,17 @@
 	vital = 1
 
 /datum/internal_organ/brain/process(delta_time)
-	..()
+	. = ..()
+	if(. == PROCESS_KILL)
+		return // Parent implemention qdeleted us
 
 	if(owner.chem_effect_flags & CHEM_EFFECT_ORGAN_STASIS)
 		return
 
 	if(organ_status >= ORGAN_BRUISED && prob(5 * delta_time))
+		var/dir_choice = pick(list(NORTH, SOUTH, EAST, WEST))
 		owner.drop_held_items()
-		if(!(owner.buckled || owner.pulledby) && owner.stat == CONSCIOUS && !(locate(/datum/effects/crit) in owner.effects_list))
-			var/dir_choice = pick(list(NORTH, SOUTH, EAST, WEST))
+		if(!owner.buckled && owner.stat == CONSCIOUS)
 			owner.Move(get_step(get_turf(owner), dir_choice))
 		to_chat(owner, SPAN_DANGER("Your mind wanders and goes blank for a moment..."))
 
@@ -289,8 +301,12 @@
 
 /datum/internal_organ/eyes/process() //Eye damage replaces the old eye_stat var.
 	. = ..()
+	if(. == PROCESS_KILL)
+		return // Parent implemention qdeleted us
+
 	if(owner.chem_effect_flags & CHEM_EFFECT_ORGAN_STASIS)
 		return
+
 	if(organ_status >= ORGAN_BRUISED)
 		owner.SetEyeBlur(20)
 	if(organ_status >= ORGAN_BROKEN)
@@ -312,6 +328,11 @@
 	return removed_organ
 
 /datum/internal_organ/Destroy()
+	if(owner)
+		owner.internal_organs -= src
+		for(var/organ_name in owner.internal_organs_by_name)
+			if(owner.internal_organs_by_name[organ_name] == src)
+				owner.internal_organs_by_name -= organ_name
 	owner = null
 	organ_holder = null
 

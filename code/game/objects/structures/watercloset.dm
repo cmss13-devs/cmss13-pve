@@ -6,7 +6,6 @@
 	density = FALSE
 	anchored = TRUE
 	can_buckle = TRUE
-	unslashable = TRUE
 	buckle_lying = 0
 	/// if the lid is up
 	var/open = 0
@@ -74,7 +73,7 @@
 
 /obj/structure/toilet/send_buckling_message(mob/M, mob/user)
 	if (M == user)
-		to_chat(M, SPAN_NOTICE("You seat yourself onto the toilet"))
+		to_chat(M, SPAN_NOTICE("You seat yourself onto the toilet."))
 	else
 		to_chat(user, SPAN_NOTICE("[M] has been seated onto the toilet by [user]."))
 		to_chat(M, SPAN_NOTICE("You have been seated onto the toilet by [user]."))
@@ -133,7 +132,8 @@
 			return
 
 	if(istype(I, /obj/item/grab))
-		if(isxeno(user)) return
+		if(isxeno(user))
+			return
 		var/obj/item/grab/G = I
 
 		if(isliving(G.grabbed_thing))
@@ -157,7 +157,7 @@
 			else
 				to_chat(user, SPAN_NOTICE("You need a tighter grip."))
 
-	if(cistern && !istype(user,/mob/living/silicon/robot)) //STOP PUTTING YOUR MODULES IN THE TOILET.
+	if(cistern)
 		if(I.w_class > SIZE_MEDIUM)
 			to_chat(user, SPAN_NOTICE("\The [I] does not fit."))
 			return

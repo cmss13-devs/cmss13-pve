@@ -52,15 +52,15 @@
 	if(!guttable)
 		to_chat(user, SPAN_WARNING("[src] cannot be gutted."))
 		return
-	if(W.sharp == IS_SHARP_ITEM_ACCURATE || W.sharp == IS_SHARP_ITEM_BIG)
+	if(W.sharp)
 		user.visible_message("[user] cuts [src] open and cleans it.", "You gut [src].")
 		playsound(loc, 'sound/effects/blobattack.ogg', 25, 1)
 		var/gut_loot = roll(total_length / 2 - min_length)
 		if(gut_loot <= 0)
 			gut_loot = 1
 
-		new /obj/effect/decal/cleanable/blood/drip(get_turf(user))
-		new base_gut_meat(get_turf(user)) //always spawnw at least one meat per gut
+		gibs(user.loc)
+		new base_gut_meat(get_turf(user)) //always spawn at least one meat per gut
 		playsound(loc, 'sound/effects/splat.ogg', 25, 1)//replace
 		gutted = TRUE
 		update_desc()
@@ -127,6 +127,7 @@
 	. = ..()
 	reagents.add_reagent("fish", 1)
 
+
 //----------------//
 //WORMS
 /obj/item/reagent_container/food/snacks/fishable/worm
@@ -162,6 +163,7 @@
 	. = ..()
 	reagents.add_reagent("fish", 1)
 
+
 //--------------------//
 // Pan Fish, Regular fish you can gut and clean (additional fish past this point)
 /obj/item/reagent_container/food/snacks/fishable/fish/bluegill
@@ -180,6 +182,7 @@
 	. = ..()
 	reagents.add_reagent("fish", 4)
 
+
 /obj/item/reagent_container/food/snacks/fishable/fish/bass
 	name = "bass"
 	desc = "A staple classic in fish cuisine!"
@@ -196,6 +199,7 @@
 	. = ..()
 	reagents.add_reagent("fish", 4)
 
+
 /obj/item/reagent_container/food/snacks/fishable/fish/catfish
 	name = "catfish"
 	desc = "Quite large though not good for eating since it's a bottom feeder."
@@ -208,6 +212,7 @@
 /obj/item/reagent_container/food/snacks/fishable/fish/catfish/Initialize()
 	. = ..()
 	reagents.add_reagent("fish", 4)
+
 
 /obj/item/reagent_container/food/snacks/fishable/fish/salmon
 
@@ -225,7 +230,6 @@
 /obj/item/reagent_container/food/snacks/fishable/fish/salmon/Initialize()
 	. = ..()
 	reagents.add_reagent("fish", 4)
-	bitesize = 5
 
 /obj/item/reagent_container/food/snacks/fishable/fish/white_perch
 
@@ -243,8 +247,6 @@
 /obj/item/reagent_container/food/snacks/fishable/fish/white_perch/Initialize()
 	. = ..()
 	reagents.add_reagent("fish", 4)
-	bitesize = 5
-
 
 //--------------------//
 //Urchins, spikey bottom-feeding creatures

@@ -66,7 +66,7 @@ It DOES NOT control where your bullets go, that's scatter and projectile varianc
 ////SCATTER////
 */
 
-#define SCATTER_AMOUNT_NEURO 60
+#define SCATTER_AMOUNT_NEURO 45
 #define SCATTER_AMOUNT_TIER_1 15
 #define SCATTER_AMOUNT_TIER_2 10
 #define SCATTER_AMOUNT_TIER_3 8
@@ -99,8 +99,10 @@ It DOES NOT control where your bullets go, that's scatter and projectile varianc
 ////RECOIL////
 */
 
+#define RECOIL_AMOUNT_TIER_0 6
 #define RECOIL_AMOUNT_TIER_1 5
 #define RECOIL_AMOUNT_TIER_2 4
+#define RECOIL_AMOUNT_TIER_2_5 3.4
 #define RECOIL_AMOUNT_TIER_3 3
 #define RECOIL_AMOUNT_TIER_4 2
 #define RECOIL_AMOUNT_TIER_5 1
@@ -136,23 +138,36 @@ As such, don't expect any values assigned to common firearms to even consider ho
 //How many ticks you have to wait between firing. Burst delay uses the same variable!
 */
 
+/// Sniper/DMR/SHARP Delays
+#define FIRE_DELAY_TIER_SHARP 40
 #define FIRE_DELAY_TIER_AMR 30
 #define FIRE_DELAY_TIER_VULTURE 20
 #define FIRE_DELAY_TIER_SNIPER 15
-#define FIRE_DELAY_TIER_1 10
-#define FIRE_DELAY_TIER_2 9
-#define FIRE_DELAY_TIER_3 8
-#define FIRE_DELAY_TIER_4 7
-#define FIRE_DELAY_TIER_5 6
-#define FIRE_DELAY_TIER_6 5
-#define FIRE_DELAY_TIER_7 4
-#define FIRE_DELAY_TIER_8 3.5
-#define FIRE_DELAY_TIER_9 3
-#define FIRE_DELAY_TIER_10 2.5
-#define FIRE_DELAY_TIER_11 2
-#define FIRE_DELAY_TIER_LMG 1.5
-#define FIRE_DELAY_TIER_SG 1.0
-#define FIRE_DELAY_TIER_SMG2 1.2
+
+/// Shotgun Delays
+#define FIRE_DELAY_TIER_SHOTGUN_SLOW 2.5 SECONDS // Heavy or damaged shotguns, KS-23, etc.
+#define FIRE_DELAY_TIER_SHOTGUN_BASE 2 SECONDS // Replaces previous shotgun value which was Tier_7 (5)*4
+#define FIRE_DELAY_TIER_SHOTGUN_COLONY 1.6 SECONDS // Used by the HG shotguns.
+#define FIRE_DELAY_TIER_SHOTGUN_COMBAT 1.4 SECONDS // Replaces previous combat shotgun value which was Tier_5 (7)*2 ...Wow that's confusing.
+#define FIRE_DELAY_TIER_SHOTGUN_DEATHSQUAD 0.6 SECONDS // For adminspawn ERTs, MARSOC, etc.
+
+/// Grenade launcher delays
+#define FIRE_DELAY_TIER_GL 3.2 SECONDS // delay for the base grenade launcher type
+
+/// General Delay Tiers
+#define FIRE_DELAY_TIER_1 12
+#define FIRE_DELAY_TIER_2 10
+#define FIRE_DELAY_TIER_3 9
+#define FIRE_DELAY_TIER_4 8
+#define FIRE_DELAY_TIER_5 7
+#define FIRE_DELAY_TIER_6 6
+#define FIRE_DELAY_TIER_7 5
+#define FIRE_DELAY_TIER_8 4
+#define FIRE_DELAY_TIER_9 3.5
+#define FIRE_DELAY_TIER_10 3
+#define FIRE_DELAY_TIER_11 2.5
+#define FIRE_DELAY_TIER_LMG 2
+#define FIRE_DELAY_TIER_SG 2
 #define FIRE_DELAY_TIER_SMG 1.5
 #define FIRE_DELAY_TIER_12 1
 
@@ -170,6 +185,7 @@ As such, don't expect any values assigned to common firearms to even consider ho
 #define DAMAGE_FALLOFF_TIER_7 4
 #define DAMAGE_FALLOFF_TIER_8 3
 #define DAMAGE_FALLOFF_TIER_9 2
+#define DAMAGE_FALLOFF_TIER_9_5 1.5
 #define DAMAGE_FALLOFF_TIER_10 1
 
 #define DAMAGE_BUILDUP_TIER_1 1
@@ -250,8 +266,7 @@ As such, don't expect any values assigned to common firearms to even consider ho
 #define AMMO_SPEED_TIER_5 5
 #define AMMO_SPEED_TIER_6 6
 #define AMMO_SPEED_TIER_7 7
-#define AMMO_SPEED_TIER_8 8
-#define AMMO_SPEED_TIER_HITSCAN 300
+#define AMMO_SPEED_INSTANT 300
 
 /*
 ////ARMOR PENETRATION////
@@ -329,7 +344,5 @@ Fire Variant = Markers for special fire types that behave outside of chemfire co
 #define FIRE_VARIANT_DEFAULT 0
 ///"Type B" Armor Shredding Greenfire: Burn Time T5, Burn Level T2, Slows on Tile, Increased Tile Damage, Easier Extinguishing.
 #define FIRE_VARIANT_TYPE_B 1
-///"Type X" Bluefire: Burn Time T4, Burn Level T7. Hellish concoction
-#define FIRE_VARIANT_TYPE_X 2
 // Lowers burn damage to humans
 #define HUMAN_BURN_DIVIDER 5

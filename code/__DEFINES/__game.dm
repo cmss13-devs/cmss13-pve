@@ -6,7 +6,7 @@
 #define GLOBAL_PROC "magic BS"
 
 //Game defining directives.
-#define MAIN_AI_SYSTEM "TITAN 1200" //Previously ARES v3.2
+#define MAIN_AI_SYSTEM "ARES v3.2"
 
 // Maploader bounds indices
 #define MAP_MINX 1
@@ -16,12 +16,17 @@
 #define MAP_MAXY 5
 #define MAP_MAXZ 6
 
+// open_space_bounds indices
+#define OPEN_SPACE_BOUNDS_MINX 1
+#define OPEN_SPACE_BOUNDS_MAXX 2
+#define OPEN_SPACE_BOUNDS_MINY 3
+#define OPEN_SPACE_BOUNDS_MAXY 4
+
 #define MAP_MAXSIZE 300
 
 
 #define MAP_ICE_COLONY "Ice Colony" // Highpop only
 #define MAP_LV_624 "LV-624"
-#define MAP_LV_624_REPAIRED "LV-624 Repaired"
 #define MAP_BIG_RED "Solaris Ridge"
 #define MAP_PRISON_STATION "Fiorina Cellblocks"
 #define MAP_PRISON_STATION_V3 "Fiorina Science Annex"
@@ -30,32 +35,26 @@
 #define MAP_SOROKYNE_STRATA "Sorokyne Strata"
 #define MAP_CORSAT "CORSAT" // Highpop only
 #define MAP_KUTJEVO "Kutjevo Refinery"
-#define MAP_ICE_COLONY_V1 "Ice Colony Classic"
-#define MAP_ICE_COLONY_V2 "Ice Colony v2"
 #define MAP_ICE_COLONY_V3 "Shivas Snowball" //Ice Rework, low pop enabled.
 #define MAP_RUNTIME "USS Runtime"
-#define MAP_LV522_CHANCES_CLAIM "LV-522 Chance's Claim" // Highpop Only
-#define MAP_LV522_CHANCES_CLAIM_FORECON "LV-522 Chance's Claim Forecon"
+#define MAP_LV522_CHANCES_CLAIM "LV-522 Chance's Claim"
+#define MAP_LV759_HYBRISA_PROSPERA "LV-759 Hybrisa Prospera" // Highpop Only
 #define MAP_NEW_VARADERO "New Varadero"//ice colony underground but as its own map
-#define MAP_NEW_VARADERO_REPAIRED "New Varadero Repaired"
+#define MAP_TYRARGO_RIFT "Tyrargo Rift"
+#define MAP_WHITE_ANTRE_RESEARCH_FACILITY "White Antre Research Facility"
 #define MAP_CHINOOK "Chinook 91 GSO" //admin level
-#define MAP_DERELICT_ALMAYER "Derelict Almayer"
-#define MAP_TAIPEI_STATION "Taipei Station"
-#define MAP_LV295_BLACKSITE "LV295 Blacksite"
-#define MAP_SI391_SEKHMET "SI-391 Sekhmet Swamp"
-#define MAP_BMG290_OTOGI_EGRESS_POINT "BMG-290 Otogi Egress Point" //mapjam
-#define MAP_TAIPEI "Taipei Way-Station" //mapjam LAGO
-#define MAP_CANYON_32B "Canyon 32B"
-#define MAP_BIG_BLUE "Kleschers Research Site"
-#define MAP_CALLIOPE_HIGHWAY "Calliope Highway" //blueshift-orientated
-#define MAP_CALLIOPE_DESERT_BUS "Calliope Desert Bus" //long-town road
-#define MAP_OREAD_GARRISON "OBW - Oread Garrison" //mapjam
-#define MAP_BOSENMORI_BASHO "Bosenmori Basho"
-#define MAP_REDEMPTION_VALLEY "Redemption Valley" //valley with a military outpost and agricultural hamlet
-#define MAP_BINHAI_SUPPLY_STATION "Binhai Supply Station" //UPP asteroid base
+#define MAP_ROSTOCK "SSV Rostock" //UPP Warship
+#define MAP_HUNTERSHIP "Hunter Ship"
 
+#define GAMEMODE_DISTRESS_SIGNAL "Distress Signal"
 #define GAMEMODE_WHISKEY_OUTPOST "Whiskey Outpost"
 #define GAMEMODE_HIVE_WARS "Hive Wars"
+#define GAMEMODE_FACTION_CLASH "Faction Clash"
+#define GAMEMODE_FACTION_CLASH_UPP_CM "Faction Clash UPP CM"
+#define GAMEMODE_HUNTER_GAMES "Hunter Games"
+#define GAMEMODE_INFECTION "Infection"
+#define GAMEMODE_EXTENDED "Extended"
+#define GAMEMODE_EXTENDED_NO_SPAWN "Extended - No Spawn"
 
 /// Number of players before we switch to lowpop maps only (LV, BR, Prison).
 #define PLAYERCOUNT_LOWPOP_MAP_LIMIT 130
@@ -125,6 +124,7 @@
 #define SOUND_ARES_MESSAGE (1<<8)
 #define SOUND_OBSERVER_ANNOUNCEMENTS (1<<9)
 #define SOUND_FAX_MACHINE (1<<10)
+#define SOUND_ROUND_END (1<<11)
 
 //toggles_chat
 #define CHAT_OOC (1<<0)
@@ -142,6 +142,7 @@
 #define CHAT_GHOSTHIVEMIND (1<<12)
 #define CHAT_NICHELOGS (1<<13)
 #define CHAT_LISTENINGBUG (1<<14)
+#define CHAT_GHOSTANNOUNCECLARITY (1<<15)
 
 //toggles_ghost
 #define GHOST_HEALTH_SCAN  (1<<0)
@@ -166,26 +167,58 @@
 #define PLAY_SYNTH (1<<5)
 #define PLAY_MISC (1<<6)
 
+//toggles_survivor
+#define PLAY_SURVIVOR_HOSTILE (1<<0)
+#define PLAY_SURVIVOR_NON_HOSTILE (1<<1)
+
+//toggles_insert
+#define PLAY_INSERT_STANDARD (1<<0)
+#define PLAY_INSERT_CORPORATE (1<<1)
+#define PLAY_INSERT_LEADER (1<<2)
+#define PLAY_INSERT_MEDIC (1<<3)
+#define PLAY_INSERT_ENGINEER (1<<4)
+#define PLAY_INSERT_SPECIALIST (1<<5)
+#define PLAY_INSERT_SMARTGUNNER (1<<6)
+#define PLAY_INSERT_SYNTH (1<<7)
+#define PLAY_INSERT_CO (1<<8)
+
+//toggles_ert_pred
+#define PLAY_MERC (1<<0)
+#define PLAY_TWE (1<<1)
+#define PLAY_UPP (1<<2)
+#define PLAY_CLF (1<<3)
+#define PLAY_PMC (1<<4)
+#define PLAY_HUNT_MISC (1<<5)
+#define PLAY_XENO_T2 (1<<6)
+#define PLAY_XENO_T3 (1<<7)
+
 //toggles_admin
 /// Splits admin tabs in Statpanel
 #define SPLIT_ADMIN_TABS (1<<0)
 #define ADMIN_STEALTHMODE (1<<1)
+#define ADMIN_AFK_SAFE (1<<2)
 
 //=================================================
 
-#define TOGGLES_CHAT_DEFAULT (CHAT_OOC|CHAT_DEAD|CHAT_GHOSTRADIO|CHAT_PRAYER|CHAT_RADIO|CHAT_LOOC|CHAT_GHOSTHIVEMIND)
+#define TOGGLES_CHAT_DEFAULT (CHAT_OOC|CHAT_DEAD|CHAT_GHOSTEARS|CHAT_GHOSTSIGHT|CHAT_PRAYER|CHAT_RADIO|CHAT_LOOC|CHAT_GHOSTHIVEMIND|CHAT_FFATTACKLOGS)
 
 #define TOGGLES_GHOST_DEFAULT (GHOST_HEALTH_SCAN)
 
 #define TOGGLES_LANGCHAT_DEFAULT (LANGCHAT_SEE_EMOTES)
 
-#define TOGGLES_SOUND_DEFAULT (SOUND_ADMINHELP|SOUND_MIDI|SOUND_AMBIENCE|SOUND_LOBBY|SOUND_INTERNET|SOUND_ADMIN_MEME|SOUND_ADMIN_ATMOSPHERIC|SOUND_OBSERVER_ANNOUNCEMENTS|SOUND_FAX_MACHINE)
+#define TOGGLES_SOUND_DEFAULT (SOUND_ADMINHELP|SOUND_MIDI|SOUND_AMBIENCE|SOUND_ROUND_END|SOUND_LOBBY|SOUND_INTERNET|SOUND_ADMIN_MEME|SOUND_ADMIN_ATMOSPHERIC|SOUND_OBSERVER_ANNOUNCEMENTS|SOUND_FAX_MACHINE)
 
 #define TOGGLES_FLASHING_DEFAULT (FLASH_ROUNDSTART|FLASH_ROUNDEND|FLASH_CORPSEREVIVE|FLASH_ADMINPM|FLASH_UNNEST)
 
 #define TOGGLES_ERT_DEFAULT (PLAY_LEADER|PLAY_MEDIC|PLAY_ENGINEER|PLAY_HEAVY|PLAY_SMARTGUNNER|PLAY_SYNTH|PLAY_MISC)
 
-#define TOGGLES_ADMIN_DEFAULT (NONE)
+#define TOGGLES_SURVIVOR_DEFAULT (PLAY_SURVIVOR_HOSTILE|PLAY_SURVIVOR_NON_HOSTILE)
+
+#define TOGGLES_INSERT_DEFAULT (PLAY_INSERT_STANDARD|PLAY_INSERT_CORPORATE|PLAY_INSERT_LEADER|PLAY_INSERT_MEDIC|PLAY_INSERT_ENGINEER|PLAY_INSERT_SPECIALIST|PLAY_INSERT_SMARTGUNNER|PLAY_INSERT_SYNTH|PLAY_INSERT_CO)
+
+#define TOGGLES_ERT_GROUNDS (PLAY_MERC|PLAY_TWE|PLAY_UPP|PLAY_CLF|PLAY_PMC|PLAY_HUNT_MISC|PLAY_XENO_T2|PLAY_XENO_T3)
+
+#define TOGGLES_ADMIN_DEFAULT (ADMIN_AFK_SAFE)
 
 // Game Intents
 #define INTENT_HELP 1
@@ -204,7 +237,8 @@
 /// how long in ticks we wait before assuming the docking controller is broken or blown up.
 #define DOCK_ATTEMPT_TIMEOUT 20 SECONDS
 #define DROPSHIP_WARMUP_TIME 10 SECONDS
-#define DROPSHIP_DROP_MSG_DELAY 5 SECONDS
+#define DROPSHIP_DROP_MSG_DELAY 30 SECONDS
+#define DROPSHIP_DROP_FIRE_DELAY 20 SECONDS
 #define DROPSHIP_TRANSIT_DURATION 100 SECONDS
 #define DROPSHIP_CORSAT_DURATION 30 SECONDS
 #define ELEVATOR_TRANSIT_DURATION 5 SECONDS
@@ -213,7 +247,6 @@
 #define ERT_SHUTTLE_TRANSIT_DURATION 30 SECONDS
 
 #define SHUTTLE_RECHARGE  2 MINUTES
-#define ELEVATOR_RECHARGE 15 SECONDS
 
 //Shuttle moving status
 //#define SHUTTLE_IDLE 0
@@ -264,7 +297,13 @@
 
 /// Frequency stuff only works with 45kbps oggs.
 #define GET_RANDOM_FREQ rand(32000, 55000)
+#define GET_RANDOM_FREQ_MINOR rand(42000, 48000)
 
+/// Directions as text for riding component
+#define TEXT_NORTH "[NORTH]"
+#define TEXT_SOUTH "[SOUTH]"
+#define TEXT_EAST "[EAST]"
+#define TEXT_WEST "[WEST]"
 
 // Ceilings
 // Ceiling types
@@ -279,6 +318,7 @@
 /// Blocks mortar placement, lasing, and medevac
 #define CEILING_PROTECTION_TIER_1 1
 #define CEILING_METAL 1.1
+#define CEILING_SANDSTONE_ALLOW_CAS 1.2
 
 /// Blocks CAS signals, supply drops, fultoning, and mortar fire
 #define CEILING_PROTECTION_TIER_2 2
@@ -289,7 +329,7 @@
 #define CEILING_PROTECTION_TIER_3 3
 #define CEILING_UNDERGROUND_BLOCK_CAS 3.1
 #define CEILING_UNDERGROUND_METAL_BLOCK_CAS 3.2
-#define CEILING_HULL_METAL 3.3
+#define CEILING_UNDERGROUND_SANDSTONE_BLOCK_CAS 3.3
 
 /// Blocks OB fire
 #define CEILING_PROTECTION_TIER_4 4
@@ -364,6 +404,8 @@
 #define WALL_REINFORCED_BUNKER "bunker"
 #define WALL_RESIN "resin"
 #define WALL_THICKRESIN "thickresin"
+#define WALL_WEEDBOUND_RESIN "weedboundresin"
+#define WALL_THICK_WEEDBOUND_RESIN "thickweedboundresin"
 #define WALL_MEMBRANE "membrane"
 #define WALL_THICKMEMBRANE "thickmembrane"
 #define WALL_BONE_RESIN "bone_resin"
@@ -375,6 +417,9 @@
 #define WALL_STRATA_ICE "strata_ice"
 #define WALL_STRATA_ICE_DIRTY "strata_ice_dirty"
 #define WALL_JUNGLE_UPDATED "jungle_veg"
+#define WALL_FOREST "forest_veg"
+#define WALL_FOREST_ROCK "rock_forest"
+#define WALL_FOREST_ROCK_DIRTY "rock_forest_dirty"
 #define WALL_STRATA_OUTPOST_RIBBED "strata_ribbed_outpost_"
 #define WALL_STRATA_OUTPOST_BARE "strata_bare_outpost_"
 #define WALL_SHIVA_ICE "shiva_ice"
@@ -396,10 +441,13 @@
 #define WALL_KUTJEVO_COLONYR "colonyr"
 #define WALL_DEVWALL "devwall"
 #define WALL_DEVWALL_R "devwall_r"
-#define WALL_HUNTERSHIP "metal"//DMI specific name
+#define WALL_HUNTERSHIP "hunter"
+#define WALL_ENGINEERSHIP "metal"
 #define WALL_AICORE "aiwall"
-#define WALL_UPP_GREEN "uppwall_interior"
-#define WALL_UPP_GREY "uppwall_interior"
+#define WALL_UPP_SHIP "uppwall_interior"
+#define WALL_UPP_BASE "uppwall"
+#define WALL_ANCIENT_BASE "ancient_stone"
+#define WALL_RUNEDSTONE "runedstone"
 
 //Defines for dropship weapon gimbals
 #define GIMBAL_LEFT -1
@@ -486,17 +534,8 @@
 /// Window skin types
 #define TOGGLE_WINDOW_SKIN 1
 
-// Quadtree values
-
-/// Max amount of player coordinates in a quadtree cell
-#define QUADTREE_CAPACITY 12
-/// Minimum X width up to which we keep dividing the tree (meaning cells can be half that)
-#define QUADTREE_BOUNDARY_MINIMUM_WIDTH 12
-/// Minimum Y height up to which we keep dividing the tree (meaning cells can be half that)
-#define QUADTREE_BOUNDARY_MINIMUM_HEIGHT 12
-
-
-#define QTREE_EXCLUDE_OBSERVER 1
+/// Whether to filter to only living mobs
+#define QTREE_FILTER_LIVING 1
 
 /// Return mob list instead of client list.
 #define QTREE_SCAN_MOBS 2
@@ -544,8 +583,10 @@
 	else
 		var/dx = abs(A.x - B.x)
 		var/dy = abs(A.y - B.y)
-		if(dx>=dy) dist = (0.934*dx) + (0.427*dy)
-		else dist = (0.427*dx) + (0.934*dy)
+		if(dx>=dy)
+			dist = (0.934*dx) + (0.427*dy)
+		else
+			dist = (0.427*dx) + (0.934*dy)
 
 	return dist
 
@@ -577,8 +618,5 @@
 /// Disables loading Techwebs and additional Z-Levels
 #define PERF_TOGGLE_TECHWEBS (1<<4)
 
-/// Dropship Camos
-#define DROPSHIP_CAMO_TAN "Tan"
-#define DROPSHIP_CAMO_NAVY "Navy"
-#define DROPSHIP_CAMO_URBAN "Urban"
-#define DROPSHIP_CAMO_JUNGLE "Jungle"
+/// Maptext styles
+#define MAP_STYLESHEET "img.icon { width: auto; height: auto } .center { text-align: center; }  .maptext { font-family: 'Small Fonts'; font-size: 7px; -dm-text-outline: 1px black; color: white; line-height: 1.1; } .center { text-align: center; } .langchat { font-family: 'Small Fonts'; font-size: 7px; -dm-text-outline: 1px black; } .langchat_small { font-size: 6px; } .langchat_yell { font-weight: bold; font-size: 10px; } .langchat_smaller_bolded { font-weight: bold; font-size: 7px; } .langchat_bolded { font-weight: bold; font-size: 8px; } .langchat_announce { font-weight: bold; font-size: 12px; } .langchat_bolditalicbig {font-weight: bold; font-size: 24px; font-style: italic; } .langchat_italic {font-style: italic; }"

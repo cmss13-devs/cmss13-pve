@@ -12,7 +12,6 @@
 	var/label_x
 	var/tag_x
 	anchored = FALSE
-	unslashable = TRUE
 
 /obj/structure/bigDelivery/attack_hand(mob/user as mob)
 	if(wrapped) //sometimes items can disappear. For example, bombs. --rastaf0
@@ -44,10 +43,10 @@
 			if("Title")
 				var/str = trim(strip_html(input(usr,"Label text?","Set label","")))
 				if(!str || !length(str))
-					to_chat(usr, SPAN_WARNING(" Invalid text."))
+					to_chat(usr, SPAN_WARNING("Invalid text."))
 					return
-				user.visible_message("\The [user] titles \the [src] with \a [W], marking down: \"[str]\"",\
-				SPAN_NOTICE("You title \the [src]: \"[str]\""),\
+				user.visible_message("\The [user] titles \the [src] with \a [W], marking down: \"[str]\"",
+				SPAN_NOTICE("You title \the [src]: \"[str]\""),
 				"You hear someone scribbling a note.")
 				name = "[name] ([str])"
 				if(!examtext && !nameset)
@@ -65,8 +64,8 @@
 					update_icon()
 				else
 					examtext = str
-				user.visible_message("\The [user] labels \the [src] with \a [W], scribbling down: \"[examtext]\"",\
-				SPAN_NOTICE("You label \the [src]: \"[examtext]\""),\
+				user.visible_message("\The [user] labels \the [src] with \a [W], scribbling down: \"[examtext]\"",
+				SPAN_NOTICE("You label \the [src]: \"[examtext]\""),
 				"You hear someone scribbling a note.")
 
 /obj/structure/bigDelivery/update_icon()
@@ -102,7 +101,7 @@
 	. = ..()
 	if(get_dist(src, user) <= 4)
 		if(sortTag)
-			. += SPAN_NOTICE("It is labeled \"[sortTag]\"")
+			. += SPAN_NOTICE("There's a sorting tag with the destination set to \"[sortTag]\"")
 		if(examtext)
 			. += SPAN_NOTICE("It has a note attached which reads, \"[examtext]\"")
 
@@ -151,10 +150,10 @@
 			if("Title")
 				var/str = trim(strip_html(input(usr,"Label text?","Set label","")))
 				if(!str || !length(str))
-					to_chat(usr, SPAN_WARNING(" Invalid text."))
+					to_chat(usr, SPAN_WARNING("Invalid text."))
 					return
-				user.visible_message("\The [user] titles \the [src] with \a [W], marking down: \"[str]\"",\
-				SPAN_NOTICE("You title \the [src]: \"[str]\""),\
+				user.visible_message("\The [user] titles \the [src] with \a [W], marking down: \"[str]\"",
+				SPAN_NOTICE("You title \the [src]: \"[str]\""),
 				"You hear someone scribbling a note.")
 				name = "[name] ([str])"
 				if(!examtext && !nameset)
@@ -173,8 +172,8 @@
 					update_icon()
 				else
 					examtext = str
-				user.visible_message("\The [user] labels \the [src] with \a [W], scribbling down: \"[examtext]\"",\
-				SPAN_NOTICE("You label \the [src]: \"[examtext]\""),\
+				user.visible_message("\The [user] labels \the [src] with \a [W], scribbling down: \"[examtext]\"",
+				SPAN_NOTICE("You label \the [src]: \"[examtext]\""),
 				"You hear someone scribbling a note.")
 	return
 
@@ -207,20 +206,21 @@
 	. = ..()
 	if(get_dist(src, user) <= 4)
 		if(sortTag)
-			. += SPAN_NOTICE("It is labeled \"[sortTag]\"")
+			. += SPAN_NOTICE("There's a sorting tag with the destination set to \"[sortTag]\"")
 		if(examtext)
 			. += SPAN_NOTICE("It has a note attached which reads, \"[examtext]\"")
 
 /obj/item/packageWrap
 	name = "package wrapper"
-	icon = 'icons/obj/items/items.dmi'
+	icon = 'icons/obj/items/tools.dmi'
 	icon_state = "deliveryPaper"
 	w_class = SIZE_MEDIUM
 	var/amount = 50
 
 
 /obj/item/packageWrap/afterattack(obj/target as obj, mob/user as mob, proximity)
-	if(!proximity) return
+	if(!proximity)
+		return
 	if(!istype(target)) //this really shouldn't be necessary (but it is). -Pete
 		return
 	if(istype(target, /obj/item/smallDelivery) || istype(target,/obj/structure/bigDelivery) \
@@ -250,10 +250,14 @@
 			if(i in list(1,2,3,4,5))
 				P.icon_state = "deliverycrate[i]"
 				switch(i)
-					if(1) P.name = "tiny parcel"
-					if(3) P.name = "normal-sized parcel"
-					if(4) P.name = "large parcel"
-					if(5) P.name = "huge parcel"
+					if(1)
+						P.name = "tiny parcel"
+					if(3)
+						P.name = "normal-sized parcel"
+					if(4)
+						P.name = "large parcel"
+					if(5)
+						P.name = "huge parcel"
 			if(i < 1)
 				P.icon_state = "deliverycrate1"
 				P.name = "tiny parcel"
@@ -264,8 +268,8 @@
 			O.add_fingerprint(usr)
 			src.add_fingerprint(usr)
 			src.amount--
-			user.visible_message("[user] wraps [target] with [src].",\
-			SPAN_NOTICE("You wrap [target], leaving [amount] units of paper on [src]."),\
+			user.visible_message("[user] wraps [target] with [src].",
+			SPAN_NOTICE("You wrap [target], leaving [amount] units of paper on [src]."),
 			"You hear someone taping paper around a small object.")
 	else if (istype(target, /obj/structure/closet/crate))
 		var/obj/structure/closet/crate/crate = target
@@ -291,8 +295,8 @@
 				package.wrapped = crate
 				crate.forceMove(package)
 				amount -= 3
-				user.visible_message("[user] wraps [target] with [src].",\
-				SPAN_NOTICE("You wrap [target], leaving [amount] units of paper on [src]."),\
+				user.visible_message("[user] wraps [target] with [src].",
+				SPAN_NOTICE("You wrap [target], leaving [amount] units of paper on [src]."),
 				"You hear someone taping paper around a large object.")
 			else if(amount < 3)
 				to_chat(user, SPAN_WARNING("You need more paper."))
@@ -304,13 +308,13 @@
 			object.welded = 1
 			object.forceMove(package)
 			amount -= 3
-			user.visible_message("[user] wraps [target] with [src].",\
-			SPAN_NOTICE("You wrap [target], leaving [amount] units of paper on [src]."),\
+			user.visible_message("[user] wraps [target] with [src].",
+			SPAN_NOTICE("You wrap [target], leaving [amount] units of paper on [src]."),
 			"You hear someone taping paper around a large object.")
 		else if(amount < 3)
 			to_chat(user, SPAN_WARNING("You need more paper."))
 	else
-		to_chat(user, SPAN_NOTICE(" The object you are trying to wrap is unsuitable for the sorting machinery!"))
+		to_chat(user, SPAN_NOTICE("The object you are trying to wrap is unsuitable for the sorting machinery!"))
 	if (amount <= 0)
 		new /obj/item/trash/c_tube( loc )
 		qdel(src)
@@ -327,6 +331,7 @@
 	name = "destination tagger"
 	desc = "Used to set the destination of properly wrapped packages."
 	icon_state = "dest_tagger"
+	icon = 'icons/obj/items/tools.dmi'
 	var/currTag = 0
 
 	w_class = SIZE_SMALL
@@ -338,19 +343,19 @@
 	var/dat = "<tt><center><h1><b>TagMaster 2.3</b></h1></center>"
 
 	dat += "<table style='width:100%; padding:4px;'><tr>"
-	for(var/i = 1, i <= length(GLOB.tagger_locations), i++)
-		dat += "<td><a href='byond://?src=\ref[src];nextTag=[GLOB.tagger_locations[i]]'>[GLOB.tagger_locations[i]]</a></td>"
+	for(var/i in 1 to length(GLOB.tagger_locations))
+		var/encoded_tag = html_encode(GLOB.tagger_locations[i])
+		dat += "<td><a href='byond://?src=\ref[src];nextTag=[encoded_tag]'>[encoded_tag]</a></td>"
 
 		if (i%4==0)
 			dat += "</tr><tr>"
 
 	dat += "</tr></table><br>Current Selection: [currTag ? currTag : "None"]</tt>"
-
-	user << browse(dat, "window=destTagScreen;size=450x350")
+	show_browser(user, dat, "Whiskey Outpost Destination Tagger")
 	onclose(user, "destTagScreen")
 
 /obj/item/device/destTagger/attack_self(mob/user)
-	..()
+	. = ..()
 	openwindow(user)
 
 /obj/item/device/destTagger/Topic(href, href_list)
@@ -384,16 +389,21 @@
 	return
 
 /obj/structure/machinery/disposal/deliveryChute/Collided(atom/movable/AM) //Go straight into the chute
-	if(istype(AM, /obj/projectile) || istype(AM, /obj/effect)) return
+	if(istype(AM, /obj/projectile) || istype(AM, /obj/effect))
+		return
 	switch(dir)
 		if(NORTH)
-			if(AM.loc.y != src.loc.y+1) return
+			if(AM.loc.y != src.loc.y+1)
+				return
 		if(EAST)
-			if(AM.loc.x != src.loc.x+1) return
+			if(AM.loc.x != src.loc.x+1)
+				return
 		if(SOUTH)
-			if(AM.loc.y != src.loc.y-1) return
+			if(AM.loc.y != src.loc.y-1)
+				return
 		if(WEST)
-			if(AM.loc.x != src.loc.x-1) return
+			if(AM.loc.x != src.loc.x-1)
+				return
 
 	if(istype(AM, /obj))
 		var/obj/O = AM
@@ -445,7 +455,8 @@
 			playsound(src.loc, 'sound/items/Welder2.ogg', 25, 1)
 			to_chat(user, "You start slicing the floorweld off the delivery chute.")
 			if(do_after(user,20, INTERRUPT_ALL|BEHAVIOR_IMMOBILE, BUSY_ICON_BUILD))
-				if(!src || !W.isOn()) return
+				if(!src || !W.isOn())
+					return
 				to_chat(user, "You sliced the floorweld off the delivery chute.")
 				var/obj/structure/disposalconstruct/C = new (src.loc)
 				C.ptype = 8 // 8 =  Delivery chute

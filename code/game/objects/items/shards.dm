@@ -3,7 +3,11 @@
 /obj/item/shard
 	name = "glass shard"
 	icon = 'icons/obj/items/shards.dmi'
-	icon_state = ""
+	item_icons = list(
+		WEAR_L_HAND = 'icons/mob/humans/onmob/inhands/equipment/janitor_lefthand.dmi',
+		WEAR_R_HAND = 'icons/mob/humans/onmob/inhands/equipment/janitor_righthand.dmi',
+	)
+	icon_state = "medium"
 	sharp = IS_SHARP_ITEM_SIMPLE
 	edge = 1
 	desc = "A shard of broken glass. Could probably be used as ... a throwing weapon?"
@@ -16,6 +20,8 @@
 	var/source_sheet_type = /obj/item/stack/sheet/glass
 	var/shardsize
 	var/count = 1
+	/// Whether to add small/medium/large to the end of the icon_state on Initialize
+	var/random_size = TRUE
 	garbage = TRUE
 
 /obj/item/shard/attack(mob/living/carbon/M, mob/living/carbon/user)
@@ -26,22 +32,21 @@
 
 /obj/item/shard/Initialize()
 	. = ..()
-	shardsize = pick("large", "medium", "small")
-	switch(shardsize)
-		if("small")
-			pixel_x = rand(-12, 12)
-			pixel_y = rand(-12, 12)
-			icon_state += shardsize
-		if("medium")
-			pixel_x = rand(-8, 8)
-			pixel_y = rand(-8, 8)
-			icon_state += shardsize
-		if("large")
-			pixel_x = rand(-5, 5)
-			pixel_y = rand(-5, 5)
-			icon_state += shardsize
-
-
+	if(random_size)
+		shardsize = pick("large", "medium", "small")
+		switch(shardsize)
+			if("small")
+				pixel_x = rand(-12, 12)
+				pixel_y = rand(-12, 12)
+				icon_state = shardsize
+			if("medium")
+				pixel_x = rand(-8, 8)
+				pixel_y = rand(-8, 8)
+				icon_state = shardsize
+			if("large")
+				pixel_x = rand(-5, 5)
+				pixel_y = rand(-5, 5)
+				icon_state = shardsize
 
 /obj/item/shard/attackby(obj/item/W, mob/user)
 	if ( iswelder(W))
@@ -86,7 +91,7 @@
 
 /obj/item/large_shrapnel/at_rocket_dud
 	name = "unexploded anti-tank rocket"
-	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/uscm.dmi'
+	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/USCM/rocket_launchers.dmi'
 	icon_state = "custom_rocket_no_fuel"
 	desc = "An undetonated anti-tank rocket that probably hit something soft. You really shouldn't drop this..."
 	/// same as custom warhead
@@ -133,8 +138,8 @@
 
 /obj/item/large_shrapnel/at_rocket_dud/launch_impact(atom/hit_atom)
 	. = ..()
-	var/datum/launch_metadata/LM = src.launch_metadata
-	var/user = LM.thrower
+	var/datum/launch_metadata/LM = launch_metadata
+	var/user = LM?.thrower
 	if(!detonating && prob(impact_sensitivity))
 		cause = "manually triggered"
 		visible_message(SPAN_DANGER("You hear the click of a mechanism triggering inside \the [src]. Uh oh."))
@@ -167,7 +172,7 @@
 		playsound(M, 'sound/effects/meteorimpact.ogg', 35)
 		M.at_munition_interior_explosion_effect(cause_data = create_cause_data("Anti-Tank Rocket", U))
 		M.interior_crash_effect()
-		M.ex_act(1000, get_dir(U, T), create_cause_data("Anti-Tank Rocket", U))
+		M.ex_act(1000)
 		return TRUE
 	return FALSE
 
@@ -237,6 +242,7 @@
 	desc = "Some shrapnel that used to be embedded underneath someone's skin."
 	icon_state = "small"
 	damage_on_move = 2
+	random_size = FALSE
 
 /obj/item/shard/shrapnel/upp/bits
 	name = "tiny shrapnel"
@@ -251,6 +257,7 @@
 	matter = list("bone" = 50)
 	desc = "It looks like it came from a prehistoric animal."
 	damage_on_move = 0.6
+	random_size = FALSE
 
 /obj/item/shard/shrapnel/bone_chips/human
 	name = "human bone fragments"
@@ -262,19 +269,29 @@
 	icon_state = "alienbonechips"
 	desc = "Sharp, jagged fragments of alien bone. Looks like the previous owner exploded violently..."
 
+/obj/item/small_shards
+	name = "small glass fragments"
+	icon = 'icons/obj/items/smoking/ashtray.dmi'
+	w_class = SIZE_TINY
+	icon_state = "ashtray_bork_gl"
+	desc = "Sharp, jagged fragments of glass."
+
+/obj/item/shard/shrapnel/tutorial
+	damage_on_move = 0
+
 /obj/item/sharp
 	name = "sharp dart shrapnel"
 	desc = "It looks like a used 9X-E Sticky Explosive Dart, useless now."
 	icon = 'icons/obj/items/weapons/projectiles.dmi'
-	icon_state = "sonicharpoon"
+	icon_state = "sharp_explosive_dart"
 	sharp = IS_SHARP_ITEM_BIG
 	w_class = SIZE_SMALL
 	edge = TRUE
 	force = 0
 	throwforce = 0
+	garbage = TRUE
 	var/damage_on_move = 3
 	var/count = 1
-	garbage = TRUE
 
 /obj/item/sharp/Initialize(mapload, dir)
 	. = ..()
@@ -295,7 +312,6 @@
 	var/obj/limb/organ = embedded_organ
 	if(istype(organ))
 		organ.take_damage(damage_on_move * count, 0, 0, no_limb_loss = TRUE)
-
 		embedded_mob.pain.apply_pain(damage_on_move * count)
 
 /obj/item/sharp/proc/turn_object(amount)
@@ -304,17 +320,14 @@
 	apply_transform(initial_matrix)
 
 /obj/item/sharp/explosive
-	name = "\improper 9X-E sticky explosive dart"
+	name = "\improper 9X-E Sticky Explosive Dart"
 
-/obj/item/sharp/track
-	name = "\improper 9X-T sticky tracker dart"
-	desc = "It looks like a used 9X-T Sticky Tracker Dart, useless now."
-	icon_state = "sonicharpoon_tracker"
+/obj/item/sharp/incendiary
+	name = "\improper 9X-T Sticky Incendiary Dart"
+	desc = "It looks like a used 9X-T Sticky Incendiary Dart, useless now."
+	icon_state = "sharp_incendiary_dart"
 
 /obj/item/sharp/flechette
-	name = "\improper 9X-F flechette dart"
+	name = "\improper 9X-F Flechette Dart"
 	desc = "It looks like a used 9X-F Flechette Dart, useless now."
-	icon_state = "sonicharpoon_flechette"
-/obj/item/shard/shrapnel/tutorial
-	damage_on_move = 0
-
+	icon_state = "sharp_flechette_dart"

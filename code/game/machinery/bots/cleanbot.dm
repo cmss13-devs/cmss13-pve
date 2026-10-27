@@ -18,7 +18,7 @@
 	var/obj/effect/decal/cleanable/target
 	var/obj/effect/decal/cleanable/oldtarget
 	var/oldloc = null
-	req_access = list(ACCESS_CIVILIAN_ENGINEERING)
+	req_one_access = list(ACCESS_CIVILIAN_ENGINEERING, ACCESS_MARINE_ENGINEERING)
 	var/path[] = new()
 	var/patrol_path[] = null
 	var/beacon_freq = 1445 // navigation beacon frequency
@@ -39,7 +39,8 @@
 	src.botcard = new(src)
 	if(GLOB.RoleAuthority)
 		var/datum/job/ctequiv = GLOB.RoleAuthority.roles_by_name[JOB_CARGO_TECH]
-		if(ctequiv) botcard.access = ctequiv.get_access()
+		if(ctequiv)
+			botcard.access = ctequiv.get_access()
 
 	src.locked = 0 // Start unlocked so roboticist can set them to patrol.
 
@@ -119,7 +120,7 @@ text("<A href='byond://?src=\ref[src];operation=oddbutton'>[src.oddbutton ? "Yes
 			src.patrol_path = null
 			src.updateUsrDialog()
 		if("freq")
-			var/freq = text2num(input("Select frequency for  navigation beacons", "Frequnecy", num2text(beacon_freq / 10))) * 10
+			var/freq = text2num(input("Select frequency for navigation beacons", "Frequency", num2text(beacon_freq / 10))) * 10
 			if (freq > 0)
 				src.beacon_freq = freq
 			src.updateUsrDialog()
@@ -136,7 +137,7 @@ text("<A href='byond://?src=\ref[src];operation=oddbutton'>[src.oddbutton ? "Yes
 	if (istype(W, /obj/item/card/id))
 		if(src.allowed(usr) && !open)
 			src.locked = !src.locked
-			to_chat(user, SPAN_NOTICE("You [ src.locked ? "lock" : "unlock"] the [src] behaviour controls."))
+			to_chat(user, SPAN_NOTICE("You [ src.locked ? "lock" : "unlock"] [src]'s behaviour controls."))
 		else
 			if(open)
 				to_chat(user, SPAN_WARNING("Please close the access panel before locking it."))
@@ -183,7 +184,8 @@ text("<A href='byond://?src=\ref[src];operation=oddbutton'>[src.oddbutton ? "Yes
 		if (LAZYLEN(patrol_path) < 1)
 			var/datum/radio_frequency/frequency = SSradio.return_frequency(beacon_freq)
 
-			if(!frequency) return
+			if(!frequency)
+				return
 
 			closest_dist = 9999
 			closest_loc = null
@@ -206,7 +208,8 @@ text("<A href='byond://?src=\ref[src];operation=oddbutton'>[src.oddbutton ? "Yes
 
 	if(target && length(path) == 0)
 		spawn(0)
-			if(!src || !target) return
+			if(!src || !target)
+				return
 			src.path = AStar(src.loc, src.target.loc, /turf/proc/CardinalTurfsWithAccess, /turf/proc/Distance, 0, 30, id=botcard)
 			if (!path) path = list()
 			if(length(src.path) == 0)

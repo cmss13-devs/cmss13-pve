@@ -113,8 +113,8 @@
 	if(!istype(human_user))
 		return
 
-	switch (action)
-		if ("vend")
+	switch(action)
+		if("vend")
 			var/exploiting = TRUE
 			var/idx=params["prod_index"]
 
@@ -168,7 +168,7 @@
 	show_points = FALSE
 	use_snowflake_points = FALSE
 	vendor_theme = VENDOR_THEME_COMPANY
-	vend_flags = VEND_CLUTTER_PROTECTION | VEND_TO_HAND
+	vend_flags = VEND_CLUTTER_PROTECTION | VEND_TO_HAND | VEND_UNIFORM_AUTOEQUIP
 	vend_delay = 1 SECONDS
 	var/list/items
 	var/list/obj/item/item_types

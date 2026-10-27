@@ -1,5 +1,10 @@
 #define DELETE_TIME 1800
 
+/// Doesn't count tier 0
+GLOBAL_VAR_INIT(total_dead_xenos, 0)
+
+#define LAST_XENO_HEAL_COOLDOWN "last_xeno_heal_cooldown"
+
 /mob/living/carbon/xenomorph/death(cause, gibbed)
 	var/msg = "lets out a waning guttural screech, green blood bubbling from its maw."
 	. = ..(cause, gibbed, msg)
@@ -8,11 +13,24 @@
 
 	GLOB.living_xeno_list -= src
 
+	overlays -= acid_overlay
+
+	// Dead xenomorphs have reduced blood
+	// Acts a source of xeno chems, but temporary and limited.
+	blood_volume = BLOOD_VOLUME_DEAD_XENO
+
+	if(organ_regen_timer != TIMER_ID_NULL)
+		deltimer(organ_regen_timer)
+		organ_regen_timer = TIMER_ID_NULL
+
 	if(is_zoomed)
 		zoom_out()
 
 	if(SSticker?.mode?.hardcore)
 		ghostize()
+
+	if(hauled_mob)
+		release_haul(stuns=FALSE)
 
 	set_light_range(0)
 
@@ -27,6 +45,12 @@
 		update_icons()
 
 	if(!should_block_game_interaction(src)) //so xeno players don't get death messages from admin tests
+		if(!(datum_flags & DF_VAR_EDITED) && istype(SSticker.mode, /datum/game_mode/colonialmarines))
+			var/datum/entity/xeno_death/death_log = DB_ENTITY(/datum/entity/xeno_death)
+			death_log.load_data(src, cause)
+			if(!(caste.caste_type in XENO_T0_CASTES))
+				GLOB.total_dead_xenos++
+
 		if(isqueen(src))
 			var/mob/living/carbon/xenomorph/queen/XQ = src
 			playsound(loc, 'sound/voice/alien_queen_died.ogg', 75, 0)
@@ -62,14 +86,17 @@
 
 			if(hive && hive.living_xeno_queen == src)
 				notify_ghosts(header = "Queen Death", message = "The Queen has been slain!", source = src, action = NOTIFY_ORBIT)
-				xeno_message(SPAN_XENOANNOUNCE("A sudden tremor ripples through the hive... the Queen has been slain! Vengeance!"),3, hivenumber)
-				hive.slashing_allowed = XENO_SLASH_ALLOWED
+				SScmtv.spectate_event("Queen Death", src)
+				xeno_message(SPAN_XENOANNOUNCE("A sudden tremor ripples through the hive... the Queen has been slain! Vengeance!"), 3, hivenumber)
+				if(!hive.hive_flags_locked)
+					hive.hive_flags = initial(hive.hive_flags)
 				hive.set_living_xeno_queen(null)
 				//on the off chance there was somehow two queen alive
 				for(var/mob/living/carbon/xenomorph/queen/Q in GLOB.living_xeno_list)
 					if(!QDELETED(Q) && Q != src && Q.hivenumber == hivenumber)
 						hive.set_living_xeno_queen(Q)
 						break
+				hive.on_queen_death()
 				hive.handle_xeno_leader_pheromones()
 				if(SSticker.mode)
 					INVOKE_ASYNC(SSticker.mode, TYPE_PROC_REF(/datum/game_mode, check_queen_status), hivenumber)
@@ -83,7 +110,7 @@
 			playsound(loc, prob(50) == 1 ? 'sound/voice/alien_death.ogg' : 'sound/voice/alien_death2.ogg', 25, 1)
 		var/area/A = get_area(src)
 		if(hive && hive.living_xeno_queen)
-			if(!HAS_TRAIT(src, TRAIT_TEMPORARILY_MUTED))
+			if(!HAS_TRAIT(src, TRAIT_TEMPORARILY_MUTED) && !hardcore)
 				xeno_message("Hive: [src] has <b>died</b>[A? " at [sanitize_area(A.name)]":""]! [banished ? "They were banished from the hive." : ""]", death_fontsize, hivenumber)
 
 	if(hive && IS_XENO_LEADER(src)) //Strip them from the Xeno leader list, if they are indexed in here
@@ -97,10 +124,6 @@
 	if(behavior_delegate)
 		behavior_delegate.handle_death(src)
 
-	for(var/atom/movable/A in stomach_contents)
-		stomach_contents.Remove(A)
-		A.acid_damage = 0 //Reset the acid damage
-		A.forceMove(loc)
 
 	// Banished xeno provide a burrowed larva on death to compensate
 	if(banished && refunds_larva_if_banished)
@@ -114,59 +137,58 @@
 
 	if(hive)
 		hive.remove_xeno(src)
+		// Finding the last xeno for anti-delay.
+		if(SSticker.mode && SSticker.current_state != GAME_STATE_FINISHED)
+			if((GLOB.last_ares_callout + 2 MINUTES) > world.time)
+				return
+			if(hive.hivenumber == XENO_HIVE_NORMAL && (LAZYLEN(hive.totalXenos) == 1))
+				var/mob/living/carbon/xenomorph/xeno = LAZYACCESS(hive.totalXenos, 1)
+				GLOB.last_ares_callout = world.time
+				// Tell the marines where the last one is.
+				var/name = "[MAIN_AI_SYSTEM] Bioscan Status"
+				var/input = "Bioscan complete.\n\nSensors indicate one remaining unknown lifeform signature in [get_area(xeno)]."
+				log_ares_bioscan(name, input)
+				marine_announcement(input, name, 'sound/AI/bioscan.ogg', logging = ARES_LOG_NONE)
+				// Tell the xeno she is the last one, heal her and make her fight to the death
+				if(xeno.client)
+					to_chat(xeno, SPAN_XENOANNOUNCE("Your carapace rattles with RAGE. You are all that remains of the hive! Go out fighting, kill them all!"))
+					if(!TIMER_COOLDOWN_CHECK(xeno, LAST_XENO_HEAL_COOLDOWN))
+						xeno.rejuvenate()
+						TIMER_COOLDOWN_START(xeno, LAST_XENO_HEAL_COOLDOWN, 10 MINUTES)
+					if(!isqueen(xeno))
+						xeno.can_heal = FALSE
+				notify_ghosts(header = "Last Xenomorph", message = "There is only one Xenomorph left: [xeno.name].", source = xeno, action = NOTIFY_ORBIT)
 
 	SEND_GLOBAL_SIGNAL(COMSIG_GLOB_XENO_DEATH, src, gibbed)
 	give_action(src, /datum/action/ghost/xeno)
 
 /mob/living/carbon/xenomorph/gib(datum/cause_data/cause = create_cause_data("gibbing", src))
-	var/obj/effect/decal/remains/xeno/remains = new(get_turf(src))
-	var/icon_path
-	var/gib_state = "gibbed-a-corpse"
-	remains.pixel_x = pixel_x //For 2x2.
-
+	var/no_remains
 	if(!caste)
 		CRASH("CASTE ERROR: gib() was called without a caste. (name: [name], disposed: [QDELETED(src)], health: [health])")
 
-	if(mob_size >= MOB_SIZE_BIG)
-		icon_path = 'icons/mob/xenos/xenomorph_64x64.dmi'
-	else
-		icon_path = 'icons/mob/xenos/xenomorph_48x48.dmi'
 	switch(caste.caste_type)
-		if(XENO_CASTE_RUNNER)
-			icon_path = 'icons/mob/xenos/xenomorph_64x64.dmi'
-			gib_state = "gibbed-a-corpse-runner"
 		if(XENO_CASTE_BOILER)
 			var/mob/living/carbon/xenomorph/boiler/src_boiler = src
 			visible_message(SPAN_DANGER("[src] begins to bulge grotesquely, and explodes in a cloud of corrosive gas!"))
 			src_boiler.smoke.set_up(2, 0, get_turf(src), new_cause_data = src_boiler.smoke.cause_data)
 			src_boiler.smoke.start()
-		if(XENO_CASTE_LARVA, XENO_CASTE_PREDALIEN_LARVA)
-			icon_path = 'icons/mob/xenos/larva.dmi'
+		if(XENO_CASTE_FACEHUGGER)
+			no_remains = TRUE
 
-	remains.icon_state = gib_state
-	remains.icon = icon_path
+	if(!no_remains)
+		new /obj/effect/decal/remains/xeno(get_turf(src), icon, "gibbed-a-corpse", pixel_x)
 
-	check_blood_splash(35, BURN, 65, 1) //Some testing numbers. 35 burn, 65 chance.
+	var/turf/death_turf = get_turf(src)
+	if(!should_block_game_interaction(src, TRUE) && (is_ground_level(death_turf.z) || is_mainship_level(death_turf.z) || is_reserved_level(death_turf.z)))
+		new /mob/dead/mob_marker(death_turf, src)
+
+	check_blood_splash(35, BURN, 65, 2) //Some testing numbers. 35 burn, 65 chance.
 
 	..(cause)
 
 /mob/living/carbon/xenomorph/gib_animation()
-	var/to_flick = "gibbed-a"
-	var/icon_path
-	if(mob_size >= MOB_SIZE_BIG)
-		icon_path = 'icons/mob/xenos/xenomorph_64x64.dmi'
-	else
-		icon_path = 'icons/mob/xenos/xenomorph_48x48.dmi'
-	switch(caste.caste_type)
-		if(XENO_CASTE_RUNNER)
-			icon_path = 'icons/mob/xenos/xenomorph_64x64.dmi'
-			to_flick = "gibbed-a-runner"
-		if(XENO_CASTE_BOILER)
-			to_flick = "gibbed-a-boiler"
-		if(XENO_CASTE_LARVA, XENO_CASTE_PREDALIEN_LARVA)
-			icon_path = 'icons/mob/xenos/larva.dmi'
-			to_flick = "larva_gib"
-	new /obj/effect/overlay/temp/gib_animation/xeno(loc, src, to_flick, icon_path)
+	new /obj/effect/overlay/temp/gib_animation/xeno(loc, src, "gibbed-a", icon)
 
 /mob/living/carbon/xenomorph/spawn_gibs()
 	xgibs(get_turf(src))
@@ -177,3 +199,5 @@
 /mob/living/carbon/xenomorph/revive()
 	SEND_SIGNAL(src, COMSIG_XENO_REVIVED)
 	..()
+
+#undef LAST_XENO_HEAL_COOLDOWN

@@ -1,9 +1,9 @@
 import { range } from 'common/collections';
+import { useBackend } from 'tgui/backend';
+import { Box, Icon, Stack } from 'tgui/components';
 
-import { useBackend } from '../../backend';
-import { Box, Icon, Stack } from '../../components';
-import { DropshipEquipment } from '../DropshipWeaponsConsole';
-import { MfdPanel, MfdProps } from './MultifunctionDisplay';
+import type { DropshipEquipment } from '../DropshipWeaponsConsole';
+import { MfdPanel, type MfdProps } from './MultifunctionDisplay';
 import { mfdState, useWeaponState } from './stateManagers';
 import {
   getLastTargetName,
@@ -11,7 +11,7 @@ import {
   TargetLines,
   useTargetOffset,
 } from './TargetAquisition';
-import { LazeTarget } from './types';
+import type { LazeTarget } from './types';
 
 const EmptyWeaponPanel = (props) => {
   return <div>Nothing Listed</div>;
@@ -26,11 +26,15 @@ const WeaponPanel = (props: {
   readonly equipment: DropshipEquipment;
 }) => {
   const { data } = useBackend<EquipmentContext>();
+  const ammoReadout =
+    props.equipment.ammo === null || props.equipment.ammo === undefined
+      ? 'DEPLETED'
+      : props.equipment.ammo + ' / ' + props.equipment.max_ammo;
 
   return (
     <Stack>
       <Stack.Item>
-        <svg height="501" width="100">
+        <svg height="501" width="100" overflow="visible">
           <text stroke="#00e94e" x={60} y={230} textAnchor="start">
             ACTIONS
           </text>
@@ -82,15 +86,13 @@ const WeaponPanel = (props: {
               <h3>{props.equipment.ammo_name}</h3>
             </Stack.Item>
             <Stack.Item>
-              <h3>
-                Ammo {props.equipment.ammo} / {props.equipment.max_ammo}
-              </h3>
+              <h3>Ammo {ammoReadout}</h3>
             </Stack.Item>
           </Stack>
         </Box>
       </Stack.Item>
       <Stack.Item>
-        <svg width="50px" height="500px">
+        <svg width="50px" height="500px" overflow="visible">
           <g transform="translate(-10)">
             {data.targets_data.length === 0 && (
               <text

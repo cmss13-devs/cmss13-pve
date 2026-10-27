@@ -1,10 +1,15 @@
 //The mob should have a gender you want before running this proc. Will run fine without H
 /datum/preferences/proc/randomize_appearance(mob/living/carbon/human/H)
 	if(H)
-		if(H.gender == MALE)
-			gender = MALE
-		else
-			gender = FEMALE
+		switch(H.gender)
+			if(MALE)
+				gender = MALE
+			if(FEMALE)
+				gender = FEMALE
+			if(PLURAL)
+				gender = PLURAL
+			else
+				gender = pick(MALE, FEMALE)
 
 	skin_color = random_skin_color()
 	body_type = random_body_type()
@@ -16,10 +21,8 @@
 	randomize_hair_color("facial")
 	randomize_eyes_color()
 	randomize_skin_color()
-	var/list/undershirt_options = gender == MALE ? GLOB.undershirt_m : GLOB.undershirt_f
-	undershirt = pick(undershirt_options-GLOB.undershirt_restricted)
-	var/list/underwear_options = gender == MALE ? GLOB.underwear_m : GLOB.underwear_f
-	underwear = pick(underwear_options-GLOB.underwear_restricted)
+	underwear = gender == MALE ? pick(GLOB.underwear_m) : pick(GLOB.underwear_f)
+	undershirt = gender == MALE ? pick(GLOB.undershirt_m) : pick(GLOB.undershirt_f)
 	backbag = 2
 	age = rand(AGE_MIN,AGE_MAX)
 	if(H)
@@ -191,9 +194,6 @@
 	if(isnull(preview_dummy))
 		preview_dummy = new()
 
-	preview_dummy.blocks_emissive = FALSE
-	preview_dummy.update_emissive_block()
-
 	clear_equipment()
 	if(refresh_limb_status)
 		for(var/obj/limb/L in preview_dummy.limbs)
@@ -202,8 +202,23 @@
 	copy_appearance_to(preview_dummy)
 	preview_dummy.update_body()
 	preview_dummy.update_hair()
+	for (var/datum/character_trait/character_trait as anything in preview_dummy.traits)
+		character_trait.unapply_trait(preview_dummy)
+
+	var/gear_to_preview = gear.Copy()
+	var/loadout_to_preview = get_active_loadout()
+	if(loadout_to_preview)
+		gear_to_preview += loadout_to_preview
+
+	for(var/gear_type in gear_to_preview)
+		var/datum/gear/gear = GLOB.gear_datums_by_type[gear_type]
+		gear.equip_to_user(preview_dummy, override_checks = TRUE, drop_instead_of_del = FALSE)
 
 	arm_equipment(preview_dummy, J, FALSE, FALSE, owner, show_job_gear)
+
+	for(var/obj/limb/L in preview_dummy.limbs)
+		L.blocks_emissive = EMISSIVE_BLOCK_NONE
+	preview_dummy.regenerate_icons()
 
 	// If the dummy was equipped with marine armor.
 	var/jacket = preview_dummy.get_item_by_slot(WEAR_JACKET)
@@ -232,121 +247,148 @@
 		rotate_right.screen_loc = "preview:1:-16,0"
 	owner.add_to_screen(rotate_right)
 
-/datum/preferences/proc/job_pref_to_gear_preset()
-	var/highest_priority_job
-	var/highest_priority = LOW_PRIORITY
-
+/// Returns the role that is selected on High
+/datum/preferences/proc/get_high_priority_job()
 	for(var/job in job_preference_list)
-		if(job_preference_list[job] == NEVER_PRIORITY)
-			continue
+		if(job_preference_list[job] == 1)
+			return job
 
-		if(job_preference_list[job] < highest_priority)
-			highest_priority_job = job
-			highest_priority = job_preference_list[job]
+	return JOB_SQUAD_MARINE
 
-	switch(highest_priority_job)
-//USCM Section
+/datum/preferences/proc/job_pref_to_gear_preset()
+	var/high_priority = get_high_priority_job()
+
+	switch(high_priority)
+		// USCM JOBS
 		if(JOB_SQUAD_MARINE)
 			return /datum/equipment_preset/uscm/private_equipped
+		if(JOB_SQUAD_ENGI)
+			return /datum/equipment_preset/uscm/engineer_equipped
 		if(JOB_SQUAD_LEADER)
 			return /datum/equipment_preset/uscm/leader_equipped
 		if(JOB_SQUAD_MEDIC)
 			return /datum/equipment_preset/uscm/medic_equipped
+		if(JOB_SQUAD_SPECIALIST)
+			return /datum/equipment_preset/uscm/specialist_equipped
 		if(JOB_SQUAD_SMARTGUN)
 			return /datum/equipment_preset/uscm/smartgunner_equipped
 		if(JOB_SQUAD_TEAM_LEADER)
 			return /datum/equipment_preset/uscm/tl_equipped
+		if(JOB_CO)
+			var/datum/job/J = GLOB.RoleAuthority.roles_by_name[JOB_CO]
+			return J.gear_preset_whitelist["[JOB_CO][J.get_whitelist_status(owner)]"]
 		if(JOB_SO)
-			return /datum/equipment_preset/uscm_ship/so_equipped
-//USCM Aux forces (not part of pre-round role select normally)
-		if(JOB_SQUAD_SPECIALIST)
-			return /datum/equipment_preset/uscm/specialist_equipped
-		if(JOB_SQUAD_ENGI)
-			return /datum/equipment_preset/uscm/engineer_equipped
+			return /datum/equipment_preset/uscm_ship/so
+		if(JOB_XO)
+			return /datum/equipment_preset/uscm_ship/xo
+		if(JOB_AUXILIARY_OFFICER)
+			return /datum/equipment_preset/uscm_ship/auxiliary_officer
+		if(JOB_INTEL)
+			return /datum/equipment_preset/uscm/intel/full
+		if(JOB_CAS_PILOT)
+			return /datum/equipment_preset/uscm_ship/gp/full
 		if(JOB_TANK_CREW)
-			return /datum/equipment_preset/uscm/tank
+			return /datum/equipment_preset/uscm/tank/full
 		if(JOB_DROPSHIP_PILOT)
-			return /datum/equipment_preset/uscm_ship/dp
+			return /datum/equipment_preset/uscm_ship/dp/full
 		if(JOB_DROPSHIP_CREW_CHIEF)
-			return /datum/equipment_preset/uscm_ship/dcc
+			return /datum/equipment_preset/uscm_ship/dcc/full
 		if(JOB_CORPORATE_LIAISON)
 			return /datum/equipment_preset/uscm_ship/liaison
+		if(JOB_CORPORATE_BODYGUARD)
+			return /datum/equipment_preset/uscm_ship/corp_sec
+		if(JOB_COMBAT_REPORTER)
+			return /datum/equipment_preset/uscm_ship/reporter
 		if(JOB_SYNTH)
 			var/datum/job/J = GLOB.RoleAuthority.roles_by_name[JOB_SYNTH]
 			return J.gear_preset_whitelist["[JOB_SYNTH][J.get_whitelist_status(owner)]"]
-		if(JOB_DI)
-			return /datum/equipment_preset/uscm_ship/di
-//UPP Platoon
-		if(JOB_SQUAD_MARINE_UPP)
-			return /datum/equipment_preset/upp/rifleman
-		if(JOB_SQUAD_LEADER_UPP)
-			return /datum/equipment_preset/upp/navallead
-		if(JOB_SQUAD_MEDIC_UPP)
-			return /datum/equipment_preset/upp/sanitar
-		if(JOB_SQUAD_SMARTGUN_UPP)
-			return /datum/equipment_preset/upp/machinegunner
-		if(JOB_SQUAD_TEAM_LEADER_UPP)
-			return /datum/equipment_preset/upp/squadlead
-		if(JOB_SO_UPP)
-			return /datum/equipment_preset/uscm_ship/so/upp/equipped
-//FORECON Squad
-		if(JOB_SQUAD_TEAM_LEADER_FORECON)
-			return /datum/equipment_preset/uscm/forecon/squad_leader
-		if(JOB_SQUAD_LEADER_FORECON)
-			return /datum/equipment_preset/uscm/forecon/squad_leader
-		if(JOB_SQUAD_MEDIC_FORECON)
-			return /datum/equipment_preset/uscm/forecon/tech //Not making corpsman & RTO equipped presets purely for this when the tech & rifleman work to convey them respectively as-is
-		if(JOB_SQUAD_RTO)
-			return /datum/equipment_preset/uscm/forecon/standard
-		if(JOB_SQUAD_MARINE_FORECON)
-			return /datum/equipment_preset/uscm/forecon/standard
-		if(JOB_SQUAD_SMARTGUN_FORECON)
-			return /datum/equipment_preset/uscm/forecon/smartgunner
-//PMC Taskforce
-		if(JOB_PMCPLAT_OW)
-			return /datum/equipment_preset/uscm_ship/so/pmc/equipped
-		if(JOB_PMCPLAT_LEADER)
-			return /datum/equipment_preset/pmc/leader
-		if(JOB_PMCPLAT_FTL)
-			return /datum/equipment_preset/pmc/leader
-		if(JOB_PMCPLAT_SG)
-			return /datum/equipment_preset/pmc/gunner
-		if(JOB_PMCPLAT_STANDARD)
-			return /datum/equipment_preset/pmc/standard
-		if(JOB_PMCPLAT_MEDIC)
-			return /datum/equipment_preset/pmc/medic
-//PMC Taskforce(small)
-		if(JOB_PMCPLAT_SMALL_LEADER)
-			return /datum/equipment_preset/pmc/leader
-		if(JOB_PMCPLAT_SMALL_FTL)
-			return /datum/equipment_preset/pmc/leader
-		if(JOB_PMCPLAT_SMALL_SG)
-			return /datum/equipment_preset/pmc/gunner
-		if(JOB_PMCPLAT_SMALL_STANDARD)
-			return /datum/equipment_preset/pmc/standard
-		if(JOB_PMCPLAT_SMALL_MEDIC)
-			return /datum/equipment_preset/pmc/medic
-//RMC Troop
-		if(JOB_TWE_RMC_RIFLEMAN)
-			return /datum/equipment_preset/royal_marine/standard
-		if(JOB_TWE_RMC_MEDIC)
-			return /datum/equipment_preset/royal_marine/medic
-		if(JOB_TWE_RMC_ENGI)
-			return /datum/equipment_preset/royal_marine/engi
-		if(JOB_TWE_RMC_MARKSMAN)
-			return /datum/equipment_preset/royal_marine/sniper/light
-		if(JOB_TWE_RMC_SMARTGUNNER)
-			return /datum/equipment_preset/royal_marine/machinegun
-		if(JOB_TWE_RMC_BREACHER)
-			return /datum/equipment_preset/royal_marine/mortar/light
-		if(JOB_TWE_RMC_TEAMLEADER)
-			return /datum/equipment_preset/royal_marine/leader/lesser_rank
-		if(JOB_TWE_RMC_SECTIONLEADER)
-			return /datum/equipment_preset/royal_marine/leader
-		if(JOB_TWE_RMC_TROOPLEADER)
-			return /datum/equipment_preset/royal_marine/troopsergeant
-		if(JOB_TWE_RMC_LIEUTENANT)
-			return /datum/equipment_preset/royal_marine/lieuteant
+		if(JOB_WORKING_JOE)
+			return /datum/equipment_preset/synth/working_joe
+		if(JOB_POLICE)
+			return /datum/equipment_preset/uscm_ship/uscm_police/mp
+		if(JOB_CHIEF_POLICE)
+			return /datum/equipment_preset/uscm_ship/uscm_police/cmp
+		if(JOB_WARDEN)
+			return /datum/equipment_preset/uscm_ship/uscm_police/warden
+		if(JOB_SEA)
+			return /datum/equipment_preset/uscm_ship/sea
+		if(JOB_CHIEF_ENGINEER)
+			return /datum/equipment_preset/uscm_ship/chief_engineer
+		if(JOB_ORDNANCE_TECH)
+			return /datum/equipment_preset/uscm_ship/ordn
+		if(JOB_MAINT_TECH)
+			return /datum/equipment_preset/uscm_ship/maint
+		if(JOB_CHIEF_REQUISITION)
+			return /datum/equipment_preset/uscm_ship/qm
+		if(JOB_CARGO_TECH)
+			return /datum/equipment_preset/uscm_ship/cargo
+		if(JOB_CMO)
+			return /datum/equipment_preset/uscm_ship/uscm_medical/cmo
+		if(JOB_DOCTOR)
+			return /datum/equipment_preset/uscm_ship/uscm_medical/doctor
+		if(JOB_FIELD_DOCTOR)
+			return /datum/equipment_preset/uscm_ship/uscm_medical/field_doctor
+		if(JOB_RESEARCHER)
+			return /datum/equipment_preset/uscm_ship/uscm_medical/researcher
+		if(JOB_NURSE)
+			return /datum/equipment_preset/uscm_ship/uscm_medical/nurse
+		if(JOB_MESS_SERGEANT)
+			return /datum/equipment_preset/uscm_ship/chef
+		// UPP JOBS
+		if(JOB_UPP)
+			return /datum/equipment_preset/upp/soldier/dressed
+		if(JOB_UPP_ENGI)
+			return /datum/equipment_preset/upp/sapper/dressed
+		if(JOB_UPP_MEDIC)
+			return /datum/equipment_preset/upp/medic/dressed
+		if(JOB_UPP_SPECIALIST)
+			return /datum/equipment_preset/upp/specialist/dressed
+		if(JOB_UPP_LEADER)
+			return /datum/equipment_preset/upp/leader/dressed
+		if(JOB_UPP_POLICE)
+			return /datum/equipment_preset/upp/military_police/dressed
+		if(JOB_UPP_LT_OFFICER)
+			return /datum/equipment_preset/upp/officer/dressed
+		if(JOB_UPP_SUPPLY)
+			return /datum/equipment_preset/upp/supply/dressed
+		if(JOB_UPP_LT_DOKTOR)
+			return /datum/equipment_preset/upp/doctor/dressed
+		if(JOB_UPP_SRLT_OFFICER)
+			return /datum/equipment_preset/upp/officer/senior/dressed
+		if(JOB_UPP_KPT_OFFICER)
+			return /datum/equipment_preset/upp/officer/kapitan/dressed
+		if(JOB_UPP_CO_OFFICER)
+			return /datum/equipment_preset/upp/officer/major/dressed
+		if(JOB_UPP_COMMISSAR)
+			return /datum/equipment_preset/upp/commissar/dressed
+		if(JOB_UPP_SUPPORT_SYNTH)
+			return /datum/equipment_preset/synth/upp/dressed
+		if(JOB_UPP_JOE)
+			return /datum/equipment_preset/synth/working_joe/upp
+		if(JOB_UPP_PILOT)
+			return /datum/equipment_preset/upp/pilot
+		// MISC-JOBS
+		if(JOB_SURVIVOR)
+			var/list/survivor_types = pref_special_job_options[JOB_SURVIVOR] != ANY_SURVIVOR && length(SSmapping.configs[GROUND_MAP].survivor_types_by_variant[pref_special_job_options[JOB_SURVIVOR]]) ? SSmapping.configs[GROUND_MAP].survivor_types_by_variant[pref_special_job_options[JOB_SURVIVOR]] : SSmapping.configs[GROUND_MAP].survivor_types
+			if(length(survivor_types))
+				return pick(survivor_types)
+			return /datum/equipment_preset/survivor
+		if(JOB_SYNTH_SURVIVOR)
+			var/list/survivor_types = pref_special_job_options[JOB_SURVIVOR] != ANY_SURVIVOR && length(SSmapping.configs[GROUND_MAP].synth_survivor_types_by_variant[pref_special_job_options[JOB_SURVIVOR]]) ? SSmapping.configs[GROUND_MAP].synth_survivor_types_by_variant[pref_special_job_options[JOB_SURVIVOR]] : SSmapping.configs[GROUND_MAP].synth_survivor_types
+			if(length(survivor_types))
+				return pick(survivor_types)
+			return /datum/equipment_preset/synth/survivor
+		if(JOB_CO_SURVIVOR)
+			if(length(SSmapping.configs[GROUND_MAP].CO_survivor_types))
+				return pick(SSmapping.configs[GROUND_MAP].CO_survivor_types)
+			else if(length(SSmapping.configs[GROUND_MAP].CO_insert_survivor_types))
+				return pick(SSmapping.configs[GROUND_MAP].CO_insert_survivor_types)
+			return /datum/equipment_preset/uscm_co
+		if(JOB_PREDATOR)
+			var/datum/job/J = GLOB.RoleAuthority.roles_by_name[JOB_PREDATOR]
+			return J.gear_preset_whitelist["[JOB_PREDATOR][J.get_whitelist_status(owner)]"]
+		if(JOB_PRED_SURVIVOR)
+			return /datum/equipment_preset/yautja/stranded
 
 	return /datum/equipment_preset/uscm/private_equipped
 

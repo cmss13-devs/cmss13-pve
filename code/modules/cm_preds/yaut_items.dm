@@ -1,3 +1,9 @@
+// how long the cooldown for the reserve console is
+#define RESERVE_HUNT_COOLDOWN 20 MINUTES
+
+GLOBAL_VAR_INIT(hunt_timer_yautja, 0)
+GLOBAL_VAR_INIT(youngblood_timer_yautja, 0)
+
 //Items specific to yautja. Other people can use em, they're not restricted or anything.
 //They can't, however, activate any of the special functions.
 //Thrall subtypes are located in /code/modules/cm_preds/thrall_items.dm
@@ -23,14 +29,14 @@
 	name = "ancient alien armor"
 	desc = "Ancient armor made from a strange alloy. It feels cold with an alien weight."
 
-	icon = 'icons/obj/items/hunter/pred_gear.dmi'
+	icon = 'icons/obj/items/hunter/pred_armor.dmi'
 	icon_state = "halfarmor1_ebony"
 	item_state = "armor"
 	item_icons = list(
-		WEAR_JACKET = 'icons/mob/humans/onmob/hunter/pred_gear.dmi'
+		WEAR_JACKET = 'icons/mob/humans/onmob/hunter/pred_armor.dmi'
 	)
 
-	armor_melee = CLOTHING_ARMOR_MEDIUM
+	armor_melee = CLOTHING_ARMOR_MEDIUMLOW
 	armor_bullet = CLOTHING_ARMOR_MEDIUM
 	armor_laser = CLOTHING_ARMOR_MEDIUM
 	armor_energy = CLOTHING_ARMOR_MEDIUM
@@ -56,44 +62,24 @@
 	)
 	unacidable = TRUE
 	item_state_slots = list(WEAR_JACKET = "halfarmor1")
-	valid_accessory_slots = list(ACCESSORY_SLOT_ARMOR_A, ACCESSORY_SLOT_ARMOR_L, ACCESSORY_SLOT_ARMOR_S, ACCESSORY_SLOT_ARMOR_M)
-	var/thrall = FALSE//Used to affect icon generation.
+	valid_accessory_slots = list(ACCESSORY_SLOT_MEDAL, ACCESSORY_SLOT_RANK, ACCESSORY_SLOT_DECOR, ACCESSORY_SLOT_PONCHO, ACCESSORY_SLOT_MASK, ACCESSORY_SLOT_ARMBAND, ACCESSORY_SLOT_ARMOR_A, ACCESSORY_SLOT_ARMOR_L, ACCESSORY_SLOT_ARMOR_S, ACCESSORY_SLOT_ARMOR_M, ACCESSORY_SLOT_UTILITY, ACCESSORY_SLOT_PATCH, ACCESSORY_SLOT_TROPHY)
+	var/random_icon = TRUE//Used to affect icon generation.
 	fire_intensity_resistance = 10
 	black_market_value = 100
 
-/obj/item/clothing/suit/armor/yautja/Initialize(mapload, armor_number = rand(1,7), armor_material = "ebony", legacy = "None")
+/obj/item/clothing/suit/armor/yautja/Initialize(mapload, armor_number = rand(1,8), armor_material = "ebony")
 	. = ..()
-	if(thrall)
+	if(!random_icon)
+		LAZYSET(item_state_slots, WEAR_JACKET, icon_state)
 		return
 	flags_cold_protection = flags_armor_protection
 	flags_heat_protection = flags_armor_protection
 
-	if(legacy != "None")
-		switch(legacy)
-			if("dragon")
-				icon_state = "halfarmor_elder_tr"
-				LAZYSET(item_state_slots, WEAR_JACKET, "halfarmor_elder_tr")
-				return
-			if("swamp")
-				icon_state = "halfarmor_elder_joshuu"
-				LAZYSET(item_state_slots, WEAR_JACKET, "halfarmor_elder_joshuu")
-				return
-			if("enforcer")
-				icon_state = "halfarmor_elder_feweh"
-				LAZYSET(item_state_slots, WEAR_JACKET, "halfarmor_elder_feweh")
-				return
-			if("collector")
-				icon_state = "halfarmor_elder_n"
-				LAZYSET(item_state_slots, WEAR_JACKET, "halfarmor_elder_n")
-				return
-
-	if(armor_number > 7)
+	if(armor_number > 8)
 		armor_number = 1
 	if(armor_number) //Don't change full armor number
 		icon_state = "halfarmor[armor_number]_[armor_material]"
 		LAZYSET(item_state_slots, WEAR_JACKET, "halfarmor[armor_number]_[armor_material]")
-
-
 
 /obj/item/clothing/suit/armor/yautja/hunter
 	name = "clan armor"
@@ -107,6 +93,94 @@
 	armor_bio = CLOTHING_ARMOR_MEDIUMHIGH
 	armor_rad = CLOTHING_ARMOR_MEDIUMHIGH
 	armor_internaldamage = CLOTHING_ARMOR_MEDIUMHIGH
+
+/// Damaged version used by survivors.
+/obj/item/clothing/suit/armor/yautja/hunter/scalable
+	armor_melee = CLOTHING_ARMOR_MEDIUMLOW
+	armor_bullet = CLOTHING_ARMOR_MEDIUM
+	armor_laser = CLOTHING_ARMOR_MEDIUM
+	armor_energy = CLOTHING_ARMOR_MEDIUM
+	armor_bomb = CLOTHING_ARMOR_HIGH
+	armor_bio = CLOTHING_ARMOR_MEDIUM
+	armor_rad = CLOTHING_ARMOR_MEDIUM
+	armor_internaldamage = CLOTHING_ARMOR_MEDIUM
+
+	var/repair_status = YAUTJA_REPAIR_DAMAGED
+
+/obj/item/clothing/suit/armor/yautja/hunter/scalable/get_examine_text(mob/user)
+	. = ..()
+	switch(repair_status)
+		if(YAUTJA_REPAIR_DAMAGED)
+			. += SPAN_RED("It has been damaged by long use and poor maintenance.")
+		if(YAUTJA_REPAIR_REINFORCED)
+			. += SPAN_GREEN("It has been reinforced to be more protective.")
+
+/obj/item/clothing/suit/armor/yautja/hunter/scalable/badblood
+	icon = 'icons/obj/items/hunter/badblood_gear.dmi'
+	item_icons = list(
+		WEAR_JACKET = 'icons/mob/humans/onmob/hunter/badblood_gear.dmi'
+	)
+	random_icon = FALSE
+	icon_state = "bbarmor_patchwork"
+
+/obj/item/clothing/suit/armor/yautja/hunter/scalable/badblood/patchwork_alt
+	icon_state = "bbarmor_patchworkalt"
+
+/obj/item/clothing/suit/armor/yautja/hunter/scalable/badblood/lunatic
+	icon_state = "bbarmor_lunatic"
+
+/obj/item/clothing/suit/armor/yautja/hunter/scalable/badblood/scav
+	icon_state = "bbarmor_scav"
+
+/obj/item/clothing/suit/armor/yautja/hunter/scalable/badblood/scav_alt
+	icon_state = "bbarmor_scavalt"
+
+/obj/item/clothing/suit/armor/yautja/hunter/scalable/badblood/venator
+	icon_state = "bbarmor_venator"
+
+/obj/item/clothing/suit/armor/yautja/hunter/scalable/badblood/commando
+	icon_state = "bbarmor_commando"
+
+/obj/item/clothing/suit/armor/yautja/hunter/scalable/badblood/commando_alt
+	icon_state = "bbarmor_commandoalt"
+
+/obj/item/clothing/suit/armor/yautja/hunter/scalable/badblood/bane
+	icon_state = "bbarmor_bane"
+
+/// emissary armor
+/obj/item/clothing/suit/armor/yautja/hunter/scalable/badblood/emissary
+	name = "YM4 pattern clan armor"
+	desc = "A suit of oversized armor built from M3 pattern plating and Smart-Gunner mesh, built for something larger than any normal man."
+	var/conforming = FALSE
+	var/camo_type = "classic"
+	icon_state = "bbarmor_emissary_classic"
+
+/obj/item/clothing/suit/armor/yautja/hunter/scalable/badblood/emissary/Initialize(mapload) // override random armor icons
+	. = ..(mapload, 0)
+	if(conforming)
+		camo_type = SSmapping.configs[GROUND_MAP].camouflage_type
+	icon_state = "bbarmor_emissary_[camo_type]"
+	LAZYSET(item_state_slots, WEAR_JACKET, "bbarmor_emissary_[camo_type]")
+
+/obj/item/clothing/suit/armor/yautja/hunter/scalable/badblood/emissary/desert
+	camo_type = "desert"
+	icon_state = "bbarmor_emissary_desert"
+
+/obj/item/clothing/suit/armor/yautja/hunter/scalable/badblood/emissary/jungle
+	camo_type = "jungle"
+	icon_state = "bbarmor_emissary_jungle"
+
+/obj/item/clothing/suit/armor/yautja/hunter/scalable/badblood/emissary/snow
+	camo_type = "snow"
+	icon_state = "bbarmor_emissary_snow"
+
+/obj/item/clothing/suit/armor/yautja/hunter/scalable/badblood/emissary/urban
+	camo_type = "urban"
+	icon_state = "bbarmor_emissary_urban"
+
+/obj/item/clothing/suit/armor/yautja/hunter/scalable/badblood/emissary/camo_conforming
+	conforming = TRUE
+
 
 
 /obj/item/clothing/suit/armor/yautja/hunter/full
@@ -123,7 +197,7 @@
 	armor_bio = CLOTHING_ARMOR_HIGH
 	armor_rad = CLOTHING_ARMOR_HIGH
 	armor_internaldamage = CLOTHING_ARMOR_HIGH
-	slowdown = 1
+	slowdown = 0.75
 	var/speed_timer = 0
 	item_state_slots = list(WEAR_JACKET = "fullarmor")
 	allowed = list(
@@ -141,7 +215,6 @@
 	icon_state = "fullarmor_[armor_material]"
 	LAZYSET(item_state_slots, WEAR_JACKET, "fullarmor_[armor_material]")
 
-
 /obj/item/clothing/yautja_cape
 	name = PRED_YAUTJA_CAPE
 	desc = "A battle-worn cape passed down by elder Yautja."
@@ -153,8 +226,9 @@
 	flags_equip_slot = SLOT_BACK
 	flags_item = ITEM_PREDATOR
 	unacidable = TRUE
-	var/clan_rank_required = CLAN_RANK_ELDER_INT
 	var/councillor_override = FALSE
+	worn_accessory_slot = ACCESSORY_SLOT_PONCHO
+	flags_obj = OBJ_CAN_ACCESSORIZE
 
 /obj/item/clothing/yautja_cape/Initialize(mapload, new_color = "#654321")
 	. = ..()
@@ -165,9 +239,9 @@
 	..()
 
 /obj/item/clothing/yautja_cape/pickup(mob/living/user)
+	. = ..()
 	if(isyautja(user))
 		remove_from_missing_pred_gear(src)
-	..()
 
 /obj/item/clothing/yautja_cape/Destroy()
 	. = ..()
@@ -176,40 +250,41 @@
 /obj/item/clothing/yautja_cape/ceremonial
 	name = PRED_YAUTJA_CEREMONIAL_CAPE
 	icon_state = "ceremonialcape"
-	clan_rank_required = CLAN_RANK_ELDER_INT
 
 /obj/item/clothing/yautja_cape/third
 	name = PRED_YAUTJA_THIRD_CAPE
 	icon_state = "thirdcape"
-	clan_rank_required = CLAN_RANK_ELDER_INT
 
 /obj/item/clothing/yautja_cape/half
 	name = PRED_YAUTJA_HALF_CAPE
 	icon_state = "halfcape"
-	clan_rank_required = CLAN_RANK_BLOODED_INT
 
 /obj/item/clothing/yautja_cape/quarter
 	name = PRED_YAUTJA_QUARTER_CAPE
 	icon_state = "quartercape"
-	clan_rank_required = CLAN_RANK_BLOODED_INT
 
 /obj/item/clothing/yautja_cape/poncho
 	name = PRED_YAUTJA_PONCHO
 	icon_state = "councilor_poncho"
-	clan_rank_required = CLAN_RANK_BLOODED_INT
+
+/obj/item/clothing/yautja_cape/damaged
+	name = PRED_YAUTJA_DAMAGED_CAPE
+	icon_state = "damagedcape"
+
+// ---------- Shoes ----------
 
 /obj/item/clothing/shoes/yautja
 	name = "ancient alien greaves"
 	desc = "Greaves made from scraps of cloth and a strange alloy. They feel cold with an alien weight."
 
-	icon = 'icons/obj/items/hunter/pred_gear.dmi'
+	icon = 'icons/obj/items/hunter/pred_shoes.dmi'
 	item_icons = list(
-		WEAR_FEET = 'icons/mob/humans/onmob/hunter/pred_gear.dmi'
+		WEAR_FEET = 'icons/mob/humans/onmob/hunter/pred_shoes.dmi'
 	)
 	icon_state = "y-boots1_ebony"
 
 	unacidable = TRUE
-	permeability_coefficient = 0.01
+
 	flags_inventory = NOSLIPPING
 	flags_armor_protection = BODY_FLAG_FEET|BODY_FLAG_LEGS
 	flags_item = ITEM_PREDATOR
@@ -231,13 +306,13 @@
 	armor_bio = CLOTHING_ARMOR_MEDIUM
 	armor_rad = CLOTHING_ARMOR_MEDIUM
 	armor_internaldamage = CLOTHING_ARMOR_MEDIUM
-	var/thrall = FALSE//Used to affect icon generation.
+	var/random_icon = TRUE//Used to affect icon generation.
 	fire_intensity_resistance = 10
 	black_market_value = 50
 
-/obj/item/clothing/shoes/yautja/New(location, boot_number = rand(1,4), armor_material = "ebony")
-	..()
-	if(thrall)
+/obj/item/clothing/shoes/yautja/Initialize(mapload, boot_number = rand(1,4), armor_material = "ebony")
+	. = ..(mapload, 0)
+	if(!random_icon)
 		return
 	if(boot_number > 4)
 		boot_number = 1
@@ -248,7 +323,7 @@
 
 /obj/item/clothing/shoes/yautja/hunter
 	name = "clan greaves"
-	desc = "A pair of armored, perfectly balanced boots. Perfect for running through the jungle."
+	desc = "A pair of armored, perfectly balanced boots. Ideal for running through the jungle."
 
 	armor_melee = CLOTHING_ARMOR_MEDIUMHIGH
 	armor_bullet = CLOTHING_ARMOR_HIGH
@@ -261,6 +336,100 @@
 
 /obj/item/clothing/shoes/yautja/hunter/knife
 	spawn_item_type = /obj/item/weapon/yautja/knife
+
+/// Damaged version used by survivors.
+/obj/item/clothing/shoes/yautja/hunter/scalable
+	armor_melee = CLOTHING_ARMOR_MEDIUM
+	armor_bullet = CLOTHING_ARMOR_MEDIUMHIGH
+	armor_laser = CLOTHING_ARMOR_MEDIUM
+	armor_energy = CLOTHING_ARMOR_MEDIUM
+	armor_bomb = CLOTHING_ARMOR_MEDIUMHIGH
+	armor_bio = CLOTHING_ARMOR_MEDIUM
+	armor_rad = CLOTHING_ARMOR_MEDIUM
+	armor_internaldamage = CLOTHING_ARMOR_MEDIUM
+
+	var/repair_status = YAUTJA_REPAIR_DAMAGED
+
+/obj/item/clothing/shoes/yautja/hunter/scalable/knife
+	spawn_item_type = /obj/item/weapon/yautja/knife
+
+/obj/item/clothing/shoes/yautja/hunter/scalable/get_examine_text(mob/user)
+	. = ..()
+	switch(repair_status)
+		if(YAUTJA_REPAIR_DAMAGED)
+			. += SPAN_RED("They have been damaged by long use and poor maintenance.")
+		if(YAUTJA_REPAIR_REINFORCED)
+			. += SPAN_GREEN("It has been reinforced to be more protective.")
+
+/obj/item/clothing/shoes/yautja/hunter/scalable/badblood
+	icon = 'icons/obj/items/hunter/badblood_gear.dmi'
+	item_icons = list(
+		WEAR_FEET = 'icons/mob/humans/onmob/hunter/badblood_gear.dmi'
+	)
+
+	icon_state = "bb_y_boots_patchwork"
+	random_icon = FALSE
+	spawn_item_type = /obj/item/weapon/yautja/knife
+
+/obj/item/clothing/shoes/yautja/hunter/scalable/badblood/patchwork_alt
+	icon_state = "bb_y_boots_patchworkalt"
+
+/obj/item/clothing/shoes/yautja/hunter/scalable/badblood/lunatic
+	icon_state = "bb_y_boots_lunatic"
+
+/obj/item/clothing/shoes/yautja/hunter/scalable/badblood/scav
+	icon_state = "bb_y_boots_scav"
+
+/obj/item/clothing/shoes/yautja/hunter/scalable/badblood/scav_alt
+	icon_state = "bb_y_boots_scavalt"
+
+/obj/item/clothing/shoes/yautja/hunter/scalable/badblood/venator
+	icon_state = "bb_y_boots_venator"
+
+/obj/item/clothing/shoes/yautja/hunter/scalable/badblood/commando
+	icon_state = "bb_y_boots_commando"
+
+/obj/item/clothing/shoes/yautja/hunter/scalable/badblood/commando_alt
+	icon_state = "bb_y_boots_commandoalt"
+
+/obj/item/clothing/shoes/yautja/hunter/scalable/badblood/bane
+	icon_state = "bb_y_boots_bane"
+
+// emissary greaves
+
+/obj/item/clothing/shoes/yautja/hunter/scalable/badblood/emissary
+	name = "clan combat boots"
+	desc = "A pair of armored boots modified with human armor plating, though still scaled to fit a hunter."
+	var/conforming = FALSE
+	var/camo_type = "classic"
+
+/obj/item/clothing/shoes/yautja/hunter/scalable/badblood/emissary/Initialize(mapload)
+	. = ..(mapload, 0)
+	if(conforming)
+		camo_type = SSmapping.configs[GROUND_MAP].camouflage_type
+	icon_state = "bb_y_boots_emissary_[camo_type]"
+	LAZYSET(item_state_slots, WEAR_FEET, "bb_y_boots_emissary_[camo_type]")
+
+/obj/item/clothing/shoes/yautja/hunter/scalable/badblood/emissary/desert
+	camo_type = "desert"
+	icon_state = "bb_y_boots_emissary_desert"
+
+/obj/item/clothing/shoes/yautja/hunter/scalable/badblood/emissary/jungle
+	camo_type = "jungle"
+	icon_state = "bb_y_boots_emissary_jungle"
+
+/obj/item/clothing/shoes/yautja/hunter/scalable/badblood/emissary/snow
+	camo_type = "snow"
+	icon_state = "bb_y_boots_emissary_snow"
+
+/obj/item/clothing/shoes/yautja/hunter/scalable/badblood/emissary/urban
+	camo_type = "urban"
+	icon_state = "bb_y_boots_emissary_urban"
+
+/obj/item/clothing/shoes/yautja/hunter/scalable/badblood/emissary/camo_conforming
+	conforming = TRUE
+
+// ---------- Shirt ----------
 
 /obj/item/clothing/under/chainshirt
 	name = "ancient alien mesh suit"
@@ -277,12 +446,13 @@
 	flags_heat_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN|BODY_FLAG_LEGS|BODY_FLAG_ARMS|BODY_FLAG_FEET|BODY_FLAG_HANDS
 	flags_item = ITEM_PREDATOR
 	has_sensor = UNIFORM_HAS_SENSORS
-	sensor_faction = FACTION_YAUTJA
 	siemens_coefficient = 0.9
 	min_cold_protection_temperature = ICE_PLANET_MIN_COLD_PROT
+	valid_accessory_slots = list(ACCESSORY_SLOT_DEFAULT, ACCESSORY_SLOT_TIE, ACCESSORY_SLOT_PATCH, ACCESSORY_SLOT_STORAGE, ACCESSORY_SLOT_UTILITY, ACCESSORY_SLOT_ARMBAND, ACCESSORY_SLOT_RANK, ACCESSORY_SLOT_DECOR, ACCESSORY_SLOT_MEDAL, ACCESSORY_SLOT_ARMOR_C, ACCESSORY_SLOT_WRIST_L, ACCESSORY_SLOT_WRIST_R, ACCESSORY_SLOT_MASK, ACCESSORY_SLOT_TROPHY)
+	is_seethrough = TRUE
 
 	armor_melee = CLOTHING_ARMOR_LOW
-	armor_bullet = CLOTHING_ARMOR_LOW
+	armor_bullet = CLOTHING_ARMOR_MEDIUMLOW
 	armor_laser = CLOTHING_ARMOR_MEDIUM
 	armor_energy = CLOTHING_ARMOR_MEDIUM
 	armor_bomb = CLOTHING_ARMOR_MEDIUMHIGH
@@ -295,7 +465,7 @@
 	desc = "A set of very fine chainlink in a meshwork for comfort and utility."
 
 	armor_melee = CLOTHING_ARMOR_LOW
-	armor_bullet = CLOTHING_ARMOR_LOW
+	armor_bullet = CLOTHING_ARMOR_MEDIUM
 	armor_laser = CLOTHING_ARMOR_MEDIUMHIGH
 	armor_energy = CLOTHING_ARMOR_MEDIUMHIGH
 	armor_bomb = CLOTHING_ARMOR_HIGH
@@ -304,11 +474,31 @@
 	armor_internaldamage = CLOTHING_ARMOR_MEDIUMHIGH
 	black_market_value = 50
 
+/obj/item/clothing/under/chainshirt/hunter/scalable
+	armor_melee = CLOTHING_ARMOR_LOW
+	armor_bullet = CLOTHING_ARMOR_MEDIUMLOW
+	armor_laser = CLOTHING_ARMOR_MEDIUM
+	armor_energy = CLOTHING_ARMOR_MEDIUM
+	armor_bomb = CLOTHING_ARMOR_MEDIUMHIGH
+	armor_bio = CLOTHING_ARMOR_MEDIUM
+	armor_rad = CLOTHING_ARMOR_MEDIUM
+	armor_internaldamage = CLOTHING_ARMOR_MEDIUM
+
+	var/repair_status = YAUTJA_REPAIR_DAMAGED
+
+/obj/item/clothing/under/chainshirt/hunter/scalable/get_examine_text(mob/user)
+	. = ..()
+	switch(repair_status)
+		if(YAUTJA_REPAIR_DAMAGED)
+			. += SPAN_RED("It has been worn from long use and poor maintenance.")
+		if(YAUTJA_REPAIR_REINFORCED)
+			. += SPAN_GREEN("It has been reinforced to be more protective.")
+
 //=================//\\=================\\
 //======================================\\
 
 /*
-				   GEAR
+				GEAR
 */
 
 //======================================\\
@@ -320,31 +510,75 @@
 	desc = "A strange Yautja device used for projecting the Yautja's voice to the others in its pack. Similar in function to a standard human radio."
 	icon_state = "communicator"
 	item_state = "headset"
+	item_icons = list(
+		WEAR_L_HAND = 'icons/mob/humans/onmob/inhands/equipment/devices_lefthand.dmi',
+		WEAR_R_HAND = 'icons/mob/humans/onmob/inhands/equipment/devices_righthand.dmi',
+	)
 	frequency = YAUT_FREQ
 	unacidable = TRUE
 	ignore_z = TRUE
 	black_market_value = 100
 	flags_item = ITEM_PREDATOR
+	volume_settings = list(RADIO_VOLUME_QUIET_STR, RADIO_VOLUME_RAISED_STR)
+	minimap_flag = MINIMAP_FLAG_YAUTJA
 
 /obj/item/device/radio/headset/yautja/talk_into(mob/living/M as mob, message, channel, verb = "commands", datum/language/speaking)
-	if(!isyautja(M)) //Nope.
+	if(!isyautja(M) && !isthrall(M)) //Nope.
 		to_chat(M, SPAN_WARNING("You try to talk into the headset, but just get a horrible shrieking in your ears!"))
 		return
+	var/check_channel = channel
+	if(check_channel == RADIO_CHANNEL_HEADSET)
+		check_channel = default_freq
+
+	if((check_channel == RADIO_CHANNEL_YAUTJA_OVERSEER) || (channel != RADIO_CHANNEL_HEADSET && !(check_channel in channels)))
+		return ..()
 
 	for(var/mob/living/carbon/xenomorph/hellhound/hellhound as anything in GLOB.hellhound_list)
-		if(!hellhound.stat)
-			to_chat(hellhound, "\[Radio\]: [M.real_name] [verb], '<B>[message]</b>'.")
+		if(hellhound.stat)
+			continue
+		// Check that it should actually be hearing this stuff.
+		if(check_channel == RADIO_CHANNEL_YAUTJA && hellhound.faction != FACTION_YAUTJA)
+			continue
+		if(check_channel == RADIO_CHANNEL_YAUTJA_STRANDED && hellhound.faction != FACTION_YAUTJA_STRANDED)
+			continue
+		if(check_channel == RADIO_CHANNEL_YAUTJA_BADBLOOD && hellhound.faction != FACTION_YAUTJA_BADBLOOD)
+			continue
+		to_chat(hellhound, SPAN_YAUTJABOLD("\[Radio\]: [M.real_name] [verb], '<B>[message]</b>'."))
+
+	if(check_channel == RADIO_CHANNEL_YAUTJA_BADBLOOD)
+		var/datum/hive_status/hive = GLOB.hive_datum[XENO_HIVE_YAUTJA_BADBLOOD]
+		if(istype(hive))
+			for(var/mob/living/carbon/xenomorph/enthralled in hive.totalXenos)
+				if(enthralled.stat)
+					continue
+				to_chat(enthralled, SPAN_YAUTJABOLD("\[Radio\]: [M.real_name] [verb], '<B>[message]</b>'."))
 	..()
 
-/obj/item/device/radio/headset/yautja/elder //primarily for use in another MR
-	name = "\improper Elder Communicator"
+/obj/item/device/radio/headset/yautja/overseer //for council
+	name = "\improper Overseer Communicator"
 	volume_settings = list(RADIO_VOLUME_QUIET_STR, RADIO_VOLUME_RAISED_STR, RADIO_VOLUME_IMPORTANT_STR, RADIO_VOLUME_CRITICAL_STR)
+	initial_keys = list(/obj/item/device/encryptionkey/yautja/overseer)
+
+/obj/item/device/radio/headset/yautja/badblood
+	name = "\improper Modified Communicator"
+	desc = "A strange Yautja device used for projecting the Yautja's voice to the others in its pack. Similar in function to a standard human radio. This one has been modified in some way."
+	frequency = BADBLOOD_FREQ
+
+/obj/item/device/radio/headset/yautja/stranded
+	name = "\improper Damaged Communicator"
+	desc = "A strange Yautja device used for projecting the Yautja's voice to the others in its pack. Similar in function to a standard human radio. This one seems damaged and is transmitting on a different frequency."
+	frequency = STRANDED_FREQ
 
 /obj/item/device/encryptionkey/yautja
 	name = "\improper Yautja encryption key"
 	desc = "A complicated encryption device."
 	icon_state = "cypherkey"
-	channels = list(RADIO_CHANNEL_YAUTJA = 1)
+	channels = list(RADIO_CHANNEL_YAUTJA = TRUE)
+
+/obj/item/device/encryptionkey/yautja/overseer
+	name = "\improper Yautja Overseer encryption key"
+	channels = list(RADIO_CHANNEL_YAUTJA = TRUE, RADIO_CHANNEL_YAUTJA_OVERSEER = TRUE)
+	abstract = TRUE
 
 //Yes, it's a backpack that goes on the belt. I want the backpack noises. Deal with it (tm)
 /obj/item/storage/backpack/yautja
@@ -397,20 +631,11 @@
 		to_chat(user, SPAN_WARNING("You fiddle with it, but nothing happens!"))
 		return
 
-	if(H.client && H.client.clan_info)
-		var/datum/entity/clan_player/clan_info = H.client.clan_info
-		if(clan_info.permissions & CLAN_PERMISSION_ADMIN_VIEW)
-			var/list/datum/view_record/clan_view/CPV = DB_VIEW(/datum/view_record/clan_view/)
-			for(var/datum/view_record/clan_view/CV in CPV)
-				if(!SSpredships.is_clanship_loaded(CV?.clan_id))
-					continue
-				ship_to_tele += list("[CV.name]" = "[CV.clan_id]: [CV.name]")
-		if(SSpredships.is_clanship_loaded(clan_info?.clan_id))
-			ship_to_tele += list("Your clan" = "[clan_info.clan_id]")
+	if(H.faction == FACTION_YAUTJA_YOUNG)
+		to_chat(user, SPAN_WARNING("You have not been shown how to use the relay beacon, best not fiddle with it."))
+		return
 
 	var/clan = ship_to_tele[tgui_input_list(H, "Select a ship to teleport to", "[src]", ship_to_tele)]
-	if(clan != "Human" && !SSpredships.is_clanship_loaded(clan))
-		return // Checking ship is valid
 
 	// Getting an arrival point
 	var/turf/target_turf
@@ -418,7 +643,7 @@
 		var/obj/effect/landmark/yautja_teleport/pickedYT = pick(GLOB.mainship_yautja_teleports)
 		target_turf = get_turf(pickedYT)
 	else
-		target_turf = SAFEPICK(SSpredships.get_clan_spawnpoints(clan))
+		target_turf = SAFEPICK(GLOB.yautja_spawnpoints)
 	if(!istype(target_turf))
 		return
 
@@ -456,31 +681,277 @@
 	set src in usr
 	if(!usr || usr.stat || !is_ground_level(usr.z))
 		return FALSE
+	var/mob/user = usr
 
-	if(istype(usr.buckled, /obj/structure/bed/nest/))
+	if(istype(user.buckled, /obj/structure/bed/nest/))
 		return FALSE
 
-	if(!HAS_TRAIT(usr, TRAIT_YAUTJA_TECH))
-		to_chat(usr, SPAN_WARNING("You have no idea how this thing works!"))
+	if(!HAS_TRAIT(user, TRAIT_YAUTJA_TECH))
+		to_chat(user, SPAN_WARNING("You have no idea how this thing works!"))
 		return FALSE
 
-	if(loc && istype(usr.loc, /turf))
-		var/turf/location = usr.loc
+	if(loc && istype(user.loc, /turf))
+		var/turf/location = user.loc
 		GLOB.yautja_teleports += location
 		var/name = input("What would you like to name this location?", "Text") as null|text
 		if(!name)
 			return FALSE
 		GLOB.yautja_teleport_descs[name + location.loc_to_string()] = location
-		to_chat(usr, SPAN_WARNING("You can now teleport to this location!"))
-		log_game("[usr] ([usr.key]) has created a new teleport location at [get_area(usr)]")
-		message_all_yautja("[usr.real_name] has created a new teleport location, [name], at [usr.loc] in [get_area(usr)]")
+		to_chat(user, SPAN_WARNING("You can now teleport to this location!"))
+		log_game("[user] ([user.key]) has created a new teleport location at [get_area(user)]")
+		message_all_yautja("[user.real_name] has created a new teleport location, [name], at [user.loc] in [get_area(user)]", broadcast_networks = list(user.faction))
 		return TRUE
+
+
+///HUNTING GROUNDS STUFF!!!!///
+
+//Allow Yautja to generate a new hunting ground separate from the main ground Z level
+/obj/structure/machinery/hunting_ground_selection
+	name = "hunter flight console"
+	desc = "A console designed by the Hunters to assist in flight pathing and navigation."
+	icon = 'icons/obj/structures/machinery/yautja_machines.dmi'
+	icon_state = "overwatch"
+	density = TRUE
+	breakable = FALSE
+	explo_proof = TRUE
+	unslashable = TRUE
+	unacidable = TRUE
+	///List of where they can choose to go to
+	var/static/list/potential_hunting_grounds = list()
+	///If one has already been spawned, don't let more be spawned
+	var/static/hunting_ground_activated = FALSE
+
+/obj/structure/machinery/hunting_ground_selection/Initialize(mapload, ...)
+	. = ..()
+	if(!length(potential_hunting_grounds))
+		generate_hunting_grounds_list()
+
+/obj/structure/machinery/hunting_ground_selection/proc/generate_hunting_grounds_list()
+	for(var/datum/lazy_template/pred/hunting_ground as anything in subtypesof(/datum/lazy_template/pred))
+		if(!hunting_ground::hunting_ground_name) //if theres no name, assume its abstract
+			continue
+		potential_hunting_grounds[hunting_ground::hunting_ground_name] = hunting_ground
+
+/obj/structure/machinery/hunting_ground_selection/attack_hand(mob/living/user)
+	. = ..()
+	if(!HAS_TRAIT(user, TRAIT_YAUTJA_TECH))
+		to_chat(user, SPAN_WARNING("You do not understand how to use this console."))
+		return
+
+	if(isthrall(user))
+		to_chat(user, SPAN_WARNING("Your master would not like you to use this."))
+		return
+
+	if(user.faction == FACTION_YAUTJA_YOUNG)
+		to_chat(user, SPAN_WARNING("You do not understand how to use this console."))
+		return
+
+	if(hunting_ground_activated)
+		to_chat(user, SPAN_WARNING("A hunting ground has already been chosen."))
+		return
+
+	if(!length(potential_hunting_grounds))
+		to_chat(user, SPAN_WARNING("There are no available hunting grounds to select."))
+		return
+
+	var/choice = tgui_input_list(user, "Which hunting grounds do you choose.", "[src]", potential_hunting_grounds)
+	if(!choice)
+		to_chat(user, SPAN_WARNING("You have not chosen any hunting grounds."))
+		return
+
+	if(hunting_ground_activated) //check again after the choice just in case
+		to_chat(user, SPAN_WARNING("A hunting ground has already been chosen."))
+		return
+
+	to_chat(user, SPAN_NOTICE("You choose [choice] as the hunting ground."))
+	message_all_yautja("[user.real_name] has chosen [choice] as the new hunting ground.")
+	message_admins(FONT_SIZE_LARGE("ALERT: [user.real_name] ([user.key]) spawned [choice] (hunting grounds)"))
+	if(SSmapping.lazy_load_template(potential_hunting_grounds[choice]))
+		hunting_ground_activated = TRUE
+
+
+/obj/structure/machinery/hunt_ground_spawner
+	name = "huntsmasters console"
+	desc = "A console for creating hunts."
+	icon = 'icons/obj/structures/machinery/yautja_machines.dmi'
+	icon_state = "overwatch"
+	density = TRUE
+	breakable = FALSE
+	explo_proof = TRUE
+	unslashable = TRUE
+	unacidable = TRUE
+	///List of what ERTs can be called
+	var/static/list/potential_prey = list()
+	var/obj/structure/machinery/hunting_ground_selection/hunt
+
+/obj/structure/machinery/hunt_ground_spawner/Initialize(mapload, ...)
+	. = ..()
+	if(!length(potential_prey))
+		generate_hunt_list()
+
+/obj/structure/machinery/hunt_ground_spawner/proc/generate_hunt_list()
+	for(var/datum/emergency_call/pred/hunting_type as anything in subtypesof(/datum/emergency_call/pred))
+		if(!hunting_type::hunt_name)
+			continue
+		potential_prey[hunting_type::hunt_name] = hunting_type
+
+/obj/structure/machinery/hunt_ground_spawner/attack_hand(mob/living/user)
+	. = ..()
+	if(!isyautja(user))
+		to_chat(user, SPAN_WARNING("You do not understand how to use this console."))
+		return
+
+	if(user.faction == FACTION_YAUTJA_YOUNG)
+		to_chat(user, SPAN_WARNING("You do not understand how to use this console."))
+		return
+
+	if(!COOLDOWN_FINISHED(GLOB, hunt_timer_yautja))
+		var/remaining_time = DisplayTimeText(COOLDOWN_TIMELEFT(GLOB, hunt_timer_yautja))
+		to_chat(user, SPAN_WARNING("You may begin another hunt in: [remaining_time]."))
+		return
+
+	if(!length(potential_prey))
+		to_chat(user, SPAN_WARNING("There are no available hunts to select."))
+		return
+
+	var/choice = tgui_input_list(user, "What will you hunt today?", "[src]", potential_prey)
+	if(!choice)
+		to_chat(user, SPAN_WARNING("You have not chosen any prey to hunt."))
+		return
+
+	to_chat(user, SPAN_NOTICE("You choose [choice] as your prey."))
+	message_all_yautja("[user.real_name] has chosen [choice] as their prey.")
+	message_admins(FONT_SIZE_LARGE("ALERT: [user.real_name] ([user.key]) triggered [choice] inside the hunting grounds"))
+	var/datum/emergency_call/pred/picked_call = potential_prey[choice]
+	SSticker.mode.get_specific_call(picked_call, TRUE, FALSE)
+	var/true_cooldown = (RESERVE_HUNT_COOLDOWN) * picked_call.timer_mult // multiplies the 20 minute timer by a set amount based on the chosen call
+	COOLDOWN_START(GLOB, hunt_timer_yautja, true_cooldown)
+
+
+/obj/structure/machinery/hunt_ground_escape
+	name = "preserve shutter console"
+	desc = "A console for opening a shutter to another part of the reserve."
+	icon = 'icons/obj/structures/machinery/yautja_machines.dmi'
+	icon_state = "crew"
+	density = TRUE
+	breakable = FALSE
+	explo_proof = TRUE
+	unslashable = TRUE
+	unacidable = TRUE
+	var/escaped = FALSE
+
+/obj/structure/machinery/hunt_ground_escape/attack_hand(mob/user)
+	. = ..()
+	if(!isyautja(user))
+		to_chat(user, SPAN_WARNING("The console blerts out two words you can understand: 'Scan' and 'Mask'."))
+		return
+
+	var/choice = tgui_alert(user, "Do you wish to close or open the shutter?", "[src]", list("Open", "Close"), 15 SECONDS)
+	if(!choice)
+		return
+
+	if(choice == "Open")
+		if(escaped)
+			to_chat(user, SPAN_WARNING("The shutter is already open."))
+			return
+		SEND_GLOBAL_SIGNAL(COMSIG_GLOB_YAUTJA_PRESERVE_OPENED)
+		message_all_yautja("[user.real_name] has opened the preserve shutter.")
+		escaped = TRUE
+
+	if(choice == "Close")
+		if(!escaped)
+			to_chat(user, SPAN_WARNING("The shutter is already closed."))
+			return
+		SEND_GLOBAL_SIGNAL(COMSIG_GLOB_YAUTJA_PRESERVE_CLOSED)
+		escaped = FALSE
+
+/obj/structure/machinery/hunt_ground_escape/attackby(obj/item/attacking_item, mob/user)
+	if(escaped)
+		to_chat(user, SPAN_NOTICE("The shutter is already open."))
+		return
+
+	if(attacking_item.loc != user)
+		to_chat(user, SPAN_WARNING("You cannot scan [attacking_item] without holding it."))
+		return
+
+	if(user.action_busy)
+		return
+
+	if(!istype(attacking_item, /obj/item/clothing/mask/gas/yautja/hunter))
+		to_chat(user, SPAN_DANGER("The console refuses [attacking_item]."))
+		return
+	to_chat(user, SPAN_DANGER("You hold [attacking_item] up to the console, and it begins to scan..."))
+	message_all_yautja("Prey is trying to escape the hunting grounds at [get_area(user)] console.")
+
+	if(!do_after(user, 15 SECONDS, INTERRUPT_ALL, BUSY_ICON_GENERIC))
+		to_chat(user, SPAN_DANGER("The strange console stops scanning abruptly."))
+		return
+
+	to_chat(user, SPAN_DANGER("The strange console's screen turns green and the shutter opens. Make your escape!"))
+	SEND_GLOBAL_SIGNAL(COMSIG_GLOB_YAUTJA_PRESERVE_OPENED)
+	escaped = TRUE
+
+/obj/structure/machinery/blooding_spawner // for spawning an ert containing non-whitelisted youngbloods.
+	name = "blooding console"
+	desc = "A console used by Yautja to awaken Youngbloods awaiting their Blooding Ritual."
+	icon = 'icons/obj/structures/machinery/yautja_machines.dmi'
+	icon_state = "cameras"
+	density = TRUE
+	breakable = FALSE
+	explo_proof = TRUE
+	unslashable = TRUE
+	unacidable = TRUE
+	var/static/list/un_blooded = list()
+
+/obj/structure/machinery/blooding_spawner/Initialize(mapload, ...)
+	. = ..()
+	if(!length(un_blooded))
+		generate_blooding_type()
+
+/obj/structure/machinery/blooding_spawner/proc/generate_blooding_type()
+	for(var/datum/emergency_call/young_bloods/blooding_type as anything in subtypesof(/datum/emergency_call/young_bloods))
+		if(!blooding_type.blooding_name)
+			continue
+		un_blooded[blooding_type.blooding_name] = blooding_type
+
+/obj/structure/machinery/blooding_spawner/attack_hand(mob/living/user)
+	. = ..()
+	if(!isyautja(user))
+		to_chat(user, SPAN_WARNING("You do not understand how to use this console."))
+		return
+
+	if(user.faction == FACTION_YAUTJA_YOUNG)
+		to_chat(user, SPAN_WARNING("This is not for you."))
+		return
+
+	if(!COOLDOWN_FINISHED(GLOB, youngblood_timer_yautja))
+		var/remaining_time = DisplayTimeText(COOLDOWN_TIMELEFT(GLOB, youngblood_timer_yautja))
+		to_chat(user, SPAN_WARNING("You may begin another hunt in: [remaining_time]."))
+		return
+
+	if(!length(un_blooded))
+		to_chat(user, SPAN_WARNING("There are no youngbloods available."))
+		return
+
+	var/choice = tgui_input_list(user, "Available youngblood groups to awaken.", "[src]", un_blooded)
+	if(!choice)
+		to_chat(user, SPAN_WARNING("You choose not to awaken any youngbloods."))
+		return
+
+	to_chat(user, SPAN_NOTICE("You choose to awaken: [choice]."))
+	message_all_yautja("[user.real_name] has chosen to awaken: [choice].")
+	message_admins(FONT_SIZE_LARGE("ALERT: [user.real_name] ([user.key]) has called [choice] (Youngblood ERT)."))
+	SSticker.mode.get_specific_call(un_blooded[choice], TRUE, FALSE)
+	COOLDOWN_START(GLOB, youngblood_timer_yautja, 40 MINUTES)
+
+//=================//\\=================\\
+//======================================\\
 
 //=================//\\=================\\
 //======================================\\
 
 /*
-			   OTHER THINGS
+			OTHER THINGS
 */
 
 //======================================\\
@@ -489,7 +960,6 @@
 /obj/item/scalp
 	name = "scalp"
 	icon = 'icons/obj/items/hunter/pred_gear.dmi'
-	w_class = SIZE_TINY
 	icon_state = "scalp_1"
 	item_state = "scalp"
 	item_icons = list(
@@ -611,76 +1081,6 @@
 	else
 		. += SPAN_WARNING("Scalp-collecting is supposed to be a <i>joke</i>. Has someone been going around doing this shit for real? What next, a necklace of severed ears? Jesus Christ.")
 
-/obj/item/explosive/grenade/spawnergrenade/hellhound
-	name = "hellhound caller"
-	spawner_type = /mob/living/carbon/xenomorph/hellhound
-	deliveryamt = 1
-	desc = "A strange piece of alien technology. It seems to call forth a hellhound."
-	icon = 'icons/obj/items/hunter/pred_gear.dmi'
-	icon_state = "hellnade"
-	w_class = SIZE_TINY
-	det_time = 30
-	var/obj/structure/machinery/camera/current = null
-	var/turf/activated_turf = null
-
-/obj/item/explosive/grenade/spawnergrenade/hellhound/dropped(mob/user)
-	check_eye(user)
-	return ..()
-
-/obj/item/explosive/grenade/spawnergrenade/hellhound/attack_self(mob/living/carbon/human/user)
-	..()
-	if(!active)
-		if(!HAS_TRAIT(user, TRAIT_YAUTJA_TECH))
-			to_chat(user, SPAN_WARNING("What's this thing?"))
-			return
-		to_chat(user, SPAN_WARNING("You activate the hellhound beacon!"))
-		activate(user)
-		add_fingerprint(user)
-		if(iscarbon(user))
-			var/mob/living/carbon/C = user
-			C.toggle_throw_mode(THROW_MODE_NORMAL)
-
-/obj/item/explosive/grenade/spawnergrenade/hellhound/activate(mob/user)
-	if(active)
-		return
-
-	if(user)
-		msg_admin_attack("[key_name(user)] primed \a [src] in [get_area(user)] ([user.loc.x],[user.loc.y],[user.loc.z]).", user.loc.x, user.loc.y, user.loc.z)
-	icon_state = initial(icon_state) + "_active"
-	active = 1
-	update_icon()
-	addtimer(CALLBACK(src, PROC_REF(prime)), det_time)
-
-/obj/item/explosive/grenade/spawnergrenade/hellhound/prime()
-	if(spawner_type && deliveryamt)
-		// Make a quick flash
-		var/turf/T = get_turf(src)
-		if(ispath(spawner_type))
-			new spawner_type(T)
-	return
-
-/obj/item/explosive/grenade/spawnergrenade/hellhound/check_eye(mob/user)
-	if (user.is_mob_incapacitated() || user.blinded )
-		user.unset_interaction()
-	else if ( !current || get_turf(user) != activated_turf || src.loc != user ) //camera doesn't work, or we moved.
-		user.unset_interaction()
-
-/obj/item/explosive/grenade/spawnergrenade/hellhound/New()
-	. = ..()
-
-	force = 20
-	throwforce = 40
-
-/obj/item/explosive/grenade/spawnergrenade/hellhound/on_set_interaction(mob/user)
-	..()
-	user.reset_view(current)
-
-/obj/item/explosive/grenade/spawnergrenade/hellhound/on_unset_interaction(mob/user)
-	..()
-	current = null
-	user.reset_view(null)
-
-
 // Hunting traps
 /obj/item/hunting_trap
 	name = "hunting trap"
@@ -694,8 +1094,12 @@
 	var/datum/effects/tethering/tether_effect
 	var/tether_range = 5
 	var/mob/trapped_mob
+	var/duration = 30 SECONDS
+	var/disarm_timer
 	layer = LOWER_ITEM_LAYER
 	flags_item = ITEM_PREDATOR
+	/// Who armed this trap? Only updates if done by Yautja.
+	var/armed_faction = FACTION_YAUTJA
 
 /obj/item/hunting_trap/Destroy()
 	cleanup_tether()
@@ -713,19 +1117,22 @@
 			icon_state = "yauttrap1"
 	..()
 
-/obj/item/hunting_trap/attack_self(mob/user as mob)
+/obj/item/hunting_trap/attack_self(mob/living/carbon/human/user)
 	..()
 	if(ishuman(user) && !user.stat && !user.is_mob_restrained())
-		var/wait_time = 3 SECONDS
 		if(!HAS_TRAIT(user, TRAIT_YAUTJA_TECH))
-			wait_time = rand(5 SECONDS, 10 SECONDS)
+			to_chat(user, SPAN_WARNING("You don't know how to use this thing!"))
+			return
+		var/wait_time = 3 SECONDS
 		if(!do_after(user, wait_time, INTERRUPT_ALL, BUSY_ICON_HOSTILE))
 			return
 		armed = TRUE
 		anchored = TRUE
 		icon_state = "yauttrap[armed]"
 		to_chat(user, SPAN_NOTICE("[src] is now armed."))
-		user.attack_log += text("\[[time_stamp()]\] <font color='orange'>[key_name(user)] has armed \the [src] at [get_location_in_text(user)].</font>")
+		if(isspeciesyautja(user))
+			armed_faction = user.faction
+		user.attack_log += text("\[[time_stamp()]\] <font color='orange'>[key_name(user)] has armed [src] at [get_location_in_text(user)].</font>")
 		log_attack("[key_name(user)] has armed \a [src] at [get_location_in_text(user)].")
 		user.drop_held_item()
 
@@ -746,7 +1153,7 @@
 	armed = FALSE
 	anchored = TRUE
 
-	var/list/tether_effects = apply_tether(src, C, range = tether_range, resistable = TRUE)
+	var/list/tether_effects = apply_tether(src, C, range = tether_range, resistible = TRUE)
 	tether_effect = tether_effects["tetherer_tether"]
 	RegisterSignal(tether_effect, COMSIG_PARENT_QDELETING, PROC_REF(disarm))
 
@@ -766,31 +1173,35 @@
 		C.emote("needhelp")
 		xeno.AddComponent(/datum/component/status_effect/interference, 100) // Some base interference to give pred time to get some damage in, if it cannot land a single hit during this time pred is cheeks
 		RegisterSignal(xeno, COMSIG_XENO_PRE_HEAL, PROC_REF(block_heal))
-	message_all_yautja("A hunting trap has caught something in [get_area_name(loc)]!")
+	message_all_yautja("A hunting trap has caught something in [get_area_name(loc)]!", broadcast_networks = list(armed_faction))
+	disarm_timer = addtimer(CALLBACK(src, PROC_REF(disarm)), duration, TIMER_UNIQUE|TIMER_STOPPABLE)
 
 /obj/item/hunting_trap/proc/block_heal(mob/living/carbon/xenomorph/xeno)
 	SIGNAL_HANDLER
 	return COMPONENT_CANCEL_XENO_HEAL
 
 /obj/item/hunting_trap/Crossed(atom/movable/AM)
-	if(armed && ismob(AM))
-		var/mob/M = AM
-		if(!M.buckled)
-			if(iscarbon(AM) && isturf(src.loc))
-				var/mob/living/carbon/H = AM
-				if(isyautja(H))
-					to_chat(H, SPAN_NOTICE("You carefully avoid stepping on the trap."))
-					return
-				trapMob(H)
-				for(var/mob/O in viewers(H, null))
-					if(O == H)
-						continue
-					O.show_message(SPAN_WARNING("[icon2html(src, O)] <B>[H] gets caught in \the [src].</B>"), SHOW_MESSAGE_VISIBLE)
-			else if(isanimal(AM) && !istype(AM, /mob/living/simple_animal/parrot))
-				armed = FALSE
-				var/mob/living/simple_animal/SA = AM
-				SA.health -= 20
 	..()
+	if(armed && ismob(AM))
+		var/mob/trap_mob = AM
+		if(!trap_mob.buckled)
+			if(iscarbon(trap_mob) && isturf(loc))
+				var/mob/living/carbon/trap_target = trap_mob
+				if(isyautja(trap_target))
+					to_chat(trap_target, SPAN_NOTICE("You carefully avoid stepping on the trap."))
+					return
+				if((armed_faction == FACTION_YAUTJA_BADBLOOD) && (xeno_hivenumber(trap_target) == XENO_HIVE_YAUTJA_BADBLOOD))
+					to_chat(trap_target, SPAN_NOTICE("We carefully avoid stepping on the trap."))
+					return
+				trapMob(trap_target)
+				for(var/mob/viewer in viewers(trap_target, null))
+					if(viewer == trap_target)
+						continue
+					viewer.show_message(SPAN_WARNING("[icon2html(src, viewer)] <B>[trap_target] gets caught in [src].</B>"), SHOW_MESSAGE_VISIBLE)
+			else if(isanimal(trap_mob))
+				armed = FALSE
+				var/mob/living/simple_animal/simple_mob = trap_mob
+				simple_mob.health -= 20
 
 /obj/item/hunting_trap/proc/cleanup_tether()
 	if (tether_effect)
@@ -800,6 +1211,8 @@
 
 /obj/item/hunting_trap/proc/disarm(mob/user)
 	SIGNAL_HANDLER
+	if(disarm_timer)
+		deltimer(disarm_timer)
 	armed = FALSE
 	anchored = FALSE
 	icon_state = "yauttrap[armed]"
@@ -833,9 +1246,9 @@
 	name = "alien stone armor"
 	desc = "A suit of armor made entirely out of stone. Looks incredibly heavy."
 
-	icon = 'icons/obj/items/hunter/pred_gear.dmi'
+	icon = 'icons/obj/items/hunter/pred_armor.dmi'
 	item_icons = list(
-		WEAR_JACKET = 'icons/mob/humans/onmob/hunter/pred_gear.dmi'
+		WEAR_JACKET = 'icons/mob/humans/onmob/hunter/pred_armor.dmi'
 	)
 	item_state = "armor"
 	icon_state = "fullarmor_ebony"
@@ -866,9 +1279,9 @@
 	name = "alien stone greaves"
 	desc = "A pair of armored, perfectly balanced boots. Perfect for running through cement because they're incredibly heavy."
 
-	icon = 'icons/obj/items/hunter/pred_gear.dmi'
+	icon = 'icons/obj/items/hunter/pred_shoes.dmi'
 	item_icons = list(
-		WEAR_FEET = 'icons/mob/humans/onmob/hunter/pred_gear.dmi'
+		WEAR_FEET = 'icons/mob/humans/onmob/hunter/pred_shoes.dmi'
 	)
 	icon_state = "y-boots2_ebony"
 
@@ -904,14 +1317,107 @@
 	blood_type = human_user.blood_type
 
 	var/list/new_access = list(ACCESS_YAUTJA_SECURE)
+
+	var/the_faction = human_user.faction
+	faction = the_faction
+	if(!(the_faction in faction_group))
+		faction_group = list(the_faction)
+
+	if(the_faction == FACTION_YAUTJA_STRANDED)
+		return
+
 	var/obj/item/clothing/gloves/yautja/hunter/bracer = loc
 	if(istype(bracer) && bracer.owner_rank)
 		switch(bracer.owner_rank)
-			if(CLAN_RANK_ELDER_INT, CLAN_RANK_LEADER_INT)
-				new_access = list(ACCESS_YAUTJA_SECURE, ACCESS_YAUTJA_ELDER)
+			if(CLAN_RANK_ELITE_INT)
+				new_access = list(ACCESS_YAUTJA_SECURE, ACCESS_YAUTJA_ELITE)
+			if(CLAN_RANK_ELDER_INT)
+				new_access = list(ACCESS_YAUTJA_SECURE, ACCESS_YAUTJA_ELITE, ACCESS_YAUTJA_ELDER)
+			if(CLAN_RANK_LEADER_INT)
+				new_access = list(ACCESS_YAUTJA_SECURE, ACCESS_YAUTJA_ELITE, ACCESS_YAUTJA_ELDER, ACCESS_YAUTJA_LEADER)
 			if(CLAN_RANK_ADMIN_INT)
-				new_access = list(ACCESS_YAUTJA_SECURE, ACCESS_YAUTJA_ELDER, ACCESS_YAUTJA_ANCIENT)
+				new_access = list(ACCESS_YAUTJA_SECURE, ACCESS_YAUTJA_ELITE, ACCESS_YAUTJA_ELDER, ACCESS_YAUTJA_LEADER, ACCESS_YAUTJA_ANCIENT)
 	access = new_access
+
+/obj/item/card/id/bracer_chip/badblood/set_user_data(mob/living/carbon/human/human_user)
+	if(!istype(human_user))
+		return
+
+	registered_name = human_user.real_name
+	registered_ref = WEAKREF(human_user)
+	registered_gid = human_user.gid
+	blood_type = human_user.blood_type
+	access = list(ACCESS_YAUTJA_BADBLOOD)
+
+	var/the_faction = human_user.faction
+	faction = the_faction
+	if(!(the_faction in faction_group))
+		faction_group = list(the_faction)
+
+///Able to dissolve anything not anchored to the ground or being held, while uncloaked.
+/obj/item/tool/yautja_cleaner
+	name = "cleanser gel vial"
+	desc = "A small vial containing a liquid capable of dissolving the gear of the fallen whilst in the field."
+	icon = 'icons/obj/items/hunter/pred_gear.dmi'
+	icon_state = "dissolving_vial"
+	force = 0
+	throwforce = 1
+	w_class = SIZE_SMALL
+	flags_item = ITEM_PREDATOR
+	black_market_value = 150
+
+	var/image/dissolving_image
+
+/obj/item/tool/yautja_cleaner/afterattack(obj/item/target, mob/user, proximity)
+	if(!isitem(target))
+		return
+	if(loc != user) //Early returns if the cleaner has been inserted into a container. Whether or not this happens is based on the user's intent; see storage.dm for info.
+		return
+	if(!can_dissolve(target, user))
+		return
+	handle_dissolve(target, user)
+
+///Checks for permission and items unallowed to be dissolved.
+/obj/item/tool/yautja_cleaner/proc/can_dissolve(obj/item/target, mob/user)
+	if(!HAS_TRAIT(user, TRAIT_YAUTJA_TECH))
+		to_chat(user, SPAN_WARNING("You have no idea what this even does."))
+		return FALSE
+	if(HAS_TRAIT(target, TRAIT_ITEM_DISSOLVING))
+		to_chat(user, SPAN_WARNING("\The [target] is already covered in dissolving gel."))
+		return FALSE
+	if(HAS_TRAIT(user,TRAIT_CLOAKED))
+		to_chat(user, SPAN_WARNING("It would not be safe to attempt this while cloaked!"))
+		return FALSE
+	if(target.anchored)
+		to_chat(user, SPAN_WARNING("\The [target] cannot be moved by any means, why dissolve it?"))
+		return FALSE
+	if(isliving(target.loc))
+		to_chat(user, SPAN_WARNING("You cannot dissolve the [target] while it is being held."))
+		return
+	if(istype(target, /obj/item/tool/yautja_cleaner))
+		to_chat(user, SPAN_WARNING("You cannot dissolve more dissolving fluid."))
+		return FALSE
+	return TRUE
+
+///Actual action of using the vial on an item.
+/obj/item/tool/yautja_cleaner/proc/handle_dissolve(obj/item/target, mob/user)
+	user.visible_message(SPAN_DANGER("[user] uncaps a vial and begins to pour out a vibrant blue liquid over [target]!"),
+					SPAN_NOTICE("You begin to spread dissolving gel onto [target]!"))
+	if(!do_after(user, 3 SECONDS, INTERRUPT_ALL, BUSY_ICON_HOSTILE))
+		user.visible_message(SPAN_WARNING("[user] stops pouring liquid on to [target]!"),
+					SPAN_NOTICE("You decide not to cover [target] with dissolving gel."))
+		return
+	if(get_dist(target, user) > 1) //Late check to ensure the item hasn't moved out of range.
+		return
+	user.visible_message(SPAN_DANGER("[user] pours blue liquid all over [target]!"),
+				SPAN_NOTICE("You cover [target] with dissolving gel!"))
+	dissolving_image = image(icon, icon_state = "dissolving_gel")
+	target.overlays += dissolving_image
+	playsound(target.loc, 'sound/effects/acid_sizzle4.ogg', 25)
+	QDEL_IN(target, 15 SECONDS)
+	addtimer(CALLBACK(target, TYPE_PROC_REF(/atom, visible_message), SPAN_WARNING("[target] crumbles into pieces!")), 15 SECONDS)
+	ADD_TRAIT(target, TRAIT_ITEM_DISSOLVING, TRAIT_SOURCE_ITEM)
+	log_attack("[key_name(user)] dissolved [target] with Yautja Cleaner.")
 
 /obj/item/storage/medicomp
 	name = "medicomp"
@@ -919,9 +1425,10 @@
 	icon_state = "medicomp"
 	icon = 'icons/obj/items/hunter/pred_gear.dmi'
 	use_sound = "toolbox"
-	w_class = SIZE_SMALL
+	w_class = SIZE_MEDIUM
 	storage_flags = STORAGE_FLAGS_DEFAULT
 	flags_item = ITEM_PREDATOR
+	flags_equip_slot = SLOT_STORE
 	storage_slots = 12
 	can_hold = list(
 		/obj/item/tool/surgery/stabilizer_gel,
@@ -930,6 +1437,7 @@
 		/obj/item/reagent_container/hypospray/autoinjector/yautja,
 		/obj/item/device/healthanalyzer/alien,
 		/obj/item/tool/surgery/healing_gel,
+		/obj/item/storage/herbal_case,
 	)
 	black_market_value = 10
 
@@ -945,6 +1453,31 @@
 	new /obj/item/tool/surgery/healing_gel/(src)
 	new /obj/item/tool/surgery/healing_gel/(src)
 
+/obj/item/storage/medicomp/thrall/fill_preset_inventory()
+	new /obj/item/tool/surgery/stabilizer_gel(src)
+	new /obj/item/tool/surgery/healing_gun(src)
+	new /obj/item/tool/surgery/wound_clamp(src)
+	new /obj/item/device/healthanalyzer/alien(src)
+	new /obj/item/reagent_container/hypospray/autoinjector/yautja/thrall(src)
+	new /obj/item/reagent_container/hypospray/autoinjector/yautja/thrall(src)
+	new /obj/item/reagent_container/hypospray/autoinjector/yautja/thrall(src)
+	new /obj/item/tool/surgery/healing_gel/(src)
+	new /obj/item/tool/surgery/healing_gel/(src)
+	new /obj/item/tool/surgery/healing_gel/(src)
+
+/obj/item/storage/medicomp/survivor/fill_preset_inventory()
+	new /obj/item/tool/surgery/stabilizer_gel(src)
+	new /obj/item/tool/surgery/healing_gun(src)
+	new /obj/item/tool/surgery/wound_clamp(src)
+	new /obj/item/device/healthanalyzer/alien(src)
+	new /obj/item/reagent_container/hypospray/autoinjector/yautja(src)
+	new /obj/item/reagent_container/hypospray/autoinjector/yautja(src)
+	new /obj/item/reagent_container/hypospray/autoinjector/yautja(src)
+	new /obj/item/tool/surgery/healing_gel/(src)
+	new /obj/item/tool/surgery/healing_gel/(src)
+	new /obj/item/tool/surgery/healing_gel/(src)
+	new /obj/item/storage/herbal_case/full(src)
+
 /obj/item/storage/medicomp/update_icon()
 	if(!length(contents))
 		icon_state = "medicomp_open"
@@ -957,6 +1490,7 @@
 	icon = 'icons/obj/items/hunter/pred_gear.dmi'
 	icon_state = "polishing_rag"
 	reagent_desc_override = TRUE //Hide the fact its actually a reagent container
+	has_lid = FALSE
 
 /obj/item/reagent_container/glass/rag/polishing_rag/get_examine_text(mob/user)
 	. = ..()
@@ -967,6 +1501,9 @@
 
 	if(!HAS_TRAIT(user, TRAIT_YAUTJA_TECH))
 		return ..()
+
+	if(user.action_busy)
+		return
 
 	if(!istype(potential_limb, /obj/item/clothing/accessory/limb/skeleton))
 		return ..()
@@ -988,12 +1525,16 @@
 //Only an onmob for the skull
 /obj/item/clothing/accessory/limb/skeleton
 	name = "How did you get this?"
-	desc = "A bone from a human."
+	desc = "A bone that appears to be of human origin."
 	icon = 'icons/obj/items/skeleton.dmi'
+	inv_overlay_icon = 'icons/obj/items/clothing/accessory/inventory_overlays/yautja.dmi'
 	accessory_icons = list(WEAR_BODY = 'icons/mob/humans/onmob/hunter/pred_gear.dmi')
 	icon_state = null
+	worn_accessory_slot = ACCESSORY_SLOT_TROPHY
 	///Has it been cleaned by a polishing rag?
 	var/polished = FALSE
+	var/loosejaw = FALSE
+
 /obj/item/clothing/accessory/limb/skeleton/l_arm
 	name = "arm bone"
 	icon_state = "l_arm"
@@ -1028,7 +1569,7 @@
 
 /obj/item/clothing/accessory/limb/skeleton/head
 	name = "skull"
-	icon_state = "skull"
+	icon_state = "skull2"
 	high_visibility = TRUE
 
 /obj/item/clothing/accessory/limb/skeleton/head/spine
@@ -1051,3 +1592,515 @@
 		to_chat(user, SPAN_NOTICE("Why would you try attaching this to your clothing?"))
 		return
 	. = ..()
+
+/// Skulls & Parts
+/obj/item/skull
+	name = "skull"
+	icon = 'icons/obj/items/hunter/prey_items.dmi'
+	unacidable = TRUE
+
+/obj/item/skull/Initialize(mapload, ...)
+	. = ..()
+	if(!icon_state)
+		return INITIALIZE_HINT_QDEL
+
+/obj/item/skull/queen
+	name = "Queen skull"
+	desc = "Skull of a prime hive ruler, mother to many."
+	icon_state = "queen_skull"
+
+/obj/item/skull/king
+	name = "King skull"
+	desc = "Skull of a militant hive ruler, lord of destruction."
+	icon_state = "king_skull"
+
+/obj/item/skull/despoiler
+	name = "Despoiler skull"
+	desc = "Skull of a decrepit wretch, the surface still stinging your hands."
+	icon_state = "despoiler_skull"
+
+
+/obj/item/skull/lurker
+	name = "Lurker skull"
+	desc = "Skull of a stealthy xenomorph, a nocturnal entity."
+	icon_state = "lurker_skull"
+
+/obj/item/skull/hunter
+	name = "Hunter skull"
+	desc = "Skull of a stealthy xenomorph, an ambushing predator."
+	icon_state = "hunter_skull"
+
+/obj/item/skull/deacon
+	name = "Deacon skull"
+	desc = "Skull of an unusual xenomorph, a mysterious specimen."
+	icon_state = "deacon_skull"
+
+/obj/item/skull/corroder
+	name = "Corroder skull"
+	desc = "Skull of an acidic xenomorph, a boiling menace."
+	icon_state = "corroder_skull"
+
+/obj/item/skull/warrior
+	name = "Warrior skull"
+	desc = "Skull of a strong xenomorph, a swift fighter."
+	icon_state = "warrior_skull"
+
+/obj/item/skull/defender
+	name = "Defender skull"
+	desc = "Skull of a sturdy xenomorph, a bulwark of the hive."
+	icon_state = "defender_skull"
+
+/obj/item/skull/praetorian
+	name = "Praetorian skull"
+	desc = "Skull of a strong xenomorph, jack of all trades, vanguard to the Queen."
+	icon_state = "praetorian_skull"
+
+/obj/item/skull/crusher
+	name = "Crusher skull"
+	desc = "Skull of a powerful xenomorph, capable of shattering defenses."
+	icon_state = "crusher_skull"
+
+/obj/item/skull/ravager
+	name = "Ravager skull"
+	desc = "Skull of a ferocious xenomorph, wielding unmatched destruction."
+	icon_state = "ravager_skull"
+
+/obj/item/skull/boiler
+	name = "Boiler skull"
+	desc = "Skull of a ranged xenomorph, known for explosive acid attacks."
+	icon_state = "boiler_skull"
+
+/obj/item/skull/carrier
+	name = "Carrier skull"
+	desc = "Skull of a diligent xenomorph, a lifeblood worker of the hive."
+	icon_state = "carrier_skull"
+
+/obj/item/skull/hivelord
+	name = "Hivelord skull"
+	desc = "Skull of a nurturing xenomorph, devoted to hive construction."
+	icon_state = "hivelord_skull"
+
+/obj/item/skull/burrower
+	name = "Burrower skull"
+	desc = "Skull of a digging xenomorph, master of subterranean assault."
+	icon_state = "burrower_skull"
+
+/obj/item/skull/drone
+	name = "Drone skull"
+	desc = "Skull of a weak but essential xenomorph, a hive worker."
+	icon_state = "drone_skull"
+
+/obj/item/skull/runner
+	name = "Runner skull"
+	desc = "Skull of a swift and agile xenomorph, a terror on the prowl."
+	icon_state = "runner_skull"
+
+/obj/item/skull/sentinel
+	name = "Sentinel skull"
+	desc = "Skull of an acidic xenomorph, skilled in ranged combat."
+	icon_state = "sentinel_skull"
+
+/obj/item/skull/spitter
+	name = "Spitter skull"
+	desc = "Skull of a highly acidic xenomorph, a venomous ranged attacker."
+	icon_state = "spitter_skull"
+
+/obj/item/skull/abomination
+	name = "Abomination skull"
+	desc = "Skull of a mysterious hybrid xenomorph, a horror on the field."
+	icon_state = "predalien_skull"
+
+/obj/item/skull/abomination/get_examine_text(mob/user)
+	. = ..()
+	if(isyautja(user))
+		. += SPAN_RED("Not even this relic can be tolerated. Destroy it.")
+
+// PELTS
+
+/obj/item/pelt
+	name = "pelt"
+	icon = 'icons/obj/items/hunter/prey_items.dmi'
+	unacidable = TRUE
+
+/obj/item/pelt/Initialize(mapload, ...)
+	. = ..()
+	if(!icon_state)
+		return INITIALIZE_HINT_QDEL
+
+/obj/item/pelt/queen
+	name = "Queen pelt"
+	desc = "The pelt of a prime hive ruler, mother to many."
+	icon_state = "queen_pelt"
+
+/obj/item/pelt/king
+	name = "King pelt"
+	desc = "The pelt of a militant hive ruler, lord of destruction."
+	icon_state = "king_pelt"
+
+/obj/item/pelt/despoiler
+	name = "Despoiler pelt"
+	desc = "The pelt of a decrepit wretch, the surface still stinging your hands."
+	icon_state = "despoiler_pelt"
+
+/obj/item/pelt/lurker
+	name = "Lurker pelt"
+	desc = "The pelt of a stealthy xenomorph, an ambushing predator."
+	icon_state = "lurker_pelt"
+
+/obj/item/pelt/hunter
+	name = "Hunter pelt"
+	desc = "The pelt of a swift xenomorph, a fearsome ambushing predator."
+	icon_state = "hunter_pelt"
+
+/obj/item/pelt/deacon
+	name = "Deacon pelt"
+	desc = "The pelt of an unusual xenomorph, a mysterious and rare specimen."
+	icon_state = "deacon_pelt"
+
+/obj/item/pelt/corroder
+	name = "Corroder pelt"
+	desc = "The pelt of an acidic xenomorph, exuding caustic menace."
+	icon_state = "corroder_pelt"
+
+/obj/item/pelt/warrior
+	name = "Warrior pelt"
+	desc = "The pelt of a strong xenomorph, a fast and lethal fighter."
+	icon_state = "warrior_pelt"
+
+/obj/item/pelt/defender
+	name = "Defender pelt"
+	desc = "The pelt of a sturdy xenomorph, a shield of the hive."
+	icon_state = "defender_pelt"
+
+/obj/item/pelt/praetorian
+	name = "Praetorian pelt"
+	desc = "The pelt of a versatile xenomorph, a vanguard to the Queen."
+	icon_state = "praetorian_pelt"
+
+/obj/item/pelt/crusher
+	name = "Crusher pelt"
+	desc = "The pelt of a powerful xenomorph, capable of shattering defenses."
+	icon_state = "crusher_pelt"
+
+/obj/item/pelt/ravager
+	name = "Ravager pelt"
+	desc = "The pelt of a ferocious xenomorph, wielding unmatched destruction."
+	icon_state = "ravager_pelt"
+
+/obj/item/pelt/boiler
+	name = "Boiler pelt"
+	desc = "The pelt of a ranged xenomorph, known for explosive acid attacks."
+	icon_state = "boiler_pelt"
+
+/obj/item/pelt/carrier
+	name = "Carrier pelt"
+	desc = "The pelt of a diligent xenomorph, a lifeblood worker of the hive."
+	icon_state = "carrier_pelt"
+
+/obj/item/pelt/hivelord
+	name = "Hivelord pelt"
+	desc = "The pelt of a nurturing xenomorph, devoted to hive construction."
+	icon_state = "hivelord_pelt"
+
+/obj/item/pelt/burrower
+	name = "Burrower pelt"
+	desc = "The pelt of a digging xenomorph, master of subterranean assault."
+	icon_state = "burrower_pelt"
+
+/obj/item/pelt/drone
+	name = "Drone pelt"
+	desc = "The pelt of a weak but essential xenomorph, a hive worker."
+	icon_state = "drone_pelt"
+
+/obj/item/pelt/runner
+	name = "Runner pelt"
+	desc = "The pelt of a swift and agile xenomorph, a terror on the prowl."
+	icon_state = "runner_pelt"
+
+/obj/item/pelt/sentinel
+	name = "Sentinel pelt"
+	desc = "The pelt of an acidic xenomorph, skilled in ranged combat."
+	icon_state = "sentinel_pelt"
+
+/obj/item/pelt/spitter
+	name = "Spitter pelt"
+	desc = "The pelt of a highly acidic xenomorph, a venomous ranged attacker."
+	icon_state = "spitter_pelt"
+
+/obj/item/pelt/larva
+	name = "Larva pelt"
+	desc = "The hide of a juvenile Xenomorph, a grim trophy from a fledgling that never reached its full potential."
+	icon_state = "larva_pelt"
+
+/obj/item/pelt/abomination
+	name = "Abomination pelt"
+	desc = "The pelt of a mysterious hybrid xenomorph, a horror on the field."
+	icon_state = "predalien_pelt"
+
+/obj/item/pelt/abomination/get_examine_text(mob/user)
+	. = ..()
+	if(isyautja(user))
+		. += SPAN_RED("Not even this relic can be tolerated. Destroy it.")
+
+/// TOOLS
+
+/obj/item/tool/crowbar/yautja
+	name = "\improper yautja crowbar"
+	desc = "Used to remove floors and to pry open doors, made of an unusual alloy."
+	icon = 'icons/obj/items/hunter/pred_gear.dmi'
+	icon_state = "bar"
+	item_state = "bar"
+	item_icons = list(
+		WEAR_L_HAND = 'icons/mob/humans/onmob/hunter/items_lefthand.dmi',
+		WEAR_R_HAND = 'icons/mob/humans/onmob/hunter/items_righthand.dmi'
+	)
+
+/obj/item/tool/wrench/yautja
+	name = "\improper alien wrench"
+	desc = "A wrench with many common uses. Made of some bizarre alien bones."
+	icon = 'icons/obj/items/hunter/pred_gear.dmi'
+	icon_state = "wrench"
+	item_state = "wrench"
+	item_icons = list(
+		WEAR_L_HAND = 'icons/mob/humans/onmob/hunter/items_lefthand.dmi',
+		WEAR_R_HAND = 'icons/mob/humans/onmob/hunter/items_righthand.dmi'
+	)
+
+/obj/item/tool/wirecutters/yautja
+	name = "\improper alien wirecutters"
+	desc = "This cuts wires, also flesh. Made of some razor-sharp animal teeth."
+	icon = 'icons/obj/items/hunter/pred_gear.dmi'
+	icon_state = "wirescutter"
+	item_state = "wirescutter"
+	item_icons = list(
+		WEAR_L_HAND = 'icons/mob/humans/onmob/hunter/items_lefthand.dmi',
+		WEAR_R_HAND = 'icons/mob/humans/onmob/hunter/items_righthand.dmi'
+	)
+
+/obj/item/tool/screwdriver/yautja
+	name = "\improper alien screwdriver"
+	desc = "Some high-tech screwing abilities."
+	icon = 'icons/obj/items/hunter/pred_gear.dmi'
+	icon_state = "screwdriver"
+	item_state = "screwdriver"
+	item_icons = list(
+		WEAR_L_HAND = 'icons/mob/humans/onmob/hunter/items_lefthand.dmi',
+		WEAR_R_HAND = 'icons/mob/humans/onmob/hunter/items_righthand.dmi'
+	)
+	force = 7
+	random_color = FALSE
+
+/obj/item/device/multitool/yautja
+	name = "\improper alien multitool"
+	desc = "Top-notch alien tech for B&E through hacking."
+	icon = 'icons/obj/items/hunter/pred_gear.dmi'
+	icon_state = "multitool"
+	item_state = "multitool"
+	item_icons = list(
+		WEAR_L_HAND = 'icons/mob/humans/onmob/hunter/items_lefthand.dmi',
+		WEAR_R_HAND = 'icons/mob/humans/onmob/hunter/items_righthand.dmi'
+	)
+
+/obj/item/tool/weldingtool/yautja
+	name = "\improper alien chem welding tool"
+	desc = "A complex chemical welding device, keep away from youngblood."
+	icon = 'icons/obj/items/hunter/pred_gear.dmi'
+	icon_state = "welder"
+	item_icons = list(
+		WEAR_L_HAND = 'icons/mob/humans/onmob/hunter/items_lefthand.dmi',
+		WEAR_R_HAND = 'icons/mob/humans/onmob/hunter/items_righthand.dmi'
+	)
+	force = 10
+	throwforce = 15
+	max_fuel = 150	//The max amount of fuel the welder can hold
+
+/obj/item/storage/belt/utility/pred
+	name = "\improper alien toolbelt"
+	desc = "A modular belt with various clips. This version lacks any hunting functionality, and is commonly used by engineers to transport important tools."
+	icon = 'icons/obj/items/hunter/pred_gear.dmi'
+	icon_state = "utilitybelt_pred"
+	item_state = "utility"
+
+/obj/item/storage/belt/utility/pred/full/fill_preset_inventory()
+	new /obj/item/tool/screwdriver/yautja(src)
+	new /obj/item/tool/wrench/yautja(src)
+	new /obj/item/tool/weldingtool/yautja(src)
+	new /obj/item/tool/crowbar/yautja(src)
+	new /obj/item/tool/wirecutters/yautja(src)
+	new /obj/item/stack/cable_coil(src)
+	new /obj/item/device/multitool/yautja(src)
+
+/obj/item/yautja/chain
+	name = "metal chains"
+	desc = "The weld pattern tells you that these chains were made with heavy weights in mind, the sharp edge implies this was also made to pierce."
+	icon = 'icons/obj/items/hunter/pred_gear.dmi'
+	icon_state = "metal_chain"
+	item_state = "metal_chain"
+
+/obj/item/device/houndcam
+	name = "Hellhound Observation Pad"
+	desc = "A portable camera console device, used for remotely overwatching Hellhounds."
+	icon = 'icons/obj/items/hunter/pred_gear.dmi'
+	icon_state = "houndpad"
+	flags_item = ITEM_PREDATOR
+	flags_atom = FPRINT|CONDUCT
+	w_class = SIZE_SMALL
+	force = 1
+	throwforce = 1
+	unacidable = TRUE
+	var/obj/structure/machinery/computer/cameras/internal/yautja/internal_camera
+
+/obj/item/device/houndcam/Initialize()
+	. = ..()
+	internal_camera = new(src)
+
+/obj/item/device/houndcam/Destroy()
+	QDEL_NULL(internal_camera)
+	return ..()
+
+/obj/item/device/houndcam/attack_hand(mob/user)
+	. = ..()
+	internal_camera.tgui_interact(user)
+
+/obj/item/storage/herbal_case
+	name = "herbs case"
+	icon = 'icons/obj/items/storage/medical.dmi'
+	item_icons = list(
+		WEAR_L_HAND = 'icons/mob/humans/onmob/inhands/equipment/medical_lefthand.dmi',
+		WEAR_R_HAND = 'icons/mob/humans/onmob/inhands/equipment/medical_righthand.dmi',
+	)
+	icon_state = "surgical_case"
+	throw_speed = SPEED_FAST
+	throw_range = 8
+	storage_slots = 4
+	w_class = SIZE_SMALL
+	matter = list("plastic" = 1000)
+	can_hold = list(
+		/obj/item/stack/medical/advanced/ointment/predator,
+		/obj/item/stack/medical/advanced/bruise_pack/predator,
+	)
+
+/obj/item/storage/herbal_case/full/fill_preset_inventory()
+	new /obj/item/stack/medical/advanced/bruise_pack/predator(src)
+	new /obj/item/stack/medical/advanced/bruise_pack/predator(src)
+	new /obj/item/stack/medical/advanced/ointment/predator(src)
+	new /obj/item/stack/medical/advanced/ointment/predator(src)
+
+GLOBAL_LIST_INIT(hivebreaker_banned_castes, list(
+	XENO_CASTE_QUEEN,
+	XENO_CASTE_KING,
+	XENO_CASTE_PREDALIEN,
+	XENO_CASTE_DRONE,
+	XENO_CASTE_CARRIER,
+	XENO_CASTE_BURROWER,
+	XENO_CASTE_HIVELORD,
+	XENO_CASTE_HELLHOUND,
+))
+
+/obj/item/device/badblood_enthraller
+	name = "hivebreaker"
+	desc = "A device used by fallen Yautja to break a Xenomorph Hivemind and enthrall a serpent."
+
+	icon = 'icons/obj/items/hunter/pred_gear.dmi'
+	icon_state = "emitter-xeno"
+
+	flags_item = ITEM_PREDATOR
+	flags_atom = FPRINT|CONDUCT
+	w_class = SIZE_TINY
+	force = 1
+	throwforce = 1
+	unacidable = TRUE
+	explo_proof = TRUE
+	black_market_value = 200
+	var/uses = 1
+
+/obj/item/device/badblood_enthraller/attack(mob/living/target, mob/living/user)
+	. = ..()
+	if(!isxeno(target))
+		return FALSE
+	var/mob/living/carbon/xenomorph/thrall_target = target
+
+	if(!HAS_TRAIT(user, TRAIT_YAUTJA_TECH) || user.faction != FACTION_YAUTJA_BADBLOOD)
+		to_chat(user, SPAN_WARNING("You have no idea what you're doing with this thing."))
+		return FALSE
+
+	if(thrall_target.hivenumber == XENO_HIVE_YAUTJA_BADBLOOD || thrall_target.faction == FACTION_YAUTJA_BADBLOOD)
+		to_chat(user, SPAN_WARNING("This serpent is already enthralled... what are you doing?"))
+		return FALSE
+
+	if(!thrall_target.client)
+		to_chat(user, SPAN_WARNING("This serpent seems defective. It is unresponsive."))
+		return FALSE
+
+	if((thrall_target.caste_type in XENO_T0_CASTES) || (thrall_target.caste_type in GLOB.hivebreaker_banned_castes))
+		to_chat(user, SPAN_WARNING("You cannot enthrall this serpent!"))
+		return FALSE
+
+	if(thrall_target.stat != UNCONSCIOUS)
+		to_chat(user, SPAN_WARNING("The target must be in a defeated state before you can enthrall them!"))
+		return FALSE
+
+	user.visible_message(SPAN_WARNING("[user] starts fiddling with a strange device pointed at [thrall_target]!"),
+				SPAN_WARNING("You start to enthrall [thrall_target]."))
+	if(!do_after(user, 3 SECONDS, INTERRUPT_ALL, BUSY_ICON_HOSTILE, thrall_target, INTERRUPT_OUT_OF_RANGE, BUSY_ICON_HOSTILE))
+		user.visible_message(SPAN_WARNING("[user] stops pressing buttons on the strange device!"),
+				SPAN_WARNING("You decide not to enthrall [thrall_target]."))
+		return FALSE
+
+	if(tgui_alert(thrall_target, "Do you wish to be Enthralled by the Bad Blood?", "Submit?", list("Yes", "No"), 10 SECONDS) != "Yes")
+		to_chat(user, SPAN_WARNING("The hivemind resists your attempt to break the connection! (This player does not wish to be a thrall.)"))
+		return FALSE
+
+	to_chat(user, SPAN_YAUTJABOLD("You have enthralled [thrall_target]!"))
+
+	thrall_target.enthrall(user)
+	uses--
+	if(uses <= 0)
+		qdel(src)
+	return TRUE
+
+/mob/living/carbon/xenomorph/proc/enthrall(mob/living/user, force = FALSE)
+	if(hivenumber == XENO_HIVE_YAUTJA_BADBLOOD || faction == FACTION_YAUTJA_BADBLOOD)
+		return FALSE
+	if(!force && ((caste_type in XENO_T0_CASTES) || (caste_type in GLOB.hivebreaker_banned_castes)))
+		return FALSE
+	set_hive_and_update(XENO_HIVE_YAUTJA_BADBLOOD)
+	hunter_data.dishonored_reason = "Enthralled to the Bad Blood [user.real_name]!"
+	return TRUE
+
+/mob/living/carbon/xenomorph/proc/handle_enthrall()
+	set_languages(list(LANGUAGE_XENOMORPH, LANGUAGE_YAUTJA))
+
+	need_weeds = FALSE
+	hunter_data.dishonored = TRUE
+	hunter_data.dishonored_reason = "Enthralled to a Bad Blood!"
+	hunter_data.dishonored_set = src
+	hud_set_hunter()
+
+	RegisterSignal(src, COMSIG_MOB_WEED_SLOWDOWN, PROC_REF(handle_weed_slowdown))
+
+	to_chat(src, SPAN_XENOHIGHDANGER("We have been enthralled by a Yautja Bad Blood!"))
+	to_chat(src, SPAN_XENOANNOUNCE("Our connection to the hivemind has been lost! We are now subservient to our master. Obey their commands."))
+	to_chat(src, SPAN_XENOANNOUNCE("We are no longer able to evolve, or to harm our master."))
+
+	return TRUE
+
+/mob/living/carbon/xenomorph/proc/handle_dethrall(automatic = TRUE)
+	set_languages(list(LANGUAGE_XENOMORPH, LANGUAGE_HIVEMIND))
+	need_weeds = TRUE
+	hunter_data.dishonored = FALSE
+	hunter_data.dishonored_reason = null
+	hunter_data.dishonored_set = null
+	UnregisterSignal(src, COMSIG_MOB_WEED_SLOWDOWN)
+
+	if(automatic)
+		to_chat(src, SPAN_XENOHIGHDANGER("We are no longer enthralled by a Yautja Bad Blood!"))
+		to_chat(src, SPAN_XENOANNOUNCE("Our connection to the hivemind has been restored!"))
+	return TRUE
+
+/mob/living/carbon/xenomorph/hellhound/handle_enthrall()
+	return FALSE
+/mob/living/carbon/xenomorph/hellhound/handle_dethrall()
+	return FALSE
+
+#undef RESERVE_HUNT_COOLDOWN

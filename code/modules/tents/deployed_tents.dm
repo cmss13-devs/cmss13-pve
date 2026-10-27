@@ -15,7 +15,8 @@
 	var/y_dim = 4
 
 	/// How much cold protection to add to entering humans - Full body clothing means complete (1) protection
-	var/cold_protection_factor = 0.4
+	/// Insulated enough to protect armorless patients in the medical tent
+	var/cold_protection_factor = 0.7
 
 	/// Roof display icon_state or null to disable
 	var/roof_state
@@ -26,8 +27,9 @@
 	. = ..()
 	bound_width = x_dim * world.icon_size
 	bound_height = y_dim * world.icon_size
+	// COMSIG_MOVABLE_TURF_ENTERED to handle ChangeTurf
+	RegisterSignal(src, COMSIG_MOVABLE_TURF_ENTERED, PROC_REF(register_turf_signals))
 	register_turf_signals()
-	RegisterSignal(src, COMSIG_ATOM_TURF_CHANGE, PROC_REF(register_turf_signals))
 
 	switch(SSmapping.configs[GROUND_MAP].camouflage_type)
 		if("jungle")
@@ -45,36 +47,64 @@
 		roof_image.appearance_flags = KEEP_APART
 		src.overlays += roof_image
 
+/// Handler for callback of COMSIG_MOVABLE_TURF_ENTERED (turf changed)
 /obj/structure/tent/proc/register_turf_signals()
 	SIGNAL_HANDLER
-	for(var/turf/turf in locs)
+	for(var/turf/turf as anything in locs) // Make sure to change that and overriding if the tent can one day move.
 		RegisterSignal(turf, COMSIG_TURF_ENTERED, PROC_REF(movable_entering_tent), override = TRUE)
+		RegisterSignal(turf, COMSIG_TURF_PRE_DEPLOYMENT, PROC_REF(filter_turf_deployment), override = TRUE)
+
+/// Prevents deployment of sentries and mounted guns in the tent
+/obj/structure/tent/proc/filter_turf_deployment(turf/source, deployable_type)
+	SIGNAL_HANDLER
+	switch(deployable_type)
+		if(TURF_DEPLOYABLE_GUN)
+			return COMPONENT_TURF_PRE_DEPLOYMENT_BLOCKED
+		if(TURF_DEPLOYABLE_SENTRY)
+			return COMPONENT_TURF_PRE_DEPLOYMENT_BLOCKED
+	return NO_FLAGS
 
 /obj/structure/tent/proc/movable_entering_tent(turf/hooked, atom/movable/subject)
 	SIGNAL_HANDLER
 	if(!ismob(subject))
 		return
+
 	var/mob/subject_mob = subject
+
+	// COMSIG_MOVABLE_TURF_ENTERED to handle movement and ChangeTurf
 	RegisterSignal(subject_mob, list(COMSIG_MOVABLE_TURF_ENTERED, COMSIG_GHOST_MOVED), PROC_REF(mob_moved), override = TRUE) // Must override because we can't know if mob was already inside tent without keeping an awful ref list
 	subject_mob.RegisterSignal(src, COMSIG_PARENT_QDELETING, TYPE_PROC_REF(/mob, tent_deletion_clean_up), override = TRUE)
-	var/atom/movable/screen/plane_master/roof/roof_plane = subject_mob.hud_used.plane_masters["[ROOF_PLANE]"]
+
+	if(istype(subject_mob, /mob/hologram))
+		var/mob/hologram/hologram_mob = subject_mob
+		subject_mob = hologram_mob.linked_mob
+
+	var/atom/movable/screen/plane_master/roof/roof_plane = subject_mob.hud_used?.plane_masters["[ROOF_PLANE]"]
 	roof_plane?.invisibility = INVISIBILITY_MAXIMUM
 	if(ishuman(subject))
 		RegisterSignal(subject, COMSIG_HUMAN_COLD_PROTECTION_APPLY_MODIFIERS, PROC_REF(cold_protection), override = TRUE)
 
+/// Handler for callback of COMSIG_HUMAN_COLD_PROTECTION_APPLY_MODIFIERS
 /obj/structure/tent/proc/cold_protection(mob/source, list/protection_data)
 	SIGNAL_HANDLER
 	protection_data["protection"] += cold_protection_factor
 
+/// Handler for callback of COMSIG_MOVABLE_TURF_ENTERED and COMSIG_GHOST_MOVED
 /obj/structure/tent/proc/mob_moved(mob/subject, turf/target_turf)
 	SIGNAL_HANDLER
+
 	if(!(target_turf in locs)) // Exited the tent
 		mob_exited_tent(subject)
 
 /obj/structure/tent/proc/mob_exited_tent(mob/subject)
 	UnregisterSignal(subject, list(COMSIG_MOVABLE_TURF_ENTERED, COMSIG_GHOST_MOVED, COMSIG_HUMAN_COLD_PROTECTION_APPLY_MODIFIERS))
 	subject.UnregisterSignal(src, COMSIG_PARENT_QDELETING)
-	var/atom/movable/screen/plane_master/roof/roof_plane = subject.hud_used.plane_masters["[ROOF_PLANE]"]
+
+	if(istype(subject, /mob/hologram))
+		var/mob/hologram/hologram_mob = subject
+		subject = hologram_mob.linked_mob
+
+	var/atom/movable/screen/plane_master/roof/roof_plane = subject.hud_used?.plane_masters["[ROOF_PLANE]"]
 	roof_plane?.invisibility = 0
 
 /mob/proc/tent_deletion_clean_up(obj/structure/tent/deleting_tent)
@@ -89,7 +119,7 @@
 	health -= rand(M.melee_damage_lower, M.melee_damage_upper)
 	playsound(src, 'sound/items/paper_ripped.ogg', 25, 1)
 
-	M.visible_message(SPAN_DANGER("[M] [M.slashes_verb] [src]!"), \
+	M.visible_message(SPAN_DANGER("[M] [M.slashes_verb] [src]!"),
 	SPAN_DANGER("You [M.slash_verb] [src]!"), null, 5, CHAT_TYPE_XENO_COMBAT)
 
 	if(health <= 0)
@@ -97,6 +127,21 @@
 		qdel(src)
 
 	return XENO_ATTACK_ACTION
+
+/obj/structure/tent/handle_tail_stab(mob/living/carbon/xenomorph/xeno, blunt_stab)
+	if(unslashable || health <= 0)
+		return TAILSTAB_COOLDOWN_NONE
+	playsound(src, 'sound/items/paper_ripped.ogg', 25, 1)
+	health -= xeno.melee_damage_upper
+	if(health <= 0)
+		xeno.visible_message(SPAN_DANGER("[xeno] collapses [src] with its tail!"),
+		SPAN_DANGER("We collapse [src] with our tail!"), null, 5, CHAT_TYPE_XENO_COMBAT)
+		qdel(src)
+	else
+		xeno.visible_message(SPAN_DANGER("[xeno] strikes [src] with its tail!"),
+		SPAN_DANGER("We strike [src] with our tail!"), null, 5, CHAT_TYPE_XENO_COMBAT)
+	xeno.tail_stab_animation(src, blunt_stab)
+	return TAILSTAB_COOLDOWN_NORMAL
 
 /obj/structure/tent/attackby(obj/item/item, mob/user)
 	var/obj/item/tool/shovel/shovel = item
@@ -154,5 +199,11 @@
 /obj/structure/tent/reqs
 	icon_state = "reqs_interior"
 	roof_state = "reqs_top"
+	x_dim = 4
+	y_dim = 4
+
+/obj/structure/tent/mess
+	icon_state = "reqs_interior"
+	roof_state = "mess_top"
 	x_dim = 4
 	y_dim = 4

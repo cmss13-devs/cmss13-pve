@@ -138,7 +138,7 @@ export const recallWindowGeometry = async (
   if (!options.scale) {
     window.document.body.style['zoom'] = `${100 / window.devicePixelRatio}%`;
   } else {
-    window.document.body.style['zoom'] = null;
+    window.document.body.style['zoom'] = '';
   }
 
   // Wait until screen offset gets resolved
@@ -172,7 +172,12 @@ export const recallWindowGeometry = async (
 };
 
 // Setup draggable window
-export const setupDrag = async () => {
+export const setupDrag = async (fancy: boolean) => {
+  if (fancy) {
+    screenOffset = [0, 0];
+    return;
+  }
+
   // Calculate screen offset caused by the windows taskbar
   let windowPosition = getWindowPosition();
 

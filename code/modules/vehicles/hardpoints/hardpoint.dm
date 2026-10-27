@@ -125,8 +125,6 @@
 
 	/// Currently selected target to fire at. Set with set_target().
 	var/atom/target
-	/// Allows hardpoint to hit target directly. Shoot non dense obj and mobs that are lying down.
-	var/allow_sprite_click = TRUE
 	/// The type of projectile to fire
 	var/projectile_type = /obj/projectile
 
@@ -156,7 +154,7 @@
 	return ..()
 
 /obj/item/hardpoint/ex_act(severity)
-	if(owner || indestructible)
+	if(owner || explo_proof)
 		return
 
 	take_damage(severity / 2)
@@ -334,12 +332,12 @@
 	return
 
 //examining a hardpoint
-/obj/item/hardpoint/get_examine_text(mob/user, integrity_only = FALSE)
+/obj/item/hardpoint/get_examine_text(mob/user)
 	. = ..()
 	if(health <= 0)
-		. += "It's busted!\n"
+		. += "It's busted!"
 	else if(isobserver(user) || (ishuman(user) && (skillcheck(user, SKILL_ENGINEER, SKILL_ENGINEER_NOVICE) || skillcheck(user, SKILL_VEHICLE, SKILL_VEHICLE_CREWMAN))))
-		. += "It's at [round(get_integrity_percent(), 1)]% integrity!\n"
+		. += "It's at [round(get_integrity_percent(), 1)]% integrity!"
 
 //reloading hardpoint - take mag from backup clips and replace current ammo with it. Will change in future. Called via weapons loader
 /obj/item/hardpoint/proc/reload(mob/user)
@@ -586,10 +584,6 @@
 
 /// Actually fires the gun, sets up the projectile and fires it.
 /obj/item/hardpoint/proc/handle_fire(atom/target, mob/living/user, params)
-	//Create this so the bullet can remember what atom was actually sprite clicked. Prevents being impossible to hit while lying down.
-	var/atom/target_overide = target
-	if(!allow_sprite_click)
-		target_overide = null
 	var/turf/origin_turf = get_origin_turf()
 
 	var/obj/projectile/projectile_to_fire = generate_bullet(user, origin_turf)
@@ -598,11 +592,11 @@
 
 	// turf-targeted projectiles are fired without scatter, because proc would raytrace them further away
 	var/ammo_flags = projectile_to_fire.ammo.flags_ammo_behavior | projectile_to_fire.projectile_override_flags
-	if(!HAS_FLAG(ammo_flags, AMMO_HITS_TARGET_TURF) && !HAS_FLAG(ammo_flags, AMMO_EXPLOSIVE)) //AMMO_EXPLOSIVE is also a turf-targeted projectile
+	if(!HAS_FLAG(ammo_flags, AMMO_HITS_TARGET_TURF))
 		projectile_to_fire.scatter = scatter
 		target = simulate_scatter(projectile_to_fire, target, origin_turf, get_turf(target), user)
 
-	INVOKE_ASYNC(projectile_to_fire, TYPE_PROC_REF(/obj/projectile, fire_at), target, user, src, projectile_to_fire.ammo.max_range, projectile_to_fire.ammo.shell_speed, target_overide)
+	INVOKE_ASYNC(projectile_to_fire, TYPE_PROC_REF(/obj/projectile, fire_at), target, user, src, projectile_to_fire.ammo.max_range, projectile_to_fire.ammo.shell_speed)
 	projectile_to_fire = null
 
 	shots_fired++
@@ -722,7 +716,8 @@
 	owner.update_icon()
 
 /obj/item/hardpoint/proc/muzzle_flash(angle)
-	if(isnull(angle)) return
+	if(isnull(angle))
+		return
 
 	// The +48 and +64 centers the muzzle flash
 	var/muzzle_flash_x = muzzle_flash_pos["[dir]"][1] + 48

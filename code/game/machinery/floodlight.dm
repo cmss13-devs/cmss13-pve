@@ -85,7 +85,3 @@
 	icon_state = "floor_flood_1"
 	base_icon_state = "floor_flood"
 	density = FALSE
-
-/obj/structure/machinery/floodlight/landing/floor/update_icon()
-	. = ..()
-	icon_state = "floor_flood0[light_on]"

@@ -10,6 +10,10 @@
 	gear_preset = /datum/equipment_preset/uscm_ship/cargo
 	entry_message_body = "<a href='"+WIKI_PLACEHOLDER+"'>Your job</a> is to dispense supplies to the marines, including weapon attachments. Stay in your department when possible to ensure the marines have full access to the supplies they may require. Listen to the radio in case someone requests a supply drop via the overwatch system."
 
+AddTimelock(/datum/job/logistics/cargo, list(
+	JOB_HUMAN_ROLES = 10 HOURS,
+))
+
 /datum/job/logistics/cargo/set_spawn_positions(count)
 	spawn_positions = ct_slot_formula(count)
 
@@ -29,11 +33,3 @@
 	name = JOB_CARGO_TECH
 	icon_state = "ct_spawn"
 	job = /datum/job/logistics/cargo
-
-/datum/job/logistics/chief
-	title = JOB_CARGO_CHIEF
-	gear_preset = /datum/equipment_preset/uscm_ship/qm/lesser_rank
-
-/datum/job/logistics/armorer
-	title = JOB_ARMORER
-	gear_preset = /datum/equipment_preset/uscm_ship/armorer

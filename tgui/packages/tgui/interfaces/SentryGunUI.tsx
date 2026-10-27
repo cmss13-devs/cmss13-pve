@@ -1,7 +1,6 @@
 import { classes } from 'common/react';
 import { useState } from 'react';
-
-import { useBackend, useSharedState } from '../backend';
+import { useBackend, useSharedState } from 'tgui/backend';
 import {
   Box,
   Button,
@@ -13,8 +12,9 @@ import {
   Section,
   Stack,
   Tabs,
-} from '../components';
-import { Window } from '../layouts';
+} from 'tgui/components';
+import { Window } from 'tgui/layouts';
+
 import { TimedCallback } from './common/TimedCallback';
 
 type SelectedState = [string, string];
@@ -453,10 +453,12 @@ const SentryCamera = (props: { readonly sentry_data: SentrySpec[] }) => {
         <Flex justify="center">
           <Flex.Item>
             <ByondUi
-              className="CameraBox"
-              params={{
+              winsetParams={{
                 id: data.mapRef,
                 type: 'map',
+              }}
+              boxProps={{
+                className: 'CameraBox',
               }}
             />
           </Flex.Item>
@@ -509,13 +511,13 @@ const PowerLevel = () => {
   const { data } = useBackend<SentryData>();
   return (
     <ProgressBar
-      width="75px"
+      width="100px"
       minValue={0}
       maxValue={data.electrical.max_charge}
       value={data.electrical.charge}
     >
       {((data.electrical.charge / data.electrical.max_charge) * 100).toFixed(2)}{' '}
-      %
+      <span>%</span>
     </ProgressBar>
   );
 };

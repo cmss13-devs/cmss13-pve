@@ -42,17 +42,16 @@
 		/obj/item/bodybag/cryobag,
 		/obj/item/device/defibrillator,
 		/obj/item/storage/firstaid/adv,
-		/obj/item/device/healthanalyzer/soul,
+		/obj/item/device/healthanalyzer,
 		/obj/item/roller,
 		/obj/item/tool/surgery/surgical_line,
 		/obj/item/tool/surgery/synthgraft,
-	)
-
-/obj/effect/essentials_set/upp_heavy
-	spawned_gear_list = list(
-		/obj/item/weapon/gun/pkp,
-		/obj/item/ammo_magazine/pkp,
-		/obj/item/ammo_magazine/pkp,
+		/obj/structure/bed/medevac_stretcher/upp,
+		/obj/item/storage/surgical_case/regular,
+		/obj/item/reagent_container/blood/OMinus,
+		/obj/item/reagent_container/blood/OMinus,
+		/obj/item/device/flashlight/pen,
+		/obj/item/clothing/accessory/stethoscope,
 	)
 
 /obj/effect/essentials_set/leader/upp

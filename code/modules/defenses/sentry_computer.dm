@@ -41,9 +41,9 @@
 	var/turf/last_camera_turf
 
 	// radio which broadcasts updates
-	var/obj/item/device/radio/marine/transceiver = new /obj/item/device/radio/marine
+	var/obj/item/device/radio/marine/transceiver
 	// the hidden mob which voices updates
-	var/mob/living/voice = new /mob/living/silicon
+	var/mob/living/silicon/abstract/voice
 
 	// Stuff needed to render the map
 
@@ -52,6 +52,9 @@
 
 /obj/item/device/sentry_computer/Initialize(mapload)
 	. = ..()
+	transceiver = new
+	voice = new
+
 	if(cell_type)
 		cell = new cell_type()
 		cell.charge = cell.maxcharge
@@ -61,12 +64,11 @@
 	AddComponent(/datum/component/camera_manager)
 	SEND_SIGNAL(src, COMSIG_CAMERA_CLEAR)
 
-	faction_group = FACTION_LIST_UA
+	faction_group = FACTION_LIST_MARINE
 	transceiver.forceMove(src)
 	transceiver.set_frequency(SENTRY_FREQ)
 	transceiver.config(list(RADIO_CHANNEL_SENTRY=1))
 	transceiver.subspace_transmission = TRUE
-	voice.invisibility = INVISIBILITY_MAXIMUM
 	voice.name = "[name]:[serial_number]"
 	voice.forceMove(src)
 
@@ -135,7 +137,7 @@
 
 /**
  * Handler for when a linked sentry has no ammo.
- * @param sentrygun: sentry gun which has ran out of ammo.
+ * @param sentrygun: sentry gun which has run out of ammo.
  */
 /obj/item/device/sentry_computer/proc/handle_empty_ammo(obj/structure/machinery/defenses/sentry/sentrygun)
 	var/displayname = sentrygun.name
@@ -151,6 +153,7 @@
  */
 /obj/item/device/sentry_computer/proc/send_message(message)
 	if(!silent && transceiver)
+		message = strip_improper(message)
 		transceiver.talk_into(voice, "[message]", RADIO_CHANNEL_SENTRY)
 		voice.say(message)
 
@@ -256,7 +259,7 @@
 	if (do_after(user, 1 SECONDS, INTERRUPT_NO_NEEDHAND, BUSY_ICON_GENERIC))
 		unpair_sentry(sentry)
 		to_chat(user, SPAN_NOTICE("[sentry] has been decrypted."))
-		var/message = "[sentry] removed from [src]"
+		var/message = "[sentry] removed from from [src]"
 		INVOKE_ASYNC(src, PROC_REF(send_message), message)
 
 /**

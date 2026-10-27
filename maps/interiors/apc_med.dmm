@@ -238,11 +238,8 @@
 /obj/structure/vehicle_locker{
 	pixel_y = 28
 	},
-/obj/structure/bed/chair/vehicle{
-	pixel_x = -8
-	},
-/obj/structure/bed/chair/vehicle{
-	pixel_x = 8
+/obj/effect/landmark/interior/spawn/vehicle_gunner_seat/armor{
+	dir = 4
 	},
 /turf/open/shuttle/vehicle/floor_3_8_1,
 /area/interior/vehicle/apc/med)
@@ -373,10 +370,7 @@
 /obj/structure/bed/chair/vehicle{
 	pixel_x = 8
 	},
-/obj/structure/phone_base/toc{
-	name = "APC reciever";
-	phone_category = "Vehicles";
-	phone_id = "M577-MED Armoured Personnel Carrier";
+/obj/effect/landmark/interior/spawn/telephone{
 	pixel_x = 5;
 	pixel_y = 30
 	},

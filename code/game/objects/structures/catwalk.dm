@@ -7,7 +7,6 @@
 	var/covered = 1 //1 for theres the cover, 0 if there isn't.
 	unslashable = TRUE
 	unacidable = TRUE
-	unslashable = TRUE
 	layer = CATWALK_LAYER
 
 /obj/structure/catwalk/Initialize()
@@ -33,7 +32,7 @@
 			return
 	var/turf/T = get_turf(src)
 	T.attackby(W, user)
-	..()
+	. = ..()
 
 /obj/structure/catwalk/prison
 	icon = 'icons/turf/floors/prison.dmi'
@@ -48,3 +47,8 @@
 	icon = 'icons/turf/floors/catwalks.dmi'
 	icon_state = "catwalk0"
 	base_state = "catwalk0"
+
+/obj/structure/catwalk/strata
+	icon = 'icons/turf/floors/strata_floor.dmi'
+	icon_state = "plating_catwalk"
+	base_state = "catwalk"

@@ -40,12 +40,11 @@
 	preferred_direction = EAST
 	port_direction = EAST
 
-/obj/docking_port/mobile/crashable/lifeboat/compact
-	name = "compact lifeboat"
-	id = MOBILE_SHUTTLE_LIFEBOAT_COMPACT
+/obj/docking_port/mobile/crashable/lifeboat/rostock
+	name = "rostock lifeboat"
+	id = MOBILE_SHUTTLE_LIFEBOAT_ROSTOCK
 	preferred_direction = EAST
 	port_direction = EAST
-	width = 20
 
 /obj/docking_port/mobile/crashable/lifeboat/evac_launch()
 	if (status == LIFEBOAT_LOCKED)
@@ -63,7 +62,10 @@
 /obj/docking_port/mobile/crashable/lifeboat/crash_check()
 	. = ..()
 
-	if(SShijack.hijack_status >= HIJACK_OBJECTIVES_COMPLETE)
+	if(SShijack.crashed)
+		return TRUE
+
+	if(SShijack.hijack_status >= HIJACK_OBJECTIVES_FTL_CRASH)
 		return FALSE
 
 	if(prob(abs((SShijack.current_progress - SShijack.required_progress) / SShijack.required_progress) * 100))
@@ -137,13 +139,12 @@
 	id = "almayer-lifeboat2"
 	roundstart_template = /datum/map_template/shuttle/lifeboat_starboard
 
-/// compact dock
-/obj/docking_port/stationary/lifeboat_dock/compact
-	name = "Compact Lifeboat Docking Port"
+/// UPP Lifeboat default dock
+/obj/docking_port/stationary/lifeboat_dock/upp
+	name = "Rostock Lifeboat Docking Port"
 	dir = NORTH
-	width  = 20
-	id = "compact-lifeboat"
-	roundstart_template = /datum/map_template/shuttle/lifeboat_compact
+	id = "rostock-lifeboat1"
+	roundstart_template = /datum/map_template/shuttle/lifeboat_rostock
 
 /obj/docking_port/stationary/lifeboat_dock/Initialize(mapload)
 	. = ..()
@@ -166,7 +167,6 @@
 	name = "Starboard door lifeboat"
 	shuttle_id = MOBILE_SHUTTLE_LIFEBOAT_STARBOARD
 
-/// Starboard-door lifeboat, bow east
-/datum/map_template/shuttle/lifeboat_compact
-	name = "Compact lifeboat"
-	shuttle_id = MOBILE_SHUTTLE_LIFEBOAT_COMPACT
+/datum/map_template/shuttle/lifeboat_rostock
+	name = "Starboard door lifeboat"
+	shuttle_id = MOBILE_SHUTTLE_LIFEBOAT_ROSTOCK

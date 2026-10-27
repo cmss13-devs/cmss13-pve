@@ -28,6 +28,8 @@ require only minor tweaks.
 #define ZTRAIT_AWAY  "Away"
 #define ZTRAIT_INTERIORS "Interiors"
 #define ZTRAIT_TECHTREE "TechTree"
+/// Exists outside the mainstream round, like pred ship.
+#define ZTRAIT_BACKGROUND_MAP "Background Map"
 
 #define ZTRAIT_FOG "Fog"
 #define ZTRAIT_LOCKDOWN "Lockdown"
@@ -107,7 +109,6 @@ require only minor tweaks.
 #define ALL_MAPTYPES list(GROUND_MAP, SHIP_MAP)
 #define OVERRIDE_MAPS_TO_FILENAME list(GROUND_MAP = "next_map_override.dmm", SHIP_MAP = "next_ship_override.dmm")
 #define MAP_TO_FILENAME list(GROUND_MAP = "data/next_map.json", SHIP_MAP = "data/next_ship.json")
-#define HUNTERSHIPS_TEMPLATE_PATH "maps/predship/huntership.dmm"
 #define OVERRIDE_DEFAULT_MAP_CONFIG list(GROUND_MAP = "maps/override_ground.json", SHIP_MAP = "maps/override_ship.json")
 
 // traity things
@@ -120,3 +121,8 @@ require only minor tweaks.
 
 /// A map key that corresponds to being one exclusively for Space.
 #define SPACE_KEY "space"
+
+#define SENTRY_TOP_LEFT "top_left"
+#define SENTRY_TOP_RIGHT "top_right"
+#define SENTRY_BOTTOM_LEFT "bottom_left"
+#define SENTRY_BOTTOM_RIGHT "bottom_right"

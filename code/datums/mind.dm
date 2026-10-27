@@ -15,12 +15,24 @@
 	//put this here for easier tracking ingame
 	var/datum/money_account/initial_account
 
+	// List of objectives you have knowledge about
+	var/datum/objective_memory_storage/objective_memory
+	var/datum/objective_memory_interface/objective_interface
+	var/datum/research_objective_memory_interface/research_objective_interface
+
 /datum/mind/New(key, ckey)
 	src.key = key
 	src.ckey = ckey
 	player_entity = setup_player_entity(ckey)
+	objective_memory = new()
+	objective_interface = new()
+	research_objective_interface = new()
 
 /datum/mind/Destroy()
+	QDEL_NULL(initial_account)
+	QDEL_NULL(objective_memory)
+	QDEL_NULL(objective_interface)
+	QDEL_NULL(research_objective_interface)
 	current = null
 	original = null
 	ghost_mob = null
@@ -57,8 +69,8 @@
 		if(new_character.client)
 			new_character.client.init_verbs()
 			new_character.client.change_view(GLOB.world_view_size) //reset view range to default.
-			new_character.client.pixel_x = 0
-			new_character.client.pixel_y = 0
+			new_character.client.set_pixel_x(0)
+			new_character.client.set_pixel_y(0)
 			if(usr && usr.open_uis)
 				for(var/datum/nanoui/ui in usr.open_uis)
 					if(ui.allowed_user_stat == -1)
@@ -68,6 +80,10 @@
 
 	SEND_SIGNAL(src, COMSIG_MIND_TRANSFERRED, old_current)
 	SEND_SIGNAL(new_character, COMSIG_MOB_NEW_MIND, current.client)
+
+	// comm_title is probably null when this is called.
+	var/datum/highlight_keywords_payload/payload = new(new_character)
+	current.client.tgui_panel.window.send_message("settings/updateHighlightKeywords", payload.to_list())
 
 	new_character.refresh_huds(current) //inherit the HUDs from the old body
 	new_character.aghosted = FALSE //reset aghost and away timer
@@ -116,12 +132,34 @@
 
 //Initialisation procs
 /mob/proc/mind_initialize()
-	if(mind) mind.key = key
+	if(mind)
+		mind.key = key
 	else
 		mind = new /datum/mind(key, ckey)
 		mind.original = src
-		if(SSticker) SSticker.minds += mind
-		else world.log << "## DEBUG: mind_initialize(): No ticker ready yet! Please inform Carn"
+		if(SSticker)
+			SSticker.minds += mind
+		else
+			world.log << "## DEBUG: mind_initialize(): No ticker ready yet! Please inform Carn"
 		. = 1 //successfully created a new mind
-	if(!mind.name) mind.name = real_name
+	if(!mind.name)
+		mind.name = real_name
 	mind.current = src
+
+//this is an objective that the player has just completed
+//and we want to store the objective clues generated based on it -spookydonut
+/datum/mind/proc/store_objective(datum/cm_objective/O)
+	if(objective_memory)
+		objective_memory.store_objective(O)
+
+/datum/mind/proc/view_objective_memories(mob/recipient)
+	if(!objective_memory)
+		return
+
+	objective_memory.synchronize_objectives()
+
+	objective_interface.holder = GET_TREE(TREE_MARINE)
+	objective_interface.tgui_interact(current)
+
+/datum/mind/proc/view_research_objective_memories(mob/recipient)
+	research_objective_interface.tgui_interact(current)

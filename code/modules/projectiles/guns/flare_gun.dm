@@ -3,12 +3,17 @@
 	desc = "A flare gun issued to JTAC operators to use with flares. Comes with a miniscope. One shot, one... life saved?"
 	icon_state = "m82f"
 	item_state = "m82f"
+	icon = 'icons/obj/items/weapons/guns/guns_by_faction/USCM/pistols.dmi'
+	item_icons = list(
+		WEAR_L_HAND = 'icons/mob/humans/onmob/inhands/weapons/guns/pistols_lefthand.dmi',
+		WEAR_R_HAND = 'icons/mob/humans/onmob/inhands/weapons/guns/pistols_righthand.dmi'
+	)
 	current_mag = /obj/item/ammo_magazine/internal/flare
 	reload_sound = 'sound/weapons/gun_shotgun_shell_insert.ogg'
 	fire_sound = 'sound/weapons/gun_flare.ogg'
 	aim_slowdown = 0
 	flags_equip_slot = SLOT_WAIST
-	wield_delay = WIELD_DELAY_VERY_FAST
+	wield_delay = WEAPON_DELAY_VERY_FAST
 	movement_onehanded_acc_penalty_mult = MOVEMENT_ACCURACY_PENALTY_MULT_TIER_4
 	flags_gun_features = GUN_INTERNAL_MAG|GUN_CAN_POINTBLANK
 	gun_category = GUN_CATEGORY_HANDGUN
@@ -52,7 +57,6 @@
 	. = ..()
 	to_chat(user, SPAN_WARNING("You pop out [src]'s tube!"))
 	update_icon()
-	eject_casing()
 
 /obj/item/weapon/gun/flare/attackby(obj/item/attacking_item, mob/user)
 	if(istype(attacking_item, /obj/item/device/flashlight/flare))
@@ -127,8 +131,6 @@
 	fired_flare.visible_message(SPAN_WARNING("\A [fired_flare] bursts into brilliant light in the sky!"))
 	fired_flare.invisibility = INVISIBILITY_MAXIMUM
 	fired_flare.mouse_opacity = FALSE
-	fired_flare.indestructible = TRUE
-	fired_flare.unacidable = TRUE
 	fired_flare.fuel = 3 MINUTES
 	fired_flare.light_range = 6
 	fired_flare.light_power = 3

@@ -5,12 +5,8 @@
 	icon_state = "walkietalkie"
 	item_state = "walkietalkie"
 	var/on = 1 // 0 for off
-	var/last_transmission
 	var/frequency = PUB_FREQ //common chat
-	var/traitor_frequency = 0 //tune to frequency to unlock traitor supplies
 	var/canhear_range = 3 // the range which mobs can hear this radio from
-	var/wires = WIRE_SIGNAL|WIRE_RECEIVE|WIRE_TRANSMIT
-	var/b_stat = 0
 	var/broadcasting = FALSE
 	var/listening = TRUE
 	var/freqlock = TRUE
@@ -34,6 +30,7 @@
 
 	var/datum/radio_frequency/radio_connection
 	var/list/datum/radio_frequency/secure_radio_connections = new
+	var/list/hear_only_channels = list() /// Used for the hear_only encryption keys.
 
 /obj/item/device/radio/proc/set_frequency(new_frequency)
 	SSradio.remove_object(src, frequency)
@@ -107,6 +104,7 @@
 	data["freqlock"] = freqlock
 
 	var/list/radio_channels = list()
+	var/list/hear_radio_channels = list()
 
 	for(var/channel in channels)
 		var/channel_key = channel_to_prefix(channel)
@@ -115,7 +113,13 @@
 			"status" = channels[channel] & FREQ_LISTENING,
 			"hotkey" = channel_key))
 
+	for(var/hear_channel in hear_only_channels)
+		hear_radio_channels += list(list(
+			"name" = hear_channel,
+			"status" = hear_only_channels[hear_channel] & FREQ_LISTENING))
+
 	data["channels"] = radio_channels
+	data["hear_channels"] = hear_radio_channels
 
 	data["command"] = volume
 	data["useCommand"] = use_volume
@@ -151,13 +155,20 @@
 			. = TRUE
 		if("channel")
 			var/channel = params["channel"]
-			if(!(channel in channels))
-				return
-			if(channels[channel] & FREQ_LISTENING)
-				channels[channel] &= ~FREQ_LISTENING
+			if(channel in channels)
+				if(channels[channel] & FREQ_LISTENING)
+					channels[channel] &= ~FREQ_LISTENING
+				else
+					channels[channel] |= FREQ_LISTENING
+				. = TRUE
+			else if(channel in hear_only_channels)
+				if(hear_only_channels[channel] & FREQ_LISTENING)
+					hear_only_channels[channel] &= ~FREQ_LISTENING
+				else
+					hear_only_channels[channel] |= FREQ_LISTENING
+				. = TRUE
 			else
-				channels[channel] |= FREQ_LISTENING
-			. = TRUE
+				return
 		if("command")
 			use_volume = !use_volume
 			. = TRUE
@@ -169,17 +180,6 @@
 				//else
 				// recalculateChannels()
 				. = TRUE
-
-/obj/item/device/radio/proc/text_wires()
-	if (!b_stat)
-		return ""
-	return {"
-			<hr>
-			Green Wire: <A href='byond://?src=\ref[src];wires=4'>[(wires & 4) ? "Cut" : "Mend"] Wire</A><BR>
-			Red Wire:   <A href='byond://?src=\ref[src];wires=2'>[(wires & 2) ? "Cut" : "Mend"] Wire</A><BR>
-			Blue Wire:  <A href='byond://?src=\ref[src];wires=1'>[(wires & 1) ? "Cut" : "Mend"] Wire</A><BR>
-			"}
-
 
 /obj/item/device/radio/proc/text_sec_channel(chan_name, chan_stat)
 	var/list = !!(chan_stat&FREQ_LISTENING)!=0
@@ -206,14 +206,11 @@
 	// If we were to send to a channel we don't have, drop it.
 	return null
 
-/obj/item/device/radio/talk_into(mob/living/M as mob, message, channel, verb = "says", datum/language/speaking = null, listening_device = FALSE)
-	if(!on) return // the device has to be on
+/obj/item/device/radio/talk_into(mob/living/M as mob, message, channel, verb = "says", datum/language/speaking = null, listening_device = NOT_LISTENING_BUG)
+	if(!on)
+		return // the device has to be on
 	//  Fix for permacell radios, but kinda eh about actually fixing them.
-	if(!M || !message) return
-
-	//  Uncommenting this. To the above comment:
-	// The permacell radios aren't suppose to be able to transmit, this isn't a bug and this "fix" is just making radio wires useless. -Giacom
-	if(!(src.wires & WIRE_TRANSMIT)) // The device has to have all its wires and shit intact
+	if(!M || !message)
 		return
 
 	/* Quick introduction:
@@ -226,6 +223,9 @@
 		the signal gets processed and logged, and an audible transmission gets sent
 		to each individual headset.
 	*/
+
+	if(should_block_game_interaction(M))
+		return
 
 	//#### Grab the connection datum ####//
 	var/datum/radio_frequency/connection = handle_message_mode(M, message, channel)
@@ -278,10 +278,14 @@
 	var/filter_type = RADIO_FILTER_TYPE_INTERCOM_AND_BOUNCER
 	if(subspace_transmission)
 		filter_type = RADIO_FILTER_TYPE_ALL
-		if(!src.ignore_z)
+		if(!ignore_z)
 			target_zs = get_target_zs(connection.frequency)
-			if (isnull(target_zs))
-				//We don't have a radio connection on our Z-level, abort!
+			if(isnull(target_zs))
+				//We don't have a radio connection on our Z-level, abort for all but maybe ghosts
+				for(var/mob/dead/observer as anything in GLOB.observer_list)
+					// Ghosts that listen to radio normally ignore radio whispers, but this radio transmission failed
+					if(CHECK_MULTIPLE_BITFIELDS(observer?.client?.prefs?.toggles_chat, CHAT_GHOSTEARS|CHAT_GHOSTRADIO))
+						observer.hear_say(message, verb, speaking, italics=TRUE, speaker=M) // Intentionally omitting message_mode
 				return
 
 	/* --- Intercoms can only broadcast to other intercoms, but shortwave radios can broadcast to shortwave radios and intercoms --- */
@@ -346,8 +350,6 @@
 	// what the range is in which mobs will hear the radio
 	// returns: -1 if can't receive, range otherwise
 
-	if (!(wires & WIRE_RECEIVE))
-		return -1
 	if(!listening)
 		return -1
 	if(!(0 in level))
@@ -373,50 +375,20 @@
 	else
 		var/accept = (freq==frequency && listening)
 		if (!accept)
-			for (var/ch_name in channels)
+			for(var/ch_name in channels)
 				var/datum/radio_frequency/RF = secure_radio_connections[ch_name]
-				if (RF.frequency==freq && (channels[ch_name]&FREQ_LISTENING))
+				if(RF.frequency==freq && (channels[ch_name]&FREQ_LISTENING))
+					accept = 1
+					break
+		if(!accept)
+			for(var/ch_name in hear_only_channels)
+				var/datum/radio_frequency/RF = secure_radio_connections[ch_name]
+				if(RF.frequency==freq && (hear_only_channels[ch_name]&FREQ_LISTENING))
 					accept = 1
 					break
 		if (!accept)
 			return -1
 	return canhear_range
-
-/obj/item/device/radio/proc/send_hear(freq, level)
-	var/range = receive_range(freq, level)
-	if(range > -1)
-		var/list/hearers
-		var/list/mobs = get_mobs_in_view(canhear_range, src)
-		var/list/radios = get_radios_in_view(canhear_range, src)
-		hearers += mobs
-		hearers += radios
-		return hearers
-
-
-/obj/item/device/radio/get_examine_text(mob/user)
-	. = ..()
-	if ((in_range(src, user) || loc == user))
-		if (b_stat)
-			. += SPAN_NOTICE("[src] can be attached and modified!")
-		else
-			. += SPAN_NOTICE("[src] can not be modified or attached!")
-
-
-/obj/item/device/radio/attackby(obj/item/W as obj, mob/user as mob)
-	..()
-	if (!HAS_TRAIT(W, TRAIT_TOOL_SCREWDRIVER))
-		return
-	b_stat = !( b_stat )
-	if(!istype(src, /obj/item/device/radio/beacon))
-		if (b_stat)
-			user.show_message(SPAN_NOTICE("The radio can now be attached and modified!"))
-		else
-			user.show_message(SPAN_NOTICE("The radio can no longer be modified or attached!"))
-		updateDialog()
-			//Foreach goto(83)
-		add_fingerprint(user)
-		return
-	else return
 
 /obj/item/device/radio/emp_act(severity)
 	. = ..()
@@ -440,3 +412,7 @@
 
 /obj/item/device/radio/marine
 	frequency = PUB_FREQ
+
+/obj/item/device/radio/marine/command
+	frequency = COMM_FREQ
+	name = "command shortwave radio"

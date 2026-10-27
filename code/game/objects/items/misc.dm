@@ -1,7 +1,7 @@
 /obj/item/bananapeel
 	name = "banana peel"
 	desc = "A peel from a banana."
-	icon = 'icons/obj/items/items.dmi'
+	icon = 'icons/obj/items/harvest.dmi'
 	icon_state = "banana_peel"
 	item_state = "banana_peel"
 	w_class = SIZE_TINY
@@ -11,27 +11,19 @@
 	garbage = TRUE
 
 /obj/item/bananapeel/Crossed(AM as mob|obj)
+	..()
 	if (iscarbon(AM))
 		var/mob/living/carbon/C = AM
 		C.slip(name, 4, 2)
 
-/*
-/obj/item/game_kit
-	name = "Gaming Kit"
-	icon = 'icons/obj/items/items.dmi'
-	icon_state = "game_kit"
-	var/selected = null
-	var/board_stat = null
-	var/data = ""
-	var/base_url = "http://svn.slurm.us/public/spacestation13/misc/game_kit"
-	item_state = "sheet-metal"
-	w_class = SIZE_HUGE
-*/
-
 /obj/item/gift
 	name = "gift"
 	desc = "A wrapped item."
-	icon = 'icons/obj/items/items.dmi'
+	icon = 'icons/obj/items/gifts.dmi'
+	item_icons = list(
+		WEAR_L_HAND = 'icons/mob/humans/onmob/inhands/equipment/paperwork_lefthand.dmi',
+		WEAR_R_HAND = 'icons/mob/humans/onmob/inhands/equipment/paperwork_righthand.dmi'
+	)
 	icon_state = "gift3"
 	var/size = 3
 	var/obj/item/gift = null
@@ -41,9 +33,13 @@
 /obj/item/weapon/pole
 	name = "wooden pole"
 	desc = "A rough, cracked pole seemingly constructed on the field. You could probably whack someone with this."
-	icon = 'icons/obj/items/weapons/weapons.dmi'
+	icon = 'icons/obj/items/weapons/melee/canes.dmi'
 	icon_state = "wooden_pole"
 	item_state = "wooden_pole"
+	item_icons = list(
+		WEAR_L_HAND = 'icons/mob/humans/onmob/inhands/weapons/melee/canes_lefthand.dmi',
+		WEAR_R_HAND = 'icons/mob/humans/onmob/inhands/weapons/melee/canes_righthand.dmi',
+	)
 	force = 20
 	attack_speed = 1.5 SECONDS
 	var/gripped = FALSE
@@ -149,14 +145,6 @@
 /obj/item/weapon/pole/fancy_cane/this_is_a_knife/katana
 	stored_item = new /obj/item/weapon/sword/katana
 
-// IN SHOTGUNS.DM!!
-
-/*obj/item/weapon/pole/fancy_cane/gun
-	name = "fancy cane"
-	desc = "An ebony cane with a fancy, seemingly-golden tip. Feels hollow to the touch."
-	force = 15 // hollow
-*/
-
 /obj/item/research//Makes testing much less of a pain -Sieve
 	name = "research"
 	icon = 'icons/obj/items/stock_parts.dmi'
@@ -170,10 +158,6 @@
 	force = 10
 	throwforce = 2
 	w_class = SIZE_LARGE
-
-
-
-
 
 /obj/item/evidencebag
 	name = "evidence bag"
@@ -228,7 +212,7 @@
 		to_chat(user, SPAN_NOTICE("[src] already has something inside it."))
 		return
 
-	user.visible_message("[user] puts [I] into [src]", "You put [I] inside [src].",\
+	user.visible_message("[user] puts [I] into [src]", "You put [I] inside [src].",
 	"You hear a rustle as someone puts something into a plastic bag.")
 
 	icon_state = "evidence"
@@ -259,7 +243,7 @@
 
 	if(length(contents))
 		var/obj/item/I = contents[1]
-		user.visible_message("[user] takes [I] out of [src]", "You take [I] out of [src].",\
+		user.visible_message("[user] takes [I] out of [src]", "You take [I] out of [src].",
 		"You hear someone rustle around in a plastic bag, and remove something.")
 		overlays.Cut() //remove the overlays
 
@@ -295,138 +279,28 @@
 /obj/item/parachute
 	name = "parachute"
 	desc = "A surprisingly small yet bulky pack with just enough safety straps to make RnD pass health and safety. The label says the pack comes with two parachutes - main and reserve, but you doubt the pack can fit even one."
-	icon = 'icons/obj/items/clothing/backpacks.dmi'
+	icon = 'icons/obj/items/clothing/backpack/backpacks_by_faction/UA.dmi'
+	item_icons = list(
+		WEAR_L_HAND = 'icons/mob/humans/onmob/inhands/clothing/backpacks_lefthand.dmi',
+		WEAR_R_HAND = 'icons/mob/humans/onmob/inhands/clothing/backpacks_righthand.dmi',
+		WEAR_BACK = 'icons/mob/humans/onmob/clothing/back/backpacks_by_faction/UA.dmi',
+	)
 	icon_state = "parachute_pack"
 	item_state = "parachute_pack"
 	w_class = SIZE_MASSIVE
 	flags_equip_slot = SLOT_BACK
 	flags_item = SMARTGUNNER_BACKPACK_OVERRIDE
 
-/obj/item/rappel_harness
-	name = "rappel harness"
-	desc = "A simple, uncomfortable rappel harness with just enough safety straps to make RnD pass health and safety. It comes with an in-built descender, but has no pouches for ammunition."
-	icon = 'icons/obj/items/clothing/belts.dmi'
-	icon_state = "rappel_harness"
-	item_state = "rappel_harness"
-	w_class = SIZE_MASSIVE
-	flags_equip_slot = SLOT_WAIST
+/obj/item/clock
+	name = "digital clock"
+	desc = "A battery powered clock, able to keep time within about 5 seconds... it was never that accurate."
+	icon = 'icons/obj/items/devices.dmi'
+	icon_state = "digital_clock"
+	force = 3
+	throwforce = 2
+	throw_range = 4
+	w_class = SIZE_SMALL
 
-/obj/item/rappel_harness/extract
-	name = "dual purpose rappel-fulton harness"
-	desc = "A fulton Surface To Air Recovery System (STARS). Special latch/hook assembly allows for aircraft on flyby equipped with a rappel system to pick up the attached item or person. The complex assembly of venlar rigging and secured buckles takes some time to set up though."
-	icon_state = "rappel_harness_adv"
-	var/shuttle_id
-	actions_types = list(/datum/action/item_action/STARS)
-
-/obj/item/rappel_harness/extract/proc/try_extract(mob/living/carbon/human/user)
-	var/obj/docking_port/mobile/marine_dropship/shuttle = SSshuttle.getShuttle(shuttle_id)
-
-	if(!shuttle)
-		return
-
-	if(!shuttle.in_flyby)
-		to_chat(user, SPAN_WARNING("No shuttle detected in lower orbit, aborting extraction."))
-		return
-
-	var/obj/structure/dropship_equipment/paradrop_system/rapsys = locate() in shuttle.equipments
-	if(!rapsys)
-		to_chat(user, SPAN_WARNING("No rappel system detected in shuttle, aborting extraction."))
-		return
-
-	user.visible_message(SPAN_DANGER("[user] gets snatched off the ground with a tremendous force!"))
-	if(prob(50))
-		user.emote("scream")
-	user.apply_effect(10, STUN)
-	animate(user, time = 2, pixel_x = 360, pixel_y = 360, flags = ANIMATION_PARALLEL)
-	playsound(user,'sound/effects/bamf.ogg', 50, 1)
-	addtimer(CALLBACK(src, PROC_REF(on_extract), user, rapsys), 1.5 SECONDS)
-
-/obj/item/rappel_harness/extract/attack(mob/living/carbon/human/H, mob/living/carbon/human/user)
-	if(H.belt)
-		to_chat(user, SPAN_WARNING("Remove their belt first!"))
-		return
-
-	if(!is_ground_level(H.z))
-		return
-
-	var/area/location_area = get_area(H)
-	if(CEILING_IS_PROTECTED(location_area.ceiling, CEILING_PROTECTION_TIER_1))
-		to_chat(H, SPAN_WARNING("There's no space for fulton balloon to fly in this area."))
-		return
-
-	user.visible_message(SPAN_DANGER("[user] begins to adjust the fulton device on [H] for extraction!"))
-	playsound(H, 'sound/items/fulton.ogg', 50, 1)
-	if(!do_after(user, (10 SECONDS), INTERRUPT_ALL, BUSY_ICON_HOSTILE, H))
-		return
-
-	if(H.belt)
-		to_chat(user, SPAN_WARNING("Remove their belt!"))
-		return
-	user.drop_inv_item_to_loc(src, H)
-	H.equip_to_slot_if_possible(src, WEAR_WAIST)
-	try_extract(H)
-
-/obj/item/rappel_harness/extract/proc/on_extract(mob/living/carbon/human/user, obj/structure/dropship_equipment/paradrop_system/system)
-	flick("rappel_hatch_opening", system)
-	user.pixel_x = 0
-	user.pixel_y = 0
-	user.forceMove(get_turf(system))
-	user.apply_effect(5, WEAKEN)
-	if(prob(25))
-		user.do_vomit()
-
-/datum/action/item_action/STARS/New(Target, obj/item/holder)
+/obj/item/clock/get_examine_text(mob/user)
 	. = ..()
-	name = "Attempt Extraction"
-	action_icon_state = "extract"
-	button.name = name
-	button.overlays.Cut()
-	button.overlays += image('icons/mob/hud/actions.dmi', button, action_icon_state)
-
-/datum/action/item_action/STARS/action_activate()
-	. = ..()
-	var/obj/item/rappel_harness/extract/harness = holder_item
-	var/mob/living/carbon/human/H = usr
-	if(H.belt != harness)
-		to_chat(H, SPAN_WARNING("You have to equip the harness on your belt!"))
-		return
-	if(!is_ground_level(H.z))
-		return
-
-	var/area/location_area = get_area(H)
-	if(CEILING_IS_PROTECTED(location_area.ceiling, CEILING_PROTECTION_TIER_1))
-		to_chat(H, SPAN_WARNING("There's no space for fulton balloon to fly in this area."))
-		return
-	H.visible_message(SPAN_DANGER("[H] begins to adjust the fulton device for self-extraction!"))
-	playsound(H, 'sound/items/fulton.ogg', 50, 1)
-	if(!do_after(H, (10 SECONDS), INTERRUPT_ALL, BUSY_ICON_HOSTILE, harness))
-		return
-
-	harness.try_extract(H)
-
-/obj/item/rappel_harness/extract/midway
-	shuttle_id = DROPSHIP_MIDWAY
-
-/obj/item/rappel_harness/extract/cyclone
-	shuttle_id = DROPSHIP_CYCLONE
-
-/obj/item/rappel_harness/extract/typhoon
-	shuttle_id = DROPSHIP_TYPHOON
-
-/obj/item/rappel_harness/extract/tornado
-	shuttle_id = DROPSHIP_TORNADO
-
-/obj/item/rappel_harness/extract/tripoli
-	shuttle_id = DROPSHIP_TRIPOLI
-
-/obj/item/rappel_harness/extract/alamo
-	shuttle_id = DROPSHIP_ALAMO
-
-/obj/item/rappel_harness/extract/normandy
-	shuttle_id = DROPSHIP_NORMANDY
-
-/obj/item/rappel_harness/extract/nauk
-	shuttle_id = DROPSHIP_UPP
-
-/obj/item/rappel_harness/extract/rmc
-	shuttle_id = DROPSHIP_GIBRALTAR
+	. += SPAN_NOTICE("The [name] reads: [GLOB.current_date_string] - [worldtime2text()]")

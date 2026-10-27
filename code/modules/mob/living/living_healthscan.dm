@@ -12,7 +12,6 @@ GLOBAL_LIST_INIT(known_implants, subtypesof(/obj/item/implant))
 	var/mob/living/target_mob
 	var/detail_level = DETAIL_LEVEL_FULL
 	var/ui_mode = UI_MODE_CLASSIC
-	var/atom/scanner_device = FALSE
 
 /datum/health_scan/New(mob/target)
 	. = ..()
@@ -24,7 +23,7 @@ GLOBAL_LIST_INIT(known_implants, subtypesof(/obj/item/implant))
 	return ..()
 
 /// This is the proc for interacting with, or looking at, a mob's health display. Also contains skillchecks and the like. You may NOT call tgui interact directly, and you MUST set the detail level.
-/datum/health_scan/proc/look_at(mob/user, detail = DETAIL_LEVEL_FULL, bypass_checks = FALSE, ignore_delay = TRUE, alien = FALSE, datum/tgui/ui = null, associated_equipment = FALSE)
+/datum/health_scan/proc/look_at(mob/user, detail = DETAIL_LEVEL_FULL, bypass_checks = FALSE, ignore_delay = TRUE, alien = FALSE, datum/tgui/ui = null)
 	if(!bypass_checks)
 		if(HAS_TRAIT(target_mob, TRAIT_FOREIGN_BIO) && !alien)
 			to_chat(user, SPAN_WARNING("ERROR: Unknown biology detected."))
@@ -33,18 +32,14 @@ GLOBAL_LIST_INIT(known_implants, subtypesof(/obj/item/implant))
 			to_chat(usr, SPAN_WARNING("You don't have the dexterity to do this!"))
 			return
 		if(!ignore_delay && !skillcheck(user, SKILL_MEDICAL, SKILL_MEDICAL_MEDIC))
-			to_chat(user, SPAN_WARNING("You start fumbling around with [target_mob]..."))
+			to_chat(user, SPAN_WARNING("You start fumbling around with the scanner..."))
 			var/fduration = 60
 			if(skillcheck(user, SKILL_MEDICAL, SKILL_MEDICAL_DEFAULT))
 				fduration = 30
 			if(!do_after(user, fduration, INTERRUPT_NO_NEEDHAND, BUSY_ICON_FRIENDLY) || !user.Adjacent(target_mob))
 				return
-		if(!istype(target_mob, /mob/living/carbon) || isxeno(target_mob))
-			to_chat(user, SPAN_WARNING("The scanner can't make sense of this creature."))
-			return
 
 	detail_level = detail
-	scanner_device = associated_equipment
 	tgui_interact(user, ui)
 
 /datum/health_scan/ui_state(mob/user)
@@ -61,7 +56,7 @@ GLOBAL_LIST_INIT(known_implants, subtypesof(/obj/item/implant))
 	if(!ui)
 		ui = new(user, src, "HealthScan", "Health Scan")
 		ui.open()
-		ui.set_autoupdate(FALSE)
+		ui.set_autoupdate(isobserver(user))
 
 /**
  * Returns TRUE if the target is either dead or appears to be dead.
@@ -95,13 +90,6 @@ GLOBAL_LIST_INIT(known_implants, subtypesof(/obj/item/implant))
 	return min(-100, target_mob.health)
 
 /datum/health_scan/ui_data(mob/user, data_detail_level = null)
-
-	//This health scan is tied to a device that can buffer multiple scans, like the HD-E or Body Scanner.
-	if(scanner_device)
-		if(istype(scanner_device, /obj/item/device/healthanalyzer/soul))
-			var/obj/item/device/healthanalyzer/soul/analyzer = scanner_device
-			if(analyzer.last_scan && !analyzer.connected_to) //least one scan in the past and the analyzer isn't supposed to fetch new info
-				return analyzer.buffer_for_report[analyzer.currently_selected_last_scan]
 	var/list/data = list(
 		"patient" = target_mob.name,
 		"dead" = get_death_value(target_mob),
@@ -115,8 +103,7 @@ GLOBAL_LIST_INIT(known_implants, subtypesof(/obj/item/implant))
 		"blood_amount" = target_mob.blood_volume,
 		"holocard" = get_holo_card_color(target_mob),
 		"hugged" = (locate(/obj/item/alien_embryo) in target_mob),
-		"ui_mode" = ui_mode,
-		"time" = worldtime2text("hh:mm:ss")
+		"ui_mode" = ui_mode
 	)
 
 	var/internal_bleeding = FALSE //do they have internal bleeding anywhere
@@ -178,11 +165,9 @@ GLOBAL_LIST_INIT(known_implants, subtypesof(/obj/item/implant))
 		var/unknown_implants = 0
 		for(var/obj/limb/limb in human_target_mob.limbs)
 			var/internal_bleeding_check = FALSE //do they have internal bleeding in this limb
-			var/arterial_bleeding_check = FALSE //this should be the opposite but fix later
 			for(var/datum/effects/bleeding/internal/ib in limb.bleeding_effects_list)
 				internal_bleeding = TRUE
 				internal_bleeding_check = TRUE
-				arterial_bleeding_check = ib.has_been_bandaged //this is for showing "[Arterial Bleeding!]" in a pink colour in HealthScan.jsx
 				break
 			if(limb.hidden)
 				unknown_implants++
@@ -199,9 +184,16 @@ GLOBAL_LIST_INIT(known_implants, subtypesof(/obj/item/implant))
 				bleeding_check = TRUE
 				break
 
-			if((!limb.brute_dam && !limb.burn_dam && !(limb.status & LIMB_DESTROYED)) && !bleeding_check && !internal_bleeding_check && !(implant && detail_level >= DETAIL_LEVEL_BODYSCAN ) && !(limb.status & LIMB_UNCALIBRATED_PROSTHETIC) && !(limb.status & LIMB_BROKEN) && !(limb.status & LIMB_SPLINTED) && !(limb.status & LIMB_SPLINTED_INDESTRUCTIBLE) && !(limb.get_incision_depth()))
+			if(!limb.brute_dam && !limb.burn_dam && !(limb.status & (LIMB_THIRD_DEGREE_BURNS|LIMB_ESCHAR|LIMB_DESTROYED|LIMB_UNCALIBRATED_PROSTHETIC|LIMB_BROKEN|LIMB_SPLINTED|LIMB_SPLINTED_INDESTRUCTIBLE)) && !bleeding_check && !internal_bleeding_check && !(implant && detail_level >= DETAIL_LEVEL_BODYSCAN) && !(limb.get_incision_depth()))
 				continue
+
 			var/list/core_body_parts = list("head", "chest", "groin")
+			var/eschar = null
+			if(limb.status & LIMB_ESCHAR)
+				eschar = "Eschar"
+			var/third_degree_burns = null
+			if(limb.status & LIMB_THIRD_DEGREE_BURNS)
+				third_degree_burns = "Severe burns"
 			var/list/current_list = list(
 				"name" = limb.display_name,
 				"brute" = floor(limb.brute_dam),
@@ -210,11 +202,11 @@ GLOBAL_LIST_INIT(known_implants, subtypesof(/obj/item/implant))
 				"salved" = limb.is_salved(),
 				"missing" = (limb.status & LIMB_DESTROYED),
 				"limb_status" = null,
+				"limb_third_degree_burns" = third_degree_burns,
+				"limb_eschar" = eschar,
 				"bleeding" = bleeding_check,
 				"implant" = implant,
-				"internal_bleeding" = internal_bleeding_check,
-				"arterial_bleeding" = arterial_bleeding_check,
-				"time" = worldtime2text("hh:mm:ss")
+				"internal_bleeding" = internal_bleeding_check
 			)
 			//broken-ness and splints
 			var/limb_status = null
@@ -272,7 +264,7 @@ GLOBAL_LIST_INIT(known_implants, subtypesof(/obj/item/implant))
 
 			//checking for open incisions, but since eyes and mouths incisions are "head incisions" but not "head surgeries" gotta do some snowflake
 			if(limb.name == "head")
-				if(human_target_mob.active_surgeries["head"])
+				if(human_target_mob.active_surgeries["head"] || limb.get_incision_depth())
 					current_list["open_incision"] = TRUE
 
 				var/zone
@@ -335,12 +327,19 @@ GLOBAL_LIST_INIT(known_implants, subtypesof(/obj/item/implant))
 					"color" = "red"
 					))
 			if(human_target_mob.stat == DEAD)
-				if((human_target_mob.health + 20) > HEALTH_THRESHOLD_DEAD)
-					advice += list(list(
-						"advice" = "Apply shock via defibrillator!",
-						"icon" = "bolt",
-						"color" = "yellow"
-						))
+				if((human_target_mob.health + 20) > human_target_mob.health_threshold_dead)
+					if(issynth(human_target_mob))
+						advice += list(list(
+							"advice" = "Reboot the synthetic with a reset key!",
+							"icon" = "robot",
+							"color" = "green"
+							))
+					else
+						advice += list(list(
+							"advice" = "Apply shock via defibrillator!",
+							"icon" = "bolt",
+							"color" = "yellow"
+							))
 				else
 					if(human_target_mob.getBruteLoss(organic_only = TRUE) > 30)
 						advice += list(list(
@@ -354,7 +353,7 @@ GLOBAL_LIST_INIT(known_implants, subtypesof(/obj/item/implant))
 							"icon" = "band-aid",
 							"color" = "orange" //BRI'ISH????
 							))
-					if(((human_target_mob.health + 50) < HEALTH_THRESHOLD_DEAD) && !issynth(human_target_mob))
+					if(((human_target_mob.health + 50) < human_target_mob.health_threshold_dead) && !issynth(human_target_mob))
 						advice += list(list(
 							"advice" = "Administer a single dose of epinephrine.",
 							"icon" = "syringe",
@@ -402,7 +401,7 @@ GLOBAL_LIST_INIT(known_implants, subtypesof(/obj/item/implant))
 						advice += temp_advice
 				if(human_target_mob.getFireLoss(organic_only = TRUE) > 30)
 					temp_advice = list(list(
-						"advice" = "Administer a single dose of kelotane.",
+						"advice" = "Administer a single dose of kelotane and apply kits to areas with severe burns.",
 						"icon" = "syringe",
 						"color" = "yellow"
 						))
@@ -482,13 +481,11 @@ GLOBAL_LIST_INIT(known_implants, subtypesof(/obj/item/implant))
 	data["ssd"] = null //clear the data in case we have an old input from a previous scan
 	if(target_mob.getBrainLoss() >= 100 || !target_mob.has_brain())
 		data["ssd"] = "Subject has taken extreme amounts of brain damage."
-	else if(target_mob.has_brain() && target_mob.stat != DEAD && ishuman(target_mob))
-		var/mob/living/carbon/human/target_human = target_mob
-		if(!target_human.get_ai_brain())
-			if(!target_mob.key)
-				data["ssd"] = "No soul detected." // they ghosted
-			else if(!target_mob.client)
-				data["ssd"] = "SSD detected." // SSD
+	else if(target_mob.has_brain() && target_mob.stat != DEAD && ishuman(target_mob) && !(target_mob.status_flags & FAKESOUL))
+		if(!target_mob.key)
+			data["ssd"] = "No soul detected." // they ghosted
+		else if(!target_mob.client)
+			data["ssd"] = "SSD detected." // SSD
 
 	return data
 
@@ -501,56 +498,16 @@ GLOBAL_LIST_INIT(known_implants, subtypesof(/obj/item/implant))
 			if(ishuman(target_mob))
 				var/mob/living/carbon/human/target_human = target_mob
 				target_human.change_holo_card(ui.user)
-				return TRUE
+				ui.send_update(list("holocard" = get_holo_card_color(target_mob)))
+				return FALSE
 		if("change_ui_mode")
 			switch(ui_mode)
 				if(UI_MODE_CLASSIC)
 					ui_mode = UI_MODE_MINIMAL
 				if(UI_MODE_MINIMAL)
 					ui_mode = UI_MODE_CLASSIC
-			if(istype(scanner_device, /obj/item/device/healthanalyzer/soul))
-				var/obj/item/device/healthanalyzer/soul/analyzer = scanner_device
-				analyzer.last_scan["ui_mode"] = !analyzer.last_scan["ui_mode"]
-				analyzer.tgui_interact(ui.user)
-			return TRUE
-		if("previous_scan")
-			if(ishuman(target_mob))
-				//var/mob/living/carbon/human/target_human = target_mob
-				if(istype(scanner_device, /obj/item/device/healthanalyzer/soul))
-					var/obj/item/device/healthanalyzer/soul/analyzer = scanner_device
-					analyzer.currently_selected_last_scan = clamp(analyzer.currently_selected_last_scan - 1, 1,analyzer.buffer_for_report.len)
-					analyzer.tgui_interact(ui.user)
-					return TRUE
-				else
-					to_chat(ui.user, "This device does not support this.")
-		if("next_scan")
-			if(istype(scanner_device, /obj/item/device/healthanalyzer/soul))
-				var/obj/item/device/healthanalyzer/soul/analyzer = scanner_device
-				analyzer.currently_selected_last_scan = clamp(analyzer.currently_selected_last_scan + 1, 1,analyzer.buffer_for_report.len)
-				analyzer.tgui_interact(ui.user)
-				return TRUE
-			else
-				to_chat(ui.user, "This device does not support this.")
-		if("print_scan")
-			if(istype(scanner_device, /obj/item/device/healthanalyzer/soul))
-				var/obj/item/device/healthanalyzer/soul/analyzer = scanner_device
-				analyzer.print_report(ui.user)
-				return TRUE
-			else if (istype(scanner_device, /obj/structure/machinery.body_scanconsole))
-				var/obj/structure/machinery/body_scanconsole/analyzer = scanner_device
-				analyzer.print_report(ui.user)
-				return TRUE
-			else
-				to_chat(ui.user, "This device does not support this.")
-		if("clear_scans")
-			if(istype(scanner_device, /obj/item/device/healthanalyzer/soul))
-				var/obj/item/device/healthanalyzer/soul/analyzer = scanner_device
-				analyzer.buffer_for_report.Cut(0,analyzer.buffer_for_report.len-1)
-				analyzer.tgui_interact(ui.user)
-				playsound(analyzer.loc, 'sound/machines/buzz-sigh.ogg', 5, 0)
-				return TRUE
-			else
-				to_chat(ui.user, "This device does not support this.")
+			ui.send_update(list("ui_mode" = ui_mode))
+			return FALSE
 
 /// legacy proc for to_chat messages on health analysers
 /mob/living/proc/health_scan(mob/living/carbon/human/user, ignore_delay = FALSE, show_limb_damage = TRUE, show_browser = TRUE, alien = FALSE, do_checks = TRUE) // ahem. FUCK WHOEVER CODED THIS SHIT AS NUMBERS AND NOT DEFINES.
@@ -577,9 +534,6 @@ GLOBAL_LIST_INIT(known_implants, subtypesof(/obj/item/implant))
 				fduration = 30
 			if(!do_after(user, fduration, INTERRUPT_NO_NEEDHAND, BUSY_ICON_FRIENDLY) || !user.Adjacent(src))
 				return
-		if(isxeno(src))
-			to_chat(user, SPAN_WARNING("[src] can't make sense of this creature."))
-			return
 		// Doesn't work on non-humans
 		if(!istype(src, /mob/living/carbon))
 			user.show_message("\nHealth Analyzer results for ERROR:\n\t Overall Status: ERROR")
@@ -760,7 +714,8 @@ GLOBAL_LIST_INIT(known_implants, subtypesof(/obj/item/implant))
 			else
 				dat += "\tBlood Level normal: [blood_percent]% [blood_volume]cl. Type: [blood_type]\n"
 		// Show pulse
-		dat += "\tPulse: <span class='[H.pulse == PULSE_THREADY || H.pulse == PULSE_NONE ? INTERFACE_RED : ""]'>[H.get_pulse(GETPULSE_TOOL)] bpm.</span>\n"
+		var/target_pulse = H.get_pulse(GETPULSE_TOOL)
+		dat += "\tPulse: <span class='[H.pulse == PULSE_THREADY || H.pulse == PULSE_NONE ? INTERFACE_RED : ""]'>[target_pulse] bpm.</span>\n"
 		if((H.stat == DEAD && !H.client))
 			unrevivable = 1
 		if(!unrevivable)

@@ -11,7 +11,7 @@
 *******/
 /obj/item/device/camera_film
 	name = "film cartridge"
-	icon = 'icons/obj/items/items.dmi'
+	icon = 'icons/obj/items/paper.dmi'
 	desc = "A camera film cartridge. Insert it into a camera to reload it."
 	icon_state = "film"
 	item_state = "electropack"
@@ -27,8 +27,8 @@
 ********/
 /obj/item/photo
 	name = "photo"
-	icon = 'icons/obj/items/items.dmi'
-	icon_state = "photo"
+	icon = 'icons/obj/items/paper.dmi'
+	icon_state = "photo_item"
 	item_state = "paper"
 	w_class = SIZE_TINY
 	var/icon/img //Big photo image
@@ -57,11 +57,12 @@
 		return  list(SPAN_NOTICE("It is too far away."))
 
 /obj/item/photo/proc/show(mob/living/user)
-	if(!isicon(img)) return // this should stop a runtime error
+	if(!isicon(img))
+		return // this should stop a runtime error
 	user << browse_rsc(img, "tmp_photo.png")
 	var/dat = "<html>" \
 		+ "<body style='overflow:hidden;margin:0;text-align:center' class='paper'>" \
-		+ "<img src='tmp_photo.png' width='[64*photo_size]' style='-ms-interpolation-mode:nearest-neighbor;image-rendering:pixelated' />" \
+		+ "<img src='tmp_photo.png' width='[64*photo_size]' style='image-rendering:pixelated'/>" \
 		+ "[scribble ? "<br>Written on the back:<br><i>[scribble]</i>" : ""]"\
 		+ "</body></html>"
 	show_browser(user, dat, name, name, width = 80 * photo_size, height = (scribble ? 100 : 82) *photo_size)
@@ -86,7 +87,7 @@
 **************/
 /obj/item/storage/photo_album
 	name = "Photo album"
-	icon = 'icons/obj/items/items.dmi'
+	icon = 'icons/obj/items/paper.dmi'
 	icon_state = "album"
 	item_state = "briefcase"
 	can_hold = list(/obj/item/photo,)
@@ -121,14 +122,15 @@
 *********/
 /obj/item/device/camera
 	name = "camera"
-	icon = 'icons/obj/items/items.dmi'
+	icon = 'icons/obj/items/paper.dmi'
 	desc = "A polaroid camera."
 	icon_state = "camera"
 	item_state = "camera"
 	item_icons = list(
-		WEAR_L_HAND = 'icons/mob/humans/onmob/items_lefthand_0.dmi',
-		WEAR_R_HAND = 'icons/mob/humans/onmob/items_righthand_0.dmi'
-		)
+		WEAR_WAIST = 'icons/mob/humans/onmob/clothing/belts/tools.dmi',
+		WEAR_L_HAND = 'icons/mob/humans/onmob/inhands/equipment/paperwork_lefthand.dmi',
+		WEAR_R_HAND = 'icons/mob/humans/onmob/inhands/equipment/paperwork_righthand.dmi'
+	)
 	flags_item = TWOHANDED
 	w_class = SIZE_SMALL
 	flags_atom = FPRINT|CONDUCT
@@ -138,10 +140,17 @@
 	var/pictures_max = 10
 	var/pictures_left = 10
 	var/size = 7
+	var/cooldown = 0
+	var/static/list/possible_focus = list(1, 3, 5, 7)
+
+/obj/item/device/camera/unique_action(mob/user)
+	change_size(user)
 
 /obj/item/device/camera/get_examine_text(mob/user)
 	. = ..()
-	. += "It has [pictures_left] photos left."
+	. += SPAN_NOTICE("It has [pictures_left] photos left.")
+	. += SPAN_NOTICE("It is currently set to take [size]x[size] photos. Press Unique Action to change the focus.")
+
 
 /obj/item/device/camera/attack_self(mob/user) //wielding capabilities
 	. = ..()
@@ -154,14 +163,16 @@
 	..()
 	unwield(user)
 
-/obj/item/device/camera/verb/change_size()
-	set name = "Set Photo Focus"
-	set src in usr
-	set category = "Object"
-	var/nsize = tgui_input_list(usr, "Photo Size","Pick a size of resulting photo.", list(1,3,5,7))
-	if(nsize)
-		size = nsize
-		to_chat(usr, SPAN_NOTICE("Camera will now take [size]x[size] photos."))
+/obj/item/device/camera/proc/change_size(mob/user)
+	var/current_focus = possible_focus.Find(size)
+	if(!current_focus) // just in case lol
+		size = possible_focus[1]
+	else
+		var/next_focus = (current_focus % possible_focus.len) + 1
+		size = possible_focus[next_focus]
+
+	to_chat(user, SPAN_NOTICE("[src] will now take [size]x[size] photos."))
+	playsound(loc, 'sound/weapons/handling/safety_toggle.ogg', 25, 1, 6)
 
 /obj/item/device/camera/attack(mob/living/carbon/human/M, mob/user)
 	return
@@ -251,8 +262,8 @@
 			CHECK_TICK
 	return res
 
-/obj/item/device/camera/proc/get_mob_descriptions(turf/the_turf, existing_descripion)
-	var/mob_detail = existing_descripion
+/obj/item/device/camera/proc/get_mob_descriptions(turf/the_turf, existing_description)
+	var/mob_detail = existing_description
 	for(var/mob/living/carbon/cur_carbon in the_turf)
 		if(cur_carbon.invisibility)
 			continue
@@ -278,17 +289,19 @@
 	return mob_detail
 
 /obj/item/device/camera/afterattack(atom/target as mob|obj|turf|area, mob/user as mob, flag)
+	if(world.time < cooldown)
+		to_chat(user, SPAN_WARNING("[src] is still processing the last photo, hold your horses!"))
+		return
 	if(pictures_left <= 0)
-		to_chat(user, SPAN_WARNING("There isn't enough film in the [src] to take a photo."))
+		to_chat(user, SPAN_WARNING("There isn't enough film in [src] to take a photo."))
 		return
 	if(ismob(target.loc) || isstorage(target.loc) || user.contains(target) || istype(target, /atom/movable/screen))
 		return
-	if(!(flags_item & WIELDED))
-		to_chat(user, SPAN_WARNING("You need to wield the [src] with both hands to take a photo!"))
-		return
+
 	playsound(loc, pick('sound/items/polaroid1.ogg', 'sound/items/polaroid2.ogg'), 15, 1)
 	pictures_left--
 	to_chat(user, SPAN_NOTICE("[pictures_left] photos left."))
+	cooldown = world.time + 3 SECONDS // an addtimer for a cooldown is kinda overkill dont you think
 
 	addtimer(CALLBACK(src, PROC_REF(captureimage), target, user, flag), 1 SECONDS)
 
@@ -313,7 +326,7 @@
 
 	var/icon/small_img = icon(photoimage)
 	var/icon/tiny_img = icon(photoimage)
-	var/icon/item_icon = icon('icons/obj/items/items.dmi',"photo")
+	var/icon/item_icon = icon('icons/obj/items/paper.dmi',"photo_item")
 	var/icon/paper_icon = icon('icons/obj/items/paper.dmi', "photo")
 	small_img.Scale(8, 8)
 	tiny_img.Scale(4, 4)
@@ -344,71 +357,139 @@
 
 /obj/item/device/camera/oldcamera
 	name = "Old Camera"
-	desc = "An old, slightly beat-up digital camera, with a cheap photo printer taped on. It's a nice shade of blue."
+	desc = "An old, slightly beat-up retro-esque polaroid camera, it's antiquated enough to be marked as a collectors item, probably. It's a nice shade of blue."
 	icon_state = "oldcamera"
+	w_class = SIZE_TINY
+	pictures_max = 0 // think disposable camera
 	pictures_left = 30
 
-/obj/item/device/camera/broadcasting
+/obj/item/device/camera/oldcamera/attackby(obj/item/film, mob/user)
+	if(istype(film, /obj/item/device/camera_film))
+		to_chat(user, SPAN_NOTICE("Try as you might, but you can't seem to open up [src] to insert some film, oh well."))
+		return
+
+/obj/item/device/broadcasting
 	name = "Broadcasting Camera"
-	desc = "Actively document everything you see, from the mundanity of shipside to the brutal battlefields below. Has a built-in printer for action shots."
+	desc = "Actively document everything you see, from the mundanity of shipside to the brutal battlefields below."
+	icon = 'icons/obj/items/tools.dmi'
+	item_icons = list(
+		WEAR_L_HAND = 'icons/mob/humans/onmob/inhands/equipment/tools_lefthand.dmi',
+		WEAR_R_HAND = 'icons/mob/humans/onmob/inhands/equipment/tools_righthand.dmi',
+	)
 	icon_state = "broadcastingcamera"
 	item_state = "broadcastingcamera"
 	unacidable = TRUE
-	indestructible = TRUE
-	pictures_left = 20
-	pictures_max = 20
+	explo_proof = TRUE
 	w_class = SIZE_HUGE
+	flags_item = NO_FLAGS
 	flags_equip_slot = NO_FLAGS //cannot be equiped
+	var/active = FALSE
 	var/obj/structure/machinery/camera/correspondent/linked_cam
 
-/obj/item/device/camera/broadcasting/Initialize(mapload, ...)
+/obj/item/device/broadcasting/Initialize(mapload, ...)
 	. = ..()
 	linked_cam = new(loc, src)
 	linked_cam.status = FALSE
 	RegisterSignal(src, COMSIG_COMPONENT_ADDED, PROC_REF(handle_rename))
 
-/obj/item/device/camera/broadcasting/Destroy()
+/obj/item/device/broadcasting/Destroy()
 	clear_broadcast()
 	return ..()
 
-/obj/item/device/camera/broadcasting/wield(mob/user)
+/obj/item/device/broadcasting/update_icon()
+	if(active)
+		item_state = "broadcastingcamera_w"
+	else
+		item_state = "broadcastingcamera"
 	. = ..()
-	if(!.)
-		return
+
+
+/obj/item/device/broadcasting/proc/turn_on(mob/user)
+	active = TRUE
 	flags_atom |= (USES_HEARING|USES_SEEING)
+	handle_move()
+	SEND_SIGNAL(src, COMSIG_BROADCAST_GO_LIVE)
+
+	var/turf/user_turf = get_turf(user)
+	if(is_ground_level(user_turf.z))
+		SScmtv.change_observed_mob(user, set_showtime = INFINITY)
+
+	RegisterSignal(src, COMSIG_MOVABLE_MOVED, PROC_REF(handle_move))
+	to_chat(user, SPAN_NOTICE("[src] begins to buzz softly as you go live."))
+	update_icon()
+
+/obj/item/device/broadcasting/proc/turn_off(mob/user)
+	active = FALSE
+	flags_atom &= ~(USES_HEARING|USES_SEEING)
+	linked_cam.status = FALSE
+
+	if(SScmtv.current_perspective == user)
+		SScmtv.reset_perspective("Broadcasting ended as turned off.")
+
+	UnregisterSignal(src, COMSIG_MOVABLE_MOVED)
+	to_chat(user, SPAN_NOTICE("[src] goes silent as the broadcast stops."))
+	update_icon()
+
+/obj/item/device/broadcasting/proc/handle_move()
 	if(!linked_cam || QDELETED(linked_cam))
 		linked_cam = new(loc, src)
 	else
 		linked_cam.status = TRUE
 		linked_cam.forceMove(loc)
-	SEND_SIGNAL(src, COMSIG_BROADCAST_GO_LIVE)
-	to_chat(user, SPAN_NOTICE("[src] begins to buzz softly as you go live."))
 
-/obj/item/device/camera/broadcasting/unwield(mob/user)
+/obj/item/device/broadcasting/dropped(mob/user)
 	. = ..()
-	flags_atom &= ~(USES_HEARING|USES_SEEING)
-	linked_cam.status = FALSE
+	linked_cam.view_range = 4
 
-/obj/item/device/camera/broadcasting/proc/handle_rename(obj/item/camera, datum/component/label)
+	if(active && SScmtv.current_perspective == user)
+		SScmtv.reset_perspective("Broadcasting ended as dropped.")
+
+/obj/item/device/broadcasting/pickup(mob/user, silent)
+	. = ..()
+	linked_cam.view_range = 7
+
+	var/turf/user_turf = get_turf(user)
+	if(active && is_ground_level(user_turf.z))
+		SScmtv.change_observed_mob(user, set_showtime = INFINITY)
+
+/obj/item/device/broadcasting/attack_self(mob/user)
+	. = ..()
+	if(active)
+		turn_off(user)
+	else
+		turn_on(user)
+
+/obj/item/device/broadcasting/attack_alien(mob/living/carbon/xenomorph/xeno)
+	. = ..()
+	if(!active)
+		return
+	xeno.animation_attack_on(src)
+	playsound(src, 'sound/effects/metalhit.ogg', 25, 1)
+	xeno.visible_message(SPAN_DANGER("[xeno] [xeno.slashes_verb] [src]!"),
+	SPAN_DANGER("We [xeno.slash_verb] [src]!"), null, 5, CHAT_TYPE_XENO_COMBAT)
+	turn_off(xeno)
+	return XENO_ATTACK_ACTION
+
+/obj/item/device/broadcasting/proc/handle_rename(obj/item/camera, datum/component/label)
 	SIGNAL_HANDLER
 	if(!istype(label, /datum/component/label))
 		return
 	linked_cam.c_tag = get_broadcast_name()
 
-/obj/item/device/camera/broadcasting/proc/clear_broadcast()
+/obj/item/device/broadcasting/proc/clear_broadcast()
 	if(!QDELETED(linked_cam))
 		QDEL_NULL(linked_cam)
 
-/obj/item/device/camera/broadcasting/proc/get_broadcast_name()
+/obj/item/device/broadcasting/proc/get_broadcast_name()
 	var/datum/component/label/src_label_component = GetComponent(/datum/component/label)
 	if(src_label_component)
 		return src_label_component.label_name
 	return "Broadcast [serial_number]"
 
-/obj/item/device/camera/broadcasting/hear_talk(mob/living/sourcemob, message, verb = "says", datum/language/language, italics = FALSE)
+/obj/item/device/broadcasting/hear_talk(mob/living/sourcemob, message, verb = "says", datum/language/language, italics = FALSE)
 	SEND_SIGNAL(src, COMSIG_BROADCAST_HEAR_TALK, sourcemob, message, verb, language, italics, get_dist(sourcemob, src) < 3)
 
-/obj/item/device/camera/broadcasting/see_emote(mob/living/sourcemob, emote, audible = FALSE)
+/obj/item/device/broadcasting/see_emote(mob/living/sourcemob, emote, audible = FALSE)
 	SEND_SIGNAL(src, COMSIG_BROADCAST_SEE_EMOTE, sourcemob, emote, audible, get_dist(sourcemob, src) < 3 && audible)
 
 /obj/item/photo/proc/construct(datum/picture/P)

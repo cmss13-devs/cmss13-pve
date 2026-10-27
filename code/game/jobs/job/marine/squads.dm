@@ -1,8 +1,6 @@
 //This datum keeps track of individual squads. New squads can be added without any problem but to give them
 //access you must add them individually to access.dm with the other squads. Just look for "access_alpha" and add the new one
 
-//Note: some important procs are held by the job controller, in job_controller.dm.
-//In particular, get_lowest_squad() and randomize_squad()
 /datum/squad_type //Majority of this is for a follow-on PR to fully flesh the system out and add more bits for other factions.
 	var/name = "Squad Type"
 	var/lead_name
@@ -11,11 +9,11 @@
 	var/sub_leader
 
 /datum/squad_type/marine_squad
-	name = "Section"
-	lead_name = "Section Sergeant"
+	name = "Squad"
+	lead_name = "Squad Leader"
 	lead_icon = "leader"
-	sub_squad = "Squad"
-	sub_leader = "Squad NCO"
+	sub_squad = "Fireteam"
+	sub_leader = "Fireteam Leader"
 
 /datum/squad_type/marsoc_team
 	name = "Team"
@@ -24,37 +22,11 @@
 	sub_squad = "Strike Team"
 	sub_leader = "Strike Leader"
 
-/datum/squad_type/forecon_squad
-	name = "Squad"
-	lead_name = "Squad Leader"
-	lead_icon = "leader"
-	sub_squad = "Team"
-	sub_leader = "Team Leader"
-
-/datum/squad_type/upp_squad
-	name = "Platoon"
-	lead_name = "Platoon Sergeant"
-	lead_icon = "leader"
-	sub_squad = "Squad"
-	sub_leader = "Squad Sergeant"
-
-/datum/squad_type/pmc_squad
-	name = "Taskforce"
-	lead_name = "Operations Leader"
-	lead_icon = "leader"
-	sub_squad = "Team"
-	sub_leader = "Team Leader"
-
-/datum/squad_type/rmc_troop
-	name = "Troop"
-	lead_name = "Troop Commander"
-	lead_icon = "rmctl"
-	sub_squad = "Section"
-	sub_leader = "Section Leader"
-
 /datum/squad
 	/// Name of the squad
 	var/name
+	/// Equivalent name so that lobby prefered squad gets used for other factions
+	var/equivalent_name
 	/// Squads ID that is set on New()
 	var/tracking_id = null //Used for the tracking subsystem
 	/// Maximum number allowed in a squad. Defaults to infinite
@@ -71,21 +43,20 @@
 	var/list/access = list()
 	/// Can use any squad vendor regardless of squad connection
 	var/omni_squad_vendor = FALSE
-	/// maximum # of engineers allowed in the squad
-	var/max_engineers = 3
-	/// maximum # of squad medics allowed in the squad
-	var/max_medics = 4
-	/// maximum # of specs allowed in the squad
-	var/max_specialists = 1
-	/// maximum # of fireteam leaders allowed in the suqad
-	var/max_tl = 2
-	/// maximum # of smartgunners allowed in the squad
-	var/max_smartgun = 2
-	/// maximum # of squad leaders allowed in the squad
-	var/max_leaders = 1
+	/// Squad roles max caps per role list
+	var/list/roles_cap = list(
+		JOB_SQUAD_MARINE = null,
+		JOB_SQUAD_ENGI = 3,
+		JOB_SQUAD_MEDIC = 4,
+		JOB_SQUAD_SMARTGUN = 1,
+		JOB_SQUAD_SPECIALIST = 1,
+		JOB_SQUAD_TEAM_LEADER = 2,
+		JOB_SQUAD_LEADER = 1,
+	)
+	/// Squad roles actual number of players list
+	var/list/roles_in = list()
 	/// Squad headsets default radio frequency
 	var/radio_freq = 1461
-
 	/// Whether this squad can be used by marines
 	var/usable = FALSE
 	/// Whether this squad can be picked at roundstart
@@ -93,47 +64,43 @@
 	// Whether the squad is available for squad management
 	var/locked = FALSE
 	/// Whether it is visible in overwatch
-	var/active = FALSE
+	var/active = TRUE //this var in fact looks COMPLEATLY useless as visibility in overwatch is also determined by faction
 	/// Which faction the squad is in
 	var/faction = FACTION_MARINE
 
 	/// What will the assistant squad leader be called
-	var/squad_type = "Section" //Referenced for aSL details. Squad/Team/Cell etc.
+	var/squad_type = "Squad" //Referenced for aSL details. Squad/Team/Cell etc.
 	/// Squad leaders icon
 	var/lead_icon //Referenced for SL's 'L' icon. If nulled, won't override icon for aSLs.
 
 	//vvv Do not set these in squad defines
 	var/mob/living/carbon/human/squad_leader = null //Who currently leads it.
 	var/list/fireteam_leaders = list(
-									"SQ1" = null,
-									"SQ2" = null,
-									"SQ3" = null,
-									"SQ4" = null,
+									"FT1" = null,
+									"FT2" = null,
+									"FT3" = null
 									) //FT leaders stored here
 	var/list/list/fireteams = list(
-							"SQ1" = list(),
-							"SQ2" = list(),
-							"SQ3" = list(),
-							"SQ4" = list(),
-							)
+							"FT1" = list(),
+							"FT2" = list(),
+							"FT3" = list()
+							) //3 FTs where references to marines stored.
 	var/list/squad_info_data = list()
 
-	var/num_riflemen = 0
-	var/num_engineers = 0
-	var/num_medics = 0
-	var/num_leaders = 0
-	var/num_smartgun = 0
-	var/num_specialists = 0
-	var/num_tl = 0
 	var/count = 0 //Current # in the squad
 	var/list/marines_list = list() // list of mobs (or name, not always a mob ref) in that squad.
 
 	var/mob/living/carbon/human/overwatch_officer = null //Who's overwatching this squad?
 	COOLDOWN_DECLARE(next_supplydrop)
 
-	///Text strings, not HTML safe so don't use it without encoding
+	/// The ungarbled primary objective string
 	var/primary_objective = null
+	/// The ungarbled secondary objective string
 	var/secondary_objective = null
+	/// The garbled primary objective string
+	var/primary_objective_garbled = null
+	/// The garbled secondary objective string
+	var/secondary_objective_garbled = null
 
 	var/obj/item/device/squad_beacon/sbeacon = null
 	var/obj/item/device/squad_beacon/bomb/bbeacon = null
@@ -141,80 +108,38 @@
 
 	var/minimap_color = MINIMAP_SQUAD_UNKNOWN
 
+	///Icon for the background of minimap icon
+	var/background_icon = "background"
+
 	///Should we add the name of our squad in front of their name? Ex: Alpha Hospital Corpsman
 	var/prepend_squad_name_to_assignment = TRUE
 
-	var/squad_one_access = ACCESS_SQUAD_ONE
-	var/squad_two_access = ACCESS_SQUAD_TWO
-	var/squad_three_access = null
-	var/squad_four_access = null
+
 
 /datum/squad/marine
 	name = "Root"
+	usable = TRUE
 	active = TRUE
 	faction = FACTION_MARINE
 	lead_icon = "leader"
 
 /datum/squad/marine/alpha
 	name = SQUAD_MARINE_1
-	equipment_color = "#4148c8"
-	chat_color = "#828cff"
+	equipment_color = "#e61919"
+	chat_color = "#e67d7d"
 	access = list(ACCESS_MARINE_ALPHA)
 	radio_freq = ALPHA_FREQ
 	minimap_color = MINIMAP_SQUAD_ALPHA
-	use_stripe_overlay = FALSE
-	usable = TRUE
-
-/datum/squad/marine/upp
-	name = SQUAD_UPP
-	equipment_color = "#8B0000"
-	chat_color = "#B22222"
-	access = list(ACCESS_UPP_GENERAL)
-	radio_freq = UPP_FREQ
-	minimap_color = MINIMAP_SQUAD_UPP
-	use_stripe_overlay = FALSE
-	usable = TRUE
-	faction = FACTION_UPP
-	squad_type = "Platoon"
-	squad_one_access = ACCESS_UPP_SQUAD_ONE
-	squad_two_access = ACCESS_UPP_SQUAD_TWO
-
-/datum/squad/marine/upp/New()
-	. = ..()
-
-	RegisterSignal(SSdcs, COMSIG_GLOB_PLATOON_NAME_CHANGE, PROC_REF(rename_platoon))
-
-/datum/squad/marine/upp/secondary
-	name = SQUAD_UPP_2
-	equipment_color = "#dfab1c"
-	chat_color = "#e0c31a"
-	usable = FALSE
-
-/datum/squad/marine/upp/secondary/New()
-	. = ..()
-	//To stop this being renamed to the first-spawned-in unit and breaking things
-	UnregisterSignal(SSdcs, COMSIG_GLOB_PLATOON_NAME_CHANGE)
-
-/datum/squad/marine/forecon
-	name = SQUAD_LRRP
-	access = list(ACCESS_MARINE_ALPHA)
-	radio_freq = SOF_FREQ
-	use_stripe_overlay = FALSE
-	equipment_color = "#32CD32"
-	chat_color = "#32CD32"
-	minimap_color = "#32CD32"
-	usable = TRUE
-	squad_type = "Squad"
+	background_icon = "background_alpha"
 
 /datum/squad/marine/bravo
 	name = SQUAD_MARINE_2
 	equipment_color = "#ffc32d"
 	chat_color = "#ffe650"
-	access = list(ACCESS_MARINE_ALPHA)
+	access = list(ACCESS_MARINE_BRAVO)
 	radio_freq = BRAVO_FREQ
-	use_stripe_overlay = FALSE
 	minimap_color = MINIMAP_SQUAD_BRAVO
-	usable = FALSE
+	background_icon = "background_bravo"
 
 /datum/squad/marine/charlie
 	name = SQUAD_MARINE_3
@@ -223,6 +148,7 @@
 	access = list(ACCESS_MARINE_CHARLIE)
 	radio_freq = CHARLIE_FREQ
 	minimap_color = MINIMAP_SQUAD_CHARLIE
+	background_icon = "background_charlie"
 
 /datum/squad/marine/delta
 	name = SQUAD_MARINE_4
@@ -231,6 +157,7 @@
 	access = list(ACCESS_MARINE_DELTA)
 	radio_freq = DELTA_FREQ
 	minimap_color = MINIMAP_SQUAD_DELTA
+	background_icon = "background_delta"
 
 /datum/squad/marine/echo
 	name = SQUAD_MARINE_5
@@ -240,6 +167,7 @@
 	radio_freq = ECHO_FREQ
 	omni_squad_vendor = TRUE
 	minimap_color = MINIMAP_SQUAD_ECHO
+	background_icon = "background_echo"
 
 	active = FALSE
 	roundstart = FALSE
@@ -251,6 +179,7 @@
 	chat_color = "#c47a50"
 	access = list(ACCESS_MARINE_ALPHA, ACCESS_MARINE_BRAVO, ACCESS_MARINE_CHARLIE, ACCESS_MARINE_DELTA)
 	minimap_color = MINIMAP_SQUAD_FOXTROT
+	background_icon = "background_foxtrot"
 
 	omni_squad_vendor = TRUE
 	radio_freq = CRYO_FREQ
@@ -265,16 +194,20 @@
 	equipment_color = "#053818"
 	minimap_color = MINIMAP_SQUAD_INTEL
 	radio_freq = INTEL_FREQ
+	background_icon = "background_intel"
 
 	roundstart = FALSE
 	prepend_squad_name_to_assignment = FALSE
 
-	max_engineers = 0
-	max_medics = 0
-	max_specialists = 0
-	max_tl = 0
-	max_smartgun = 0
-	max_leaders = 0
+	roles_cap = list(
+		JOB_SQUAD_MARINE = null,
+		JOB_SQUAD_ENGI = 0,
+		JOB_SQUAD_MEDIC = 0,
+		JOB_SQUAD_SMARTGUN = 0,
+		JOB_SQUAD_SPECIALIST = 0,
+		JOB_SQUAD_TEAM_LEADER = 0,
+		JOB_SQUAD_LEADER = 0,
+	)
 
 /datum/squad/marine/sof
 	name = SQUAD_SOF
@@ -284,21 +217,11 @@
 	squad_type = "Team"
 	lead_icon = "soctl"
 	minimap_color = MINIMAP_SQUAD_SOF
+	background_icon = "background_sof"
 
 	active = FALSE
 	roundstart = FALSE
 	locked = TRUE
-
-/datum/squad/marine/sof/forecon
-	name = SQUAD_LRRP_2
-	use_stripe_overlay = FALSE
-	equipment_color = "#8f5e30"
-	chat_color = "#8f5e30"
-	minimap_color = "#8f5e30"
-	squad_type = "Squad"
-	access = list(ACCESS_MARINE_ALPHA)
-	usable = FALSE
-	locked = FALSE
 
 /datum/squad/marine/cbrn
 	name = SQUAD_CBRN
@@ -306,6 +229,19 @@
 	chat_color = "#553EB2"
 	radio_freq = CBRN_FREQ
 	minimap_color = "#3B2A7B"
+	background_icon = "background_cbrn"
+
+	active = FALSE
+	roundstart = FALSE
+	locked = TRUE
+
+/datum/squad/marine/forecon
+	name = SQUAD_FORECON
+	equipment_color = "#32CD32"
+	chat_color = "#32CD32"
+	radio_freq = FORECON_FREQ
+	minimap_color = "#32CD32"
+	background_icon = "background_forecon"
 
 	active = FALSE
 	roundstart = FALSE
@@ -317,22 +253,23 @@
 	chat_color = "#5a2c2c"
 	radio_freq = SOF_FREQ
 	minimap_color = "#5a2c2c"
+	background_icon = "background_civilian"
 
 	active = FALSE
 	roundstart = FALSE
 	locked = TRUE
 
-/datum/squad/army
+/datum/squad/marine/army
 	name = SQUAD_ARMY
 	equipment_color = "#349c30"
 	chat_color = "#349c30"
-	radio_freq = ARM_FREQ
+	radio_freq = ARMY_FREQ
 	minimap_color = "#349c30"
-	use_stripe_overlay = FALSE
-	faction = FACTION_ARMY
-	active = TRUE
+	background_icon = "background_civillian"
+	minimap_color = MINIMAP_SQUAD_ARMY
+
+	active = FALSE
 	roundstart = FALSE
-	usable = TRUE
 	locked = TRUE
 
 //############################### UPP Squads
@@ -341,33 +278,49 @@
 	usable = TRUE
 	omni_squad_vendor = TRUE
 	faction = FACTION_UPP
+	radio_freq = UPP_FREQ
+	roles_cap = list(
+		JOB_UPP_ENGI = 3,
+		JOB_UPP_MEDIC = 4,
+		JOB_UPP_SPECIALIST = 1,
+		JOB_UPP_LEADER = 1,
+	)
 
 /datum/squad/upp/one
-	name = "UPPS1"
+	name = SQUAD_UPP_1
+	equivalent_name = SQUAD_MARINE_1
 	equipment_color = "#e61919"
 	chat_color = "#e67d7d"
+	background_icon = "background_upp_alpha"
 
-/datum/squad/upp/twp
-	name = "UPPS2"
+/datum/squad/upp/two
+	name = SQUAD_UPP_2
+	equivalent_name = SQUAD_MARINE_2
 	equipment_color = "#ffc32d"
 	chat_color = "#ffe650"
+	background_icon = "background_upp_bravo"
 
 /datum/squad/upp/three
-	name = "UPPS3"
+	name = SQUAD_UPP_3
+	equivalent_name = SQUAD_MARINE_3
 	equipment_color = "#c864c8"
 	chat_color = "#ff96ff"
+	background_icon = "background_upp_charlie"
 
 /datum/squad/upp/four
-	name = "UPPS4"
+	name = SQUAD_UPP_4
+	equivalent_name = SQUAD_MARINE_4
 	equipment_color = "#4148c8"
 	chat_color = "#828cff"
+	background_icon = "background_upp_delta"
 
 /datum/squad/upp/kdo
-	name = "UPPKdo"
+	name = SQUAD_UPP_5
 	equipment_color = "#c47a50"
 	chat_color = "#c47a50"
 	squad_type = "Team"
 	locked = TRUE
+	usable = FALSE
 
 //###############################
 /datum/squad/pmc
@@ -391,54 +344,6 @@
 	name = "Taskforce White"
 	locked = TRUE
 	faction = FACTION_WY_DEATHSQUAD
-
-
-//##############################
-
-/datum/squad/marine/pmc
-	name = SQUAD_PMCPLT
-	chat_color = "#ccffe9"
-	minimap_color = MINIMAP_SQUAD_PMC
-	use_stripe_overlay = FALSE
-	usable = TRUE
-	squad_one_access = ACCESS_PMC_SQUAD_ONE
-	squad_two_access = ACCESS_PMC_SQUAD_TWO
-	faction = FACTION_PMC
-	squad_type = "Taskforce"
-
-/datum/squad/marine/pmc/secondary
-	name = SQUAD_PMCPLT_2
-	chat_color = "#0fc777"
-	minimap_color = MINIMAP_SQUAD_ECHO
-	usable = FALSE
-
-/datum/squad/marine/pmc/small
-	name = SQUAD_PMCPLT_SMALL
-
-/datum/squad/marine/pmc/New()
-	. = ..()
-
-	UnregisterSignal(SSdcs, COMSIG_GLOB_PLATOON_NAME_CHANGE, PROC_REF(rename_platoon))
-
-//##############################
-
-/datum/squad/marine/rmc
-	name = SQUAD_RMC
-	equipment_color = "#bd851e"
-	chat_color = "#aa740f"
-	minimap_color = MINIMAP_SQUAD_RMC
-	use_stripe_overlay = FALSE
-	radio_freq = RMC_FREQ
-	usable = TRUE
-	squad_one_access = ACCESS_TWE_SQUAD_ONE
-	squad_two_access = ACCESS_TWE_SQUAD_TWO
-	faction = FACTION_TWE
-
-/datum/squad/marine/rmc/New()
-	. = ..()
-
-	UnregisterSignal(SSdcs, COMSIG_GLOB_PLATOON_NAME_CHANGE, PROC_REF(rename_platoon))
-
 //###############################
 /datum/squad/clf
 	name = "Root"
@@ -463,39 +368,12 @@
 	. = ..()
 
 	tracking_id = SStracking.setup_trackers()
-	SStracking.setup_trackers(null, "SQ1")
-	SStracking.setup_trackers(null, "SQ2")
-	SStracking.setup_trackers(null, "SQ3")
-	SStracking.setup_trackers(null, "SQ4")
+	SStracking.setup_trackers(null, "FT1")
+	SStracking.setup_trackers(null, "FT2")
+	SStracking.setup_trackers(null, "FT3")
 	update_all_squad_info()
 
 	RegisterSignal(SSdcs, COMSIG_GLOB_MODE_POSTSETUP, PROC_REF(setup_supply_drop_list))
-
-/datum/squad/marine/alpha/New()
-	. = ..()
-
-	RegisterSignal(SSdcs, COMSIG_GLOB_PLATOON_NAME_CHANGE, PROC_REF(rename_platoon))
-
-/datum/squad/marine/proc/rename_platoon(datum/source, new_name, old_name)
-	SIGNAL_HANDLER
-
-	name = new_name
-
-	for(var/mob/living/carbon/human/marine in marines_list)
-		if(!istype(marine.wear_id, /obj/item/card/id))
-			continue
-
-		var/obj/item/card/id/marine_card = marine.get_idcard()
-		var/datum/weakref/marine_card_registered = marine_card.registered_ref
-
-		if(!istype(marine_card_registered))
-			continue
-
-		if(marine != marine_card_registered.resolve())
-			continue
-
-		marine_card.assignment = "[new_name] [marine.job]"
-		marine_card.name = "[marine_card.registered_name]'s [marine_card.card_name] ([marine_card.assignment])"
 
 /datum/squad/proc/setup_supply_drop_list()
 	SIGNAL_HANDLER
@@ -507,15 +385,15 @@
 			break
 
 /// Sets an overwatch officer for the squad, returning TRUE on success
-/datum/squad/proc/assume_overwatch(mob/M)
+/datum/squad/proc/assume_overwatch(mob/target_mob)
 	var/mob/previous
 	if(overwatch_officer)
-		if(overwatch_officer == M)
+		if(overwatch_officer == target_mob)
 			return FALSE
 		previous = overwatch_officer
 		overwatch_officer = null
 		clear_ref_tracking(previous)
-	overwatch_officer = M
+	overwatch_officer = target_mob
 	RegisterSignal(overwatch_officer, COMSIG_PARENT_QDELETING, PROC_REF(personnel_deleted), override = TRUE)
 	return TRUE
 
@@ -529,30 +407,31 @@
 	return TRUE
 
 /// Clear deletion signal as needed for mob - to call *after* removal
-/datum/squad/proc/clear_ref_tracking(mob/M)
-	if(!M) return FALSE
-	if(M in marines_list)
+/datum/squad/proc/clear_ref_tracking(mob/target_mob)
+	if(!target_mob)
 		return FALSE
-	if(overwatch_officer == M)
+	if(target_mob in marines_list)
 		return FALSE
-	UnregisterSignal(M, COMSIG_PARENT_QDELETING)
+	if(overwatch_officer == target_mob)
+		return FALSE
+	UnregisterSignal(target_mob, COMSIG_PARENT_QDELETING)
 	return TRUE
 
 /// Clear references in squad listing upon deletion. Zap also erases the kept records.
 /// NOTE: zap will be set true for a forced COMSIG_PARENT_QDELETING
-/datum/squad/proc/personnel_deleted(mob/M, zap = FALSE)
+/datum/squad/proc/personnel_deleted(mob/target_mob, zap = FALSE)
 	SIGNAL_HANDLER
-	if(M == overwatch_officer)
+	if(target_mob == overwatch_officer)
 		overwatch_officer = null
-	if(M == squad_leader)
+	if(target_mob == squad_leader)
 		squad_leader = null
-	SStracking.stop_tracking(tracking_id, M)
+	SStracking.stop_tracking(tracking_id, target_mob)
 	if(zap)
-		marines_list.Remove(M)
+		marines_list.Remove(target_mob)
 		return
-	var/idx = marines_list.Find(M)
+	var/idx = marines_list.Find(target_mob)
 	if(idx)
-		marines_list[idx] = M.name // legacy behavior, replace mob ref index by name. very weird
+		marines_list[idx] = target_mob.name // legacy behavior, replace mob ref index by name. very weird
 
 /*
  * Send a text message to the squad members following legacy overwatch usage
@@ -578,9 +457,9 @@
 	if(leader_only)
 		targets = list(squad_leader)
 	else
-		for(var/mob/M in marines_list)
-			if(!M.stat && M.client)
-				targets += M.client
+		for(var/mob/target_mob in marines_list)
+			if(!target_mob.stat && target_mob.client)
+				targets += target_mob.client
 
 	if(displayed_icon)
 		message = "[icon2html(displayed_icon, targets, dir = null)] [message]"
@@ -589,267 +468,292 @@
 	to_chat(targets, html = message, type = MESSAGE_TYPE_RADIO)
 
 /// Displays a message to squad members directly on the game map
-/datum/squad/proc/send_maptext(text = "", title_text = "", only_leader = 0)
+/datum/squad/proc/send_maptext(text="", title_text="", only_leader=FALSE, list/targets_to_garble=null, garbled_text="")
 	var/message_color = chat_color
+
 	if(only_leader)
-		if(squad_leader)
-			if(!squad_leader.stat && squad_leader.client)
-				playsound_client(squad_leader.client, 'sound/effects/radiostatic.ogg', squad_leader.loc, 25, FALSE)
-				squad_leader.play_screen_text("<span class='langchat' style=font-size:16pt;text-align:center valign='top'><u>[title_text]</u></span><br>" + text, /atom/movable/screen/text/screen_text/command_order, message_color)
-	else
-		for(var/mob/living/carbon/human/marine in marines_list)
-			if(!marine.stat && marine.client) //Only living and connected people in our squad
-				playsound_client(marine.client, 'sound/effects/radiostatic.ogg', marine.loc, 25, FALSE)
-				marine.play_screen_text("<span class='langchat' style=font-size:16pt;text-align:center valign='top'><u>[title_text]</u></span><br>" + text, /atom/movable/screen/text/screen_text/command_order, message_color)
+		if(squad_leader && squad_leader.stat == CONSCIOUS && squad_leader.client)
+			squad_leader.play_screen_text("<span class='langchat' style=font-size:16pt;text-align:center valign='top'><u>[title_text]</u></span><br>[text]", /atom/movable/screen/text/screen_text/command_order, message_color)
+		return
+
+	for(var/mob/living/carbon/human/marine in marines_list)
+		if(marine.stat == CONSCIOUS && marine.client) //Only living and connected people in our squad
+			playsound_client(marine.client, 'sound/effects/radiostatic.ogg', marine.loc, 25, FALSE)
+			if(marine in targets_to_garble)
+				marine.play_screen_text("<span class='langchat' style=font-size:16pt;text-align:center valign='top'><u>[title_text]</u></span><br>[garbled_text]", /atom/movable/screen/text/screen_text/command_order, message_color)
+			else
+				marine.play_screen_text("<span class='langchat' style=font-size:16pt;text-align:center valign='top'><u>[title_text]</u></span><br>[text]", /atom/movable/screen/text/screen_text/command_order, message_color)
 
 /// Displays a message to the squad members in chat
-/datum/squad/proc/send_message(text = "", plus_name = 0, only_leader = 0)
+/datum/squad/proc/send_message(text="", transmitter=null, only_leader=FALSE, list/targets_to_garble=null, garbled_text="")
 	var/nametext = ""
-	if(plus_name)
-		nametext = "[usr.name] transmits: "
+	if(transmitter)
+		nametext = "[transmitter] transmits: "
 		text = "[FONT_SIZE_LARGE("<b>[text]<b>")]"
 
 	if(only_leader)
-		if(squad_leader)
-			var/mob/living/carbon/human/SL = squad_leader
-			if(!SL.stat && SL.client)
-				if(plus_name)
-					SL << sound('sound/effects/tech_notification.ogg')
-				to_chat(SL, "[SPAN_BLUE("<B>SL Overwatch:</b> [nametext][text]")]", type = MESSAGE_TYPE_RADIO)
-				return
+		if(squad_leader && squad_leader.stat == CONSCIOUS && squad_leader.client)
+			if(transmitter)
+				squad_leader << sound('sound/effects/tech_notification.ogg')
+			to_chat(squad_leader, "[SPAN_BLUE("<B>SL Overwatch:</b> [nametext][text]")]", type = MESSAGE_TYPE_RADIO)
+		return
+
+	for(var/mob/living/carbon/human/marine in marines_list)
+		if(marine.stat == CONSCIOUS && marine.client) //Only living and connected people in our squad
+			if(transmitter)
+				marine << sound('sound/effects/tech_notification.ogg')
+			if(marine in targets_to_garble)
+				to_chat(marine, "[SPAN_BLUE("<B>Overwatch:</b> [nametext][garbled_text]")]", type = MESSAGE_TYPE_RADIO)
+			else
+				to_chat(marine, "[SPAN_BLUE("<B>Overwatch:</b> [nametext][text]")]", type = MESSAGE_TYPE_RADIO)
+
+/// Displays a message to squad members in chat and directly on the game map with potential coms garble for only the text argument
+/datum/squad/proc/transmit_alert(prefix="", text="", postfix="", maptext_title="", transmitter=null, only_leader=FALSE)
+	var/garbled_text = get_garbled_announcement(text, faction)
+	var/list/targets_to_garble = get_garbled_targets(only_leader)
+
+	send_message("[prefix][text][postfix]", transmitter, only_leader, targets_to_garble, "[prefix][garbled_text][postfix]")
+	send_maptext(text, maptext_title, only_leader, targets_to_garble, garbled_text)
+
+	var/garbled_count = length(targets_to_garble)
+	if(garbled_count)
+		log_garble("[garbled_count] received '[garbled_text]' in squad [src].")
+
+/// Displays and sets an objective for squad members in chat and directly on the game map with potential coms garble for only the text argument
+/datum/squad/proc/transmit_objective(text="", transmitter=null, primary=TRUE)
+	var/prefix = "Your primary objective has been changed to '"
+	var/postfix = "'. See Status pane for details."
+	var/maptext_title = "Primary Objective Updated:"
+	if(!primary)
+		prefix = "Your secondary objective has been changed to '"
+		maptext_title = "Secondary Objective Updated:"
+
+	var/garbled_text = get_garbled_announcement(text, faction)
+	var/list/targets_to_garble = get_garbled_targets(only_leader=FALSE)
+
+	send_message("[prefix][text][postfix]", transmitter, FALSE, targets_to_garble, "[prefix][garbled_text][postfix]")
+	send_maptext(text, maptext_title, FALSE, targets_to_garble, garbled_text)
+
+	var/garbled_count = length(targets_to_garble)
+	if(garbled_count)
+		log_garble("[garbled_count] received '[garbled_text]' in squad [src].")
+
+	if(primary)
+		primary_objective = "[text] ([worldtime2text()])"
+		primary_objective_garbled = "[garbled_text] ([worldtime2text()])"
+		for(var/mob/living/carbon/human/marine in marines_list)
+			marine.squad_primary_objective_ungarbled = !(marine in targets_to_garble)
 	else
-		for(var/mob/living/carbon/human/M in marines_list)
-			if(!M.stat && M.client) //Only living and connected people in our squad
-				if(plus_name)
-					M << sound('sound/effects/tech_notification.ogg')
-				to_chat(M, "[SPAN_BLUE("<B>Overwatch:</b> [nametext][text]")]", type = MESSAGE_TYPE_RADIO)
+		secondary_objective = "[text] ([worldtime2text()])"
+		secondary_objective_garbled = "[garbled_text] ([worldtime2text()])"
+		for(var/mob/living/carbon/human/marine in marines_list)
+			marine.squad_secondary_objective_ungarbled = !(marine in targets_to_garble)
 
+/datum/squad/proc/remind_objective(transmitter=null, primary=TRUE)
+	var/prefix = "Your primary objective is '"
+	var/postfix = "'. See Status pane for details."
+	var/maptext_title = "Primary Objective:"
+	var/text = primary_objective
+	var/garbled_text = primary_objective_garbled
+	if(!primary)
+		prefix = "Your secondary objective is '"
+		maptext_title = "Secondary Objective:"
+		text = secondary_objective
+		garbled_text = secondary_objective_garbled
 
+	var/list/targets_to_garble = get_garbled_targets(only_leader=FALSE)
+
+	send_message("[prefix][text][postfix]", transmitter, FALSE, targets_to_garble, "[prefix][garbled_text][postfix]")
+	send_maptext(text, maptext_title, FALSE, targets_to_garble, garbled_text)
+
+/// Returns a list of squad members that are without coms
+/datum/squad/proc/get_garbled_targets(only_leader=FALSE)
+	var/list/targets = only_leader ? list(squad_leader) : marines_list
+	var/list/targets_to_garble = list()
+	var/list/coms_zs = SSradio.get_available_tcomm_zs(COMM_FREQ)
+
+	for(var/mob/current_mob in targets)
+		var/turf/current_turf = get_turf(current_mob)
+		var/is_shipside = is_mainship_level(current_turf?.z)
+		if(!is_shipside && !(current_turf?.z in coms_zs))
+			if(!istype(current_mob.back, /obj/item/storage/backpack/marine/satchel/rto))
+				targets_to_garble += current_mob
+
+	return targets_to_garble
 
 //Straight-up insert a marine into a squad.
 //This sets their ID, increments the total count, and so on. Everything else is done in job_controller.dm.
 //So it does not check if the squad is too full already, or randomize it, etc.
-/datum/squad/proc/put_marine_in_squad(mob/living/carbon/human/M, obj/item/card/id/ID)
-
-	if(!istype(M))
+/datum/squad/proc/put_marine_in_squad(mob/living/carbon/human/target_mob, obj/item/card/id/id_card)
+	if(!istype(target_mob))
 		return FALSE //Logic
-	if(!src.usable)
+	if(!usable)
 		return FALSE
-	if(!M.job)
+	if(!target_mob.job)
 		return FALSE //Not yet
-	if(M.assigned_squad)
+	if(target_mob.assigned_squad)
 		return FALSE //already in a squad
 
-	var/obj/item/card/id/C = ID
-	if(!C)
-		C = M.get_idcard()
-	if(!C)
-		C = M.get_active_hand()
-	if(!istype(C))
+	if(!id_card)
+		id_card = target_mob.wear_id
+		if(!id_card)
+			id_card = target_mob.get_active_hand()
+
+	if(!istype(id_card))
 		return FALSE //No ID found
 
-	var/assignment = M.job
-
-	var/id_assignment = M.assigned_equipment_preset.assignment
+	var/assignment = target_mob.job
 	var/paygrade
 
 	var/list/extra_access = list()
 
-	switch(GET_DEFAULT_ROLE(M.job))
-		if(JOB_SQUAD_MARINE)
-			assignment = JOB_SQUAD_MARINE
-			num_riflemen++
-			var/squad_number = (ceil(num_riflemen / 2) > 2) ? pick(1, 2) : ceil(num_riflemen / 2)
-			assign_fireteam("SQ[squad_number]", M)
+	var/mob_role = GET_DEFAULT_ROLE(target_mob.job)
+	switch(mob_role)
 		if(JOB_SQUAD_ENGI)
 			assignment = JOB_SQUAD_ENGI
-			num_engineers++
-			C.claimedgear = FALSE
+			id_card.claimedgear = FALSE
 		if(JOB_SQUAD_MEDIC)
 			assignment = JOB_SQUAD_MEDIC
-			num_medics++
-			C.claimedgear = FALSE
+			id_card.claimedgear = FALSE
 		if(JOB_SQUAD_SPECIALIST)
 			assignment = JOB_SQUAD_SPECIALIST
-			num_specialists++
 		if(JOB_SQUAD_TEAM_LEADER)
 			assignment = JOB_SQUAD_TEAM_LEADER
-			num_tl++
-			M.important_radio_channels += radio_freq
-			var/squad_number = (num_tl > 2) ? pick(1, 2) : num_tl
-			assign_fireteam("SQ[squad_number]", M)
-			assign_ft_leader("SQ[squad_number]", M)
+			target_mob.important_radio_channels += radio_freq
+			for(var/lead in 1 to roles_cap[JOB_SQUAD_TEAM_LEADER])
+				if(!fireteam_leaders["FT[lead]"])
+					assign_fireteam("FT[lead]", target_mob)
+					assign_ft_leader("FT[lead]", target_mob)
+					break
+
 		if(JOB_SQUAD_SMARTGUN)
 			assignment = JOB_SQUAD_SMARTGUN
-			num_smartgun++
-			var/squad_number = (num_smartgun > 2) ? pick(1, 2) : num_smartgun
-			assign_fireteam("SQ[squad_number]", M)
 		if(JOB_SQUAD_LEADER)
 			if(squad_leader && GET_DEFAULT_ROLE(squad_leader.job) != JOB_SQUAD_LEADER) //field promoted SL
 				var/old_lead = squad_leader
 				demote_squad_leader() //replaced by the real one
 				SStracking.start_tracking(tracking_id, old_lead)
-			assignment = squad_type + " Sergeant"
-			squad_leader = M
-			SStracking.set_leader(tracking_id, M)
-			SStracking.start_tracking("marine_sl", M)
+			assignment = squad_type + " Leader"
+			squad_leader = target_mob
+			SStracking.set_leader(tracking_id, target_mob)
+			SStracking.start_tracking("marine_sl", target_mob)
 
-			if(GET_DEFAULT_ROLE(M.job) == JOB_SQUAD_LEADER) //field promoted SL don't count as real ones
-				num_leaders++
-		if(JOB_SQUAD_RTO)
-			assignment = JOB_SQUAD_RTO
+		if(JOB_UPP_ENGI)
+			assignment = JOB_SQUAD_ENGI
+			id_card.claimedgear = FALSE
+		if(JOB_UPP_MEDIC)
+			assignment = JOB_SQUAD_MEDIC
+			id_card.claimedgear = FALSE
+		if(JOB_UPP_SPECIALIST)
+			assignment = JOB_SQUAD_SPECIALIST
+		if(JOB_UPP_LEADER)
+			if(squad_leader && GET_DEFAULT_ROLE(squad_leader.job) != JOB_UPP_LEADER) //field promoted SL
+				var/old_lead = squad_leader
+				demote_squad_leader() //replaced by the real one
+				SStracking.start_tracking(tracking_id, old_lead)
+			assignment = squad_type + " Leader"
+			squad_leader = target_mob
+			SStracking.set_leader(tracking_id, target_mob)
+			SStracking.start_tracking("marine_sl", target_mob)
 
 		if(JOB_MARINE_RAIDER)
 			assignment = JOB_MARINE_RAIDER
 			if(name == JOB_MARINE_RAIDER)
+				assignment = "Smartgunner Specialist"
+		if(JOB_MARINE_RAIDER_SG)
+			assignment = JOB_MARINE_RAIDER_SG
+			if(name == JOB_MARINE_RAIDER_SG)
 				assignment = "Special Operator"
 		if(JOB_MARINE_RAIDER_SL)
 			assignment = JOB_MARINE_RAIDER_SL
-			if(name == JOB_MARINE_RAIDER)
+			if(name == JOB_MARINE_RAIDER || name == JOB_MARINE_RAIDER_SG)
 				if(squad_leader && GET_DEFAULT_ROLE(squad_leader.job) != JOB_MARINE_RAIDER_SL) //field promoted SL
 					var/old_lead = squad_leader
 					demote_squad_leader() //replaced by the real one
 					SStracking.start_tracking(tracking_id, old_lead)
 				assignment = squad_type + " Leader"
-				squad_leader = M
-				SStracking.set_leader(tracking_id, M)
-				SStracking.start_tracking("marine_sl", M)
-				if(GET_DEFAULT_ROLE(M.job) == JOB_MARINE_RAIDER_SL) //field promoted SL don't count as real ones
-					num_leaders++
+				squad_leader = target_mob
+				SStracking.set_leader(tracking_id, target_mob)
+				SStracking.start_tracking("marine_sl", target_mob)
+				mob_role = JOB_SQUAD_LEADER
 		if(JOB_MARINE_RAIDER_CMD)
 			assignment = JOB_MARINE_RAIDER_CMD
-			if(name == JOB_MARINE_RAIDER)
+			if(name == JOB_MARINE_RAIDER || name == JOB_MARINE_RAIDER_SG)
 				assignment = "Officer"
 
-//This is a mess
-		if(JOB_TWE_RMC_SECTIONLEADER)
-			assignment = JOB_TWE_RMC_SECTIONLEADER
-			num_tl++
-			M.important_radio_channels += radio_freq
-			assign_fireteam("SQ1", M)
-			assign_ft_leader("SQ1", M)
-		if(JOB_TWE_RMC_RIFLEMAN)
-			assignment = JOB_TWE_RMC_RIFLEMAN
-			num_riflemen++
-			assign_fireteam("SQ1", M)
-		if(JOB_TWE_RMC_ENGI)
-			assignment = JOB_TWE_RMC_ENGI
-			num_engineers++
-			C.claimedgear = FALSE
-			assign_fireteam("SQ1", M)
-		if(JOB_TWE_RMC_MEDIC)
-			assignment = JOB_TWE_RMC_MEDIC
-			num_medics++
-			C.claimedgear = FALSE
-			assign_fireteam("SQ1", M)
-		if(JOB_TWE_RMC_TEAMLEADER)
-			assignment = JOB_TWE_RMC_TEAMLEADER
-			num_tl++
-			M.important_radio_channels += radio_freq
-			assign_fireteam("SQ2", M)
-			assign_ft_leader("SQ2", M)
-		if(JOB_TWE_RMC_SMARTGUNNER)
-			assignment = JOB_TWE_RMC_SMARTGUNNER
-			num_smartgun++
-			assign_fireteam("SQ2", M)
-		if(JOB_TWE_RMC_MARKSMAN)
-			assignment = JOB_TWE_RMC_MARKSMAN
-			num_specialists++
-			assign_fireteam("SQ2", M)
-		if(JOB_TWE_RMC_LIEUTENANT)
-			assignment = JOB_TWE_RMC_LIEUTENANT
-			M.important_radio_channels += radio_freq
-			num_leaders++
-			squad_leader = M
-			SStracking.set_leader(tracking_id, M)
-			SStracking.start_tracking("marine_sl", M)
-		if(JOB_TWE_RMC_BREACHER)
-			assignment = JOB_TWE_RMC_BREACHER
-			num_engineers++
-		if(JOB_TWE_RMC_TROOPLEADER)
-			assignment = JOB_TWE_RMC_TROOPLEADER
+	if(mob_role in roles_cap)
+		roles_in[mob_role]++
 
-	RegisterSignal(M, COMSIG_PARENT_QDELETING, PROC_REF(personnel_deleted), override = TRUE)
+	RegisterSignal(target_mob, COMSIG_PARENT_QDELETING, PROC_REF(personnel_deleted), override = TRUE)
 	if(assignment != JOB_SQUAD_LEADER)
-		SStracking.start_tracking(tracking_id, M)
+		SStracking.start_tracking(tracking_id, target_mob)
 
 	count++ //Add up the tally. This is important in even squad distribution.
 
-	if(GET_DEFAULT_ROLE(M.job) != JOB_SQUAD_MARINE)
-		log_admin("[key_name(M)] has been assigned as [name] [M.job]") // we don't want to spam squad marines but the others are useful
+	if(GET_DEFAULT_ROLE(target_mob.job) != JOB_SQUAD_MARINE)
+		log_admin("[key_name(target_mob)] has been assigned as [name] [target_mob.job]") // we don't want to spam squad marines but the others are useful
 
-	marines_list += M
-	M.assigned_squad = src //Add them to the squad
-	C.access += (src.access + extra_access) //Add their squad access to their ID
+	marines_list += target_mob
+	target_mob.assigned_squad = src //Add them to the squad
+	id_card.access += (src.access + extra_access) //Add their squad access to their ID
 	if(prepend_squad_name_to_assignment)
-		C.assignment = "[name] [id_assignment]"
+		id_card.assignment = "[name] [assignment]"
 	else
-		C.assignment = id_assignment
+		id_card.assignment = assignment
 
-	SEND_SIGNAL(M, COMSIG_SET_SQUAD)
+	SEND_SIGNAL(target_mob, COMSIG_SET_SQUAD)
 
 	if(paygrade)
-		C.paygrade = paygrade
-	C.name = "[C.registered_name]'s [C.card_name] ([C.assignment])"
+		id_card.paygrade = paygrade
+	id_card.name = "[id_card.registered_name]'s [id_card.id_type] ([id_card.assignment])"
 
-	var/obj/item/device/radio/headset/almayer/marine/headset = locate() in list(M.wear_l_ear, M.wear_r_ear)
+	var/obj/item/device/radio/headset/almayer/marine/headset = locate() in list(target_mob.wear_l_ear, target_mob.wear_r_ear)
 	if(headset && radio_freq)
 		headset.set_frequency(radio_freq)
-	M.update_inv_head()
-	M.update_inv_wear_suit()
-	M.update_inv_gloves()
+	target_mob.update_inv_head()
+	target_mob.update_inv_wear_suit()
+	target_mob.update_inv_gloves()
 	return TRUE
 
 //proc used by the overwatch console to transfer marine to another squad
-/datum/squad/proc/remove_marine_from_squad(mob/living/carbon/human/M, obj/item/card/id/ID)
-	if(M.assigned_squad != src)
+/datum/squad/proc/remove_marine_from_squad(mob/living/carbon/human/target_mob, obj/item/card/id/id_card)
+	if(target_mob.assigned_squad != src)
 		return //not assigned to the correct squad
-	var/obj/item/card/id/C = ID
-	if(!istype(C))
-		C = M.get_idcard()
-	if(!istype(C))
+	if(!istype(id_card))
+		id_card = target_mob.get_idcard()
+	if(!istype(id_card))
 		return FALSE //Abort, no ID found
 
-	C.access -= src.access
-	C.assignment = M.assigned_equipment_preset.assignment
-	C.name = "[C.registered_name]'s [C.card_name] ([C.assignment])"
+	id_card.access -= src.access
+	id_card.assignment = target_mob.job
+	id_card.name = "[id_card.registered_name]'s [id_card.id_type] ([id_card.assignment])"
 
-	forget_marine_in_squad(M)
+	forget_marine_in_squad(target_mob)
 
 //gracefully remove a marine from squad system, alive, dead or otherwise
-/datum/squad/proc/forget_marine_in_squad(mob/living/carbon/human/M)
-	if(M.assigned_squad.squad_leader == M)
-		if(GET_DEFAULT_ROLE(M.job) != JOB_SQUAD_LEADER) //a field promoted SL, not a real one
+/datum/squad/proc/forget_marine_in_squad(mob/living/carbon/human/target_mob)
+	if(target_mob.assigned_squad.squad_leader == target_mob)
+		if(GET_DEFAULT_ROLE(target_mob.job) != JOB_SQUAD_LEADER || GET_DEFAULT_ROLE(target_mob.job) != JOB_UPP_LEADER) //a field promoted SL, not a real one
 			demote_squad_leader()
 		else
-			M.assigned_squad.squad_leader = null
+			target_mob.assigned_squad.squad_leader = null
 		update_squad_leader()
 	else
-		if(M.assigned_fireteam)
-			if(fireteam_leaders[M.assigned_fireteam] == M)
-				unassign_ft_leader(M.assigned_fireteam, TRUE, FALSE)
-			unassign_fireteam(M, FALSE)
+		if(target_mob.assigned_fireteam)
+			if(fireteam_leaders[target_mob.assigned_fireteam] == target_mob)
+				unassign_ft_leader(target_mob.assigned_fireteam, TRUE, FALSE)
+			unassign_fireteam(target_mob, FALSE)
 
 	count--
-	marines_list -= M
-	personnel_deleted(M, zap = TRUE) // Free all refs and Zap it entierly as this is on purpose
-	clear_ref_tracking(M)
+	marines_list -= target_mob
+	personnel_deleted(target_mob, zap = TRUE) // Free all refs and Zap it entierly as this is on purpose
+	clear_ref_tracking(target_mob)
 	update_free_mar()
-	M.assigned_squad = null
+	target_mob.assigned_squad = null
 
-	switch(GET_DEFAULT_ROLE(M.job))
-		if(JOB_SQUAD_ENGI)
-			num_engineers--
-		if(JOB_SQUAD_MEDIC)
-			num_medics--
-		if(JOB_SQUAD_SPECIALIST)
-			num_specialists--
-		if(JOB_SQUAD_SMARTGUN)
-			num_smartgun--
-		if(JOB_SQUAD_TEAM_LEADER)
-			num_tl--
-		if(JOB_SQUAD_LEADER)
-			num_leaders--
+	var/slot_check = GET_DEFAULT_ROLE(target_mob.job)
+	if(slot_check && !isnull(roles_cap[slot_check]))
+		roles_in[slot_check]--
 
 //proc for demoting current Squad Leader
 /datum/squad/proc/demote_squad_leader(leader_killed)
@@ -859,46 +763,72 @@
 	SStracking.stop_tracking("marine_sl", old_lead)
 
 	squad_leader = null
-	switch(GET_DEFAULT_ROLE(old_lead.job))
-		if(JOB_SQUAD_SPECIALIST)
-			old_lead.comm_title = "Spc"
-		if(JOB_SQUAD_ENGI)
-			old_lead.comm_title = "ComEng"
-		if(JOB_SQUAD_MEDIC)
-			old_lead.comm_title = "HM"
-		if(JOB_SQUAD_TEAM_LEADER)
-			old_lead.comm_title = "SqLdr"
-		if(JOB_SQUAD_SMARTGUN)
-			old_lead.comm_title = "SG"
-		if(JOB_SQUAD_LEADER)
-			if(!leader_killed)
-				old_lead.comm_title = "SctSgt"
-		if(JOB_SQUAD_RTO)
-			old_lead.comm_title = "RTO"
-		if(JOB_MARINE_RAIDER)
-			old_lead.comm_title = "Op."
-		if(JOB_MARINE_RAIDER_SL)
-			old_lead.comm_title = "TL."
-		if(JOB_MARINE_RAIDER_CMD)
-			old_lead.comm_title = "CMD."
-		else
-			old_lead.comm_title = "RFN"
-
-	if(GET_DEFAULT_ROLE(old_lead.job) != JOB_SQUAD_LEADER || !leader_killed)
-		var/obj/item/device/radio/headset/almayer/marine/R = old_lead.get_type_in_ears(/obj/item/device/radio/headset/almayer/marine)
-		if(R)
-			for(var/obj/item/device/encryptionkey/squadlead/acting/key in R.keys)
-				R.keys -= key
-				qdel(key)
-			R.recalculateChannels()
-		var/obj/item/card/id/card = old_lead.get_idcard()
-		if(card)
-			card.access -= ACCESS_MARINE_LEADER
+	switch(faction)
+		if (FACTION_UPP)
+			switch(GET_DEFAULT_ROLE(old_lead.job))
+				if(JOB_UPP_SPECIALIST)
+					old_lead.comm_title = "Spec"
+				if(JOB_UPP_ENGI)
+					old_lead.comm_title = "Sapper"
+				if(JOB_UPP_MEDIC)
+					old_lead.comm_title = "Med"
+				if(JOB_UPP_LEADER)
+					if(!leader_killed)
+						old_lead.comm_title = "MSzh"
+				else
+					old_lead.comm_title = "Sld"
+			if(GET_DEFAULT_ROLE(old_lead.job) != JOB_UPP_LEADER || !leader_killed)
+				var/obj/item/device/radio/headset/headset = old_lead.get_type_in_ears(/obj/item/device/radio/headset/distress/UPP)
+				if(headset)
+					for(var/obj/item/device/encryptionkey/upp/command/acting/key in headset.keys)
+						headset.keys -= key
+						qdel(key)
+					headset.recalculateChannels()
+		if (FACTION_MARINE)
+			switch(GET_DEFAULT_ROLE(old_lead.job))
+				if(JOB_SQUAD_SPECIALIST)
+					old_lead.comm_title = "Spc"
+				if(JOB_SQUAD_ENGI)
+					old_lead.comm_title = "ComTech"
+				if(JOB_SQUAD_MEDIC)
+					old_lead.comm_title = "HM"
+				if(JOB_SQUAD_TEAM_LEADER)
+					old_lead.comm_title = "FTL"
+				if(JOB_SQUAD_SMARTGUN)
+					old_lead.comm_title = "SG"
+				if(JOB_SQUAD_LEADER)
+					if(!leader_killed)
+						old_lead.comm_title = "Sgt"
+				if(JOB_MARINE_RAIDER)
+					old_lead.comm_title = "Op."
+				if(JOB_MARINE_RAIDER_SG)
+					old_lead.comm_title = "SG."
+				if(JOB_MARINE_RAIDER_SL)
+					old_lead.comm_title = "TL."
+				if(JOB_MARINE_RAIDER_CMD)
+					old_lead.comm_title = "CMD."
+				else
+					var/datum/job/job = GLOB.RoleAuthority.roles_for_mode[GET_DEFAULT_ROLE(old_lead.job)]
+					old_lead.comm_title = job.gear_preset.role_comm_title
+			if(GET_DEFAULT_ROLE(old_lead.job) != JOB_SQUAD_LEADER || !leader_killed)
+				var/obj/item/device/radio/headset/almayer/marine/headset = old_lead.get_type_in_ears(/obj/item/device/radio/headset/almayer)
+				if(headset)
+					for(var/obj/item/device/encryptionkey/squadlead/acting/key in headset.keys)
+						headset.keys -= key
+						qdel(key)
+					headset.recalculateChannels()
+				var/obj/item/card/id/card = old_lead.get_idcard()
+				if(card)
+					card.access -= ACCESS_MARINE_LEADER
 	REMOVE_TRAITS_IN(old_lead, TRAIT_SOURCE_SQUAD_LEADER)
 	old_lead.hud_set_squad()
 	old_lead.update_inv_head() //updating marine helmet leader overlays
 	old_lead.update_inv_wear_suit()
 	to_chat(old_lead, FONT_SIZE_BIG(SPAN_BLUE("You're no longer the [squad_type] Leader for [src]!")))
+
+	var/obj/item/device/radio/headset/earpiece = old_lead.get_type_in_ears(/obj/item/device/radio/headset)
+	if(earpiece)
+		earpiece.locate_setting = TRACKER_SL
 
 //Not a safe proc. Returns null if squads or jobs aren't set up.
 //Mostly used in the marine squad console in marine_consoles.dm.
@@ -962,21 +892,12 @@
 			to_chat(fireteam_leaders[fireteam], FONT_SIZE_BIG(SPAN_BLUE("[H.mind ? H.comm_title : ""] [H] was assigned to your fireteam.")))
 		if(H.stat == CONSCIOUS)
 			to_chat(H, FONT_SIZE_HUGE(SPAN_BLUE("You were assigned to [fireteam].")))
+
+	var/obj/item/device/radio/headset/earpiece = H.get_type_in_ears(/obj/item/device/radio/headset)
+	if(earpiece)
+		earpiece.locate_setting = TRACKER_FTL
+
 	H.hud_set_squad()
-
-	// I'm not fixing how cursed these strings are, god save us all if someone (or me (https://i.imgur.com/nSy81Bn.png)) has to change these again
-	var/obj/item/card/id/id = H.get_idcard()
-	if(id)
-		if(fireteam == "SQ1")
-			id.access += squad_one_access
-		if(fireteam == "SQ2")
-			id.access += squad_two_access
-
-	for(var/obj/item/device/radio/headset/cycled_headset in H)
-		if(!("Squad Leader" in cycled_headset.tracking_options))
-			continue
-
-		cycled_headset.locate_setting = cycled_headset.tracking_options["Squad Leader"]
 
 /datum/squad/proc/unassign_fireteam(mob/living/carbon/human/H, upd_ui = TRUE)
 	fireteams[H.assigned_fireteam].Remove(H)
@@ -990,17 +911,11 @@
 		to_chat(fireteam_leaders[ft], FONT_SIZE_HUGE(SPAN_BLUE("[H.mind ? H.comm_title : ""] [H] was unassigned from your fireteam.")))
 	if(!H.stat)
 		to_chat(H, FONT_SIZE_HUGE(SPAN_BLUE("You were unassigned from [ft].")))
+
+	var/obj/item/device/radio/headset/earpiece = H.get_type_in_ears(/obj/item/device/radio/headset)
+	if(earpiece)
+		earpiece.locate_setting = TRACKER_SL
 	H.hud_set_squad()
-
-	var/obj/item/card/id/id = H.get_idcard()
-	if(id)
-		id.access.Remove(squad_one_access, squad_two_access)
-
-	for(var/obj/item/device/radio/headset/cycled_headset in H)
-		if(!("Section Sergeant" in cycled_headset.tracking_options))
-			continue
-
-		cycled_headset.locate_setting = cycled_headset.tracking_options["Section Sergeant"]
 
 /datum/squad/proc/assign_ft_leader(fireteam, mob/living/carbon/human/H, upd_ui = TRUE)
 	if(fireteam_leaders[fireteam])
@@ -1013,11 +928,9 @@
 	if(H.stat == CONSCIOUS)
 		to_chat(H, FONT_SIZE_HUGE(SPAN_BLUE("You were assigned as [fireteam] Team Leader.")))
 
-	for(var/obj/item/device/radio/headset/cycled_headset in H)
-		if(!("Section Sergeant" in cycled_headset.tracking_options))
-			continue
-
-		cycled_headset.locate_setting = cycled_headset.tracking_options["Section Sergeant"]
+	var/obj/item/device/radio/headset/earpiece = H.get_type_in_ears(/obj/item/device/radio/headset)
+	if(earpiece)
+		earpiece.locate_setting = TRACKER_SL
 
 /datum/squad/proc/unassign_ft_leader(fireteam, clear_group_id, upd_ui = TRUE)
 	if(!fireteam_leaders[fireteam])
@@ -1031,7 +944,128 @@
 	if(!H.stat)
 		to_chat(H, FONT_SIZE_HUGE(SPAN_BLUE("You were unassigned as [fireteam] Team Leader.")))
 
+	var/obj/item/device/radio/headset/earpiece = H.get_type_in_ears(/obj/item/device/radio/headset)
+	if(earpiece)
+		earpiece.locate_setting = TRACKER_FTL
+
+// this proc is defunct too
+/datum/squad/proc/unassign_all_ft_leaders()
+	for(var/team in fireteam_leaders)
+		if(fireteam_leaders[team])
+			unassign_ft_leader(team, TRUE, TRUE)
+
 /datum/squad/proc/reassign_ft_tracker_group(fireteam, old_id, new_id)
 	for(var/mob/living/carbon/human/H in fireteams[fireteam])
 		SStracking.stop_tracking(old_id, H)
 		SStracking.start_tracking(new_id, H)
+
+//moved the main proc for ft management from human.dm here to make it support both examine and squad info way to edit fts
+/datum/squad/proc/manage_fireteams(mob/living/carbon/human/target_mob)
+	var/obj/item/card/id/ID = target_mob.get_idcard()
+
+	if(!ID || ((!(ID.rank in GLOB.ROLES_MARINES) && faction == FACTION_MARINE) || (!(ID.rank in GLOB.ROLES_MARINES_ANTAG) && faction == FACTION_UPP)))
+		return
+	if(ID.rank == JOB_SQUAD_LEADER || squad_leader == target_mob) //if SL/aSL are chosen
+		var/choice = tgui_input_list(squad_leader, "Manage Fireteams and Team leaders.", "Fireteams Management", list("Cancel", "Unassign Fireteam 1 Leader", "Unassign Fireteam 2 Leader", "Unassign Fireteam 3 Leader", "Unassign all Team Leaders"))
+		if(target_mob.assigned_squad != src)
+			return //in case they somehow change squad while SL is choosing
+		if(squad_leader.is_mob_incapacitated() || !hasHUD(squad_leader,"squadleader"))
+			return //if SL got knocked out or demoted while choosing
+		switch(choice)
+			if("Unassign Fireteam 1 Leader")
+				unassign_ft_leader("FT1", TRUE)
+			if("Unassign Fireteam 2 Leader")
+				unassign_ft_leader("FT2", TRUE)
+			if("Unassign Fireteam 3 Leader")
+				unassign_ft_leader("FT3", TRUE)
+			if("Unassign all Team Leaders")
+				unassign_all_ft_leaders()
+			else
+				return
+		target_mob.hud_set_squad()
+		return
+	if(target_mob.assigned_fireteam)
+		if(fireteam_leaders[target_mob.assigned_fireteam] == target_mob) //Check if person already is FT leader
+			var/choice = tgui_input_list(squad_leader, "Manage Fireteams and Team leaders.", "Fireteams Management", list("Cancel", "Unassign from Team Leader position"))
+			if(target_mob.assigned_squad != src)
+				return
+			if(squad_leader.is_mob_incapacitated() || !hasHUD(squad_leader,"squadleader"))
+				return
+			if(choice == "Unassign from Team Leader position")
+				unassign_ft_leader(target_mob.assigned_fireteam, TRUE)
+			target_mob.hud_set_squad()
+			return
+
+		var/choice = tgui_input_list(squad_leader, "Manage Fireteams and Team leaders.", "Fireteams Management", list("Remove from Fireteam", "Assign to Fireteam 1", "Assign to Fireteam 2", "Assign to Fireteam 3", "Assign as Team Leader"))
+		if(target_mob.assigned_squad != src)
+			return
+		if(squad_leader.is_mob_incapacitated() || !hasHUD(squad_leader,"squadleader"))
+			return
+		switch(choice)
+			if("Remove from Fireteam")
+				unassign_fireteam(target_mob)
+			if("Assign to Fireteam 1")
+				assign_fireteam("FT1", target_mob)
+			if("Assign to Fireteam 2")
+				assign_fireteam("FT2", target_mob)
+			if("Assign to Fireteam 3")
+				assign_fireteam("FT3", target_mob)
+			if("Assign as Team Leader")
+				assign_ft_leader(target_mob.assigned_fireteam, target_mob)
+			else
+				return
+		target_mob.hud_set_squad()
+		return
+
+	var/choice = tgui_input_list(squad_leader, "Manage Fireteams and Team leaders.", "Fireteams Management", list("Cancel", "Assign to Fireteam 1", "Assign to Fireteam 2", "Assign to Fireteam 3"))
+	if(target_mob.assigned_squad != src)
+		return
+	if(squad_leader.is_mob_incapacitated() || !hasHUD(squad_leader,"squadleader"))
+		return
+	switch(choice)
+		if("Assign to Fireteam 1")
+			assign_fireteam("FT1", target_mob)
+		if("Assign to Fireteam 2")
+			assign_fireteam("FT2", target_mob)
+		if("Assign to Fireteam 3")
+			assign_fireteam("FT3", target_mob)
+		else
+			return
+	target_mob.hud_set_squad()
+	return
+
+//Managing MIA and KIA statuses for marines
+//this is currently defunct, but theres probably something to salvage here
+/datum/squad/proc/change_squad_status(mob/living/carbon/human/target_mob)
+	if(target_mob == squad_leader)
+		return //you can't mark yourself KIA
+	var/choice = tgui_input_list(squad_leader, "Marine status management: M.I.A. for missing marines, K.I.A. for confirmed unrevivable dead.", "Squad Management", list("Cancel", "Remove status", "M.I.A.", "K.I.A."))
+	if(target_mob.assigned_squad != src)
+		return //in case they somehow change squad while SL is choosing
+	if(squad_leader.is_mob_incapacitated() || !hasHUD(squad_leader,"squadleader"))
+		return //if SL got knocked out or demoted while choosing
+	switch(choice)
+		if("Remove status")
+			target_mob.squad_status = null
+		if("M.I.A.")
+			target_mob.squad_status = choice
+			to_chat(squad_leader, FONT_SIZE_BIG(SPAN_BLUE("You set [target_mob]'s status as Missing In Action.")))
+			if(target_mob.stat == CONSCIOUS)
+				to_chat(target_mob, FONT_SIZE_HUGE(SPAN_BLUE("You were marked as Missing In Action by Squad Leader.")))
+		if("K.I.A.")
+			target_mob.squad_status = choice
+			if(target_mob.assigned_fireteam)
+				if(fireteam_leaders[target_mob.assigned_fireteam] == target_mob)
+					unassign_ft_leader(target_mob.assigned_fireteam, TRUE, FALSE)
+				unassign_fireteam(target_mob, FALSE)
+			to_chat(squad_leader, FONT_SIZE_BIG(SPAN_BLUE("You set [target_mob]'s status as Killed In Action. If they were Team Leader or in fireteam, they were demoted and unassigned.")))
+			if(target_mob.stat == CONSCIOUS)
+				to_chat(target_mob, FONT_SIZE_HUGE(SPAN_BLUE("You were marked as Killed In Action by Squad Leader.")))
+		else
+			return
+	if(target_mob.assigned_fireteam)
+		update_fireteam(target_mob.assigned_fireteam)
+	else
+		update_free_mar()
+	target_mob.hud_set_squad()
+	return

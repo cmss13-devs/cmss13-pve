@@ -4,7 +4,7 @@
 
 /obj/vehicle/multitile/van
 	name = "Colony Van"
-	desc = "A rather old hunk of metal with four wheels, you know what to do. Entrance on the back and sides."
+	desc = "A rather old hunk of metal with six wheels, you know what to do. Entrance on the back and sides."
 	layer = ABOVE_XENO_LAYER
 
 	icon = 'icons/obj/vehicles/van.dmi'
@@ -41,8 +41,7 @@
 	movement_sound = 'sound/vehicles/tank_driving.ogg'
 	honk_sound = 'sound/vehicles/honk_2_truck.ogg'
 
-	light_range = 3
-	vehicle_light_range = 6
+	vehicle_light_range = 8
 
 	move_max_momentum = 3
 
@@ -56,6 +55,8 @@
 	req_one_access = list()
 
 	door_locked = FALSE
+
+	mob_size_required_to_hit = MOB_SIZE_XENO
 
 	var/overdrive_next = 0
 	var/overdrive_cooldown = 15 SECONDS
@@ -169,7 +170,7 @@
 		var/mob/M = I
 		M.client.images -= normal_image
 
-	QDEL_NULL(light_holder)
+	QDEL_NULL(lighting_holder)
 
 	return ..()
 
@@ -216,7 +217,7 @@
 
 /obj/vehicle/multitile/van/get_projectile_hit_boolean(obj/projectile/P)
 	if(src == P.original) //clicking on the van itself will hit it.
-		var/hitchance = P.get_effective_accuracy()
+		var/hitchance = P.get_effective_accuracy(src)
 		if(prob(hitchance))
 			return TRUE
 	return FALSE

@@ -3,6 +3,12 @@
 	desc = "A stun baton for incapacitating people with."
 	icon_state = "stunbaton"
 	item_state = "baton"
+	icon = 'icons/obj/items/weapons/melee/non_lethal.dmi'
+	item_icons = list(
+		WEAR_WAIST = 'icons/mob/humans/onmob/clothing/belts/weapons.dmi',
+		WEAR_L_HAND = 'icons/mob/humans/onmob/inhands/weapons/melee/non_lethal_lefthand.dmi',
+		WEAR_R_HAND = 'icons/mob/humans/onmob/inhands/weapons/melee/non_lethal_righthand.dmi'
+	)
 	flags_equip_slot = SLOT_WAIST
 	force = 15
 	throwforce = 7
@@ -12,15 +18,12 @@
 
 	attack_verb = list("beaten")
 	req_one_access = list(ACCESS_MARINE_BRIG, ACCESS_MARINE_ARMORY, ACCESS_MARINE_SENIOR, ACCESS_WY_GENERAL, ACCESS_WY_SECURITY, ACCESS_CIVILIAN_BRIG)
+	shield_flags = CAN_SHIELD_BASH
 	var/stunforce = 50
 	var/status = FALSE //whether the thing is on or not
 	var/obj/item/cell/bcell = null
 	var/hitcost = 1000 //oh god why do power cells carry so much charge? We probably need to make a distinction between "industrial" sized power cells for APCs and power cells for everything else.
 	var/has_user_lock = TRUE //whether the baton prevents people without correct access from using it.
-
-/obj/item/weapon/baton/suicide_act(mob/user)
-	user.visible_message(SPAN_SUICIDE("[user] is putting the live [name] in \his mouth! It looks like \he's trying to commit suicide."))
-	return (FIRELOSS)
 
 /obj/item/weapon/baton/Initialize(mapload, ...)
 	. = ..()
@@ -106,12 +109,12 @@
 	var/mob/living/carbon/human/human_target = target
 	if(has_user_lock && !skillcheck(real_user, SKILL_POLICE, SKILL_POLICE_SKILLED))
 		if(prob(70) && status)
-			to_chat(real_user, SPAN_WARNING("You hit yourself with the [src] during the struggle..."))
+			to_chat(real_user, SPAN_WARNING("You hit yourself with [src] during the struggle..."))
 			real_user.drop_held_item()
 			real_user.apply_effect(1,STUN)
 			human_target = real_user
 		if(prob(20) && !status) //a relatively reliable melee weapon when turned off.
-			to_chat(real_user, SPAN_WARNING("You grab the [src] incorrectly twisting your hand in the process."))
+			to_chat(real_user, SPAN_WARNING("You grab [src] incorrectly twisting your hand in the process."))
 			real_user.drop_held_item()
 			real_user.apply_effect(1,STUN)
 			real_user.apply_damage(force, BRUTE, pick("l_hand","r_hand"), no_limb_loss = TRUE)
@@ -119,10 +122,10 @@
 	var/target_zone = check_zone(user.zone_selected)
 	if(user.a_intent == INTENT_HARM)
 		if (!..()) //item/attack() does it's own messaging and logs
-			return FALSE // item/attack() will return TRUE if they hit, 0 if they missed.
+			return ATTACKBY_HINT_UPDATE_NEXT_MOVE // item/attack() will return TRUE if they hit, 0 if they missed.
 
 		if(!status)
-			return TRUE
+			return (ATTACKBY_HINT_NO_AFTERATTACK|ATTACKBY_HINT_UPDATE_NEXT_MOVE)
 
 	else
 		//copied from human_defense.dm - human defence code should really be refactored some time.
@@ -130,20 +133,20 @@
 
 			if(!target_zone) //shouldn't ever happen
 				human_target.visible_message(SPAN_DANGER("<B>[user] misses [human_target] with \the [src]!"))
-				return FALSE
+				return ATTACKBY_HINT_UPDATE_NEXT_MOVE
 
 			var/mob/living/carbon/human/H = human_target
 			var/obj/limb/affecting = H.get_limb(target_zone)
 			if (affecting)
 				if(!status)
 					human_target.visible_message(SPAN_WARNING("[human_target] has been prodded in the [affecting.display_name] with [src] by [user]. Luckily it was off."))
-					return TRUE
+					return (ATTACKBY_HINT_NO_AFTERATTACK|ATTACKBY_HINT_UPDATE_NEXT_MOVE)
 				else
 					H.visible_message(SPAN_DANGER("[human_target] has been prodded in the [affecting.display_name] with [src] by [user]!"))
 		else
 			if(!status)
 				human_target.visible_message(SPAN_WARNING("[human_target] has been prodded with [src] by [user]. Luckily it was off."))
-				return TRUE
+				return (ATTACKBY_HINT_NO_AFTERATTACK|ATTACKBY_HINT_UPDATE_NEXT_MOVE)
 			else
 				human_target.visible_message(SPAN_DANGER("[human_target] has been prodded with [src] by [user]!"))
 
@@ -168,7 +171,7 @@
 
 	deductcharge(hitcost)
 
-	return TRUE
+	return (ATTACKBY_HINT_NO_AFTERATTACK|ATTACKBY_HINT_UPDATE_NEXT_MOVE)
 
 /obj/item/weapon/baton/emp_act(severity)
 	. = ..()
@@ -181,6 +184,11 @@
 	desc = "An improvised stun baton."
 	icon_state = "stunprod"
 	item_state = "prod"
+	icon = 'icons/obj/items/weapons/melee/spears.dmi'
+	item_icons = list(
+		WEAR_L_HAND = 'icons/mob/humans/onmob/inhands/weapons/melee/spears_lefthand.dmi',
+		WEAR_R_HAND = 'icons/mob/humans/onmob/inhands/weapons/melee/spears_righthand.dmi'
+	)
 	force = 3
 	throwforce = 5
 	stunforce = 40

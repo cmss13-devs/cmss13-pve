@@ -22,7 +22,7 @@
 	//Should item be deleted on being empty
 	var/delete_on_empty = FALSE
 	gulp_size = 10
-	icon = 'icons/obj/items/drinkcans.dmi'
+	icon = 'icons/obj/items/food/drinkcans.dmi'
 	item_icons = list(
 		WEAR_L_HAND = 'icons/mob/humans/onmob/inhands/items/food_lefthand.dmi',
 		WEAR_R_HAND = 'icons/mob/humans/onmob/inhands/items/food_righthand.dmi'
@@ -97,7 +97,7 @@
 	if(crushed)
 		return ..()
 
-	if (open && !reagents.total_volume)
+	if(open && !reagents.total_volume && crushable)
 		if(user.a_intent == INTENT_HARM)
 			if(isturf(loc))
 				if(user.zone_selected == "r_foot" || user.zone_selected == "l_foot" )
@@ -113,7 +113,7 @@
 		return
 
 	if(!open)
-		to_chat(user, SPAN_NOTICE("You need to open the drink!"))
+		to_chat(user, SPAN_NOTICE("You need to open the [object_fluff]!"))
 		return
 	var/datum/reagents/R = src.reagents
 
@@ -132,7 +132,7 @@
 
 		playsound(M.loc, consume_sound, 15, 1)
 		return 1
-	else if( istype(M, /mob/living/carbon/human) )
+	else if( istype(M, /mob/living/carbon) )
 		if (!open)
 			to_chat(user, SPAN_NOTICE("You need to open the [object_fluff]!"))
 			return
@@ -141,7 +141,8 @@
 			SPAN_HELPFUL("You <b>start feeding</b> [user == M ? "yourself" : "[M]"] <b>[src]</b>."),
 			SPAN_HELPFUL("[user] <b>starts feeding</b> you <b>[src]</b>."),
 			SPAN_NOTICE("[user] starts feeding [user == M ? "themselves" : "[M]"] [src]."))
-		if(!do_after(user, 30, INTERRUPT_ALL, BUSY_ICON_FRIENDLY, M)) return
+		if(!do_after(user, 30, INTERRUPT_ALL, BUSY_ICON_FRIENDLY, M))
+			return
 		user.affected_message(M,
 			SPAN_HELPFUL("You <b>fed</b> [user == M ? "yourself" : "[M]"] <b>[src]</b>."),
 			SPAN_HELPFUL("[user] <b>fed</b> you <b>[src]</b>."),
@@ -164,7 +165,8 @@
 
 
 /obj/item/reagent_container/food/drinks/cans/afterattack(obj/target, mob/user, proximity)
-	if(crushed || !proximity) return
+	if(crushed || !proximity)
+		return
 
 	if(istype(target, /obj/structure/reagent_dispensers)) //A dispenser. Transfer FROM it TO us.
 		if (!open)
@@ -177,7 +179,7 @@
 			to_chat(user, SPAN_NOTICE("You need to open the [object_fluff]!"))
 			return
 
-		if (istype(target, /obj/item/reagent_container/food/drinks/cans))
+		if(istype(target, /obj/item/reagent_container/food/drinks/cans))
 			var/obj/item/reagent_container/food/drinks/cans/cantarget = target
 			if(!cantarget.open)
 				to_chat(user, SPAN_NOTICE("You need to open the [object_fluff] you want to pour into!"))
@@ -196,7 +198,7 @@
 			to_chat(user, SPAN_DANGER("You can't add any more to [target]."))
 			return
 		var/trans = src.reagents.trans_to(target, amount_per_transfer_from_this)
-		to_chat(user, SPAN_NOTICE(" You transfer [trans] units of the contents to [target]."))
+		to_chat(user, SPAN_NOTICE("You transfer [trans] units of the contents to [target]."))
 
 	return ..()
 
@@ -213,7 +215,7 @@
 	L = H.get_limb(H.zone_selected)
 
 	if(src == H.get_inactive_hand())
-		message = "between [user.gender == MALE ? "his" : "her"] hands"
+		message = "between [user.p_their()] hands"
 		to_chat(user, SPAN_NOTICE("You start crushing the [name] between your hands!"))
 		if(!do_after(user, 2 SECONDS, INTERRUPT_ALL, BUSY_ICON_GENERIC)) //crushing with hands takes great effort and might
 			return
@@ -223,14 +225,13 @@
 				if(!L)
 					to_chat(user, SPAN_WARNING("You don't have a [H.zone_selected], can't crush yer can on nothing!"))
 					return
-				message = "against [user.gender == MALE ? "his" : "her"] head!"
+				message = "against [user.p_their()] head!"
 				L.take_damage(brute = 3) //ouch! but you're a tough badass so it barely hurts
-				H.UpdateDamageIcon()
 			if("l_foot" , "r_foot")
 				if(!L)
 					to_chat(user, SPAN_WARNING("You don't have a [H.zone_selected], can't crush yer can under nothing!"))
 					return
-				message = "under [user.gender == MALE ? "his" : "her"] foot!"
+				message = "under [user.p_their()] foot!"
 
 	crushed = TRUE
 	flags_atom &= ~OPENCONTAINER
@@ -250,8 +251,8 @@
 //SODA
 
 /obj/item/reagent_container/food/drinks/cans/classcola
-	name = "\improper Coca-Cola"
-	desc = "Victor of the Cola Wars, this beverage is the most popular soft drink in the UA and much of the TWE."
+	name = "\improper Classic Cola"
+	desc = "A classic cola with a taste that's been around for centuries. Nobody can beat it."
 	icon_state = "cola"
 	center_of_mass = "x=16;y=10"
 
@@ -259,18 +260,9 @@
 	. = ..()
 	reagents.add_reagent("cola", 30)
 
-/obj/item/reagent_container/food/drinks/cans/pepsi
-	name = "\improper Pepsi"
-	desc = "The Cola Wars left it defeated, but this beverage retains its place as second-most popular soft drink in the UA."
-	icon_state = "pepsi"
-
-/obj/item/reagent_container/food/drinks/cans/pepsi/Initialize()
-	. = ..()
-	reagents.add_reagent("pepsi", 30)
-
 /obj/item/reagent_container/food/drinks/cans/space_mountain_wind
-	name = "\improper Mountain Dew"
-	desc = "For the discerning gamer."
+	name = "\improper Mountain Wind"
+	desc = "Blows right through you like a space wind."
 	icon_state = "space_mountain_wind"
 	center_of_mass = "x=16;y=10"
 
@@ -290,8 +282,8 @@
 	reagents.add_reagent("thirteenloko", 30)
 
 /obj/item/reagent_container/food/drinks/cans/dr_gibb
-	name = "\improper Dr Pepper"
-	desc = "A mixture of 23 different flavors, proving its not about quantity."
+	name = "\improper Dr. Gibb"
+	desc = "A delicious mixture of 42 different flavors of chemicals that you can't pronounce."
 	icon_state = "dr_gibb"
 	center_of_mass = "x=16;y=10"
 
@@ -300,8 +292,8 @@
 	reagents.add_reagent("dr_gibb", 30)
 
 /obj/item/reagent_container/food/drinks/cans/starkist
-	name = "\improper Sunkist"
-	desc = "Despite tasting ostensibly like carbonated orange juice, it holds no vitamin C content."
+	name = "\improper Star-kist"
+	desc = "The taste of a star in liquid form. And, a bit of tuna...?"
 	icon_state = "starkist"
 	center_of_mass = "x=16;y=10"
 
@@ -311,8 +303,8 @@
 	reagents.add_reagent("orangejuice", 15)
 
 /obj/item/reagent_container/food/drinks/cans/space_up
-	name = "\improper 7-UP"
-	desc = "Friend to many a cocktail."
+	name = "\improper Space-Up"
+	desc = "Tastes like a hull breach in your mouth."
 	icon_state = "space-up"
 	center_of_mass = "x=16;y=10"
 
@@ -331,8 +323,8 @@
 	reagents.add_reagent("lemon_lime", 30)
 
 /obj/item/reagent_container/food/drinks/cans/iced_tea
-	name = "Lipton iced tea"
-	desc = "It doesn't hold a candle to meemaw's sweet tea, but it does the trick in a pinch."
+	name = "iced tea can"
+	desc = "Just like the squad redneck's grandmother used to buy."
 	icon_state = "ice_tea_can"
 	center_of_mass = "x=16;y=10"
 
@@ -406,10 +398,10 @@
 	reagents.add_reagent("fruit_beer", 30)
 
 /obj/item/reagent_container/food/drinks/cans/waterbottle
-	name = "\improper Mountain Spring"
-	desc = "One of the most popular brands of bottled water in UA and TWE space, thanks to aggressive marketing abroad and in-house contracting with company colonies."
-	icon_state = "water"
-	crushed_icon = "water_crushed"
+	name = "\improper Weyland-Yutani Bottled Spring Water"
+	desc = "Overpriced 'Spring' water. Bottled by the Weyland-Yutani Corporation."
+	icon_state = "wy_water"
+	crushed_icon = "wy_water_crushed"
 	item_icons = list(
 		WEAR_L_HAND = 'icons/mob/humans/onmob/inhands/items/bottles_lefthand.dmi',
 		WEAR_R_HAND = 'icons/mob/humans/onmob/inhands/items/bottles_righthand.dmi',
@@ -420,13 +412,18 @@
 /obj/item/reagent_container/food/drinks/cans/waterbottle/Initialize()
 	. = ..()
 	reagents.add_reagent("water", 30)
+	AddElement(/datum/element/corp_label/wy)
 
 /obj/item/reagent_container/food/drinks/cans/waterbottle/upp
 	name = "\improper Gerolsteiner Bottled Sparkling Water"
 	desc = "German bottled, sparkling water popular among germanic population of UPP."
-	desc_lore = "After Gerolsteiner company becoming an intergrated state enterprise, their products became a common thing in military rations and in other places."
+	desc_lore = "After Gerolsteiner company becoming an integrated state enterprise, their products became a common thing in military rations and in other places."
 	icon_state = "upp_water"
 	crushed_icon = "upp_water_crushed"
+
+/obj/item/reagent_container/food/drinks/cans/waterbottle/upp/Initialize()
+	. = ..()
+	RemoveElement(/datum/element/corp_label/wy)
 
 /obj/item/reagent_container/food/drinks/cans/coconutmilk
 	name = "\improper Weyland-Yutani Bottled Coconut Milk"
@@ -443,6 +440,7 @@
 /obj/item/reagent_container/food/drinks/cans/coconutmilk/Initialize()
 	. = ..()
 	reagents.add_reagent("coconutmilk", 30)
+	AddElement(/datum/element/corp_label/wy)
 
 /obj/item/reagent_container/food/drinks/cans/soylent
 	name = "\improper Weyland-Yutani Premium Choco Soylent"
@@ -463,6 +461,7 @@
 	reagents.add_reagent("nutriment", 10)
 	reagents.add_reagent("soymilk", 10)
 	reagents.add_reagent("coco_drink", 10)
+	AddElement(/datum/element/corp_label/wy)
 
 /obj/item/reagent_container/food/drinks/cans/bugjuice
 	name = "\improper Weyland-Yutani Bug Juice Protein Drink"
@@ -481,6 +480,7 @@
 /obj/item/reagent_container/food/drinks/cans/bugjuice/Initialize()
 	. = ..()
 	reagents.add_reagent("bugjuice", 30)
+	AddElement(/datum/element/corp_label/wy)
 
 /obj/item/reagent_container/food/drinks/cans/beer
 	name = "\improper Weyland-Yutani Lite"
@@ -491,6 +491,7 @@
 /obj/item/reagent_container/food/drinks/cans/beer/Initialize()
 	. = ..()
 	reagents.add_reagent("beer", 30)
+	AddElement(/datum/element/corp_label/wy)
 
 /obj/item/reagent_container/food/drinks/cans/ale
 	name = "\improper Weyland-Yutani IPA"
@@ -502,6 +503,7 @@
 /obj/item/reagent_container/food/drinks/cans/ale/Initialize()
 	. = ..()
 	reagents.add_reagent("ale", 30)
+	AddElement(/datum/element/corp_label/wy)
 
 //SOUTO
 
@@ -513,11 +515,19 @@
 	center_of_mass = "x=16;y=10"
 	embeddable = 1
 
+/obj/item/reagent_container/food/drinks/cans/souto/Initialize()
+	. = ..()
+	AddElement(/datum/element/corp_label/souta)
+
 /obj/item/reagent_container/food/drinks/cans/souto/diet
 	name = "\improper Diet Souto"
-	desc = "Now with 0% fruit juice! Canned in Havana"
+	desc = "Now with 0% fruit juice! Canned in Havana."
 	icon_state = "souto_diet_classic"
 	item_state = "souto_diet_classic"
+
+/obj/item/reagent_container/food/drinks/cans/souto/diet/Initialize()
+	. = ..()
+	reagents.add_reagent("water", 25)
 
 /obj/item/reagent_container/food/drinks/cans/souto/classic
 	name = "\improper Souto Classic"
@@ -527,33 +537,27 @@
 
 /obj/item/reagent_container/food/drinks/cans/souto/classic/Initialize()
 	. = ..()
-	reagents.add_reagent("cornsyrup", 15)
-	reagents.add_reagent("sodawater", 15)
-	reagents.add_reagent("souto_classic", 20)
+	reagents.add_reagent("souto_classic", 50)
 
 /obj/item/reagent_container/food/drinks/cans/souto/diet/classic
 	name = "\improper Diet Souto"
-	desc = "Now with 0% fruit juice! Canned in Havana"
+	desc = "Now with 0% fruit juice! Canned in Havana."
 	icon_state = "souto_diet_classic"
 	item_state = "souto_diet_classic"
 
 /obj/item/reagent_container/food/drinks/cans/souto/diet/classic/Initialize()
 	. = ..()
-	reagents.add_reagent("sucralose", 15)
-	reagents.add_reagent("sodawater", 15)
-	reagents.add_reagent("souto_classic", 20)
+	reagents.add_reagent("souto_classic", 25)
 
 /obj/item/reagent_container/food/drinks/cans/souto/cherry
 	name = "\improper Cherry Souto"
-	desc = "Now with more artificial flavors! Canned in Havana"
+	desc = "Now with more artificial flavors! Canned in Havana."
 	icon_state = "souto_cherry"
 	item_state = "souto_cherry"
 
 /obj/item/reagent_container/food/drinks/cans/souto/cherry/Initialize()
 	. = ..()
-	reagents.add_reagent("cornsyrup", 15)
-	reagents.add_reagent("sodawater", 15)
-	reagents.add_reagent("souto_cherry", 20)
+	reagents.add_reagent("souto_cherry", 50)
 
 /obj/item/reagent_container/food/drinks/cans/souto/diet/cherry
 	name = "\improper Diet Cherry Souto"
@@ -563,9 +567,7 @@
 
 /obj/item/reagent_container/food/drinks/cans/souto/diet/cherry/Initialize()
 	. = ..()
-	reagents.add_reagent("sucralose", 15)
-	reagents.add_reagent("sodawater", 15)
-	reagents.add_reagent("souto_cherry", 20)
+	reagents.add_reagent("souto_cherry", 25)
 
 /obj/item/reagent_container/food/drinks/cans/souto/lime
 	name = "\improper Lime Souto"
@@ -575,9 +577,7 @@
 
 /obj/item/reagent_container/food/drinks/cans/souto/lime/Initialize()
 	. = ..()
-	reagents.add_reagent("cornsyrup", 15)
-	reagents.add_reagent("sodawater", 15)
-	reagents.add_reagent("souto_lime", 20)
+	reagents.add_reagent("souto_lime", 50)
 
 /obj/item/reagent_container/food/drinks/cans/souto/diet/lime
 	name = "\improper Diet Lime Souto"
@@ -587,9 +587,7 @@
 
 /obj/item/reagent_container/food/drinks/cans/souto/diet/lime/Initialize()
 	. = ..()
-	reagents.add_reagent("sucralose", 15)
-	reagents.add_reagent("sodawater", 15)
-	reagents.add_reagent("souto_lime", 20)
+	reagents.add_reagent("souto_lime", 25)
 
 /obj/item/reagent_container/food/drinks/cans/souto/grape
 	name = "\improper Grape Souto"
@@ -599,9 +597,7 @@
 
 /obj/item/reagent_container/food/drinks/cans/souto/grape/Initialize()
 	. = ..()
-	reagents.add_reagent("cornsyrup", 15)
-	reagents.add_reagent("sodawater", 15)
-	reagents.add_reagent("souto_grape", 20)
+	reagents.add_reagent("souto_grape", 50)
 
 /obj/item/reagent_container/food/drinks/cans/souto/diet/grape
 	name = "\improper Diet Grape Souto"
@@ -611,9 +607,7 @@
 
 /obj/item/reagent_container/food/drinks/cans/souto/diet/grape/Initialize()
 	. = ..()
-	reagents.add_reagent("sucralose", 15)
-	reagents.add_reagent("sodawater", 15)
-	reagents.add_reagent("souto_grape", 20)
+	reagents.add_reagent("souto_grape", 25)
 
 /obj/item/reagent_container/food/drinks/cans/souto/blue
 	name = "\improper Blue Raspberry Souto"
@@ -624,9 +618,7 @@
 
 /obj/item/reagent_container/food/drinks/cans/souto/blue/Initialize()
 	. = ..()
-	reagents.add_reagent("cornsyrup", 15)
-	reagents.add_reagent("sodawater", 15)
-	reagents.add_reagent("souto_blueraspberry", 20)
+	reagents.add_reagent("souto_blueraspberry", 50)
 
 /obj/item/reagent_container/food/drinks/cans/souto/diet/blue
 	name = "\improper Diet Blue Raspberry Souto"
@@ -636,9 +628,7 @@
 
 /obj/item/reagent_container/food/drinks/cans/souto/diet/blue/Initialize()
 	. = ..()
-	reagents.add_reagent("sucralose", 15)
-	reagents.add_reagent("sodawater", 15)
-	reagents.add_reagent("souto_blueraspberry", 20)
+	reagents.add_reagent("souto_blueraspberry", 25)
 
 /obj/item/reagent_container/food/drinks/cans/souto/peach
 	name = "\improper Peach Souto"
@@ -648,9 +638,7 @@
 
 /obj/item/reagent_container/food/drinks/cans/souto/peach/Initialize()
 	. = ..()
-	reagents.add_reagent("cornsyrup", 15)
-	reagents.add_reagent("sodawater", 15)
-	reagents.add_reagent("souto_peach", 20)
+	reagents.add_reagent("souto_peach", 50)
 
 /obj/item/reagent_container/food/drinks/cans/souto/diet/peach
 	name = "\improper Diet Peach Souto"
@@ -660,9 +648,7 @@
 
 /obj/item/reagent_container/food/drinks/cans/souto/diet/peach/Initialize()
 	. = ..()
-	reagents.add_reagent("sucralose", 15)
-	reagents.add_reagent("sodawater", 15)
-	reagents.add_reagent("souto_peach", 20)
+	reagents.add_reagent("souto_peach", 25)
 
 /obj/item/reagent_container/food/drinks/cans/souto/cranberry
 	name = "\improper Cranberry Souto"
@@ -672,9 +658,7 @@
 
 /obj/item/reagent_container/food/drinks/cans/souto/cranberry/Initialize()
 	. = ..()
-	reagents.add_reagent("cornsyrup", 15)
-	reagents.add_reagent("sodawater", 15)
-	reagents.add_reagent("souto_cranberry", 20)
+	reagents.add_reagent("souto_cranberry", 50)
 
 /obj/item/reagent_container/food/drinks/cans/souto/diet/cranberry
 	name = "\improper Diet Cranberry Souto"
@@ -684,15 +668,14 @@
 
 /obj/item/reagent_container/food/drinks/cans/souto/diet/cranberry/Initialize()
 	. = ..()
-	reagents.add_reagent("sucralose", 15)
-	reagents.add_reagent("sodawater", 15)
-	reagents.add_reagent("souto_cranberry", 20)
+	reagents.add_reagent("souto_cranberry", 25)
+	reagents.add_reagent("water", 25)
 
 /obj/item/reagent_container/food/drinks/cans/souto/vanilla
 	name = "\improper Vanilla Souto"
 	desc = "When most soft drinks say 'vanilla,' they really mean their classic flavor with a bit of vanilla added. NOT THE SOUTO CORPORATION, BABY! This bad boy is filled to the brim with 100% pure carbonated vanilla extract! It tastes terrible. Canned in Havana."
 	icon_state = "souto_vanilla"
-	item_state = "souto_canilla"
+	item_state = "souto_vanilla"
 
 /obj/item/reagent_container/food/drinks/cans/souto/vanilla/Initialize()
 	. = ..()
@@ -706,32 +689,29 @@
 
 /obj/item/reagent_container/food/drinks/cans/souto/diet/vanilla/Initialize()
 	. = ..()
-	reagents.add_reagent("sodawater", 25)
 	reagents.add_reagent("souto_vanilla", 25)
+	reagents.add_reagent("water", 25)
 
 /obj/item/reagent_container/food/drinks/cans/souto/pineapple
 	name = "\improper Pineapple Souto"
-	desc = "This tastes like battery acid with a full cup of corn syrup mixed in. Canned in Havana."
+	desc = "This tastes like battery acid with a full cup of sugar mixed in. Canned in Havana."
 	icon_state = "souto_pineapple"
 	item_state = "souto_pineapple"
 
 /obj/item/reagent_container/food/drinks/cans/souto/pineapple/Initialize()
 	. = ..()
-	reagents.add_reagent("cornsyrup", 15)
-	reagents.add_reagent("sodawater", 15)
-	reagents.add_reagent("souto_pineapple", 20)
+	reagents.add_reagent("souto_pineapple", 50)
 
 /obj/item/reagent_container/food/drinks/cans/souto/diet/pineapple
 	name = "\improper Diet Pineapple Souto"
-	desc = "This tastes like battery acid with a full cup of sugar substitute mixed in. Canned in Havana."
+	desc = "This tastes like battery acid with a half cup of sugar mixed in. Canned in Havana."
 	icon_state = "souto_diet_pineapple"
 	item_state = "souto_diet_pineapple"
 
 /obj/item/reagent_container/food/drinks/cans/souto/diet/pineapple/Initialize()
 	. = ..()
-	reagents.add_reagent("cornsyrup", 15)
-	reagents.add_reagent("sodawater", 15)
-	reagents.add_reagent("souto_pineapple", 20)
+	reagents.add_reagent("souto_pineapple", 25)
+	reagents.add_reagent("water", 25)
 
 //ASPEN
 
@@ -739,8 +719,10 @@
 	name = "\improper Weyland-Yutani Aspen Beer"
 	desc = "Pretty good when you get past the fact that it tastes like piss. Canned by the Weyland-Yutani Corporation."
 	icon_state = "6_pack_1"
+	item_state = "6_pack_1"
 	center_of_mass = "x=16;y=10"
 
 /obj/item/reagent_container/food/drinks/cans/aspen/Initialize()
 	. = ..()
 	reagents.add_reagent("beer", 50)
+	AddElement(/datum/element/corp_label/wy)

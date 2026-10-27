@@ -25,11 +25,11 @@ GLOBAL_LIST_INIT(_kbMap, list(
 	"ALT" = "Alt",
 	"SHIFT" = "Shift",
 	"CONTROL" = "Ctrl",
-	"MULTIPLY" = "Multiply",
-	"DIVIDE" = "Divide",
-	"SUBTRACT" = "Subtract",
-	"ADD" = "Add",
-	"DECIMAL" = "Decimal",
+	"*" = "Multiply",
+	"/" = "Divide",
+	"-" = "Subtract",
+	"+" = "Add",
+	"," = "Decimal",
 	"CLEAR" = "Center",
 	"PAUSE" = "Pause",
 	"CONTEXTMENU" = "Apps",
@@ -46,3 +46,6 @@ GLOBAL_LIST_INIT(_kbMap, list(
 
 ///List of ckeys that have seen a blurb of a given key.
 GLOBAL_LIST_EMPTY(blurb_witnesses)
+
+/// dict of ckey -> last occupied mob
+GLOBAL_LIST_EMPTY(ckey_to_occupied_mob)

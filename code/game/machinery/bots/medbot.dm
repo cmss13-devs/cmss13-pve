@@ -211,7 +211,7 @@
 		return
 
 	else
-		..()
+		. = ..()
 		if (health < maxhealth && !HAS_TRAIT(W, TRAIT_TOOL_SCREWDRIVER) && W.force)
 			step_to(src, (get_step_away(src,user)))
 
@@ -449,7 +449,7 @@
 
 	new /obj/item/device/assembly/prox_sensor(Tsec)
 
-	new /obj/item/device/healthanalyzer/soul(Tsec) //yeah
+	new /obj/item/device/healthanalyzer(Tsec)
 
 	if(src.reagent_glass)
 		src.reagent_glass.forceMove(Tsec)

@@ -16,7 +16,7 @@
 			return
 		programmer.visible_message(SPAN_NOTICE("[programmer] reprograms \the [src]'s IFF tag."), SPAN_NOTICE("You reprogram \the [src]'s IFF tag."), max_distance = 3)
 		return
-	if(stat == DEAD)
+	if(stat == DEAD || hive.is_ally(user))
 		if(!istype(item, /obj/item/reagent_container/syringe))
 			var/datum/surgery/current_surgery = active_surgeries[user.zone_selected]
 			if(current_surgery)
@@ -44,9 +44,9 @@
 		return
 	return ..()
 
-/mob/living/carbon/xenomorph/ex_act(severity, direction, datum/cause_data/cause_data, pierce=0)
+/mob/living/carbon/xenomorph/ex_act(severity, direction, datum/cause_data/cause_data, pierce=0, enviro=FALSE)
 
-	if(body_position == LYING_DOWN && direction)
+	if(body_position == LYING_DOWN && direction > 0)
 		severity *= EXPLOSION_PRONE_MULTIPLIER
 
 	if(severity >= 30)
@@ -54,9 +54,6 @@
 
 	last_damage_data = istype(cause_data) ? cause_data : create_cause_data(cause_data)
 
-	if(severity > EXPLOSION_THRESHOLD_LOW && length(stomach_contents))
-		for(var/mob/M in stomach_contents)
-			M.ex_act(severity - EXPLOSION_THRESHOLD_LOW, last_damage_data, pierce)
 
 	var/b_loss = 0
 	var/f_loss = 0
@@ -83,9 +80,8 @@
 	if (damage >= 0)
 		b_loss += damage * 0.5
 		f_loss += damage * 0.5
-		apply_damage(b_loss, BRUTE)
-		apply_damage(f_loss, BURN)
-		updatehealth()
+		apply_damage(b_loss, BRUTE, enviro=enviro)
+		apply_damage(f_loss, BURN, enviro=enviro)
 
 		var/powerfactor_value = round( damage * 0.05 ,1)
 		powerfactor_value = min(powerfactor_value,20)
@@ -121,7 +117,8 @@
 		"penetration" = penetration,
 		"armour_break_pr_pen" = armour_break_pr_pen,
 		"armour_break_flat" = armour_break_flat,
-		"armor_integrity" = armor_integrity
+		"armor_integrity" = armor_integrity,
+		"armour_type" = armour_type,
 	)
 	SEND_SIGNAL(src, COMSIG_XENO_PRE_APPLY_ARMOURED_DAMAGE, damagedata)
 	var/modified_damage = armor_damage_reduction(armour_config, damage,
@@ -138,13 +135,13 @@
 
 	return modified_damage
 
-/mob/living/carbon/xenomorph/apply_damage(damage = 0, damagetype = BRUTE, def_zone = null, used_weapon = null, sharp = 0, edge = 0, force = FALSE)
+/mob/living/carbon/xenomorph/apply_damage(damage = 0, damagetype = BRUTE, def_zone = null, used_weapon = null, sharp = 0, edge = 0, force = FALSE, enviro = FALSE , chemical = FALSE)
 	if(!damage)
 		return
 
-
-	var/list/damagedata = list("damage" = damage)
-	if(SEND_SIGNAL(src, COMSIG_XENO_TAKE_DAMAGE, damagedata, damagetype) & COMPONENT_BLOCK_DAMAGE) return
+	var/list/damagedata = list("damage" = damage, "enviro" = enviro)
+	if(SEND_SIGNAL(src, COMSIG_MOB_TAKE_DAMAGE, damagedata, damagetype) & COMPONENT_BLOCK_DAMAGE)
+		return
 	damage = damagedata["damage"]
 
 	//We still want to check for blood splash before we get to the damage application.
@@ -158,7 +155,8 @@
 
 	var/list/damage_data = list(
 		"bonus_damage" = 0,
-		"damage" = damage
+		"damage" = damage,
+		"enviro" = enviro
 	)
 	SEND_SIGNAL(src, COMSIG_BONUS_DAMAGE, damage_data)
 	damage += damage_data["bonus_damage"]
@@ -209,7 +207,8 @@
 	if(GLOB.xeno_general.armor_ignore_integrity)
 		return FALSE
 
-	if(stat == DEAD) return
+	if(stat == DEAD)
+		return
 
 	if(armor_deflection<=0)
 		return
@@ -235,7 +234,8 @@
 
 /mob/living/carbon/xenomorph/proc/post_apply_armorbreak()
 	set waitfor = 0
-	if(!caste) return
+	if(!caste)
+		return
 	sleep(XENO_ARMOR_BREAK_PASS_TIME)
 	if(warding_aura && armor_break_to_apply > 0) //Damage to armor reduction
 		armor_break_to_apply = floor(armor_break_to_apply * ((100 - (warding_aura * 15)) / 100))
@@ -250,7 +250,8 @@
 	if(!damage || !acid_blood_damage || world.time < acid_splash_last + acid_splash_cooldown || SSticker?.mode?.hardcore)
 		return FALSE
 	var/chance = 20 //base chance
-	if(damtype == BRUTE) chance += 5
+	if(damtype == BRUTE)
+		chance += 5
 	chance += chancemod + (damage * 0.33)
 	var/turf/T = loc
 	if(!T || !istype(T))
@@ -269,8 +270,10 @@
 		var/splash_chance = 40 //Base chance of getting splashed. Decreases with # of victims.
 		var/i = 0 //Tally up our victims.
 
-		for(var/mob/living/carbon/human/victim in orange(radius, src)) //Loop through all nearby victims, including the tile.
+		for(var/mob/living/carbon/human/victim in range(radius, src)) //Loop through all nearby victims, including the tile.
 			splash_chance = 65 - (i * 5)
+			if(HAS_TRAIT(victim, TRAIT_HAULED))
+				continue
 			if(victim.loc == loc)
 				splash_chance += 30 //Same tile? BURN
 			if(victim.species?.acid_blood_dodge_chance)
@@ -281,7 +284,7 @@
 				if(SEND_SIGNAL(src, COMSIG_XENO_DEAL_ACID_DAMAGE, victim, dmg) & COMPONENT_BLOCK_DAMAGE)
 					continue
 				i++
-				victim.visible_message(SPAN_DANGER("\The [victim] is scalded with hissing green blood!"), \
+				victim.visible_message(SPAN_DANGER("\The [victim] is scalded with hissing green blood!"),
 				SPAN_DANGER("You are splattered with sizzling blood! IT BURNS!"))
 				if(prob(60) && !victim.stat && victim.pain.feels_pain)
 					INVOKE_ASYNC(victim, TYPE_PROC_REF(/mob, emote), "scream") //Topkek
@@ -291,11 +294,6 @@
 				handle_blood_splatter(get_dir(src, victim), 1 SECONDS)
 				playsound(victim, "acid_sizzle", 25, TRUE)
 				animation_flash_color(victim, "#FF0000") //pain hit flicker
-
-		if(damtype == BRUTE && acid_blood_spatter && prob(splash_chance)) /// Only brute damage makes sense for the spatter.
-			var/turf/acid_loc = pick(get_step(src,rand(0,8)))
-			if(acid_loc && !(locate(/obj/effect/xenomorph/acid) in acid_loc))
-				new /obj/effect/xenomorph/acid/spatter(acid_loc) ///Don't want to double up. It will target barricades first.
 
 /mob/living/carbon/xenomorph/get_target_lock(access_to_check)
 	if(isnull(access_to_check))

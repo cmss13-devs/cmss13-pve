@@ -1,6 +1,5 @@
 #define TESLA_COIL_FIREDELAY 20
 #define TESLA_COIL_RANGE 3
-#define TESLA_COIL_RMC_RANGE 5
 #define TESLA_COIL_DAZE_EFFECT 5
 #define TESLA_COIL_SLOW_EFFECT 3
 
@@ -135,12 +134,12 @@
 	var/list/turf/path = get_line(src, M, include_start_atom = FALSE)
 
 	var/blocked = FALSE
-	for(var/turf/T in path)
-		if(T.density || T.opacity)
+	for(var/turf/turf in path)
+		if(turf.density || turf.opacity)
 			blocked = TRUE
 			break
 
-		for(var/obj/structure/S in T)
+		for(var/obj/structure/S in turf)
 			if(S.opacity)
 				blocked = TRUE
 				break
@@ -149,7 +148,9 @@
 					blocked = TRUE
 					break
 
-		for(var/obj/effect/particle_effect/smoke/S in T)
+		for(var/obj/effect/particle_effect/smoke/smoke in turf)
+			if(!smoke.obscuring)
+				continue
 			blocked = TRUE
 			break
 
@@ -192,31 +193,14 @@
 
 	M.set_effect(TESLA_COIL_DAZE_EFFECT * 1.5, DAZE) // 1.5x as effective as normal tesla
 
-/obj/structure/machinery/defenses/tesla_coil/stun/rmc
-	name = "\improper L33A1 TED device"
-	desc = "Tactical Electroshock Deterrence device, also simply called 'tedds' by those who use them. A perfected way of producing high-frequency & high-voltage, low-current electricity. Adaptave grounding in RMC equipment allows it to only hit hostile targets with a devastating shock."
-	tesla_range = TESLA_COIL_RMC_RANGE
-	fire_delay = TESLA_COIL_FIREDELAY
-	handheld_type = /obj/item/defenses/handheld/tesla_coil/stun/rmc
-	disassemble_time = 0.5 SECONDS
-
-	choice_categories = list(
-		SENTRY_CATEGORY_IFF = list(FACTION_TWE, SENTRY_FACTION_WEYLAND, SENTRY_FACTION_HUMAN),
-	)
-
-	selected_categories = list(
-		SENTRY_CATEGORY_IFF = FACTION_TWE,
-	)
-
-
-
 #undef TESLA_COIL_STUN_FIRE_DELAY
-#define TESLA_COIL_MICRO_FIRE_DELAY 10
+#define TESLA_COIL_MICRO_FIRE_DELAY 1 SECONDS
 /obj/structure/machinery/defenses/tesla_coil/micro
 	name = "\improper 25S micro tesla coil"
 	desc = "A perfected way of producing high-voltage, low-current and high-frequency electricity. Minor modifications allow it to only hit hostile targets with a devastating shock. This one is smaller and more lightweight."
 	handheld_type = /obj/item/defenses/handheld/tesla_coil/micro
 	disassemble_time = 0.5 SECONDS
+	fire_delay = TESLA_COIL_MICRO_FIRE_DELAY
 	density = FALSE
 	defense_type = "Micro"
 

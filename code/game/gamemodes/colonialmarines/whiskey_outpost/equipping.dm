@@ -22,6 +22,22 @@ Stay alive, and Godspeed, commander!"}
 		marine_announcement("All forces, Ground Commander [H.real_name] is in command!")
 
 
+
+//*************************************
+//----------------SYNTHETIC-------------
+//*************************************/
+
+/datum/job/civilian/synthetic/whiskey
+	title = JOB_WO_SYNTH
+	gear_preset = /datum/equipment_preset/synth/uscm/wo
+
+/datum/job/civilian/synthetic/whiskey/generate_entry_message()
+	. = {"You are a Synthetic! You are held to a higher standard and are required to obey not only the Server Rules but Marine Law and Synthetic Rules. Failure to do so may result in your White-list Removal.
+You were deployed alongside the Dust Raiders to assist in engineering, medical, and diplomatic duties. Things seem to have taken a turn for the worst.
+Assist the humans in sending a signal to the remaining Dust Raiders on board the USS Alistoun, to inform them of the threat.
+Destruction in inevitable. At the very least, you can assist in preventing others from sharing the same fate."}
+
+
 //*************************************
 //---------EXECUITIVE OFFICER-----------
 //*************************************/
@@ -67,13 +83,13 @@ Glory to the commander. Glory to the USCM."}
 
 
 //*************************************
-//----------------CREWMAN---------------
+//----------------WARDEN---------------
 //*************************************/
-/datum/job/command/tank_crew/whiskey
-	title = JOB_WO_CREWMAN
+/datum/job/command/warden/whiskey
+	title = JOB_WO_WARDEN
 	gear_preset = /datum/equipment_preset/wo/hgs
 
-/datum/job/command/tank_crew/whiskey/generate_entry_message(mob/living/carbon/human/H)
+/datum/job/command/warden/whiskey/generate_entry_message(mob/living/carbon/human/H)
 	. = {"You were assigned to guard the commander in this hostile environment; that hasn't changed. Ensure your extra training and equipment isn't wasted!
 You're expected to defend not only the commander, but the bunker at large; leave the outside defenses to the marines.
 You've been through much, and as such, have been given special-weapons training. Use it well.
@@ -173,12 +189,12 @@ Ensure power is up, and the bunker is well defended. You share your bunker crew 
 //*************************************
 //---------------MAINT TECH-------------
 //*************************************/
-/datum/job/logistics/tech/maint/whiskey
+/datum/job/logistics/maint/whiskey
 	title = JOB_WO_ORDNANCE_TECH
 	supervisors = "the bunker crew master and the quartermaster"
 	gear_preset = /datum/equipment_preset/wo/bc
 
-/datum/job/logistics/tech/maint/whiskey/generate_entry_message(mob/living/carbon/human/H)
+/datum/job/logistics/maint/whiskey/generate_entry_message(mob/living/carbon/human/H)
 	. = {"You've worked here for a while, figuring it was a pretty comfy job. Now you gotta fight for your life. Have fun with that.
 Assist both the Bunker Crew Master and the Quartermaster in their duties."}
 

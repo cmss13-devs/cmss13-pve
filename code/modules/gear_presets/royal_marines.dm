@@ -1,626 +1,698 @@
-/datum/equipment_preset/royal_marine
-	name = FACTION_TWE
+/datum/equipment_preset/twe
+	name = "Three World Empire"
 	faction = FACTION_TWE
-	faction_group = FACTION_LIST_TWE
-	languages = list(LANGUAGE_ENGLISH, LANGUAGE_JAPANESE)
-	flags = EQUIPMENT_PRESET_EXTRA
+	faction_group = list(FACTION_TWE, FACTION_MARINE)
 	origin_override = ORIGIN_TWE
-	access = list(ACCESS_WY_GENERAL, ACCESS_TWE_COMMANDO)
+	languages = list(LANGUAGE_ENGLISH, LANGUAGE_JAPANESE)
+	minimap_background = "background_twe"
+
+/datum/equipment_preset/twe/royal_marine/load_name(mob/living/carbon/human/new_human, randomise)
+	new_human.gender = pick(MALE, FEMALE)
+	var/datum/preferences/placeholder_pref = new()
+	placeholder_pref.randomize_appearance(new_human)
+	var/random_name = random_name(new_human.gender)
+	new_human.change_real_name(new_human, random_name)
+	new_human.age = rand(20,45)
+
+	var/static/list/colors = list("BLACK" = list(15, 15, 25), "BROWN" = list(102, 51, 0), "AUBURN" = list(139, 62, 19))
+	var/static/list/hair_colors = colors.Copy() + list("BLONDE" = list(197, 164, 30), "CARROT" = list(174, 69, 42))
+	var/hair_color = pick(hair_colors)
+	new_human.r_hair = hair_colors[hair_color][1]
+	new_human.g_hair = hair_colors[hair_color][2]
+	new_human.b_hair = hair_colors[hair_color][3]
+	new_human.r_facial = hair_colors[hair_color][1]
+	new_human.g_facial = hair_colors[hair_color][2]
+	new_human.b_facial = hair_colors[hair_color][3]
+	var/eye_color = pick(colors)
+	new_human.r_eyes = colors[eye_color][1]
+	new_human.g_eyes = colors[eye_color][2]
+	new_human.b_eyes = colors[eye_color][3]
+	idtype = /obj/item/card/id/dogtag
+	if(new_human.gender == MALE)
+		new_human.h_style = pick("Crewcut", "Shaved Head", "Buzzcut", "Undercut", "Side Undercut", "Pvt. Joker", "Marine Fade", "Low Fade", "Medium Fade", "High Fade", "No Fade", "Coffee House Cut", "Flat Top",)
+		new_human.f_style = pick("5 O'clock Shadow", "Shaved", "Full Beard", "3 O'clock Moustache", "5 O'clock Shadow", "5 O'clock Moustache", "7 O'clock Shadow", "7 O'clock Moustache",)
+	else
+		new_human.h_style = pick("Ponytail 1", "Ponytail 2", "Ponytail 3", "Ponytail 4", "Pvt. Redding", "Pvt. Clarison", "Cpl. Dietrich", "Pvt. Vasquez", "Marine Bun", "Marine Bun 2", "Marine Flat Top",)
+
+/datum/equipment_preset/twe/royal_marine/load_id(mob/living/carbon/human/new_human, client/mob_client)
+	if(human_versus_human)
+		var/obj/item/clothing/under/uniform = new_human.w_uniform
+		if(istype(uniform))
+			uniform.has_sensor = UNIFORM_HAS_SENSORS
+	return ..()
+
+//*****************************************************************************************************/
+
+/datum/equipment_preset/twe/royal_marine
+	name = "Royal Marines Commando"
+	assignment = JOB_TWE_RMC_RIFLEMAN
+	job_title = JOB_TWE_RMC_RIFLEMAN
+	var/human_versus_human = FALSE
+	///Gives the Royal Marines their radios
+	var/headset_type = /obj/item/device/radio/headset/distress/royal_marine
 	idtype = /obj/item/card/id/dogtag
 
 //*****************************************************************************************************/
-//Royal Marine Commandos & RMC specialisations
-//*****************************************************************************************************/
 
-/datum/equipment_preset/royal_marine/load_id(mob/living/carbon/human/new_human, client/mob_client)
-	var/obj/item/clothing/under/uniform = new_human.w_uniform
-	if(istype(uniform))
-		uniform.has_sensor = UNIFORM_HAS_SENSORS
-		uniform.sensor_faction = FACTION_TWE
-	return ..()
-
-/datum/equipment_preset/royal_marine/standard
-	name = "Royal Marine Commando, Rifleman (Equipped)"
-	flags = EQUIPMENT_PRESET_EXTRA
+/datum/equipment_preset/twe/royal_marine/standard
+	name = "TWE Royal Marine Commando (Rifleman)"
 	paygrades = list(PAY_SHORT_RMC1 = JOB_PLAYTIME_TIER_0)
-	role_comm_title = "RM"
+	role_comm_title = "RMC"
+	flags = EQUIPMENT_PRESET_EXTRA
 	assignment = JOB_TWE_RMC_RIFLEMAN
-	rank = JOB_TWE_RMC_RIFLEMAN
+	job_title = JOB_TWE_RMC_RIFLEMAN
+
+	minimap_icon = "rmc_rifleman"
+
 	skills = /datum/skills/rmc
-	access = list(ACCESS_WY_GENERAL, ACCESS_TWE_COMMANDO)
-
-/datum/equipment_preset/royal_marine/standard/load_gear(mob/living/carbon/human/new_human)
-	//back
-	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/rmc/heavy(new_human), WEAR_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/device/motiondetector/hacked/twe(new_human), WEAR_IN_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/box/packet/rmc(new_human), WEAR_IN_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/tool/shovel/etool/rmc/folded(new_human), WEAR_IN_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/box/mre/twe(new_human), WEAR_IN_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/box/flare(new_human), WEAR_IN_BACK)
-	//face
-	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/almayer/marine/solardevils/rmc(new_human), WEAR_L_EAR)
-	new_human.equip_to_slot_or_del(new /obj/item/device/overwatch_camera/twe(new_human), WEAR_R_EAR)
-	//head
-	if(prob(65))
-		new_human.equip_to_slot_or_del(new /obj/item/clothing/head/cmcap/royal_marine(new_human), WEAR_HEAD)
-		new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/veteran/pmc/gunner/rmc(new_human), WEAR_IN_BACK)
-	else
-		new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/veteran/pmc/gunner/rmc(new_human), WEAR_HEAD)
-		new_human.equip_to_slot_or_del(new /obj/item/clothing/head/cmcap/royal_marine(new_human), WEAR_IN_BACK)
-	//uniform
-	add_rmc_uniform(new_human)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/smallpouch/rmc(new_human), WEAR_ACCESSORY)
-	new_human.equip_to_slot_or_del(new /obj/item/reagent_container/food/drinks/flask/canteen(new_human), WEAR_IN_ACCESSORY)
-	new_human.equip_to_slot_or_del(new /obj/item/tool/weldingtool(new_human), WEAR_IN_ACCESSORY)
-	new_human.equip_to_slot_or_del(new /obj/item/tool/wirecutters/tactical(new_human), WEAR_IN_ACCESSORY)
-	new_human.equip_to_slot_or_del(new /obj/item/tool/crowbar/tactical(new_human), WEAR_IN_ACCESSORY)
-	//jacket
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/marine/veteran/royal_marine/heavy(new_human), WEAR_JACKET)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/webbing/m3/uppsmall/rmc/preset(new_human), WEAR_ACCESSORY)
-	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/nsg23/rmc/preloaded(new_human), WEAR_J_STORE)
-	//waist
-	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/marine/rmc/nsg(new_human), WEAR_WAIST)
-	//limbs
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine(new_human), WEAR_HANDS)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/rmc/knife(new_human), WEAR_FEET)
-	//pockets
-	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate(new_human), WEAR_L_STORE)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/pistol/alt(new_human), WEAR_R_STORE)
-	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/pistol/vp78/rmc(new_human), WEAR_IN_R_STORE)
-
-	if(SSmapping.configs[GROUND_MAP].environment_traits[MAP_COLD])
-		new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/rebreather/scarf(new_human), WEAR_FACE)
-
-//*****************************************************************************************************/
-
-/datum/equipment_preset/royal_marine/machinegun
-	name = "Royal Marine Commando, GPMG Gunner (Equipped)"
-	paygrades = list(PAY_SHORT_RMC1 = JOB_PLAYTIME_TIER_0)
-	flags = EQUIPMENT_PRESET_EXTRA
-	role_comm_title = "RM HW(GPMG)"
-	assignment = JOB_TWE_RMC_SMARTGUNNER
-	rank = JOB_TWE_RMC_SMARTGUNNER
-	skills = /datum/skills/rmc/smartgun
-	access = list(ACCESS_WY_GENERAL, ACCESS_TWE_COMMANDO)
-
-/datum/equipment_preset/royal_marine/machinegun/load_gear(mob/living/carbon/human/new_human)
-	//back
-	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/rmc/light(new_human), WEAR_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/smartgun_battery(new_human), WEAR_IN_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/smartgun/holo_targeting(new_human), WEAR_IN_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/smartgun/holo_targeting(new_human), WEAR_IN_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/box/mre/twe(new_human), WEAR_IN_BACK)
-	//face
-	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/almayer/marine/solardevils/rmc(new_human), WEAR_L_EAR)
-	new_human.equip_to_slot_or_del(new /obj/item/device/overwatch_camera/twe(new_human), WEAR_R_EAR)
-	new_human.equip_to_slot(new /obj/item/clothing/glasses/night/m56_goggles/rmc(new_human), WEAR_EYES)
-	//head
-	if(prob(65))
-		new_human.equip_to_slot_or_del(new /obj/item/clothing/head/cmcap/royal_marine(new_human), WEAR_HEAD)
-		new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/veteran/pmc/gunner/rmc(new_human), WEAR_IN_BACK)
-	else
-		new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/veteran/pmc/gunner/rmc(new_human), WEAR_HEAD)
-		new_human.equip_to_slot_or_del(new /obj/item/clothing/head/cmcap/royal_marine(new_human), WEAR_IN_BACK)
-	//uniform
-	add_rmc_uniform(new_human)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/smallpouch/rmc(new_human), WEAR_ACCESSORY)
-	new_human.equip_to_slot_or_del(new /obj/item/reagent_container/food/drinks/flask/canteen(new_human), WEAR_IN_ACCESSORY)
-	new_human.equip_to_slot_or_del(new /obj/item/tool/weldingtool(new_human), WEAR_IN_ACCESSORY)
-	new_human.equip_to_slot_or_del(new /obj/item/tool/wirecutters/tactical(new_human), WEAR_IN_ACCESSORY)
-	new_human.equip_to_slot_or_del(new /obj/item/tool/crowbar/tactical(new_human), WEAR_IN_ACCESSORY)
-	//jacket
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/marine/veteran/royal_marine/smartgun(new_human), WEAR_JACKET)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/webbing/m3/uppsmall/rmc/preset(new_human), WEAR_ACCESSORY)
-	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/smartgun/rmc(new_human), WEAR_J_STORE)
-	//waist
-	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/gun/l905/full(new_human), WEAR_WAIST)
-	//limbs
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine(new_human), WEAR_HANDS)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/rmc/knife(new_human), WEAR_FEET)
-	//pockets
-	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate(new_human), WEAR_L_STORE)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/flare/rmc/full(new_human), WEAR_R_STORE)
-
-	if(SSmapping.configs[GROUND_MAP].environment_traits[MAP_COLD])
-		new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/rebreather/scarf(new_human), WEAR_FACE)
-
-//*****************************************************************************************************/
-
-/datum/equipment_preset/royal_marine/stealth
-	name = "Royal Marine Commando, Stealth (Equipped)"
-	flags = EQUIPMENT_PRESET_EXTRA
-	paygrades = list(PAY_SHORT_RMC1 = JOB_PLAYTIME_TIER_0)
-	role_comm_title = "RM"
-	assignment = JOB_TWE_RMC_RIFLEMAN
-	rank = JOB_TWE_RMC_RIFLEMAN
-	skills = /datum/skills/rmc
-	access = list(ACCESS_WY_GENERAL, ACCESS_TWE_COMMANDO)
-
-/datum/equipment_preset/royal_marine/stealth/load_gear(mob/living/carbon/human/new_human)
-	//back
-	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/rmc/heavy(new_human), WEAR_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/device/motiondetector/hacked/twe(new_human), WEAR_IN_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/box/packet/rmc(new_human), WEAR_IN_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/box/packet/rmc/gas(new_human), WEAR_IN_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/tool/shovel/etool/rmc/folded(new_human), WEAR_IN_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/box/mre/twe(new_human), WEAR_IN_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/explosive/plastic/breaching_charge(new_human), WEAR_IN_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/explosive/plastic/breaching_charge(new_human), WEAR_IN_BACK)
-	//face
-	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/almayer/marine/solardevils/rmc(new_human), WEAR_L_EAR)
-	new_human.equip_to_slot_or_del(new /obj/item/device/overwatch_camera/twe(new_human), WEAR_R_EAR)
-	//head
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/veteran/pmc/gunner/rmc(new_human), WEAR_HEAD)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/cmcap/royal_marine(new_human), WEAR_IN_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/prop/helmetgarb/helmet_nvg(new_human), WEAR_IN_BACK)
-	//uniform
-	add_rmc_uniform(new_human)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/smallpouch/rmc(new_human), WEAR_ACCESSORY)
-	new_human.equip_to_slot_or_del(new /obj/item/reagent_container/food/drinks/flask/canteen(new_human), WEAR_IN_ACCESSORY)
-	new_human.equip_to_slot_or_del(new /obj/item/tool/weldingtool(new_human), WEAR_IN_ACCESSORY)
-	new_human.equip_to_slot_or_del(new /obj/item/tool/wirecutters/tactical(new_human), WEAR_IN_ACCESSORY)
-	new_human.equip_to_slot_or_del(new /obj/item/tool/crowbar/tactical(new_human), WEAR_IN_ACCESSORY)
-	//jacket
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/marine/veteran/royal_marine(new_human), WEAR_JACKET)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/webbing/m3/uppsmall/rmc/preset(new_human), WEAR_ACCESSORY)
-	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/nsg23/rmc/preloaded/tactical(new_human), WEAR_J_STORE)
-	//waist
-	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/marine/rmc/nsg(new_human), WEAR_WAIST)
-	//limbs
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine(new_human), WEAR_HANDS)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/rmc/knife(new_human), WEAR_FEET)
-	//pockets
-	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate(new_human), WEAR_L_STORE)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/pistol/alt(new_human), WEAR_R_STORE)
-	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/pistol/vp78/rmc(new_human), WEAR_IN_R_STORE)
-
-	if(SSmapping.configs[GROUND_MAP].environment_traits[MAP_COLD])
-		new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/rebreather/scarf(new_human), WEAR_FACE)
-
-//*****************************************************************************************************/
-
-/datum/equipment_preset/royal_marine/sniper
-	name = "Royal Marine Commando, Scout Sniper (M42A2) (Equipped)"
-	flags = EQUIPMENT_PRESET_EXTRA
-	paygrades = list(PAY_SHORT_RMC1 = JOB_PLAYTIME_TIER_0)
-	role_comm_title = "RM ScS" //Intended, going by current royal marine role/specialisation abbreviations
-	assignment = JOB_TWE_RMC_MARKSMAN
-	rank = JOB_TWE_RMC_MARKSMAN
-	skills = /datum/skills/rmc
-	access = list(ACCESS_WY_GENERAL, ACCESS_TWE_COMMANDO)
-
-/datum/equipment_preset/royal_marine/sniper/load_gear(mob/living/carbon/human/new_human)
-	//back
-	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/rmc/light(new_human), WEAR_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/device/motiondetector/hacked/twe(new_human), WEAR_IN_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/tool/shovel/etool/rmc/folded(new_human), WEAR_IN_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/box/mre/twe(new_human), WEAR_IN_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/box/flare(new_human), WEAR_IN_BACK)
-	//face
-	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/almayer/marine/solardevils/rmc(new_human), WEAR_L_EAR)
-	new_human.equip_to_slot_or_del(new /obj/item/device/overwatch_camera/twe(new_human), WEAR_R_EAR)
-	new_human.equip_to_slot(new /obj/item/clothing/glasses/night/m42_hms/rmc(new_human), WEAR_EYES)
-	//head
-	if(prob(65))
-		new_human.equip_to_slot_or_del(new /obj/item/clothing/head/cmcap/royal_marine(new_human), WEAR_HEAD)
-		new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/veteran/pmc/sniper/rmc(new_human), WEAR_IN_BACK)
-	else
-		new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/veteran/pmc/sniper/rmc(new_human), WEAR_HEAD)
-		new_human.equip_to_slot_or_del(new /obj/item/clothing/head/cmcap/royal_marine(new_human), WEAR_IN_BACK)
-	//uniform
-	add_rmc_uniform(new_human)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/smallpouch/rmc(new_human), WEAR_ACCESSORY)
-	new_human.equip_to_slot_or_del(new /obj/item/reagent_container/food/drinks/flask/canteen(new_human), WEAR_IN_ACCESSORY)
-	new_human.equip_to_slot_or_del(new /obj/item/tool/weldingtool(new_human), WEAR_IN_ACCESSORY)
-	new_human.equip_to_slot_or_del(new /obj/item/tool/wirecutters/tactical(new_human), WEAR_IN_ACCESSORY)
-	new_human.equip_to_slot_or_del(new /obj/item/tool/crowbar/tactical(new_human), WEAR_IN_ACCESSORY)
-	//jacket
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/marine/veteran/royal_marine(new_human), WEAR_JACKET)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/webbing/m3/uppsmall/rmc/preset(new_human), WEAR_ACCESSORY)
-	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/sniper/M42A/silenced(new_human), WEAR_J_STORE)
-	//waist
-	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/marine/rmc(new_human), WEAR_WAIST)
-	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/sniper(new_human), WEAR_IN_BELT)
-	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/sniper(new_human), WEAR_IN_BELT)
-	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/sniper(new_human), WEAR_IN_BELT)
-	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/sniper(new_human), WEAR_IN_BELT)
-	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/sniper(new_human), WEAR_IN_BELT)
-	//limbs
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine(new_human), WEAR_HANDS)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/rmc/knife(new_human), WEAR_FEET)
-	//pockets
-	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate(new_human), WEAR_L_STORE)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/pistol/alt(new_human), WEAR_R_STORE)
-	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/pistol/vp78/rmc(new_human), WEAR_IN_R_STORE)
-
-	if(SSmapping.configs[GROUND_MAP].environment_traits[MAP_COLD])
-		new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/rebreather/scarf(new_human), WEAR_FACE)
-
-/datum/equipment_preset/royal_marine/sniper/light
-	name = "Royal Marine Commando, Scout Sniper (DMR) (Equipped)"
-
-/datum/equipment_preset/royal_marine/sniper/light/load_gear(mob/living/carbon/human/new_human)
-	//uniform
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/veteran/royal_marine(new_human), WEAR_BODY)
-	//jacket
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/marine/veteran/royal_marine(new_human), WEAR_JACKET)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/webbing/m3/uppsmall/rmc/preset(new_human), WEAR_ACCESSORY)
-	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/sniper/rmc(new_human), WEAR_J_STORE)
-	//waist
-	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/marine/rmc(new_human), WEAR_WAIST)
-	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/sniper/rmc(new_human), WEAR_IN_BELT)
-	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/sniper/rmc(new_human), WEAR_IN_BELT)
-	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/sniper/rmc(new_human), WEAR_IN_BELT)
-	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/sniper/rmc(new_human), WEAR_IN_BELT)
-	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/sniper/rmc(new_human), WEAR_IN_BELT)
-	..()
-
-//*****************************************************************************************************/
-//Commando-trained attached specialists. Royal Navy, Army Royal Engineers & Army Royal Artillery
-//*****************************************************************************************************/
-
-/datum/equipment_preset/royal_marine/medic
-	name = "Royal Marine Commando, Medical Assistant (Equipped)"
-	flags = EQUIPMENT_PRESET_EXTRA
-	paygrades = list(PAY_SHORT_RMC2N = JOB_PLAYTIME_TIER_0)
-	role_comm_title = "RM MA"
-	assignment = JOB_TWE_RMC_MEDIC
-	rank = JOB_TWE_RMC_MEDIC
-	skills = /datum/skills/rmc/medic
-	access = list(ACCESS_WY_GENERAL, ACCESS_TWE_COMMANDO, ACCESS_TWE_MEDICAL)
-
-/datum/equipment_preset/royal_marine/medic/load_gear(mob/living/carbon/human/new_human)
-	//back
-	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/rmc/medic(new_human), WEAR_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/box/packet/rmc(new_human), WEAR_IN_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/box/mre/twe(new_human), WEAR_IN_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/roller/surgical(new_human), WEAR_IN_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/tool/shovel/etool/rmc/folded(new_human), WEAR_IN_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/firstaid/adv(new_human), WEAR_IN_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/firstaid/adv(new_human), WEAR_IN_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/surgical_case/rmc_surgical_case(new_human), WEAR_IN_BACK)
-	//face
-	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/almayer/marine/solardevils/rmc(new_human), WEAR_L_EAR)
-	new_human.equip_to_slot_or_del(new /obj/item/device/overwatch_camera/twe(new_human), WEAR_R_EAR)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/hud/health(new_human), WEAR_EYES)
-	//head
-	if(prob(65))
-		new_human.equip_to_slot_or_del(new /obj/item/clothing/head/cmcap/royal_marine(new_human), WEAR_HEAD)
-		new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/veteran/pmc/gunner/rmc(new_human), WEAR_IN_BACK)
-	else
-		new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/veteran/pmc/gunner/rmc(new_human), WEAR_HEAD)
-		new_human.equip_to_slot_or_del(new /obj/item/clothing/head/cmcap/royal_marine(new_human), WEAR_IN_BACK)
-	//uniform
-	add_rmc_uniform(new_human)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/smallpouch/rmc(new_human), WEAR_ACCESSORY)
-	new_human.equip_to_slot_or_del(new /obj/item/reagent_container/food/drinks/flask/canteen(new_human), WEAR_IN_ACCESSORY)
-	new_human.equip_to_slot_or_del(new /obj/item/tool/weldingtool(new_human), WEAR_IN_ACCESSORY)
-	new_human.equip_to_slot_or_del(new /obj/item/tool/wirecutters/tactical(new_human), WEAR_IN_ACCESSORY)
-	new_human.equip_to_slot_or_del(new /obj/item/tool/crowbar/tactical(new_human), WEAR_IN_ACCESSORY)
-	//jacket
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/marine/veteran/royal_marine/heavy(new_human), WEAR_JACKET)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/webbing/m3/uppsmall/rmc/preset(new_human), WEAR_ACCESSORY)
-	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/nsg23/rmc/preloaded(new_human), WEAR_J_STORE)
-	//waist
-	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/medical/rmc/full(new_human), WEAR_WAIST)
-	//limbs
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine(new_human), WEAR_HANDS)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/rmc/knife(new_human), WEAR_FEET)
-	//pockets
-	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/magazine(new_human), WEAR_L_STORE)
-	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/nsg23(new_human), WEAR_IN_L_STORE)
-	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/nsg23(new_human), WEAR_IN_L_STORE)
-	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/nsg23(new_human), WEAR_IN_L_STORE)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/pistol/alt(new_human), WEAR_R_STORE)
-	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/pistol/vp78/rmc(new_human), WEAR_IN_R_STORE)
-
-	if(SSmapping.configs[GROUND_MAP].environment_traits[MAP_COLD])
-		new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/rebreather/scarf(new_human), WEAR_FACE)
-
-//*****************************************************************************************************/
-
-/datum/equipment_preset/royal_marine/engi
-	name = "Royal Marine Commando, Assault Engineer (Equipped)"
-	flags = EQUIPMENT_PRESET_EXTRA
-	paygrades = list(PAY_SHORT_RMC2E = JOB_PLAYTIME_TIER_0)
-	role_comm_title = "RM AE"
-	assignment = JOB_TWE_RMC_ENGI
-	rank = JOB_TWE_RMC_ENGI
-	skills = /datum/skills/rmc/engi
-	access = list(ACCESS_WY_GENERAL, ACCESS_TWE_COMMANDO, ACCESS_TWE_ENGINEERING)
-
-/datum/equipment_preset/royal_marine/engi/load_gear(mob/living/carbon/human/new_human)
-	//back
-	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine/engineerpack/satchel/rmc(new_human), WEAR_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/box/packet/rmc(new_human), WEAR_IN_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/box/mre/twe(new_human), WEAR_IN_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/reagent_container/food/drinks/flask/canteen(new_human), WEAR_IN_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/toolkit/full(new_human), WEAR_IN_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/tool/shovel/etool/rmc/folded(new_human), WEAR_IN_BACK)
-	//face
-	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/almayer/marine/solardevils/rmc(new_human), WEAR_L_EAR)
-	new_human.equip_to_slot_or_del(new /obj/item/device/overwatch_camera/twe(new_human), WEAR_R_EAR)
-	//head
-	if(prob(65))
-		new_human.equip_to_slot_or_del(new /obj/item/clothing/head/cmcap/royal_marine(new_human), WEAR_HEAD)
-		new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/veteran/pmc/gunner/rmc(new_human), WEAR_IN_BACK)
-	else
-		new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/veteran/pmc/gunner/rmc(new_human), WEAR_HEAD)
-		new_human.equip_to_slot_or_del(new /obj/item/clothing/head/cmcap/royal_marine(new_human), WEAR_IN_BACK)
-	//uniform
-	add_rmc_uniform(new_human)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/tool_webbing/tactical(new_human), WEAR_ACCESSORY)
-	//jacket
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/marine/veteran/royal_marine/heavy(new_human), WEAR_JACKET)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/webbing/m3/uppsmall/rmc/preset(new_human), WEAR_ACCESSORY)
-	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/nsg23/rmc/preloaded(new_human), WEAR_J_STORE)
-	//waist
-	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/marine/rmc/nsg(new_human), WEAR_WAIST)
-	//limbs
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine(new_human), WEAR_HANDS)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/rmc/knife(new_human), WEAR_FEET)
-	//pockets
-	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate(new_human), WEAR_L_STORE)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/pistol/alt(new_human), WEAR_R_STORE)
-	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/pistol/vp78/rmc(new_human), WEAR_IN_R_STORE)
-
-	if(SSmapping.configs[GROUND_MAP].environment_traits[MAP_COLD])
-		new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/rebreather/scarf(new_human), WEAR_FACE)
-
-//*****************************************************************************************************/
-
-/datum/equipment_preset/royal_marine/mortar
-	name = "Royal Marine Commando, Bombardment Specialist (Equipped)"
-	flags = EQUIPMENT_PRESET_EXTRA
-	paygrades = list(PAY_SHORT_RMC2G = JOB_PLAYTIME_TIER_0)
-	role_comm_title = "RM HW(BMBRD)"
-	assignment = JOB_TWE_RMC_BREACHER
-	rank = JOB_TWE_RMC_BREACHER
-	skills = /datum/skills/rmc
-	access = list(ACCESS_WY_GENERAL, ACCESS_TWE_COMMANDO)
-
-/datum/equipment_preset/royal_marine/mortar/load_gear(mob/living/carbon/human/new_human)
-	//back
-	new_human.equip_to_slot_or_del(new /obj/item/mortar_kit/rmc(new_human), WEAR_BACK)
-	//face
-	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/almayer/marine/solardevils/rmc(new_human), WEAR_L_EAR)
-	new_human.equip_to_slot_or_del(new /obj/item/device/overwatch_camera/twe(new_human), WEAR_R_EAR)
-	//head
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/veteran/pmc/gunner/rmc(new_human), WEAR_HEAD)
-	//uniform
-	add_rmc_uniform(new_human)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/smallpouch/rmc(new_human), WEAR_ACCESSORY)
-	new_human.equip_to_slot_or_del(new /obj/item/reagent_container/food/drinks/flask/canteen(new_human), WEAR_IN_ACCESSORY)
-	new_human.equip_to_slot_or_del(new /obj/item/tool/wrench(new_human), WEAR_IN_ACCESSORY)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/box/mre/twe(new_human), WEAR_IN_ACCESSORY)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/cmcap/royal_marine(new_human), WEAR_IN_ACCESSORY)
-	//jacket
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/marine/veteran/royal_marine/heavy(new_human), WEAR_JACKET)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/webbing/m3/uppsmall/rmc/preset(new_human), WEAR_ACCESSORY)
-	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/nsg23/rmc/preloaded(new_human), WEAR_J_STORE)
-	//waist
-	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/gun/mortarbelt/rmc/full(new_human), WEAR_WAIST)
-	//limbs
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine(new_human), WEAR_HANDS)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/rmc/knife(new_human), WEAR_FEET)
-	//pockets
-	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate(new_human), WEAR_L_STORE)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/flare/rmc/full(new_human), WEAR_R_STORE)
-
-	if(SSmapping.configs[GROUND_MAP].environment_traits[MAP_COLD])
-		new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/rebreather/scarf(new_human), WEAR_FACE)
-
-//*****************************************************************************************************/
-
-/datum/equipment_preset/royal_marine/mortar/light
-	name = "Royal Marine Commando, Bombardment Specialist (GL) (Equipped)"
-
-/datum/equipment_preset/royal_marine/mortar/light/load_gear(mob/living/carbon/human/new_human)
-	//uniform
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/veteran/royal_marine(new_human), WEAR_BODY)
-	//back
-	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/launcher/grenade/m92/rmc(new_human), WEAR_BACK)
-	//waist
-	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/gun/mortarbelt/rmc/full/gl(new_human), WEAR_WAIST)
-	..()
-
-//*****************************************************************************************************/
-//RMC Leadership roles
-//*****************************************************************************************************/
-
-/datum/equipment_preset/royal_marine/leader
-	name = "Royal Marine Commando, Section Leader (Equipped)"
-	flags = EQUIPMENT_PRESET_EXTRA
-	paygrades = list(PAY_SHORT_RMC3 = JOB_PLAYTIME_TIER_0)
-	role_comm_title = "RM STL"
-	assignment = JOB_TWE_RMC_SECTIONLEADER
-	rank = JOB_TWE_RMC_SECTIONLEADER
-	skills = /datum/skills/rmc/leader
-	access = list(ACCESS_WY_GENERAL, ACCESS_WY_FLIGHT, ACCESS_TWE_COMMANDO, ACCESS_TWE_LEADERSHIP)
-
-/datum/equipment_preset/royal_marine/leader/load_gear(mob/living/carbon/human/new_human)
-	//back
-	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/rmc/heavy, WEAR_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/device/motiondetector/hacked/twe(new_human), WEAR_IN_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/box/packet/rmc(new_human), WEAR_IN_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/box/packet/smoke/green(new_human), WEAR_IN_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/box/mre/twe(new_human), WEAR_IN_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/box/flare(new_human), WEAR_IN_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/tool/shovel/etool/rmc/folded(new_human), WEAR_IN_BACK)
-	//face
-	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/almayer/marine/solardevils/rmc(new_human), WEAR_L_EAR)
-	new_human.equip_to_slot_or_del(new /obj/item/device/overwatch_camera/twe(new_human), WEAR_R_EAR)
-	//head
-	if(prob(65))
-		new_human.equip_to_slot_or_del(new /obj/item/clothing/head/cmcap/royal_marine(new_human), WEAR_HEAD)
-		new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/veteran/pmc/gunner/rmc(new_human), WEAR_IN_BACK)
-	else
-		new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/veteran/pmc/gunner/rmc(new_human), WEAR_HEAD)
-		new_human.equip_to_slot_or_del(new /obj/item/clothing/head/cmcap/royal_marine(new_human), WEAR_IN_BACK)
-	//uniform
-	add_rmc_uniform(new_human)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/smallpouch/rmc(new_human), WEAR_ACCESSORY)
-	new_human.equip_to_slot_or_del(new /obj/item/device/binoculars/range/designator(new_human), WEAR_IN_ACCESSORY)
-	new_human.equip_to_slot_or_del(new /obj/item/tool/weldingtool(new_human), WEAR_IN_ACCESSORY)
-	new_human.equip_to_slot_or_del(new /obj/item/tool/wirecutters/tactical(new_human), WEAR_IN_ACCESSORY)
-	new_human.equip_to_slot_or_del(new /obj/item/tool/crowbar/tactical(new_human), WEAR_IN_ACCESSORY)
-	//jacket
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/marine/veteran/royal_marine/heavy(new_human), WEAR_JACKET)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/webbing/m3/uppsmall/rmc/preset(new_human), WEAR_ACCESSORY)
-	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/nsg23/rmc/preloaded(new_human), WEAR_J_STORE)
-	//waist
-	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/marine/rmc/nsg(new_human), WEAR_WAIST)
-	//limbs
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine(new_human), WEAR_HANDS)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/rmc/knife(new_human), WEAR_FEET)
-	//pockets
-	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate(new_human), WEAR_L_STORE)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/pistol/alt(new_human), WEAR_R_STORE)
-	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/pistol/vp78/rmc(new_human), WEAR_IN_R_STORE)
-
-	if(SSmapping.configs[GROUND_MAP].environment_traits[MAP_COLD])
-		new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/rebreather/scarf(new_human), WEAR_FACE)
 
 
-/datum/equipment_preset/royal_marine/leader/lesser_rank
-	name = "Royal Marine Commando, Team Leader (Equipped)"
-	flags = EQUIPMENT_PRESET_EXTRA
-	paygrades = list(PAY_SHORT_RMC2 = JOB_PLAYTIME_TIER_0)
-	role_comm_title = "RM TL"
-	assignment = JOB_TWE_RMC_TEAMLEADER
-	rank = JOB_TWE_RMC_TEAMLEADER
-
-//*****************************************************************************************************/
-
-/datum/equipment_preset/royal_marine/troopsergeant
-	name = "Royal Marine Commando, Troop Sergeant (Equipped)"
-	flags = EQUIPMENT_PRESET_EXTRA
-	paygrades = list(PAY_SHORT_RMC4 = JOB_PLAYTIME_TIER_0)
-	role_comm_title = "RM TS"
-	assignment = JOB_TWE_RMC_TROOPLEADER
-	rank = JOB_TWE_RMC_TROOPLEADER
-	skills = /datum/skills/rmc/officer
-	access = list(ACCESS_WY_GENERAL, ACCESS_WY_FLIGHT, ACCESS_TWE_COMMANDO, ACCESS_TWE_LEADERSHIP, ACCESS_TWE_ARMORY)
-
-/datum/equipment_preset/royal_marine/troopsergeant/load_gear(mob/living/carbon/human/new_human)
-	//back
-	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/rmc/frame(new_human), WEAR_BACK) //Shock horror, a SNCO kitted to not be a frontline leadership jockey? Can't wait to see people try it anyways
-	new_human.equip_to_slot_or_del(new /obj/item/storage/firstaid/adv(new_human), WEAR_IN_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/ammo_box/magazine/nsg23(new_human), WEAR_IN_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/box/packet/rmc(new_human), WEAR_IN_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/box/packet/rmc(new_human), WEAR_IN_BACK)
-	//face
-	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/almayer/marine/solardevils/rmc(new_human), WEAR_L_EAR)
-	new_human.equip_to_slot_or_del(new /obj/item/device/overwatch_camera/twe(new_human), WEAR_R_EAR)
-	//head
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/veteran/pmc/gunner/rmc(new_human), WEAR_HEAD)
-	//uniform
-	add_rmc_uniform(new_human)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/smallpouch/rmc(new_human), WEAR_ACCESSORY)
-	new_human.equip_to_slot_or_del(new /obj/item/device/binoculars/range/designator(new_human), WEAR_IN_ACCESSORY)
-	new_human.equip_to_slot_or_del(new /obj/item/reagent_container/food/drinks/flask/canteen(new_human), WEAR_IN_ACCESSORY)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/box/mre/twe(new_human), WEAR_IN_ACCESSORY)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/cmcap/royal_marine(new_human), WEAR_IN_ACCESSORY)
-	//jacket
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/marine/veteran/royal_marine(new_human), WEAR_JACKET)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/webbing/m3/uppsmall/rmc/preset(new_human), WEAR_ACCESSORY)
-	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/nsg23/rmc/preloaded(new_human), WEAR_J_STORE)
-	//waist
-	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/marine/rmc/nsg(new_human), WEAR_WAIST)
-	//limbs
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine(new_human), WEAR_HANDS)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/rmc/knife(new_human), WEAR_FEET)
-	//pockets
-	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate(new_human), WEAR_L_STORE)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/pistol/alt(new_human), WEAR_R_STORE)
-	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/pistol/vp78/rmc(new_human), WEAR_IN_R_STORE)
-
-	if(SSmapping.configs[GROUND_MAP].environment_traits[MAP_COLD])
-		new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/rebreather/scarf(new_human), WEAR_FACE)
-
-//*****************************************************************************************************/
-
-/datum/equipment_preset/royal_marine/lieuteant
-	name = "Royal Marine Commando, Troop Commander (Equipped)"
-	flags = EQUIPMENT_PRESET_EXTRA
-	paygrades = list(PAY_SHORT_RMO1 = JOB_PLAYTIME_TIER_0)
-	role_comm_title = "RM TC"
-	assignment = JOB_TWE_RMC_LIEUTENANT
-	rank = JOB_TWE_RMC_LIEUTENANT
-	skills = /datum/skills/rmc/officer
-	access = list(ACCESS_WY_GENERAL, ACCESS_WY_FLIGHT, ACCESS_TWE_MEDICAL, ACCESS_TWE_ENGINEERING, ACCESS_TWE_COMMANDO, ACCESS_TWE_LEADERSHIP, ACCESS_TWE_SENIOR_LEAD)
-
-/datum/equipment_preset/royal_marine/lieuteant/load_gear(mob/living/carbon/human/new_human)
-	//back
-	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/rmc/heavy(new_human), WEAR_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/box/packet/rmc(new_human), WEAR_IN_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/box/packet/smoke/green(new_human), WEAR_IN_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/device/motiondetector/hacked/twe(new_human), WEAR_IN_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/box/mre/twe(new_human), WEAR_IN_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/box/flare(new_human), WEAR_IN_BACK)
-	//face
-	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/almayer/marine/solardevils/rmc(new_human), WEAR_L_EAR)
-	new_human.equip_to_slot_or_del(new /obj/item/device/overwatch_camera/twe(new_human), WEAR_R_EAR)
-	//head
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/cmcap/royal_marine(new_human), WEAR_HEAD)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/veteran/pmc/gunner/rmc(new_human), WEAR_IN_BACK)
-	//uniform
-	add_rmc_lt_uniform(new_human)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/smallpouch/rmc(new_human), WEAR_ACCESSORY)
-	new_human.equip_to_slot_or_del(new /obj/item/device/binoculars/range/designator(new_human), WEAR_IN_ACCESSORY)
-	new_human.equip_to_slot_or_del(new /obj/item/tool/weldingtool(new_human), WEAR_IN_ACCESSORY)
-	new_human.equip_to_slot_or_del(new /obj/item/tool/wirecutters/tactical(new_human), WEAR_IN_ACCESSORY)
-	new_human.equip_to_slot_or_del(new /obj/item/tool/crowbar/tactical(new_human), WEAR_IN_ACCESSORY)
-	//jacket
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/marine/veteran/royal_marine(new_human), WEAR_JACKET)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/webbing/m3/uppsmall/rmc/preset(new_human), WEAR_ACCESSORY)
-	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/nsg23/rmc/preloaded(new_human), WEAR_J_STORE)
-	//waist
-	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/gun/l905/full(new_human), WEAR_WAIST)
-	//limbs
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine(new_human), WEAR_HANDS)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/rmc/knife(new_human), WEAR_FEET)
-	//pockets
-	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate(new_human), WEAR_L_STORE)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/magazine(new_human), WEAR_R_STORE)
-	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/nsg23(new_human), WEAR_IN_R_STORE)
-	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/nsg23(new_human), WEAR_IN_R_STORE)
-	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/nsg23(new_human), WEAR_IN_R_STORE)
-
-	if(SSmapping.configs[GROUND_MAP].environment_traits[MAP_COLD])
-		new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/rebreather/scarf(new_human), WEAR_FACE)
-
-/datum/equipment_preset/royal_marine/captain
-	name = "Royal Marine Commando, Squadron Commander (Equipped)"
-	flags = EQUIPMENT_PRESET_EXTRA
-	paygrades = list(PAY_SHORT_RMO3 = JOB_PLAYTIME_TIER_0)
-	role_comm_title = "RM OC"
-	assignment = JOB_TWE_RMC_COMMANDER
-	rank = JOB_TWE_RMC_COMMANDER
-	skills = /datum/skills/rmc/officer
-	access = list(ACCESS_WY_GENERAL, ACCESS_TWE_COMMANDO, ACCESS_TWE_LEADERSHIP, ACCESS_TWE_SENIOR_LEAD)
-
-/datum/equipment_preset/royal_marine/captain/load_gear(mob/living/carbon/human/new_human)
-	//face
-	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/almayer/marine/solardevils/rmc(new_human), WEAR_L_EAR)
-	//head
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/cmcap/royal_marine(new_human), WEAR_HEAD)
-	//uniform
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/veteran/royal_marine/lt/service, WEAR_BODY)
+/datum/equipment_preset/twe/royal_marine/standard/load_gear(mob/living/carbon/human/new_human)
+	new_human.equip_to_slot_or_del(new headset_type, WEAR_L_EAR)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/veteran/royal_marine, WEAR_HEAD)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/veteran/royal_marine, WEAR_BODY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine/veteran/royal_marine, WEAR_HANDS)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/royal_marine/knife, WEAR_FEET)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/royal_marines, WEAR_ACCESSORY)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/smallpouch/rmc(new_human), WEAR_ACCESSORY)
-	new_human.equip_to_slot_or_del(new /obj/item/device/binoculars/range/designator(new_human), WEAR_IN_ACCESSORY)
-	new_human.equip_to_slot_or_del(new /obj/item/reagent_container/food/drinks/flask/canteen(new_human), WEAR_IN_ACCESSORY)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/box/mre/twe(new_human), WEAR_IN_ACCESSORY)
-	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/pistol/vp78/rmc(new_human), WEAR_IN_ACCESSORY)
-	//waist
-	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/general_belt/rmc(new_human), WEAR_WAIST)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/box/packet/smoke/green(new_human), WEAR_IN_BELT)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/box/packet/smoke/red(new_human), WEAR_IN_BELT)
-	new_human.equip_to_slot_or_del(new /obj/item/device/cotablet/rmc(new_human), WEAR_IN_BELT)
-	//limbs
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/rmc/knife(new_human), WEAR_FEET)
-	//pockets
-	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate(new_human), WEAR_L_STORE)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/pistol/alt(new_human), WEAR_R_STORE)
-	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/pistol/vp78/rmc(new_human), WEAR_IN_R_STORE)
+
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/holster, WEAR_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/pistol/vp78, WEAR_IN_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/pistol/vp78, WEAR_IN_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/pistol/vp78, WEAR_IN_ACCESSORY)
+
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/marine/veteran/royal_marine/light, WEAR_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/device/binoculars/range, WEAR_IN_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/explosive/plastic/breaching_charge, WEAR_IN_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/tool/crowbar/tactical, WEAR_IN_JACKET)
+
+	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/l23, WEAR_J_STORE)
+
+	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/marine/rmc/rmc_l23_ammo, WEAR_WAIST)
+
+	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/rmc/light, WEAR_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/l23/ap, WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/l23, WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/box/packet/rmc/incin, WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/box/packet/rmc/he, WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/box/mre/twe, WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/box/m94, WEAR_IN_BACK)
+
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/general/large, WEAR_L_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/beret/royal_marine, WEAR_IN_L_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/gas/pmc/royal_marine, WEAR_IN_L_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/medkit/full_rmc_aid, WEAR_R_STORE)
+
+/datum/equipment_preset/twe/royal_marine/standard/mre_pack
+	name = "TWE Royal Marine Commando (Gear Rifleman)" //finally useful preset
+
+/datum/equipment_preset/twe/royal_marine/standard/mre_pack/load_gear(mob/living/carbon/human/new_human)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/rmc/frame, WEAR_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_box/magazine/l23, WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_box/magazine/misc/flares, WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_box/magazine/misc/mre/twe, WEAR_IN_BACK)
+	..()
+
+//*****************************************************************************************************/
+/datum/equipment_preset/twe/royal_marine/spec
+	paygrades = list(PAY_SHORT_RMC2 = JOB_PLAYTIME_TIER_0)
+	role_comm_title = "RMC SPC"
+	flags = EQUIPMENT_PRESET_EXTRA
+	skills = /datum/skills/rmc/specialist
+
+/datum/equipment_preset/twe/royal_marine/spec/marksman
+	name = "TWE Royal Marine Commando (Marksman)"
+	assignment = JOB_TWE_RMC_MARKSMAN
+	job_title = JOB_TWE_RMC_MARKSMAN
+	minimap_icon = "rmc_marksman"
+
+/datum/equipment_preset/twe/royal_marine/spec/marksman/load_gear(mob/living/carbon/human/new_human)
+	new_human.equip_to_slot_or_del(new headset_type, WEAR_L_EAR)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/veteran/royal_marine, WEAR_HEAD)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/rebreather/scarf/tacticalmask/tan, WEAR_FACE)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/veteran/royal_marine, WEAR_BODY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine/veteran/royal_marine, WEAR_HANDS)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/royal_marine/knife, WEAR_FEET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/night/m42_night_goggles/rmc, WEAR_EYES)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/royal_marines, WEAR_ACCESSORY)
+
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/holster, WEAR_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/pistol/vp78, WEAR_IN_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/pistol/vp78, WEAR_IN_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/pistol/vp78, WEAR_IN_ACCESSORY)
+
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/marine/veteran/royal_marine/light, WEAR_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/device/binoculars/range/designator, WEAR_IN_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/explosive/plastic/breaching_charge, WEAR_IN_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/tool/crowbar/tactical, WEAR_IN_JACKET)
+
+	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/l64a3/marksman, WEAR_J_STORE)
+
+	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/marine/rmc/l64a3/marksman, WEAR_WAIST)
+
+	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/rmc/light, WEAR_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/box/packet/rmc/incin, WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/box/packet/rmc/he, WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/box/mre/twe, WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/l64/ap, WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/box/m94, WEAR_IN_BACK)
+
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/general/large, WEAR_L_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/beret/royal_marine, WEAR_IN_L_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/gas/pmc/royal_marine, WEAR_IN_L_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/medkit/full_rmc_aid, WEAR_R_STORE)
+
+//*****************************************************************************************************/
+
+/datum/equipment_preset/twe/royal_marine/spec/breacher
+	name = "TWE Royal Marine Commando (Breacher)"
+	role_comm_title = "RMC BRC"
+	assignment = JOB_TWE_RMC_BREACHER
+	job_title = JOB_TWE_RMC_BREACHER
+	minimap_icon = "rmc_breacher"
+
+	skills = /datum/skills/rmc/breacher
+
+/datum/equipment_preset/twe/royal_marine/spec/breacher/load_gear(mob/living/carbon/human/new_human)
+	new_human.equip_to_slot_or_del(new headset_type, WEAR_L_EAR)
+
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/veteran/royal_marine/breacher, WEAR_HEAD)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/veteran/royal_marine, WEAR_BODY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine/veteran/royal_marine, WEAR_HANDS)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/royal_marine/knife, WEAR_FEET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/welding/superior, WEAR_EYES)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/royal_marines, WEAR_ACCESSORY)
+
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/droppouch, WEAR_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/beret/royal_marine, WEAR_IN_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/gas/pmc/royal_marine, WEAR_IN_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/box/mre/twe, WEAR_IN_ACCESSORY)
+
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/marine/veteran/royal_marine/pointman, WEAR_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/device/binoculars/range, WEAR_IN_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/explosive/plastic/breaching_charge, WEAR_IN_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/l23/ap, WEAR_IN_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/l23, WEAR_IN_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/l23, WEAR_IN_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/l23, WEAR_IN_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/l23, WEAR_IN_JACKET)
+
+	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/l23/breacher, WEAR_J_STORE)
+
+	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/general_belt/rmc, WEAR_WAIST)
+	new_human.equip_to_slot_or_del(new /obj/item/explosive/plastic/breaching_charge, WEAR_IN_BELT)
+	new_human.equip_to_slot_or_del(new /obj/item/explosive/plastic/breaching_charge, WEAR_IN_BELT)
+	new_human.equip_to_slot_or_del(new /obj/item/explosive/plastic/breaching_charge, WEAR_IN_BELT)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/handful/shotgun/buckshot, WEAR_IN_BELT)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/handful/shotgun/buckshot, WEAR_IN_BELT)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/handful/shotgun/buckshot, WEAR_IN_BELT)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/box/m94, WEAR_IN_BELT)
+
+	new_human.equip_to_slot_or_del(new /obj/item/weapon/shield/riot/ballistic, WEAR_BACK)
+
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/tools/tactical/full, WEAR_L_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/medkit/full_rmc_aid, WEAR_R_STORE)
+
+//*****************************************************************************************************/
+/datum/equipment_preset/twe/royal_marine/spec/machinegun
+	name = "TWE Royal Marine Commando (Smartgunner)"
+	role_comm_title = "RMC SG"
+	assignment = JOB_TWE_RMC_SMARTGUNNER
+	job_title = JOB_TWE_RMC_SMARTGUNNER
+
+	minimap_icon = "rmc_sg"
+
+	skills = /datum/skills/rmc/smartgun
+
+/datum/equipment_preset/twe/royal_marine/spec/machinegun/load_gear(mob/living/carbon/human/new_human)
+	new_human.equip_to_slot_or_del(new headset_type, WEAR_L_EAR)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/veteran/royal_marine/breacher, WEAR_HEAD)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/veteran/royal_marine, WEAR_BODY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine/veteran/royal_marine, WEAR_HANDS)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/royal_marine/knife, WEAR_FEET)
+	new_human.equip_to_slot(new /obj/item/clothing/glasses/night/m56_goggles, WEAR_EYES)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/royal_marines, WEAR_ACCESSORY)
+
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/droppouch, WEAR_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/gas/pmc/royal_marine, WEAR_IN_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/beret/royal_marine, WEAR_IN_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/box/mre/twe, WEAR_IN_ACCESSORY)
+
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/marine/veteran/royal_marine/smartgun, WEAR_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/device/binoculars/range, WEAR_IN_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/explosive/plastic/breaching_charge, WEAR_IN_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/tool/crowbar/tactical, WEAR_IN_JACKET)
+
+	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/smartgun/rmc, WEAR_J_STORE)
+
+	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/gun/l905/full, WEAR_WAIST)
+
+	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/rmc/light, WEAR_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/firstaid/regular, WEAR_IN_BACK)
+	new_human.equip_to_slot(new /obj/item/smartgun_battery(new_human), WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/smartgun/holo_targetting, WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/smartgun/holo_targetting, WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/box/packet/rmc/incin, WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/box/packet/rmc/he, WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/box/m94, WEAR_IN_BACK)
+
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/general/large, WEAR_L_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/smartgun/holo_targetting, WEAR_IN_L_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/smartgun/holo_targetting, WEAR_IN_L_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/medkit/full_rmc_aid, WEAR_R_STORE)
+
+//*****************************************************************************************************/
+
+/datum/equipment_preset/twe/royal_marine/medic
+	name = "TWE Royal Marine Commando (Medical Technician)"
+	paygrades = list(PAY_SHORT_RMC3 = JOB_PLAYTIME_TIER_0)
+	role_comm_title = "RMC MED"
+	flags = EQUIPMENT_PRESET_EXTRA
+	assignment = JOB_TWE_RMC_MEDIC
+	job_title = JOB_TWE_RMC_MEDIC
+
+	minimap_icon = "rmc_medic"
+
+	skills = /datum/skills/rmc/medic
+
+/datum/equipment_preset/twe/royal_marine/medic/load_gear(mob/living/carbon/human/new_human)
+	new_human.equip_to_slot_or_del(new headset_type, WEAR_L_EAR)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/veteran/royal_marine/medic, WEAR_HEAD)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/veteran/royal_marine, WEAR_BODY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine/veteran/royal_marine/medical, WEAR_HANDS)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/royal_marine/knife, WEAR_FEET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/hud/health, WEAR_EYES)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/royal_marines, WEAR_ACCESSORY)
+
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/surg_vest/equipped, WEAR_ACCESSORY)
+
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/marine/veteran/royal_marine/light, WEAR_JACKET)
+
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/l23/extended, WEAR_IN_JACKET) // Medic is very limited in ammo (sarcasm?)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/l23/extended, WEAR_IN_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/l23/ap, WEAR_IN_JACKET)
+
+	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/l23, WEAR_J_STORE) // This is until we get proper Astra SMG sprites
+
+	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/medical/rmc/full, WEAR_WAIST)
+
+	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/rmc/medium/medic, WEAR_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/firstaid/adv, WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/device/defibrillator, WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/box/packet/rmc/incin, WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/box/packet/rmc/he, WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/beret/royal_marine, WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/gas/pmc/royal_marine, WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/syringe_case/rmc, WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/roller/surgical, WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/tool/crowbar/tactical, WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/box/mre/twe, WEAR_IN_BACK)
+
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/medkit/full_rmc, WEAR_L_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/pressurized_reagent_canister/revival_tricord, WEAR_R_STORE)
+
+//*****************************************************************************************************/
+/datum/equipment_preset/twe/royal_marine/team_leader
+	name = "TWE Royal Marine Commando (Teamleader)"
+	paygrades = list(PAY_SHORT_RMC4 = JOB_PLAYTIME_TIER_0)
+	role_comm_title = "RMC TL"
+	flags = EQUIPMENT_PRESET_EXTRA
+	assignment = JOB_TWE_RMC_TEAMLEADER
+	job_title = JOB_TWE_RMC_TEAMLEADER
+
+	minimap_icon = "rmc_teamleader"
+
+	skills = /datum/skills/rmc/leader
+
+/datum/equipment_preset/twe/royal_marine/team_leader/load_gear(mob/living/carbon/human/new_human)
+	new_human.equip_to_slot_or_del(new headset_type, WEAR_L_EAR)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/beret/royal_marine/team_leader, WEAR_HEAD)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/veteran/royal_marine/tl, WEAR_BODY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine/veteran/royal_marine, WEAR_HANDS)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/royal_marine/knife, WEAR_FEET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/royal_marines, WEAR_ACCESSORY)
+
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/droppouch, WEAR_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/veteran/royal_marine, WEAR_IN_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/gas/pmc/royal_marine, WEAR_IN_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/box/mre/twe, WEAR_IN_ACCESSORY)
+
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/marine/veteran/royal_marine/light/team_leader, WEAR_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/device/binoculars/range/designator, WEAR_IN_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/explosive/plastic/breaching_charge, WEAR_IN_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/tool/crowbar/tactical, WEAR_IN_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/l23/extended, WEAR_IN_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/l23/ap, WEAR_IN_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/l23, WEAR_IN_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/l23, WEAR_IN_JACKET)
+
+	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/l23/leader, WEAR_J_STORE)
+
+	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/gun/l905/full, WEAR_WAIST)
+
+	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/rmc/light, WEAR_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/firstaid/adv, WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/device/defibrillator/compact, WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/syringe_case/rmc, WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/tool/surgery/cautery, WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/box/packet/rmc/incin, WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/box/packet/rmc/he, WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/l23, WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/box/m94, WEAR_IN_BACK)
+
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/tools/rmc, WEAR_L_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/medkit/full_rmc_aid, WEAR_R_STORE)
+
+//*****************************************************************************************************/
+
+/datum/equipment_preset/twe/royal_marine/lieuteant //they better say it Lef-tenant or they should be banned for LRP. More importantly this guy doesn't spawn in the ERT
+	name = "TWE Royal Marine Commando (Officer)"
+	paygrades = list(PAY_SHORT_RNO1A = JOB_PLAYTIME_TIER_0)
+	role_comm_title = "RMC LT"
+	flags = EQUIPMENT_PRESET_EXTRA
+	assignment = JOB_TWE_RMC_LIEUTENANT
+	job_title = JOB_TWE_RMC_LIEUTENANT
+
+	minimap_icon = "rmc_lieutenant"
+
+	skills = /datum/skills/rmc/lieutenant
+
+/datum/equipment_preset/twe/royal_marine/lieuteant/load_gear(mob/living/carbon/human/new_human)
+	new_human.equip_to_slot_or_del(new headset_type, WEAR_L_EAR)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/beret/royal_marine/team_leader, WEAR_HEAD)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/veteran/royal_marine/lt, WEAR_BODY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine/veteran/royal_marine, WEAR_HANDS)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/royal_marine/knife, WEAR_FEET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/hud/health, WEAR_EYES)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/royal_marines, WEAR_ACCESSORY)
+
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/droppouch, WEAR_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/veteran/royal_marine, WEAR_IN_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/gas/pmc/royal_marine, WEAR_IN_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/box/mre/twe, WEAR_IN_ACCESSORY)
+
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/marine/veteran/royal_marine/light/team_leader, WEAR_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/device/binoculars/range/designator, WEAR_IN_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/explosive/plastic/breaching_charge, WEAR_IN_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/tool/crowbar/tactical, WEAR_IN_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/l23/extended, WEAR_IN_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/l23/ap, WEAR_IN_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/l23, WEAR_IN_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/l23, WEAR_IN_JACKET)
+
+	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/l23/leader, WEAR_J_STORE)
+
+	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/gun/l905/full, WEAR_WAIST)
+
+	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/rmc/light, WEAR_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/firstaid/adv, WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/syringe_case/rmc, WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/device/defibrillator/compact, WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/tool/surgery/cautery, WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/box/packet/rmc/incin, WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/box/packet/rmc/he, WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/l23, WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/box/m94, WEAR_IN_BACK)
+
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/tools/rmc, WEAR_L_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/medkit/full_rmc_officer_aid, WEAR_R_STORE)
+
+/datum/equipment_preset/twe/royal_marine/lieuteant/service
+	name = "TWE Royal Marine Commando (SO)"
+
+/datum/equipment_preset/twe/royal_marine/lieuteant/service/load_gear(mob/living/carbon/human/new_human)
+	new_human.equip_to_slot_or_del(new headset_type, WEAR_L_EAR)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/beret/royal_marine, WEAR_HEAD)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/officer/royal_marine, WEAR_BODY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/dress/rmc, WEAR_FEET)
+
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/jacket/marine/rmc/service, WEAR_JACKET)
+
+	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/satchel, WEAR_BACK)
+
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/general/large, WEAR_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/general/large, WEAR_L_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/device/binoculars/range/designator, WEAR_IN_L_STORE)
+
+/datum/equipment_preset/twe/royal_marine/captain //RMC Captain. Exists purely for admin spawns (you never know when you need a high ranking RMC Officer, eh?)
+	name = "TWE Royal Marine Commando (Captain)"
+	paygrades = list(PAY_SHORT_RNO2 = JOB_PLAYTIME_TIER_0)
+	role_comm_title = "RMC CPT"
+	flags = EQUIPMENT_PRESET_EXTRA
+	assignment = JOB_TWE_RMC_CAPTAIN
+	job_title = JOB_TWE_RMC_CAPTAIN
+
+	minimap_icon = "rmc_commander"
+
+	skills = /datum/skills/rmc/captain
+
+/datum/equipment_preset/twe/royal_marine/captain/load_gear(mob/living/carbon/human/new_human)
+	new_human.equip_to_slot_or_del(new headset_type, WEAR_L_EAR)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/beret/royal_marine/team_leader, WEAR_HEAD)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/veteran/royal_marine/lt, WEAR_BODY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine/veteran/royal_marine, WEAR_HANDS)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/royal_marine/knife, WEAR_FEET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/hud/health, WEAR_EYES)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/royal_marines, WEAR_ACCESSORY)
+
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/droppouch, WEAR_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/veteran/royal_marine, WEAR_IN_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/gas/pmc/royal_marine, WEAR_IN_ACCESSORY)
+
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/marine/veteran/royal_marine/light/team_leader, WEAR_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/device/binoculars/range/designator, WEAR_IN_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/explosive/plastic/breaching_charge, WEAR_IN_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/tool/crowbar/tactical, WEAR_IN_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/l23/extended, WEAR_IN_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/l23/incendiary, WEAR_IN_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/l23, WEAR_IN_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/l23, WEAR_IN_JACKET)
+
+	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/l23/leader, WEAR_J_STORE)
+
+	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/gun/l905/full, WEAR_WAIST)
+
+	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/rmc/light, WEAR_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/firstaid/adv, WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/syringe_case/rmc, WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/device/defibrillator/compact, WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/tool/surgery/cautery, WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/box/packet/rmc/incin, WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/box/packet/rmc/he, WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/box/m94, WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/box/mre/twe, WEAR_IN_BACK)
+
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/tools/rmc, WEAR_L_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/medkit/full_rmc_officer_aid, WEAR_R_STORE)
+
+/datum/equipment_preset/twe/royal_marine/captain/service
+	name = "TWE Royal Marine Commando (XO)"
+
+/datum/equipment_preset/twe/royal_marine/captain/service/load_gear(mob/living/carbon/human/new_human)
+	new_human.equip_to_slot_or_del(new headset_type, WEAR_L_EAR)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/beret/royal_marine, WEAR_HEAD)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/officer/royal_marine, WEAR_BODY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/dress/rmc, WEAR_FEET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/sunglasses/aviator, WEAR_EYES)
+
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/jacket/marine/rmc/service, WEAR_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine/veteran/royal_marine, WEAR_IN_JACKET)
+
+	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/satchel, WEAR_BACK)
+
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/general/large, WEAR_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/device/binoculars/range/designator, WEAR_IN_L_STORE)
+
+/datum/equipment_preset/twe/royal_marine/major //RMC Major. The top brass of the RMC forces in Neroid. Custom pistol coming soon(tm)
+	name = "TWE Royal Marine Commando (Major)"
+	paygrades = list(PAY_SHORT_RNO3 = JOB_PLAYTIME_TIER_0)
+	role_comm_title = "RMC MJR"
+	flags = EQUIPMENT_PRESET_EXTRA
+	assignment = JOB_TWE_RMC_MAJOR
+	job_title = JOB_TWE_RMC_MAJOR
+
+	minimap_icon = "rmc_major"
+
+	skills = /datum/skills/rmc/major
+
+/datum/equipment_preset/twe/royal_marine/major/load_gear(mob/living/carbon/human/new_human)
+	new_human.equip_to_slot_or_del(new headset_type, WEAR_L_EAR)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/beret/royal_marine/team_leader, WEAR_HEAD)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/veteran/royal_marine/lt, WEAR_BODY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine/veteran/royal_marine, WEAR_HANDS)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/royal_marine/knife, WEAR_FEET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/hud/health, WEAR_EYES)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/royal_marines, WEAR_ACCESSORY)
+
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/droppouch, WEAR_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/veteran/royal_marine/breacher, WEAR_IN_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/gas/pmc/royal_marine, WEAR_IN_ACCESSORY)
+
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/marine/veteran/royal_marine/light/team_leader, WEAR_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/device/binoculars/range/designator, WEAR_IN_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/explosive/plastic/breaching_charge, WEAR_IN_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/tool/crowbar/tactical, WEAR_IN_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/l23/extended, WEAR_IN_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/l23/incendiary, WEAR_IN_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/l23/incendiary, WEAR_IN_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/l23, WEAR_IN_JACKET)
+
+	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/l23/leader, WEAR_J_STORE)
+
+	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/gun/mateba/cmateba/special, WEAR_WAIST)
+
+	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/rmc/light, WEAR_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/firstaid/adv, WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/syringe_case/rmc, WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/device/defibrillator/compact, WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/tool/surgery/cautery, WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/box/packet/rmc/incin, WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/box/packet/rmc/he, WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/box/m94, WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/box/mre/twe, WEAR_IN_BACK)
+
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/tools/rmc, WEAR_L_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/medkit/full_rmc_officer_aid, WEAR_R_STORE)
+
+/datum/equipment_preset/twe/royal_marine/major/service
+	name = "TWE Royal Marine Commando (CO)"
+
+/datum/equipment_preset/twe/royal_marine/major/service/load_gear(mob/living/carbon/human/new_human)
+	new_human.equip_to_slot_or_del(new headset_type, WEAR_L_EAR)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/beret/royal_marine, WEAR_HEAD)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/officer/royal_marine, WEAR_BODY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/dress/rmc, WEAR_FEET)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/gun/mateba/cmateba/special, WEAR_WAIST)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/sunglasses/aviator, WEAR_EYES)
+
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/jacket/marine/rmc/service/co, WEAR_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine/veteran/royal_marine, WEAR_IN_JACKET)
+
+	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/satchel/lockable, WEAR_BACK)
+
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/general/large, WEAR_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/pistol/command, WEAR_L_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/device/binoculars/range/designator, WEAR_IN_L_STORE)
+
+
+///Hunting Grounds Royal Marines///
+
+/datum/equipment_preset/twe/royal_marine/standard/hunted
+	name = "TWE Royal Marine Commando (Hunted)"
+	faction = FACTION_HUNTED_TWE
+	faction_group = FACTION_LIST_HUNTED
+
+/datum/equipment_preset/twe/royal_marine/standard/hunted/load_gear(mob/living/carbon/human/new_human)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/veteran/royal_marine, WEAR_HEAD)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/veteran/royal_marine, WEAR_BODY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine/veteran/royal_marine, WEAR_HANDS)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/royal_marine/knife, WEAR_FEET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/royal_marines, WEAR_ACCESSORY)
+
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/holster, WEAR_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/pistol/vp78, WEAR_IN_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/pistol/vp78, WEAR_IN_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/pistol/vp78, WEAR_IN_ACCESSORY)
+
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/marine/veteran/royal_marine/light, WEAR_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/device/binoculars/range, WEAR_IN_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/explosive/plastic/breaching_charge, WEAR_IN_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/tool/crowbar/tactical, WEAR_IN_JACKET)
+
+	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/rmc_f90, WEAR_J_STORE)
+
+	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/marine/rmc/rmc_f90_ammo, WEAR_WAIST)
+
+	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/rmc/light, WEAR_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/rmc_f90, WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/rmc_f90, WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/box/packet/rmc/incin, WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/box/packet/rmc/he, WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/box/mre/twe, WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/box/m94, WEAR_IN_BACK)
+
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/general/large, WEAR_L_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/beret/royal_marine, WEAR_IN_L_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/gas/pmc/royal_marine, WEAR_IN_L_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/medkit/full_rmc_aid, WEAR_R_STORE)
+
+/datum/equipment_preset/twe/royal_marine/team_leader/hunted
+	name = "TWE Royal Marine Commando TL (Hunted)"
+	faction = FACTION_HUNTED_TWE
+	faction_group = FACTION_LIST_HUNTED
+
+/datum/equipment_preset/twe/royal_marine/team_leader/hunted/load_gear(mob/living/carbon/human/new_human)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/veteran/royal_marine, WEAR_HEAD)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/veteran/royal_marine, WEAR_BODY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine/veteran/royal_marine, WEAR_HANDS)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/royal_marine/knife, WEAR_FEET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/royal_marines, WEAR_ACCESSORY)
+
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/holster, WEAR_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/pistol/vp78, WEAR_IN_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/pistol/vp78, WEAR_IN_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/pistol/vp78, WEAR_IN_ACCESSORY)
+
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/marine/veteran/royal_marine/light, WEAR_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/device/binoculars/range, WEAR_IN_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/explosive/plastic/breaching_charge, WEAR_IN_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/tool/crowbar/tactical, WEAR_IN_JACKET)
+
+	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/rmc_f90/a_grip, WEAR_J_STORE)
+
+	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/marine/rmc/rmc_f90_ammo, WEAR_WAIST)
+
+	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/rmc/light, WEAR_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/rmc_f90, WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/rmc_f90, WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/box/packet/rmc/incin, WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/box/packet/rmc/he, WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/box/mre/twe, WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/box/m94, WEAR_IN_BACK)
+
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/general/large, WEAR_L_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/beret/royal_marine, WEAR_IN_L_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/gas/pmc/royal_marine, WEAR_IN_L_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/medkit/full_rmc_aid, WEAR_R_STORE)
+
+/datum/equipment_preset/twe/royal_marine/lieuteant/hunted
+	name = "TWE Royal Marine Commando Officer (Hunted)"
+	faction = FACTION_HUNTED_TWE
+	faction_group = FACTION_LIST_HUNTED
+
+/datum/equipment_preset/twe/royal_marine/lieuteant/hunted/load_gear(mob/living/carbon/human/new_human)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/beret/royal_marine/team_leader, WEAR_HEAD)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/veteran/royal_marine/lt, WEAR_BODY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine/veteran/royal_marine, WEAR_HANDS)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/royal_marine/knife, WEAR_FEET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/hud/health, WEAR_EYES)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/royal_marines, WEAR_ACCESSORY)
+
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/droppouch, WEAR_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/veteran/royal_marine, WEAR_IN_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/gas/pmc/royal_marine, WEAR_IN_ACCESSORY)
+
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/marine/veteran/royal_marine/light/team_leader, WEAR_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/device/binoculars/range/designator, WEAR_IN_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/explosive/plastic/breaching_charge, WEAR_IN_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/tool/crowbar/tactical, WEAR_IN_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/rmc_f90, WEAR_IN_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/rmc_f90, WEAR_IN_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/rmc_f90, WEAR_IN_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/rmc_f90, WEAR_IN_JACKET)
+
+	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/rmc_f90/a_grip, WEAR_J_STORE)
+
+	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/gun/l905/full, WEAR_WAIST)
+
+	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/rmc/light, WEAR_BACK)
+
+	new_human.equip_to_slot_or_del(new /obj/item/storage/firstaid/adv, WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/box/packet/rmc/incin, WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/box/packet/rmc/he, WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/box/m94, WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/box/mre/twe, WEAR_IN_BACK)
+
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/general/large, WEAR_L_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/tool/surgery/cautery, WEAR_IN_L_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/syringe_case/rmc, WEAR_IN_L_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/medkit/full_rmc_officer_aid, WEAR_R_STORE)

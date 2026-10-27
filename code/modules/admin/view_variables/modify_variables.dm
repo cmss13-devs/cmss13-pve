@@ -244,15 +244,11 @@ GLOBAL_PROTECT(VVpixelmovement)
 
 		if("DELETE FROM LIST")
 			L.Cut(index, index+1)
-
-			var/temp_type = O.type
-
 			if (O)
 				if (O.vv_edit_var(objectvar, L))
 					to_chat(src, "Your edit was rejected by the object.", confidential = TRUE)
 					return
-
-			log_world("### ListVarEdit by [src]: [temp_type] [objectvar]: REMOVED=[html_encode("[original_var]")]")
+			log_world("### ListVarEdit by [src]: [O.type] [objectvar]: REMOVED=[html_encode("[original_var]")]")
 			log_admin("[key_name(src)] modified [original_name]'s [objectvar]: REMOVED=[original_var]")
 			message_admins("[key_name_admin(src)] modified [original_name]'s [objectvar]: REMOVED=[original_var]")
 			return
@@ -389,7 +385,7 @@ GLOBAL_PROTECT(VVpixelmovement)
 	log_admin("[key_name(src)] modified [original_name]'s [variable] from [html_encode("[var_value]")] to [html_encode("[var_new]")]")
 	var/msg = "[key_name_admin(src)] modified [original_name]'s [variable] from [var_value] to [var_new]"
 	message_admins(msg)
-	admin_ticket_log(O, msg)
+	admin_ticket_log(O, msg, raw_message = "[key_name(src)] modified [original_name]'s [variable] from [var_value] to [var_new]")
 	return TRUE
 
 /proc/make_types_fancy(list/types)

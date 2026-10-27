@@ -2,7 +2,7 @@
 	name = "gun cabinet"
 	req_access = null
 	health = 1000
-	icon = 'icons/obj/structures/props/misc.dmi'
+	icon = 'icons/obj/structures/props/furniture/misc.dmi'
 	icon_state = "base"
 	icon_off ="base"
 	icon_broken ="base"
@@ -10,6 +10,7 @@
 	icon_closed ="base"
 	icon_opened = "base"
 	req_access = list(ACCESS_MARINE_ARMORY)
+	var/uses_sec_level = TRUE
 	var/req_level = SEC_LEVEL_GREEN
 
 /obj/structure/closet/secure_closet/guncabinet/get_examine_text(mob/user)
@@ -24,6 +25,8 @@
 
 /obj/structure/closet/secure_closet/guncabinet/proc/sec_changed(datum/source, new_sec)
 	SIGNAL_HANDLER
+	if(!uses_sec_level)
+		return
 	if(new_sec < req_level)
 		if(locked)
 			return
@@ -80,12 +83,12 @@
 	new /obj/item/weapon/shield/riot(src)
 	new /obj/item/weapon/shield/riot(src)
 	new /obj/item/weapon/shield/riot(src)
-	new /obj/item/ammo_magazine/shotgun/beanbag(src)
-	new /obj/item/ammo_magazine/shotgun/beanbag(src)
-	new /obj/item/ammo_magazine/shotgun/beanbag(src)
-	new /obj/item/ammo_magazine/shotgun/beanbag(src)
-	new /obj/item/weapon/gun/launcher/grenade/m81/riot(src, TRUE)
-	new /obj/item/ammo_box/magazine/nade_box/ltl/tear_gas(src)
+	new /obj/item/ammo_magazine/shotgun/beanbag/riot(src)
+	new /obj/item/ammo_magazine/shotgun/beanbag/riot(src)
+	new /obj/item/ammo_magazine/shotgun/beanbag/riot(src)
+	new /obj/item/ammo_magazine/shotgun/beanbag/riot(src)
+	new /obj/item/weapon/gun/launcher/grenade/m84(src, TRUE)
+	new /obj/item/storage/box/nade_box/tear_gas(src)
 	new /obj/item/clothing/mask/gas(src)
 	new /obj/item/clothing/mask/gas(src)
 	new /obj/item/clothing/mask/gas(src)
@@ -111,4 +114,5 @@
 
 /obj/structure/closet/secure_closet/guncabinet/wy
 	name = "weyland yutani gun cabinet"
-	req_access = ACCESS_WY_SECURITY
+	req_access = list(ACCESS_WY_SECURITY)
+	uses_sec_level = FALSE

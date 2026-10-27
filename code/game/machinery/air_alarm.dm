@@ -84,7 +84,7 @@ GLOBAL_LIST_INIT(aalarm_mode_descriptions, flatten_numeric_alist(alist(
 	idle_power_usage = 80
 	active_power_usage = 1000 //For heating/cooling rooms. 1000 joules equates to about 1 degree every 2 seconds for a single tile of air.
 	power_channel = POWER_CHANNEL_ENVIRON
-	req_one_access = list(ACCESS_CIVILIAN_ENGINEERING)
+	req_one_access = list(ACCESS_CIVILIAN_ENGINEERING, ACCESS_MARINE_ENGINEERING)
 	var/alarm_id = null
 	var/breach_detection = 1 // Whether to use automatic breach detection or not
 	var/frequency = 1439
@@ -145,10 +145,14 @@ GLOBAL_LIST_INIT(aalarm_mode_descriptions, flatten_numeric_alist(alist(
 
 	if(!pixel_x && !pixel_y)
 		switch(dir)
-			if(NORTH) pixel_y = 25
-			if(SOUTH) pixel_y = -25
-			if(EAST) pixel_x = 25
-			if(WEST) pixel_x = -25
+			if(NORTH)
+				pixel_y = 25
+			if(SOUTH)
+				pixel_y = -25
+			if(EAST)
+				pixel_x = 25
+			if(WEST)
+				pixel_x = -25
 
 	first_run()
 
@@ -604,9 +608,9 @@ Pressure: <span class='dl[pressure_dangerlevel]'>[environment_pressure]</span>kP
 
 	output += "Area Status: "
 	if(alarm_area.atmosalm)
-		output += SPAN_DL1("Atmos alert in area")
+		output += SPAN_DL1("Atmos alert in area.")
 	else if (alarm_area.flags_alarm_state & ALARM_WARNING_FIRE)
-		output += SPAN_DL1("Fire alarm in area")
+		output += SPAN_DL1("Fire alarm in area.")
 	else
 		output += "No alerts"
 
@@ -792,7 +796,7 @@ table tr:first-child th:first-child { border: none;}
 	return output
 
 /obj/structure/machinery/alarm/Topic(href, href_list)
-	if(..() || !( Adjacent(usr) || isRemoteControlling(usr)) ) // dont forget calling super in machine Topics -walter0o
+	if(..() || !( Adjacent(usr) || isRemoteControlling(usr)) ) // don't forget calling super in machine Topics -walter0o
 		usr.unset_interaction()
 		close_browser(usr, "air_alarm")
 		close_browser(usr, "AAlarmwires")
@@ -819,9 +823,9 @@ table tr:first-child th:first-child { border: none;}
 		var/list/selected = TLV["temperature"]
 		var/max_temperature = min(selected[3] - T0C, MAX_TEMPERATURE)
 		var/min_temperature = max(selected[2] - T0C, MIN_TEMPERATURE)
-		var/input_temperature = tgui_input_number(usr, "What temperature would you like the system to mantain? (Capped between [min_temperature]C and [max_temperature]C)", "Thermostat Controls", min_temperature, max_temperature, min_temperature)
+		var/input_temperature = tgui_input_number(usr, "What temperature would you like the system to maintain? (Capped between [min_temperature]C and [max_temperature]C)", "Thermostat Controls", min_temperature, max_temperature, min_temperature)
 		if(!input_temperature || input_temperature > max_temperature || input_temperature < min_temperature)
-			to_chat(usr, "Temperature must be between [min_temperature]C and [max_temperature]C")
+			to_chat(usr, "Temperature must be between [min_temperature]C and [max_temperature]C.")
 		else
 			target_temperature = input_temperature + T0C
 
@@ -957,7 +961,7 @@ table tr:first-child th:first-child { border: none;}
 	switch(buildstage)
 		if(2)
 			if(HAS_TRAIT(W, TRAIT_TOOL_SCREWDRIVER))  // Opening that Air Alarm up.
-				//to_chat(user, "You pop the Air Alarm's maintence panel open.")
+				//to_chat(user, "You pop the Air Alarm's maintenance panel open.")
 				wiresexposed = !wiresexposed
 				to_chat(user, "The wires have been [wiresexposed ? "exposed" : "unexposed"]")
 				update_icon()
@@ -968,19 +972,19 @@ table tr:first-child th:first-child { border: none;}
 
 			if(istype(W, /obj/item/card/id))// trying to unlock the interface with an ID card
 				if(inoperable())
-					to_chat(user, "It does nothing")
+					to_chat(user, "It does nothing.")
 					return
 				else
 					if(allowed(usr) && !isWireCut(AALARM_WIRE_IDSCAN))
 						locked = !locked
-						to_chat(user, SPAN_NOTICE(" You [locked ? "lock" : "unlock"] the Air Alarm interface."))
+						to_chat(user, SPAN_NOTICE("You [locked ? "lock" : "unlock"] the Air Alarm interface."))
 						updateUsrDialog()
 					else
 						to_chat(user, SPAN_DANGER("Access denied."))
 			return
 
 		if(1)
-			if(iscoil(W))
+			if(iswire(W))
 				var/obj/item/stack/cable_coil/C = W
 				if(C.use(5))
 					to_chat(user, SPAN_NOTICE("You wire \the [src]."))
@@ -1038,7 +1042,7 @@ table tr:first-child th:first-child { border: none;}
 
 /obj/structure/machinery/alarm/server/Initialize()
 	. = ..()
-	req_one_access = list(ACCESS_CIVILIAN_ENGINEERING)
+	req_one_access = list(ACCESS_CIVILIAN_ENGINEERING, ACCESS_MARINE_ENGINEERING)
 	TLV["oxygen"] = list(-1.0, -1.0,-1.0,-1.0) // Partial pressure, kpa
 	TLV["carbon dioxide"] = list(-1.0, -1.0,   5,  10) // Partial pressure, kpa
 	TLV["phoron"] = list(-1.0, -1.0, 0.2, 0.5) // Partial pressure, kpa

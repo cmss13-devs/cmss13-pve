@@ -40,9 +40,5 @@
 	if(!istype(T))
 		return COMPONENT_BULLET_PASS_THROUGH
 
-	if(!T.hull)
+	if(!(T.turf_flags & TURF_HULL))
 		return COMPONENT_BULLET_PASS_THROUGH
-
-/datum/element/bullet_trait_penetrating/pkp
-	distance_loss_per_hit = 6
-

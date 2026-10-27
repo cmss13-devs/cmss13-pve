@@ -62,7 +62,7 @@
 	set name = "Aghost"
 	set category = "Admin.Game"
 
-	if(!check_rights(R_MOD))
+	if(!check_client_rights(src, R_MOD))
 		return
 
 	var/new_STUI = 0
@@ -127,7 +127,7 @@
 
 /datum/admins/proc/announce()
 	set name = "Admin Announcement"
-	set desc = "Announce your desires to the world"
+	set desc = "Announce your desires to the world."
 	set category = "Admin.Game"
 
 	if(!check_rights(0))
@@ -136,7 +136,7 @@
 	if(message)
 		if(!check_rights(R_SERVER,0))
 			message = adminscrub(message,500)
-		to_chat_spaced(world, type = MESSAGE_TYPE_SYSTEM, html = SPAN_ANNOUNCEMENT_HEADER_ADMIN(" <b>[usr.client.admin_holder.fakekey ? "Administrator" : usr.key] Announces:</b>\n \t [message]"))
+		to_chat_spaced(world, type = MESSAGE_TYPE_SYSTEM, html = SPAN_ANNOUNCEMENT_HEADER_ADMIN("<b>[usr.client.admin_holder.fakekey ? "Administrator" : usr.client.username()] Announces:</b>\n \t [message]"))
 		log_admin("Announce: [key_name(usr)] : [message]")
 
 /datum/admins/proc/player_notes_show(key as text)
@@ -228,10 +228,9 @@
 
 	if(alert("This will sleep ALL mobs within your view range (for Administration purposes). Are you sure?",,"Yes","Cancel") == "Cancel")
 		return
-	for(var/mob/living/M in view(usr.client))
-		M.apply_effect(3, PARALYZE) // prevents them from exiting the screen range
-		M.sleeping = 9999999 //if they're not, sleep them and add the sleep icon, so other marines nearby know not to mess with them.
-		M.AddSleepingIcon()
+	for(var/mob/living/living_target in view(usr.client))
+		living_target.set_admin_sleep(TRUE) //if they're not already, add the aslept trait them and add the sleep icon, so other marines nearby know not to mess with them.
+		living_target.AddSleepingIcon()
 
 	message_admins("[key_name(usr)] used Toggle Sleep In View.")
 
@@ -245,9 +244,9 @@
 
 	if(alert("This wake ALL mobs within your view range (for Administration purposes). Are you sure?",,"Yes","Cancel") == "Cancel")
 		return
-	for(var/mob/living/M in view(usr.client))
-		M.sleeping = 0 //set their sleep to zero and remove their icon
-		M.RemoveSleepingIcon()
+	for(var/mob/living/living_target in view(usr.client))
+		living_target.set_admin_sleep(FALSE) //if they're already slept, remove the aslept trait and remove the icon
+		living_target.RemoveSleepingIcon()
 
 	message_admins("[key_name(usr)] used Toggle Wake In View.")
 
@@ -258,6 +257,7 @@
 
 	cmd_admin_say(msg)
 
+SET_PROTECTED_PROC(/client/proc/cmd_admin_say)
 /client/proc/cmd_admin_say(msg as text)
 	set name = "Asay" //Gave this shit a shorter name so you only have to time out "asay" rather than "admin say" to use it --NeoFite
 	set category = "Admin"
@@ -271,9 +271,9 @@
 	if (!msg)
 		return
 
-	REDIS_PUBLISH("byond.asay", "author" = src.key, "message" = strip_html(msg), "admin" = CLIENT_HAS_RIGHTS(src, R_ADMIN), "rank" = admin_holder.rank)
+	REDIS_PUBLISH("byond.asay", "author" = src.username(), "message" = strip_html(msg), "admin" = CLIENT_HAS_RIGHTS(src, R_ADMIN), "rank" = admin_holder.rank)
 
-	if(findtext(msg, "@") || findtext(msg, "#"))
+	if(findtext(msg, "@") || findtext(msg, "#") || findtext(msg, "~"))
 		var/list/link_results = check_asay_links(msg)
 		if(length(link_results))
 			msg = link_results[ASAY_LINK_NEW_MESSAGE_INDEX]
@@ -294,9 +294,10 @@
 
 	var/channel = "ADMIN:"
 	channel = "[admin_holder.rank]:"
+	var/ooc_prefix = handle_ooc_prefix()
 	for(var/client/client as anything in GLOB.admins)
 		if((R_ADMIN|R_MOD) & client.admin_holder.rights)
-			to_chat(client, "<span class='[color]'><span class='prefix'>[channel]</span> <EM>[key_name(src,1)]</EM> [ADMIN_JMP_USER(mob)]: <span class='message'>[msg]</span></span>")
+			to_chat(client, "<span class='[color]'><span class='prefix'>[channel]</span> [ooc_prefix]<span class='prefix'><EM>[key_name(src,1)]</EM> [ADMIN_JMP_USER(mob)]: <span class='message'>[msg]</span></span>")
 
 /datum/admins/proc/alertall()
 	set name = "Alert All"
@@ -307,13 +308,14 @@
 		return
 
 	var/message = input(src, "Input your custom admin alert text:", "Message") as text|null
-	if(!message) return
+	if(!message)
+		return
 	var/color = input(src, "Input your message color:", "Color Selector") as color|null
-	if(!color) return
+	if(!color)
+		return
 
 	for(var/mob/living/mob in view(usr.client))
 		show_blurb(mob, 15, message, null, "center", "center", color, null, null, 1)
-	log_admin("[key_name(src)] sent an In View admin alert with custom message [message].")
 	message_admins("[key_name(src)] sent an In View admin alert with custom message [message].")
 
 /datum/admins/proc/directnarrateall()
@@ -330,7 +332,6 @@
 
 	for(var/mob/living/mob in view(usr.client))
 		to_chat(mob, SPAN_ANNOUNCEMENT_HEADER_BLUE(message))
-	log_admin("[key_name(usr)] sent a Direct Narrate in View with custom message \"[message]\".")
 	message_admins("[key_name(usr)] sent a Direct Narrate in View with custom message \"[message]\".")
 
 #define SUBTLE_MESSAGE_IN_HEAD "Voice in Head"
@@ -348,11 +349,11 @@
 
 	var/list/subtle_message_options = list(SUBTLE_MESSAGE_IN_HEAD, SUBTLE_MESSAGE_WEYLAND, SUBTLE_MESSAGE_USCM, SUBTLE_MESSAGE_FACTION)
 	var/message_option = tgui_input_list(usr, "Choose the method of subtle messaging", "", subtle_message_options)
+	if(!message_option)
+		return
 
 	if(message_option == SUBTLE_MESSAGE_FACTION)
 		var/faction = input("Choose which faction", "") as text|null
-		if(!faction)
-			return
 		message_option = faction
 
 	var/input = input("Contents of the message", text("Subtle PM to In View")) as text|null
@@ -383,9 +384,10 @@
 	var/msg = input(src, null, "asay \"text\"") as text|null
 	cmd_admin_say(msg)
 
+SET_PROTECTED_PROC(/client/proc/cmd_mentor_say)
 /client/proc/cmd_mentor_say(msg as text)
 	set name = "MentorSay"
-	set category = "OOC"
+	set category = "Admin.Mentor"
 	set hidden = 0
 
 	if(!check_rights(R_MENTOR|R_MOD|R_ADMIN))
@@ -403,10 +405,10 @@
 	channel = "[admin_holder.rank]:"
 	if(check_rights(R_MOD|R_ADMIN,0))
 		color = "mentorstaff"
-
+	var/ooc_prefix = handle_ooc_prefix()
 	for(var/client/C in GLOB.admins)
 		if((R_ADMIN|R_MOD|R_MENTOR) & C.admin_holder.rights)
-			to_chat(C, "<span class='[color]'><span class='prefix'>[channel]</span> <EM>([usr.key])</EM>: <span class='message'>[msg]</span></span>")
+			to_chat(C, "<span class='[color]'><span class='prefix'>[channel]</span> [ooc_prefix]<span class='prefix'><EM><EM>([usr.key])</EM>: <span class='message'>[msg]</span></span>")
 
 /client/proc/get_mentor_say()
 	var/msg = input(src, null, "mentorsay \"text\"") as text|null
@@ -621,7 +623,7 @@
 	return
 
 /datum/admins/proc/imaginary_friend()
-	set category = "OOC.Mentor"
+	set category = "Admin.Mentor"
 	set name = "Imaginary Friend"
 
 	var/mob/user = usr
@@ -666,7 +668,6 @@
 	friend.aghosted_original_mob = user.mind?.original
 	user.mind.transfer_to(friend)
 
-	log_admin("[key_name(friend)] started being imaginary friend of [key_name(befriended_mob)].")
 	message_admins("[key_name_admin(friend)] started being imaginary friend of [key_name_admin(befriended_mob)].")
 
 /client/proc/in_view_panel()
@@ -678,224 +679,27 @@
 
 	admin_holder.in_view_panel()
 
-/client/proc/toggle_lz_resin()
-	set name = "Toggle LZ Weeding"
-	set category = "Admin.Flags"
+/datum/admins/proc/set_commander()
+	if(!check_rights(R_MOD, FALSE))
+		return
+
+	if(!SSticker || SSticker.current_state != GAME_STATE_PLAYING)
+		to_chat(usr, SPAN_WARNING("The game hasn't started yet!"))
+		return
+
+	var/mob/living/carbon/human/commander = tgui_input_list(usr, "Choose someone to be the operation commander", "Choose an acting commander", GLOB.alive_human_list)
+	if(!commander)
+		return
+
+	SSticker.mode.ares_command_check(commander, TRUE)
+
+	log_admin("[key_name_admin(usr)] manually chose [key_name_admin(commander)], [commander?.job] as the acting commander.")
+
+/client/proc/set_commander()
+	set name = "Set Operations Commander"
+	set category = "Admin.Factions"
 
 	if(!admin_holder || !check_rights(R_MOD, FALSE))
 		return
 
-	set_lz_resin_allowed(!GLOB.resin_lz_allowed)
-	message_admins("[src] has [GLOB.resin_lz_allowed ? "allowed xenos to weed" : "disallowed from weeding"] near the LZ.")
-
-/proc/set_lz_resin_allowed(allowed = TRUE)
-	if(allowed)
-		for(var/area/A in GLOB.all_areas)
-			if(A.flags_area & AREA_UNWEEDABLE)
-				continue
-			A.is_resin_allowed = TRUE
-		msg_admin_niche("Areas close to landing zones are now weedable.")
-	else
-		for(var/area/A in GLOB.all_areas)
-			if(A.flags_area & AREA_UNWEEDABLE)
-				continue
-			A.is_resin_allowed = initial(A.is_resin_allowed)
-		msg_admin_niche("Areas close to landing zones cannot be weeded now.")
-	GLOB.resin_lz_allowed = allowed
-
-/client/proc/toggle_ob_spawn() // not really a flag but i'm cheating here
-	set name = "Toggle OB Spawn"
-	set category = "Admin.Flags"
-
-	if(!admin_holder || !check_rights(R_MOD, FALSE))
-		return
-
-	GLOB.spawn_ob = !GLOB.spawn_ob
-	message_admins("[src] has [GLOB.spawn_ob ? "allowed OBs to spawn" : "prevented OBs from spawning"] at roundstart.")
-
-/client/proc/toggle_sniper_upgrade()
-	set name = "Toggle Engi Sniper Upgrade"
-	set category = "Admin.Flags"
-
-	if(!admin_holder || !check_rights(R_MOD, FALSE))
-		return
-
-	if(!SSticker.mode)
-		to_chat(usr, SPAN_WARNING("A mode hasn't been selected yet!"))
-		return
-
-	SSticker.mode.toggleable_flags ^= MODE_NO_SNIPER_SENTRY
-	message_admins("[src] has [MODE_HAS_TOGGLEABLE_FLAG(MODE_NO_SNIPER_SENTRY) ? "disallowed engineers from picking" : "allowed engineers to pick"] long-range sentry upgrades.")
-
-/client/proc/toggle_attack_dead()
-	set name = "Toggle Attack Dead"
-	set category = "Admin.Flags"
-
-	if(!admin_holder || !check_rights(R_MOD, FALSE))
-		return
-
-	if(!SSticker.mode)
-		to_chat(usr, SPAN_WARNING("A mode hasn't been selected yet!"))
-		return
-
-	SSticker.mode.toggleable_flags ^= MODE_NO_ATTACK_DEAD
-	message_admins("[src] has [MODE_HAS_TOGGLEABLE_FLAG(MODE_NO_ATTACK_DEAD) ? "prevented dead mobs from being" : "allowed dead mobs to be"] attacked.")
-
-/client/proc/toggle_disposal_mobs()
-	set name = "Toggle Disposable Mobs"
-	set category = "Admin.Flags"
-
-	if(!admin_holder || !check_rights(R_EVENT, FALSE))
-		return
-
-	if(!SSticker.mode)
-		to_chat(usr, SPAN_WARNING("A mode hasn't been selected yet!"))
-		return
-
-	SSticker.mode.toggleable_flags ^= MODE_DISPOSABLE_MOBS
-	message_admins("[src] has [MODE_HAS_TOGGLEABLE_FLAG(MODE_DISPOSABLE_MOBS) ? "allowed mobs to fit" : "prevented mobs fitting"] inside disposals.")
-
-/client/proc/toggle_strip_drag()
-	set name = "Toggle Strip/Drag Dead"
-	set category = "Admin.Flags"
-
-	if(!admin_holder || !check_rights(R_MOD, FALSE))
-		return
-
-	if(!SSticker.mode)
-		to_chat(usr, SPAN_WARNING("A mode hasn't been selected yet!"))
-		return
-
-	SSticker.mode.toggleable_flags ^= MODE_NO_STRIPDRAG_ENEMY
-	message_admins("[src] has [MODE_HAS_TOGGLEABLE_FLAG(MODE_NO_STRIPDRAG_ENEMY) ? "prevented dead humans from being" : "allowed dead humans to be"] stripped and dragged around by non-matching IFF players.")
-
-/client/proc/toggle_uniform_strip()
-	set name = "Toggle Uniform Strip Dead"
-	set category = "Admin.Flags"
-
-	if(!admin_holder || !check_rights(R_MOD, FALSE))
-		return
-
-	if(!SSticker.mode)
-		to_chat(usr, SPAN_WARNING("A mode hasn't been selected yet!"))
-		return
-
-	SSticker.mode.toggleable_flags ^= MODE_STRIP_NONUNIFORM_ENEMY
-	message_admins("[src] has [MODE_HAS_TOGGLEABLE_FLAG(MODE_STRIP_NONUNIFORM_ENEMY) ? "allowed dead humans to be stripped of everything but their uniform, boots, armor, helmet, and ID" : "prevented dead humans from being stripped of anything"].")
-	if(!MODE_HAS_TOGGLEABLE_FLAG(MODE_NO_STRIPDRAG_ENEMY))
-		message_admins("WARNING: Dead enemy players can still be stripped of everything, as the Strip/Drag toggle flag isn't active.")
-
-/client/proc/toggle_strong_defibs()
-	set name = "Toggle Strong Defibs"
-	set category = "Admin.Flags"
-
-	if(!admin_holder || !check_rights(R_MOD, FALSE))
-		return
-
-	if(!SSticker.mode)
-		to_chat(usr, SPAN_WARNING("A mode hasn't been selected yet!"))
-		return
-
-	SSticker.mode.toggleable_flags ^= MODE_STRONG_DEFIBS
-	message_admins("[src] has [MODE_HAS_TOGGLEABLE_FLAG(MODE_STRONG_DEFIBS) ? "allowed defibs to ignore armor" : "made defibs operate normally"].")
-
-/client/proc/toggle_blood_optimization()
-	set name = "Toggle Blood Optimization"
-	set category = "Admin.Flags"
-
-	if(!admin_holder || !check_rights(R_MOD, FALSE))
-		return
-
-	if(!SSticker.mode)
-		to_chat(usr, SPAN_WARNING("A mode hasn't been selected yet!"))
-		return
-
-	SSticker.mode.toggleable_flags ^= MODE_BLOOD_OPTIMIZATION
-	message_admins("[src] has [MODE_HAS_TOGGLEABLE_FLAG(MODE_BLOOD_OPTIMIZATION) ? "toggled blood optimization on" : "toggled blood optimization off"].")
-
-/client/proc/toggle_combat_cas()
-	set name = "Toggle Combat CAS Equipment"
-	set category = "Admin.Flags"
-
-	if(!admin_holder || !check_rights(R_MOD, FALSE))
-		return
-
-	if(!SSticker.mode)
-		to_chat(usr, SPAN_WARNING("A mode hasn't been selected yet!"))
-		return
-
-	SSticker.mode.toggleable_flags ^= MODE_NO_COMBAT_CAS
-	message_admins("[src] has [MODE_HAS_TOGGLEABLE_FLAG(MODE_NO_COMBAT_CAS) ? "toggled combat CAS off" : "toggled combat CAS on"].")
-
-/client/proc/toggle_lz_protection()
-	set name = "Toggle LZ Mortar Protection"
-	set category = "Admin.Flags"
-
-	if(!admin_holder || !check_rights(R_MOD, FALSE))
-		return
-
-	if(!SSticker.mode)
-		to_chat(usr, SPAN_WARNING("A mode hasn't been selected yet!"))
-		return
-
-	SSticker.mode.toggleable_flags ^= MODE_LZ_PROTECTION
-	message_admins("[src] has [MODE_HAS_TOGGLEABLE_FLAG(MODE_LZ_PROTECTION) ? "toggled LZ protection on, mortars can no longer fire there" : "toggled LZ protection off, mortars can now fire there"].")
-
-/client/proc/toggle_shipside_sd()
-	set name = "Toggle Shipside SD Protection"
-	set category = "Admin.Flags"
-
-	if(!admin_holder || !check_rights(R_MOD, FALSE))
-		return
-
-	if(!SSticker.mode)
-		to_chat(usr, SPAN_WARNING("A mode hasn't been selected yet!"))
-		return
-
-	SSticker.mode.toggleable_flags ^= MODE_SHIPSIDE_SD
-	message_admins("[src] has [MODE_HAS_TOGGLEABLE_FLAG(MODE_SHIPSIDE_SD) ? "toggled SD protection off, Yautja can now big self destruct anywhere" : "toggled SD protection on, Yautja can now only big self destruct on the hunting grounds"].")
-
-/client/proc/toggle_hardcore_perma()
-	set name = "Toggle Hardcore"
-	set category = "Admin.Flags"
-
-	if(!admin_holder || !check_rights(R_MOD, FALSE))
-		return
-
-	if(!SSticker.mode)
-		to_chat(usr, SPAN_WARNING("A mode hasn't been selected yet!"))
-		return
-
-	if(!MODE_HAS_TOGGLEABLE_FLAG(MODE_HARDCORE_PERMA) && tgui_alert(usr, "Are you sure you want to toggle Hardcore mode on? This will cause all humans to instantly go perma on death.", "Confirmation", list("Yes", "Cancel")) != "Yes")
-		return
-
-	SSticker.mode.toggleable_flags ^= MODE_HARDCORE_PERMA
-	message_admins("[src] has toggled Hardcore [MODE_HAS_TOGGLEABLE_FLAG(MODE_HARDCORE_PERMA) ? "on, causing all humans to instantly go perma on death" : "off, causing all humans to die like normal"].")
-
-/client/proc/toggle_bypass_joe_restriction()
-	set name = "Toggle Working Joe Restrictions"
-	set category = "Admin.Flags"
-
-	if(!admin_holder || !check_rights(R_EVENT, TRUE))
-		return
-
-	if(!SSticker.mode)
-		to_chat(usr, SPAN_WARNING("A mode hasn't been selected yet!"))
-		return
-
-	SSticker.mode.toggleable_flags ^= MODE_BYPASS_JOE
-	message_admins("[src] has [MODE_HAS_TOGGLEABLE_FLAG(MODE_BYPASS_JOE) ? "allowed players to bypass (except whitelist)" : "prevented players from bypassing"] Working Joe spawn conditions.")
-
-/client/proc/toggle_joe_respawns()
-	set name = "Toggle Working Joe Respawns"
-	set category = "Admin.Flags"
-
-	if(!admin_holder || !check_rights(R_EVENT, TRUE))
-		return
-
-	if(!SSticker.mode)
-		to_chat(usr, SPAN_WARNING("A mode hasn't been selected yet!"))
-		return
-
-	SSticker.mode.toggleable_flags ^= MODE_DISABLE_JOE_RESPAWN
-	message_admins("[src] has [MODE_HAS_TOGGLEABLE_FLAG(MODE_DISABLE_JOE_RESPAWN) ? "disabled" : "enabled"] Working Joe respawns.")
+	admin_holder.set_commander()

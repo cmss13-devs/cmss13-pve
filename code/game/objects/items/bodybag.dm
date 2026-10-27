@@ -4,7 +4,12 @@
 	name = "body bag"
 	desc = "A folded bag designed for the storage and transportation of cadavers."
 	icon = 'icons/obj/bodybag.dmi'
+	item_icons = list(
+		WEAR_L_HAND = 'icons/mob/humans/onmob/inhands/equipment/medical_lefthand.dmi',
+		WEAR_R_HAND = 'icons/mob/humans/onmob/inhands/equipment/medical_righthand.dmi',
+	)
 	icon_state = "bodybag_folded"
+	item_state = "bodybag"
 	w_class = SIZE_SMALL
 	var/unfolded_path = /obj/structure/closet/bodybag
 
@@ -31,8 +36,9 @@
 /obj/item/bodybag/cryobag
 	name = "stasis bag"
 	desc = "A folded, reusable bag designed to prevent additional damage to an occupant."
-	icon = 'icons/obj/cryobag.dmi'
-	icon_state = "bodybag_folded"
+	icon = 'icons/obj/bodybag.dmi'
+	icon_state = "cryobag_folded"
+	item_state = "cryobag"
 	unfolded_path = /obj/structure/closet/bodybag/cryobag
 	matter = list("plastic" = 7500)
 	var/used = 0
@@ -95,30 +101,41 @@
 /obj/structure/closet/bodybag/attackby(obj/item/W, mob/user)
 	if(HAS_TRAIT(W, TRAIT_TOOL_PEN))
 		var/prior_label_text
-		var/datum/component/label/labelcomponent = src.GetComponent(/datum/component/label)
-		if(labelcomponent)
+		var/datum/component/label/labelcomponent = GetComponent(/datum/component/label)
+		if(labelcomponent && labelcomponent.has_label())
 			prior_label_text = labelcomponent.label_name
-		var/tmp_label = sanitize(input(user, "Enter a label for [name]","Label", prior_label_text))
-		if(tmp_label == "" || !tmp_label)
-			to_chat(user, SPAN_NOTICE("You're going to need to use wirecutters to remove the label."))
+		var/tmp_label = tgui_input_text(user, "Enter a label for [src]", "Label", prior_label_text, MAX_NAME_LEN, ui_state=GLOB.not_incapacitated_state)
+		if(isnull(tmp_label))
+			return // Canceled
+		if(!tmp_label)
+			if(prior_label_text)
+				to_chat(user, SPAN_NOTICE("You're going to need to use wirecutters to remove the label."))
 			return
 		if(length(tmp_label) > MAX_NAME_LEN)
 			to_chat(user, SPAN_WARNING("The label can be at most [MAX_NAME_LEN] characters long."))
-		else
-			user.visible_message(SPAN_NOTICE("[user] labels [src] as \"[tmp_label]\"."), \
-			SPAN_NOTICE("You label [src] as \"[tmp_label]\"."))
-			AddComponent(/datum/component/label, tmp_label)
-			playsound(src, "paper_writing", 15, TRUE)
+			return
+		if(prior_label_text == tmp_label)
+			to_chat(user, SPAN_WARNING("The label already says \"[tmp_label]\"."))
+			return
+		user.visible_message(SPAN_NOTICE("[user] labels [src] as \"[tmp_label]\"."),
+		SPAN_NOTICE("You label [src] as \"[tmp_label]\"."))
+		msg_admin_niche("[key_name(usr)] changed [src]'s name to [tmp_label] [ADMIN_JMP(src)]")
+		AddComponent(/datum/component/label, tmp_label)
+		playsound(src, "paper_writing", 15, TRUE)
 		return
+
 	else if(HAS_TRAIT(W, TRAIT_TOOL_WIRECUTTERS))
-		to_chat(user, SPAN_NOTICE("You cut the tag off the bodybag."))
-		src.overlays.Cut()
-		var/datum/component/label/labelcomponent = src.GetComponent(/datum/component/label)
-		if(labelcomponent)
-			labelcomponent.remove_label()
+		overlays.Cut()
+		var/datum/component/label/labelcomponent = GetComponent(/datum/component/label)
+		if(labelcomponent && labelcomponent.has_label())
+			log_admin("[key_name(usr)] has removed label from [src].")
+			user.visible_message(SPAN_NOTICE("[user] cuts the tag off of the [name]."),
+								SPAN_NOTICE("You cut the tag off the [name]."))
+			labelcomponent.clear_label()
 		return
+
 	else if(istype(W, /obj/item/weapon/zombie_claws))
-		open()
+		open(user)
 
 /obj/structure/closet/bodybag/store_mobs(stored_units) // overriding this
 	var/list/dead_mobs = list()
@@ -147,29 +164,31 @@
 
 /obj/structure/closet/bodybag/attack_hand(mob/living/user)
 	if(!opened)
+		if(open_cooldown > world.time)
+			to_chat(user, SPAN_WARNING("\The [src] has been opened too recently!"))
+			return
 		open_cooldown = world.time + 10 //1s cooldown for opening and closing, stop that spam! - stan_albatross
-	if(opened && open_cooldown > world.time)
-		to_chat(user, SPAN_WARNING("\The [src] has been opened too recently!"))
-		return
 	. = ..()
 
 
-/obj/structure/closet/bodybag/close()
+/obj/structure/closet/bodybag/close(mob/user)
 	if(..())
 		density = FALSE
 		update_name()
 		return 1
 	return 0
 
-/obj/structure/closet/bodybag/open()
+/obj/structure/closet/bodybag/open(mob/user, force)
 	. = ..()
 	update_name()
 
 /obj/structure/closet/bodybag/MouseDrop(over_object, src_location, over_location)
 	..()
 	if(over_object == usr && Adjacent(usr) && !roller_buckled)
-		if(!ishuman(usr)) return
-		if(length(contents)) return 0
+		if(!ishuman(usr))
+			return
+		if(length(contents))
+			return 0
 		visible_message(SPAN_NOTICE("[usr] folds up [name]."))
 		var/obj/item/I = new item_path(get_turf(src), src)
 		usr.put_in_hands(I)
@@ -209,7 +228,10 @@
 	name = "stasis bag"
 	bag_name = "stasis bag"
 	desc = "A reusable plastic bag designed to prevent additional damage to an occupant."
-	icon = 'icons/obj/cryobag.dmi'
+	icon = 'icons/obj/bodybag.dmi'
+	icon_state = "cryobag_closed"
+	icon_closed = "cryobag_closed"
+	icon_opened = "cryobag_open"
 	item_path = /obj/item/bodybag/cryobag
 	store_items = FALSE
 	/// the mob in stasis
@@ -246,33 +268,50 @@
 /obj/structure/closet/bodybag/cryobag/update_icon()
 	. = ..()
 	// Bump up a living player in the bag to layer of an actual corpse and not just an accidentally coverable prop
-	if(stasis_mob)
-		layer = LYING_BETWEEN_MOB_LAYER
-	else
-		layer = initial(layer)
 
-/obj/structure/closet/bodybag/cryobag/open()
-	var/mob/living/L = locate() in contents
-	if(L)
-		L.in_stasis = FALSE
-		stasis_mob = null
-		STOP_PROCESSING(SSobj, src)
+	overlays.Cut()	// makes sure any previous triage cards are removed
+
+	if(!stasis_mob)
+		layer = initial(layer)
+		return
+
+	layer = LYING_BETWEEN_MOB_LAYER
+
+	if(stasis_mob.holo_card_color && !opened)
+		var/image/holo_card_icon = image('icons/obj/bodybag.dmi', src, "cryocard_[stasis_mob.holo_card_color]")
+
+		if(!holo_card_icon) // makes sure an icon was actually located
+			return
+
+		overlays |= holo_card_icon
+
+/obj/structure/closet/bodybag/cryobag/attack_hand(mob/living/user)
+	if(!opened && stasis_mob && open_cooldown <= world.time)
+		user.visible_message(SPAN_WARNING("[user] opens [src]."), SPAN_NOTICE("You open [src]."))
+		user.attack_log += text("\[[time_stamp()]\] opened stasis bag containing <b>[key_name(stasis_mob)]</b> at [get_area(src)] ([loc.x],[loc.y],[loc.z])")
+		stasis_mob.attack_log += text("\[[time_stamp()]\] had their stasis bag opened by <b>[key_name(user)]</b> at [get_area(src)] ([loc.x],[loc.y],[loc.z])")
 	. = ..()
+
+/obj/structure/closet/bodybag/cryobag/open(mob/user, force)
+	. = ..()
+	if(stasis_mob)
+		stasis_mob.in_stasis = FALSE
+		UnregisterSignal(stasis_mob, COMSIG_HUMAN_TRIAGE_CARD_UPDATED)
+		stasis_mob = null
+	STOP_PROCESSING(SSobj, src)
 	if(used > max_uses)
 		new /obj/item/trash/used_stasis_bag(loc)
 		qdel(src)
 
-/obj/structure/closet/bodybag/cryobag/store_mobs(stored_units) // overriding this
+/obj/structure/closet/bodybag/cryobag/store_mobs(stored_units)
+	. = ..()
 	var/list/mobs_can_store = list()
-	for(var/mob/living/carbon/human/H in loc)
-		if(H.buckled)
+	for(var/mob/living/carbon/human/human in loc)
+		if(human.buckled || (human.stat == DEAD))
 			continue
-		if(H.stat == DEAD) // dead, nope
-			continue
-		mobs_can_store += H
-	var/mob/living/carbon/human/mob_to_store
+		mobs_can_store += human
 	if(length(mobs_can_store))
-		mob_to_store = pick(mobs_can_store)
+		var/mob/living/carbon/human/mob_to_store = pick(mobs_can_store)
 		mob_to_store.forceMove(src)
 		stored_units += mob_size
 	return stored_units
@@ -280,11 +319,13 @@
 /obj/structure/closet/bodybag/cryobag/close()
 	. = ..()
 	last_use = used + 1
-	var/mob/living/carbon/human/H = locate() in contents
-	if(H)
-		stasis_mob = H
+	for(var/mob/living/carbon/human/human in contents)
+		stasis_mob = human
+		// Uses RegisterSignal with an override, just in case the human escaped the last bag without calling open() somehow
+		RegisterSignal(human, COMSIG_HUMAN_TRIAGE_CARD_UPDATED, PROC_REF(update_icon), TRUE)
 		START_PROCESSING(SSobj, src)
 		update_icon()
+		return
 
 /obj/structure/closet/bodybag/cryobag/process()
 	used++
@@ -366,6 +407,6 @@
 
 /obj/item/trash/used_stasis_bag
 	name = "used stasis bag"
-	icon = 'icons/obj/cryobag.dmi'
-	icon_state = "bodybag_used"
+	icon = 'icons/obj/bodybag.dmi'
+	icon_state = "cryobag_used"
 	desc = "It's been ripped open. You will need to find a machine capable of recycling it."

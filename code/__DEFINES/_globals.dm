@@ -9,12 +9,29 @@
 /// Creates an empty global initializer, do not use
 #define GLOBAL_UNMANAGED(X) /datum/controller/global_vars/proc/InitGlobal##X() { return; }
 
+#define GLOBAL_MANAGED_MULTIPLE(X)\
+/datum/controller/global_vars/proc/InitGlobal##X(){\
+	##X = CollectGlobal##X();\
+}\
+/datum/controller/global_vars/proc/CollectGlobal##X(){\
+	CAN_BE_REDEFINED(TRUE);\
+	return list();\
+}
+
+#define GLOBAL_MULTIPLE_UPDATE(X, NewValue)\
+/datum/controller/global_vars/CollectGlobal##X(){\
+	. = ..();\
+	. += ##NewValue;\
+}
+
 /// Creates name keyed subtype instance list
 #define GLOBAL_SUBTYPE_INDEXED(X, TypePath, Index)\
 /datum/controller/global_vars/proc/InitGlobal##X(){\
 	##X = list();\
 	for(var/t in subtypesof(TypePath)){\
 		var##TypePath/A = new t;\
+		var##TypePath/existing = ##X[A.##Index];\
+		if(existing && !isnull(A.##Index)) stack_trace("'[A.##Index]' index for [t] in [#X] overlaps with [existing.type]! It must have a unique index for lookup!");\
 		##X[A.##Index] = A;\
 	}\
 	gvars_datum_init_order += #X;\
@@ -26,6 +43,8 @@
 	##X = list();\
 	for(var/t in subtypesof(TypePath)){\
 		var##TypePath/A = t;\
+		var##TypePath/existing = ##X[initial(A.##Index)];\
+		if(existing && !isnull(initial(A.##Index))) stack_trace("'[initial(A.##Index)]' index for [t] in [#X] overlaps with [existing]! It must have a unique index for lookup!");\
 		##X[initial(A.##Index)] = t;\
 	}\
 	gvars_datum_init_order += #X;\
@@ -64,6 +83,8 @@
 
 /// Create a global const var, do not use
 #define GLOBAL_VAR_CONST(X, InitValue) GLOBAL_RAW(/const/##X) = InitValue; GLOBAL_UNMANAGED(X)
+
+#define GLOBAL_MULTIPLE(X) GLOBAL_RAW(/list/##X); GLOBAL_MANAGED_MULTIPLE(X)
 
 /// Create a list global with an initializer expression
 #define GLOBAL_LIST_INIT(X, InitValue) GLOBAL_RAW(/list/##X); GLOBAL_MANAGED(X, InitValue)

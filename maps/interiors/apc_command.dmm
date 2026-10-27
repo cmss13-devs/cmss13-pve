@@ -68,12 +68,6 @@
 	icon = 'icons/obj/vehicles/interiors/general.dmi';
 	pixel_y = 28
 	},
-/obj/structure/bed/chair/vehicle{
-	pixel_x = -8
-	},
-/obj/structure/bed/chair/vehicle{
-	pixel_x = 8
-	},
 /turf/open/shuttle/vehicle/floor_3_13,
 /area/interior/vehicle/apc/command)
 "k" = (
@@ -106,13 +100,13 @@
 	},
 /obj/structure/machinery/computer/groundside_operations{
 	dir = 4;
-	indestructible = 1;
+	explo_proof = 1;
 	layer = 2.82;
 	pixel_y = -10
 	},
 /obj/structure/machinery/computer/overwatch/almayer{
 	dir = 8;
-	indestructible = 1;
+	explo_proof = 1;
 	layer = 2.81;
 	pixel_y = 4
 	},
@@ -128,11 +122,8 @@
 /obj/structure/vehicle_locker{
 	pixel_y = 28
 	},
-/obj/structure/bed/chair/vehicle{
-	pixel_x = -8
-	},
-/obj/structure/bed/chair/vehicle{
-	pixel_x = 8
+/obj/effect/landmark/interior/spawn/vehicle_gunner_seat/armor{
+	dir = 4
 	},
 /turf/open/shuttle/vehicle/floor_3_8_1,
 /area/interior/vehicle/apc/command)
@@ -141,7 +132,7 @@
 /area/interior/vehicle/apc/command)
 "s" = (
 /obj/structure/machinery/prop/almayer/CICmap{
-	indestructible = 1;
+	explo_proof = 1;
 	unslashable = 1
 	},
 /obj/structure/surface/table/reinforced/prison,
@@ -168,10 +159,7 @@
 /obj/structure/bed/chair/comfy{
 	dir = 8
 	},
-/obj/structure/phone_base{
-	name = "APC reciever";
-	phone_category = "Vehicles";
-	phone_id = "M577-CMD Armoured Personnel Carrier";
+/obj/effect/landmark/interior/spawn/telephone{
 	pixel_x = -9;
 	pixel_y = 30
 	},

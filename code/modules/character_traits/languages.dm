@@ -35,23 +35,13 @@
 	applyable = TRUE
 	cost = 1
 
-/datum/character_trait/language/scandinavian
-	language_name = LANGUAGE_SCANDINAVIAN
-	applyable = TRUE
-	cost = 1
-
 /datum/character_trait/language/german
 	language_name = LANGUAGE_GERMAN
 	applyable = TRUE
 	cost = 1
 
-/datum/character_trait/language/spanish
-	language_name = LANGUAGE_SPANISH
-	applyable = TRUE
-	cost = 1
-
-/datum/character_trait/language/portuguese
-	language_name = LANGUAGE_PORTUGUESE
+/datum/character_trait/language/scandinavian
+	language_name = LANGUAGE_SCANDINAVIAN
 	applyable = TRUE
 	cost = 1
 
@@ -60,29 +50,10 @@
 	applyable = TRUE
 	cost = 1
 
-/datum/character_trait/language/filipino
-	language_name = LANGUAGE_FILIPINO
+/datum/character_trait/language/spanish
+	language_name = LANGUAGE_SPANISH
 	applyable = TRUE
 	cost = 1
-
-/datum/character_trait/language/ruspatois
-	language_name = LANGUAGE_RUSPATOIS
-	applyable = TRUE
-	cost = 1
-
-/datum/character_trait/language/english
-	language_name = LANGUAGE_ENGLISH
-	applyable = TRUE
-	cost = 1
-
-/datum/character_trait/language/polish
-	language_name = LANGUAGE_POLISH
-	applyable = TRUE
-	cost = 1
-
-/datum/character_trait/language/english/New()
-	..()
-	trait_desc = "Can speak the language [language_name]. Not at all useful if you're in the Marine Corps."
 
 /datum/character_trait/language/primitive
 	language_name = LANGUAGE_MONKEY
@@ -94,4 +65,12 @@
 
 /datum/character_trait/language/sainja
 	language_name = LANGUAGE_YAUTJA
+	applyable = FALSE
+
+/datum/character_trait/language/tactical_sign_language
+	language_name = LANGUAGE_TSL
+	applyable = FALSE
+
+/datum/character_trait/language/forgotten
+	language_name = LANGUAGE_FORGOTTEN
 	applyable = FALSE

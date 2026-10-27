@@ -56,36 +56,31 @@ GLOBAL_LIST_INIT(snow_recipes, list(
 
 
 /obj/item/stack/snow/afterattack(atom/target, mob/user, proximity)
-	if(!proximity) return
-	if(istype(target, /turf/open))
+	if(!proximity)
+		return
+	if(istype(target, /turf/open/auto_turf/snow))
 		if(user.action_busy)
 			return
-		var/turf/open/T = target
-		if(istype(T,/turf/open/snow) || istype(T,/turf/open/auto_turf/snow))
-			if(T.bleed_layer >= 3)
-				to_chat(user, "This ground is already full of snow.")
-				return
-			to_chat(user, "You start putting some snow back on the ground.")
-			if(!do_after(user, 15, INTERRUPT_ALL|BEHAVIOR_IMMOBILE, BUSY_ICON_BUILD))
-				to_chat(user, "You stop putting some snow back on the ground.")
-				return
-			if(T.bleed_layer >= 3)
-				return
-			to_chat(user, "You put a new snow layer on the ground.")
-			if(istype(T,/turf/open/auto_turf/snow))
-				var/turf/open/auto_turf/snow/AT = T
-				AT.changing_layer(AT.bleed_layer += 1)
-			else
-				T.bleed_layer++
-				T.update_icon(TRUE, FALSE)
-			use(1)
+		var/turf/open/auto_turf/snow/snow_turf = target
+		if(snow_turf.bleed_layer >= 3)
+			to_chat(user, "This ground is already full of snow.")
+			return
+		to_chat(user, "You start putting some snow back on the ground.")
+		if(!do_after(user, 15, INTERRUPT_ALL|BEHAVIOR_IMMOBILE, BUSY_ICON_BUILD))
+			to_chat(user, "You stop putting some snow back on the ground.")
+			return
+		if(snow_turf.bleed_layer >= 3)
+			return
+		to_chat(user, "You put a new snow layer on the ground.")
+		snow_turf.changing_layer(snow_turf.bleed_layer + 1)
+		use(1)
 
 /obj/item/snowball
 	name = "snowball"
 	desc = "A weapon of mass destruction, this perfectly crafted item can be used to decimate the enemy forces, provided there isn't a shoebill to block your shot..."
-	icon = 'icons/obj/items/weapons/weapons.dmi'
+	icon = 'icons/obj/items/toy.dmi'
 	icon_state = "snowball"
-	item_state = "lgloves"
+	item_state = "latex"
 	flags_atom = ITEM_UNCATCHABLE
 	force = 0
 	w_class = SIZE_SMALL

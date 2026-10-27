@@ -3,8 +3,12 @@
 ////////////////////////////////////////////////////////////////////////////////
 /obj/item/reagent_container/food/drinks
 	name = "drink"
-	desc = "yummy"
-	icon = 'icons/obj/items/drinks.dmi'
+	desc = "Yummy."
+	icon = 'icons/obj/items/food/drinks.dmi'
+	item_icons = list(
+		WEAR_L_HAND = 'icons/mob/humans/onmob/inhands/items/bottles_lefthand.dmi',
+		WEAR_R_HAND = 'icons/mob/humans/onmob/inhands/items/bottles_righthand.dmi',
+	)
 	icon_state = null
 	flags_atom = FPRINT|OPENCONTAINER
 	var/gulp_size = 5 //This is now officially broken ... need to think of a nice way to fix it.
@@ -14,12 +18,8 @@
 /obj/item/reagent_container/food/drinks/on_reagent_change()
 	if(gulp_size < 5)
 		gulp_size = 5
-	else gulp_size = max(floor(reagents.total_volume / 5), 5)
-
-/obj/item/reagent_container/food/drinks/flask/on_reagent_change()
-	if(gulp_size < 15)
-		gulp_size = 15
-	else gulp_size = max(floor(reagents.total_volume / 15), 15)
+	else
+		gulp_size = max(floor(reagents.total_volume / 5), 5)
 
 /obj/item/reagent_container/food/drinks/attack(mob/M, mob/user)
 	var/datum/reagents/R = src.reagents
@@ -33,14 +33,14 @@
 		return FALSE
 
 	if(M == user)
-		to_chat(M, SPAN_NOTICE(" You swallow a gulp from \the [src]."))
+		to_chat(M, SPAN_NOTICE("You swallow a gulp from \the [src]."))
 		if(reagents.total_volume)
 			reagents.set_source_mob(user)
 			reagents.trans_to_ingest(M, gulp_size)
 
 		playsound(M.loc,'sound/items/drink.ogg', 15, 1)
 		return TRUE
-	else if(istype(M, /mob/living/carbon/human))
+	else if(istype(M, /mob/living/carbon))
 
 		user.affected_message(M,
 			SPAN_HELPFUL("You <b>start feeding</b> [user == M ? "yourself" : "[M]"] <b>[src]</b>."),
@@ -71,7 +71,8 @@
 
 
 /obj/item/reagent_container/food/drinks/afterattack(obj/target, mob/user, proximity)
-	if(!proximity) return
+	if(!proximity)
+		return
 
 	if(istype(target, /obj/structure/reagent_dispensers)) //A dispenser. Transfer FROM it TO us.
 
@@ -89,7 +90,7 @@
 			to_chat(user, SPAN_DANGER("You fail to fill [src] with reagents from [target]."))
 			return
 
-		to_chat(user, SPAN_NOTICE(" You fill [src] with [trans] units of the contents of [target]."))
+		to_chat(user, SPAN_NOTICE("You fill [src] with [trans] units of the contents of [target]."))
 
 	else if(target.is_open_container()) //Something like a glass. Player probably wants to transfer TO it.
 		if(!reagents.total_volume)
@@ -101,7 +102,7 @@
 			return
 
 		var/trans = src.reagents.trans_to(target, amount_per_transfer_from_this)
-		to_chat(user, SPAN_NOTICE(" You transfer [trans] units of the solution to [target]."))
+		to_chat(user, SPAN_NOTICE("You transfer [trans] units of the solution to [target]."))
 
 	return ..()
 
@@ -126,10 +127,10 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 /obj/item/reagent_container/food/drinks/golden_cup
-	desc = "A golden cup"
+	desc = "A golden cup."
 	name = "golden cup"
 	icon_state = "golden_cup"
-	item_state = "" //nope :(
+	item_state = "golden_cup" //nope :(? nope my ass
 	w_class = SIZE_LARGE
 	force = 14
 	throwforce = 10
@@ -149,10 +150,10 @@
 // Formatting is the same as food.
 
 /obj/item/reagent_container/food/drinks/milk
-	name = "milk carton"
-	desc = "A carton of 2% cow milk."
+	name = "Space Milk"
+	desc = "It's milk. White and nutritious goodness!"
 	icon_state = "milk"
-	item_state = "carton"
+	item_state = "milk"
 	center_of_mass = "x=16;y=9"
 
 /obj/item/reagent_container/food/drinks/milk/Initialize()
@@ -175,31 +176,21 @@
 */
 
 /obj/item/reagent_container/food/drinks/soymilk
-	name = "soy milk carton"
-	desc = "A carton of soy milk."
+	name = "soy milk"
+	desc = "It's soy milk. White and nutritious goodness!"
 	icon_state = "soymilk"
-	item_state = "carton"
+	item_state = "soymilk"
 	center_of_mass = "x=16;y=9"
 
 /obj/item/reagent_container/food/drinks/soymilk/Initialize()
 	. = ..()
 	reagents.add_reagent("soymilk", 50)
 
-/obj/item/reagent_container/food/drinks/chocolatemilk
-	name = "chocolate milk carton"
-	desc = "A carton of chocolate milk."
-	icon_state = "chocmilk"
-	item_state = "carton"
-	center_of_mass = "x=16;y=9"
-
-/obj/item/reagent_container/food/drinks/chocolatemilk/Initialize()
-	. = ..()
-	reagents.add_reagent("chocolatemilk", 50)
-
 /obj/item/reagent_container/food/drinks/coffee
 	name = "\improper Coffee"
 	desc = "Careful, the beverage you're about to enjoy is extremely hot."
 	icon_state = "coffee"
+	item_state = "coffee"
 	center_of_mass = "x=15;y=10"
 
 /obj/item/reagent_container/food/drinks/coffee/Initialize()
@@ -213,34 +204,12 @@
 	name = "\improper Duke Purple Tea"
 	desc = "An insult to Duke Purple is an insult to the Space Queen! Any proper gentleman will fight you, if you sully this tea."
 	icon_state = "tea"
-	item_state = "coffee"
+	item_state = "tea"
 	center_of_mass = "x=16;y=14"
 
 /obj/item/reagent_container/food/drinks/tea/Initialize()
 	. = ..()
 	reagents.add_reagent("tea", 30)
-
-/obj/item/reagent_container/food/drinks/tea/upp
-	name = "\improper insulated container"
-	desc = "A small, reusable, insulated container for holding liquids with a sip lid."
-	icon_state = "tea_upp"
-	item_state = "coffee"
-	center_of_mass = "x=16;y=14"
-
-/obj/item/reagent_container/food/drinks/tea/upp/Initialize()
-	. = ..()
-	reagents.add_reagent("tea", 30)
-
-/obj/item/reagent_container/food/drinks/water
-	name = "\improper insulated container"
-	desc = "A small, reusable, insulated container for holding liquids with a sip lid."
-	icon_state = "tea_upp"
-	item_state = "coffee"
-	center_of_mass = "x=16;y=14"
-
-/obj/item/reagent_container/food/drinks/water/Initialize()
-	. = ..()
-	reagents.add_reagent("water", 30)
 
 /obj/item/reagent_container/food/drinks/ice
 	name = "ice cup"
@@ -257,7 +226,7 @@
 	name = "\improper Dutch hot coco"
 	desc = "Made in Space South America."
 	icon_state = "hot_coco"
-	item_state = "coffee"
+	item_state = "hot_coco"
 	center_of_mass = "x=15;y=13"
 
 /obj/item/reagent_container/food/drinks/h_chocolate/Initialize()
@@ -279,8 +248,9 @@
 	name = "paper cup"
 	desc = "A paper water cup."
 	icon_state = "water_cup_e"
+	item_state = "water_cup_e"
 	possible_transfer_amounts = null
-	volume = 10
+	volume = 30
 	center_of_mass = "x=16;y=12"
 
 /obj/item/reagent_container/food/drinks/sillycup/Initialize()
@@ -295,7 +265,7 @@
 /obj/item/reagent_container/food/drinks/cup
 	name = "plastic cup"
 	desc = "A generic red cup. Beer pong, anyone?"
-	icon = 'icons/obj/items/cup.dmi'
+	icon = 'icons/obj/items/food/drinks.dmi'
 	icon_state = "solocup"
 	throwforce = 0
 	w_class = SIZE_TINY
@@ -317,7 +287,7 @@
 /obj/item/trash/crushed_cup
 	name = "crushed cup"
 	desc = "A sad crushed and destroyed cup. It's now useless trash. What a waste."
-	icon = 'icons/obj/items/cup.dmi'
+	icon = 'icons/obj/items/food/drinks.dmi'
 	icon_state = "crushed_solocup"
 	throwforce = 0
 	w_class = SIZE_TINY
@@ -341,54 +311,66 @@
 	name = "metal flask"
 	desc = "A metal flask with a decent liquid capacity."
 	icon_state = "flask"
-	volume = 120
+	item_state = "flask"
+	item_state_slots = list(WEAR_AS_GARB = "flask")
+	item_icons = list(
+		WEAR_AS_GARB = 'icons/mob/humans/onmob/clothing/helmet_garb/misc.dmi',
+		WEAR_L_HAND = 'icons/mob/humans/onmob/inhands/items/bottles_lefthand.dmi',
+		WEAR_R_HAND = 'icons/mob/humans/onmob/inhands/items/bottles_righthand.dmi',
+	)
+	volume = 60
 	center_of_mass = "x=17;y=8"
 
 /obj/item/reagent_container/food/drinks/flask/marine
 	name = "\improper USCM flask"
 	desc = "A metal flask embossed with the USCM logo and probably filled with a slurry of water, motor oil, and medicinal alcohol."
 	icon_state = "flask_uscm"
-	volume = 120
+	item_state = "flask_uscm"
+	volume = 60
 	center_of_mass = "x=17;y=8"
 
 /obj/item/reagent_container/food/drinks/flask/marine/Initialize()
 	. = ..()
-	reagents.add_reagent("water", 118)
-	reagents.add_reagent("hooch", 2)
+	reagents.add_reagent("water", 59)
+	reagents.add_reagent("hooch", 1)
+
+/obj/item/reagent_container/food/drinks/flask/marine/army
+	name = "\improper US Army flask"
+	icon_state = "flask_army"
+	item_state = "flask_army"
+	desc = "A metal flask embossed with the US Army logo and probably filled with a slurry of water, motor oil, and medicinal alcohol. Albeit, higher quality motor oil compared to Marine rations."
 
 /obj/item/reagent_container/food/drinks/flask/weylandyutani
 	name = "\improper Weyland-Yutani flask"
 	desc = "A metal flask embossed with Weyland-Yutani's signature logo that some corporate bootlicker probably ordered to be stocked in USS military vessels' canteen vendors."
 	icon_state = "flask_wy"
-	volume = 120
+	item_state = "flask_wy"
+	volume = 60
 	center_of_mass = "x=17;y=8"
 
 /obj/item/reagent_container/food/drinks/flask/weylandyutani/Initialize()
 	. = ..()
 	reagents.add_reagent("fruit_beer", 60)
+	AddElement(/datum/element/corp_label/wy)
 
 /obj/item/reagent_container/food/drinks/flask/canteen
 	name = "canteen"
-	desc = "A ruggedized metal alloy flask. Can hold a good amount of water... Or other liquids."
+	desc = "You take a sip from your trusty USCM canteen..."
 	icon_state = "canteen"
-	volume = 120
+	item_state = "canteen"
+	volume = 60
 	center_of_mass = "x=17;y=8"
 
 /obj/item/reagent_container/food/drinks/flask/canteen/Initialize()
 	. = ..()
-	reagents.add_reagent("water", 120)
-
-/obj/item/reagent_container/food/drinks/flask/canteen/empty
-
-/obj/item/reagent_container/food/drinks/flask/canteen/empty/Initialize()
-	. = ..()
-	reagents.clear_reagents()
+	reagents.add_reagent("water", 60)
 
 /obj/item/reagent_container/food/drinks/flask/detflask
 	name = "brown leather flask"
 	desc = "A flask with a leather band around the sides, often seen filled with whiskey and carried by rugged, gritty detectives."
 	icon_state = "brownflask"
-	volume = 120
+	item_state = "brownflask"
+	volume = 60
 	center_of_mass = "x=17;y=8"
 
 /obj/item/reagent_container/food/drinks/flask/detflask/Initialize()
@@ -400,34 +382,45 @@
 	name = "black leather flask"
 	desc = "A flask with a slick black leather band around the sides. For those who can't be bothered to hang out at the bar to drink."
 	icon_state = "blackflask"
-	volume = 120
+	item_state = "blackflask"
+	volume = 60
 	center_of_mass = "x=17;y=7"
 
 /obj/item/reagent_container/food/drinks/flask/vacuumflask
 	name = "vacuum flask"
 	desc = "Keeping your drinks at the perfect temperature since 1892."
 	icon_state = "vacuumflask"
-	volume = 120
+	volume = 60
 	center_of_mass = "x=15;y=4"
 
 /obj/item/reagent_container/food/drinks/coffeecup
 	name = "coffee mug"
 	desc = "A ceramic coffee mug. Practically guaranteed to fall and spill scalding-hot drink onto your brand-new shirt. Ouch."
 	icon_state = "coffeecup"
+	item_state = "coffecup"
 	volume = 30
 	center_of_mass = "x=15;y=13"
 
 /obj/item/reagent_container/food/drinks/coffeecup/uscm
-	name = "USCM coffee mug"
+	name = "\improper USCM coffee mug"
 	desc = "A red, white and blue coffee mug depicting the emblem of the USCM. Patriotic and bold, and commonly seen among veterans as a novelty."
 	icon_state = "uscmcup"
+	item_state = "uscmcup"
 
 /obj/item/reagent_container/food/drinks/coffeecup/wy
-	name = "Weyland-Yutani coffee mug"
+	name = "\improper Weyland-Yutani coffee mug"
 	desc = "A matte gray coffee mug bearing the Weyland-Yutani logo on its front. Either issued as corporate standard, or bought as a souvenir for people who love the Company oh so dearly. Probably the former."
 	icon_state = "wycup"
+	item_state = "wycup"
 
-/obj/item/reagent_container/food/drinks/plasticcup
-	name = "plastic cup"
-	icon_state = "plasticcup"
-	desc = "A decent sized plastic cup, perfect aboard starships for it's capacity to deal with careless handling by roughnecks."
+/obj/item/reagent_container/food/drinks/coffeecup/wy/Initialize()
+	. = ..()
+	AddElement(/datum/element/corp_label/wy)
+
+// Hybrisa
+
+/obj/item/reagent_container/food/drinks/coffee/cuppa_joes
+	name = "\improper Cuppa Joe's coffee"
+	desc = "Have you got the CuppaJoe Smile? Stay perky! Freeze-dried CuppaJoe's Coffee."
+	icon_state = "coffeecuppajoe"
+	center_of_mass = "x=15;y=10"

@@ -13,18 +13,6 @@
 	var/allow_reagents = 0
 	var/malfunction = 0
 
-/obj/item/implant/proc/do_implant(mob/living/carbon/implantee, target_limb)
-	implanted(implantee)
-	forceMove(implantee)
-	imp_in = implantee
-	implanted = TRUE
-	if(ishuman(implantee))
-		var/mob/living/carbon/human/human = implantee
-		var/obj/limb/affected = human.get_limb(target_limb)
-		affected.implants += src
-		part = affected
-
-
 /obj/item/implant/proc/trigger(emote, source as mob)
 	return
 
@@ -46,7 +34,7 @@
 /obj/item/implant/proc/islegal()
 	return 0
 
-/obj/item/implant/proc/meltdown() //breaks it down, making implant unrecongizible
+/obj/item/implant/proc/meltdown() //breaks it down, making implant unrecongizeable
 	to_chat(imp_in, SPAN_WARNING("You feel something melting inside [part ? "your [part.display_name]" : "you"]!"))
 	if (part)
 		part.take_damage(burn = 15, used_weapon = "Electronics meltdown")
@@ -137,7 +125,8 @@ Implant Specifics:<BR>"}
 
 
 /obj/item/implant/dexplosive/activate(cause)
-	if((!cause) || (!src.imp_in)) return 0
+	if((!cause) || (!src.imp_in))
+		return 0
 	explosion(src, -1, 0, 2, 3, 0)//This might be a bit much, dono will have to see.
 	if(src.imp_in)
 		src.imp_in.gib()
@@ -312,7 +301,8 @@ the implant may become unstable and either pre-maturely inject the subject or si
 
 
 /obj/item/implant/chem/activate(cause)
-	if((!cause) || (!src.imp_in)) return 0
+	if((!cause) || (!src.imp_in))
+		return 0
 	var/mob/living/carbon/R = src.imp_in
 	src.reagents.trans_to(R, cause)
 	to_chat(R, "You hear a faint *beep*.")
@@ -352,13 +342,15 @@ the implant may become unstable and either pre-maturely inject the subject or si
 <HR>
 <b>Implant Details:</b><BR>
 <b>Function:</b> Marks the host as WY property and allow special monitoring functions.<BR>
-<b>Special Features:</b> Will make the host more resistent to brainwashing techniques.<BR>
+<b>Special Features:</b> Will make the host more resistant to brainwashing techniques.<BR>
 <b>Integrity:</b> Implant will last approximately ten years."}
 	return dat
 
 /obj/item/implant/loyalty/implanted(mob/M)
-	if(!ishuman(M)) return
-	if(isyautja(M)) return
+	if(!ishuman(M))
+		return
+	if(isyautja(M))
+		return
 	var/mob/living/carbon/human/H = M
 	to_chat(H, SPAN_NOTICE("You are now tagged as a WY loyalist and will be monitored by their central headquarters. You retain your free will and mental faculties."))
 	return 1
@@ -386,7 +378,7 @@ the implant may become unstable and either pre-maturely inject the subject or si
 	if (src.uses < 1) return 0
 	if (emote == "pale")
 		src.uses--
-		to_chat(source, SPAN_NOTICE(" You feel a sudden surge of energy!"))
+		to_chat(source, SPAN_NOTICE("You feel a sudden surge of energy!"))
 		source.set_effect(0, STUN)
 		source.set_effect(0, WEAKEN)
 		source.set_effect(0, PARALYZE)
@@ -511,77 +503,3 @@ the implant may become unstable and either pre-maturely inject the subject or si
 
 /obj/item/implant/compressed/islegal()
 	return 0
-
-/obj/item/implant/poison_tooth
-	name = "tooth"
-	desc = "This one seems particularly clean."
-	icon = 'icons/obj/items/items.dmi'
-	icon_state = "tooth"
-	w_class = SIZE_TINY
-	var/activation_emote
-	var/poison_reagent = "cyanide"
-	var/poison_amount = 50
-
-/obj/item/implant/poison_tooth/meltdown()
-	return
-
-/obj/item/implant/poison_tooth/trigger(emote, mob/source)
-	if (emote == activation_emote)
-		activate()
-
-/obj/item/implant/poison_tooth/activate()
-	if(iscarbon(imp_in))
-		var/mob/living/carbon/mob = imp_in
-		if(!mob.reagents)
-			return
-		to_chat(mob, SPAN_WARNING("You feel your poison tooth shatter, sprinkling some liquid into your mouth..."))
-		mob.reagents.add_reagent(poison_reagent, poison_amount)
-		playsound(imp_in, 'sound/items/poison_tooth.ogg', 15, TRUE)
-	qdel(src)
-
-/obj/item/implant/poison_tooth/implanted(mob/source)
-	activation_emote = tgui_input_list(usr, "Choose activation emote:", "Emote", list("grin", "smile"))
-	if (source.mind)
-		source.mind.store_memory("Poison tooth will shatter by using the [activation_emote] emote, <B>say *[src.activation_emote]</B> to attempt to activate it.", 0, 0)
-	to_chat(source, SPAN_NOTICE("Poison tooth will shatter by using the [activation_emote] emote, <B>say *[src.activation_emote]</B> to attempt to activate it"))
-	return TRUE
-
-/obj/item/implant/poison_tooth/islegal()
-	return FALSE
-
-/obj/item/implant/poison_tooth/preset/implanted(mob/source)
-	activation_emote = pick("grin", "smile")
-	if (source.mind)
-		source.mind.store_memory("Poison tooth will shatter by using the [activation_emote] emote, <B>say *[src.activation_emote]</B> to attempt to activate it.", 0, 0)
-	to_chat(source, SPAN_NOTICE("Poison tooth will shatter by using the [activation_emote] emote, <B>say *[src.activation_emote]</B> to attempt to activate it"))
-	return TRUE
-
-/obj/item/implant/poison_tooth/cia
-	poison_reagent = "cia_toxin"
-
-/obj/item/implant/poison_tooth/preset/cia
-	poison_reagent = "cia_toxin"
-
-/obj/item/implant/poison_tooth/mss
-	poison_reagent = "mss_toxin"
-
-/obj/item/implant/poison_tooth/preset/mss
-	poison_reagent = "mss_toxin"
-
-
-/obj/item/storage/syringe_case/poison_tooth
-	storage_slots = 4
-	can_hold = list(
-		/obj/item/implant/poison_tooth,
-		/obj/item/tool/surgery/hemostat/miniature,
-		/obj/item/paper,
-		/obj/item/reagent_container/syringe,
-	)
-
-/obj/item/storage/syringe_case/poison_tooth/fill_preset_inventory()
-	new /obj/item/implant/poison_tooth(src)
-	new /obj/item/tool/surgery/hemostat/miniature(src)
-	new /obj/item/reagent_container/syringe/oxycodone(src)
-	var/obj/item/paper/paper = new(src)
-	paper.info = "1. Inject a dose of oxycodone.\n2. Remove one of your molars from your <b>mouth</b> using a <b>hemostat</b>\n3. Carefully insert the tooth."
-	paper.update_icon()

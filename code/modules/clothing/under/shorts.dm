@@ -1,16 +1,15 @@
 /obj/item/clothing/under/shorts
 	name = "athletic shorts"
 	desc = "95% Polyester, 5% Spandex!"
+	icon = 'icons/obj/items/clothing/uniforms/underwear_uniforms.dmi'
+	item_icons = list(
+		WEAR_BODY = 'icons/mob/humans/onmob/clothing/uniforms/underwear_uniforms.dmi',
+	)
 	gender = PLURAL
 	flags_armor_protection = BODY_FLAG_GROIN
 
 /obj/item/clothing/under/shorts/red
 	name = "red athletic shorts"
-	icon_state = "redshorts"
-
-/obj/item/clothing/under/shorts/red/uscm
-	name = "USCM PT shorts"
-	desc = "Silky smooth Marine Corps PT shorts."
 	icon_state = "redshorts"
 
 /obj/item/clothing/under/shorts/green

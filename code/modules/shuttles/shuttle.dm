@@ -7,7 +7,6 @@
 	var/name = "Shuttle" //Name of the shuttle, for messages
 	var/warmup_time = 0
 	var/moving_status = SHUTTLE_IDLE
-	var/move_scheduled = 0
 	var/turf/target_turf = null
 	var/target_rotation = 0
 	var/list/shuttle_turfs = null
@@ -34,7 +33,8 @@
 	var/ambience_muffle = MUFFLE_HIGH
 
 /datum/shuttle/proc/short_jump(area/origin, area/destination)
-	if(moving_status != SHUTTLE_IDLE) return
+	if(moving_status != SHUTTLE_IDLE)
+		return
 
 	//it would be cool to play a sound here
 	moving_status = SHUTTLE_WARMUP
@@ -47,7 +47,8 @@
 		moving_status = SHUTTLE_IDLE
 
 /datum/shuttle/proc/long_jump(area/departing, area/destination, area/interim, travel_time, direction)
-	if(moving_status != SHUTTLE_IDLE) return
+	if(moving_status != SHUTTLE_IDLE)
+		return
 
 	moving_status = SHUTTLE_WARMUP
 	if(transit_optimized)
@@ -87,7 +88,8 @@
 
 /* Pseudo-code. Auto-bolt shuttle airlocks when in motion.
 /datum/shuttle/proc/toggle_doors(close_doors, bolt_doors, area/whatArea)
-	if(!whatArea) return <-- logic checks!
+	if(!whatArea)
+		return <-- logic checks!
 		for(all doors in whatArea)
 			if(door.id is the same as src.id)
 				if(close_doors)
@@ -111,9 +113,6 @@
 			INVOKE_ASYNC(P, TYPE_PROC_REF(/obj/structure/machinery/door, close))
 
 	if (iselevator) // Super snowflake code
-		for (var/obj/structure/machinery/computer/shuttle_control/ice_colony/C in area)
-			C.animate_on()
-
 		for (var/turf/closed/shuttle/elevator/gears/G in area)
 			G.start()
 
@@ -140,8 +139,6 @@
 			INVOKE_ASYNC(P, TYPE_PROC_REF(/obj/structure/machinery/door, open))
 
 	if (iselevator) // Super snowflake code
-		for (var/obj/structure/machinery/computer/shuttle_control/ice_colony/C in area)
-			C.animate_off()
 
 		for (var/turf/closed/shuttle/elevator/gears/G in area)
 			G.stop()

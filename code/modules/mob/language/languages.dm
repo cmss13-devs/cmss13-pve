@@ -8,6 +8,7 @@
 	flags = RESTRICTED
 
 	syllables = list("al", "an", "ar", "as", "at", "ea", "ed", "en", "er", "es", "ha", "he", "hi", "in", "is", "it", "le", "me", "nd", "ne", "ng", "nt", "on", "or", "ou", "re", "se", "st", "te", "th", "ti", "to", "ve", "wa", "all", "and", "are", "but", "ent", "era", "ere", "eve", "for", "had", "hat", "hen", "her", "hin", "his", "ing", "ion", "ith", "not", "ome", "oul", "our", "sho", "ted", "ter", "tha", "the", "thi", "tio", "uld", "ver", "was", "wit", "you")
+
 /datum/language/generated //parent type for languages with custom sound generation methods like chinese and japanese
 	space_chance = 100 //uses a unique system
 
@@ -61,27 +62,15 @@
 
 	syllables = list("ha", "pana", "ja", "blo", "que", "spa", "di", "ga", "na", "ces", "si", "mo", "so", "de", "el", "to", "ro", "mi", "ca", "la", "di", "ah", "mio", "tar", "ion", "gran", "van", "jo", "cie", "qie", "las", "locho", "mas", "no", "gui", "es", "mal")
 
-/datum/language/portuguese
-	name = LANGUAGE_PORTUGUESE
-	desc = "The third most common language spoken in the UA."
-	speech_verb = "states"
-	ask_verb = "quizes"
-	exclaim_verb = "yells"
-	color = "portuguese"
-	key = "6"
-
-	syllables = list("o", "de", "e", "que", "um", "para", "com", "por", "seu", "outro", "ele", "já", "eiro", "bem", "bom", "só", "iço", "iça", "lho", "lha", "ção", "pois", "hoje", "ém", "hão", "três", "ela", "aço", "aça", "ça", "você", "ança", "lhe", "lher", "lado", "fim", "nem", "são", "vir", "sem", "sim", "nó", "se", "em", "até", "esse", "nosso", "eu", "dois", "ar", "mal", "não", "muito", "bém", "mais", "en", "tão", "lá", "aí", "ou")
-
-/datum/language/french
-	name = LANGUAGE_FRENCH
-	desc = "The most spoken language on Earth. Vive la France."
-	speech_verb = "proclaims"
-	ask_verb = "inquires"
-	exclaim_verb = "bellows"
-	color = "french"
+/datum/language/event_hivemind
+	name = LANGUAGE_TELEPATH
+	desc = "An event only language that provides a hivemind for its users."
+	speech_verb = "resonates"
+	ask_verb = "resonates"
+	exclaim_verb = "resonates"
+	color = "tajaran"
 	key = "7"
-
-	syllables = list("la", "là", "pou", "tu", "cou", "fou", "sous", "chou", "je", "ro", "po", "me", "âge", "île", "ni", "moi", "ami", "pâtes", "fromage", "vin", "coup", "grâce", "rôle", "et", "beau", "cuit", "clé", "eau", "lit", "pain", "plus", "trop", "agi", "bien", "songé", "cure", "vite", "dur", "vide", "cru", "bas", "ta", "pis", "pire", "mieux", "meilleur", "bien", "mauvais", "à", "belle", "mur", "sac", "chez", "ai", "pomme", "que", "longe", "genre", "mon", "gérée", "série", "erreur", "ira", "jeu", "jou", "pu", "puis", "qui", "que", "côté", "côte", "vie", "ville", "sur", "tard", "les", "des", "voix", "pluie", "pont", "pot", "roue", "peu", "sec", "vis", "où", "ou", "seul", "mienne", "os", "né", "mort", "trou", "pâle", "tue", "cher", "en", "incroyable", "on", "un", "eu", "au", "œil", "aide", "oui", "non", "si", "été", "nez", "près", "après", "mûr", "sûr", "croît", "ère", "lui", "tâche")
+	flags = RESTRICTED|HIVEMIND
 
 /datum/language/generated/chinese
 	name = LANGUAGE_CHINESE
@@ -92,36 +81,27 @@
 	color = "chinese"
 	key = "8"
 
-/datum/language/ruspatois
-	name = LANGUAGE_RUSPATOIS
-	desc = "Russian patois spoken by Eastern Europeans residing for decades within the UA and TWE. Largely incompatible with contemporary Russian."
-	speech_verb = "says"
-	color = "ruspatois"
+/datum/language/french
+	name = LANGUAGE_FRENCH
+	desc = "Standard French, spoken by the French Republic, one of the few independent countries left on Earth."
+	speech_verb = "declares"
+	ask_verb = "inquires"
+	exclaim_verb = "exclaims"
+	color = "french"
 	key = "9"
 
-	syllables = list("che", "de", "da", "du", "yo", "yu", "ty", "yon", "ka", "ke", "don", "yed", "mas", "kyen", "no", "ua", "khe", "kha", "o", "na", "has", "ya", "yen", "tra", "blo", "kho", "est", "soi", "dos", "par", "dya", "tan", "ey", "sa", "kom", "nyo", "min", "svi", "yan", "suy", "des", "ven", "vo", "ro", "ku", "tak", "u", "ov", "so", "ri", "kab", "ten", "nos", "mi", "an", "su", "men", "ma", "dro", "li", "ak", "om", "er", "ir", "ar", "ote", "op", "ki", "to")
+	syllables = list("le", "en", "es", "de", "re", "ai", "an", "ar", "au", "ou", "nt", "on", "er", "ur", "an", "it", "te", "me", "la", "is", "ou", "nt", "on", "er", "ur", "an", "it", "te", "et", "me", "is", "qu", "se", "il", "ent", "que", "ait", "les", "lle", "our", "men", "ais", "est", "tre", "mai", "ous", "par", "ant", "ion", "eme", "tai", "ans", "pas", "ell", "vou", "tou", "pou", "eur", "ont", "res", "dan", "une", "ien", "sur", "son", "mme", "tio", "des")
 
-/datum/language/filipino
-	name = LANGUAGE_FILIPINO
-	desc = "The fourth most common language spoken in the UA."
-	speech_verb = "states"
-	ask_verb = "quizes"
-	exclaim_verb = "yells"
-	color = "filipino"
+/datum/language/forgotten
+	name = LANGUAGE_FORGOTTEN
+	desc = "An old human language forgotten to time. Doubt you will find anyone speaking this unless they got cryogenically frozen."
+	speech_verb = "utters"
+	ask_verb = "questions"
+	exclaim_verb = "shouts"
+	color = "tajaran_signlang"
 	key = "f"
 
-	syllables = list("ako", "ito", "dito", "an", "paa", "lam", "kai", "tay", "saan", "taba", "hok", "kama", "ta", "opi", "oo", "dya", "ryo", "kas", "ngi", "nga", "asu", "kal", "lupa", "damo", "baho", "yon", "mari", "pak", "gan", "king", "atin", "ang", "ng", "sa", "nag", "kita", "han", "kan", "araw", "mala", "laba", "baka", "kay", "kina", "ni", "nina", "para", "tung", "kol", "hing", "gil", "ayon", "tungo", "bag", "ba", "bay")
-
-/datum/language/polish
-	name = LANGUAGE_POLISH
-	desc = "A West Slavic language spoken by Polish people. Currently the fifth most commonly spoken in the UPP."
-	speech_verb = "says"
-	ask_verb = "inquires"
-	exclaim_verb = "shouts"
-	color = "polish"
-	key = "p"
-
-	syllables = list("się", "w", "je", "na", "to", "nie", "że", "i", "z", "do", "tak", "jak", "o", "mnie", "za", "ja", "mi", "ale", "czy", "ty", "ci", "cię", "już", "ma", "mam", "pan", "coś", "dla", "dobrze", "szę", "być", "wię", "mogę", "są", "więc", "kurwa", "pierdole", "był", "moj", "chcę", "ją", "pęk", "gor", "żeb", "że", "źółć", "kto", "bo", "mu", "on", "ona", "tej", "ktoś", "sam", "ta", "czas", "raz", "daj", "kim", "przy", "nikt", "dwa", "cóż", "iść", "ile", "cały", "nią", "idź", "trzy", "rację", "chaj", "spójrz", "nasz", "lub", "kogo", "którą", "źle", "pew", "oto", "całą", "zrób", "wczor", "boga", "bog")
+	syllables = list("le", "en", "es", "de", "re", "ai", "an", "ar", "au", "di", "ga", "na", "ces", "si", "mo", "so", "de", "el", "to", "ro", "mi", "he", "hi", "in", "is", "it", "me", "nd", "ne", "ng", "nt", "on", "or", "ou", "re", "se", "st", "te", "th", "ti", "to", "ve", "pas", "ell", "vou", "tou", "pou", "eur", "ont", "res", "dan", "une", "ien", "sur", "son", "mme", "tio", "des")
 
 /datum/language/hellhound
 	name = LANGUAGE_HELLHOUND
@@ -161,15 +141,6 @@
 	syllables = list("!", "?", ".", "@", "$", "%", "^", "&", "*", "-", "=", "+", "e", "b", "y", "p", "|", "z", "~", ">")
 	space_chance = 20
 
-/datum/language/primitive
-	name = LANGUAGE_MONKEY
-	desc = "Ook ook ook."
-	speech_verb = "chimpers"
-	ask_verb = "chimpers"
-	exclaim_verb = "screeches"
-	color = "monkey"
-	key = "m"
-
 /datum/language/xenomorph
 	name = LANGUAGE_XENOMORPH
 	color = "xenotalk"
@@ -208,7 +179,17 @@
 	speech_verb = "states"
 	ask_verb = "queries"
 	exclaim_verb = "declares"
-	key = "a"
+	key = "6"
+	flags = RESTRICTED|HIVEMIND
+
+/datum/language/artemis
+	name = LANGUAGE_ARTEMIS
+	desc = "The ARTEMIS Link is an AI subprocessor based on APOLLO Link. Its signal is stronger than APOLLO Link to accomidate the ground it must travel through for an underground AI core."
+	color = "skrell"
+	speech_verb = "states"
+	ask_verb = "queries"
+	exclaim_verb = "declares"
+	key = "z"
 	flags = RESTRICTED|HIVEMIND
 
 /datum/language/apollo/broadcast(mob/living/speaker, message, speaker_mask)
@@ -247,17 +228,57 @@
 	var/list/listening = hearers(1, src)
 	listening -= src
 
-	for (var/mob/living/M in listening)
-		if(isSilicon(M) || M.hear_apollo())
+	for (var/mob/living/listener in listening)
+		if(isSilicon(listener) || listener.hear_apollo())
 			continue
-		M.show_message("<i><span class='game say'><span class='name'>synthesised voice</span> <span class='message'>beeps, \"beep beep beep\"</span></span></i>",2)
+		listener.show_message("<i><span class='game say'><span class='name'>synthesised voice</span> <span class='message'>beeps, \"beep beep beep\"</span></span></i>",2)
 
-/datum/language/event_hivemind
-	name = LANGUAGE_TELEPATH
-	desc = "An event only language that provides a hivemind for its users."
-	speech_verb = "resonates"
-	ask_verb = "resonates"
-	exclaim_verb = "resonates"
-	color = "tajaran"
-	key = "t"
-	flags = RESTRICTED|HIVEMIND
+/datum/language/artemis/broadcast(mob/living/speaker, message, speaker_mask)
+	if(!speaker.hear_artemis())
+		return
+
+	if (!message)
+		return
+
+	///Font size
+	var/scale = "message"
+	if(isARES(speaker))
+		scale = "large"
+
+	var/message_start = "<i><span class='game say'>[name], <span class='name'>[speaker.name]</span>"
+	var/message_body = "<span class='message'>broadcasts, \"[message]\"</span></span></i>"
+	var/full_message = "<span class='[scale]'><span class='[color]'>[message_start] [message_body]</span></span>"
+
+
+	GLOB.STUI.game.Add("\[[time_stamp()]]<font color='#FFFF00'>APOLLO: [key_name(speaker)] : [message]</font><br>")
+	GLOB.STUI.processing |= STUI_LOG_GAME_CHAT
+	log_say("[speaker.name != "Unknown" ? speaker.name : "([speaker.real_name])"] \[APOLLO\]: [message] (CKEY: [speaker.key]) (JOB: [speaker.job]) (AREA: [get_area_name(speaker)])")
+	log_ares_apollo(speaker.real_name, message)
+	for (var/mob/dead in GLOB.dead_mob_list)
+		if(!istype(dead,/mob/new_player) && !istype(dead,/mob/living/brain)) //No meta-evesdropping
+			var/dead_message = "<span class='[scale]'><span class='[color]'>[message_start](<a href='byond://?src=\ref[dead];track=\ref[speaker]'>F</a>) [message_body]</span></span>"
+			dead.show_message(dead_message, SHOW_MESSAGE_VISIBLE)
+
+	for (var/mob/living/listener in GLOB.alive_mob_list)
+
+		if (!listener.hear_artemis())
+			continue
+
+		listener.show_message(full_message, SHOW_MESSAGE_VISIBLE)
+
+	var/list/listening = hearers(1, src)
+	listening -= src
+
+	for (var/mob/living/listener in listening)
+		if(isSilicon(listener) || listener.hear_artemis())
+			continue
+		listener.show_message("<i><span class='game say'><span class='name'>synthesised voice</span> <span class='message'>beeps, \"beep beep beep\"</span></span></i>",2)
+
+/datum/language/primitive
+	name = LANGUAGE_MONKEY
+	desc = "Ook ook ook."
+	speech_verb = "chimpers"
+	ask_verb = "chimpers"
+	exclaim_verb = "screeches"
+	color = "monkey"
+	key = "_"

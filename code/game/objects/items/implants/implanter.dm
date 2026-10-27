@@ -1,7 +1,11 @@
 /obj/item/implanter
 	name = "implanter"
-	icon = 'icons/obj/items/items.dmi'
-	icon_state = "implanter0"
+	icon = 'icons/obj/items/syringe.dmi'
+	item_icons = list(
+		WEAR_L_HAND = 'icons/mob/humans/onmob/inhands/equipment/medical_lefthand.dmi',
+		WEAR_R_HAND = 'icons/mob/humans/onmob/inhands/equipment/medical_righthand.dmi',
+	)
+	icon_state = "implanter_alt0"
 	item_state = "syringe_0"
 	throw_speed = SPEED_FAST
 	throw_range = 5
@@ -10,11 +14,9 @@
 
 /obj/item/implanter/proc/update()
 	if(imp)
-		icon_state = "implanter1"
+		icon_state = "implanter_alt1"
 	else
-		icon_state = "implanter0"
-	return
-
+		icon_state = "implanter_alt0"
 
 /obj/item/implanter/attack(mob/M as mob, mob/user as mob)
 	if (!istype(M, /mob/living/carbon/human))
@@ -22,7 +24,7 @@
 	if(isyautja(M))
 		return
 	if (user && src.imp)
-		user.visible_message(SPAN_WARNING("[user] is attemping to implant [M]."), SPAN_NOTICE("You're attemping to implant [M]."))
+		user.visible_message(SPAN_WARNING("[user] is attempting to implant [M]."), SPAN_NOTICE("You're attempting to implant [M]."))
 
 		var/turf/T1 = get_turf(M)
 		if (T1 && ((M == user) || do_after(user, 50, INTERRUPT_ALL, BUSY_ICON_GENERIC)))
@@ -46,7 +48,7 @@
 					src.imp = null
 					update()
 				else
-					to_chat(user, SPAN_NOTICE(" You failed to implant [M]."))
+					to_chat(user, SPAN_NOTICE("You failed to implant [M]."))
 
 	return
 

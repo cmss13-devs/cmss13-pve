@@ -14,7 +14,6 @@
 	var/icobase_source // if we want to use sourcing system
 	var/deform_source
 	var/eyes = "eyes_s"   // Icon for eyes.
-	var/uses_skin_color = FALSE  //Set to TRUE to load proper skin_colors and what have you
 	var/special_body_types = FALSE
 
 	var/primitive   // Lesser form, if any (ie. monkey for humans)
@@ -23,7 +22,6 @@
 	var/datum/unarmed_attack/secondary_unarmed // For empty hand harm-intent attack if the first fails.
 	var/slowdown = 0
 	var/gluttonous // Can eat some mobs. 1 for monkeys, 2 for people.
-	var/rarity_value = 1  // Relative rarity/collector value for this species. Only used by ninja and cultists atm.
 	var/unarmed_type =    /datum/unarmed_attack
 	var/secondary_unarmed_type = /datum/unarmed_attack/bite
 	var/pain_type   = /datum/pain/human
@@ -41,7 +39,7 @@
 	var/gibbed_anim = "gibbed-h"
 	var/dusted_anim = "dust-h"
 	var/remains_type = /obj/effect/decal/remains/xeno
-	var/bloodsplatter_type = /obj/effect/temp_visual/dir_setting/bloodsplatter/human
+	var/bloodsplatter_type = /obj/effect/bloodsplatter/human
 	var/death_sound
 	var/death_message = "seizes up and falls limp, their eyes dead and lifeless..."
 
@@ -51,13 +49,13 @@
 
 	var/total_health = 100  //new maxHealth
 
-	var/cold_level_1 = 260  // Cold damage level 1 below this point.
+	var/cold_level_1 = BODYTEMP_COLD_DAMAGE_LIMIT  // Cold damage level 1 below this point.
 	var/cold_level_2 = 240  // Cold damage level 2 below this point.
 	var/cold_level_3 = 120  // Cold damage level 3 below this point.
 
-	var/heat_level_1 = 360  // Heat damage level 1 above this point.
+	var/heat_level_1 = BODYTEMP_HEAT_DAMAGE_LIMIT  // Heat damage level 1 above this point.
 	var/heat_level_2 = 400  // Heat damage level 2 above this point.
-	var/heat_level_3 = 1000 // Heat damage level 2 above this point.
+	var/heat_level_3 = 800 // Heat damage level 3 above this point.
 
 	var/body_temperature = 310.15 //non-IS_SYNTHETIC species will try to stabilize at this temperature. (also affects temperature processing)
 	var/reagent_tag  //Used for metabolizing reagents.
@@ -77,6 +75,18 @@
 	var/flesh_color = "#FFC896" //Pink.
 	var/base_color   //Used when setting species.
 	var/hair_color   //If the species only has one hair color
+	var/no_grad_style //Hair gradients or no
+	var/list/eyes_help = list() //red, green, blue
+	var/list/eyes_disarm = list()
+	var/list/eyes_grab = list()
+	var/list/eyes_harm = list()
+
+	//Currently, this is only used for flavor in surgery messages. Can be changed for individual species (i.e. synths)
+	var/flesh_type = "flesh"
+	var/nerves_type = "nervous system"
+	var/muscle_type = "muscles"
+	var/vasculature_type = "blood vessels"
+	var/bone_type = "bone"
 
 	//Used in icon caching.
 	var/race_key = 0
@@ -118,6 +128,12 @@
 	var/ignores_stripdrag_flag = FALSE
 
 	var/has_species_tab_items = FALSE
+
+	///Species specific emote sound lists
+	var/list/burstscreams = list()
+
+	var/fire_sprite_prefix = "Standing"
+	var/fire_sprite_sheet = 'icons/mob/humans/onmob/OnFire.dmi'
 
 /datum/species/New()
 	if(unarmed_type)
@@ -213,13 +229,13 @@
 		attempt_fist_bump(human, target)
 		return
 	else if(human.body_position == LYING_DOWN) // Keep other interactions above lying check for maximum awkwardness potential
-		human.visible_message(SPAN_NOTICE("[human] waves at [target] to make [t_him] feel better!"), \
+		human.visible_message(SPAN_NOTICE("[human] waves at [target] to make [t_him] feel better!"),
 			SPAN_NOTICE("You wave at [target] to make [t_him] feel better!"), null, 4)
 	else if(target_zone == "groin")
-		human.visible_message(SPAN_NOTICE("[human] hugs [target] to make [t_him] feel better!"), \
+		human.visible_message(SPAN_NOTICE("[human] hugs [target] to make [t_him] feel better!"),
 			SPAN_NOTICE("You hug [target] to make [t_him] feel better!"), null, 4)
 	else
-		human.visible_message(SPAN_NOTICE("[human] pats [target] on the back to make [t_him] feel better!"), \
+		human.visible_message(SPAN_NOTICE("[human] pats [target] on the back to make [t_him] feel better!"),
 			SPAN_NOTICE("You pat [target] on the back to make [t_him] feel better!"), null, 4)
 	playsound(target, 'sound/weapons/thudswoosh.ogg', 25, 1, 5)
 
@@ -263,8 +279,10 @@
 			var/static/list/what_beats_what = list("rock" = "scissors", "scissors" = "paper", "paper" = "rock")
 			if(antagonist_plays == what_beats_what[protagonist_plays])
 				winner_text = " [H] wins!"
+				SEND_SIGNAL(H, COMSIG_HUMAN_WON_RPS)
 			else
 				winner_text = " [target] wins!"
+				SEND_SIGNAL(target, COMSIG_HUMAN_WON_RPS)
 		H.visible_message(SPAN_NOTICE("[H] plays <b>[protagonist_plays]</b>![winner_text]"), SPAN_NOTICE("You play <b>[protagonist_plays]</b>![winner_text]"), max_distance = 5)
 		target.visible_message(SPAN_NOTICE("[target] plays <b>[antagonist_plays]</b>![winner_text]"), SPAN_NOTICE("You play <b>[antagonist_plays]</b>![winner_text]"), max_distance = 5)
 		playsound(target, "clownstep", 35, TRUE)
@@ -304,8 +322,8 @@
 		target.flags_emote &= ~EMOTING_HIGH_FIVE
 		var/extra_quip = ""
 		if(prob(10))
-			extra_quip = pick(" Down low!", " Eiffel Tower!")
-		H.visible_message(SPAN_NOTICE("[H] gives [target] a high five![extra_quip]"), \
+			extra_quip = pick("Down low!", "Eiffel Tower!")
+		H.visible_message(SPAN_NOTICE("[H] gives [target] a high five![extra_quip]"),
 			SPAN_NOTICE("You give [target] a high five![extra_quip]"), null, 4)
 		playsound(target, 'sound/effects/snap.ogg', 25, 1)
 		H.animation_attack_on(target)
@@ -326,7 +344,7 @@
 		if(FEMALE)
 			h_his = "her"
 
-	H.visible_message(SPAN_NOTICE("[H] raises [h_his] hand out for a high five from [target]."), \
+	H.visible_message(SPAN_NOTICE("[H] raises [h_his] hand out for a high five from [target]."),
 		SPAN_NOTICE("You raise your hand out for a high five from [target]."), null, 4)
 	H.flags_emote |= EMOTING_HIGH_FIVE
 	if(do_after(H, 50, INTERRUPT_ALL|INTERRUPT_EMOTE, EMOTE_ICON_HIGHFIVE) && H.flags_emote & EMOTING_HIGH_FIVE)
@@ -348,7 +366,7 @@
 			to_chat(H, SPAN_NOTICE("Too slow!"))
 			return
 		target.flags_emote &= ~EMOTING_FIST_BUMP
-		H.visible_message(SPAN_NOTICE("[H] gives [target] a fistbump!"), \
+		H.visible_message(SPAN_NOTICE("[H] gives [target] a fistbump!"),
 			SPAN_NOTICE("You give [target] a fistbump!"), null, 4)
 		playsound(target, 'sound/effects/thud.ogg', 40, 1)
 		H.animation_attack_on(target)
@@ -368,7 +386,7 @@
 		if(FEMALE)
 			h_his = "her"
 
-	H.visible_message(SPAN_NOTICE("[H] raises [h_his] fist out for a fistbump from [target]."), \
+	H.visible_message(SPAN_NOTICE("[H] raises [h_his] fist out for a fistbump from [target]."),
 		SPAN_NOTICE("You raise your fist out for a fistbump from [target]."), null, 4)
 	H.flags_emote |= EMOTING_FIST_BUMP
 	if(do_after(H, 50, INTERRUPT_ALL|INTERRUPT_EMOTE, EMOTE_ICON_FISTBUMP) && H.flags_emote & EMOTING_FIST_BUMP)
@@ -401,7 +419,8 @@
 	if(flags & IS_SYNTHETIC)
 		H.h_style = ""
 		spawn(100)
-			if(!H) return
+			if(!H)
+				return
 			H.update_hair()
 	return
 */
@@ -437,20 +456,8 @@
 /datum/species/proc/handle_unique_behavior(mob/living/carbon/human/H)
 	return
 
-// Used to update alien icons for aliens.
-/datum/species/proc/handle_login_special(mob/living/carbon/human/H)
-	return
-
-// As above.
-/datum/species/proc/handle_logout_special(mob/living/carbon/human/H)
-	return
-
 // Builds the HUD using species-specific icons and usable slots.
 /datum/species/proc/build_hud(mob/living/carbon/human/H)
-	return
-
-// Grabs the window received when you click-drag someone onto you.
-/datum/species/proc/get_inventory_dialogue(mob/living/carbon/human/H)
 	return
 
 //Used by xenos understanding larvae and dionaea understanding nymphs.
@@ -494,7 +501,7 @@
 		if(D)
 			color_override = D.color
 
-	var/obj/effect/temp_visual/dir_setting/bloodsplatter/bloodsplatter = new bloodsplatter_type(human.loc, splatter_dir, 5, color_override)
+	var/obj/effect/bloodsplatter/bloodsplatter = new bloodsplatter_type(human.loc, splatter_dir, 5, color_override)
 	return bloodsplatter
 
 /datum/species/proc/get_status_tab_items()

@@ -5,16 +5,26 @@
 /obj/item/storage/backpack
 	name = "backpack"
 	desc = "You wear this on your back and put items into it."
-	icon = 'icons/obj/items/clothing/backpacks.dmi'
+	icon = 'icons/obj/items/clothing/backpack/backpacks.dmi'
+	item_icons = list(
+		WEAR_L_HAND = 'icons/mob/humans/onmob/inhands/clothing/backpacks_lefthand.dmi',
+		WEAR_R_HAND = 'icons/mob/humans/onmob/inhands/clothing/backpacks_righthand.dmi',
+		WEAR_BACK = 'icons/mob/humans/onmob/clothing/back/backpacks.dmi'
+	)
 	icon_state = "backpack"
 	w_class = SIZE_LARGE
 	flags_equip_slot = SLOT_BACK //ERROOOOO
 	max_w_class = SIZE_MEDIUM
 	storage_slots = null
 	max_storage_space = 21
+	cant_hold = list(/obj/item/storage/firstaid, /obj/item/storage/toolkit)
+	can_hold_skill = list(
+		/obj/item/storage/firstaid = list(SKILL_MEDICAL, SKILL_MEDICAL_MEDIC),
+		/obj/item/storage/toolkit = list(SKILL_ENGINEER, SKILL_ENGINEER_TRAINED),
+		/obj/item/storage/firstaid/regular/response = list(SKILL_MEDICAL, SKILL_MEDICAL_DEFAULT),
+		)
 	drop_sound = "armorequip"
 	var/worn_accessible = FALSE //whether you can access its content while worn on the back
-	var/bag_open_time = 2 SECONDS //How long it takes to open the bag
 	var/obj/item/card/id/locking_id = null
 	var/is_id_lockable = FALSE
 	var/lock_overridable = TRUE
@@ -45,7 +55,7 @@
 	if(HAS_TRAIT(target_mob, TRAIT_XENONID))
 		return ..() // We don't have backpack sprites for xenoids (yet?)
 	var/mob/living/carbon/xenomorph/xeno = target_mob
-	if(target_mob.stat != DEAD) // If the Xeno is alive, fight back
+	if((target_mob.stat != DEAD) && !xeno.legcuffed) // If the Xeno is alive, fight back
 		var/mob/living/carbon/carbon_user = user
 		if(!carbon_user || !carbon_user.ally_of_hivenumber(xeno.hivenumber))
 			user.KnockDown(rand(xeno.caste.tacklestrength_min, xeno.caste.tacklestrength_max))
@@ -53,7 +63,7 @@
 			user.visible_message(SPAN_WARNING("\The [user] tried to strap \the [src] onto [target_mob] but instead gets a tail swipe to the head!"))
 			return FALSE
 
-	user.visible_message(SPAN_NOTICE("\The [user] starts strapping \the [src] onto [target_mob]."), \
+	user.visible_message(SPAN_NOTICE("\The [user] starts strapping \the [src] onto [target_mob]."),
 	SPAN_NOTICE("You start strapping \the [src] onto [target_mob]."), null, 5, CHAT_TYPE_FLUFF_ACTION)
 	if(!do_after(user, HUMAN_STRIP_DELAY * user.get_skill_duration_multiplier(SKILL_CQC), INTERRUPT_ALL, BUSY_ICON_GENERIC, target_mob, INTERRUPT_MOVED, BUSY_ICON_GENERIC))
 		to_chat(user, SPAN_WARNING("You were interrupted!"))
@@ -85,7 +95,7 @@
 			to_chat(H, SPAN_NOTICE("You unlock \the [src]!"))
 			locking_id = null
 		else
-			to_chat(H, SPAN_NOTICE("The ID lock rejects your ID"))
+			to_chat(H, SPAN_NOTICE("The ID lock rejects your ID."))
 	update_icon()
 
 /obj/item/storage/backpack/equipped(mob/user, slot, silent)
@@ -111,10 +121,25 @@
 /obj/item/storage/backpack/open(mob/user)
 	if(!is_accessible_by(user))
 		return
-	if(locking_id && !compare_id(user))//if id locked we the user's id against the locker's
+	if(!check_id_lock(user))
 		to_chat(user, SPAN_NOTICE("[src] is locked by [locking_id.registered_name]'s ID! You decide to leave it alone."))
 		return
 	..()
+
+/obj/item/storage/backpack/can_storage_interact(mob/user)
+	if(!check_id_lock(user))
+		return FALSE
+	. = ..()
+
+/obj/item/storage/backpack/can_be_inserted(obj/item/W, mob/user, stop_messages = FALSE)
+	if(!check_id_lock(user))
+		return FALSE
+	. = ..()
+
+/obj/item/storage/backpack/proc/check_id_lock(mob/user)
+	if(locking_id && !compare_id(user)) //if id locked we check the user's id against the locker's
+		return FALSE
+	return TRUE
 
 /obj/item/storage/backpack/storage_close(mob/user)
 	UnregisterSignal(user, COMSIG_MOVABLE_PRE_MOVE)
@@ -129,7 +154,7 @@
 		if(!worn_accessible)
 			if(H.back == src && !user.action_busy) //Not doing any timed actions?
 				to_chat(H, SPAN_NOTICE("You begin to open [src], so you can check its contents."))
-				if(!do_after(user, bag_open_time, INTERRUPT_NO_NEEDHAND, BUSY_ICON_GENERIC)) //Timed opening.
+				if(!do_after(user, 2 SECONDS, INTERRUPT_NO_NEEDHAND, BUSY_ICON_GENERIC)) //Timed opening.
 					to_chat(H, SPAN_WARNING("You were interrupted!"))
 					return FALSE
 				RegisterSignal(user, COMSIG_MOVABLE_PRE_MOVE, PROC_REF(storage_close)) //Continue along the proc and allow opening if not locked; close on movement.
@@ -153,7 +178,8 @@
 	var/obj/item/card/id/card = H.get_idcard()
 	if(!card || locking_id.registered_name != card.registered_name)
 		return FALSE
-	else return TRUE
+	else
+		return TRUE
 
 /obj/item/storage/backpack/update_icon()
 	overlays.Cut()
@@ -167,19 +193,18 @@
 		overlays += "+[icon_state]_full"
 		overlays += "+[icon_state]_locked"
 		return
-	else if(is_id_lockable)
-		overlays += "+[icon_state]_unlocked"
 
 	var/sum_storage_cost = 0
 	for(var/obj/item/I in contents)
 		sum_storage_cost += I.get_storage_cost()
-	if(!sum_storage_cost)
-		return
+	if(sum_storage_cost)
+		if(sum_storage_cost <= max_storage_space * 0.5)
+			overlays += "+[icon_state]_half"
+		else
+			overlays += "+[icon_state]_full"
 
-	else if(sum_storage_cost <= max_storage_space * 0.5)
-		overlays += "+[icon_state]_half"
-	else
-		overlays += "+[icon_state]_full"
+	if(is_id_lockable) // assumption: !locking_id
+		overlays += "+[icon_state]_unlocked"
 
 /obj/item/storage/backpack/get_examine_text(mob/user)
 	. = ..()
@@ -331,19 +356,33 @@
 	name = "leather satchel"
 	desc = "A very fancy satchel made of fine leather. Looks pretty pricey."
 	icon_state = "satchel"
+	item_state = "satchel"
 	worn_accessible = TRUE
 	storage_slots = null
 	max_storage_space = 15
+	item_state_slots = list()
+	var/mode = TRUE
 
-/obj/item/storage/backpack/satchel/blue
-	name = "leather satchel"
-	desc = "A very fancy satchel made of fine leather. Looks pretty pricey. This one is blue."
-	icon_state = "satchel-blue"
+/obj/item/storage/backpack/satchel/post_skin_selection()
+	toggle_mode()
 
-/obj/item/storage/backpack/satchel/black
-	name = "leather satchel"
-	desc = "A very fancy satchel made of fine leather. Looks pretty pricey. This one is black."
-	icon_state = "satchel-black"
+/obj/item/storage/backpack/satchel/verb/toggle_mode()
+	set category = "Object"
+	set name = "Change Side of Strap"
+	set desc = "Changes which arm the strap of the satchel will be on."
+	set src in usr
+	if(!ishuman(usr))
+		return
+	if(mode)
+		// Strap in the same arm
+		item_state_slots[WEAR_BACK] = "[item_state]_b"
+		mode = FALSE
+	else
+		// Strap in the opposite arm
+		item_state_slots[WEAR_BACK] = item_state
+		mode = TRUE
+	update_icon()
+	usr.update_inv_back()
 
 /obj/item/storage/backpack/satchel/withwallet
 
@@ -360,76 +399,146 @@
 
 /obj/item/storage/backpack/satchel/blue
 	icon_state = "satchel_blue"
+	item_state = "satchel_blue"
+
+/obj/item/storage/backpack/satchel/blue/lockable
+	name = "secure leather satchel"
+	is_id_lockable = TRUE
+
+/obj/item/storage/backpack/satchel/blue/lockable/no_override
+	lock_overridable = FALSE
 
 /obj/item/storage/backpack/satchel/black
 	icon_state = "satchel_black"
+	item_state = "satchel_black"
+
+/obj/item/storage/backpack/satchel/black/lockable
+	name = "secure leather satchel"
+	is_id_lockable = TRUE
+
+/obj/item/storage/backpack/satchel/black/lockable/no_override
+	lock_overridable = FALSE
 
 /obj/item/storage/backpack/satchel/norm
 	name = "satchel"
 	desc = "A trendy-looking satchel."
 	icon_state = "satchel-norm"
+	item_state = "satchel-norm"
+
+/obj/item/storage/backpack/satchel/norm/blue
+	icon_state = "satchel-chem"
+	item_state = "satchel-chem"
+
+/obj/item/storage/backpack/satchel/norm/red_line
+	icon_state = "satchel-med"
+	item_state = "satchel-med"
+
+/obj/item/storage/backpack/satchel/norm/orange_line
+	icon_state = "satchel-eng"
+	item_state = "satchel-eng"
+
+/obj/item/storage/backpack/satchel/norm/green
+	icon_state = "satchel_hyd"
+	item_state = "satchel_hyd"
 
 /obj/item/storage/backpack/satchel/eng
 	name = "industrial satchel"
 	desc = "A tough satchel with extra pockets."
 	icon_state = "satchel-eng"
+	item_state = "satchel-eng"
 
 /obj/item/storage/backpack/satchel/med
 	name = "medical satchel"
 	desc = "A sterile satchel used in medical departments."
 	icon_state = "satchel-med"
+	item_state = "satchel-med"
 
 /obj/item/storage/backpack/satchel/vir
 	name = "virologist satchel"
 	desc = "A sterile satchel with virologist colors."
 	icon_state = "satchel-vir"
+	item_state = "satchel-vir"
 
 /obj/item/storage/backpack/satchel/chem
 	name = "chemist satchel"
 	desc = "A sterile satchel with chemist colors."
 	icon_state = "satchel-chem"
+	item_state = "satchel-chem"
 
 /obj/item/storage/backpack/satchel/gen
 	name = "geneticist satchel"
 	desc = "A sterile satchel with geneticist colors."
 	icon_state = "satchel-gen"
+	item_state = "satchel-gen"
 
 /obj/item/storage/backpack/satchel/tox
 	name = "scientist satchel"
 	desc = "Useful for holding research materials."
 	icon_state = "satchel-tox"
+	item_state = "satchel-tox"
 
 /obj/item/storage/backpack/satchel/sec //Universal between USCM MPs & Colony, should be split at some point.
 	name = "security satchel"
 	desc = "A robust satchel composed of two drop pouches and a large internal pocket. Made of a stiff fabric, it isn't very comfy to wear."
 	icon_state = "satchel-sec"
+	item_state = "satchel-sec"
 
 /obj/item/storage/backpack/satchel/hyd
 	name = "hydroponics satchel"
 	desc = "A green satchel for plant-related work."
 	icon_state = "satchel_hyd"
+	item_state = "satchel_hyd"
 
 //==========================// MARINE BACKPACKS\\================================\\
 //=======================================================================\\
 
 /obj/item/storage/backpack/marine
 	name = "\improper lightweight IMP backpack"
-	desc = "The standard-issue pack of the USCM and US Army forces. Designed to lug gear into the battlefield using the Intuitive Mounting Point system on M3 armor."
-	icon_state = "imp"
-	item_state = "imp"
-	has_gamemode_skin = FALSE //replace this with the atom_flag NO_SNOW_TYPE at some point, just rename it to like, NO_MAP_VARIANT_SKIN
+	desc = "The standard-issue pack of the USCM forces. Designed to lug gear into the battlefield."
+	icon_state = "marinepack"
+	item_state = "marinepack"
+	icon = 'icons/obj/items/clothing/backpack/backpacks_by_map/jungle.dmi'
+	flags_atom = FPRINT // has gamemode skin
+	xeno_icon_state = "marinepack"
+	xeno_types = list(/mob/living/carbon/xenomorph/runner, /mob/living/carbon/xenomorph/praetorian, /mob/living/carbon/xenomorph/drone, /mob/living/carbon/xenomorph/warrior, /mob/living/carbon/xenomorph/defender, /mob/living/carbon/xenomorph/sentinel, /mob/living/carbon/xenomorph/spitter)
+	item_icons = list(
+		WEAR_BACK = 'icons/mob/humans/onmob/clothing/back/backpacks_by_map/jungle.dmi'
+	)
 
-/obj/item/storage/backpack/marine/standard
-	has_gamemode_skin = FALSE
+
+/obj/item/storage/backpack/marine/select_gamemode_skin(expected_type, list/override_icon_state, list/override_protection)
+	. = ..()
+	if(flags_atom & MAP_COLOR_INDEX)
+		return
+	switch(SSmapping.configs[GROUND_MAP].camouflage_type)
+		if("jungle")
+			icon = 'icons/obj/items/clothing/backpack/backpacks_by_map/jungle.dmi'
+			item_icons[WEAR_BACK] = 'icons/mob/humans/onmob/clothing/back/backpacks_by_map/jungle.dmi'
+		if("classic")
+			icon = 'icons/obj/items/clothing/backpack/backpacks_by_map/classic.dmi'
+			item_icons[WEAR_BACK] = 'icons/mob/humans/onmob/clothing/back/backpacks_by_map/classic.dmi'
+		if("desert")
+			icon = 'icons/obj/items/clothing/backpack/backpacks_by_map/desert.dmi'
+			item_icons[WEAR_BACK] = 'icons/mob/humans/onmob/clothing/back/backpacks_by_map/desert.dmi'
+		if("snow")
+			icon = 'icons/obj/items/clothing/backpack/backpacks_by_map/snow.dmi'
+			item_icons[WEAR_BACK] = 'icons/mob/humans/onmob/clothing/back/backpacks_by_map/snow.dmi'
+		if("urban")
+			icon = 'icons/obj/items/clothing/backpack/backpacks_by_map/urban.dmi'
+			item_icons[WEAR_BACK] = 'icons/mob/humans/onmob/clothing/back/backpacks_by_map/urban.dmi'
 
 /obj/item/storage/backpack/marine/ammo_rack
 	name = "\improper IMP ammo rack"
 	desc = "A bare IMP frame with buckles designed to hold multiple ammo cans, but can fit any cumbersome box thanks to Marine ingenuity. Helps you lug around extra rounds or supplies."
-	has_gamemode_skin = FALSE
+	flags_atom = FPRINT|NO_GAMEMODE_SKIN // same sprite for all gamemodes
 	storage_slots = 3
 	icon_state = "ammo_pack_0"
-	can_hold = list(/obj/item/ammo_box, /obj/item/stack/folding_barricade)
-	max_w_class = SIZE_HUGE
+	icon = 'icons/obj/items/clothing/backpack/backpacks_by_faction/UA.dmi'
+	item_icons = list(
+		WEAR_BACK = 'icons/mob/humans/onmob/clothing/back/backpacks_by_faction/UA.dmi'
+	)
+	can_hold = list(/obj/item/ammo_box, /obj/item/stack/folding_barricade, /obj/item/stack/sandbags, /obj/item/stack/sandbags_empty)
+	max_w_class = SIZE_MASSIVE
 	throw_range = 0
 	xeno_types = null
 	var/base_icon_state = "ammo_pack"
@@ -460,8 +569,64 @@
 	xeno_icon_state = "medicpack"
 	xeno_types = list(/mob/living/carbon/xenomorph/runner, /mob/living/carbon/xenomorph/praetorian, /mob/living/carbon/xenomorph/drone, /mob/living/carbon/xenomorph/warrior, /mob/living/carbon/xenomorph/defender, /mob/living/carbon/xenomorph/sentinel, /mob/living/carbon/xenomorph/spitter)
 
-/obj/item/storage/backpack/marine/medic/standard
-	has_gamemode_skin = FALSE
+/obj/item/storage/backpack/marine/saddle
+	name = "\improper USCM XX-121 Saddle"
+	desc = "A saddle with straps designed to fit around a XX-121 specimen. Not sure who would be stupid enough to try and put this on one."
+	icon_state = "saddlebags"
+	xeno_icon_state = "saddlebags"
+	xeno_types = list(/mob/living/carbon/xenomorph/runner)
+
+/obj/item/storage/backpack/marine/saddle/mob_can_equip(mob/equipping_mob, slot, disable_warning)
+	if(!isrunner(equipping_mob))
+		return FALSE
+	return ..()
+
+/obj/item/storage/backpack/marine/saddle/unequipped(mob/user, slot, silent)
+	. = ..()
+	if(isrunner(user))
+		DISABLE_BITFIELD(user.buckle_flags, CAN_BUCKLE)
+		user.RemoveElement(/datum/element/ridable, /datum/component/riding/creature/runner)
+		for(var/mob/riders in user.buckled_mobs)
+			user.unbuckle(riders)
+
+/obj/item/storage/backpack/marine/saddle/attack(mob/living/target_mob, mob/living/user)
+	. = ..()
+	var/mob/living/carbon/xenomorph/xeno = target_mob
+	if(!user || !user.ally_of_hivenumber(xeno.hivenumber))
+		user.KnockDown(rand(xeno.caste.tacklestrength_min, xeno.caste.tacklestrength_max))
+		playsound(user.loc, 'sound/weapons/pierce.ogg', 25, TRUE)
+		user.visible_message(SPAN_WARNING("[user] tried to strap [src] onto [xeno] but instead gets a tail swipe to the head!"))
+		return FALSE
+	if(isrunner(xeno))
+		ENABLE_BITFIELD(xeno.buckle_flags, CAN_BUCKLE)
+		xeno.AddElement(/datum/element/ridable, /datum/component/riding/creature/runner)
+
+/obj/item/storage/backpack/marine/saddle/cowboy
+	icon_state = "cowboybags"
+	xeno_icon_state = "cowboybags"
+
+/obj/item/storage/backpack/marine/k9_synth
+	icon = 'icons/obj/items/clothing/backpack/backpacks_by_faction/UA.dmi'
+	icon_override = 'icons/mob/humans/species/synth_k9/onmob/synth_k9_overlays.dmi'
+	icon_state = null
+	uniform_restricted = list(/obj/item/clothing/under/rank/synthetic/synth_k9) //K9 Synth only
+	force_overlays_on = TRUE
+	flags_atom = FPRINT|NO_GAMEMODE_SKIN // same sprite for all gamemodes
+
+/obj/item/storage/backpack/marine/k9_synth/cargopack
+	name = "\improper M209 portable K9 backpack"
+	desc = "Form fitted for the K9 Rescue Unit line of synthetics. Designed to lug gear into the battlefield."
+	icon_state = "marinepack_k9"
+
+/obj/item/storage/backpack/marine/k9_synth/medicalpack
+	name = "\improper M210 portable K9 medical backpack"
+	desc = "Form fitted for the K9 Rescue Unit line of synthetics. For carrying medical supplies."
+	icon_state = "marinepack_medic_k9"
+
+/obj/item/storage/backpack/marine/k9_synth/mppack
+	name = "\improper M553 portable K9 police backpack"
+	desc = "Form fitted for the K9 Rescue Unit line of synthetics. For carrying MP Equipment."
+	icon_state = "mppack_k9"
 
 /obj/item/storage/backpack/marine/medic/upp
 	name = "\improper UPP corpsman backpack"
@@ -485,19 +650,36 @@
 	name = "\improper USCM expedition chestrig"
 	desc = "A heavy-duty IMP based chestrig, can quickly be accessed with only one hand. Usually issued to USCM intelligence officers."
 	icon_state = "intel_chestrig"
-	max_storage_space = 20
+
+/obj/item/storage/backpack/marine/satchel/intel/expeditionsatchel
+	name = "\improper USCM lightweight expedition satchel"
+	desc = "A heavy-duty IMP based satchel, reinforced with kevlar so it doesn't rip. Can quickly be accessed with only one hand. Usually issued to USCM intelligence officers."
+	icon_state = "intel_satchel"
+	icon = 'icons/obj/items/clothing/backpack/backpacks_by_faction/UA.dmi'
+	item_state_slots = list(
+		WEAR_BACK = "intel_satchel",
+		WEAR_R_HAND = "marinesatch",
+		WEAR_L_HAND = "marinesatch",
+	)
+	item_icons = list(
+		WEAR_L_HAND = 'icons/mob/humans/onmob/inhands/items_by_map/classic_lefthand.dmi',
+		WEAR_R_HAND = 'icons/mob/humans/onmob/inhands/items_by_map/classic_righthand.dmi',
+		WEAR_BACK = 'icons/mob/humans/onmob/clothing/back/backpacks_by_faction/UA.dmi'
+	)
+	flags_atom = FPRINT|NO_GAMEMODE_SKIN
 
 /obj/item/storage/backpack/marine/satchel
 	name = "\improper USCM satchel"
-	desc = "A heavy-duty satchel carried by some USCM soldiers and support personnel."
+	desc = "A heavy-duty satchel carried by some Marines of the USCM and support personnel."
 	icon_state = "marinesatch"
 	worn_accessible = TRUE
 	storage_slots = null
 	max_storage_space = 15
 	xeno_types = null
 
-/obj/item/storage/backpack/marine/satchel/standard
-	has_gamemode_skin = FALSE
+/obj/item/storage/backpack/marine/satchel/army
+	name = "\improper US Army satchel"
+	desc = "A heavy-duty satchel carried by some US Army soldiers and support personnel."
 
 /obj/item/storage/backpack/marine/satchel/big //wacky squad marine loadout item, its the IO backpack.
 	name = "\improper USCM logistics IMP backpack"
@@ -507,13 +689,13 @@
 	storage_slots = null
 	max_storage_space = 21 //backpack size
 
+/obj/item/storage/backpack/marine/satchel/big/army
+	name = "\improper US Army logistics IMP backpack"
+
 /obj/item/storage/backpack/marine/satchel/medic
 	name = "\improper USCM corpsman satchel"
 	desc = "A heavy-duty satchel used by USCM medics. It sacrifices capacity for usability. A small patch is sewn to the top flap."
 	icon_state = "marinesatch_medic"
-
-/obj/item/storage/backpack/marine/satchel/medic/standard
-	has_gamemode_skin = FALSE
 
 /obj/item/storage/backpack/marine/satchel/tech
 	name = "\improper USCM technician chestrig"
@@ -524,7 +706,6 @@
 	name = "\improper USCM chestrig"
 	desc = "A chestrig used by some USCM personnel."
 	icon_state = "chestrig"
-	has_gamemode_skin = FALSE
 
 GLOBAL_LIST_EMPTY_TYPED(radio_packs, /obj/item/storage/backpack/marine/satchel/rto)
 
@@ -533,52 +714,127 @@ GLOBAL_LIST_EMPTY_TYPED(radio_packs, /obj/item/storage/backpack/marine/satchel/r
 	desc = "A heavy-duty pack, used for telecommunications between central command. Commonly carried by RTOs."
 	icon_state = "rto_backpack"
 	item_state = "rto_backpack"
-	has_gamemode_skin = FALSE
+	icon = 'icons/obj/items/clothing/backpack/backpacks_by_faction/UA.dmi'
+	item_icons = list(
+		WEAR_L_HAND = 'icons/mob/humans/onmob/inhands/clothing/backpacks_lefthand.dmi',
+		WEAR_R_HAND = 'icons/mob/humans/onmob/inhands/clothing/backpacks_righthand.dmi',
+		WEAR_BACK = 'icons/mob/humans/onmob/clothing/back/backpacks_by_faction/UA.dmi'
+	)
+	flags_atom = FPRINT|NO_GAMEMODE_SKIN // same sprite for all gamemodes
+	actions_types = list(/datum/action/item_action/rto_pack/use_phone)
 
 	flags_item = ITEM_OVERRIDE_NORTHFACE
+
+	var/obj/structure/transmitter/internal/internal_transmitter
 
 	var/phone_category = PHONE_MARINE
 	var/list/networks_receive = list(FACTION_MARINE)
 	var/list/networks_transmit = list(FACTION_MARINE)
-
-	actions_types = list(/datum/action/item_action/rto_pack/use_phone)
-
-/obj/item/storage/backpack/marine/satchel/rto/Initialize()
-	. = ..()
-
-	AddComponent(/datum/component/phone, phone_category = phone_category, networks_receive = networks_receive, networks_transmit = networks_transmit, overlay_interactable = TRUE)
-	RegisterSignal(src, COMSIG_ATOM_PHONE_PICKED_UP, PROC_REF(phone_picked_up))
-	RegisterSignal(src, COMSIG_ATOM_PHONE_HUNG_UP, PROC_REF(phone_hung_up))
-	RegisterSignal(src, COMSIG_ATOM_PHONE_RINGING, PROC_REF(phone_ringing))
-	RegisterSignal(src, COMSIG_ATOM_PHONE_STOPPED_RINGING, PROC_REF(phone_stopped_ringing))
+	var/base_icon
 
 /datum/action/item_action/rto_pack/use_phone/New(mob/living/user, obj/item/holder)
 	..()
 	name = "Use Phone"
 	button.name = name
 	button.overlays.Cut()
-	var/image/phone_overlay = image('icons/obj/items/misc.dmi', button, "rpb_phone")
-	button.overlays += phone_overlay
+	var/image/IMG = image('icons/mob/hud/actions.dmi', button, "phone")
+	button.overlays += IMG
 
 /datum/action/item_action/rto_pack/use_phone/action_activate()
 	. = ..()
 	for(var/obj/item/storage/backpack/marine/satchel/rto/radio_backpack in owner)
-		SEND_SIGNAL(radio_backpack, COMSIG_ATOM_PHONE_BUTTON_USE, user = owner)
+		radio_backpack.use_phone(owner)
 		return
 
-/obj/item/storage/backpack/marine/satchel/rto/proc/phone_picked_up()
-	icon_state = PHONE_OFF_BASE_UNIT_ICON_STATE
+/obj/item/storage/backpack/marine/satchel/rto/post_skin_selection()
+	base_icon = icon_state
 
-/obj/item/storage/backpack/marine/satchel/rto/proc/phone_hung_up()
-	icon_state = PHONE_ON_BASE_UNIT_ICON_STATE
+/obj/item/storage/backpack/marine/satchel/rto/Initialize()
+	. = ..()
+	internal_transmitter = new(src)
+	internal_transmitter.relay_obj = src
+	internal_transmitter.phone_category = phone_category
+	internal_transmitter.enabled = FALSE
+	internal_transmitter.networks_receive = networks_receive
+	internal_transmitter.networks_transmit = networks_transmit
+	RegisterSignal(internal_transmitter, COMSIG_TRANSMITTER_UPDATE_ICON, PROC_REF(check_for_ringing))
+	GLOB.radio_packs += src
 
-/obj/item/storage/backpack/marine/satchel/rto/proc/phone_ringing()
-	icon_state = PHONE_RINGING_ICON_STATE
+/obj/item/storage/backpack/marine/satchel/rto/proc/check_for_ringing()
+	SIGNAL_HANDLER
+	update_icon()
 
-/obj/item/storage/backpack/marine/satchel/rto/proc/phone_stopped_ringing()
-	if(icon_state == PHONE_OFF_BASE_UNIT_ICON_STATE)
+/obj/item/storage/backpack/marine/satchel/rto/update_icon()
+	. = ..()
+	if(!internal_transmitter)
 		return
-	icon_state = PHONE_ON_BASE_UNIT_ICON_STATE
+
+	if(!internal_transmitter.attached_to \
+		|| internal_transmitter.attached_to.loc != internal_transmitter)
+		icon_state = "[base_icon]_ear"
+		return
+
+	if(internal_transmitter.inbound_call)
+		icon_state = "[base_icon]_ring"
+		item_state = "rto_backpack_ring"
+	else
+		icon_state = base_icon
+		item_state = "rto_backpack"
+
+/obj/item/storage/backpack/marine/satchel/rto/forceMove(atom/dest)
+	. = ..()
+	if(isturf(dest))
+		internal_transmitter.set_tether_holder(src)
+	else
+		internal_transmitter.set_tether_holder(loc)
+
+/obj/item/storage/backpack/marine/satchel/rto/Destroy()
+	GLOB.radio_packs -= src
+	qdel(internal_transmitter)
+	return ..()
+
+/obj/item/storage/backpack/marine/satchel/rto/pickup(mob/user)
+	. = ..()
+	autoset_phone_id(user)
+
+/obj/item/storage/backpack/marine/satchel/rto/equipped(mob/user, slot)
+	. = ..()
+	autoset_phone_id(user)
+
+/// Automatically sets the phone_id based on the current or updated user
+/obj/item/storage/backpack/marine/satchel/rto/proc/autoset_phone_id(mob/user)
+	if(!user)
+		internal_transmitter.phone_id = "[src]"
+		internal_transmitter.enabled = FALSE
+		return
+	if(ishuman(user))
+		var/mob/living/carbon/human/H = user
+		if(H.comm_title)
+			internal_transmitter.phone_id = "[H.comm_title] [H]"
+		else if(H.job)
+			internal_transmitter.phone_id = "[H.job] [H]"
+		else
+			internal_transmitter.phone_id = "[H]"
+
+		if(H.assigned_squad)
+			internal_transmitter.phone_id += " ([H.assigned_squad.name])"
+	else
+		internal_transmitter.phone_id = "[user]"
+	internal_transmitter.enabled = TRUE
+
+/obj/item/storage/backpack/marine/satchel/rto/dropped(mob/user)
+	. = ..()
+	autoset_phone_id(null) // Disable phone when dropped
+
+/obj/item/storage/backpack/marine/satchel/rto/proc/use_phone(mob/user)
+	internal_transmitter.attack_hand(user)
+
+
+/obj/item/storage/backpack/marine/satchel/rto/attackby(obj/item/W, mob/user)
+	if(internal_transmitter && internal_transmitter.attached_to == W)
+		internal_transmitter.attackby(W, user)
+	else
+		. = ..()
 
 /obj/item/storage/backpack/marine/satchel/rto/upp_net
 	name = "\improper UPP Radio Telephone Pack"
@@ -589,6 +845,7 @@ GLOBAL_LIST_EMPTY_TYPED(radio_packs, /obj/item/storage/backpack/marine/satchel/r
 	name = "\improper USCM Small Radio Telephone Pack"
 	max_storage_space = 10
 
+
 /obj/item/storage/backpack/marine/satchel/rto/small/upp_net
 	name = "\improper UPP Radio Telephone Pack"
 	networks_receive = list(FACTION_UPP)
@@ -596,6 +853,7 @@ GLOBAL_LIST_EMPTY_TYPED(radio_packs, /obj/item/storage/backpack/marine/satchel/r
 	phone_category = PHONE_UPP_SOLDIER
 
 /obj/item/storage/backpack/marine/satchel/rto/io
+	uniform_restricted = list(/obj/item/clothing/under/marine/officer/intel)
 	phone_category = PHONE_IO
 
 /obj/item/storage/backpack/marine/smock
@@ -605,37 +863,55 @@ GLOBAL_LIST_EMPTY_TYPED(radio_packs, /obj/item/storage/backpack/marine/satchel/r
 	worn_accessible = TRUE
 	xeno_types = null
 
+/obj/item/storage/backpack/marine/smock/select_gamemode_skin()
+	. = ..()
+	if(SSmapping.configs[GROUND_MAP].camouflage_type == "urban"	|| "classic")
+		name = "\improper M60 Sniper Cloak"
+		desc = "A specially-designed cloak with thermal dampering waterproof coating, designed for urban environments. Doesn't have the optical camouflage electronics that more advanced M68 cloak has."
+
 /obj/item/storage/backpack/marine/marsoc
 	name = "\improper USCM SOF IMP tactical rucksack"
-	icon_state = "tacrucksack"
 	desc = "With a backpack like this, you'll forget you're on a hell march designed to kill you."
+	icon_state = "tacrucksack"
+	icon = 'icons/obj/items/clothing/backpack/backpacks_by_faction/UA.dmi'
+	item_icons = list(
+		WEAR_BACK = 'icons/mob/humans/onmob/clothing/back/backpacks_by_faction/UA.dmi'
+	)
 	worn_accessible = TRUE
-	has_gamemode_skin = FALSE
+	flags_atom = FPRINT|NO_GAMEMODE_SKIN // same sprite for all gamemodes
 	xeno_types = null
 
 /obj/item/storage/backpack/marine/rocketpack
 	name = "\improper USCM IMP M22 rocket bags"
 	desc = "A specially-designed backpack that fits to the IMP mounting frame on standard USCM pattern M3 armors. It's made of two waterproofed reinforced tubes and one smaller satchel slung at the bottom. The two silos are for rockets, but no one is stopping you from cramming other things in there."
 	icon_state = "rocketpack"
+	icon = 'icons/obj/items/clothing/backpack/backpacks_by_faction/UA.dmi'
+	item_icons = list(
+		WEAR_BACK = 'icons/mob/humans/onmob/clothing/back/backpacks_by_faction/UA.dmi'
+	)
 	worn_accessible = TRUE
-	has_gamemode_skin = FALSE //monkeysfist101 never sprited a snowtype but included duplicate icons. Why?? Recolor and touch up sprite at a later date.
+	flags_atom = FPRINT|NO_GAMEMODE_SKIN // same sprite for all gamemodes
 	xeno_types = null
 
 /obj/item/storage/backpack/marine/grenadepack
 	name = "\improper USCM IMP M63A1 grenade satchel"
 	desc = "A secure satchel with dedicated grenade pouches meant to minimize risks of secondary ignition."
 	icon_state = "grenadierpack"
+	icon = 'icons/obj/items/clothing/backpack/backpacks_by_faction/UA.dmi'
+	item_icons = list(
+		WEAR_BACK = 'icons/mob/humans/onmob/clothing/back/backpacks_by_faction/UA.dmi'
+	)
 	overlays = list("+grenadierpack_unlocked")
 	worn_accessible = TRUE
 	max_storage_space = 36 //12 grenades
 	storage_slots = 12
 	can_hold = list(/obj/item/explosive/grenade)
 	is_id_lockable = TRUE
-	has_gamemode_skin = FALSE
+	flags_atom = FPRINT|NO_GAMEMODE_SKIN // same sprite for all gamemodes
 	xeno_types = null
 
 /obj/item/storage/backpack/marine/grenadepack/attackby(obj/item/W, mob/user)
-	if(istype(W, /obj/item/ammo_box/magazine/nade_box) || istype(W, /obj/item/storage/backpack/marine/grenadepack) || istype(W, /obj/item/storage/belt/grenade))
+	if(istype(W, /obj/item/storage/box/nade_box) || istype(W, /obj/item/storage/backpack/marine/grenadepack) || istype(W, /obj/item/storage/box/packet) || istype(W, /obj/item/storage/belt/grenade))
 		dump_into(W,user)
 	else
 		return ..()
@@ -646,22 +922,8 @@ GLOBAL_LIST_EMPTY_TYPED(radio_packs, /obj/item/storage/backpack/marine/satchel/r
 	icon_state = "mortarpack"
 	max_w_class = SIZE_HUGE
 	storage_slots = 12
-	can_hold = list(/obj/item/mortar_shell, /obj/item/device/binoculars)
+	can_hold = list(/obj/item/mortar_shell)
 	xeno_types = null
-
-/obj/item/storage/backpack/marine/mortarpack/full/fill_preset_inventory()
-	new /obj/item/mortar_shell/flare(src)
-	new /obj/item/mortar_shell/flare(src)
-	new /obj/item/mortar_shell/flare(src)
-	new /obj/item/mortar_shell/he(src)
-	new /obj/item/mortar_shell/he(src)
-	new /obj/item/mortar_shell/he(src)
-	new /obj/item/mortar_shell/he(src)
-	new /obj/item/mortar_shell/he(src)
-	new /obj/item/mortar_shell/incendiary(src)
-	new /obj/item/mortar_shell/incendiary(src)
-	new /obj/item/mortar_shell/incendiary(src)
-	new /obj/item/mortar_shell/incendiary(src)
 
 /// G-8-a general pouch belt
 /obj/item/storage/backpack/general_belt
@@ -671,11 +933,42 @@ GLOBAL_LIST_EMPTY_TYPED(radio_packs, /obj/item/storage/backpack/marine/satchel/r
 	w_class = SIZE_LARGE
 	max_w_class = SIZE_MEDIUM
 	flags_equip_slot = SLOT_WAIST
-	icon = 'icons/obj/items/clothing/belts.dmi'
 	icon_state = "g8pouch"
 	item_state = "g8pouch"
-	has_gamemode_skin = FALSE
+	icon = 'icons/obj/items/clothing/belts/belts_by_map/jungle.dmi'
+	item_icons = list(
+		WEAR_WAIST = 'icons/mob/humans/onmob/clothing/belts/belts_by_map/jungle.dmi'
+	)
+	flags_atom = FPRINT // has gamemode skin
 	can_hold_skill = list()
+	item_state_slots = list(
+		WEAR_L_HAND = "marinebelt",
+		WEAR_R_HAND = "marinebelt",
+	)
+
+/obj/item/storage/backpack/general_belt/select_gamemode_skin(expected_type, list/override_icon_state, list/override_protection)
+	. = ..()
+	switch(SSmapping.configs[GROUND_MAP].camouflage_type)
+		if("jungle")
+			icon = 'icons/obj/items/clothing/belts/belts_by_map/jungle.dmi'
+			item_icons[WEAR_WAIST] = 'icons/mob/humans/onmob/clothing/belts/belts_by_map/jungle.dmi'
+			item_icons[WEAR_J_STORE] = 'icons/mob/humans/onmob/clothing/suit_storage/suit_storage_by_map/jungle.dmi'
+		if("classic")
+			icon = 'icons/obj/items/clothing/belts/belts_by_map/classic.dmi'
+			item_icons[WEAR_WAIST] = 'icons/mob/humans/onmob/clothing/belts/belts_by_map/classic.dmi'
+			item_icons[WEAR_J_STORE] = 'icons/mob/humans/onmob/clothing/suit_storage/suit_storage_by_map/classic.dmi'
+		if("desert")
+			icon = 'icons/obj/items/clothing/belts/belts_by_map/desert.dmi'
+			item_icons[WEAR_WAIST] = 'icons/mob/humans/onmob/clothing/belts/belts_by_map/desert.dmi'
+			item_icons[WEAR_J_STORE] = 'icons/mob/humans/onmob/clothing/suit_storage/suit_storage_by_map/desert.dmi'
+		if("snow")
+			icon = 'icons/obj/items/clothing/belts/belts_by_map/snow.dmi'
+			item_icons[WEAR_WAIST] = 'icons/mob/humans/onmob/clothing/belts/belts_by_map/snow.dmi'
+			item_icons[WEAR_J_STORE] = 'icons/mob/humans/onmob/clothing/suit_storage/suit_storage_by_map/snow.dmi'
+		if("urban")
+			icon = 'icons/obj/items/clothing/belts/belts_by_map/urban.dmi'
+			item_icons[WEAR_WAIST] = 'icons/mob/humans/onmob/clothing/belts/belts_by_map/urban.dmi'
+			item_icons[WEAR_J_STORE] = 'icons/mob/humans/onmob/clothing/suit_storage/suit_storage_by_map/urban.dmi'
 
 /obj/item/storage/backpack/general_belt/equipped(mob/user, slot)
 	switch(slot)
@@ -687,48 +980,37 @@ GLOBAL_LIST_EMPTY_TYPED(radio_packs, /obj/item/storage/backpack/marine/satchel/r
 	mouse_opacity = initial(mouse_opacity)
 	..()
 
-/obj/item/storage/backpack/general_belt/standard
-	can_hold_skill = FALSE
-
-/obj/item/storage/backpack/general_belt/upp
-	name = "\improper Type 48-M general utility pouch"
-	desc = "A small, lightweight pouch that can be clipped onto U-pattern UPP armor to provide additional storage. The newer 48-M model, while uncomfortable, can also be clipped around the waist."
-	icon_state = "upp_g8pouch"
-	item_state = "upp_g8pouch"
-	has_gamemode_skin = FALSE
-
-//this preset is for the US Army machinegunner.
-/obj/item/storage/backpack/general_belt/army
-	desc = "A small light pouch that can be fitted around the waist or back. Used as a mass pouch for bulkier magazines."
-//this fills the preset's ammo belt
-/obj/item/storage/backpack/general_belt/army/fill_preset_inventory()
-		new /obj/item/ammo_magazine/hpr_box/ap (src)
-		new /obj/item/ammo_magazine/hpr_box/ap (src)
-
-#define FULL_CAMO_ALPHA 15
-#define VISIBLE_CAMO_ALPHA 60
-
-#define FULL_PVE_CAMO_ALPHA 30
-#define VISIBLE_PVE_CAMO_ALPHA 75
-
 // Scout Cloak
 /obj/item/storage/backpack/marine/satchel/scout_cloak
 	name = "\improper M68 Thermal Cloak"
 	desc = "The lightweight thermal dampeners and optical camouflage provided by this cloak are weaker than those found in standard USCM ghillie suits. In exchange, the cloak can be worn over combat armor and offers the wearer high maneuverability and adaptability to many environments."
 	icon_state = "scout_cloak"
+	icon = 'icons/obj/items/clothing/backpack/backpacks_by_faction/UA.dmi'
+	item_icons = list(
+		WEAR_BACK = 'icons/mob/humans/onmob/clothing/back/backpacks_by_faction/UA.dmi'
+	)
 	unacidable = TRUE
-	indestructible = TRUE
-	has_gamemode_skin = FALSE //same sprite for all gamemode.
+	explo_proof = TRUE
+	uniform_restricted = list(/obj/item/clothing/suit/storage/marine/M3S) //Need to wear Scout armor and helmet to equip this.
 	var/camo_active = FALSE
-	var/full_camo_alpha = FULL_PVE_CAMO_ALPHA
-	var/incremental_shooting_camo_penalty = 30
-	var/current_camo = FULL_PVE_CAMO_ALPHA
-	var/visible_camo_alpha = VISIBLE_PVE_CAMO_ALPHA
-	var/camouflage_break = 8 SECONDS
-	var/cloak_cooldown
-	var/camo_message_delay = 2 SECONDS
+	var/camo_alpha = 10
+	var/allow_gun_usage = FALSE
+	var/cloak_cooldown = 0
+	var/allowed_stealth_shooting = FALSE
+	var/fluff_item = "cloak"
+	var/camo_on_sound = 'sound/effects/cloak_scout_on.ogg'
+	var/camo_off_sound = 'sound/effects/cloak_scout_off.ogg'
 
 	actions_types = list(/datum/action/item_action/specialist/toggle_cloak)
+
+/obj/item/storage/backpack/marine/satchel/scout_cloak/select_gamemode_skin(expected_type, list/override_icon_state, list/override_protection)
+	if(flags_atom & NO_GAMEMODE_SKIN)
+		return
+	switch(SSmapping.configs[GROUND_MAP].camouflage_type)
+		if("urban")
+			icon_state = "u_scout_cloak"
+		else
+			icon_state = "scout_cloak"
 
 /obj/item/storage/backpack/marine/satchel/scout_cloak/dropped(mob/user)
 	if(ishuman(user) && !issynth(user))
@@ -751,37 +1033,36 @@ GLOBAL_LIST_EMPTY_TYPED(radio_packs, /obj/item/storage/backpack/marine/satchel/r
 	if(!ishuman(usr))
 		return
 	var/mob/living/carbon/human/H = usr
+	if(!skillcheck(H, SKILL_SPEC_WEAPONS, SKILL_SPEC_ALL) && H.skills.get_skill_level(SKILL_SPEC_WEAPONS) != SKILL_SPEC_SCOUT)
+		to_chat(H, SPAN_WARNING("You don't seem to know how to use [src]..."))
+		return
 
 	if(H.back != src)
-		to_chat(H, SPAN_WARNING("You must be wearing the cloak to activate it!"))
+		to_chat(H, SPAN_WARNING("You must be wearing the [fluff_item] to activate it!"))
 		return
 
 	if(camo_active)
 		deactivate_camouflage(H)
 		return
 
-	if(cloak_cooldown && cloak_cooldown > world.time)
-		to_chat(H, SPAN_WARNING("Your cloak is malfunctioning and can't be enabled right now!"))
+	if(cloak_cooldown > world.time)
+		to_chat(H, SPAN_WARNING("Your [fluff_item] is malfunctioning and can't be enabled right now!"))
 		return
 
-	RegisterSignal(H,  list(
-		COMSIG_MOB_FIRED_GUN,
-		COMSIG_MOB_FIRED_GUN_ATTACHMENT)
-		, PROC_REF(fade_in))
-	RegisterSignal(H, COMSIG_HUMAN_EXTINGUISH, PROC_REF(wrapper_fizzle_camouflage))
-	RegisterSignal(H, list(
-		COMSIG_MOB_DEATH,
-		COMSIG_MOB_EFFECT_CLOAK_CANCEL
-	), PROC_REF(deactivate_camouflage))
+	RegisterSignal(H, COMSIG_GRENADE_PRE_PRIME, PROC_REF(cloak_grenade_callback))
+	RegisterSignal(H, list(COMSIG_HUMAN_EXTINGUISH,  COMSIG_MOB_HAULED, COMSIG_MOB_UNHAULED), PROC_REF(wrapper_fizzle_camouflage))
+	RegisterSignal(H, COMSIG_MOB_EFFECT_CLOAK_CANCEL, PROC_REF(deactivate_camouflage))
 
 	camo_active = TRUE
 	ADD_TRAIT(H, TRAIT_CLOAKED, TRAIT_SOURCE_EQUIPMENT(WEAR_BACK))
-	H.visible_message(SPAN_DANGER("[H] vanishes into thin air!"), SPAN_NOTICE("You activate your cloak's camouflage."), max_distance = 4)
-	playsound(H.loc, 'sound/effects/cloak_scout_on.ogg', 15, TRUE)
+	H.visible_message(SPAN_DANGER("[H] vanishes into thin air!"), SPAN_NOTICE("You activate your [fluff_item]'s camouflage."), max_distance = 4)
+	playsound(H.loc, camo_on_sound, 15, TRUE)
 	H.unset_interaction()
 
-	H.alpha = full_camo_alpha
+	H.alpha = camo_alpha
 	H.FF_hit_evade = 1000
+	if(!allowed_stealth_shooting)
+		H.allow_gun_usage = allow_gun_usage
 
 	var/datum/mob_hud/security/advanced/SA = GLOB.huds[MOB_HUD_SECURITY_ADVANCED]
 	SA.remove_from_hud(H)
@@ -789,35 +1070,13 @@ GLOBAL_LIST_EMPTY_TYPED(radio_packs, /obj/item/storage/backpack/marine/satchel/r
 	XI.remove_from_hud(H)
 
 	anim(H.loc, H, 'icons/mob/mob.dmi', null, "cloak", null, H.dir)
+	cloak_cooldown = world.time + 0.8 SECONDS
 	return TRUE
-
-
-/obj/item/storage/backpack/marine/satchel/scout_cloak/proc/fade_in(mob/user)
-	SIGNAL_HANDLER
-	var/mob/living/carbon/human/H = user
-	if(camo_active)
-		if(current_camo < full_camo_alpha)
-			current_camo = full_camo_alpha
-		current_camo = clamp(current_camo + incremental_shooting_camo_penalty, full_camo_alpha, 255)
-		H.alpha = current_camo
-		if(current_camo > visible_camo_alpha)
-			REMOVE_TRAIT(H, TRAIT_CLOAKED, TRAIT_SOURCE_EQUIPMENT(WEAR_BACK))
-			to_chat(H, SPAN_BOLDNOTICE("Your cloak can't keep you perfectly hidden anymore!"))
-		addtimer(CALLBACK(src, PROC_REF(fade_out_finish), H), camouflage_break, TIMER_OVERRIDE|TIMER_UNIQUE)
-		animate(H, alpha = full_camo_alpha + 5, time = camouflage_break, easing = LINEAR_EASING, flags = ANIMATION_END_NOW)
-
-/obj/item/storage/backpack/marine/satchel/scout_cloak/proc/fade_out_finish(mob/living/carbon/human/H)
-	if(camo_active && H.back == src)
-		ADD_TRAIT(H, TRAIT_CLOAKED, TRAIT_SOURCE_EQUIPMENT(WEAR_BACK))
-		to_chat(H, SPAN_BOLDNOTICE("Your cloak shimmers, returning to it's perfectly camouflaged state!"))
-		animate(H, alpha = full_camo_alpha)
-		current_camo = full_camo_alpha
-
 
 /obj/item/storage/backpack/marine/satchel/scout_cloak/proc/wrapper_fizzle_camouflage()
 	SIGNAL_HANDLER
 	var/mob/wearer = src.loc
-	wearer.visible_message(SPAN_DANGER("[wearer]'s cloak fizzles out!"), SPAN_DANGER("Your cloak fizzles out!"))
+	wearer.visible_message(SPAN_DANGER("[wearer]'s [fluff_item] fizzles out!"), SPAN_DANGER("Your [fluff_item] fizzles out!"))
 	var/datum/effect_system/spark_spread/sparks = new /datum/effect_system/spark_spread
 	sparks.set_up(5, 4, src)
 	sparks.start()
@@ -828,12 +1087,16 @@ GLOBAL_LIST_EMPTY_TYPED(radio_packs, /obj/item/storage/backpack/marine/satchel/r
 	if(!istype(H))
 		return FALSE
 
+	if(cloak_cooldown > world.time)
+		to_chat(H, SPAN_WARNING("Your [fluff_item] is malfunctioning and can't be disabled right now!"))
+		return
+
 	UnregisterSignal(H, list(
-	COMSIG_MOB_FIRED_GUN,
-	COMSIG_MOB_FIRED_GUN_ATTACHMENT,
+	COMSIG_GRENADE_PRE_PRIME,
 	COMSIG_HUMAN_EXTINGUISH,
-	COMSIG_MOB_DEATH,
 	COMSIG_MOB_EFFECT_CLOAK_CANCEL,
+	COMSIG_MOB_HAULED,
+	COMSIG_MOB_UNHAULED,
 	))
 
 	if(forced)
@@ -841,8 +1104,8 @@ GLOBAL_LIST_EMPTY_TYPED(radio_packs, /obj/item/storage/backpack/marine/satchel/r
 
 	camo_active = FALSE
 	REMOVE_TRAIT(H, TRAIT_CLOAKED, TRAIT_SOURCE_EQUIPMENT(WEAR_BACK))
-	H.visible_message(SPAN_DANGER("[H] shimmers into existence!"), SPAN_WARNING("Your cloak's camouflage has deactivated!"), max_distance = 4)
-	playsound(H.loc, 'sound/effects/cloak_scout_off.ogg', 15, TRUE)
+	H.visible_message(SPAN_DANGER("[H] shimmers into existence!"), SPAN_WARNING("Your [fluff_item]'s camouflage has deactivated!"), max_distance = 4)
+	playsound(H.loc, camo_off_sound, 15, TRUE)
 
 	H.alpha = initial(H.alpha)
 	H.FF_hit_evade = initial(H.FF_hit_evade)
@@ -855,6 +1118,22 @@ GLOBAL_LIST_EMPTY_TYPED(radio_packs, /obj/item/storage/backpack/marine/satchel/r
 	if(anim)
 		anim(H.loc, H,'icons/mob/mob.dmi', null, "uncloak", null, H.dir)
 
+	cloak_cooldown = world.time + 0.8 SECONDS
+	addtimer(CALLBACK(src, PROC_REF(allow_shooting), H), 1.5 SECONDS)
+
+// This proc is to cancel priming grenades in /obj/item/explosive/grenade/attack_self()
+/obj/item/storage/backpack/marine/satchel/scout_cloak/proc/cloak_grenade_callback(mob/user)
+	SIGNAL_HANDLER
+
+	if(!allowed_stealth_shooting)
+		to_chat(user, SPAN_WARNING("Your cloak prevents you from priming the grenade!"))
+		return COMPONENT_GRENADE_PRIME_CANCEL
+
+/obj/item/storage/backpack/marine/satchel/scout_cloak/proc/allow_shooting(mob/living/carbon/human/H)
+	if(camo_active && !allow_gun_usage && !allowed_stealth_shooting)
+		return
+	H.allow_gun_usage = TRUE
+
 /datum/action/item_action/specialist/toggle_cloak
 	ability_primacy = SPEC_PRIMARY_ACTION_1
 
@@ -862,9 +1141,16 @@ GLOBAL_LIST_EMPTY_TYPED(radio_packs, /obj/item/storage/backpack/marine/satchel/r
 	..()
 	name = "Toggle Cloak"
 	button.name = name
+	update_button_icon()
+
+/datum/action/item_action/specialist/toggle_cloak/update_button_icon()
+	var/obj/item/storage/backpack/marine/satchel/scout_cloak/cloak = holder_item
+	if(cloak.camo_active)
+		action_icon_state = "invisibility"
+	else
+		action_icon_state = "invisibility_off"
 	button.overlays.Cut()
-	var/image/IMG = image('icons/obj/items/clothing/backpacks.dmi', button, "scout_cloak")
-	button.overlays += IMG
+	button.overlays += image('icons/mob/hud/actions.dmi', button, action_icon_state)
 
 /datum/action/item_action/specialist/toggle_cloak/can_use_action()
 	var/mob/living/carbon/human/H = owner
@@ -875,11 +1161,27 @@ GLOBAL_LIST_EMPTY_TYPED(radio_packs, /obj/item/storage/backpack/marine/satchel/r
 	. = ..()
 	var/obj/item/storage/backpack/marine/satchel/scout_cloak/SC = holder_item
 	SC.camouflage()
+	update_button_icon()
 
-/obj/item/storage/backpack/marine/satchel/scout_cloak/invis
-	full_camo_alpha = FULL_CAMO_ALPHA
-	current_camo = FULL_CAMO_ALPHA
-	visible_camo_alpha = VISIBLE_CAMO_ALPHA
+/obj/item/storage/backpack/marine/satchel/scout_cloak/wy_invis_droid
+	name = "M7X Mark II optical camouflage powerpack"
+	desc = "A heavy-duty powerpack carried by Weyland-Yutani combat androids. Powers the reverse-engineered optical camouflage system utilized by M7X Mark II Apesuit."
+	icon_state = "invis_android_powerpack"
+	flags_atom = FPRINT|NO_GAMEMODE_SKIN // same sprite for all gamemodes
+	icon = 'icons/obj/items/clothing/backpack/backpacks_by_faction/WY.dmi'
+	item_icons = list(
+		WEAR_BACK = 'icons/mob/humans/onmob/clothing/back/backpacks_by_faction/WY.dmi'
+	)
+	uniform_restricted = list(/obj/item/clothing/suit/storage/marine/veteran/pmc/wy_droid/dark)
+	allow_gun_usage = TRUE
+	allowed_stealth_shooting = TRUE
+	fluff_item = "powerpack"
+	camo_on_sound = 'sound/effects/pred_cloakon.ogg'
+	camo_off_sound = 'sound/effects/pred_cloakoff.ogg'
+
+/obj/item/storage/backpack/marine/satchel/scout_cloak/wy_invis_droid/Initialize()
+	. = ..()
+	AddElement(/datum/element/corp_label/wy)
 
 // Welder Backpacks //
 
@@ -892,7 +1194,7 @@ GLOBAL_LIST_EMPTY_TYPED(radio_packs, /obj/item/storage/backpack/marine/satchel/r
 	var/fuel_type = "fuel"
 	max_storage_space = 18
 	storage_slots = null
-	has_gamemode_skin = FALSE
+	flags_atom = FPRINT // has gamemode skin
 	xeno_types = null
 
 /obj/item/storage/backpack/marine/engineerpack/Initialize()
@@ -946,7 +1248,7 @@ GLOBAL_LIST_EMPTY_TYPED(radio_packs, /obj/item/storage/backpack/marine/satchel/r
 	if(!proximity)
 		return
 	if(istype(target, /obj/structure/reagent_dispensers))
-		if(!(istypestrict(target, /obj/structure/reagent_dispensers/fueltank)))
+		if(!(istypestrict(target, /obj/structure/reagent_dispensers/tank/fuel)))
 			to_chat(user, SPAN_NOTICE("This must be filled with a fuel tank."))
 			return
 		if(reagents.total_volume < max_fuel)
@@ -968,8 +1270,12 @@ GLOBAL_LIST_EMPTY_TYPED(radio_packs, /obj/item/storage/backpack/marine/satchel/r
 	desc = "A specialized satchel worn by USCM technicians and engineers. It carries two small fuel tanks for quick welder refueling and use."
 	icon_state = "satchel_marine_welder"
 	item_state = "satchel_marine_welder"
+	icon = 'icons/obj/items/clothing/backpack/backpacks_by_faction/UA.dmi'
+	item_icons = list(
+		WEAR_BACK = 'icons/mob/humans/onmob/clothing/back/backpacks_by_faction/UA.dmi'
+	)
 	max_storage_space = 12
-	has_gamemode_skin = FALSE
+	flags_atom = FPRINT|NO_GAMEMODE_SKIN // same sprite for all gamemodes
 	max_fuel = 100
 	worn_accessible = TRUE
 
@@ -977,9 +1283,7 @@ GLOBAL_LIST_EMPTY_TYPED(radio_packs, /obj/item/storage/backpack/marine/satchel/r
 	name = "\improper Technician Welder Chestrig"
 	desc = "A specialized Chestrig worn by technicians and engineers. It carries one medium fuel tank for quick welder refueling and use."
 	icon_state = "welder_chestrig"
-	item_state = "welder_chestrig"
 	max_storage_space = 12
-	has_gamemode_skin = FALSE
 	max_fuel = 100
 	worn_accessible = TRUE
 
@@ -990,7 +1294,7 @@ GLOBAL_LIST_EMPTY_TYPED(radio_packs, /obj/item/storage/backpack/marine/satchel/r
 	icon_state = "flamethrower_tank"
 	max_fuel = 500
 	fuel_type = "utnapthal"
-	has_gamemode_skin = FALSE
+	flags_atom = FPRINT // has gamemode skin
 
 /obj/item/storage/backpack/marine/engineerpack/flamethrower/verb/remove_reagents()
 	set name = "Empty canister"
@@ -1015,7 +1319,7 @@ GLOBAL_LIST_EMPTY_TYPED(radio_packs, /obj/item/storage/backpack/marine/satchel/r
 /obj/item/storage/backpack/marine/engineerpack/flamethrower/afterattack(obj/target, mob/user, proximity)
 	if(!proximity)
 		return
-	if (!(istype(target, /obj/structure/reagent_dispensers/fueltank)))
+	if (!(istype(target, /obj/structure/reagent_dispensers/tank/fuel)))
 		return
 
 	if (reagents.total_volume >= max_fuel)
@@ -1049,8 +1353,14 @@ GLOBAL_LIST_EMPTY_TYPED(radio_packs, /obj/item/storage/backpack/marine/satchel/r
 	desc = "A much older-generation back rig that holds fuel in two tanks. A small regulator sits between them. Has a few straps for holding up to three of the actual flamer tanks you'll be refilling."
 	icon_state = "flamethrower_backpack"
 	item_state = "flamethrower_backpack"
+	icon = 'icons/obj/items/clothing/backpack/backpacks_by_faction/UA.dmi'
+	item_icons = list(
+		WEAR_L_HAND = 'icons/mob/humans/onmob/inhands/clothing/backpacks_lefthand.dmi',
+		WEAR_R_HAND = 'icons/mob/humans/onmob/inhands/clothing/backpacks_righthand.dmi',
+		WEAR_BACK = 'icons/mob/humans/onmob/clothing/back/backpacks_by_faction/UA.dmi'
+	)
 	max_fuel = 350
-	has_gamemode_skin = FALSE
+	flags_atom = FPRINT|NO_GAMEMODE_SKIN // same sprite for all gamemodes
 	max_storage_space = 15
 	storage_slots = 3
 	worn_accessible = TRUE
@@ -1068,24 +1378,173 @@ GLOBAL_LIST_EMPTY_TYPED(radio_packs, /obj/item/storage/backpack/marine/satchel/r
 /obj/item/storage/backpack/lightpack/five_slot
 	max_storage_space = 15
 
+/obj/item/storage/backpack/lightpack/black
+	name = "\improper lightweight combat pack"
+	desc = "A small, lightweight pack for expeditions and short-range operations."
+	icon_state = "ERT_satchel_black"
+
+/obj/item/storage/backpack/lightpack/black/five_slot
+	max_storage_space = 15
+
+/obj/item/storage/backpack/lightpack/black/medic
+	name = "\improper lightweight medic combat pack"
+	desc = "A small, lightweight medic pack for expeditions and short-range operations."
+	icon_state = "ERT_satchel_medic_black"
+
+/obj/item/storage/backpack/lightpack/black/medic/five_slot
+	max_storage_space = 15
+
 /obj/item/storage/backpack/marine/engineerpack/ert
 	name = "\improper lightweight technician welderpack"
 	desc = "A small, lightweight pack for expeditions and short-range operations. Features a small fueltank for quick blowtorch refueling."
 	icon_state = "ERT_satchel_welder"
-	has_gamemode_skin = FALSE
+	icon = 'icons/obj/items/clothing/backpack/backpacks.dmi'
+	item_icons = list(
+		WEAR_BACK = 'icons/mob/humans/onmob/clothing/back/backpacks.dmi'
+	)
+	flags_atom = FPRINT|NO_GAMEMODE_SKIN // same sprite for all gamemodes
 	worn_accessible = TRUE
 	max_fuel = 180
 
-/obj/item/storage/backpack/commando
-	name = "commando bag"
-	desc = "A heavy-duty bag carried by Weyland-Yutani commandos."
-	icon_state = "commandopack"
+/obj/item/storage/backpack/marine/engineerpack/ert/four_slot
+	max_fuel = 100
+	max_storage_space = 12
+
+/obj/item/storage/backpack/marine/engineerpack/ert/black
+	icon_state = "ERT_satchel_welder_black"
+	max_storage_space = 20
+
+/obj/item/storage/backpack/marine/engineerpack/ert/black/four_slot
+	max_fuel = 100
+	max_storage_space = 12
+
+/obj/item/storage/backpack/molle
+	name = "\improper T13 MOLLE Satchel"
+	desc = "Tactical satchel manufactured by one of the Alphatech subsidiaries. Very lightweight beltbag variant that utilizes UA standard MOLLE fastening systems. Can be often found in hands of colonial security and various private military groups."
+	icon_state = "MOLLEbeltbag"
+	item_state = "MOLLEbeltbag"
 	worn_accessible = TRUE
+	max_storage_space = 15
+
+/obj/item/storage/backpack/molle/Initialize()
+	. = ..()
+	AddElement(/datum/element/corp_label/alphatech)
+
+/obj/item/storage/backpack/molle/backpack
+	name = "\improper T16 MOLLE Backpack"
+	desc = "Tactical backpack manufactured by one of the Alphatech subsidiaries. Very lightweight backpack that utilizes UA standard MOLLE fastening systems, which allows easy access and optimal weight distribution. Can be often found in hands of colonial security and various private military groups."
+	icon_state = "MOLLEbackpack"
+	item_state = "MOLLEbackpack"
+	max_storage_space = 21
+
+/obj/item/storage/backpack/molle/backpack/surv
+	worn_accessible = FALSE
+
+/obj/item/storage/backpack/molle/army
+	name = "\improper M1 MOLLE Satchel"
+	desc = "Tactical satchel manufactured by one of the Alphatech subsidiaries. Very lightweight beltbag variant that utilizes UA standard MOLLE fastening systems. Standard issue pack for US army troopers."
+
+/obj/item/storage/backpack/molle/backpack/army
+	name = "\improper M2 MOLLE Backpack"
+	desc = "Tactical backpack manufactured by one of the Alphatech subsidiaries. Very lightweight backpack that utilizes UA standard MOLLE fastening systems, which allows easy access and optimal weight distribution. Standard issue heavy duty pack for US army troopers."
+
+//----------WY----------
+
+/obj/item/storage/backpack/pmc
+	name = "\improper W-Y combat pack"
+	desc = "A small, lightweight pack for expeditions and short-range operations, designed for Weyland-Yutani security and private military personnel."
+	icon = 'icons/obj/items/clothing/backpack/backpacks_by_faction/WY.dmi'
+	icon_state = "pmc_satchel"
+	item_icons = list(
+		WEAR_BACK = 'icons/mob/humans/onmob/clothing/back/backpacks_by_faction/WY.dmi'
+	)
+	worn_accessible = TRUE
+	max_storage_space = 15
+
+/obj/item/storage/backpack/pmc/Initialize()
+	. = ..()
+	AddElement(/datum/element/corp_label/wy)
+
+/obj/item/storage/backpack/pmc/medic
+	name = "\improper W-Y medic combat pack"
+	icon = 'icons/obj/items/clothing/backpack/backpacks_by_faction/WY.dmi'
+	icon_state = "pmc_medic_satchel"
+
+/obj/item/storage/backpack/pmc/medic/guard
+	icon_state = "pmc_guard_medic_satchel"
+
+/obj/item/storage/backpack/pmc/backpack
+	name = "\improper PMC combat backpack"
+	desc = "Ergonomic, protected, high capacity backpack, designed for Weyland-Yutani PMCs."
+	icon_state = "pmc_backpack"
+	max_storage_space = 21
+
+/obj/item/storage/backpack/pmc/backpack/rto_broken
+	name = "\improper Broken WY Radio Telephone Pack"
+	desc = "A heavy-duty extended-pack, used for telecommunications between central command. Commonly carried by RTOs. This one bears the logo of Weyland Yutani and internal systems seem to completely fried and broken."
+	icon_state = "pmc_broken_rto"
+	item_state = "pmc_broken_rto"
+	icon = 'icons/obj/items/clothing/backpack/backpacks_by_faction/WY.dmi'
+	item_icons = list(
+		WEAR_L_HAND = 'icons/mob/humans/onmob/inhands/clothing/backpacks_lefthand.dmi',
+		WEAR_R_HAND = 'icons/mob/humans/onmob/inhands/clothing/backpacks_righthand.dmi',
+		WEAR_BACK = 'icons/mob/humans/onmob/clothing/back/backpacks_by_faction/WY.dmi'
+	)
+	flags_atom = FPRINT|NO_GAMEMODE_SKIN // same sprite for all gamemodes
+
+	flags_item = ITEM_OVERRIDE_NORTHFACE
+
+/obj/item/storage/backpack/pmc/backpack/commando
+	name = "\improper W-Y Commando combat backpack"
+	desc = "Ergonomic, protected, high capacity backpack, designed for Weyland-Yutani Commandos."
+	icon_state = "commando_backpack"
+
+/obj/item/storage/backpack/pmc/backpack/commando/leader
+	icon_state = "commando_leader_backpack"
+
+/obj/item/storage/backpack/marine/engineerpack/ert/pmc
+	name = "\improper PMC technician welderpack"
+	desc = "Ergonomic, protected, high capacity backpack, designed for Weyland-Yutani PMCs. Features a small fueltank for quick blowtorch refueling."
+	icon_state = "pmc_welderpack"
+	icon = 'icons/obj/items/clothing/backpack/backpacks_by_faction/WY.dmi'
+	item_icons = list(
+		WEAR_BACK = 'icons/mob/humans/onmob/clothing/back/backpacks_by_faction/WY.dmi'
+	)
+	flags_atom = FPRINT|NO_GAMEMODE_SKIN // same sprite for all gamemodes
+	worn_accessible = TRUE
+	max_fuel = 180
+
+/obj/item/storage/backpack/marine/engineerpack/ert/pmc/Initialize()
+	. = ..()
+	AddElement(/datum/element/corp_label/wy)
+
+/obj/item/storage/backpack/pmc/backpack/commando/apesuit
+	name = "Dog Catcher bag"
+	desc = "A heavy-duty bag carried by Weyland-Yutani Dog Catchers."
+	icon_state = "apesuit_pack"
+
+/obj/item/storage/backpack/combat_droid
+	name = "combat android powerpack"
+	desc = "A heavy-duty powerpack carried by Weyland-Yutani combat androids."
+	icon_state = "combat_android_powerpack"
+	icon = 'icons/obj/items/clothing/backpack/backpacks_by_faction/WY.dmi'
+	item_icons = list(
+		WEAR_BACK = 'icons/mob/humans/onmob/clothing/back/backpacks_by_faction/WY.dmi'
+	)
+	worn_accessible = TRUE
+
+/obj/item/storage/backpack/combat_droid/Initialize()
+	. = ..()
+	AddElement(/datum/element/corp_label/wy)
 
 /obj/item/storage/backpack/mcommander
 	name = "marine commanding officer backpack"
 	desc = "The contents of this backpack are top secret."
 	icon_state = "marinepack"
+	icon = 'icons/obj/items/clothing/backpack/backpacks_by_map/jungle.dmi'
+	item_icons = list(
+		WEAR_BACK = 'icons/mob/humans/onmob/clothing/back/backpacks_by_map/jungle.dmi'
+	)
 	storage_slots = null
 	max_storage_space = 30
 
@@ -1109,10 +1568,10 @@ GLOBAL_LIST_EMPTY_TYPED(radio_packs, /obj/item/storage/backpack/marine/satchel/r
 	var/list/smartguns = typesof(/obj/item/weapon/gun/smartgun)
 	var/list/training_guns = list(
 		/obj/item/weapon/gun/rifle/m41a/training,
-		/obj/item/weapon/gun/rifle/m49a/training,
+		/obj/item/weapon/gun/rifle/m4ra/training,
 		/obj/item/weapon/gun/smg/m39/training,
 		/obj/item/weapon/gun/pistol/m4a3/training,
-		/obj/item/weapon/gun/pistol/vp70/training) //Ivan doesn't carry toys.
+		/obj/item/weapon/gun/pistol/mod88/training) //Ivan doesn't carry toys.
 
 	var/list/picklist = subtypesof(/obj/item/weapon/gun) - (template_guns + bad_guns + emplacements + yautja_guns + smartguns + training_guns)
 	var/random_gun = pick(picklist)
@@ -1131,6 +1590,9 @@ GLOBAL_LIST_EMPTY_TYPED(radio_packs, /obj/item/storage/backpack/marine/satchel/r
 	var/internal_mag = new /obj/item/ammo_magazine/internal/souto
 	worn_accessible = TRUE
 
+/obj/item/storage/backpack/souto/Initialize()
+	. = ..()
+	AddElement(/datum/element/corp_label/souta)
 
 //----------UPP SECTION----------
 
@@ -1138,69 +1600,83 @@ GLOBAL_LIST_EMPTY_TYPED(radio_packs, /obj/item/storage/backpack/marine/satchel/r
 	name = "\improper UCP3 combat pack"
 	desc = "A UPP military standard-issue Union Combat Pack MK3."
 	icon_state = "satchel_upp"
+	icon = 'icons/obj/items/clothing/backpack/backpacks_by_faction/UPP.dmi'
+	item_icons = list(
+		WEAR_BACK = 'icons/mob/humans/onmob/clothing/back/backpacks_by_faction/UPP.dmi'
+	)
 	worn_accessible = TRUE
 	max_storage_space = 15
+
+/obj/item/storage/backpack/lightpack/upp/Initialize()
+	. = ..()
+	AddElement(/datum/element/corp_label/norcomm)
 
 //UPP engineer welderpack
 /obj/item/storage/backpack/marine/engineerpack/upp
 	name = "\improper UCP3-E technician welderpack"
 	desc = "A special version of the Union Combat Pack MK3 featuring a small fueltank for quick blowtorch refueling. Used by UPP Sappers."
 	icon_state = "satchel_upp_welder"
-	has_gamemode_skin = FALSE
+	icon = 'icons/obj/items/clothing/backpack/backpacks_by_faction/UPP.dmi'
+	item_icons = list(
+		WEAR_BACK = 'icons/mob/humans/onmob/clothing/back/backpacks_by_faction/UPP.dmi'
+	)
+	flags_atom = FPRINT|NO_GAMEMODE_SKIN // same sprite for all gamemodes
 	worn_accessible = TRUE
 	max_fuel = 180
 	max_storage_space = 12
 
+/obj/item/storage/backpack/marine/engineerpack/upp/Initialize()
+	. = ..()
+	AddElement(/datum/element/corp_label/norcomm)
+
 /obj/item/storage/backpack/marine/satchel/scout_cloak/upp
 	name = "\improper V86 Thermal Cloak"
 	desc = "A thermo-optic camouflage cloak commonly used by UPP commando units."
+	uniform_restricted = list(/obj/item/clothing/suit/storage/marine/faction/UPP/commando) //Need to wear UPP commando armor to equip this.
+	flags_atom = FPRINT|NO_GAMEMODE_SKIN // same sprite for all gamemodes
+
 	max_storage_space = 21
+	camo_alpha = 10
 
-/obj/item/storage/backpack/marine/satchel/scout_cloak/upp/invis
-	full_camo_alpha = FULL_CAMO_ALPHA
-	current_camo = FULL_CAMO_ALPHA
-	visible_camo_alpha = VISIBLE_CAMO_ALPHA
+/obj/item/storage/backpack/marine/satchel/scout_cloak/upp/strong
+	name = "\improper V87 Thermal Cloak"
+	desc = "A thermo-optic camouflage cloak commonly used by UPP commando units. This advanced version can stay cloaked even while shooting."
+	allow_gun_usage = TRUE
+	allowed_stealth_shooting = TRUE
 
-#undef FULL_CAMO_ALPHA
-#undef VISIBLE_CAMO_ALPHA
-#undef FULL_PVE_CAMO_ALPHA
-#undef VISIBLE_PVE_CAMO_ALPHA
+/obj/item/storage/backpack/marine/satchel/scout_cloak/upp/weak
+	desc = "A thermo-optic camouflage cloak commonly used by UPP commando units. This one is less effective than normal."
+	actions_types = null
 
 //----------TWE SECTION----------
 /obj/item/storage/backpack/rmc
-	has_gamemode_skin = FALSE
+	icon_state = ""
+	icon = 'icons/obj/items/clothing/backpack/backpacks_by_faction/TWE.dmi'
+	item_icons = list(
+		WEAR_BACK = 'icons/mob/humans/onmob/clothing/back/backpacks_by_faction/TWE.dmi'
+	)
+	flags_atom = FPRINT|NO_GAMEMODE_SKIN // same sprite for all gamemodes
 
 /obj/item/storage/backpack/rmc/heavy
 	name = "heavyweight RMC backpack"
 	desc = "The heavy-carry pack of the RMC forces. Designed to lug the most amount of gear into the battlefield."
 	icon_state = "backpack_large"
 	item_state = "backpack_large"
-	max_storage_space = 24
-	bag_open_time = 3 SECONDS
-
-/obj/item/storage/backpack/rmc/medic
-	name = "RMC medical backpack"
-	desc = "A TWE military standard-carry RMC combat pack MK3. Modified by Medical Assistants to fit their needs better."
-	icon_state = "backpack_medium_medic"
-	item_state = "backpack_medium_medic"
-	worn_accessible = TRUE
-	max_storage_space = 21
+	max_storage_space = 27
 
 /obj/item/storage/backpack/rmc/medium
 	name = "standard RMC backpack"
 	desc = "A TWE military standard-carry RMC combat pack MK3."
 	icon_state = "backpack_medium"
 	item_state = "backpack_medium"
-	max_storage_space = 18
-
-/obj/item/storage/backpack/marine/engineerpack/satchel/rmc
-	name = "RMC engineering backpack"
-	desc = "A TWE military standard-carry RMC combat pack MK3. Modified by ingenious Royal Engineers to better fit their requirements."
-	icon_state = "backpack_sapper"
-	item_state = "backpack_sapper"
-	max_storage_space = 18
-	max_fuel = 150
 	worn_accessible = TRUE
+	max_storage_space = 24
+
+/obj/item/storage/backpack/rmc/medium/medic
+	name = "standard RMC backpack"
+	desc = "A TWE military standard-carry RMC combat pack MK3 with a green cross denoting that it's a medic's backpack." //Surely CLF won't shoot the doc, right?
+	icon_state = "backpack_medium_medic"
+	item_state = "backpack_medium_medic"
 
 /obj/item/storage/backpack/rmc/light
 	name = "lightweight RMC backpack"
@@ -1208,63 +1684,35 @@ GLOBAL_LIST_EMPTY_TYPED(radio_packs, /obj/item/storage/backpack/marine/satchel/r
 	icon_state = "backpack_small"
 	item_state = "backpack_small"
 	worn_accessible = TRUE
-	max_storage_space = 15
+	max_storage_space = 21
 
-/obj/item/storage/backpack/rmc/frame //One sorry sod should have to lug this about spawns in their shuttle currently
+/obj/item/storage/backpack/rmc/frame //One sorry sod should have to lug this about spawns in their shuttle currently (making it a more useless backpack was devious. Reworks it to hold ammo and medkits, as well as nades.)
 	name = "\improper RMC carry-frame"
 	desc = "A backpack specifically designed to hold equipment for commandos."
 	icon_state = "backpack_frame_0"
 	item_state = "backpack_frame"
 	max_w_class = SIZE_HUGE
-	storage_slots = 7
+	storage_slots = 5
 	can_hold = list(
 		/obj/item/storage/firstaid,
+		/obj/item/device/defibrillator,
 		/obj/item/storage/box/packet,
 		/obj/item/ammo_box,
-		/obj/item/mortar_shell,
 	)
-	cant_hold = list(
-		/obj/item/ammo_box/magazine/nsg23/large = list(SKILL_DOMESTIC, SKILL_DOMESTIC_MASTER),
-		/obj/item/ammo_box/magazine/mk1/large = list(SKILL_DOMESTIC, SKILL_DOMESTIC_MASTER),
-		) //Jank, but amusing to think that the janitor can store these things in a frame pack whilst a marine commando can't
-
 	var/base_icon_state = "backpack_frame"
 
 /obj/item/storage/backpack/rmc/frame/update_icon()
 	. = ..()
 	icon_state = "[base_icon_state]_[length(contents)]"
 
-/obj/item/storage/backpack/general_belt/rmc
-	name = "\improper L26 pattern general utility belt"
+/obj/item/storage/backpack/general_belt/rmc //the breachers belt
+	name = "\improper RMC general utility belt"
 	desc = "A small, lightweight pouch that can be clipped onto armor to provide additional storage. This new RMC model, while uncomfortable, can also be clipped around the waist."
 	icon_state = "rmc_general"
 	item_state = "rmc_general"
-	has_gamemode_skin = FALSE
-	max_storage_space = 10
-
-//----------USASF & ARMY SECTION----------
-
-/obj/item/storage/backpack/marine/satchel/rto/navy
-	name = "\improper USASF Radio Telephone Pack"
-	desc = "A heavy-duty pack, used for telecommunications between orbiting warships and their forward observers."
-	networks_receive = list(FACTION_MARINE, FACTION_NAVY)
-	networks_transmit = list(FACTION_MARINE, FACTION_NAVY)
-
-/obj/item/storage/backpack/marine/satchel/rto/army
-	name = "\improper US Army Radio Telephone Pack"
-	desc = "A heavy-duty pack, used for telecommunications between army elements in the field and higher command elements."
-	networks_receive = list(FACTION_MARINE, FACTION_ARMY)
-	networks_transmit = list(FACTION_MARINE, FACTION_ARMY)
-
-/obj/item/storage/backpack/marine/medic/army
-	name = "\improper Army combat medic backpack"
-	desc = "A standard-issue backpack worn by US Army medics."
-	has_gamemode_skin = FALSE
-
-/obj/item/storage/backpack/marine/rocketpack/army
-	name = "\improper IMP M22 rocketeer bag"
-	desc = "A specially-designed backpack that fits to the IMP mounting frame on standard M3 & M4 pattern armors. It's made of two waterproofed reinforced tubes and one smaller satchel slung at the bottom. The two silos are for rockets, but no one is stopping you from cramming other things in there."
-
-/obj/item/storage/backpack/marine/satchel/intel/chestrig/army
-	name = "\improper Army expedition chestrig"
-	desc = "A heavy-duty IMP based chestrig, can quickly be accessed with only one hand. Usually issued to intelligence officers."
+	icon = 'icons/obj/items/clothing/belts/belts_by_faction/TWE.dmi'
+	item_icons = list(
+		WEAR_WAIST = 'icons/mob/humans/onmob/clothing/belts/belts_by_faction/TWE.dmi'
+	)
+	flags_atom = FPRINT|NO_GAMEMODE_SKIN // same sprite for all gamemodes
+	max_storage_space = 15

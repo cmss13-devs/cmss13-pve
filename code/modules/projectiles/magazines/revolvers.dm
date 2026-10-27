@@ -3,13 +3,17 @@
 
 /obj/item/ammo_magazine/revolver
 	name = "\improper M44 speed loader (.44)"
-	desc = "A revolver speed loader for the M44 revolver."
+	desc = "A 7-round .44 revolver speed loader."
 	default_ammo = /datum/ammo/bullet/revolver
 	flags_equip_slot = NO_FLAGS
 	caliber = ".44"
-	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/uscm.dmi'
+	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/USCM/revolvers.dmi'
 	icon_state = "m44"
 	item_state = "generic_speedloader"
+	item_icons = list(
+		WEAR_L_HAND = 'icons/mob/humans/onmob/inhands/weapons/ammo_lefthand.dmi',
+		WEAR_R_HAND = 'icons/mob/humans/onmob/inhands/weapons/ammo_righthand.dmi'
+		)
 	w_class = SIZE_SMALL
 	max_rounds = 7
 	gun_type = /obj/item/weapon/gun/revolver/m44
@@ -18,29 +22,33 @@
 
 /obj/item/ammo_magazine/revolver/marksman
 	name = "\improper M44 marksman speed loader (.44)"
+	desc = "A 7-round .44 revolver speed loader containing long-range armor-piercing marksman bullets."
 	default_ammo = /datum/ammo/bullet/revolver/marksman
 	caliber = ".44"
 	ammo_band_color = REVOLVER_TIP_COLOR_MARKSMAN
 
 /obj/item/ammo_magazine/revolver/heavy
 	name = "\improper M44 heavy speed loader (.44)"
-	desc = "A revolver speed loader containing heavy bullets. While less damaging overall than the traditional rounds, they are more accurate."
+	desc = "A 7-round .44 revolver speed loader containing heavy bullets. While less damaging than traditional .44 rounds, they deliver a higher stopping power."
 	default_ammo = /datum/ammo/bullet/revolver/heavy
 	caliber = ".44"
 	ammo_band_color = REVOLVER_TIP_COLOR_HEAVY
 
 /obj/item/ammo_magazine/revolver/incendiary
 	name = "\improper M44 incendiary speed loader (.44)"
+	desc = "A 7-round .44 revolver speed loader containing incendiary bullets."
 	default_ammo = /datum/ammo/bullet/revolver/incendiary
 	ammo_band_color = REVOLVER_TIP_COLOR_INCENDIARY
 
 /obj/item/ammo_magazine/revolver/marksman/toxin
 	name = "\improper M44 toxic speed loader (.44)"
+	desc = "A 7-round .44 revolver speed loader containing toxin bullets."
 	default_ammo = /datum/ammo/bullet/revolver/marksman/toxin
 	ammo_band_color = REVOLVER_TIP_COLOR_TOXIN
 
 /obj/item/ammo_magazine/revolver/penetrating
 	name = "\improper M44 wall-penetrating speed loader (.44)"
+	desc = "A 7-round .44 revolver speed loader containing wall-penetrating bullets."
 	default_ammo = /datum/ammo/bullet/revolver/penetrating
 	ammo_band_color = REVOLVER_TIP_COLOR_PENETRATING
 
@@ -51,15 +59,16 @@
 /obj/item/ammo_magazine/revolver/pkd
 	name = "\improper Plfager Katsuma stripper clip (.44)"
 	desc = "Flip up the two side latches (three on PKL) and push after aligning with feed lips on blaster. Clip can be re-used."
-	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/colony.dmi'
+	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/colony/revolvers.dmi'
 	icon_state = "pkd_44"
 	caliber = ".44 sabot"
 
 /obj/item/ammo_magazine/revolver/upp
 	name = "\improper ZHNK-72 speed loader (7.62x38mmR)"
+	desc = "A 7-round 7.62x38mmR revolver speed loader."
 	default_ammo = /datum/ammo/bullet/revolver/upp
 	caliber = "7.62x38mmR"
-	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/upp.dmi'
+	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/UPP/revolvers.dmi'
 	icon_state = "zhnk72loader"
 	gun_type = /obj/item/weapon/gun/revolver/upp
 
@@ -70,38 +79,38 @@
 	icon_state = "zhnk72loader_shrapnel"
 
 /obj/item/ammo_magazine/revolver/small
-	name = "\improper .38 overpressure speedloader (.38 +P)"
-	desc = "A speedloader of 6 handloaded overpressure .38 bullets. Substantial impact, but suffers from accuracy issues compared to factory ammunition. Liable to damage firearms not built to handle the chamber pressure."
+	name = "\improper S&W speed loader (.38)"
+	desc = "A 6-round .38 revolver speed loader."
 	default_ammo = /datum/ammo/bullet/revolver/small
-	caliber = ".38 +P"
-	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/colony.dmi'
+	caliber = ".38"
+	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/colony/revolvers.dmi'
 	icon_state = "38"
 	max_rounds = 6
 	gun_type = /obj/item/weapon/gun/revolver/small
 
-/obj/item/ammo_magazine/revolver/spearhead
-	name = "\improper Spearhead speed loader (.357)"
-	desc = "A speedloader of 6 FMJ .357 bullets, uncommonly issued to Colonial Marshals due to overpenetration risks."
-	default_ammo = /datum/ammo/bullet/revolver/small
-	caliber = ".357"
-	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/colony.dmi'
-	icon_state = "cmb"
-	max_rounds = 6
-	gun_type = /obj/item/weapon/gun/revolver/spearhead
-
-/obj/item/ammo_magazine/revolver/spearhead/hollowpoint
-	name = "\improper Spearhead speed loader (.357)"
-	desc = "A speedloader of 6 hollowpoint .357 bullets, commonly issued to Colonial Marshals to both prevent overpenetration and improve performance against unarmored criminals or wildlife."
+/obj/item/ammo_magazine/revolver/cmb
+	name = "\improper Spearhead hollowpoint speed loader (.357)"
+	desc = "This 6-round speed loader was created for the Colonial Marshals' most commonly issued sidearm, loaded with hollow-point rounds either for colonies with wildlife problems or orbital stations, which favor the lesser penetration over other ammunition to reduce the risk of hull breaches. In exchange, they're near useless against armored targets, but what's the chance of that being a problem on a space station?"
 	default_ammo = /datum/ammo/bullet/revolver/small/hollowpoint
+	caliber = ".357"
+	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/colony/revolvers.dmi'
 	icon_state = "cmb_hp"
+	max_rounds = 6
+	gun_type = /obj/item/weapon/gun/revolver/cmb
+
+/obj/item/ammo_magazine/revolver/cmb/normalpoint //put these in the marshal ert - ok sure :)
+	name = "\improper Spearhead speed loader (.357)"
+	desc = "This 6-round speed loader is fitted with standard .357 revolver bullets. A surprising rarity, as most CMB revolvers are issued with hollow-point rounds to Marshals on colonies with inimical wildlife, or thin-hulled space stations."
+	default_ammo = /datum/ammo/bullet/revolver/small/cmb
+	icon_state = "cmb"
 
 /**
  * MATEBA REVOLVER
  */
 
 /obj/item/ammo_magazine/revolver/mateba
-	name = "\improper Mateba speed loader (.454)"
-	desc = "A formidable .454 speedloader, made exclusively for the Mateba autorevolver. Packs a devastating punch. This standard-variant is optimized for anti-armor."
+	name = "\improper Unica 6 speed loader (.454)"
+	desc = "A formidable 6-round .454 speedloader, made exclusively for the Spearhead Unica 6 autorevolver. Packs a devastating punch. This standard-variant is optimized for anti-armor."
 	default_ammo = /datum/ammo/bullet/revolver/mateba
 	caliber = ".454"
 	icon_state = "mateba"
@@ -109,20 +118,20 @@
 	gun_type = /obj/item/weapon/gun/revolver/mateba
 
 /obj/item/ammo_magazine/revolver/mateba/highimpact
-	name = "\improper High Impact Mateba speed loader (.454)"
-	desc = "A formidable .454 speedloader, made exclusively for the Mateba autorevolver. Packs a devastating punch. This high impact variant is optimized for anti-personnel. Don't point at anything you don't want to destroy."
+	name = "\improper High Impact Unica 6 speed loader (.454)"
+	desc = "A formidable 6-round .454 speedloader, made exclusively for the Spearhead Unica 6 autorevolver. Packs a devastating punch. This high impact variant is optimized for anti-personnel. Don't point at anything you don't want to destroy."
 	default_ammo = /datum/ammo/bullet/revolver/mateba/highimpact
 	ammo_band_color = REVOLVER_TIP_COLOR_HIGH_IMPACT
 
 /obj/item/ammo_magazine/revolver/mateba/highimpact/ap
-	name = "\improper High Impact Armor-Piercing Mateba speed loader (.454)"
-	desc = "A formidable .454 speedloader, made exclusively for the Mateba autorevolver. Packs a devastating punch. This armor-piercing variant is optimized against armored targets at the cost of lower overall damage. Don't point at anything you don't want to destroy."
+	name = "\improper High Impact Armor-Piercing Unica 6 speed loader (.454)"
+	desc = "A formidable 6-round .454 speedloader, made exclusively for the Spearhead Unica 6 autorevolver. Packs a devastating punch. This armor-piercing variant is optimized against armored targets at the cost of lower overall damage. Don't point at anything you don't want to destroy."
 	default_ammo = /datum/ammo/bullet/revolver/mateba/highimpact/ap
-	ammo_band_color = REVOLVER_TIP_COLOR_AP
+	ammo_band_color = REVOLVER_TIP_COLOR_HIAP
 
 /obj/item/ammo_magazine/revolver/mateba/highimpact/explosive
-	name = "\improper Mateba explosive speed loader (.454)"
-	desc = "A formidable .454 speedloader, made exclusively for the Mateba autorevolver. There's an impact charge built into the bullet tip. Firing this at anything will result in a powerful explosion. Use with EXTREME caution."
+	name = "\improper Unica 6 explosive speed loader (.454)"
+	desc = "A formidable 6-round .454 speedloader, made exclusively for the Spearhead Unica 6 autorevolver. There's an impact charge built into the bullet tip. Firing this at anything will result in a powerful explosion. Use with EXTREME caution."
 	default_ammo = /datum/ammo/bullet/revolver/mateba/highimpact/explosive
 	ammo_band_color = REVOLVER_TIP_COLOR_EXPLOSIVE
 
@@ -135,7 +144,7 @@
 	desc = ".455 Webley, the last decent pistol calibre. Loaded with Mk III dum-dum bullets, because Marines are not human and the Hague Conventions do not apply to them."
 	default_ammo = /datum/ammo/bullet/revolver/webley
 	caliber = ".455"
-	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/colony.dmi'
+	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/colony/revolvers.dmi'
 	icon_state = "357"
 	max_rounds = 6
 	gun_type = /obj/item/weapon/gun/revolver/m44/custom/webley
@@ -149,6 +158,32 @@
 	default_ammo = /datum/ammo/bullet/revolver
 	max_rounds = 6
 	gun_type = /obj/item/weapon/gun/revolver
+
+/obj/item/ammo_magazine/internal/revolver/create_handful(mob/user, transfer_amount, obj_name = src)
+	if(current_rounds <= 0)
+		return FALSE
+
+	var/list/rounds_in_cylinder = list()
+	for(var/ammo_path in chamber_contents)
+		if(ammo_path != "empty")
+			rounds_in_cylinder[ammo_path]++
+
+	var/first_put = TRUE
+	for(var/ammo_path in rounds_in_cylinder)
+		var/datum/ammo/bullet = GLOB.ammo_list[ammo_path]
+		if(!bullet)
+			continue
+		var/obj/item/ammo_magazine/handful/new_handful = new bullet.handful_type()
+		var/amount = rounds_in_cylinder[ammo_path]
+		new_handful.generate_handful(ammo_path, caliber, amount, gun_type)
+		if(first_put && user)
+			user.put_in_hands(new_handful) // only put the first one in their hands
+			first_put = FALSE
+		else
+			new_handful.forceMove(get_turf(src))
+			to_chat(user, SPAN_WARNING("...but you drop the rest of the mixed ammunition in the process."))
+
+	return TRUE
 
 //-------------------------------------------------------
 //M44 MAGNUM REVOLVER //Not actually cannon, but close enough.
@@ -183,11 +218,11 @@
 
 /obj/item/ammo_magazine/internal/revolver/small
 	default_ammo = /datum/ammo/bullet/revolver/small
-	caliber = ".357 Hotload"
+	caliber = ".38"
 	gun_type = /obj/item/weapon/gun/revolver/small
 
 //-------------------------------------------------------
-//BURST REVOLVER //Mateba is pretty well known. The cylinder folds up instead of to the side.
+//BURST REVOLVER //Mateba(Unica) is pretty well known. The cylinder folds up instead of to the side.
 
 /obj/item/ammo_magazine/internal/revolver/mateba
 	default_ammo = /datum/ammo/bullet/revolver
@@ -206,15 +241,15 @@
 //-------------------------------------------------------
 //MARSHALS REVOLVER //Spearhead exists in Alien cannon.
 
-/obj/item/ammo_magazine/internal/revolver/spearhead
-	default_ammo = /datum/ammo/bullet/revolver/small
+/obj/item/ammo_magazine/internal/revolver/cmb
+	default_ammo = /datum/ammo/bullet/revolver/small/cmb
 	caliber = ".357"
-	gun_type = /obj/item/weapon/gun/revolver/spearhead
+	gun_type = /obj/item/weapon/gun/revolver/cmb
 
-/obj/item/ammo_magazine/internal/revolver/spearhead/hollowpoint
+/obj/item/ammo_magazine/internal/revolver/cmb/hollowpoint
 	default_ammo = /datum/ammo/bullet/revolver/small/hollowpoint
 	caliber = ".357"
-	gun_type = /obj/item/weapon/gun/revolver/spearhead
+	gun_type = /obj/item/weapon/gun/revolver/cmb
 
 //-------------------------------------------------------
 //BIG GAME HUNTER'S REVOLVER

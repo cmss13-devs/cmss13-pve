@@ -11,11 +11,16 @@
 /obj/effect/acid_hole/Initialize()
 	. = ..()
 	if(istype(loc, /turf/closed/wall))
-		var/turf/closed/wall/W = loc
-		W.acided_hole = src
-		holed_wall = W
+		var/turf/closed/wall/acided_wall = loc
+		acided_wall.acided_hole = src
+		holed_wall = acided_wall
 		holed_wall.opacity = FALSE
-		setDir(W.acided_hole_dir)
+		// Original intended way for mappers to set the direction was to set wall.acided_hole_dir, but mappers didnt know that, so we will just handle all ways they could have set it.
+		// Since holes can only have two states (vertical/horizontal), default is vertical.
+		if(icon_state != initial(icon_state)) // Mapper varedited icon_state to horizontal, so we update code to reflect it.
+			holed_wall.acided_hole_dir = EAST
+		if(dir != EAST && dir != WEST) // Mapper didnt varedit dir to horizontal, so we will use acided_hole_dir.
+			setDir(acided_wall.acided_hole_dir)
 
 /obj/effect/acid_hole/Destroy()
 	if(holed_wall)
@@ -31,11 +36,19 @@
 	return
 
 
-/obj/effect/acid_hole/MouseDrop_T(mob/M, mob/user)
+/obj/effect/acid_hole/MouseDrop_T(mob/entity, mob/user)
 	if (!holed_wall)
 		return
 
-	if(M == user && isxeno(user))
+	if(entity == user && isxeno(user))
+		if (entity.resting)
+			to_chat(user, SPAN_WARNING("You cannot do that while resting!"))
+			return
+
+		if (entity.is_mob_incapacitated())
+			to_chat(user, SPAN_WARNING("You cannot do that while incapacitated!"))
+			return
+
 		use_wall_hole(user)
 
 
@@ -44,8 +57,10 @@
 		qdel(src) //no wall?! then cease existence...
 		return
 
-	expand_hole(user)
-	return XENO_NO_DELAY_ACTION
+	if(!use_wall_hole(user))
+		if(user.mob_size >= MOB_SIZE_BIG)
+			expand_hole(user)
+			return XENO_NO_DELAY_ACTION
 
 /obj/effect/acid_hole/attack_larva(mob/living/carbon/xenomorph/larva/M)
 	attack_alien(M)
@@ -56,11 +71,9 @@
 
 	playsound(src, "pry", 25, 1)
 	xeno_attack_delay(user)
-	ADD_TRAIT(user, TRAIT_IMMOBILIZED, TRAIT_SOURCE_ABILITY("Acid hole"))
 	if(do_after(user, 60, INTERRUPT_ALL, BUSY_ICON_GENERIC) && !QDELETED(src) && holed_wall && istype(holed_wall))
 		holed_wall.take_damage(rand(2000,3500))
 		user.emote("roar")
-	REMOVE_TRAIT(user, TRAIT_IMMOBILIZED, TRAIT_SOURCE_ABILITY("Acid hole"))
 
 /obj/effect/acid_hole/proc/use_wall_hole(mob/living/user)
 
@@ -140,7 +153,7 @@
 		if(do_after(user,10, INTERRUPT_ALL, BUSY_ICON_HOSTILE))
 			if(Target.density)
 				return
-			user.visible_message(SPAN_WARNING("[user] throws [G] through [src]!"), \
+			user.visible_message(SPAN_WARNING("[user] throws [G] through [src]!"),
 								SPAN_WARNING("You throw [G] through [src]"))
 			user.drop_held_item()
 			G.forceMove(Target)
@@ -162,7 +175,7 @@
 		if(do_after(user,10, INTERRUPT_ALL, BUSY_ICON_HOSTILE))
 			if(Target.density)
 				return
-			user.visible_message(SPAN_WARNING("[user] throws [F] through [src]!"), \
+			user.visible_message(SPAN_WARNING("[user] throws [F] through [src]!"),
 								SPAN_WARNING("You throw [F] through [src]"))
 			user.drop_held_item()
 			F.forceMove(Target)

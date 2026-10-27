@@ -3,18 +3,10 @@
 
 /datum/action/xeno_action/activable/xeno_spit/spitter
 	name = "Spit Acid"
-	action_icon_state = "xeno_spit"
-	ability_name = "spit acid"
-	macro_path = /datum/action/xeno_action/verb/verb_xeno_spit
-	action_type = XENO_ACTION_CLICK
-	ability_primacy = XENO_PRIMARY_ACTION_1
-	cooldown_message = "We feel our corrosive glands swell with acid. We can spit again."
-	//xeno_cooldown = 60 SECONDS useless var. funny shitcode
 
 /datum/action/xeno_action/onclick/charge_spit
 	name = "Charge Spit"
 	action_icon_state = "charge_spit"
-	ability_name = "charge spit"
 	macro_path = /datum/action/xeno_action/verb/verb_charge_spit
 	ability_primacy = XENO_PRIMARY_ACTION_2
 	action_type = XENO_ACTION_ACTIVATE
@@ -22,7 +14,7 @@
 	xeno_cooldown = 12 SECONDS
 
 	// Config
-	var/duration = 35
+	var/duration = 3.5 SECONDS
 	var/speed_buff_amount = 0.8 // Go from shit slow to kindafast
 	var/armor_buff_amount = 5 // hopefully-minor buff so they can close the distance
 

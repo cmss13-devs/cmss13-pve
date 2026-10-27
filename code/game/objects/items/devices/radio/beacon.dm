@@ -3,6 +3,10 @@
 	desc = "A beacon used by a teleporter."
 	icon_state = "beacon"
 	item_state = "signaller"
+	item_icons = list(
+		WEAR_L_HAND = 'icons/mob/humans/onmob/inhands/equipment/devices_lefthand.dmi',
+		WEAR_R_HAND = 'icons/mob/humans/onmob/inhands/equipment/devices_righthand.dmi',
+	)
 	var/code = "electronic"
 
 /obj/item/device/radio/beacon/Initialize()
@@ -16,10 +20,6 @@
 
 /obj/item/device/radio/beacon/hear_talk()
 	return
-
-
-/obj/item/device/radio/beacon/send_hear()
-	return null
 
 
 /obj/item/device/radio/beacon/verb/alter_signal(t as text)

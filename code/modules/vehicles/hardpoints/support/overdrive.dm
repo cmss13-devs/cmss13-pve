@@ -6,7 +6,7 @@
 	disp_icon = "tank"
 	disp_icon_state = "odrive_enhancer"
 
-	health = 2000
+	health = 250
 
 	// 20% movespeed increase. Remember that movespeed is given in delay
 	buff_multipliers = list(

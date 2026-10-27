@@ -54,7 +54,7 @@
 				++xcrd
 			--ycrd
 
-/datum/map_template/shuttle/load(turf/T, centered, register=TRUE)
+/datum/map_template/shuttle/load(turf/target_turf, centered=FALSE, delete=FALSE, allow_cropping=FALSE, crop_within_type=null, crop_within_border=1, expand_type=null, keep_within_ztrait=FALSE, register=TRUE)
 	. = ..()
 	if(!.)
 		return
@@ -66,6 +66,7 @@
 		// the docking port.
 
 		for(var/obj/docking_port/mobile/port in place)
+			port.calculate_docking_port_information(src)
 			SSatoms.InitializeAtoms(list(port))
 			if(register)
 				port.register()
@@ -103,40 +104,3 @@
 	var/obj/docking_port/mobile/trijent_elevator/elev = M
 	elev.elevator_network = elevator_network
 	log_debug("Adding network [elevator_network] to [M.id]")
-
-/datum/map_template/shuttle/trijent_elevator/ice_elevator
-	name = "Classic Ice Elevator"
-	shuttle_id = "ice_classic_shuttle"
-
-/datum/map_template/shuttle/trijent_elevator/ice_elevator/lab
-	elevator_network = "lab"
-
-/datum/map_template/shuttle/trijent_elevator/ice_elevator/dorm
-	elevator_network = "dorm"
-
-/datum/map_template/shuttle/trijent_elevator/ice_elevator/arrivals
-	elevator_network = "Arrivals"
-/datum/map_template/shuttle/trijent_elevator/ice_elevator/omicorn
-	elevator_network = "Omicorn"
-
-/datum/map_template/shuttle/trijent_elevator/ice_elevator/requisitions
-	elevator_network = "Requisitions"
-
-/datum/map_template/shuttle/trijent_elevator/golden_arrow
-	shuttle_id = "unused"
-
-/datum/map_template/shuttle/trijent_elevator/golden_arrow/vehicleone
-	name = "Vehicle Elevator One"
-	shuttle_id = MOBILE_SHUTTLE_SHIPMAP_ELEVATOR_ONE
-	elevator_network = "ArrowVehicleOne"
-
-/datum/map_template/shuttle/trijent_elevator/golden_arrow/vehicletwo
-	name = "Vehicle Elevator Two"
-	shuttle_id = MOBILE_SHUTTLE_SHIPMAP_ELEVATOR_TWO
-	elevator_network = "ArrowVehicleTwo"
-
-/datum/map_template/shuttle/trijent_elevator/golden_arrow/cargo
-	name = "Cargo Elevator"
-	elevator_network = "garrow_cargo"
-	shuttle_id = MOBILE_SHUTTLE_SHIPMAP_ELEVATOR_CARGO
-	elevator_network = "ArrowCargo"

@@ -34,8 +34,6 @@ GLOBAL_LIST_EMPTY(command_apc_list)
 
 	movement_sound = 'sound/vehicles/tank_driving.ogg'
 
-	light_range = 4
-
 	var/gunner_view_buff = 10
 
 	hardpoints_allowed = list(
@@ -61,33 +59,29 @@ GLOBAL_LIST_EMPTY(command_apc_list)
 
 	vehicle_flags = VEHICLE_CLASS_LIGHT
 
+	mob_size_required_to_hit = MOB_SIZE_XENO
+
 	dmg_multipliers = list(
 		"all" = 1,
 		"acid" = 1.6,
-		"slash" = 1.8,
+		"slash" = 0.8,
 		"bullet" = 0.6,
 		"explosive" = 0.7,
 		"blunt" = 0.7,
-		"abstract" = 1,
+		"abstract" = 1
 	)
 
-	move_max_momentum = 2.5
+	move_max_momentum = 2
 	move_momentum_build_factor = 1.5
 	move_turn_momentum_loss_factor = 0.8
 
 	vehicle_ram_multiplier = VEHICLE_TRAMPLE_DAMAGE_APC_REDUCTION
-
-/obj/vehicle/multitile/apc/Initialize()
-	. = ..()
-
-	var/turf/gotten_turf = get_turf(src)
-	if(gotten_turf && gotten_turf.z)
-		SSminimaps.add_marker(src, gotten_turf.z, MINIMAP_FLAG_USCM, "apc", 'icons/ui_icons/map_blips_large.dmi')
+	minimap_icon_state = "apc"
 
 /obj/vehicle/multitile/apc/load_role_reserved_slots()
 	var/datum/role_reserved_slots/RRS = new
 	RRS.category_name = "Crewmen"
-	RRS.roles = list(JOB_TANK_CREW, JOB_WO_CREWMAN, JOB_UPP_CREWMAN, JOB_PMC_CREWMAN)
+	RRS.roles = list(JOB_TANK_CREW, JOB_UPP_CREWMAN, JOB_PMC_CREWMAN, JOB_ARMY_TANK)
 	RRS.total = 2
 	role_reserved_slots += RRS
 
@@ -108,8 +102,6 @@ GLOBAL_LIST_EMPTY(command_apc_list)
 		add_verb(M.client, list(
 			/obj/vehicle/multitile/proc/toggle_door_lock,
 			/obj/vehicle/multitile/proc/activate_horn,
-			/obj/vehicle/multitile/proc/switch_hardpoint,
-			/obj/vehicle/multitile/proc/cycle_hardpoint,
 			/obj/vehicle/multitile/proc/name_vehicle
 		))
 	else if(seat == VEHICLE_GUNNER)
@@ -136,8 +128,6 @@ GLOBAL_LIST_EMPTY(command_apc_list)
 		remove_verb(M.client, list(
 			/obj/vehicle/multitile/proc/toggle_door_lock,
 			/obj/vehicle/multitile/proc/activate_horn,
-			/obj/vehicle/multitile/proc/switch_hardpoint,
-			/obj/vehicle/multitile/proc/cycle_hardpoint,
 			/obj/vehicle/multitile/proc/name_vehicle,
 		))
 	else if(seat == VEHICLE_GUNNER)

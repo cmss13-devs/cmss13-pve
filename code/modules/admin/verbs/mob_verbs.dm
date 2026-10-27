@@ -1,3 +1,7 @@
+#define NARRATION_METHOD_SAY "Say"
+#define NARRATION_METHOD_ME "Me"
+#define NARRATION_METHOD_DIRECT "Direct"
+
 // Converted this into a proc. Verb will be separate
 /client/proc/change_ckey(mob/M in GLOB.mob_list, a_ckey = null)
 	var/new_ckey = a_ckey
@@ -34,10 +38,11 @@
 	if(!istype(O) || (!check_rights(R_ADMIN|R_DEBUG, 0))) //Let's add a few extra sanity checks.
 		return
 	if(alert("Do you want to possess this mob?", "Switch Ckey", "Yes", "No") == "Yes")
-		if(!M || !O) //Extra check in case the mob was deleted while we were transfering.
+		if(!M || !O) //Extra check in case the mob was deleted while we were transferring.
 			return
 		change_ckey(M, O.ckey)
-	else return
+	else
+		return
 
 /client/proc/cmd_admin_check_contents(mob/living/M as mob in GLOB.living_mob_list)
 	set name = "Check Contents"
@@ -63,7 +68,7 @@
 		alert("Why do you need to add a HUD to a ghost?")
 		return
 
-	var/list/listed_huds = list("Medical HUD", "Security HUD", "Squad HUD", "Xeno Status HUD")
+	var/list/listed_huds = list("Medical HUD", "Security HUD", "Squad HUD", "Xeno Status HUD", "Hunter HUD")
 	var/hud_choice = tgui_input_list(usr, "Choose a HUD to toggle", "Toggle HUD", listed_huds)
 	var/datum/mob_hud/H
 	switch(hud_choice)
@@ -75,7 +80,10 @@
 			H = GLOB.huds[MOB_HUD_FACTION_OBSERVER]
 		if("Xeno Status HUD")
 			H = GLOB.huds[MOB_HUD_XENO_STATUS]
-		else return
+		if("Hunter HUD")
+			H = GLOB.huds[MOB_HUD_HUNTER]
+		else
+			return
 
 	H.add_hud_to(M, HUD_SOURCE_ADMIN)
 	to_chat(src, SPAN_INFO("[hud_choice] enabled."))
@@ -85,12 +93,15 @@
 	set category = "Admin.Fun"
 	set name = "Gib"
 
-	if(!check_rights(R_ADMIN)) return
+	if(!check_rights(R_ADMIN))
+		return
 
 	var/confirm = alert(src, "You sure?", "Confirm", "Yes", "No")
-	if(confirm != "Yes") return
+	if(confirm != "Yes")
+		return
 	//Due to the delay here its easy for something to have happened to the mob
-	if(!M) return
+	if(!M)
+		return
 
 	message_admins("[key_name_admin(usr)] has gibbed [key_name_admin(M)]", 1)
 
@@ -154,11 +165,11 @@
 			var/mob/living/carbon/human/H = M
 
 			if(!istype(H))
-				to_chat(usr, "The person you are trying to contact is not human")
+				to_chat(usr, "The person you are trying to contact is not human.")
 				return
 
 			if(!H.get_type_in_ears(/obj/item/device/radio/headset))
-				to_chat(usr, "The person you are trying to contact is not wearing a headset")
+				to_chat(usr, "The person you are trying to contact is not wearing a headset.")
 				return
 			to_chat(H, SPAN_ANNOUNCEMENT_HEADER_BLUE("Message received through headset. [message_option] Transmission <b>\"[msg]\"</b>"))
 
@@ -199,26 +210,38 @@
 		else
 			return
 
-/client/proc/cmd_admin_atom_narrate(atom/selected in view(src))
-	set name = "Atom Narrate"
+/client/proc/cmd_admin_object_narrate(obj/selected in view(src))
+	set name = "Object Narrate"
 	set category = null
 
 	if(!check_rights(R_MOD))
 		return
 
-	var/delayed = tgui_alert(mob, "Do you want this narration to occur when someone walks nearby?", "Confirmation", list("Yes", "No")) == "Yes"
-
-	var/narration_type = tgui_input_list(mob,"What type of narration?", "Narration", list(NARRATION_METHOD_SAY, NARRATION_METHOD_ME, NARRATION_METHOD_DIRECT))
-
-	if(!narration_type)
+	var/type = tgui_input_list(usr,
+				"What type of narration?",
+				"Narration",
+				list(NARRATION_METHOD_SAY, NARRATION_METHOD_ME, NARRATION_METHOD_DIRECT))
+	if(!type)
 		return
-
-	var/message = tgui_input_text(mob, "What should it say?", "Narrating as [selected]")
-
+	var/message = input(usr,
+				"What should it say?",
+				"Narrating as [selected.name]")
 	if(!message)
 		return
 
-	selected.AddComponent(/datum/component/atom_narrate, message, narration_type, delayed, key_name(src))
+	var/list/heard = get_mobs_in_view(GLOB.world_view_size, selected)
+
+	switch(type)
+		if(NARRATION_METHOD_SAY)
+			selected.langchat_speech(message, heard, GLOB.all_languages, skip_language_check = TRUE)
+			selected.visible_message("<b>[selected]</b> says, \"[message]\"")
+		if(NARRATION_METHOD_ME)
+			selected.langchat_speech(message, heard, GLOB.all_languages, skip_language_check = TRUE, animation_style = LANGCHAT_FAST_POP, additional_styles = list("langchat_small", "emote"))
+			selected.visible_message("<b>[selected]</b> [message]")
+		if(NARRATION_METHOD_DIRECT)
+			selected.visible_message("[message]")
+	log_admin("[key_name(src)] sent an Object Narrate with message [message].")
+	message_admins("[key_name(src)] sent an Object Narrate with message [message].")
 
 /client/proc/cmd_admin_direct_narrate(mob/M in GLOB.mob_list)
 	set name = "Narrate"
@@ -275,7 +298,7 @@
 	usr.forceMove(O)
 	usr.real_name = O.name
 	usr.name = O.name
-	usr.client.eye = O
+	usr.client?.set_eye(O)
 	usr.control_object = O
 
 /client/proc/release(obj/O as obj in world)
@@ -295,7 +318,7 @@
 			H.change_real_name(H, usr.name_archive)
 
 	usr.forceMove(O.loc )// Appear where the object you were controlling is -- TLE
-	usr.client.eye = usr
+	usr.client?.set_eye(usr)
 	usr.control_object = null
 
 /client/proc/cmd_admin_drop_everything(mob/M as mob in GLOB.mob_list)
@@ -311,7 +334,8 @@
 		return
 
 	for(var/obj/item/W in M)
-		if(istype(W,/obj/item/alien_embryo)) continue
+		if(istype(W,/obj/item/alien_embryo))
+			continue
 		M.drop_inv_item_on_ground(W)
 
 	message_admins("[key_name_admin(usr)] made [key_name_admin(M)] drop everything!")
@@ -331,7 +355,7 @@
 	var/newhive = tgui_input_list(src,"Select a hive.", "Change Hivenumber", hives, theme="hive_status")
 
 	if(!H)
-		to_chat(usr, "This mob no longer exists")
+		to_chat(usr, "This mob no longer exists.")
 		return
 
 	if(isxeno(H))
@@ -365,7 +389,7 @@
 		return
 
 	if(!carbon)
-		to_chat(usr, "This mob no longer exists")
+		to_chat(usr, "This mob no longer exists.")
 		return
 
 	var/old_name = carbon.name
@@ -374,27 +398,28 @@
 		var/mob/living/carbon/human/human = carbon
 		var/obj/item/card/id/card = human.get_idcard()
 		if(card)
-			card.name = "[human.real_name]'s ID Card"
+			card.name = "[human.real_name]'s [card.id_type]"
 			card.registered_name = "[human.real_name]"
 			if(card.assignment)
 				card.name += " ([card.assignment])"
 
 	message_admins("[key_name(src)] changed name of [old_name] to [newname].")
 
-/datum/admins/proc/togglesleep(mob/living/M as mob in GLOB.mob_list)
+/datum/admins/proc/togglesleep(mob/living/living_target as mob in GLOB.mob_list)
 	set name = "Toggle Sleeping"
 	set category = null
 
-	if(!check_rights(0)) return
+	if(!check_rights(0))
+		return
 
-	if (M.sleeping > 0) //if they're already slept, set their sleep to zero and remove the icon
-		M.sleeping = 0
-		M.RemoveSleepingIcon()
+	if (living_target.is_admin_slept()) //if they're already slept, remove the aslept trait and remove the icon
+		living_target.set_admin_sleep(FALSE)
+		living_target.RemoveSleepingIcon()
 	else
-		M.sleeping = 9999999 //if they're not, sleep them and add the sleep icon, so other marines nearby know not to mess with them.
-		M.AddSleepingIcon()
+		living_target.set_admin_sleep(TRUE) //if they're not, add the aslept trait them and add the sleep icon, so other marines nearby know not to mess with them.
+		living_target.AddSleepingIcon()
 
-	message_admins("[key_name(usr)] used Toggle Sleeping on [key_name(M)].")
+	message_admins("[key_name(usr)] used Toggle Sleeping on [key_name(living_target)].")
 	return
 
 #undef NARRATION_METHOD_SAY

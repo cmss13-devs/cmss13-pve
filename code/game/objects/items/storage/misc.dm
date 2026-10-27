@@ -11,7 +11,7 @@
  */
 
 /obj/item/storage/donut_box
-	icon = 'icons/obj/items/food.dmi'
+	icon = 'icons/obj/items/food/donuts.dmi'
 	icon_state = "donutbox"
 	name = "\improper Yum! donuts"
 	desc = "A box of mouth-watering \"<i>Yum!</i>\" brand donuts."
@@ -43,7 +43,7 @@
 	var/i = 0
 	for(var/obj/item/reagent_container/food/snacks/donut/D in contents)
 		i++
-		var/image/img = image('icons/obj/items/food.dmi', "[D.overlay_state]-[i]")
+		var/image/img = image('icons/obj/items/food/donuts.dmi', "[D.overlay_state]-[i]")
 		overlays += img
 
 /obj/item/storage/donut_box/empty
@@ -51,14 +51,14 @@
 	startswith = 0
 
 /*
- * Mateba Case
+ * Mateba(Unica) Case
  */
 
 /obj/item/storage/mateba_case
 	icon = 'icons/obj/items/storage/kits.dmi'
 	icon_state = "matebacase"
-	name = "mateba customization kit case"
-	desc = "A wooden case used for storing the tools and parts needed to customize a Mateba revolver. Comes with three barrel lengths and the necessary key to swap them out."
+	name = "Unica spare barrels case"
+	desc = "A wooden case used for storing the tools and parts needed to customize a Unica autorevolver. Comes with three barrel lengths and the necessary key to swap them out, as well as room for the gun itself."
 	storage_slots = 5
 	can_hold = list(/obj/item/attachable/mateba, /obj/item/weapon/gun/revolver/mateba, /obj/item/weapon/mateba_key)
 
@@ -70,18 +70,35 @@
 
 /obj/item/storage/mateba_case/captain/council
 	icon_state = "c_matebacase"
-	name = "colonel's mateba customization kit case"
-	desc = "A black-ebony case used for storing the tools and parts needed to customize a Mateba revolver. This variant is custom-made for colonels."
+	name = "senior officer's Unica spare barrels case"
+	desc = "A black-ebony case used for storing the tools and parts needed to customize a Unica autorevolver, as well as room for the gun itself. This variant is custom-made for senior officers and comes with silver barrel attachments."
+
+/obj/item/storage/mateba_case/captain/council/fill_preset_inventory()
+	new /obj/item/attachable/mateba/short/silver(src)
+	new /obj/item/attachable/mateba/silver(src)
+	new /obj/item/attachable/mateba/long/silver(src)
+	new /obj/item/weapon/mateba_key(src)
+
+/obj/item/storage/mateba_case/captain/council_gold
+	icon_state = "c_matebacase"
+	name = "senior officer's Unica spare barrels case"
+	desc = "A black-ebony case used for storing the tools and parts needed to customize a Unica autorevolver, as well as room for the gun itself. This variant is custom-made for senior officers and comes with golden barrel attachments."
+
+/obj/item/storage/mateba_case/captain/council_gold/fill_preset_inventory()
+	new /obj/item/attachable/mateba/short/gold(src)
+	new /obj/item/attachable/mateba/gold(src)
+	new /obj/item/attachable/mateba/long/gold(src)
+	new /obj/item/weapon/mateba_key(src)
 
 /obj/item/storage/mateba_case/general
 	icon_state = "c_matebacase"
-	name = "general's mateba customization kit case"
-	desc = "A black-ebony case used for storing the tools and parts needed to customize a Mateba revolver. This variant is made for general-grade golden Matebas and comes with golden barrel attachments."
+	name = "luxurious Unica customization kit case"
+	desc = "A black-ebony case used for storing the tools and parts needed to customize a Unica autorevolver. This variant is made for general-grade golden Unicas and comes with golden barrel attachments."
 
 /obj/item/storage/mateba_case/general/fill_preset_inventory()
-	new /obj/item/attachable/mateba/short/dark(src)
-	new /obj/item/attachable/mateba/dark(src)
-	new /obj/item/attachable/mateba/long/dark(src)
+	new /obj/item/attachable/mateba/short/gold(src)
+	new /obj/item/attachable/mateba/gold(src)
+	new /obj/item/attachable/mateba/long/gold(src)
 	new /obj/item/weapon/mateba_key(src)
 
 //6 pack
@@ -89,7 +106,7 @@
 /obj/item/storage/beer_pack
 	name = "beer pack"
 	desc = "A pack of Aspen beer cans."
-	icon = 'icons/obj/items/drinkcans.dmi'
+	icon = 'icons/obj/items/food/drinkcans.dmi'
 	icon_state = "6_pack_6"
 	item_state = "souto_classic"
 	storage_slots = 6
@@ -111,190 +128,115 @@
 	else
 		icon_state = "6_pack_[length(contents)]"
 
-/obj/item/storage/box/loadout
-	name = "storage case"
-	desc = "A wooden case that fits a pistol and a number of magazines."
-	icon = 'icons/obj/items/storage/kits.dmi'
-	icon_state = "matebacase"
-	w_class = SIZE_MEDIUM
+/obj/item/storage/box/fluff_gun
+	name = "Sidearm Storage Box"
+	desc = "Base item for preference weapons."
+	w_class = SIZE_LARGE
 	max_w_class = SIZE_MEDIUM
 	storage_slots = 7
+	icon = 'icons/obj/items/storage/kits.dmi'
+	icon_state = "m43case"
 
-/obj/item/storage/box/loadout/T73_loadout
-	name = "Type 73 storing case"
-	desc = "A small case containing a loaded Type 73, and additional magazines."
-	can_hold = list(/obj/item/weapon/gun/pistol/t73, /obj/item/ammo_magazine/pistol/t73)
-
-/obj/item/storage/box/loadout/T73_loadout/fill_preset_inventory()
-	handle_item_insertion(new /obj/item/weapon/gun/pistol/t73())
-	for(var/i = 1 to storage_slots - 1)
-		new /obj/item/ammo_magazine/pistol/t73(src)
-
-/obj/item/storage/box/loadout/ZHNK72_loadout
-	name = "ZHNK-72 storing case"
-	desc = "A small case containing a loaded ZHNK-72, and additional speedloaders."
-	can_hold = list(/obj/item/weapon/gun/revolver/upp, /obj/item/ammo_magazine/revolver/upp)
-
-/obj/item/storage/box/loadout/ZHNK72_loadout/fill_preset_inventory()
-	handle_item_insertion(new /obj/item/weapon/gun/revolver/upp())
-	for(var/i = 1 to storage_slots - 1)
-		new /obj/item/ammo_magazine/revolver/upp(src)
-
-/obj/item/storage/box/loadout/M4A3_custom_loadout
-	name = "M4A3 storage case"
-	desc = "A relatively large storage case containing a loaded M4A3 and additional magazines."
-	can_hold = list(/obj/item/weapon/gun/pistol/m4a3/custom, /obj/item/ammo_magazine/pistol)
-
-/obj/item/storage/box/loadout/M4A3_custom_loadout/fill_preset_inventory()
-	handle_item_insertion(new /obj/item/weapon/gun/pistol/m4a3/custom())
-	for(var/i = 1 to storage_slots - 1)
-		new /obj/item/ammo_magazine/pistol(src)
-
-/obj/item/storage/box/loadout/HG45_civilian_loadout
-	name = "HG 45 'Aguila' storage case"
-	desc = "A relatively large storage case containing a loaded HG 45 'Aguila' and additional magazines."
-	can_hold = list(/obj/item/weapon/gun/pistol/highpower, /obj/item/ammo_magazine/pistol/highpower)
-
-/obj/item/storage/box/loadout/HG45_civilian_loadout/fill_preset_inventory()
-	handle_item_insertion(new /obj/item/weapon/gun/pistol/highpower())
-	for(var/i = 1 to storage_slots - 1)
-		new /obj/item/ammo_magazine/pistol/highpower(src)
-
-/obj/item/storage/box/loadout/HG45_marine_loadout
-	name = "HG 45 'Marina' storage case"
-	desc = "A relatively large storage case containing a loaded HG 45 'Marina' and additional magazines."
-	can_hold = list(/obj/item/weapon/gun/pistol/highpower/black, /obj/item/ammo_magazine/pistol/highpower/black)
-
-/obj/item/storage/box/loadout/HG45_marine_loadout/fill_preset_inventory()
-	handle_item_insertion(new /obj/item/weapon/gun/pistol/highpower/black())
-	for(var/i = 1 to storage_slots - 1)
-		new /obj/item/ammo_magazine/pistol/highpower/black(src)
-
-/obj/item/storage/box/loadout/HG44_loadout
-	name = "HG 44 'Automag' storage case"
-	desc = "A relatively large storage case containing a loaded HG 44 'Automag' and additional magazines."
-	can_hold = list(/obj/item/weapon/gun/pistol/highpower/automag, /obj/item/ammo_magazine/pistol/highpower/automag)
-
-/obj/item/storage/box/loadout/HG44_loadout/fill_preset_inventory()
-	handle_item_insertion(new /obj/item/weapon/gun/pistol/highpower/automag())
-	for(var/i = 1 to storage_slots - 1)
-		new /obj/item/ammo_magazine/pistol/highpower/automag(src)
-
-/obj/item/storage/box/loadout/Spearhead_loadout
-	name = "Spearhead Armoury storage case"
-	desc = "A relatively large storage case containing a loaded Spearhead Armoury revolver and additional speedloaders."
-	can_hold = list(/obj/item/weapon/gun/revolver/spearhead, /obj/item/ammo_magazine/revolver/spearhead)
-
-/obj/item/storage/box/loadout/Spearhead_loadout/fill_preset_inventory()
-	handle_item_insertion(new /obj/item/weapon/gun/revolver/spearhead())
-	for(var/i = 1 to storage_slots - 1)
-		new /obj/item/ammo_magazine/revolver/spearhead(src)
-
-/obj/item/storage/box/loadout/Spearhead_loadout/custom
-	name = "Spearhead Armoury storage case"
-	desc = "A relatively large storage case containing a loaded Spearhead Armoury revolver and additional speedloaders."
-	can_hold = list(/obj/item/weapon/gun/revolver/spearhead/black, /obj/item/ammo_magazine/revolver/spearhead)
-
-/obj/item/storage/box/loadout/Spearhead_loadout/custom/fill_preset_inventory()
-	handle_item_insertion(new /obj/item/weapon/gun/revolver/spearhead/black())
-	for(var/i = 1 to storage_slots - 1)
-		new /obj/item/ammo_magazine/revolver/spearhead(src)
-
-/obj/item/storage/box/loadout/M1911_loadout
-	name = "M1911 storage case"
-	desc = "A relatively large storage case containing a loaded M1911 and additional magazines."
-	can_hold = list(/obj/item/weapon/gun/pistol/m1911, /obj/item/ammo_magazine/pistol/m1911)
-
-/obj/item/storage/box/loadout/M1911_loadout/fill_preset_inventory()
-	handle_item_insertion(new /obj/item/weapon/gun/pistol/m1911())
-	for(var/i = 1 to storage_slots - 1)
-		new /obj/item/ammo_magazine/pistol/m1911(src)
-
-/obj/item/storage/box/loadout/M44_loadout
-	name = "M44 storage case"
-	desc = "A relatively large storage case containing a loaded M44 revolver and additional speedloaders."
-	can_hold = list(/obj/item/weapon/gun/revolver/m44, /obj/item/ammo_magazine/revolver)
-
-/obj/item/storage/box/loadout/M44_loadout/fill_preset_inventory()
-	handle_item_insertion(new /obj/item/weapon/gun/revolver/m44())
-	for(var/i = 1 to storage_slots - 1)
-		new /obj/item/ammo_magazine/revolver(src)
-
-/obj/item/storage/box/loadout/M44_custom_loadout
-	name = "M44 storage case"
-	desc = "A relatively large storage case containing a loaded M44 revolver and additional speedloaders."
-	can_hold = list(/obj/item/weapon/gun/revolver/m44/custom, /obj/item/ammo_magazine/revolver)
-
-/obj/item/storage/box/loadout/M44_custom_loadout/fill_preset_inventory()
-	handle_item_insertion(new /obj/item/weapon/gun/revolver/m44/custom())
-	for(var/i = 1 to storage_slots - 1)
-		new /obj/item/ammo_magazine/revolver(src)
-
-/obj/item/storage/box/loadout/CLF_loadout
-	name = "Hummingbird storage box"
-	desc = "A slim storage case containing a loaded Hummingbird pistol and additional magazines."
-	w_class = SIZE_SMALL
+/obj/item/storage/box/fluff_gun/clf
+	name = "D18-storing box"
+	desc = "A fairly decorated and ceremonial box containing a CLF D18 and a few additional magazines for it. I guess those CLF folk really care about their craftsmanship and prose rather than practicality, eh?"
+	w_class = SIZE_SMALL //pocket pistols have smaller boxes because noone is going to put these in a belt
 	max_w_class = SIZE_TINY
 	storage_slots = 4
 	can_hold = list(/obj/item/weapon/gun/pistol/clfpistol, /obj/item/ammo_magazine/pistol/clfpistol)
 
-/obj/item/storage/box/loadout/CLF_loadout/fill_preset_inventory()
-	handle_item_insertion(new /obj/item/weapon/gun/pistol/clfpistol())
-	for(var/i = 1 to storage_slots - 1)
-		new /obj/item/ammo_magazine/pistol/clfpistol(src)
+/obj/item/storage/box/fluff_gun/clf/fill_preset_inventory()
+	new /obj/item/weapon/gun/pistol/clfpistol(src)
+	new /obj/item/ammo_magazine/pistol/clfpistol(src)
+	new /obj/item/ammo_magazine/pistol/clfpistol(src)
+	new /obj/item/ammo_magazine/pistol/clfpistol(src)
 
-/obj/item/storage/box/loadout/L54_loadout
-	name = "L54A2 storage box"
-	desc = "A slim storage case containing a loaded L54A2 pistol and additional magazines."
+/obj/item/storage/box/fluff_gun/upp //war trophy luger
+	name = "Type 73 storing case"
+	desc = "A small case containing the once-standard sidearm of the UPP, the Type 73, and some additional magazines. The contained sidearm is probably looted off a dead officer or from a captured stockpile, either way this thing is worth a pretty penny."
+	can_hold = list(/obj/item/weapon/gun/pistol/t73, /obj/item/ammo_magazine/pistol/t73)
+
+/obj/item/storage/box/fluff_gun/upp/fill_preset_inventory()
+	new /obj/item/weapon/gun/pistol/t73(src)
+	new /obj/item/ammo_magazine/pistol/t73(src)
+	new /obj/item/ammo_magazine/pistol/t73(src)
+	new /obj/item/ammo_magazine/pistol/t73(src)
+	new /obj/item/ammo_magazine/pistol/t73(src)
+	new /obj/item/ammo_magazine/pistol/t73(src)
+	new /obj/item/ammo_magazine/pistol/t73(src)
+
+/obj/item/storage/box/fluff_gun/np92
+	name = "NP92 storing case"
+	desc = "A small case containing the standard sidearm of the UPP, the NP92, and some additional magazines. The contained sidearm is probably looted from a captured stockpile."
+	can_hold = list(/obj/item/weapon/gun/pistol/np92, /obj/item/ammo_magazine/pistol/np92)
+
+/obj/item/storage/box/fluff_gun/np92/fill_preset_inventory()
+	new /obj/item/weapon/gun/pistol/np92(src)
+	new /obj/item/ammo_magazine/pistol/np92(src)
+	new /obj/item/ammo_magazine/pistol/np92(src)
+	new /obj/item/ammo_magazine/pistol/np92(src)
+	new /obj/item/ammo_magazine/pistol/np92(src)
+	new /obj/item/ammo_magazine/pistol/np92(src)
+	new /obj/item/ammo_magazine/pistol/np92(src)
+
+/obj/item/storage/box/fluff_gun/action
+	name = "AC71 'Action' storing case"
+	desc = "A small case containing an AC71 Action, a holdout pistol by Spearhead Armory. It was most likely brought by a marine from home, or taken from a colony without permission."
+	w_class = SIZE_SMALL //pocket pistols have smaller boxes because noone is going to put these in a belt
+	max_w_class = SIZE_TINY
+	storage_slots = 4
+	can_hold = list(/obj/item/weapon/gun/pistol/action, /obj/item/ammo_magazine/pistol/action)
+
+/obj/item/storage/box/fluff_gun/action/fill_preset_inventory()
+	new /obj/item/weapon/gun/pistol/action(src)
+	new /obj/item/ammo_magazine/pistol/action(src)
+	new /obj/item/ammo_magazine/pistol/action(src)
+	new /obj/item/ammo_magazine/pistol/action(src)
+
+/obj/item/storage/box/fluff_gun/plinker
+	name = "W62 'Whisper' storing case"
+	desc = "A small case containing a W62 Whisper, a .22 ratkiller made by Spearhead Armory. It was most likely brought by a marine from home, or taken from a colony without permission."
+	can_hold = list(/obj/item/weapon/gun/pistol/holdout, /obj/item/ammo_magazine/pistol/holdout)
+
+/obj/item/storage/box/fluff_gun/plinker/fill_preset_inventory()
+	new /obj/item/weapon/gun/pistol/holdout(src)
+	new /obj/item/ammo_magazine/pistol/holdout(src)
+	new /obj/item/ammo_magazine/pistol/holdout(src)
+	new /obj/item/ammo_magazine/pistol/holdout(src)
+	new /obj/item/ammo_magazine/pistol/holdout(src)
+	new /obj/item/ammo_magazine/pistol/holdout(src)
+	new /obj/item/ammo_magazine/pistol/holdout(src)
+
+/obj/item/storage/box/fluff_gun/m1911
+	name = "M48A4 storing case"
+	desc = "A small case containing a M48A4, a modernized version of the classic M1911. It was most likely privately bought by a marine, or specially ordered by an officer."
+	can_hold = list(/obj/item/weapon/gun/pistol/m1911/fluff, /obj/item/ammo_magazine/pistol/m1911)
+
+/obj/item/storage/box/fluff_gun/m1911/fill_preset_inventory()
+	new /obj/item/weapon/gun/pistol/m1911/fluff(src)
+	new /obj/item/ammo_magazine/pistol/m1911(src)
+	new /obj/item/ammo_magazine/pistol/m1911(src)
+	new /obj/item/ammo_magazine/pistol/m1911(src)
+	new /obj/item/ammo_magazine/pistol/m1911(src)
+	new /obj/item/ammo_magazine/pistol/m1911(src)
+	new /obj/item/ammo_magazine/pistol/m1911(src)
+
+/obj/item/storage/box/fluff_gun/l54
+	name = "L54 storing case"
+	desc = "A small case containing an L54 Service Pistol, the standard sidearm of the NSPA. It was most likely brought by a marine from home, or taken from a colony without permission."
 	can_hold = list(/obj/item/weapon/gun/pistol/l54, /obj/item/ammo_magazine/pistol/l54)
 
-/obj/item/storage/box/loadout/L54_loadout/fill_preset_inventory()
-	handle_item_insertion(new /obj/item/weapon/gun/pistol/l54())
-	for(var/i = 1 to storage_slots - 1)
-		new /obj/item/ammo_magazine/pistol/l54(src)
+/obj/item/storage/box/fluff_gun/l54/fill_preset_inventory()
+	new /obj/item/weapon/gun/pistol/l54(src)
+	new /obj/item/ammo_magazine/pistol/l54(src)
+	new /obj/item/ammo_magazine/pistol/l54(src)
+	new /obj/item/ammo_magazine/pistol/l54(src)
+	new /obj/item/ammo_magazine/pistol/l54(src)
+	new /obj/item/ammo_magazine/pistol/l54(src)
+	new /obj/item/ammo_magazine/pistol/l54(src)
 
-/obj/item/storage/box/loadout/M9_loadout
-	name = "Berreta 92FS storage box"
-	desc = "A slim storage case containing a loaded M9 pistol and additional magazines."
-	can_hold = list(/obj/item/weapon/gun/pistol/b92fs, /obj/item/ammo_magazine/pistol/b92fs)
 
-/obj/item/storage/box/loadout/M9_loadout/fill_preset_inventory()
-	handle_item_insertion(new /obj/item/weapon/gun/pistol/b92fs())
-	for(var/i = 1 to storage_slots - 1)
-		new /obj/item/ammo_magazine/pistol/b92fs(src)
-
-/obj/item/storage/box/loadout/VP78_loadout
-	name = "VP78 storage box"
-	desc = "A slim storage case containing a loaded VP78 pistol and additional magazines."
-	can_hold = list(/obj/item/weapon/gun/pistol/vp78, /obj/item/ammo_magazine/pistol/vp78)
-//Base VP's been nerfed in this PR, so it can come with full mags now. On par with the automag
-
-/obj/item/storage/box/loadout/VP78_loadout/fill_preset_inventory()
-	handle_item_insertion(new /obj/item/weapon/gun/pistol/vp78())
-	for(var/i = 1 to storage_slots - 1)
-		new /obj/item/ammo_magazine/pistol/vp78(src)
-
-/obj/item/storage/box/loadout/bowie
-	name = "Bowie knife storage case"
-	desc = "A relatively large storage case containing a Bowie fighting knife and a fine leather sheath for it."
-	w_class = SIZE_MEDIUM
-	max_w_class = SIZE_LARGE	//So the sheath can fit
-	can_hold = list(/obj/item/weapon/knife/marine/bowie, /obj/item/clothing/accessory/storage/sheath)
-
-/obj/item/storage/box/loadout/bowie/fill_preset_inventory()
-	new /obj/item/clothing/accessory/storage/sheath(src)
-	new /obj/item/weapon/knife/marine/bowie(src)
-
-/obj/item/storage/box/loadout/bowie/kukri
-	name = "Kukri knife storage case"
-	desc = "A relatively large storage case containing a Kukri utility knife and a fine leather sheath for it."
-	can_hold = list(/obj/item/weapon/knife/marine/bowie/kukri, /obj/item/clothing/accessory/storage/sheath)
-
-/obj/item/storage/box/loadout/bowie/kukri/fill_preset_inventory()
-	new /obj/item/clothing/accessory/storage/sheath(src)
-	new /obj/item/weapon/knife/marine/bowie/kukri(src)
-
-/obj/item/storage/box/loadout/co2_knife
+/obj/item/storage/box/co2_knife
 	name = "M8 cartridge bayonet packaging"
 	desc = "Contains one M8 Cartridge Bayonet and two sister CO2 cartridges. Thanks for being a dedicated Boots magazine subscriber!"
 	icon = 'icons/obj/items/storage/kits.dmi'
@@ -305,7 +247,7 @@
 	max_w_class = SIZE_SMALL
 	can_hold = list(/obj/item/attachable/bayonet/co2, /obj/item/co2_cartridge)
 
-/obj/item/storage/box/loadout/co2_knife/fill_preset_inventory()
+/obj/item/storage/box/co2_knife/fill_preset_inventory()
 	new /obj/item/attachable/bayonet/co2(src)
 	new /obj/item/co2_cartridge(src)
 	new /obj/item/co2_cartridge(src)

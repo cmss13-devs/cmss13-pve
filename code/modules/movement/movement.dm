@@ -14,23 +14,25 @@
  * If the object is completely solid, returns ALL
  */
 /atom/proc/BlockedPassDirs(atom/movable/mover, target_dir)
-	var/reverse_dir = REVERSE_DIR(dir)
-	var/flags_can_pass = pass_flags.flags_can_pass_all|flags_can_pass_all_temp|pass_flags.flags_can_pass_front|flags_can_pass_front_temp
-
 	if(!mover || !mover.pass_flags)
 		return NO_BLOCKED_MOVEMENT
 
-	var/mover_flags_pass = (mover.pass_flags.flags_pass|mover.flags_pass_temp) & ~mover.flags_pass_temp_negative
-
-	if (!density || (flags_can_pass & mover_flags_pass))
+	if(!density)
 		return NO_BLOCKED_MOVEMENT
 
-	if (flags_atom & ON_BORDER)
-		if (!(target_dir & reverse_dir))
+	var/flags_can_pass = pass_flags?.flags_can_pass_all|flags_can_pass_all_temp|pass_flags?.flags_can_pass_front|flags_can_pass_front_temp
+	var/mover_flags_pass = mover.pass_flags.flags_pass|mover.flags_pass_temp
+
+	if(flags_can_pass & mover_flags_pass)
+		return NO_BLOCKED_MOVEMENT
+
+	if(flags_atom & ON_BORDER)
+		var/reverse_dir = REVERSE_DIR(dir)
+		if(!(target_dir & reverse_dir))
 			return NO_BLOCKED_MOVEMENT
 
 		// This is to properly handle diagonal movement (a cade to your NE facing west when you are trying to move NE should block for north instead of east)
-		if (target_dir & (NORTH|SOUTH) && target_dir & (EAST|WEST))
+		if(IS_DIAGONAL_DIR(target_dir))
 			return target_dir - (target_dir & reverse_dir)
 		return target_dir & reverse_dir
 	else
@@ -43,18 +45,18 @@
  * If the object is completely solid, returns all directions
  */
 /atom/proc/BlockedExitDirs(atom/movable/mover, target_dir)
-	var/flags_can_pass = pass_flags.flags_can_pass_all|flags_can_pass_all_temp|pass_flags.flags_can_pass_behind|flags_can_pass_behind_temp
-
 	if(!mover || !mover.pass_flags)
 		return NO_BLOCKED_MOVEMENT
 
-	var/mover_flags_pass = (mover.pass_flags.flags_pass|mover.flags_pass_temp) & ~mover.flags_pass_temp_negative
+	var/flags_can_pass = pass_flags?.flags_can_pass_all|flags_can_pass_all_temp|pass_flags?.flags_can_pass_behind|flags_can_pass_behind_temp
+	var/mover_flags_pass = mover.pass_flags.flags_pass|mover.flags_pass_temp
 
 	if(flags_atom & ON_BORDER && density && !(flags_can_pass & mover_flags_pass))
 		return target_dir & dir
 
 	return NO_BLOCKED_MOVEMENT
 
+// TODO: Remove any and all overrides of this proc
 /atom/movable/Move(NewLoc, direct)
 	// If Move is not valid, exit
 	if (SEND_SIGNAL(src, COMSIG_MOVABLE_PRE_MOVE, NewLoc) & COMPONENT_CANCEL_MOVE)
@@ -71,12 +73,22 @@
 	l_move_time = world.time
 	if ((oldloc != loc && oldloc && oldloc.z == z))
 		last_move_dir = get_dir(oldloc, loc)
+	if(. && buckled_mob && !handle_buckled_mob_movement(loc,direct)) //movement fails if buckled mob's move fails.
+		. = FALSE
 	if (.)
 		Moved(oldloc, direct)
 
+/// Called when `crossed_by` enters the atom's turf (via native Move() or doMove() if allowed).
+/// Does not return anything, only handles side effects from Crossed.
+/atom/Crossed(atom/movable/crossed_by)
+	SHOULD_CALL_PARENT(TRUE)
+	SEND_SIGNAL(src, COMSIG_ATOM_CROSSED, crossed_by)
+
+	..()
+
 /// Called when a movable atom has hit an atom via movement
 /atom/movable/proc/Collide(atom/A)
-	if (throwing)
+	if (HAS_TRAIT(src, TRAIT_LAUNCHED))
 		launch_impact(A)
 
 	if (A && !QDELETED(A))
@@ -84,9 +96,9 @@
 		A.Collided(src)
 
 /// Called when an atom has been hit by a movable atom via movement
-/atom/movable/Collided(atom/movable/AM)
-	if(isliving(AM) && !anchored)
-		var/target_dir = get_dir(AM, src)
+/atom/movable/Collided(atom/movable/collider)
+	if(!anchored && isliving(collider))
+		var/target_dir = get_dir(collider, src)
 		var/turf/target_turf = get_step(loc, target_dir)
 		Move(target_turf)
 
@@ -102,14 +114,15 @@
 
 /atom/movable/proc/forceMove(atom/destination)
 	. = FALSE
-
 	if(destination)
 		. = doMove(destination)
 	else
 		CRASH("No valid destination passed into forceMove")
 
-	if(SEND_SIGNAL(src, COMSIG_MOVABLE_FORCEMOVED, destination))
-		return
+	// Bring the buckled_mob with us. No Move(), on_move callbacks, or any of this bullshit, we just got teleported
+	if(buckled_mob && loc == destination)
+		buckled_mob.forceMove(destination)
+
 
 /atom/movable/proc/moveToNullspace()
 	return doMove(null)

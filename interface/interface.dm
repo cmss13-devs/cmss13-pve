@@ -1,29 +1,41 @@
 //Please use mob or src (not usr) in these procs. This way they can be called in the same fashion as procs.
-/client/verb/wiki()
+CLIENT_VERB(wiki)
 	set name = "wiki"
 	set desc = "Visit the wiki."
 	set hidden = TRUE
-	if( CONFIG_GET(string/wikiurl_home_page) || CONFIG_GET(string/wikiurl) )
+	if( CONFIG_GET(string/wikiurl) )
 		if(tgui_alert(src, "This will open the wiki in your browser. Are you sure?", "Confirm", list("Yes", "No")) != "Yes")
 			return
-		src << link(CONFIG_GET(string/wikiurl_home_page) || CONFIG_GET(string/wikiurl))
+		src << link(CONFIG_GET(string/wikiurl))
 	else
 		to_chat(src, SPAN_DANGER("The wiki URL is not set in the server configuration."))
 	return
 
-/client/verb/worksheet()
-	set name = "Worksheet"
-	set desc = "Visit the worksheet."
+CLIENT_VERB(forum)
+	set name = "forum"
+	set desc = "Visit the forum."
 	set hidden = TRUE
 	if( CONFIG_GET(string/forumurl) )
-		if(tgui_alert(src, "This will open the worksheet in your browser. Are you sure?", "Confirm", list("Yes", "No")) != "Yes")
+		if(tgui_alert(src, "This will open the forum in your browser. Are you sure?", "Confirm", list("Yes", "No")) != "Yes")
 			return
 		src << link(CONFIG_GET(string/forumurl))
 	else
 		to_chat(src, SPAN_DANGER("The forum URL is not set in the server configuration."))
 	return
 
-/client/verb/changelog()
+CLIENT_VERB(rules)
+	set name = "rules"
+	set desc = "Read our rules."
+	set hidden = TRUE
+	if( CONFIG_GET(string/rulesurl) )
+		if(tgui_alert(src, "This will open the rules in your browser. Are you sure?", "Confirm", list("Yes", "No")) != "Yes")
+			return
+		src << link(CONFIG_GET(string/rulesurl))
+	else
+		to_chat(src, SPAN_DANGER("The rules URL is not set in the server configuration."))
+	return
+
+CLIENT_VERB(changelog)
 	set name = "Changelog"
 	set category = "OOC"
 	if(!GLOB.changelog_tgui)
@@ -33,9 +45,9 @@
 	if(prefs.lastchangelog != GLOB.changelog_hash)
 		prefs.lastchangelog = GLOB.changelog_hash
 		prefs.save_preferences()
-		winset(src, "infowindow.changelog", "font-style=;")
+		stat_panel.send_message("changelog_read", TRUE)
 
-/client/verb/discord()
+CLIENT_VERB(discord)
 	set name = "Discord"
 	set desc = "Join our Discord! Meet and talk with other players in the server."
 	set hidden = TRUE
@@ -46,18 +58,18 @@
 	src << link("[CONFIG_GET(string/discordurl)]")
 	return
 
-/client/verb/github()
-	set name = "Github"
-	set desc = "View our github!."
+CLIENT_VERB(submitbug)
+	set name = "Submit Bug"
+	set desc = "Submit a bug."
 	set hidden = TRUE
-
-	if(tgui_alert(src, "This will open the GitHub in your browser. Are you sure?", "Confirm", list("Yes", "No")) != "Yes")
+	if(!usr)
 		return
+	var/datum/tgui_bug_report_form/report = new(usr)
 
-	src << link(CONFIG_GET(string/githuburl))
+	report.tgui_interact(usr)
 	return
 
-/client/verb/set_fps()
+CLIENT_VERB(set_fps)
 	set name = "Set FPS"
 	set desc = "Set client FPS. 20 is the default"
 	set category = "Preferences"
@@ -68,7 +80,7 @@
 		prefs.save_preferences()
 	return
 
-/client/verb/edit_hotkeys()
+CLIENT_VERB(edit_hotkeys)
 	set name = "Edit Hotkeys"
 	set category = "Preferences"
 	prefs.macros.tgui_interact(usr)

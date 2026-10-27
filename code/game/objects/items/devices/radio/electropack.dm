@@ -3,6 +3,11 @@
 	desc = "Dance my monkeys! DANCE!!!"
 	icon_state = "electropack0"
 	item_state = "electropack"
+	item_icons = list(
+		WEAR_L_HAND = 'icons/mob/humans/onmob/inhands/clothing/backpacks_lefthand.dmi',
+		WEAR_R_HAND = 'icons/mob/humans/onmob/inhands/clothing/backpacks_righthand.dmi',
+		WEAR_BACK = 'icons/mob/humans/onmob/clothing/back/misc.dmi'
+	)
 	frequency = 1457
 	flags_atom = FPRINT|CONDUCT
 	flags_equip_slot = SLOT_BACK
@@ -69,7 +74,7 @@
 		var/mob/M = loc
 		var/turf/T = M.loc
 		if(istype(T, /turf))
-			if( (world.time - mob_move_time) >= (5 SECONDS) && M.last_move_dir)
+			if((world.time - mob_move_time) >= (5 SECONDS) && M.last_move_dir && M.stat == CONSCIOUS)
 				mob_move_time = world.time
 				step(M, M.last_move_dir)
 		to_chat(M, SPAN_DANGER("You feel a sharp shock!"))
@@ -79,9 +84,7 @@
 
 		M.apply_effect(10, WEAKEN)
 
-	if(master && wires & 1)
-		master.receive_signal()
-	return
+	master?.receive_signal()
 
 /obj/item/device/radio/electropack/attack_self(mob/user as mob, flag1)
 	..()

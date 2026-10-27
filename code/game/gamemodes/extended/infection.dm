@@ -1,7 +1,7 @@
 //THIS IS A BLANK LABEL ONLY SO PEOPLE CAN SEE WHEN WE RUNNIN DIS BITCH.   Should probably write a real one one day.  Maybe.
 /datum/game_mode/infection
-	name = "Infection"
-	config_tag = "Infection"
+	name = GAMEMODE_INFECTION
+	config_tag = GAMEMODE_INFECTION
 	required_players = 0 //otherwise... no zambies
 	latejoin_larva_drop = 0
 	flags_round_type = MODE_INFECTION //Apparently without this, the game mode checker ignores this as a potential legit game mode.
@@ -11,7 +11,7 @@
 /datum/game_mode/infection/announce()
 	to_world("<B>The current game mode is - ZOMBIES!</B>")
 	to_world("<B>Just have fun and role-play!</B>")
-	to_world("<B>If you die as a zombie, you come back.  NO MATTER HOW MUCH DAMAGE.</B>")
+	to_world("<B>If you die as a zombie, you come back. NO MATTER HOW MUCH DAMAGE.</B>")
 	to_world("<B>Don't ahelp asking for specific details, you won't get them.</B>")
 
 /datum/game_mode/infection/get_roles_list()
@@ -23,8 +23,6 @@
 /datum/game_mode/infection/post_setup()
 	initialize_post_survivor_list()
 	initialize_post_marine_gear_list()
-	for(var/mob/new_player/np in GLOB.new_player_list)
-		np.new_player_panel_proc()
 
 	addtimer(CALLBACK(src, PROC_REF(ares_online)), 5 SECONDS)
 	addtimer(CALLBACK(src, PROC_REF(map_announcement)), 20 SECONDS)
@@ -76,8 +74,8 @@
 			if(A.roundstart_picked)
 				possible_survivors -= A
 
-		if(length(possible_survivors)) //We may have stripped out all the contendors, so check again.
-			var/i = surv_starting_num
+		if(length(possible_survivors)) //We may have stripped out all the contenders, so check again.
+			var/i = 0
 			var/datum/mind/new_survivor
 			while(i > 0)
 				if(!length(possible_survivors))
@@ -103,7 +101,8 @@
 		round_finished = MODE_INFECTION_ZOMBIE_WIN
 
 /datum/game_mode/infection/check_finished()
-	if(round_finished) return 1
+	if(round_finished)
+		return 1
 
 /datum/game_mode/infection/process()
 	. = ..()
@@ -130,5 +129,6 @@
 	declare_completion_announce_predators()
 	declare_completion_announce_medal_awards()
 
+	GLOB.round_statistics?.save()
 
 	return 1

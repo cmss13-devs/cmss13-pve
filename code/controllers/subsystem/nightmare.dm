@@ -111,22 +111,27 @@ SUBSYSTEM_DEF(nightmare)
 	if(!data)
 		log_debug("Nightmare: Failed to read config file: [filename]")
 		CRASH("Could not get requested nightmare config file!")
-	if(data) data = file2text(data)
-	if(data) data = json_decode(data)
+	if(data)
+		data = file2text(data)
+	if(data)
+		data = json_decode(data)
 	return parse_tree(data)
 
 /// Instanciates nmnodes from parsed JSON
 /datum/controller/subsystem/nightmare/proc/parse_tree(list/parsed)
 	RETURN_TYPE(/list/datum/nmnode)
-	if(!islist(parsed)) return
+	if(!islist(parsed))
+		return
 	var/list/datum/nmnode/nodes = list()
 	if(!parsed["type"]) // This is a JSON array
 		for(var/list/spec as anything in parsed)
 			var/datum/nmnode/N = read_node(spec)
-			if(N) nodes += N
+			if(N)
+				nodes += N
 	else // This is a JSON hash
 		var/datum/nmnode/N = read_node(parsed)
-		if(N) nodes += N
+		if(N)
+			nodes += N
 	return nodes
 
 /// Instanciate a single nmnode from its JSON definition
@@ -137,5 +142,11 @@ SUBSYSTEM_DEF(nightmare)
 	if(nodetype)
 		return new nodetype(parsed)
 	else
-		CRASH("Tried to instanciate an invalid node type")
+		CRASH("Tried to instantiate an invalid node type")
 
+/// Returns whether the ground context indicates a hostile survivor scenario
+/datum/controller/subsystem/nightmare/proc/get_scenario_is_hostile_survivor()
+	// Assumption: Only ground context is relevant
+	var/datum/nmcontext/ground_context = contexts[NIGHTMARE_CTX_GROUND]
+	var/scenario = ground_context.get_scenario_value(NIGHTMARE_SCENARIO_HOSTILE_SURVIVOR)
+	return !!scenario

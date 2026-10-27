@@ -5,6 +5,11 @@
 	var/maxHealth = 100 //Maximum health that should be possible.
 	var/health = 100 //A mob's health
 
+	///How much health a mob has when it dies.
+	var/health_threshold_dead = -100
+	///How much health a mob has when it goes into crit state.
+	var/health_threshold_crit = -50
+
 	//Damage related vars, NOTE: THESE SHOULD ONLY BE MODIFIED BY PROCS
 	var/bruteloss = 0 //Brutal damage caused by brute force (punching, being clubbed by a toolbox ect... this also accounts for pressure damage)
 	var/oxyloss = 0 //Oxygen depravation damage (no air in lungs)
@@ -19,6 +24,7 @@
 	var/slowed = 0 // X_SLOW_AMOUNT
 	var/superslowed = 0 // X_SUPERSLOW_AMOUNT
 	var/sleeping = 0
+	var/hushed = 0 // forced whispering, very annoying that silent exists but whatever
 
 	///a list of all status effects the mob has
 	var/list/status_effects
@@ -55,7 +61,6 @@
 	var/fire_stacks = 0 //Tracks how many stacks of fire we have on, max is
 	var/datum/reagent/fire_reagent
 
-	var/is_being_hugged = 0 //Is there a hugger humping our face?
 	var/chestburst = 0 // 0: normal, 1: bursting, 2: bursted.
 	var/first_xeno = FALSE //Are they the first wave of infected?
 	var/in_stasis = FALSE //Is the mob in stasis bag?
@@ -80,7 +85,6 @@
 	var/flags_emote
 	//ventcrawl
 	var/list/canEnterVentWith = list(
-		/atom/movable/emissive_blocker,
 		/obj/item/implant,
 		/obj/item/clothing/mask/facehugger,
 		/obj/item/device/radio,
@@ -124,6 +128,8 @@
 
 	/// Variable to track the body position of a mob, regardgless of the actual angle of rotation (usually matching it, but not necessarily).
 	var/body_position = STANDING_UP
+	/// For knowing when was the body position changed
+	var/body_position_changed = 0
 	/// Number of degrees of rotation of a mob. 0 means no rotation, up-side facing NORTH. 90 means up-side rotated to face EAST, and so on.
 	VAR_PROTECTED/lying_angle = 0
 	/// Value of lying lying_angle before last change. TODO: Remove the need for this.
@@ -141,3 +147,7 @@
 	/// flipped icon_states for weed_food (needs to be the same length as weed_food_states)
 	var/list/weed_food_states_flipped = list("human_1_f","human_2_f","human_3_f","human_4_f","human_5_f")
 
+	// for multiz looking up
+	var/atom/observed_atom
+
+	var/nutrition = NUTRITION_NORMAL // This should be on /human

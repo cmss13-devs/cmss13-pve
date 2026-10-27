@@ -22,10 +22,15 @@
 	initialize_stamina()
 	GLOB.living_mob_list += src
 
+	if(!(mob_flags & MOB_ABSTRACT))
+		SSmapgrids.track_movable(src)
+
 /mob/living/Destroy()
+	GLOB.living_player_list -= src
 	GLOB.living_mob_list -= src
 	cleanup_status_effects()
 	pipes_shown = null
+	QDEL_NULL(observed_atom)
 
 	. = ..()
 
@@ -69,9 +74,9 @@
 		var/divided_damage = (burn_amount)/(length(H.limbs))
 		var/extradam = 0 //added to when organ is at max dam
 		for(var/obj/limb/affecting in H.limbs)
-			if(!affecting) continue
-			if(affecting.take_damage(0, divided_damage+extradam)) //TODO: fix the extradam stuff. Or, ebtter yet...rewrite this entire proc ~Carn
-				H.UpdateDamageIcon()
+			if(!affecting)
+				continue
+			affecting.take_damage(0, divided_damage+extradam) //TODO: fix the extradam stuff. Or, better yet...rewrite this entire proc ~Carn
 		H.updatehealth()
 		return 1
 
@@ -105,7 +110,7 @@
 
 	if(passed_object)
 		if(recursion > 8)
-			debug_log("Recursion went long for get_contents() for [src] ending at the object [passed_object]. Likely object_one is holding object_two which is holding object_one ad naseum.")
+			debug_log("Recursion went long for get_contents() for [src] ending at the object [passed_object]. Likely object_one is holding object_two which is holding object_one ad nauseum.")
 			return total_contents
 
 		total_contents += passed_object.contents
@@ -148,7 +153,7 @@
 		if(client)
 			to_chat(usr, "[src]'s Metainfo:<br>[client.prefs.metadata]")
 		else
-			to_chat(usr, "[src] does not have any stored infomation!")
+			to_chat(usr, "[src] does not have any stored information!")
 	else
 		to_chat(usr, "OOC Metadata is not supported by this server!")
 
@@ -177,34 +182,34 @@
 
 		var/pull_dir = get_dir(src, pulling)
 
-		switch(grab_level)
-			if(GRAB_CARRY)
-				var/direction_to_face = EAST
+		if(grab_level >= GRAB_CARRY)
+			switch(grab_level)
+				if(GRAB_CARRY)
+					var/direction_to_face = EAST
 
-				if(direct & WEST)
-					direction_to_face = WEST
+					if(direct & WEST)
+						direction_to_face = WEST
 
-				pulling.Move(NewLoc, direction_to_face)
+					pulling.Move(NewLoc, direction_to_face)
+					var/mob/living/pmob = pulling
+					if(istype(pmob))
+						SEND_SIGNAL(pmob, COMSIG_MOB_MOVE_OR_LOOK, TRUE, direction_to_face, direction_to_face)
+				else
+					pulling.Move(NewLoc, direct)
+		else if(get_dist(src, pulling) > 1 || ((pull_dir - 1) & pull_dir)) //puller and pullee more than one tile away or in diagonal position
+			var/pulling_dir = get_dir(pulling, T)
+			pulling.Move(T, pulling_dir) //the pullee tries to reach our previous position
+			if(pulling && get_dist(src, pulling) > 1) //the pullee couldn't keep up
+				stop_pulling()
+			else
 				var/mob/living/pmob = pulling
 				if(istype(pmob))
-					SEND_SIGNAL(pmob, COMSIG_MOB_MOVE_OR_LOOK, TRUE, direction_to_face, direction_to_face)
-			if(GRAB_CHOKE)
-				pulling.Move(NewLoc, direct)
-			else
-				if(get_dist(src, pulling) > 1 || ((pull_dir - 1) & pull_dir)) //puller and pullee more than one tile away or in diagonal position
-					var/pulling_dir = get_dir(pulling, T)
-					pulling.Move(T, pulling_dir) //the pullee tries to reach our previous position
-					if(pulling && get_dist(src, pulling) > 1) //the pullee couldn't keep up
-						stop_pulling()
-					else
-						var/mob/living/pmob = pulling
-						if(istype(pmob))
-							SEND_SIGNAL(pmob, COMSIG_MOB_MOVE_OR_LOOK, TRUE, pulling_dir, pulling_dir)
-						if(!(flags_atom & DIRLOCK))
-							setDir(turn(direct, 180)) //face the pullee
+					SEND_SIGNAL(pmob, COMSIG_MOB_MOVE_OR_LOOK, TRUE, pulling_dir, pulling_dir)
+				if(!(flags_atom & DIRLOCK))
+					setDir(turn(direct, 180)) //face the pullee
 
 	if(pulledby && get_dist(src, pulledby) > 1)//separated from our puller and not in the middle of a diagonal move.
-		pulledby.stop_pulling(TRUE) /// Mob was likely bumped by the pulledby. Can lead to additional checking, if we don't want the victim to get out of jail for free.
+		pulledby.stop_pulling()
 
 	if (s_active && !( s_active in contents ) && get_turf(s_active) != get_turf(src)) //check !( s_active in contents ) first so we hopefully don't have to call get_turf() so much.
 		s_active.storage_close(src)
@@ -216,48 +221,44 @@
 	if(back && (back.flags_item & ITEM_OVERRIDE_NORTHFACE))
 		update_inv_back()
 
+	if(. && nutrition && stat != DEAD)
+		nutrition -= HUNGER_FACTOR/5
+
+
 /mob/proc/resist_grab(moving_resist)
 	return //returning 1 means we successfully broke free
 
 /mob/living/resist_grab(moving_resist)
 	if(!pulledby)
 		return
+	// vars for checks of strength
+	var/pulledby_is_strong = HAS_TRAIT(pulledby, TRAIT_SUPER_STRONG)
+	var/src_is_strong = HAS_TRAIT(src, TRAIT_SUPER_STRONG)
 
-	switch(pulledby.grab_level)
-		if(GRAB_AGGRESSIVE to GRAB_CHOKE)
-			/// Probably could use some refactoring for the CQC skill, traits, and the like.
-			if(prob(50))
-				playsound(src.loc, 'sound/weapons/thudswoosh.ogg', 25, 1, 7)
-				visible_message(SPAN_DANGER("[src] has broken free of [pulledby]'s grip!"), null, null, 5)
-				pulledby.stop_pulling()
-				return TRUE
-			if(moving_resist && client) //we resisted by trying to move
-				visible_message(SPAN_DANGER("[src] struggles to break free of [pulledby]'s grip!"), null, null, 5)
-				client.next_movement = world.time + (10*pulledby.grab_level) + client.move_delay
-		if(GRAB_XENO) /// Specific to some xenomorphs.
-			if(HAS_TRAIT(src, TRAIT_SUPER_STRONG)) /// Superstrength means you get out of jail for free.
-				. = TRUE
-			else
-				/// If the living mob is skilled in CQC, they will get a bonus to escape the grab, 7% per skill level, or 35% if maxed out.
-				var/skill_bonus = (skills?.get_skill_level(SKILL_CQC)) * 7
-				/// Then we need to determine if they loosen the grip or escape outright, or struggle in vain.
-				if(prob((65 - SKILL_CQC_MAX * 7) + skill_bonus)) /// At most a 65% chance to escape outright.
-					. = TRUE
-				else
-					if(prob((100 - SKILL_CQC_MAX * 7) + skill_bonus)) /// Maximum 100% to loosen the grip.
-						visible_message(SPAN_DANGER("[src] loosens [pulledby]'s grip!"), null, null, 5)
-						pulledby.grab_level = GRAB_PASSIVE /// Loosens the grab into a passive grab, being able to escape on the next go.
-					else
-						visible_message(SPAN_DANGER("[src] struggles to break free of [pulledby]'s grip!"), null, null, 5)
-					client.next_movement = world.time + (10 * GRAB_XENO) + client.move_delay /// Grab level may get reset, so we want to keep it at a good delay.
+	if(!pulledby.grab_level && (!pulledby_is_strong || src_is_strong)) // if passive grab, check if puller is stronger than src, and if not, break free
+		pulledby.stop_pulling()
+		return TRUE
 
-			if(.) /// Our living mob successfully broke away.
-				playsound(src.loc, 'sound/weapons/thudswoosh.ogg', 25, 1, 7)
-				visible_message(SPAN_DANGER("[src] has broken free of [pulledby]'s grip!"), null, null, 5)
-				pulledby.stop_pulling()
+	// Chance for person to break free of grip, defaults to 50.
+	var/chance = 50
+	if(src_is_strong && !isxeno(pulledby)) // no extra chance to resist warrior grabs
+		chance += 30 // you are strong, you can overpower them easier
+	if(pulledby_is_strong)
+		chance -= 30 // stronger grip
+	// above code means that if you are super strong, 80% chance to resist, otherwise, 20 percent. if both are super strong, standard 50.
+
+	if(prob(chance))
+		playsound(loc, 'sound/weapons/thudswoosh.ogg', 25, 1, 7)
+		visible_message(SPAN_DANGER("[src] has broken free of [pulledby]'s grip!"), max_distance = 5)
+		pulledby.stop_pulling()
+		return TRUE
+	if(moving_resist && client) //we resisted by trying to move
+		visible_message(SPAN_DANGER("[src] struggles to break free of [pulledby]'s grip!"), max_distance = 5)
+		// +1 delay if super strong, also done as passive grabs would have a modifier of 0 otherwise, causing spam
+		if(pulledby_is_strong && !src_is_strong)
+			client.next_movement = world.time + (10*(pulledby.grab_level + 1)) + client.move_delay
 		else
-			pulledby.stop_pulling()
-			return TRUE
+			client.next_movement = world.time + (10*pulledby.grab_level) + client.move_delay
 
 /mob/living/movement_delay()
 	. = ..()
@@ -266,11 +267,11 @@
 		. += 10
 		do_bump_delay = 0
 
-	if (drowsyness > 0)
+	if (drowsiness > 0)
 		. += 6
 
-	if(pulling && pulling.drag_delay && get_pull_miltiplier()) //Dragging stuff can slow you down a bit.
-		var/pull_delay = pulling.get_pull_drag_delay() * get_pull_miltiplier()
+	if(pulling && pulling.drag_delay && get_pull_multiplier()) //Dragging stuff can slow you down a bit.
+		var/pull_delay = pulling.get_pull_drag_delay() * get_pull_multiplier()
 
 		var/grab_level_delay = 0
 		switch(grab_level)
@@ -278,6 +279,10 @@
 				grab_level_delay = 6
 			if(GRAB_CHOKE)
 				grab_level_delay = 9
+		if(ismob(pulling))
+			var/mob/pulled_mob = pulling
+			if(pulled_mob.pulling)
+				grab_level_delay = 9 // its a chain pull...
 
 		. += max(pull_speed + (pull_delay + reagent_move_delay_modifier) + grab_level_delay, 0) //harder grab makes you slower
 	move_delay = .
@@ -300,7 +305,7 @@
 		. = drag_delay
 
 //whether we are slowed when dragging things
-/mob/living/proc/get_pull_miltiplier()
+/mob/living/proc/get_pull_multiplier()
 	if(!HAS_TRAIT(src, TRAIT_DEXTROUS))
 		if(grab_level == GRAB_CARRY)
 			return 0.1
@@ -326,97 +331,108 @@
 	if(.)
 		reset_view(destination)
 
-/mob/living/Collide(atom/movable/AM)
+/mob/living/Collide(atom/movable/moving_atom)
 	if(buckled || now_pushing)
 		return
 
-	if(throwing)
-		launch_impact(AM)
+	if(HAS_TRAIT(src, TRAIT_LAUNCHED))
+		launch_impact(moving_atom)
 		return
 
-	if(SEND_SIGNAL(src, COMSIG_LIVING_PRE_COLLIDE, AM) & COMPONENT_LIVING_COLLIDE_HANDLED)
+	if(SEND_SIGNAL(src, COMSIG_LIVING_PRE_COLLIDE, moving_atom) & COMPONENT_LIVING_COLLIDE_HANDLED)
 		return
 
-	if(!isliving(AM))
+	if(!isliving(moving_atom))
 		..()
 		return
 
 	now_pushing = TRUE
-	var/mob/living/L = AM
+	var/mob/living/living_mob = moving_atom
 
-	if(L.status_flags & IMMOBILE_ACTION && src.faction == L.faction && src.mob_size <= L.mob_size)
+	if(living_mob.status_flags & IMMOBILE_ACTION && src.faction == living_mob.faction && src.mob_size <= living_mob.mob_size)
 		now_pushing = FALSE
 		return
 
 	//Leaping mobs just land on the tile, no pushing, no anything.
 	if(status_flags & LEAPING)
-		forceMove(L.loc)
+		forceMove(living_mob.loc)
 		status_flags &= ~LEAPING
 		now_pushing = FALSE
 		return
 
-	if(L.pulledby && L.pulledby != src && L.is_mob_restrained())
+	if(living_mob.pulledby && living_mob.pulledby != src && living_mob.is_mob_restrained() && ishumansynth_strict(src))
 		if(!(world.time % 5))
-			to_chat(src, SPAN_WARNING("[L] is restrained, you cannot push past."))
+			to_chat(src, SPAN_WARNING("[living_mob] is restrained, you cannot push past."))
 		now_pushing = FALSE
 		return
 
-	if(isxeno(L) && !islarva(L))
-		var/mob/living/carbon/xenomorph/X = L
-		if(X.mob_size >= MOB_SIZE_BIG || (ishuman(src) && !isyautja(src))) // Small xenos can be pushed by other xenos or preds
+	if(isxeno(living_mob) && !islarva(living_mob))
+		var/mob/living/carbon/xenomorph/xenomorph = living_mob
+		if(xenomorph.mob_size >= MOB_SIZE_BIG || (ishuman(src) && !isyautja(src))) // Small xenos can be pushed by other xenos or preds
 			now_pushing = FALSE
 			return
 
-	if(L.pulling)
-		if(ismob(L.pulling))
-			var/mob/P = L.pulling
-			if(P.is_mob_restrained())
+	if(living_mob.pulling)
+		if(ismob(living_mob.pulling) && ishumansynth_strict(src))
+			var/mob/pulled_mob = living_mob.pulling
+			if(pulled_mob.is_mob_restrained())
 				if(!(world.time % 5))
-					to_chat(src, SPAN_WARNING("[L] is restraining [P], you cannot push past."))
+					to_chat(src, SPAN_WARNING("[living_mob] is restraining [pulled_mob], you cannot push past."))
 				now_pushing = FALSE
 				return
+		if(!pulling)
+			// treat it as if we're also pulling just for move delay
+			pulling = living_mob.pulling
+			if(client)
+				client.recalculate_move_delay()
+			else
+				movement_delay()
+			pulling = null
 
-	if(ishuman(L))
-		if(!(L.status_flags & CANPUSH))
+	if(ishuman(living_mob))
+		if(!(living_mob.status_flags & CANPUSH))
 			now_pushing = FALSE
 			return
 
-	if(!L.buckled && !L.anchored)
+	if(!living_mob.buckled && !living_mob.anchored)
 		var/mob_swap
 		//the puller can always swap with its victim if on grab intent
-		if(L.pulledby == src && a_intent == INTENT_GRAB)
+		if(living_mob.pulledby == src && a_intent == INTENT_GRAB)
 			mob_swap = 1
 		//restrained people act if they were on 'help' intent to prevent a person being pulled from being separated from their puller
-		else if((L.is_mob_restrained() || L.a_intent == INTENT_HELP) && (is_mob_restrained() || a_intent == INTENT_HELP))
+		else if((living_mob.is_mob_restrained() || living_mob.a_intent == INTENT_HELP) && (is_mob_restrained() || a_intent == INTENT_HELP))
 			mob_swap = 1
 		if(mob_swap)
 			//switch our position with L
-			if(loc && !loc.Adjacent(L.loc))
+			if(loc && !loc.Adjacent(living_mob.loc))
 				now_pushing = FALSE
 				return
-			var/oldloc = loc
-			var/oldLloc = L.loc
 
-			L.add_temp_pass_flags(PASS_MOB_THRU)
-			add_temp_pass_flags(PASS_MOB_THRU)
+			if(!(living_mob.pass_flags.flags_pass & PASS_MOB_THRU)) //if they already pass through mob thi stuff is unnecessary
 
-			L.Move(oldloc)
-			Move(oldLloc)
+				var/oldloc = loc
+				var/oldLloc = living_mob.loc
 
-			remove_temp_pass_flags(PASS_MOB_THRU)
-			L.remove_temp_pass_flags(PASS_MOB_THRU)
+				living_mob.add_temp_pass_flags(PASS_MOB_THRU)
+				add_temp_pass_flags(PASS_MOB_THRU)
 
-			now_pushing = FALSE
-			return
+				living_mob.Move(oldloc)
+				Move(oldLloc)
+
+				remove_temp_pass_flags(PASS_MOB_THRU)
+				living_mob.remove_temp_pass_flags(PASS_MOB_THRU)
+
+				now_pushing = FALSE
+				return
 
 	now_pushing = FALSE
 
-	if(!(L.status_flags & CANPUSH))
+	if(!(living_mob.status_flags & CANPUSH))
 		return
 
 	..()
 
-/mob/living/launch_towards(datum/launch_metadata/LM)
+/mob/living/launch_towards(datum/launch_metadata/LM, tracking = FALSE)
 	if(src)
 		SEND_SIGNAL(src, COMSIG_MOB_MOVE_OR_LOOK, TRUE, dir, dir)
 	if(!istype(LM) || !LM.target || !src)
@@ -466,12 +482,12 @@
 /mob/proc/flash_eyes()
 	return
 
-/mob/living/flash_eyes(intensity = EYE_PROTECTION_FLASH, bypass_checks, flash_timer = 40, type = /atom/movable/screen/fullscreen/flash, dark_type = /atom/movable/screen/fullscreen/flash/dark)
+/mob/living/flash_eyes(intensity = EYE_PROTECTION_FLASH, bypass_checks, flash_timer = 40, light_type = /atom/movable/screen/fullscreen/flash, dark_type = /atom/movable/screen/fullscreen/flash/dark)
 	if(bypass_checks || (get_eye_protection() < intensity && !(sdisabilities & DISABILITY_BLIND)))
 		if(client?.prefs?.flash_overlay_pref == FLASH_OVERLAY_DARK)
 			overlay_fullscreen("flash", dark_type)
 		else
-			overlay_fullscreen("flash", type)
+			overlay_fullscreen("flash", light_type)
 		spawn(flash_timer)
 			clear_fullscreen("flash", 20)
 		return TRUE
@@ -492,7 +508,7 @@
 // If this proc causes issues you can probably disable it until then.
 /mob/living/carbon/update_stat()
 	if(stat != DEAD)
-		if(health <= HEALTH_THRESHOLD_DEAD)
+		if(health <= health_threshold_dead)
 			death()
 			return
 		else if(HAS_TRAIT(src, TRAIT_KNOCKEDOUT))
@@ -546,6 +562,7 @@
 		return
 	. = lying_angle
 	lying_angle = new_lying
+	SEND_SIGNAL(src, COMSIG_LIVING_SET_LYING_ANGLE)
 	if(lying_angle != lying_prev)
 		update_transform(instant_update = on_movement) // Don't use transition for eg. crawling movement, because we already have the movement glide
 		lying_prev = lying_angle
@@ -638,6 +655,7 @@
 		return
 	. = body_position
 	body_position = new_value
+	body_position_changed = world.time
 	SEND_SIGNAL(src, COMSIG_LIVING_SET_BODY_POSITION, new_value, .)
 	if(new_value == LYING_DOWN) // From standing to lying down.
 		on_lying_down()
@@ -692,11 +710,68 @@
 
 
 // legacy procs
-/mob/living/put_in_l_hand(obj/item/W)
+/mob/living/put_in_l_hand(obj/item/moved_item)
 	if(body_position == LYING_DOWN)
-		return
+		if(!HAS_TRAIT(src, TRAIT_HAULED))
+			return
 	return ..()
-/mob/living/put_in_r_hand(obj/item/W)
+
+/mob/living/put_in_r_hand(obj/item/moved_item)
 	if(body_position == LYING_DOWN)
-		return
+		if(!HAS_TRAIT(src, TRAIT_HAULED))
+			return
 	return ..()
+
+/mob/living/onZImpact(turf/impact_turf, height)
+	. = ..()
+	impact_turf.z_impact(src, height)
+
+/**
+ * Checks if user can mount src
+ *
+ * Arguments:
+ * * user - The mob trying to mount
+ * * target_mounting - Is the target initiating the mounting process?
+ */
+/mob/living/proc/can_mount(mob/living/user, target_mounting = FALSE)
+	if(!target_mounting)
+		user = pulling
+	if(!ishuman(user))
+		return FALSE
+	var/mob/living/carbon/human/human_pulled = user
+	if(human_pulled.stat == DEAD)
+		return FALSE
+	if(!CHECK_BITFIELD(buckle_flags, CAN_BUCKLE))
+		return FALSE
+	return TRUE
+
+/**
+ * Handles the target trying to ride src
+ *
+ * Arguments:
+ * * target - The mob being put on the back
+ * * target_mounting - Is the target initiating the mounting process?
+ */
+/mob/living/proc/carry_target(mob/living/carbon/target, target_mounting = FALSE)
+	if(!ismob(target))
+		return
+	if(target.is_mob_incapacitated())
+		if(target_mounting)
+			to_chat(target, SPAN_WARNING("You cannot mount [src]!"))
+			return
+		return
+	visible_message(SPAN_NOTICE("[target_mounting ? "[target] starts to mount [src]" : "[src] starts hoisting [target] onto [p_their()] back..."]"),
+	SPAN_NOTICE("[target_mounting ? "[target] starts to mount on your back" : "You start to lift [target] onto your back..."]"))
+	if(!do_after(target_mounting ? target : src, 5 SECONDS, NONE, BUSY_ICON_HOSTILE, target_mounting ? src : target))
+		visible_message(SPAN_WARNING("[target_mounting ? "[target] fails to mount on [src]" : "[src] fails to carry [target]!"]"))
+		return
+	//Second check to make sure they're still valid to be carried
+	if(target.is_mob_incapacitated())
+		return
+	buckle_mob(target, src, target_hands_needed = 1)
+
+/mob/living/MouseDrop_T(atom/dropping, mob/user)
+	. = ..()
+	if(!can_mount(user, TRUE))
+		return
+	INVOKE_ASYNC(src, PROC_REF(carry_target), dropping, TRUE)

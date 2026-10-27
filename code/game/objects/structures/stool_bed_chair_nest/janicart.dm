@@ -1,6 +1,6 @@
 
 
-//old style retardo-cart
+//old style cart
 /obj/structure/bed/chair/janicart
 	name = "janicart"
 	icon = 'icons/obj/vehicles/vehicles.dmi'
@@ -10,7 +10,7 @@
 	flags_atom = OPENCONTAINER
 	buildstacktype = null //can't be disassembled and doesn't drop anything when destroyed
 	//copypaste sorry
-	picked_up_item = null
+	foldabletype = null
 	var/amount_per_transfer_from_this = 5 //shit I dunno, adding this so syringes stop runtime erroring. --NeoFite
 	var/obj/item/storage/bag/trash/mybag = null
 	var/callme = "pimpin' ride" //how do people refer to it?
@@ -18,7 +18,6 @@
 
 /obj/structure/bed/chair/janicart/Initialize()
 	. = ..()
-	handle_rotation()
 	create_reagents(100)
 
 
@@ -71,8 +70,8 @@
 
 
 /obj/structure/bed/chair/janicart/send_buckling_message(mob/M, mob/user)
-	M.visible_message(\
-		SPAN_NOTICE("[M] climbs onto the [callme]!"),\
+	M.visible_message(
+		SPAN_NOTICE("[M] climbs onto the [callme]!"),
 		SPAN_NOTICE("You climb onto the [callme]!"))
 
 

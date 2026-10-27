@@ -7,11 +7,15 @@
 /obj/item/reagent_container/food/snacks/mre_food/wy
 	icon = 'icons/obj/items/food/mre_food/wy.dmi'
 
+/obj/item/mre_food_packet/wy/Initialize()
+	. = ..()
+	AddElement(/datum/element/corp_label/wy)
+
 ///ENTREE
 
 /obj/item/mre_food_packet/entree/wy
 	name = "\improper CFR main dish"
-	desc = "A CFR entree component. Contains a well-prepared main course, preserved using cutting-edge methods & copious chemicals."
+	desc = "An CFR entree component. Contains a luxurious well prepared main course, preserved using high-tech methods."
 	icon = 'icons/obj/items/food/mre_food/wy.dmi'
 	icon_state = "pmc_entree"
 	food_list = list(
@@ -21,10 +25,14 @@
 		/obj/item/reagent_container/food/snacks/mre_food/wy/entree/beefstake,
 	)
 
+/obj/item/mre_food_packet/entree/wy/Initialize()
+	. = ..()
+	AddElement(/datum/element/corp_label/wy)
+
 /obj/item/reagent_container/food/snacks/mre_food/wy/entree/bakedfish
 	name = "baked salmon"
 	icon_state = "baked fish"
-	desc = "A baked fillet of salmon in a creamy sauce. Contains just the right amount of added vitamin D3 you might need for the next four days."
+	desc = "A creamy baked wild salmon, contains just the right amount of vitamin D3 you might need for the next four days."
 
 /obj/item/reagent_container/food/snacks/mre_food/wy/entree/bakedfish/Initialize()
 	. = ..()
@@ -35,7 +43,7 @@
 /obj/item/reagent_container/food/snacks/mre_food/wy/entree/smokyribs
 	name = "smoky ribs"
 	icon_state = "smoky ribs"
-	desc = "A rack of smoked beef ribs, in a black pepper and apple sauce. Surprisingly succulent."
+	desc = "A well smoked beef ribs, in a black pepper and apple sauce, very juicy and chewy."
 
 /obj/item/reagent_container/food/snacks/mre_food/wy/entree/smokyribs/Initialize()
 	. = ..()
@@ -47,7 +55,7 @@
 /obj/item/reagent_container/food/snacks/mre_food/wy/entree/ham
 	name = "baked ham"
 	icon_state = "ham"
-	desc = "Baked ham, with a peppery outer layer. Moist and rich in flavor."
+	desc = "Medium-rare baked ham, with a peppery outer layer, moist and rich in flavor."
 
 /obj/item/reagent_container/food/snacks/mre_food/wy/entree/ham/Initialize()
 	. = ..()
@@ -59,7 +67,7 @@
 /obj/item/reagent_container/food/snacks/mre_food/wy/entree/beefstake
 	name = "beefsteak"
 	icon_state = "beefstake"
-	desc = "A tolerably cooked slab of steak, finished with an orange & thyme sauce."
+	desc = "Medium-well steak, finished with an orange juice sauce and thyme."
 
 /obj/item/reagent_container/food/snacks/mre_food/wy/entree/beefstake/Initialize()
 	. = ..()
@@ -110,7 +118,7 @@
 /obj/item/reagent_container/food/snacks/mre_food/wy/dessert/eclair
 	name = "eclair"
 	icon_state = "eclair"
-	desc = "A gentle pastry, filled with a vanilla flavored cream and iced with a layer of chocolate on the top. You can taste the preservatives already."
+	desc = "A gentle pastry, filled with an airy vanilla flavored cream, iced with a layer of chocolate on the top."
 
 /obj/item/reagent_container/food/snacks/mre_food/wy/dessert/eclair/Initialize()
 	. = ..()

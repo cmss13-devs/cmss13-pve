@@ -2,6 +2,7 @@
 	name = "Light Rain"
 	display_name = "Light Rain"
 	length = 8 MINUTES
+	fullscreen_type = /atom/movable/screen/fullscreen/weather/low
 
 	turf_overlay_icon_state = "strata_storm"
 	turf_overlay_alpha = 50
@@ -17,6 +18,7 @@
 	name = "Heavy Rain"
 	display_name = "Heavy Rain"
 	length = 12 MINUTES
+	fullscreen_type = /atom/movable/screen/fullscreen/weather/medium
 
 	turf_overlay_icon_state = "strata_storm"
 	turf_overlay_alpha = 125

@@ -26,7 +26,7 @@ FLOOR SAFES
 /obj/structure/safe
 	name = "safe"
 	desc = "A huge chunk of metal with a dial embedded in it. Fine print on the dial reads \"Scarborough Arms - 2 tumbler safe, guaranteed thermite resistant, explosion resistant, and assistant resistant.\""
-	icon = 'icons/obj/structures/structures.dmi'
+	icon = 'icons/obj/structures/safes.dmi'
 	icon_state = "safe"
 	anchored = TRUE
 	density = TRUE
@@ -54,6 +54,10 @@ FLOOR SAFES
 	tumbler_2_pos = 0
 	tumbler_2_open = (rand(0,10) * 5)
 
+	if(is_ground_level(loc.z))
+		//adding an objective for cracking open the safe
+		new /datum/cm_objective/crack_safe(src)
+
 	for(var/obj/item/I in loc)
 		if(space >= maxspace)
 			return
@@ -64,6 +68,11 @@ FLOOR SAFES
 	if(spawnkey)
 		new /obj/item/paper/safe_key(loc) //Spawn the key on top of the safe.
 
+/obj/structure/safe/Destroy()
+	qdel(objective)
+	objective = null
+	return ..()
+
 /obj/structure/safe/proc/check_unlocked(mob/user as mob, canhear)
 	if(user && canhear)
 		if(tumbler_1_pos == tumbler_1_open)
@@ -71,7 +80,8 @@ FLOOR SAFES
 		if(tumbler_2_pos == tumbler_2_open)
 			to_chat(user, SPAN_NOTICE("You hear a [pick("tink", "krink", "plink")] from [src]."))
 	if(tumbler_1_pos == tumbler_1_open && tumbler_2_pos == tumbler_2_open)
-		if(user) visible_message("<b>[pick("Spring", "Sprang", "Sproing", "Clunk", "Click")]!</b>")
+		if(user)
+			visible_message("<b>[pick("Spring", "Sprang", "Sproing", "Clunk", "Click")]!</b>")
 		return 1
 	return 0
 
@@ -126,7 +136,8 @@ FLOOR SAFES
 	. = ..()
 	if(.)
 		return
-	if(!ishuman(usr)) return
+	if(!ishuman(usr))
+		return
 	var/mob/living/carbon/human/user = usr
 
 	var/canhear = 0
@@ -240,3 +251,4 @@ FLOOR SAFES
 	new /obj/item/storage/box/mre/wy(src)
 	new /obj/item/storage/box/mre/wy(src)
 	new /obj/item/coin/platinum(src)
+	new /obj/item/device/defibrillator/synthetic/noskill(src)

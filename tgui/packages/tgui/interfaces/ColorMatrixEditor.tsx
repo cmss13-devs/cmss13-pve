@@ -1,6 +1,5 @@
 import { toFixed } from 'common/math';
-
-import { useBackend } from '../backend';
+import { useBackend } from 'tgui/backend';
 import {
   Box,
   Button,
@@ -8,8 +7,8 @@ import {
   NumberInput,
   Section,
   Stack,
-} from '../components';
-import { Window } from '../layouts';
+} from 'tgui/components';
+import { Window } from 'tgui/layouts';
 
 type Data = {
   mapRef: string;
@@ -76,10 +75,12 @@ export const ColorMatrixEditor = (props) => {
           </Stack.Item>
           <Stack.Item grow>
             <ByondUi
-              height="100%"
-              params={{
+              winsetParams={{
                 id: mapRef,
                 type: 'map',
+              }}
+              boxProps={{
+                height: '100%',
               }}
             />
           </Stack.Item>

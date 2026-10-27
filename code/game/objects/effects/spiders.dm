@@ -1,7 +1,7 @@
 //generic procs copied from obj/effect/alien
 /obj/effect/spider
 	name = "web"
-	desc = "it's stringy and sticky"
+	desc = "It's stringy and sticky."
 	icon = 'icons/effects/effects.dmi'
 	anchored = TRUE
 	density = FALSE
@@ -48,9 +48,10 @@
 	if(health <= 0)
 		qdel(src)
 
-/obj/effect/spider/flamer_fire_act(dam = BURN_LEVEL_TIER_1)
-	health -= dam
-	healthcheck(src)
+/obj/effect/spider/fire_act(exposed_temperature, exposed_volume)
+	if(exposed_temperature > 300)
+		health -= 5
+		healthcheck()
 
 /obj/effect/spider/stickyweb
 	icon_state = "stickyweb1"
@@ -73,7 +74,7 @@
 
 /obj/effect/spider/eggcluster
 	name = "egg cluster"
-	desc = "They seem to pulse slightly with an inner life"
+	desc = "They seem to pulse slightly with an inner life."
 	icon_state = "eggs"
 	var/amount_grown = 0
 /obj/effect/spider/eggcluster/Initialize(mapload, ...)
@@ -147,7 +148,7 @@
 			var/target_atom = pick(nearby)
 			walk_to(src, target_atom, 5)
 			if(prob(25))
-				src.visible_message(SPAN_NOTICE("\the [src] skitters[pick(" away"," around","")]."))
+				src.visible_message(SPAN_NOTICE("\The [src] skitters[pick(" away"," around","")]."))
 	else if(prob(5))
 		//vent crawl!
 		for(var/obj/structure/pipes/vents/pump/v in view(7,src))
@@ -157,7 +158,7 @@
 				break
 
 	if(prob(1))
-		src.visible_message(SPAN_NOTICE("\the [src] chitters."))
+		src.visible_message(SPAN_NOTICE("\The [src] chitters."))
 	if(isturf(loc) && amount_grown > 0)
 		amount_grown += rand(0,2)
 		if(amount_grown >= 100)
@@ -173,7 +174,7 @@
 			var/target_atom = pick(nearby)
 			walk_to(src, target_atom, 5)
 			if(prob(25))
-				src.visible_message(SPAN_NOTICE("\the [src] skitters[pick(" away"," around","")]."))
+				src.visible_message(SPAN_NOTICE("\The [src] skitters[pick(" away"," around","")]."))
 	else if(prob(5))
 		//vent crawl!
 		for(var/obj/structure/pipes/vents/pump/v in view(7,src))
@@ -183,7 +184,7 @@
 				break
 
 	if(prob(1))
-		src.visible_message(SPAN_NOTICE("\the [src] chitters."))
+		src.visible_message(SPAN_NOTICE("\The [src] chitters."))
 
 /obj/effect/decal/cleanable/spiderling_remains
 	name = "spiderling remains"
@@ -194,9 +195,9 @@
 
 /obj/effect/spider/cocoon
 	name = "cocoon"
-	desc = "Something wrapped in silky spider web"
+	desc = "Something wrapped in silky spider web."
 	icon_state = "cocoon1"
-	health = 30
+	health = 60
 
 /obj/effect/decal/cleanable/spiderling_remains/New()
 	icon_state = pick("cocoon1","cocoon2","cocoon3")

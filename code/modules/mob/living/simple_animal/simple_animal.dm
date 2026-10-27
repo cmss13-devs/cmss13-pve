@@ -14,7 +14,7 @@
 	melee_damage_upper = 0
 	attacktext = "attacks"
 	attack_sound = null
-	//Attacktext is the mob deal 0 damaage.
+	//Attacktext is the mob deal 0 damage.
 	friendly = "nuzzles"
 	can_crawl = FALSE
 	black_market_value = 25
@@ -35,9 +35,10 @@
 
 	var/turns_per_move = 1
 	var/turns_since_move = 0
+	universal_speak = FALSE //No, just no.
 	var/meat_amount = 0
 	var/meat_type
-	///Use this to temporarely stop random movement or to if you write special movement code for animals.
+	///Use this to temporarily stop random movement or to if you write special movement code for animals.
 	var/stop_automated_movement = 0
 	///Does the mob wander around when idle?
 	var/wander = 1
@@ -75,14 +76,6 @@
 	var/unsuitable_atoms_damage = 2
 	var/fire_overlay
 
-	/// Whether or not this simple_animal can squeeze under doors
-	var/squeeze_under = FALSE
-
-	lighting_alpha = LIGHTING_PLANE_ALPHA_MOSTLY_INVISIBLE
-
-	universal_speak = FALSE
-	universal_understand = TRUE
-
 /mob/living/simple_animal/Initialize()
 	. = ..()
 	SSmob.living_misc_mobs += src
@@ -92,8 +85,9 @@
 	return ..()
 
 /mob/living/simple_animal/Login()
-	if(src && src.client)
-		src.client.screen = null
+	if(client)
+		client.screen = null
+		client.render_plates_shown = alist()
 	..()
 
 /mob/living/simple_animal/updatehealth()
@@ -132,6 +126,16 @@
 		return
 	return ..()
 
+/mob/living/simple_animal/update_stat()
+	if(stat == DEAD)
+		return
+
+	if(HAS_TRAIT(src, TRAIT_KNOCKEDOUT))
+		set_stat(UNCONSCIOUS)
+		return
+
+	set_stat(CONSCIOUS)
+
 /mob/living/simple_animal/update_fire()
 	if(!on_fire)
 		overlays -= fire_overlay
@@ -154,6 +158,7 @@
 		fire_overlay = fire_overlay_image
 
 /mob/living/simple_animal/Life(delta_time)
+	..()
 	if(affected_by_fire)
 		handle_fire()
 	//Health
@@ -177,7 +182,7 @@
 
 	//Movement
 	if(!client && !stop_automated_movement && wander && !anchored)
-		if(isturf(src.loc) && !resting && !buckled && (mobility_flags & MOBILITY_MOVE)) //This is so it only moves if it's not inside a closet, gentics machine, etc.
+		if(isturf(loc) && !resting && !buckled && (mobility_flags & MOBILITY_MOVE) && !HAS_TRAIT(src, TRAIT_HAULED)) //This is so it only moves if it's not inside a closet, genetics machine, etc.
 			turns_since_move++
 			if(turns_since_move >= turns_per_move)
 				if(!(stop_automated_movement_when_pulled && pulledby)) //Soma animals don't move when pulled
@@ -272,7 +277,8 @@
 	return 1
 
 /mob/living/simple_animal/Collided(atom/movable/AM)
-	if(!AM) return
+	if(!AM)
+		return
 
 	if(resting || buckled)
 		return
@@ -288,7 +294,8 @@
 
 /mob/living/simple_animal/death()
 	. = ..()
-	if(!.) return //was already dead
+	if(!.)
+		return //was already dead
 	SSmob.living_misc_mobs -= src
 	icon_state = icon_dead
 	black_market_value = dead_black_market_value
@@ -318,7 +325,7 @@
 		M.attack_log += text("\[[time_stamp()]\] <font color='red'>attacked [src.name] ([src.ckey])</font>")
 		src.attack_log += text("\[[time_stamp()]\] <font color='orange'>was attacked by [M.name] ([M.ckey])</font>")
 		var/damage = rand(M.melee_damage_lower, M.melee_damage_upper)
-		apply_damage(damage, BRUTE)
+		apply_damage(damage, BRUTE, enviro=TRUE)
 
 /mob/living/simple_animal/attack_hand(mob/living/carbon/human/attacking_mob)
 	..()
@@ -363,7 +370,7 @@
 
 /mob/living/simple_animal/can_be_pulled_by(mob/pulling_mob)
 	if(locate(/obj/item/explosive/plastic) in contents)
-		to_chat(pulling_mob, SPAN_WARNING("You leave \the [src] alone. It's got live explosives on it!"))
+		to_chat(pulling_mob, SPAN_WARNING("You leave [src] alone. It's got live explosives on it!"))
 		return FALSE
 	return ..()
 
@@ -374,14 +381,14 @@
 			var/obj/item/stack/medical/MED = O
 			if(health < maxHealth)
 				if(MED.get_amount() >= 1)
-					apply_damage(-MED.heal_brute, BRUTE)
+					apply_damage(-12, BRUTE)
 					MED.use(1)
 					for(var/mob/M as anything in viewers(src, null))
 						if ((M.client && !( M.blinded )))
 							M.show_message(SPAN_NOTICE("[user] applies [MED] on [src]"), SHOW_MESSAGE_VISIBLE)
 					return
 		else
-			to_chat(user, SPAN_NOTICE(" this [src] is dead, medical items won't bring it back to life."))
+			to_chat(user, SPAN_NOTICE("[src] is dead, medical items won't bring it back to life."))
 			return
 	if(meat_type && (stat == DEAD)) //if the animal has a meat, and if it is dead.
 		if(istype(O, /obj/item/tool/kitchen/knife) || istype(O, /obj/item/tool/kitchen/knife/butcher))
@@ -391,7 +398,7 @@
 			else
 				gib()
 			return
-	..()
+	return ..()
 
 
 /mob/living/simple_animal/movement_delay()
@@ -401,7 +408,7 @@
 	move_delay = .
 
 
-/mob/living/simple_animal/ex_act(severity, direction)
+/mob/living/simple_animal/ex_act(severity, direction, datum/cause_data/cause_data, pierce=0, enviro=FALSE)
 
 	if(severity >= 30)
 		flash_eyes()
@@ -410,8 +417,7 @@
 		gib()
 		return
 
-	apply_damage(severity, BRUTE)
-	updatehealth()
+	apply_damage(severity, BRUTE, enviro=enviro)
 
 	var/knock_value = min( round( severity*0.1 ,1) ,10)
 	if(knock_value > 0)
@@ -475,5 +481,22 @@
 	if(user && error_msg)
 		to_chat(user, SPAN_WARNING("You aren't sure how to inject this animal!"))
 	return FALSE
+
+/mob/living/simple_animal/small
+	name = "small animal"
+
+/mob/living/simple_animal/small/initialize_pass_flags(datum/pass_flags_container/pass_flags)
+	..()
+	if(pass_flags)
+		pass_flags.flags_pass = PASS_MOB_THRU|PASS_FLAGS_CRAWLER
+		pass_flags.flags_can_pass_all = PASS_ALL|PASS_OVER_THROW_ITEM
+
+/mob/living/simple_animal/big
+	name = "big animal"
+
+/mob/living/simple_animal/big/initialize_pass_flags(datum/pass_flags_container/pass_flags)
+	..()
+	if(pass_flags)
+		pass_flags.flags_can_pass_all = PASS_OVER_THROW_ITEM
 
 #undef OVERLAY_FIRE_LAYER

@@ -66,7 +66,7 @@
 // Third var is only for custom event handlers for OW hud indicators, currently only used for the Queen icon
 // If you use it, be sure to manually specify the second var, even if its the default value.
 /mob/living/carbon/xenomorph/proc/overwatch(mob/living/carbon/xenomorph/targetXeno, stop_overwatch = FALSE)
-	if(stop_overwatch)
+	if(stop_overwatch || (observed_xeno && targetXeno && observed_xeno == targetXeno))
 		var/mob/living/carbon/xenomorph/oldXeno = observed_xeno
 		observed_xeno = null
 
@@ -100,13 +100,6 @@
 
 		if(HAS_TRAIT(src, TRAIT_ABILITY_BURROWED))
 			to_chat(src, SPAN_XENOWARNING("We cannot do this in our current state!"))
-			return
-
-		if(observed_xeno && targetXeno && observed_xeno == targetXeno)
-			if(istype(targetXeno, /obj/effect/alien/resin/marker))
-				to_chat(src, SPAN_XENOWARNING("We are already watching that mark!"))
-				return
-			to_chat(src, SPAN_XENOWARNING("We are already watching that sister!"))
 			return
 
 		if(caste_type != XENO_CASTE_QUEEN && is_zoomed)
@@ -175,8 +168,12 @@
 // Sets the Xeno's view to its observed target if that target is set. Otherwise, resets the xeno's view to itself.
 // Please handle typechecking outside this proc
 /mob/living/carbon/xenomorph/reset_view(atom/A)
+	var/queued_cursor = queued_action ? client?.mouse_pointer_icon : null
+
 	. = ..(A)
 	if(.)
+		if(queued_cursor)
+			client.mouse_pointer_icon = queued_cursor
 		return
 
 	if (client)
@@ -184,7 +181,10 @@
 		// Is our observed xeno configured and are we alive?
 		if(observed_xeno && !stat)
 			client.perspective = EYE_PERSPECTIVE
-			client.eye = observed_xeno
+			client.set_eye(observed_xeno)
+
+	if(queued_cursor)
+		client.mouse_pointer_icon = queued_cursor
 
 // Handle HREF clicks through hive status and hivemind
 /mob/living/carbon/xenomorph/Topic(href, href_list)

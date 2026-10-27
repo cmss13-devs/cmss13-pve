@@ -37,7 +37,7 @@
 
 /atom/movable/screen/close
 	name = "close"
-	icon_state = "x"
+	icon_state = "close"
 
 
 /atom/movable/screen/close/clicked(mob/user)
@@ -53,6 +53,7 @@
 /atom/movable/screen/action_button
 	icon = 'icons/mob/hud/actions.dmi'
 	icon_state = "template"
+	plane = ABOVE_TACMAP_PLANE
 	var/datum/action/source_action
 	var/image/maptext_overlay
 
@@ -85,6 +86,8 @@
 
 /atom/movable/screen/action_button/proc/set_maptext(new_maptext, new_maptext_x, new_maptext_y)
 	overlays -= maptext_overlay
+	if(!new_maptext)
+		return
 	maptext_overlay = image(null, null, null, layer + 0.1)
 	maptext_overlay.maptext = new_maptext
 	if(new_maptext_x)
@@ -98,18 +101,29 @@
 	icon = 'icons/mob/hud/actions.dmi'
 	icon_state = "hide"
 	var/hidden = 0
+	var/base_icon
 
 /atom/movable/screen/action_button/hide_toggle/clicked(mob/user, list/mods)
 	user.hud_used.action_buttons_hidden = !user.hud_used.action_buttons_hidden
 	hidden = user.hud_used.action_buttons_hidden
-	if(hidden)
-		name = "Show Buttons"
-		icon_state = "show"
-	else
-		name = "Hide Buttons"
-		icon_state = "hide"
+	update_button_icon(user)
 	user.update_action_buttons()
 	return TRUE
+
+/atom/movable/screen/action_button/hide_toggle/proc/update_button_icon(mob/user)
+	if(isyautja(user))
+		base_icon = "pred"
+	else if(isxeno(user))
+		base_icon = "xeno"
+	else
+		base_icon = "marine"
+
+	if(hidden)
+		name = "Show Buttons"
+		icon_state = "[base_icon]_show"
+	else
+		name = "Hide Buttons"
+		icon_state = "[base_icon]_hide"
 
 /atom/movable/screen/action_button/ghost/minimap/get_button_screen_loc(button_number)
 	return "SOUTH:6,CENTER+1:24"
@@ -294,6 +308,9 @@
 /atom/movable/screen/inventory/proc/handle_dropped_on(atom/dropped_on, atom/dropping, client/user)
 	SIGNAL_HANDLER
 
+	if(!isliving(user.mob))
+		return
+
 	if(slot_id != WEAR_L_HAND && slot_id != WEAR_R_HAND)
 		return
 
@@ -456,13 +473,10 @@
 /atom/movable/screen/squad_leader_locator/clicked(mob/living/carbon/human/user, mods)
 	if(!istype(user))
 		return
-
 	var/obj/item/device/radio/headset/earpiece = user.get_type_in_ears(/obj/item/device/radio/headset)
-	var/has_access = earpiece.misc_tracking || (user.assigned_squad && user.assigned_squad.radio_freq == earpiece.frequency)
-	if(!istype(earpiece) || !earpiece.has_hud || !has_access)
+	if(!istype(earpiece) || !earpiece.has_hud)
 		to_chat(user, SPAN_WARNING("Unauthorized access detected."))
 		return
-
 	if(mods[SHIFT_CLICK])
 		var/area/current_area = get_area(user)
 		to_chat(user, SPAN_NOTICE("You are currently at: <b>[current_area.name]</b>."))
@@ -470,7 +484,7 @@
 	else if(mods[ALT_CLICK])
 		earpiece.switch_tracker_target()
 		return
-	if(user.get_active_hand())
+	if(user.a_intent == INTENT_HARM && user.get_active_hand()) //Stop it popping up in combat(hopefully), but work any other time.
 		return
 	if(user.assigned_squad)
 		user.assigned_squad.tgui_interact(user)
@@ -530,6 +544,9 @@
 			// Don't need weakrefs to this or the hive core, since there's only one possible target.
 			options["Queen"] = list(null, TRACKER_QUEEN)
 
+		if(user.hive.living_xeno_king)
+			options["King"] = list(user.hive.living_xeno_king, TRACKER_KING)
+
 		if(user.hive.hive_location)
 			options["Hive Core"] = list(null, TRACKER_HIVE)
 
@@ -552,7 +569,11 @@
 		return FALSE
 	if(HAS_TRAIT(user, TRAIT_ABILITY_BURROWED) || user.is_mob_incapacitated() || user.buckled)
 		return FALSE
-	user.overwatch(user.hive.living_xeno_queen)
+	//Xenos should not be able to track tunnels. Queen's weakref is equal to null if selected.
+	if((tracker_type != TRACKER_LEADER && tracker_type  != TRACKER_KING) || !tracking_ref)
+		user.overwatch(user.hive.living_xeno_queen)
+		return
+	user.overwatch(tracking_ref.resolve())
 
 // Reset to the defaults
 /atom/movable/screen/queen_locator/proc/reset_tracking()
@@ -581,6 +602,9 @@
 			icon_state = "nightvision_full"
 			vision_define = XENO_VISION_LEVEL_FULL_NVG
 		if(LIGHTING_PLANE_ALPHA_MOSTLY_INVISIBLE)
+			icon_state = "nightvision_three_quarters"
+			vision_define = XENO_VISION_LEVEL_HIGH_NVG
+		if(LIGHTING_PLANE_ALPHA_SOMEWHAT_INVISIBLE)
 			icon_state = "nightvision_half"
 			vision_define = XENO_VISION_LEVEL_MID_NVG
 		if(LIGHTING_PLANE_ALPHA_VISIBLE)

@@ -1,15 +1,15 @@
 /** Window sizes in pixels */
 export enum WindowSize {
   Small = 30,
-  Medium = 45,
-  Large = 60,
+  Medium = 50,
+  Large = 70,
   Width = 380,
 }
 
 /** Line lengths for autoexpand */
 export enum LineLength {
-  Small = 38,
-  Medium = 76,
+  Small = 36,
+  Medium = 70,
   Large = 104,
 }
 
@@ -105,8 +105,8 @@ export const RADIO_PREFIXES = {
     label: 'Charl.',
   },
   '#c ': {
-    id: 'cia',
-    label: 'CIA',
+    id: 'clf-cmd',
+    label: 'CLF Cmd.',
   },
   ':d ': {
     id: 'delta',
@@ -117,8 +117,8 @@ export const RADIO_PREFIXES = {
     label: 'Delta',
   },
   '#d ': {
-    id: 'merc',
-    label: 'Mercenary',
+    id: 'clf-cct',
+    label: 'CLF CCT',
   },
   ':e ': {
     id: 'echo',
@@ -173,8 +173,8 @@ export const RADIO_PREFIXES = {
     label: 'SOF',
   },
   '.k ': {
-    id: 'sof',
-    label: 'SOF',
+    id: 'yautja',
+    label: 'Military',
   },
   '#k ': {
     id: 'specops',
@@ -233,32 +233,32 @@ export const RADIO_PREFIXES = {
     label: 'PMC',
   },
   ':q ': {
-    id: 'rmc',
-    label: 'RMC',
+    id: 'hive',
+    label: 'Hive',
   },
   '.q ': {
-    id: 'rmc',
-    label: 'RMC',
+    id: 'hive',
+    label: 'Hive',
   },
   '#q ': {
-    id: 'rmc',
-    label: 'RMC',
+    id: 'hive',
+    label: 'Hive',
   },
   '#r ': {
     id: 'yautja',
     label: 'Yautja',
   },
   ':s ': {
-    id: 'us-army',
-    label: 'US Army',
+    id: 'army',
+    label: 'Army',
   },
   '.s ': {
-    id: 'us-army',
-    label: 'US Army',
+    id: 'army',
+    label: 'Army',
   },
   '#s ': {
-    id: 'us-army',
-    label: 'US Army',
+    id: 'yautja',
+    label: 'Yautja Ovr.',
   },
   ':t ': {
     id: 'intel',
@@ -297,28 +297,52 @@ export const RADIO_PREFIXES = {
     label: 'UPP Cmd.',
   },
   ':x ': {
-    id: 'usasf',
-    label: 'USASF',
+    id: 'hyperdyne',
+    label: 'Hyperdyne',
   },
   '.x ': {
-    id: 'usasf',
-    label: 'USASF',
+    id: 'hyperdyne',
+    label: 'Hyperdyne',
   },
   '#x ': {
-    id: 'usasf',
-    label: 'USASF',
+    id: 'hyperdyne',
+    label: 'Hyperdyne',
   },
   ':y ': {
     id: 'wy',
-    label: 'W-Y',
+    label: 'W-Y Corp',
   },
   '.y ': {
     id: 'wy',
-    label: 'W-Y',
+    label: 'W-Y Corp',
   },
   '#y ': {
-    id: 'wy',
-    label: 'W-Y',
+    id: 'wysec',
+    label: 'W-Y Sec',
+  },
+  ':1 ': {
+    id: 'wypub',
+    label: 'W-Y Pub',
+  },
+  '.1 ': {
+    id: 'wypub',
+    label: 'W-Y Pub',
+  },
+  '#1 ': {
+    id: 'wypub',
+    label: 'W-Y Pub',
+  },
+  ':2 ': {
+    id: 'cia',
+    label: 'CIA',
+  },
+  '.2 ': {
+    id: 'cia',
+    label: 'CIA',
+  },
+  '#2 ': {
+    id: 'cia',
+    label: 'CIA',
   },
   ':z ': {
     id: 'highcom',
@@ -331,54 +355,6 @@ export const RADIO_PREFIXES = {
   '#z ': {
     id: 'pmc-cmd',
     label: 'PMC Cmd.',
-  },
-  ':0 ': {
-    id: 'uscg',
-    label: 'USCG',
-  },
-  '.0 ': {
-    id: 'uscg',
-    label: 'USCG',
-  },
-  '#0 ': {
-    id: 'uscg',
-    label: 'USCG',
-  },
-  ':1 ': {
-    id: 'usasf',
-    label: 'USASF',
-  },
-  '.1 ': {
-    id: 'usasf',
-    label: 'USASF',
-  },
-  '#1 ': {
-    id: 'usasf',
-    label: 'USASF',
-  },
-  ':2 ': {
-    id: 'pfa',
-    label: 'PFA',
-  },
-  '.2 ': {
-    id: 'pfa',
-    label: 'PFA',
-  },
-  '#2 ': {
-    id: 'pfa',
-    label: 'PFA',
-  },
-  ':3 ': {
-    id: 'jsc',
-    label: 'JSC',
-  },
-  '.3 ': {
-    id: 'jsc',
-    label: 'JSC',
-  },
-  '#3 ': {
-    id: 'jsc',
-    label: 'JSC',
   },
 } as const;
 
@@ -412,51 +388,39 @@ export const LANGUAGE_PREFIXES = {
     label: 'Apollo',
   },
   '!7 ': {
-    id: 'french',
-    label: 'French',
+    id: 'telepathy',
+    label: 'Telepathy',
   },
   '!8 ': {
     id: 'chinese',
     label: 'Chinese',
   },
   '!9 ': {
-    id: 'russian patois',
-    label: 'Russian patois',
+    id: 'french',
+    label: 'French',
   },
-  '!f ': {
-    id: 'filipino',
-    label: 'Filipino',
-  },
-  '!h ': {
-    id: 'hellhound',
-    label: 'Hellhound',
+  '!x ': {
+    id: 'xenomorph',
+    label: 'Xenomporph',
   },
   '!l ': {
     id: 'tactical sign language',
-    label: 'Tacitical Sign',
-  },
-  '!m ': {
-    id: 'primitive',
-    label: 'Primitive',
-  },
-  '!p ': {
-    id: 'polish',
-    label: 'Polish',
+    label: 'Tactical Sign',
   },
   '!s ': {
     id: 'sainja',
     label: 'Sainja',
   },
-  '!t ': {
-    id: 'telepathy',
-    label: 'Telepathy',
+  '!h ': {
+    id: 'hellhound',
+    label: 'Hellhound',
   },
   '!q ': {
     id: 'hivemind',
     label: 'Hivemind',
   },
-  '!x ': {
-    id: 'xenomorph',
-    label: 'Xenomporph',
+  '!_ ': {
+    id: 'primitive',
+    label: 'Primitive',
   },
 } as const;

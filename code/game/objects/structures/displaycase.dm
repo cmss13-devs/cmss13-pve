@@ -1,12 +1,11 @@
 /obj/structure/displaycase
 	name = "display case"
-	icon = 'icons/obj/structures/props/stationobjs.dmi'
+	icon = 'icons/obj/structures/props/furniture/display_case.dmi'
 	icon_state = "glassbox1"
 	desc = "A display case for prized possessions. It taunts you to kick it."
 	density = TRUE
 	anchored = TRUE
 	unacidable = FALSE
-	unslashable = TRUE
 	health = 30
 	var/occupied = 1
 	var/destroyed = 0
@@ -60,7 +59,7 @@
 /obj/structure/displaycase/attackby(obj/item/W as obj, mob/user as mob)
 	src.health -= W.force * W.demolition_mod
 	src.healthcheck()
-	..()
+	. = ..()
 	return
 
 /obj/structure/displaycase/attack_hand(mob/user as mob)

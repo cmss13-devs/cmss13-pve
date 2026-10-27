@@ -16,6 +16,10 @@
 
 /obj/item/toy
 	icon = 'icons/obj/items/toy.dmi'
+	item_icons = list(
+		WEAR_L_HAND = 'icons/mob/humans/onmob/inhands/items/toys_lefthand.dmi',
+		WEAR_R_HAND = 'icons/mob/humans/onmob/inhands/items/toys_righthand.dmi'
+	)
 	throwforce = 0
 	throw_speed = SPEED_VERY_FAST
 	throw_range = 20
@@ -39,8 +43,9 @@
 	return
 
 /obj/item/toy/balloon/afterattack(atom/A as mob|obj, mob/user as mob, proximity)
-	if(!proximity) return
-	if (istype(A, /obj/structure/reagent_dispensers/watertank) && get_dist(src,A) <= 1)
+	if(!proximity)
+		return
+	if (istype(A, /obj/structure/reagent_dispensers/tank/water) && get_dist(src,A) <= 1)
 		A.reagents.trans_to(src, 10)
 		to_chat(user, SPAN_NOTICE("You fill the balloon with the contents of [A]."))
 		src.desc = "A translucent balloon with some form of liquid sloshing around in it."
@@ -91,7 +96,7 @@
 	throw_speed = SPEED_VERY_FAST
 	throw_range = 20
 	force = 0
-	icon = 'icons/obj/items/weapons/weapons.dmi'
+	icon = 'icons/obj/items/toy.dmi'
 	icon_state = "syndballoon"
 	item_state = "syndballoon"
 	w_class = SIZE_LARGE
@@ -101,7 +106,7 @@
  */
 /obj/item/toy/blink
 	name = "electronic blink toy game"
-	desc = "Blink.  Blink.  Blink. Ages 8 and up."
+	desc = "Blink... Blink... Blink... For ages 8 and up."
 	icon = 'icons/obj/items/radio.dmi'
 	icon_state = "beacon"
 	item_state = "signaller"
@@ -123,8 +128,11 @@
 /obj/item/toy/crayon
 	name = "crayon"
 	desc = "A colorful crayon. Please refrain from eating it or putting it in your nose."
-	icon = 'icons/obj/items/crayons.dmi'
+	icon = 'icons/obj/items/paint.dmi'
 	icon_state = "crayonred"
+	item_icons = list(
+		WEAR_AS_GARB = 'icons/mob/humans/onmob/clothing/helmet_garb/crayons.dmi',
+		)
 	w_class = SIZE_TINY
 	attack_verb = list("attacked", "colored")
 	black_market_value = 5
@@ -134,6 +142,8 @@
 	var/uses = 30
 	var/instant = 0
 	var/colorName = "red" //for updateIcon purposes
+
+	flags_obj = OBJ_IS_HELMET_GARB
 
 /*
  * Snap pops
@@ -155,6 +165,7 @@
 	qdel(src)
 
 /obj/item/toy/snappop/Crossed(H as mob|obj)
+	..()
 	if((ishuman(H))) //i guess carp and shit shouldn't set them off
 		var/mob/living/carbon/M = H
 		to_chat(M, SPAN_WARNING("You step on the snap pop!"))
@@ -195,14 +206,14 @@
 	else if (locate (/obj/structure/surface/table, src.loc))
 		return
 
-	else if (istype(A, /obj/structure/reagent_dispensers/watertank) && get_dist(src,A) <= 1)
+	else if (istype(A, /obj/structure/reagent_dispensers/tank/water) && get_dist(src,A) <= 1)
 		A.reagents.trans_to(src, 10)
-		to_chat(user, SPAN_NOTICE(" You refill your flower!"))
+		to_chat(user, SPAN_NOTICE("You refill your flower!"))
 		return
 
 	else if (src.reagents.total_volume < 1)
 		src.empty = 1
-		to_chat(user, SPAN_NOTICE(" Your flower has run dry!"))
+		to_chat(user, SPAN_NOTICE("Your flower has run dry!"))
 		return
 
 	else
@@ -241,7 +252,7 @@
 /obj/item/toy/prize
 	icon_state = "ripleytoy"
 	var/cooldown = 0
-	w_class = SIZE_SMALL
+	w_class = SIZE_TINY
 
 //all credit to skasi for toy mech fun ideas
 /obj/item/toy/prize/attack_self(mob/user)
@@ -316,17 +327,16 @@
 	desc = "Mini-Mecha action figure! Collect them all! 11/11."
 	icon_state = "phazonprize"
 
-/obj/item/toy/prize/apc
-	name = "toy APC"
-	desc = "Limited edition APC action figure."
-	icon_state = "apctoy"
 
 /obj/item/toy/inflatable_duck
 	name = "inflatable duck"
 	desc = "No bother to sink or swim when you can just float!"
 	icon_state = "inflatable"
 	item_state = "inflatable"
-	icon = 'icons/obj/items/clothing/belts.dmi'
+	icon = 'icons/obj/items/clothing/belts/misc.dmi'
+	item_icons = list(
+		WEAR_WAIST = 'icons/mob/humans/onmob/clothing/belts/misc.dmi'
+	)
 	flags_equip_slot = SLOT_WAIST
 	black_market_value = 20
 
@@ -374,14 +384,14 @@
 	else if(sides == 20 && result == 1)
 		comment = "Ouch, bad luck."
 	icon_state = "[name][result]"
-	user.visible_message(SPAN_NOTICE("[user] has thrown [src]. It lands on [result]. [comment]"), \
-						SPAN_NOTICE("You throw [src]. It lands on a [result]. [comment]"), \
+	user.visible_message(SPAN_NOTICE("[user] has thrown [src]. It lands on [result]. [comment]"),
+						SPAN_NOTICE("You throw [src]. It lands on a [result]. [comment]"),
 						SPAN_NOTICE("You hear [src] landing on a [result]. [comment]"))
 
 /obj/item/toy/bikehorn
 	name = "bike horn"
 	desc = "A horn off of a bicycle."
-	icon = 'icons/obj/items/items.dmi'
+	icon = 'icons/obj/items/toy.dmi'
 	icon_state = "bike_horn"
 	item_state = "bike_horn"
 	throwforce = 3
@@ -406,13 +416,12 @@
 /obj/item/toy/bikehorn/rubberducky
 	name = "rubber ducky"
 	desc = "Rubber ducky you're so fine, you make bathtime lots of fuuun. Rubber ducky I'm awfully fooooond of yooooouuuu~" //thanks doohl
-	icon = 'icons/obj/structures/props/watercloset.dmi'
 	icon_state = "rubberducky"
 	item_state = "rubberducky"
 
 /obj/item/computer3_part
 	name = "computer part"
-	desc = "Holy jesus you donnit now"
+	desc = "Holy jesus you donnit now."
 	gender = PLURAL
 	icon = 'icons/obj/structures/machinery/stock_parts.dmi'
 	icon_state = "hdd1"
@@ -484,12 +493,13 @@
 
 /obj/item/toy/plush
 	name = "generic plushie"
-	desc = "perfectly generic"
-	icon = 'icons/obj/items/plush.dmi'
+	desc = "Perfectly generic."
+	icon = 'icons/obj/items/toy.dmi'
 	icon_state = "debug"
 	w_class = SIZE_SMALL
 	COOLDOWN_DECLARE(last_hug_time)
 	black_market_value = 10
+	var/register_attempted
 
 /obj/item/toy/plush/attack_self(mob/user)
 	..()
@@ -503,13 +513,14 @@
 	name = "Farwa plush"
 	desc = "A Farwa plush doll. It's soft and comforting!"
 	icon_state = "farwa"
+	item_state = "farwaplush"
 	black_market_value = 25
 
 /obj/item/toy/plush/barricade
 	name = "plushie barricade"
 	desc = "Great for squeezing whenever you're scared. Or lightly hurt. Or in any other situation."
 	icon_state = "barricade"
-	item_state = "cade_plush"
+	item_state = "plushie_cade"
 
 /obj/item/toy/plush/shark //A few more generic plushies to increase the size of the plushie loot pool
 	name = "shark plush"
@@ -521,40 +532,20 @@
 	desc = "A cute toy that awakens the warrior spirit in the most reserved marine."
 	icon_state = "bee"
 
-/obj/item/toy/plush/moth
-	name = "moth plush"
-	desc = "A plush doll of a bug."
-	icon_state = "moth"
-
 /obj/item/toy/plush/rock
 	name = "rock plush"
 	desc = "It says it is a plush on the tag, at least."
 	icon_state = "rock"
 
-/obj/item/toy/plush/otter
-	name = "otter plush"
-	desc = "A perfectly sized snuggable river weasel plush. Keep away from Clams."
-	icon_state = "otter"
+/obj/item/toy/plush/gnarp
+	name = "gnarp plush"
+	desc = "Gnarp gnarp."
+	icon_state = "gnarp"
 
-/obj/item/toy/plush/fox
-	name = "fox plush"
-	desc = "What does the fox say? Well, this one says nothing on account of it being a stuffed toy."
-	icon_state = "fox"
-
-/obj/item/toy/plush/kitten
-	name = "kitten plush"
-	desc = "A plushie of a cute kitten. Sadly, this one won't purr like the real thing."
-	icon_state = "kbitty"
-
-/obj/item/toy/plush/box
-	name = "box plush"
-	desc = "A toy box plushie, it holds cotton."
-	icon_state = "box"
-
-/obj/item/toy/plush/carp
-	name = "carp plush"
-	desc = "A stuffed toy that resembles a mythological space carp."
-	icon_state = "carp"
+/obj/item/toy/plush/gnarp/alt
+	name = "gnarp plush"
+	desc = "Gnarp gnarp."
+	icon_state = "gnarp_alt"
 
 /obj/item/toy/plush/therapy
 	name = "therapy plush"
@@ -604,13 +595,9 @@
 		/obj/item/toy/plush/barricade,
 		/obj/item/toy/plush/bee,
 		/obj/item/toy/plush/shark,
-		/obj/item/toy/plush/moth,
+		/obj/item/toy/plush/gnarp,
+		/obj/item/toy/plush/gnarp/alt,
 		/obj/item/toy/plush/rock,
-		/obj/item/toy/plush/otter,
-		/obj/item/toy/plush/fox,
-		/obj/item/toy/plush/kitten,
-		/obj/item/toy/plush/box,
-		/obj/item/toy/plush/carp,
 	)
 	///Therapy plushies left separately to not flood the entire list
 	var/list/therapy_plush_list = list(
@@ -632,13 +619,35 @@
 
 /obj/item/toy/plush/random_plushie/pickup(mob/user, silent)
 	. = ..()
-	RegisterSignal(user, COMSIG_POST_SPAWN_UPDATE, PROC_REF(create_plushie), override = TRUE)
+	if(!register_attempted)
+		register_attempted = TRUE
+		RegisterSignal(user, COMSIG_POST_VANITY_UPDATE, PROC_REF(create_plushie), override = TRUE)
+
+/obj/item/toy/plush/random_plushie/on_enter_storage(obj/item/storage/inventory)
+	. = ..()
+	if(!register_attempted)
+		register_attempted = TRUE
+		var/mob/living/carbon/human/human_user
+		var/atom/container_on_human = inventory.loc
+		var/depth_limit
+		while(!ishuman(container_on_human) && depth_limit < 2)
+			container_on_human = container_on_human.loc
+			depth_limit++
+		human_user = container_on_human
+		if(human_user)
+			RegisterSignal(human_user, COMSIG_POST_VANITY_UPDATE, PROC_REF(create_plushie), override = TRUE)
+
+/obj/item/toy/plush/random_plushie/dropped(mob/user)
+	. = ..()
+	if(!register_attempted)
+		register_attempted = TRUE
+		RegisterSignal(user, COMSIG_POST_VANITY_UPDATE, PROC_REF(create_plushie), override = TRUE)
 
 ///The randomizer picking and spawning a plushie on either the ground or in the humans backpack. Needs var/source due to signals
 /obj/item/toy/plush/random_plushie/proc/create_plushie(datum/source)
 	SIGNAL_HANDLER
 	if(source)
-		UnregisterSignal(source, COMSIG_POST_SPAWN_UPDATE)
+		UnregisterSignal(source, COMSIG_POST_VANITY_UPDATE)
 	var/turf/spawn_location = get_turf(src)
 	var/plush_list_variety = pick(60; plush_list, 40; therapy_plush_list)
 	var/random_plushie = pick(plush_list_variety)
@@ -659,7 +668,7 @@
 //Admin plushies
 /obj/item/toy/plush/yautja
 	name = "strange plush"
-	desc = "A plush doll depicting some sort of tall humanoid biped..?"
+	desc = "A plush doll depicting some sort of tall humanoid biped...?"
 	icon_state = "yautja"
 	black_market_value = 100
 
@@ -679,7 +688,7 @@
 	. = ..()
 	if(beret)
 		return
-	if(!istypestrict(attacking_object, /obj/item/clothing/head/beret/marine/mp))
+	if(!(istypestrict(attacking_object, /obj/item/clothing/head/beret/marine/mp)))
 		return
 	var/beret_attack = attacking_object
 	to_chat(user, SPAN_NOTICE("You put [beret_attack] on [src]."))
@@ -693,58 +702,3 @@
 		icon_state = "runner_beret"
 		return
 	icon_state = "runner"
-
-/obj/item/toy/plush/shark/alt
-	icon_state = "shark_alt"
-
-//desk toys
-/obj/item/toy/desk
-	name = "generic desk-toy"
-	desc = "You shouldn't be seeing this."
-	icon = 'icons/obj/items/toy.dmi'
-	var/on = FALSE
-	var/activation_sound = 'sound/machines/click.ogg'
-
-/obj/item/toy/desk/update_icon()
-	if(on)
-		icon_state = initial(icon_state) + "-on"
-	else
-		icon_state = initial(icon_state)
-
-/obj/item/toy/desk/proc/activate(mob/user as mob)
-	on = !on
-	playsound(src.loc, activation_sound, 75, 1)
-	update_icon()
-	return 1
-
-/obj/item/toy/desk/attack_self(mob/user)
-	..()
-	activate(user)
-
-/obj/item/toy/desk/MouseDrop(atom/over_object)
-	if(over_object == usr && ishuman(usr) && !usr.is_mob_restrained() && !usr.stat && (loc == usr || in_range(src, usr)))
-		if(!usr.get_active_hand()) //if active hand is empty
-			usr.put_in_hands(src)
-		to_chat(usr, SPAN_NOTICE("You pick up [src]."))
-	return
-
-/obj/item/toy/desk/newtoncradle
-	name = "\improper Newton's cradle"
-	desc = "A ancient 21th century super-weapon model demonstrating that Sir Isaac Newton is the deadliest sonuvabitch in space."
-	icon_state = "newtoncradle"
-
-/obj/item/toy/desk/fan
-	name = "office fan"
-	desc = "Your greatest fan."
-	icon_state = "fan"
-
-/obj/item/toy/desk/officetoy
-	name = "office toy"
-	desc = "A generic battery-powered office desk toy. Only generates magnetism and ennui."
-	icon_state = "desktoy"
-
-/obj/item/toy/desk/dippingbird
-	name = "dipping bird toy"
-	desc = "Engineers marvel at this scale model of a primitive thermal engine. It's highly debated why the majority of owners \
-	were in low-level bureaucratic jobs."
-	icon_state = "dippybird"

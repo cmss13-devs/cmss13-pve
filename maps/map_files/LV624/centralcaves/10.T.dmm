@@ -61,7 +61,11 @@
 /obj/effect/landmark/structure_spawner/setup/distress/xeno_wall,
 /turf/open/gm/dirt,
 /area/lv624/ground/caves/south_central_caves)
-"q" = (
+"o" = (
+/obj/structure/fence,
+/turf/open/floor/warning/northwest,
+/area/lv624/ground/barrens/containers)
+"p" = (
 /obj/structure/fence,
 /turf/open/floor/warning/north,
 /area/lv624/ground/barrens/containers)
@@ -100,6 +104,10 @@
 /obj/effect/decal/grass_overlay/grass1{
 	dir = 9
 	},
+/turf/open/gm/dirt,
+/area/lv624/ground/caves/south_central_caves)
+"C" = (
+/obj/effect/landmark/objective_landmark/close,
 /turf/open/gm/dirt,
 /area/lv624/ground/caves/south_central_caves)
 "D" = (
@@ -176,12 +184,8 @@
 "V" = (
 /turf/open/gm/dirt,
 /area/lv624/ground/caves/south_central_caves)
-"W" = (
-/obj/structure/fence,
-/turf/open/floor/warning/northwest,
-/area/lv624/ground/barrens/containers)
 "Z" = (
-/obj/structure/flora/bush/ausbushes/ppflowers,
+/obj/structure/flora/bush/ausbushes/var3/ppflowers,
 /turf/open/auto_turf/strata_grass/layer1,
 /area/lv624/ground/caves/central_caves)
 
@@ -311,7 +315,7 @@ l
 l
 l
 l
-V
+C
 V
 V
 V
@@ -778,7 +782,7 @@ V
 V
 G
 V
-V
+C
 l
 l
 l
@@ -804,7 +808,7 @@ V
 l
 l
 l
-W
+o
 "}
 (28,1,1) = {"
 f
@@ -827,7 +831,7 @@ V
 l
 l
 l
-q
+p
 "}
 (29,1,1) = {"
 f
@@ -850,7 +854,7 @@ l
 l
 l
 l
-q
+p
 "}
 (30,1,1) = {"
 f
@@ -873,7 +877,7 @@ l
 k
 k
 k
-q
+p
 "}
 (31,1,1) = {"
 f
@@ -896,7 +900,7 @@ k
 k
 k
 k
-q
+p
 "}
 (32,1,1) = {"
 O
@@ -919,7 +923,7 @@ k
 k
 m
 k
-q
+p
 "}
 (33,1,1) = {"
 f
@@ -942,5 +946,5 @@ k
 k
 k
 k
-q
+p
 "}

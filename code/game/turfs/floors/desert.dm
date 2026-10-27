@@ -23,9 +23,7 @@
 /turf/open/desert/dirt
 	name = "desert"
 	icon_state = "desert1"
-
-/turf/open/desert/dirt/is_weedable()
-	return FULLY_WEEDABLE
+	is_weedable = FULLY_WEEDABLE
 
 /turf/open/desert/dirt/desert_transition_edge1
 	icon_state = "desert_transition_edge1"
@@ -82,24 +80,11 @@
 /turf/open/desert/dirt/rock1
 	icon_state = "rock1"
 
-//desert riverbed
-/turf/open/desert/riverbed/dirt1
-	name = "riverbed"
-	icon_state = "dirt1"
-//turf/open/desert/riverbed/dirt2
-// name = "riverbed"
-// icon_state = "dirt2"
-//turf/open/desert/riverbed/dirt3
-// name = "riverbed"
-// icon_state = "dirt3"
-
 //desert floor
 /turf/open/desert/rock
 	name = "rock"
 	icon_state = "rock1"
-
-/turf/open/desert/rock/is_weedable()
-	return FULLY_WEEDABLE
+	is_weedable = FULLY_WEEDABLE
 
 /turf/open/desert/rock/edge1
 	name = "desert"
@@ -179,22 +164,20 @@
 	icon_state = "shore1"
 	var/toxic = 0
 	supports_surgery = FALSE
+	is_weedable = NOT_WEEDABLE
 
 /turf/open/desert/desert_shore/update_icon()
 	..()
 	switch(toxic)
-		if(1)
+		if(/obj/effect/blocker/water/toxic::WATER_TOXIC_YES)
 			set_light(2)
 			icon = 'icons/turf/floors/desert_water_toxic.dmi'
-		if(0)
+		if(/obj/effect/blocker/water/toxic::WATER_TOXIC_NO)
 			set_light(0)
 			icon = 'icons/turf/floors/desert_water.dmi'
-		if(-1)
+		if(/obj/effect/blocker/water/toxic::WATER_TOXIC_DISPERSING)
 			set_light(1)
 			icon = 'icons/turf/floors/desert_water_transition.dmi'
-
-/turf/open/desert/desert_shore/is_weedable()
-	return NOT_WEEDABLE
 
 /turf/open/desert/desert_shore/desert_shore1
 	name = "shore"
@@ -275,23 +258,29 @@
 
 //Desert Cave
 /turf/open/desert/cave
+	icon = 'icons/turf/floors/desertdam_map.dmi'
 	icon_state = "outer_cave_floor1"
+
 //desert floor to outer cave floor transition
 /turf/open/desert/cave/desert_into_outer_cave_floor
 	name = "cave"
 	icon_state = "outer_cave_transition1"
+
 //outer cave floor
 /turf/open/desert/cave/outer_cave_floor
 	name = "cave"
 	icon_state = "outer_cave_floor1"
+
 //outer to inner cave floor transition
 /turf/open/desert/cave/outer_cave_to_inner_cave
 	name = "cave"
 	icon_state = "outer_cave_to_inner1"
+
 //inner cave floor
 /turf/open/desert/cave/inner_cave_floor
 	name = "cave"
 	icon_state = "inner_cave_1"
+
 //inner cave shore
 /turf/open/desert/cave/cave_shore
 	name = "cave shore"
@@ -302,13 +291,13 @@
 /turf/open/desert/cave/cave_shore/update_icon()
 	..()
 	switch(toxic)
-		if(1)
+		if(/obj/effect/blocker/water/toxic::WATER_TOXIC_YES)
 			set_light(2)
 			icon = 'icons/turf/floors/desert_water_toxic.dmi'
-		if(0)
+		if(/obj/effect/blocker/water/toxic::WATER_TOXIC_NO)
 			set_light(0)
 			icon = 'icons/turf/floors/desert_water.dmi'
-		if(-1)
+		if(/obj/effect/blocker/water/toxic::WATER_TOXIC_DISPERSING)
 			set_light(1)
 			icon = 'icons/turf/floors/desert_water_transition.dmi'
 
@@ -329,20 +318,18 @@
 	icon_overlay = "_shallow"
 	var/toxic = 0
 	default_name = "water"
-
-/turf/open/gm/river/desert/is_weedable()
-	return NOT_WEEDABLE
+	is_weedable = NOT_WEEDABLE
 
 /turf/open/gm/river/desert/update_icon()
 	..()
 	switch(toxic)
-		if(1)
+		if(/obj/effect/blocker/water/toxic::WATER_TOXIC_YES)
 			set_light(2)
 			icon = 'icons/turf/floors/desert_water_toxic.dmi'
-		if(0)
+		if(/obj/effect/blocker/water/toxic::WATER_TOXIC_NO)
 			set_light(0)
 			icon = 'icons/turf/floors/desert_water.dmi'
-		if(-1)
+		if(/obj/effect/blocker/water/toxic::WATER_TOXIC_DISPERSING)
 			set_light(1)
 			icon = 'icons/turf/floors/desert_water_transition.dmi'
 	update_overlays()
@@ -353,19 +340,9 @@
 	icon_state = "shallow"
 	icon_overlay = "_shallow"
 
-/turf/open/gm/river/desert/shallow/no_overlay
-	icon_state = "shallow"
-	icon_overlay = "_shallow"
-	no_overlay = TRUE
-
 /turf/open/gm/river/desert/shallow/covered
 	covered = TRUE
 	icon = 'icons/turf/floors/desert_water_covered.dmi'
-
-/turf/open/gm/river/desert/shallow/covered/no_overlay
-	covered = TRUE
-	icon = 'icons/turf/floors/desert_water_covered.dmi'
-	no_overlay = TRUE
 
 /turf/open/gm/river/desert/shallow/toxic
 	icon = 'icons/turf/floors/desert_water_toxic.dmi'
@@ -378,59 +355,26 @@
 	icon_state = "shallow_edge"
 	icon_overlay = "shallow_edge_overlay"
 
-/turf/open/gm/river/desert/shallow_edge/no_overlay
-	icon_state = "shallow_edge"
-	icon_overlay = "shallow_edge_overlay"
-	no_overlay = TRUE
-
 /turf/open/gm/river/desert/shallow_edge/southwest
 	dir = SOUTHWEST
-
-/turf/open/gm/river/desert/shallow_edge/southwest/no_overlay
-	dir = SOUTHWEST
-	no_overlay = TRUE
 
 /turf/open/gm/river/desert/shallow_edge/north
 	dir = NORTH
 
-/turf/open/gm/river/desert/shallow_edge/north/no_overlay
-	dir = NORTH
-	no_overlay = TRUE
-
 /turf/open/gm/river/desert/shallow_edge/east
 	dir = EAST
-
-/turf/open/gm/river/desert/shallow_edge/east/no_overlay
-	dir = EAST
-	no_overlay = TRUE
 
 /turf/open/gm/river/desert/shallow_edge/northeast
 	dir = NORTHEAST
 
-/turf/open/gm/river/desert/shallow_edge/northeast/no_overlay
-	dir = NORTHEAST
-	no_overlay = TRUE
-
 /turf/open/gm/river/desert/shallow_edge/southeast
 	dir = SOUTHEAST
-
-/turf/open/gm/river/desert/shallow_edge/southeast/no_overlay
-	dir = SOUTHEAST
-	no_overlay = TRUE
 
 /turf/open/gm/river/desert/shallow_edge/west
 	dir = WEST
 
-/turf/open/gm/river/desert/shallow_edge/west/no_overlay
-	dir = WEST
-	no_overlay = TRUE
-
 /turf/open/gm/river/desert/shallow_edge/northwest
 	dir = NORTHWEST
-
-/turf/open/gm/river/desert/shallow_edge/northwest/no_overlay
-	dir = NORTHWEST
-	no_overlay = TRUE
 
 /turf/open/gm/river/desert/shallow_edge/covered
 	covered = TRUE
@@ -453,11 +397,6 @@
 	icon_state = "shallow_c"
 	icon_overlay = "shallow_c_overlay"
 
-/turf/open/gm/river/desert/shallow_corner/no_overlay
-	icon_state = "shallow_c"
-	icon_overlay = "shallow_c_overlay"
-	no_overlay = TRUE
-
 /turf/open/gm/river/desert/shallow_corner/covered
 	covered = TRUE
 	icon = 'icons/turf/floors/desert_water_covered.dmi'
@@ -465,35 +404,17 @@
 /turf/open/gm/river/desert/shallow_corner/north
 	dir = NORTH
 
-/turf/open/gm/river/desert/shallow_corner/north/no_overlay
-	dir = NORTH
-	no_overlay = TRUE
-
 /turf/open/gm/river/desert/shallow_corner/east
 	dir = EAST
 
-/turf/open/gm/river/desert/shallow_corner/east/no_overlay
-	dir = EAST
-	no_overlay = TRUE
-
 /turf/open/gm/river/desert/shallow_corner/west
 	dir = WEST
-
-/turf/open/gm/river/desert/shallow_corner/west/no_overlay
-	dir = WEST
-	no_overlay = TRUE
 
 
 //deep water
 /turf/open/gm/river/desert/deep
 	icon_state = "deep"
 	icon_overlay = "_deep"
-
-/turf/open/gm/river/desert/deep/no_overlay
-	icon_state = "deep"
-	icon_overlay = "_deep"
-	no_overlay = TRUE
-	supports_fishing = TRUE
 
 /turf/open/gm/river/desert/deep/no_slowdown
 	base_river_slowdown = 0
@@ -520,6 +441,7 @@
 
 /turf/open/desert/excavation
 	icon = 'icons/turf/floors/desert_excavation.dmi'
+	icon_state = null
 
 //Engineer Ship
 /turf/open/desert/excavation/component1
@@ -698,3 +620,28 @@
 
 /turf/open/desert/excavation/component9/west
 	dir = WEST
+
+// Tyrargo
+
+//shallow water
+/turf/open/gm/river/desert/tyrargo
+	icon_state = "seashallow"
+	icon_overlay = "_seashallow"
+
+/turf/open/gm/river/desert/tyrargo/no_slowdown
+	base_river_slowdown = 1
+
+/turf/open/gm/river/desert/tyrargo/covered
+	covered = TRUE
+	icon = 'icons/turf/floors/desert_water_covered.dmi'
+
+/turf/open/gm/river/desert/tyrargo/deep
+	icon_state = "seadeep"
+	icon_overlay = "_seadeep"
+
+/turf/open/gm/river/desert/tyrargo/deep/no_slowdown
+	base_river_slowdown = 1
+
+/turf/open/gm/river/desert/tyrargo/deep/covered
+	covered = TRUE
+	icon = 'icons/turf/floors/desert_water_covered.dmi'

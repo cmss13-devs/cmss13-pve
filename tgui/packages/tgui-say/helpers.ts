@@ -5,55 +5,49 @@ import { LANGUAGE_PREFIXES, RADIO_PREFIXES, WindowSize } from './constants';
  * Once byond signals this via keystroke, it
  * ensures window size, visibility, and focus.
  */
-export const windowOpen = (channel: Channel, scale: boolean) => {
+export function windowOpen(channel: Channel, scale: boolean): void {
   setWindowVisibility(true, scale);
   Byond.sendMessage('open', { channel });
-};
+}
 
 /**
  * Resets the state of the window and hides it from user view.
  * Sending "close" logs it server side.
  */
-export const windowClose = (scale: boolean) => {
+export function windowClose(scale: boolean): void {
   setWindowVisibility(false, scale);
   Byond.winset('map', {
     focus: true,
   });
   Byond.sendMessage('close');
-};
+}
 
 /**
  * Modifies the window size.
  */
-export const windowSet = (size = WindowSize.Small, scale: boolean) => {
+export function windowSet(size = WindowSize.Small, scale: boolean): void {
   const pixelRatio = scale ? window.devicePixelRatio : 1;
 
-  let sizeStr = `${WindowSize.Width * pixelRatio}x${size * pixelRatio}`;
+  const sizeStr = `${WindowSize.Width * pixelRatio}x${size * pixelRatio}`;
 
-  Byond.winset('tgui_say', {
-    size: sizeStr,
+  Byond.winset(null, {
+    'tgui_say.size': sizeStr,
+    'tgui_say.browser.size': sizeStr,
   });
-
-  Byond.winset('tgui_say.browser', {
-    size: sizeStr,
-  });
-};
+}
 
 /** Helper function to set window size and visibility */
-const setWindowVisibility = (visible: boolean, scale: boolean) => {
+function setWindowVisibility(visible: boolean, scale: boolean): void {
   const pixelRatio = scale ? window.devicePixelRatio : 1;
 
-  const sizeString = `${WindowSize.Width * pixelRatio}x${WindowSize.Small * pixelRatio}`;
+  const sizeStr = `${WindowSize.Width * pixelRatio}x${WindowSize.Small * pixelRatio}`;
 
-  Byond.winset('tgui_say', {
-    'is-visible': visible,
-    size: sizeString,
+  Byond.winset(null, {
+    'tgui_say.is-visible': visible,
+    'tgui_say.size': sizeStr,
+    'tgui_say.browser.size': sizeStr,
   });
-
-  Byond.winset('tgui_say.browser', {
-    size: sizeString,
-  });
-};
+}
 
 const CHANNEL_REGEX = /^[!:.#]\w\s/;
 

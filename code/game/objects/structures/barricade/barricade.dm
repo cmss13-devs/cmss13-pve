@@ -38,7 +38,7 @@
 	var/brute_multiplier = 1
 	var/burn_multiplier = 1
 	var/explosive_multiplier = 1
-	var/brute_projectile_multiplier = 0.5
+	var/brute_projectile_multiplier = 1
 	var/burn_flame_multiplier = 1
 	var/repair_materials = list()
 	var/metallic = TRUE
@@ -54,14 +54,37 @@
 	addtimer(CALLBACK(src, PROC_REF(update_icon)), 0)
 	starting_maxhealth = maxhealth
 
+/obj/structure/barricade/metal/Initialize(mapload, mob/user)
+	. = ..()
+	var/area/area = get_area(src)
+	if(area.flags_area & AREA_NOSECURECADES && !mapload)
+		anchored = FALSE
+		build_state = BARRICADE_BSTATE_MOVABLE
+		to_chat(user, SPAN_WARNING("[src] does not properly secure on this surface!"))
+
+/obj/structure/barricade/plasteel/Initialize(mapload, mob/user)
+	. = ..()
+	var/area/area = get_area(src)
+	if(area.flags_area & AREA_NOSECURECADES && !mapload)
+		anchored = FALSE
+		build_state = BARRICADE_BSTATE_MOVABLE
+		to_chat(user, SPAN_WARNING("[src] does not properly secure on this surface!"))
+
+/obj/structure/barricade/deployable/Initialize(mapload, mob/user)
+	. = ..()
+	var/area/area = get_area(src)
+	if(area.flags_area & AREA_NOSECURECADES && !mapload)
+		anchored = FALSE
+		to_chat(user, SPAN_WARNING("[src] does not properly secure on this surface!"))
+
 /obj/structure/barricade/initialize_pass_flags(datum/pass_flags_container/pass_flags)
 	..()
-	if (pass_flags)
+	if(pass_flags)
 		pass_flags.flags_can_pass_all = NONE
 		pass_flags.flags_can_pass_front = NONE
 		pass_flags.flags_can_pass_behind = PASS_OVER^(PASS_OVER_ACID_SPRAY|PASS_OVER_THROW_MOB)
-	flags_can_pass_front_temp = PASS_OVER_THROW_MOB
-	flags_can_pass_behind_temp = PASS_OVER_THROW_MOB
+	flags_can_pass_front_temp = PASS_FLAGS_UNWIRED
+	flags_can_pass_behind_temp = PASS_FLAGS_UNWIRED
 
 /obj/structure/barricade/get_examine_text(mob/user)
 	. = ..()
@@ -92,14 +115,17 @@
 				layer = initial(layer) - 0.01
 			else
 				layer = initial(layer)
-		if(!anchored)
-			layer = initial(layer)
 	else
 		if(can_change_dmg_state)
 			icon_state = "[barricade_type]_closed_[damage_state]"
 		else
 			icon_state = "[barricade_type]_closed"
 		layer = OBJ_LAYER
+
+	// Pixelshift to indicate anchored state
+	pixel_y = initial(pixel_y)
+	if(!anchored)
+		pixel_y += 2
 
 	if(upgraded)
 		switch(upgraded)
@@ -119,24 +145,38 @@
 	..()
 
 /obj/structure/barricade/hitby(atom/movable/atom_movable)
-	if(atom_movable.throwing && is_wired)
+	if(HAS_TRAIT(atom_movable, TRAIT_LAUNCHED) && is_wired)
 		if(iscarbon(atom_movable))
 			var/mob/living/carbon/living_carbon = atom_movable
 			if(living_carbon.mob_size <= MOB_SIZE_XENO)
 				living_carbon.visible_message(SPAN_DANGER("The barbed wire slices into [living_carbon]!"),
 				SPAN_DANGER("The barbed wire slices into you!"))
-				living_carbon.apply_damage(10)
+				living_carbon.apply_damage(10, enviro=TRUE)
 				living_carbon.apply_effect(2, WEAKEN) //Leaping into barbed wire is VERY bad
 				playsound(living_carbon, "bonk", 75, FALSE)
 	..()
 
 /obj/structure/barricade/Collided(atom/movable/atom_movable)
-	..()
+	// Similar behavior to /atom/movable/Collided(atom/movable/AM) but we account for something in our same location
+	if(isliving(atom_movable) && !anchored)
+		var/blocked = FALSE
+		for(var/atom/movable/other_moveable as anything in loc)
+			if(other_moveable == src || other_moveable == atom_movable)
+				continue
+			if(!other_moveable.density || !other_moveable.can_block_movement)
+				continue
+			blocked = TRUE
+			break
+		if(!blocked)
+			var/target_dir = get_dir(atom_movable, src) || dir
+			var/turf/target_turf = get_step(loc, target_dir)
+			Move(target_turf)
+	SEND_SIGNAL(src, COMSIG_STRUCTURE_COLLIDED, atom_movable)
 
 	if(istype(atom_movable, /mob/living/carbon/xenomorph/crusher))
 		var/mob/living/carbon/xenomorph/crusher/living_carbon = atom_movable
 
-		if (!living_carbon.throwing)
+		if(!HAS_TRAIT(living_carbon, TRAIT_LAUNCHED))
 			return
 
 		if(crusher_resistant)
@@ -181,9 +221,15 @@
 
 	return ..()
 
-/obj/structure/barricade/handle_barrier_chance()
+/obj/structure/barricade/handle_barrier_chance(mob/living/attacker)
 	if(!anchored)
 		return FALSE
+
+	if(isxeno(attacker))
+		var/mob/living/carbon/xenomorph/xeno = attacker
+		if(xeno.strain && istype(xeno.strain, /datum/xeno_strain/bulwark))
+			return prob(25) //Bulwark can attack through wired cade with 75% chance.
+
 	return prob(max(30,(100.0*health)/maxhealth))
 
 /obj/structure/barricade/attack_animal(mob/user as mob)
@@ -193,6 +239,7 @@
 	if(istype(item, /obj/item/weapon/zombie_claws))
 		user.visible_message(SPAN_DANGER("The zombie smashed at the [src.barricade_type] barricade!"),
 		SPAN_DANGER("You smack the [src.barricade_type] barricade!"))
+		. = ..()
 		if(barricade_hitsound)
 			playsound(src, barricade_hitsound, 35, 1)
 		hit_barricade(item)
@@ -221,8 +268,8 @@
 				update_health(-50)
 				can_wire = FALSE
 				is_wired = TRUE
-				flags_can_pass_front_temp &= ~PASS_OVER_THROW_MOB
-				flags_can_pass_behind_temp &= ~PASS_OVER_THROW_MOB
+				flags_can_pass_front_temp &= ~PASS_FLAGS_UNWIRED
+				flags_can_pass_behind_temp &= ~PASS_FLAGS_UNWIRED
 				climbable = FALSE
 				update_icon()
 		return
@@ -242,15 +289,15 @@
 				update_health(50)
 				can_wire = TRUE
 				is_wired = FALSE
-				flags_can_pass_front_temp &= ~PASS_OVER_THROW_MOB
-				flags_can_pass_behind_temp &= ~PASS_OVER_THROW_MOB
+				flags_can_pass_front_temp |= PASS_FLAGS_UNWIRED
+				flags_can_pass_behind_temp |= PASS_FLAGS_UNWIRED
 				climbable = TRUE
 				update_icon()
 				new/obj/item/stack/barbed_wire( src.loc )
 		return
 
-	if(item.force > force_level_absorption)
-		..()
+	if((item.force > force_level_absorption) && !HAS_TRAIT(item, TRAIT_TOOL_CROWBAR))
+		. = ..()
 		if(barricade_hitsound)
 			playsound(src, barricade_hitsound, 35, 1)
 		hit_barricade(item)
@@ -262,6 +309,7 @@
 		bullet.damage = bullet.damage * burn_multiplier
 	else
 		bullet.damage = bullet.damage * brute_projectile_multiplier
+		playsound(src, barricade_hitsound, 35, 1)
 
 	if(istype(bullet.ammo, /datum/ammo/xeno/boiler_gas))
 		take_damage(floor(50 * burn_multiplier))
@@ -273,7 +321,9 @@
 
 	return TRUE
 
-/obj/structure/barricade/deconstruct(disassembled = TRUE)
+/obj/structure/barricade/deconstruct(disassembled = TRUE, debris = TRUE)
+	if(!debris)
+		return ..()
 	if(disassembled)
 		if(is_wired)
 			new /obj/item/stack/barbed_wire(loc)
@@ -318,10 +368,14 @@
 // However, will look into fixing bugs w/diagonal movement different if this is
 // to hacky.
 /obj/structure/barricade/handle_rotation()
-	if (dir & EAST)
-		setDir(EAST)
-	else if(dir & WEST)
-		setDir(WEST)
+	var/direction = handle_barricade_stacking()
+	if(!direction)
+		if(dir & EAST)
+			setDir(EAST)
+		else if(dir & WEST)
+			setDir(WEST)
+	else
+		setDir(direction)
 	update_icon()
 
 /obj/structure/barricade/acid_spray_act()
@@ -342,7 +396,7 @@
 
 	update_health(damage)
 
-/obj/structure/barricade/proc/take_acid_damage(damage)
+/obj/structure/barricade/corrosive_acid_act(damage)
 	take_damage(damage * burn_multiplier)
 
 /obj/structure/barricade/update_health(damage, nomessage)
@@ -361,10 +415,14 @@
 /obj/structure/barricade/proc/update_damage_state()
 	var/health_percent = floor(health/maxhealth * 100)
 	switch(health_percent)
-		if(0 to 25) damage_state = BARRICADE_DMG_HEAVY
-		if(25 to 50) damage_state = BARRICADE_DMG_MODERATE
-		if(50 to 75) damage_state = BARRICADE_DMG_SLIGHT
-		if(75 to INFINITY) damage_state = BARRICADE_DMG_NONE
+		if(0 to 25)
+			damage_state = BARRICADE_DMG_HEAVY
+		if(25 to 50)
+			damage_state = BARRICADE_DMG_MODERATE
+		if(50 to 75)
+			damage_state = BARRICADE_DMG_SLIGHT
+		if(75 to INFINITY)
+			damage_state = BARRICADE_DMG_NONE
 
 /obj/structure/barricade/proc/try_weld_cade(obj/item/tool/weldingtool/welder, mob/user, repeat = TRUE, skip_check = FALSE)
 	if(!skip_check && !can_weld(welder, user))
@@ -421,8 +479,44 @@
 		return
 
 	user.next_move = world.time + 3 //slight spam prevention? you don't want every metal cade to turn into a doorway
-	setDir(turn(dir, 90 * rotation_dir))
-	update_icon()
+
+	var/new_dir = handle_barricade_stacking(turn(dir, 90 * rotation_dir))
+	if(new_dir && (new_dir != dir))
+		setDir(new_dir)
+		update_icon()
+	else
+		to_chat(user, SPAN_WARNING("Every other facing direction is occupied, you can't rotate it!"))
+
+/obj/structure/barricade/proc/handle_barricade_stacking(potential_dir = FALSE)
+	var/list/directions = list()
+	if(!potential_dir)
+		potential_dir = dir
+
+	for(var/obj/structure/barricade/cade in loc)
+		if(cade == src)
+			continue
+		directions += cade.dir
+
+	if(length(directions) == 0)
+		return potential_dir
+
+	if(length(directions) >= 4)
+		return FALSE //We shouldn't have four cades already there.
+
+	var/possible_directions = CARDINAL_DIRS	- directions
+	var/best_direction = turn(dir, 180)
+
+	if(potential_dir in possible_directions)
+		return potential_dir
+
+	if(best_direction in possible_directions)
+		return best_direction
+
+	else
+		possible_directions -= dir
+		if(!length(possible_directions))
+			return FALSE //We can't rotate it, all other directions are filled
+		return possible_directions[1]
 
 /obj/structure/barricade/clicked(mob/user, list/mods)
 	if(mods[ALT_CLICK])

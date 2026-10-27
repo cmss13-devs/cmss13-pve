@@ -27,8 +27,6 @@
 	door_control.label = "elevator"
 	for(var/area/shuttle_area in shuttle_areas)
 		for(var/obj/structure/machinery/door/door in shuttle_area)
-			if(istype(door, /obj/structure/machinery/door/poddoor/filler_object)) //poddoor filler was sneaking in
-				continue
 			door_control.add_door(door, door.id)
 
 /obj/docking_port/mobile/trijent_elevator/Destroy(force, ...)
@@ -113,9 +111,3 @@
 	id=STAT_TRIJENT_OMEGA
 	airlock_area=/area/shuttle/trijent_shuttle/omega
 	airlock_exit="east"
-
-/obj/docking_port/mobile/trijent_elevator/ice_classic
-	name = "Classic Ice Elevator"
-	id = "ice_classic_shuttle"
-	width = 8
-	height = 5

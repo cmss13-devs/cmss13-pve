@@ -31,7 +31,7 @@
 //This is the proc for turning a mob into ash. Mostly a copy of gib code (above).
 //Originally created for wizard disintegrate. I've removed the virus code since it's irrelevant here.
 //Dusting robots does not eject the MMI, so it's a bit more powerful than gib() /N
-/mob/proc/dust(cause = "dusting")
+/mob/proc/dust(datum/cause_data/cause = create_cause_data("dusting", src))
 	death(cause, 1)
 	dust_animation()
 	spawn_dust_remains()
@@ -44,12 +44,12 @@
 /mob/proc/dust_animation()
 	return
 
-/mob/proc/death(datum/cause_data/cause_data, gibbed = 0, deathmessage = "seizes up and falls limp...", should_deathmessage = TRUE)
+/mob/proc/death(datum/cause_data/cause_data, gibbed = 0, deathmessage = "seizes up and falls limp...")
 	if(stat == DEAD)
 		return 0
 
-	if(!gibbed && should_deathmessage)
-		visible_message("<b>\The [src.name]</b> [deathmessage]")
+	if(!gibbed)
+		visible_message("<b>[src.name]</b> [deathmessage]")
 
 	if(cause_data && !istype(cause_data))
 		stack_trace("death called with string cause ([cause_data]) instead of datum")
@@ -83,9 +83,20 @@
 
 	timeofdeath = world.time
 	life_time_total = world.time - life_time_start
-	if(mind) mind.store_memory("Time of death: [worldtime2text()]", 0)
+	if(mind)
+		mind.store_memory("Time of death: [worldtime2text()]", 0)
 	GLOB.alive_mob_list -= src
 	GLOB.dead_mob_list += src
+
+	// Larva pool: We use the larger of their existing time or the new timeofdeath except for facehuggers or lesser drone
+	var/exempt_tod = isfacehugger(src) || islesserdrone(src) || should_block_game_interaction(src, include_hunting_grounds=TRUE)
+	var/new_tod = exempt_tod ? 1 : timeofdeath
+	if(client)
+		client.player_details.larva_pool_time = max(client.player_details.larva_pool_time, new_tod)
+	else if(persistent_ckey)
+		var/datum/player_details/details = GLOB.player_details[persistent_ckey]
+		if(details)
+			details.larva_pool_time = max(details.larva_pool_time, new_tod)
 
 	if(client && client.player_data)
 		record_playtime(client.player_data, job, type)
@@ -99,7 +110,7 @@
 	med_hud_set_status()
 
 	update_icons()
-	SEND_SIGNAL(src, COMSIG_MOB_DEATH, gibbed)
+	SEND_SIGNAL(src, COMSIG_MOB_DEATH)
 	return 1
 
 /mob/proc/handle_death_cause(datum/cause_data/cause_data, turf/death_loc)

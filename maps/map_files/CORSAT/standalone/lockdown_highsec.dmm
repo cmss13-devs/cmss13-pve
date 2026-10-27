@@ -132,6 +132,10 @@
 "z" = (
 /turf/open/floor/corsat/squares,
 /area/corsat/omega/checkpoint)
+"A" = (
+/obj/effect/landmark/corpsespawner/pmc,
+/turf/open/floor/corsat/squares,
+/area/corsat/omega/checkpoint)
 "B" = (
 /obj/structure/bed/chair/comfy/black{
 	icon_state = "comfychair";
@@ -294,7 +298,7 @@ g
 f
 n
 q
-z
+A
 z
 J
 n

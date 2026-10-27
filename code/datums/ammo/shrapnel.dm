@@ -6,12 +6,11 @@
 /datum/ammo/bullet/shrapnel
 	name = "shrapnel"
 	icon_state = "buckshot"
-	accurate_range_min = 4
+	accurate_range_min = 5
 	flags_ammo_behavior = AMMO_BALLISTIC|AMMO_STOPPED_BY_COVER
-
 	accuracy = HIT_ACCURACY_TIER_3
 	accurate_range = 32
-	max_range = 4
+	max_range = 8
 	damage = 25
 	damage_var_low = -PROJECTILE_VARIANCE_TIER_6
 	damage_var_high = PROJECTILE_VARIANCE_TIER_6
@@ -19,11 +18,23 @@
 	shell_speed = AMMO_SPEED_TIER_2
 	shrapnel_chance = 5
 
+/datum/ammo/bullet/shrapnel/enviro
+	damage_enviro = TRUE
+
 /datum/ammo/bullet/shrapnel/on_hit_obj(obj/O, obj/projectile/P)
 	if(istype(O, /obj/structure/barricade))
 		var/obj/structure/barricade/B = O
 		B.health -= rand(2, 5)
 		B.update_health(1)
+
+
+/datum/ammo/bullet/shrapnel/breaching/set_bullet_traits()
+	. = ..()
+	LAZYADD(traits_to_give, list(
+		BULLET_TRAIT_ENTRY_ID("turfs", /datum/element/bullet_trait_damage_boost, 5, GLOB.damage_boost_turfs),
+		BULLET_TRAIT_ENTRY_ID("breaching", /datum/element/bullet_trait_damage_boost, 10.8, GLOB.damage_boost_breaching),
+		BULLET_TRAIT_ENTRY_ID("pylons", /datum/element/bullet_trait_damage_boost, 5, GLOB.damage_boost_pylons)
+	))
 
 /datum/ammo/bullet/shrapnel/rubber
 	name = "rubber pellets"
@@ -34,109 +45,17 @@
 	stamina_damage = 25
 	shrapnel_chance = 0
 
-/datum/ammo/bullet/shrapnel/canister
-	name = "low velocity canister shot"
-	icon_state = "buckshot"
-
-	accuracy_var_low = PROJECTILE_VARIANCE_TIER_4
-	accuracy_var_high = PROJECTILE_VARIANCE_TIER_8
-	damage = 65
-	penetration = ARMOR_PENETRATION_TIER_2
-	shell_speed = AMMO_SPEED_TIER_1
-	damage_armor_punch = 1
-	pen_armor_punch = 0
-	accurate_range = 3
-	effective_range_max = 5
-	damage_falloff = DAMAGE_FALLOFF_TIER_1
-	max_range = 7
-
-/datum/ammo/bullet/shrapnel/canister/on_hit_mob(mob/M, obj/projectile/P)
-	knockback(M, P, 4)
-/datum/ammo/bullet/shrapnel/canister/knockback_effects(mob/living/living_mob, obj/projectile/fired_projectile)
-	if(iscarbonsizexeno(living_mob))
-		var/mob/living/carbon/xenomorph/target = living_mob
-		to_chat(target, SPAN_XENODANGER("You are shaken and slowed by the sudden impact!"))
-		target.KnockDown(2.5)
-		target.Stun(2.5)
-		target.Slow(4)
-	else
-		if(!isyautja(living_mob)) //Not predators.
-			living_mob.KnockDown(3)
-			living_mob.Stun(3)
-			living_mob.Slow(5)
-			to_chat(living_mob, SPAN_HIGHDANGER("The impact knocks you off-balance!"))
-		living_mob.apply_stamina_damage(fired_projectile.ammo.damage, fired_projectile.def_zone, ARMOR_BULLET)
-
-
-/datum/ammo/bullet/shrapnel/canister/set_bullet_traits()
-	. = ..()
-	LAZYADD(traits_to_give, list(
-		BULLET_TRAIT_ENTRY_ID("turfs", /datum/element/bullet_trait_damage_boost, 6, GLOB.damage_boost_turfs),
-		BULLET_TRAIT_ENTRY_ID("breaching", /datum/element/bullet_trait_damage_boost, 6, GLOB.damage_boost_breaching),
-		BULLET_TRAIT_ENTRY_ID("pylons", /datum/element/bullet_trait_damage_boost, 5, GLOB.damage_boost_pylons)
-	))
-
-/datum/ammo/bullet/shrapnel/heavy
-	name = "shrapnel cloud"
-	icon_state = "shrapnel_light"
-	flags_ammo_behavior = AMMO_PRONETARGET
-	max_range = 6
-	damage = 35
-	damage_var_low = -PROJECTILE_VARIANCE_TIER_4
-	damage_var_high = PROJECTILE_VARIANCE_TIER_6
-	penetration = ARMOR_PENETRATION_TIER_3
-	shell_speed = AMMO_SPEED_TIER_3
-	shrapnel_chance = 10
-
-/datum/ammo/bullet/shrapnel/claymore
-	name = "claymore pellet"
-	icon_state = "buckshot"
-	accurate_range_min = 0
-	flags_ammo_behavior = AMMO_BALLISTIC|AMMO_PRONETARGET|AMMO_STOPPED_BY_COVER
-	accuracy = HIT_ACCURACY_TIER_10 //half & half chance of being hit
-	accuracy_var_low = PROJECTILE_VARIANCE_TIER_5
-	accuracy_var_high = PROJECTILE_VARIANCE_TIER_9
-	accurate_range = 7
-	max_range = 10
-	damage = 20
-	damage_var_low = PROJECTILE_VARIANCE_TIER_5
-	damage_var_high = PROJECTILE_VARIANCE_TIER_5
-	penetration = ARMOR_PENETRATION_TIER_1
-	shell_speed = AMMO_SPEED_TIER_3
-	shrapnel_chance = 5
-
-//player-given claymore shrapnel
-/datum/ammo/bullet/shrapnel/claymore/strong
-	damage = 35
-	shrapnel_chance = 15
-
-/datum/ammo/bullet/shrapnel/claymore/strong/on_hit_mob(mob/entity, obj/projectile/bullet)
-	. = ..()
-	knockback(entity, bullet, 4)
-
-/datum/ammo/bullet/shrapnel/claymore/strong/knockback_effects(mob/living/living_mob, obj/projectile/fired_projectile)
-	if(iscarbonsizexeno(living_mob))
-		var/mob/living/carbon/xenomorph/target = living_mob
-		to_chat(target, SPAN_XENODANGER("You are shaken and slowed by the sudden impact!"))
-		target.KnockDown(1.5)
-		target.Stun(1.5)
-		target.Slow(3)
-	else
-		living_mob.KnockDown(1.5)
-		living_mob.Stun(1.5)
-		living_mob.Slow(3)
-		to_chat(living_mob, SPAN_HIGHDANGER("The impact knocks you off-balance!"))
 
 /datum/ammo/bullet/shrapnel/hornet_rounds
 	name = ".22 hornet round"
 	icon_state = "hornet_round"
 	flags_ammo_behavior = AMMO_BALLISTIC
-	damage = 20
+	damage = 8
 	shrapnel_chance = 0
 	shell_speed = AMMO_SPEED_TIER_3//she fast af boi
 	penetration = ARMOR_PENETRATION_TIER_5
 	/// inflicts this many holo stacks per bullet hit
-	var/holo_stacks = 10
+	var/holo_stacks = 20
 	/// modifies the default cap limit of 100 by this amount
 	var/bonus_damage_cap_increase = 0
 	/// multiplies the default drain of 5 holo stacks per second by this amount
@@ -146,20 +65,11 @@
 	. = ..()
 	hit_mob.AddComponent(/datum/component/bonus_damage_stack, holo_stacks, world.time, bonus_damage_cap_increase, stack_loss_multiplier)
 
-/datum/ammo/bullet/shrapnel/hornet_rounds/rmc
-	name = "holo-targeting pellet"
-	icon_state = "hornet_round"
-	flags_ammo_behavior = AMMO_BALLISTIC|AMMO_STOPPED_BY_COVER
-	damage = 10
-	holo_stacks = 30
-	accuracy = HIT_ACCURACY_TIER_5
-	max_range = 6
 
 /datum/ammo/bullet/shrapnel/incendiary
 	name = "flaming shrapnel"
 	icon_state = "beanbag" // looks suprisingly a lot like flaming shrapnel chunks
 	flags_ammo_behavior = AMMO_STOPPED_BY_COVER
-
 	shell_speed = AMMO_SPEED_TIER_1
 	damage = 20
 	penetration = ARMOR_PENETRATION_TIER_4
@@ -170,22 +80,18 @@
 		BULLET_TRAIT_ENTRY(/datum/element/bullet_trait_incendiary)
 	))
 
-/datum/ammo/bullet/shrapnel/incendiary/light
-	damage = 10
-	penetration = ARMOR_PENETRATION_TIER_2
+/datum/ammo/bullet/shrapnel/neuro
+	name = "neurotoxin coated shrapnel"
+	icon_state = "neurotoxin"
+	flags_ammo_behavior = AMMO_STOPPED_BY_COVER
 
-/datum/ammo/bullet/shrapnel/incendiary/heavy	//Maximum warcrimes edition
-	accurate_range = 32
-	max_range = 8
-	shell_speed = AMMO_SPEED_TIER_2
-	damage = 20
-	penetration = ARMOR_PENETRATION_TIER_5
+	shell_speed = AMMO_SPEED_TIER_1
+	damage = 30
+	penetration = ARMOR_PENETRATION_TIER_4
 
-/datum/ammo/bullet/shrapnel/incendiary/heavy/set_bullet_traits()
-	. = ..()
-	LAZYADD(traits_to_give, list(
-		BULLET_TRAIT_ENTRY(/datum/element/bullet_trait_incendiary, reagent = /datum/reagent/napalm/blue)
-	))
+/datum/ammo/bullet/shrapnel/neuro/on_hit_mob(mob/living/mob, obj/projectile/projectile)
+	if(mob.slowed < 6)
+		mob.adjust_effect(0.8, SLOW)
 
 /datum/ammo/bullet/shrapnel/metal
 	name = "metal shrapnel"
@@ -205,6 +111,9 @@
 	penetration = ARMOR_PENETRATION_TIER_1
 	shell_speed = AMMO_SPEED_TIER_1
 	shrapnel_chance = 0
+
+/datum/ammo/bullet/shrapnel/light/resin
+	name = "resin shrapnel"
 
 /datum/ammo/bullet/shrapnel/light/human
 	name = "human bone fragments"
@@ -277,14 +186,6 @@
 /datum/ammo/bullet/shrapnel/jagged/on_hit_mob(mob/M, obj/projectile/P)
 	if(isxeno(M))
 		M.apply_effect(0.4, SLOW)
-
-/datum/ammo/bullet/shrapnel/himat
-	accurate_range = 8
-	max_range = 8
-	damage = 95
-	shrapnel_chance = SHRAPNEL_CHANCE_TIER_2
-	accuracy = HIT_ACCURACY_TIER_MAX
-	icon_state = "shrapnel_light"
 
 /*
 //========

@@ -19,28 +19,35 @@
 	return ..()
 
 /datum/soundOutput/Destroy()
-	UnregisterSignal(owner.mob, list(COMSIG_MOVABLE_MOVED, COMSIG_MOB_LOGOUT))
-	UnregisterSignal(owner, COMSIG_CLIENT_MOB_LOGGED_IN)
 	owner = null
 	return ..()
 
+/// Called when processing every sound on every client
+/// This is a VERY hot proc, it's advised to keep it as lean as possible
+/// Consider if there are 400 sounds/second and 150 clients get to hear them,
+/// that could be 60K calls/second
 /datum/soundOutput/proc/process_sound(datum/sound_template/T)
-	var/sound/S = sound(T.file, T.repeat, T.wait)
-	S.volume = owner.volume_preferences[T.volume_cat] * T.volume
-	if(T.channel == 0)
+	var/sound/S = sound(T.file, T.wait, T.repeat)
+	S.volume = owner.prefs.volume_preferences[T.volume_cat] * T.volume
+
+	// This should never happen and you don't want it to happen, because
+	// channels are allocated globally. If you start allocating a global
+	// channel per-sound per-person, you'll rotate through them really
+	// fast and it'll cause running sounds to be randomly overwritten.
+	if(T.channel == NONE)
 		S.channel = get_free_channel()
 	else
 		S.channel = T.channel
+
 	S.frequency = T.frequency
 	S.falloff = T.falloff
-	S.offset = T.offset
-	S.pitch = T.pitch
 	S.status = T.status
-	if(T.x && T.y && T.z)
+
+	if(T.x && T.y && T.z) // Patch up 3D Sound based on in-world coordinates
 		var/turf/owner_turf = get_turf(owner.mob)
 		if(owner_turf)
 			// We're in an interior and sound came from outside
-			if(SSinterior.in_interior(owner_turf) && owner_turf.z != T.z)
+			if(SSINTERIOR_TURF_IN_INTERIOR_FAST(owner_turf) && owner_turf.z != T.z)
 				var/datum/interior/VI = SSinterior.get_interior_by_coords(owner_turf.x, owner_turf.y, owner_turf.z)
 				if(VI && VI.exterior)
 					var/turf/candidate = get_turf(VI.exterior)
@@ -48,16 +55,19 @@
 						return // Invalid location
 					S.falloff /= 2
 					owner_turf = candidate
+
 			S.x = T.x - owner_turf.x
-			S.y = 0
+			S.y = (T.z - owner_turf.z) * MULTI_Z_SOUND_DISTANCE
 			S.z = T.y - owner_turf.y
-		S.y += T.y_s_offset
+
+		S.z += T.z_s_offset // Please read the codedoc for z_s_offset
 		S.x += T.x_s_offset
+
 		S.echo = SOUND_ECHO_REVERB_ON //enable environment reverb for positional sounds
-	for(var/pos = 1 to length(T.echo))
-		if(!T.echo[pos])
-			continue
-		S.echo[pos] = T.echo[pos]
+
+	if(T.echo)
+		S.echo = T.echo
+
 	if(owner.mob.ear_deaf > 0)
 		S.status |= SOUND_MUTE
 
@@ -93,7 +103,7 @@
 		ambience = target_ambience
 
 
-	S.volume = 100 * owner.volume_preferences[VOLUME_AMB]
+	S.volume = 100 * owner.prefs.volume_preferences[VOLUME_AMB]
 	S.status = status_flags
 
 	if(target_area)
@@ -119,7 +129,7 @@
 		if(length(soundscape_playlist))
 			var/sound/S = sound()
 			S.file = pick(soundscape_playlist)
-			S.volume = 100 * owner.volume_preferences[VOLUME_AMB]
+			S.volume = 100 * owner.prefs.volume_preferences[VOLUME_AMB]
 			S.x = pick(1,-1)
 			S.z = pick(1,-1)
 			S.y = 1
@@ -143,6 +153,8 @@
 /// Pulls mob's area's sound_environment and applies if necessary and not overridden.
 /datum/soundOutput/proc/update_area_environment()
 	var/area/owner_area = get_area(owner.mob)
+	if(!owner_area)
+		return
 	var/new_environment = owner_area.sound_environment
 
 	if(owner.mob.sound_environment_override != SOUND_ENVIRONMENT_NONE) //override in effect, can't apply
@@ -186,30 +198,33 @@
 	update_mob_environment_override()
 
 /client/proc/adjust_volume_prefs(volume_key, prompt = "", channel_update = 0)
-	volume_preferences[volume_key] = (tgui_input_number(src, prompt, "Volume", volume_preferences[volume_key]*100)) / 100
-	if(volume_preferences[volume_key] > 1)
-		volume_preferences[volume_key] = 1
-	if(volume_preferences[volume_key] < 0)
-		volume_preferences[volume_key] = 0
+	prefs.volume_preferences[volume_key] = (tgui_input_number(src, prompt, "Volume", prefs.volume_preferences[volume_key]*100)) / 100
+	if(prefs.volume_preferences[volume_key] > 1)
+		prefs.volume_preferences[volume_key] = 1
+	if(prefs.volume_preferences[volume_key] < 0)
+		prefs.volume_preferences[volume_key] = 0
+
+	prefs.save_preferences()
+
 	if(channel_update)
 		var/sound/S = sound()
 		S.channel = channel_update
-		S.volume = 100 * volume_preferences[volume_key]
+		S.volume = 100 * prefs.volume_preferences[volume_key]
 		S.status = SOUND_UPDATE
 		sound_to(src, S)
 
-/client/verb/adjust_volume_sfx()
+CLIENT_VERB(adjust_volume_sfx)
 	set name = "Adjust Volume SFX"
 	set category = "Preferences.Sound"
 	adjust_volume_prefs(VOLUME_SFX, "Set the volume for sound effects", 0)
 
-/client/verb/adjust_volume_ambience()
+CLIENT_VERB(adjust_volume_ambience)
 	set name = "Adjust Volume Ambience"
 	set category = "Preferences.Sound"
 	adjust_volume_prefs(VOLUME_AMB, "Set the volume for ambience and soundscapes", 0)
 	soundOutput.update_ambience(null, null, TRUE)
 
-/client/verb/adjust_volume_lobby_music()
+CLIENT_VERB(adjust_volume_lobby_music)
 	set name = "Adjust Volume LobbyMusic"
 	set category = "Preferences.Sound"
 	adjust_volume_prefs(VOLUME_LOBBY, "Set the volume for Lobby Music", SOUND_CHANNEL_LOBBY)

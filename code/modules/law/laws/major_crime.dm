@@ -1,10 +1,7 @@
-/datum/law/major_law
-	severity = MAJOR_CRIME
-
 /datum/law/major_law/damage_to_government_property
 	name = "Damage to Government Property"
 	desc = "Damaging the ship or making any unauthorized modifications to it as outlined in Standard Operating Procedure on a major level, such as destroying/dismantling multiple walls or windows."
-	special_punishment = "Repairation"
+	special_punishment = "Reparation"
 	brig_time = 10
 
 /datum/law/major_law/disorderly_conduct
@@ -20,7 +17,7 @@
 /datum/law/major_law/contraband
 	name = "Contraband"
 	desc = "Possessing, or distributing controlled substances or unauthorized items or weapons as defined in Standard Operating Procedure or impairing, intoxicating or addictive drugs such as Mindbreaker, this does not include custom mixes or dosages of medicinal drugs."
-	special_punishment = "Contraband Confiscation"
+	special_punishment = "Confiscation of Contraband"
 	brig_time = 15
 
 /datum/law/major_law/insubordination
@@ -88,5 +85,5 @@
 
 /datum/law/major_law/unauthorized_deployment
 	name = "Unauthorized Deployment"
-	desc = "To deploy into the area of operations without permission of the relevant head of department or Commander where appropriate whilst still performing assigned duties. (I.E A doctor deploying without permission, with the intentions to perform field surgery.) Deploying without intent to perform assigned duties remains desertion."
+	desc = "To deploy into the area of operations without permission of the relevant head of department or Commander where appropriate whilst still performing assigned duties. (i.e. a doctor deploying without permission, with the intentions to perform field surgery.) Deploying without intent to perform assigned duties remains desertion."
 	brig_time = 10

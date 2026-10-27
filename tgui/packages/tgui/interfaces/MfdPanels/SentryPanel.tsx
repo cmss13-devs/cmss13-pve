@@ -1,16 +1,21 @@
-import { useBackend } from '../../backend';
-import { Box, Stack } from '../../components';
-import { DropshipEquipment } from '../DropshipWeaponsConsole';
-import { MfdPanel, MfdProps } from './MultifunctionDisplay';
+import { useBackend } from 'tgui/backend';
+import { Box, Stack } from 'tgui/components';
+
+import type { DropshipEquipment } from '../DropshipWeaponsConsole';
+import { MfdPanel, type MfdProps } from './MultifunctionDisplay';
 import { mfdState, useEquipmentState } from './stateManagers';
-import { EquipmentContext, SentrySpec } from './types';
+import type { EquipmentContext, SentrySpec } from './types';
 
 const SentryPanel = (props: DropshipEquipment) => {
   const sentryData = props.data as SentrySpec;
+  const ammoReadout =
+    sentryData.rounds === null || sentryData.rounds === undefined
+      ? 'DEPLETED'
+      : sentryData.rounds + ' / ' + sentryData.max_rounds;
   return (
     <Stack>
       <Stack.Item width="100px">
-        <svg />
+        <svg overflow="visible" />
       </Stack.Item>
       <Stack.Item>
         <Stack vertical width="300px" align="center">
@@ -23,15 +28,17 @@ const SentryPanel = (props: DropshipEquipment) => {
             </h3>
           </Stack.Item>
           <Stack.Item>
+            <h3>Ammo: {ammoReadout}</h3>
+          </Stack.Item>
+          <Stack.Item>
             <h3>
-              Ammo {sentryData.rounds} / {sentryData.max_rounds}
+              Deploy Status:{' '}
+              {sentryData.deployed === 1 ? 'DEPLOYED' : 'UNDEPLOYED'}
             </h3>
           </Stack.Item>
           <Stack.Item>
-            <h3>{sentryData.deployed === 1 ? 'DEPLOYED' : 'UNDEPLOYED'}</h3>
-          </Stack.Item>
-          <Stack.Item>
             <h3>
+              Sentry Status:{' '}
               {sentryData.engaged === 1
                 ? 'ENGAGED'
                 : sentryData.deployed === 1
@@ -39,10 +46,16 @@ const SentryPanel = (props: DropshipEquipment) => {
                   : 'OFFLINE'}
             </h3>
           </Stack.Item>
+          <Stack.Item>
+            <h3>
+              Auto-Deploy:{' '}
+              {sentryData.auto_deploy === 1 ? 'ENABLED' : 'DISABLED'}
+            </h3>
+          </Stack.Item>
         </Stack>
       </Stack.Item>
       <Stack.Item width="100px">
-        <svg />
+        <svg overflow="visible" />
       </Stack.Item>
     </Stack>
   );
@@ -57,6 +70,11 @@ export const SentryMfdPanel = (props: MfdProps) => {
   );
   const deployLabel =
     (sentry?.data?.deployed ?? 0) === 1 ? 'RETRACT' : 'DEPLOY';
+
+  const autoDeployLabel =
+    (sentry?.data?.auto_deploy ?? 0) === 1
+      ? 'AUTO-DEPLOY OFF'
+      : 'AUTO-DEPLOY ON';
 
   return (
     <MfdPanel
@@ -74,6 +92,11 @@ export const SentryMfdPanel = (props: MfdProps) => {
           children: sentry?.data?.camera_available ? 'CAMERA' : undefined,
           onClick: () =>
             act('set-camera-sentry', { equipment_id: sentry?.mount_point }),
+        },
+        {
+          children: autoDeployLabel,
+          onClick: () =>
+            act('auto-deploy', { equipment_id: sentry?.mount_point }),
         },
       ]}
       bottomButtons={[

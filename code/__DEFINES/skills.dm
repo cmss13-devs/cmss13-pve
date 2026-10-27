@@ -34,21 +34,20 @@
 //increase or decrase accuracy, recoil, and firing delay of rifles and smgs.
 #define SKILL_FIREARMS_CIVILIAN 0  //civilian
 #define SKILL_FIREARMS_TRAINED 1   //marines (allow tactical reloads)
-#define SKILL_FIREARMS_EXPERT 2   //special training
-#define SKILL_FIREARMS_MAX 2
+#define SKILL_FIREARMS_SKILLED 2   //a few marines and more trained personnel
+#define SKILL_FIREARMS_MASTER 3   //special training
+#define SKILL_FIREARMS_MAX 3
 
 //spec_weapons skill
 //hidden. who can and can't use specialist weapons
-#define SKILL_SPEC_DEFAULT 7
-/// No training in spec equipment
-#define SKILL_SPEC_UNTRAINED 0
+#define SKILL_SPEC_DEFAULT 0
 /// Is trained to use specialist gear, but hasn't picked a kit.
 #define SKILL_SPEC_TRAINED 1
 /// Is trained to use specialist gear & HAS picked a kit. (Functionally same as SPEC_ROCKET)
 #define SKILL_SPEC_KITTED 2
 /// Can use RPG
 #define SKILL_SPEC_ROCKET 2
-/// Can use thermal cloaks and custom M49A rifle
+/// Can use thermal cloaks and custom M4RA rifle
 #define SKILL_SPEC_SCOUT 3
 /// Can use sniper rifles and camo suits
 #define SKILL_SPEC_SNIPER 4
@@ -64,16 +63,14 @@
 #define SKILL_SPEC_ALL 9
 
 //construction skill
-#define SKILL_CONSTRUCTION_DEFAULT 2
-#define SKILL_CONSTRUCTION_UNTRAINED 0	//No training to build anything
+#define SKILL_CONSTRUCTION_DEFAULT 0
 #define SKILL_CONSTRUCTION_TRAINED 1   //metal barricade construction (CT, mini-engis)
 #define SKILL_CONSTRUCTION_ENGI 2   //plasteel barricade, windows and girder construction, building machine&computer frames, (Combat Engi, OT, etc.)
 #define SKILL_CONSTRUCTION_MASTER 3   //Synths
 #define SKILL_CONSTRUCTION_MAX 3
 
 // engineer skill
-#define SKILL_ENGINEER_DEFAULT 2
-#define SKILL_ENGINEER_UNTRAINED 0	//no training
+#define SKILL_ENGINEER_DEFAULT 0
 #define SKILL_ENGINEER_NOVICE 1   //barricade repair && c4 use (mini-engis, specs)
 #define SKILL_ENGINEER_TRAINED 2   //plasteel barricade deconstruction, hacking&&planet engine fixing&&apc building, Telecomms fixing  (OT, etc.)
 #define SKILL_ENGINEER_ENGI 3      // Slightly faster at everything (Combat Technicians)
@@ -127,7 +124,7 @@
 
 
 //execution skill
-//roles with the execution skill can perform battlefield executions (i.e. mateba and deagle)
+//roles with the execution skill can perform battlefield executions (i.e. mateba(unica) and deagle)
 //should be restricted to CO/general/W-Y execs maybe
 
 #define SKILL_EXECUTION_DEFAULT 0
@@ -137,18 +134,18 @@
 //powerloader skill
 //hidden
 //proficiency with powerloader, changes powerloader speed.
-#define SKILL_POWERLOADER_DEFAULT 1
-#define SKILL_POWERLOADER_UNTRAINED 0 //No training
+#define SKILL_POWERLOADER_DEFAULT 0
 #define SKILL_POWERLOADER_TRAINED 1 //
 #define SKILL_POWERLOADER_MASTER 2 //Pilot, CT, Req, OT, CE
 #define SKILL_POWERLOADER_MAX 2
 
 //leadership skill
 #define SKILL_LEAD_NOVICE 0 //Anyone but the above. Using SL items is possible but painfully slow
-#define SKILL_LEAD_TRAINED 1 //SL
-#define SKILL_LEAD_EXPERT 2 //SOs
-#define SKILL_LEAD_MASTER 3 //XO, CO
-#define SKILL_LEAD_MAX 3
+#define SKILL_LEAD_TRAINED 1 //Junior leadership roles and officers not primarily trained in leadership
+#define SKILL_LEAD_SKILLED 2 //Leadership roles with expereince such as SLs
+#define SKILL_LEAD_EXPERT 3 //Specifically trained in managerial leadership such as department heads or SOs
+#define SKILL_LEAD_MASTER 4 //Senior leadership roles or managerial roles expecting to see combat
+#define SKILL_LEAD_MAX 4
 
 //overwatch skill
 #define SKILL_OVERWATCH_DEFAULT 0
@@ -174,8 +171,7 @@
 
 
 //pilot skill, hidden
-#define SKILL_PILOT_DEFAULT 1
-#define SKILL_PILOT_UNTRAINED 0 //No training
+#define SKILL_PILOT_DEFAULT 0
 #define SKILL_PILOT_TRAINED 1 // DCC
 #define SKILL_PILOT_EXPERT 2 // Pilot, Synth
 #define SKILL_PILOT_MAX 2
@@ -201,10 +197,8 @@
 #define SKILL_DOMESTIC_MAX 2
 
 //multitile vehicle skills
-
-#define SKILL_VEHICLE_DEFAULT 2
 //Can't drive
-#define SKILL_VEHICLE_UNTRAINED 0
+#define SKILL_VEHICLE_DEFAULT 0
 //Can drive small vehicles (truck)
 #define SKILL_VEHICLE_SMALL 1
 //Can drive large vehicles (apc, tank)
@@ -221,8 +215,7 @@
 #define SKILL_INTEL_MAX 2
 
 // Fireman carry - Separated from police skills for further rebalances. Determines how fast you carry someone.
-#define SKILL_FIREMAN_DEFAULT 3
-#define SKILL_FIREMAN_UNTRAINED 0
+#define SKILL_FIREMAN_DEFAULT 0
 #define SKILL_FIREMAN_TRAINED 1
 #define SKILL_FIREMAN_SKILLED 2
 #define SKILL_FIREMAN_EXPERT 3

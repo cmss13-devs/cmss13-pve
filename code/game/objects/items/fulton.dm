@@ -6,6 +6,10 @@ GLOBAL_LIST_EMPTY(deployed_fultons)
 /obj/item/stack/fulton
 	name = "fulton recovery device"
 	icon = 'icons/obj/items/marine-items.dmi'
+	item_icons = list(
+		WEAR_L_HAND = 'icons/mob/humans/onmob/inhands/equipment/tools_lefthand.dmi',
+		WEAR_R_HAND = 'icons/mob/humans/onmob/inhands/equipment/tools_righthand.dmi',
+	)
 	icon_state = "fulton"
 	amount = 20
 	max_amount = 20
@@ -23,6 +27,7 @@ GLOBAL_LIST_EMPTY(deployed_fultons)
 	var/turf/original_location = null
 	var/attachable_atoms = list(/obj/structure/closet/crate)
 	var/datum/turf_reservation/reservation
+	var/faction
 
 /obj/item/stack/fulton/New(loc, amount, atom_to_attach)
 	..()
@@ -57,7 +62,7 @@ GLOBAL_LIST_EMPTY(deployed_fultons)
 		return
 
 /obj/item/stack/fulton/attack(mob/M as mob, mob/user as mob)
-	return
+	return ATTACKBY_HINT_UPDATE_NEXT_MOVE
 
 /obj/item/stack/fulton/attack_hand(mob/user as mob)
 	if (attached_atom)
@@ -112,19 +117,20 @@ GLOBAL_LIST_EMPTY(deployed_fultons)
 				break
 
 	if(can_attach)
-		user.visible_message(SPAN_WARNING("[user] begins attaching [src] onto [target_atom]."), \
+		user.visible_message(SPAN_WARNING("[user] begins attaching [src] onto [target_atom]."),
 					SPAN_WARNING("You begin to attach [src] onto [target_atom]."))
 		if(do_after(user, 50 * user.get_skill_duration_multiplier(SKILL_INTEL), INTERRUPT_ALL, BUSY_ICON_GENERIC))
 			if(!amount || get_dist(target_atom,user) > 1)
 				return
 			for(var/obj/item/stack/fulton/F in get_turf(target_atom))
 				return
-			var/obj/item/stack/fulton/F = new type(get_turf(target_atom), 1, target_atom)
+			var/obj/item/stack/fulton/F = new /obj/item/stack/fulton(get_turf(target_atom), 1, target_atom)
 			transfer_fingerprints_to(F)
 			src.add_fingerprint(user)
 			F.add_fingerprint(user)
 			user.count_niche_stat(STATISTICS_NICHE_FULTON)
 			use(1)
+			F.faction = user.faction
 			F.deploy_fulton()
 	else
 		to_chat(user, SPAN_WARNING("You can't attach [src] to [target_atom]."))
@@ -133,13 +139,35 @@ GLOBAL_LIST_EMPTY(deployed_fultons)
 	if(!attached_atom)
 		return
 	var/image/I = image(icon, icon_state)
-	if(isxeno(attached_atom))
-		var/mob/living/carbon/xenomorph/X = attached_atom
-		I.pixel_x = (X.pixel_x * -1)
-	attached_atom.overlays += I
-	sleep(30)
-	original_location = get_turf(attached_atom)
+	var/image/cables = image('icons/obj/structures/droppod_32x64.dmi', attached_atom, "chute_cables_static")
+	var/image/chute = image('icons/obj/structures/droppod_64x64.dmi', attached_atom, "chute_static")
+	var/corr_x = (attached_atom.pixel_x * -1)//This fixes a pixel offset bug with big sprites
+	var/original_dir = attached_atom.dir
+
+	if(ishuman(attached_atom))
+		var/mob/living/attached_living = attached_atom
+		attached_living.setDir(SOUTH)
+		attached_living.set_lying_angle(0)
+
+
+	I.pixel_x = corr_x
+	cables.pixel_x = corr_x
+	chute.pixel_x = corr_x - 16
+	chute.pixel_y = 16
+	icon_state = ""
+	attached_atom.overlays += list(cables, chute, I)
+
+	var/originalLayer = attached_atom.layer
+	var/originalAlpha = attached_atom.alpha
+	attached_atom.layer = 100 //You want this above everything else because it flies up into the sky
+	animate(attached_atom, pixel_y = 10, time = 30, easing = BOUNCE_EASING, flags = ANIMATION_PARALLEL)
 	playsound(loc, 'sound/items/fulton.ogg', 50, 1)
+	sleep(30)
+	animate(attached_atom, pixel_y = 500, time = 50, alpha = 0, easing = CIRCULAR_EASING|EASE_OUT)
+	playsound(loc, 'sound/items/fulton_takeoff.ogg', 50, 1)
+	sleep(50)
+	original_location = get_turf(attached_atom)
+
 	reservation = SSmapping.request_turf_block_reservation(3, 3, 1, turf_type_override = /turf/open/space)
 	var/turf/bottom_left_turf = reservation.bottom_left_turfs[1]
 	var/turf/top_right_turf = reservation.top_right_turfs[1]
@@ -150,15 +178,21 @@ GLOBAL_LIST_EMPTY(deployed_fultons)
 		visible_message(SPAN_WARNING("[src] begins beeping like crazy. Something is wrong!"))
 		return
 
-	icon_state = ""
-
 	attached_atom.anchored = TRUE
 	attached_atom.forceMove(space_tile)
+	attached_atom.pixel_y = 0
 
 	forceMove(attached_atom)
 	GLOB.deployed_fultons += src
-	attached_atom.overlays -= I
 
+	if(ishuman(attached_atom))
+		var/mob/living/attached_living = attached_atom
+		attached_living.setDir(original_dir)
+		attached_living.set_lying_angle(90)
+
+	attached_atom.overlays -= list(I, cables, chute)
+	attached_atom.layer = originalLayer
+	attached_atom.alpha = originalAlpha
 	addtimer(CALLBACK(src, PROC_REF(return_fulton), original_location), 150 SECONDS)
 
 /obj/item/stack/fulton/proc/return_fulton(turf/return_turf)
@@ -171,23 +205,12 @@ GLOBAL_LIST_EMPTY(deployed_fultons)
 	attached_atom.anchored = FALSE
 	playsound(attached_atom.loc,'sound/effects/bamf.ogg', 50, 1)
 
-	/*
 	if(GLOB.intel_system)
 		if (!LAZYISIN(GLOB.failed_fultons, attached_atom))
 			//Giving marines an objective to retrieve that fulton (so they'd know what they lost and where)
 			var/datum/cm_objective/retrieve_item/fulton/objective = new /datum/cm_objective/retrieve_item/fulton(attached_atom)
 			GLOB.intel_system.store_single_objective(objective)
-	*/
 
 	qdel(reservation)
 	qdel(src)
 	return
-
-/obj/item/stack/fulton/destroy_on_use
-
-/obj/item/stack/fulton/destroy_on_use/deploy_fulton()
-	. = ..()
-
-	qdel(attached_atom)
-	qdel(reservation)
-	qdel(src)

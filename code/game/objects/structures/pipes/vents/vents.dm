@@ -1,7 +1,7 @@
 /obj/structure/pipes/vents
 	icon = 'icons/obj/pipes/vent_scrubber.dmi'
 	icon_state = "map_vent"
-	desc = "Has a valve and pump attached to it"
+	desc = "Has a valve and pump attached to it."
 	valid_directions = list(NORTH, SOUTH, EAST, WEST)
 
 	var/area/initial_loc = null
@@ -77,21 +77,22 @@
 			weldtime = 60
 		var/obj/item/tool/weldingtool/WT = W
 		if(WT.remove_fuel(1, user))
-			user.visible_message(SPAN_NOTICE("[user] starts welding \the [src] with \the [WT]."), \
+			user.visible_message(SPAN_NOTICE("[user] starts welding \the [src] with \the [WT]."),
 			SPAN_NOTICE("You start welding \the [src] with \the [WT]."))
 			playsound(loc, 'sound/items/weldingtool_weld.ogg', 25)
 			if(do_after(user, weldtime * user.get_skill_duration_multiplier(SKILL_CONSTRUCTION), INTERRUPT_ALL|BEHAVIOR_IMMOBILE, BUSY_ICON_BUILD))
-				if(!src || !WT.isOn()) return 0
+				if(!src || !WT.isOn())
+					return 0
 				playsound(get_turf(src), 'sound/items/Welder2.ogg', 25, 1)
 				if(!welded)
-					user.visible_message(SPAN_NOTICE("[user] welds \the [src] shut."), \
+					user.visible_message(SPAN_NOTICE("[user] welds \the [src] shut."),
 					SPAN_NOTICE("You weld \the [src] shut."))
 					welded = 1
 					update_icon()
 					msg_admin_niche("[key_name(user)] welded a vent pump.")
 					return 1
 				else
-					user.visible_message(SPAN_NOTICE("[user] welds \the [src] open."), \
+					user.visible_message(SPAN_NOTICE("[user] welds \the [src] open."),
 					SPAN_NOTICE("You weld \the [src] open."))
 					welded = 0
 					msg_admin_niche("[key_name(user)] un-welded a vent pump.")
@@ -139,7 +140,7 @@
 		if(welded)
 			to_chat(usr, SPAN_WARNING("You cannot release gas from a welded vent."))
 			return FALSE
-		var/list/options = list(VENT_GAS_SMOKE, VENT_GAS_SLEEP, VENT_GAS_CN20, VENT_GAS_CN20_XENO, VENT_GAS_LSD)
+		var/list/options = list(VENT_GAS_SMOKE, VENT_GAS_CN20, VENT_GAS_CN20_XENO)
 		var/gas_choice = tgui_input_list(user, "What gas do you wish to use?", "Gas Choice", options, 20 SECONDS)
 		if(!gas_choice)
 			return FALSE
@@ -162,14 +163,10 @@
 	switch(gas_type)
 		if(VENT_GAS_SMOKE)
 			spreader = new /datum/effect_system/smoke_spread/bad
-		if(VENT_GAS_SLEEP)
-			spreader = new /datum/effect_system/smoke_spread/sleepy
 		if(VENT_GAS_CN20)
 			spreader = new /datum/effect_system/smoke_spread/cn20
 		if(VENT_GAS_CN20_XENO)
 			spreader = new /datum/effect_system/smoke_spread/cn20/xeno
-		if(VENT_GAS_LSD)
-			spreader = new /datum/effect_system/smoke_spread/LSD
 	if(!spreader)
 		return FALSE
 	gas_holder = spreader
@@ -184,5 +181,5 @@
 	if(!gas_holder || welded)
 		return FALSE
 	playsound(loc, 'sound/effects/smoke.ogg', 25, 1, 4)
-	gas_holder.set_up(radius, 0, get_turf(src), null, 10 SECONDS)
+	gas_holder.set_up(radius, 0, get_turf(src), null, 10)
 	gas_holder.start()

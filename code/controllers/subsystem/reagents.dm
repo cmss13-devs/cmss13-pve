@@ -4,7 +4,7 @@ SUBSYSTEM_DEF(reagents)
 	flags = SS_NO_FIRE
 
 /datum/controller/subsystem/reagents/Initialize()
-	// Initalize to create the global chemistry lists:
+	// Initialize to create the global chemistry lists:
 	// Must be before SSatoms.InitializeAtoms and SSmapping
 	prepare_properties()
 	prepare_reagents()
@@ -36,7 +36,7 @@ SUBSYSTEM_DEF(reagents)
 			GLOB.chemical_data.research_property_data += chem
 		if(prop.rarity > PROPERTY_DISABLED)
 			//Filters for the generator picking properties
-			if(prop.rarity == PROPERTY_RARE || prop.rarity == PROPERTY_LEGENDARY)
+			if(prop.rarity == PROPERTY_RARE) //legendary properties are no more
 				GLOB.chemical_properties_list["rare"][prop.name] = prop
 			else if(isNegativeProperty(prop))
 				GLOB.chemical_properties_list["negative"][prop.name] = prop
@@ -44,6 +44,17 @@ SUBSYSTEM_DEF(reagents)
 				GLOB.chemical_properties_list["neutral"][prop.name] = prop
 			else if(isPositiveProperty(prop))
 				GLOB.chemical_properties_list["positive"][prop.name] = prop
+
+	//preparing random generation for legendary properties
+	for(var/datum/chem_property/property as anything in subtypesof(/datum/chem_property/special))
+		if((property.rarity == PROPERTY_LEGENDARY && property.category != PROPERTY_TYPE_ANOMALOUS) || property.name == PROPERTY_CIPHERING)
+			var/list/recipe = list()
+			for(var/i in 1 to LEGENDARY_COMBINE_PROPERTIES)
+				recipe += pick(GLOB.chemical_properties_list[pick("neutral", "positive", "negative")])
+			if(property.name == PROPERTY_CIPHERING)
+				// Ciphering forces last property to encrypted
+				recipe[LEGENDARY_COMBINE_PROPERTIES] = PROPERTY_ENCRYPTED
+			GLOB.combining_properties[property.name] = recipe
 
 /datum/controller/subsystem/reagents/proc/prepare_reagents()
 	//I dislike having these here but map-objects are initialised before world/New() is called. >_>

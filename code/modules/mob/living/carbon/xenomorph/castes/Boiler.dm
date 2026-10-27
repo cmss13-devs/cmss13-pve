@@ -18,11 +18,10 @@
 
 	evolution_allowed = FALSE
 	deevolves_to = list(XENO_CASTE_SPITTER)
-	spit_delay = 30 SECONDS
 	caste_desc = "Gross!"
 	acid_level = 3
 	caste_luminosity = 2
-	spit_types = list(/datum/ammo/xeno/boiler_gas, /datum/ammo/xeno/boiler_gas/acid)
+	spit_types = list(/datum/ammo/xeno/boiler_gas/acid, /datum/ammo/xeno/boiler_gas)
 	// 3x fire damage
 	fire_vulnerability_mult = FIRE_MULTIPLIER_DEADLY
 
@@ -34,28 +33,31 @@
 
 	minimum_evolve_time = 15 MINUTES
 
+	organ_type = /obj/item/organ/xeno/boiler
+
 	minimap_icon = "boiler"
 
 /mob/living/carbon/xenomorph/boiler
 	caste_type = XENO_CASTE_BOILER
 	name = XENO_CASTE_BOILER
 	desc = "A huge, grotesque xenomorph covered in glowing, oozing acid slime."
-	icon = 'icons/mob/xenos/boiler.dmi'
+	icon = 'icons/mob/xenos/castes/tier_3/boiler.dmi'
 	icon_size = 64
 	icon_state = "Boiler Walking"
-	plasma_types = list(PLASMA_NEUROTOXIN)
 	pixel_x = -16
 	old_x = -16
 	mob_size = MOB_SIZE_BIG
 	tier = 3
 	gib_chance = 100
 	drag_delay = 6 //pulling a big dead xeno is hard
-	spit_delay  = 30 SECONDS
 	tileoffset = 3
 	viewsize = 7
+	fire_immunity = FIRE_VULNERABILITY
 
-	icon_xeno = 'icons/mob/xenos/boiler.dmi'
-	icon_xenonid = 'icons/mob/xenonids/boiler.dmi'
+	icon_xeno = 'icons/mob/xenos/castes/tier_3/boiler.dmi'
+	icon_xenonid = 'icons/mob/xenonids/castes/tier_3/boiler.dmi'
+
+	acid_overlay = icon('icons/mob/xenos/castes/tier_3/boiler.dmi', "Boiler-Spit")
 
 	weed_food_icon = 'icons/mob/xenos/weeds_64x64.dmi'
 	weed_food_states = list("Boiler_1","Boiler_2","Boiler_3")
@@ -64,8 +66,9 @@
 	var/datum/effect_system/smoke_spread/xeno_acid/smoke
 
 	base_actions = list(
+		/datum/action/xeno_action/onclick/toggle_seethrough,
 		/datum/action/xeno_action/onclick/xeno_resting,
-		/datum/action/xeno_action/onclick/regurgitate,
+		/datum/action/xeno_action/onclick/release_haul,
 		/datum/action/xeno_action/watch_xeno,
 		/datum/action/xeno_action/activable/tail_stab/boiler,
 		/datum/action/xeno_action/activable/corrosive_acid/strong,
@@ -74,8 +77,19 @@
 		/datum/action/xeno_action/activable/spray_acid/boiler, //3rd macro
 		/datum/action/xeno_action/onclick/toggle_long_range/boiler, //4th macro
 		/datum/action/xeno_action/onclick/acid_shroud, //5th macro
-		/datum/action/xeno_action/onclick/tacmap,
 	)
+	skull = /obj/item/skull/boiler
+	pelt = /obj/item/pelt/boiler
+
+/obj/item/organ/xeno/boiler
+	name = "boiler heart"
+	icon_state = "heart_t3"
+	item_state = "heart_t3"
+	// high research value because obtaining this is not possible
+	// without a corrupted hive
+	research_value = 20000
+
+	xeno_organ_flags = XENO_ORGAN_STRONG|XENO_ORGAN_FRAGILE|XENO_ORGAN_ACID
 
 /mob/living/carbon/xenomorph/boiler/Initialize(mapload, mob/living/carbon/xenomorph/oldxeno, h_number)
 	. = ..()
@@ -83,10 +97,6 @@
 	smoke.attach(src)
 	smoke.cause_data = create_cause_data(initial(caste_type), src)
 	see_in_dark = 20
-	ammo = GLOB.ammo_list[/datum/ammo/xeno/boiler_gas/acid]
-	spit_types = list(/datum/ammo/xeno/boiler_gas/acid, /datum/ammo/xeno/boiler_gas)
-
-	update_icon_source()
 
 /mob/living/carbon/xenomorph/boiler/Destroy()
 	if(smoke)
@@ -97,3 +107,135 @@
 // No special behavior for boilers
 /datum/behavior_delegate/boiler_base
 	name = "Base Boiler Behavior Delegate"
+
+
+/datum/action/xeno_action/activable/xeno_spit/bombard/use_ability(atom/affected_atom)
+	. = ..()
+	var/mob/living/carbon/xenomorph/xeno = owner
+	if(!action_cooldown_check()) // activate c/d only if we already spit
+		for (var/action_type in action_types_to_cd)
+			var/datum/action/xeno_action/xeno_action = get_action(xeno, action_type)
+			if (!istype(xeno_action))
+				continue
+
+			xeno_action.apply_cooldown_override(cooldown_duration)
+
+
+/datum/action/xeno_action/onclick/acid_shroud/use_ability(atom/affected_atom)
+	var/datum/effect_system/smoke_spread/xeno_acid/spicy_gas
+	var/mob/living/carbon/xenomorph/xeno = owner
+	if (!isxeno(owner))
+		return
+
+	if (!action_cooldown_check())
+		return
+
+	if (!xeno.check_state())
+		return
+
+	if(sound_play)
+		playsound(xeno,"acid_strike", 35, 1)
+		sound_play = FALSE
+		addtimer(VARSET_CALLBACK(src, sound_play, TRUE), 2 SECONDS)
+
+	if (!do_after(xeno, xeno.ammo.spit_windup/6.5, INTERRUPT_ALL|BEHAVIOR_IMMOBILE, BUSY_ICON_HOSTILE, numticks = 2)) /// 0.7 seconds
+		to_chat(xeno, SPAN_XENODANGER("We decide to cancel our gas shroud."))
+		return
+
+	playsound(xeno,"acid_sizzle", 50, 1)
+
+	if(xeno.ammo == GLOB.ammo_list[/datum/ammo/xeno/boiler_gas/acid])
+		spicy_gas = new /datum/effect_system/smoke_spread/xeno_acid
+	else if(xeno.ammo == GLOB.ammo_list[/datum/ammo/xeno/boiler_gas])
+		spicy_gas = new /datum/effect_system/smoke_spread/xeno_weaken
+	else
+		CRASH("Globber has unknown ammo [xeno.ammo]! Oh no!")
+	var/datum/cause_data/cause_data = create_cause_data("acid shroud gas", owner)
+	spicy_gas.set_up(1, 0, get_turf(xeno), null, 6, new_cause_data = cause_data)
+	spicy_gas.start()
+	to_chat(xeno, SPAN_XENOHIGHDANGER("We dump our acid through our pores, creating a shroud of gas!"))
+
+	for (var/action_type in action_types_to_cd)
+		var/datum/action/xeno_action/xeno_action = get_action(xeno, action_type)
+		if (!istype(xeno_action))
+			continue
+
+		xeno_action.apply_cooldown_override(cooldown_duration)
+
+	apply_cooldown()
+	return ..()
+
+/datum/action/xeno_action/onclick/shift_spits/boiler/use_ability(atom/affected_atom)
+	. = ..()
+	apply_cooldown()
+
+/datum/action/xeno_action/activable/tail_stab/boiler/use_ability(atom/affected_atom)
+	var/mob/living/carbon/xenomorph/stabbing_xeno = owner
+	var/target = ..()
+	if(iscarbon(target))
+		var/mob/living/carbon/carbon_target = target
+		if(stabbing_xeno.ammo == GLOB.ammo_list[/datum/ammo/xeno/boiler_gas/acid])
+			carbon_target.reagents.add_reagent("molecularacid", 6)
+			carbon_target.reagents.set_source_mob(owner, /datum/reagent/toxin/molecular_acid)
+		else if(stabbing_xeno.ammo == GLOB.ammo_list[/datum/ammo/xeno/boiler_gas])
+			var/datum/effects/neurotoxin/neuro_effect = locate() in carbon_target.effects_list
+			if(!neuro_effect)
+				neuro_effect = new(carbon_target, owner)
+			neuro_effect.duration += 20
+			to_chat(carbon_target,SPAN_HIGHDANGER("You are injected with something from [stabbing_xeno]'s tailstab!"))
+		else
+			CRASH("Globber has unknown ammo [stabbing_xeno.ammo]! Oh no!")
+		return TRUE
+
+#define ACID_COST_BOILER 200 // ACID_COST_LEVEL_3
+
+/mob/living/carbon/xenomorph/boiler/try_fill_trap(obj/effect/alien/resin/trap/target)
+	if(!istype(target))
+		return FALSE
+
+	if(!acid_level)
+		to_chat(src, SPAN_XENONOTICE("You can't secrete any acid into [target]."))
+		return FALSE
+
+	var/trap_acid_level = 0
+	if(target.trap_type >= RESIN_TRAP_ACID1)
+		trap_acid_level = 1 + target.trap_type - RESIN_TRAP_ACID1
+
+	if(trap_acid_level >= acid_level)
+		to_chat(src, SPAN_XENONOTICE("It already has good acid in."))
+		return FALSE
+
+	if(!check_plasma(ACID_COST_BOILER))
+		to_chat(src, SPAN_XENOWARNING("You must produce more plasma before doing this."))
+		return FALSE
+
+	to_chat(src, SPAN_XENONOTICE("You begin charging the resin trap with acid gas."))
+	xeno_attack_delay(src)
+	if(!do_after(src, 3 SECONDS, INTERRUPT_NO_NEEDHAND, BUSY_ICON_HOSTILE, src))
+		return FALSE
+
+	if(target.trap_type >= RESIN_TRAP_ACID1)
+		trap_acid_level = 1 + target.trap_type - RESIN_TRAP_ACID1
+
+	if(trap_acid_level >= acid_level)
+		return FALSE
+
+	if(!check_plasma(ACID_COST_BOILER))
+		return FALSE
+
+	use_plasma(ACID_COST_BOILER)
+
+	if(ammo.type == /datum/ammo/xeno/boiler_gas)
+		target.smoke_system = new /datum/effect_system/smoke_spread/xeno_weaken()
+	else
+		target.smoke_system = new /datum/effect_system/smoke_spread/xeno_acid()
+	target.cause_data = create_cause_data("resin gas trap", src)
+	target.setup_tripwires()
+	target.set_state(RESIN_TRAP_GAS)
+
+	playsound(target, 'sound/effects/refill.ogg', 25, 1)
+	visible_message(SPAN_XENOWARNING("[src] pressurises the resin trap with acid gas!"),
+	SPAN_XENOWARNING("You pressurise the resin trap with acid gas!"), null, 5)
+	return TRUE
+
+#undef ACID_COST_BOILER

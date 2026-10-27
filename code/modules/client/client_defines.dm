@@ -9,6 +9,8 @@
 	// Holds the client's current mentorhelp thread
 	var/datum/mentorhelp/current_mhelp = null
 
+	var/datum/ticket_panel/ticket_panel
+
 	var/last_message = "" //Contains the last message sent by this client - used to protect against copy-paste spamming.
 	var/last_message_count = 0 //contins a number of how many times a message identical to last_message was sent.
 	var/talked = 0
@@ -42,14 +44,12 @@
 	var/played = 0
 	var/midi_silenced = 0
 	var/datum/soundOutput/soundOutput
-	var/list/volume_preferences = list(1, 0.5, 1, 0.6)//Game, music, admin midis, lobby music
 
 		////////////
 		//SECURITY//
 		////////////
 	var/next_allowed_topic_time = 10
-	// comment out the line below when debugging locally to enable the options & messages menu
-	//control_freak = 1
+	control_freak = CONTROL_FREAK_MACROS
 
 	var/received_irc_pm = -99999
 
@@ -126,6 +126,9 @@
 	///lazylist of screen_texts for this client, first in this list is the one playing
 	var/list/atom/movable/screen/text/screen_text/screen_texts
 
+	/// Controller for mob achievements. If present, the mob is eligible for achievements that are unattained
+	var/datum/achievement_manager/achievement_manager
+
 	/// Does this client have typing indicators enabled?
 	var/typing_indicators = TRUE
 
@@ -135,22 +138,8 @@
 	/// If this client has any windows scaling applied
 	var/window_scaling
 
-	/// Holds the game master datum for this client
-	var/datum/game_master/game_master_menu
+	/// An alist used to make checks for whether a render plate has been added to a client's screen faster.
+	/// render relay plate -> TRUE
+	/// This must be cleared whenever screen is cleared manually.
+	var/alist/render_plates_shown = alist()
 
-	/// Holds the human AI manager panel for this client
-	var/datum/human_ai_management_menu/human_ai_menu
-
-	/// Holds the human faction manager panel for this client
-	var/datum/human_faction_management_menu/human_faction_menu
-
-	/// Holds the human defense creator panel for this client
-	var/datum/human_defense_creator_menu/human_defense_menu
-
-	/// Holds the human squad spawner panel for this client
-	var/datum/human_squad_spawner_menu/human_squad_menu
-
-	/// Holds the human squad spawner panel for this client
-	var/datum/human_ai_spawner_menu/human_spawn_menu
-	/// Sets LOOC messaging cooldown
-	COOLDOWN_DECLARE(looc_cooldown)

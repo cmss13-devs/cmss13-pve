@@ -1,7 +1,7 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
 "a" = (
 /turf/closed/wall/r_wall/prison_unmeltable,
-/area/template_noop)
+/area/fiorina/oob)
 "b" = (
 /obj/structure/bed/chair{
 	dir = 1
@@ -28,6 +28,7 @@
 /area/template_noop)
 "s" = (
 /obj/structure/filingcabinet,
+/obj/effect/landmark/objective_landmark/close,
 /turf/open/floor/wood,
 /area/template_noop)
 "t" = (
@@ -48,18 +49,10 @@
 "x" = (
 /obj/structure/window/framed/prison/reinforced/hull,
 /turf/open/floor/plating/prison,
-/area/template_noop)
+/area/fiorina/oob)
 "y" = (
 /obj/effect/landmark/survivor_spawner,
 /turf/open/floor/carpet,
-/area/template_noop)
-"z" = (
-/obj/structure/machinery/light/double/blue{
-	dir = 1;
-	pixel_y = 21
-	},
-/obj/structure/machinery/power/apc/power/west,
-/turf/open/floor/wood,
 /area/template_noop)
 "A" = (
 /obj/effect/decal/cleanable/blood,
@@ -67,15 +60,6 @@
 /area/template_noop)
 "E" = (
 /turf/open/floor/wood,
-/area/template_noop)
-"I" = (
-/obj/structure/machinery/light/double/blue{
-	dir = 1;
-	pixel_y = 21
-	},
-/obj/structure/surface/table/woodentable/fancy,
-/obj/item/weapon/gun/pistol/highpower/automag/tactical,
-/turf/open/floor/plating,
 /area/template_noop)
 "K" = (
 /obj/structure/bed/chair{
@@ -86,14 +70,14 @@
 "L" = (
 /obj/structure/lattice,
 /turf/open/space,
-/area/template_noop)
+/area/fiorina/oob)
 "O" = (
 /obj/structure/xenoautopsy/tank/broken,
 /turf/open/floor/carpet,
 /area/template_noop)
 "R" = (
 /obj/structure/surface/table/woodentable/fancy,
-/obj/item/weapon/unathiknife{
+/obj/item/weapon/yautja/duelknife{
 	name = "ceremonial knife";
 	pixel_x = 7;
 	pixel_y = -2
@@ -104,12 +88,30 @@
 /obj/effect/decal/cleanable/blood,
 /turf/open/floor/carpet,
 /area/template_noop)
+"S" = (
+/obj/structure/machinery/light/double/blue{
+	dir = 1;
+	pixel_y = 21
+	},
+/obj/structure/machinery/power/apc/power/west,
+/turf/open/floor/wood,
+/area/template_noop)
 "T" = (
+/obj/effect/landmark/corpsespawner/prison_security,
 /obj/item/clothing/head/helmet/warden{
 	pixel_x = -9;
 	pixel_y = 5
 	},
 /obj/effect/decal/cleanable/blood,
+/turf/open/floor/plating,
+/area/template_noop)
+"U" = (
+/obj/structure/machinery/light/double/blue{
+	dir = 1;
+	pixel_y = 21
+	},
+/obj/structure/surface/table/woodentable/fancy,
+/obj/item/weapon/gun/pistol/highpower/tactical,
 /turf/open/floor/plating,
 /area/template_noop)
 "W" = (
@@ -137,7 +139,7 @@ L
 (2,1,1) = {"
 a
 a
-z
+S
 E
 E
 x
@@ -191,7 +193,7 @@ x
 (8,1,1) = {"
 a
 a
-I
+U
 e
 t
 x

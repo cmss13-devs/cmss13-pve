@@ -1,0 +1,106 @@
+.Book {
+  &.Window__Content {
+    padding: 5px;
+
+    overflow: none;
+  }
+
+  .PaperDivider {
+    margin: 0.5em 0;
+  }
+
+  .TopDivider {
+    border-top: 1.5rem solid hsl(120, 7%, 14%);
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+    border-top-width: 1.5rem !important;
+  }
+
+  .BottomDivider {
+    border-bottom: 1.5rem solid hsl(120, 7%, 14%);
+    border-bottom-left-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+    border-bottom-width: 1.5rem !important;
+  }
+
+  .PageTurn {
+    background-color: transparent;
+    outline: 2px solid hsl(120, 7%, 14%);
+    background-color: hsl(0, 0%, 87%);
+    position: absolute;
+    cursor: pointer;
+
+    rotate: 45deg;
+    height: 80px;
+    width: 80px;
+
+    bottom: -40px;
+
+    &.Forward {
+      right: -40px;
+    }
+
+    &.Backward {
+      left: -40px;
+    }
+  }
+
+  .PageNavigation {
+    position: absolute;
+    bottom: 30px;
+    left: 32px;
+    width: 588px;
+    font:
+      14px Arial,
+      sans-serif;
+  }
+
+  .HeaderImage {
+    filter: grayscale(1);
+  }
+
+  .TextArea {
+    color: white;
+  }
+  .LorePage {
+    box-sizing: border-box;
+    width: 620px;
+    height: 530px;
+    margin: 0 10px;
+    padding: 16px;
+    font:
+      15px/1.4 Arial,
+      sans-serif;
+
+    h2 {
+      margin: 0 0 12px;
+      padding: 0;
+      font-size: 22px;
+    }
+
+    p {
+      display: flow-root;
+      margin: 0 0 16px;
+    }
+
+    img {
+      float: right;
+      margin: 0 0 8px 12px;
+      object-fit: contain;
+
+      &.PixelArt {
+        image-rendering: pixelated;
+      }
+    }
+  }
+
+  pre {
+    background-color: hsl(120, 7%, 14%);
+    border-radius: 0.5rem;
+    color: white;
+    padding: 1em;
+  }
+
+  font-family: monospace;
+  font-size: 16px;
+}

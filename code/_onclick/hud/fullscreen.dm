@@ -8,10 +8,13 @@
 	if (!screen || screen.type != type)
 		// needs to be recreated
 		clear_fullscreen(category, FALSE)
-		fullscreens[category] = screen = new type()
+		fullscreens[category] = screen = type ? new type() : null
 	else if ((!severity || severity == screen.severity) && (!client || screen.screen_loc != "CENTER-7,CENTER-7" || screen.fs_view == client.view))
 		// doesn't need to be updated
 		return screen
+
+	if(!screen)
+		return
 
 	screen.icon_state = "[initial(screen.icon_state)][severity]"
 	screen.severity = severity
@@ -20,10 +23,6 @@
 		client.add_to_screen(screen)
 
 	return screen
-
-/mob/proc/overlay_fullscreen_timer(duration, animated, category, type, severity)
-	overlay_fullscreen(category, type, severity)
-	addtimer(CALLBACK(src, PROC_REF(clear_fullscreen), category, animated), duration)
 
 /mob/proc/clear_fullscreen(category, animated = 10)
 	var/atom/movable/screen/fullscreen/screen = fullscreens[category]
@@ -59,17 +58,18 @@
 		var/atom/movable/screen/fullscreen/screen
 		for(var/category in fullscreens)
 			screen = fullscreens[category]
-			if(screen.should_show_to(src))
+			if(screen?.should_show_to(src))
 				screen.update_for_view(client.view)
 				client.add_to_screen(screen)
 			else
 				client.remove_from_screen(screen)
 
+//Get the distance to the farthest edge of the screen
 /mob/proc/get_maximum_view_range()
 	if(!client)
 		return world.view
 
-	var/offset = max(abs(client.pixel_x), abs(client.pixel_y))
+	var/offset = max(abs(client.get_pixel_x()), abs(client.get_pixel_y()))
 	return client.view + offset / 32
 
 /atom/movable/screen/fullscreen
@@ -100,20 +100,6 @@
 	severity = 0
 	. = ..()
 
-/atom/movable/screen/fullscreen/black
-	icon_state = "black"
-	layer = INTRO_LAYER
-
-/atom/movable/screen/fullscreen/spawning_in
-	icon_state = "blackimageoverlay"
-	layer = INTRO_LAYER
-
-/atom/movable/screen/fullscreen/crt
-	icon_state = "crt"
-	layer = ABOVE_INTRO_LAYER
-	blend_mode = BLEND_OVERLAY
-	alpha = 150
-
 /atom/movable/screen/fullscreen/brute
 	icon_state = "brutedamageoverlay"
 	layer = FULLSCREEN_DAMAGE_LAYER
@@ -126,7 +112,7 @@
 	layer = FULLSCREEN_DAMAGE_LAYER
 
 /atom/movable/screen/fullscreen/flash/noise/nvg
-	alpha = 5
+	alpha = 27.5
 
 /atom/movable/screen/fullscreen/crit
 	icon_state = "passage"

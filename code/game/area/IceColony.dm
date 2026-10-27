@@ -56,7 +56,6 @@
 /area/ice_colony/exterior/surface/landing_pad
 	name = "\improper Aerodrome Landing Pad"
 	icon_state = "landing_pad"
-	is_resin_allowed = FALSE
 	minimap_color = MINIMAP_AREA_LZ
 
 //Landing Pad for the Vindi. THIS IS NOT THE SHUTTLE AREA
@@ -64,14 +63,12 @@
 	name = "\improper Emergency Landing Pad"
 	icon_state = "landing_pad"
 	minimap_color = MINIMAP_AREA_LZ
-	is_resin_allowed = FALSE
 
 
 //Everything around the physical landing pad
 /area/ice_colony/exterior/surface/landing_pad_external
 	name = "\improper Aerodrome Landing Valley"
 	icon_state = "landing_pad_ext"
-	is_resin_allowed = FALSE
 	minimap_color = MINIMAP_AREA_LZ
 
 //Aerodrome Container Yard
@@ -79,7 +76,6 @@
 	name = "\improper Aerodrome Container Yard"
 	icon_state = "container_yard"
 	minimap_color = MINIMAP_AREA_LZ
-	is_resin_allowed = FALSE
 
 //
 // Valleys
@@ -123,12 +119,6 @@
 /area/ice_colony/exterior/surface/valley/southwest
 	name = "\improper South Western Valleys"
 	icon_state = "valley_south_west"
-
-/area/ice_colony/exterior/surface/valley/northeast/apc_support
-	always_unpowered = FALSE
-
-/area/ice_colony/exterior/surface/valley/southeast/apc_support
-	always_unpowered = FALSE
 
 //
 // Clearing
@@ -363,7 +353,6 @@
 
 /area/ice_colony/surface/hangar/hallway
 	name = "\improper Aerodrome Hangar Hallway"
-	is_resin_allowed = FALSE
 
 /area/ice_colony/surface/hangar/alpha
 	name = "\improper Aerodrome Hangar 'Alpha'"
@@ -372,7 +361,6 @@
 /area/ice_colony/surface/hangar/beta
 	name = "\improper Aerodrome Hangar 'Beta'"
 	icon_state = "hangar_beta"
-	is_resin_allowed = FALSE
 
 /area/ice_colony/surface/hangar/checkpoint
 	name = "\improper Aerodrome Hangar Security Checkpoint"
@@ -637,7 +625,6 @@
 /area/ice_colony/underground/maintenance/north
 	name = "\improper Underground Northern Maintenance"
 	icon_state = "asmaint"
-	is_resin_allowed = FALSE
 
 /*
  * Underground - Medbay
@@ -698,7 +685,6 @@
 /area/ice_colony/underground/requesition
 	name = "\improper Underground Requesitions"
 	icon_state = "quart"
-	is_resin_allowed = FALSE
 
 /area/ice_colony/underground/requesition/lobby
 	name = "\improper Underground Requesitions Lobby"
@@ -711,7 +697,6 @@
 /area/ice_colony/underground/requesition/sec_storage
 	name = "\improper Underground Requesitions Secure Storage"
 	icon_state = "storage"
-	is_resin_allowed = TRUE
 
 /*
  * Underground - Research
@@ -779,7 +764,6 @@
 	name = "\improper Underground Hangar"
 	icon_state = "hangar"
 	ceiling = CEILING_NONE
-	is_resin_allowed = FALSE
 
 /*
  * Underground - Storage
@@ -797,81 +781,57 @@
 /area/shuttle/elevator1/ground
 	name = "\improper Elevator I"
 	icon_state = "shuttlered"
-	requires_power = TRUE
-	unlimited_power = FALSE
 
 /area/shuttle/elevator1/underground
 	name = "\improper Elevator I"
 	icon_state = "shuttle"
-	requires_power = TRUE
-	unlimited_power = FALSE
 
 /area/shuttle/elevator1/transit
 	name = "\improper Elevator I"
 	icon_state = "shuttle2"
-	requires_power = TRUE
-	unlimited_power = FALSE
 
 /area/shuttle/elevator2/ground
 	name = "\improper Elevator II"
 	icon_state = "shuttle"
-	requires_power = TRUE
-	unlimited_power = FALSE
 
 /area/shuttle/elevator2/underground
 	name = "\improper Elevator II"
 	icon_state = "shuttle2"
-	requires_power = TRUE
-	unlimited_power = FALSE
 
 /area/shuttle/elevator2/transit
 	name = "\improper Elevator II"
 	icon_state = "shuttlered"
-	requires_power = TRUE
-	unlimited_power = FALSE
 
 /area/shuttle/elevator3/ground
 	name = "\improper Elevator III"
 	icon_state = "shuttle"
-	requires_power = TRUE
-	unlimited_power = FALSE
 
 /area/shuttle/elevator3/underground
 	name = "\improper Elevator III"
 	icon_state = "shuttle2"
-	requires_power = TRUE
-	unlimited_power = FALSE
 
 /area/shuttle/elevator3/transit
 	name = "\improper Elevator III"
 	icon_state = "shuttlered"
-	requires_power = TRUE
-	unlimited_power = FALSE
 
 /area/shuttle/elevator4/ground
 	name = "\improper Elevator IV"
 	icon_state = "shuttlered"
-	requires_power = TRUE
-	unlimited_power = FALSE
 
 /area/shuttle/elevator4/underground
 	name = "\improper Elevator IV"
 	icon_state = "shuttle"
-	requires_power = TRUE
-	unlimited_power = FALSE
 
 /area/shuttle/elevator4/transit
 	name = "\improper Elevator IV"
 	icon_state = "shuttle2"
-	requires_power = TRUE
-	unlimited_power = FALSE
 
 /area/ice_colony/landing/console
 	name = "\improper LZ1 'Lazarus'"
 	icon_state = "tcomsatcham"
-	requires_power = FALSE
+	requires_power = 0
 
 /area/ice_colony/landing/console2
 	name = "\improper LZ2 'Underground'"
 	icon_state = "tcomsatcham"
-	requires_power = FALSE
+	requires_power = 0

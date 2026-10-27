@@ -37,9 +37,6 @@
 	blood_overlay.color = b_color
 
 /mob/living/carbon/human/add_blood(b_color = "#830303", blood_flags = BLOOD_ALL)
-	if(b_color == BLOOD_COLOR_XENO || b_color == BLOOD_COLOR_XENO_ROYAL)
-		return FALSE
-
 	if(blood_flags & BLOOD_BODY)
 		if(wear_suit)
 			wear_suit.add_blood(b_color)
@@ -79,6 +76,7 @@
 	blood_color = null
 	if(blood_overlay)
 		overlays.Remove(blood_overlay)
+		blood_overlay = null // so guns will actually be cleaned of blood
 	return 1
 
 /obj/item/clothing/gloves/clean_blood()

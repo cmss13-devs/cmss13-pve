@@ -4,7 +4,7 @@ It's best not to mess with the numbers of the regular access levels because
 most of them are tied into map-placed objects. This should be reworked in the future.*/
 //WE NEED TO REWORK THIS ONE DAY.  Access levels make me cry - Apophis
 #define ACCESS_MARINE_SENIOR 1
-#define ACCESS_MARINE_DATABASE 2
+#define ACCESS_MARINE_GENERAL 2
 #define ACCESS_MARINE_BRIG 3
 #define ACCESS_MARINE_ARMORY 4
 #define ACCESS_MARINE_CMO 5
@@ -43,10 +43,12 @@ most of them are tied into map-placed objects. This should be reworked in the fu
 
 #define ACCESS_MARINE_SYNTH 36
 #define ACCESS_MARINE_ASO 37
-#define ACCESS_MARINE_CHAPLAIN 38
+#define ACCESS_MARINE_FIELD_DOC 38
 
-#define ACCESS_SQUAD_ONE 39
-#define ACCESS_SQUAD_TWO 40
+/// Grants access to Marine record databases
+#define ACCESS_MARINE_DATABASE 40
+/// Grants administrator access to Marine record databases
+#define ACCESS_MARINE_DATABASE_ADMIN 41
 
 // AI Core Accesses
 /// Used in temporary passes
@@ -89,10 +91,6 @@ most of them are tied into map-placed objects. This should be reworked in the fu
 ///WY access given to field executives, like a marine liaison.
 #define ACCESS_WY_EXEC 207
 
-//theta
-#define ACCESS_PMC_SQUAD_ONE 208
-#define ACCESS_PMC_SQUAD_TWO 209
-
 #define ACCESS_WY_PMC 210
 #define ACCESS_WY_PMC_TL 211
 #define ACCESS_WY_ARMORY 212
@@ -102,9 +100,6 @@ most of them are tied into map-placed objects. This should be reworked in the fu
 #define ACCESS_WY_LEADERSHIP 215
 ///Senior leadership, the highest ranks
 #define ACCESS_WY_SENIOR_LEAD 216
-
-#define ACCESS_PMC_GUNNER 217
-
 
 //=================================================
 
@@ -118,17 +113,11 @@ most of them are tied into map-placed objects. This should be reworked in the fu
 #define ACCESS_UPP_FLIGHT 235
 #define ACCESS_UPP_RESEARCH 236
 
-#define ACCESS_UPP_SQUAD_ONE 237
-#define ACCESS_UPP_SQUAD_TWO 238
-
 #define ACCESS_UPP_COMMANDO 239
 #define ACCESS_UPP_LEADERSHIP 240
 ///Senior leadership, the highest ranks
 #define ACCESS_UPP_SENIOR_LEAD 241
 
-#define ACCESS_UPP_MEDPREP 242
-#define ACCESS_UPP_MACHINEGUN 243
-#define ACCESS_UPP_TLPREP 244
 //=================================================
 
 //Colonial Liberation Front access levels (260-289)
@@ -156,30 +145,26 @@ most of them are tied into map-placed objects. This should be reworked in the fu
 #define ACCESS_TWE_FLIGHT 295
 #define ACCESS_TWE_RESEARCH 296
 
-#define ACCESS_TWE_SQUAD_ONE 297
-#define ACCESS_TWE_SQUAD_TWO 298
-
-#define ACCESS_TWE_COMMANDO 300
-#define ACCESS_TWE_LEADERSHIP 301
-
-#define ACCESS_TWE_MEDPREP 302
-#define ACCESS_TWE_ENGPREP 303
-#define ACCESS_TWE_HEVWEAPPREP 304
-#define ACCESS_TWE_SNIPERPREP 305
-#define ACCESS_TWE_TLPREP 306
-
+#define ACCESS_TWE_COMMANDO 299
+#define ACCESS_TWE_LEADERSHIP 300
 ///Senior leadership, the highest ranks
-#define ACCESS_TWE_SENIOR_LEAD 310
+#define ACCESS_TWE_SENIOR_LEAD 301
 
 //=================================================
 
 // Yautja Access Levels
 /// Requires a visible ID chip to open
 #define ACCESS_YAUTJA_SECURE 390
+/// Elites+ only
+#define ACCESS_YAUTJA_ELITE 391
 /// Elders+ only
-#define ACCESS_YAUTJA_ELDER 391
+#define ACCESS_YAUTJA_ELDER 392
+/// Clan Leaders+ only
+#define ACCESS_YAUTJA_LEADER 393
 /// Ancients only
-#define ACCESS_YAUTJA_ANCIENT 392
+#define ACCESS_YAUTJA_ANCIENT 394
+/// Badbloods
+#define ACCESS_YAUTJA_BADBLOOD 395
 
 /// Anything in a tutorial sequence that shouldn't be accessed
 #define ACCESS_TUTORIAL_LOCKED 998
@@ -208,6 +193,8 @@ most of them are tied into map-placed objects. This should be reworked in the fu
 #define ACCESS_LIST_WY_BASE "Wey-Yu (Basic)"
 ///Wey-Yu Corp Security access.
 #define ACCESS_LIST_WY_GOON "Wey-Yu (Goons)"
+///Wey-Yu Corp Sec PPO access.
+#define ACCESS_LIST_WY_PPO "Wey-Yu (PPO)"
 ///Wey-Yu PMCs access.
 #define ACCESS_LIST_WY_PMC "Wey-Yu (PMC)"
 ///Access levels for WY senior leadership
@@ -215,12 +202,7 @@ most of them are tied into map-placed objects. This should be reworked in the fu
 ///All access levels associated with Weyland Yutani
 #define ACCESS_LIST_WY_ALL "Wey-Yu (ALL)"
 
-///Access levels for RMC platoon members
-#define ACCESS_LIST_TWE_TROOP "RMC (Troop)"
-///All access levels associated with the RMC & TWE
-#define ACCESS_LIST_TWE_ALL "TWE (ALL)"
-
-///All the access levels in the civillian category, excluding Press.
+///All the access levels in the civilian category, excluding Press.
 #define ACCESS_LIST_COLONIAL_ALL "Colonial (ALL)"
 ///Used by the Wey-Yu - Civil Authority Liaison
 #define ACCESS_LIST_CIVIL_LIAISON "Colonial (Liaison)"
@@ -229,7 +211,6 @@ most of them are tied into map-placed objects. This should be reworked in the fu
 
 ///All access levels associated with UPP
 #define ACCESS_LIST_UPP_ALL "UPP (ALL)"
-#define ACCESS_LIST_UPP_PLATOON "UPP (Platoon)"
 
 ///Generic/basic access to CLF stuff
 #define ACCESS_LIST_CLF_BASE "CLF (Basic)"

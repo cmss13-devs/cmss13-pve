@@ -24,9 +24,6 @@
 ///from /atom/hitby(): (atom/movable/AM)
 #define COMSIG_ATOM_HITBY "atom_hitby"
 
-///from /turf/ChangeTurf
-#define COMSIG_ATOM_TURF_CHANGE "movable_turf_change"
-
 //from atom/set_light(): (l_range, l_power, l_color)
 #define COMSIG_ATOM_SET_LIGHT "atom_set_light"
 
@@ -47,29 +44,6 @@
 ///When the transform or an atom is varedited through vv topic.
 #define COMSIG_ATOM_VV_MODIFY_TRANSFORM "atom_vv_modify_transform"
 
-/// From /mob/living/carbon/human/UnarmedAttack()
-#define COMSIG_ATOM_BEFORE_HUMAN_ATTACK_HAND "atom_before_human_attack_hand"
-	#define COMPONENT_CANCEL_ATTACK_HAND (1<<0)
-
-/// From /mob/proc/click_adjacent()
-#define COMSIG_ATOM_MOB_ATTACKBY "atom_mob_attackby"
-	#define COMPONENT_CANCEL_ATTACKBY (1<<0)
-
-/// From /atom/proc/attack_hand()
-#define COMSIG_ATOM_ATTACK_HAND "atom_attack_hand"
-
-/// From /datum/action/item_action/rto_pack/use_phone/action_activate()
-#define COMSIG_ATOM_PHONE_BUTTON_USE "atom_phone_button_use"
-
-/// From /datum/component/phone/proc/picked_up_call() and /datum/component/phone/proc/post_call_phone()
-#define COMSIG_ATOM_PHONE_PICKED_UP "atom_phone_picked_up"
-/// From /datum/component/phone/proc/recall_handset()
-#define COMSIG_ATOM_PHONE_HUNG_UP "atom_phone_hung_up"
-/// From /datum/component/phone/proc/call_phone()
-#define COMSIG_ATOM_PHONE_RINGING "atom_phone_ringing"
-/// From /datum/component/phone/proc/reset_call()
-#define COMSIG_ATOM_PHONE_STOPPED_RINGING "atom_phone_stopped_ringing"
-
 /// Called when an atom has something mouse dropped on it, from /client/MouseDrop: (atom/dropped_on)
 #define COMSIG_ATOM_DROPPED_ON "atom_dropped_on"
 
@@ -78,3 +52,7 @@
 
 /// Called when an atom has emp_act called on it, from /atom/emp_act: (severity)
 #define COMSIG_ATOM_EMP_ACT "atom_emp_act"
+
+/// Called when an atom is crossed by a movable atom
+#define COMSIG_ATOM_CROSSED "atom_crossed"
+

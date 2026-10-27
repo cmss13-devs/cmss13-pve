@@ -1,316 +1,302 @@
 2025-07-01:
-  AlanParkerMasters:
-  - rscadd: follow menu option for infected players
-  Blacklist897:
-  - rscadd: ' The USCM has allowed the limited Issue of MS-11 smart refill tanks'
-2025-07-02:
-  Blacklist897:
-  - spellcheck: removed a extra bracket
-  Max-023:
-  - rscadd: UPP patrol cap, boonie, ushanka, uniform patches, and service jacket are
-      all added to the loadout menu with UPP origin requirements.
-  The32bitguy:
-  - balance: Concentrated Adrenaline now heals a large amount of oxygen damage instead
-      of causing it, and acts as the strongest painkiller. The heart damage it causes
-      has been increased.
-  - bugfix: Concentrated Adrenaline now properly prevents knockouts and immobility
-      due to critical health.
-2025-07-03:
-  BonniePandora:
-  - bugfix: Crew Manifest works for non-USCM factions
-  - ui: Removes a few unused buttons on the main menu
-  - balance: 9mm on the whole has slightly higher AP than before in both pistol &
-      SMG form. Damage equalised between the two forms too
-  - balance: .45 has lost it's positive AP, now having (slightly) worse than 9mm but
-      with more damage to make up for it
-  - balance: The hipower/HG-45 has lost it's insane AP value of 25, now dialled back
-      to a more reasonable 10 for the lesser damage it dealt per bullet
-  - balance: .44 rounds deal slightly less damage but have AP on par with the HG-45's
-      rounds, .357 does less damage but has slightly higher AP & bullet-speed
-  - balance: The nagant-revolver calibre used by the UPP revolver has been adjusted,
-      sitting between ,44 & .357 in terms of damage & AP
-  - balance: The MP7's rounds do less damage but have AP now
-  - balance: The PPSH type rounds have been brought closer together in terms of stats
-  - balance: The Viper 9/M39 once more uses the actual SMG rounds in it's magazines
-  - rscadd: The M10's squad optic visor, M56 gunsight eyepiece, M42 scout sight, M49A
-      battle-sight, Mk4 Battlemedic sight, M5 camera gear and all relevant subtypes
-      now function as the a means to see allied-faction HUD icons.
-  - rscadd: The M42A, M42C, UPP commando NVGs and M56 gunsight optic now offer corresponding
-      faction HUDs, for those who run those kinds of eyepieces without a helmet. Many
-      of them will also offer a camera for OW units to observe through the wearer
-  - rscadd: Faction subtypes of the M5 cam-gear, PMC, TWE & UPP
-  - rscadd: Synthetic headset subtypes for PMC, UPP & FORECON ones, bringing them
-      in-line with the USCM one
-  - rscadd: Subtypes of the crew monitor tablet, in UPP & PMC flavours
-  - rscadd: CMB faction HUD
-  - qol: Many HUD sources will give the squad HUD info of allied factions, so USCM
-      can see USASF & Army and PMC can see the TWE/WY ones
-  - qol: The USCM medical vendors have recieved a new category for a combi squad &
-      medical HUD eyepiece. The USCM LT of the Garrow recieves one in their office
-      too
-  Pandora029:
-  - balance: The M402 mortar & rangefinding functions can now be used on the ship
-      map, so long as the ceiling isn't too tough
-  - balance: Laser designators can now laze targets that are under a roof, so long
-      as the user themselves are in the open
-2025-07-04:
-  Ediblebomb:
-  - spellcheck: Changes the name of the armor attachments in the vendor UI to be the
-      same as the item.
-  MistChristmas:
-  - bugfix: Edit Hotkey's search bar is case-insensitive.
-  MistChristmas, Drathek:
-  - rscadd: Languages use '!' prefix instead of sharing prefixes with Radio Channels.
-      Provost channel changed to '#l'.
-  - code_imp: Re-org RADIO_PREFIXES, langauges, and department radio keys into mostly
-      alphabetical order. Remove Uppercase instances. Add missing colours for tgui
-      say.
-  - qol: Languages pop up in TGUI-say if you switch to them whilst not being on a
-      radio channel
-2025-07-05:
-  BonniePandora:
-  - bugfix: Click-delay put back in place for items
-  - bugfix: Reverts two PRs that introduced issues
   Drathek:
-  - code_imp: Corrected many cases where code would override the built in var caller
-  - code_imp: Corrected a couple usages of usr in yaut bracer code
-  Merrgear:
-  - rscadd: re-adds various berets to pointbuy
-  Mikrel0712, Molto, Kugamo, Drathek, Red-Byte3D:
-  - rscadd: Devour Removed, Replaced with Haul
-  MistChristmas:
-  - bugfix: Fixes a unclosed html tag. Murders the rest of the html bold tags with
-      SPAN_BOLD
-  - spellcheck: Made total upper and/or lower body bleeding more unique.
-  MistChristmas, Git-Nivrak:
-  - bugfix: fixed an RTO Bag crash. Fix phone_ids generating as non-unique and causing
-      weird TGUI stuff later.
-  - maptweak: Medical Bay no longer called Hypersleep Bay. Medical Bay phone no longer
-      called Supply Bay. APC/ARC Interirors with phones have names and categories.
-  - code_imp: Phone Spawners killed. And replaced by just mapping in the phone.
-  joookschad:
-  - rscadd: Added Polish.
-  lordloko:
-  - balance: Changed prices and items of the UPP cigarette vendor
-  nauticall, private-tristan, realforest2001:
-  - rscadd: Adds CIA, with TWE and UA Rebel Presets under "Sapper". As well as Intelligence
-      Liaison Officer, MARSOC, and Generic Civvie, and UPP Rifleman and UPP Senior
-      Lieutenant
-  - rscdel: Removes UAAC-TIS
-  - bugfix: Portable Vendors are now scrollable
-2025-07-07:
-  BisLordLoko:
-  - rscadd: Added a few cosmetic hats to the FORECON uniform vendor
-  - bugfix: Removed duplicated cosmetic items from the FORECON vendors
-  CactusMouth:
-  - rscadd: Adds the Razorwire, new defensive tool.
-  Ediblebomb:
-  - qol: UBGLs now eject grenades into your offhand if it is open.
-  KoishiVibe:
-  - rscadd: new bimex sunglasses variant
-  MistChristmas:
-  - bugfix: TGUI will recognise the polish prefix which is p again "!p". Also fixes
-      TSL and Rus Patois not being recognised by TGUI, also removes and extra space
-      no one would ever actually notice from Radio Menu.
-  UntoldTactics:
-  - rscadd: Adds the M3-VL flak vest and M70 flak vest as choices to the synthetic
-      clothing vendor.
-  - rscdel: Removes the synthetic utility vests as choices from the synthetic clothing
-      vendor.
-2025-07-10:
-  AndroBetel:
-  - rscadd: Poison tooth implant and surgery.
-  - rscadd: Reworked XM51 breaching scattergun into M1771 16 gauge shotgun.
-  BisLordLoko:
-  - balance: Switches the USCM CO preset's beret for service peaked cap
-  Ediblebomb:
-  - qol: Ammo counters now count the round in the chamber.
-  - rscadd: E-tools are now sharp.
-  stalkerino:
-  - rscadd: Adds new hairstyles to the game
-2025-07-11:
-  Ediblebomb:
-  - rscadd: Readds autodoc automatic mode
-  - qol: You can now use autodocs regardless of surgical skill, however, you can only
-      use automatic mode if you don't meet the skill requirements
-2025-07-12:
-  AndroBetel:
-  - bugfix: UACG headsets properly display Marshalls HUD
-  BonniePandora:
-  - balance: VAI & Freelancer gear presets adjusted,
-  - balance: Weapon-chances for TWE & UA rebels have been tweaked
-  - balance: hAI view range has been tweaked slightly and their action-delay doubled
-  - qol: Last vestiges of anglicized UPP ranks/job titles should be handled now
-  - bugfix: UPP squad lead's lesser rank preset matches the naming standards of other
-      ones now
-  - bugfix: gives the USCM pilot helmet the right visor-type
-  - bugfix: Humans given the ventcrawl verb can do so once more
-  - balance: Smartgun armor imparts a greater slowdown, but the aim slowdown when
-      wielding the smartgun itself is lessened slightly
-  - rscadd: New cheese-slice items and a box full of them
-  - rscdel: Universal Enzyme from the long-life foodstuff locker and galley vendors
-      main stock
-  - imageadd: New sprites for the kruft slices
-  - qol: Halves the slowdown duration when breaking off of bipoding
-  - qol: Ups the fire-rate of the M41 HPR, tweaks to the full-auto scatter mod too
-  - qol: The HPR can now take M41A (mk1) magazines
-  - balance: As above, given that's a balance thing too
-  - bugfix: Makes it so the HPR bipod being deployed and retracted doesn't leave the
-      weapon in a worse state stats-wise than it was prior
-  - rscadd: The SIM-118 Hornet & EMBLR-92 Goose anti air weapons
-  - imageadd: Sprites for the above, along with a UPP rocket-bag (currently unused)
-  Max-023:
-  - rscadd: Civilian Jungle Boots to loadout menu
-  - rscadd: Service cap, Operations cap, and laceup shoes to PltCo locker
-  - balance: Changes standard USCM boots to be the black variant, not jungle
-  SpartanBobby:
-  - rscadd: Adds multiple factions to the create HAI panel
-  - rscadd: Create HAI machinegunner, a copy of create sniper code containing machinegunners
-      instead
-  - rscadd: Removes zombies ability to infect with claws, makes them take longer to
-      revive
-  - balance: Changed M42C from AT rifle into a more AVP2010 Accuracte DMR
-  - balance: Added more ammo choices for M42C, Basic, flak, incin, HEAP, Overkill
-      (How it used to work)
-  The32bitguy:
-  - rscadd: Added a Health Analyzer stylized after the portable ECG in the Aliens(1986)
-      film. The "health diagnostic equipment"/HD-E automatically records and can print
-      scan results, makes heart monitor sounds according to the health of the human
-      it is connected to, requires connecting ECG leads like blood bags and is larger.
-  - rscadd: Replaced the space left by the OG HF2 in first aid kits with medical items
-      related to the kits purpose. Blood bags in Advanced first aid kits. Dermaline
-      injectors in fire first aid kits. Etc
-  - rscadd: Add saline bags. The first aid equivalent to blood bags. They very slowly
-      restore blood and reduce toxin damage.
-  - rscadd: Blood bags can now inject all reagents when connected.
-  - rscadd: Blood bag IV lines are coloured according to their contents.
-  - rscadd: Gas masks to most medical vendors.
-  - rscdel: Most spawns of OG HF2 from regular, not powerful equipment presets.
-  - rscdel: Spawns of OG HF2 from first aid kits and Nanomeds.
-  - balance: Reduce spawns of the HD-E in medical item vendors.
-  - ui: Updated the setting of the health analyser to print the scan readout to be
-      in parity with the TGUI dialog.
-  - ui: Ported Minimal HUD for health analyser.
-  - soundadd: Added sounds for the HD-E. Five increments of heart monitor beeping
-      and an oxygen saturation alarm.
-  - imageadd: Added icons for the HD-E by dimdach. Onmob sprites for various medical
-      stacks and items.
-  - maptweak: Replace OG HF2 spawns with the HD-E
+  - rscadd: Fun facts are now randomized (meaning just mentions first player meeting
+      a minimum is mentioned - not a top stat) and are only displayed for currently
+      connected players
+  TheKillfish:
+  - code_imp: Xeno Spit now uses xeno_cooldown var, like a normal ability.
+  - rscdel: Deletes now-useless vars related to Xeno Spit cooldown
+2025-07-02:
+  Drathek:
+  - balance: Base prae acid spray no longer has a windup
+  FebrezeNinja:
+  - bugfix: Medical's fax machine now properly alerts :m on receipt of priority fax.
+  - bugfix: 'Changes other department fax machines to correspond with #9804'
+  Red-byte3D:
+  - bugfix: Predator taps aka TRAIT_INTERFERENCE now stops xenos from devolving and
+      transmuting, so they dont bug themselves out forever.
+  - imageadd: Radial icons for up and down.
+  - rscadd: Radial menu for ladders, being presented for going up and down has never
+      looked better
+  - bugfix: Praetorian strains now properly get their acid removed
+  - bugfix: Your patients now need a head if you want to attach the anasthetic mask
+      on them
   Zenith:
-  - rscadd: Pilot helmet visors to the pilot helmet
-  - bugfix: Gives the pilot helmet the right kind of visor
-  - spellcheck: Small typo in pilot helmet specialization var
-  - soundadd: New opening & closing sounds for the pilot visors
+  - bugfix: Fixes a mistake from a previous PR that had overwritten a RMC helmet for
+      the spec.
+  - rscadd: Adds Paramedic survivors to appropriate maps, adds civilian/unique presets
+      to NV, replaced NV "Miner" with "KMCC" preset.
+  ihatethisengine:
+  - balance: HPR doesn't require bipod for full auto, no longer spawns with one
+  matttheficus, harryob:
+  - ui: XM88 custom crosshair is now blue.
+  stalkerino:
+  - bugfix: fixes access for CO surv on solaris ridge and radio
+  tallfission:
+  - bugfix: large general pouch can no longer hold engineering toolkits
+2025-07-03:
+  Zenith00000:
+  - bugfix: fixes sand & mud_corners & edges, stops them from being deleted from explosions.
+  - maptweak: various very minor tweaks to Hybrisa & Soro, with lot's of decal tidying
+      up on Hybrisa specifically.
+  - imageadd: added stain & goo icons, which were previously only var edits, now should
+      work as originally intended.
+2025-07-05:
+  Detective-Google:
+  - bugfix: Fixed the ritual knife onmob sprite.
+  - admin: Logging for BEs is updated
+  stalkerino:
+  - balance: disables cade anchoring on almayer, except sandbags
+  - rscadd: Barricades and handrails now properly layer even when unanchored, and
+      instead pixel shift when unanchored
+  - bugfix: Barricades can no longer be pushed behind a blocking atom/mob
+  - bugfix: Added missing bitfields for AREA_YAUTJA flags
+2025-07-06:
+  Drathek:
+  - bugfix: Fixed a few cases of capitalized channels not working
+  FebrezeNinja:
+  - bugfix: Fixed a typo in the fax sprite sheet
+  - bugfix: Fixed the portable fax machine's identification being random every time
+      it was deployed
+  - bugfix: Fixed the portable fax causing sprites to temporarily morph
+  - qol: Moved the portable fax to the USS Almayer department and gave it a name.
+  Jesters-Ballad:
+  - qol: Spotter's spotting changed to Spec Ability 2 for smoother use of both spotting
+      and cloaking as a spotter.
+  MistChristmas:
+  - ui: Sentry Computer's CRT theme won't scroll away.
+  Red-byte3D:
+  - bugfix: Fixes some brute message being sent to everyone instead of self
+  SRG3124, Thwomper:
+  - rscadd: Added four new jackets for the CC to wear.
+  - bugfix: fixed the RMC Service Obj sprite being different from it's worn sprite
+  Zenith:
+  - bugfix: added both Hyperdyne & the IASF to the follow menu.
+  - imageadd: addeded iasf background icon & swapped around CO squad_menu icon to
+      gold.
+  nyozzl:
+  - rscadd: Added mess tent
+  realforest2001:
+  - rscadd: Infected follow category is now split between hives.
+2025-07-10:
+  Red-byte3D:
+  - code_imp: Xenomorph markers can now be put into different z levels
+2025-07-11:
+  matttheficus:
+  - bugfix: Field Doctor now counts hours towards the Doctor Roles timelock.
+2025-07-12:
+  jupyterkat:
+  - imageadd: added sharp operator hud icon and map icon
+2025-07-13:
+  Red-byte3D:
+  - rscadd: Adds in more radial menus for ladders including grenade throwing, looking
+      up and ghosts
+  tallfission:
+  - balance: Synthetic reset keys now spawn on all in-rotation groundmaps
+  - balance: A synthetic reset key starts in the Almayer's medical bay, in one of
+      the backrooms
+  - maptweak: Fiorina Science Annex has 2% more powercreep (synthetic vest)
+2025-07-14:
+  Drathek:
+  - bugfix: Fixed the possibility of fax machines sending faxes on cooldown and ejecting
+      paper when there is no paper
 2025-07-15:
-  AndroBetel, Dimdimich:
-  - rscadd: Replaced Type 71s with a new pulse carbine in CANC Grunt preset
-  - rscadd: Replaced Type 88s with the DMR version of a pulse carbine in CANC Sniper
-      preset
-  - rscadd: Minor aesthetic adjustments for CANC presets
+  DarkLordCabbage:
+  - balance: Changes one of the XO's timelock requirements from being 20 hours of
+      ASO or SO to just 20 hours of SO
+  - bugfix: fixed a bug where dog tags couldn't be retrieved from bursted/headless
+      bodies until 5 minutes had passed.
+  - balance: adds dexalin plus and oxycodone to the pressurized reagent canister chem
+      dispensers.
+  - qol: trying to use a hand labeler on closed crates no longer opens them
+  - bugfix: fixed being unable to label wooden crates
+  Detective-Google:
+  - maptweak: USS runtime testing map has been expanded for multiz testing
+  - bugfix: BRUTE rockets no longer malfunction at max range.
+  Drathek:
+  - code_imp: Removed depreciated url-loader for tgui
+  - bugfix: Fixed tgui kitchen sink theme and tab stories
+  - bugfix: Fixed issue with pngs not properly inlining with rspack
+  - bugfix: Fixed clean build scripts not actually cleaning rspack
+  FebrezeNinja:
+  - qol: Cryo Cell's auto-eject now waits for Toxin damage to heal
+  MistChristmas, Drathek:
+  - bugfix: fixed TGUI search crashes
+  Thwomper:
+  - rscadd: New M37A1 sprites as Marine standard issue shotgun.
+  Venuska1117:
+  - balance: Healer Drone "Sacrifice" ability now extinguish and remove debuffs.
+  Zenith:
+  - soundadd: added some sounds for the CLF large flags
+  - imageadd: added new CLF hand-held flags
+  - imageadd: added new CLF large flags
+  - imageadd: added new CLF sentry sprites
+  - maptweak: added large CLF and some handheld CLF flags to each CLF insert.
+  - rscadd: Adds many new clothing into the CL's wardrobe.
+  - imageadd: replaced shiva_floor.dmi icons with new updated, modern CM style icons.
+  lanse12:
+  - qol: face slot bayonet can now be equipped with keybinds
+  - balance: clf survs spawn with the iron teeth trait and guerillas spawn with bayonets
+      in their mouths
+  mullenpaul:
+  - ui: added z-level filter buttons to orbit menu
+  realforest2001:
+  - bugfix: ASB ammunition for Pyro Spec and Scout Spec now drop the correct contents.
+  - rscdel: Dropship walls and other solid turfs cannot be weeded. This does not affect
+      dropship internals.
 2025-07-16:
-  Ediblebomb:
-  - bugfix: Non-USCM factions can now pick the "magazine" item.
-  Memefist:
-  - rscadd: Adds a new eye drops item to the loadout selection
-  Yorkoh:
-  - rscadd: New minimap color define, MINIMAP_ROAD. it's a light grey
-  - bugfix: asphalt turf now references this new minimap color
-2025-07-18:
-  AndroBetel:
-  - rscadd: FORECON HPR variant to their ship.
-  - rscadd: Some armor accessories variation to FORECON vendors
-  - rscdel: Removed camo comforming uniform option from FORECON vendor
-  - bugfix: Fixed modified M79's scope attachment incorrectly appearing visible.
-  BonniePandora:
-  - rscadd: US Army squad datum
-  - rscadd: New descriptions & names for the US army armor & helmet
-  - qol: Army mobs will no longer have a chance to spawn with lamarr or MARSOC NVGs
-      in their helmet garb
-  - qol: Made some of the gear preset equipping procs a little less naff
-  - spellcheck: Couple small typos caught and corrected as I worked on this
-  - imageadd: New armor brigade patch & army webbing sprites, revamped army helmet
-      sprite
-  - imageadd: Recoloured army squad icons
-  Generalcamo:
-  - bugfix: USCM Corpsman sight selection no longer conflicts with backpacks
-  - bugfix: USCM Forecon Corpsman sight selection no longer conflicts with backpacks
-  Max-023:
-  - rscadd: 2 Operations cap entries into the preference screen, one for green and
-      the other for tan
-  - rscadd: 2 Operations cap entries into the squad prep machinery, ditto
-  - rscadd: Old patrol caps now properly are referenced as 'utility' caps.
+  MistChristmas:
+  - bugfix: Tactical Sign Language not registering for TGUI
+  - ui: Sentry computer % sign for power level uses a different font that looks better.
+      Radio menu gets a little more formatting
+  Unknownity:
+  - rscadd: Synthetic Survivors now gain access to the civilian only section of the
+      loadout gear and are able to spawn with it. Wear those Weyland or Hyperdyne
+      patches proudly! Disclaimer, this does not apply to all of their variants.
+  - bugfix: Fixed PMC,CMB and FORECON survivors having the civilian origin, they now
+      have the closest appropriate origin instead.
+  realforest2001:
+  - balance: Locking the dropship as Queen now takes 5 seconds.
+  stalkerino, zenith:
+  - rscadd: adds the leg pouch from pve as a 5 slot webbing resprite
+  - rscadd: gives co the intel satchel, and chestrig  option rather than only the
+      backpack
+  - rscadd: gives insulated black gloves option to POs too
+2025-07-17:
+  Drathek:
+  - balance: Queen now matures on hijack launch so there isn't reason for delay
+  - balance: Early game queen is now temporarily mature when near the hive core (1
+      minute timer that refreshes while close or when getting shot)
+  - code_imp: Added missing undefs for queen and removed a few redundant checks for
+      refreshing the choose resin ability
+2025-07-19:
+  Drathek:
+  - bugfix: Fix db backend for playtime sometimes recording the gamemode type instead
+      of mob type
+  Red-byte3D:
+  - bugfix: Tac reload now only works if the magazine is in your hand or inventory.
+  - bugfix: You will now only put items on conveyor belts when not on harm intent.
 2025-07-20:
-  CactusMouth:
-  - rscadd: Added UACG Variants
+  Drathek:
+  - rscadd: Added flavor text inserts for bloodtype, rank, and name.
+  - bugfix: Fixed a runtime with lessers on death
+  - rscadd: Added missing implementations for transform and enumerations in Filteriffic
+  - bugfix: Fixed multiple crash causes in Filteriffic e.g. opening displacement at
+      all
+  - bugfix: Fixed multiple crash causes in particle editor e.g. touching gradients
+      or transform at all
+  - qol: When picking icons in VV Filteriffic or Particle editor, you can now specify
+      just a dmi path, and in the case of Filteriffic customize the icon paramters
+  - code_imp: Moved matrix identities to a define file and ported a filter qdel check
+      from TG
+  - rscadd: Fun facts can now have whitelist/blacklists for role and faction. Namely
+      this now prevents lessers and huggers from generating fun facts, and larva from
+      generating kills fun facts (burst)
+  - bugfix: Fixed various eye protection runtimes
+  - code_imp: Death statistics are no longer deleted since GLOB.round_statistics holds
+      on to them
+  Red-byte3D:
+  - bugfix: You can now fire underbarrel extuingishers on flamers when they are not
+      loaded again
 2025-07-21:
-  AndroBetel:
-  - rscadd: Crusher may now enter the scene through the wall.
-  Ediblebomb:
-  - rscadd: Adds butterfly knives to loadout item selection.
-  - maptweak: UPP loadout lockers no longer have items you didn't select in them.
-      UPP berets also now spawn in said lockers instead of on heads.
-  lordloko:
-  - rscadd: New USASF Infantry Presets and Human AI squads
-  - rscadd: New USASF combat uniform
-  - rscadd: New USASF rifle variant
-  - rscadd: New USASF armor variants
-  - bugfix: fixed LatAm Marshals subtypes spawning with English names
+  Zenith:
+  - bugfix: fixed some preset issues with radios spawning in nullspace on the SOF
+      insert for Soro.
+  tallfission:
+  - imageadd: rolled sleeve icons for CMB SWAT uniforms
 2025-07-22:
-  BonniePandora:
-  - balance: Battle-medic sight gets a skill-requirement to use
-  - bugfix: Visors no longer throw a runtime when toggled off
-  - bugfix: Army visors no longer keep their basic med-hud active despite visor's
-      being toggled off
+  Blundir:
+  - rscadd: M79 been renamed and resprited into M85A1
+  Red-byte3D:
+  - bugfix: Lizards will no longer attack xenos in tunnels
+  Unknownity:
+  - bugfix: Fixed bugged survivor spawns due to origins.
+  - rscadd: Added three new origins, WY, TWE and the CMBs. WY has three sub origins,
+      the corporate default, goon security and the PMCs. Added the origins to the
+      respective gear presets that would have them.
+  jupyterkat:
+  - bugfix: fixed bullets disappearing if you shoot the above or below zlevels from
+      some angles
 2025-07-23:
-  AndroBetel:
-  - rscadd: UPP double-barrel hunting shotgun.
+  Red-byte3D:
+  - bugfix: Queens can now watch leaders through "watch leaders" properly.
+  - bugfix: Queens can now weed through the queen eye, the same map level they are
+      on regardless of z level.
+  dadlips:
+  - bugfix: fixes the revolver iff scope bug
+  jupyterkat:
+  - bugfix: you now stop looking up on zlevel transitions
+  - bugfix: you can no longer look up ladders from half a screen away
+  kiVts:
+  - bugfix: Patched a chemical simulator exploit
 2025-07-24:
-  BonniePandora:
-  - rscadd: New FORECON gear presets for props, both light(survivor) and kitted(normal)
-  - rscadd: The M39 SMG returns as a military-service weapon, a subtype of the Viper
-      9 meant for use by Recon units as a sidearm/backup weapon
-  - rscadd: A FORECON-preset only variant of the M49A that sports a slightly better
-      fire-rate & 2-shot burst fire, but fires slower than the A5 custom variant and
-      can't chamber any of the A19 mags
-  - rscadd: New variant of the M48A modernized M1911 for the FORECON CO, chambered
-      in .45 super. Still accepts .45 ACP mags too
-  - rscdel: Removed the old presets
-  Ediblebomb:
-  - rscadd: Gives the PMC SG helmet BLOCKGASEFFECT
-  Yorkoh:
-  - balance: Slight improvement to Type71 ROF
-  - balance: Reduced Type71 scatter
-  - spellcheck: Formatting text in pkp aka gpmg description to align it with other
-      weapon descriptions
-  - balance: Slight improvement to pkp aka gpmg full auto max scatter
-  - rscadd: introduced full auto scatter peak to pkp aka gpmg (40 rounds which is
-      x10 default)
+  Venuska1117:
+  - rscadd: 'New Hivelord strain: Designer'
+  - rscadd: New plasma type called "Nutrient" that can be used in research.
+  - code_imp: Changed Hivelord resin walker ability from behavior_delegate to be ability
+      only, now it consumes correctly 30 plasma every 2 seconds instead of 10 plasma
+      every 2 seconds.
 2025-07-25:
-  AndroBetel:
-  - rscadd: GMs can now spawn humans via paradrop. Look to the skies!
-  CactusMouth:
-  - code_imp: Fixes UACG faction alliances to not shoot allies
-  MistChristmas:
-  - balance: IA made free. MB/KD Pill form price increased to 60. NW, D+, Fe Price
-      decreased to 30. Bottles that had 135 have been bumped to an even 140.
-  - bugfix: Health HUD making -100 crit people look dead.
-  - imageadd: Used the -50 HUD to make a -100 that's just blinking faster
+  Willzadl:
+  - bugfix: requisition line tutorial now uses the brute warhead and m37a1 instead
+      of the XM51 mag and m37a2
+  thevandie:
+  - rscadd: Added two new pistols, the Action and Whisper
+  - rscdel: Removed the old holdout pistol and replaced it with the Action and Whisper
+  - soundadd: Added a new firing sound for the Action pistol
+  - imageadd: Added new sprites for the Whisper and Action pistols, including Inhands
+  - imageadd: Added a new sprite for the Action pistols magazines
+  - imagedel: Deleted the old Holdout Pistol sprite
 2025-07-26:
+  Drathek:
+  - bugfix: Fixed pheros helping banished xenos
+  - balance: Banishment damage now ignores armor
+  - code_imp: Cleaned up some of handle_pheromones
+  FishyFlaps2024:
+  - rscadd: Adds research access to ASO
+  - rscadd: Adds research skill to ASO
   MistChristmas:
-  - rscadd: Harm intent forces normal gun firing. Such as full auto. Except Shotguns.
-      Grab intent still PBs.
+  - bugfix: Nightmare disposal pipes no longer end up with null icon_states on load.
+  Red-byte3D:
+  - rscadd: You can now use a custom "glove" cursor from preferences by clicking the
+      "use custom cursors" in preferences tab. Theres a cursor for each faction
+  - bugfix: You can no longer paradrop to outside of the map.
+  Unknownity:
+  - rscadd: Adds an upgraded autodoc to the Yautja ship and upgrades their sleepers.
+  Venuska1117:
+  - bugfix: Swap Designer macros of Place Design and Change Design ability.
+  Willzadl:
+  - rscadd: Nested predators will now be stabilized
+  cuberound:
+  - bugfix: reduces AP GAU ammo spread to 3 tile from 4 as intended
+  jupyterkat:
+  - bugfix: look up is a toggle again
+  rattybag:
+  - rscadd: adds alt click to sinks and hydro trays
 2025-07-28:
-  AndroBetel:
-  - rscadd: Adds pilot visors to marine loadout selection.
-  CactusMouth:
-  - rscadd: Insurgent/UACG Armored Van
-  - imageadd: Added sprites for Armored Van
-  Max-023:
-  - rscadd: Added extra ammo dum to Smartgun Lockers
-  - rscdel: Removed ammo drum from the stored smartguns
-  Yorkoh:
-  - maptweak: new locker area added to chapaev lower deck
-  - balance: PDT power draw has dropped from 10+50 to 1+4
+  ghostsheet:
+  - bugfix: Throwing guns no longer breaks their sprites.
+  jupyterkat:
+  - bugfix: fixed look up
+  - qol: made it clear that you can throw nades and drag click to look into ladders
+      on the examine text
+  - qol: unlit flares thrown up/down ladders are now lit
+  - qol: you now instantly stop looking at ladders when you move
+  private-tristan:
+  - balance: The last living xeno is now fully healed, but is unable to heal/rest
+      at all. FIGHT AND DIE.
+  realforest2001:
+  - bugfix: Fixes duplicate entries in infected follow menu.
+  yackemflam:
+  - qol: You can make sausages with raw ingredients now. Why on earth would you make
+      sausage with cooked casings and fillings?
 2025-07-29:
-  Max-023:
-  - rscadd: M1 Multi-spectrum Visor, replacing the M2 goggles in the loadout menu
+  TheGamerdk:
+  - rscdel: Removed an outdated first name
+  kiVts:
+  - bugfix: You can unrest as the last xeno
+2025-07-31:
+  SRG3124, Geeves, Frans_Feiffer:
+  - rscadd: Added a Riot Visor for MP's
+  Stakeyng:
+  - balance: the pistol toolbelt can hold anything its pistolless sister can.

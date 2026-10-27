@@ -1,7 +1,7 @@
 /obj/item/tool/crew_monitor
 	name = "crew monitor"
-	desc = "A tool used to get coordinates to deployed personnel."
-	icon = 'icons/obj/items/experimental_tools.dmi'
+	desc = "A tool used to get coordinates to deployed personnel. It was invented after it was found out 3/4 command officers couldn't read numbers."
+	icon = 'icons/obj/items/devices.dmi'
 	icon_state = "crew_monitor"
 	flags_equip_slot = SLOT_WAIST
 	w_class = SIZE_SMALL
@@ -22,44 +22,12 @@
 
 /obj/item/tool/crew_monitor/dropped(mob/user)
 	. = ..()
-	SStgui.close_uis(src)
-
-/obj/item/tool/crew_monitor/upp
-	name = "\"Dísir\" lifesigns monitor"
-	faction = FACTION_UPP
-
-/obj/item/tool/crew_monitor/pmc
-	name = "operative wellbeing monitor"
-	faction = FACTION_PMC
-
-/obj/item/tool/signal_tracker
-	name = "Signal Tracker"
-	desc = "A tool used to track signals and the user's distance to them."
-	icon = 'icons/obj/items/experimental_tools.dmi'
-	icon_state = "crew_monitor"
-	flags_equip_slot = SLOT_WAIST
-	w_class = SIZE_SMALL
-	var/datum/radar/signal_tracker/radar
-
-/obj/item/tool/signal_tracker/Initialize(mapload, ...)
-	. = ..()
-	radar = new /datum/radar/signal_tracker(src)
-
-/obj/item/tool/signal_tracker/Destroy()
-	QDEL_NULL(radar)
-	. = ..()
-
-/obj/item/tool/signal_tracker/proc/handle_signal_deletion()
 	SStgui.close_uis(radar)
-
-/obj/item/tool/signal_tracker/attack_self(mob/user)
-	. = ..()
-	radar.tgui_interact(user)
 
 /obj/item/clothing/suit/auto_cpr
 	name = "autocompressor" //autocompressor
 	desc = "A device that gives regular compression to the victim's ribcage, used in case of urgent heart issues.\nClick a person with it to place it on them."
-	icon = 'icons/obj/items/experimental_tools.dmi'
+	icon = 'icons/obj/items/medical_tools.dmi'
 	icon_state = "autocomp"
 	item_state = "autocomp"
 	item_state_slots = list(WEAR_JACKET = "autocomp")
@@ -74,6 +42,9 @@
 	var/pump_cost = 20
 	var/obj/item/cell/pdcell = null
 	movement_compensation = 0
+	item_icons = list(
+		WEAR_JACKET = 'icons/mob/humans/onmob/clothing/suits/objects.dmi',
+	)
 
 /obj/item/clothing/suit/auto_cpr/Initialize(mapload, ...)
 	. = ..()
@@ -202,11 +173,31 @@
 			pdcell.use(pump_cost)
 			update_icon()
 			return
+		else if(H.is_revivable() && H.stat == DEAD)
+			if(H.cpr_cooldown < world.time)
+				H.revive_grace_period += 7 SECONDS
+				H.visible_message(SPAN_NOTICE("<b>\The [src]</b> automatically performs <b>CPR</b> on <b>[H]</b>."))
+			else
+				H.visible_message(SPAN_NOTICE("<b>\The [src]</b> fails to perform CPR on <b>[H]</b>."))
+				if(prob(50))
+					var/obj/limb/E = H.get_limb("chest")
+					E.fracture(100)
+			H.cpr_cooldown = world.time + 7 SECONDS
+			pdcell.use(pump_cost)
+			update_icon()
+			return
+		else
+			end_cpr()
+			return PROCESS_KILL
 
 /obj/item/tool/portadialysis
 	name = "portable dialysis machine"
 	desc = "A man-portable dialysis machine, with a small internal battery that can be recharged. Filters out all foreign compounds from the bloodstream of whoever it's attached to, but also typically ends up removing some blood as well."
-	icon = 'icons/obj/items/experimental_tools.dmi'
+	icon = 'icons/obj/items/medical_tools.dmi'
+	item_icons = list(
+		WEAR_L_HAND = 'icons/mob/humans/onmob/inhands/equipment/medical_lefthand.dmi',
+		WEAR_R_HAND = 'icons/mob/humans/onmob/inhands/equipment/medical_righthand.dmi',
+	)
 	icon_state = "portadialysis"
 	item_state = "syringe_0"
 	flags_equip_slot = SLOT_WAIST
@@ -306,7 +297,7 @@
 			return
 
 		if(target == attached) //are we attached to the target?
-			user.visible_message("[user] detaches \the [src] from [attached].", \
+			user.visible_message("[user] detaches \the [src] from [attached].",
 			"You detach \the [src] from [attached].")
 			attached = null
 			filtering = FALSE
@@ -326,17 +317,17 @@
 			attaching = TRUE
 			update_icon()
 			to_chat(target, SPAN_DANGER("[user] is trying to attach \the [src] to you!"))
-			user.visible_message(SPAN_WARNING("[user] starts setting up \the [src]'s needle on [target]'s arm."), \
+			user.visible_message(SPAN_WARNING("[user] starts setting up \the [src]'s needle on [target]'s arm."),
 				SPAN_WARNING("You start setting up \the [src]'s needle on [target]'s arm."))
 			if(!do_after(user, attach_time, INTERRUPT_ALL, BUSY_ICON_FRIENDLY, target, INTERRUPT_MOVED, BUSY_ICON_MEDICAL))
-				user.visible_message(SPAN_WARNING("[user] stops setting up \the [src]'s needle on [target]'s arm."), \
+				user.visible_message(SPAN_WARNING("[user] stops setting up \the [src]'s needle on [target]'s arm."),
 				SPAN_WARNING("You stop setting up \the [src]'s needle on [target]'s arm."))
 				visible_message("\The [src]'s tubing snaps back onto the machine frame.")
 				attaching = FALSE
 				update_icon()
 				return
 
-			user.visible_message("[user] attaches \the [src] to [target].", \
+			user.visible_message("[user] attaches \the [src] to [target].",
 			"You attach \the [src] to [target].")
 			attached = target
 			filtering = TRUE
@@ -370,7 +361,7 @@
 	var/obj/limb/l_arm = attached.get_limb("l_arm")
 	var/obj/limb/r_arm = attached.get_limb("r_arm")
 	if((l_arm.status & LIMB_DESTROYED) && (r_arm.status & LIMB_DESTROYED))
-		attached.visible_message(SPAN_NOTICE("\The [src] automatically detaches from [attached] - \he has no arms to attach to!."))
+		attached.visible_message(SPAN_NOTICE("\The [src] automatically detaches from [attached] - \he has no arms to attach to."))
 		attached = null
 		filtering = FALSE
 		update_icon(TRUE)
@@ -380,7 +371,7 @@
 	if(filtering)
 		attached.reagents.remove_any_but("blood", reagent_removed_per_second*delta_time)
 		attached.take_blood(attached, blood_cost*delta_time)
-		if(attached.blood_volume < BLOOD_VOLUME_SAFE) if(prob(5))
+		if(attached.blood_volume < BLOOD_VOLUME_SAFE && prob(5))
 			visible_message("\The [src] beeps loudly.")
 		pdcell.use(filter_cost*delta_time)
 

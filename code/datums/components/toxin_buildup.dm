@@ -7,11 +7,12 @@
 	var/max_alpha = 35
 	var/glow_color = "#00ff00"
 
-/datum/component/status_effect/toxic_buildup/Initialize(toxic_buildup, toxic_buildup_dissipation, max_buildup)
+/datum/component/status_effect/toxic_buildup/Initialize(toxic_buildup, toxic_buildup_dissipation = AMOUNT_PER_TIME(1, 3 SECONDS), max_buildup = 75)
 	. = ..()
 	src.toxic_buildup = toxic_buildup
 	src.toxic_buildup_dissipation = toxic_buildup_dissipation
 	src.max_buildup = max_buildup
+	to_chat(parent, SPAN_XENOHIGHDANGER("The toxic substance damages our armor!"))
 
 /datum/component/status_effect/toxic_buildup/InheritComponent(datum/component/status_effect/toxic_buildup/C, i_am_original, toxic_buildup)
 	. = ..()
@@ -74,4 +75,3 @@
 	if(has_immunity)
 		return
 	damagedata["armor"] = max(damagedata["armor"] - toxic_buildup, 0)
-	to_chat(parent, SPAN_XENOHIGHDANGER("The toxic substance damages our armor!"))

@@ -4,7 +4,7 @@
 
 	unacidable = TRUE
 	unslashable = TRUE
-	indestructible = TRUE
+	explo_proof = TRUE
 	can_rotate = FALSE
 
 	//you want these chairs to not be easily obscured by objects
@@ -44,8 +44,8 @@
 		vehicle.set_seated_mob(seat, null)
 		if(M.client)
 			M.client.change_view(GLOB.world_view_size, vehicle)
-			M.client.pixel_x = 0
-			M.client.pixel_y = 0
+			M.client.set_pixel_x(0)
+			M.client.set_pixel_y(0)
 			M.reset_view()
 	else
 		if(M.stat == DEAD)
@@ -107,6 +107,9 @@
 			else
 				to_chat(user, SPAN_WARNING("You are unable to use heavy weaponry."))
 			return
+		if(MODE_HAS_MODIFIER(/datum/gamemode_modifier/ceasefire))
+			to_chat(user, SPAN_WARNING("You will not break the ceasefire by doing that!"))
+			return FALSE
 
 	for(var/obj/item/I in user.contents)		//prevents shooting while zoomed in, but zoom can still be activated and used without shooting
 		if(I.zoom)
@@ -120,35 +123,23 @@
 /obj/structure/bed/chair/comfy/vehicle/attackby(obj/item/W, mob/living/user)
 	return
 
-/obj/structure/bed/chair/comfy/vehicle/attack_alien(mob/living/carbon/xenomorph/X, dam_bonus)
-
-	if(X.is_mob_incapacitated() || !Adjacent(X))
+/obj/structure/bed/chair/comfy/vehicle/attack_alien(mob/living/carbon/xenomorph/user)
+	if(user.is_mob_incapacitated() || !Adjacent(user))
 		return
 
 	if(buckled_mob)
-		manual_unbuckle(X)
+		manual_unbuckle(user)
 		return
 
-// Commander's seat
-// Mirror of drivers stuff as it isn't much more than a LARP seat
-/obj/structure/bed/chair/comfy/vehicle/commander
-	name = "commanders's seat"
-	desc = "Military-grade seat for armored vehicle commander with some controls, switches and indicators."
-	var/image/over_image = null
-	seat = VEHICLE_COMMANDER
-	required_skill = SKILL_VEHICLE_CREWMAN
-
-/obj/structure/bed/chair/comfy/vehicle/commander/do_buckle(mob/target, mob/user)
-	required_skill = vehicle.required_skill
-	if(!skillcheck(target, SKILL_VEHICLE, required_skill))
-		if(target == user)
-			to_chat(user, SPAN_WARNING("You have no idea how to command this thing!"))
-		return FALSE
-
-	if(vehicle)
-		vehicle.vehicle_faction = target.faction
-
-	return ..()
+/obj/structure/bed/chair/comfy/vehicle/handle_tail_stab(mob/living/carbon/xenomorph/xeno, blunt_stab)
+	if(!buckled_mob)
+		return TAILSTAB_COOLDOWN_NONE
+	manual_unbuckle(xeno)
+	playsound(src, 'sound/effects/metalhit.ogg', 25, 1)
+	xeno.visible_message(SPAN_DANGER("[xeno] smacks [src] with its tail!"),
+	SPAN_DANGER("We smack [src] with our tail!"), null, 5, CHAT_TYPE_XENO_COMBAT)
+	xeno.tail_stab_animation(src, blunt_stab)
+	return TAILSTAB_COOLDOWN_LOW
 
 //custom vehicle seats for armored vehicles
 //spawners located in interior_landmarks
@@ -158,7 +149,7 @@
 	var/image/over_image = null
 
 /obj/structure/bed/chair/comfy/vehicle/driver/armor/Initialize(mapload)
-	over_image = image('icons/obj/vehicles/interiors/general.dmi', "armor_chair_buckled")
+	over_image = image(icon, "armor_chair_buckled")
 	over_image.layer = ABOVE_MOB_LAYER
 
 	return ..()
@@ -180,7 +171,7 @@
 	var/image/over_image = null
 
 /obj/structure/bed/chair/comfy/vehicle/gunner/armor/Initialize(mapload)
-	over_image = image('icons/obj/vehicles/interiors/general.dmi', "armor_chair_buckled")
+	over_image = image(icon, "armor_chair_buckled")
 	over_image.layer = ABOVE_MOB_LAYER
 
 	return ..()
@@ -199,8 +190,8 @@
 		vehicle.set_seated_mob(seat, null)
 		if(M.client)
 			M.client.change_view(GLOB.world_view_size, vehicle)
-			M.client.pixel_x = 0
-			M.client.pixel_y = 0
+			M.client.set_pixel_x(0)
+			M.client.set_pixel_y(0)
 	else
 		if(M.stat != CONSCIOUS)
 			unbuckle()
@@ -221,7 +212,6 @@
 	if(buckled_mob)
 		overlays += over_image
 
-
 //armored vehicles support gunner seat
 
 /obj/structure/bed/chair/comfy/vehicle/support_gunner
@@ -240,7 +230,7 @@
 	. = ..()
 
 /obj/structure/bed/chair/comfy/vehicle/support_gunner/Initialize(mapload)
-	over_image = image('icons/obj/vehicles/interiors/general.dmi', "armor_chair_buckled")
+	over_image = image(icon, "armor_chair_buckled")
 	over_image.layer = ABOVE_MOB_LAYER
 
 	return ..()
@@ -255,6 +245,9 @@
 			else
 				to_chat(user, SPAN_WARNING("You are unable to use firearms."))
 			return
+		if(MODE_HAS_MODIFIER(/datum/gamemode_modifier/ceasefire))
+			to_chat(user, SPAN_WARNING("You will not break the ceasefire by doing that!"))
+			return FALSE
 	. = ..()
 
 	update_icon()
@@ -277,8 +270,8 @@
 		vehicle.set_seated_mob(seat, null)
 		if(M.client)
 			M.client.change_view(GLOB.world_view_size, vehicle)
-			M.client.pixel_x = 0
-			M.client.pixel_y = 0
+			M.client.set_pixel_x(0)
+			M.client.set_pixel_y(0)
 			M.reset_view()
 	else
 		if(M.stat == DEAD)
@@ -321,13 +314,11 @@
 	desc = "A sturdy chair with a brace that lowers over your body. Prevents being flung around in vehicle during crash being injured as a result. Fasten your seatbelts, kids! Fix with welding tool in case of damage."
 	icon = 'icons/obj/vehicles/interiors/general.dmi'
 	icon_state = "vehicle_seat"
-	buckling_sound = 'sound/effects/metal_close.ogg'
 	var/image/chairbar = null
 	var/broken = FALSE
 	buildstackamount = 0
 	can_rotate = FALSE
-	picked_up_item = null
-
+	foldabletype = null
 	unslashable = FALSE
 	unacidable = TRUE
 
@@ -336,14 +327,39 @@
 	var/buckle_offset_y = 0
 	var/mob_old_y = 0
 
+	var/init_pixel_y
+	var/init_pixel_x
+	var/higher_layer
+
 /obj/structure/bed/chair/vehicle/Initialize()
 	. = ..()
-	chairbar = image('icons/obj/vehicles/interiors/general.dmi', "vehicle_bars")
+	chairbar = image(icon, "vehicle_bars")
 	chairbar.layer = ABOVE_MOB_LAYER
 
 	addtimer(CALLBACK(src, PROC_REF(setup_buckle_offsets)), 1 SECONDS)
 
 	handle_rotation()
+
+	init_pixel_y = pixel_y
+	init_pixel_x = pixel_x
+
+/obj/structure/bed/chair/vehicle/update_shimmy_data(obj/structure/bed/chair/neighbor = null, force_update = FALSE)
+	.=..()
+
+	var/approachness = NORTH|SOUTH|EAST|WEST
+	var/internalness = NORTH|SOUTH|EAST|WEST
+
+	if(neighbor && neighbor.buckled_mob)
+		internalness &= ~turn(dir, 180)	//cant walk into filled seats
+		approachness &= ~turn(dir, 180)
+
+	if(force_update && buckled_mob)
+		buckled_mob.density = FALSE
+		density = TRUE
+		AddComponent(/datum/component/shimmy_around, \
+			approach_dirs = approachness, \
+			internal_dirs = internalness \
+		)
 
 /obj/structure/bed/chair/vehicle/proc/setup_buckle_offsets()
 	if(pixel_x != 0)
@@ -355,9 +371,13 @@
 	if(dir == NORTH)
 		layer = FLY_LAYER
 	else
-		layer = BELOW_MOB_LAYER
+		if(higher_layer)
+			layer = BELOW_MOB_LAYER + 0.01
+		else
+			layer = BELOW_MOB_LAYER
 	if(buckled_mob)
 		buckled_mob.setDir(dir)
+	update_shimmy_data()
 
 //------BUCKLING AND UNBUCKLING
 //trying to buckle a mob
@@ -393,21 +413,6 @@
 			M.pixel_y = mob_old_y
 			mob_old_y = 0
 
-	for(var/obj/structure/bed/chair/vehicle/VS in get_turf(src))
-		if(VS != src)
-			//if both seats on same tile have buckled mob, we become dense, otherwise, not dense.
-			if(buckled_mob)
-				if(VS.buckled_mob)
-					REMOVE_TRAIT(buckled_mob, TRAIT_UNDENSE, DOUBLE_SEATS_TRAIT)
-					REMOVE_TRAIT(VS.buckled_mob, TRAIT_UNDENSE, DOUBLE_SEATS_TRAIT)
-				else
-					ADD_TRAIT(buckled_mob, TRAIT_UNDENSE, DOUBLE_SEATS_TRAIT)
-			else
-				if(VS.buckled_mob)
-					ADD_TRAIT(VS.buckled_mob, TRAIT_UNDENSE, DOUBLE_SEATS_TRAIT)
-				REMOVE_TRAIT(M, TRAIT_UNDENSE, DOUBLE_SEATS_TRAIT)
-			break
-
 	handle_rotation()
 
 //attack handling
@@ -422,6 +427,18 @@
 		else
 			deconstruct(FALSE)
 
+/obj/structure/bed/chair/vehicle/handle_tail_stab(mob/living/carbon/xenomorph/xeno, blunt_stab)
+	if(unslashable)
+		return TAILSTAB_COOLDOWN_NONE
+	playsound(src, 'sound/effects/metalhit.ogg', 25, 1)
+	xeno.visible_message(SPAN_DANGER("[xeno] smashes [src] with its tail!"),
+	SPAN_DANGER("We smash [src] with our tail!"), null, 5, CHAT_TYPE_XENO_COMBAT)
+	if(!broken)
+		break_seat()
+	else
+		deconstruct(FALSE)
+	xeno.tail_stab_animation(src, blunt_stab)
+	return TAILSTAB_COOLDOWN_NORMAL
 
 /obj/structure/bed/chair/vehicle/attackby(obj/item/W, mob/living/user)
 	if((iswelder(W) && broken))
@@ -453,7 +470,7 @@
 //MISC
 
 /obj/structure/bed/chair/vehicle/ex_act(severity)
-	if(broken || indestructible)
+	if(broken || explo_proof)
 		return
 	switch(severity)
 		if(0 to EXPLOSION_THRESHOLD_LOW)
@@ -465,95 +482,9 @@
 		if(EXPLOSION_THRESHOLD_MEDIUM to INFINITY)
 			break_seat()
 
-/obj/structure/bed/chair/vehicle/toc
-	name = "overwatch chair"
-	desc = "A sturdy chair with a brace that lowers over the body. Prevents being flung around in vehicle during a crash and being injured as a result. Fasten your seatbelts, kids! Fix with welding tool in case of damage."
-	icon_state = "armor_chair"
-	can_rotate = TRUE
+// White chairs
 
-/obj/structure/bed/chair/vehicle/toc/afterbuckle(mob/M)
-	if(buckled_mob)
-		if(buckled_mob != M)
-			return
-		icon_state = initial(icon_state) + "_buckled"
-		overlays += chairbar
-
-		if(buckle_offset_x != 0)
-			mob_old_x = M.pixel_x
-			M.pixel_x = buckle_offset_x
-		if(buckle_offset_y != 0)
-			mob_old_y = M.pixel_y
-			M.pixel_y = buckle_offset_y
-
-		ADD_TRAIT(buckled_mob, TRAIT_UNDENSE, BUCKLED_TRAIT)
-	else
-		icon_state = initial(icon_state)
-		overlays -= chairbar
-
-		if(buckle_offset_x != 0)
-			M.pixel_x = mob_old_x
-			mob_old_x = 0
-		if(buckle_offset_y != 0)
-			M.pixel_y = mob_old_y
-			mob_old_y = 0
-
-		REMOVE_TRAIT(M, TRAIT_UNDENSE, BUCKLED_TRAIT)
-
-	handle_rotation()
-
-/obj/structure/bed/chair/vehicle/dropship_cockpit
-	name = "cockpit seat"
-	desc = "A sturdy metal chair with a brace that lowers over your body. Holds you in place during high altitude drops."
-	icon_state = "vehicle_seat"
-	can_rotate = FALSE
-
-/obj/structure/bed/chair/vehicle/dropship_cockpit/afterbuckle(mob/M)
-	if(buckled_mob)
-		if(buckled_mob != M)
-			return
-		icon_state = initial(icon_state) + "_buckled"
-		overlays += chairbar
-
-		if(buckle_offset_x != 0)
-			mob_old_x = M.pixel_x
-			M.pixel_x = buckle_offset_x
-		if(buckle_offset_y != 0)
-			mob_old_y = M.pixel_y
-			M.pixel_y = buckle_offset_y
-
-		ADD_TRAIT(buckled_mob, TRAIT_UNDENSE, BUCKLED_TRAIT)
-	else
-		icon_state = initial(icon_state)
-		overlays -= chairbar
-
-		if(buckle_offset_x != 0)
-			M.pixel_x = mob_old_x
-			mob_old_x = 0
-		if(buckle_offset_y != 0)
-			M.pixel_y = mob_old_y
-			mob_old_y = 0
-
-		REMOVE_TRAIT(M, TRAIT_UNDENSE, BUCKLED_TRAIT)
-
-	handle_rotation()
-
-/obj/structure/bed/chair/vehicle/dropship_cockpit/pilot
-	name = "pilot seat"
-
-/obj/structure/bed/chair/vehicle/dropship_cockpit/pilot/handle_rotation()
-	if(dir == NORTH)
-		layer = ABOVE_MOB_LAYER
-	else
-		layer = BELOW_MOB_LAYER
-	if(buckled_mob)
-		buckled_mob.setDir(dir)
-
-/obj/structure/bed/chair/vehicle/dropship_cockpit/copilot
-	name = "co-pilot seat"
-
-// GUNNER VAN Seat
-/obj/structure/bed/chair/comfy/vehicle/van_gunner
-	name = "gunner's seat"
-	desc = "Comfortable seat for a gunner."
-	seat = VEHICLE_GUNNER
-	required_skill = SKILL_VEHICLE_DEFAULT
+/obj/structure/bed/chair/vehicle/white
+	name = "passenger seat"
+	desc = "A sturdy chair with a brace that lowers over your body. Prevents being flung around in vehicle during crash being injured as a result. Fasten your seatbelts, kids! Fix with welding tool in case of damage."
+	icon = 'icons/obj/vehicles/interiors/general_wy.dmi'

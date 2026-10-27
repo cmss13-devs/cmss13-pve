@@ -110,10 +110,8 @@
 	group = "Weapons Specialist Ammo"
 
 /datum/supply_packs/ammo_amr_marksman
-	name = "XM43E1 anti-materiel rifle marksman magazines crate (x5)"
+	name = "XM43E1 anti-materiel rifle marksman magazines crate (x3)"
 	contains = list(
-		/obj/item/ammo_magazine/sniper/anti_materiel,
-		/obj/item/ammo_magazine/sniper/anti_materiel,
 		/obj/item/ammo_magazine/sniper/anti_materiel,
 		/obj/item/ammo_magazine/sniper/anti_materiel,
 		/obj/item/ammo_magazine/sniper/anti_materiel,
@@ -123,59 +121,120 @@
 	containername = "XM43E1 Marksman Magazine Crate"
 	group = "Weapons Specialist Ammo"
 
-//M49A
+//M4RA
 
 /datum/supply_packs/ammo_scout_mix
-	name = "M49A Scout Mixed Magazine Crate (regular x2, incendiary x2, explosive x2)"
+	name = "M4RA Scout Mixed Magazine Crate (regular x2, incendiary x2, impact x2)"
 	contains = list(
-		/obj/item/ammo_magazine/rifle/m49a/custom,
-		/obj/item/ammo_magazine/rifle/m49a/custom,
-		/obj/item/ammo_magazine/rifle/m49a/custom/incendiary,
-		/obj/item/ammo_magazine/rifle/m49a/custom/incendiary,
-		/obj/item/ammo_magazine/rifle/m49a/custom/explosive,
-		/obj/item/ammo_magazine/rifle/m49a/custom/explosive,
+		/obj/item/ammo_magazine/rifle/m4ra/custom,
+		/obj/item/ammo_magazine/rifle/m4ra/custom,
+		/obj/item/ammo_magazine/rifle/m4ra/custom/incendiary,
+		/obj/item/ammo_magazine/rifle/m4ra/custom/incendiary,
+		/obj/item/ammo_magazine/rifle/m4ra/custom/impact,
+		/obj/item/ammo_magazine/rifle/m4ra/custom/impact,
 	)
 	cost = 40
 	containertype = /obj/structure/closet/crate/ammo
-	containername = "M49A Scout Mixed Magazine Crate"
+	containername = "M4RA Scout Mixed Magazine Crate"
 	group = "Weapons Specialist Ammo"
 
 /datum/supply_packs/ammo_scout_regular
-	name = "M49A5 Magazine Crate (x5)"
+	name = "M4RA Scout Magazine Crate (x5)"
 	contains = list(
-		/obj/item/ammo_magazine/rifle/m49a/custom,
-		/obj/item/ammo_magazine/rifle/m49a/custom,
-		/obj/item/ammo_magazine/rifle/m49a/custom,
-		/obj/item/ammo_magazine/rifle/m49a/custom,
-		/obj/item/ammo_magazine/rifle/m49a/custom,
+		/obj/item/ammo_magazine/rifle/m4ra/custom,
+		/obj/item/ammo_magazine/rifle/m4ra/custom,
+		/obj/item/ammo_magazine/rifle/m4ra/custom,
+		/obj/item/ammo_magazine/rifle/m4ra/custom,
+		/obj/item/ammo_magazine/rifle/m4ra/custom,
 	)
 	cost = 30
 	containertype = /obj/structure/closet/crate/ammo
-	containername = "M49A5 Magazine Crate"
+	containername = "M4RA Scout Magazine Crate"
 	group = "Weapons Specialist Ammo"
 
 /datum/supply_packs/ammo_scout_incendiary
-	name = "M49A5 Incendiary Magazine Crate (x3)"
+	name = "M4RA Scout Incendiary Magazine Crate (x4)"
 	contains = list(
-		/obj/item/ammo_magazine/rifle/m49a/custom/incendiary,
-		/obj/item/ammo_magazine/rifle/m49a/custom/incendiary,
-		/obj/item/ammo_magazine/rifle/m49a/custom/incendiary,
+		/obj/item/ammo_magazine/rifle/m4ra/custom/incendiary,
+		/obj/item/ammo_magazine/rifle/m4ra/custom/incendiary,
+		/obj/item/ammo_magazine/rifle/m4ra/custom/incendiary,
+		/obj/item/ammo_magazine/rifle/m4ra/custom/incendiary,
 	)
 	cost = 30
 	containertype = /obj/structure/closet/crate/ammo
-	containername = "M49A5 Incendiary Magazine"
+	containername = "M4RA Scout Incendiary Magazine"
 	group = "Weapons Specialist Ammo"
 
-/datum/supply_packs/ammo_scout_explosive
-	name = "M49A5 Explosive Magazine Crate (x3)"
+/datum/supply_packs/ammo_scout_impact
+	name = "M4RA Scout Impact Magazine Crate (x4)"
 	contains = list(
-		/obj/item/ammo_magazine/rifle/m49a/custom/explosive,
-		/obj/item/ammo_magazine/rifle/m49a/custom/explosive,
-		/obj/item/ammo_magazine/rifle/m49a/custom/explosive,
+		/obj/item/ammo_magazine/rifle/m4ra/custom/impact,
+		/obj/item/ammo_magazine/rifle/m4ra/custom/impact,
+		/obj/item/ammo_magazine/rifle/m4ra/custom/impact,
+		/obj/item/ammo_magazine/rifle/m4ra/custom/impact,
 	)
 	cost = 30
 	containertype = /obj/structure/closet/crate/ammo
-	containername = "M49A5 Explosive Magazine Crate"
+	containername = "M4RA Scout Impact Magazine Crate"
+	group = "Weapons Specialist Ammo"
+
+//SHARP
+
+/datum/supply_packs/ammo_grenadier_sharp_mix
+	name = "SHARP Operator Mixed Magazine Crate (explosive x2, flechette x2, incendiary x2)"
+	contains = list(
+		/obj/item/ammo_magazine/rifle/sharp/explosive,
+		/obj/item/ammo_magazine/rifle/sharp/explosive,
+		/obj/item/ammo_magazine/rifle/sharp/flechette,
+		/obj/item/ammo_magazine/rifle/sharp/flechette,
+		/obj/item/ammo_magazine/rifle/sharp/incendiary,
+		/obj/item/ammo_magazine/rifle/sharp/incendiary,
+	)
+	cost = 40
+	containertype = /obj/structure/closet/crate/ammo
+	containername = "SHARP Operator Mixed Magazine Crate"
+	group = "Weapons Specialist Ammo"
+
+/datum/supply_packs/ammo_grenadier_sharp_explosive
+	name = "SHARP Operator Explosive Magazine Crate (x5)"
+	contains = list(
+		/obj/item/ammo_magazine/rifle/sharp/explosive,
+		/obj/item/ammo_magazine/rifle/sharp/explosive,
+		/obj/item/ammo_magazine/rifle/sharp/explosive,
+		/obj/item/ammo_magazine/rifle/sharp/explosive,
+		/obj/item/ammo_magazine/rifle/sharp/explosive,
+	)
+	cost = 30
+	containertype = /obj/structure/closet/crate/ammo
+	containername = "SHARP Operator Explosive Magazine Crate"
+	group = "Weapons Specialist Ammo"
+
+/datum/supply_packs/ammo_grenadier_sharp_flechette
+	name = "SHARP Operator Flechette Magazine Crate (x5)"
+	contains = list(
+		/obj/item/ammo_magazine/rifle/sharp/flechette,
+		/obj/item/ammo_magazine/rifle/sharp/flechette,
+		/obj/item/ammo_magazine/rifle/sharp/flechette,
+		/obj/item/ammo_magazine/rifle/sharp/flechette,
+		/obj/item/ammo_magazine/rifle/sharp/flechette,
+	)
+	cost = 30
+	containertype = /obj/structure/closet/crate/ammo
+	containername = "SHARP Operator Flechette Magazine Crate"
+	group = "Weapons Specialist Ammo"
+
+/datum/supply_packs/ammo_grenadier_sharp_incendiary
+	name = "SHARP Operator incendiary Magazine Crate (x5)"
+	contains = list(
+		/obj/item/ammo_magazine/rifle/sharp/incendiary,
+		/obj/item/ammo_magazine/rifle/sharp/incendiary,
+		/obj/item/ammo_magazine/rifle/sharp/incendiary,
+		/obj/item/ammo_magazine/rifle/sharp/incendiary,
+		/obj/item/ammo_magazine/rifle/sharp/incendiary,
+	)
+	cost = 30
+	containertype = /obj/structure/closet/crate/ammo
+	containername = "SHARP Operator incendiary Magazine Crate"
 	group = "Weapons Specialist Ammo"
 
 //M240-T

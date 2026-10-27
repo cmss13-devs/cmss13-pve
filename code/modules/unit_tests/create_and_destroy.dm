@@ -3,38 +3,46 @@
 	//You absolutely must run last
 	priority = TEST_CREATE_AND_DESTROY
 
-GLOBAL_VAR_INIT(running_create_and_destroy, FALSE)
-/datum/unit_test/create_and_destroy/Run()
-	//We'll spawn everything here
-	var/turf/spawn_at = run_loc_floor_bottom_left
-	var/list/ignore = list(
+GLOBAL_VAR_INIT(create_and_destroy_ignore_paths, generate_ignore_paths())
+/proc/generate_ignore_paths()
+	. = list(
 		//Never meant to be created, errors out the ass for mobcode reasons
 		/mob/living/carbon,
 		/obj/effect/node,
 		/obj/item/seeds/cutting,
 		//lighting singleton
 		/mob/dview,
-		// These use walkaway() after initialization, which causes false positives
+		// These use walk_away() after initialization, which causes false positives
 		/obj/item/explosive/grenade/flashbang/cluster/segment,
 		/obj/item/explosive/grenade/flashbang/cluster_piece,
+		/mob/living/simple_animal/hostile/retaliate/giant_lizard,
+		/obj/effect/landmark/lizard_spawn,
 		/obj/effect/fake_attacker,
 		/atom/movable/lighting_mask, //leave it alone
 		//This is meant to fail extremely loud every single time it occurs in any environment in any context, and it falsely alarms when this unit test iterates it. Let's not spawn it in.
 		/obj/merge_conflict_marker,
+		/obj/effect/projector_anchor, // Needs a link ID set to work as intended
+		/obj/effect/projector/linked, // Needs a link ID set to work as intended
 	)
 	//This turf existing is an error in and of itself
-	ignore += typesof(/turf/baseturf_skipover)
-	ignore += typesof(/turf/baseturf_bottom)
+	. += typesof(/turf/baseturf_skipover)
+	. += typesof(/turf/baseturf_bottom)
 	//Our system doesn't support it without warning spam from unregister calls on things that never registered
-	ignore += typesof(/obj/docking_port)
-	ignore += typesof(/obj/item/storage/internal)
+	. += typesof(/obj/docking_port)
+	. += typesof(/obj/item/storage/internal)
 	// fuck interiors
-	ignore += typesof(/obj/vehicle)
-	ignore += typesof(/obj/effect/vehicle_spawner)
-	//Screen objects don't play nicely when spawned manually.
-	ignore += typesof(/atom/movable/screen)
+	. += typesof(/obj/vehicle)
+	. += typesof(/obj/effect/vehicle_spawner)
 	// Always ought to have an associated escape menu. Any references it could possibly hold would need one regardless.
-	ignore += subtypesof(/atom/movable/screen/escape_menu)
+	. += subtypesof(/atom/movable/screen/escape_menu)
+	. += typesof(/obj/effect/timed_event)
+	// Need a defined ID, mapping-only, will and should fail loudly if spawned without one
+	. += typesof(/obj/effect/landmark/dispersal_initiator)
+
+GLOBAL_VAR_INIT(running_create_and_destroy, FALSE)
+/datum/unit_test/create_and_destroy/Run()
+	//We'll spawn everything here
+	var/turf/spawn_at = run_loc_floor_bottom_left
 
 	var/list/cached_contents = spawn_at.contents.Copy()
 	var/original_turf_type = spawn_at.type
@@ -42,7 +50,7 @@ GLOBAL_VAR_INIT(running_create_and_destroy, FALSE)
 	var/original_baseturf_count = length(original_baseturfs)
 
 	GLOB.running_create_and_destroy = TRUE
-	for(var/type_path in typesof(/atom/movable, /turf) - ignore) //No areas please
+	for(var/type_path in typesof(/atom/movable, /turf) - GLOB.create_and_destroy_ignore_paths) //No areas please
 		if(ispath(type_path, /turf))
 			spawn_at.ChangeTurf(type_path)
 			//We change it back to prevent baseturfs stacking and hitting the limit
@@ -117,6 +125,8 @@ GLOBAL_VAR_INIT(running_create_and_destroy, FALSE)
 			TEST_FAIL("Something has gone horribly wrong, the garbage queue has been processing for well over 30 minutes. What the hell did you do")
 			break
 
+		if(garbage_queue_processed)
+			break // don't even bother firing it again, just end
 		//Immediately fire the gc right after
 		SSgarbage.next_fire = 1
 		//Unless you've seriously fucked up, queue processing shouldn't take "that" long. Let her run for a bit, see if anything's changed
@@ -147,3 +157,14 @@ GLOBAL_VAR_INIT(running_create_and_destroy, FALSE)
 	//This shouldn't be needed, but let's be polite
 	SSgarbage.collection_timeout[GC_QUEUE_CHECK] = GC_CHECK_QUEUE
 	SSgarbage.collection_timeout[GC_QUEUE_HARDDELETE] = GC_DEL_QUEUE
+
+/datum/unit_test/create_and_destroy/Destroy()
+	. = ..()
+	//Ensure the entire space is the correct turf again
+	var/original_turf_type = run_loc_floor_bottom_left.type
+	var/original_baseturfs = islist(run_loc_floor_bottom_left.baseturfs) ? run_loc_floor_bottom_left.baseturfs.Copy() : run_loc_floor_bottom_left.baseturfs
+	var/width = run_loc_floor_top_right.x - run_loc_floor_bottom_left.x + 1
+	var/height = run_loc_floor_top_right.y - run_loc_floor_bottom_left.y + 1
+	for(var/turf/turf as anything in CORNER_BLOCK(run_loc_floor_bottom_left, width, height))
+		debug_log("C&D: Changing [turf] - [turf.type] at [turf.x],[turf.y] back to [original_turf_type]")
+		turf.ChangeTurf(original_turf_type, original_baseturfs)

@@ -99,13 +99,13 @@
 				data["occupant"]["statstate"] = "bad"
 		data["occupant"]["health"] = round(mob_occupant.health, 1)
 		data["occupant"]["maxHealth"] = mob_occupant.maxHealth
-		data["occupant"]["minHealth"] = HEALTH_THRESHOLD_DEAD
+		data["occupant"]["minHealth"] = mob_occupant.health_threshold_dead
 		data["occupant"]["bruteLoss"] = round(mob_occupant.getBruteLoss(), 1)
 		data["occupant"]["oxyLoss"] = round(mob_occupant.getOxyLoss(), 1)
 		data["occupant"]["toxLoss"] = round(mob_occupant.getToxLoss(), 1)
 		data["occupant"]["fireLoss"] = round(mob_occupant.getFireLoss(), 1)
 		data["occupant"]["bodyTemperature"] = round(mob_occupant.bodytemperature, 1)
-		if(mob_occupant.bodytemperature < 255)
+		if(mob_occupant.bodytemperature <= BODYTEMP_CRYO_LIQUID_THRESHOLD)
 			data["occupant"]["temperaturestatus"] = "good"
 		else if(mob_occupant.bodytemperature < T0C)
 			data["occupant"]["temperaturestatus"] = "average"
@@ -169,7 +169,7 @@
 		for(var/datum/reagent/cur_reagent in beaker.reagents.reagent_list)
 			reagentnames += ";[cur_reagent.name]"
 
-		msg_admin_niche("[key_name(user)] put \a [beaker] into [src], containing [reagentnames] at ([src.loc.x],[src.loc.y],[src.loc.z]) [ADMIN_JMP(src.loc)].", 1)
+		msg_admin_niche("[key_name(user)] put \a [beaker] into [src], containing [reagentnames] at [ADMIN_VERBOSEJMP(src)].")
 
 		if(user.drop_inv_item_to_loc(W, src))
 			user.visible_message("[user] adds \a [W] to [src]!", "You add \a [W] to [src]!")
@@ -228,7 +228,7 @@
 				occupant.apply_damage(-1, OXY)
 
 			//severe damage should heal waaay slower without proper chemicals
-			if(occupant.bodytemperature < 225)
+			if(occupant.bodytemperature <= BODYTEMP_CRYO_LIQUID_THRESHOLD)
 				if(occupant.getToxLoss())
 					occupant.apply_damage(max(-1, -20/occupant.getToxLoss()), TOX)
 				var/heal_brute = occupant.getBruteLoss() ? min(1, 20/occupant.getBruteLoss()) : 0
@@ -256,8 +256,8 @@
 			beaker.reagents.reaction(occupant, permeable_in_mobs = FALSE)
 
 	if(autoeject)
-		//release the patient automatically when brute and burn are handled on non-robotic limbs
-		if(!occupant.getBruteLoss(TRUE) && !occupant.getFireLoss(TRUE) && !occupant.getCloneLoss())
+		//release the patient automatically when brute and burn are handled on non-robotic limbs and tox damage handled
+		if(!occupant.getBruteLoss(TRUE) && !occupant.getFireLoss(TRUE) && !occupant.getToxLoss() && !occupant.getCloneLoss())
 			display_message("Patient's external wounds are healed.")
 			go_out(TRUE)
 			return
@@ -270,7 +270,7 @@
 	if(!(occupant))
 		return
 	if(occupant.client)
-		occupant.client.eye = occupant.client.mob
+		occupant.client.set_eye(occupant.client.mob)
 		occupant.client.perspective = MOB_PERSPECTIVE
 	switch(dir)
 		if(NORTH)
@@ -281,8 +281,8 @@
 			occupant.forceMove(get_step(loc, WEST))
 		else
 			occupant.forceMove(get_step(loc, SOUTH))
-	if(occupant.bodytemperature < 261 && occupant.bodytemperature >= 70)
-		occupant.bodytemperature = 261
+	if(occupant.bodytemperature < BODYTEMP_CRYO_LIQUID_THRESHOLD)
+		occupant.bodytemperature = BODYTEMP_CRYO_LIQUID_THRESHOLD
 		occupant.recalculate_move_delay = TRUE
 	if(auto_eject) //Turn off and announce if auto-ejected because patient is recovered or dead.
 		on = FALSE
@@ -312,7 +312,7 @@
 	if(do_after(usr, 2 SECONDS, INTERRUPT_NO_NEEDHAND, BUSY_ICON_GENERIC))
 		visible_message(SPAN_NOTICE("[usr] moves [usr == cur_mob ? "" : "[cur_mob] "]inside the cryo cell."))
 		cur_mob.forceMove(src)
-		if(cur_mob.health >= HEALTH_THRESHOLD_DEAD && (cur_mob.health <= 0 || cur_mob.sleeping))
+		if(cur_mob.health >= cur_mob.health_threshold_dead && (cur_mob.health <= 0 || cur_mob.sleeping))
 			to_chat(cur_mob, SPAN_NOTICE("You feel cold liquid surround you. Your skin starts to freeze up."))
 		occupant = cur_mob
 		occupant_death_stage = DEATH_STAGE_NONE
@@ -384,3 +384,7 @@
 #undef DEATH_STAGE_EARLY
 #undef DEATH_STAGE_WARNING
 #undef DEATH_STAGE_CRITICAL
+
+/obj/structure/machinery/cryo_cell/yautja
+	icon = 'icons/obj/structures/machinery/cryogenics2.dmi'
+	icon_state = "pred_cell"

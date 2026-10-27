@@ -163,13 +163,11 @@
 	if (!src.powernet)
 		return
 
-	for(var/obj/structure/machinery/power/terminal/T in src.powernet.nodes)
-		if(istype(T.master, /obj/structure/machinery/power/apc))
-			var/obj/structure/machinery/power/apc/A = T.master
-			if (prob(overload_chance))
-				A.overload_lighting()
-			if (prob(failure_chance))
-				A.set_broken()
+	for(var/obj/structure/machinery/power/apc/apc in src.powernet.nodes)
+		if (prob(overload_chance))
+			apc.overload_lighting()
+		if (prob(failure_chance))
+			apc.set_broken()
 
 	// Failing SMES has special icon overlay.
 /obj/structure/machinery/power/smes/buildable/updateicon()
@@ -187,7 +185,8 @@
 	// If parent returned 1:
 	// - Hatch is open, so we can modify the SMES
 	// - No action was taken in parent function (terminal de/construction atm).
-	if (..())
+	. = ..()
+	if (.)
 
 		// Charged above 1% and safeties are enabled.
 		if((charge > (capacity/100)) && safeties_enabled && !HAS_TRAIT(W, TRAIT_TOOL_MULTITOOL))

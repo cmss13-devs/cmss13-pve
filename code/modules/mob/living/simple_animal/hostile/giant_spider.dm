@@ -12,7 +12,7 @@
 	icon_living = "guard"
 	icon_dead = "guard_dead"
 	speak_emote = list("chitters")
-	emote_hear = list("chitters")
+	emote_hear = list("chitters.")
 	speak_chance = 5
 	turns_per_move = 5
 	see_in_dark = 10
@@ -62,24 +62,25 @@
 	poison_per_bite = 5
 	move_to_delay = 4
 
-/mob/living/simple_animal/hostile/giant_spider/initialize_pass_flags(datum/pass_flags_container/PF)
+/mob/living/simple_animal/hostile/giant_spider/initialize_pass_flags(datum/pass_flags_container/pass_flags)
 	..()
-	if (PF)
-		PF.flags_pass = PASS_FLAGS_CRAWLER
+	if (pass_flags)
+		pass_flags.flags_pass = PASS_FLAGS_CRAWLER
+		pass_flags.flags_can_pass_all = PASS_OVER_THROW_ITEM
 
 /mob/living/simple_animal/hostile/giant_spider/AttackingTarget()
 	..()
+	var/mob/living/target_mob = target_mob_ref?.resolve()
 	if(isliving(target_mob))
-		var/mob/living/L = target_mob
-		if(L.reagents)
-			L.reagents.add_reagent("toxin", poison_per_bite)
+		if(target_mob.reagents)
+			target_mob.reagents.add_reagent("toxin", poison_per_bite)
 			if(prob(poison_per_bite))
-				to_chat(L, SPAN_DANGER("You feel a tiny prick."))
-				L.reagents.add_reagent(poison_type, 5)
+				to_chat(target_mob, SPAN_DANGER("You feel a tiny prick."))
+				target_mob.reagents.add_reagent(poison_type, 5)
 
 /mob/living/simple_animal/hostile/giant_spider/Life(delta_time)
-	..()
-	if(!stat)
+	. = ..()
+	if(stat == CONSCIOUS)
 		if(stance == HOSTILE_STANCE_IDLE)
 			//1% chance to skitter madly away
 			if(!busy && prob(1))
@@ -101,8 +102,8 @@
 			stop_automated_movement = 0
 
 /mob/living/simple_animal/hostile/giant_spider/nurse/Life(delta_time)
-	..()
-	if(!stat)
+	. = ..()
+	if(stat == CONSCIOUS)
 		if(stance == HOSTILE_STANCE_IDLE)
 			var/list/can_see = view(src, 10)
 			//30% chance to stop wandering and do something
@@ -121,7 +122,7 @@
 				var/obj/effect/spider/stickyweb/W = locate() in get_turf(src)
 				if(!W)
 					busy = SPINNING_WEB
-					src.visible_message(SPAN_NOTICE("\the [src] begins to secrete a sticky substance."))
+					src.visible_message(SPAN_NOTICE("\The [src] begins to secrete a sticky substance."))
 					stop_automated_movement = 1
 					spawn(40)
 						if(busy == SPINNING_WEB)
@@ -133,7 +134,7 @@
 					var/obj/effect/spider/eggcluster/E = locate() in get_turf(src)
 					if(!E && fed > 0)
 						busy = LAYING_EGGS
-						src.visible_message(SPAN_NOTICE("\the [src] begins to lay a cluster of eggs."))
+						src.visible_message(SPAN_NOTICE("\The [src] begins to lay a cluster of eggs."))
 						stop_automated_movement = 1
 						spawn(50)
 							if(busy == LAYING_EGGS)
@@ -161,7 +162,7 @@
 			else if(busy == MOVING_TO_TARGET && cocoon_target)
 				if(get_dist(src, cocoon_target) <= 1)
 					busy = SPINNING_COCOON
-					src.visible_message(SPAN_NOTICE("\the [src] begins to secrete a sticky substance around \the [cocoon_target]."))
+					src.visible_message(SPAN_NOTICE("\The [src] begins to secrete a sticky substance around \the [cocoon_target]."))
 					stop_automated_movement = 1
 					walk(src,0)
 					spawn(50)
@@ -176,7 +177,7 @@
 										continue
 									large_cocoon = 1
 									fed++
-									src.visible_message(SPAN_DANGER("\the [src] sticks a proboscis into \the [cocoon_target] and sucks a viscous substance out."))
+									src.visible_message(SPAN_DANGER("\The [src] sticks a proboscis into \the [cocoon_target] and sucks a viscous substance out."))
 									M.forceMove(C)
 									C.pixel_x = M.pixel_x
 									C.pixel_y = M.pixel_y

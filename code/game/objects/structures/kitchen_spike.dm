@@ -4,10 +4,9 @@
 	name = "a meat spike"
 	icon = 'icons/obj/structures/machinery/kitchen.dmi'
 	icon_state = "spike"
-	desc = "A spike for collecting meat from animals"
+	desc = "A spike for collecting meat from animals."
 	density = TRUE
 	anchored = TRUE
-	unslashable = TRUE
 	var/meat = 0
 	var/occupied = 0
 	var/meattype = 0 // 0 - Nothing, 1 - Monkey, 2 - Xeno

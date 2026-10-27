@@ -20,17 +20,6 @@
 	},
 /turf/open/jungle,
 /area/bigredv2/outside/admin_building)
-"as" = (
-/obj/item/ammo_magazine/rifle/rubber{
-	current_rounds = 0;
-	pixel_y = 11
-	},
-/turf/open/floor/wood,
-/area/bigredv2/outside/admin_building)
-"at" = (
-/obj/structure/bed/chair/comfy/black,
-/turf/open/floor/carpet,
-/area/bigredv2/outside/admin_building)
 "aB" = (
 /obj/structure/surface/table,
 /obj/structure/prop/server_equipment/laptop/on,
@@ -52,12 +41,18 @@
 	},
 /turf/open/floor/carpet,
 /area/bigredv2/outside/admin_building)
-"aL" = (
-/obj/structure/reagent_dispensers/fueltank,
+"aK" = (
+/obj/structure/surface/table,
+/obj/item/device/radio/marine,
+/obj/effect/landmark/objective_landmark/medium,
+/obj/item/weapon/gun/pistol/m4a3/training{
+	name = "dented M4A3 service pistol"
+	},
+/obj/item/ammo_magazine/pistol/rubber,
 /turf/open/floor/carpet,
 /area/bigredv2/outside/admin_building)
-"aO" = (
-/obj/item/storage/secure/briefcase,
+"aL" = (
+/obj/structure/reagent_dispensers/tank/fuel,
 /turf/open/floor/carpet,
 /area/bigredv2/outside/admin_building)
 "aQ" = (
@@ -86,16 +81,7 @@
 /obj/structure/pipes/vents/pump{
 	dir = 4
 	},
-/obj/item/clothing/head/helmet/marine/veteran/pmc,
-/turf/open/floor/carpet,
-/area/bigredv2/outside/admin_building)
-"bb" = (
-/obj/structure/bed/chair/comfy/blue{
-	dir = 8
-	},
-/obj/structure/pipes/standard/simple/hidden/green{
-	dir = 4
-	},
+/obj/item/clothing/head/helmet/marine/veteran/pmc/leader,
 /turf/open/floor/carpet,
 /area/bigredv2/outside/admin_building)
 "bc" = (
@@ -117,74 +103,36 @@
 	},
 /turf/open/floor/plating,
 /area/bigredv2/outside/admin_building)
-"dp" = (
-/obj/item/ammo_magazine/rifle/rubber{
-	current_rounds = 0;
-	pixel_x = -6;
-	pixel_y = -4
-	},
-/turf/open/floor/carpet,
-/area/bigredv2/outside/admin_building)
-"fy" = (
-/obj/structure/machinery/light{
+"bY" = (
+/obj/structure/barricade/metal/wired{
 	dir = 4
 	},
-/obj/item/storage/toolbox/syndicate,
+/turf/open/floor/wood,
+/area/bigredv2/outside/admin_building)
+"cD" = (
+/obj/item/shard,
+/turf/open/floor/darkred2,
+/area/bigredv2/outside/admin_building)
+"dC" = (
+/obj/structure/pipes/standard/simple/hidden/green{
+	dir = 4
+	},
 /turf/open/floor/darkred2/east,
 /area/bigredv2/outside/admin_building)
+"ed" = (
+/obj/effect/decal/cleanable/blood,
+/turf/open/floor/carpet,
+/area/bigredv2/outside/admin_building)
+"ee" = (
+/obj/effect/decal/cleanable/blood/xeno,
+/turf/open/floor/darkred2/east,
+/area/bigredv2/outside/admin_building)
+"eg" = (
+/obj/structure/platform_decoration/metal/almayer/west,
+/obj/effect/decal/cleanable/blood/xeno,
+/turf/open/floor/dark,
+/area/bigredv2/outside/admin_building)
 "gb" = (
-/obj/structure/pipes/standard/manifold/hidden/green,
-/turf/open/floor/dark,
-/area/bigredv2/outside/admin_building)
-"gc" = (
-/obj/structure/barricade/metal/wired{
-	dir = 4
-	},
-/obj/item/ammo_magazine/pistol/rubber{
-	current_rounds = 0
-	},
-/turf/open/floor/wood,
-/area/bigredv2/outside/admin_building)
-"gI" = (
-/obj/structure/platform_decoration{
-	dir = 4
-	},
-/turf/open/floor/dark,
-/area/bigredv2/outside/admin_building)
-"gW" = (
-/obj/structure/pipes/standard/simple/hidden/green{
-	dir = 4
-	},
-/obj/structure/machinery/door/airlock/almayer/command/colony{
-	name = "\improper Operations Office"
-	},
-/turf/open/floor/wood,
-/area/bigredv2/outside/admin_building)
-"jH" = (
-/obj/structure/machinery/door/airlock/almayer/command/colony{
-	dir = 1;
-	name = "\improper Operations Meeting Room"
-	},
-/turf/open/floor/delivery,
-/area/bigredv2/outside/admin_building)
-"kt" = (
-/obj/structure/pipes/standard/simple/hidden/green{
-	dir = 4
-	},
-/turf/open/floor/darkredcorners2,
-/area/bigredv2/outside/admin_building)
-"kv" = (
-/obj/structure/barricade/metal/wired{
-	dir = 4
-	},
-/turf/open/floor/wood,
-/area/bigredv2/outside/admin_building)
-"kY" = (
-/obj/structure/pipes/standard/simple/hidden/green,
-/obj/effect/landmark/crap_item,
-/turf/open/floor/darkred2/west,
-/area/bigredv2/outside/admin_building)
-"mw" = (
 /obj/item/ammo_box/magazine{
 	num_of_magazines = 2
 	},
@@ -200,30 +148,114 @@
 	},
 /turf/open/floor/wood,
 /area/bigredv2/outside/admin_building)
-"oS" = (
-/obj/item/ammo_magazine/rifle{
-	current_rounds = 0;
-	pixel_x = -9;
-	pixel_y = 7
+"gR" = (
+/obj/effect/decal/cleanable/blood/xeno,
+/obj/structure/barricade/metal/wired{
+	dir = 1;
+	icon_state = "metal_2"
 	},
-/turf/open/floor/wood,
+/turf/open/floor/carpet,
 /area/bigredv2/outside/admin_building)
-"pQ" = (
-/obj/structure/window/framed/solaris/reinforced,
-/obj/structure/machinery/door/poddoor/shutters/almayer{
-	dir = 4;
-	id = "Operations";
-	name = "\improper Operations Shutters"
-	},
-/turf/open/floor/plating,
-/area/bigredv2/outside/admin_building)
-"sr" = (
-/obj/structure/platform{
-	dir = 8
+"he" = (
+/obj/structure/platform/metal/almayer,
+/obj/structure/flora/jungle/planttop1{
+	pixel_y = 10
 	},
 /turf/open/floor/dark,
 /area/bigredv2/outside/admin_building)
-"vx" = (
+"hf" = (
+/obj/item/device/radio/intercom{
+	freerange = 1;
+	frequency = 1469;
+	name = "General Listening Channel";
+	pixel_x = 30
+	},
+/turf/open/floor/darkred2/southeast,
+/area/bigredv2/outside/admin_building)
+"hz" = (
+/turf/open/floor/darkred2,
+/area/bigredv2/outside/admin_building)
+"hC" = (
+/obj/structure/pipes/standard/manifold/hidden/green,
+/turf/open/floor/dark,
+/area/bigredv2/outside/admin_building)
+"hM" = (
+/obj/structure/pipes/standard/simple/hidden/green{
+	dir = 4
+	},
+/obj/effect/decal/cleanable/blood/xeno,
+/turf/open/floor/darkred2,
+/area/bigredv2/outside/admin_building)
+"hN" = (
+/obj/effect/decal/cleanable/blood,
+/turf/open/floor/dark,
+/area/bigredv2/outside/admin_building)
+"jh" = (
+/obj/structure/pipes/standard/simple/hidden/green,
+/obj/effect/decal/cleanable/blood/xeno,
+/turf/open/floor/darkredcorners2/west,
+/area/bigredv2/outside/admin_building)
+"jm" = (
+/obj/structure/platform/metal/almayer/east,
+/turf/open/floor/dark,
+/area/bigredv2/outside/admin_building)
+"jq" = (
+/obj/item/weapon/gun/rifle/m41a/corporate{
+	current_mag = /obj/item/ammo_magazine/rifle/rubber;
+	desc = "A Weyland-Yutani creation, this M41A MK2 comes equipped in corporate white. Uses 10x24mm caseless ammunition. It seems to be pretty battered and broken up.";
+	name = "battered M41A pulse rifle MK2";
+	pixel_x = 4
+	},
+/turf/open/floor/carpet,
+/area/bigredv2/outside/admin_building)
+"jY" = (
+/obj/item/ammo_magazine/rifle/rubber{
+	current_rounds = 0;
+	pixel_x = -6;
+	pixel_y = -4
+	},
+/obj/item/stack/sheet/metal{
+	pixel_x = -5;
+	pixel_y = 2
+	},
+/turf/open/floor/carpet,
+/area/bigredv2/outside/admin_building)
+"kr" = (
+/obj/item/stack/sheet/metal{
+	pixel_x = 3;
+	pixel_y = -11
+	},
+/turf/open/floor/carpet,
+/area/bigredv2/outside/admin_building)
+"la" = (
+/obj/item/ammo_magazine/pistol/rubber{
+	current_rounds = 0
+	},
+/obj/effect/decal/cleanable/blood,
+/turf/open/floor/carpet,
+/area/bigredv2/outside/admin_building)
+"lv" = (
+/obj/structure/machinery/light{
+	dir = 8
+	},
+/obj/effect/decal/cleanable/blood{
+	icon_state = "gib6"
+	},
+/turf/open/floor/wood,
+/area/bigredv2/outside/admin_building)
+"mi" = (
+/obj/effect/spawner/random/toolbox,
+/obj/structure/platform_decoration/metal/almayer,
+/turf/open/floor/dark,
+/area/bigredv2/outside/admin_building)
+"mr" = (
+/obj/structure/barricade/metal/wired{
+	dir = 4;
+	icon_state = "metal_2"
+	},
+/turf/open/floor/wood,
+/area/bigredv2/outside/admin_building)
+"nd" = (
 /obj/item/ammo_magazine/rifle{
 	current_rounds = 0;
 	pixel_x = -8;
@@ -234,23 +266,74 @@
 	},
 /turf/open/floor/wood,
 /area/bigredv2/outside/admin_building)
-"vR" = (
-/turf/open/floor/darkred2/east,
+"oI" = (
+/obj/item/shard,
+/turf/open/floor/dark,
 /area/bigredv2/outside/admin_building)
-"wH" = (
-/obj/item/ammo_box/magazine/ext{
-	num_of_magazines = 1
+"oZ" = (
+/obj/effect/decal/cleanable/blood/xeno,
+/turf/open/floor/darkred2/southwest,
+/area/bigredv2/outside/admin_building)
+"pZ" = (
+/obj/structure/machinery/door/airlock/almayer/command/colony{
+	dir = 1;
+	name = "\improper Operations Meeting Room";
+	density = 0;
+	icon_state = "door_open"
+	},
+/turf/open/floor/delivery,
+/area/bigredv2/outside/admin_building)
+"qR" = (
+/obj/structure/pipes/standard/simple/hidden/green{
+	dir = 4
+	},
+/obj/structure/machinery/door/airlock/almayer/command/colony{
+	name = "\improper Operations Office"
 	},
 /turf/open/floor/wood,
 /area/bigredv2/outside/admin_building)
-"xr" = (
-/obj/effect/spawner/random/toolbox,
-/obj/structure/platform_decoration,
+"re" = (
+/obj/structure/pipes/standard/simple/hidden/green,
+/turf/open/floor/darkred2/west,
+/area/bigredv2/outside/admin_building)
+"sX" = (
+/turf/open/floor/wood,
+/area/bigredv2/outside/admin_building)
+"ts" = (
+/obj/item/storage/secure/briefcase,
+/obj/effect/decal/cleanable/blood,
+/turf/open/floor/carpet,
+/area/bigredv2/outside/admin_building)
+"tz" = (
+/obj/effect/landmark/survivor_spawner,
+/obj/structure/platform_decoration/metal/almayer/north,
 /turf/open/floor/dark,
 /area/bigredv2/outside/admin_building)
-"xV" = (
-/obj/structure/barricade/sandbags/wired,
-/turf/open/floor/darkred2/east,
+"uH" = (
+/obj/structure/bed/chair/comfy/blue{
+	dir = 8
+	},
+/obj/structure/pipes/standard/simple/hidden/green{
+	dir = 4
+	},
+/obj/effect/landmark/corpsespawner/wygoon,
+/obj/effect/decal/cleanable/blood,
+/obj/effect/decal/cleanable/blood/gibs/body,
+/turf/open/floor/carpet,
+/area/bigredv2/outside/admin_building)
+"xe" = (
+/obj/structure/platform_decoration/metal/almayer/east,
+/turf/open/floor/dark,
+/area/bigredv2/outside/admin_building)
+"xQ" = (
+/obj/effect/acid_hole{
+	dir = 4
+	},
+/turf/closed/wall/solaris,
+/area/bigredv2/outside/admin_building)
+"yd" = (
+/obj/structure/window_frame/solaris,
+/turf/open/floor/plating,
 /area/bigredv2/outside/admin_building)
 "za" = (
 /obj/structure/pipes/standard/simple/hidden/green{
@@ -259,18 +342,150 @@
 /obj/structure/machinery/door/airlock/almayer/command/colony{
 	name = "\improper Operations Meeting Room"
 	},
-/obj/structure/pipes/standard/simple/hidden/green{
-	dir = 4
-	},
 /turf/open/floor,
 /area/bigredv2/outside/admin_building)
-"zv" = (
+"AF" = (
+/obj/structure/platform/metal/almayer/west,
+/turf/open/floor/dark,
+/area/bigredv2/outside/admin_building)
+"Br" = (
+/obj/structure/surface/table,
+/obj/item/storage/firstaid/regular/empty,
+/turf/open/floor/carpet,
+/area/bigredv2/outside/admin_building)
+"Cj" = (
 /obj/structure/pipes/standard/simple/hidden/green{
 	dir = 4
 	},
+/turf/open/floor/dark,
+/area/bigredv2/outside/admin_building)
+"Cw" = (
+/obj/effect/landmark/corpsespawner/wygoon/lead,
+/obj/effect/decal/cleanable/blood,
+/obj/effect/decal/cleanable/blood/gibs/body,
+/turf/open/floor/wood,
+/area/bigredv2/outside/admin_building)
+"CO" = (
+/obj/item/ammo_magazine/rifle{
+	current_rounds = 0;
+	pixel_x = -9;
+	pixel_y = 7
+	},
+/turf/open/floor/wood,
+/area/bigredv2/outside/admin_building)
+"EO" = (
+/obj/item/ammo_magazine/pistol/rubber{
+	current_rounds = 0
+	},
+/obj/effect/decal/cleanable/blood,
+/turf/open/floor/wood,
+/area/bigredv2/outside/admin_building)
+"ER" = (
+/obj/structure/platform/metal/almayer/north,
+/turf/open/floor/dark,
+/area/bigredv2/outside/admin_building)
+"Gc" = (
+/obj/item/ammo_box/magazine/ext{
+	num_of_magazines = 1
+	},
+/turf/open/floor/wood,
+/area/bigredv2/outside/admin_building)
+"Mu" = (
+/obj/effect/decal/cleanable/blood,
+/obj/effect/decal/cleanable/blood/gibs/body,
+/turf/open/floor/wood,
+/area/bigredv2/outside/admin_building)
+"Nb" = (
+/obj/structure/barricade/metal/wired{
+	dir = 4
+	},
+/obj/item/ammo_magazine/pistol/rubber{
+	current_rounds = 0
+	},
+/turf/open/floor/wood,
+/area/bigredv2/outside/admin_building)
+"Nc" = (
+/obj/structure/pipes/standard/simple/hidden/green{
+	dir = 4
+	},
+/turf/open/floor/darkredcorners2,
+/area/bigredv2/outside/admin_building)
+"Nl" = (
+/obj/effect/landmark/corpsespawner/wygoon,
+/obj/effect/decal/cleanable/blood,
+/obj/effect/decal/cleanable/blood/gibs/body,
+/turf/open/floor/carpet,
+/area/bigredv2/outside/admin_building)
+"NS" = (
+/obj/item/ammo_magazine/rifle/rubber{
+	current_rounds = 0;
+	pixel_y = 11
+	},
+/obj/effect/decal/cleanable/blood,
+/turf/open/floor/wood,
+/area/bigredv2/outside/admin_building)
+"Op" = (
+/obj/structure/barricade/sandbags/wired,
 /turf/open/floor/darkred2/east,
 /area/bigredv2/outside/admin_building)
-"zF" = (
+"PU" = (
+/obj/structure/pipes/standard/simple/hidden/green,
+/obj/effect/landmark/crap_item,
+/turf/open/floor/darkred2/west,
+/area/bigredv2/outside/admin_building)
+"PX" = (
+/obj/effect/decal/cleanable/blood,
+/obj/structure/barricade/metal/wired{
+	dir = 4
+	},
+/turf/open/floor/wood,
+/area/bigredv2/outside/admin_building)
+"Sz" = (
+/obj/item/ammo_magazine/rifle/rubber{
+	current_rounds = 0;
+	pixel_x = 5;
+	pixel_y = -5
+	},
+/turf/open/floor/carpet,
+/area/bigredv2/outside/admin_building)
+"TJ" = (
+/turf/open/floor/dark,
+/area/bigredv2/outside/admin_building)
+"Ua" = (
+/obj/item/stack/sheet/metal{
+	amount = 3
+	},
+/turf/open/floor/carpet,
+/area/bigredv2/outside/admin_building)
+"Ux" = (
+/obj/structure/machinery/light{
+	dir = 4
+	},
+/obj/item/storage/toolbox/syndicate,
+/turf/open/floor/darkred2/east,
+/area/bigredv2/outside/admin_building)
+"WY" = (
+/obj/structure/pipes/standard/manifold/hidden/green{
+	dir = 8
+	},
+/turf/open/floor/darkred2/west,
+/area/bigredv2/outside/admin_building)
+"Yb" = (
+/obj/item/ammo_magazine/rifle{
+	current_rounds = 0
+	},
+/turf/open/floor/wood,
+/area/bigredv2/outside/admin_building)
+"YI" = (
+/obj/structure/pipes/standard/simple/hidden/green,
+/obj/structure/barricade/sandbags/wired,
+/turf/open/floor/darkred2/west,
+/area/bigredv2/outside/admin_building)
+"Zg" = (
+/obj/effect/decal/cleanable/blood/xeno,
+/turf/open/floor/darkred2,
+/area/bigredv2/outside/admin_building)
+"ZN" = (
 /obj/structure/machinery/light{
 	dir = 8
 	},
@@ -284,163 +499,16 @@
 	},
 /turf/open/floor/wood,
 /area/bigredv2/outside/admin_building)
-"AC" = (
-/obj/item/ammo_magazine/pistol/rubber{
-	current_rounds = 0
-	},
-/turf/open/floor/carpet,
-/area/bigredv2/outside/admin_building)
-"Br" = (
-/obj/structure/surface/table,
-/obj/item/storage/firstaid/regular/empty,
-/turf/open/floor/carpet,
-/area/bigredv2/outside/admin_building)
-"BL" = (
-/obj/structure/barricade/metal/wired{
-	dir = 4;
-	icon_state = "metal_2"
-	},
-/turf/open/floor/wood,
-/area/bigredv2/outside/admin_building)
-"BW" = (
-/obj/structure/platform,
-/obj/structure/flora/jungle/planttop1{
-	pixel_y = 10
-	},
-/turf/open/floor/dark,
-/area/bigredv2/outside/admin_building)
-"Ce" = (
-/obj/structure/pipes/standard/simple/hidden/green{
-	dir = 4
-	},
-/turf/open/floor/dark,
-/area/bigredv2/outside/admin_building)
-"EC" = (
-/obj/effect/landmark/survivor_spawner,
-/obj/structure/platform_decoration{
-	dir = 1
-	},
-/turf/open/floor/dark,
-/area/bigredv2/outside/admin_building)
-"EL" = (
-/obj/structure/surface/table,
-/obj/item/device/radio/marine,
-/obj/item/weapon/gun/pistol/m4a3/training{
-	name = "dented M4A3 service pistol"
-	},
-/obj/item/ammo_magazine/pistol/rubber,
-/turf/open/floor/carpet,
-/area/bigredv2/outside/admin_building)
-"Fi" = (
-/obj/structure/platform{
-	dir = 1
-	},
-/turf/open/floor/dark,
-/area/bigredv2/outside/admin_building)
-"Fp" = (
-/obj/structure/pipes/standard/manifold/hidden/green{
-	dir = 8
-	},
-/turf/open/floor/darkred2/west,
-/area/bigredv2/outside/admin_building)
-"Gx" = (
-/turf/open/floor/darkred2/southwest,
-/area/bigredv2/outside/admin_building)
-"GR" = (
+"ZO" = (
 /obj/structure/pipes/standard/simple/hidden/green,
 /obj/structure/machinery/light{
 	dir = 8
 	},
 /turf/open/floor/darkred2/west,
-/area/bigredv2/outside/admin_building)
-"HY" = (
-/obj/structure/platform_decoration{
-	dir = 8
-	},
-/obj/effect/decal/cleanable/blood/xeno,
-/turf/open/floor/dark,
-/area/bigredv2/outside/admin_building)
-"Js" = (
-/obj/item/device/radio/intercom{
-	freerange = 1;
-	frequency = 1469;
-	name = "General Listening Channel";
-	pixel_x = 30
-	},
-/turf/open/floor/darkred2/southeast,
-/area/bigredv2/outside/admin_building)
-"Jt" = (
-/obj/effect/decal/cleanable/blood,
-/turf/open/floor/dark,
-/area/bigredv2/outside/admin_building)
-"Jy" = (
-/turf/open/floor/darkred2,
-/area/bigredv2/outside/admin_building)
-"JM" = (
-/obj/structure/pipes/standard/simple/hidden/green,
-/obj/effect/decal/cleanable/blood/xeno,
-/turf/open/floor/darkredcorners2/west,
-/area/bigredv2/outside/admin_building)
-"Li" = (
-/obj/item/ammo_magazine/rifle{
-	current_rounds = 0
-	},
-/turf/open/floor/wood,
-/area/bigredv2/outside/admin_building)
-"Nz" = (
-/obj/structure/pipes/standard/simple/hidden/green,
-/turf/open/floor/darkred2/west,
-/area/bigredv2/outside/admin_building)
-"NX" = (
-/turf/open/floor/dark,
-/area/bigredv2/outside/admin_building)
-"Od" = (
-/obj/structure/machinery/light{
-	dir = 8
-	},
-/obj/effect/decal/cleanable/blood{
-	icon_state = "gib6"
-	},
-/turf/open/floor/wood,
-/area/bigredv2/outside/admin_building)
-"Qf" = (
-/obj/structure/platform{
-	dir = 4
-	},
-/turf/open/floor/dark,
-/area/bigredv2/outside/admin_building)
-"RN" = (
-/obj/structure/pipes/standard/simple/hidden/green,
-/obj/structure/barricade/sandbags/wired,
-/turf/open/floor/darkred2/west,
-/area/bigredv2/outside/admin_building)
-"Sz" = (
-/obj/item/ammo_magazine/rifle/rubber{
-	current_rounds = 0;
-	pixel_x = 5;
-	pixel_y = -5
-	},
-/turf/open/floor/carpet,
-/area/bigredv2/outside/admin_building)
-"WP" = (
-/turf/open/floor/wood,
-/area/bigredv2/outside/admin_building)
-"Xw" = (
-/obj/structure/pipes/standard/simple/hidden/green{
-	dir = 4
-	},
-/obj/effect/decal/cleanable/blood/xeno,
-/turf/open/floor/darkred2,
-/area/bigredv2/outside/admin_building)
-"Ze" = (
-/obj/item/ammo_magazine/pistol/rubber{
-	current_rounds = 0
-	},
-/turf/open/floor/wood,
 /area/bigredv2/outside/admin_building)
 
 (1,1,1) = {"
-pQ
+yd
 ab
 ab
 ab
@@ -452,134 +520,134 @@ ab
 ab
 "}
 (2,1,1) = {"
-Jy
+Zg
 aD
-Od
-WP
-as
-WP
-Li
-zF
-wH
+lv
+Mu
+NS
+Cw
+Yb
+ZN
+Gc
 ab
 "}
 (3,1,1) = {"
-Jy
-ak
-dp
-AC
-aJ
-aO
+cD
+yd
+jY
+la
+Ua
+ts
 aJ
 aQ
-mw
+gb
 bp
 "}
 (4,1,1) = {"
-Jy
+hz
 ak
-at
+gR
 aB
-EL
+aK
 Br
 aV
 ba
-WP
-oS
+sX
+CO
 "}
 (5,1,1) = {"
-Jy
+hz
 ae
-aQ
+jq
 aC
 aQ
-aC
+kr
 Sz
-bb
-WP
-WP
+uH
+sX
+sX
 "}
 (6,1,1) = {"
-NX
-jH
-aQ
+TJ
+pZ
+Nl
 aW
 aL
 aS
-aQ
+ed
 bc
-WP
-Ze
+sX
+EO
 "}
 (7,1,1) = {"
-Jy
+hz
 ae
-BL
-kv
-kv
-gc
-kv
-vx
-WP
-WP
+PX
+mr
+bY
+Nb
+bY
+nd
+sX
+sX
 "}
 (8,1,1) = {"
-Jy
+hz
 ae
 ae
-ad
+ak
 ad
 ad
 ae
 za
-ae
+xQ
 ae
 "}
 (9,1,1) = {"
-JM
-GR
-Nz
-Fp
-RN
-Nz
-kY
-gb
-Gx
-bs
+jh
+ZO
+re
+WY
+YI
+re
+PU
+hC
+oZ
+ak
 "}
 (10,1,1) = {"
-xr
-Qf
-HY
-Ce
-NX
-Jt
-NX
-Ce
-NX
-bs
+mi
+jm
+eg
+Cj
+oI
+hN
+TJ
+Cj
+TJ
+ak
 "}
 (11,1,1) = {"
-BW
+he
 ap
-Fi
-kt
-xV
-fy
-vR
-zv
-Js
+ER
+Nc
+Op
+Ux
+ee
+dC
+hf
 bs
 "}
 (12,1,1) = {"
-EC
-sr
-gI
-Xw
+tz
+AF
+xe
+hM
 ae
 ae
 ae
-gW
+qR
 ae
 ae
 "}

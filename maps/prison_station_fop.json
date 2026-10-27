@@ -2,6 +2,17 @@
     "map_name": "Fiorina Cellblocks",
     "map_path": "map_files/FOP_v2_Cellblocks",
     "map_file": "Prison_Station_FOP.dmm",
+    "survivor_types": [
+        "/datum/equipment_preset/survivor/scientist/fiorina",
+        "/datum/equipment_preset/survivor/doctor/fiorina",
+        "/datum/equipment_preset/survivor/interstellar_human_rights_observer",
+        "/datum/equipment_preset/survivor/security/fiorina",
+        "/datum/equipment_preset/survivor/prisoner",
+        "/datum/equipment_preset/survivor/prisoner",
+        "/datum/equipment_preset/survivor/gangleader",
+        "/datum/equipment_preset/survivor/engineer/fiorina",
+        "/datum/equipment_preset/survivor/civilian"
+    ],
     "defcon_triggers": [
         3750,
         2600,
@@ -23,7 +34,7 @@
         "xeno_hive_bravo": 0,
         "xeno_hive_charlie": 0
     },
-    "camouflage": "jungle",
+    "camouflage": "classic",
     "gamemodes": [
         "Distress Signal",
         "Hunter Games",

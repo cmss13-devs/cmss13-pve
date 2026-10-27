@@ -61,6 +61,7 @@
 	rank_pin = /obj/item/clothing/accessory/ranks/marine/e7
 	ranking = 6
 	pay_multiplier = 2.75
+	sea_grade = TRUE
 
 /datum/paygrade/marine/e8
 	paygrade = PAY_SHORT_ME8
@@ -69,6 +70,7 @@
 	rank_pin = /obj/item/clothing/accessory/ranks/marine/e8
 	ranking = 7
 	pay_multiplier = 2.75
+	sea_grade = TRUE
 
 /datum/paygrade/marine/e8e
 	paygrade = PAY_SHORT_ME8E
@@ -77,6 +79,7 @@
 	rank_pin = /obj/item/clothing/accessory/ranks/marine/e8e
 	ranking = 8
 	pay_multiplier = 2.75
+	sea_grade = TRUE
 
 /datum/paygrade/marine/e9
 	paygrade = PAY_SHORT_ME9
@@ -85,6 +88,7 @@
 	rank_pin = /obj/item/clothing/accessory/ranks/marine/e9
 	ranking = 9
 	pay_multiplier = 3
+	sea_grade = TRUE
 
 /datum/paygrade/marine/e9e
 	paygrade = PAY_SHORT_ME9E
@@ -93,6 +97,7 @@
 	rank_pin = /obj/item/clothing/accessory/ranks/marine/e9e
 	ranking = 10
 	pay_multiplier = 3
+	sea_grade = TRUE
 
 /datum/paygrade/marine/e9c
 	paygrade = PAY_SHORT_ME9C
@@ -101,48 +106,25 @@
 	rank_pin = /obj/item/clothing/accessory/ranks/marine/e9c
 	ranking = 11
 	pay_multiplier = 3
+	sea_grade = TRUE
 
-// WARRANT OFFICER PAYGRADES
-
-/datum/paygrade/marine/w1
-	paygrade = PAY_SHORT_MW1
+/datum/paygrade/marine/wo
+	paygrade = PAY_SHORT_MWO
 	name = "Warrant Officer"
 	prefix = "WO"
-	rank_pin = /obj/item/clothing/accessory/ranks/marine/w1
+	rank_pin = /obj/item/clothing/accessory/ranks/marine/wo
 	ranking = 12
-	pay_multiplier = 2.75	//Pay on par with E7 to begin with
-
-/datum/paygrade/marine/w2
-	paygrade = PAY_SHORT_MW2
-	name = "Chief Warrant Officer 2"
-	prefix = "CWO2"
-	rank_pin = /obj/item/clothing/accessory/ranks/marine/w2
-	ranking = 13
-	pay_multiplier = 2.9
-
-/datum/paygrade/marine/w3
-	paygrade = PAY_SHORT_MW3
-	name = "Chief Warrant Officer 3"
-	prefix = "CWO3."
-	rank_pin = /obj/item/clothing/accessory/ranks/marine/w3
-	ranking = 14
 	pay_multiplier = 3
+	officer_grade = GRADE_OFFICER
 
-/datum/paygrade/marine/w4
-	paygrade = PAY_SHORT_MW4
-	name = "Chief Warrant Officer 4"
-	prefix = "CWO4"
-	rank_pin = /obj/item/clothing/accessory/ranks/marine/w4
-	ranking = 15
-	pay_multiplier = 3.2
-
-/datum/paygrade/marine/w5
-	paygrade = PAY_SHORT_MW5
-	name = "Chief Warrant Officer 5"
-	prefix = "CWO5"
-	rank_pin = /obj/item/clothing/accessory/ranks/marine/w5
-	ranking = 16
-	pay_multiplier = 3.5
+/datum/paygrade/marine/cwo
+	paygrade = PAY_SHORT_MCWO
+	name = "Chief Warrant Officer"
+	prefix = "CWO"
+	rank_pin = /obj/item/clothing/accessory/ranks/marine/cwo
+	ranking = 13
+	pay_multiplier = 3
+	officer_grade = GRADE_OFFICER
 
 // COMMISSIONED PAYGRADES
 
@@ -151,7 +133,7 @@
 	name = "Second Lieutenant"
 	prefix = "2ndLt"
 	rank_pin = /obj/item/clothing/accessory/ranks/marine/o1
-	ranking = 17
+	ranking = 14
 	pay_multiplier = 3
 	officer_grade = GRADE_OFFICER
 
@@ -160,7 +142,7 @@
 	name = "First Lieutenant"
 	prefix = "1stLt"
 	rank_pin = /obj/item/clothing/accessory/ranks/marine/o2
-	ranking = 18
+	ranking = 15
 	pay_multiplier = 3.2
 	officer_grade = GRADE_OFFICER
 
@@ -169,7 +151,7 @@
 	name = "Captain"
 	prefix = "Capt"
 	rank_pin = /obj/item/clothing/accessory/ranks/marine/o3
-	ranking = 19
+	ranking = 16
 	pay_multiplier = 4
 	officer_grade = GRADE_OFFICER
 
@@ -178,7 +160,7 @@
 	name = "Major"
 	prefix = "Maj"
 	rank_pin = /obj/item/clothing/accessory/ranks/marine/o4
-	ranking = 20
+	ranking = 17
 	pay_multiplier = 4
 	officer_grade = GRADE_OFFICER
 
@@ -187,7 +169,7 @@
 	name = "Lieutenant Colonel"
 	prefix = "LtCol"
 	rank_pin = /obj/item/clothing/accessory/ranks/marine/o5
-	ranking = 21
+	ranking = 18
 	pay_multiplier = 4.2
 	officer_grade = GRADE_OFFICER
 
@@ -197,7 +179,7 @@
 	name = "Colonel"
 	prefix = "Col"
 	rank_pin = /obj/item/clothing/accessory/ranks/marine/o6
-	ranking = 22
+	ranking = 19
 	pay_multiplier = 4.4
 	officer_grade = GRADE_OFFICER
 
@@ -206,7 +188,7 @@
 	name = "Senior Colonel"
 	prefix = "Snr Col."
 	rank_pin = /obj/item/clothing/accessory/ranks/marine/o6e
-	ranking = 23
+	ranking = 20
 	pay_multiplier = 4.6
 	officer_grade = GRADE_OFFICER
 
@@ -215,7 +197,7 @@
 	name = "Division Colonel"
 	prefix = "Div Col."
 	rank_pin = /obj/item/clothing/accessory/ranks/marine/o6c
-	ranking = 24
+	ranking = 21
 	pay_multiplier = 4.8
 	officer_grade = GRADE_OFFICER
 
@@ -225,7 +207,7 @@
 	name = "Brigadier General"
 	prefix = "BGen"
 	rank_pin = /obj/item/clothing/accessory/ranks/marine/o7
-	ranking = 25
+	ranking = 22
 	pay_multiplier = 6
 	officer_grade = GRADE_FLAG
 
@@ -234,7 +216,7 @@
 	name = "Major General"
 	prefix = "MajGen"
 	rank_pin = /obj/item/clothing/accessory/ranks/marine/o8
-	ranking = 26
+	ranking = 23
 	pay_multiplier = 6.2
 	officer_grade = GRADE_FLAG
 
@@ -243,7 +225,7 @@
 	name = "Lieutenant General"
 	prefix = "LtGen"
 	rank_pin = /obj/item/clothing/accessory/ranks/marine/o9
-	ranking = 27
+	ranking = 24
 	pay_multiplier = 6.4
 	officer_grade = GRADE_FLAG
 
@@ -252,7 +234,7 @@
 	name = "General"
 	prefix = "Gen"
 	rank_pin = /obj/item/clothing/accessory/ranks/marine/o10
-	ranking = 28
+	ranking = 25
 	pay_multiplier = 6.6
 	officer_grade = GRADE_FLAG
 
@@ -261,7 +243,7 @@
 	name = "Assistant Commandant of the Marine Corps"
 	prefix = "ACMC"
 	rank_pin = /obj/item/clothing/accessory/ranks/marine/o10c
-	ranking = 29
+	ranking = 26
 	pay_multiplier = 6.8
 	officer_grade = GRADE_FLAG
 
@@ -270,6 +252,16 @@
 	name = "Commandant of the Marine Corps"
 	prefix = "CMC"
 	rank_pin = /obj/item/clothing/accessory/ranks/marine/o10c
-	ranking = 30
+	ranking = 27
 	pay_multiplier = 7
 	officer_grade = GRADE_FLAG
+
+//Historical Background: Combat Dogs were given the lowest officer rank possible, they have no notional command but if someone were to abuse the animal, the offender could be charged with assaulting an officer.
+/datum/paygrade/marine/k9
+	paygrade = PAY_SHORT_SYN_K9
+	name = "Second Lieutenant Combat Lifesaver"
+	prefix = "2ndLt Combat Lifesaver"
+	rank_pin = /obj/item/clothing/accessory/ranks/marine/o1
+	ranking = 14
+	pay_multiplier = 0
+	officer_grade = GRADE_OFFICER

@@ -39,10 +39,15 @@
 	var/gas_type = GAS_TYPE_AIR
 	var/temperature = T20C
 	var/pressure = ONE_ATMOSPHERE
-	var/can_build_special = TRUE
-	var/is_resin_allowed = TRUE // can xenos weed, place resin holes or dig tunnels at said areas
-	var/is_landing_zone = FALSE // primarily used to prevent mortars from hitting this location
-	var/resin_construction_allowed = TRUE // Allow construction of resin walls, and other special
+	var/can_build_special = FALSE
+	/// can xenos weed, place resin holes or dig tunnels at said areas
+	var/is_resin_allowed = TRUE
+	/// whether or not you can build things like barricades in this area
+	var/allow_construction = TRUE
+	/// primarily used to prevent mortars from hitting this location
+	var/is_landing_zone = FALSE
+	/// Allow construction of resin walls, and other special
+	var/resin_construction_allowed = TRUE
 
 	// Weather
 	var/weather_enabled = TRUE // Manual override for weather if set to false
@@ -82,9 +87,17 @@
 	/// Doesn't need to be set for areas/Z levels that are marked as admin-only
 	var/block_game_interaction = FALSE
 
-	// Day-Night settings
-	var/daytime_affected = TRUE
+	/// Which, if any, LZ this area belongs to. If an area belongs to an LZ, if that LZ is designated as the primary
+	/// LZ, all weeds will be destroyed and further weed placement disabled
+	var/linked_lz = FALSE
 
+	/// How long this area should be un-oviable
+	var/unoviable_timer = 25 MINUTES
+
+	/// How many potentially open turfs can exist in this area
+	var/openable_turf_count = 0
+	/// How much destroyable resin currently exists in this area
+	var/current_resin_count = 0
 
 /area/New()
 	// This interacts with the map loader, so it needs to be set immediately
@@ -105,11 +118,32 @@
 	reg_in_areas_in_z()
 	if(is_mainship_level(z))
 		GLOB.ship_areas += src
-		daytime_affected = FALSE
-	if(ceiling > CEILING_GLASS)
-		daytime_affected = FALSE
 
 	update_base_lighting()
+
+	if(unoviable_timer)
+		SSticker.OnRoundstart(CALLBACK(src, PROC_REF(handle_ovi_timer)))
+
+	if((flags_area & AREA_UNWEEDABLE) && is_resin_allowed)
+		is_resin_allowed = FALSE
+		log_mapping("[src] has AREA_UNWEEDABLE flag but has is_resin_allowed as true! Forcing is_resin_allowed false...")
+
+	if(!(flags_area & AREA_UNWEEDABLE))
+		for(var/turf/current in src)
+			if(!current.density)
+				openable_turf_count++
+				continue
+			if(istype(current, /turf/closed/wall))
+				var/turf/closed/wall/current_wall = current
+				if(!(current_wall.turf_flags & TURF_HULL))
+					openable_turf_count++
+					continue
+
+	// If map_holder exists for SSweather, its already done its one-time setup
+	if(weather_enabled && SSweather.map_holder?.should_affect_area(src))
+		SSweather.weather_areas += src
+		if(SSweather.is_weather_event)
+			overlays += SSweather.curr_master_turf_overlay
 
 /area/proc/initialize_power(override_power)
 	if(requires_power)
@@ -126,7 +160,7 @@
 
 /// Returns the correct ambience sound track for a client in this area
 /area/proc/get_sound_ambience(client/target)
-	if(SSweather.is_weather_event && SSweather.map_holder.should_affect_area(src))
+	if(SSweather.is_weather_event && SSweather.map_holder.should_affect_area(src) && weather_enabled)
 		return SSweather.weather_event_instance.ambience
 	return ambience_exterior
 
@@ -280,13 +314,19 @@
 /area/proc/updateicon()
 	var/I //More important == bottom. Fire normally takes priority over everything.
 	if(flags_alarm_state && (!requires_power || power_environ)) //It either doesn't require power or the environment is powered. And there is an alarm.
-		if(flags_alarm_state & ALARM_WARNING_READY) I = "alarm_ready" //Area is ready for something.
-		if(flags_alarm_state & ALARM_WARNING_EVAC) I = "alarm_evac" //Evacuation happening.
-		if(flags_alarm_state & ALARM_WARNING_ATMOS) I = "alarm_atmos" //Atmos breach.
-		if(flags_alarm_state & ALARM_WARNING_FIRE) I = "alarm_fire" //Fire happening.
-		if(flags_alarm_state & ALARM_WARNING_DOWN) I = "alarm_down" //Area is shut down.
+		if(flags_alarm_state & ALARM_WARNING_READY)
+			I = "alarm_ready" //Area is ready for something.
+		if(flags_alarm_state & ALARM_WARNING_EVAC)
+			I = "alarm_evac" //Evacuation happening.
+		if(flags_alarm_state & ALARM_WARNING_ATMOS)
+			I = "alarm_atmos" //Atmos breach.
+		if(flags_alarm_state & ALARM_WARNING_FIRE)
+			I = "alarm_fire" //Fire happening.
+		if(flags_alarm_state & ALARM_WARNING_DOWN)
+			I = "alarm_down" //Area is shut down.
 
-	if(icon_state != I) icon_state = I //If the icon state changed, change it. Otherwise do nothing.
+	if(icon_state != I)
+		icon_state = I //If the icon state changed, change it. Otherwise do nothing.
 
 /area/proc/powered(chan) // return true if the area has power to given channel
 	if(!requires_power)
@@ -345,7 +385,7 @@
 
 	return used
 
-/area/proc/use_power(amount, chan)
+/area/proc/use_power(amount, chan = POWER_CHANNEL_ONEOFF)
 	switch(chan)
 		if(POWER_CHANNEL_EQUIP)
 			used_equip += amount
@@ -356,35 +396,52 @@
 		if(POWER_CHANNEL_ONEOFF)
 			used_oneoff += amount
 
-/area/Entered(A,atom/OldLoc)
-	if(ismob(A))
+#if defined(UNIT_TESTS)
+	switch(chan)
+		if(POWER_CHANNEL_EQUIP)
+			if(used_equip < 0)
+				stack_trace("[src] ([type]) now has [used_equip] used_equip after use_power([amount],...)!")
+		if(POWER_CHANNEL_LIGHT)
+			if(used_light < 0)
+				stack_trace("[src] ([type]) now has [used_light] used_light after use_power([amount],...)!")
+		if(POWER_CHANNEL_ENVIRON)
+			if(used_environ < 0)
+				stack_trace("[src] ([type]) now has [used_environ] used_environ after use_power([amount],...)!")
+		if(POWER_CHANNEL_ONEOFF)
+			if(used_oneoff < 0)
+				stack_trace("[src] ([type]) now has [used_oneoff] used_oneoff after use_power([amount],...)!")
+#endif
+
+/area/Entered(atom/movable/thing, atom/OldLoc)
+	if(ismob(thing))
 		if(!OldLoc)
 			return
-		var/mob/M = A
+		var/mob/mob_thing = thing
 		var/area/old_area = get_area(OldLoc)
 		if(old_area == src)
 			return
-		M?.client?.soundOutput?.update_ambience(src, null, TRUE)
-	else if(istype(A, /obj/structure/machinery))
-		add_machine(A)
+		mob_thing?.client?.soundOutput?.update_ambience(src, null, TRUE)
+	else if(istype(thing, /obj/structure/machinery))
+		add_machine(thing)
 
-/area/Exited(A)
-	if(istype(A, /obj/structure/machinery))
-		remove_machine(A)
-	else if(ismob(A))
-		var/mob/exiting_mob = A
+/area/Exited(atom/movable/thing)
+	if(istype(thing, /obj/structure/machinery))
+		remove_machine(thing)
+	else if(ismob(thing))
+		var/mob/exiting_mob = thing
 		exiting_mob?.client?.soundOutput?.update_ambience(target_area = null, ambience_override = null, force_update = TRUE)
 
-/area/proc/add_machine(obj/structure/machinery/M)
+/area/proc/add_machine(obj/structure/machinery/machine)
 	SHOULD_NOT_SLEEP(TRUE)
-	if(istype(M))
-		use_power(M.calculate_current_power_usage(), M.power_channel)
-		M.power_change()
+	if(!machine.last_power_usage)
+		machine.update_use_power(-1)
+	else
+		use_power(machine.last_power_usage, machine.power_channel)
+	machine.power_change()
 
-/area/proc/remove_machine(obj/structure/machinery/M)
+/area/proc/remove_machine(obj/structure/machinery/machine)
 	SHOULD_NOT_SLEEP(TRUE)
-	if(istype(M))
-		use_power(-M.calculate_current_power_usage(), M.power_channel)
+	use_power(-machine.last_power_usage, machine.power_channel)
 
 //atmos related procs
 
@@ -406,21 +463,30 @@
 	return flags
 
 /area/proc/reg_in_areas_in_z()
-	if(!length(contents))
-		return
+	if(!SSmapping.areas_in_z["[z]"])
+		SSmapping.areas_in_z["[z]"] = list()
+	SSmapping.areas_in_z["[z]"] += src
 
-	var/list/areas_in_z = SSmapping.areas_in_z
-	var/z
-	for(var/i in contents)
-		var/atom/thing = i
-		if(!thing)
-			continue
-		z = thing.z
-		break
-	if(!z)
-		WARNING("No z found for [src]")
-		return
-	if(!areas_in_z["[z]"])
-		areas_in_z["[z]"] = list()
-	areas_in_z["[z]"] += src
+/**
+ * Purges existing weeds, and prevents future weeds from being placed.
+ */
+/area/proc/purge_weeds()
+	SEND_SIGNAL(src, COMSIG_AREA_RESIN_DISALLOWED)
 
+	is_resin_allowed = FALSE
+
+/// From roundstart, sets a timer to make an area oviable.
+/area/proc/handle_ovi_timer()
+	addtimer(VARSET_CALLBACK(src, unoviable_timer, FALSE), unoviable_timer)
+
+/area/sky
+	name = "Lower Sky"
+	icon_state = "lv-626"
+	flags_area = AREA_UNWEEDABLE
+	is_resin_allowed = FALSE
+
+/area/sky/level4
+	name = "Sky"
+
+/area/sky/level5
+	name = "Upper Sky"

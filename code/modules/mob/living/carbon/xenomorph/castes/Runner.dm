@@ -17,7 +17,7 @@
 	available_strains = list(/datum/xeno_strain/acider)
 	behavior_delegate_type = /datum/behavior_delegate/runner_base
 	evolves_to = list(XENO_CASTE_LURKER)
-	deevolves_to = list("Larva")
+	deevolves_to = list(XENO_CASTE_LARVA)
 
 	tackle_min = 4
 	tackle_max = 5
@@ -29,17 +29,19 @@
 
 	minimum_evolve_time = 5 MINUTES
 
+	organ_type = /obj/item/organ/xeno/runner
+
 	minimap_icon = "runner"
 
 /mob/living/carbon/xenomorph/runner
 	caste_type = XENO_CASTE_RUNNER
 	name = XENO_CASTE_RUNNER
 	desc = "A small red alien that looks like it could run fairly quickly..."
-	icon = 'icons/mob/xenos/runner.dmi'
+	icon = 'icons/mob/xenos/castes/tier_1/runner.dmi'
 	icon_state = "Runner Walking"
 	icon_size = 64
+	buckle_flags = CAN_BUCKLE
 	layer = MOB_LAYER
-	plasma_types = list(PLASMA_CATECHOLAMINE)
 	tier = 1
 	pixel_x = -16  //Needed for 2x2
 	old_x = -16
@@ -47,35 +49,42 @@
 	base_pixel_y = -20
 	pull_speed = -0.5
 	viewsize = 9
-	organ_value = 500 //worthless
 
 	mob_size = MOB_SIZE_XENO_SMALL
 
 	base_actions = list(
+		/datum/action/xeno_action/onclick/toggle_seethrough,
 		/datum/action/xeno_action/onclick/xeno_resting,
-		/datum/action/xeno_action/onclick/regurgitate,
+		/datum/action/xeno_action/onclick/release_haul,
 		/datum/action/xeno_action/watch_xeno,
 		/datum/action/xeno_action/activable/tail_stab,
 		/datum/action/xeno_action/onclick/xenohide,
 		/datum/action/xeno_action/activable/pounce/runner,
 		/datum/action/xeno_action/activable/runner_skillshot,
 		/datum/action/xeno_action/onclick/toggle_long_range/runner,
-		/datum/action/xeno_action/onclick/tacmap,
 	)
 	inherent_verbs = list(
 		/mob/living/carbon/xenomorph/proc/vent_crawl,
 	)
 
-	icon_xeno = 'icons/mob/xenos/runner.dmi'
-	icon_xenonid = 'icons/mob/xenonids/runner.dmi'
+	icon_xeno = 'icons/mob/xenos/castes/tier_1/runner.dmi'
+	icon_xenonid = 'icons/mob/xenonids/castes/tier_1/runner.dmi'
 
 	weed_food_icon = 'icons/mob/xenos/weeds_64x64.dmi'
 	weed_food_states = list("Runner_1","Runner_2","Runner_3")
 	weed_food_states_flipped = list("Runner_1","Runner_2","Runner_3")
 
-	var/linger_range = 5
-	var/linger_deviation = 1
-	var/pull_direction
+	skull = /obj/item/skull/runner
+	pelt = /obj/item/pelt/runner
+
+/obj/item/organ/xeno/runner
+	name = "runner heart"
+	icon_state = "heart_t1"
+	item_state = "heart_t1"
+	research_value = 500
+
+	xeno_organ_flags = XENO_ORGAN_WEAK|XENO_ORGAN_TACHYCARDIA
+
 
 /mob/living/carbon/xenomorph/runner/initialize_pass_flags(datum/pass_flags_container/pass_flags_container)
 	..()
@@ -88,75 +97,17 @@
 	if(is_zoomed)
 		zoom_out()
 
-/mob/living/carbon/xenomorph/runner/launch_towards(datum/launch_metadata/LM)
-	if(!current_target)
-		return ..()
-
-	pull_direction = turn(get_dir(src, current_target), 180)
-
-	if(!(pull_direction in GLOB.cardinals))
-		if(abs(x - current_target.x) < abs(y - current_target.y))
-			pull_direction &= (NORTH|SOUTH)
-		else
-			pull_direction &= (EAST|WEST)
-	return ..()
-
-/mob/living/carbon/xenomorph/runner/start_pulling(atom/movable/AM, lunge, no_msg)
-	. = ..()
-
-	add_temp_negative_pass_flags(PASS_FLAGS_CRAWLER)
-
-/mob/living/carbon/xenomorph/runner/stop_pulling(bumped_movement = FALSE)
-	. = ..()
-
-	remove_temp_negative_pass_flags(PASS_FLAGS_CRAWLER)
-
-/mob/living/carbon/xenomorph/runner/init_movement_handler()
-	var/datum/xeno_ai_movement/linger/linger_movement = new(src)
-	linger_movement.linger_range = linger_range
-	linger_movement.linger_deviation = linger_deviation
-	return linger_movement
-
-/mob/living/carbon/xenomorph/runner/ai_move_target(delta_time)
-	if(throwing)
-		return
-
-	if(pulling)
-		if(!current_target || get_dist(src, current_target) > 10)
-			INVOKE_ASYNC(src, PROC_REF(stop_pulling))
-			return ..()
-		if(can_move_and_apply_move_delay())
-			if(!Move(get_step(loc, pull_direction), pull_direction))
-				pull_direction = turn(pull_direction, pick(45, -45))
-		current_path = null
-		return
-
-	..()
-
-	if(get_dist(current_target, src) > 1)
-		return
-
-	if(!istype(current_target, /mob))
-		return
-
-	var/mob/current_target_mob = current_target
-
-	if(!current_target_mob.is_mob_incapacitated())
-		return
-
-	if(isxeno(current_target.pulledby))
-		return
-
-	if(!DT_PROB(RUNNER_GRAB, delta_time))
-		return
-
-	INVOKE_ASYNC(src, PROC_REF(start_pulling), current_target)
-	swap_hand()
-
-/mob/living/carbon/xenomorph/runner/process_ai(delta_time)
-	if(get_active_hand())
-		swap_hand()
-	return ..()
+/mob/living/carbon/xenomorph/runner/can_mount(mob/living/user, target_mounting = FALSE)
+	if(!target_mounting)
+		user = pulling
+	if(!ishuman(user))
+		return FALSE
+	var/mob/living/carbon/human/human_pulled = user
+	if(human_pulled.stat == DEAD)
+		return FALSE
+	if(!istype(back, /obj/item/storage/backpack/marine/saddle)) //cant ride without a saddle
+		return FALSE
+	return TRUE
 
 /datum/behavior_delegate/runner_base
 	name = "Base Runner Behavior Delegate"
@@ -168,14 +119,25 @@
 	if(hide)
 		hide.post_attack()
 
-/mob/living/carbon/xenomorph/runner/acider
-	crit_health = 0
+/datum/action/xeno_action/activable/runner_skillshot/use_ability(atom/affected_atom)
+	var/mob/living/carbon/xenomorph/xeno = owner
+	if(!istype(xeno))
+		return
 
-/mob/living/carbon/xenomorph/runner/acider/Initialize(mapload, mob/living/carbon/xenomorph/oldXeno, h_number, ai_hard_off = FALSE)
-	. = ..()
-	playsound(src, 'sound/effects/acider.ogg', 100, TRUE, 30, falloff = 5)
-	var/datum/xeno_strain/strain_instance = new /datum/xeno_strain/acider()
-	strain_instance._add_to_xeno(src)
+	if(!affected_atom || affected_atom.layer >= FLY_LAYER || !isturf(xeno.loc))
+		return
 
-/mob/living/carbon/xenomorph/runner/acider/init_movement_handler()
-	return new /datum/xeno_ai_movement(src)
+	XENO_ACTION_CHECK_USE_PLASMA(xeno)
+
+	xeno.visible_message(SPAN_XENOWARNING("[xeno] fires a burst of bone chips at [affected_atom]!"), SPAN_XENOWARNING("We fire a burst of bone chips at [affected_atom]!"))
+
+	var/turf/target = get_turf(affected_atom)
+	var/obj/projectile/projectile = new /obj/projectile(xeno.loc, create_cause_data(initial(xeno.caste_type), xeno))
+
+	var/datum/ammo/ammo_datum = GLOB.ammo_list[ammo_type]
+
+	projectile.generate_bullet(ammo_datum)
+	projectile.fire_at(target, xeno, xeno, ammo_datum.max_range, ammo_datum.shell_speed)
+
+	apply_cooldown()
+	return ..()

@@ -1,17 +1,10 @@
 /datum/action/xeno_action
 	icon_file = 'icons/mob/hud/actions_xeno.dmi'
-	var/ability_name // Our name
-
+	button_icon_state = "template_xeno"
 	var/plasma_cost = 0
 	var/macro_path
 	var/action_type = XENO_ACTION_CLICK // Determines how macros interact with this action. Defines are in xeno.dm in the defines folder.
 	var/ability_primacy = XENO_NOT_PRIMARY_ACTION // Determines how the default ability macros handle this.
-
-	/// Whether this action gets added to AI xenos
-	var/default_ai_action = FALSE
-
-	/// Chance of use per tick applicable tick
-	var/ai_prob_chance = 80
 
 	// Cooldown
 	/// Cooldown of the ability (do not use the cooldown var)
@@ -34,6 +27,9 @@
 
 	var/charges = NO_ACTION_CHARGES
 
+	/// Should the ability trigger an acid overlay for their respective caste upon action selection and deselection.
+	var/ability_uses_acid_overlay = FALSE
+
 /datum/action/xeno_action/New(Target, override_icon_state)
 	. = ..()
 	if(charges != NO_ACTION_CHARGES)
@@ -41,6 +37,13 @@
 	if(charge_time)
 		charge_ready = FALSE
 	update_button_icon()
+
+/datum/action/xeno_action/Destroy()
+	STOP_PROCESSING(SSfasteffects, src)
+	. = ..()
+
+/datum/action/xeno_action/process(delta_time)
+	return update_cooldown_visual()
 
 /datum/action/xeno_action/proc/remove_charge()
 	SIGNAL_HANDLER
@@ -65,40 +68,26 @@
 		action.update_button_icon()
 	return TRUE
 
-/// Used for AI xenos to prevent them from sleeping
-/datum/action/xeno_action/proc/use_ability_async(atom/A)
-	set waitfor = FALSE
-	use_ability(A)
-
 // Track statistics for this ability
 /datum/action/xeno_action/proc/track_xeno_ability_stats()
 	if(!owner)
 		return
-	var/mob/living/carbon/xenomorph/X = owner
-	if (ability_name && GLOB.round_statistics)
-		GLOB.round_statistics.track_ability_usage(ability_name)
-		X.track_ability_usage(ability_name, X.caste_type)
+	var/mob/living/carbon/xenomorph/xeno = owner
+	if(name && GLOB.round_statistics)
+		GLOB.round_statistics.track_ability_usage(name)
+		xeno.track_ability_usage(name, xeno.caste_type)
 
 /datum/action/xeno_action/can_use_action()
 	if(!owner)
 		return FALSE
-	var/mob/living/carbon/xenomorph/X = owner
-	if(X && !X.is_mob_incapacitated() && !HAS_TRAIT(X, TRAIT_DAZED) && X.body_position == STANDING_UP && !X.buckled && X.plasma_stored >= plasma_cost)
+	var/mob/living/carbon/xenomorph/xeno = owner
+	if(xeno && !xeno.is_mob_incapacitated() && !HAS_TRAIT(xeno, TRAIT_DAZED) && xeno.body_position == STANDING_UP && !xeno.buckled && xeno.plasma_stored >= plasma_cost)
 		return TRUE
 
-/datum/action/xeno_action/give_to(mob/living/living_mob)
+/datum/action/xeno_action/give_to(mob/living/living)
 	..()
-
 	if(macro_path)
-		add_verb(living_mob, macro_path)
-
-	if(!istype(living_mob, /mob/living/carbon/xenomorph))
-		return
-
-	var/mob/living/carbon/xenomorph/xeno_mob = living_mob
-
-	if(default_ai_action)
-		xeno_mob.register_ai_action(src)
+		add_verb(living, macro_path)
 
 /datum/action/xeno_action/update_button_icon()
 	if(!button)
@@ -113,22 +102,10 @@
 	else
 		button.color = rgb(255,255,255,255)
 
-/datum/action/xeno_action/proc/process_ai(mob/living/carbon/xenomorph/processing_xeno, delta_time)
-	SHOULD_NOT_SLEEP(TRUE)
-	return PROCESS_KILL
-
-/datum/action/xeno_action/proc/ai_registered(mob/living/carbon/xenomorph/X)
-	SHOULD_CALL_PARENT(TRUE)
-	return
-
-/datum/action/xeno_action/proc/ai_unregistered(mob/living/carbon/xenomorph/X)
-	SHOULD_CALL_PARENT(TRUE)
-	return
-
 // Helper proc that checks and uses plasma if possible, returning TRUE
 // if the use was successful
 /datum/action/xeno_action/proc/check_and_use_plasma_owner(plasma_to_use)
-	if (!check_plasma_owner(plasma_to_use))
+	if(!check_plasma_owner(plasma_to_use))
 		return FALSE
 
 	use_plasma_owner(plasma_to_use)
@@ -144,8 +121,8 @@
 	if(plasma_to_use)
 		plasma_to_check = plasma_to_use
 
-	var/mob/living/carbon/xenomorph/X = owner
-	return X.check_plasma(plasma_to_check)
+	var/mob/living/carbon/xenomorph/xeno = owner
+	return xeno.check_plasma(plasma_to_check)
 
 // Uses plasma on the owner.
 /datum/action/xeno_action/proc/use_plasma_owner(plasma_to_use)
@@ -156,8 +133,8 @@
 	if(plasma_to_use)
 		plasma_to_check = plasma_to_use
 
-	var/mob/living/carbon/xenomorph/X = owner
-	X.use_plasma(plasma_to_check)
+	var/mob/living/carbon/xenomorph/xeno = owner
+	xeno.use_plasma(plasma_to_check)
 
 /// A wrapper for use_ability that sends a signal
 /datum/action/xeno_action/proc/use_ability_wrapper(...)
@@ -201,13 +178,15 @@
 			return // We clicked the same ability in a very short time
 		if(xeno.client && xeno.client.prefs && xeno.client.prefs.toggle_prefs & TOGGLE_ABILITY_DEACTIVATION_OFF)
 			return
-		to_chat(xeno, "You will no longer use [ability_name] with [xeno.get_ability_mouse_name()].")
-		button.icon_state = "template"
+		to_chat(xeno, "You will no longer use [name] with [xeno.get_ability_mouse_name()].")
+		button.icon_state = "template_xeno"
 		xeno.set_selected_ability(null)
 		if(charge_time)
 			stop_charging_ability()
+		if(ability_uses_acid_overlay)
+			xeno.overlays -= xeno.acid_overlay
 	else
-		to_chat(xeno, "You will now use [ability_name] with [xeno.get_ability_mouse_name()].")
+		to_chat(xeno, "You will now use [name] with [xeno.get_ability_mouse_name()].")
 		if(xeno.selected_ability)
 			xeno.selected_ability.action_deselect()
 			if(xeno.selected_ability.charge_time)
@@ -219,11 +198,17 @@
 			to_chat(xeno, SPAN_INFO("It has [charges] uses left."))
 		if(charge_time)
 			start_charging_ability()
+		if(ability_uses_acid_overlay && !xeno.resting && xeno.stat != DEAD)
+			if(!HAS_TRAIT(xeno, TRAIT_FLOORED))
+				xeno.overlays |= xeno.acid_overlay
+
 
 // Called when a different action is clicked on and this one is deselected.
 /datum/action/xeno_action/activable/proc/action_deselect()
-	button.icon_state = "template"
-
+	var/mob/living/carbon/xenomorph/xeno = owner
+	if(ability_uses_acid_overlay)
+		xeno.overlays -= xeno.acid_overlay
+	button.icon_state = "template_xeno"
 
 /datum/action/xeno_action/activable/remove_from(mob/living/carbon/xenomorph/xeno)
 	..()
@@ -252,9 +237,9 @@
 /datum/action/xeno_action/proc/apply_cooldown(cooldown_modifier = 1)
 	if(!owner)
 		return
-	var/mob/living/carbon/xenomorph/X = owner
+	var/mob/living/carbon/xenomorph/xeno = owner
 	// Uh oh! STINKY! already on cooldown
-	if (cooldown_timer_id != TIMER_ID_NULL)
+	if(cooldown_timer_id != TIMER_ID_NULL)
 	/*
 		Debug log disabled due to our historical inability at doing anything meaningful about it
 		And to make room for ones that matter more in regard to our ability to fix.
@@ -271,12 +256,13 @@
 	if(!cooldown_to_apply)
 		return
 
-	cooldown_to_apply = cooldown_to_apply * (1 - clamp(X.cooldown_reduction_percentage, 0, 0.5))
+	cooldown_to_apply = cooldown_to_apply * (1 - clamp(xeno.cooldown_reduction_percentage, 0, 0.5))
 
 	// Add a unique timer
 	cooldown_timer_id = addtimer(CALLBACK(src, PROC_REF(on_cooldown_end)), cooldown_to_apply, TIMER_UNIQUE|TIMER_STOPPABLE)
 	current_cooldown_duration = cooldown_to_apply
 	current_cooldown_start_time = world.time
+	START_PROCESSING(SSfasteffects, src)
 
 	// Update our button
 	update_button_icon()
@@ -291,23 +277,24 @@
 	if(cooldown_timer_id != TIMER_ID_NULL)
 		deltimer(cooldown_timer_id)
 
-	var/mob/living/carbon/xenomorph/X = owner
+	var/mob/living/carbon/xenomorph/xeno = owner
 	// Note: no check to see if we're already on CD. we just flat override whatever's there
-	cooldown_duration = cooldown_duration * (1 - clamp(X.cooldown_reduction_percentage, 0, 0.5))
+	cooldown_duration = cooldown_duration * (1 - clamp(xeno.cooldown_reduction_percentage, 0, 0.5))
 	cooldown_timer_id = addtimer(CALLBACK(src, PROC_REF(on_cooldown_end)), cooldown_duration, TIMER_OVERRIDE|TIMER_UNIQUE|TIMER_STOPPABLE)
 	current_cooldown_duration = cooldown_duration
 	current_cooldown_start_time = world.time
+	START_PROCESSING(SSfasteffects, src)
 
 // Checks whether the action is on cooldown. Should not be overridden.
 // Returns TRUE if the action can be used and FALSE otherwise.
-/datum/action/xeno_action/proc/action_cooldown_check()
+/datum/action/xeno_action/action_cooldown_check()
 	return (cooldown_timer_id == TIMER_ID_NULL) && (!charge_time || charge_ready)
 
 // What occurs when a cooldown ends NATURALLY. Ties into ability_cooldown_over, which tells the source Xeno
 // that it can do stuff again and handles any other end-of-cooldown behavior. ability_cooldown_over
 // is called when a cooldown ends prematurely and otherwise.
 /datum/action/xeno_action/proc/on_cooldown_end()
-	if (cooldown_timer_id == TIMER_ID_NULL)
+	if(cooldown_timer_id == TIMER_ID_NULL)
 		/* See notes above in apply_cooldown()
 		log_debug("Xeno action [src] tried to go off cooldown while already off cooldown.")
 		log_admin("Xeno action [src] tried to go off cooldown while already off cooldown.")
@@ -323,7 +310,7 @@
 
 // Immediately force-ends the current cooldown.
 /datum/action/xeno_action/proc/end_cooldown()
-	if (cooldown_timer_id == TIMER_ID_NULL)
+	if(cooldown_timer_id == TIMER_ID_NULL)
 		/* See notes above in apply_cooldown()
 		log_debug("Xeno action [src] tried to force end cooldown while already off cooldown.")
 		log_admin("Xeno action [src] tried to force end cooldown while already off cooldown.")
@@ -341,7 +328,7 @@
 // we tracked earlier, because unfortunately the timer SS doesn't support querying the time from
 // an existing timer by ID. So we just delete it and add a new one if necessary
 /datum/action/xeno_action/proc/reduce_cooldown(amount)
-	if (cooldown_timer_id == TIMER_ID_NULL)
+	if(cooldown_timer_id == TIMER_ID_NULL)
 		/* See notes above in apply_cooldown()
 		log_debug("Xeno action [src] tried to force end cooldown while already off cooldown.")
 		log_admin("Xeno action [src] tried to force end cooldown while already off cooldown.")
@@ -353,7 +340,7 @@
 	cooldown_timer_id = TIMER_ID_NULL
 
 	// Are we done, or do we need to add a new timer
-	if ((current_cooldown_start_time + current_cooldown_duration - amount) < world.time)
+	if((current_cooldown_start_time + current_cooldown_duration - amount) < world.time)
 		// We are done, no more cooldown.
 		current_cooldown_start_time = 0
 		current_cooldown_duration = 0
@@ -376,10 +363,10 @@
 /datum/action/xeno_action/proc/ability_cooldown_over()
 	if(!owner)
 		return
-	for(var/X in owner.actions)
-		var/datum/action/act = X
+	for(var/xeno in owner.actions)
+		var/datum/action/act = xeno
 		act.update_button_icon()
-	if(!no_cooldown_msg)
+	if(!no_cooldown_msg && owner.client?.prefs.show_cooldown_messages)
 		if(cooldown_message)
 			to_chat(owner, SPAN_XENODANGER("[cooldown_message]"))
 		else
@@ -402,33 +389,33 @@
 	deltimer(charge_timer_id)
 	charge_timer_id = TIMER_ID_NULL
 
-// Helper proc to check if there is anything blocking the way from mob M to the atom A
+// Helper proc to check if there is anything blocking the way from mob "mob" to the atom "atom"
 // Max distance can be supplied to check some of the way instead of the whole way.
-/proc/check_clear_path_to_target(mob/M, atom/A, smash_windows = TRUE, max_distance = 1000)
-	if(A.z != M.z)
+/proc/check_clear_path_to_target(mob/mob, atom/atom, smash_windows = TRUE, max_distance = 1000)
+	if(atom.z != mob.z)
 		return FALSE
 
-	var/list/turf/path = get_line(M, A, include_start_atom = FALSE)
+	var/list/turf/path = get_line(mob, atom, include_start_atom = FALSE)
 	var/distance = 0
-	for(var/turf/T in path)
+	for(var/turf/turf in path)
 		if(distance >= max_distance)
 			return FALSE
 		distance++
 
-		if(T.density || T.opacity)
+		if(turf.density || turf.opacity)
 			return FALSE
 
 		// H'yup, it's the snowflake check for dropships
-		if(istype(T, /turf/closed/shuttle/))
+		if(istype(turf, /turf/closed/shuttle/))
 			return FALSE
 
-		for(var/obj/structure/S in T)
-			if(istype(S, /obj/structure/window/framed) && smash_windows)
-				var/obj/structure/window/framed/W = S
+		for(var/obj/structure/structure in turf)
+			if(istype(structure, /obj/structure/window/framed) && smash_windows)
+				var/obj/structure/window/framed/W = structure
 				if(!W.unslashable)
 					W.deconstruct(disassembled = FALSE)
 
-			if(S.opacity)
+			if(structure.opacity)
 				return FALSE
 
 	return TRUE
@@ -472,7 +459,7 @@
 
 /datum/action/xeno_action/active_toggle/proc/disable_toggle()
 	action_active = FALSE
-	button.icon_state = "template"
+	button.icon_state = "template_xeno"
 	if(action_end_message)
 		to_chat(owner, SPAN_WARNING(action_end_message))
 
@@ -484,6 +471,20 @@
 	track_xeno_ability_stats()
 	if(action_start_message)
 		to_chat(owner, SPAN_NOTICE(action_start_message))
+
+/datum/action/xeno_action/proc/update_cooldown_visual()
+	var/time_left = max(current_cooldown_start_time + current_cooldown_duration - world.time, 0)
+	if(!owner || time_left <= 0 || cooldown_timer_id == TIMER_ID_NULL)
+		button.set_maptext()
+		return PROCESS_KILL
+	else
+		button.set_maptext(SMALL_FONTS(7, round(time_left/10, 0.1)), 4, 4)
+
+/datum/action/xeno_action/proc/on_select(mob/user)
+	return
+
+/datum/action/xeno_action/proc/on_deselect(mob/user)
+	return
 
 #define XENO_ACTION_CHECK(X) if(!X.check_state() || !action_cooldown_check() || !check_plasma_owner(src.plasma_cost)) return
 #define XENO_ACTION_CHECK_USE_PLASMA(X) if(!X.check_state() || !action_cooldown_check() || !check_and_use_plasma_owner(src.plasma_cost)) return

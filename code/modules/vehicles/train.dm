@@ -27,6 +27,11 @@
 	for(var/obj/vehicle/train/T in orange(1, src))
 		latch(T)
 
+/obj/vehicle/train/Destroy(force)
+	. = ..()
+	lead = null
+	tow = null
+
 /obj/vehicle/train/Move()
 	var/old_loc = get_turf(src)
 	. = ..()
@@ -116,7 +121,7 @@
 	setDir(lead.dir)
 
 	if(user && display_to_chat)
-		to_chat(user, SPAN_NOTICE(" You hitch [src] to [T]."))
+		to_chat(user, SPAN_NOTICE("You hitch [src] to [T]."))
 
 	update_stats()
 
@@ -135,7 +140,7 @@
 	lead.update_stats()
 
 	if(display_to_chat)
-		to_chat(user, SPAN_NOTICE(" You unhitch [src] from [lead]."))
+		to_chat(user, SPAN_NOTICE("You unhitch [src] from [lead]."))
 	lead = null
 
 	update_stats()

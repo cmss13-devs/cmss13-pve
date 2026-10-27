@@ -172,6 +172,13 @@
 				if(!skillcheck(user, SKILL_ENGINEER, SKILL_ENGINEER_TRAINED))
 					to_chat(user, SPAN_WARNING("You are not trained to assemble [src]..."))
 					return
+				var/area/area = get_area(src)
+				if(!area.allow_construction)
+					to_chat(user, SPAN_WARNING("[src] must be secured on a proper surface!"))
+					return
+				if(area.flags_area & AREA_NOSECURECADES)
+					to_chat(user, SPAN_WARNING("[src] must be secured on a proper surface!"))
+					return
 				var/turf/open/T = loc
 				if(!(istype(T) && T.allow_construction))
 					to_chat(user, SPAN_WARNING("[src] must be secured on a proper surface!"))
@@ -215,8 +222,8 @@
 		if(recentlyflipped)
 			to_chat(user, SPAN_NOTICE("[src] has been flipped too recently!"))
 			return
-		user.visible_message(SPAN_NOTICE("[user] flips [src] open."),
-		SPAN_NOTICE("You flip [src] open."))
+		user.visible_message(SPAN_NOTICE("[user] flips [src] closed."),
+		SPAN_NOTICE("You flip [src] closed."))
 		open(src)
 		recentlyflipped = TRUE
 		spawn(10)
@@ -227,8 +234,8 @@
 		if(recentlyflipped)
 			to_chat(user, SPAN_NOTICE("[src] has been flipped too recently!"))
 			return
-		user.visible_message(SPAN_NOTICE("[user] flips [src] closed."),
-		SPAN_NOTICE("You flip [src] closed."))
+		user.visible_message(SPAN_NOTICE("[user] flips [src] open."),
+		SPAN_NOTICE("You flip [src] open."))
 		close(src)
 		recentlyflipped = TRUE
 		spawn(10)
@@ -262,17 +269,17 @@
 	update_icon()
 
 
-/obj/structure/barricade/plasteel/wired/Initialize(mapload, mob/user)
-	. = ..()
+/obj/structure/barricade/plasteel/wired/New()
 	can_wire = FALSE
 	is_wired = TRUE
 	climbable = FALSE
 	update_icon()
+	return ..()
 
 /obj/structure/barricade/plasteel/wired/initialize_pass_flags(datum/pass_flags_container/PF)
 	..()
-	flags_can_pass_front_temp &= ~PASS_OVER_THROW_MOB
-	flags_can_pass_behind_temp &= ~PASS_OVER_THROW_MOB
+	flags_can_pass_front_temp &= ~PASS_FLAGS_UNWIRED
+	flags_can_pass_behind_temp &= ~PASS_FLAGS_UNWIRED
 
 /obj/structure/barricade/plasteel/metal
 	name = "folding metal barricade"
@@ -289,15 +296,3 @@
 	repair_materials = list("metal" = 0.3, "plasteel" = 0.45)
 
 	linkable = FALSE
-
-/obj/structure/barricade/plasteel/metal/wired/Initialize(mapload, mob/user)
-	. = ..()
-	can_wire = FALSE
-	is_wired = TRUE
-	climbable = FALSE
-	update_icon()
-
-/obj/structure/barricade/plasteel/metal/wired/initialize_pass_flags(datum/pass_flags_container/PF)
-	..()
-	flags_can_pass_front_temp &= ~PASS_OVER_THROW_MOB
-	flags_can_pass_behind_temp &= ~PASS_OVER_THROW_MOB

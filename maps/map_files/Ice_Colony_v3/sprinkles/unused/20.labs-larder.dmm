@@ -1,0 +1,262 @@
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"a" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/plating,
+/area/shiva/interior/colony/research_hab)
+"b" = (
+/turf/open/floor/plating,
+/area/shiva/interior/colony/research_hab)
+"c" = (
+/obj/structure/machinery/light/double{
+	dir = 1;
+	pixel_y = 9
+	},
+/turf/open/floor/plating,
+/area/shiva/interior/colony/research_hab)
+"d" = (
+/obj/structure/closet/crate/construction,
+/obj/item/stack/sheet/metal/large_stack,
+/obj/item/stack/sheet/metal/large_stack,
+/obj/item/tank/oxygen,
+/obj/item/tank/oxygen,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/plating,
+/area/shiva/interior/colony/research_hab)
+"e" = (
+/obj/structure/surface/rack,
+/obj/item/tool/pickaxe,
+/obj/item/tool/pickaxe{
+	pixel_x = -4;
+	pixel_y = 4
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/item/tool/pickaxe{
+	pixel_x = 4;
+	pixel_y = -4
+	},
+/turf/open/floor/plating,
+/area/shiva/interior/colony/research_hab)
+"f" = (
+/obj/structure/machinery/light/double{
+	dir = 8;
+	pixel_y = 9
+	},
+/obj/structure/closet/crate/construction,
+/obj/item/stack/sheet/metal/large_stack,
+/obj/item/tank/oxygen,
+/obj/item/tank/oxygen,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/plating,
+/area/shiva/interior/colony/research_hab)
+"g" = (
+/obj/structure/surface/rack,
+/obj/item/reagent_container/food/snacks/milosoup,
+/obj/item/reagent_container/food/snacks/mushroomsoup{
+	pixel_y = 8
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/plating,
+/area/shiva/interior/colony/research_hab)
+"i" = (
+/obj/structure/surface/rack,
+/obj/item/reagent_container/food/snacks/bloodsoup,
+/obj/item/reagent_container/food/snacks/bloodsoup{
+	pixel_y = 10
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/plating,
+/area/shiva/interior/colony/research_hab)
+"j" = (
+/turf/closed/wall/shiva/prefabricated/blue,
+/area/shiva/interior/colony/research_hab)
+"k" = (
+/obj/structure/surface/rack,
+/obj/structure/machinery/light/double{
+	dir = 4;
+	pixel_y = 9
+	},
+/obj/item/tool/pickaxe,
+/obj/item/tool/pickaxe{
+	pixel_x = -4;
+	pixel_y = 4
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/item/tool/pickaxe{
+	pixel_x = 4;
+	pixel_y = -4
+	},
+/turf/open/floor/plating,
+/area/shiva/interior/colony/research_hab)
+"l" = (
+/obj/structure/surface/rack,
+/obj/item/weapon/ice_axe/red{
+	pixel_y = -4
+	},
+/obj/item/weapon/ice_axe,
+/obj/item/weapon/ice_axe/green{
+	pixel_y = 4
+	},
+/turf/open/floor/plating,
+/area/shiva/interior/colony/research_hab)
+"m" = (
+/obj/structure/surface/rack,
+/obj/item/reagent_container/food/snacks/meatballsoup,
+/obj/item/reagent_container/food/snacks/vegetablesoup{
+	pixel_y = 9
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/plating,
+/area/shiva/interior/colony/research_hab)
+"q" = (
+/obj/structure/surface/rack,
+/obj/item/reagent_container/food/snacks/beetsoup,
+/obj/item/reagent_container/food/snacks/beetsoup{
+	pixel_y = 10
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/plating,
+/area/shiva/interior/colony/research_hab)
+"r" = (
+/turf/closed/wall/shiva/ice,
+/area/shiva/interior/oob)
+"s" = (
+/obj/structure/closet/crate/freezer/rations,
+/obj/item/stack/sheet/metal/medium_stack,
+/obj/item/reagent_container/food/snacks/bigbiteburger,
+/obj/item/reagent_container/food/snacks/bigbiteburger,
+/turf/open/floor/plating,
+/area/shiva/interior/colony/research_hab)
+"t" = (
+/obj/structure/machinery/light/double{
+	dir = 1;
+	pixel_y = 9
+	},
+/obj/structure/closet/secure_closet/freezer/fridge,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/plating,
+/area/shiva/interior/colony/research_hab)
+"v" = (
+/obj/structure/surface/rack,
+/obj/item/reagent_container/food/drinks/flask/vacuumflask{
+	pixel_x = -5;
+	pixel_y = 4
+	},
+/obj/item/reagent_container/food/drinks/flask/vacuumflask{
+	pixel_x = 5;
+	pixel_y = 4
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/plating,
+/area/shiva/interior/colony/research_hab)
+"w" = (
+/obj/item/stack/rods,
+/turf/open/floor/plating,
+/area/shiva/interior/colony/research_hab)
+"B" = (
+/obj/structure/closet/secure_closet/freezer/fridge,
+/obj/item/clothing/head/cakehat,
+/turf/open/floor/plating,
+/area/shiva/interior/colony/research_hab)
+"D" = (
+/obj/structure/reagent_dispensers/beerkeg/alt,
+/turf/open/floor/plating,
+/area/shiva/interior/colony/research_hab)
+"E" = (
+/obj/structure/closet/secure_closet/freezer/fridge,
+/turf/open/floor/plating,
+/area/shiva/interior/colony/research_hab)
+"N" = (
+/obj/structure/blocker/forcefield/multitile_vehicles,
+/turf/closed/wall/shiva/prefabricated/blue,
+/area/shiva/interior/colony/research_hab)
+
+(1,1,1) = {"
+r
+r
+r
+j
+j
+j
+j
+"}
+(2,1,1) = {"
+j
+j
+j
+j
+j
+j
+j
+"}
+(3,1,1) = {"
+j
+D
+s
+l
+f
+d
+j
+"}
+(4,1,1) = {"
+N
+c
+a
+b
+a
+b
+j
+"}
+(5,1,1) = {"
+N
+B
+a
+m
+g
+b
+j
+"}
+(6,1,1) = {"
+N
+E
+a
+a
+a
+b
+w
+"}
+(7,1,1) = {"
+N
+t
+a
+q
+i
+w
+b
+"}
+(8,1,1) = {"
+N
+v
+a
+a
+a
+b
+j
+"}
+(9,1,1) = {"
+N
+j
+j
+e
+k
+e
+j
+"}
+(10,1,1) = {"
+r
+r
+j
+j
+j
+j
+j
+"}

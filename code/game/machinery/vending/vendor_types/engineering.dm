@@ -37,10 +37,11 @@
 		list("TOOLS", -1, null, null),
 		list("Blowtorch", floor(scale * 4), /obj/item/tool/weldingtool, VENDOR_ITEM_REGULAR),
 		list("Crowbar", floor(scale * 4), /obj/item/tool/crowbar, VENDOR_ITEM_REGULAR),
-		list("ME3 Hand Welder", floor(scale * 2), /obj/item/tool/weldingtool/simple, VENDOR_ITEM_REGULAR),
+		list("Seegson MCT", floor(scale * 2), /obj/item/tool/weldingtool/simple, VENDOR_ITEM_REGULAR),
 		list("Screwdriver", floor(scale * 4), /obj/item/tool/screwdriver, VENDOR_ITEM_REGULAR),
 		list("Wirecutters", floor(scale * 4), /obj/item/tool/wirecutters, VENDOR_ITEM_REGULAR),
-		list("Wrench", floor(scale * 4), /obj/item/tool/wrench, VENDOR_ITEM_REGULAR)
+		list("Wrench", floor(scale * 4), /obj/item/tool/wrench, VENDOR_ITEM_REGULAR),
+		list("Light Replacer", floor(scale * 4), /obj/item/device/lightreplacer, VENDOR_ITEM_REGULAR)
 	)
 
 /obj/structure/machinery/cm_vending/sorted/tech/comtech_tools
@@ -64,7 +65,8 @@
 		list("Wirecutters", floor(scale * 4), /obj/item/tool/wirecutters, VENDOR_ITEM_REGULAR),
 		list("Wrench", floor(scale * 4), /obj/item/tool/wrench, VENDOR_ITEM_REGULAR),
 		list("Multitool", floor(scale * 4), /obj/item/device/multitool, VENDOR_ITEM_REGULAR),
-		list("ME3 Hand Welder", floor(scale * 2), /obj/item/tool/weldingtool/simple, VENDOR_ITEM_REGULAR),
+		list("Seegson MCT", floor(scale * 2), /obj/item/tool/weldingtool/simple, VENDOR_ITEM_REGULAR),
+		list("Light Replacer", floor(scale * 4), /obj/item/device/lightreplacer, VENDOR_ITEM_REGULAR),
 
 		list("UTILITY", -1, null, null),
 		list("Sentry Gun Network Laptop", 4, /obj/item/device/sentry_computer, VENDOR_ITEM_REGULAR),
@@ -87,6 +89,7 @@
 		list("ID Computer", 2, /obj/item/circuitboard/computer/card, VENDOR_ITEM_REGULAR),
 		list("Security Records", 2, /obj/item/circuitboard/computer/secure_data, VENDOR_ITEM_REGULAR),
 		list("Supply Ordering Console", 2, /obj/item/circuitboard/computer/ordercomp, VENDOR_ITEM_REGULAR),
+		list("ASRS Console", 2, /obj/item/circuitboard/computer/supplycomp, VENDOR_ITEM_REGULAR),
 		list("Research Data Terminal", 2, /obj/item/circuitboard/computer/research_terminal, VENDOR_ITEM_REGULAR),
 		list("P.A.C.M.A.N Generator", 1, /obj/item/circuitboard/machine/pacman, VENDOR_ITEM_REGULAR),
 		list("Auxiliary Power Storage Unit", 2, /obj/item/circuitboard/machine/ghettosmes, VENDOR_ITEM_REGULAR),
@@ -188,7 +191,7 @@
 /obj/structure/machinery/cm_vending/sorted/tech/robotics/populate_product_list(scale)
 	listed_products = list(
 		list("EQUIPMENT", -1, null, null),
-		list("Labcoat", 2, /obj/item/clothing/suit/storage/labcoat, VENDOR_ITEM_REGULAR),
+		list("Lab Coat", 2, /obj/item/clothing/suit/storage/labcoat, VENDOR_ITEM_REGULAR),
 		list("Medical Mask", 2, /obj/item/clothing/mask/breath/medical, VENDOR_ITEM_REGULAR),
 		list("Roboticist's Jumpsuit", 2, /obj/item/clothing/under/rank/roboticist, VENDOR_ITEM_REGULAR),
 
@@ -205,8 +208,8 @@
 		list("Proximity Sensor", 4, /obj/item/device/assembly/prox_sensor, VENDOR_ITEM_REGULAR),
 		list("Signaller", 4, /obj/item/device/assembly/signaller, VENDOR_ITEM_REGULAR),
 
-		list("MISCELLANOUS", -1, null, null),
+		list("MISCELLANEOUS", -1, null, null),
 		list("Anesthetic Tank", 2, /obj/item/tank/anesthetic, VENDOR_ITEM_REGULAR),
-		list("Health Diagnostic Equipment", 2, /obj/item/device/healthanalyzer/soul, VENDOR_ITEM_REGULAR)
+		list("Health Analyzer", 2, /obj/item/device/healthanalyzer, VENDOR_ITEM_REGULAR)
 	)
 

@@ -4,7 +4,6 @@
 # Rank is CASE-SENSITIVE, all punctuation will be stripped so spaces don't matter.     #
 # Each rank is then followed by keywords with the prefix "+".                          #
 # These keywords represent groups of verbs and abilities which are given to that rank. #
-# +@ (or +prev) is a special shorthand which adds all the rights of the rank above it. #
 # Ranks with no keywords will just be given the most basic verbs and abilities   ~Carn #
 ########################################################################################
 # PLEASE NOTE: depending on config options, some abilities will be unavailable regardless if you have permission to use them!
@@ -27,33 +26,23 @@
 # +RIGHTS (or +PERMISSIONS) = allows you to promote and/or demote people.
 # +SOUND (or +SOUNDS) = allows you to upload and play sounds
 # +SPAWN (or +CREATE) = mob transformations, spawning of most atoms including mobs
-# +EVERYTHING (or +HOST or +ALL) = Simply gives you everything without having to type every flag
+# +EVENT = the ability to use verbs in the Admin.Events category
+# +EVERYTHING = Simply gives you everything without having to type every flag (apart from the profiler)
+# +PROFILER = gives access to the BYOND profiler
+# +HOST = Actually gives everything, including the profiler
 
 
 Donator 		+COLOR
 Mentor      	+MENTOR +COLOR
 
 
-Trial Moderator +MOD +SERVER +COLOR
-Moderator 		+MOD +SERVER +BAN +COLOR +NOLOCK
-Trial Admin 	+ADMIN +MOD +SERVER +BAN +SPAWN +STEALTH +VAREDIT +COLOR
-Admin 			+ADMIN +MOD +SERVER +BAN +SPAWN +STEALTH +VAREDIT +POSSESS +SOUND +COLOR +BUILDMODE
+Trial Admin 	+BAN +SERVER +MOD +MENTOR
+Admin 			+BUILDMODE +ADMIN +BAN +SERVER +DEBUG +POSSESS +VAREDIT +SOUND +SPAWN +MOD +MENTOR +BAN +NOLOCK +EVENT
+
+Maintainer		+BUILDMODE +ADMIN +BAN +SERVER +DEBUG +POSSESS +VAREDIT +SOUND +SPAWN +MOD +MENTOR +PROFILER +BAN +NOLOCK +EVENT
+System Admin	+EVERYTHING +PROFILER
 
 
-Coder			+MOD +SERVER +BAN +VAREDIT +SPAWN +DEBUG +COLOR
-Mapper 			+MOD +VAREDIT +COLOR +BUILDMODE +SPAWN
-Spriter			+MOD +VAREDIT +SPAWN +COLOR
-Developer		+ADMIN +MOD +SERVER +BAN +VAREDIT +SPAWN +DEBUG +POSSESS +BUILDMODE +SOUND +COLOR
-Lead Spriter    +ADMIN +MOD +SERVER +VAREDIT +BUILDMODE +SPAWN +DEBUG +COLOR
-
-
-Host 			+EVERYTHING
-Vice Host   	+EVERYTHING
+Host 			+HOST
 Manager			+EVERYTHING
-Head Dev		+EVERYTHING
-
-
-Legacy Mentor 	 +MENTOR +COLOR
-Senior Moderator +ADMIN +MOD +SERVER +BAN +SPAWN +STEALTH +VAREDIT +POSSESS +SOUND +COLOR +BUILDMODE
-Senior Admin  	 +ADMIN +MOD +SERVER +BAN +SPAWN +STEALTH +VAREDIT +POSSESS +SOUND +COLOR +BUILDMODE +DEBUG
-
+Maintainer Manager		+EVERYTHING +PROFILER

@@ -1,18 +1,21 @@
 //------------GEAR VENDOR---------------
 
+GLOBAL_LIST_EMPTY(primary_specialists_picked)
+
 GLOBAL_LIST_INIT(cm_vending_gear_spec, list(
 		list("WEAPONS SPECIALIST SETS (CHOOSE 1)", 0, null, null, null),
-		list("Rocketeer Set", 0, /obj/item/storage/box/spec/rocketeer, MARINE_CAN_BUY_ESSENTIALS, VENDOR_ITEM_REGULAR),
+		list("Demolitionist Set", 0, /obj/item/storage/box/spec/demolitionist, MARINE_CAN_BUY_ESSENTIALS, VENDOR_ITEM_REGULAR),
 		list("Heavy Grenadier Set", 0, /obj/item/storage/box/spec/heavy_grenadier, MARINE_CAN_BUY_ESSENTIALS, VENDOR_ITEM_REGULAR),
+		list("SHARP Operator Set", 0, /obj/item/storage/box/spec/sharp_operator, MARINE_CAN_BUY_ESSENTIALS, VENDOR_ITEM_REGULAR),
 		list("Pyro Set", 0, /obj/item/storage/box/spec/pyro, MARINE_CAN_BUY_ESSENTIALS, VENDOR_ITEM_REGULAR),
-		list("Scout-Sniper (Spotter) Set", 0, /obj/item/storage/box/spec/spotter, MARINE_CAN_BUY_ESSENTIALS, VENDOR_ITEM_REGULAR),
-		list("Scout-Sniper (Shooter)", 0, /obj/item/storage/box/spec/sniper, MARINE_CAN_BUY_ESSENTIALS, VENDOR_ITEM_RECOMMENDED),
-		list("Scout-Sniper (Anti-Materiel Shooter)", 0, /obj/item/storage/box/spec/sniper/anti_materiel, MARINE_CAN_BUY_ESSENTIALS, VENDOR_ITEM_RECOMMENDED),
+		list("Scout Set", 0, /obj/item/storage/box/spec/scout, MARINE_CAN_BUY_ESSENTIALS, VENDOR_ITEM_REGULAR),
+		list("Sniper Set", 0, /obj/item/storage/box/spec/sniper, MARINE_CAN_BUY_ESSENTIALS, VENDOR_ITEM_RECOMMENDED),
+		list("Anti-Materiel Sniper Set", 0, /obj/item/storage/box/spec/sniper/anti_materiel, MARINE_CAN_BUY_ESSENTIALS, VENDOR_ITEM_RECOMMENDED),
 
 		list("EXTRA SCOUT AMMUNITION", 0, null, null, null),
-		list("A19 High Velocity Explosive Magazine (10x24mm)", 40, /obj/item/ammo_magazine/rifle/m49a/custom/explosive, null, VENDOR_ITEM_REGULAR),
-		list("A19 High Velocity Incendiary Magazine (10x24mm)", 40, /obj/item/ammo_magazine/rifle/m49a/custom/incendiary, null, VENDOR_ITEM_REGULAR),
-		list("A19 High Velocity Magazine (10x24mm)", 40, /obj/item/ammo_magazine/rifle/m49a/custom, null, VENDOR_ITEM_REGULAR),
+		list("A19 High Velocity Impact Magazine (10x24mm)", 40, /obj/item/ammo_magazine/rifle/m4ra/custom/impact, null, VENDOR_ITEM_REGULAR),
+		list("A19 High Velocity Incendiary Magazine (10x24mm)", 40, /obj/item/ammo_magazine/rifle/m4ra/custom/incendiary, null, VENDOR_ITEM_REGULAR),
+		list("A19 High Velocity Magazine (10x24mm)", 40, /obj/item/ammo_magazine/rifle/m4ra/custom, null, VENDOR_ITEM_REGULAR),
 
 		list("EXTRA SNIPER AMMUNITION", 0, null, null, null),
 		list("M42A Flak Magazine (10x28mm)", 40, /obj/item/ammo_magazine/sniper/flak, null, VENDOR_ITEM_REGULAR),
@@ -20,10 +23,15 @@ GLOBAL_LIST_INIT(cm_vending_gear_spec, list(
 		list("M42A Marksman Magazine (10x28mm Caseless)", 40, /obj/item/ammo_magazine/sniper, null, VENDOR_ITEM_REGULAR),
 		list("XM43E1 Marksman Magazine (10x99mm Caseless)", 40, /obj/item/ammo_magazine/sniper/anti_materiel, null, VENDOR_ITEM_REGULAR),
 
-		list("EXTRA ROCKETEER AMMUNITION", 0, null, null, null),
+		list("EXTRA DEMOLITIONIST AMMUNITION", 0, null, null, null),
 		list("84mm Anti-Armor Rocket", 40, /obj/item/ammo_magazine/rocket/ap, null, VENDOR_ITEM_REGULAR),
 		list("84mm High-Explosive Rocket", 40, /obj/item/ammo_magazine/rocket, null, VENDOR_ITEM_REGULAR),
 		list("84mm White-Phosphorus Rocket", 40, /obj/item/ammo_magazine/rocket/wp, null, VENDOR_ITEM_REGULAR),
+
+		list("EXTRA SHARP AMMUNITION", 0, null, null, null),
+		list("SHARP 9X-E Sticky Explosive Dart magazine (darts)", 40, /obj/item/ammo_magazine/rifle/sharp/explosive, null, VENDOR_ITEM_REGULAR),
+		list("SHARP 9X-T Sticky incendiary Dart magazine (darts)", 40, /obj/item/ammo_magazine/rifle/sharp/incendiary, null, VENDOR_ITEM_REGULAR),
+		list("SHARP 9X-F Flechette Dart Magazine (darts)", 40, /obj/item/ammo_magazine/rifle/sharp/flechette, null, VENDOR_ITEM_REGULAR),
 
 		list("EXTRA GRENADES", 0, null, null, null),
 		list("M40 HEDP Grenades x6", 40, /obj/effect/essentials_set/hedp_6_pack, null, VENDOR_ITEM_REGULAR),
@@ -41,6 +49,11 @@ GLOBAL_LIST_INIT(cm_vending_gear_spec, list(
 
 	))
 
+GLOBAL_LIST_INIT(cm_vending_gear_spec_heavy, list(
+	list("WEAPONS SPECIALIST SETS (CHOOSE 1)", 0, null, null, null),
+	list("Heavy Armor Set", 0, /obj/item/storage/box/spec/B18, MARINE_CAN_BUY_ESSENTIALS, VENDOR_ITEM_RECOMMENDED),
+))
+
 /obj/structure/machinery/cm_vending/gear/spec
 	name = "\improper ColMarTech Squad Weapons Specialist Gear Rack"
 	desc = "An automated gear rack for Squad Weapons Specialists."
@@ -52,8 +65,49 @@ GLOBAL_LIST_INIT(cm_vending_gear_spec, list(
 	req_access = list(ACCESS_MARINE_SPECPREP)
 
 /obj/structure/machinery/cm_vending/gear/spec/get_listed_products(mob/user)
+	if(SSticker.mode && MODE_HAS_MODIFIER(/datum/gamemode_modifier/heavy_specialists))
+		return GLOB.cm_vending_gear_spec_heavy
 	return GLOB.cm_vending_gear_spec
 
+/obj/structure/machinery/cm_vending/gear/spec/vendor_successful_vend_one(prod_type, mob/living/carbon/human/user, turf/target_turf, insignas_override, stack_amount)
+	. = ..()
+	if(length(GLOB.primary_specialists_picked) >= /datum/job/marine/specialist::total_positions)
+		return
+
+	if(ispath(prod_type, /obj/item/storage/box/spec))
+		var/obj/item/storage/box/spec/spec_kit = prod_type
+		GLOB.primary_specialists_picked[spec_kit::kit_name] = TRUE
+
+/obj/structure/machinery/cm_vending/gear/spec/automatic_vend(mob/user)
+	// Try to automatically vend spec kit if it was already assigned automatically if needed
+	var/mob/living/carbon/human/human_user = user
+	if(!istype(human_user))
+		return
+	if(!HAS_TRAIT(user, TRAIT_SPEC_VENDOR))
+		return
+	if(!vendor_role.Find(JOB_SQUAD_SPECIALIST))
+		return
+	if(!user.skills.get_skill_level(SKILL_SPEC_WEAPONS) == SKILL_SPEC_TRAINED)
+		return
+	if((!human_user.assigned_squad && squad_tag) || (!human_user.assigned_squad?.omni_squad_vendor && (squad_tag && human_user.assigned_squad.name != squad_tag)))
+		to_chat(user, SPAN_WARNING("This machine isn't for your squad."))
+		return
+	var/datum/specialist_set/chosen_set = get_specialist_set(user)
+	if(!chosen_set)
+		return
+	var/kit_path = chosen_set::kit_typepath
+	var/list/itemspec
+	for(var/list/entry as anything in GLOB.cm_vending_gear_spec)
+		if(entry[3] == kit_path)
+			itemspec = entry
+			break
+	if(!itemspec)
+		// Fallback
+		human_user.put_in_any_hand_if_possible(new kit_path, FALSE)
+		CRASH("Failed to locate [chosen_set::name] for [user] in GLOB.cm_vending_gear_spec!")
+	if(!handle_vend(itemspec, human_user))
+		return
+	vendor_successful_vend(itemspec, user)
 
 //------------CLOTHING VENDOR---------------
 
@@ -61,7 +115,7 @@ GLOBAL_LIST_INIT(cm_vending_clothing_specialist, list(
 		list("STANDARD EQUIPMENT (TAKE ALL)", 0, null, null, null),
 		list("Standard Marine Apparel", 0, list(/obj/item/clothing/under/marine, /obj/item/clothing/shoes/marine/knife, /obj/item/clothing/gloves/marine, /obj/item/device/radio/headset/almayer/marine), MARINE_CAN_BUY_UNIFORM, VENDOR_ITEM_MANDATORY),
 		list("MRE", 0, /obj/item/storage/box/mre, MARINE_CAN_BUY_MRE, VENDOR_ITEM_MANDATORY),
-		list("Map", 0, /obj/item/map/current_map, MARINE_CAN_BUY_KIT, VENDOR_ITEM_MANDATORY),
+		list("Map", 0, /obj/item/map/current_map, MARINE_CAN_BUY_MAP, VENDOR_ITEM_MANDATORY),
 
 		list("BACKPACK (CHOOSE 1)", 0, null, null, null),
 		list("Backpack", 0, /obj/item/storage/backpack/marine, MARINE_CAN_BUY_BACKPACK, VENDOR_ITEM_REGULAR),
@@ -70,14 +124,16 @@ GLOBAL_LIST_INIT(cm_vending_clothing_specialist, list(
 		list("BELT (CHOOSE 1)", 0, null, null, null),
 		list("G8-A General Utility Pouch", 0, /obj/item/storage/backpack/general_belt, MARINE_CAN_BUY_BELT, VENDOR_ITEM_RECOMMENDED),
 		list("M276 Ammo Load Rig", 0, /obj/item/storage/belt/marine, MARINE_CAN_BUY_BELT, VENDOR_ITEM_REGULAR),
+		list("M276 Combat Sidearm Rig", 0, /obj/item/storage/belt/gun/combat_rig, MARINE_CAN_BUY_BELT, VENDOR_ITEM_REGULAR),
 		list("M276 General Pistol Holster Rig", 0, /obj/item/storage/belt/gun/m4a3, MARINE_CAN_BUY_BELT, VENDOR_ITEM_RECOMMENDED),
 		list("M276 M39 Holster Rig", 0, /obj/item/storage/belt/gun/m39, MARINE_CAN_BUY_BELT, VENDOR_ITEM_REGULAR),
+		list("M276 M10 Holster Rig", 0, /obj/item/storage/belt/gun/m10, MARINE_CAN_BUY_BELT, VENDOR_ITEM_REGULAR),
 		list("M276 General Revolver Holster Rig", 0, /obj/item/storage/belt/gun/m44, MARINE_CAN_BUY_BELT, VENDOR_ITEM_REGULAR),
 		list("M276 M82F Holster Rig", 0, /obj/item/storage/belt/gun/flaregun, MARINE_CAN_BUY_BELT, VENDOR_ITEM_REGULAR),
 		list("M276 Shotgun Shell Loading Rig", 0, /obj/item/storage/belt/shotgun, MARINE_CAN_BUY_BELT, VENDOR_ITEM_REGULAR),
 
 		list("POUCHES (CHOOSE 2)", 0, null, null, null),
-		list("First-Aid Pouch (Refillable Injectors)", 0, /obj/item/storage/pouch/firstaid/full, MARINE_CAN_BUY_POUCH, VENDOR_ITEM_RECOMMENDED),
+		list("First-Aid Pouch (Refillable Autoinjectors)", 0, /obj/item/storage/pouch/firstaid/full, MARINE_CAN_BUY_POUCH, VENDOR_ITEM_RECOMMENDED),
 		list("First-Aid Pouch (Splints, Gauze, Ointment)", 0, /obj/item/storage/pouch/firstaid/full/alternate, MARINE_CAN_BUY_POUCH, VENDOR_ITEM_RECOMMENDED),
 		list("First-Aid Pouch (Pill Packets)", 0, /obj/item/storage/pouch/firstaid/full/pills, MARINE_CAN_BUY_POUCH, VENDOR_ITEM_RECOMMENDED),
 		list("Flare Pouch (Full)", 0, /obj/item/storage/pouch/flare/full, MARINE_CAN_BUY_POUCH, VENDOR_ITEM_REGULAR),
@@ -91,9 +147,13 @@ GLOBAL_LIST_INIT(cm_vending_clothing_specialist, list(
 		list("ACCESSORIES (CHOOSE 1)", 0, null, null, null),
 		list("Brown Webbing Vest", 0, /obj/item/clothing/accessory/storage/black_vest/brown_vest, MARINE_CAN_BUY_ACCESSORY, VENDOR_ITEM_RECOMMENDED),
 		list("Black Webbing Vest", 0, /obj/item/clothing/accessory/storage/black_vest, MARINE_CAN_BUY_ACCESSORY, VENDOR_ITEM_REGULAR),
+		list("Leg Pouch", 0, /obj/item/clothing/accessory/storage/black_vest/leg_pouch, MARINE_CAN_BUY_ACCESSORY, VENDOR_ITEM_REGULAR),
+		list("Leg Pouch (Black)", 0, /obj/item/clothing/accessory/storage/black_vest/black_leg_pouch, MARINE_CAN_BUY_ACCESSORY, VENDOR_ITEM_REGULAR),
 		list("Shoulder Holster", 0, /obj/item/clothing/accessory/storage/holster, MARINE_CAN_BUY_ACCESSORY, VENDOR_ITEM_REGULAR),
 		list("Webbing", 0, /obj/item/clothing/accessory/storage/webbing, MARINE_CAN_BUY_ACCESSORY, VENDOR_ITEM_REGULAR),
+		list("Black Webbing", 0, /obj/item/clothing/accessory/storage/webbing/black, MARINE_CAN_BUY_ACCESSORY, VENDOR_ITEM_REGULAR),
 		list("Drop Pouch", 0, /obj/item/clothing/accessory/storage/droppouch, MARINE_CAN_BUY_ACCESSORY, VENDOR_ITEM_REGULAR),
+		list("Black Drop Pouch", 0, /obj/item/clothing/accessory/storage/droppouch/black, MARINE_CAN_BUY_ACCESSORY, VENDOR_ITEM_REGULAR),
 
 		list("MASK (CHOOSE 1)", 0, null, null, null),
 		list("Gas Mask", 0, /obj/item/clothing/mask/gas, MARINE_CAN_BUY_MASK, VENDOR_ITEM_REGULAR),
@@ -104,8 +164,9 @@ GLOBAL_LIST_INIT(cm_vending_clothing_specialist, list(
 		list("SU-6 Smart Pistol", 15, /obj/item/storage/box/guncase/smartpistol, null, VENDOR_ITEM_REGULAR),
 
 		list("SIDEARM AMMUNITION", 0, null, null, null),
-		list("M44 Heavy Speed Loader (.44)", 10, /obj/item/ammo_magazine/revolver/heavy, null, VENDOR_ITEM_REGULAR),
-		list("M44 Marksman Speed Loader (.44)", 10, /obj/item/ammo_magazine/revolver/marksman, null, VENDOR_ITEM_REGULAR),
+		list("M10 HV Extended Magazine (10x20mm-APC)", 10, /obj/item/ammo_magazine/pistol/m10/extended , null, VENDOR_ITEM_REGULAR),
+		list("M44 Heavy Speed Loader (.44)", 5, /obj/item/ammo_magazine/revolver/heavy, null, VENDOR_ITEM_REGULAR),
+		list("M44 Marksman Speed Loader (.44)", 5, /obj/item/ammo_magazine/revolver/marksman, null, VENDOR_ITEM_REGULAR),
 		list("M4A3 HP Magazine", 5, /obj/item/ammo_magazine/pistol/hp, null, VENDOR_ITEM_REGULAR),
 		list("M4A3 AP Magazine", 5, /obj/item/ammo_magazine/pistol/ap, null, VENDOR_ITEM_REGULAR),
 		list("VP78 Magazine", 5, /obj/item/ammo_magazine/pistol/vp78, null, VENDOR_ITEM_REGULAR),
@@ -114,7 +175,6 @@ GLOBAL_LIST_INIT(cm_vending_clothing_specialist, list(
 		list("CLOTHING ITEMS", 0, null, null, null),
 		list("Machete Scabbard (Full)", 6, /obj/item/storage/large_holster/machete/full, null, VENDOR_ITEM_REGULAR),
 		list("Machete Pouch (Full)", 15, /obj/item/storage/pouch/machete/full, null, VENDOR_ITEM_REGULAR),
-		list("USCM Radio Telephone Pack", 15, /obj/item/storage/backpack/marine/satchel/rto, null, VENDOR_ITEM_REGULAR),
 		list("Fuel Tank Strap Pouch", 5, /obj/item/storage/pouch/flamertank, null, VENDOR_ITEM_REGULAR),
 		list("Welding Goggles", 3, /obj/item/clothing/glasses/welding, null, VENDOR_ITEM_REGULAR),
 		list("Large General Pouch", 10, /obj/item/storage/pouch/general/large, null, VENDOR_ITEM_REGULAR),
@@ -127,7 +187,8 @@ GLOBAL_LIST_INIT(cm_vending_clothing_specialist, list(
 		list("Fire Extinguisher (Portable)", 5, /obj/item/tool/extinguisher/mini, null, VENDOR_ITEM_REGULAR),
 		list("Motion Detector", 10, /obj/item/device/motiondetector, null, VENDOR_ITEM_REGULAR),
 		list("Data Detector", 10, /obj/item/device/motiondetector/intel, null, VENDOR_ITEM_REGULAR),
-		list("Whistle", 5, /obj/item/device/whistle, null, VENDOR_ITEM_REGULAR),
+		list("Whistle", 5, /obj/item/clothing/accessory/device/whistle, null, VENDOR_ITEM_REGULAR),
+		list("SensorMate Medical HUD", 15, /obj/item/clothing/glasses/hud/sensor, null, VENDOR_ITEM_REGULAR),
 
 		list("BINOCULARS", 0, null, null, null),
 		list("Binoculars", 5, /obj/item/device/binoculars, null, VENDOR_ITEM_REGULAR),
@@ -135,18 +196,19 @@ GLOBAL_LIST_INIT(cm_vending_clothing_specialist, list(
 		list("Laser Designator", 15, /obj/item/device/binoculars/range/designator, null, VENDOR_ITEM_REGULAR),
 
 		list("HELMET OPTICS", 0, null, null, null),
-		list("Medical Helmet Optic", 15, /obj/item/device/helmet_visor/medical, null, VENDOR_ITEM_REGULAR),
+		list("SensorMate Medical Optic", 15, /obj/item/device/helmet_visor/medical, null, VENDOR_ITEM_REGULAR),
 		list("Welding Visor", 5, /obj/item/device/helmet_visor/welding_visor, null, VENDOR_ITEM_REGULAR),
 
 		list("PAMPHLETS", 0, null, null, null),
-		list("JTAC Pamphlet", 15, /obj/item/pamphlet/skill/jtac, null, VENDOR_ITEM_REGULAR),
-		list("Engineering Pamphlet", 15, /obj/item/pamphlet/skill/engineer, null, VENDOR_ITEM_REGULAR),
+		list("JTAC Pamphlet", 15, /obj/item/pamphlet/upgradeable/jtac, null, VENDOR_ITEM_REGULAR),
+		list("Engineering Pamphlet", 15, /obj/item/pamphlet/upgradeable/engineer, null, VENDOR_ITEM_REGULAR),
 
 		list("RADIO KEYS", 0, null, null, null),
 		list("Engineering Radio Encryption Key", 5, /obj/item/device/encryptionkey/engi, null, VENDOR_ITEM_REGULAR),
 		list("Intel Radio Encryption Key", 5, /obj/item/device/encryptionkey/intel, null, VENDOR_ITEM_REGULAR),
 		list("JTAC Radio Encryption Key", 5, /obj/item/device/encryptionkey/jtac, null, VENDOR_ITEM_REGULAR),
 		list("Supply Radio Encryption Key", 5, /obj/item/device/encryptionkey/req, null, VENDOR_ITEM_REGULAR),
+		list("Medical Radio Encryption Key", 5, /obj/item/device/encryptionkey/med, null, VENDOR_ITEM_REGULAR),
 	))
 
 /obj/structure/machinery/cm_vending/clothing/specialist
@@ -260,78 +322,3 @@ GLOBAL_LIST_INIT(cm_vending_clothing_specialist, list(
 		/obj/item/explosive/grenade/sebb,
 		/obj/item/explosive/grenade/sebb,
 	)
-
-/obj/effect/essentials_set/m15_4_pack
-	spawned_gear_list = list(
-		/obj/item/explosive/grenade/high_explosive/m15,
-		/obj/item/explosive/grenade/high_explosive/m15,
-		/obj/item/explosive/grenade/high_explosive/m15,
-		/obj/item/explosive/grenade/high_explosive/m15,
-	)
-
-// RMC sniper-vendor
-
-/obj/effect/essentials_set/rmcdmr
-	spawned_gear_list = list(
-		/obj/item/ammo_magazine/sniper/rmc,
-		/obj/item/ammo_magazine/sniper/rmc,
-		/obj/item/ammo_magazine/sniper/rmc,
-		/obj/item/ammo_magazine/sniper/rmc,
-		/obj/item/ammo_magazine/sniper/rmc,
-		/obj/item/ammo_magazine/sniper/rmc,
-		/obj/item/ammo_magazine/sniper/rmc,
-		/obj/item/ammo_magazine/sniper/rmc,
-		/obj/item/ammo_magazine/sniper/rmc,
-		/obj/item/ammo_magazine/sniper/rmc,
-		/obj/item/weapon/gun/rifle/sniper/rmc,
-		/obj/item/clothing/glasses/night/m42_hms/rmc,
-		/obj/item/attachable/bipod,
-	)
-
-/obj/effect/essentials_set/rmcsniper
-	spawned_gear_list = list(
-		/obj/item/ammo_magazine/sniper,
-		/obj/item/ammo_magazine/sniper,
-		/obj/item/ammo_magazine/sniper,
-		/obj/item/ammo_magazine/sniper,
-		/obj/item/ammo_magazine/sniper,
-		/obj/item/ammo_magazine/sniper,
-		/obj/item/weapon/gun/rifle/sniper/M42A/silenced,
-		/obj/item/clothing/glasses/night/m42_hms/rmc,
-		/obj/item/attachable/bipod,
-	)
-
-GLOBAL_LIST_INIT(cm_vending_clothing_rmc_sniper, list(
-		list("PRECISION WEAPON SET (MANDATORY)", 0, null, null, null),
-		list("Essential Sniper Set", 0, /obj/effect/essentials_set/rmcsniper, MARINE_CAN_BUY_ESSENTIALS, VENDOR_ITEM_MANDATORY),
-		list("Essential Marksman Set", 0, /obj/effect/essentials_set/rmcdmr, MARINE_CAN_BUY_ESSENTIALS, VENDOR_ITEM_MANDATORY),
-
-		list("HELMET (CHOOSE 1)", 0, null, null, null),
-		list("Mk12 Marksman Helmet", 0, /obj/item/clothing/head/helmet/marine/veteran/pmc/sniper/rmc, MARINE_CAN_BUY_HELMET, VENDOR_ITEM_RECOMMENDED),
-
-		list("BACKPACK (CHOOSE 1)", 0, null, null, null),
-		list("Heavy-duty Backpack", 0, /obj/item/storage/backpack/rmc/heavy, MARINE_CAN_BUY_BACKPACK, VENDOR_ITEM_REGULAR),
-		list("Standard Backpack", 0, /obj/item/storage/backpack/rmc/medium, MARINE_CAN_BUY_BACKPACK, VENDOR_ITEM_RECOMMENDED),
-		list("Lightweight Backpack", 0, /obj/item/storage/backpack/rmc/light, MARINE_CAN_BUY_BACKPACK, VENDOR_ITEM_REGULAR),
-
-		list("BELT (CHOOSE 1)", 0, null, null, null),
-		list("L70 pattern Ammo Load Rig", 0, /obj/item/storage/belt/marine/rmc, MARINE_CAN_BUY_BELT, VENDOR_ITEM_RECOMMENDED),
-		list("L26 Pattern General Utility Belt", 0, /obj/item/storage/backpack/general_belt/rmc, MARINE_CAN_BUY_BELT, VENDOR_ITEM_REGULAR),
-		list("L165 Gunbelt", 0, /obj/item/storage/belt/gun/l905, MARINE_CAN_BUY_BELT, VENDOR_ITEM_REGULAR),
-
-		list("ACCESSORIES (CHOOSE 1)", 0, null, null, null),
-		list("Drop Pouch", 0, /obj/item/clothing/accessory/storage/droppouch/rmc, MARINE_CAN_BUY_ACCESSORY, VENDOR_ITEM_RECOMMENDED),
-		list("Small Pouch", 0, /obj/item/clothing/accessory/storage/smallpouch/rmc, MARINE_CAN_BUY_ACCESSORY, VENDOR_ITEM_REGULAR),
-		list("Waist Holster", 0, /obj/item/clothing/accessory/storage/holster/waist, MARINE_CAN_BUY_ACCESSORY, VENDOR_ITEM_REGULAR),
-	))
-
-/obj/structure/machinery/cm_vending/clothing/specialist/rmc
-	name = "\improper WeyTech Section Marksman Equipment Rack"
-	desc = "An automated rack hooked up to a colossal storage of standard-issue equipment for Royal Marine Scout-Snipers."
-	icon_state = "spec_gear"
-	req_access = list(ACCESS_TWE_SNIPERPREP)
-	vendor_role = list(JOB_TWE_RMC_MARKSMAN)
-	vendor_theme = VENDOR_THEME_COMPANY
-
-/obj/structure/machinery/cm_vending/clothing/specialist/rmc/get_listed_products(mob/user)
-	return GLOB.cm_vending_clothing_rmc_sniper

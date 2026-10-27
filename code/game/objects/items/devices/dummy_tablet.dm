@@ -3,8 +3,9 @@
 	name = "\improper Professor DUMMY tablet"
 	desc = "A Professor DUMMY Control Tablet."
 	suffix = "\[3\]"
-	icon_state = "Cotablet"
-	item_state = "Cotablet"
+	icon_state = "dummytablet"
+	item_state = "dummytablet"
+	item_icons = list(WEAR_R_HAND = null, WEAR_L_HAND = null) // No mob state currently
 
 	var/mob/living/carbon/human/linked_dummy
 	///Should the dummy be destroyed on hijack?
@@ -80,6 +81,7 @@
 	dat += "<BR>\[ <A href='byond://?src=\ref[src];operation=burn_damage'>Burn Damage</A> \]"
 	dat += "<BR>\[ <A href='byond://?src=\ref[src];operation=toxin'>Inject Toxins</A> \]"
 	dat += "<BR>\[ <A href='byond://?src=\ref[src];operation=bones'>Break Bones</A> \]"
+	dat += "<BR>\[ <A href='byond://?src=\ref[src];operation=eschar'>Inflict Eschar</A> \]"
 	dat += "<BR>\[ <A href='byond://?src=\ref[src];operation=blood_loss'>Blood Loss</A> \]"
 	dat += "<BR>\[ <A href='byond://?src=\ref[src];operation=bleeding'>Internal Bleeding</A> \]"
 	dat += "<BR>\[ <A href='byond://?src=\ref[src];operation=shrapnel'>Shrapnel</A> \]"
@@ -141,7 +143,8 @@
 
 
 /obj/item/device/professor_dummy_tablet/Topic(href, href_list)
-	if(..()) return FALSE
+	if(..())
+		return FALSE
 
 	if (!is_adjacent_to_dummy(usr))
 		return FALSE
@@ -205,6 +208,17 @@
 			if(limb.status & LIMB_DESTROYED)
 				return
 			limb.fracture(100)
+		if ("eschar")
+			var/selection = select_body_part()
+			if (!selection)
+				return
+			var/obj/limb/limb = linked_dummy.get_limb(selection)
+			if (!istype(limb))
+				return
+			if(limb.status & LIMB_ESCHAR)
+				return
+			limb.eschar()
+			limb.take_damage(0, limb.burn_healing_threshold)
 		if ("blood_loss")
 			var/amount = 0
 			amount = tgui_input_real_number(usr, "Amount?")
@@ -245,7 +259,7 @@
 				return
 			if(limb.status & LIMB_DESTROYED)
 				return
-			limb.droplimb(TRUE, TRUE, "tablet")
+			limb.droplimb(FALSE, TRUE, "tablet")
 			playsound(loc, 'sound/weapons/slice.ogg', 25)
 		if("reset")
 			linked_dummy.revive()

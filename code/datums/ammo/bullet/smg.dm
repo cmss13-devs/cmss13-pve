@@ -11,49 +11,25 @@
 //way too many people don't read the changelog, and after one or two months the changelog entry is all but archive, so there needs to be an ingame description of what the ammo does
 //in comparison to armor-piercing rounds.
 
-/datum/ammo/bullet/smg	//Same stats damage & AP wise as the pistol counterpart, but other stats are tweaked
+/datum/ammo/bullet/smg
 	name = "submachinegun bullet"
-	damage = 40
+	damage = 34
 	accurate_range = 4
 	effective_range_max = 4
-	penetration = -ARMOR_PENETRATION_TIER_1
-	shell_speed = AMMO_SPEED_TIER_5
+	penetration = ARMOR_PENETRATION_TIER_1
+	shell_speed = AMMO_SPEED_TIER_6
 	damage_falloff = DAMAGE_FALLOFF_TIER_5
 	scatter = SCATTER_AMOUNT_TIER_6
 	accuracy = HIT_ACCURACY_TIER_3
-	shell_casing = /obj/effect/decal/ammo_casing //We back on that cased 9mm grind for the M39 series
 
 /datum/ammo/bullet/smg/m39
 	name = "high-velocity submachinegun bullet" //i don't want all smgs to inherit 'high velocity'
 
-/datum/ammo/bullet/smg/squash
-	name = "squash-head submachinegun bullet"
-	damage = 30
-	penetration = ARMOR_PENETRATION_TIER_3
-	effective_range_max = 7
-	damage_falloff = DAMAGE_FALLOFF_TIER_3
-	max_range = 14
-
-/datum/ammo/bullet/smg/squash/on_hit_mob(mob/entity, obj/projectile/bullet)
-	..()
-	slowdown(entity, bullet)
-
-/datum/ammo/bullet/smg/pve
-	name = "squash-head submachinegun duplex bullet"
-	shell_speed = AMMO_SPEED_TIER_4 //high velocitisn't
-	penetration = ARMOR_PENETRATION_TIER_4
-	bonus_projectiles_type = /datum/ammo/bullet/smg/duplex
-	bonus_projectiles_amount = EXTRA_PROJECTILES_TIER_1 //1 extra
-
-/datum/ammo/bullet/smg/duplex
-	name = "squash-head submachinegun duplex bullet"
-	penetration = ARMOR_PENETRATION_TIER_4
-	shell_speed = AMMO_SPEED_TIER_3 //high velocitisn't - lags behind first
-
 /datum/ammo/bullet/smg/ap
 	name = "armor-piercing submachinegun bullet"
-	damage = 25
-	penetration = ARMOR_PENETRATION_TIER_3
+
+	damage = 26
+	penetration = ARMOR_PENETRATION_TIER_6
 	shell_speed = AMMO_SPEED_TIER_4
 
 /datum/ammo/bullet/smg/heap
@@ -62,7 +38,7 @@
 	damage = 45
 	headshot_state = HEADSHOT_OVERLAY_MEDIUM
 	penetration = ARMOR_PENETRATION_TIER_6
-	shell_speed = AMMO_SPEED_TIER_3
+	shell_speed = AMMO_SPEED_TIER_4
 
 /datum/ammo/bullet/smg/ap/toxin
 	name = "toxic submachinegun bullet"
@@ -88,11 +64,10 @@
 	icon_state = "nail-projectile"
 
 	damage = 25
-	penetration = -ARMOR_PENETRATION_TIER_5
+	penetration = ARMOR_PENETRATION_TIER_5
 	damage_falloff = DAMAGE_FALLOFF_TIER_6
 	accurate_range = 5
 	shell_speed = AMMO_SPEED_TIER_4
-	shell_casing = null
 
 /datum/ammo/bullet/smg/incendiary
 	name = "incendiary submachinegun bullet"
@@ -137,34 +112,56 @@
 	sound_override = 'sound/weapons/gun_c99.ogg'
 
 	damage = 0
-	stamina_damage = 30
+	stamina_damage = 10
 	shrapnel_chance = 0
 
 /datum/ammo/bullet/smg/mp27
 	name = "simple submachinegun bullet"
-	damage = 25
+	damage = 40
 	accurate_range = 5
 	effective_range_max = 7
-	penetration = ARMOR_PENETRATION_TIER_3
-	shell_speed = AMMO_SPEED_TIER_5
+	penetration = 0
+	shell_speed = AMMO_SPEED_TIER_6
 	damage_falloff = DAMAGE_FALLOFF_TIER_6
-	scatter = SCATTER_AMOUNT_TIER_8
+	scatter = SCATTER_AMOUNT_TIER_6
 	accuracy = HIT_ACCURACY_TIER_2
+
+// less damage than the m39, but better falloff, range, and AP
 
 /datum/ammo/bullet/smg/ppsh
 	name = "crude submachinegun bullet"
-	damage = 30
+	damage = 26
 	accurate_range = 7
 	effective_range_max = 7
-	penetration = -ARMOR_PENETRATION_TIER_2
+	penetration = ARMOR_PENETRATION_TIER_2
 	damage_falloff = DAMAGE_FALLOFF_TIER_7
-	scatter = SCATTER_AMOUNT_TIER_9
+	scatter = SCATTER_AMOUNT_TIER_5
 
 /datum/ammo/bullet/smg/pps43
 	name = "simple submachinegun bullet"
 	damage = 35
 	accurate_range = 7
 	effective_range_max = 10
-	penetration = -ARMOR_PENETRATION_TIER_2
+	penetration = ARMOR_PENETRATION_TIER_4
 	damage_falloff = DAMAGE_FALLOFF_TIER_6
-	scatter = SCATTER_AMOUNT_TIER_10
+	scatter = SCATTER_AMOUNT_TIER_6
+
+/datum/ammo/bullet/smg/p90
+	name = "submachinegun bullet"
+
+	damage = 22
+	accurate_range = 5
+	effective_range_max = 8
+	penetration = ARMOR_PENETRATION_TIER_2
+	damage_falloff = DAMAGE_FALLOFF_TIER_6
+	scatter = SCATTER_AMOUNT_TIER_6
+
+/datum/ammo/bullet/smg/p90/ap
+	name = "armor-piercing submachinegun bullet"
+
+	damage = 20
+	accurate_range = 5
+	effective_range_max = 8
+	penetration = ARMOR_PENETRATION_TIER_4
+	damage_falloff = DAMAGE_FALLOFF_TIER_6
+	scatter = SCATTER_AMOUNT_TIER_6

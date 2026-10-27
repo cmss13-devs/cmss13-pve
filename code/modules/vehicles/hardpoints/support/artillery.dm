@@ -6,12 +6,12 @@
 	disp_icon = "tank"
 	disp_icon_state = "artillerymod"
 
-	health = 2000
+	health = 250
 
 	activatable = TRUE
 
 	var/is_active = 0
-	var/view_buff = 12 //This way you can VV for more or less fun
+	var/view_buff = 10 //This way you can VV for more or less fun
 	var/view_tile_offset = 7
 
 /obj/item/hardpoint/support/artillery_module/handle_fire(atom/target, mob/living/user, params)
@@ -19,9 +19,9 @@
 		return
 
 	if(is_active)
-		user.client.change_view(10, owner)
-		user.client.pixel_x = 0
-		user.client.pixel_y = 0
+		user.client.change_view(8, owner)
+		user.client.set_pixel_x(0)
+		user.client.set_pixel_y(0)
 		is_active = FALSE
 		return
 
@@ -35,17 +35,17 @@
 
 	switch(holder.dir)
 		if(NORTH)
-			user.client.pixel_x = 0
-			user.client.pixel_y = view_tile_offset * 32
+			user.client.set_pixel_x(0)
+			user.client.set_pixel_y(view_tile_offset * 32)
 		if(SOUTH)
-			user.client.pixel_x = 0
-			user.client.pixel_y = -1 * view_tile_offset * 32
+			user.client.set_pixel_x(0)
+			user.client.set_pixel_y(-1 * view_tile_offset * 32)
 		if(EAST)
-			user.client.pixel_x = view_tile_offset * 32
-			user.client.pixel_y = 0
+			user.client.set_pixel_x(view_tile_offset * 32)
+			user.client.set_pixel_y(0)
 		if(WEST)
-			user.client.pixel_x = -1 * view_tile_offset * 32
-			user.client.pixel_y = 0
+			user.client.set_pixel_x(-1 * view_tile_offset * 32)
+			user.client.set_pixel_y(0)
 
 /obj/item/hardpoint/support/artillery_module/deactivate()
 	if(!is_active)
@@ -54,13 +54,13 @@
 	var/obj/vehicle/multitile/C = owner
 	for(var/seat in C.seats)
 		if(!ismob(C.seats[seat]))
-			return
+			continue
 		var/mob/user = C.seats[seat]
-		if(user.client)
-			return
+		if(!user.client)
+			continue
 		user.client.change_view(GLOB.world_view_size, owner)
-		user.client.pixel_x = 0
-		user.client.pixel_y = 0
+		user.client.set_pixel_x(0)
+		user.client.set_pixel_y(0)
 	is_active = FALSE
 
 /obj/item/hardpoint/support/artillery_module/try_fire(target, user, params)

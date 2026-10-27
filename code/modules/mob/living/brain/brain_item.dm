@@ -3,6 +3,11 @@
 	health = 400 //They need to live awhile longer than other organs.
 	desc = "A piece of juicy meat found in a person's head."
 	icon_state = "brain2"
+	item_icons = list(
+		WEAR_L_HAND = 'icons/mob/humans/onmob/inhands/items/organs_lefthand.dmi',
+		WEAR_R_HAND = 'icons/mob/humans/onmob/inhands/items/organs_righthand.dmi',
+	)
+	item_state = "brain2"
 	flags_atom = NO_FLAGS
 	force = 1
 	w_class = SIZE_SMALL
@@ -25,7 +30,8 @@
 	..()
 	spawn(5)
 		if(brainmob && brainmob.client)
-			brainmob.client.screen.len = null //clear the hud
+			brainmob.client.screen.Cut() //clear the hud
+			brainmob.client.render_plates_shown = alist()
 
 /obj/item/organ/brain/proc/transfer_identity(mob/living/carbon/H)
 	name = "[H]'s brain"
@@ -37,7 +43,7 @@
 	if(H.mind)
 		H.mind.transfer_to(brainmob)
 
-	to_chat(brainmob, SPAN_NOTICE(" You feel slightly disoriented. That's normal when you're just a brain."))
+	to_chat(brainmob, SPAN_NOTICE("You feel slightly disoriented. That's normal when you're just a brain."))
 
 /obj/item/organ/brain/get_examine_text(mob/user)
 	. = ..()
@@ -67,4 +73,5 @@
 			brainmob.mind.transfer_to(target)
 		else
 			target.key = brainmob.key
-			if(target.client) target.client.change_view(GLOB.world_view_size)
+			if(target.client)
+				target.client.change_view(GLOB.world_view_size)

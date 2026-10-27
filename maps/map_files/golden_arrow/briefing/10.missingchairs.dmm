@@ -166,7 +166,7 @@
 /area/golden_arrow/briefing)
 "oB" = (
 /obj/structure/prop/invuln/overhead_pipe{
-	icon = 'icons/obj/structures/props/almayer_props.dmi';
+	icon = 'modular_pve/icons/obj/structures/props/almayer_props.dmi';
 	icon_state = "wallpipe_2";
 	pixel_y = 22
 	},
@@ -250,7 +250,7 @@
 /area/golden_arrow/briefing)
 "qP" = (
 /obj/structure/prop/invuln/overhead_pipe{
-	icon = 'icons/obj/structures/props/almayer_props.dmi';
+	icon = 'modular_pve/icons/obj/structures/props/almayer_props.dmi';
 	icon_state = "wallpipe_3";
 	pixel_y = 22
 	},
@@ -354,7 +354,7 @@
 /area/golden_arrow/briefing)
 "AM" = (
 /obj/structure/prop/invuln/overhead_pipe{
-	icon = 'icons/obj/structures/props/almayer_props.dmi';
+	icon = 'modular_pve/icons/obj/structures/props/almayer_props.dmi';
 	icon_state = "wallpipe_2";
 	pixel_y = 22
 	},
@@ -570,7 +570,7 @@
 /area/golden_arrow/briefing)
 "MK" = (
 /obj/structure/prop/invuln/overhead_pipe{
-	icon = 'icons/obj/structures/props/almayer_props.dmi';
+	icon = 'modular_pve/icons/obj/structures/props/almayer_props.dmi';
 	icon_state = "wallpipe_2";
 	pixel_y = 31
 	},

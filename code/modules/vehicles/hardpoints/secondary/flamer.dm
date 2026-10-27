@@ -7,11 +7,11 @@
 	disp_icon_state = "flamer"
 	activation_sounds = list('sound/weapons/vehicles/flamethrower.ogg')
 
-	health = 2000
+	health = 300
 	firing_arc = 120
 
 	ammo = new /obj/item/ammo_magazine/hardpoint/secondary_flamer
-	max_clips = 4
+	max_clips = 1
 
 	use_muzzle_flash = FALSE
 
@@ -24,12 +24,8 @@
 		"8" = list(-3, 18)
 	)
 
-	scatter = 2
-	gun_firemode = GUN_FIREMODE_AUTOMATIC
-	gun_firemode_list = list(
-		GUN_FIREMODE_AUTOMATIC,
-	)
-	fire_delay = 0.5 SECONDS
+	scatter = 6
+	fire_delay = 3.0 SECONDS
 
 /obj/item/hardpoint/secondary/small_flamer/try_fire(atom/target, mob/living/user, params)
 	if(get_turf(target) in owner.locs)
@@ -51,9 +47,8 @@
 	var/distance = get_dist(origin_turf, get_turf(target))
 	var/fire_amount = min(ammo.current_rounds, distance+1, max_range)
 	ammo.current_rounds -= fire_amount
-	var/datum/reagent/burnystuff = new /datum/reagent/napalm/high_damage()
 
-	new /obj/flamer_fire(origin_turf, create_cause_data(initial(name), user), burnystuff, fire_amount, null, FLAMESHAPE_LINE, target)
+	new /obj/flamer_fire(origin_turf, create_cause_data(initial(name), user), null, fire_amount, null, FLAMESHAPE_LINE, target)
 
 	play_firing_sounds()
 

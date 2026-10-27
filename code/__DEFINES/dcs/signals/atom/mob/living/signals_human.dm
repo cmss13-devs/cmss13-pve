@@ -1,9 +1,6 @@
 ///from /mob/living/carbon/human/proc/force_say(): ()
 #define COMSIG_HUMAN_FORCESAY "human_forcesay"
 
-#define COMSIG_HUMAN_TAKE_DAMAGE "human_take_damage"
-	#define COMPONENT_BLOCK_DAMAGE (1<<0)
-
 /// From /mob/living/carbon/human/ExtinguishMob()
 #define COMSIG_HUMAN_EXTINGUISH "human_extinguish"
 
@@ -56,9 +53,6 @@
 //from /mob/living/carbon/human/equip_to_slot()
 #define COMSIG_HUMAN_EQUIPPED_ITEM "human_equipped_item"
 
-//from /mob/living/carbon/human/u_equip()
-#define COMSIG_HUMAN_UNEQUIPPED_ITEM "human_unequipped_item"
-
 /// From /mob/proc/equip_to_slot_if_possible()
 #define COMSIG_HUMAN_ATTEMPTING_EQUIP "human_attempting_equip"
 	#define COMPONENT_HUMAN_CANCEL_ATTEMPT_EQUIP (1<<0)
@@ -68,24 +62,47 @@
 
 /// from /datum/surgery_step/proc/attempt_step()
 #define COMSIG_HUMAN_SURGERY_APPLY_MODIFIERS "human_surgery_apply_modifiers"
+
 /// From /mob/living/carbon/human/proc/get_flags_cold_protection()
 #define COMSIG_HUMAN_COLD_PROTECTION_APPLY_MODIFIERS "human_cold_protection_apply_modifiers"
 
 /// From /obj/item/proc/dig_out_shrapnel() : ()
 #define COMSIG_HUMAN_SHRAPNEL_REMOVED "human_shrapnel_removed"
 
+/// From /obj/item/reagent_container/pill/attack() : (mob/living/carbon/human/attacked_mob)
+#define COMSIG_HUMAN_PILL_FED "human_pill_fed"
+
+/// From /mob/living/carbon/human/attack_hand() : (successful)
+// Sends to attacking mob, successful TRUE or FALSE
+#define COMSIG_HUMAN_CPR_PERFORMED "human_cpr_performed"
+
+#define COMSIG_HUMAN_HM_TUTORIAL_TREATED "human_hm_tutorial_treated"
+
 /// From /mob/living/carbon/human/UnarmedAttack()
 #define COMSIG_HUMAN_UNARMED_ATTACK "human_unarmed_attack"
 
-/// From /mob/living/carbon/human/UnarmedAttack()
-#define COMSIG_HUMAN_BEFORE_ATTACK_HAND "human_before_attack_hand"
-	#define COMPONENT_CANCEL_HUMAN_ATTACK_HAND (1<<0)
+/// from /modules/animations/animations_library.dm
+#define COMSIG_HUMAN_ANIMATING "human_animating"
 
-/// From /obj/item/restraint/proc/place_handcuffs() : ()
-#define COMSIG_HUMAN_HANDCUFFED "human_handcuffed"
+/// from /proc/transfer_marine_to_squad
+#define COMSIG_HUMAN_SQUAD_CHANGED "human_squad_change"
 
-/// From /mob/living/carbon/human/proc/set_species() : (new_species)
-#define COMSIG_HUMAN_SET_SPECIES "human_set_species"
+/// From /mob/living/carbon/human/hud_set_holocard()
+#define COMSIG_HUMAN_TRIAGE_CARD_UPDATED "human_triage_card_updated"
 
-/// From /mob/living/carbon/human/proc/get_human_ai_brain() : (datum/human_ai_brain/out_brain)
-#define COMSIG_HUMAN_GET_AI_BRAIN "human_get_ai_brain"
+/// From /datum/surgery_step/remove_larva/success()
+#define COMSIG_HUMAN_REMOVED_A_LARVA "human_removed_a_larva"
+
+/// From /datum/species/proc/attempt_rock_paper_scissors
+#define COMSIG_HUMAN_WON_RPS "human_won_rps"
+
+/// From /mob/living/carbon/human/help_shake_act
+#define COMSIG_HUMAN_HELPING_UP "human_helping_up"
+
+/// /datum/game_mode/colonialmarines/declare_completion
+#define COMSIG_HUMAN_FINISHED_ROUND "human_finished_round"
+
+/// From sniper aimed_shot/use_ability()
+#define COMSIG_HUMAN_AIMED_SHOT_START "human_aimed_shot_start"
+/// From From sniper aimed_shot/use_ability()
+#define COMSIG_HUMAN_AIMED_SHOT_END "human_aimed_shot_end"

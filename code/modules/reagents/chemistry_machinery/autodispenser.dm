@@ -17,14 +17,18 @@
 	icon = 'icons/obj/structures/machinery/science_machines.dmi'
 	icon_state = "autodispenser"
 	active_power_usage = 40
+	health = STRUCTURE_HEALTH_REINFORCED
 	layer = BELOW_OBJ_LAYER
 	density = TRUE
+	unacidable = TRUE
 	///Contains vials for our program
 	var/obj/item/storage/fancy/vials/input_container
 	///Our output beaker
 	var/obj/item/reagent_container/glass/output_container
 	///Where we take chemicals from
 	var/obj/structure/machinery/smartfridge/chemistry/linked_storage
+	///Optionally connected chemical storage system
+	var/chemical_network = "Research"
 
 	///the program of chem datums to dispense, 1 = memory, 2 = box
 	var/list/list/programs = list(list(),list())
@@ -43,7 +47,7 @@
 	var/stage = 1
 	///How much we have left to dispense, if we didn't have enough
 	var/stage_missing = 0
-	///0 = idle, <0 = stuck, 1 = finished, 2 = running
+	///0 = idle, <0 = stuck, 1 = running, 2 = finished
 	var/status = AUTODISPENSER_IDLE
 	///Error status message
 	var/error
@@ -85,7 +89,7 @@
 	else if(status == AUTODISPENSER_RUNNING)
 		overlays += "+running"
 	else if(status == AUTODISPENSER_FINISHED)
-		overlays += "finished"
+		overlays += "+full"
 
 /obj/structure/machinery/autodispenser/proc/connect_storage()
 	if(linked_storage)
@@ -304,7 +308,7 @@
 
 	var/space = container.reagents.maximum_volume - container.reagents.total_volume
 	if(!space || cycle >= cycle_limit) //We done boys
-		stop_program(1)
+		stop_program(2)
 		update_icon()
 		return
 
@@ -328,8 +332,13 @@
 		else
 			amount = min(program_amount[program]["[R.name]"] * multiplier, space)
 
+		var/obj/structure/machinery/chem_storage/network = GLOB.chemical_data.chemical_networks[chemical_network]
+		var/amt = network.additional_chemicals[R.id] || 0
+		if(amt >= amount)
+			network.additional_chemicals[R.id] -= amount
+			container.reagents.add_reagent(R.id, amount)
 		//Check and use stored chemicals first. This doesn't consume energy.
-		if(smartlink && linked_storage)
+		else if(smartlink && linked_storage)
 			var/skip
 			for(var/obj/item/reagent_container/C in linked_storage.contents)
 				if(!C.reagents)

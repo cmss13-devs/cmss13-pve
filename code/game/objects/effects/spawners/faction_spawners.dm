@@ -3,7 +3,7 @@
  */
 /obj/effect/spawner/random/gun/uscm_primary
 	name = "USCM primary weapon spawner"
-	desc = "spawns USCM primary weapons"
+	desc = "Spawns USCM primary weapons."
 	mags_max = 2
 	mags_min = 1
 	guns = list(
@@ -28,7 +28,7 @@
 
 /obj/effect/spawner/random/gun/uscm_secondary
 	name = "USCM secondary weapon spawner"
-	desc = "spawns USCM secondary weapons"
+	desc = "Spawns USCM secondary weapons."
 	spawn_nothing_percentage = 0
 	mags_max = 2
 	mags_min = 1
@@ -55,7 +55,7 @@
  */
 /obj/effect/spawner/random/gun/upp_primary
 	name = "UPP primary weapon spawner"
-	desc = "spawns UPP primary weapons"
+	desc = "Spawns UPP primary weapons."
 	mags_max = 2
 	mags_min = 1
 	guns = list(
@@ -78,7 +78,7 @@
 
 /obj/effect/spawner/random/gun/upp_secondary
 	name = "UPP secondary weapon spawner"
-	desc = "spawns UPP secondary weapons"
+	desc = "Spawns UPP secondary weapons."
 	mags_max = 2
 	mags_min = 1
 	guns = list(
@@ -103,16 +103,16 @@
  */
 /obj/effect/spawner/random/gun/pmc_primary
 	name = "PMC primary weapon spawner"
-	desc = "spawns PMC primary weapons"
+	desc = "Spawns PMC primary weapons."
 	mags_max = 2
 	mags_min = 1
 	guns = list(
-		/obj/item/weapon/gun/rifle/m41aMK1/elite = /obj/item/ammo_magazine/rifle/ap,
-		/obj/item/weapon/gun/rifle/m41aMK1/elite = /obj/item/ammo_magazine/rifle/extended,
+		/obj/item/weapon/gun/rifle/m41a/elite = /obj/item/ammo_magazine/rifle/ap,
+		/obj/item/weapon/gun/rifle/m41a/elite = /obj/item/ammo_magazine/rifle/extended,
 		/obj/item/weapon/gun/smg/m39/elite = /obj/item/ammo_magazine/smg/m39/ap,
 		/obj/item/weapon/gun/smg/m39/elite = /obj/item/ammo_magazine/smg/m39/extended,
 		/obj/item/weapon/gun/rifle/nsg23 = /obj/item/ammo_magazine/rifle/nsg23/ap,
-		/obj/item/weapon/gun/rifle/nsg23 = /obj/item/ammo_magazine/rifle/nsg23
+		/obj/item/weapon/gun/rifle/nsg23 = /obj/item/ammo_magazine/rifle/nsg23/extended
 	)
 
 /obj/effect/spawner/random/gun/pmc_primary/lowchance
@@ -129,12 +129,12 @@
 
 /obj/effect/spawner/random/gun/pmc_secondary
 	name = "PMC secondary weapon spawner"
-	desc = "spawns PMC secondary weapons"
+	desc = "Spawns PMC secondary weapons."
 	mags_max = 2
 	mags_min = 1
 	guns = list(
 		/obj/item/weapon/gun/pistol/vp78 = /obj/item/ammo_magazine/pistol/vp78,
-		/obj/item/weapon/gun/pistol/vp70 = /obj/item/ammo_magazine/pistol/vp70
+		/obj/item/weapon/gun/pistol/mod88 = /obj/item/ammo_magazine/pistol/mod88
 	)
 
 /obj/effect/spawner/random/gun/pmc_secondary/lowchance
@@ -154,11 +154,11 @@
  */
 /obj/effect/spawner/random/gun/clf_primary
 	name = "CLF primary weapon spawner"
-	desc = "spawns CLF primary weapons"
+	desc = "Spawns CLF primary weapons."
 	mags_max = 2
 	mags_min = 1
 	guns = list(
-		/obj/item/weapon/gun/rifle/m16 = /obj/item/ammo_magazine/rifle/m16,
+		/obj/item/weapon/gun/rifle/m20a = /obj/item/ammo_magazine/rifle/m20a,
 		/obj/item/weapon/gun/rifle/mar40/carbine = /obj/item/ammo_magazine/rifle/mar40
 	)
 
@@ -176,7 +176,7 @@
 
 /obj/effect/spawner/random/gun/clf_secondary
 	name = "CLF secondary weapon spawner"
-	desc = "spawns CLF secondary weapons"
+	desc = "Spawns CLF secondary weapons."
 	mags_max = 2
 	mags_min = 1
 	guns = list(

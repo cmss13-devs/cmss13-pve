@@ -7,6 +7,9 @@
 	},
 /turf/open/floor/plating,
 /area/bigredv2/outside/cargo)
+"ab" = (
+/turf/open/floor/delivery,
+/area/bigredv2/outside/cargo)
 "ad" = (
 /obj/structure/pipes/standard/simple/hidden/green,
 /turf/open/floor,
@@ -41,6 +44,14 @@
 /obj/structure/window/framed/solaris,
 /turf/open/floor/plating,
 /area/bigredv2/outside/cargo)
+"al" = (
+/obj/structure/barricade/wooden{
+	desc = "This barricade is heavily reinforced. Nothing short of blasting it open seems like it'll do the trick, that or melting the breams supporting it...";
+	dir = 8;
+	health = 25000
+	},
+/turf/open/floor/delivery,
+/area/bigredv2/outside/cargo)
 "am" = (
 /obj/structure/largecrate/cow,
 /turf/open/floor,
@@ -48,6 +59,10 @@
 "an" = (
 /obj/effect/decal/cleanable/blood,
 /turf/open/floor,
+/area/bigredv2/outside/cargo)
+"ao" = (
+/obj/structure/largecrate/cow,
+/turf/open/floor/loadingarea,
 /area/bigredv2/outside/cargo)
 "ap" = (
 /obj/structure/closet/emcloset,
@@ -101,6 +116,12 @@
 	},
 /turf/open/floor,
 /area/bigredv2/outside/cargo)
+"ay" = (
+/obj/structure/pipes/vents/pump{
+	dir = 8
+	},
+/turf/open/floor,
+/area/bigredv2/outside/cargo)
 "az" = (
 /obj/structure/machinery/autolathe,
 /turf/open/floor,
@@ -113,7 +134,19 @@
 /obj/structure/machinery/light{
 	dir = 8
 	},
+/obj/structure/surface/table,
+/obj/effect/spawner/random/tool,
 /turf/open/floor,
+/area/bigredv2/outside/cargo)
+"aC" = (
+/turf/open/floor/loadingarea,
+/area/bigredv2/outside/cargo)
+"aD" = (
+/obj/structure/pipes/standard/simple/hidden/green,
+/obj/structure/machinery/door/airlock/multi_tile/almayer/generic{
+	name = "\improper Cargo Offices"
+	},
+/turf/open/floor/delivery,
 /area/bigredv2/outside/cargo)
 "aE" = (
 /obj/structure/window/framed/solaris,
@@ -124,17 +157,86 @@
 	},
 /turf/open/floor/plating,
 /area/bigredv2/outside/cargo)
+"aF" = (
+/obj/structure/cargo_container/arious/leftmid,
+/turf/open/floor/bot/north,
+/area/bigredv2/outside/cargo)
+"aG" = (
+/obj/structure/pipes/standard/simple/hidden/green{
+	dir = 5
+	},
+/obj/structure/cargo_container/arious/rightmid,
+/turf/open/floor/bot/north,
+/area/bigredv2/outside/cargo)
+"aH" = (
+/obj/structure/pipes/standard/simple/hidden/green{
+	dir = 4
+	},
+/obj/structure/cargo_container/arious/right,
+/turf/open/floor/bot/north,
+/area/bigredv2/outside/cargo)
 "aI" = (
 /obj/structure/pipes/standard/manifold/hidden/green{
 	dir = 1
 	},
 /turf/open/floor,
 /area/bigredv2/outside/cargo)
+"aJ" = (
+/obj/structure/largecrate,
+/obj/structure/pipes/standard/simple/hidden/green{
+	dir = 4
+	},
+/turf/open/floor/bot/north,
+/area/bigredv2/outside/cargo)
+"aK" = (
+/obj/structure/pipes/standard/simple/hidden/green{
+	dir = 4
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/bot/north,
+/area/bigredv2/outside/cargo)
+"aL" = (
+/obj/structure/pipes/standard/simple/hidden/green{
+	dir = 9
+	},
+/turf/open/floor/bot/north,
+/area/bigredv2/outside/cargo)
 "aN" = (
 /obj/structure/machinery/light{
 	dir = 1
 	},
 /turf/open/floor,
+/area/bigredv2/outside/cargo)
+"aO" = (
+/obj/structure/largecrate/random/barrel,
+/turf/open/floor/bot/north,
+/area/bigredv2/outside/cargo)
+"aP" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/largecrate,
+/turf/open/floor/bot/north,
+/area/bigredv2/outside/cargo)
+"aQ" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/landmark/good_item,
+/turf/open/floor/bot/north,
+/area/bigredv2/outside/cargo)
+"aR" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/closet/crate/trashcart,
+/turf/open/floor/bot/north,
+/area/bigredv2/outside/cargo)
+"aS" = (
+/obj/structure/cargo_container/grant/left,
+/turf/open/floor/bot/north,
+/area/bigredv2/outside/cargo)
+"aT" = (
+/obj/structure/cargo_container/grant/rightmid,
+/turf/open/floor/bot/north,
+/area/bigredv2/outside/cargo)
+"aU" = (
+/obj/structure/cargo_container/grant/right,
+/turf/open/floor/bot/north,
 /area/bigredv2/outside/cargo)
 "aV" = (
 /obj/effect/decal/cleanable/dirt,
@@ -143,10 +245,69 @@
 	},
 /turf/open/floor,
 /area/bigredv2/outside/cargo)
+"aW" = (
+/obj/structure/pipes/standard/simple/hidden/green{
+	dir = 4
+	},
+/obj/structure/machinery/door/airlock/almayer/security/glass/colony{
+	name = "\improper Cargo Bay Security"
+	},
+/turf/open/floor/delivery,
+/area/bigredv2/outside/cargo)
+"aX" = (
+/turf/open/floor/bot/north,
+/area/bigredv2/outside/cargo)
+"aY" = (
+/obj/structure/machinery/light{
+	dir = 8
+	},
+/turf/open/floor/loadingarea,
+/area/bigredv2/outside/cargo)
+"aZ" = (
+/obj/structure/surface/table,
+/obj/effect/spawner/random/bomb_supply,
+/turf/open/floor,
+/area/bigredv2/outside/cargo)
+"ba" = (
+/obj/structure/surface/table,
+/obj/item/stack/sheet/glass{
+	amount = 30
+	},
+/turf/open/floor,
+/area/bigredv2/outside/cargo)
 "bb" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/pipes/standard/simple/hidden/green,
 /turf/open/floor,
+/area/bigredv2/outside/cargo)
+"bc" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/cargo_container/watatsumi/leftmid,
+/turf/open/floor/bot/north,
+/area/bigredv2/outside/cargo)
+"bd" = (
+/obj/structure/cargo_container/watatsumi/rightmid,
+/turf/open/floor/bot/north,
+/area/bigredv2/outside/cargo)
+"be" = (
+/obj/structure/cargo_container/watatsumi/right,
+/turf/open/floor/bot/north,
+/area/bigredv2/outside/cargo)
+"bf" = (
+/obj/structure/cargo_container/kelland/left,
+/turf/open/floor/bot/north,
+/area/bigredv2/outside/cargo)
+"bg" = (
+/obj/structure/cargo_container/kelland/right,
+/turf/open/floor/bot/north,
+/area/bigredv2/outside/cargo)
+"bh" = (
+/obj/structure/largecrate/random/barrel,
+/turf/open/floor,
+/area/bigredv2/outside/cargo)
+"bj" = (
+/obj/structure/largecrate,
+/turf/open/floor/bot/north,
 /area/bigredv2/outside/cargo)
 "bm" = (
 /obj/item/device/flashlight,
@@ -156,6 +317,12 @@
 "bp" = (
 /obj/structure/pipes/standard/manifold/hidden/green,
 /turf/open/floor,
+/area/bigredv2/outside/cargo)
+"bq" = (
+/obj/structure/pipes/standard/simple/hidden/green{
+	dir = 4
+	},
+/turf/open/floor/delivery,
 /area/bigredv2/outside/cargo)
 "bs" = (
 /obj/effect/decal/cleanable/dirt,
@@ -173,6 +340,23 @@
 /area/bigredv2/outside/cargo)
 "bv" = (
 /obj/structure/pipes/standard/manifold/hidden/green{
+	dir = 8
+	},
+/turf/open/floor,
+/area/bigredv2/outside/cargo)
+"by" = (
+/obj/structure/machinery/door/airlock/multi_tile/almayer/generic{
+	dir = 1;
+	name = "\improper Cargo Bay"
+	},
+/turf/open/floor/delivery,
+/area/bigredv2/outside/cargo)
+"bz" = (
+/obj/effect/landmark/corpsespawner/security/marshal,
+/turf/open/floor,
+/area/bigredv2/outside/cargo)
+"bA" = (
+/obj/structure/machinery/light{
 	dir = 8
 	},
 /turf/open/floor,
@@ -203,6 +387,25 @@
 	},
 /turf/open/floor,
 /area/bigredv2/outside/cargo)
+"bI" = (
+/obj/item/reagent_container/spray/cleaner,
+/obj/structure/pipes/standard/simple/hidden/green,
+/turf/open/floor/floor4,
+/area/bigredv2/outside/cargo)
+"bJ" = (
+/turf/open/floor/floor4,
+/area/bigredv2/outside/cargo)
+"bK" = (
+/turf/open/floor/loadingarea/east,
+/area/bigredv2/outside/cargo)
+"bM" = (
+/obj/structure/pipes/standard/simple/hidden/green,
+/obj/structure/largecrate/random/barrel,
+/turf/open/floor/bot/north,
+/area/bigredv2/outside/cargo)
+"bN" = (
+/turf/open/floor/loadingarea/west,
+/area/bigredv2/outside/cargo)
 "bO" = (
 /obj/structure/machinery/door_control{
 	id = "Cargonia";
@@ -211,19 +414,94 @@
 	},
 /turf/open/floor,
 /area/bigredv2/outside/cargo)
+"bP" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/reagent_dispensers/tank/fuel,
+/turf/open/floor,
+/area/bigredv2/outside/cargo)
+"bQ" = (
+/obj/structure/pipes/standard/simple/hidden/green,
+/obj/structure/machinery/light{
+	dir = 4
+	},
+/turf/open/floor,
+/area/bigredv2/outside/cargo)
+"bR" = (
+/obj/structure/pipes/standard/simple/hidden/green,
+/obj/structure/machinery/door/airlock/almayer/engineering/colony{
+	dir = 1;
+	name = "\improper Cargo Bay Quartermaster"
+	},
+/turf/open/floor/delivery,
+/area/bigredv2/outside/cargo)
 "bS" = (
 /obj/structure/pipes/standard/simple/hidden/green{
 	dir = 5
 	},
 /turf/open/floor,
 /area/bigredv2/outside/cargo)
+"bU" = (
+/obj/structure/pipes/standard/simple/hidden/green{
+	dir = 4
+	},
+/turf/open/floor/loadingarea/east,
+/area/bigredv2/outside/cargo)
+"bV" = (
+/obj/structure/pipes/standard/simple/hidden/green{
+	dir = 4
+	},
+/obj/structure/cargo_container/kelland/left,
+/turf/open/floor/bot/north,
+/area/bigredv2/outside/cargo)
+"bW" = (
+/obj/structure/pipes/standard/simple/hidden/green{
+	dir = 4
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/cargo_container/kelland/right,
+/turf/open/floor/bot/north,
+/area/bigredv2/outside/cargo)
+"bX" = (
+/obj/structure/pipes/standard/simple/hidden/green{
+	dir = 4
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/cargo_container/kelland/left,
+/turf/open/floor/bot/north,
+/area/bigredv2/outside/cargo)
+"bY" = (
+/obj/structure/pipes/standard/simple/hidden/green{
+	dir = 9
+	},
+/obj/structure/cargo_container/kelland/right,
+/turf/open/floor/bot/north,
+/area/bigredv2/outside/cargo)
 "bZ" = (
-/obj/structure/reagent_dispensers/watertank,
+/obj/structure/reagent_dispensers/tank/water,
+/turf/open/floor,
+/area/bigredv2/outside/cargo)
+"cb" = (
+/obj/structure/filingcabinet,
+/obj/effect/landmark/objective_landmark/science,
+/turf/open/floor,
+/area/bigredv2/outside/cargo)
+"cc" = (
+/obj/structure/filingcabinet,
+/obj/structure/machinery/light{
+	dir = 1
+	},
+/obj/effect/landmark/objective_landmark/close,
 /turf/open/floor,
 /area/bigredv2/outside/cargo)
 "cd" = (
-/obj/structure/reagent_dispensers/fueltank,
+/obj/structure/reagent_dispensers/tank/fuel,
 /turf/open/floor,
+/area/bigredv2/outside/cargo)
+"ce" = (
+/obj/structure/machinery/door/airlock/almayer/engineering/colony{
+	name = "\improper Cargo Bay Quartermaster"
+	},
+/turf/open/floor/delivery,
 /area/bigredv2/outside/cargo)
 "cf" = (
 /obj/structure/bed/chair/office/dark,
@@ -249,7 +527,7 @@
 /turf/open/floor,
 /area/bigredv2/outside/cargo)
 "cj" = (
-/obj/structure/machinery/computer/ordercomp,
+/obj/structure/machinery/computer/supply,
 /turf/open/floor,
 /area/bigredv2/outside/cargo)
 "ck" = (
@@ -315,7 +593,7 @@
 /turf/open/floor,
 /area/bigredv2/outside/cargo)
 "ct" = (
-/obj/structure/reagent_dispensers/fueltank,
+/obj/structure/reagent_dispensers/tank/fuel,
 /obj/structure/machinery/light{
 	dir = 4
 	},
@@ -332,151 +610,27 @@
 "cv" = (
 /turf/closed/wall/solaris/reinforced,
 /area/bigredv2/outside/engineering)
-"fe" = (
-/obj/structure/pipes/standard/simple/hidden/green{
-	dir = 4
-	},
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/bot/north,
-/area/bigredv2/outside/cargo)
-"fj" = (
-/obj/structure/cargo_container/kelland/right,
-/turf/open/floor/bot/north,
-/area/bigredv2/outside/cargo)
-"hQ" = (
-/turf/open/floor/floor4,
-/area/bigredv2/outside/cargo)
-"ju" = (
-/obj/structure/cargo_container/watatsumi/right,
-/turf/open/floor/bot/north,
-/area/bigredv2/outside/cargo)
-"kO" = (
-/obj/structure/largecrate,
-/turf/open/floor/bot/north,
-/area/bigredv2/outside/cargo)
-"nh" = (
-/turf/open/floor/delivery,
-/area/bigredv2/outside/cargo)
-"pl" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/cargo_container/watatsumi/leftmid,
-/turf/open/floor/bot/north,
-/area/bigredv2/outside/cargo)
-"qx" = (
-/obj/structure/pipes/standard/simple/hidden/green{
-	dir = 9
-	},
-/turf/open/floor/bot/north,
-/area/bigredv2/outside/cargo)
-"ra" = (
-/turf/open/floor/loadingarea/east,
-/area/bigredv2/outside/cargo)
-"rh" = (
-/obj/structure/largecrate/random/barrel,
-/turf/open/floor/bot/north,
-/area/bigredv2/outside/cargo)
-"rm" = (
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/floor4,
-/area/bigredv2/outside/cargo)
-"rM" = (
-/obj/structure/machinery/light{
-	dir = 8
-	},
-/turf/open/floor/loadingarea,
-/area/bigredv2/outside/cargo)
-"sh" = (
-/obj/structure/pipes/standard/simple/hidden/green{
-	dir = 4
-	},
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/cargo_container/kelland/right,
-/turf/open/floor/bot/north,
-/area/bigredv2/outside/cargo)
-"ss" = (
-/obj/structure/barricade/wooden{
-	desc = "This barricade is heavily reinforced. Nothing short of blasting it open seems like it'll do the trick, that or melting the breams supporting it...";
-	dir = 8;
-	health = 25000
-	},
-/turf/open/floor/delivery,
-/area/bigredv2/outside/cargo)
-"tO" = (
-/obj/structure/pipes/standard/simple/hidden/green{
-	dir = 4
-	},
-/obj/structure/machinery/door/airlock/almayer/security/glass/colony{
-	name = "\improper Cargo Bay Security"
-	},
-/turf/open/floor/delivery,
-/area/bigredv2/outside/cargo)
-"uJ" = (
-/turf/open/floor/bot/north,
-/area/bigredv2/outside/cargo)
-"vu" = (
-/obj/structure/filingcabinet,
-/obj/structure/machinery/light{
-	dir = 1
-	},
-/turf/open/floor,
-/area/bigredv2/outside/cargo)
-"wt" = (
-/obj/structure/pipes/standard/simple/hidden/green,
-/obj/structure/machinery/door/airlock/almayer/engineering/colony{
-	dir = 1;
-	name = "\improper Cargo Bay Quartermaster"
-	},
-/turf/open/floor/delivery,
-/area/bigredv2/outside/cargo)
-"xd" = (
-/obj/structure/pipes/standard/simple/hidden/green,
+"cw" = (
 /obj/structure/machinery/door/airlock/multi_tile/almayer/generic{
-	name = "\improper Cargo Offices"
+	name = "\improper Engineering Complex"
 	},
 /turf/open/floor/delivery,
-/area/bigredv2/outside/cargo)
-"xB" = (
+/area/bigredv2/outside/engineering)
+"cx" = (
 /obj/structure/pipes/standard/simple/hidden/green,
 /turf/open/floor/delivery,
 /area/bigredv2/outside/engineering)
-"xU" = (
-/obj/structure/pipes/standard/simple/hidden/green{
-	dir = 9
-	},
-/obj/structure/cargo_container/kelland/right,
-/turf/open/floor/bot/north,
-/area/bigredv2/outside/cargo)
-"zb" = (
+"zL" = (
 /obj/structure/pipes/standard/simple/hidden/green{
 	dir = 4
 	},
-/obj/structure/cargo_container/arious/right,
-/turf/open/floor/bot/north,
+/turf/open/floor/floor4,
 /area/bigredv2/outside/cargo)
-"zs" = (
+"AS" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/largecrate,
-/turf/open/floor/bot/north,
+/turf/open/floor/floor4,
 /area/bigredv2/outside/cargo)
-"Cg" = (
-/obj/structure/pipes/standard/simple/hidden/green{
-	dir = 4
-	},
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/cargo_container/kelland/left,
-/turf/open/floor/bot/north,
-/area/bigredv2/outside/cargo)
-"Cl" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/reagent_dispensers/fueltank,
-/turf/open/floor,
-/area/bigredv2/outside/cargo)
-"DF" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/landmark/good_item,
-/turf/open/floor/bot/north,
-/area/bigredv2/outside/cargo)
-"DM" = (
+"Gu" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/surface/table,
 /obj/structure/machinery/light{
@@ -485,163 +639,11 @@
 /obj/effect/spawner/random/toolbox,
 /turf/open/floor,
 /area/bigredv2/outside/cargo)
-"DX" = (
-/obj/structure/machinery/power/apc/power/north,
-/turf/open/floor,
-/area/bigredv2/outside/cargo)
-"EQ" = (
-/obj/structure/pipes/standard/simple/hidden/green{
-	dir = 4
-	},
-/turf/open/floor/delivery,
-/area/bigredv2/outside/cargo)
-"Gk" = (
-/turf/open/floor/loadingarea,
-/area/bigredv2/outside/cargo)
-"GQ" = (
-/obj/structure/pipes/vents/pump{
-	dir = 8
-	},
-/turf/open/floor,
-/area/bigredv2/outside/cargo)
-"HN" = (
-/obj/structure/cargo_container/watatsumi/rightmid,
-/turf/open/floor/bot/north,
-/area/bigredv2/outside/cargo)
-"Ic" = (
-/obj/structure/largecrate/random/barrel,
-/turf/open/floor,
-/area/bigredv2/outside/cargo)
-"IC" = (
-/obj/structure/pipes/standard/simple/hidden/green{
-	dir = 4
-	},
-/obj/structure/cargo_container/kelland/left,
-/turf/open/floor/bot/north,
-/area/bigredv2/outside/cargo)
-"Ja" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/surface/table,
-/obj/effect/spawner/random/tool,
-/turf/open/floor,
-/area/bigredv2/outside/cargo)
-"Jh" = (
-/obj/structure/cargo_container/grant/rightmid,
-/turf/open/floor/bot/north,
-/area/bigredv2/outside/cargo)
-"Jo" = (
-/obj/structure/filingcabinet,
-/turf/open/floor,
-/area/bigredv2/outside/cargo)
-"JZ" = (
-/obj/structure/pipes/standard/simple/hidden/green{
-	dir = 4
-	},
-/turf/open/floor/loadingarea/east,
-/area/bigredv2/outside/cargo)
 "KO" = (
-/obj/structure/pipes/standard/simple/hidden/green{
-	dir = 5
-	},
-/obj/structure/cargo_container/arious/rightmid,
-/turf/open/floor/bot/north,
-/area/bigredv2/outside/cargo)
-"Lg" = (
-/obj/structure/surface/table,
-/obj/effect/spawner/random/bomb_supply,
-/turf/open/floor,
-/area/bigredv2/outside/cargo)
-"Lj" = (
-/obj/structure/surface/table,
-/obj/item/stack/sheet/glass{
-	amount = 30
-	},
-/turf/open/floor,
-/area/bigredv2/outside/cargo)
-"Oc" = (
-/obj/structure/machinery/light{
-	dir = 8
-	},
+/obj/effect/decal/cleanable/dirt,
 /obj/structure/surface/table,
 /obj/effect/spawner/random/tool,
 /turf/open/floor,
-/area/bigredv2/outside/cargo)
-"Ot" = (
-/obj/structure/pipes/standard/simple/hidden/green,
-/obj/structure/largecrate/random/barrel,
-/turf/open/floor/bot/north,
-/area/bigredv2/outside/cargo)
-"Ow" = (
-/obj/structure/pipes/standard/simple/hidden/green{
-	dir = 4
-	},
-/turf/open/floor/floor4,
-/area/bigredv2/outside/cargo)
-"Pd" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/closet/crate/trashcart,
-/turf/open/floor/bot/north,
-/area/bigredv2/outside/cargo)
-"Rd" = (
-/obj/structure/machinery/door/airlock/multi_tile/almayer/generic{
-	name = "\improper Engineering Complex"
-	},
-/turf/open/floor/delivery,
-/area/bigredv2/outside/engineering)
-"Rk" = (
-/obj/structure/machinery/door/airlock/almayer/engineering/colony{
-	name = "\improper Cargo Bay Quartermaster"
-	},
-/turf/open/floor/delivery,
-/area/bigredv2/outside/cargo)
-"TP" = (
-/obj/structure/cargo_container/grant/right,
-/turf/open/floor/bot/north,
-/area/bigredv2/outside/cargo)
-"Vg" = (
-/turf/open/floor/loadingarea/west,
-/area/bigredv2/outside/cargo)
-"Vo" = (
-/obj/structure/largecrate/cow,
-/turf/open/floor/loadingarea,
-/area/bigredv2/outside/cargo)
-"Wf" = (
-/obj/structure/pipes/standard/simple/hidden/green,
-/obj/structure/machinery/light{
-	dir = 4
-	},
-/turf/open/floor,
-/area/bigredv2/outside/cargo)
-"Wh" = (
-/obj/structure/cargo_container/grant/left,
-/turf/open/floor/bot/north,
-/area/bigredv2/outside/cargo)
-"WA" = (
-/obj/structure/largecrate,
-/obj/structure/pipes/standard/simple/hidden/green{
-	dir = 4
-	},
-/turf/open/floor/bot/north,
-/area/bigredv2/outside/cargo)
-"WN" = (
-/obj/item/reagent_container/spray/cleaner,
-/obj/structure/pipes/standard/simple/hidden/green,
-/turf/open/floor/floor4,
-/area/bigredv2/outside/cargo)
-"WU" = (
-/obj/structure/cargo_container/kelland/left,
-/turf/open/floor/bot/north,
-/area/bigredv2/outside/cargo)
-"Xz" = (
-/obj/structure/machinery/door/airlock/multi_tile/almayer/generic{
-	dir = 1;
-	name = "\improper Cargo Bay"
-	},
-/turf/open/floor/delivery,
-/area/bigredv2/outside/cargo)
-"Zq" = (
-/obj/structure/cargo_container/arious/leftmid,
-/turf/open/floor/bot/north,
 /area/bigredv2/outside/cargo)
 
 (1,1,1) = {"
@@ -655,31 +657,31 @@ aE
 ai
 ai
 ai
-EQ
-Xz
+bq
+by
 ai
 ai
 ai
 ai
-Rk
+ce
 ai
 ai
 "}
 (2,1,1) = {"
-nh
-ss
-nh
+ab
+al
+ab
 ai
 av
 av
 av
 ai
-Lg
-aB
+aZ
+bA
 ax
 av
 bH
-Oc
+aB
 ai
 aN
 av
@@ -690,16 +692,16 @@ ai
 av
 av
 av
-rM
-Zq
-rh
+aY
+aF
+aO
 av
 ak
-Lj
-hQ
-Ow
-hQ
-hQ
+ba
+bJ
+zL
+bJ
+bJ
 av
 ai
 av
@@ -712,17 +714,17 @@ ad
 ad
 au
 ad
-KO
-zs
+aG
+aP
 av
 ak
-Ic
-hQ
+bh
+bJ
 aI
 bb
-WN
+bI
 ad
-wt
+bR
 ad
 ad
 ci
@@ -732,19 +734,19 @@ cu
 ae
 av
 av
-Gk
-zb
-DF
+aC
+aH
+aQ
 av
 ai
 av
-hQ
-Ow
-hQ
-rm
-Cl
+bJ
+zL
+bJ
+AS
+bP
 ak
-Jo
+cb
 af
 cj
 cu
@@ -757,15 +759,15 @@ am
 aI
 ad
 ad
-wt
+bR
 ad
-Wf
+bQ
 bp
-av
-Ja
-DM
+bz
+KO
+Gu
 ak
-Jo
+cb
 av
 av
 cu
@@ -774,19 +776,19 @@ cu
 ag
 av
 av
-Gk
-WA
-Pd
-uJ
+aC
+aJ
+aR
+aX
 ai
 ai
 ai
-EQ
-Xz
+bq
+by
 ai
 ai
 ai
-vu
+cc
 av
 ck
 ai
@@ -804,11 +806,11 @@ av
 av
 ax
 af
-aB
+bA
 ae
 ai
 ak
-Rk
+ce
 ak
 ai
 "}
@@ -816,12 +818,12 @@ ai
 av
 av
 av
-Gk
-fe
-Wh
+aC
+aK
+aS
 av
-pl
-uJ
+bc
+aX
 av
 ax
 bB
@@ -838,11 +840,11 @@ ap
 av
 aw
 ad
-qx
-Jh
+aL
+aT
 av
-HN
-rh
+bd
+aO
 av
 aI
 ad
@@ -852,18 +854,18 @@ bS
 af
 av
 cl
-Rd
+cw
 "}
 (11,1,1) = {"
 ap
 av
 ax
-Vo
-uJ
-TP
+ao
+aX
+aU
 av
-ju
-kO
+be
+bj
 av
 ax
 av
@@ -873,12 +875,12 @@ aI
 ad
 ad
 cm
-xB
+cx
 "}
 (12,1,1) = {"
 ah
 av
-GQ
+ay
 av
 av
 av
@@ -888,9 +890,9 @@ av
 av
 bs
 bD
-ra
+bK
 av
-JZ
+bU
 av
 av
 cn
@@ -909,9 +911,9 @@ aN
 av
 bt
 bD
-uJ
+aX
 av
-IC
+bV
 af
 av
 co
@@ -926,13 +928,13 @@ av
 av
 av
 ai
-DX
+av
 av
 af
 bD
-WU
+bf
 av
-sh
+bW
 af
 av
 cp
@@ -951,9 +953,9 @@ av
 af
 af
 af
-fj
+bg
 av
-Cg
+bX
 av
 av
 aj
@@ -963,18 +965,18 @@ cv
 af
 as
 ad
-xd
+aD
 au
 aV
 ad
-xd
+aD
 ad
 au
 bv
 au
-Ot
+bM
 ad
-xU
+bY
 av
 av
 cq
@@ -984,18 +986,18 @@ cv
 av
 at
 af
-nh
+ab
 af
 ar
 av
-nh
+ab
 av
 af
 bs
 av
-Vg
+bN
 av
-Vg
+bN
 av
 av
 cr
@@ -1028,7 +1030,7 @@ ak
 ai
 ai
 ak
-tO
+aW
 ak
 ai
 av

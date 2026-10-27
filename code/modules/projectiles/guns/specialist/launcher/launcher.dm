@@ -6,6 +6,7 @@
 	has_empty_icon = FALSE
 	has_open_icon = FALSE
 	mouse_pointer = 'icons/effects/mouse_pointer/explosive_mouse.dmi'
+
 	///gun update_icon doesn't detect that guns with no magazine are loaded or not, and will always append _o or _e if possible.
 	var/GL_has_empty_icon = TRUE
 	///gun update_icon doesn't detect that guns with no magazine are loaded or not, and will always append _o or _e if possible.
@@ -25,6 +26,7 @@
 	var/use_sound = null
 	///Whether clicking a held weapon with an empty hand will open its inventory or draw a munition out.
 	var/direct_draw = TRUE
+	var/can_be_reloaded = TRUE
 
 /obj/item/weapon/gun/launcher/Initialize(mapload, spawn_empty) //If changing vars on init, be sure to do the parent proccall *after* the change.
 	. = ..()

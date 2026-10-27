@@ -1,11 +1,10 @@
 /datum/game_mode/extended
-	name = "Extended"
-	config_tag = "Extended"
+	name = GAMEMODE_EXTENDED
+	config_tag = GAMEMODE_EXTENDED
 	required_players = 0
 	latejoin_larva_drop = 0
+	static_comms_amount = 2
 	votable = FALSE
-	var/research_allocation_interval = 10 MINUTES
-	var/next_research_allocation = 0
 	taskbar_icon = 'icons/taskbar/gml_colonyrp.png'
 
 /datum/game_mode/extended/announce()
@@ -16,16 +15,15 @@
 
 /datum/game_mode/extended/post_setup()
 	initialize_post_marine_gear_list()
-	for(var/mob/new_player/np in GLOB.new_player_list)
-		np.new_player_panel_proc()
 	round_time_lobby = world.time
+	GLOB.chemical_data.reroll_chemicals() //kickstart the research chemical contract "system"
 	return ..()
 
 /datum/game_mode/extended/process()
+	if(GLOB.chemical_data.next_reroll < world.time)
+		GLOB.chemical_data.reroll_chemicals()
+
 	. = ..()
-	if(next_research_allocation < world.time)
-		GLOB.chemical_data.update_credits(GLOB.chemical_data.research_allocation_amount)
-		next_research_allocation = world.time + research_allocation_interval
 
 /datum/game_mode/extended/check_finished()
 	if(round_finished)
@@ -37,7 +35,7 @@
 /datum/game_mode/extended/declare_completion()
 	announce_ending()
 	var/musical_track = pick('sound/theme/neutral_hopeful1.ogg','sound/theme/neutral_hopeful2.ogg')
-	world << musical_track
+	send_end_round_music(musical_track)
 
 	if(GLOB.round_statistics)
 		GLOB.round_statistics.game_mode = name
@@ -49,5 +47,6 @@
 	declare_completion_announce_predators()
 	declare_completion_announce_medal_awards()
 
+	GLOB.round_statistics?.save()
 
 	return TRUE

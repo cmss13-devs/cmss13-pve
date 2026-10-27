@@ -4,7 +4,7 @@
 	if(!check_rights(R_SOUNDS))
 		return
 
-	var/sound_mode = tgui_input_list(src, "Play a sound from which source?", "Select Source", list("Upload","Web"))
+	var/sound_mode = tgui_input_list(src, "Play a sound from which source?", "Select Source", list("Web", "Upload"))
 	if(!sound_mode)
 		return
 
@@ -92,12 +92,12 @@
 		music_extra_data["title"] = data["title"]
 
 	if(!must_send_assets && web_sound_url && !findtext(web_sound_url, GLOB.is_http_protocol))
-		to_chat(src, SPAN_BOLDWARNING("BLOCKED: Content URL not using http(s) protocol"), confidential = TRUE)
-		to_chat(src, SPAN_WARNING("The media provider returned a content URL that isn't using the HTTP or HTTPS protocol"), confidential = TRUE)
+		to_chat(src, SPAN_BOLDWARNING("BLOCKED: Content URL not using http(s) protocol."), confidential = TRUE)
+		to_chat(src, SPAN_WARNING("The media provider returned a content URL that isn't using the HTTP or HTTPS protocol."), confidential = TRUE)
 		return
 
 
-	switch(tgui_alert(src, "Show the name of this sound to the players?", "Sound Name", list("No","Yes","Cancel")))
+	switch(tgui_alert(src, "Show the name of this sound to the players?", "Sound Name", list("Yes","No","Cancel")))
 		if("No")
 			music_extra_data["title"] = "Admin sound"
 			announce_title = FALSE
@@ -106,8 +106,8 @@
 
 	var/list/targets = list()
 	var/list/sound_type_list = list(
-		"Atmospheric" = SOUND_ADMIN_ATMOSPHERIC,
-		"Meme" = SOUND_ADMIN_MEME
+		"Meme" = SOUND_ADMIN_MEME,
+		"Atmospheric" = SOUND_ADMIN_ATMOSPHERIC
 	)
 
 	var/style = tgui_input_list(src, "Who do you want to play this to?", "Select Listeners", list("Globally", "Xenos", "Marines", "Ghosts", "All In View Range", "Single Mob"))
@@ -124,7 +124,7 @@
 		if("Ghosts")
 			targets = GLOB.observer_list + GLOB.dead_mob_list
 		if("All In View Range")
-			var/list/atom/ranged_atoms = urange(usr.client.view, get_turf(usr))
+			var/list/atom/ranged_atoms = long_range(usr.client.view, get_turf(usr))
 			for(var/mob/receiver in ranged_atoms)
 				targets += receiver
 		if("Single Mob")
@@ -151,7 +151,6 @@
 		else
 			client?.tgui_panel?.stop_music()
 
-	log_admin("[key_name(src)] played admin sound: [web_sound_input] -[log_title ? " [title] -" : ""] [style]")
 	message_admins("[key_name_admin(src)] played admin sound: [web_sound_input] -[log_title ? " [title] -" : ""] [style]")
 
 /client/proc/stop_admin_sound()

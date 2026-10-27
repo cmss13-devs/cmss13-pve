@@ -8,13 +8,17 @@
 
 /obj/item/inflatable/attack_self(mob/user)
 	..()
+	var/area/area = get_area(user)
+	if(!area.allow_construction)
+		to_chat(user, SPAN_WARNING("[src] must be inflated on a proper surface!"))
+		return
 	var/turf/open/T = user.loc
 	if(!(istype(T) && T.allow_construction))
 		to_chat(user, SPAN_WARNING("[src] must be inflated on a proper surface!"))
 		return
 	if(do_after(user, 0.5 SECONDS, INTERRUPT_ALL, BUSY_ICON_BUILD, src))
 		playsound(loc, 'sound/items/zip.ogg', 25, TRUE)
-		to_chat(user, SPAN_NOTICE(" You inflate [src]."))
+		to_chat(user, SPAN_NOTICE("You inflate [src]."))
 		var/obj/structure/inflatable/R = new inflatable_type(usr.loc)
 		src.transfer_fingerprints_to(R)
 		R.add_fingerprint(user)
@@ -77,21 +81,24 @@
 		user.visible_message(SPAN_DANGER("[user] tears at [src]!"))
 
 /obj/structure/inflatable/attack_animal(mob/user as mob)
-	if(!isanimal(user)) return
+	if(!isanimal(user))
+		return
 	var/mob/living/simple_animal/M = user
-	if(M.melee_damage_upper <= 0) return
+	if(M.melee_damage_upper <= 0)
+		return
 	attack_generic(M, M.melee_damage_upper)
 
 
 /obj/structure/inflatable/attackby(obj/item/W as obj, mob/user as mob)
-	if(!istype(W)) return
+	if(!istype(W))
+		return
 
 	if (can_puncture(W))
 		visible_message(SPAN_DANGER("<b>[user] pierces [src] with [W]!</b>"))
 		deflate(1)
 	if(W.damtype == BRUTE || W.damtype == BURN)
 		hit(W.force)
-		..()
+		. = ..()
 	return
 
 /obj/structure/inflatable/proc/hit(damage, sound_effect = 1)
@@ -184,10 +191,12 @@
 	return TryToSwitchState(user)
 
 /obj/structure/inflatable/door/proc/TryToSwitchState(atom/user)
-	if(isSwitchingStates) return
+	if(isSwitchingStates)
+		return
 	if(ismob(user))
 		var/mob/M = user
-		if(world.time - user.last_bumped <= 60) return //NOTE do we really need that?
+		if(world.time - user.last_bumped <= 60)
+			return //NOTE do we really need that?
 		if(M.client)
 			if(iscarbon(M))
 				var/mob/living/carbon/C = M
@@ -250,7 +259,7 @@
 		//src.transfer_fingerprints_to(R)
 		qdel(src)
 	else
-		//to_chat(user, SPAN_NOTICE(" You slowly deflate the inflatable wall."))
+		//to_chat(user, SPAN_NOTICE("You slowly deflate the inflatable wall."))
 		visible_message("[src] slowly deflates.")
 		flick("door_deflating", src)
 		spawn(50)
@@ -267,8 +276,12 @@
 	name = "inflatable barrier box"
 	desc = "Contains inflatable walls and doors."
 	icon = 'icons/obj/items/storage/boxes.dmi'
+	item_icons = list(
+		WEAR_L_HAND = 'icons/mob/humans/onmob/inhands/items/storage_lefthand.dmi',
+		WEAR_R_HAND = 'icons/mob/humans/onmob/inhands/items/storage_righthand.dmi',
+	)
 	icon_state = "inf_box"
-	item_state = "syringe_kit"
+	item_state = "box"
 	max_storage_space = 21
 
 /obj/item/storage/briefcase/inflatable/Initialize()
@@ -280,3 +293,6 @@
 	new /obj/item/inflatable(src)
 	new /obj/item/inflatable(src)
 	new /obj/item/inflatable(src)
+
+/obj/item/storage/briefcase/inflatable/small
+	w_class = SIZE_MEDIUM

@@ -1,96 +1,16 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
-"d" = (
-/turf/open/floor/red/northeast,
-/area/lv624/lazarus/security)
-"i" = (
-/turf/closed/wall/r_wall,
-/area/lv624/lazarus/armory)
-"j" = (
-/turf/closed/wall/r_wall,
-/area/lv624/lazarus/security)
-"v" = (
-/obj/structure/surface/rack,
-/obj/item/explosive/plastic,
-/obj/item/explosive/plastic,
-/obj/item/explosive/grenade/high_explosive/pmc,
-/obj/item/explosive/grenade/high_explosive/pmc,
-/obj/item/explosive/grenade/high_explosive/pmc,
-/obj/item/explosive/grenade/high_explosive/pmc,
-/obj/structure/machinery/door_control{
-	id = "garage_blast";
-	name = "Garage Shutters";
-	pixel_x = -26;
-	range = 200
-	},
-/turf/open/floor/cult,
-/area/lv624/lazarus/armory)
-"w" = (
-/obj/structure/surface/rack{
-	layer = 2.5
-	},
-/obj/item/weapon/gun/shotgun/pump,
-/obj/item/ammo_magazine/shotgun/slugs,
-/obj/item/ammo_magazine/shotgun/flechette,
-/obj/item/ammo_magazine/shotgun/incendiary,
-/turf/open/floor/cult,
-/area/lv624/lazarus/armory)
-"x" = (
-/turf/open/floor/whiteyellowcorner/east,
-/area/lv624/lazarus/main_hall)
-"z" = (
-/turf/closed/wall/strata_ice/jungle,
-/area/lv624/ground/jungle/east_central_jungle)
-"D" = (
-/obj/item/storage/toolbox/syndicate,
-/obj/structure/surface/rack{
-	layer = 2.5
-	},
-/obj/effect/landmark/crap_item,
-/obj/effect/landmark/crap_item,
-/obj/item/ammo_magazine/smg/m39/extended,
-/obj/item/weapon/gun/smg/m39,
-/turf/open/floor/cult,
-/area/lv624/lazarus/armory)
-"E" = (
-/obj/structure/target/syndicate,
-/turf/open/floor/red/northeast,
-/area/lv624/lazarus/security)
-"G" = (
-/turf/open/floor/cult,
-/area/lv624/lazarus/armory)
-"H" = (
+"a" = (
 /turf/open/floor/white,
 /area/lv624/lazarus/main_hall)
-"I" = (
-/obj/structure/machinery/deployable/barrier,
-/obj/effect/decal/cleanable/cobweb,
-/turf/open/floor/cult,
-/area/lv624/lazarus/armory)
-"J" = (
+"b" = (
 /obj/item/stack/sheet/wood,
 /turf/open/floor/white,
 /area/lv624/lazarus/main_hall)
-"K" = (
+"c" = (
 /turf/open/floor/whiteyellow/east,
 /area/lv624/lazarus/main_hall)
-"M" = (
-/obj/structure/surface/rack{
-	layer = 2.5
-	},
-/obj/effect/landmark/crap_item,
-/obj/effect/landmark/crap_item,
-/obj/item/ammo_magazine/smg/m39/extended,
-/obj/item/weapon/gun/smg/m39,
-/turf/open/floor/cult,
-/area/lv624/lazarus/armory)
-"N" = (
-/obj/structure/barricade/wooden{
-	dir = 8
-	},
-/turf/open/floor/white,
-/area/lv624/lazarus/main_hall)
-"O" = (
-/obj/item/handset{
+"d" = (
+/obj/item/phone{
 	desc = "A model of an ancient Earth communication device.";
 	force = 8
 	},
@@ -106,14 +26,40 @@
 /obj/structure/window/reinforced,
 /turf/open/floor/wood,
 /area/lv624/lazarus/main_hall)
-"P" = (
-/obj/structure/machinery/door/airlock/almayer/secure/colony{
-	locked = 1;
-	name = "\improper Nexus Dome Armory"
+"e" = (
+/obj/structure/barricade/wooden{
+	dir = 8
 	},
+/turf/open/floor/white,
+/area/lv624/lazarus/main_hall)
+"f" = (
+/turf/open/floor/whiteyellowcorner/east,
+/area/lv624/lazarus/main_hall)
+"g" = (
+/turf/open/floor/whiteyellow/north,
+/area/lv624/lazarus/main_hall)
+"h" = (
+/obj/structure/machinery/light/small,
+/obj/effect/landmark/crap_item,
+/turf/open/floor/white,
+/area/lv624/lazarus/main_hall)
+"i" = (
+/turf/closed/wall/r_wall,
+/area/lv624/lazarus/armory)
+"j" = (
+/turf/closed/wall/r_wall,
+/area/lv624/lazarus/security)
+"k" = (
+/obj/structure/surface/rack{
+	layer = 2.5
+	},
+/obj/item/weapon/gun/shotgun/pump,
+/obj/item/ammo_magazine/shotgun/slugs,
+/obj/item/ammo_magazine/shotgun/flechette,
+/obj/item/ammo_magazine/shotgun/incendiary,
 /turf/open/floor/cult,
 /area/lv624/lazarus/armory)
-"Q" = (
+"l" = (
 /obj/effect/decal/cleanable/cobweb2,
 /obj/item/reagent_container/hypospray/autoinjector/tricord,
 /obj/structure/surface/rack{
@@ -128,22 +74,16 @@
 /obj/effect/landmark/crap_item,
 /turf/open/floor/cult,
 /area/lv624/lazarus/armory)
-"R" = (
-/obj/structure/window/reinforced{
-	dir = 4
-	},
-/obj/structure/surface/table,
-/obj/item/weapon/gun/revolver/spearhead,
-/obj/item/ammo_magazine/revolver/spearhead,
-/obj/item/ammo_magazine/revolver/spearhead,
-/obj/item/ammo_magazine/revolver/spearhead,
+"m" = (
+/obj/structure/target/syndicate,
 /turf/open/floor/red/northeast,
 /area/lv624/lazarus/security)
-"S" = (
+"n" = (
 /obj/structure/machinery/deployable/barrier,
+/obj/effect/decal/cleanable/cobweb,
 /turf/open/floor/cult,
 /area/lv624/lazarus/armory)
-"T" = (
+"o" = (
 /obj/structure/machinery/light/small{
 	dir = 1
 	},
@@ -159,34 +99,98 @@
 /obj/item/ammo_magazine/shotgun/beanbag,
 /turf/open/floor/cult,
 /area/lv624/lazarus/armory)
-"U" = (
-/obj/structure/machinery/power/apc/no_power/west,
+"p" = (
 /turf/open/floor/cult,
 /area/lv624/lazarus/armory)
-"V" = (
-/obj/structure/machinery/light/small,
+"q" = (
+/obj/structure/surface/rack{
+	layer = 2.5
+	},
 /obj/effect/landmark/crap_item,
-/turf/open/floor/white,
-/area/lv624/lazarus/main_hall)
-"W" = (
 /obj/effect/landmark/crap_item,
+/obj/item/ammo_magazine/smg/m39/extended,
+/obj/item/weapon/gun/smg/m39,
 /turf/open/floor/cult,
 /area/lv624/lazarus/armory)
-"X" = (
+"r" = (
 /obj/structure/machinery/light/small{
 	dir = 8
 	},
 /turf/open/floor/red/northeast,
 /area/lv624/lazarus/security)
-"Y" = (
-/turf/open/floor/whiteyellow/north,
-/area/lv624/lazarus/main_hall)
+"s" = (
+/obj/structure/machinery/deployable/barrier,
+/turf/open/floor/cult,
+/area/lv624/lazarus/armory)
+"t" = (
+/turf/open/floor/red/northeast,
+/area/lv624/lazarus/security)
+"u" = (
+/obj/structure/machinery/power/apc/no_power/west,
+/turf/open/floor/cult,
+/area/lv624/lazarus/armory)
+"w" = (
+/obj/item/storage/toolbox/syndicate,
+/obj/structure/surface/rack{
+	layer = 2.5
+	},
+/obj/effect/landmark/crap_item,
+/obj/effect/landmark/crap_item,
+/obj/item/ammo_magazine/smg/m39/extended,
+/obj/item/weapon/gun/smg/m39,
+/turf/open/floor/cult,
+/area/lv624/lazarus/armory)
+"y" = (
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/structure/surface/table,
+/obj/item/weapon/gun/revolver/cmb,
+/obj/item/ammo_magazine/revolver/cmb,
+/obj/item/ammo_magazine/revolver/cmb,
+/obj/item/ammo_magazine/revolver/cmb,
+/turf/open/floor/red/northeast,
+/area/lv624/lazarus/security)
+"z" = (
+/turf/closed/wall/strata_ice/jungle,
+/area/lv624/ground/jungle/east_central_jungle)
+"A" = (
+/obj/effect/landmark/crap_item,
+/turf/open/floor/cult,
+/area/lv624/lazarus/armory)
+"B" = (
+/obj/structure/machinery/door/airlock/almayer/secure/colony{
+	locked = 1;
+	name = "\improper Nexus Dome Armory"
+	},
+/turf/open/floor/cult,
+/area/lv624/lazarus/armory)
+"C" = (
+/obj/structure/surface/rack,
+/obj/item/explosive/plastic,
+/obj/item/explosive/plastic,
+/obj/item/explosive/grenade/high_explosive/pmc,
+/obj/item/explosive/grenade/high_explosive/pmc,
+/obj/item/explosive/grenade/high_explosive/pmc,
+/obj/item/explosive/grenade/high_explosive/pmc,
+/obj/structure/machinery/door_control{
+	id = "garage_blast";
+	name = "Garage Shutters";
+	pixel_x = -26;
+	range = 200
+	},
+/turf/open/floor/cult,
+/area/lv624/lazarus/armory)
+"H" = (
+/obj/effect/landmark/objective_landmark/medium,
+/turf/open/floor/cult,
+/area/lv624/lazarus/armory)
 
 (1,1,1) = {"
-H
-H
-H
-H
+a
+a
+a
+a
 i
 i
 i
@@ -195,74 +199,74 @@ z
 z
 "}
 (2,1,1) = {"
-J
-N
-N
-N
+b
+e
+e
+e
 i
-I
-S
+n
+s
 i
 i
 i
 "}
 (3,1,1) = {"
-H
-H
-V
+a
+a
+h
 i
 i
-T
-G
-U
-v
+o
+p
+u
+C
 i
 "}
 (4,1,1) = {"
-H
-H
-H
+a
+a
+a
 i
-w
-G
-G
-G
-W
+k
+p
+p
+H
+A
 i
 "}
 (5,1,1) = {"
-H
-H
-H
+a
+a
+a
 i
-Q
-M
-M
-D
-G
+l
+q
+q
+w
+p
 i
 "}
 (6,1,1) = {"
-K
-x
-H
+c
+f
+a
 i
 i
 i
 i
 i
-P
+B
 i
 "}
 (7,1,1) = {"
-O
-Y
-H
+d
+g
+a
 j
-E
-X
-d
-R
-d
+m
+r
+t
+y
+t
 j
 "}

@@ -10,7 +10,13 @@
 	var/list/fingerprintshidden
 	var/fingerprintslast = null
 
+	/// determines whether or not the object can be destroyed by xeno acid
 	var/unacidable = FALSE
+	/// determines whether or not the object can be destroyed by an explosion
+	var/explo_proof = FALSE
+	/// determines whether or not the object can be affected by EMPs
+	var/emp_proof = FALSE
+
 	var/last_bumped = 0
 
 	// The cached datum for the permanent pass flags for any given atom
@@ -20,9 +26,6 @@
 	var/list/flags_pass_temp
 	var/list/temp_flag_counter
 
-	var/list/flags_pass_temp_negative
-	var/list/negative_temp_flag_counter
-
 	// Temporary flags for what can pass through an atom
 	var/list/flags_can_pass_all_temp
 	var/list/flags_can_pass_front_temp
@@ -30,8 +33,6 @@
 
 	var/flags_barrier = NO_FLAGS
 	var/throwpass = 0
-
-	var/object_weight = 0
 
 	//Effects
 	var/list/effects_list
@@ -193,15 +194,6 @@ directive is properly returned.
 /atom/proc/can_be_syringed()
 	return flags_atom & CAN_BE_SYRINGED
 
-/*//Convenience proc to see whether a container can be accessed in a certain way.
-
-	proc/can_subract_container()
-		return flags & EXTRACT_CONTAINER
-
-	proc/can_add_container()
-		return flags & INSERT_CONTAINER
-*/
-
 /atom/proc/allow_drop()
 	return 1
 
@@ -209,8 +201,11 @@ directive is properly returned.
 /atom/proc/HasProximity(atom/movable/AM as mob|obj)
 	return
 
-/atom/proc/emp_act(severity)
+/atom/proc/emp_act(severity, datum/cause_data/cause_data)
 	SHOULD_CALL_PARENT(TRUE)
+
+	if(emp_proof)
+		return FALSE
 
 	SEND_SIGNAL(src, COMSIG_ATOM_EMP_ACT, severity)
 
@@ -253,7 +248,7 @@ directive is properly returned.
 		log_debug("Attempted to create an examine block with no strings! Atom : [src], user : [user]")
 		return
 	SEND_SIGNAL(src, COMSIG_PARENT_EXAMINE, user, examine_strings)
-	to_chat(user, examine_block(examine_strings.Join("\n")))
+	to_chat(user, boxed_message(examine_strings.Join("\n")))
 
 /atom/proc/get_examine_text(mob/user)
 	. = list()
@@ -265,14 +260,27 @@ directive is properly returned.
 
 // called by mobs when e.g. having the atom as their machine, pulledby, loc (AKA mob being inside the atom) or buckled var set.
 // see code/modules/mob/mob_movement.dm for more.
-/atom/proc/relaymove()
+/atom/proc/relaymove(mob/living/user, direction)
 	return
+
+/**
+ * A special case of relaymove() in which the person relaying the move may be "driving" this atom
+ *
+ * This is a special case for vehicles and ridden animals where the relayed movement may be handled
+ * by the riding component attached to this atom. Returns TRUE as long as there's nothing blocking
+ * the movement, or FALSE if the signal gets a reply that specifically blocks the movement
+ */
+/atom/proc/relaydrive(mob/living/user, direction)
+	return !(SEND_SIGNAL(src, COMSIG_RIDDEN_DRIVER_MOVE, user, direction) & COMPONENT_DRIVER_BLOCK_MOVE)
 
 /atom/proc/contents_explosion(severity)
 	for(var/atom/A in contents)
 		A.ex_act(severity)
 
-/atom/proc/ex_act(severity)
+/atom/proc/ex_act(severity, direction, datum/cause_data/cause_data, pierce=0, enviro=FALSE)
+	if(explo_proof)
+		return
+
 	contents_explosion(severity)
 
 /atom/proc/fire_act()
@@ -283,25 +291,25 @@ directive is properly returned.
 	return
 
 /atom/proc/add_hiddenprint(mob/living/M)
-	if(!M || QDELETED(M) || !M.key || !(flags_atom  & FPRINT) || fingerprintslast == M.key)
+	if(!M || QDELETED(M) || !M.ckey || !(flags_atom  & FPRINT) || fingerprintslast == M.ckey)
 		return
 	if (ishuman(M))
 		var/mob/living/carbon/human/H = M
 		if (H.gloves)
-			fingerprintshidden += "\[[time_stamp()]\] (Wearing gloves). Real name: [H.real_name], Key: [H.key]"
+			fingerprintshidden += "\[[time_stamp()]\] (Wearing gloves). Real name: [H.real_name], CKEY: [H.ckey]"
 		else
-			fingerprintshidden += "\[[time_stamp()]\] Real name: [H.real_name], Key: [H.key]"
+			fingerprintshidden += "\[[time_stamp()]\] Real name: [H.real_name], CKEY: [H.ckey]"
 	else
-		fingerprintshidden += "\[[time_stamp()]\] Real name: [M.real_name], Key: [M.key]"
-	fingerprintslast = M.key
+		fingerprintshidden += "\[[time_stamp()]\] Real name: [M.real_name], CKEY: [M.ckey]"
+	fingerprintslast = M.ckey
 
 
 /atom/proc/add_fingerprint(mob/living/M)
-	if(!M || QDELETED(M) || !M.key || !(flags_atom & FPRINT) || fingerprintslast == M.key)
+	if(!M || QDELETED(M) || !M.ckey || !(flags_atom & FPRINT) || fingerprintslast == M.ckey)
 		return
 	if(!fingerprintshidden)
 		fingerprintshidden = list()
-	fingerprintslast = M.key
+	fingerprintslast = M.ckey
 
 	if (ishuman(M))
 		var/mob/living/carbon/human/H = M
@@ -309,15 +317,15 @@ directive is properly returned.
 		//Fibers~
 		blood_touch(H)
 
-		fingerprintslast = M.key
+		fingerprintslast = M.ckey
 
 		//Now, deal with gloves.
 		if (H.gloves && H.gloves != src)
-			fingerprintshidden += "\[[time_stamp()]\](Wearing gloves). Real name: [H.real_name], Key: [H.key]"
+			fingerprintshidden += "\[[time_stamp()]\](Wearing gloves). Real name: [H.real_name], CKEY: [H.ckey]"
 		else
-			fingerprintshidden += "\[[time_stamp()]\]Real name: [H.real_name], Key: [H.key]"
+			fingerprintshidden += "\[[time_stamp()]\]Real name: [H.real_name], CKEY: [H.ckey]"
 	else
-		fingerprintshidden +=  "\[[time_stamp()]\]Real name: [M.real_name], Key: [M.key]"
+		fingerprintshidden +=  "\[[time_stamp()]\]Real name: [M.real_name], CKEY: [M.ckey]"
 
 
 
@@ -362,7 +370,11 @@ directive is properly returned.
 /atom/proc/flamer_fire_act(dam = BURN_LEVEL_TIER_1, datum/cause_data/flame_cause_data)
 	return
 
+//Xeno Abilities Proc's.
 /atom/proc/acid_spray_act()
+	return
+
+/atom/proc/corrosive_acid_act()
 	return
 
 
@@ -418,14 +430,13 @@ Parameters are passed from New.
 	var/proj_z = 0
 
 /atom/proc/create_clone(shift_x, shift_y, shift_z) //NOTE: Use only for turfs, otherwise use create_clone_movable
-	var/turf/T = null
-	T = locate(src.x + shift_x, src.y + shift_y, src.z + shift_z)
+	var/turf/target_turf = locate(x + shift_x, y + shift_y, z + shift_z)
 
-	T.appearance = src.appearance
-	T.setDir(src.dir)
+	target_turf.appearance = appearance
+	target_turf.setDir(dir)
 
 	GLOB.clones_t.Add(src)
-	src.clone = T
+	clone = target_turf
 
 // EFFECTS
 /atom/proc/extinguish_acid()
@@ -463,34 +474,6 @@ Parameters are passed from New.
 			if (temp_flag_counter[flag_str] == 0)
 				temp_flag_counter -= flag_str
 				flags_pass_temp &= ~flag
-
-/atom/proc/add_temp_negative_pass_flags(flags_to_add)
-	if (isnull(negative_temp_flag_counter))
-		negative_temp_flag_counter = list()
-
-	for (var/flag in GLOB.bitflags)
-		if(!(flags_to_add & flag))
-			continue
-		var/flag_str = "[flag]"
-		if (negative_temp_flag_counter[flag_str])
-			negative_temp_flag_counter[flag_str]++
-		else
-			negative_temp_flag_counter[flag_str] = 1
-			flags_pass_temp_negative |= flag
-
-/atom/proc/remove_temp_negative_pass_flags(flags_to_remove)
-	if (isnull(negative_temp_flag_counter))
-		return
-
-	for (var/flag in GLOB.bitflags)
-		if(!(flags_to_remove & flag))
-			continue
-		var/flag_str = "[flag]"
-		if (negative_temp_flag_counter[flag_str])
-			negative_temp_flag_counter[flag_str]--
-			if (negative_temp_flag_counter[flag_str] == 0)
-				negative_temp_flag_counter -= flag_str
-				flags_pass_temp_negative &= ~flag
 
 // This proc is for initializing pass flags (allows for inheriting pass flags and list-based pass flags)
 /atom/proc/initialize_pass_flags(datum/pass_flags_container/PF)
@@ -660,7 +643,7 @@ Parameters are passed from New.
 
 // returns a modifier for how much the tail stab should be cooldowned by
 // returning a 0 makes it do nothing
-/atom/proc/handle_tail_stab(mob/living/carbon/xenomorph/xeno)
+/atom/proc/handle_tail_stab(mob/living/carbon/xenomorph/xeno, blunt_stab)
 	return TAILSTAB_COOLDOWN_NONE
 
 /atom/proc/handle_flamer_fire(obj/flamer_fire/fire, damage, delta_time)
@@ -697,7 +680,7 @@ Parameters are passed from New.
 		var/datum/effect_system/spark_spread/spark_system = new
 		spark_system.set_up(5, 0, src)
 		spark_system.attach(src)
-		spark_system.start(src)
+		spark_system.start()
 	return CHECKS_PASSED
 
 ///Turn on the light, should be called by a timer
@@ -712,9 +695,10 @@ Parameters are passed from New.
 /atom/vv_get_dropdown()
 	. = ..()
 	VV_DROPDOWN_OPTION("", "-----ATOM-----")
-	var/turf/curturf = get_turf(src)
-	if(curturf)
-		. += "<option value='?_src_=admin_holder;[HrefToken(forceGlobal = TRUE)];adminplayerobservecoodjump=1;X=[curturf.x];Y=[curturf.y];Z=[curturf.z]'>Jump To</option>"
+	if(!ismovable(src))
+		var/turf/curturf = get_turf(src)
+		if(curturf)
+			. += "<option value='?_src_=admin_holder;[HrefToken(forceGlobal = TRUE)];adminplayerobservecoodjump=1;X=[curturf.x];Y=[curturf.y];Z=[curturf.z]'>Jump To</option>"
 	VV_DROPDOWN_OPTION(VV_HK_MODIFY_TRANSFORM, "Modify Transform")
 	VV_DROPDOWN_OPTION(VV_HK_ADD_REAGENT, "Add Reagent")
 	VV_DROPDOWN_OPTION(VV_HK_TRIGGER_EMP, "EMP Pulse")
@@ -834,3 +818,4 @@ Parameters are passed from New.
 	var/refid = REF(src)
 	. += "[VV_HREF_TARGETREF(refid, VV_HK_AUTO_RENAME, "<b id='name'>[src]</b>")]"
 	. += "<br><font size='1'><a href='byond://?_src_=vars;[HrefToken()];rotatedatum=[refid];rotatedir=left'><<</a> <a href='byond://?_src_=vars;[HrefToken()];datumedit=[refid];varnameedit=dir' id='dir'>[dir2text(dir) || dir]</a> <a href='byond://?_src_=vars;[HrefToken()];rotatedatum=[refid];rotatedir=right'>>></a></font>"
+

@@ -8,8 +8,10 @@
 #define TUNNEL_ENTER_BIG_XENO_DELAY 120
 #define TUNNEL_ENTER_LARVA_DELAY 10
 
-/// The duration it takes a player controlled facehugger to leap or hug adjacently
-#define FACEHUGGER_WINDUP_DURATION 1 SECONDS
+/// The duration it takes a player controlled facehugger to leap
+#define FACEHUGGER_LEAP_DURATION 2 SECONDS
+/// The duration it takes a player controlled facehugger to hug a target lying down by clicking on it
+#define FACEHUGGER_CLIMB_DURATION 1 SECONDS
 
 // Defines for action types and click delays used by xenomorph/unarmedattack() and attack_alien().
 
@@ -36,9 +38,7 @@
 #define XENO_HITS_TO_DESTROY_WINDOW_FRAME 3
 #define XENO_HITS_TO_DESTROY_R_WINDOW_FRAME 5
 #define XENO_HITS_TO_DESTROY_BOLTED_DOOR 10
-#define XENO_HITS_TO_DESTROY_DOOR 12
-#define XENO_HITS_TO_DESTROY_WELDED_DOOR 20
-#define XENO_HITS_TO_DESTROY_AIRLOCK_ASSEMBLY 2
+#define XENO_HITS_TO_DESTROY_WELDED_DOOR 15
 #define XENO_HITS_TO_EXPOSE_WIRES_MIN 3
 #define XENO_HITS_TO_EXPOSE_WIRES_MAX 4
 #define XENO_HITS_TO_CUT_WIRES 10
@@ -59,6 +59,8 @@
 #define XENO_CORROSIVE_ACID 6 //Macro for covering things in acid, universal ability
 #define XENO_SCREECH 7 //Macro for queen screech
 #define XENO_TAIL_STAB 8 //macro for tail stabs
+#define XENO_BECOME_SEETHROUGH 9 // macro to become seethrough, only used by queen as of implementation
+
 
 #define NO_ACTION_CHARGES -1 // This ability does not have a limit to how many times it can be used
 
@@ -67,10 +69,6 @@
 /// Defines for Abomination ability /datum/action/xeno_action/activable/feralfrenzy
 #define SINGLETARGETGUT 0
 #define AOETARGETGUT 1
-
-#define WARDEN_HEAL_SHIELD 0
-#define WARDEN_HEAL_HP 1
-#define WARDEN_HEAL_DEBUFFS 2
 
 #define HUD_PAIN_STATES_XENO   4
 #define HUD_HEALTH_STATES_XENO 16
@@ -85,15 +83,14 @@
 
 #define IGNORE_BUILD_DISTANCE -1
 
-#define XENO_LEADER_HIVE_POS(X)   (X + 1)
-#define GET_XENO_LEADER_NUM(X)  (X.hive_pos - 1)
-#define IS_XENO_LEADER(X)    (X.hive_pos > 1)
+#define XENO_LEADER_HIVE_POS(X) (X + 1)
+#define GET_XENO_LEADER_NUM(X) (X.hive_pos - 1)
+#define IS_XENO_LEADER(X) (X.hive_pos >= XENO_LEADER)
+#define IS_NORMAL_XENO(X) (X.hive_pos == NORMAL_XENO)
 
 #define NORMAL_XENO  0
 #define XENO_QUEEN   1
 #define XENO_LEADER  2
-/// Nobody can create constructions. (Feral)
-#define XENO_NOBODY  3
 
 #define XENO_HIVE_AREA_SIZE 21 //The turf size from the centrepiece of a hive in which special things can be done (like building structures)
 
@@ -110,8 +107,40 @@
 
 #define XENO_STARTING_CRYSTAL 100 //How much building resource the queen gets to start with
 
-#define XENO_SLASH_ALLOWED 0
-#define XENO_SLASH_FORBIDDEN 1
+/// Whether the xeno in question is capable of prying open dropships, starting hijack (queen) and disabling ERT shuttles
+#define IS_XENO_DROPSHIP_CAPABLE(X) (X.hive_pos == XENO_QUEEN || X.caste_type == XENO_CASTE_PREDALIEN || X.caste_type == XENO_CASTE_KING)
+
+// Queen permission toggles
+#define COOLDOWN_TOGGLE_SLASH "cooldown_toggle_slash"
+#define COOLDOWN_TOGGLE_CONSTRUCTION "cooldown_toggle_construction"
+#define COOLDOWN_TOGGLE_DECONSTRUCTION "cooldown_toggle_deconstruction"
+#define COOLDOWN_TOGGLE_UNNESTING "cooldown_toggle_unnesting"
+
+/// Whether you can harm non-infected
+#define XENO_SLASH_NORMAL (1<<0)
+/// Whether you can harm infected
+#define XENO_SLASH_INFECTED (1<<1)
+/// Multi-flag to indicate all harming is allowed
+#define XENO_SLASH_ALLOW_ALL (XENO_SLASH_NORMAL|XENO_SLASH_INFECTED)
+/// Whether only drone castes can unnest hosts
+#define XENO_UNNESTING_RESTRICTED (1<<2)
+/// Whether normal xenos can make special structures
+#define XENO_CONSTRUCTION_NORMAL (1<<3)
+/// Whether leader xenos can make special structures
+#define XENO_CONSTRUCTION_LEADERS (1<<4)
+/// Whether queen can make special structures
+#define XENO_CONSTRUCTION_QUEEN (1<<5)
+/// Multi-flag to indicate all special structures construction is allowed
+#define XENO_CONSTRUCTION_ALLOW_ALL (XENO_CONSTRUCTION_QUEEN|XENO_CONSTRUCTION_LEADERS|XENO_CONSTRUCTION_NORMAL)
+/// Whether normal xenos can destroy special structures
+#define XENO_DECONSTRUCTION_NORMAL (1<<6)
+/// Whether leader xenos can destroy special structures
+#define XENO_DECONSTRUCTION_LEADERS (1<<7)
+/// Whether queen can destroy special structures
+#define XENO_DECONSTRUCTION_QUEEN (1<<8)
+/// Multi-flag to indicate all special structures deconstruction is allowed
+#define XENO_DECONSTRUCTION_ALLOW_ALL (XENO_DECONSTRUCTION_QUEEN|XENO_DECONSTRUCTION_LEADERS|XENO_DECONSTRUCTION_NORMAL)
+
 // Holds defines for /datum/caste_datum, which is the primary datum for the caste system,
 // /datum/hive_status (self explanatory)
 // and some of the var defines for the Xenomorph base type.
@@ -176,7 +205,7 @@
 /// The time when xenos can start taking over comm towers
 #define XENO_COMM_ACQUISITION_TIME (55 MINUTES)
 
-/// The time it takes for a pylon to give one larva while activated
+/// The time it takes for a pylon to give one royal resin while activated
 #define XENO_PYLON_ACTIVATION_COOLDOWN (5 MINUTES)
 
 /// The time until you can re-corrupt a comms relay after the last pylon was destroyed
@@ -201,10 +230,11 @@
 #define XENO_LEAVE_TIMER_LARVA 80 //80 seconds
 /// The time against away_timer when an AFK xeno (not larva) can be replaced
 #define XENO_LEAVE_TIMER 300 //300 seconds
-/// The time against away_timer when an AFK facehugger converts to a npc
-#define XENO_FACEHUGGER_LEAVE_TIMER 420 //420 seconds
 /// The time against away_timer when an AFK xeno gets listed in the available list so ghosts can get ready
-#define XENO_AVAILABLE_TIMER 60 //60 seconds
+#define XENO_AVAILABLE_TIMER 30 //30 seconds
+
+/// The damage that xeno health gets divided by for banish tick damage
+#define XENO_BANISHMENT_DMG_DIVISOR 23
 
 /// Between 2% to 10% of explosion severity
 #define WEED_EXPLOSION_DAMAGEMULT rand(2, 10)*0.01
@@ -238,7 +268,7 @@
 #define XENO_EXPLOSIVE_ARMOR_TIER_10 100
 
 // Health bands
-#define XENO_HEALTH_LARVA 45 * XENO_UNIVERSAL_HPMULT
+#define XENO_HEALTH_LARVA 35 * XENO_UNIVERSAL_HPMULT
 #define XENO_HEALTH_LESSER_DRONE 160 * XENO_UNIVERSAL_HPMULT
 #define XENO_HEALTH_RUNNER 230 * XENO_UNIVERSAL_HPMULT // Killed by 1 PB
 #define XENO_HEALTH_TIER_1 250 * XENO_UNIVERSAL_HPMULT
@@ -314,7 +344,7 @@
 #define XENO_EVASION_HIGH 20
 
 // Speeds
-#define XENO_SPEED_QUEEN 0.5
+#define XENO_SPEED_QUEEN 0.6
 #define XENO_SPEED_TIER_1 0.4
 #define XENO_SPEED_TIER_2 0.2
 #define XENO_SPEED_TIER_3 0
@@ -380,6 +410,7 @@
 
 // Hivelord strain flags
 #define HIVELORD_RESIN_WHISPERER "Resin Whisperer"
+#define HIVELORD_DESIGNER "Designer"
 
 // Carrier strain flags
 #define CARRIER_EGGSAC "Eggsac"
@@ -392,6 +423,9 @@
 
 // Lurker strain flags
 #define LURKER_VAMPIRE "Vampire"
+
+// Warrior strain flags
+#define WARRIOR_BULWARK "Bulwark"
 
 // Ravager strain flags
 #define RAVAGER_HEDGEHOG "Hedgehog"
@@ -406,7 +440,7 @@
 // Praetorian strain flags
 #define PRAETORIAN_VANGUARD "Vanguard"
 #define PRAETORIAN_DANCER "Dancer"
-#define PRAETORIAN_WARDEN "Warden"
+#define PRAETORIAN_VALKYRIE "Valkyrie"
 #define PRAETORIAN_OPPRESSOR "Oppressor"
 
 /////////////////////////////////////////////////////////////////////////////////////
@@ -421,6 +455,7 @@
 
 // Damage - this is applied as a flat nerf/buff to the xeno's average damage
 #define XENO_DAMAGE_MOD_VERY_SMALL  5
+#define XENO_DAMAGE_MOD_BULWARK  8
 #define XENO_DAMAGE_MOD_SMALL   10
 #define XENO_DAMAGE_MOD_MED 15
 #define XENO_DAMAGE_MOD_LARGE   20
@@ -432,7 +467,7 @@
 #define XENO_HEALTH_MOD_MED 60
 #define XENO_HEALTH_MOD_LARGE   80
 #define XENO_HEALTH_MOD_VERY_LARGE  100
-#define XENO_HEALTH_MOD_ACIDER  -60
+#define XENO_HEALTH_MOD_ACIDER  115
 
 // Armor mods. Use the above defines for some guidance
 // In general, +20 armor should be a little more than +20% effective HP, however,
@@ -494,6 +529,22 @@
 #define XENO_NEURO_TIER_4   1.75
 #define XENO_NEURO_TIER_5   2
 
+// Pheromone strength
+#define XENO_PHERO_STRENGTH_NONE 0
+#define XENO_PHERO_STRENGTH_VERY_WEAK 0.5
+#define XENO_PHERO_STRENGTH_WEAK 1
+#define XENO_PHERO_STRENGTH_NORMAL 2
+#define XENO_PHERO_STRENGTH_HIVELORD 2.5 // Apparently hivelords have slightly better pheromones, even though they're marked as "normal"
+#define XENO_PHERO_STRENGTH_STRONG 3
+#define XENO_PHERO_STRENGTH_VERY_STRONG 4
+#define XENO_PHERO_STRENGTH_OVERWHELMING 6
+
+// Pheromone types
+#define XENO_PHERO_RECOVERY "recovery"
+#define XENO_PHERO_FRENZY "frenzy"
+#define XENO_PHERO_WARDING "warding"
+#define ALL_XENO_PHEROMONES list(XENO_PHERO_RECOVERY, XENO_PHERO_FRENZY, XENO_PHERO_WARDING)
+
 // Pheremone strength modifiers
 #define XENO_PHERO_MOD_VERY_SMALL  0.25
 #define XENO_PHERO_MOD_SMALL   0.5
@@ -528,110 +579,73 @@
 
 /////////////////////////////////////////////////////////////////////////////////////
 //
-// Default scaling values
+// Hive Stat Modifiers
 //
-// In the abscence of a scalar (documented below) these values are what are used
-// to scale xeno stats by age.
+// Used to increase/decrease stats across the entire Hive
+// Comes in flat value and multiplier flavours
 //
 /////////////////////////////////////////////////////////////////////////////////////
 
-#define XENO_MULTIPLIER_HEALTH_YOUNG 1
-#define XENO_MULTIPLIER_HEALTH_MATURE 1.25
-#define XENO_MULTIPLIER_HEALTH_ELDER 1.4
-#define XENO_MULTIPLIER_HEALTH_ANCIENT 1.5
-#define XENO_MULTIPLIER_HEALTH_PRIMORDIAL 1.75
+// Flat Values
+// Has single, double and triple digit variants
+// Single and double are in multiples of 5 and go up to 50
+// Triple in multiples of 50 and go up to 500
+// Speed gets its own bespoke values
+#define XENO_HIVE_STATMOD_FLAT_NONE 0
+#define XENO_HIVE_STATMOD_FLAT_5 5
+#define XENO_HIVE_STATMOD_FLAT_10 10
+#define XENO_HIVE_STATMOD_FLAT_15 15
+#define XENO_HIVE_STATMOD_FLAT_20 20
+#define XENO_HIVE_STATMOD_FLAT_25 25
+#define XENO_HIVE_STATMOD_FLAT_30 30
+#define XENO_HIVE_STATMOD_FLAT_35 35
+#define XENO_HIVE_STATMOD_FLAT_40 40
+#define XENO_HIVE_STATMOD_FLAT_45 45
+#define XENO_HIVE_STATMOD_FLAT_50 50
 
-#define XENO_MULTIPLIER_DAMAGE_YOUNG 1
-#define XENO_MULTIPLIER_DAMAGE_MATURE 1.2
-#define XENO_MULTIPLIER_DAMAGE_ELDER 1.3
-#define XENO_MULTIPLIER_DAMAGE_ANCIENT 1.35
-#define XENO_MULTIPLIER_DAMAGE_PRIMORDIAL 1.45
+#define XENO_HIVE_STATMOD_FLAT_100 100
+#define XENO_HIVE_STATMOD_FLAT_150 150
+#define XENO_HIVE_STATMOD_FLAT_200 200
+#define XENO_HIVE_STATMOD_FLAT_250 250
+#define XENO_HIVE_STATMOD_FLAT_300 300
+#define XENO_HIVE_STATMOD_FLAT_350 350
+#define XENO_HIVE_STATMOD_FLAT_400 400
+#define XENO_HIVE_STATMOD_FLAT_450 450
+#define XENO_HIVE_STATMOD_FLAT_500 500
 
-#define XENO_MULTIPLIER_PLASMA_YOUNG 1
-#define XENO_MULTIPLIER_PLASMA_MATURE 1.25
-#define XENO_MULTIPLIER_PLASMA_ELDER 1.5
-#define XENO_MULTIPLIER_PLASMA_ANCIENT 2
-#define XENO_MULTIPLIER_PLASMA_PRIMORDIAL 2.25
+#define XENO_HIVE_STATMOD_FLAT_LOW_SPEED 0.2
+#define XENO_HIVE_STATMOD_FLAT_LOWMED_SPEED 0.4
+#define XENO_HIVE_STATMOD_FLAT_MED_SPEED 0.6
+#define XENO_HIVE_STATMOD_FLAT_MEDHIGH_SPEED 0.8
+#define XENO_HIVE_STATMOD_FLAT_HIGH_SPEED 1
 
-#define XENO_MULTIPLIER_CRYSTAL_YOUNG 1
-#define XENO_MULTIPLIER_CRYSTAL_MATURE 1.1
-#define XENO_MULTIPLIER_CRYSTAL_ELDER 1.2
-#define XENO_MULTIPLIER_CRYSTAL_ANCIENT 1.3
-#define XENO_MULTIPLIER_CRYSTAL_PRIMORDIAL 1.5
+// Multipliers
+// Has positive (over 1) and negative (below 1)
+// Positive
+#define XENO_HIVE_STATMOD_MULT_NONE 1
+#define XENO_HIVE_STATMOD_MULTPOS_EXTREMELOW 1.05
+#define XENO_HIVE_STATMOD_MULT_VERYLOW 1.1
+#define XENO_HIVE_STATMOD_MULT_LOW 1.15
+#define XENO_HIVE_STATMOD_MULT_LOWMED 1.2
+#define XENO_HIVE_STATMOD_MULT_MED 1.25
+#define XENO_HIVE_STATMOD_MULT_MEDHIGH 1.3
+#define XENO_HIVE_STATMOD_MULT_HIGH 1.35
+#define XENO_HIVE_STATMOD_MULT_VERYHIGH 1.4
+#define XENO_HIVE_STATMOD_MULT_EXTREMEHIGH 1.45
+#define XENO_HIVE_STATMOD_MULT_MEGAHIGH 1.5
+#define XENO_HIVE_STATMOD_MULT_OHGOD 2
 
-#define XENO_MULTIPLIER_PLASMA_GAIN_YOUNG 1
-#define XENO_MULTIPLIER_PLASMA_GAIN_MATURE 1.2
-#define XENO_MULTIPLIER_PLASMA_GAIN_ELDER 1.4
-#define XENO_MULTIPLIER_PLASMA_GAIN_ANCIENT 1.6
-#define XENO_MULTIPLIER_PLASMA_GAIN_PRIMORDIAL 1.8
-
-#define XENO_MULTIPLIER_ARMOR_FACTOR_YOUNG 0.6
-#define XENO_MULTIPLIER_ARMOR_FACTOR_MATURE 1.1
-#define XENO_MULTIPLIER_ARMOR_FACTOR_ELDER 1.15
-#define XENO_MULTIPLIER_ARMOR_FACTOR_ANCIENT 1.20
-#define XENO_MULTIPLIER_ARMOR_FACTOR_PRIMORDIAL 1.30
-
-#define XENO_MULTIPLIER_EVASION_YOUNG 0.6
-#define XENO_MULTIPLIER_EVASION_MATURE 1.10
-#define XENO_MULTIPLIER_EVASION_ELDER 1.15
-#define XENO_MULTIPLIER_EVASION_ANCIENT 1.20
-#define XENO_MULTIPLIER_EVASION_PRIMORDIAL 1.3
-
-/////////////////////////////////////////////////////////////////////////////////////////////
-//
-// Scalars
-//
-// These are used to adjust caste scaling. Define in them in the caste datum definitions
-// for each age to override the default. Bear in mind that these scale from the base caste
-// values; they are NOT multiplicative. The actual variables for doing that are down below.
-//
-/////////////////////////////////////////////////////////////////////////////////////////////
-
-#define XENO_SCALAR_HEALTH_NONE 1
-#define XENO_SCALAR_HEALTH_LOW 1.1
-#define XENO_SCALAR_HEALTH_LOWMED 1.15
-#define XENO_SCALAR_HEALTH_MED 1.2
-#define XENO_SCALAR_HEALTH_MEDHIGH 1.25
-#define XENO_SCALAR_HEALTH_HIGH 1.3
-#define XENO_SCALAR_HEALTH_VERYHIGH 1.35
-#define XENO_SCALAR_HEALTH_ULTRAHIGH 1.4
-#define XENO_SCALAR_HEALTH_IMMORTAL 1.5
-#define XENO_SCALAR_HEALTH_OHLAWD 1.7
-
-#define XENO_SCALAR_DAMAGE_NONE 1
-#define XENO_SCALAR_DAMAGE_LOW 1.1
-#define XENO_SCALAR_DAMAGE_MED 1.2
-#define XENO_SCALAR_DAMAGE_HIGH 1.3
-#define XENO_SCALAR_DAMAGE_VERYHIGH 1.4
-#define XENO_SCALAR_DAMAGE_ULTRAHIGH 1.5
-
-#define XENO_SCALAR_PLASMA_NONE 1
-#define XENO_SCALAR_PLASMA_LOW 1.25
-#define XENO_SCALAR_PLASMA_MED 1.5
-#define XENO_SCALAR_PLASMA_HIGH 1.75
-#define XENO_SCALAR_PLASMA_VERYHIGH 2
-#define XENO_SCALAR_PLASMA_ULTRAHIGH 2.25
-
-#define XENO_SCALAR_PLASMA_GAIN_NONE 1
-#define XENO_SCALAR_PLASMA_GAIN_LOW 1.15
-#define XENO_SCALAR_PLASMA_GAIN_MED 1.3
-#define XENO_SCALAR_PLASMA_GAIN_HIGH 1.45
-#define XENO_SCALAR_PLASMA_GAIN_VERYHIGH 1.6
-#define XENO_SCALAR_PLASMA_GAIN_ULTRAHIGH 1.75
-
-#define XENO_SCALAR_ARMORFACTOR_NONE 1
-#define XENO_SCALAR_ARMORFACTOR_LOW 1.05
-#define XENO_SCALAR_ARMORFACTOR_MED 1.1
-#define XENO_SCALAR_ARMORFACTOR_HIGH 1.15
-#define XENO_SCALAR_ARMORFACTOR_VERYHIGH 1.20
-#define XENO_SCALAR_ARMORFACTOR_ULTRAHIGH 1.25
-
-#define XENO_SCALAR_EVASION_NONE 1
-#define XENO_SCALAR_EVASION_LOW 1.05
-#define XENO_SCALAR_EVASION_MED 1.1
-#define XENO_SCALAR_EVASION_HIGH 1.15
-#define XENO_SCALAR_EVASION_VERYHIGH 1.20
-#define XENO_SCALAR_EVASION_ULTRAHIGH 1.25
+// Negative
+#define XENO_HIVE_STATMOD_MULT_NEGATIVE_EXTREMELOW0.95
+#define XENO_HIVE_STATMOD_MULT_NEGATIVE_VERYLOW 0.9
+#define XENO_HIVE_STATMOD_MULT_NEGATIVE_LOW 0.85
+#define XENO_HIVE_STATMOD_MULT_NEGATIVE_LOWMED 0.8
+#define XENO_HIVE_STATMOD_MULT_NEGATIVE_MED 0.75
+#define XENO_HIVE_STATMOD_MULT_NEGATIVE_MEDHIGH 0.7
+#define XENO_HIVE_STATMOD_MULT_NEGATIVE_HIGH 0.65
+#define XENO_HIVE_STATMOD_MULT_NEGATIVE_VERYHIGH 0.60
+#define XENO_HIVE_STATMOD_MULT_NEGATIVE_EXTREMEHIGH 0.55
+#define XENO_HIVE_STATMOD_MULT_NEGATIVE_MEGAHIGH 0.5
 
 #define XENO_STRUCTURE_BUILD_TIME    20
 
@@ -640,6 +654,7 @@
 #define XENO_STRUCTURE_PYLON "hive pylon"
 #define XENO_STRUCTURE_EGGMORPH  "egg morpher"
 #define XENO_STRUCTURE_RECOVERY  "recovery node"
+#define XENO_STRUCTURE_PLASMA_TREE "plasma tree"
 #define XENO_STRUCTURE_NEST  "thick resin nest"
 
 #define RESIN_TRAP_EMPTY 0
@@ -671,8 +686,14 @@
 #define XENO_SHIELD_SOURCE_CUMULATIVE_GENERIC 10
 #define XENO_SHIELD_SOURCE_KING_BULWARKSPELL 11
 
+//Xeno tier slots
+#define TIER_3 "3"
+#define TIER_2 "2"
+#define OPEN_SLOTS "open_slots"
+#define GUARANTEED_SLOTS "guaranteed_slots"
+
 //XENO CASTES
-#define XENO_CASTE_LARVA  "Bloody Larva"
+#define XENO_CASTE_LARVA  "Larva"
 #define XENO_CASTE_PREDALIEN_LARVA   "Predalien Larva"
 #define XENO_CASTE_FACEHUGGER "Facehugger"
 #define XENO_CASTE_LESSER_DRONE "Lesser Drone"
@@ -690,23 +711,29 @@
 #define XENO_CASTE_HIVELORD   "Hivelord"
 #define XENO_CASTE_LURKER "Lurker"
 #define XENO_CASTE_WARRIOR    "Warrior"
-#define XENO_CASTE_SOLDIER    "Soldier"
 #define XENO_CASTE_SPITTER    "Spitter"
-#define XENO_T2_CASTES    list(XENO_CASTE_BURROWER, XENO_CASTE_CARRIER, XENO_CASTE_HIVELORD, XENO_CASTE_LURKER, XENO_CASTE_WARRIOR, XENO_CASTE_SPITTER, XENO_CASTE_SOLDIER)
+#define XENO_T2_CASTES    list(XENO_CASTE_BURROWER, XENO_CASTE_CARRIER, XENO_CASTE_HIVELORD, XENO_CASTE_LURKER, XENO_CASTE_WARRIOR, XENO_CASTE_SPITTER)
 //t3
 #define XENO_CASTE_BOILER "Boiler"
 #define XENO_CASTE_PRAETORIAN "Praetorian"
 #define XENO_CASTE_CRUSHER    "Crusher"
 #define XENO_CASTE_RAVAGER    "Ravager"
-#define XENO_T3_CASTES    list(XENO_CASTE_BOILER, XENO_CASTE_PRAETORIAN, XENO_CASTE_CRUSHER, XENO_CASTE_RAVAGER)
-//special
+#define XENO_CASTE_DESPOILER "Despoiler"
+#define XENO_T3_CASTES    list(XENO_CASTE_BOILER, XENO_CASTE_PRAETORIAN, XENO_CASTE_CRUSHER, XENO_CASTE_RAVAGER, XENO_CASTE_DESPOILER)
+
+//Tier 4
 #define XENO_CASTE_KING "King"
 #define XENO_CASTE_QUEEN  "Queen"
+
+//special
 #define XENO_CASTE_PREDALIEN  "Predalien"
 #define XENO_CASTE_HELLHOUND  "Hellhound"
 #define XENO_SPECIAL_CASTES   list(XENO_CASTE_QUEEN, XENO_CASTE_PREDALIEN, XENO_CASTE_HELLHOUND)
 
-#define ALL_XENO_CASTES list(XENO_CASTE_LARVA, XENO_CASTE_PREDALIEN_LARVA, XENO_CASTE_FACEHUGGER, XENO_CASTE_LESSER_DRONE, XENO_CASTE_DRONE, XENO_CASTE_RUNNER, XENO_CASTE_SENTINEL, XENO_CASTE_DEFENDER, XENO_CASTE_BURROWER, XENO_CASTE_CARRIER, XENO_CASTE_HIVELORD, XENO_CASTE_LURKER, XENO_CASTE_WARRIOR, XENO_CASTE_SPITTER, XENO_CASTE_BOILER, XENO_CASTE_PRAETORIAN, XENO_CASTE_CRUSHER, XENO_CASTE_RAVAGER, XENO_CASTE_QUEEN, XENO_CASTE_PREDALIEN, XENO_CASTE_HELLHOUND, XENO_CASTE_SOLDIER, XENO_CASTE_KING)
+//caste list
+#define XENO_CONSTRUCT_NODE_BOOST list(XENO_CASTE_HIVELORD, XENO_CASTE_BURROWER, XENO_CASTE_CARRIER, XENO_CASTE_QUEEN)
+
+#define ALL_XENO_CASTES list(XENO_CASTE_LARVA, XENO_CASTE_PREDALIEN_LARVA, XENO_CASTE_FACEHUGGER, XENO_CASTE_LESSER_DRONE, XENO_CASTE_DRONE, XENO_CASTE_RUNNER, XENO_CASTE_SENTINEL, XENO_CASTE_DEFENDER, XENO_CASTE_BURROWER, XENO_CASTE_CARRIER, XENO_CASTE_HIVELORD, XENO_CASTE_LURKER, XENO_CASTE_WARRIOR, XENO_CASTE_SPITTER, XENO_CASTE_BOILER, XENO_CASTE_DESPOILER, XENO_CASTE_PRAETORIAN, XENO_CASTE_CRUSHER, XENO_CASTE_RAVAGER, XENO_CASTE_QUEEN, XENO_CASTE_PREDALIEN, XENO_CASTE_HELLHOUND, XENO_CASTE_KING)
 
 // Checks if two hives are allied to each other.
 // PARAMETERS:
@@ -721,6 +748,7 @@
 #define FIRE_IMMUNITY_NO_IGNITE			(1<<1)
 #define FIRE_IMMUNITY_XENO_FRENZY		(1<<2)
 #define FIRE_VULNERABILITY				(1<<3)
+#define FIRE_IMMUNITY_IGNORE_PEN		(1<<4)
 
 #define FIRE_MULTIPLIER_BASE	 	1
 #define FIRE_MULTIPLIER_LOW		 	1.25
@@ -729,6 +757,7 @@
 #define FIRE_MULTIPLIER_EXTREME	 	2
 #define FIRE_MULTIPLIER_DEADLY		3
 
+#define WHISPERER_VIEWRANGE 10
 #define TRAPPER_VIEWRANGE 13
 
 #define SECRETE_RESIN_INTERRUPT -1
@@ -741,8 +770,14 @@
 
 #define XENO_VISION_LEVEL_NO_NVG "No Night Vision"
 #define XENO_VISION_LEVEL_MID_NVG "Half Night Vision"
+#define XENO_VISION_LEVEL_HIGH_NVG "Three Quarters Night Vision"
 #define XENO_VISION_LEVEL_FULL_NVG "Full Night Vision"
 
+// dancer defines
+#define DANCER_DODGE_TIME 7 SECONDS
+
+// bulwark defines
+#define BULWARK_REFLECTIVE_TIME 6 SECONDS
 
 // drone fruits
 
@@ -772,4 +807,56 @@
 #define FRENZY_DAMAGE_MULTIPLIER 2
 
 #define JOIN_AS_FACEHUGGER_DELAY (3 MINUTES)
-#define JOIN_AS_LESSER_DRONE_DELAY (30 SECONDS)
+#define JOIN_AS_LESSER_DRONE_DELAY (1 MINUTES)
+
+// larva states
+#define LARVA_STATE_BLOODY 0
+#define LARVA_STATE_NORMAL 1
+#define LARVA_STATE_MATURE 2
+
+// facehugger / carrier nonsense
+
+#define MIN_IMPREGNATION_TIME 10 SECONDS //Time it takes to impregnate someone
+#define MAX_IMPREGNATION_TIME 15 SECONDS
+
+#define HUGGER_TIME_TO_LIVE 30 SECONDS
+#define HUGGER_ACTIVE_TIME 4 SECONDS //Time between being dropped and being able to jump
+
+#define FACEHUGGER_JUMP_RANGE 1 // dont really want them to hug you immediately as you break down a corner or a door when a carrier stacks them on a tile
+#define EGG_JUMP_RANGE 2 // This is for egg huggers, they are supposed to be scary and leap at people yes.
+#define CARRIER_HUGGER_THROW_RANGE 6
+
+// xeno organ flags
+
+// these organs are automatically assigned
+
+/// Organ is capable of generating plasma
+#define XENO_ORGAN_PLASMA (1<<0)
+/// Organ was taken from a living xenomorph
+#define XENO_ORGAN_FRESH (1<<1)
+
+// these need to be manually added
+
+/// Organ is capable of generating acid (sentinel evo tree)
+#define XENO_ORGAN_ACID (1<<2)
+/// Organ belongs to a support-type caste (drone evo tree)
+#define XENO_ORGAN_SUPPORT (1<<3)
+/// Organ belongs to a brute caste (defender evo tree)
+#define XENO_ORGAN_HARDENED (1<<4)
+/// Organ belongs to a fast caste (runner evo tree)
+#define XENO_ORGAN_TACHYCARDIA (1<<5)
+
+/// Organ belongs to a fragile caste (boiler)
+/// Obtaining it is very difficult and essentially
+/// requires a corrupted hive that evolves a boiler
+#define XENO_ORGAN_FRAGILE (1<<6)
+
+/// Organ taken from a low-tier caste
+#define XENO_ORGAN_WEAK (1<<7)
+/// Organ taken from a high-tier caste
+#define XENO_ORGAN_STRONG (1<<8)
+/// Organ taken from a royal-tier caste
+#define XENO_ORGAN_ROYAL (1<<9)
+
+/// Determines how fast xeno botany chems produce.
+#define XENO_BOTANY_RATE 10 SECONDS

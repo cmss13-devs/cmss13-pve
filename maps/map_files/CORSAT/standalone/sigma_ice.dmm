@@ -240,6 +240,11 @@
 	},
 /turf/open/ice,
 /area/corsat/sigma/biodome/ice)
+"eV" = (
+/obj/effect/landmark/corpsespawner/engineer,
+/obj/effect/decal/cleanable/blood/splatter,
+/turf/open/floor/asteroidfloor/north,
+/area/corsat/sigma/biodome/ice)
 "fc" = (
 /obj/effect/landmark/structure_spawner/xvx_hive/xeno_door,
 /turf/open/ice,
@@ -274,6 +279,11 @@
 /obj/structure/pipes/standard/simple/visible,
 /turf/open/floor/plating,
 /area/corsat/inaccessible)
+"fT" = (
+/obj/effect/decal/cleanable/blood/oil,
+/obj/effect/landmark/corpsespawner/engineer,
+/turf/open/ice,
+/area/corsat/sigma/biodome/scrapyard)
 "gd" = (
 /obj/item/tool/shovel,
 /turf/open/auto_turf/snow/layer4,
@@ -292,6 +302,11 @@
 /area/corsat/sigma/airlock/control)
 "gr" = (
 /obj/structure/bed/nest,
+/turf/open/ice,
+/area/corsat/sigma/biodome/ice)
+"gx" = (
+/obj/structure/bed/nest,
+/obj/effect/landmark/corpsespawner/engineer,
 /turf/open/ice,
 /area/corsat/sigma/biodome/ice)
 "gB" = (
@@ -364,6 +379,10 @@
 /obj/structure/cargo_container/grant/right,
 /turf/open/auto_turf/snow/layer2,
 /area/corsat/sigma/biodome/scrapyard)
+"ih" = (
+/obj/effect/landmark/corpsespawner/pmc,
+/turf/open/floor/asteroidfloor/north,
+/area/corsat/sigma/biodome/gunrange)
 "io" = (
 /obj/effect/alien/weeds/node,
 /turf/open/ice,
@@ -445,11 +464,6 @@
 	dir = 4
 	},
 /turf/open/auto_turf/snow/layer3,
-/area/corsat/sigma/biodome/ice)
-"kt" = (
-/obj/structure/pipes/standard/simple/hidden/green,
-/obj/structure/pipes/standard/simple/hidden/green,
-/turf/open/ice,
 /area/corsat/sigma/biodome/ice)
 "kv" = (
 /obj/structure/pipes/standard/manifold/hidden/green,
@@ -587,6 +601,16 @@
 	},
 /turf/template_noop,
 /area/template_noop)
+"nB" = (
+/obj/effect/decal/cleanable/blood/oil,
+/obj/effect/landmark/corpsespawner/pmc,
+/turf/open/ice,
+/area/corsat/sigma/biodome/scrapyard)
+"nI" = (
+/obj/structure/bed/nest,
+/obj/effect/landmark/corpsespawner/scientist,
+/turf/open/ice,
+/area/corsat/sigma/biodome/ice)
 "nP" = (
 /turf/open/auto_turf/snow/layer3,
 /area/corsat/sigma/biodome/scrapyard)
@@ -1121,6 +1145,7 @@
 "AJ" = (
 /obj/structure/pipes/standard/simple/hidden/green,
 /obj/effect/decal/cleanable/blood/oil,
+/obj/effect/landmark/corpsespawner/pmc,
 /turf/open/floor/asteroidfloor/north,
 /area/corsat/sigma/biodome/scrapyard)
 "AS" = (
@@ -1169,7 +1194,7 @@
 /obj/structure/window/reinforced/toughened{
 	dir = 1
 	},
-/obj/item/weapon/gun/flamer/M240T,
+/obj/item/weapon/gun/flamer/m240/spec,
 /turf/open/floor/asteroidplating,
 /area/corsat/sigma/biodome/gunrange)
 "Bv" = (
@@ -1315,7 +1340,8 @@
 /area/corsat/sigma/airlock/control)
 "Eg" = (
 /obj/structure/machinery/computer/general_air_control/large_tank_control{
-	name = "CO2 Control"
+	name = "CO2 Control";
+	dir = 4
 	},
 /obj/structure/surface/table/almayer{
 	dir = 4
@@ -1401,7 +1427,7 @@
 /obj/structure/machinery/door/window/westright{
 	name = "Weapon Rack"
 	},
-/obj/item/ammo_magazine/flamer_tank,
+/obj/item/ammo_magazine/flamer_tank/survivor,
 /turf/open/floor/asteroidplating,
 /area/corsat/sigma/biodome/gunrange)
 "Gf" = (
@@ -1672,6 +1698,7 @@
 	dir = 4
 	},
 /obj/effect/decal/cleanable/blood/splatter,
+/obj/effect/landmark/corpsespawner/pmc,
 /turf/open/floor/corsat/squares,
 /area/corsat/sigma/airlock/control)
 "ME" = (
@@ -3595,7 +3622,7 @@ TX
 cf
 TX
 TX
-Bf
+fT
 RM
 TX
 nq
@@ -3952,8 +3979,8 @@ vU
 Sl
 Sl
 Sl
-kt
-kt
+Sl
+Sl
 kI
 Sl
 Sl
@@ -4244,7 +4271,7 @@ aO
 TX
 YC
 TX
-Bf
+nB
 TX
 nq
 Zf
@@ -4679,7 +4706,7 @@ Wk
 Wk
 Wk
 Wk
-gr
+gx
 lr
 Zr
 io
@@ -4687,7 +4714,7 @@ YN
 Zr
 Zr
 lr
-gr
+nI
 Wk
 Wk
 Wk
@@ -4839,7 +4866,7 @@ Zr
 Wk
 Wk
 Wk
-gr
+nI
 fc
 lr
 Zr
@@ -4930,7 +4957,7 @@ pP
 Zr
 Zr
 fc
-gr
+gx
 Wk
 Wk
 Wk
@@ -5162,7 +5189,7 @@ Zr
 Zr
 Zr
 Wk
-gr
+nI
 fc
 Zr
 YN
@@ -5510,7 +5537,7 @@ ZL
 bN
 cJ
 bN
-bN
+ih
 At
 bN
 bN
@@ -5611,7 +5638,7 @@ hH
 hH
 hH
 hH
-jy
+eV
 jy
 hH
 hH
@@ -6155,7 +6182,7 @@ aI
 ar
 rP
 bN
-bN
+ih
 cJ
 Xm
 Xm

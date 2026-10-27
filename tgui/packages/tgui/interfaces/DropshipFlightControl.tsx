@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react';
-
-import { useBackend, useSharedState } from '../backend';
+import { useBackend, useSharedState } from 'tgui/backend';
 import {
   Box,
   Button,
@@ -10,8 +9,9 @@ import {
   ProgressBar,
   Section,
   Stack,
-} from '../components';
-import { Window } from '../layouts';
+} from 'tgui/components';
+import { Window } from 'tgui/layouts';
+
 import {
   CancelLaunchButton,
   DisabledScreen,

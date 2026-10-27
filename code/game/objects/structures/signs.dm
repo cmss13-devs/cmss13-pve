@@ -1,17 +1,18 @@
 /obj/structure/sign
-	icon = 'icons/obj/structures/props/decals.dmi'
+	icon = 'icons/obj/structures/props/wall_decorations/decals.dmi'
 	anchored = TRUE
 	opacity = FALSE
 	density = FALSE
-	unslashable = TRUE
 	layer = WALL_OBJ_LAYER
+	var/deconstructable = TRUE
 
 /obj/structure/sign/ex_act(severity)
-	deconstruct(FALSE)
+	if(!explo_proof)
+		deconstruct(FALSE)
 	return
 
 /obj/structure/sign/attackby(obj/item/tool as obj, mob/user as mob) //deconstruction
-	if(HAS_TRAIT(tool, TRAIT_TOOL_SCREWDRIVER) && !istype(src, /obj/structure/sign/double))
+	if(deconstructable && HAS_TRAIT(tool, TRAIT_TOOL_SCREWDRIVER) && !istype(src, /obj/structure/sign/double) && !QDELETED(src))
 		to_chat(user, "You unfasten the sign with your [tool].")
 		var/obj/item/sign/S = new(src.loc)
 		S.name = name
@@ -25,14 +26,17 @@
 /obj/item/sign
 	name = "sign"
 	desc = ""
-	icon = 'icons/obj/structures/props/decals.dmi'
+	icon = 'icons/obj/structures/props/wall_decorations/decals.dmi'
 	w_class = SIZE_MEDIUM //big
 	var/sign_state = ""
 
 /obj/item/sign/attackby(obj/item/tool as obj, mob/user as mob) //construction
 	if(HAS_TRAIT(tool, TRAIT_TOOL_SCREWDRIVER) && isturf(user.loc))
 		var/direction = tgui_input_list(usr, "In which direction?", "Select direction.", list("North", "East", "South", "West", "Cancel"))
-		if(direction == "Cancel") return
+		if(direction == "Cancel")
+			return
+		if(!Adjacent(user, src))
+			return
 		var/obj/structure/sign/S = new(user.loc)
 		switch(direction)
 			if("North")
@@ -43,7 +47,8 @@
 				S.pixel_y = -32
 			if("West")
 				S.pixel_x = -32
-			else return
+			else
+				return
 		S.name = name
 		S.desc = desc
 		S.icon_state = sign_state
@@ -60,11 +65,13 @@
 	name = "\improper NO SMOKING"
 	desc = "A warning sign which reads 'NO SMOKING'."
 	icon_state = "nosmoking"
+	deconstructable = FALSE
 
 /obj/structure/sign/nosmoking_2
 	name = "\improper NO SMOKING"
 	desc = "A warning sign which reads 'NO SMOKING'."
 	icon_state = "nosmoking2"
+	deconstructable = FALSE
 
 /obj/structure/sign/goldenplaque
 	name = "The Most Robust Men Award for Robustness"
@@ -91,12 +98,30 @@
 /obj/structure/sign/double/maltesefalcon/right
 	icon_state = "maltesefalcon-right"
 
+/obj/structure/sign/uacqs
+	name = "\improper UACQS Plaque"
+	desc = "A UACQS sign."
+	icon_state = "roplaque"
+	deconstructable = FALSE
+
+/obj/structure/sign/uacqs/New(loc, ...)
+	. = ..()
+	desc = "1) These premises are under the operation of the United Americas Commission for Quality and Standards.<br>2) Access to these premises are regulated by UACQS personnel, or the regulating authority of the region.<br>[SPAN_RED("3) In accordance with Civil Law, firearms are not permitted in these premises.")]"
+
+/obj/structure/sign/minefield
+	name = "\improper MINEFIELD WARNING"
+	desc = "A warning sign indicating the presence of a minefield!"
+	icon_state = "minefield"
+
+/obj/structure/sign/minefield/alt
+	icon_state = "mines_warning"
+
 //============//
 //  Banners  //
 //==========//
 
 /obj/structure/sign/banners
-	icon = 'icons/obj/structures/props/banners.dmi'
+	icon = 'icons/obj/structures/props/wall_decorations/banners.dmi'
 
 /obj/structure/sign/banners/happybirthdaysteve
 	name = "\improper Happy Birthday Steve banner"
@@ -112,22 +137,10 @@
 	name = "\improper United Americas flag"
 	desc = "A flag of the United Americas. Inspires patriotism, fear, or revulsion depending on the viewer's political leanings."
 	icon_state = "uaflag"
-/obj/structure/sign/banners/united_americas_worn
-	name = "\improper United Americas flag"
-	desc = "A very worn flag of the United Americas. Inspires patriotism, fear, or revulsion depending on the viewer's political leanings."
+/obj/structure/sign/banners/united_americas_flag_worn
+	name = "\improper Worn United Americas flag"
+	desc = "A very worn flag of United Americas. Inspires patriotism, fear, or revulsion depending on the viewer's political leanings."
 	icon_state = "uaflag_worn"
-//============//
-//  Flags    //
-//==========//
-
-/obj/structure/sign/flag
-	icon = 'icons/obj/structures/props/flags.dmi'
-
-/obj/structure/sign/flag/upp
-	name = "\improper Union of Progressive Peoples Flag"
-	desc = "Unity through Strength, Freedom through Unity"
-	icon_state = "upp_flag"
-
 /obj/structure/sign/banners/colonial_marines_flag
 	name = "\improper United States Colonial Marine Corps flag"
 	desc = "A flag of the United States Colonial Marine Corps. Inspires patriotism, fear, or revulsion depending on the viewer's political leanings."
@@ -152,29 +165,33 @@
 	name = "\improper Worn Union of Progressive Peoples flag"
 	desc = "A very worn flag of the Union of Progressive Peoples. Inspires patriotism, fear, or revulsion depending on the viewer's political leanings."
 	icon_state = "uppflag_worn"
-/obj/structure/sign/banners/usa_flag
-	name = "\improper Worn United States of America flag"
-	desc = "A flag of the United States of America. Inspires patriotism, fear, or revulsion depending on the viewer's political leanings."
-	icon_state = "usaflag"
-/obj/structure/sign/banners/usa_worn
-	name = "\improper Worn United States of America flag"
-	desc = "A very worn flag of the United States of America. Inspires patriotism, fear, or revulsion depending on the viewer's political leanings."
-	icon_state = "usaflag_worn"
-/obj/structure/sign/banners/brazil_flag
-	name = "\improper Brazil flag"
-	desc = "A flag of Brazil. Inspires patriotism, fear, but not revulsion, everybody likes Brazil."
-	icon_state = "brazilflag"
-/obj/structure/sign/banners/brazil_worn
-	name = "\improper Worn Brazil flag"
-	desc = "A flag of Brazil. Inspires patriotism, fear, but not revulsion, everybody likes Brazil."
-	icon_state = "brazilflag_worn"
+/obj/structure/sign/banners/clf_flag
+	name = "\improper Colonial Liberation Front flag"
+	desc = "A flag of the Colonial Liberation Front. Inspires patriotism, fear, or revulsion depending on the viewer's political leanings."
+	icon_state = "clfflag"
+/obj/structure/sign/banners/clf_worn
+	name = "\improper Worn Colonial Liberation Front flag"
+	desc = "A very worn flag of the Colonial Liberation Front. Inspires patriotism, fear, or revulsion depending on the viewer's political leanings."
+	icon_state = "clfflag_worn"
+//============//
+//  Flags    //
+//==========//
+
+/obj/structure/sign/flag
+	icon = 'icons/obj/structures/props/wall_decorations/flags.dmi'
+
+/obj/structure/sign/flag/upp
+	name = "\improper Union of Progressive Peoples Flag"
+	desc = "Unity through Strength, Freedom through Unity."
+	icon_state = "upp_flag"
+
 //=====================//
 // SEMIOTIC STANDARD  //
 //===================//
 
 /obj/structure/sign/safety
 	name = "sign"
-	icon = 'icons/obj/structures/props/semiotic_standard.dmi'
+	icon = 'icons/obj/structures/props/wall_decorations/semiotic_standard.dmi'
 	desc = "A sign denoting Semiotic Standard. The Interstellar Commerce Commission requires that these symbols be placed pretty much everywhere for your safety."
 	anchored = TRUE
 	opacity = FALSE
@@ -567,12 +584,12 @@
 
 /obj/structure/sign/safety/luggageclaim
 	name = "\improper luggage claim semiotic"
-	desc = "Semiotic Standard denoting the presecense of a luggage claim area nearby."
+	desc = "Semiotic Standard denoting the presence of a luggage claim area nearby."
 	icon_state = "luggageclaim"
 
 /obj/structure/sign/safety/landingzone
 	name = "\improper landing zone semiotic"
-	desc = "Semiotic Standard denoting the presecense of a landing zone nearby."
+	desc = "Semiotic Standard denoting the presence of a landing zone nearby."
 	icon_state = "landingzone"
 
 /obj/structure/sign/safety/zero
@@ -625,14 +642,40 @@
 	desc = "Semiotic Standard denoting the number nine."
 	icon_state = "9"
 
+/obj/structure/sign/safety/big_one
+	name = "one semiotic"
+	desc = "Semiotic Standard denoting the number one."
+	icon_state = "big1"
+
+/obj/structure/sign/safety/fire_station
+	name = "fire-station semiotic"
+	desc = "Semiotic Standard denoting the nearby presence of a fire-station."
+	icon_state = "firestation"
+
 //===================//
 //   Marine signs   //
 //=================//
 
 /obj/structure/sign/ROsign
 	name = "\improper USCM Requisitions Office Guidelines"
-	desc = " 1. You are not entitled to service or equipment. Attachments are a privilege, not a right.\n 2. You must be fully dressed to obtain service. Cryosleep underwear is non-permissible.\n 3. The Quartermaster has the final say and the right to decline service. Only the Acting Commanding Officer may override their decisions.\n 4. Please treat your Requsitions staff with respect. They work hard."
+	desc = "1. You are not entitled to service or equipment. Attachments are a privilege, not a right.\n 2. You must be fully dressed to obtain service. Cryosleep underwear is non-permissible.\n 3. The Quartermaster has the final say and the right to decline service. Only the Acting Commanding Officer may override their decisions.\n 4. Please treat your Requisitions staff with respect. They work hard."
 	icon_state = "roplaque"
+	deconstructable = FALSE
+
+/obj/structure/sign/third_fleet_info
+	name = "\improper USCM Disposition and Readiness"
+	desc = "A plaque describing the deployment and arrangment of the troops that compose the United States Colonial Marines."
+	desc_lore = {"
+		The United States Colonial Marine Corps is organized into Marine Space Forces, each being responsible for military operations within a defined region of space. An MSF commands the ground, aerospace, and support elements needed to conduct sustained interstellar operations. Each MSF consists of the following major components:
+		A Division is the primary large-scale ground formation within an MSF. Each division is organized around three infantry regiments that work in conjunction to create a balanced force of combat, support, and service elements. They are designed to be capable of executing both orbital assault missions and sustained surface operations.,
+		A dedicated Aerospace Wing responsible for all dropships, strike, and support craft. Aerospace Wings provide orbital insertion, reconnaissance, close air support, and logistical transport throughout the MSF's operating theatre. They operate alongside the Division to project force across multiple star systems.,
+		A Brigade is a self-contained, all-purpose formation composed of a single reinforced regiment, supported by an attached aircraft group and logistics support. Brigades function as a compact, all-in-one division capable of conducting independent campaigns, sustaining prolonged operations, and deploying across multiple worlds.,
+		A Marine Assault Unit is a rapid-deployment, battalion sized expeditionary force. Composed of a reinforced infantry element, dropship squadron, and combat logistics battalion, MAUs provide flexible, self-contained capabilities for crises, assaults, and emergency operations within an MSF's operating theatre.,
+		MSF Sol oversees operations through the Core Systems, including a separate division solely for the Sol System.
+		MSF Eridani administers operations across the Outer Rim and Coreward Frontier, providing coverage for the American Corridor, Advance, and hotly contested frontier border regions.
+		MSF Herculis (to which the USS Almayer belongs) operates along the Anglo-Japanese Arm, the Tartarus Sector, and as deep into the American Arm as Alpha Caeli."}
+	icon_state = "roplaque"
+	deconstructable = FALSE
 
 /obj/structure/sign/ROcreed
 	name = "\improper QMC Creed Plaque"
@@ -705,5 +748,56 @@
 /obj/structure/sign/catclock
 	name = "cat clock"
 	desc = "An unbelievably creepy cat clock that surveys the room with every tick and every tock."
-	icon = 'icons/obj/structures/props/catclock.dmi'
+	icon = 'icons/obj/structures/props/furniture/clock.dmi'
 	icon_state = "cat_clock_motion"
+
+//===================//
+//      Calendar     //
+//=================//
+
+/obj/structure/sign/calendar
+	name = "wall calendar"
+	desc = "Classic office decoration and a place to stare at maniacally."
+	icon_state = "calendar_civ"
+	var/calendar_faction
+
+/obj/structure/sign/catclock/get_examine_text(mob/user)
+	. = ..()
+	. += SPAN_NOTICE("[src] reads: [worldtime2text()]")
+
+/obj/structure/sign/calendar/get_examine_text(mob/user)
+	. = ..()
+	. += SPAN_INFO("The current date is: [time2text(world.realtime, "DDD, MMM DD")], [GLOB.game_year].")
+	if(length(GLOB.holidays))
+		. += SPAN_INFO("Events:")
+		for(var/holidayname in GLOB.holidays)
+			var/datum/holiday/holiday = GLOB.holidays[holidayname]
+			if(holiday.holiday_faction)
+				if(holiday.holiday_faction != calendar_faction)
+					continue
+			. += SPAN_INFO("[holiday.name]")
+			. += SPAN_BOLDNOTICE("[holiday.greet_text]")
+
+/obj/structure/sign/calendar/upp
+	icon_state = "calendar_upp"
+	desc = "Classic office decoration with a spot to stare at maniacally. Features a UPP logo, written in Russian."
+	calendar_faction = FACTION_UPP
+
+/obj/structure/sign/calendar/wy
+	icon_state = "calendar_wy"
+	desc = "Classic office decoration and a place to stare at maniacally, produced by Weyland-Yutani."
+	calendar_faction = FACTION_WY
+
+/obj/structure/sign/calendar/wy/Initialize()
+	. = ..()
+	AddElement(/datum/element/corp_label/wy)
+
+/obj/structure/sign/calendar/twe
+	icon_state = "calendar_twe"
+	desc = "Classic office decoration and a place to stare at maniacally, has a pattern resembling a Union Jack on it."
+	calendar_faction = FACTION_TWE
+
+/obj/structure/sign/calendar/ua
+	icon_state = "calendar_ua"
+	desc = "Classic office decoration and a place to stare at maniacally, has a vertically placed UA flag and some army symbolics."
+	calendar_faction = FACTION_MARINE

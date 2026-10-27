@@ -27,17 +27,9 @@
 	name = "Shoulder-length Hair"
 	icon_state = "hair_long_shoulder"
 
-/datum/sprite_accessory/hair/longalt
-	name = "Shoulder-length Hair Alt"
-	icon_state = "hair_longfringe"
-
 /datum/sprite_accessory/hair/longer
 	name = "Long Hair"
 	icon_state = "hair_vlong"
-
-/datum/sprite_accessory/hair/longeralt
-	name = "Long Hair Alt"
-	icon_state = "hair_vlongfringe"
 
 /datum/sprite_accessory/hair/longest
 	name = "Very Long Hair"
@@ -828,55 +820,3 @@
 	name = "Emo Fringe"
 	icon_state = "hair_emo_fringe"
 	gender = FEMALE
-
-/datum/sprite_accessory/hair/eighties
-	name = "The Eighties"
-	icon_state = "hair_80s"
-
-/datum/sprite_accessory/hair/overeyebowl
-	name = "Over Eye Bowlcut"
-	icon_state = "hair_overeyebowl"
-
-/datum/sprite_accessory/hair/zone
-	name = "Zone"
-	icon_state = "hair_zone"
-
-/datum/sprite_accessory/hair/gloomyshort
-	name = "Gloomy (Short)"
-	icon_state = "hair_gloomy_short"
-
-/datum/sprite_accessory/hair/gloomymedium
-	name = "Gloomy (Medium)"
-	icon_state = "hair_gloomy_medium"
-
-/datum/sprite_accessory/hair/gloomylonger
-	name = "Gloomy (Long)"
-	icon_state = "hair_gloomy_long"
-
-/datum/sprite_accessory/hair/volajushort
-	name = "Volaju (Short)"
-	icon_state = "hair_volaju"
-
-/datum/sprite_accessory/hair/volajulong
-	name = "Volaju (Long)"
-	icon_state = "hair_volajupompless"
-
-/datum/sprite_accessory/hair/modern
-	name = "Modern"
-	icon_state = "hair_modern"
-
-/datum/sprite_accessory/hair/jessica
-	name = "Jessica"
-	icon_state = "hair_jessica"
-
-/datum/sprite_accessory/hair/vriska
-	name = "Vriska"
-	icon_state = "hair_vriska"
-
-/datum/sprite_accessory/hair/fluffyshort
-	name = "Fluffy (Short)"
-	icon_state = "hair_fluffy"
-
-/datum/sprite_accessory/hair/fluffylong //ignore
-	name = "Fluffy (Long)"
-	icon_state = "hair_fluffy_long"

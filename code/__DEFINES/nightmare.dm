@@ -6,6 +6,8 @@
 #define NIGHTMARE_CTX_GROUND "ground"
 /// Ship Map Context: Performs actions relevant to the ship map
 #define NIGHTMARE_CTX_SHIP "ship"
+/// Ground Map Context: Whether hostile survivors should be used instead
+#define NIGHTMARE_SCENARIO_HOSTILE_SURVIVOR "hostile_survivors"
 
 // File names for use in context configs
 #define NIGHTMARE_FILE_SCENARIO "scenario.json"

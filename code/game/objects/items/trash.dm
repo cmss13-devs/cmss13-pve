@@ -26,10 +26,18 @@
 	icon_state = "burger"
 	desc = "A greasy plastic film that once held a Cheeseburger. Packaged by the Weyland-Yutani Corporation."
 
+/obj/item/trash/burger/Initialize()
+	. = ..()
+	AddElement(/datum/element/corp_label/wy)
+
 /obj/item/trash/buritto
 	name = "Burrito wrapper"
 	icon_state = "burrito"
 	desc = "A foul-smelling plastic film that once held a microwave burrito. Packaged by the Weyland-Yutani Corporation."
+
+/obj/item/trash/buritto/Initialize()
+	. = ..()
+	AddElement(/datum/element/corp_label/wy)
 
 /obj/item/trash/candy
 	name = "Candy"
@@ -64,6 +72,10 @@
 	icon_state = "hotdog"
 	desc = "A musty plastic film that once held a hotdog. Packaged by the Weyland-Yutani Corporation."
 
+/obj/item/trash/hotdog/Initialize()
+	. = ..()
+	AddElement(/datum/element/corp_label/wy)
+
 /obj/item/trash/kepler
 	name = "Kepler wrapper"
 	icon_state = "kepler"
@@ -72,17 +84,13 @@
 	name = "Kepler Flamehot wrapper"
 	icon_state = "flamehotkepler"
 
-/obj/item/trash/liquidfood
-	name = "\improper \"LiquidFood\" ration"
-	icon_state = "liquidfood"
-
-/obj/item/trash/pistachios
-	name = "Pistachios pack"
-	icon_state = "pistachios_pack"
-
 /obj/item/trash/popcorn
 	name = "Popcorn"
 	icon_state = "popcorn"
+
+/obj/item/trash/popcorn/Initialize()
+	. = ..()
+	AddElement(/datum/element/corp_label/wy)
 
 /obj/item/trash/raisins
 	name = "4no raisins"
@@ -134,15 +142,9 @@
 
 /obj/item/trash/merc_mre
 	name = "\improper crumbled FSR ration"
-	desc = "Who left it in here? Civillians? Hikers? Military collectors? Undercover mercenaries?"
+	desc = "Who left it in here? Civilians? Hikers? Military collectors? Undercover mercenaries?"
 	icon = 'icons/obj/items/storage/mre.dmi'
 	icon_state = "mealpackempty"
-
-/obj/item/trash/hdr_mre
-	name = "\improper crumbled HDR"
-	desc = "Someone is going to live another day."
-	icon = 'icons/obj/items/storage/mre.dmi'
-	icon_state = "hdr_mealpackempty"
 
 /obj/item/trash/waffles
 	name = "Waffles"
@@ -162,7 +164,7 @@
 /obj/item/trash/cigbutt
 	name = "cigarette butt"
 	desc = "A manky old cigarette butt."
-	icon = 'icons/obj/items/clothing/masks.dmi'
+	icon = 'icons/obj/items/smoking/cigarettes.dmi'
 	icon_state = "cigbutt"
 	w_class = SIZE_TINY
 	throwforce = 1
@@ -186,6 +188,7 @@
 	name = "cigar butt"
 	desc = "A manky old cigar butt."
 	icon_state = "cigarbutt"
+	icon = 'icons/obj/items/smoking/cigars.dmi'
 
 ////////////
 ///Dishes///
@@ -218,23 +221,9 @@
 	icon_state = "tray"
 
 /obj/item/trash/USCMtray
-	name = "\improper empty meal tray"
-	desc = "An empty meal tray made of a space age plastoid. Commonly seen on the frontier and in military service."
-	icon = 'icons/obj/items/food_canteen.dmi'
-	icon_state = "mar_tray_empty"
-
-/obj/item/trash/UPPtray
-	name = "\improper UPP Tray"
+	name = "\improper USCM Tray"
 	desc = "Finished with its tour of duty."
-	icon = 'icons/obj/items/food.dmi'
-	icon_state = "upp_tray"
-
-/obj/item/trash/RMCtray
-	name = "\improper RMC Meal Tray"
-	desc = "An empty bento-style meal tray made of a space age plastoid. Uncommon to see outside of Three World Empire Military Service."
-	icon = 'icons/obj/items/food_canteen.dmi'
-	icon_state = "rmc_tray_empty"
-
+	icon_state = "MREtray"
 
 //////////
 ///Misc///
@@ -248,52 +237,70 @@
 /obj/item/trash/c_tube
 	name = "cardboard tube"
 	desc = "A tube... of cardboard."
-	icon = 'icons/obj/items/items.dmi'
+	icon = 'icons/obj/items/tools.dmi'
 	icon_state = "c_tube"
 	throwforce = 1
 	w_class = SIZE_SMALL
 	throw_speed = SPEED_VERY_FAST
 	throw_range = 5
 
-/obj/item/trash/grenade
-	name = "spent M47 smoke grenade"
-	desc = "A used-up smoke grenade canister. This is trash."
-	icon = 'icons/obj/items/weapons/grenade.dmi'
-	icon_state = "grenade_spent"
 
-/obj/item/trash/grenade/gas
-	name = "spent gas grenade"
-	desc = "A used gas grenade canister, no way to tell what was once inside it now. This is trash."
-	icon_state = "flashbang2_spent"
+// Hybrisa
+/obj/item/trash/hybrisa
+	icon = 'icons/obj/structures/props/hybrisa/misc_props.dmi'
+	icon_state = ""
 
-/obj/item/trash/grenade/gas/marine
-	name = "spent M66 tear gas grenade"
-	desc = "A used tear gas grenade. This is trash."
-	icon_state = "grenade_spent"
+// Cuppa Joe's Trash
+/obj/item/trash/hybrisa/cuppa_joes
+	icon = 'icons/obj/items/food/drinks.dmi'
 
-/obj/item/trash/grenade/gas/rmc
-	name = "spent R2175/CN20 gas grenade"
-	desc = "A used RMC CN20 gas grenade. This is trash."
-	icon_state = "grenade_spent"
-
-/obj/item/trash/grenade/Initialize()
-	. = ..()
-	animation_spin(5, 1,)
-
-/obj/item/trash/grenade/animation_spin(speed = 5, loop_amount = -1, clockwise = TRUE, sections = 3, angular_offset = 0, pixel_fuzz = 0)
-	clockwise = pick(TRUE, FALSE)
-	angular_offset = rand(360)
-	return ..()
-
-/obj/item/trash/tooth
-	name = "tooth"
-	desc = "Has seen heavy use, that's for sure."
-	icon = 'icons/obj/items/items.dmi'
-	icon_state = "tooth"
+/obj/item/trash/hybrisa/cuppa_joes/lid
+	name = "Cuppa Joe's coffee cup lid"
+	desc = "Have you got the CuppaJoe Smile? Stay perky! Freeze-dried CuppaJoe's Coffee."
+	icon_state = "coffeecuppajoelid"
 	w_class = SIZE_TINY
+	throwforce = 1
+/obj/item/trash/hybrisa/cuppa_joes/empty_cup
+	name = "Empty Cuppa Joe's coffee cup"
+	desc = "Have you got the CuppaJoe Smile? Stay perky! Freeze-dried CuppaJoe's Coffee."
+	icon_state = "coffeecuppajoenolid"
+	w_class = SIZE_TINY
+	throwforce = 1
 
-/obj/item/trash/tooth/Initialize()
+/obj/item/trash/hybrisa/cuppa_joes/Initialize()
 	. = ..()
 	pixel_x = rand(-10,10)
 	pixel_y = rand(-10,10)
 	apply_transform(turn(transform,rand(0,360)))
+
+// Cuppa Joes no random axis
+/obj/item/trash/hybrisa/cuppa_joes_static/lid
+	name = "Cuppa Joe's coffee cup lid"
+	desc = "Have you got the CuppaJoe Smile? Stay perky! Freeze-dried CuppaJoe's Coffee."
+	icon = 'icons/obj/items/food/drinks.dmi'
+	icon_state = "coffeecuppajoelid"
+	w_class = SIZE_TINY
+	throwforce = 1
+/obj/item/trash/hybrisa/cuppa_joes_static/empty_cup
+	name = "Empty Cuppa Joe's coffee cup"
+	desc = "Have you got the CuppaJoe Smile? Stay perky! Freeze-dried CuppaJoe's Coffee."
+	icon = 'icons/obj/items/food/drinks.dmi'
+	icon_state = "coffeecuppajoenolid"
+	w_class = SIZE_TINY
+	throwforce = 1
+
+/obj/item/trash/hybrisa/cuppa_joes_static/empty_cup_stack
+	name = "Empty Cuppa Joe's coffee cup stack"
+	desc = "Have you got the CuppaJoe Smile? Stay perky! Freeze-dried CuppaJoe's Coffee."
+	icon = 'icons/obj/items/food/drinks.dmi'
+	icon_state = "coffeecuppajoestacknolid"
+	w_class = SIZE_TINY
+	throwforce = 1
+
+/obj/item/trash/hybrisa/cuppa_joes_static/lid_stack
+	name = "Cuppa Joe's coffee cup lid stack"
+	desc = "Have you got the CuppaJoe Smile? Stay perky! Freeze-dried CuppaJoe's Coffee."
+	icon = 'icons/obj/items/food/drinks.dmi'
+	icon_state = "coffeecuppajoelidstack"
+	w_class = SIZE_TINY
+	throwforce = 1

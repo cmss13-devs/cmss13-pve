@@ -20,7 +20,7 @@
 	desc = "A monitor depicting the ship's current status. It flickers every so often."
 	anchored = TRUE
 	density = FALSE
-	use_power = FALSE
+	use_power = USE_POWER_NONE
 	idle_power_usage = 10
 	var/mode = 0 // 0 = Blank
 					// 1 = Shuttle timer
@@ -80,9 +80,11 @@
 			message1 = "EVAC"
 			message2 = SShijack.get_evac_eta()
 			if(message2)
-				if(length(message2) > CHARS_PER_LINE) message2 = "Error"
+				if(length(message2) > CHARS_PER_LINE)
+					message2 = "Error"
 				update_display(message1, message2)
-			else remove_display()
+			else
+				remove_display()
 			return 1
 		if(STATUS_DISPLAY_MESSAGE) //custom messages
 			var/line1
@@ -144,18 +146,6 @@
 	var/new_text = {"<div style="font-size:[FONT_SIZE];color:[DEFAULT_FONT_COLOR];font:'[FONT_STYLE]';text-align:center;" valign="top">[line1]<br>[line2]</div>"}
 	if(maptext != new_text)
 		maptext = new_text
-
-/obj/structure/machinery/status_display/proc/get_supply_shuttle_timer()
-	var/datum/shuttle/ferry/supply/shuttle = GLOB.supply_controller.shuttle
-	if (!shuttle)
-		return "Error"
-
-	if(shuttle.has_arrive_time())
-		var/timeleft = round((shuttle.arrive_time - world.time) / 10,1)
-		if(timeleft < 0)
-			return "Late"
-		return "[add_zero(num2text((timeleft / 60) % 60),2)]:[add_zero(num2text(timeleft % 60), 2)]"
-	return ""
 
 /obj/structure/machinery/status_display/proc/remove_display()
 	LAZYCLEARLIST(overlays)

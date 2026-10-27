@@ -4,7 +4,7 @@
 /obj/item/tool/shovel
 	name = "shovel"
 	desc = "A large tool for digging and moving dirt."
-	icon = 'icons/obj/items/items.dmi'
+	icon = 'icons/obj/items/tools.dmi'
 	icon_state = "shovel"
 	item_state = "shovel"
 	flags_atom = FPRINT|CONDUCT
@@ -27,11 +27,16 @@
 /obj/item/tool/shovel/update_icon()
 	var/image/I = image(icon,src,dirt_overlay)
 	switch(dirt_type) // We can actually shape the color for what environment we dig up our dirt in.
-		if(DIRT_TYPE_GROUND) I.color = "#512A09"
-		if(DIRT_TYPE_MARS) I.color = "#FF5500"
-		if(DIRT_TYPE_SNOW) I.color = "#EBEBEB"
-		if(DIRT_TYPE_SAND) I.color = "#ab804b"
-		if(DIRT_TYPE_SHALE) I.color = "#1c2142"
+		if(DIRT_TYPE_GROUND)
+			I.color = "#512A09"
+		if(DIRT_TYPE_MARS)
+			I.color = "#FF5500"
+		if(DIRT_TYPE_SNOW)
+			I.color = "#EBEBEB"
+		if(DIRT_TYPE_SAND)
+			I.color = "#ab804b"
+		if(DIRT_TYPE_SHALE)
+			I.color = "#1c2142"
 	overlays -= I
 	if(dirt_amt)
 		overlays += I
@@ -82,16 +87,11 @@
 				return
 
 			var/transfer_amount = dirt_amt_per_dig
-			if(istype(T,/turf/open))
-				var/turf/open/OT = T
-				if(OT.bleed_layer)
-					transfer_amount = min(OT.bleed_layer, dirt_amt_per_dig)
-					if(istype(T, /turf/open/auto_turf))
-						var/turf/open/auto_turf/AT = T
-						AT.changing_layer(AT.bleed_layer - transfer_amount)
-					else
-						OT.bleed_layer -= transfer_amount
-						OT.update_icon(1,0)
+			if(istype(T,/turf/open/auto_turf))
+				var/turf/open/auto_turf/AT = T
+				if(AT.bleed_layer)
+					transfer_amount = min(AT.bleed_layer, dirt_amt_per_dig)
+					AT.changing_layer(AT.bleed_layer - transfer_amount)
 			to_chat(user, SPAN_NOTICE("You dig up some [dirt_type_to_name(turfdirt)]."))
 			dirt_amt = transfer_amount
 			dirt_type = turfdirt
@@ -105,9 +105,6 @@
 					for(var/obj/item/stack/sandbags_empty/sandbags in range(1, user))
 						SB = sandbags
 						break
-
-				if(MODE_HAS_TOGGLEABLE_FLAG(MODE_NO_MAKE_BARRICADES)) // check if barricades can be made/sandbags can be filled
-					return
 
 				if(!istype(SB, /obj/item/stack/sandbags_empty)) // Checks sandbag a second time to confirm, if none are found, cancels everything
 					to_chat(user, SPAN_NOTICE("There are no sandbags nearby to fill up."))
@@ -186,6 +183,10 @@
 /obj/item/tool/shovel/spade
 	name = "spade"
 	desc = "A small tool for digging and moving dirt."
+	item_icons = list(
+		WEAR_L_HAND = 'icons/mob/humans/onmob/inhands/equipment/hydroponics_tools_lefthand.dmi',
+		WEAR_R_HAND = 'icons/mob/humans/onmob/inhands/equipment/hydroponics_tools_righthand.dmi',
+	)
 	icon_state = "spade"
 	item_state = "spade"
 	force = 5
@@ -195,6 +196,8 @@
 	shovelspeed = 60
 	dirt_amt_per_dig = 1
 
+/obj/item/tool/shovel/spade/yautja
+	icon = 'icons/obj/structures/props/hunter/32x32_hunter_props.dmi'
 
 //Snow Shovel----------
 /obj/item/tool/shovel/snow
@@ -205,38 +208,31 @@
 	throwforce = 3
 
 
+
+
 // Entrenching tool.
 /obj/item/tool/shovel/etool
-	name = "USCM M61 entrenching tool"
-	desc = "A marine's best friend. Dually useful for digging foxholes and bashing in heads. Folds in half for easier storage."
-	icon = 'icons/obj/items/marine-items.dmi'
+	name = "entrenching tool"
+	desc = "Used to dig holes and bash heads in. Folds in to fit in small spaces."
+	icon = 'icons/obj/items/tools.dmi'
 	icon_state = "etool"
 	item_state = "etool"
 	force = 30
 	throwforce = 2
 	w_class = SIZE_LARGE
-	sharp = IS_SHARP_ITEM_BIG
-	hitsound = 'sound/weapons/bladeslice.ogg'
 
 	dirt_overlay = "etool_overlay"
 	dirt_amt_per_dig = 5
 	shovelspeed = 50
 
-/obj/item/tool/shovel/etool/Initialize()
-	. = ..()
-	update_icon()
-	if(folded)
-		w_class = SIZE_SMALL
-		force = 5
-		hitsound = 'sound/weapons/genhit3.ogg'
 
 /obj/item/tool/shovel/etool/update_icon()
 	if(folded)
-		icon_state = "[initial(icon_state)]_c"
-		item_state = "[initial(item_state)]_c"
+		icon_state = "etool_c"
+		item_state = "etool_c"
 	else
-		icon_state = initial(icon_state)
-		item_state = initial(item_state)
+		icon_state = "etool"
+		item_state = "etool"
 	..()
 
 
@@ -244,31 +240,15 @@
 	folded = !folded
 	if(folded)
 		w_class = SIZE_SMALL
-		force = 5
-		hitsound = 'sound/weapons/genhit3.ogg'
+		force = 2
 	else
 		w_class = SIZE_LARGE
 		force = 30
-		hitsound = initial(hitsound)
 	..()
 
 /obj/item/tool/shovel/etool/folded
 	folded = TRUE
-
-/obj/item/tool/shovel/etool/rmc
-	name = "2155 pattern entrenching tool"
-	desc = "A marine commando's best friend. Dually useful for digging foxholes and bashing in noggins. Folds in half for easier storage."
-
-/obj/item/tool/shovel/etool/rmc/folded
-	folded = TRUE
-
-/obj/item/tool/shovel/etool/upp
-	name = "Type 50 entrenching tool"
-	desc = "A serviceman's best friend. Dually useful for digging foxholes and bashing in heads. Folds in half for easier storage."
-	icon_state = "etoolupp"
-	item_state = "etoolupp"
-	dirt_overlay = "etoolupp_overlay"
-
-/obj/item/tool/shovel/etool/upp/folded
-	folded = TRUE
-
+	w_class = SIZE_SMALL
+	force = 2
+	icon_state = "etool_c"
+	item_state = "etool_c"

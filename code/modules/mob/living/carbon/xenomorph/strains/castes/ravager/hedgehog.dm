@@ -18,7 +18,7 @@
 	behavior_delegate_type = /datum/behavior_delegate/ravager_hedgehog
 
 /datum/xeno_strain/hedgehog/apply_strain(mob/living/carbon/xenomorph/ravager/ravager)
-	ravager.plasma_max = 0
+	ravager.plasmapool_modifier = XENO_NO_PLASMA
 	ravager.small_explosives_stun = TRUE
 	ravager.explosivearmor_modifier += XENO_EXPOSIVEARMOR_MOD_SMALL
 	ravager.damage_modifier -= XENO_DAMAGE_MOD_SMALL
@@ -97,7 +97,7 @@
 	bound_xeno.recalculate_armor()
 	times_armor_buffed = armor_buff_count
 
-	var/image/holder = bound_xeno.hud_list[PLASMA_HUD]
+	var/image/holder = bound_xeno.hud_list[SPECIAL_HUD]
 	holder.overlays.Cut()
 	var/percentage_shards = round((shards / max_shards) * 100, 10)
 	if(percentage_shards)
@@ -115,7 +115,7 @@
 
 
 /datum/behavior_delegate/ravager_hedgehog/handle_death(mob/M)
-	var/image/holder = bound_xeno.hud_list[PLASMA_HUD]
+	var/image/holder = bound_xeno.hud_list[SPECIAL_HUD]
 	holder.overlays.Cut()
 
 /datum/behavior_delegate/ravager_hedgehog/on_hitby_projectile()
@@ -127,3 +127,190 @@
 	if (!shards_locked)
 		shards = min(max_shards, shards + shards_per_slash)
 	return
+
+
+/datum/action/xeno_action/onclick/spike_shield/use_ability(atom/target)
+	var/mob/living/carbon/xenomorph/xeno = owner
+
+	if (!action_cooldown_check())
+		return
+
+	if (!xeno.check_state())
+		return
+
+	var/datum/behavior_delegate/ravager_hedgehog/behavior = xeno.behavior_delegate
+	if (!behavior.check_shards(shard_cost))
+		to_chat(xeno, SPAN_DANGER("Not enough shards! We need [shard_cost - behavior.shards] more!"))
+		return
+	behavior.use_shards(shard_cost)
+
+	xeno.visible_message(SPAN_XENODANGER("[xeno] ruffles its bone-shard quills, forming a defensive shell!"), SPAN_XENODANGER("We ruffle our bone-shard quills, forming a defensive shell!"))
+
+	// Add our shield
+	var/datum/xeno_shield/hedgehog_shield/shield = xeno.add_xeno_shield(shield_amount, XENO_SHIELD_SOURCE_HEDGE_RAV, /datum/xeno_shield/hedgehog_shield)
+	if (shield)
+		shield.owner = xeno
+		shield.shrapnel_amount = shield_shrapnel_amount
+		xeno.overlay_shields()
+
+	xeno.create_shield(shield_duration, "shield2")
+	shield_active = TRUE
+	button.icon_state = "template_active"
+	addtimer(CALLBACK(src, PROC_REF(remove_shield)), shield_duration)
+
+	apply_cooldown()
+	return ..()
+
+/datum/action/xeno_action/onclick/spike_shield/action_cooldown_check()
+	if (shield_active) // If active shield, return FALSE so that this action does not get carried out
+		return FALSE
+	else if (cooldown_timer_id == TIMER_ID_NULL)
+		var/mob/living/carbon/xenomorph/xeno = owner
+		var/datum/behavior_delegate/ravager_hedgehog/behavior = xeno.behavior_delegate
+		return behavior.check_shards(shard_cost)
+	return FALSE
+
+/datum/action/xeno_action/onclick/spike_shield/proc/remove_shield()
+	var/mob/living/carbon/xenomorph/xeno = owner
+
+	if (!shield_active)
+		return
+
+	shield_active = FALSE
+	button.icon_state = "template_xeno"
+
+	for (var/datum/xeno_shield/shield in xeno.xeno_shields)
+		if (shield.shield_source == XENO_SHIELD_SOURCE_HEDGE_RAV)
+			shield.on_removal()
+			qdel(shield)
+			break
+
+	to_chat(xeno, SPAN_XENODANGER("We feel our shard shield dissipate!"))
+	xeno.overlay_shields()
+	return
+
+/datum/action/xeno_action/activable/rav_spikes/use_ability(atom/affected_atom)
+	var/mob/living/carbon/xenomorph/xeno = owner
+
+	if (!action_cooldown_check())
+		return
+
+	if(!affected_atom || affected_atom.layer >= FLY_LAYER || !isturf(xeno.loc) || !xeno.check_state())
+		return
+
+	var/datum/behavior_delegate/ravager_hedgehog/behavior = xeno.behavior_delegate
+	if (!behavior.check_shards(shard_cost))
+		to_chat(xeno, SPAN_DANGER("Not enough shards! We need [shard_cost - behavior.shards] more!"))
+		return
+	behavior.use_shards(shard_cost)
+
+	xeno.visible_message(SPAN_XENOWARNING("[xeno] fires their spikes at [affected_atom]!"), SPAN_XENOWARNING("We fire our spikes at [affected_atom]!"))
+
+	var/turf/target = locate(affected_atom.x, affected_atom.y, affected_atom.z)
+	var/obj/projectile/projectile = new /obj/projectile(xeno.loc, create_cause_data(initial(xeno.caste_type), xeno))
+
+	var/datum/ammo/ammo_datum = GLOB.ammo_list[ammo_type]
+
+	projectile.generate_bullet(ammo_datum)
+
+	projectile.fire_at(target, xeno, xeno, ammo_datum.max_range, ammo_datum.shell_speed)
+	playsound(xeno, 'sound/effects/spike_spray.ogg', 25, 1)
+
+	apply_cooldown()
+	return ..()
+
+/datum/action/xeno_action/activable/rav_spikes/action_cooldown_check()
+	if(!owner)
+		return FALSE
+	if (cooldown_timer_id == TIMER_ID_NULL)
+		var/mob/living/carbon/xenomorph/xeno = owner
+		if(!istype(xeno))
+			return FALSE
+		var/datum/behavior_delegate/ravager_hedgehog/behavior = xeno.behavior_delegate
+		return behavior.check_shards(shard_cost)
+	else
+		return FALSE
+
+/datum/action/xeno_action/onclick/spike_shed/use_ability(atom/affected_atom)
+	var/mob/living/carbon/xenomorph/xeno = owner
+
+	if (!action_cooldown_check())
+		return
+
+	if (!xeno.check_state())
+		return
+
+	var/datum/behavior_delegate/ravager_hedgehog/behavior = xeno.behavior_delegate
+	if (!behavior.check_shards(shard_cost))
+		to_chat(xeno, SPAN_DANGER("Not enough shards! We need [shard_cost - behavior.shards] more!"))
+		return
+	behavior.use_shards(shard_cost)
+	behavior.lock_shards()
+
+	xeno.visible_message(SPAN_XENOWARNING("[xeno] sheds their spikes, firing them in all directions!"), SPAN_XENOWARNING("We shed our spikes, firing them in all directions!!"))
+	xeno.spin_circle()
+	create_shrapnel(get_turf(xeno), shrapnel_amount, null, null, ammo_type, create_cause_data(initial(xeno.caste_type), owner), TRUE)
+	playsound(xeno, 'sound/effects/spike_spray.ogg', 25, 1)
+
+	apply_cooldown()
+	return ..()
+
+/datum/action/xeno_action/onclick/spike_shed/action_cooldown_check()
+	if (cooldown_timer_id == TIMER_ID_NULL)
+		var/mob/living/carbon/xenomorph/xeno = owner
+		var/datum/behavior_delegate/ravager_hedgehog/behavior = xeno.behavior_delegate
+		return behavior.check_shards(shard_cost)
+	else
+		return FALSE
+
+/datum/behavior_delegate/ravager_hedgehog/override_intent(mob/living/carbon/target_carbon)
+	. = ..()
+
+	// If the ravager fails RNG, they perform an accidental slash instead!
+	if(bound_xeno.a_intent == INTENT_DISARM && prob(25)) // 1/4 chance
+		if(bound_xeno.claw_restrained())
+			bound_xeno.animation_attack_on(target_carbon)
+			bound_xeno.visible_message(SPAN_NOTICE("[bound_xeno] almost slashes [target_carbon]!"),
+			SPAN_XENONOTICE("We feel the strongest urge to destroy [target_carbon], but the Queen holds us back!"))
+			return XENO_ATTACK_ACTION
+
+		if(bound_xeno.can_not_harm(target_carbon, check_hive_flags=FALSE)) // We manually check hive_flags later
+			bound_xeno.animation_attack_on(bound_xeno)
+			bound_xeno.visible_message(SPAN_NOTICE("[bound_xeno] nibbles [target_carbon]"),
+			SPAN_XENONOTICE("We nibble [bound_xeno]"))
+			return XENO_ATTACK_ACTION
+
+		if(bound_xeno.behavior_delegate && bound_xeno.behavior_delegate.handle_slash(bound_xeno))
+			return XENO_NO_DELAY_ACTION
+
+		if(target_carbon.stat == DEAD)
+			to_chat(bound_xeno, SPAN_WARNING("We raise our claws to attack [target_carbon]!- but... they're already dead."))
+			return XENO_NO_DELAY_ACTION
+
+		if(bound_xeno.caste && !bound_xeno.caste.is_intelligent)
+			var/embryo_allied = FALSE
+			if(target_carbon.status_flags & XENO_HOST)
+				for(var/obj/item/alien_embryo/embryo in target_carbon)
+					if(HIVE_ALLIED_TO_HIVE(bound_xeno.hivenumber, embryo.hivenumber))
+						embryo_allied = TRUE
+						break
+
+			if(embryo_allied)
+				if(HAS_TRAIT(bound_xeno, TRAIT_NESTED))
+					bound_xeno.animation_attack_on(target_carbon)
+					bound_xeno.visible_message(SPAN_NOTICE("[bound_xeno] nibbles [target_carbon]"),
+					SPAN_XENONOTICE("ATTACK!!!! Oh- [target_carbon] has a sister inside..."))
+					return XENO_NO_DELAY_ACTION
+				if(!HAS_FLAG(bound_xeno.hive.hive_flags, XENO_SLASH_INFECTED))
+					bound_xeno.animation_attack_on(target_carbon)
+					bound_xeno.visible_message(SPAN_NOTICE("[bound_xeno] nibbles [target_carbon]"),
+					SPAN_XENONOTICE("ATTACK!!!! Oh- [target_carbon] has a sister inside..."))
+					return XENO_ATTACK_ACTION
+			if(!HAS_FLAG(bound_xeno.hive.hive_flags, XENO_SLASH_NORMAL))
+				bound_xeno.animation_attack_on(target_carbon)
+				bound_xeno.visible_message(SPAN_NOTICE("[bound_xeno] nibbles [target_carbon]"),
+				SPAN_XENONOTICE("ATTACK!!!! Wait- we're not allowed to attack hosts anymore..."))
+				return XENO_ATTACK_ACTION
+		bound_xeno.visible_message(SPAN_DANGER("[bound_xeno] fumbles stupidly for a moment, then slashes [target_carbon]!"),
+			SPAN_HIGHDANGER("Your oversized claws and small mind get in the way of restraining, slashing [target_carbon]!"), message_flags=CHAT_TYPE_XENO_COMBAT)
+		return INTENT_HARM

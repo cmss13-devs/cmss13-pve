@@ -91,7 +91,6 @@
 /datum/action/xeno_action/active_toggle/generate_egg
 	name = "Generate Eggs (50)"
 	action_icon_state = "lay_egg"
-	ability_name = "generate egg"
 	action_type = XENO_ACTION_CLICK
 	plasma_cost = 50
 	plasma_use_per_tick = 15
@@ -122,7 +121,8 @@
 				egg_generation_progress = 0
 				xeno.eggs_cur++
 				to_chat(xeno, SPAN_XENONOTICE("We generate an egg. Now sheltering: [xeno.eggs_cur] / [xeno.eggs_max]."))
-				xeno.update_icons()
+				xeno.behavior_delegate?.on_update_icons()
 
 #undef EGGSAC_OFF_WEED_EGGCAP
 #undef EGGSAC_EGG_SUSTAIN_DISTANCE
+

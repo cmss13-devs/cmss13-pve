@@ -1,22 +1,21 @@
 /obj/item/device/helmet_visor
-	name = "AN/PAV-70 visor"
-	desc = "The guts of a Personal-Augmented-Viewer HUD unit. Fitted as-standard in almost all helmets in use by UA forces."
+	name = "squad optic"
+	desc = "An insertable visor HUD into a standard USCM helmet."
 	icon = 'icons/obj/items/clothing/helmet_visors.dmi'
 	icon_state = "hud_sight"
 	w_class = SIZE_TINY
 
-	hud_type = list(MOB_HUD_FACTION_MARINE, MOB_HUD_FACTION_ARMY, MOB_HUD_FACTION_NAVY)
-
+	///The type of HUD our visor shows
+	var/hud_type = MOB_HUD_FACTION_MARINE
 	///The sound when toggling on the visor
 	var/toggle_on_sound = 'sound/handling/hud_on.ogg'
-
 	///The sound when toggling off the visor
 	var/toggle_off_sound = 'sound/handling/hud_off.ogg'
-
-	///The icon name for our helmet's action, in 'icons/obj/items/clothing/helmet_visors.dmi'
-	var/action_icon_string = "hud_sight_down"
-
-	///The overlay name for when our visor is active, in 'icons/mob/humans/onmob/helmet_garb.dmi'
+	///The icon name for our helmet's action
+	var/action_icon_string = "hud_marine_sight_down"
+	///The icon for the helmet_overlay
+	var/helmet_overlay_icon = 'icons/mob/humans/onmob/clothing/helmet_garb/huds.dmi'
+	///The overlay name for when our visor is active
 	var/helmet_overlay = "hud_sight_right"
 
 /obj/item/device/helmet_visor/Destroy(force)
@@ -32,7 +31,7 @@
 	. = ..()
 
 // Visors can attach to all marine helmets by default
-/obj/item/device/helmet_visor/proc/can_attach_to(obj/item/clothing/head/helmet/target_helmet)
+/obj/item/device/helmet_visor/proc/can_attach_to(obj/item/clothing/head/helmet/marine/target_helmet)
 	return TRUE
 
 /// Called to see if the user can even use this visor
@@ -41,6 +40,9 @@
 
 /// Called to see if this visor is a special non-HUD visor
 /obj/item/device/helmet_visor/proc/toggle_visor(obj/item/clothing/head/helmet/marine/attached_helmet, mob/living/carbon/human/user, silent = FALSE)
+	if(attached_helmet != user.head) // This lets you change through the visors WITHOUT the effects, meaning you can still interact with it and whatever you had it on will be applied once you put it on, better then just making the helmet uninteractable.
+		return FALSE
+
 	if(attached_helmet == user.head && attached_helmet.active_visor == src)
 
 		if(!can_toggle(user))
@@ -49,7 +51,7 @@
 		activate_visor(attached_helmet, user)
 
 		if(!silent)
-			to_chat(user, SPAN_NOTICE("You activate the [src] on the [attached_helmet]."))
+			to_chat(user, SPAN_NOTICE("You activate [src] on the [attached_helmet]."))
 			playsound_client(user.client, toggle_on_sound, null, 75)
 
 		return TRUE
@@ -57,91 +59,52 @@
 	deactivate_visor(attached_helmet, user)
 
 	if(!silent)
-		to_chat(user, SPAN_NOTICE("You deactivate the [src] on the [attached_helmet]."))
+		to_chat(user, SPAN_NOTICE("You deactivate [src] on the [attached_helmet]."))
 		playsound_client(user.client, toggle_off_sound, null, 75)
 
 	return TRUE
 
 /// Called by toggle_visor() to activate the visor's effects
 /obj/item/device/helmet_visor/proc/activate_visor(obj/item/clothing/head/helmet/marine/attached_helmet, mob/living/carbon/human/user)
-	for(var/type in hud_type)
-		var/datum/mob_hud/current_mob_hud = GLOB.huds[type]
-		current_mob_hud.add_hud_to(user, attached_helmet)
+	var/datum/mob_hud/current_mob_hud = GLOB.huds[hud_type]
+	current_mob_hud.add_hud_to(user, attached_helmet)
 
 /// Called by toggle_visor() to deactivate the visor's effects
 /obj/item/device/helmet_visor/proc/deactivate_visor(obj/item/clothing/head/helmet/marine/attached_helmet, mob/living/carbon/human/user)
-	for(var/type in hud_type)
-		var/datum/mob_hud/current_mob_hud = GLOB.huds[type]
-		current_mob_hud.remove_hud_from(user, attached_helmet)
-
-/obj/item/device/helmet_visor/process(delta_time)
-	return PROCESS_KILL
+	var/datum/mob_hud/current_mob_hud = GLOB.huds[hud_type]
+	current_mob_hud.remove_hud_from(user, attached_helmet)
 
 /// Called by /obj/item/clothing/head/helmet/marine/get_examine_text(mob/user) to get extra examine text for this visor
 /obj/item/device/helmet_visor/proc/get_helmet_examine_text()
 	return SPAN_NOTICE("\A [name] is flipped down.")
 
-/obj/item/device/helmet_visor/upp
-	name = "KKV-66M visor"
-	desc = "The KKV-66M \"Geist\" is an augmented-reality Heads Up Display developed by Germany. Standard for all helmets in use by the UPP's armed forces."
-	hud_type = list(MOB_HUD_FACTION_UPP)
-
-/obj/item/device/helmet_visor/twe
-	name = "squad optic"
-	desc = "An insertable visor HUD into a standard RMC helmet."
-	hud_type = list(MOB_HUD_FACTION_TWE)
-
 /obj/item/device/helmet_visor/medical
-	name = "AN/MPAV-71 visor"
-	desc = "The guts of a Medical/Personal-Augmented-Viewer HUD unit. Uncommon to see in use outside of US Army units."
-	icon_state = "med_sight"
-	hud_type = list(MOB_HUD_MEDICAL_BASIC)
-	action_icon_string = "med_sight_down"
-	helmet_overlay = "med_sight_right"
-
-/obj/item/device/helmet_visor/medical/army
-	name = "AN/MPAV-71A visor"
-	desc = "The guts of a Medical/Personal-Augmented-Viewer HUD unit. This one has US Army markings on its casing."
-	helmet_overlay = "med_sight_left"
-	hud_type = list(MOB_HUD_FACTION_MARINE, MOB_HUD_FACTION_ARMY, MOB_HUD_FACTION_NAVY, MOB_HUD_MEDICAL_BASIC)
+	name = "sensormate optic"
+	icon_state = "sensor_sight"
+	hud_type = MOB_HUD_MEDICAL_ADVANCED
+	action_icon_string = "sensor_sight_down"
+	helmet_overlay = "sensor_sight_right"
 
 /obj/item/device/helmet_visor/medical/advanced
-	name = "AN/MAV-72 visor"
-	desc = "The guts of a Medical-Augmented-Viewer HUD unit. Links to the biomonitors of allied personnel and provides detailed information for those able to comprehend it."
+	name = "advanced medical optic"
+	icon_state = "med_sight"
+	action_icon_string = "med_sight_down"
 	helmet_overlay = "med_sight_right"
-	hud_type = list(MOB_HUD_FACTION_MARINE, MOB_HUD_FACTION_ARMY, MOB_HUD_FACTION_NAVY, MOB_HUD_MEDICAL_ADVANCED)
+	var/datum/weakref/equipped_user
 
-/obj/item/device/helmet_visor/medical/advanced/pmc
-	hud_type = list(MOB_HUD_FACTION_PMC, MOB_HUD_FACTION_TWE, MOB_HUD_FACTION_WY, MOB_HUD_MEDICAL_ADVANCED)
-
-/obj/item/device/helmet_visor/medical/advanced/rmc
-	name = "HBVS visor"
-	desc = "One of the few successful components from the otherwise disastrous Commando Upgrade Program ran in the mid 2170s, the head-mounted, biomonitor vision system comes as standard in all RMC helmets."
-	hud_type = list(MOB_HUD_FACTION_WY, MOB_HUD_FACTION_TWE, MOB_HUD_MEDICAL_ADVANCED)
-	icon_state = "hud_sight"
-	action_icon_string = "hud_sight_down"
-	helmet_overlay = "hud_sight_full"
-
-/obj/item/device/helmet_visor/medical/advanced/rmc/alt
-	helmet_overlay = "hud_sight_right"
-
-/obj/item/device/helmet_visor/medical/advanced/upp
-	hud_type = list(MOB_HUD_FACTION_UPP, MOB_HUD_MEDICAL_ADVANCED)
-
-/obj/item/device/helmet_visor/medical/activate_visor(obj/item/clothing/head/helmet/marine/attached_helmet, mob/living/carbon/human/user)
+/obj/item/device/helmet_visor/medical/advanced/activate_visor(obj/item/clothing/head/helmet/marine/attached_helmet, mob/living/carbon/human/user)
 	. = ..()
-	for(var/type in hud_type)
-		var/datum/mob_hud/current_mob_hud = GLOB.huds[type]
-		current_mob_hud.add_hud_to(user, attached_helmet)
+	equipped_user = WEAKREF(user)
+	user.RegisterSignal(GLOB.chemical_data, COMSIG_CHEMICAL_ANNOUNCEMENT, PROC_REF(announce_to_user), override = TRUE)
+	var/datum/action/item_action/view_publications/helmet_visor/publication_action = new(attached_helmet)
+	publication_action.give_to(user)
 
-/obj/item/device/helmet_visor/medical/deactivate_visor(obj/item/clothing/head/helmet/marine/attached_helmet, mob/living/carbon/human/user)
+/obj/item/device/helmet_visor/medical/advanced/deactivate_visor(obj/item/clothing/head/helmet/marine/attached_helmet, mob/living/carbon/human/user)
 	. = ..()
-	for(var/type in hud_type)
-		var/datum/mob_hud/current_mob_hud = GLOB.huds[type]
-		current_mob_hud.remove_hud_from(user, attached_helmet)
-
-/obj/item/device/helmet_visor/medical/process(delta_time)
-	return PROCESS_KILL
+	equipped_user = null
+	UnregisterSignal(GLOB.chemical_data, COMSIG_CHEMICAL_ANNOUNCEMENT)
+	var/datum/action/item_action/view_publications/helmet_visor/publication_action = locate() in attached_helmet.actions
+	qdel(publication_action)
 
 /obj/item/device/helmet_visor/medical/advanced/can_toggle(mob/living/carbon/human/user)
 	. = ..()
@@ -153,6 +116,11 @@
 		return FALSE
 
 	return TRUE
+
+/obj/item/device/helmet_visor/medical/advanced/proc/announce_to_user(datum/source, text, name)
+	var/mob/player = equipped_user.resolve()
+	playsound_client(player.client, 'sound/effects/radiostatic.ogg', player.loc, 25, FALSE)
+	player.play_screen_text("<span class='langchat' style=font-size:16pt;text-align:center valign='top'><u>Chemical Advisory: [name]</u></span><br>[text]", /atom/movable/screen/text/screen_text/chemical_advisory, "#13d182", TRUE)
 
 /obj/item/device/helmet_visor/medical/advanced/ui_state(mob/user)
 	return GLOB.not_incapacitated_and_adjacent_strict_state
@@ -202,23 +170,21 @@
 	medical_visor.tgui_interact(owner)
 
 /obj/item/device/helmet_visor/security
-	name = "AN/JPAV-73"
-	desc = "The guts of a Judicial/Personal-Augmented-Viewer HUD unit. Uncommon to see in use outside of military police units."
+	name = "security optic"
 	icon_state = "sec_sight"
-	hud_type = list(MOB_HUD_FACTION_MARINE, MOB_HUD_FACTION_ARMY, MOB_HUD_FACTION_NAVY, MOB_HUD_SECURITY_ADVANCED)
+	hud_type = MOB_HUD_SECURITY_ADVANCED
 	action_icon_string = "sec_sight_down"
 	helmet_overlay = "sec_sight_right"
 
 /obj/item/device/helmet_visor/welding_visor
 	name = "welding visor"
-	desc = "An integrated heavily-polarized welding screen that can be quickly deployed & retracted as needed by the operator."
 	icon_state = "sight_empty"
 	hud_type = null
 	action_icon_string = "blank_hud_sight_down"
 	helmet_overlay = "weld_visor"
 
 /obj/item/device/helmet_visor/welding_visor/activate_visor(obj/item/clothing/head/helmet/marine/attached_helmet, mob/living/carbon/human/user)
-	attached_helmet.vision_impair = VISION_IMPAIR_MAX
+	attached_helmet.vision_impair = VISION_IMPAIR_ULTRA
 	attached_helmet.flags_inventory |= COVEREYES|COVERMOUTH
 	attached_helmet.flags_inv_hide |= HIDEEYES|HIDEFACE
 	attached_helmet.eye_protection = EYE_PROTECTION_WELDING
@@ -237,6 +203,9 @@
 /obj/item/device/helmet_visor/welding_visor/tanker
 	helmet_overlay = "tanker_weld_visor"
 
+/obj/item/device/helmet_visor/welding_visor/goon
+	helmet_overlay = "goon_weld_visor"
+
 #define NVG_VISOR_USAGE(delta_time) (power_cell.use(power_use * (delta_time ? delta_time : 1)))
 
 /obj/item/device/helmet_visor/night_vision
@@ -248,15 +217,16 @@
 	helmet_overlay = "nvg_sight_right"
 	toggle_on_sound = 'sound/handling/toggle_nv1.ogg'
 	toggle_off_sound = 'sound/handling/toggle_nv2.ogg'
+	var/matrix_color = NV_COLOR_GREEN
 
 	/// The internal battery for the visor
-	var/obj/item/cell/high/power_cell
+	var/obj/item/cell/super/power_cell
 
-	/// About 5 minutes active use charge (hypothetically)
+	/// About 10 minutes active use charge (hypothetically)
 	var/power_use = 33
 
 	/// The alpha of darkness we set to for the mob while the visor is on, not completely fullbright but see-able
-	var/lighting_alpha = 140
+	var/lighting_alpha = 100
 
 	/// A slight glowing green light while the NVG is activated, is initialized as in the attached_helmet's contents
 	var/atom/movable/nvg_light/on_light
@@ -279,10 +249,11 @@
 
 /obj/item/device/helmet_visor/night_vision/activate_visor(obj/item/clothing/head/helmet/marine/attached_helmet, mob/living/carbon/human/user)
 	RegisterSignal(user, COMSIG_HUMAN_POST_UPDATE_SIGHT, PROC_REF(on_update_sight))
-
-	user.add_client_color_matrix("nvg_visor", 90, color_matrix_multiply(color_matrix_saturation(0.02), color_matrix_from_string("#c4dbdf")))
+	if(user.client?.prefs?.night_vision_preference)
+		matrix_color = user.client.prefs.nv_color_list[user.client.prefs.night_vision_preference]
+	user.add_client_color_matrix("nvg_visor", 99, color_matrix_multiply(color_matrix_saturation(0), color_matrix_from_string(matrix_color)))
 	user.overlay_fullscreen("nvg_visor", /atom/movable/screen/fullscreen/flash/noise/nvg)
-	//user.overlay_fullscreen("nvg_visor_blur", /atom/movable/screen/fullscreen/brute/nvg, 1)
+	user.overlay_fullscreen("nvg_visor_blur", /atom/movable/screen/fullscreen/brute/nvg, 3)
 	user.update_sight()
 	if(visor_glows)
 		on_light = new(attached_helmet)
@@ -323,7 +294,7 @@
 	if(!.)
 		return
 
-	if(user.client?.view > 7)
+	if(user.client.view > 7)
 		to_chat(user, SPAN_WARNING("You cannot use [src] while using optics."))
 		return FALSE
 
@@ -373,7 +344,7 @@
 /obj/item/device/helmet_visor/night_vision/marine_raider
 	name = "advanced night vision optic"
 	desc = "An insertable visor HUD into a standard USCM helmet. This type gives a form of night vision and is standard issue in special forces units."
-	hud_type = list(MOB_HUD_FACTION_MARINE, MOB_HUD_FACTION_ARMY, MOB_HUD_FACTION_NAVY, MOB_HUD_MEDICAL_ADVANCED)
+	hud_type = list(MOB_HUD_FACTION_MARINE, MOB_HUD_MEDICAL_ADVANCED)
 	helmet_overlay = "nvg_sight_right_raider"
 	power_use = 0
 	visor_glows = FALSE
@@ -395,14 +366,37 @@
 /obj/item/device/helmet_visor/night_vision/marine_raider/process(delta_time)
 	return PROCESS_KILL
 
-/obj/item/device/helmet_visor/night_vision/marine_raider/rmc
-	name = "HIBVS night-sight visor"
-	desc = "A heavily modified version of the standard HBVS, that offers infrared night-vision capabilities alongside the existent biomonitoring systems."
-	hud_type = list(MOB_HUD_FACTION_TWE, MOB_HUD_FACTION_WY, MOB_HUD_MEDICAL_ADVANCED)
-	helmet_overlay = "nvg_sight_rmc"
-	power_use = 0
-	visor_glows = FALSE
+/obj/item/device/helmet_visor/leader
+	name = "leader optic"
+	desc = "An insertable visor HUD loaded with tacmap data into a standard USCM helmet."
+	hud_type = null
+	///The type of minimap this visor gives access to
+	var/datum/action/minimap/minimap_type = /datum/action/minimap/marine
 
+/obj/item/device/helmet_visor/leader/activate_visor(obj/item/clothing/head/helmet/marine/attached_helmet, mob/living/carbon/human/user)
+	add_minimap(user)
+
+/obj/item/device/helmet_visor/leader/deactivate_visor(obj/item/clothing/head/helmet/marine/attached_helmet, mob/living/carbon/human/user)
+	remove_minimap(user)
+
+/obj/item/device/helmet_visor/leader/proc/add_minimap(mob/living/carbon/human/user)
+	remove_minimap(user)
+	var/datum/action/minimap/mini = new minimap_type
+	mini.give_to(user, mini)
+
+///Remove all action of type minimap from the wearer, and make him disappear from the minimap
+/obj/item/device/helmet_visor/leader/proc/remove_minimap(mob/living/carbon/human/user)
+	for(var/datum/action/action as anything in user.actions)
+		if(istype(action, /datum/action/minimap))
+			action.remove_from(user)
+
+/obj/item/device/helmet_visor/leader/upp
+	minimap_type = /datum/action/minimap/upp
+	desc = "An insertable visor HUD loaded with tacmap data into a standard UPP helmet."
+
+/obj/item/device/helmet_visor/leader/pmc
+	minimap_type = /datum/action/minimap/pmc
+	desc = "An insertable visor HUD loaded with tacmap data into a standard PMC helmet."
 /////////////////////// PO VISOR ///////////////////////
 
 /obj/item/device/helmet_visor/po_visor
@@ -411,24 +405,23 @@
 	icon_state = "po_visor"
 	action_icon_string = "po_visor_down"
 	helmet_overlay = "po_visor_black"
+	hud_type = null
 	toggle_on_sound = 'sound/handling/helmet_open.ogg'
 	toggle_off_sound = 'sound/handling/helmet_close.ogg'
 
-/obj/item/device/helmet_visor/po_visor/can_attach_to(obj/item/clothing/head/helmet/target_helmet)
-	if(!istype(target_helmet, /obj/item/clothing/head/helmet/upp/marinepilot))
+/obj/item/device/helmet_visor/po_visor/can_attach_to(obj/item/clothing/head/helmet/marine/target_helmet)
+	if(!istype(target_helmet, /obj/item/clothing/head/helmet/marine/pilot))
 		return FALSE
 	return TRUE
 
 /obj/item/device/helmet_visor/po_visor/activate_visor(obj/item/clothing/head/helmet/marine/attached_helmet, mob/living/carbon/human/user)
-	..()
-	attached_helmet.flags_inventory |= COVEREYES
+	attached_helmet.flags_inventory |= COVEREYES|COVERMOUTH
 	attached_helmet.flags_inv_hide |= HIDEEYES|HIDEFACE
 	attached_helmet.eye_protection = EYE_PROTECTION_FLASH
 	user.update_tint()
 
 /obj/item/device/helmet_visor/po_visor/deactivate_visor(obj/item/clothing/head/helmet/marine/attached_helmet, mob/living/carbon/human/user)
-	..()
-	attached_helmet.flags_inventory &= ~(COVEREYES)
+	attached_helmet.flags_inventory &= ~(COVEREYES|COVERMOUTH)
 	attached_helmet.flags_inv_hide &= ~(HIDEEYES|HIDEFACE)
 	attached_helmet.eye_protection = EYE_PROTECTION_NONE
 	user.update_tint()
@@ -462,18 +455,3 @@
 	icon_state = "po_visor_yellow"
 	action_icon_string = "po_visor_yellow_down"
 	helmet_overlay = "po_visor_yellow"
-
-/obj/item/device/helmet_visor/po_visor/marine
-	name = "MK30 flight visor, black"
-	desc = "A standard issue snap-on visor used by USCM dropship pilots. Polarized to reduce glare and protect the eyes during atmospheric re-entry and orbital deployment. This one seems to be slightly modified in order to fit into most modern helmets."
-	helmet_overlay = "po_visor_black_marine"
-	hud_type = list()
-
-/obj/item/device/helmet_visor/po_visor/marine/can_attach_to(obj/item/clothing/head/helmet/target_helmet)
-	return TRUE
-
-/obj/item/device/helmet_visor/po_visor/marine/yellow
-	name = "MK30 flight visor, yellow"
-	icon_state = "po_visor_yellow"
-	action_icon_string = "po_visor_yellow_down"
-	helmet_overlay = "po_visor_yellow_marine"

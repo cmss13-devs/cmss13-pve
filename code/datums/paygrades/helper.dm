@@ -1,5 +1,6 @@
 /proc/get_paygrades(paygrade, size, gender)
-	if(!paygrade) return
+	if(!paygrade)
+		return
 
 	var/datum/paygrade/P = GLOB.paygrades[paygrade]
 
@@ -24,15 +25,18 @@
 			return "[paygrade]"
 		return P.name
 
-/proc/get_paygrade_id_by_name(paygrade_name)
+/proc/get_paygrade_id_by_name(paygrade_name, paygrades_list_to_search = GLOB.paygrades)
 	var/datum/paygrade/paygrade
-	for(var/paygrade_id in GLOB.paygrades)
-		paygrade = GLOB.paygrades[paygrade_id]
+	if(!length(paygrades_list_to_search))
+		paygrades_list_to_search = GLOB.paygrades
+	for(var/paygrade_id in paygrades_list_to_search)
+		paygrade = paygrades_list_to_search[paygrade_id]
 		if(paygrade.name == paygrade_name)
 			return paygrade_id
 
 /proc/get_rank_pins(paygrade)
-	if(!paygrade) return null
+	if(!paygrade)
+		return null
 
 	if(!(paygrade in GLOB.paygrades))
 		return null

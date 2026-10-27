@@ -20,11 +20,11 @@
 
 //Don't set this very much higher then 1024 unless you like inviting people in to dos your server with message spam
 #define MAX_MESSAGE_LEN 1024
-#define MAX_EMOTE_LEN 1024
+#define MAX_EMOTE_LEN 256
 #define MAX_PAPER_MESSAGE_LEN 3072
 #define MAX_BOOK_MESSAGE_LEN 9216
 #define MAX_NAME_LEN 28
-#define MAX_RECORDS_MESSAGE_LEN 10240
-#define MAX_FLAVOR_MESSAGE_LEN 3072
-
+#define MAX_PRESET_NAME_LEN 20
 #define MAX_MESSAGE_CHUNKS 20
+
+#define WRAP_BRACKETS(to_resolve) "\[[to_resolve]\]"

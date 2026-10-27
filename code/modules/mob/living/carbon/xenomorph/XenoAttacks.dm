@@ -14,11 +14,10 @@
 			M.flick_attack_overlay(src, "punch")
 			visible_message(SPAN_DANGER("[S] [S.attacktext] [src]!"), null, null, 5, CHAT_TYPE_MELEE_HIT)
 			var/damage = rand(S.melee_damage_lower, S.melee_damage_upper)
-			apply_damage(damage, BRUTE)
+			apply_damage(damage, BRUTE, enviro=TRUE)
 			last_damage_data = create_cause_data(initial(M.name), M)
 			S.attack_log += text("\[[time_stamp()]\] <font color='red'>attacked [key_name(src)]</font>")
 			attack_log += text("\[[time_stamp()]\] <font color='orange'>was attacked by [key_name(S)]</font>")
-			updatehealth()
 
 /mob/living/carbon/xenomorph/attack_hand(mob/living/carbon/human/M)
 	if(..())
@@ -31,14 +30,14 @@
 				back.add_fingerprint(M)
 				var/obj/item/storage/backpack = back
 				if(backpack && !M.action_busy)
-					if(stat != DEAD) // If the Xeno is alive, fight back
+					if((stat != DEAD) && !legcuffed) // If the Xeno is alive, fight back
 						if(!M.ally_of_hivenumber(hivenumber))
 							M.KnockDown(rand(caste.tacklestrength_min, caste.tacklestrength_max))
 							playsound(M.loc, 'sound/weapons/pierce.ogg', 25, TRUE)
 							M.visible_message(SPAN_WARNING("\The [M] tried to open \the [backpack] on [src] but instead gets a tail swipe to the head!"))
 							return FALSE
 
-					M.visible_message(SPAN_NOTICE("\The [M] starts opening \the [backpack] on [src]"), \
+					M.visible_message(SPAN_NOTICE("\The [M] starts opening \the [backpack] on [src]"),
 					SPAN_NOTICE("You begin to open \the [backpack] on [src], so you can check its contents."), null, 5, CHAT_TYPE_FLUFF_ACTION)
 					if(!do_after(M, 1 SECONDS, INTERRUPT_NO_NEEDHAND, BUSY_ICON_GENERIC, src, INTERRUPT_MOVED, BUSY_ICON_GENERIC)) //Timed opening.
 						to_chat(M, SPAN_WARNING("You were interrupted!"))
@@ -49,10 +48,10 @@
 					backpack.open(M)
 					return
 			if(stat == DEAD)
-				M.visible_message(SPAN_WARNING("\The [M] pokes \the [src], but nothing happens."), \
+				M.visible_message(SPAN_WARNING("\The [M] pokes \the [src], but nothing happens."),
 				SPAN_WARNING("You poke \the [src], but nothing happens."), null, 5, CHAT_TYPE_FLUFF_ACTION)
 			else
-				M.visible_message(SPAN_WARNING("\The [M] pokes \the [src]."), \
+				M.visible_message(SPAN_WARNING("\The [M] pokes \the [src]."),
 				SPAN_WARNING("You poke \the [src]."), null, 5, CHAT_TYPE_FLUFF_ACTION)
 
 		if(INTENT_GRAB)
@@ -64,9 +63,24 @@
 
 			M.start_pulling(src)
 
-		else
+		if(INTENT_DISARM)
+			M.animation_attack_on(src)
+			M.flick_attack_overlay(src, "disarm")
+			//friendly lessers, huggers and larva can be pushed around
+			if(M.ally_of_hivenumber(hivenumber) && mob_size < MOB_SIZE_XENO_SMALL && prob(85))
+				playsound(loc, 'sound/weapons/alien_knockdown.ogg', 25, 1)
+				M.visible_message(SPAN_DANGER("[M] shoves [src]!"), null, null, 5, CHAT_TYPE_COMBAT_ACTION)
+				apply_effect(1, WEAKEN)
+				return
+
+			var/shove_sound = pick('sound/weapons/punchmiss.ogg', 'sound/weapons/thudswoosh.ogg')
+			playsound(loc, shove_sound, 25, 1, 7)
+			visible_message(SPAN_DANGER("[M] tries to shove [src]!"), null, null, 5, CHAT_TYPE_COMBAT_ACTION)
+
+		if(INTENT_HARM)
 			var/datum/unarmed_attack/attack = M.species.unarmed
-			if(!attack.is_usable(M)) attack = M.species.secondary_unarmed
+			if(!attack.is_usable(M))
+				attack = M.species.secondary_unarmed
 			if(!attack.is_usable(M))
 				return 0
 
@@ -84,7 +98,6 @@
 				attack_log += text("\[[time_stamp()]\] <font color='orange'>was [picked_verb]ed by [key_name(M)]</font>")
 				M.attack_log += text("\[[time_stamp()]\] <font color='red'>[picked_verb]ed [key_name(src)]</font>")
 				apply_damage(damage, BRUTE)
-				updatehealth()
 			else
 				playsound(loc, attack.miss_sound, 25, 1)
 				visible_message(SPAN_DANGER("[M] tried to [pick(attack.attack_verb)] [src]!"), null, null, 5, CHAT_TYPE_MELEE_HIT)
@@ -94,7 +107,7 @@
 //Hot hot Aliens on Aliens action.
 //Actually just used for eating people.
 /mob/living/carbon/xenomorph/attack_alien(mob/living/carbon/xenomorph/xeno)
-	if (xeno.fortify || HAS_TRAIT(xeno, TRAIT_ABILITY_BURROWED))
+	if(xeno.fortify || HAS_TRAIT(xeno, TRAIT_ABILITY_BURROWED) || HAS_TRAIT(xeno, TRAIT_ABILITY_REFLECTIVE_PLATES))
 		return XENO_NO_DELAY_ACTION
 
 	if(HAS_TRAIT(src, TRAIT_ABILITY_BURROWED))
@@ -157,7 +170,7 @@
 			if(xeno.behavior_delegate)
 				damage = xeno.behavior_delegate.melee_attack_modify_damage(damage, src)
 
-			//Frenzy auras stack in a way, then the raw value is multipled by two to get the additive modifier
+			//Frenzy auras stack in a way, then the raw value is multiplied by two to get the additive modifier
 			if(xeno.frenzy_aura > 0)
 				damage += (xeno.frenzy_aura * FRENZY_DAMAGE_MULTIPLIER)
 
@@ -213,7 +226,7 @@
 			to_chat(src, SPAN_NOTICE("Too slow!"))
 			return
 		target.flags_emote &= ~EMOTING_HEADBUTT
-		visible_message(SPAN_NOTICE("[src] slams their head into [target]!"), \
+		visible_message(SPAN_NOTICE("[src] slams their head into [target]!"),
 			SPAN_NOTICE("We slam your head into [target]!"), null, 4)
 		playsound(src, pick('sound/weapons/punch1.ogg','sound/weapons/punch2.ogg','sound/weapons/punch3.ogg','sound/weapons/punch4.ogg'), 50, 1)
 		animation_attack_on(target)
@@ -227,7 +240,7 @@
 		to_chat(src, "You just did an audible emote. Wait a while.")
 		return
 
-	visible_message(SPAN_NOTICE("[src] raises their head for a headbutt from [target]."), \
+	visible_message(SPAN_NOTICE("[src] raises their head for a headbutt from [target]."),
 		SPAN_NOTICE("We raise our head for a headbutt from [target]."), null, 4)
 	flags_emote |= EMOTING_HEADBUTT
 	if(do_after(src, 50, INTERRUPT_ALL|INTERRUPT_EMOTE, EMOTE_ICON_HEADBUTT) && flags_emote & EMOTING_HEADBUTT)
@@ -241,7 +254,7 @@
 			to_chat(src, SPAN_NOTICE("Too slow!"))
 			return
 		target.flags_emote &= ~EMOTING_TAIL_SWIPE
-		visible_message(SPAN_NOTICE("[src] clashes their tail with [target]!"), \
+		visible_message(SPAN_NOTICE("[src] clashes their tail with [target]!"),
 			SPAN_NOTICE("We clash our tail with [target]!"), null, 4)
 		playsound(src, 'sound/weapons/alien_claw_block.ogg', 50, 1)
 		spin_circle()
@@ -255,7 +268,7 @@
 		to_chat(src, "You just did an audible emote. Wait a while.")
 		return
 
-	visible_message(SPAN_NOTICE("[src] raises their tail out for a swipe from [target]."), \
+	visible_message(SPAN_NOTICE("[src] raises their tail out for a swipe from [target]."),
 		SPAN_NOTICE("We raise our tail out for a tail swipe from [target]."), null, 4)
 	flags_emote |= EMOTING_TAIL_SWIPE
 	if(do_after(src, 50, INTERRUPT_ALL|INTERRUPT_EMOTE, EMOTE_ICON_TAILSWIPE) && flags_emote & EMOTING_TAIL_SWIPE)

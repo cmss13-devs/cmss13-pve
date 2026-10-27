@@ -17,6 +17,28 @@
 	properties = list(PROPERTY_NEOGENETIC = 1, PROPERTY_NUTRITIOUS = 2, PROPERTY_HEMOGENIC = 1)
 	flags = REAGENT_SCANNABLE
 
+/datum/reagent/nutriment/reaction_hydro_tray_reagent(obj/structure/machinery/portable_atmospherics/hydroponics/processing_tray, volume)
+	. = ..()
+	if(!processing_tray.seed)
+		return
+	processing_tray.plant_health += 0.5*volume
+	processing_tray.yield_mod += 0.1*volume
+	processing_tray.nutrilevel += 1*volume
+
+/datum/reagent/nutriment/process_non_property_effects(mob/living/M, list/mods, delta_time)
+	var/first_collective_volume = 0
+	for(var/datum/reagent/nutriment/nutri in M.reagents.reagent_list)
+		first_collective_volume += nutri.volume
+	if(first_collective_volume >= HIGH_REAGENTS_OVERDOSE)
+		var/second_collective_volume = 0
+		for(var/datum/reagent/nutriment/nutri in M.reagents.reagent_list)
+			holder.remove_reagent(nutri.id, max(first_collective_volume / 10, 5) * delta_time, TRUE)
+			second_collective_volume += nutri.volume
+		var/mob/living/carbon/human/subject = M
+		if(ishuman(M) && subject.lastpuke == FALSE && second_collective_volume >= HIGH_REAGENTS_OVERDOSE)
+			subject.Superslow(20)
+			subject.vomit()
+
 /datum/reagent/nutriment/egg
 	name = "Egg"
 	id = "egg"
@@ -39,7 +61,7 @@
 	name = "Meat Protein"
 	id = "meatprotein"
 	description = "Proteins found in various types of meat."
-	flags = REAGENT_NO_GENERATION
+	chemclass = CHEM_CLASS_RARE
 
 /datum/reagent/nutriment/meat/fish
 	name = "Fish Meat"
@@ -51,10 +73,10 @@
 	name = "Plant Matter"
 	id = "plantmatter"
 	description = "Some sort of plant."
-	flags = REAGENT_NO_GENERATION
+	chemclass = CHEM_CLASS_RARE
 
 /datum/reagent/nutriment/grown/vegetable
-	name = "Vegetables"
+	name = "Vegetable"
 	id = "vegetable"
 	description = "Some sort of vegetable."
 	flags = REAGENT_NO_GENERATION
@@ -95,6 +117,7 @@
 	description = "Some sort of grinded nut, smells like almonds."
 	flags = REAGENT_NO_GENERATION
 
+
 /datum/reagent/lipozine
 	name = "Lipozine" // The anti-nutriment.
 	id = "lipozine"
@@ -115,6 +138,7 @@
 	nutriment_factor = 2 * REAGENTS_METABOLISM
 	color = "#792300" // rgb: 121, 35, 0
 	chemclass = CHEM_CLASS_RARE
+	flags = REAGENT_NO_GENERATION
 	properties = list(PROPERTY_NUTRITIOUS = 2)
 
 /datum/reagent/ketchup
@@ -194,20 +218,107 @@
 			if(victim.pain.feels_pain)
 				victim.emote("scream")
 				to_chat(victim, SPAN_WARNING("You're sprayed directly in the eyes with pepperspray!"))
-				victim.AdjustEyeBlur(25)
-				victim.AdjustEyeBlind(10)
-				victim.apply_effect(3, STUN)
-				victim.apply_effect(3, WEAKEN)
+				victim.EyeBlur(25)
+				victim.EyeBlind(10)
+				victim.Stun(3)
+				victim.KnockDown(3)
 
 /datum/reagent/frostoil
 	name = "Frost Oil"
 	id = "frostoil"
-	description = "A special oil that noticably chills the body. Extracted from Ice Peppers."
+	description = "A special oil that noticeably chills the body. Extracted from Ice Peppers."
 	reagent_state = LIQUID
 	color = "#B31008" // rgb: 139, 166, 233
 	chemclass = CHEM_CLASS_RARE
 	properties = list(PROPERTY_HYPOTHERMIC = 6)
 
+// HYDRO HARD TIER CHEMS
+
+/datum/reagent/atropine //poppy
+	name = "Atropine"
+	id = "atropine"
+	description = "Plant based chemical replaced and superseded by Epinephrine, it has a plethora of side effects but is considerably stronger than epinephrine" //I know, now stay shush
+	reagent_state = LIQUID
+	color = "#B31008" // rgb: 139, 166, 233
+	chemclass = CHEM_CLASS_NONE
+	properties = list(PROPERTY_ELECTROGENETIC = 7, PROPERTY_INTRAVENOUS = 1, PROPERTY_NEUROTOXIC = 0.5)
+
+/datum/reagent/thymol //some kind of thyme
+	name = "Thymol"
+	id = "thymol"
+	description = "Known chemical used in the 20th century as innovative way to combat hookworm parasites and generally all kinds of infections, it was since used as natural pesticide."
+	reagent_state = LIQUID
+	color = "#badb9e" // rgb: 139, 166, 233
+	chemclass = CHEM_CLASS_NONE
+	properties = list(PROPERTY_ANTIPARASITIC = 1.5)
+
+/datum/reagent/psoralen //cabbage, doesn't make sense but eh
+	name = "Psoralen"
+	id = "psoralen"
+	description = "Naturally occurring carcinogenic, used commonly as mutagen for DNA research."
+	reagent_state = LIQUID
+	color = "#c9ca75" // rgb: 139, 166, 233
+	chemclass = CHEM_CLASS_NONE
+	properties = list(PROPERTY_CARCINOGENIC = 6)
+
+/datum/reagent/coniine //carrot
+	name = "Coniine"
+	id = "coniine"
+	description = "Potent toxic chemical causing loss of consciousness and respiratory failure in matter of seconds, although it was studied for a long time, it could have some undocumented use."
+	reagent_state = LIQUID
+	overdose = LOW_REAGENTS_OVERDOSE
+	overdose_critical = LOW_REAGENTS_OVERDOSE_CRITICAL
+	color = "#8f947b" // rgb: 139, 166, 233
+	chemclass = CHEM_CLASS_NONE
+	properties = list(PROPERTY_HYPNOTIC = 7, PROPERTY_HYPOXEMIC = 6, PROPERTY_EXCRETING = 2, PROPERTY_HEPATOPEUTIC = 2)
+
+/datum/reagent/zygacine
+	name = "Zygacine"
+	id = "zygacine"
+	description = "Causes convulsing of the heart muscles before blocking the contractions entirely."
+	reagent_state = LIQUID
+	overdose = LOW_REAGENTS_OVERDOSE
+	overdose_critical = LOW_REAGENTS_OVERDOSE_CRITICAL
+	color = "#aaaaaa" // rgb: 139, 166, 233
+	chemclass = CHEM_CLASS_NONE
+	properties = list(PROPERTY_CARDIOTOXIC = 3)
+
+/datum/reagent/digoxin
+	name = "Digoxin"
+	id = "digoxin"
+	description = "One of the oldest chemicals to enter field in treating many heart conditions, besides few sides effects, it can be used to great effect."
+	reagent_state = LIQUID
+	overdose = LOWM_REAGENTS_OVERDOSE
+	overdose_critical = LOWM_REAGENTS_OVERDOSE_CRITICAL
+	color = "#9ec265" // rgb: 139, 166, 233
+	chemclass = CHEM_CLASS_NONE
+	properties = list(PROPERTY_CARDIOPEUTIC = 3, PROPERTY_TRICHOGENIC = 1)
+
+/datum/reagent/urishiol
+	name = "Urishiol"
+	id = "urishiol"
+	description = "Potent skin and tissue irritant causing burns which lasts weeks after the contact is made, commonly encountered in plants like Poison Ivy, Poison Oak, and similar toxicodendrons."
+	overdose = LOW_REAGENTS_OVERDOSE
+	overdose_critical = LOW_REAGENTS_OVERDOSE_CRITICAL
+	custom_metabolism = AMOUNT_PER_TIME(15, 20 MINUTES)
+	reagent_state = LIQUID
+	color = "#c0bf90" // rgb: 139, 166, 233
+	chemclass = CHEM_CLASS_NONE
+	properties = list(PROPERTY_ALLERGENIC = 6, PROPERTY_CORROSIVE = 3)
+
+/datum/reagent/phenol
+	name = "Phenol"
+	id = "phenol"
+	description = "Skin analgesic used for targeted operation and mild pain relief of an area. While safe on the skin, extremely lethal on injection."
+	overdose = LOWM_REAGENTS_OVERDOSE
+	overdose_critical = LOWM_REAGENTS_OVERDOSE_CRITICAL
+	reagent_state = LIQUID
+	color = "#c095c9" // rgb: 139, 166, 233
+	chemclass = CHEM_CLASS_NONE
+	properties = list(PROPERTY_INTRAVENOUS = 1, PROPERTY_NEUROTOXIC = 5)
+
+
+//HARD TIER HYDRO END.
 /datum/reagent/sodiumchloride
 	name = "Table Salt"
 	id = "sodiumchloride"
@@ -233,7 +344,7 @@
 /datum/reagent/coco
 	name = "Coco Powder"
 	id = "coco"
-	description = "The cocoa bean or simply cocoa, which is also called the cacao bean or cacao, is the dried and fully fermented seed of Theobroma cacao, from which cocoa solids and cocoa butter can be extracted. "
+	description = "The cocoa bean or simply cocoa, which is also called the cacao bean or cacao, is the dried and fully fermented seed of Theobroma cacao, from which cocoa solids and cocoa butter can be extracted."
 	reagent_state = SOLID
 	nutriment_factor = 5 * REAGENTS_METABOLISM
 	color = "#302000" // rgb: 48, 32, 0
@@ -248,6 +359,7 @@
 	nutriment_factor = 2 * REAGENTS_METABOLISM
 	color = "#865e2a" // rgb: 48, 32, 0
 	chemclass = CHEM_CLASS_RARE
+	flags = REAGENT_NO_GENERATION
 	properties = list(PROPERTY_NUTRITIOUS = 2)
 
 /datum/reagent/coco_drink
@@ -258,26 +370,7 @@
 	nutriment_factor = 2 * REAGENTS_METABOLISM
 	color = "#61450e" // rgb: 48, 32, 0
 	chemclass = CHEM_CLASS_RARE
-	properties = list(PROPERTY_NUTRITIOUS = 2)
-
-/datum/reagent/vanilla
-	name = "Vanilla Powder"
-	id = "vanilla"
-	description = "Vanilla from the vanilla bean. Now in dust form."
-	reagent_state = SOLID
-	nutriment_factor = 5 * REAGENTS_METABOLISM
-	color = "#ffecc6"
-	chemclass = CHEM_CLASS_RARE
-	properties = list(PROPERTY_NUTRITIOUS = 2)
-
-/datum/reagent/strawberry
-	name = "Strawberry Powder"
-	id = "strawberrypowder"
-	description = "The flash frozen and ground elements of strawberry. Maybe."
-	reagent_state = SOLID
-	nutriment_factor = 5 * REAGENTS_METABOLISM
-	color = "#fc0065"
-	chemclass = CHEM_CLASS_RARE
+	flags = REAGENT_NO_GENERATION
 	properties = list(PROPERTY_NUTRITIOUS = 2)
 
 /datum/reagent/psilocybin
@@ -312,7 +405,7 @@
 /datum/reagent/enzyme
 	name = "Universal Enzyme"
 	id = "enzyme"
-	description = "A universal enzyme used in the preperation of certain chemicals and foods."
+	description = "A universal enzyme used in the preparation of certain chemicals and foods."
 	reagent_state = LIQUID
 	color = "#365E30" // rgb: 54, 94, 48
 	overdose = REAGENTS_OVERDOSE
@@ -379,102 +472,12 @@
 	color = "#801E28" // rgb: 128, 30, 40
 	properties = list(PROPERTY_NUTRITIOUS = 2)
 
-/datum/reagent/strawberryjam
-	name = "Strawberry Jam"
-	id = "strawberryjam"
-	description = "Sweet jam made from strawberries."
-	reagent_state = LIQUID
-	nutriment_factor = 1 * REAGENTS_METABOLISM
-	color = "#801E28" // rgb: 128, 30, 40
-	properties = list(PROPERTY_NUTRITIOUS = 2)
-
 /datum/reagent/honey
 	name = "Honey"
 	id = "honey"
 	description = "Honey is a natural sweet, viscous food substance composed of mainly fructose and glucose."
 	color = COLOR_YELLOW
 	chemclass = CHEM_CLASS_RARE
-	properties = list(PROPERTY_NUTRITIOUS = 2)
-	flags = REAGENT_NO_GENERATION
-
-/datum/reagent/dehydrated_juice
-	name = "Mystery Juice Powder"
-	id = "dehydrated_juice"
-	description = "Powderized fruit-juice ready to be mixed with water. Smells of artificial bananas."
-	reagent_state = SOLID
-	color = "#863333" // rgb: 175, 175, 0
-	chemclass = CHEM_CLASS_COMMON
-	properties = list(PROPERTY_NUTRITIOUS = 2)
-	flags = REAGENT_NO_GENERATION
-
-/datum/reagent/dehydrated_orange_juice
-	name = "Orange Juice Powder"
-	id = "dehydrated_orange_juice"
-	description = "Powderized orange-juice ready to be mixed with water. Smells of, surprise surprise, oranges."
-	reagent_state = SOLID
-	color = "#E78108" // rgb: 231, 129, 8
-	chemclass = CHEM_CLASS_COMMON
-	properties = list(PROPERTY_NUTRITIOUS = 2)
-	flags = REAGENT_NO_GENERATION
-
-/datum/reagent/dehydrated_apple_juice
-	name = "Apple Juice Powder"
-	id = "dehydrated_apple_juice"
-	description = "Powderized apple-juice ready to be mixed with water. Smells of, surprise surprise, apples."
-	reagent_state = SOLID
-	color = "#365E30" // rgb: 54, 94, 48
-	chemclass = CHEM_CLASS_COMMON
-	properties = list(PROPERTY_NUTRITIOUS = 2)
-	flags = REAGENT_NO_GENERATION
-
-/datum/reagent/dehydrated_watermelon_juice
-	name = "Watermelon Juice Powder"
-	id = "dehydrated_watermelon_juice"
-	description = "Powderized watermelon-juice ready to be mixed with water. Smells of, surprise surprise, watermelons."
-	reagent_state = SOLID
-	color = "#863333" // rgb: 134, 51, 51
-	chemclass = CHEM_CLASS_COMMON
-	properties = list(PROPERTY_NUTRITIOUS = 2)
-	flags = REAGENT_NO_GENERATION
-
-/datum/reagent/dehydrated_grape_juice
-	name = "Grape Juice Powder"
-	id = "dehydrated_grape_juice"
-	description = "Powderized grape-juice ready to be mixed with water. Smells of, surprise surprise, grapes."
-	reagent_state = SOLID
-	color = "#863333" // rgb: 134, 51, 51
-	chemclass = CHEM_CLASS_COMMON
-	properties = list(PROPERTY_NUTRITIOUS = 2)
-	flags = REAGENT_NO_GENERATION
-
-/datum/reagent/dehydrated_pineapple_juice
-	name = "Pineapple Juice Powder"
-	id = "dehydrated_pineapple_juice"
-	description = "Powderized pineapple-juice ready to be mixed with water. Smells of, surprise surprise, pineapples."
-	reagent_state = SOLID
-	color = "#FFC000" // rgb: 255, 192, 0
-	chemclass = CHEM_CLASS_COMMON
-	properties = list(PROPERTY_NUTRITIOUS = 2)
-	flags = REAGENT_NO_GENERATION
-
-/datum/reagent/dehydrated_egg_powder
-	name = "Powdered Egg"
-	id = "dehydrated_egg_powder"
-	description = "Powderized egg-whites and egg-yolk ready to be mixed with water."
-	reagent_state = SOLID
-	color = "#FFFFFF" // rgb: 255,255,255
-	chemclass = CHEM_CLASS_COMMON
-	properties = list(PROPERTY_NUTRITIOUS = 2)
-	flags = REAGENT_NO_GENERATION
-
-/datum/reagent/dehydrated_milk_powder
-	name = "Dehydrated Milk Powder"
-	id = "dehydrated_milk_powder"
-	description = "Dehydrated milk-product powder waiting to be mixed with water."
-	reagent_state = SOLID
-	color = "#DFDFDF" // rgb: 223, 223, 223
-	chemclass = CHEM_CLASS_COMMON
-	properties = list(PROPERTY_NUTRITIOUS = 2)
 	flags = REAGENT_NO_GENERATION
 
 /datum/reagent/electrolyte_grape_beverage

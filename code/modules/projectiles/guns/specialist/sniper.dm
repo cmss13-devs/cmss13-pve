@@ -5,10 +5,16 @@
 //Because this parent type did not exist
 //Note that this means that snipers will have a slowdown of 3, due to the scope
 /obj/item/weapon/gun/rifle/sniper
+	item_icons = list(
+		WEAR_BACK = 'icons/mob/humans/onmob/clothing/back/guns_by_type/marksman_rifles.dmi',
+		WEAR_J_STORE = 'icons/mob/humans/onmob/clothing/suit_storage/guns_by_type/marksman_rifles.dmi',
+		WEAR_L_HAND = 'icons/mob/humans/onmob/inhands/weapons/guns/marksman_rifles_lefthand.dmi',
+		WEAR_R_HAND = 'icons/mob/humans/onmob/inhands/weapons/guns/marksman_rifles_righthand.dmi'
+	)
 	mouse_pointer = 'icons/effects/mouse_pointer/sniper_mouse.dmi'
 
 	aim_slowdown = SLOWDOWN_ADS_SPECIALIST
-	wield_delay = WIELD_DELAY_SLOW
+	wield_delay = WEAPON_DELAY_SLOW
 
 	var/has_aimed_shot = TRUE
 	var/aiming_time = 1.25 SECONDS
@@ -19,12 +25,7 @@
 	var/sniper_lockon_icon = "sniper_lockon"
 	var/obj/effect/ebeam/sniper_beam_type = /obj/effect/ebeam/laser
 	var/sniper_beam_icon = "laser_beam"
-	var/skill_locked = FALSE
-
-	/// How far out people can tell the direction of the shot, baseline of the hAI marksman firing range
-	var/fire_message_range = 30
-	///If the sniper will generate a message when shot
-	var/loud = TRUE
+	var/skill_locked = TRUE
 
 	/// Variables for Focus Fire and alternate icons for lockon and laser.
 	var/enable_aimed_shot_icon_alt = FALSE
@@ -48,24 +49,6 @@
 		if(!skillcheck(user, SKILL_SPEC_WEAPONS, SKILL_SPEC_ALL) && user.skills.get_skill_level(SKILL_SPEC_WEAPONS) != SKILL_SPEC_SNIPER)
 			to_chat(user, SPAN_WARNING("You don't seem to know how to use \the [src]..."))
 			return 0
-
-/obj/item/weapon/gun/rifle/sniper/Fire(atom/target, mob/living/user, params, reflex, dual_wield)
-	. = ..()
-	if(!.)
-		return .
-	if(!loud)
-		return .
-	for(var/mob/current_mob as anything in get_mobs_in_z_level_range(get_turf(user), fire_message_range) - user)
-		var/relative_dir = Get_Compass_Dir(current_mob, user)
-		var/final_dir = dir2text(relative_dir)
-		if(current_mob.faction != user.faction)
-			to_chat(current_mob, SPAN_HIGHDANGER("You hear a loud gunshot coming from [final_dir ? "the [final_dir]" : "nearby"]!"))
-		else
-			to_chat(current_mob, SPAN_WARNING("You hear a loud gunshot coming from [final_dir ? "the [final_dir]" : "nearby"]!"))
-		if(current_mob.client)
-			playsound_client(current_mob.client, 'sound/weapons/gun_vulture_report.ogg', src, 30)
-
-	return .
 
 // Aimed shot ability
 /datum/action/item_action/specialist/aimed_shot
@@ -118,7 +101,7 @@
 		return
 
 	var/obj/item/weapon/gun/rifle/sniper/sniper_rifle = holder_item
-	if(world.time < sniper_rifle.aimed_shot_cooldown)
+	if(world.time < sniper_rifle.aimed_shot_cooldown || !sniper_rifle.able_to_fire(human))
 		return
 
 	if(!check_can_use(target))
@@ -137,11 +120,6 @@
 		aim_multiplier = 0.6
 		aiming_buffs++
 
-	var/mob/living/carbon/xenomorph/bug
-	if(target == bug)
-		aim_multiplier = 0.5
-		aiming_buffs++
-
 	if(HAS_TRAIT(target, TRAIT_SPOTTER_LAZED))
 		aim_multiplier = 0.5
 		aiming_buffs++
@@ -156,7 +134,7 @@
 
 	if(istype(sniper_rifle, /obj/item/weapon/gun/rifle/sniper/XM43E1))
 		var/obj/item/weapon/gun/rifle/sniper/XM43E1/amr = sniper_rifle
-		if((amr.focused_fire_counter >= 1 && amr.focused_fire_counter < 3) && (target == amr.focused_fire_target?.resolve()))
+		if(amr.focused_fire_counter == 1 && target == amr.focused_fire_target?.resolve())
 			sniper_rifle.enable_aimed_shot_icon_alt = TRUE
 		else
 			sniper_rifle.enable_aimed_shot_icon_alt = FALSE
@@ -194,18 +172,22 @@
 		animate(laser_beam.visuals, alpha = initial(laser_beam.visuals.alpha), f_aiming_time, easing = SINE_EASING|EASE_OUT)
 
 	////timer is (f_spotting_time + 1 SECONDS) because sometimes it janks out before the doafter is done. blame sleeps or something
+	SEND_SIGNAL(human, COMSIG_HUMAN_AIMED_SHOT_START)
 
 	if(!do_after(human, f_aiming_time, INTERRUPT_ALL|BEHAVIOR_IMMOBILE, NO_BUSY_ICON))
+		SEND_SIGNAL(human, COMSIG_HUMAN_AIMED_SHOT_END)
 		target.overlays -= lockon_icon
 		target.overlays -= lockon_direction_icon
 		qdel(laser_beam)
 		return
 
+	SEND_SIGNAL(human, COMSIG_HUMAN_AIMED_SHOT_END)
+
 	target.overlays -= lockon_icon
 	target.overlays -= lockon_direction_icon
 	qdel(laser_beam)
 
-	if(!check_can_use(target, TRUE) || target.is_dead())
+	if(!check_can_use(target, TRUE) || target.is_dead() || !sniper_rifle.able_to_fire(human))
 		return
 
 	var/obj/projectile/aimed_proj = sniper_rifle.in_chamber
@@ -264,12 +246,20 @@
 				blocked = TRUE
 				break
 
-		for(var/obj/effect/particle_effect/smoke/S in T)
+		for(var/obj/effect/particle_effect/smoke/smoke in T)
+			if(!smoke.obscuring)
+				continue
 			blocked = TRUE
 			break
 
 	return blocked
-
+/obj/item/weapon/gun/rifle/sniper/equipped(mob/living/user, slot)
+	. = ..()
+	//Toggle Aimed Shot on equip in hands. Skips back and armour slot equips
+	if(slot == WEAR_R_HAND || slot == WEAR_L_HAND)
+		var /datum/action/toggling_action = locate(/datum/action/item_action/specialist/aimed_shot) in user.actions
+		if(toggling_action)
+			toggling_action.action_activate()
 // Snipers may enable or disable their laser tracker at will.
 /datum/action/item_action/specialist/toggle_laser
 
@@ -338,21 +328,49 @@
 /obj/item/weapon/gun/rifle/sniper/M42A
 	name = "\improper M42A scoped rifle"
 	desc = "A heavy sniper rifle manufactured by Armat Systems. It has a scope system and fires armor penetrating rounds out of a 15-round magazine.\n'Peace Through Superior Firepower'"
-	icon = 'icons/obj/items/weapons/guns/guns_by_faction/uscm.dmi'
+	icon = 'icons/obj/items/weapons/guns/guns_by_faction/USCM/marksman_rifles.dmi'
 	icon_state = "m42a"
 	item_state = "m42a"
 	unacidable = TRUE
-	indestructible = 1
+	explo_proof = TRUE
+
 	fire_sound = 'sound/weapons/gun_sniper.ogg'
 	current_mag = /obj/item/ammo_magazine/sniper
 	force = 12
-	wield_delay = WIELD_DELAY_HORRIBLE //Ends up being 1.6 seconds due to scope
+	wield_delay = WEAPON_DELAY_HORRIBLE //Ends up being 1.6 seconds due to scope
 	zoomdevicename = "scope"
 	attachable_allowed = list(/obj/item/attachable/bipod)
-	starting_attachment_types = list(/obj/item/attachable/sniperbarrel)
 	flags_gun_features = GUN_AUTO_EJECTOR|GUN_SPECIALIST|GUN_WIELDED_FIRING_ONLY|GUN_AMMO_COUNTER
-	map_specific_decoration = FALSE
+	map_specific_decoration = TRUE
+	inhand_x_dimension = 64
+
 	flags_item = TWOHANDED|NO_CRYO_STORE
+	pixel_x = -6
+	hud_offset = -6
+
+/obj/item/weapon/gun/rifle/sniper/M42A/Initialize(mapload, spawn_empty)
+	. = ..()
+	select_gamemode_skin()
+	AddElement(/datum/element/corp_label/armat)
+
+/obj/item/weapon/gun/rifle/sniper/M42A/select_gamemode_skin(expected_type, list/override_icon_state, list/override_protection)
+	. = ..()
+	switch(SSmapping.configs[GROUND_MAP].camouflage_type)
+		if("jungle")
+			item_icons[WEAR_L_HAND] = 'icons/obj/items/weapons/guns/guns_by_map/jungle/guns_lefthand_x64.dmi'
+			item_icons[WEAR_R_HAND] = 'icons/obj/items/weapons/guns/guns_by_map/jungle/guns_righthand_x64.dmi'
+		if("classic")
+			item_icons[WEAR_L_HAND] = 'icons/obj/items/weapons/guns/guns_by_map/classic/guns_lefthand_x64.dmi'
+			item_icons[WEAR_R_HAND] = 'icons/obj/items/weapons/guns/guns_by_map/classic/guns_righthand_x64.dmi'
+		if("desert")
+			item_icons[WEAR_L_HAND] = 'icons/obj/items/weapons/guns/guns_by_map/desert/guns_lefthand_x64.dmi'
+			item_icons[WEAR_R_HAND] = 'icons/obj/items/weapons/guns/guns_by_map/desert/guns_righthand_x64.dmi'
+		if("snow")
+			item_icons[WEAR_L_HAND] = 'icons/obj/items/weapons/guns/guns_by_map/snow/guns_lefthand_x64.dmi'
+			item_icons[WEAR_R_HAND] = 'icons/obj/items/weapons/guns/guns_by_map/snow/guns_righthand_x64.dmi'
+		if("urban")
+			item_icons[WEAR_L_HAND] = 'icons/obj/items/weapons/guns/guns_by_map/urban/guns_lefthand_x64.dmi'
+			item_icons[WEAR_R_HAND] = 'icons/obj/items/weapons/guns/guns_by_map/urban/guns_righthand_x64.dmi'
 
 /obj/item/weapon/gun/rifle/sniper/M42A/verb/toggle_scope_zoom_level()
 	set name = "Toggle Scope Zoom Level"
@@ -382,32 +400,19 @@
 	..()
 	set_fire_delay(FIRE_DELAY_TIER_SNIPER)
 	set_burst_amount(BURST_AMOUNT_TIER_1)
-	accuracy_mult = BASE_ACCURACY_MULT * 3 //you HAVE to be able to hit
-	scatter = SCATTER_AMOUNT_TIER_8
+	accuracy_mult = BASE_ACCURACY_MULT * 3 + HIT_ACCURACY_MULT_TIER_3 //you HAVE to be able to hit
+	scatter = SCATTER_AMOUNT_NONE
 	damage_mult = BASE_BULLET_DAMAGE_MULT
 	recoil = RECOIL_AMOUNT_TIER_5
-
-/obj/item/weapon/gun/rifle/sniper/M42A/basic
-	current_mag = /obj/item/ammo_magazine/sniper/basic
-
-/obj/item/weapon/gun/rifle/sniper/M42A/silenced
-	name = "\improper M42A2 SSR"
-	desc = "The M42A2 Suppressed Scoped Rifle (SSR for short), is a heavy sniper rifle manufactured by Armat Systems. Modified with an integral suppressor, it has a scope system and fires armor penetrating rounds out of a 15-round magazine.\n'Peace Through Superior Firepower'"
-	starting_attachment_types = list(/obj/item/attachable/supsniperbarrel)
-	loud = FALSE
-
-/obj/item/weapon/gun/rifle/sniper/M42A/silenced/unloaded
-	current_mag = null
-	flags_gun_features = GUN_AUTO_EJECTOR|GUN_SPECIALIST|GUN_WIELDED_FIRING_ONLY|GUN_AMMO_COUNTER|GUN_TRIGGER_SAFETY
 
 /obj/item/weapon/gun/rifle/sniper/XM43E1
 	name = "\improper XM43E1 experimental anti-materiel rifle"
 	desc = "An experimental anti-materiel rifle produced by Armat Systems, recently reacquired from the deep storage of an abandoned prototyping facility. This one in particular is currently undergoing field testing. Chambered in 10x99mm Caseless.\n\nThis weapon can punch through thin metal plating and walls, though it'll lose most of its lethality in the process. It can even work for demolitions, with experienced users known to disassemble segments of solid, reinforced walls in the field with just a single standard magazine of 10x99mm. In lieu of explosives or an engineer, they instead use each of the 8 shots to break down vital structural supports, taking the wall apart in the process."
-	icon = 'icons/obj/items/weapons/guns/guns_by_faction/uscm.dmi'
+	icon = 'icons/obj/items/weapons/guns/guns_by_faction/USCM/marksman_rifles.dmi'
 	icon_state = "xm43e1"
 	item_state = "xm43e1"
 	unacidable = TRUE
-	indestructible = 1
+	explo_proof = TRUE
 	aiming_time = 2 SECONDS
 	aimed_shot_cooldown_delay = 4.5 SECONDS
 	var/focused_fire_counter = 0
@@ -416,20 +421,26 @@
 	fire_sound = 'sound/weapons/sniper_heavy.ogg'
 	current_mag = /obj/item/ammo_magazine/sniper/anti_materiel //Renamed from anti-tank to align with new identity/description. Other references have been changed as well. -Kaga
 	force = 12
-	wield_delay = WIELD_DELAY_HORRIBLE //Ends up being 1.6 seconds due to scope
+	wield_delay = WEAPON_DELAY_HORRIBLE //Ends up being 1.6 seconds due to scope
 	zoomdevicename = "scope"
 	attachable_allowed = list(/obj/item/attachable/bipod)
-	flags_gun_features = GUN_AUTO_EJECTOR|GUN_SPECIALIST|GUN_WIELDED_FIRING_ONLY|GUN_AMMO_COUNTER|GUN_AUTO_EJECT_CASINGS
-	starting_attachment_types = list(/obj/item/attachable/pmc_sniperbarrel)
+	flags_gun_features = GUN_AUTO_EJECTOR|GUN_SPECIALIST|GUN_WIELDED_FIRING_ONLY|GUN_AMMO_COUNTER
 	sniper_beam_type = /obj/effect/ebeam/laser
 	sniper_beam_icon = "laser_beam"
 	sniper_lockon_icon = "sniper_lockon"
+	pixel_x = -5
+	hud_offset = -5
+
+/obj/item/weapon/gun/rifle/sniper/XM43E1/Initialize()
+	. = ..()
+	AddElement(/datum/element/corp_label/armat)
 
 /obj/item/weapon/gun/rifle/sniper/XM43E1/handle_starting_attachment()
 	..()
 	var/obj/item/attachable/scope/variable_zoom/S = new(src)
 	S.icon_state = "pmcscope"
 	S.attach_icon = "pmcscope"
+	S.hidden = TRUE
 	S.flags_attach_features &= ~ATTACH_REMOVABLE
 	S.Attach(src)
 	update_attachable(S.slot)
@@ -445,8 +456,8 @@
 	//Kaga: Fixed back to half the M42A's firerate (3 seconds), using a new define.
 	//This outright deals less DPS than the normal sniper rifle, 125 vs 140 per 3s.
 	set_burst_amount(BURST_AMOUNT_TIER_1)
-	accuracy_mult = BASE_ACCURACY_MULT + 2*HIT_ACCURACY_MULT_TIER_10 //Who coded this like this, and why? It just calculates out to 1+1=2. Leaving a note here to check back later.
-	scatter = SCATTER_AMOUNT_TIER_10
+	accuracy_mult = BASE_ACCURACY_MULT + 2*(HIT_ACCURACY_MULT_TIER_10 + HIT_ACCURACY_MULT_TIER_2) - HIT_ACCURACY_MULT_TIER_1//Who coded this like this, and why? It just calculates out to 1+1=2. Leaving a note here to check back later.
+	scatter = SCATTER_AMOUNT_NONE
 	damage_mult = BASE_BULLET_DAMAGE_MULT
 	recoil = RECOIL_AMOUNT_TIER_1
 
@@ -454,11 +465,12 @@
 	LAZYADD(traits_to_give, list(
 		BULLET_TRAIT_ENTRY(/datum/element/bullet_trait_iff),
 		BULLET_TRAIT_ENTRY_ID("turfs", /datum/element/bullet_trait_damage_boost, 11, GLOB.damage_boost_turfs),
-		BULLET_TRAIT_ENTRY_ID("breaching", /datum/element/bullet_trait_damage_boost, 15, GLOB.damage_boost_breaching),
-		//At 2090 per shot vs resin and 2850 vs normal, it'll take 1 shot to break resin turfs usually (thick resin at 1350, RNG may vary), and half a mag (4 rounds) to break reinforced walls.
+		BULLET_TRAIT_ENTRY_ID("breaching", /datum/element/bullet_trait_damage_boost, 11, GLOB.damage_boost_breaching),
+		//At 1375 per shot it'll take 1 shot to break resin turfs usually (thick resin at 1350, RNG may vary), and a full mag of 8 to break reinforced walls.
+		//However, the second wall it hits will only take 550 damage, unable to even kill a full-health normal resin wall (900).
 		//Much more effective at breaking resin doors and membranes, which have less HP and slow down the projectile less.
 		BULLET_TRAIT_ENTRY_ID("pylons", /datum/element/bullet_trait_damage_boost, 6, GLOB.damage_boost_pylons)
-		//At 1140 per shot it'll take 2 to break a Pylon (1800 HP). No Damage Boost vs other xeno structures yet, those will require a whole new list w/ the damage_boost trait.
+		//At 750 per shot it'll take 3 to break a Pylon (1800 HP). No Damage Boost vs other xeno structures yet, those will require a whole new list w/ the damage_boost trait.
 	))
 
 /*
@@ -472,84 +484,106 @@
 */
 
 /obj/item/weapon/gun/rifle/sniper/elite
-	name = "\improper M42C scoped rifle"
-	desc = "A high-end, compact, marksman rifle from Weyland-Armat chambered in 10x28mm Caseless. Near exclusively seen in use by corporate PMCs, this weapon is the bougie reflection of its cousin, the M42A. The desired aim of this weapon's development was to bridge the gap between sniper rifle and marksman rifle, via an increased fire rate combined with the utilization of a smaller frame."
-	icon = 'icons/obj/items/weapons/guns/guns_by_faction/wy.dmi'
+	name = "\improper M42C anti-tank sniper rifle"
+	desc = "A high-end superheavy magrail sniper rifle from Weyland-Armat chambered in a specialized variant of the heaviest ammo available, 10x99mm Caseless. This weapon requires a specialized armor rig for recoil mitigation in order to be used effectively."
+	icon = 'icons/obj/items/weapons/guns/guns_by_faction/WY/marksman_rifles.dmi'
 	icon_state = "m42c"
 	item_state = "m42c" //NEEDS A TWOHANDED STATE
 
 	fire_sound = 'sound/weapons/sniper_heavy.ogg'
-	current_mag = /obj/item/ammo_magazine/sniper/elite/basic
+	current_mag = /obj/item/ammo_magazine/sniper/elite
 	force = 17
 	zoomdevicename = "scope"
-	flags_gun_features = GUN_AUTO_EJECTOR|GUN_WY_RESTRICTED|GUN_SPECIALIST|GUN_WIELDED_FIRING_ONLY|GUN_AMMO_COUNTER|GUN_AUTO_EJECT_CASINGS
-	starting_attachment_types = list(/obj/item/attachable/pmc_sniperbarrel)
+	flags_gun_features = GUN_AUTO_EJECTOR|GUN_WY_RESTRICTED|GUN_SPECIALIST|GUN_WIELDED_FIRING_ONLY|GUN_AMMO_COUNTER
 	sniper_beam_type = /obj/effect/ebeam/laser/intense
 	sniper_beam_icon = "laser_beam_intense"
 	sniper_lockon_icon = "sniper_lockon_intense"
-	aim_slowdown = SLOWDOWN_ADS_RIFLE
+	has_aimed_shot = FALSE
+	pixel_x = -2
+	hud_offset = -2
+
+/obj/item/weapon/gun/rifle/sniper/elite/Initialize()
+	. = ..()
+	AddElement(/datum/element/corp_label/wy)
 
 /obj/item/weapon/gun/rifle/sniper/elite/handle_starting_attachment()
 	..()
-	var/obj/item/attachable/scope/variable_zoom/PMC_Scope = new(src)
-	PMC_Scope.icon_state = "pmcscope"
-	PMC_Scope.attach_icon = "pmcscope"
-	PMC_Scope.flags_attach_features &= ~ATTACH_REMOVABLE
-	PMC_Scope.Attach(src)
-	update_attachable(PMC_Scope.slot)
+	var/obj/item/attachable/scope/S = new(src)
+	S.icon_state = "pmcscope"
+	S.attach_icon = "pmcscope"
+	S.hidden = TRUE
+	S.flags_attach_features &= ~ATTACH_REMOVABLE
+	S.Attach(src)
+	update_attachable(S.slot)
+
+/obj/item/weapon/gun/rifle/sniper/elite/set_bullet_traits()
+	LAZYADD(traits_to_give, list(
+		BULLET_TRAIT_ENTRY(/datum/element/bullet_trait_iff)
+	))
 
 /obj/item/weapon/gun/rifle/sniper/elite/set_gun_attachment_offsets()
 	attachable_offset = list("muzzle_x" = 32, "muzzle_y" = 18,"rail_x" = 15, "rail_y" = 19, "under_x" = 20, "under_y" = 15, "stock_x" = 20, "stock_y" = 15)
 
 /obj/item/weapon/gun/rifle/sniper/elite/set_gun_config_values()
 	..()
-	set_fire_delay(FIRE_DELAY_TIER_2)
-	set_burst_amount(0)
-	accuracy_mult = BASE_ACCURACY_MULT * 3
-	scatter = SCATTER_AMOUNT_TIER_8
-	damage_mult = BASE_BULLET_DAMAGE_MULT + BULLET_DAMAGE_MULT_TIER_2
-	recoil = RECOIL_AMOUNT_TIER_5
-	recoil_unwielded = RECOIL_AMOUNT_TIER_1
+	set_fire_delay(FIRE_DELAY_TIER_6*5)
+	set_burst_amount(BURST_AMOUNT_TIER_1)
+	accuracy_mult = BASE_ACCURACY_MULT * 3 + HIT_ACCURACY_MULT_TIER_3 //Was previously BAM + HAMT10, similar to the XM42B, and coming out to 1.5? Changed to be consistent with M42A. -Kaga
+	scatter = SCATTER_AMOUNT_NONE
+	damage_mult = BASE_BULLET_DAMAGE_MULT
+	recoil = RECOIL_AMOUNT_TIER_1
 
-/obj/item/weapon/gun/rifle/sniper/elite/heap
-	current_mag = /obj/item/ammo_magazine/sniper/elite
+/obj/item/weapon/gun/rifle/sniper/elite/simulate_recoil(total_recoil = 0, mob/user, atom/target)
+	. = ..()
+	if(.)
+		var/mob/living/carbon/human/PMC_sniper = user
+		if(PMC_sniper.body_position == STANDING_UP && !istype(PMC_sniper.wear_suit,/obj/item/clothing/suit/storage/marine/smartgunner/veteran/pmc) && !istype(PMC_sniper.wear_suit,/obj/item/clothing/suit/storage/marine/veteran))
+			PMC_sniper.visible_message(SPAN_WARNING("[PMC_sniper] is blown backwards from the recoil of the [src.name]!"),SPAN_HIGHDANGER("You are knocked prone by the blowback!"))
+			step(PMC_sniper,turn(PMC_sniper.dir,180))
+			PMC_sniper.KnockDown(5)
+			PMC_sniper.Stun(5)
 
 //Type 88 //Based on the actual Dragunov DMR rifle.
 
 /obj/item/weapon/gun/rifle/sniper/svd
 	name = "\improper Type 88 designated marksman rifle"
 	desc = "The standard issue DMR of the UPP, the Type 88 is sought after by competitive shooters and terrorists alike for its high degree of accuracy. Typically loaded with armor-piercing 7.62x54mmR rounds in a 12 round magazine."
-	icon = 'icons/obj/items/weapons/guns/guns_by_faction/upp.dmi'
+	icon = 'icons/obj/items/weapons/guns/guns_by_faction/UPP/marksman_rifles.dmi'
 	icon_state = "type88"
 	item_state = "type88"
+
+	pixel_x = -6
+	hud_offset = -6
 
 	fire_sound = 'sound/weapons/gun_mg.ogg'
 	current_mag = /obj/item/ammo_magazine/sniper/svd
 	attachable_allowed = list(
 		//Muzzle,
 		/obj/item/attachable/bayonet,
-		/obj/item/attachable/bayonet/upp/surplus,
+		/obj/item/attachable/bayonet/upp_replica,
 		/obj/item/attachable/bayonet/upp,
+		/obj/item/attachable/bayonet/antique,
+		/obj/item/attachable/bayonet/wy,
+		/obj/item/attachable/bayonet/custom,
+		/obj/item/attachable/bayonet/custom/red,
+		/obj/item/attachable/bayonet/custom/blue,
+		/obj/item/attachable/bayonet/custom/black,
+		/obj/item/attachable/bayonet/tanto,
+		/obj/item/attachable/bayonet/tanto/blue,
+		/obj/item/attachable/bayonet/rmc_replica,
+		/obj/item/attachable/bayonet/rmc,
 		//Under,
 		/obj/item/attachable/verticalgrip,
-		/obj/item/attachable/verticalgrip/upp,
 		/obj/item/attachable/bipod,
-		//Integrated,
-		/obj/item/attachable/type88_barrel,
 	)
 	has_aimed_shot = FALSE
-	flags_gun_features = GUN_AUTO_EJECTOR|GUN_WIELDED_FIRING_ONLY|GUN_AMMO_COUNTER|GUN_CAN_POINTBLANK|GUN_AUTO_EJECT_CASINGS
+	flags_gun_features = GUN_AUTO_EJECTOR|GUN_WIELDED_FIRING_ONLY|GUN_AMMO_COUNTER|GUN_CAN_POINTBLANK
 	starting_attachment_types = list()
 	sniper_beam_type = null
 	skill_locked = FALSE
 
 /obj/item/weapon/gun/rifle/sniper/svd/handle_starting_attachment()
 	..()
-	var/obj/item/attachable/attachie = new /obj/item/attachable/type88_barrel(src)
-	attachie.flags_attach_features &= ~ATTACH_REMOVABLE
-	attachie.Attach(src)
-	update_attachable(attachie.slot)
-
 	var/obj/item/attachable/scope/variable_zoom/integrated/type88sight = new(src)
 	type88sight.flags_attach_features &= ~ATTACH_REMOVABLE
 	type88sight.hidden = TRUE
@@ -561,120 +595,10 @@
 
 /obj/item/weapon/gun/rifle/sniper/svd/set_gun_config_values()
 	..()
-	set_fire_delay(FIRE_DELAY_TIER_VULTURE)
+	set_fire_delay(FIRE_DELAY_TIER_6)
 	set_burst_amount(BURST_AMOUNT_TIER_1)
 	accuracy_mult = BASE_ACCURACY_MULT * 3
 	scatter = SCATTER_AMOUNT_TIER_8
 	damage_mult = BASE_BULLET_DAMAGE_MULT
 	recoil = RECOIL_AMOUNT_TIER_5
 	damage_falloff_mult = 0
-
-/obj/item/weapon/gun/rifle/sniper/svd/iff
-	name = "\improper Type 88-I designated marksman rifle"
-	desc = /obj/item/weapon/gun/rifle/sniper/svd::desc + " This one is outfitted with an IFF system, and has been refitted to allow an increased rate of fire."
-	actions_types = list(/datum/action/item_action/toggle_iff_svd)
-	var/iff_enabled = TRUE
-
-/obj/item/weapon/gun/rifle/sniper/svd/iff/handle_starting_attachment()
-	var/obj/item/attachable/attachie = new /obj/item/attachable/type88_barrel(src)
-	attachie.flags_attach_features &= ~ATTACH_REMOVABLE
-	attachie.Attach(src)
-	update_attachable(attachie.slot)
-
-	var/obj/item/attachable/scope/variable_zoom/integrated/svd_iff/type88sight = new(src)
-	type88sight.flags_attach_features &= ~ATTACH_REMOVABLE
-	type88sight.hidden = FALSE //cagged out
-	type88sight.Attach(src)
-	update_attachable(type88sight.slot)
-
-/obj/item/weapon/gun/rifle/sniper/svd/iff/set_bullet_traits()
-	LAZYADD(traits_to_give, list(
-		BULLET_TRAIT_ENTRY_ID("iff", /datum/element/bullet_trait_iff) //it has no PVE IFF mechanics because its innacurate as hell and is used for suppression and not as assault weapon.
-	))
-
-/datum/action/item_action/toggle_iff_svd/New(Target, obj/item/holder)
-	. = ..()
-	name = "Toggle IFF"
-	action_icon_state = "iff_toggle_on"
-	button.name = name
-	button.overlays.Cut()
-	button.overlays += image('icons/mob/hud/actions.dmi', button, action_icon_state)
-
-/datum/action/item_action/toggle_iff_svd/action_activate()
-	. = ..()
-
-	var/obj/item/weapon/gun/rifle/sniper/svd/iff/G = holder_item
-	if(!ishuman(owner))
-		return
-	var/mob/living/carbon/human/H = owner
-	if(H.is_mob_incapacitated() || G.get_active_firearm(H, FALSE) != holder_item)
-		return
-
-	G.toggle_lethal_mode(usr)
-	if(G.iff_enabled)
-		action_icon_state = "iff_toggle_on"
-	else
-		action_icon_state = "iff_toggle_off"
-	button.overlays.Cut()
-	button.overlays += image('icons/mob/hud/actions.dmi', button, action_icon_state)
-
-/obj/item/weapon/gun/rifle/sniper/svd/iff/proc/toggle_lethal_mode(mob/user)
-	to_chat(user, "[icon2html(src, usr)] You [iff_enabled? "<B>disable</b>" : "<B>enable</b>"] \the [src]'s fire restriction. You will [iff_enabled ? "harm anyone in your way" : "target through IFF"].")
-	playsound(loc,'sound/machines/click.ogg', 25, 1)
-	iff_enabled = !iff_enabled
-	if(iff_enabled)
-		add_bullet_trait(BULLET_TRAIT_ENTRY_ID("iff", /datum/element/bullet_trait_iff))
-	if(!iff_enabled)
-		remove_bullet_trait("iff")
-	SEND_SIGNAL(src, COMSIG_GUN_IFF_TOGGLED, iff_enabled)
-
-/obj/item/weapon/gun/rifle/sniper/svd/iff/stored
-	current_mag = null
-	flags_gun_features = /obj/item/weapon/gun/rifle/sniper/svd/iff::flags_gun_features | GUN_TRIGGER_SAFETY
-
-
-/obj/item/weapon/gun/rifle/sniper/svd/pve
-	current_mag = /obj/item/ammo_magazine/sniper/svd/pve
-
-/obj/item/weapon/gun/rifle/sniper/rmc
-	name = "\improper L64A3 designated marksman rifle"
-	desc = "A lightweight designated marksman rifle developed by Howatomo Precision Machining for the Royal Marines. Designed to provide commandos with responsive long range reach past what the old F903 could manage. A continuous-charge HESH payload removes the requirement for traditional armor piercing steel core ammunition, and improves damage retention at extended range. Faster cycle rate of the breech and a light trigger gives fast and precise followup shots even at thousand meter distances."
-	icon = 'icons/obj/items/weapons/guns/guns_by_faction/twe_guns.dmi'
-	icon_state = "rmcdmr"
-	item_state = "rmcdmr"
-	unacidable = TRUE
-	indestructible = 1
-	aiming_time = 0.6 SECONDS
-	aimed_shot_cooldown_delay = 1.2 SECONDS
-	fire_sound = "gun_rmcdmr"
-	reload_sound = 'sound/weapons/handling/gun_rmcdmr_reload.ogg'
-	unload_sound = 'sound/weapons/handling/gun_rmcdmr_unload.ogg'
-	current_mag = /obj/item/ammo_magazine/sniper/rmc
-	wield_delay = WIELD_DELAY_FAST
-	aim_slowdown = SLOWDOWN_ADS_RIFLE
-	zoomdevicename = "scope"
-	attachable_allowed = list(/obj/item/attachable/bipod)
-	starting_attachment_types = list(/obj/item/attachable/stock/rmcdmr)
-	flags_gun_features = GUN_AUTO_EJECTOR|GUN_SPECIALIST|GUN_WIELDED_FIRING_ONLY|GUN_AMMO_COUNTER
-	map_specific_decoration = FALSE
-	flags_item = TWOHANDED
-	loud = FALSE
-
-/obj/item/weapon/gun/rifle/sniper/rmc/handle_starting_attachment()
-	..()
-	var/obj/item/attachable/scope/mini/rmcdmr/S = new(src)
-	S.flags_attach_features &= ~ATTACH_REMOVABLE
-	S.Attach(src)
-	update_attachable(S.slot)
-
-/obj/item/weapon/gun/rifle/sniper/rmc/set_gun_attachment_offsets()
-	attachable_offset = list("muzzle_x" = 39, "muzzle_y" = 17,"rail_x" = 10, "rail_y" = 20, "under_x" = 19, "under_y" = 14, "stock_x" = 22, "stock_y" = 11)
-
-/obj/item/weapon/gun/rifle/sniper/rmc/set_gun_config_values()
-	..()
-	set_fire_delay(FIRE_DELAY_TIER_8)
-	set_burst_amount(BURST_AMOUNT_TIER_1)
-	accuracy_mult = BASE_ACCURACY_MULT + HIT_ACCURACY_MULT_TIER_10
-	scatter = SCATTER_AMOUNT_TIER_9
-	damage_mult = BASE_BULLET_DAMAGE_MULT
-	recoil = RECOIL_AMOUNT_TIER_5

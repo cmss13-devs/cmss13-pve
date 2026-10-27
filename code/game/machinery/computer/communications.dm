@@ -43,7 +43,6 @@
 	var/stat_msg1
 	var/stat_msg2
 
-	var/datum/tacmap/drawing/tacmap
 	var/minimap_type = MINIMAP_FLAG_USCM
 
 	processing = TRUE
@@ -51,10 +50,8 @@
 /obj/structure/machinery/computer/communications/Initialize()
 	. = ..()
 	start_processing()
-	tacmap = new(src, minimap_type)
 
 /obj/structure/machinery/computer/communications/Destroy()
-	QDEL_NULL(tacmap)
 	return ..()
 
 /obj/structure/machinery/computer/communications/process()
@@ -62,14 +59,13 @@
 		updateDialog()
 
 /obj/structure/machinery/computer/communications/Topic(href, href_list)
-	if(..()) return FALSE
+	if(..())
+		return FALSE
 
 	usr.set_interaction(src)
 	switch(href_list["operation"])
-		if("mapview")
-			tacmap.tgui_interact(usr)
-
-		if("main") state = STATE_DEFAULT
+		if("main")
+			state = STATE_DEFAULT
 
 		if("login")
 			if(isRemoteControlling(usr))
@@ -77,13 +73,15 @@
 			var/mob/living/carbon/human/C = usr
 			var/obj/item/card/id/I = C.get_active_hand()
 			if(istype(I))
-				if(check_access(I)) authenticated = 1
+				if(check_access(I))
+					authenticated = 1
 				if(ACCESS_MARINE_SENIOR in I.access)
 					authenticated = 2
 			else
 				I = C.get_idcard()
 				if(I)
-					if(check_access(I)) authenticated = 1
+					if(check_access(I))
+						authenticated = 1
 					if(ACCESS_MARINE_SENIOR in I.access)
 						authenticated = 2
 		if("logout")
@@ -95,14 +93,15 @@
 			if(istype(I))
 				if((ACCESS_MARINE_SENIOR in I.access) || (ACCESS_MARINE_COMMAND in I.access)) //Let heads change the alert level.
 					switch(tmp_alertlevel)
-						if(-INFINITY to SEC_LEVEL_GREEN) tmp_alertlevel = SEC_LEVEL_GREEN //Cannot go below green.
-						if(SEC_LEVEL_BLUE to INFINITY) tmp_alertlevel = SEC_LEVEL_BLUE //Cannot go above blue.
+						if(-INFINITY to SEC_LEVEL_GREEN)
+							tmp_alertlevel = SEC_LEVEL_GREEN //Cannot go below green.
+						if(SEC_LEVEL_BLUE to INFINITY)
+							tmp_alertlevel = SEC_LEVEL_BLUE //Cannot go above blue.
 
 					var/old_level = GLOB.security_level
 					set_security_level(tmp_alertlevel)
 					if(GLOB.security_level != old_level)
 						//Only notify the admins if an actual change happened
-						log_game("[key_name(usr)] has changed the security level to [get_security_level()].")
 						message_admins("[key_name_admin(usr)] has changed the security level to [get_security_level()].")
 				else
 					to_chat(usr, SPAN_WARNING("You are not authorized to do this."))
@@ -159,7 +158,6 @@
 					to_chat(usr, SPAN_WARNING("You are unable to initiate an evacuation procedure right now!"))
 					return FALSE
 
-				log_game("[key_name(usr)] has called for an emergency evacuation.")
 				message_admins("[key_name_admin(usr)] has called for an emergency evacuation.")
 				log_ares_security("Initiate Evacuation", "Called for an emergency evacuation.", usr)
 				return TRUE
@@ -185,7 +183,6 @@
 					to_chat(usr, SPAN_WARNING("You are unable to cancel the evacuation right now!"))
 					return FALSE
 
-				log_game("[key_name(usr)] has canceled the emergency evacuation.")
 				message_admins("[key_name_admin(usr)] has canceled the emergency evacuation.")
 				log_ares_security("Cancel Evacuation", "Cancelled the emergency evacuation.", usr)
 				return TRUE
@@ -205,6 +202,14 @@
 
 				if(SSticker.mode.force_end_at == 0)
 					to_chat(usr, SPAN_WARNING("ARES has denied your request for operational security reasons."))
+					return FALSE
+
+				if(SShijack.in_ftl)
+					to_chat(usr, SPAN_WARNING("The ship's hyperdrive is currently active - a beacon cannot be launched."))
+					return FALSE
+
+				if(SShijack.crashed || SShijack.hijack_status == HIJACK_OBJECTIVES_GROUND_CRASH)
+					to_chat(usr, SPAN_WARNING("The ship's systems are unresponsive - a beacon cannot be launched."))
 					return FALSE
 
 				if(world.time < cooldown_request + COOLDOWN_COMM_REQUEST)
@@ -266,8 +271,10 @@
 		if("viewmessage")
 			state = STATE_VIEWMESSAGE
 			if (!currmsg)
-				if(href_list["message-num"]) currmsg = text2num(href_list["message-num"])
-				else state = STATE_MESSAGELIST
+				if(href_list["message-num"])
+					currmsg = text2num(href_list["message-num"])
+				else
+					state = STATE_MESSAGELIST
 
 		if("delmessage")
 			state = (currmsg) ? STATE_DELMESSAGE : STATE_MESSAGELIST
@@ -279,10 +286,12 @@
 					var/text  = messagetext[currmsg]
 					messagetitle.Remove(title)
 					messagetext.Remove(text)
-					if(currmsg == aicurrmsg) aicurrmsg = 0
+					if(currmsg == aicurrmsg)
+						aicurrmsg = 0
 					currmsg = 0
 				state = STATE_MESSAGELIST
-			else state = STATE_VIEWMESSAGE
+			else
+				state = STATE_VIEWMESSAGE
 
 
 		if("status")
@@ -299,10 +308,11 @@
 		if("messageUSCM")
 			if(authenticated == 2)
 				if(world.time < cooldown_central + COOLDOWN_COMM_CENTRAL)
-					to_chat(usr, SPAN_WARNING("Arrays recycling.  Please stand by."))
+					to_chat(usr, SPAN_WARNING("Arrays recycling. Please stand by."))
 					return FALSE
-				var/input = stripped_input(usr, "Please choose a message to transmit to USCM.  Please be aware that this process is very expensive, and abuse will lead to termination.  Transmission does not guarantee a response. There is a small delay before you may send another message. Be clear and concise.", "To abort, send an empty message.", "")
-				if(!input || !(usr in dview(1, src)) || authenticated != 2 || world.time < cooldown_central + COOLDOWN_COMM_CENTRAL) return FALSE
+				var/input = stripped_input(usr, "Please choose a message to transmit to USCM. Please be aware that this process is very expensive, and abuse will lead to termination. Transmission does not guarantee a response. There is a small delay before you may send another message. Be clear and concise.", "To abort, send an empty message.", "")
+				if(!input || !(usr in dview(1, src)) || authenticated != 2 || world.time < cooldown_central + COOLDOWN_COMM_CENTRAL)
+					return FALSE
 
 				high_command_announce(input, usr)
 				to_chat(usr, SPAN_NOTICE("Message transmitted."))
@@ -311,25 +321,18 @@
 
 		if("securitylevel")
 			tmp_alertlevel = text2num( href_list["newalertlevel"] )
-			if(!tmp_alertlevel) tmp_alertlevel = 0
+			if(!tmp_alertlevel)
+				tmp_alertlevel = 0
 			state = STATE_CONFIRM_LEVEL
 
 		if("changeseclevel")
 			state = STATE_ALERT_LEVEL
 
 		if("selectlz")
-			if(!SSticker.mode.active_lz)
-				var/lz_choices = list("lz1", "lz2")
-				var/new_lz = tgui_input_list(usr, "Select primary LZ", "LZ Select", lz_choices)
-				if(!new_lz)
-					return
-				if(new_lz == "lz1")
-					SSticker.mode.select_lz(locate(/obj/structure/machinery/computer/shuttle/dropship/flight/lz1))
-				else
-					SSticker.mode.select_lz(locate(/obj/structure/machinery/computer/shuttle/dropship/flight/lz2))
+			SSticker.mode.pick_a_lz(usr)
 
-
-		else return FALSE
+		else
+			return FALSE
 
 	updateUsrDialog()
 
@@ -337,7 +340,8 @@
 	return attack_hand(user)
 
 /obj/structure/machinery/computer/communications/attack_hand(mob/user as mob)
-	if(..()) return FALSE
+	if(..())
+		return FALSE
 
 	//Should be refactored later, if there's another ship that can appear during a mode with a comm console.
 	if(!istype(loc.loc, /area/almayer/command/cic)) //Has to be in the CIC. Can also be a generic CIC area to communicate, if wanted.

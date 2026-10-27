@@ -27,6 +27,8 @@
 	var/list/evolves_to = list()
 	/// what caste or castes to de-evolve to.
 	var/list/deevolves_to = list()
+	///This is where you add castes drones can evolve to before first drop.
+	var/list/early_evolves_to
 	///If they can use consoles, etc. Set on Queen
 	var/is_intelligent = 0
 	var/caste_desc = null
@@ -40,20 +42,16 @@
 
 	///Chance of deflecting projectiles.
 	var/armor_deflection = 0
-	var/fire_immunity = FIRE_IMMUNITY_NONE
 	var/fire_intensity_resistance = 0
-
-	///Delay timer for spitting
-	var/spit_delay = 60
 
 	/// Windup for spits
 	var/spit_windup = FALSE
 
 	///The strength of our aura. Zero means we can't emit one
-	var/aura_strength = 0
+	var/aura_strength = XENO_PHERO_STRENGTH_NONE
 
 	///"Evolving" removed for the time being
-	var/aura_allowed = list("frenzy", "warding", "recovery")
+	var/aura_allowed = list(XENO_PHERO_FRENZY, XENO_PHERO_WARDING, XENO_PHERO_RECOVERY)
 
 	///Adjust pixel size. 0.x is smaller, 1.x is bigger, percentage based.
 	var/adjust_size_x = 1
@@ -84,7 +82,8 @@
 	var/hugger_nurturing = FALSE
 	var/huggers_max = 0
 	var/throwspeed = 0
-	var/hugger_delay = 0
+	/// delay time modifier it takes between hugger throws, only exclusively used by the carrier currently
+	var/hugger_throw_delay = 0
 	var/eggs_max = 0
 	var/egg_cooldown = 30
 	///Armor but for explosions
@@ -102,13 +101,10 @@
 	var/caste_luminosity = 0
 
 	/// if fire_immunity is set to be vulnerable, how much will fire damage be multiplied. Defines in xeno.dm
-	var/fire_vulnerability_mult = 1
+	var/fire_vulnerability_mult = 0
 
 	var/burrow_cooldown = 5 SECONDS
-	var/tunnel_cooldown = 100
-	var/widen_cooldown = 10 SECONDS
-	///Big strong ability, big cooldown.
-	var/tremor_cooldown = 30 SECONDS
+	var/tunnel_cooldown = 10 SECONDS
 	///whether the xeno heals even outside weeds.
 	var/innate_healing = FALSE
 
@@ -132,10 +128,15 @@
 	var/minimum_evolve_time = 1 MINUTES
 	/// Iconstate for the xeno on the minimap
 	var/minimap_icon = "xeno"
+	var/minimap_background = "background_xeno"
 	///The iconstate for leadered xenos on the minimap, added as overlay
 	var/minimap_leadered_overlay = "xenoleader"
 
 	var/royal_caste = FALSE
+
+	var/organ_type = /obj/item/organ/xeno;
+	/// Time taken to regenerate the organ
+	var/organ_regen_time = 5 MINUTES
 
 
 /datum/caste_datum/can_vv_modify()
@@ -173,14 +174,3 @@
 
 /datum/caste_datum/proc/get_caste_requirement(client/client)
 	return minimum_xeno_playtime - client.get_total_xeno_playtime()
-
-/datum/caste_datum/proc/get_minimap_icon()
-	var/image/background = mutable_appearance('icons/ui_icons/map_blips.dmi', "background")
-	background.color = MINIMAP_ICON_BACKGROUND_XENO
-
-	var/iconstate = minimap_icon ? minimap_icon : "unknown"
-	var/mutable_appearance/icon = image('icons/ui_icons/map_blips.dmi', icon_state = iconstate)
-	icon.appearance_flags = RESET_COLOR
-	background.overlays += icon
-
-	return background

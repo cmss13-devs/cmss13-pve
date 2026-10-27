@@ -102,8 +102,9 @@
 /obj/item/stack/points
 	name = "credits"
 	singular_name = "credit"
-	gender = PLURAL
 	icon_state = "point"
+	icon = 'icons/obj/items/economy.dmi'
+	gender = PLURAL
 
 	stack_id = "antag points"
 
@@ -148,13 +149,12 @@
 
 	listed_products = list(
 		list("STATIONERY", 0, null, null, null),
-		list("pen", 1, /obj/item/tool/pen/clicky, "white", "A pen, for writing on the go."),
+		list("Pen", 1, /obj/item/tool/pen/clicky, "white", "A pen, for writing on the go."),
 		list("Paper", 1, /obj/item/paper, "white", "A fresh piece of paper, for writing on."),
 		list("Carbon Paper", 1, /obj/item/paper/carbon, "white", "A piece of carbon paper, to double the writing output."),
 		list("Clipboard", 1, /obj/item/clipboard, "white", "A clipboard, for storing all that writing."),
 
 		list("WEAPONS", 0, null, null, null),
-		list("M48A4 SOCOM", 25, /obj/item/weapon/gun/pistol/m1911/socom/equipped, "white", "A Customised M48A4. Chambered in .45 ACP."),
 		list("Configured Stunbaton", 25, /obj/item/weapon/baton/antag, "white", "A stun baton with more charge."),
 		list("Tranquilizer Gun", 25, /obj/item/weapon/gun/pistol/tranquilizer, "white", "A tranquilizer gun. Comes with 5 darts. Deals no damage, knockout guaranteed."),
 		list("Chloroform Cloth", 18, /obj/item/weapon/chloroform, "white", "A cloth dosed with chloroform. Has 8 effective uses and can only be used whilst behind a target. You must be in disarm intent to use."),
@@ -175,14 +175,14 @@
 		list("MARINE CLOTHING", 0, null, null, null),
 		list("Marine Helmet", 5, /obj/item/clothing/head/helmet/marine, "white", "A USCM standard military helmet."),
 		list("Marine Fatigues", 8, /obj/item/clothing/under/marine, "white", "A USCM standard military battle dress uniform."),
-		list("M3 Pattern Marine Armor", 20, /obj/item/clothing/suit/marine, "white", "A USCM standard armor rig for combat situations."),
-		list("M3-L Pattern Marine Armor", 15, /obj/item/clothing/suit/marine/light, "white", "A USCM light armor rig for combat situations."),
+		list("M3 Pattern Marine Armor", 20, /obj/item/clothing/suit/storage/marine, "white", "A USCM standard armor rig for combat situations."),
+		list("M3 Pattern Marine Armor", 15, /obj/item/clothing/suit/storage/marine/light, "white", "A USCM light armor rig for combat situations."),
 		list("M3-VL Ballistics Vest", 12, /obj/item/clothing/suit/storage/marine/light/vest, "white", "A USCM light ballistic vest for combat situations."),
 
 		list("RADIO KEYS", 0, null, null, null),
-		list("Radio Key: CIA", 10, /obj/item/device/encryptionkey/cia, "white", "Radio Key for CIA and USCM communications."),
+		list("Radio Key: CIA", 10, /obj/item/device/encryptionkey/cia, "white", "Radio Key for CIA communications."),
 		list("Radio Key: Colonial Marshals", 20, /obj/item/device/encryptionkey/cmb, "white", "Radio Key for the CMB."),
-		list("Radio Key: Colony Radio Key", 20, /obj/item/device/encryptionkey/colony, "white", "Radio Key for known local Colony frequencies."),
+		list("Radio Key: Colonial Liberation Front", 20, /obj/item/device/encryptionkey/clf, "white", "Radio Key for known local CLF frequencies."),
 		list("Radio Key: Union of Progressive Peoples", 20, /obj/item/device/encryptionkey/upp, "white", "Radio Key for known UPP listening frequencies."),
 
 		list("TRANSFER POINTS", 0, null, null, null),

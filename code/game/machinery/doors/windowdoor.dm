@@ -5,7 +5,7 @@
 	icon_state = "left"
 	layer = WINDOW_LAYER
 	var/base_state = "left"
-	health = 150 //If you change this, consiter changing ../door/window/brigdoor/ health at the bottom of this .dm file
+	health = 150 //If you change this, consider changing ../door/window/brigdoor/ health at the bottom of this .dm file
 	visible = 0
 	use_power = USE_POWER_NONE
 	flags_atom = ON_BORDER
@@ -35,9 +35,12 @@
 	if(direction)
 		setDir(direction)
 	switch(dir)
-		if(NORTH) layer = ABOVE_TABLE_LAYER
-		if(SOUTH) layer = ABOVE_MOB_LAYER
-		else layer = initial(layer)
+		if(NORTH)
+			layer = ABOVE_TABLE_LAYER
+		if(SOUTH)
+			layer = ABOVE_MOB_LAYER
+		else
+			layer = initial(layer)
 
 /obj/structure/machinery/door/window/Collided(atom/movable/AM)
 	if (!( ismob(AM) ))
@@ -79,6 +82,8 @@
 	density = FALSE
 	operating = DOOR_OPERATING_IDLE
 
+	SEND_SIGNAL(src, COMSIG_DOOR_OPEN)
+
 /obj/structure/machinery/door/window/close(forced = FALSE)
 	if(operating)
 		return FALSE
@@ -97,6 +102,7 @@
 		return
 
 	operating = DOOR_OPERATING_IDLE
+	SEND_SIGNAL(src, COMSIG_DOOR_CLOSE)
 
 /obj/structure/machinery/door/window/proc/take_damage(damage)
 	src.health = max(0, src.health - damage)
@@ -174,7 +180,7 @@
 		playsound(src.loc, 'sound/items/Crowbar.ogg', 25, 1)
 		user.visible_message("[user] removes the electronics from the windoor.", "You start to remove electronics from the windoor.")
 		if (do_after(user, 40, INTERRUPT_ALL, BUSY_ICON_BUILD))
-			to_chat(user, SPAN_NOTICE(" You removed the windoor electronics!"))
+			to_chat(user, SPAN_NOTICE("You removed the windoor electronics!"))
 
 			var/obj/structure/windoor_assembly/wa = new/obj/structure/windoor_assembly(src.loc)
 			if (istype(src, /obj/structure/machinery/door/window/brigdoor))
@@ -185,7 +191,7 @@
 			if (src.base_state == "right" || src.base_state == "rightsecure")
 				wa.facing = "r"
 			wa.setDir(src.dir)
-			wa.state = "02"
+			wa.state = WINDOOR_STATE_02
 			wa.update_icon()
 
 			var/obj/item/circuitboard/airlock/ae
@@ -215,7 +221,7 @@
 		visible_message(SPAN_DANGER("<B>[src] was hit by [I].</B>"))
 		if(I.damtype == BRUTE || I.damtype == BURN)
 			take_damage(aforce)
-		return 1
+		return (ATTACKBY_HINT_NO_AFTERATTACK|ATTACKBY_HINT_UPDATE_NEXT_MOVE)
 	else
 		return try_to_activate_door(user)
 

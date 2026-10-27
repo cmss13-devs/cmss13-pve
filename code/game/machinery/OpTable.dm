@@ -93,6 +93,10 @@
 		to_chat(user, SPAN_WARNING("The patient needs to be on the table first."))
 		return
 
+	if(!H.has_limb("head"))
+		to_chat(user, SPAN_WARNING("The patient has no head."))
+		return
+
 	if(!anes_tank)
 		to_chat(user, SPAN_WARNING("There is no anesthetic tank connected to the table, load one first."))
 		return
@@ -107,6 +111,10 @@
 	if(!anes_tank)
 		to_chat(user, SPAN_WARNING("There is no anesthetic tank connected to the table, load one first."))
 		return
+	if(!H.has_limb("head"))
+		to_chat(user, SPAN_WARNING("The patient has no head."))
+		return
+
 	if(H.wear_mask)
 		var/obj/item/mask = H.wear_mask
 		if(mask.flags_inventory & CANTSTRIP)
@@ -220,7 +228,7 @@
 
 /obj/structure/machinery/optable/proc/take_victim(mob/living/carbon/C, mob/living/carbon/user)
 	if (C == user)
-		user.visible_message(SPAN_NOTICE("[user] climbs on the operating table."), \
+		user.visible_message(SPAN_NOTICE("[user] climbs on the operating table."),
 			SPAN_NOTICE("You climb on the operating table."), null, null, 4)
 	else
 		visible_message(SPAN_NOTICE("[C] has been laid on the operating table by [user]."), null, 4)
@@ -263,7 +271,7 @@
 			if(!C.stasis_mob)
 				return
 			M = C.stasis_mob
-			C.open()
+			C.open(user)
 			user.stop_pulling()
 			user.start_pulling(M)
 		else
@@ -273,11 +281,14 @@
 
 /obj/structure/machinery/optable/proc/check_table(mob/living/carbon/patient)
 	if(buckled_mob)
-		to_chat(patient, SPAN_NOTICE(" <B>The table is already occupied!</B>"))
+		to_chat(patient, SPAN_NOTICE("<B>The table is already occupied!</B>"))
 		return FALSE
 
 	if(patient.buckled)
-		to_chat(patient, SPAN_NOTICE(" <B>Unbuckle first!</B>"))
+		to_chat(patient, SPAN_NOTICE("<B>Unbuckle first!</B>"))
 		return FALSE
 
 	return TRUE
+
+/obj/structure/machinery/optable/yautja
+	icon = 'icons/obj/structures/machinery/yautja_machines.dmi'

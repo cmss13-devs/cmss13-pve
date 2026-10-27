@@ -23,14 +23,11 @@ sound/music/walkman/*/*.ogg
 sound/music/walkman/*.txt
 icons/custom/*
 maps/**/backup
+maps/templates.dm
 *.before
 __pycache__
 test_environment.txt
 .cache
-
-#ALL_MAPS juke import files
-maps/templates_extra.dm
-maps/templates_base.dm
 
 # byond-tracy backend, not shipped with the codebase so it shouldn't be maintained
 prof.dll
@@ -38,3 +35,7 @@ libprof.so
 
 # OpenDream compatibility stuff
 colonialmarines.json
+
+# build module folders
+node_modules/
+package-lock.json

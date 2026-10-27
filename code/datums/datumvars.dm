@@ -47,7 +47,7 @@
 //href_list is a reference, modifying it in these procs WILL change the rest of the proc in topic.dm of admin/view_variables!
 //This proc is for "high level" actions like admin heal/set species/etc/etc. The low level debugging things should go in admin/view_variables/topic_basic.dm incase this runtimes.
 /datum/proc/vv_do_topic(list/href_list)
-	if(!usr || !usr.client || !usr.client.admin_holder || !check_rights(NONE))
+	if(!usr || !usr.client || !usr.client.admin_holder || !check_rights(R_VAREDIT))
 		return FALSE //This is VV, not to be called by anything else.
 	if(SEND_SIGNAL(src, COMSIG_VV_TOPIC, usr, href_list) & COMPONENT_VV_HANDLED)
 		return FALSE
@@ -59,7 +59,7 @@
 
 		var/atom/A = locate(href_list[VV_HK_EXPLODE])
 		if(!isobj(A) && !ismob(A) && !isturf(A))
-			to_chat(usr, "This can only be done to instances of type /obj, /mob and /turf")
+			to_chat(usr, "This can only be done to instances of type /obj, /mob and /turf.")
 			return
 
 		cell_explosion(A, 150, 100, , create_cause_data("divine intervention"))
@@ -70,7 +70,7 @@
 
 		var/atom/A = locate(href_list[VV_HK_EMPULSE])
 		if(!isobj(A) && !ismob(A) && !isturf(A))
-			to_chat(usr, "This can only be done to instances of type /obj, /mob and /turf")
+			to_chat(usr, "This can only be done to instances of type /obj, /mob and /turf.")
 			return
 
 		usr.client.cmd_admin_emp(A)

@@ -7,6 +7,8 @@
 
 /obj/item/ore/uranium
 	name = "pitchblende"
+	desc = "An ore containing Uranium. Just looking at it makes your head feel fuzzy... it's slightly luminescent."
+	desc_lore = "Colonies all over the Neroid Sector mine extensively for pitchblende - uranium ore. It finds use in outdated fission reactors, nuclear weapons, and more commonly armor-piercing munitions. A W-Y funded research team determined that radiation poisoning from using these munitions is 'negligible'."
 	icon_state = "Uranium ore"
 
 	oretag = "uranium"
@@ -67,15 +69,9 @@
 	oretag = "platinum"
 	black_market_value = 30
 
-/obj/item/ore/hydrogen
-	name = "raw hydrogen"
-	icon_state = "Phazon"
-	oretag = "hydrogen"
-	black_market_value = 20
-
 /obj/item/ore/slag
 	name = "Slag"
-	desc = "Completely useless"
+	desc = "Completely useless."
 	icon_state = "slag"
 	oretag = "slag"
 	black_market_value = 0

@@ -12,6 +12,9 @@
 	name = "experimental hoverpack"
 	desc = "This prototype hoverpack allows marines to quickly jump over to strategic locations on the battlefield, at the cost of their backpack. You think you could change the settings with a screwdriver."
 	icon = 'icons/obj/items/devices.dmi'
+	item_icons = list(
+		WEAR_BACK = 'icons/mob/humans/onmob/clothing/back/misc.dmi'
+	)
 	icon_state = "hoverpack"
 	w_class = SIZE_LARGE
 	flags_equip_slot = SLOT_BACK
@@ -151,7 +154,7 @@
 	if(last_fuel)
 		fuel_used = last_fuel
 
-	to_chat(user, SPAN_BOLDNOTICE(" PROPELLANT EXPENDED: [round(fuel_used/reservoir.reagents.maximum_volume * 100, 0.1)]% <br> PROPELLANT REMAINING: [round(reservoir.reagents.total_volume/reservoir.reagents.maximum_volume * 100, 0.1)]%"))
+	to_chat(user, SPAN_BOLDNOTICE("PROPELLANT EXPENDED: [round(fuel_used/reservoir.reagents.maximum_volume * 100, 0.1)]% <br> PROPELLANT REMAINING: [round(reservoir.reagents.total_volume/reservoir.reagents.maximum_volume * 100, 0.1)]%"))
 	update_icon()
 	playsound(user, 'sound/items/jetpack_sound.ogg', 45, TRUE)
 
@@ -250,7 +253,7 @@
 
 /obj/item/reagent_container/glass/beaker/reservoir
 	name = "internal propellant tank"
-	desc = "You shouldn't be able to see this"
+	desc = "You shouldn't be able to see this."
 	volume = 90
 	amount_per_transfer_from_this = 10
 

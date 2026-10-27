@@ -36,6 +36,10 @@
 	},
 /turf/open/auto_turf/strata_grass/layer1,
 /area/lv624/ground/caves/south_central_caves)
+"hW" = (
+/obj/structure/fence,
+/turf/open/floor/warning/northwest,
+/area/lv624/ground/barrens/containers)
 "iS" = (
 /obj/item/reagent_container/food/snacks/grown/mushroom/plumphelmet{
 	pixel_x = 8
@@ -75,7 +79,7 @@
 /turf/open/gm/dirt,
 /area/lv624/ground/caves/central_caves)
 "pd" = (
-/obj/structure/flora/bush/ausbushes/var3/ywflowers,
+/obj/structure/flora/bush/ausbushes/ywflowers,
 /turf/open/auto_turf/strata_grass/layer1,
 /area/lv624/ground/caves/south_central_caves)
 "pC" = (
@@ -104,14 +108,6 @@
 "sO" = (
 /turf/closed/wall/strata_ice/jungle,
 /area/lv624/ground/caves/south_central_caves)
-"tF" = (
-/obj/structure/fence,
-/turf/open/floor/warning/northwest,
-/area/lv624/ground/barrens/containers)
-"vB" = (
-/obj/structure/fence,
-/turf/open/floor/warning/north,
-/area/lv624/ground/barrens/containers)
 "vC" = (
 /obj/structure/blocker/forcefield/multitile_vehicles,
 /obj/effect/landmark/structure_spawner/xvx_hive/xeno_door,
@@ -159,6 +155,10 @@
 /obj/effect/landmark/structure_spawner/setup/distress/xeno_door,
 /turf/open/auto_turf/strata_grass/layer1,
 /area/lv624/ground/caves/south_central_caves)
+"AL" = (
+/obj/effect/landmark/objective_landmark/close,
+/turf/open/gm/dirt,
+/area/lv624/ground/caves/south_central_caves)
 "DG" = (
 /obj/effect/decal/grass_overlay/grass1{
 	dir = 8
@@ -202,6 +202,10 @@
 /obj/structure/flora/bush/ausbushes/lavendergrass,
 /turf/open/auto_turf/strata_grass/layer1,
 /area/lv624/ground/caves/south_central_caves)
+"JZ" = (
+/obj/structure/fence,
+/turf/open/floor/warning/north,
+/area/lv624/ground/barrens/containers)
 "KX" = (
 /turf/open/gm/dirt,
 /area/lv624/ground/barrens/west_barrens)
@@ -214,7 +218,7 @@
 /turf/open/gm/dirt,
 /area/lv624/ground/caves/south_central_caves)
 "Oe" = (
-/obj/structure/flora/bush/ausbushes/ppflowers,
+/obj/structure/flora/bush/ausbushes/var3/ppflowers,
 /turf/open/auto_turf/strata_grass/layer1,
 /area/lv624/ground/caves/central_caves)
 "Pd" = (
@@ -474,7 +478,7 @@ ER
 wL
 Xj
 XV
-XV
+AL
 wk
 wk
 "}
@@ -913,7 +917,7 @@ hJ
 wk
 wk
 wk
-tF
+hW
 "}
 (28,1,1) = {"
 PB
@@ -936,7 +940,7 @@ wk
 wk
 wk
 wk
-vB
+JZ
 "}
 (29,1,1) = {"
 PB
@@ -959,7 +963,7 @@ wk
 wk
 wk
 wk
-vB
+JZ
 "}
 (30,1,1) = {"
 PB
@@ -982,7 +986,7 @@ wk
 wk
 yD
 yD
-vB
+JZ
 "}
 (31,1,1) = {"
 PB
@@ -1005,7 +1009,7 @@ yD
 yD
 yD
 yD
-vB
+JZ
 "}
 (32,1,1) = {"
 UB
@@ -1028,7 +1032,7 @@ yD
 yD
 mN
 yD
-vB
+JZ
 "}
 (33,1,1) = {"
 PB
@@ -1051,5 +1055,5 @@ yD
 yD
 yD
 yD
-vB
+JZ
 "}

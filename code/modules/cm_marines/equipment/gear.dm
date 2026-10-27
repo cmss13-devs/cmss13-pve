@@ -6,13 +6,13 @@
 	name = "combat flashlight"
 	desc = "A Flashlight designed to be held in the hand, or attached to a rifle, has better bulb compared to a normal flashlight."
 	icon_state = "combat_flashlight"
-	item_state = "flashlight"
-	light_range = 5 //Pretty luminous, but still a flashlight that fits in a pocket
+	item_state = ""
+	light_range = 6 //Pretty luminous, but still a flashlight that fits in a pocket
 
 //MARINE SNIPER TARPS
 
 /obj/item/bodybag/tarp
-	name = "\improper V1 thermal-dapening tarp (folded)"
+	name = "\improper M1 thermal-dampening tarp (folded)"
 	desc = "A tarp carried by USCM Snipers. When laying underneath the tarp, the sniper is almost indistinguishable from the landscape if utilized correctly. The tarp contains a thermal-dampening weave to hide the wearer's heat signatures, optical camouflage, and smell dampening."
 	icon = 'icons/obj/bodybag.dmi'
 	icon_state = "jungletarp_folded"
@@ -26,22 +26,22 @@
 	unfolded_path = /obj/structure/closet/bodybag/tarp/snow
 
 /obj/item/bodybag/tarp/reactive
-	name = "\improper V2 reactive thermal tarp (folded)"
+	name = "\improper M1A2 reactive thermal tarp (folded)"
 	desc = "A tarp carried by some USCM infantry. This updated tarp is capable of blending into its environment nearly flawlessly, given that it can properly collate data once deployed. The tarp is able to hide the wearer's heat signature."
 	icon = 'icons/obj/bodybag.dmi'
 	icon_state = "reactivetarp_folded"
 	unfolded_path = /obj/structure/closet/bodybag/tarp/reactive
 
 /obj/item/bodybag/tarp/reactive/scout
-	name = "\improper V3 reactive thermal tarp (folded)"
-	desc = "A more compact and improved version of the V2 thermal tarp, intended primarily for the transportation of deceased or wounded marines. It has improved cloaking technology than earlier models, allowing it to cloak to a greater degree and faster."
+	name = "\improper M1A3 reactive thermal tarp (folded)"
+	desc = "A more compact and improved version of the M1A2 thermal tarp, intended primarily for the transportation of deceased or wounded marines. It has improved cloaking technology than earlier models, allowing it to cloak to a greater degree and faster, but can only be used with special training."
 	icon_state = "scouttarp_folded"
 	w_class = SIZE_SMALL
 	unfolded_path = /obj/structure/closet/bodybag/tarp/reactive/scout
 
 /obj/structure/closet/bodybag/tarp
-	name = "\improper V1 thermal-dampening tarp"
-	bag_name = "\improper V1 thermal-dampening tarp"
+	name = "\improper M1 thermal-dampening tarp"
+	bag_name = "\improper M1 thermal-dampening tarp"
 	desc = "A tarp carried by USCM Snipers. When laying underneath the tarp, the sniper is almost indistinguishable from the landscape if utilized correctly. The tarp contains a thermal-dampening weave to hide the wearer's heat signatures, optical camouflage, and smell dampening."
 	icon = 'icons/obj/bodybag.dmi'
 	icon_state = "jungletarp_closed"
@@ -57,7 +57,7 @@
 	var/can_store_dead = FALSE
 	var/is_animating = FALSE
 	var/first_open = TRUE
-	exit_stun = 0
+	exit_stun = 1
 	/// used to implement a delay before tarp can be entered again after opened (anti-exploit)
 	COOLDOWN_DECLARE(toggle_delay)
 
@@ -68,30 +68,38 @@
 	item_path = /obj/item/bodybag/tarp/snow
 
 /obj/structure/closet/bodybag/tarp/reactive
-	name = "\improper V2 reactive thermal tarp"
-	bag_name = "\improper V2 reactive thermal tarp"
+	name = "\improper M1A2 reactive thermal tarp"
+	bag_name = "\improper M1A2 reactive thermal tarp"
 	desc = "A tarp carried by some USCM infantry. This updated tarp is capable of blending into its environment nearly flawlessly, given that it can properly collate data once deployed. The tarp is able to hide the wearer's heat signature."
 	icon_state = "reactivetarp_closed"
 	icon_closed = "reactivetarp_closed"
 	icon_opened = "reactivetarp_open"
-	open_sound = 'sound/effects/vegetation_walk_1.ogg'
-	close_sound = 'sound/effects/vegetation_walk_2.ogg'
+	open_sound = 'sound/items/zip.ogg'
+	close_sound = 'sound/items/zip.ogg'
+	cloak_time = 10
+	closed_alpha = 50
 
 	item_path = /obj/item/bodybag/tarp/reactive
 	anchored = FALSE
 
 /obj/structure/closet/bodybag/tarp/reactive/scout
-	name = "\improper V3 reactive thermal tarp (folded)"
-	bag_name = "\improper V3 reactive thermal tarp"
-	desc = "A more compact and improved version of the V2 thermal tarp, intended primarily for the transportation of deceased or wounded marines. It has improved cloaking technology than earlier models, allowing it to cloak to a greater degree and faster.\nUse this item in-hand or click somewhere on the floor adjacent to you to deploy it, then click it again to close it, which automatically cloaks the bag. Click again to open and uncloak it. If you lose it, right click to check tile contents around you to find it."
+	name = "\improper M1A3 reactive thermal tarp (folded)"
+	bag_name = "\improper M1A3 reactive thermal tarp"
+	desc = "A more compact and improved version of the M1A2 thermal tarp, intended primarily for the transportation of deceased or wounded marines. It has improved cloaking technology than earlier models, allowing it to cloak to a greater degree and faster, but can only be used with special training.\nUse this item in-hand or click somewhere on the floor adjacent to you to deploy it, then click it again to close it, which automatically cloaks the bag. Click again to open and uncloak it. If you lose it, right click to check tile contents around you to find it."
 	icon_state = "scouttarp_closed"
 	icon_closed = "scouttarp_closed"
 	icon_opened = "scouttarp_open"
 	item_path = /obj/item/bodybag/tarp/reactive/scout
 	cloak_time = 5
-	closed_alpha = 10 //Between scout & ghillie camo alphas
+	closed_alpha = 10 //same as scout cloak alpha
 	exit_stun = 1
 	can_store_dead = TRUE
+
+/obj/structure/closet/bodybag/tarp/reactive/scout/close(mob/user)
+	if(!skillcheck(usr, SKILL_SPEC_WEAPONS, SKILL_SPEC_ALL) && usr.skills.get_skill_level(SKILL_SPEC_WEAPONS) != SKILL_SPEC_SCOUT)
+		to_chat(user, SPAN_WARNING("You don't seem to know how to use [src]..."))
+		return
+	. = ..()
 
 /obj/structure/closet/bodybag/tarp/store_mobs(stored_units)//same as stasis bag proc
 	var/list/mobs_can_store = list()
@@ -132,7 +140,7 @@
 			is_animating = FALSE //animation finished
 			return
 
-/obj/structure/closet/bodybag/tarp/open()
+/obj/structure/closet/bodybag/tarp/open(mob/user, force)
 	COOLDOWN_START(src, toggle_delay, 3 SECONDS) //3 seconds must pass before tarp can be closed
 	. = ..()
 	handle_cloaking()
@@ -150,14 +158,12 @@
 	anchored = TRUE
 	opacity = TRUE
 	density = TRUE
-	unslashable = TRUE
 	icon = 'icons/obj/apc.dmi'
 	icon_state = "apc"
 
-
 /obj/item/reagent_container/food/snacks/protein_pack
-	name = "chocolate Preemptive Action nutrition bar"
-	desc = "A flaky, crunchy military nutrition bar. It's an American armed forces classic, for better or worse. The chocolate tastes a bit artificial and the vitamins are barely covered up by the stevia sweetener."
+	name = "stale USCM protein bar"
+	desc = "The most fake-looking protein bar you have ever laid eyes on, covered in a substitution chocolate. The powder used to make these is a substitute of a substitute of whey substitute."
 	icon_state = "yummers"
 	icon = 'icons/obj/items/food/mre_food/uscm.dmi'
 	filling_color = "#ED1169"
@@ -166,48 +172,20 @@
 /obj/item/reagent_container/food/snacks/protein_pack/Initialize()
 	. = ..()
 	reagents.add_reagent("nutriment", 8)
-	reagents.add_reagent("coco", 8)
 	bitesize = 4
 
-/obj/item/reagent_container/food/snacks/protein_pack2
-	name = "strawberry Preemptive Action nutrition bar"
-	desc = "A flaky, crunchy military nutrition bar. It's an American armed forces classic, for better or worse. The strawberry coating is definitely oversweetened."
-	//TODO: ACTUAL SPRITES
-	icon_state = "yummers2"
-	filling_color = "#ff00cc"
-	w_class = SIZE_TINY
-
-/obj/item/reagent_container/food/snacks/protein_pack2/Initialize()
-	. = ..()
-	reagents.add_reagent("nutriment", 8)
-	reagents.add_reagent("strawberrypowder", 8)
-	bitesize = 4
-
-/obj/item/reagent_container/food/snacks/protein_pack3
-	name = "vanilla Preemptive Action nutrition bar"
-	desc = "A flaky, crunchy military nutrition bar. It's an American armed forces classic, for better or worse. The vanilla is overpoweringly strong, but there's not enough sweetener to cover the bitter aftertaste of the filling."
-	//TODO: ACTUAL SPRITES
-	icon_state = "yummers3"
-	filling_color = "#e6e6e6"
-	w_class = SIZE_TINY
-
-/obj/item/reagent_container/food/snacks/protein_pack3/Initialize()
-	. = ..()
-	reagents.add_reagent("nutriment", 8)
-	reagents.add_reagent("vanilla", 8)
-	bitesize = 4
 
 /obj/item/reagent_container/food/snacks/mre_pack
 	name = "\improper generic MRE pack"
-	icon = 'icons/obj/items/food_canteen.dmi'
-	icon_state = "mar_tray_empty"
-	trash = /obj/item/trash/USCMtray
+	//trash = /obj/item/trash/USCMtray
+	icon = 'icons/obj/items/food/trays.dmi'
+	trash = null
 	w_class = SIZE_SMALL
 
 /obj/item/reagent_container/food/snacks/mre_pack/meal1
-	name = "\improper mechanically prepared meal (chili and cornbread)"
-	desc = "An autochef prepared meal meant to imitate 'Southern' cuisine, whatever that means. Contains aggressively overseasoned chili with reconstituted beans, dry crumbly cornbread, and something that might've been gazpacho once."
-	icon_state = "mar_tray_menu1"
+	name = "\improper USCM Prepared Meal (cornbread)"
+	desc = "A tray of standard USCM food. Stale cornbread, tomato paste and some green goop fill this tray."
+	icon_state = "MREa"
 	filling_color = "#ED1169"
 
 /obj/item/reagent_container/food/snacks/mre_pack/meal1/Initialize()
@@ -216,9 +194,9 @@
 	bitesize = 3
 
 /obj/item/reagent_container/food/snacks/mre_pack/meal2
-	name = "\improper mechanically prepared meal (ham and potatoes)"
-	desc = "An autochef prepared meal of slightly undercooked ham, surprisingly good reconstituted potato wedges made with real potato powder, artificial fruit puree, and stale crackers."
-	icon_state = "mar_tray_menu2"
+	name = "\improper USCM Prepared Meal (pork)"
+	desc = "A tray of standard USCM food. Partially raw pork, goopy corn and some watery mashed potatoes fill this tray."
+	icon_state = "MREb"
 
 /obj/item/reagent_container/food/snacks/mre_pack/meal2/Initialize()
 	. = ..()
@@ -226,9 +204,9 @@
 	bitesize = 2
 
 /obj/item/reagent_container/food/snacks/mre_pack/meal3
-	name = "\improper mechanically prepared meal (spaghetti)"
-	desc = "An autochef prepared meal of oversalted spaghetti in sauce and square 'beef meatballs'. On the side are perfectly baked breadsticks, an unevenly warmed hotdog, and some bland applesauce."
-	icon_state = "mar_tray_menu3"
+	name = "\improper USCM Prepared Meal (pasta)"
+	desc = "A tray of standard USCM food. Overcooked spaghetti, waterlogged carrots and two french fries fill this tray."
+	icon_state = "MREc"
 
 /obj/item/reagent_container/food/snacks/mre_pack/meal3/Initialize()
 	. = ..()
@@ -236,49 +214,39 @@
 	bitesize = 3
 
 /obj/item/reagent_container/food/snacks/mre_pack/meal4
-	name = "\improper mechanically prepared meal (pizza)"
-	desc = "An autochef prepared meal of underseasoned cheese pizza dotted with little bits of sausage. On the side are some concerningly wet scrambled reconstituted eggs and sautee'd broccoli with a little freezer burn."
-	icon_state = "mar_tray_menu4"
+	name = "\improper USCM Prepared Meal (pizza)"
+	desc = "A tray of standard USCM food. Cold pizza, wet green beans and a shitty egg fill this tray. Get something other than pizza, lardass."
+	icon_state = "MREd"
 
 /obj/item/reagent_container/food/snacks/mre_pack/meal4/Initialize()
 	. = ..()
-	reagents.add_reagent("nutriment", 9)
-	bitesize = 3
+	reagents.add_reagent("nutriment", 8)
+	bitesize = 1
 
 /obj/item/reagent_container/food/snacks/mre_pack/meal5
-	name = "\improper mechanically prepared meal (chicken)"
-	desc = "An autochef prepared meal of some potentially undercooked apparently halal roast chicken slices, an unidentified dubious sauce, mixed nuts trail mix, overcooked brown rice, and a tube of cherry-flavored halal jelly that tastes pretty heavily of vitamins."
-	icon_state = "mar_tray_menu5"
+	name = "\improper USCM Prepared Meal (chicken)"
+	desc = "A tray of standard USCM food. Moist chicken, dry rice and a mildly depressed piece of broccoli fill this tray."
+	icon_state = "MREe"
 
 /obj/item/reagent_container/food/snacks/mre_pack/meal5/Initialize()
 	. = ..()
-	reagents.add_reagent("nutriment", 9)
+	reagents.add_reagent("nutriment", 10)
 	bitesize = 3
 
 /obj/item/reagent_container/food/snacks/mre_pack/meal6
-	name = "\improper mechanically prepared meal (vegetarian tofu)"
-	desc = "An autochef prepared meal of some surprisingly well fried tofu, stale crackers, and underseasoned breadsticks. On the side is a protein bar in mediocre strawberry."
-	icon_state = "mar_tray_menu6"
+	name = "\improper USCM Prepared Meal (tofu)"
+	desc = "The USCM doesn't serve tofu you grass sucking hippie. The flag signifies your defeat."
+	icon_state = "MREf"
 
 /obj/item/reagent_container/food/snacks/mre_pack/meal6/Initialize()
 	. = ..()
-	reagents.add_reagent("nutriment", 9)
-	bitesize = 3
-
-/obj/item/reagent_container/food/snacks/mre_pack/meal7
-	name = "\improper mechanically prepared meal (macaroni and cheese)"
-	desc = "An autochef prepared meal of concerningly viscous macaroni and cheese. On the side is sautee'd broccoli with some freezer burn, a tube of cherry-and-vitamin flavor jelly, and a packet of mixed nuts trail mix."
-	icon_state = "mar_tray_menu7"
-
-/obj/item/reagent_container/food/snacks/mre_pack/meal7/Initialize()
-	. = ..()
-	reagents.add_reagent("nutriment", 9)
-	bitesize = 3
+	reagents.add_reagent("nutriment", 2)
+	bitesize = 1
 
 /obj/item/reagent_container/food/snacks/mre_pack/xmas1
-	name = "\improper mechanically prepared meal (sugar cookies)"
-	desc = "An autochef prepared meal of overbaked sugar cookies, a packet of what claims to be cherry cobbler, and a spiced dipping sauce that's divisive as to whether or not it goes with the cookies. On the side is a moist fruit-swirl bread roll."
-	icon_state = "mar_tray_menuSC"
+	name = "\improper USCM M25 'X-MAS' Meal: Sugar Cookies"
+	desc = "The USCM M25 Sugar Cookies Meal was designed to give marines a feeling of Christmas joy. But to the bemusement of superior officers, the costs-savings measure of simply fabricating protein bars in the shape of cookies with chocolate substitute chips and the replacement of the expected milk with artificially colored water did not go over well with most marines."
+	icon_state = "mreCookies"
 	black_market_value = 10
 
 /obj/item/reagent_container/food/snacks/mre_pack/xmas1/Initialize()
@@ -288,9 +256,9 @@
 	bitesize = 8
 
 /obj/item/reagent_container/food/snacks/mre_pack/xmas2
-	name = "\improper mechanically prepared meal (gingerbread and vanilla cake)"
-	desc = "An autochef prepared meal of some oddly soft gingerbread cookies and a fairly undersweetened vanilla cake. There's a protein bar on the side and a tube of cherry flavored vitamin filled jelly."
-	icon_state = "mar_tray_menuGV"
+	name = "\improper USCM M25 'X-MAS' Meal: Gingerbread Cookies"
+	desc = "The USCM M25 Gingerbread Cookies Meal was designed to give marines convenient and cheap access to gingerbread cookies as a replacement for annual gingerbread making classes due to rising expenses and comically low success rates for the Basic Holidays Festivities Course. However, due to cost saving measures, these cookies seldom inspire happiness, nor holiday spirit."
+	icon_state = "mreGingerbread"
 	black_market_value = 10
 
 /obj/item/reagent_container/food/snacks/mre_pack/xmas2/Initialize()
@@ -300,9 +268,9 @@
 	bitesize = 8
 
 /obj/item/reagent_container/food/snacks/mre_pack/xmas3
-	name = "\improper mechanically prepared meal (fruitcake)"
-	desc = "An autochef prepared meal of a fruitcake and applesauce. The fruitcake tastes of vitamins but is shockingly palatable even still, while the applesauce is... there?"
-	icon_state = "mar_tray_menuFC"
+	name = "\improper USCM M25 'X-MAS' Meal: Fruitcake"
+	desc = "The USCM M25 Fruitcake Meal was the third meal designed by an officers' committee as part of the M25 Project; this shows through the terrible hardness and tartness of the bread and raisined fruits. It can be logically deduced that the people who vended this option are worse than the Grinch and the Miser combined, along with the people who designed and prepared this fruitcake."
+	icon_state = "mreFruitcake"
 	black_market_value = 10
 
 /obj/item/reagent_container/food/snacks/mre_pack/xmas3/Initialize()
@@ -310,140 +278,6 @@
 	reagents.add_reagent("nutriment", 15)
 	reagents.add_reagent("sugar", 9)
 	bitesize = 8
-
-/obj/item/reagent_container/food/snacks/mre_pack/thanksgiving
-	name = "\improper mechanically prepared meal (turkey and potato)"
-	desc = "An autochef prepared meal of roast turkey slices and reconstituted potato wedges made from real potato powder. Cherry cobbler in a tube on the side and some bland applesauce in a sealed cup."
-	icon_state = "mar_tray_menuTP"
-
-/obj/item/reagent_container/food/snacks/mre_pack/thanksgiving/Initialize()
-	. = ..()
-	reagents.add_reagent("nutriment", 10)
-	bitesize = 3
-
-/obj/item/reagent_container/food/snacks/mre_pack/thanksgiving2
-	name = "\improper mechanically prepared meal (steak and potato)"
-	desc = "An autochef prepared meal of rare steak slices and reconstituted potato wedges made from real potato powder. Cherry cobbler in a tube on the side and some bland applesauce in a sealed cup."
-	icon_state = "mar_tray_menuSP"
-
-/obj/item/reagent_container/food/snacks/mre_pack/thanksgiving2/Initialize()
-	. = ..()
-	reagents.add_reagent("nutriment", 10)
-	bitesize = 3
-
-/obj/item/reagent_container/food/snacks/mre_pack/thanksgiving3
-	name = "\improper mechanically prepared meal (shrimp and rice)"
-	desc = "An autochef prepared meal of stir fried imitation shrimp and overcooked brown rice. Some mixed nuts trail mix and an unidentified sauce are on the side."
-	icon_state = "mar_tray_menuSR"
-
-/obj/item/reagent_container/food/snacks/mre_pack/thanksgiving3/Initialize()
-	. = ..()
-	reagents.add_reagent("nutriment", 10)
-	bitesize = 3
-
-//UPP Tray Food
-
-/obj/item/reagent_container/food/snacks/mre_pack/upp
-	name = "\improper generic MRE pack"
-	icon = 'icons/obj/items/food.dmi'
-	icon_state = "upp_lid"
-	trash = /obj/item/trash/UPPtray
-	w_class = SIZE_SMALL
-	bitesize = 5
-
-/obj/item/reagent_container/food/snacks/mre_pack/upp/Initialize()
-	. = ..()
-	reagents.add_reagent("nutriment", 15)
-
-/obj/item/reagent_container/food/snacks/mre_pack/upp/meal1
-	name = "\improper UPP Prepared Meal (Chow mein)"
-	desc = "Chow mein with imitation shrimp, two slightly overcooked spring rolls, some type of porridge and a small tofu cube."
-	icon_state = "upp_chowmein"
-
-/obj/item/reagent_container/food/snacks/mre_pack/upp/meal2
-	name = "\improper UPP Prepared Meal (Banush)"
-	desc = "Ukrainian style Banush cornmeal stew, dried apricots, and a couple vienna sausages."
-	icon_state = "upp_banush"
-
-/obj/item/reagent_container/food/snacks/mre_pack/upp/meal3
-	name = "\improper UPP Prepared Meal (Frankfurter)"
-	desc = "A large, juicy frankfurter with mashed potato, crispy potato pancakes and saurkraut."
-	icon_state = "upp_frankfurter"
-
-/obj/item/reagent_container/food/snacks/mre_pack/upp/meal4
-	name = "\improper UPP Prepared Meal (Jiaozi)"
-	desc = "Four boiled dumplings, soy-vinegar dipping sauce, pickled red cucumbers and two rye biscuits."
-	icon_state = "upp_jiaozi"
-
-/obj/item/reagent_container/food/snacks/mre_pack/upp/meal5
-	name = "\improper UPP Prepared Meal (Wursts)"
-	desc = "Two scoops of rice, two Weiner wursts, a tortilla with tomato sauce and a small bowl of Mungbean soup fill this tray."
-	icon_state = "upp_wursts"
-
-/obj/item/reagent_container/food/snacks/mre_pack/upp/meal6
-	name = "\improper UPP Prepared Meal (Luncheon)"
-	desc = "A prepackaged meal for UPP troops with two scoops of slightly dried out rice, a square of some kind of luncheon meat, two carrot sticks, and a 'fruit' bar."
-	icon_state = "upp_luncheon"
-
-/obj/item/reagent_container/food/snacks/mre_pack/upp/meal7
-	name = "\improper UPP Prepared Meal (Shrimp)"
-	desc = "A prepackaged meal for UPP troops that sports a greasy rice patty with bits of fake imitation shrimp and egg flavoring. Smells quite off. On the side there's a slightly soggy spring roll."
-	icon_state = "upp_shrimp"
-
-/obj/item/reagent_container/food/snacks/mre_pack/upp/meal8
-	name = "\improper UPP Prepared Meal (Cuban)"
-	desc = "A prepackaged meal for UPP troops containing Cuban rice with bland-ish eggs pieces, tomato sauce, potato salad, and a dry biscuit."
-	icon_state = "upp_cuban"
-
-/obj/item/reagent_container/food/snacks/mre_pack/upp/meal9
-	name = "\improper UPP Prepared Meal (Meatballs)"
-	desc = "A prepackaged meal for UPP troops containing marinated Königsberger Klopse meatballs, a creamy sauce, some spinach, and a scoop of rice. One of the better options out of the pre-packaged meals and is rarely ever in stock."
-	icon_state = "upp_meatballs"
-
-//RMC Tray Food
-
-/obj/item/reagent_container/food/snacks/protein_pack/rmc
-	name = "Biscuits Brown snack bar"
-	desc = "The devil in disguise. Quick to eat, with a fairly pleasant taste and texture, but consuming more than one in a short span of time will ensure you won't be digging latrine holes out in the field for at least two weeks."
-	icon_state = "muesli"
-	filling_color = "#ED1169"
-
-/obj/item/reagent_container/food/snacks/mre_pack/rmc
-	name = "\improper generic MRE pack"
-	icon = 'icons/obj/items/food_canteen.dmi'
-	icon_state = "rmc_tray_empty"
-	trash = /obj/item/trash/RMCtray
-	w_class = SIZE_SMALL
-	bitesize = 5
-
-/obj/item/reagent_container/food/snacks/mre_pack/rmc/Initialize()
-	. = ..()
-	reagents.add_reagent("nutriment", 15)
-
-/obj/item/reagent_container/food/snacks/mre_pack/rmc/meal1
-	name = "\improper RMC Prepared Meal (Roast Beef)"
-	desc = "A slab of imitation beef drenched in too-salty gravy, with a portion of undercooked peas, soggy carrots and oddly dry mashed potatoes."
-	icon_state = "rmc_meat"
-
-/obj/item/reagent_container/food/snacks/mre_pack/rmc/meal2
-	name = "\improper RMC Prepared Meal (Tikka Curry)"
-	desc = "Chunks of pork and potato submerged in a mass of mild Indian curry sauce, with a side of fluffy rice and a lukewarm bit of naan flatbread."
-	icon_state = "rmc_tikka"
-
-/obj/item/reagent_container/food/snacks/mre_pack/rmc/meal3
-	name = "\improper RMC Prepared Meal (Katsu Curry)"
-	desc = "Breaded chicken strips slathered in a Japanese style curry sauce. Comes with a helping of fluffy rice and an unidentifiable mound of overcooked veg as the side components."
-	icon_state = "rmc_katsu"
-
-/obj/item/reagent_container/food/snacks/mre_pack/rmc/meal4
-	name = "\improper RMC Prepared Meal (Sausage & Eggs)"
-	desc = "Several overdone sausages, a wodge of scrambled eggs, and a load of sweet potato fries & green beans fill this tray."
-	icon_state = "rmc_sausage"
-
-/obj/item/reagent_container/food/snacks/mre_pack/rmc/meal5
-	name = "\improper RMC Prepared Meal (Seafood Platter)"
-	desc = "Numerous kinds of sushi occupy the side-component slots of this tray, with the main component being several slices of salmon sashimi atop cold, boiled rice."
-	icon_state = "rmc_fish"
 
 /obj/item/storage/box/pizza
 	name = "food delivery box"
@@ -453,8 +287,8 @@
 	. = ..()
 	pixel_y = rand(-3,3)
 	pixel_x = rand(-3,3)
-	new /obj/item/reagent_container/food/snacks/microwavable/donkpocket(src)
-	new /obj/item/reagent_container/food/snacks/microwavable/donkpocket(src)
+	new /obj/item/reagent_container/food/snacks/donkpocket(src)
+	new /obj/item/reagent_container/food/snacks/donkpocket(src)
 	var/randsnack
 	for(var/i = 1 to 3)
 		randsnack = rand(0,5)
@@ -472,67 +306,341 @@
 
 /obj/item/paper/janitor
 	name = "crumbled paper"
-	icon_state = "pamphlet"
+	icon_state = "scrap"
 	info = "In loving memory of Cub Johnson."
-
 
 /obj/item/device/overwatch_camera
 	name = "M5 Camera Gear"
-	desc = "A camera and associated headgear designed to allow unit commanders to see what their troops can see, and those troops to see squad info via a HUD. A more robust version of this equipment is integrated into all standard combat helmets in use by UA forces."
-	icon = 'icons/obj/items/clothing/glasses.dmi'
-	icon_state = "overwatch_gear"
-	item_state = "overwatch_gear"
+	desc = "A camera and associated headgear designed to allow marine commanders to see what their troops can see. A more robust version of this equipment is integrated into all standard USCM combat helmets."
+	icon = 'icons/obj/items/clothing/glasses/misc.dmi'
+	icon_state = "cam_gear_off"
 	item_icons = list(
-		WEAR_L_EAR = 'icons/mob/humans/onmob/ears.dmi',
-		WEAR_R_EAR = 'icons/mob/humans/onmob/ears.dmi',
-		)
+		WEAR_L_EAR = 'icons/mob/humans/onmob/clothing/ears.dmi',
+		WEAR_R_EAR = 'icons/mob/humans/onmob/clothing/ears.dmi',
+	)
+	item_state_slots = list(
+		WEAR_L_EAR = "cam_gear",
+		WEAR_R_EAR = "cam_gear",
+	)
 	flags_equip_slot = SLOT_EAR
 	var/obj/structure/machinery/camera/camera
-	has_hud = TRUE
-	hud_type = list(MOB_HUD_FACTION_MARINE, MOB_HUD_FACTION_ARMY, MOB_HUD_FACTION_NAVY)
 
 /obj/item/device/overwatch_camera/Initialize(mapload, ...)
 	. = ..()
 	camera = new /obj/structure/machinery/camera/overwatch(src)
+	AddComponent(/datum/component/overwatch_console_control)
 
 /obj/item/device/overwatch_camera/Destroy()
 	QDEL_NULL(camera)
 	return ..()
 
 /obj/item/device/overwatch_camera/equipped(mob/living/carbon/human/mob, slot)
-	if(mob.has_item_in_ears(src))
+	if(camera)
 		camera.c_tag = mob.name
-		for(var/type in hud_type)
-			var/datum/mob_hud/MH = GLOB.huds[type]
-			MH.add_hud_to(mob, src)
+		camera.status = TRUE
+		icon_state = "cam_gear_on"
+		update_icon()
 	..()
+
+/obj/item/device/overwatch_camera/unequipped(mob/user, slot)
+	. = ..()
+	if(camera)
+		camera.status = FALSE
+		icon_state = "cam_gear_off"
+		update_icon()
 
 /obj/item/device/overwatch_camera/dropped(mob/user)
 	if(camera)
 		camera.c_tag = "Unknown"
-	if(hud_type)
-		for(var/type in hud_type)
-			var/datum/mob_hud/MH = GLOB.huds[type]
-			MH.remove_hud_from(user, src)
 	..()
 
-/obj/item/device/overwatch_camera/twe
-	name = "OOCUHM Cam-Gear"
-	desc = "Operational Oversight Camera Unit, Head-Mounted. Usually nicknamed \"Ooks\" or \"Big Brother\" by the marine commandos that wear them, the TWE-manufactured camera unit & eyepiece allows both command oversight of operations and display of an augmented reality 'Heads-Up-Display' to the wearer."
-	hud_type = list(MOB_HUD_FACTION_TWE, MOB_HUD_FACTION_WY)
-	icon_state = "rmc_overwatch_gear"
-	item_state = "rmc_overwatch_gear"
+/obj/item/device/overwatch_camera/hear_talk(mob/living/sourcemob, message, verb, datum/language/language, italics)
+	SEND_SIGNAL(src, COMSIG_BROADCAST_HEAR_TALK, sourcemob, message, verb, language, italics, loc == sourcemob)
 
-/obj/item/device/overwatch_camera/pmc
-	name = "Mk3 TOCU headcam"
-	desc = "A modification & ruggedisation of the camera gear fielded by the RMC, the Tactical Overwatch Camera Unit is used by Weyland Yutani PMC forces that forgo a typical protective head-cover, allowing their handler to remain aware of the operatives current status."
-	hud_type = list(MOB_HUD_FACTION_PMC, MOB_HUD_FACTION_WY, MOB_HUD_FACTION_TWE)
-	icon_state = "rmc_overwatch_gear"
-	item_state = "rmc_overwatch_gear"
+/obj/item/device/overwatch_camera/see_emote(mob/living/sourcemob, emote, audible)
+	SEND_SIGNAL(src, COMSIG_BROADCAST_SEE_EMOTE, sourcemob, emote, audible, loc == sourcemob && audible)
 
-/obj/item/device/overwatch_camera/upp
-	name = "1PN77M \"Periskop\" camera unit"
-	desc = "Replacing last generation head-mounted-sights, the \"Periskop\" brings several improvements over its' predecessors in the areas of ergonomics and technology. Thanks to its' superior camera systems and redesigned optical suite, which has improved both officer overwatch and personal combat capabilities, the unit has seen wide adoption among all UPP branches."
-	hud_type = list(MOB_HUD_FACTION_UPP)
-	icon_state = "upp_overwatch_gear"
-	item_state = "upp_overwatch_gear"
+/obj/item/device/overwatch_camera_tripod
+	name = "FTC Tripod Camera"
+	desc = "A Motoca-430-T deployable tripod camera that connects to the overwatch network. It can be renamed and deployed."
+	icon = 'icons/obj/structures/machinery/defenses/overwatch.dmi'  // ToDO: Get real sprites
+	icon_state = "undeployed"
+	item_icons = null
+	item_state_slots = null
+	flags_equip_slot = null
+	desc_lore = "Following modernisation efforts in the Marine'70 program, USCM Platoons were shrunk and squads re-organised to emphasise individual firepower and mobility. The Motoca-430-T, the precursor to the Motoca-500 Helmet Camera, was commissioned by the Department of Defense to be utilised by Colonial Marine squads in establishing secure perimeters and watching rear areas remotely through the Overwatch system."
+	var/label
+	var/datum/squad/squad
+	var/obj/structure/machinery/camera/camera
+
+/obj/item/device/overwatch_camera_tripod/Initialize(mapload, ...)
+	. = ..()
+	label = "FTC - Field Tripod Camera"
+	camera = new /obj/structure/machinery/camera/overwatch(src)
+	AddComponent(/datum/component/overwatch_console_control)
+
+/obj/item/device/overwatch_camera_tripod/Destroy()
+	squad = null
+	QDEL_NULL(camera)
+	return ..()
+
+/obj/item/device/overwatch_camera_tripod/attack_self(mob/user)
+	..()
+	if(!user || user.stat != CONSCIOUS || user.is_mob_incapacitated())
+		return
+	if(user.get_active_hand() != src)
+		to_chat(user, SPAN_WARNING("You must hold [src] in your active hand."))
+		return
+	var/choice = tgui_alert(user, "What would you like to do with [src]?", "Tripod Camera", list("Rename", "Deploy", "Cancel"))
+	switch(choice)
+		if("Cancel")
+			return
+		if("Rename")
+			var/new_name = tgui_input_text(user, "Enter a new name for the camera:", "Rename Camera", label ? label : "FTC - Field Tripod Camera", MAX_NAME_LEN, ui_state=GLOB.not_incapacitated_state, encode=FALSE)
+			if(!new_name)
+				return
+			if(user.get_active_hand() != src)
+				to_chat(user, SPAN_WARNING("You must hold [src] in your active hand."))
+				return
+			if(!user.Adjacent(src))
+				to_chat(user, SPAN_WARNING("You must be closer to rename [src]."))
+				return
+			new_name = trim_right(replace_non_alphanumeric_plus(new_name))
+			if(!length(new_name))
+				label = "FTC - Field Tripod Camera"
+				name = "FTC - Field Tripod Camera"
+				if(camera)
+					camera.c_tag = "FTC - Field Tripod Camera"
+				to_chat(user, SPAN_NOTICE("Invalid name – defaulting to 'FTC - Field Tripod Camera'."))
+				return
+			label = new_name
+			name = label
+			if(camera)
+				camera.c_tag = label
+			to_chat(user, SPAN_NOTICE("Camera renamed to [name]. It will appear with your squads' name when deployed."))
+			return
+		if("Deploy")
+			deploy_tripod(user)
+
+/obj/item/device/overwatch_camera_tripod/proc/deploy_tripod(mob/user)
+	if(!user || user.stat != CONSCIOUS) // pre-do-after
+		to_chat(user, SPAN_WARNING("You can't do that right now."))
+		return
+
+	if(user.is_mob_incapacitated())
+		to_chat(user, SPAN_WARNING("You are incapacitated."))
+		return
+
+	if(isyautja(user) || isxeno(user))
+		to_chat(user, SPAN_WARNING("You can't think of a reason to interact with [src] and decide to leave it alone."))
+		return
+
+	if(user.get_active_hand() != src)
+		to_chat(user, SPAN_WARNING("You must hold [src] in your active hand to deploy it."))
+		return
+
+	var/turf/deploy_turf = get_turf(user)
+	if(!deploy_turf)
+		return
+
+	var/area/deploy_area = get_area(deploy_turf)
+	if(!deploy_area.allow_construction)
+		to_chat(user, SPAN_WARNING("You cannot deploy [src] here!"))
+		return
+	if(istype(deploy_area, /area/shuttle))
+		to_chat(user, SPAN_WARNING("You cannot deploy [src] in a shuttle area.")) // i copied this from M2C so idk if this is necessary?
+		return
+	if(!istype(deploy_turf, /turf/open))
+		to_chat(user, SPAN_WARNING("[src] must be placed on a solid surface!"))
+		return
+
+	for(var/obj/blocking_object in deploy_turf)
+		if(blocking_object.density && blocking_object != src)
+			to_chat(user, SPAN_WARNING("[blocking_object] is blocking the deployment spot!"))
+			return
+
+	if(!do_after(user, 5 SECONDS, INTERRUPT_ALL, BUSY_ICON_BUILD)) // do-after
+		to_chat(user, SPAN_WARNING("You were interrupted while deploying [src]"))
+		return
+
+	if(!deploy_area.allow_construction) //re-check turf etc.
+		to_chat(user, SPAN_WARNING("You cannot deploy [src] here!"))
+		return
+	if(istype(deploy_area, /area/shuttle))
+		to_chat(user, SPAN_WARNING("You cannot deploy [src] in a shuttle area.")) // i copied this from M2C so idk if this is necessary?
+		return
+	if(!istype(deploy_turf, /turf/open))
+		to_chat(user, SPAN_WARNING("[src] must be placed on a solid surface!"))
+		return
+
+	for(var/obj/blocking_object in deploy_turf)
+		if(blocking_object.density && blocking_object != src)
+			to_chat(user, SPAN_WARNING("[blocking_object] is blocking the deployment spot!"))
+			return
+
+	var/datum/squad/user_squad = null // deployment & labelling
+	if(ishuman(user)) // second human check just in case
+		var/mob/living/carbon/human/human_user = user
+		user_squad = human_user.assigned_squad
+
+	var/base_label = label ? label : "FTC - Field Tripod Camera"
+
+	var/obj/structure/overwatch_camera_tripod/deployed_structure = new(deploy_turf) // transform to new struc
+	deployed_structure.base_label = base_label
+	deployed_structure.squad = user_squad
+	deployed_structure.update_full_label()
+	deployed_structure.setDir(user.dir)
+	deployed_structure.icon_state = "deployed"
+
+	if(camera)
+		camera.forceMove(deployed_structure)
+		camera.c_tag = deployed_structure.label
+		camera.status = TRUE
+		deployed_structure.camera = camera
+		src.camera = null
+
+	to_chat(user, SPAN_NOTICE("You deploy [src]."))
+	playsound(loc, 'sound/weapons/mine_armed.ogg', 25, 1)
+	user.temp_drop_inv_item()
+	qdel(src)
+
+/obj/structure/overwatch_camera_tripod
+	name = "FTC Tripod Camera"
+	desc = "A Motoca-430-T deployed tripod camera connected to the overwatch network."
+	icon = 'icons/obj/structures/machinery/defenses/overwatch.dmi'  // ToDO: Get real sprites
+	icon_state = "deployed"
+	density = FALSE
+	anchored = TRUE
+	layer = OBJ_LAYER
+	desc_lore = "Following modernisation efforts in the Marine'70 program, USCM Platoons were shrunk and squads re-organised to emphasise individual firepower and mobility. The Motoca-430-T, the precursor to the Motoca-500 Helmet Camera, was commissioned by the Department of Defense to be utilised by Colonial Marine squads in establishing secure perimeters and watching rear areas remotely through the Overwatch system."
+	var/label = "FTC - Field Tripod Camera"
+	var/base_label = "FTC"
+	var/obj/structure/machinery/camera/camera
+	var/datum/squad/squad
+	var/slash_count = 0 // tracks xeno slashes 4 breaking
+	var/broken = FALSE // prevents duplicate undeploys
+
+/obj/structure/overwatch_camera_tripod/Initialize(mapload)
+	. = ..()
+	base_label = "FTC - Field Tripod Camera"
+	update_full_label()
+	camera = new /obj/structure/machinery/camera/overwatch(src)
+	camera.c_tag = label
+	camera.status = TRUE
+	AddComponent(/datum/component/overwatch_console_control)
+	GLOB.deployed_tripod_cameras += src
+
+/// This is used to append squad names to the Field Camera Tripods' user-made label.
+/obj/structure/overwatch_camera_tripod/proc/update_full_label()
+	if(squad)
+		label = "[squad.name] - [base_label]"
+	else
+		label = base_label
+	name = label
+	if(camera)
+		camera.c_tag = label
+
+/obj/structure/overwatch_camera_tripod/Destroy()
+	GLOB.deployed_tripod_cameras -= src
+	squad = null
+	QDEL_NULL(camera)
+	return ..()
+
+/obj/structure/overwatch_camera_tripod/get_examine_text(mob/user)
+	. = ..()
+	. += "The label reads: [label]"
+	if(squad)
+		. += "It is currently assigned to squad: [squad.name]"
+
+/obj/structure/overwatch_camera_tripod/attack_hand(mob/user)
+	if(user.a_intent != INTENT_HELP) // I've left this in just in case maints want me to change the tgui menu to intent handling or smth.
+		return ..()
+	var/choice = tgui_alert(user, "What would you like to do with [src]?", "Tripod Camera", list("Rename", "Pick Up", "Cancel"))
+	switch(choice)
+		if("Cancel")
+			return
+		if("Rename")
+			if(!user.Adjacent(src))
+				to_chat(user, SPAN_WARNING("You must be closer to rename [src]."))
+				return
+			if(isyautja(user))
+				to_chat(user, SPAN_WARNING("You can't think of a reason to interact with [src] and decide to leave it alone."))
+				return
+			var/new_name = tgui_input_text(user, "Enter a new label for the camera:", "Rename Camera", base_label, MAX_NAME_LEN, ui_state=GLOB.not_incapacitated_state, encode=FALSE)
+			if(!new_name)
+				return
+			if(!user.Adjacent(src))
+				to_chat(user, SPAN_WARNING("You must be closer to rename [src]."))
+				return
+			new_name = trim_right(replace_non_alphanumeric_plus(new_name))
+			if(!length(new_name))
+				base_label = "FTC - Field Tripod Camera"
+				update_full_label()
+				to_chat(user, SPAN_NOTICE("Invalid name – defaulting to 'FTC - Field Tripod Camera'."))
+				return
+			base_label = new_name
+			update_full_label()
+			to_chat(user, SPAN_NOTICE("Camera renamed to [name]."))
+			return
+		if("Pick Up")
+			if(isyautja(user))
+				to_chat(user, SPAN_WARNING("You can't think of a reason to interact with [src] and decide to leave it alone."))
+				return
+			if(!user.Adjacent(src))
+				to_chat(user, SPAN_WARNING("You must be closer to pick up [src]."))
+				return
+			if(!do_after(user, 2 SECONDS, INTERRUPT_ALL, BUSY_ICON_GENERIC))
+				to_chat(user, SPAN_WARNING("You were interrupted while picking up the [src]."))
+				return
+			// Create a new tripod item from the structure
+			undeploy(user)
+			return // not sure if i need this here
+
+/obj/structure/overwatch_camera_tripod/attack_alien(mob/living/carbon/xenomorph/Xeno)
+	if(islarva(Xeno))
+		return
+	slash_count++
+	Xeno.animation_attack_on(src)
+	Xeno.flick_attack_overlay(src, "slash")
+	playsound(loc, 'sound/weapons/slash.ogg', 25, 1)
+	if(slash_count >= 3)
+		Xeno.visible_message(SPAN_DANGER("[Xeno] slashes [src] apart!"),
+							SPAN_DANGER("You tear through [src]!"))
+		undeploy()
+	else
+		Xeno.visible_message(SPAN_DANGER("[Xeno] slashes [src]!"),
+							SPAN_DANGER("You slash [src]!"))
+	return XENO_ATTACK_ACTION
+
+/obj/structure/overwatch_camera_tripod/proc/undeploy(mob/user)
+	if(broken)
+		return
+	broken = TRUE
+
+	var/obj/item/device/overwatch_camera_tripod/new_tripod = new(get_turf(src))
+	new_tripod.label = base_label
+	new_tripod.name = base_label
+	new_tripod.squad = squad
+	if(camera)
+		camera.forceMove(new_tripod)
+		camera.c_tag = base_label
+		camera.status = TRUE
+		new_tripod.camera = camera
+		src.camera = null
+	if(user && ishuman(user))
+		user.put_in_hands(new_tripod)
+		to_chat(user, SPAN_NOTICE("You disassemble [src]."))
+	else
+		new_tripod.visible_message(SPAN_WARNING("[new_tripod] falls to the floor."))
+	qdel(src)
+
+/obj/structure/overwatch_camera_tripod/ex_act(severity)
+	switch(severity)
+		if(EXPLOSION_THRESHOLD_VLOW | EXPLOSION_THRESHOLD_LOW | EXPLOSION_THRESHOLD_MEDIUM)
+			undeploy()
+		if(EXPLOSION_THRESHOLD_HIGH)
+			visible_message(SPAN_DANGER("[src] is obliterated by the explosion!"))
+			GLOB.deployed_tripod_cameras -= src
+			if(camera)
+				QDEL_NULL(camera)
+			qdel(src)

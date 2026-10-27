@@ -1,80 +1,90 @@
 
 //procs directly related to mob health
 
-#define MAX_DAMAGE_OF_TYPE(user) (user.maxHealth + abs(HEALTH_THRESHOLD_DEAD))
-
 
 /mob/living/getBruteLoss()
 	return bruteloss
 
 /mob/living/proc/adjustBruteLoss(amount)
-	if(status_flags & GODMODE) return 0 //godmode
-	bruteloss = min(max(bruteloss + amount, 0), MAX_DAMAGE_OF_TYPE(src))
+	if(status_flags & GODMODE)
+		return 0 //godmode
+	bruteloss = min(max(bruteloss + amount, 0),(maxHealth*2))
 
 /mob/living/getOxyLoss()
 	return oxyloss
 
 /mob/living/proc/adjustOxyLoss(amount)
-	if(status_flags & GODMODE) return 0 //godmode
-	oxyloss = min(max(oxyloss + amount, 0), MAX_DAMAGE_OF_TYPE(src))
+	if(status_flags & GODMODE)
+		return 0 //godmode
+	oxyloss = min(max(oxyloss + amount, 0),(maxHealth*2))
 
 /mob/living/proc/setOxyLoss(amount)
-	if(status_flags & GODMODE) return 0 //godmode
+	if(status_flags & GODMODE)
+		return 0 //godmode
 	oxyloss = amount
 
 /mob/living/getToxLoss()
 	return toxloss
 
 /mob/living/proc/adjustToxLoss(amount)
-	if(status_flags & GODMODE) return 0 //godmode
-	toxloss = min(max(toxloss + amount, 0), MAX_DAMAGE_OF_TYPE(src))
+	if(status_flags & GODMODE)
+		return 0 //godmode
+	toxloss = min(max(toxloss + amount, 0),(maxHealth*2))
 
 /mob/living/proc/setToxLoss(amount)
-	if(status_flags & GODMODE) return 0 //godmode
+	if(status_flags & GODMODE)
+		return 0 //godmode
 	toxloss = amount
 
 /mob/living/getFireLoss()
 	return fireloss
 
-/mob/living/proc/adjustFireLoss(amount)
-	if(status_flags & GODMODE) return 0 //godmode
-	fireloss = min(max(fireloss + amount, 0), MAX_DAMAGE_OF_TYPE(src))
+/mob/living/proc/adjustFireLoss(amount, chemical = FALSE)
+	if(status_flags & GODMODE)
+		return 0 //godmode
+	fireloss = min(max(fireloss + amount, 0),(maxHealth*2))
 
 /mob/living/getCloneLoss()
 	return cloneloss
 
 /mob/living/proc/adjustCloneLoss(amount)
-	if(status_flags & GODMODE) return 0 //godmode
-	cloneloss = min(max(cloneloss + amount, 0), MAX_DAMAGE_OF_TYPE(src))
+	if(status_flags & GODMODE)
+		return 0 //godmode
+	cloneloss = min(max(cloneloss + amount, 0),(maxHealth*2))
 
 /mob/living/proc/setCloneLoss(amount)
-	if(status_flags & GODMODE) return 0 //godmode
+	if(status_flags & GODMODE)
+		return 0 //godmode
 	cloneloss = amount
 
 /mob/living/getBrainLoss()
 	return brainloss
 
 /mob/living/proc/adjustBrainLoss(amount)
-	if(status_flags & GODMODE) return 0 //godmode
+	if(status_flags & GODMODE)
+		return 0 //godmode
 	if(ishuman(src))
 		var/mob/living/carbon/human/H = src
 		if(H.chem_effect_flags & CHEM_EFFECT_RESIST_NEURO)
 			return
-	brainloss = min(max(brainloss + amount, 0), MAX_DAMAGE_OF_TYPE(src))
+	brainloss = min(max(brainloss + amount, 0),(maxHealth*2))
 
 /mob/living/proc/setBrainLoss(amount)
-	if(status_flags & GODMODE) return 0 //godmode
+	if(status_flags & GODMODE)
+		return 0 //godmode
 	brainloss = amount
 
 /mob/living/getHalLoss()
 	return halloss
 
 /mob/living/proc/adjustHalLoss(amount)
-	if(status_flags & GODMODE) return 0 //godmode
-	halloss = min(max(halloss + amount, 0), MAX_DAMAGE_OF_TYPE(src))
+	if(status_flags & GODMODE)
+		return 0 //godmode
+	halloss = min(max(halloss + amount, 0),(maxHealth*2))
 
 /mob/living/proc/setHalLoss(amount)
-	if(status_flags & GODMODE) return 0 //godmode
+	if(status_flags & GODMODE)
+		return 0 //godmode
 	halloss = amount
 
 /mob/living/proc/getMaxHealth()
@@ -83,7 +93,6 @@
 /mob/living/proc/setMaxHealth(newMaxHealth)
 	maxHealth = newMaxHealth
 
-#undef MAX_DAMAGE_OF_TYPE
 /* STUN (Incapacitation) */
 /// Overridable handler to adjust the numerical value of status effects. Expand as needed
 /mob/living/proc/GetStunDuration(amount)
@@ -95,15 +104,18 @@
 	if(S)
 		return S.get_duration_left() / GLOBAL_STATUS_MULTIPLIER
 	return 0
-/mob/living/proc/Stun(amount)
+/mob/living/proc/Stun(amount, resistible = FALSE)
 	if(!(status_flags & CANSTUN))
 		return
 	amount = GetStunDuration(amount)
 	var/datum/status_effect/incapacitating/stun/S = IsStun()
+	for(var/datum/reagent/nst_stim as anything in reagents.reagent_list) //reduce amount of NST stim in blood for every stun
+		if(nst_stim.get_property(PROPERTY_NERVESTIMULATING))
+			nst_stim.volume += max(min((-1*amount)/10, 0), -10)
 	if(S)
-		S.update_duration(amount, increment = TRUE)
+		S.update_duration(amount, increment=TRUE, resistible=resistible)
 	else if(amount > 0)
-		S = apply_status_effect(/datum/status_effect/incapacitating/stun, amount)
+		S = apply_status_effect(/datum/status_effect/incapacitating/stun, amount, resistible)
 	return S
 /mob/living/proc/SetStun(amount, ignore_canstun = FALSE) //Sets remaining duration
 	if(!(status_flags & CANSTUN))
@@ -124,6 +136,9 @@
 		return
 	amount = GetStunDuration(amount)
 	var/datum/status_effect/incapacitating/stun/S = IsStun()
+	for(var/datum/reagent/nst_stim as anything in reagents.reagent_list) //reduce amount of NST stim in blood for every stun
+		if(nst_stim.get_property(PROPERTY_NERVESTIMULATING))
+			nst_stim.volume += max(min((-1*amount)/10, 0), -10)
 	if(S)
 		S.adjust_duration(amount)
 	else if(amount > 0)
@@ -258,6 +273,18 @@
 
 /mob/living/proc/AdjustSuperslow(amount)
 	SetSuperslow(superslowed + amount)
+	return
+
+/mob/living/proc/hushed(amount)
+	hushed = max(max(hushed, amount), 0)
+	return
+
+/mob/living/proc/set_hushed(amount)
+	hushed = max(amount, 0)
+	return
+
+/mob/living/proc/adjust_hushed(amount)
+	hushed = max(hushed + amount, 0)
 	return
 
 /* KnockDown (Flooring) */
@@ -433,6 +460,9 @@
 	stuttering = max(stuttering + amount,0)
 	return
 
+/mob/living/proc/EyeBlind(amount)
+	eye_blind = max(max(eye_blind, amount), 0)
+	return
 
 /mob/living/proc/SetEyeBlind(amount)
 	eye_blind = max(amount, 0)
@@ -456,7 +486,6 @@
 	else if(ear_deaf)
 		on_deafness_gain()
 
-
 /mob/living/proc/SetEarDeafness(amount)
 	var/prev_deaf = ear_deaf
 	ear_deaf = max(amount, 0)
@@ -479,40 +508,75 @@
 		client.soundOutput.status_flags ^= EAR_DEAF_MUTE
 		client.soundOutput.apply_status()
 
+/mob/living/proc/is_admin_slept()
+	return has_status_effect(/datum/status_effect/incapacitating/unconscious/aslept)
+
+/// Sets Admin sleeping, TRUE for applying FALSE for removing, defualts to removing
+/mob/living/proc/set_admin_sleep(apply)
+	if(!apply)
+		var/datum/status_effect/incapacitating/unconscious/aslept/admin_slept = is_admin_slept()
+		if(admin_slept)
+			qdel(admin_slept)
+	else
+		apply_status_effect(/datum/status_effect/incapacitating/unconscious/aslept)
+	return
+
+/mob/living/proc/grant_spawn_protection(duration)
+	status_flags |= RECENTSPAWN|GODMODE
+	RegisterSignal(src, list(COMSIG_LIVING_FLAMER_CROSSED, COMSIG_LIVING_FLAMER_FLAMED), PROC_REF(handle_fire_protection))
+	addtimer(CALLBACK(src, PROC_REF(end_spawn_protection)), duration)
+
+/mob/living/carbon/xenomorph/grant_spawn_protection(duration)
+	status_flags |= RECENTSPAWN|GODMODE
+	fire_immunity |= FIRE_IMMUNITY_NO_DAMAGE|FIRE_IMMUNITY_NO_IGNITE
+	addtimer(CALLBACK(src, PROC_REF(end_spawn_protection)), duration)
+
+/mob/living/proc/end_spawn_protection()
+	status_flags &= ~(RECENTSPAWN|GODMODE)
+	UnregisterSignal(src, list(COMSIG_LIVING_FLAMER_CROSSED, COMSIG_LIVING_FLAMER_FLAMED))
+
+/mob/living/carbon/xenomorph/end_spawn_protection()
+	status_flags &= ~(RECENTSPAWN|GODMODE)
+	fire_immunity = initial(fire_immunity)
+	if(hive?.active_hivebuffs)
+		var/datum/hivebuff/fire/fire_buff = locate() in hive.active_hivebuffs
+		if(fire_buff)
+			fire_buff.apply_buff_effects(src)
+
+/mob/living/proc/handle_fire_protection(mob/living/living, datum/reagent/chem)
+	SIGNAL_HANDLER
+	if(status_flags & (RECENTSPAWN|GODMODE))
+		return COMPONENT_NO_IGNITE
+
 // heal ONE limb, organ gets randomly selected from damaged ones.
-/mob/living/proc/heal_limb_damage(brute, burn)
+/mob/living/proc/heal_limb_damage(brute, burn, chemical = FALSE)
 	apply_damage(-brute, BRUTE)
-	apply_damage(-burn, BURN)
-	src.updatehealth()
+	apply_damage(-burn, BURN, chemical = chemical)
 
 // damage ONE limb, organ gets randomly selected from damaged ones.
 /mob/living/proc/take_limb_damage(brute, burn)
-	if(status_flags & GODMODE) return 0 //godmode
+	if(status_flags & GODMODE)
+		return 0 //godmode
 	apply_damage(brute, BRUTE)
 	apply_damage(burn, BURN)
-	src.updatehealth()
 
 // heal MANY limbs, in random order
 /mob/living/proc/heal_overall_damage(brute, burn)
 	apply_damage(-brute, BRUTE)
 	apply_damage(-burn, BURN)
-	src.updatehealth()
 
 // damage MANY limbs, in random order
 /mob/living/proc/take_overall_damage(brute, burn, used_weapon = null, limb_damage_chance = 80)
-	if(status_flags & GODMODE) return 0 //godmode
+	if(status_flags & GODMODE)
+		return 0 //godmode
 	apply_damage(brute, BRUTE)
 	apply_damage(burn, BURN)
-	src.updatehealth()
 
 /mob/living/proc/restore_all_organs()
 	return
 
-
-
 /mob/living/proc/revive(keep_viruses)
 	rejuvenate()
-
 
 /mob/living/proc/rejuvenate()
 	heal_all_damage()
@@ -520,11 +584,11 @@
 	// shut down ongoing problems
 	status_flags &= ~PERMANENTLY_DEAD
 	nutrition = NUTRITION_NORMAL
-	bodytemperature = T20C
+	bodytemperature = T37C
 	recalculate_move_delay = TRUE
 	sdisabilities = 0
 	disabilities = 0
-	drowsyness = 0
+	drowsiness = 0
 	hallucination = 0
 	jitteriness = 0
 	dizziness = 0
@@ -546,6 +610,7 @@
 	//Reset any surgeries.
 	active_surgeries = DEFENSE_ZONES_LIVING
 	initialize_incision_depths()
+	remove_surgery_overlays()
 
 	// remove the character from the list of the dead
 	if(stat == DEAD)
@@ -554,9 +619,15 @@
 		tod = null
 		timeofdeath = 0
 
-	// restore us to consciousness
-	set_stat(CONSCIOUS)
+	// restore us to consciousness if we're not admin slept
+	if(!(HAS_TRAIT_FROM(src, TRAIT_KNOCKEDOUT, TRAIT_STATUS_EFFECT(TRAIT_SOURCE_ADMIN))))
+		set_stat(CONSCIOUS)
 	regenerate_all_icons()
+
+	// Update HUDs, notably because we were dead during health updates so it's not correct
+	med_hud_set_health()
+	med_hud_set_armor()
+	med_hud_set_status()
 
 	SEND_SIGNAL(src, COMSIG_LIVING_REJUVENATED)
 
@@ -574,6 +645,7 @@
 	set_effect(0, SLOW)
 	set_effect(0, SUPERSLOW)
 	set_effect(0, WEAKEN)
+	set_effect(0, HUSHED)
 	ExtinguishMob()
 	fire_stacks = 0
 
@@ -597,6 +669,14 @@
 	if(ishuman(src))
 		var/mob/living/carbon/human/H = src
 		H.update_body()
+
+/mob/living/proc/remove_surgery_overlays() // Mainly for ahealing
+	if(overlays)
+		overlays -= image('icons/mob/humans/dam_human.dmi', "skull_surgery_closed")
+		overlays -= image('icons/mob/humans/dam_human.dmi', "skull_surgery_open")
+		overlays -= image('icons/mob/humans/dam_human.dmi', "chest_surgery_closed")
+		overlays -= image('icons/mob/humans/dam_human.dmi', "chest_surgery_open")
+
 
 /mob/living/keybind_face_direction(direction)
 	if(!canface())

@@ -87,7 +87,6 @@
 			if(!(virus_type in discovered_diseases))
 				return
 			var/obj/item/reagent_container/glass/bottle/B = new/obj/item/reagent_container/glass/bottle(src.loc)
-			B.icon_state = "bottle3"
 			var/datum/disease/D = null
 			if(!virus_type)
 				var/datum/disease/advance/A = GLOB.archive_diseases[href_list["create_virus_culture"]]
@@ -98,7 +97,8 @@
 					D = new virus_type(0, null)
 			var/list/data = list("viruses"=list(D))
 			var/name = strip_html(input(user,"Name:","Name the culture",D.name))
-			if(!name || name == " ") name = D.name
+			if(!name || name == " ")
+				name = D.name
 			B.name = "[name] culture bottle"
 			B.desc = "A small bottle. Contains [D.agent] culture in synthblood medium."
 			B.reagents.add_reagent("blood",20,data)
@@ -125,9 +125,12 @@
 		return
 	else if(href_list["name_disease"])
 		var/new_name = stripped_input(user, "Name the Disease", "New Name", "", MAX_NAME_LEN)
-		if(inoperable()) return
-		if(user.stat || user.is_mob_restrained()) return
-		if(!in_range(src, user)) return
+		if(inoperable())
+			return
+		if(user.stat || user.is_mob_restrained())
+			return
+		if(!in_range(src, user))
+			return
 		var/id = href_list["name_disease"]
 		if(GLOB.archive_diseases[id])
 			var/datum/disease/advance/A = GLOB.archive_diseases[id]
@@ -253,5 +256,5 @@
 		update_icon()
 
 	else
-		..()
+		. = ..()
 	return

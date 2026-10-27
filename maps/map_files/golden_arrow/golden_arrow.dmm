@@ -3,7 +3,7 @@
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
 	},
-/obj/structure/machinery/landinglight/ds1{
+/obj/structure/machinery/landinglight{
 	dir = 8
 	},
 /turf/open/floor/almayer/plate,
@@ -37,7 +37,7 @@
 /turf/open/floor/almayer/test_floor4,
 /area/golden_arrow/lower_cargo)
 "aae" = (
-/obj/structure/machinery/landinglight/ds1/delaythree,
+/obj/structure/machinery/landinglight/delaythree,
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/hangar)
 "aaf" = (
@@ -267,7 +267,7 @@
 	desc = "A silver medal issued by the USCM to reward acts of courage and effectiveness exemplifying the ideal United States Colonial Marine. The citation's been scratched to illegibility."
 	},
 /obj/item/prop{
-	icon = 'icons/obj/items/clothing/cm_hats.dmi';
+	icon = 'modular_pve/icons/obj/items/clothing/cm_hats.dmi';
 	icon_state = "helmet";
 	desc = "A helmet once belonging to some unnamed Marine- now missing it's owner. On the front of it, written in harsh white, lies the words 'REMEMBER SHACKLETON'.";
 	pixel_y = 6;
@@ -651,7 +651,7 @@
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
 	},
-/obj/structure/machinery/landinglight/ds1/delaythree{
+/obj/structure/machinery/landinglight/delaythree{
 	dir = 8
 	},
 /turf/open/floor/almayer/plate,
@@ -813,7 +813,7 @@
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
 	},
-/obj/structure/reagent_dispensers/fueltank{
+/obj/structure/reagent_dispensers/tank/fuel{
 	layer = 2.9;
 	icon = 'icons/obj/structures/props/generic_props.dmi';
 	icon_state = "weldtank_old";
@@ -844,7 +844,7 @@
 /turf/open/floor/almayer/mono,
 /area/golden_arrow/motor_pool)
 "abT" = (
-/obj/structure/machinery/landinglight/ds1/delaytwo,
+/obj/structure/machinery/landinglight/delaytwo,
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/hangar)
 "abV" = (
@@ -916,21 +916,21 @@
 	pixel_y = 14;
 	pixel_x = 15
 	},
-/obj/item/prop/helmetgarb/rosary{
+/obj/item/clothing/accessory/rosary{
 	pixel_x = -11;
 	desc = "An old rosary, a few beads missing from it's string, yet it still holds together.";
 	name = "damaged rosary"
 	},
 /obj/item/prop{
 	name = "\improper battered M10 pattern ballistic helmet";
-	icon = 'icons/obj/items/clothing/cm_hats.dmi';
+	icon = 'modular_pve/icons/obj/items/clothing/cm_hats.dmi';
 	icon_state = "helmet";
 	desc = "A helmet once belonging to a marine aboard the Golden Arrow. It's new home is sitting right in front of the memorial, a reminder of who has been lost.";
 	pixel_y = 12
 	},
 /obj/item/prop{
 	name = "\improper worn-out headband";
-	icon = 'icons/obj/items/clothing/cm_hats.dmi';
+	icon = 'modular_pve/icons/obj/items/clothing/cm_hats.dmi';
 	icon_state = "headband";
 	desc = "A torn up and worn out old headband. The green looks faded.";
 	pixel_y = 9;
@@ -1151,7 +1151,7 @@
 /obj/effect/landmark/late_join/alpha,
 /obj/effect/landmark/late_join,
 /obj/structure/prop/invuln/overhead_pipe{
-	icon = 'icons/obj/structures/props/almayer_props.dmi';
+	icon = 'modular_pve/icons/obj/structures/props/almayer_props.dmi';
 	icon_state = "wallpipe_2";
 	pixel_y = 8;
 	dir = 8
@@ -2407,13 +2407,13 @@
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/platoonprep)
 "ahb" = (
-/obj/structure/machinery/landinglight/ds1{
+/obj/structure/machinery/landinglight{
 	dir = 4
 	},
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/hangar)
 "ahc" = (
-/obj/structure/machinery/landinglight/ds1{
+/obj/structure/machinery/landinglight{
 	dir = 1
 	},
 /turf/open/floor/almayer/plate,
@@ -2771,7 +2771,7 @@
 /turf/open/floor/almayer/test_floor4,
 /area/golden_arrow/platoonprep)
 "air" = (
-/obj/structure/machinery/landinglight/ds1/delaytwo{
+/obj/structure/machinery/landinglight/delaytwo{
 	dir = 8
 	},
 /turf/open/floor/almayer/plate,
@@ -2984,7 +2984,7 @@
 /turf/open/floor/almayer/test_floor4,
 /area/golden_arrow/supply)
 "aiY" = (
-/obj/structure/machinery/landinglight/ds1{
+/obj/structure/machinery/landinglight{
 	dir = 8
 	},
 /obj/structure/machinery/floodlight/landing/floor{
@@ -3228,7 +3228,7 @@
 	layer = 2.52
 	},
 /obj/structure/prop/invuln/overhead_pipe{
-	icon = 'icons/obj/structures/props/almayer_props.dmi';
+	icon = 'modular_pve/icons/obj/structures/props/almayer_props.dmi';
 	icon_state = "wallpipe_2";
 	pixel_y = -1
 	},
@@ -3823,7 +3823,7 @@
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
 	},
-/obj/structure/machinery/landinglight/ds1/delayone,
+/obj/structure/machinery/landinglight/delayone,
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/hangar)
 "amf" = (
@@ -4042,7 +4042,7 @@
 /turf/open/floor/almayer/edge/smooth/corner/west,
 /area/golden_arrow/lower_cargo)
 "amQ" = (
-/obj/structure/machinery/landinglight/ds1/delayone{
+/obj/structure/machinery/landinglight/delayone{
 	dir = 1
 	},
 /obj/structure/machinery/floodlight/landing/floor{
@@ -4113,7 +4113,7 @@
 /turf/open/floor/almayer/dark_sterile,
 /area/golden_arrow/medical)
 "and" = (
-/obj/structure/machinery/power/terminal{
+/obj/structure/terminal{
 	dir = 4
 	},
 /obj/structure/cable/heavyduty{
@@ -4267,7 +4267,7 @@
 /turf/open/floor/plating,
 /area/golden_arrow/hangar)
 "anx" = (
-/obj/structure/machinery/landinglight/ds1/delaytwo{
+/obj/structure/machinery/landinglight/delaytwo{
 	dir = 1
 	},
 /turf/open/floor/almayer/plate,
@@ -4316,13 +4316,13 @@
 /area/golden_arrow/cryo_cells)
 "anJ" = (
 /obj/structure/prop/invuln/overhead_pipe{
-	icon = 'icons/obj/structures/props/almayer_props.dmi';
+	icon = 'modular_pve/icons/obj/structures/props/almayer_props.dmi';
 	icon_state = "wallpipe_2";
 	pixel_y = 8;
 	dir = 8
 	},
 /obj/structure/prop/invuln/overhead_pipe{
-	icon = 'icons/obj/structures/props/almayer_props.dmi';
+	icon = 'modular_pve/icons/obj/structures/props/almayer_props.dmi';
 	icon_state = "wallpipe_2";
 	pixel_y = 8;
 	dir = 8;
@@ -4581,7 +4581,7 @@
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
 	},
-/obj/structure/machinery/landinglight/ds1/delaythree,
+/obj/structure/machinery/landinglight/delaythree,
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/hangar)
 "aoz" = (
@@ -4806,7 +4806,7 @@
 /turf/open/floor/almayer/edge/smooth/corner/north,
 /area/golden_arrow/hangar)
 "apw" = (
-/obj/structure/machinery/power/terminal{
+/obj/structure/terminal{
 	dir = 8
 	},
 /obj/effect/decal/cleanable/dirt{
@@ -4908,7 +4908,7 @@
 	pixel_y = 1
 	},
 /obj/structure/prop/invuln/overhead_pipe{
-	icon = 'icons/obj/structures/props/almayer_props.dmi';
+	icon = 'modular_pve/icons/obj/structures/props/almayer_props.dmi';
 	icon_state = "wallpipe_2";
 	pixel_y = 22;
 	pixel_x = -14
@@ -5019,7 +5019,7 @@
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
 	},
-/obj/structure/reagent_dispensers/fueltank{
+/obj/structure/reagent_dispensers/tank/fuel{
 	layer = 2.91;
 	icon = 'icons/obj/structures/props/generic_props.dmi';
 	icon_state = "weldtank_old";
@@ -5257,7 +5257,7 @@
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
 	},
-/obj/structure/machinery/landinglight/ds1/delayone{
+/obj/structure/machinery/landinglight/delayone{
 	dir = 8
 	},
 /turf/open/floor/almayer/plate,
@@ -5395,7 +5395,7 @@
 /turf/open/floor/almayer,
 /area/golden_arrow/hangar)
 "arr" = (
-/obj/structure/machinery/cm_vending/sorted/marine_food,
+/obj/structure/machinery/cm_vending/sorted/marine_food/modular_pve,
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/cryo_cells)
 "ars" = (
@@ -5411,7 +5411,7 @@
 /turf/open/floor/almayer/cargo_arrow,
 /area/golden_arrow/hangar)
 "aru" = (
-/obj/structure/machinery/power/terminal{
+/obj/structure/terminal{
 	dir = 8
 	},
 /obj/structure/cable/heavyduty{
@@ -5461,7 +5461,7 @@
 	desc = "An M540 Armored Recon carrier, a supposedly more nimble alternative to the M577A3 APC. Evidently not nimble enough to escape from a dropship crashing into it. At least it didn't get shot up."
 	},
 /obj/structure/machinery/prop{
-	icon = 'icons/obj/vehicles/arc.dmi';
+	icon = 'modular_pve/icons/obj/vehicles/arc.dmi';
 	icon_state = "flare_launcher_1";
 	pixel_x = -31;
 	pixel_y = -38;
@@ -5545,7 +5545,7 @@
 	pixel_x = 2
 	},
 /obj/structure/prop{
-	icon = 'icons/obj/structures/props/almayer_props64.dmi';
+	icon = 'modular_pve/icons/obj/structures/props/almayer_props64.dmi';
 	icon_state = "fuel_enhancer";
 	name = "Damaged FS/FES-3 fuel enhancer";
 	desc = "A fuel enhancement system for dropships. It improves the thrust produced by the fuel combustion for faster travels. Full of bullet holes and probably needs to be replaced. The label says it was manufactured in 2171";
@@ -5657,7 +5657,7 @@
 /area/golden_arrow/hangar)
 "asi" = (
 /obj/structure/surface/table/reinforced/almayer_B,
-/obj/structure/phone_base{
+/obj/structure/transmitter{
 	pixel_y = 30;
 	pixel_x = 9;
 	phone_id = "Overwatch";
@@ -5983,7 +5983,7 @@
 /turf/open/floor/almayer/edge/smooth/west,
 /area/golden_arrow/hangar)
 "aty" = (
-/obj/structure/machinery/power/terminal{
+/obj/structure/terminal{
 	dir = 4
 	},
 /obj/effect/decal/cleanable/dirt{
@@ -6444,7 +6444,7 @@
 /turf/open/floor/almayer/edge/east,
 /area/golden_arrow/platoonarmory)
 "avw" = (
-/obj/structure/machinery/cm_vending/clothing/synth/snowflake,
+/obj/structure/machinery/cm_vending/clothing/marine/snowflake,
 /turf/open/floor/almayer/test_floor5,
 /area/golden_arrow/synthcloset)
 "avA" = (
@@ -6517,7 +6517,7 @@
 /turf/open/floor/almayer/dark_sterile,
 /area/golden_arrow/medical)
 "avL" = (
-/obj/structure/machinery/landinglight/ds1{
+/obj/structure/machinery/landinglight{
 	dir = 4
 	},
 /obj/structure/machinery/floodlight/landing/floor{
@@ -6842,7 +6842,7 @@
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
 	},
-/obj/structure/machinery/landinglight/ds1/delaytwo{
+/obj/structure/machinery/landinglight/delaytwo{
 	dir = 4
 	},
 /turf/open/floor/almayer/plate,
@@ -6998,25 +6998,25 @@
 	dir = 1
 	},
 /obj/structure/prop/invuln/overhead_pipe{
-	icon = 'icons/obj/structures/props/almayer_props.dmi';
+	icon = 'modular_pve/icons/obj/structures/props/almayer_props.dmi';
 	icon_state = "wallpipe_2";
 	pixel_y = 22;
 	pixel_x = 6
 	},
 /obj/structure/prop/invuln/overhead_pipe{
-	icon = 'icons/obj/structures/props/almayer_props.dmi';
+	icon = 'modular_pve/icons/obj/structures/props/almayer_props.dmi';
 	icon_state = "wallpipe_2";
 	pixel_y = 22;
 	pixel_x = 12
 	},
 /obj/structure/prop/invuln/overhead_pipe{
-	icon = 'icons/obj/structures/props/almayer_props.dmi';
+	icon = 'modular_pve/icons/obj/structures/props/almayer_props.dmi';
 	icon_state = "wallpipe_2";
 	pixel_x = 6;
 	pixel_y = -1
 	},
 /obj/structure/prop/invuln/overhead_pipe{
-	icon = 'icons/obj/structures/props/almayer_props.dmi';
+	icon = 'modular_pve/icons/obj/structures/props/almayer_props.dmi';
 	icon_state = "wallpipe_2";
 	pixel_y = -1;
 	pixel_x = 12
@@ -7081,7 +7081,7 @@
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
 	},
-/obj/structure/machinery/landinglight/ds1/delayone{
+/obj/structure/machinery/landinglight/delayone{
 	dir = 4
 	},
 /turf/open/floor/almayer/plate,
@@ -7107,13 +7107,13 @@
 	dir = 4
 	},
 /obj/structure/prop/invuln/overhead_pipe{
-	icon = 'icons/obj/structures/props/almayer_props.dmi';
+	icon = 'modular_pve/icons/obj/structures/props/almayer_props.dmi';
 	icon_state = "wallpipe_2";
 	pixel_y = 22;
 	pixel_x = 6
 	},
 /obj/structure/prop/invuln/overhead_pipe{
-	icon = 'icons/obj/structures/props/almayer_props.dmi';
+	icon = 'modular_pve/icons/obj/structures/props/almayer_props.dmi';
 	icon_state = "wallpipe_2";
 	pixel_y = 22;
 	pixel_x = 12
@@ -7443,7 +7443,7 @@
 	icon_state = "4-8"
 	},
 /obj/structure/prop/invuln/overhead_pipe{
-	icon = 'icons/obj/structures/props/almayer_props.dmi';
+	icon = 'modular_pve/icons/obj/structures/props/almayer_props.dmi';
 	icon_state = "wallpipe_2";
 	pixel_y = -1
 	},
@@ -7456,7 +7456,7 @@
 /turf/open/floor/almayer/mono,
 /area/golden_arrow/cryo_cells)
 "ayA" = (
-/obj/structure/machinery/landinglight/ds1/delayone,
+/obj/structure/machinery/landinglight/delayone,
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/hangar)
 "ayC" = (
@@ -7719,7 +7719,7 @@
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
 	},
-/obj/structure/machinery/landinglight/ds1{
+/obj/structure/machinery/landinglight{
 	dir = 4
 	},
 /turf/open/floor/almayer/plate,
@@ -7925,7 +7925,7 @@
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
 	},
-/obj/structure/machinery/landinglight/ds1/delaythree{
+/obj/structure/machinery/landinglight/delaythree{
 	dir = 4
 	},
 /turf/open/floor/almayer/plate,
@@ -7963,13 +7963,13 @@
 	pixel_y = 1
 	},
 /obj/structure/prop/invuln/overhead_pipe{
-	icon = 'icons/obj/structures/props/almayer_props.dmi';
+	icon = 'modular_pve/icons/obj/structures/props/almayer_props.dmi';
 	icon_state = "wallpipe_2";
 	pixel_y = 22;
 	pixel_x = 12
 	},
 /obj/structure/prop/invuln/overhead_pipe{
-	icon = 'icons/obj/structures/props/almayer_props.dmi';
+	icon = 'modular_pve/icons/obj/structures/props/almayer_props.dmi';
 	icon_state = "wallpipe_2";
 	pixel_y = 22;
 	pixel_x = 6
@@ -8266,7 +8266,7 @@
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/cryo_cells)
 "aAJ" = (
-/obj/structure/machinery/landinglight/ds1{
+/obj/structure/machinery/landinglight{
 	dir = 8
 	},
 /turf/open/floor/almayer/plate,
@@ -8408,7 +8408,7 @@
 /turf/open/floor/almayer/cargo_arrow/north,
 /area/golden_arrow/hangar)
 "aBi" = (
-/obj/structure/machinery/landinglight/ds1,
+/obj/structure/machinery/landinglight,
 /obj/structure/machinery/floodlight/landing/floor{
 	color = "#dae2ff";
 	light_color = "#dae2ff"
@@ -8544,7 +8544,7 @@
 	pixel_x = 5;
 	pixel_y = 25
 	},
-/obj/structure/machinery/cm_vending/sorted/marine_food,
+/obj/structure/machinery/cm_vending/sorted/marine_food/modular_pve,
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/cryo_cells)
 "aBE" = (
@@ -8582,7 +8582,7 @@
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
 	},
-/obj/structure/machinery/landinglight/ds1/delayone{
+/obj/structure/machinery/landinglight/delayone{
 	dir = 4
 	},
 /obj/structure/machinery/floodlight/landing/floor{
@@ -8771,7 +8771,7 @@
 	pixel_x = -3;
 	pixel_y = 6
 	},
-/obj/structure/machinery/landinglight/ds1{
+/obj/structure/machinery/landinglight{
 	dir = 8
 	},
 /turf/open/floor/almayer/plate,
@@ -8882,13 +8882,13 @@
 "aCM" = (
 /obj/structure/closet/firecloset,
 /obj/structure/prop/invuln/overhead_pipe{
-	icon = 'icons/obj/structures/props/almayer_props.dmi';
+	icon = 'modular_pve/icons/obj/structures/props/almayer_props.dmi';
 	icon_state = "wallpipe_3";
 	pixel_y = 22;
 	pixel_x = 12
 	},
 /obj/structure/prop/invuln/overhead_pipe{
-	icon = 'icons/obj/structures/props/almayer_props.dmi';
+	icon = 'modular_pve/icons/obj/structures/props/almayer_props.dmi';
 	icon_state = "wallpipe_3";
 	pixel_y = 22;
 	pixel_x = 6
@@ -8905,7 +8905,7 @@
 	},
 /obj/structure/surface/table/almayer,
 /obj/structure/prop{
-	icon = 'icons/obj/structures/props/almayer_props.dmi';
+	icon = 'modular_pve/icons/obj/structures/props/almayer_props.dmi';
 	icon_state = "targeting_system";
 	name = "\improper Broken AN/AAQ-178 Weapon Targeting System";
 	desc = "A targeting system for dropships. It improves firing accuracy on laser targets. Far beyond repair.";
@@ -9133,7 +9133,7 @@
 /turf/open/floor/almayer/edge/smooth/east,
 /area/golden_arrow/motor_pool)
 "aDy" = (
-/obj/structure/machinery/landinglight/ds1/delayone{
+/obj/structure/machinery/landinglight/delayone{
 	dir = 1
 	},
 /turf/open/floor/almayer/plate,
@@ -9309,13 +9309,13 @@
 	dir = 1
 	},
 /obj/structure/prop/invuln/overhead_pipe{
-	icon = 'icons/obj/structures/props/almayer_props.dmi';
+	icon = 'modular_pve/icons/obj/structures/props/almayer_props.dmi';
 	icon_state = "wallpipe_2";
 	pixel_y = 22;
 	pixel_x = -14
 	},
 /obj/structure/prop/invuln/overhead_pipe{
-	icon = 'icons/obj/structures/props/almayer_props.dmi';
+	icon = 'modular_pve/icons/obj/structures/props/almayer_props.dmi';
 	icon_state = "wallpipe_2";
 	pixel_y = -1;
 	pixel_x = -14;
@@ -9892,7 +9892,7 @@
 /turf/open/floor/almayer/test_floor4,
 /area/golden_arrow/motor_pool)
 "aGb" = (
-/obj/structure/reagent_dispensers/fueltank{
+/obj/structure/reagent_dispensers/tank/fuel{
 	layer = 2.97
 	},
 /turf/open/floor/almayer/plate,
@@ -9947,12 +9947,12 @@
 	layer = 2.52
 	},
 /obj/structure/prop/invuln/overhead_pipe{
-	icon = 'icons/obj/structures/props/almayer_props.dmi';
+	icon = 'modular_pve/icons/obj/structures/props/almayer_props.dmi';
 	icon_state = "wallpipe_2";
 	pixel_y = -1
 	},
 /obj/structure/prop/invuln/overhead_pipe{
-	icon = 'icons/obj/structures/props/almayer_props.dmi';
+	icon = 'modular_pve/icons/obj/structures/props/almayer_props.dmi';
 	icon_state = "wallpipe_3";
 	pixel_y = 22
 	},
@@ -10095,7 +10095,7 @@
 /turf/open/floor/almayer/test_floor4,
 /area/golden_arrow/hangar)
 "aGF" = (
-/obj/structure/machinery/landinglight/ds1/delaythree{
+/obj/structure/machinery/landinglight/delaythree{
 	dir = 4
 	},
 /turf/open/floor/almayer/plate,
@@ -10615,7 +10615,7 @@
 /area/golden_arrow/prep_hallway)
 "aIB" = (
 /obj/structure/prop/invuln{
-	icon = 'icons/obj/structures/structures.dmi';
+	icon = 'modular_pve/icons/obj/structures/structures.dmi';
 	icon_state = "ladder11";
 	pixel_y = 10;
 	desc = "A sturdy metal ladder.";
@@ -10687,7 +10687,7 @@
 /obj/structure/machinery/light/double/blue/golden_arrow{
 	pixel_y = 40
 	},
-/obj/structure/machinery/cm_vending/sorted/marine_food,
+/obj/structure/machinery/cm_vending/sorted/marine_food/modular_pve,
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/cryo_cells)
 "aIR" = (
@@ -11143,13 +11143,13 @@
 /area/golden_arrow/hangar)
 "aKr" = (
 /obj/structure/prop/invuln/overhead_pipe{
-	icon = 'icons/obj/structures/props/almayer_props.dmi';
+	icon = 'modular_pve/icons/obj/structures/props/almayer_props.dmi';
 	icon_state = "wallpipe_2";
 	pixel_y = 8;
 	dir = 8
 	},
 /obj/structure/prop/invuln/overhead_pipe{
-	icon = 'icons/obj/structures/props/almayer_props.dmi';
+	icon = 'modular_pve/icons/obj/structures/props/almayer_props.dmi';
 	icon_state = "wallpipe_2";
 	pixel_y = 8;
 	dir = 8;
@@ -11583,7 +11583,7 @@
 	dir = 4
 	},
 /obj/structure/prop/invuln/overhead_pipe{
-	icon = 'icons/obj/structures/props/almayer_props.dmi';
+	icon = 'modular_pve/icons/obj/structures/props/almayer_props.dmi';
 	icon_state = "wallpipe_2";
 	pixel_y = 22;
 	pixel_x = -14
@@ -11645,7 +11645,7 @@
 /turf/open/floor/almayer,
 /area/golden_arrow/dorms)
 "aMi" = (
-/obj/structure/machinery/landinglight/ds1,
+/obj/structure/machinery/landinglight,
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/hangar)
 "aMl" = (
@@ -12043,7 +12043,7 @@
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
 	},
-/obj/structure/machinery/landinglight/ds1/delaytwo{
+/obj/structure/machinery/landinglight/delaytwo{
 	dir = 8
 	},
 /turf/open/floor/almayer/plate,
@@ -12108,7 +12108,7 @@
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
 	},
-/obj/structure/machinery/landinglight/ds1,
+/obj/structure/machinery/landinglight,
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/hangar)
 "aNY" = (
@@ -12143,7 +12143,7 @@
 /turf/open/floor/almayer/mono,
 /area/golden_arrow/platoonprep)
 "aOi" = (
-/obj/structure/machinery/power/terminal{
+/obj/structure/terminal{
 	dir = 4
 	},
 /obj/item/tool/warning_cone{
@@ -12164,7 +12164,7 @@
 	},
 /obj/structure/prop/dam/crane,
 /obj/structure/prop{
-	icon = 'icons/obj/structures/props/almayer_props64.dmi';
+	icon = 'modular_pve/icons/obj/structures/props/almayer_props64.dmi';
 	icon_state = "cooling_system";
 	name = "Damaged FS/ACS-9 cooling system";
 	desc = "A cooling system for the Tripoli. It produces additional cooling reducing delays between launch. The pipes are crooked and bent,  hoses are sliced open, and that's not even mentioning the bullet holes. Looks to be an older model as well.";
@@ -12263,7 +12263,7 @@
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
 	},
-/obj/structure/machinery/landinglight/ds1{
+/obj/structure/machinery/landinglight{
 	dir = 1
 	},
 /turf/open/floor/almayer/plate,
@@ -12427,7 +12427,7 @@
 /turf/open/floor/almayer/cargo_arrow/north,
 /area/golden_arrow/hangar)
 "aPl" = (
-/obj/structure/machinery/landinglight/ds1/delayone{
+/obj/structure/machinery/landinglight/delayone{
 	dir = 8
 	},
 /turf/open/floor/almayer/plate,
@@ -12563,7 +12563,7 @@
 /turf/open/floor/almayer/edge/north,
 /area/golden_arrow/lower_cargo)
 "aPA" = (
-/obj/structure/machinery/landinglight/ds1/delaytwo{
+/obj/structure/machinery/landinglight/delaytwo{
 	dir = 4
 	},
 /turf/open/floor/almayer/plate,
@@ -12810,7 +12810,7 @@
 /obj/effect/landmark/late_join/alpha,
 /obj/effect/landmark/late_join,
 /obj/structure/prop/invuln/overhead_pipe{
-	icon = 'icons/obj/structures/props/almayer_props.dmi';
+	icon = 'modular_pve/icons/obj/structures/props/almayer_props.dmi';
 	icon_state = "wallpipe_2";
 	pixel_y = 8;
 	dir = 8
@@ -13263,7 +13263,7 @@
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/hangar)
 "aSj" = (
-/obj/structure/machinery/landinglight/ds1/delayone{
+/obj/structure/machinery/landinglight/delayone{
 	dir = 4
 	},
 /turf/open/floor/almayer/plate,
@@ -13937,7 +13937,7 @@
 /turf/open/floor/almayer/plate,
 /area/golden_arrow/hangar)
 "aUI" = (
-/obj/structure/machinery/power/reactor{
+/obj/structure/machinery/power/power_generator/reactor{
 	name = "\improper S-52 fusion reactor 17"
 	},
 /turf/open/floor/almayer,
@@ -13998,7 +13998,7 @@
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
 	},
-/obj/structure/machinery/landinglight/ds1/delaythree{
+/obj/structure/machinery/landinglight/delaythree{
 	dir = 1
 	},
 /turf/open/floor/almayer/plate,
@@ -14051,7 +14051,7 @@
 "aVa" = (
 /obj/structure/closet/emcloset,
 /obj/structure/prop/invuln/overhead_pipe{
-	icon = 'icons/obj/structures/props/almayer_props.dmi';
+	icon = 'modular_pve/icons/obj/structures/props/almayer_props.dmi';
 	icon_state = "wallpipe_3";
 	pixel_y = 22;
 	pixel_x = -14
@@ -14172,7 +14172,7 @@
 	pixel_x = 2;
 	pixel_y = -9
 	},
-/obj/structure/machinery/landinglight/ds1/delayone{
+/obj/structure/machinery/landinglight/delayone{
 	dir = 8
 	},
 /obj/structure/machinery/floodlight/landing/floor{
@@ -14403,7 +14403,7 @@
 /turf/open/floor/plating/plating_catwalk,
 /area/golden_arrow/hangar)
 "aWm" = (
-/obj/structure/machinery/landinglight/ds1/delaythree{
+/obj/structure/machinery/landinglight/delaythree{
 	dir = 8
 	},
 /turf/open/floor/almayer/plate,
@@ -14456,12 +14456,12 @@
 	pixel_y = 28
 	},
 /obj/structure/prop/invuln/overhead_pipe{
-	icon = 'icons/obj/structures/props/almayer_props.dmi';
+	icon = 'modular_pve/icons/obj/structures/props/almayer_props.dmi';
 	icon_state = "wallpipe_2";
 	pixel_y = -1
 	},
 /obj/structure/prop/invuln/overhead_pipe{
-	icon = 'icons/obj/structures/props/almayer_props.dmi';
+	icon = 'modular_pve/icons/obj/structures/props/almayer_props.dmi';
 	icon_state = "wallpipe_3";
 	pixel_y = 22
 	},
@@ -14902,7 +14902,7 @@
 /turf/open/floor/almayer/edge/smooth,
 /area/golden_arrow/cryo_cells)
 "aYd" = (
-/obj/structure/phone_base{
+/obj/structure/transmitter{
 	pixel_y = 30;
 	name = "motor pool receiver";
 	phone_category = "Golden Arrow";
@@ -15366,7 +15366,7 @@
 /turf/open/floor/almayer/cargo_arrow,
 /area/golden_arrow/hangar)
 "aZL" = (
-/obj/structure/machinery/landinglight/ds1/delaythree{
+/obj/structure/machinery/landinglight/delaythree{
 	dir = 1
 	},
 /turf/open/floor/almayer/plate,
@@ -15762,7 +15762,7 @@
 /area/golden_arrow/engineering)
 "bRe" = (
 /obj/structure/prop/invuln/overhead_pipe{
-	icon = 'icons/obj/structures/props/almayer_props.dmi';
+	icon = 'modular_pve/icons/obj/structures/props/almayer_props.dmi';
 	icon_state = "wallpipe_2";
 	pixel_y = 22;
 	pixel_x = -14
@@ -15787,13 +15787,13 @@
 	pixel_y = 1
 	},
 /obj/structure/prop/invuln/overhead_pipe{
-	icon = 'icons/obj/structures/props/almayer_props.dmi';
+	icon = 'modular_pve/icons/obj/structures/props/almayer_props.dmi';
 	icon_state = "wallpipe_2";
 	pixel_y = 8;
 	dir = 8
 	},
 /obj/structure/prop/invuln/overhead_pipe{
-	icon = 'icons/obj/structures/props/almayer_props.dmi';
+	icon = 'modular_pve/icons/obj/structures/props/almayer_props.dmi';
 	icon_state = "wallpipe_2";
 	pixel_y = 8;
 	dir = 8;
@@ -16152,13 +16152,13 @@
 /area/golden_arrow/supply)
 "dDk" = (
 /obj/structure/prop/invuln/overhead_pipe{
-	icon = 'icons/obj/structures/props/almayer_props.dmi';
+	icon = 'modular_pve/icons/obj/structures/props/almayer_props.dmi';
 	icon_state = "wallpipe_2";
 	pixel_y = 22;
 	pixel_x = 6
 	},
 /obj/structure/prop/invuln/overhead_pipe{
-	icon = 'icons/obj/structures/props/almayer_props.dmi';
+	icon = 'modular_pve/icons/obj/structures/props/almayer_props.dmi';
 	icon_state = "wallpipe_2";
 	pixel_y = 22;
 	pixel_x = 12
@@ -16166,7 +16166,7 @@
 /turf/open/floor/almayer,
 /area/golden_arrow/engineering)
 "dGg" = (
-/obj/structure/machinery/landinglight/ds1/delaythree{
+/obj/structure/machinery/landinglight/delaythree{
 	dir = 8
 	},
 /obj/structure/machinery/floodlight/landing/floor{
@@ -16498,7 +16498,7 @@
 /area/golden_arrow/supplydrop)
 "eGp" = (
 /obj/structure/prop/invuln/overhead_pipe{
-	icon = 'icons/obj/structures/props/almayer_props.dmi';
+	icon = 'modular_pve/icons/obj/structures/props/almayer_props.dmi';
 	icon_state = "wallpipe_2";
 	pixel_y = 31
 	},
@@ -16677,7 +16677,7 @@
 /turf/open/floor/almayer/edge/smooth/north,
 /area/golden_arrow/briefing)
 "ftY" = (
-/obj/structure/machinery/landinglight/ds1/delaythree{
+/obj/structure/machinery/landinglight/delaythree{
 	dir = 4
 	},
 /obj/structure/machinery/floodlight/landing/floor{
@@ -16778,7 +16778,7 @@
 /area/golden_arrow/engineering)
 "fLv" = (
 /obj/structure/prop/invuln/overhead_pipe{
-	icon = 'icons/obj/structures/props/almayer_props.dmi';
+	icon = 'modular_pve/icons/obj/structures/props/almayer_props.dmi';
 	icon_state = "wallpipe_2";
 	pixel_y = 22
 	},
@@ -17198,7 +17198,7 @@
 	icon_state = "4-8"
 	},
 /obj/structure/prop/invuln/overhead_pipe{
-	icon = 'icons/obj/structures/props/almayer_props.dmi';
+	icon = 'modular_pve/icons/obj/structures/props/almayer_props.dmi';
 	icon_state = "wallpipe_3";
 	pixel_y = 22;
 	pixel_x = -14
@@ -17340,7 +17340,7 @@
 /area/golden_arrow/engineering)
 "hGc" = (
 /obj/structure/prop/invuln/overhead_pipe{
-	icon = 'icons/obj/structures/props/almayer_props.dmi';
+	icon = 'modular_pve/icons/obj/structures/props/almayer_props.dmi';
 	icon_state = "wallpipe_2";
 	pixel_y = 31;
 	pixel_x = -14
@@ -17421,7 +17421,7 @@
 /area/golden_arrow/engineering)
 "idK" = (
 /obj/structure/barricade/handrail,
-/obj/structure/reagent_dispensers/fueltank{
+/obj/structure/reagent_dispensers/tank/fuel{
 	layer = 2.9;
 	icon = 'icons/obj/structures/props/generic_props.dmi';
 	icon_state = "weldtank_old";
@@ -17663,7 +17663,7 @@
 /obj/structure/cable/heavyduty{
 	icon_state = "4-8"
 	},
-/obj/structure/phone_base{
+/obj/structure/transmitter{
 	pixel_y = 31;
 	name = "engineering receiver";
 	phone_category = "Golden Arrow";
@@ -17677,13 +17677,13 @@
 	layer = 3.1
 	},
 /obj/structure/prop/invuln/overhead_pipe{
-	icon = 'icons/obj/structures/props/almayer_props.dmi';
+	icon = 'modular_pve/icons/obj/structures/props/almayer_props.dmi';
 	icon_state = "wallpipe_3";
 	pixel_y = 22;
 	pixel_x = 6
 	},
 /obj/structure/prop/invuln/overhead_pipe{
-	icon = 'icons/obj/structures/props/almayer_props.dmi';
+	icon = 'modular_pve/icons/obj/structures/props/almayer_props.dmi';
 	icon_state = "wallpipe_3";
 	pixel_y = 22;
 	pixel_x = 12
@@ -18549,7 +18549,7 @@
 /area/golden_arrow/lower_cargo)
 "mEQ" = (
 /obj/structure/prop/invuln/overhead_pipe{
-	icon = 'icons/obj/structures/props/almayer_props.dmi';
+	icon = 'modular_pve/icons/obj/structures/props/almayer_props.dmi';
 	icon_state = "wallpipe_3";
 	pixel_y = 22
 	},
@@ -19144,7 +19144,7 @@
 /turf/open/floor/almayer/edge/smooth/corner,
 /area/golden_arrow/supply)
 "olG" = (
-/obj/structure/phone_base{
+/obj/structure/transmitter{
 	pixel_y = 6;
 	name = "medical bay receiver";
 	phone_category = "Golden Arrow";
@@ -19256,7 +19256,7 @@
 /area/golden_arrow/briefing)
 "oFy" = (
 /obj/structure/prop/invuln/overhead_pipe{
-	icon = 'icons/obj/structures/props/almayer_props.dmi';
+	icon = 'modular_pve/icons/obj/structures/props/almayer_props.dmi';
 	icon_state = "wallpipe_2";
 	pixel_y = 22
 	},
@@ -19293,7 +19293,7 @@
 /turf/closed/wall/almayer/outer,
 /area/golden_arrow/supply)
 "oIL" = (
-/obj/structure/phone_base{
+/obj/structure/transmitter{
 	name = "briefing receiver";
 	phone_category = "Golden Arrow";
 	phone_id = "Briefing";
@@ -19605,7 +19605,7 @@
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
 	},
-/obj/structure/phone_base{
+/obj/structure/transmitter{
 	pixel_y = 30;
 	name = "supply launch bay receiver";
 	phone_category = "Golden Arrow";
@@ -19645,13 +19645,13 @@
 /area/golden_arrow/briefing)
 "qbU" = (
 /obj/structure/prop/invuln/overhead_pipe{
-	icon = 'icons/obj/structures/props/almayer_props.dmi';
+	icon = 'modular_pve/icons/obj/structures/props/almayer_props.dmi';
 	icon_state = "wallpipe_2";
 	pixel_y = 31;
 	pixel_x = 6
 	},
 /obj/structure/prop/invuln/overhead_pipe{
-	icon = 'icons/obj/structures/props/almayer_props.dmi';
+	icon = 'modular_pve/icons/obj/structures/props/almayer_props.dmi';
 	icon_state = "wallpipe_2";
 	pixel_y = 31;
 	pixel_x = 12
@@ -19859,7 +19859,7 @@
 /turf/open/floor/almayer/edge/smooth/west,
 /area/golden_arrow/supply)
 "rdX" = (
-/obj/structure/phone_base{
+/obj/structure/transmitter{
 	pixel_y = 2;
 	name = "supply bay receiver";
 	phone_category = "Golden Arrow";
@@ -20209,7 +20209,7 @@
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
 	},
-/obj/structure/phone_base{
+/obj/structure/transmitter{
 	pixel_y = 31;
 	name = "lower supply bay receiver";
 	phone_category = "Golden Arrow";

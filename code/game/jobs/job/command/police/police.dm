@@ -25,6 +25,10 @@
 		total_positions_so_far = positions
 	return positions
 
+AddTimelock(/datum/job/command/police, list(
+	JOB_SQUAD_ROLES = 10 HOURS
+))
+
 /obj/effect/landmark/start/police
 	name = JOB_POLICE
 	icon_state = "mp_spawn"

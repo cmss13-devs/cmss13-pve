@@ -4,22 +4,24 @@
 //======
 */
 
-// Used by M4A3, M4A3 Custom and B92FS
+// Used by M4A3, M4A4, M4A3 Custom and B92FS
 /datum/ammo/bullet/pistol
-	name = "9x19 bullet"
+	name = "pistol bullet"
 	headshot_state = HEADSHOT_OVERLAY_MEDIUM
-	accuracy = HIT_ACCURACY_TIER_3
+	accuracy = -HIT_ACCURACY_TIER_3
 	accuracy_var_low = PROJECTILE_VARIANCE_TIER_6
 	damage = 40
-	penetration= -ARMOR_PENETRATION_TIER_1
+	penetration= ARMOR_PENETRATION_TIER_2
 	shrapnel_chance = SHRAPNEL_CHANCE_TIER_2
-	shell_casing = /obj/effect/decal/ammo_casing
+
+/datum/ammo/bullet/pistol/setup_faction_clash_values()
+	. = ..()
+	accuracy += 20
+	accurate_range -= 2 //we want pistols to be more accurate but only at short range
+
 
 /datum/ammo/bullet/pistol/tiny
 	name = "light pistol bullet"
-
-/datum/ammo/bullet/pistol/upp
-	name = "9x18 bullet"
 
 /datum/ammo/bullet/pistol/tranq
 	name = "tranquilizer bullet"
@@ -31,22 +33,23 @@
 //Limited by its lack of versatility and lower supply, so marines finally have an answer for flanker castes that isn't just buckshot.
 
 /datum/ammo/bullet/pistol/hollow
-	name = "hollowpoint 9x19 bullet"
+	name = "hollowpoint pistol bullet"
 
 	damage = 55 //hollowpoint is strong
-	penetration = -ARMOR_PENETRATION_TIER_3 //hollowpoint can't pierce armor!
-	shrapnel_chance = SHRAPNEL_CHANCE_TIER_5 //hollowpoint causes shrapnel
+	penetration = 0 //hollowpoint can't pierce armor!
+	shrapnel_chance = SHRAPNEL_CHANCE_TIER_3 //hollowpoint causes shrapnel
 
 // Used by M4A3 AP and mod88
 /datum/ammo/bullet/pistol/ap
-	name = "armor-piercing 9x19 bullet"
+	name = "armor-piercing pistol bullet"
 
 	damage = 25
 	accuracy = HIT_ACCURACY_TIER_2
-	penetration= ARMOR_PENETRATION_TIER_3
+	penetration= ARMOR_PENETRATION_TIER_8
+	shrapnel_chance = SHRAPNEL_CHANCE_TIER_2
 
 /datum/ammo/bullet/pistol/ap/penetrating
-	name = "wall-penetrating 9x19 bullet"
+	name = "wall-penetrating pistol bullet"
 	shrapnel_chance = 0
 
 	damage = 30
@@ -59,7 +62,7 @@
 	))
 
 /datum/ammo/bullet/pistol/ap/toxin
-	name = "toxic 9x19 bullet"
+	name = "toxic pistol bullet"
 	var/acid_per_hit = 10
 	var/organic_damage_mult = 3
 
@@ -78,14 +81,14 @@
 		P.damage *= organic_damage_mult
 
 /datum/ammo/bullet/pistol/le
-	name = "armor-shredding 9x19 bullet"
+	name = "armor-shredding pistol bullet"
 
 	damage = 15
-	penetration = ARMOR_PENETRATION_TIER_5
+	penetration = ARMOR_PENETRATION_TIER_4
 	pen_armor_punch = 3
 
 /datum/ammo/bullet/pistol/rubber
-	name = "rubber 9x19 bullet"
+	name = "rubber pistol bullet"
 	sound_override = 'sound/weapons/gun_c99.ogg'
 
 	damage = 0
@@ -93,75 +96,80 @@
 	shrapnel_chance = 0
 
 // Reskinned rubber bullet used for the ES-4 CL pistol.
-/datum/ammo/bullet/pistol/electrostatic
-	name = "electrostatic pistol bullet"
+/datum/ammo/bullet/pistol/rubber/es4
+	name = "stun pistol bullet"
+	icon_state = "cm_laser"
 	sound_override = null
-	damage = 15
+	flags_ammo_behavior = AMMO_ENERGY|AMMO_IGNORE_RESIST
+	sound_hit = "energy_hit"
+	sound_miss = "energy_miss"
+	sound_bounce = "energy_bounce"
+	hit_effect_color = "#00aeff"
+	stamina_damage = 30
+	accuracy = HIT_ACCURACY_TIER_4
 
-/datum/ammo/bullet/pistol/electrostatic/on_hit_mob(mob/entity, obj/projectile/bullet)
-	slowdown(entity, bullet)
-
-// Used by M1911, Deagle and KT-42
+// Used by M1911 and KT-42
 /datum/ammo/bullet/pistol/heavy
 	name = "heavy pistol bullet"
 	headshot_state = HEADSHOT_OVERLAY_MEDIUM
-	accuracy = HIT_ACCURACY_TIER_3
+	accuracy = -HIT_ACCURACY_TIER_3
 	accuracy_var_low = PROJECTILE_VARIANCE_TIER_6
 	damage = 55
-	penetration = -ARMOR_PENETRATION_TIER_2 //bigger but slower, armor works to counter more effectively
+	penetration = ARMOR_PENETRATION_TIER_3
 	shrapnel_chance = SHRAPNEL_CHANCE_TIER_2
 
-/datum/ammo/bullet/pistol/heavy/special //That's a spicy meataball. Hits harder, moves faster, can only be used in select guns
-	name = "supersonic heavy pistol bullet"
-	shell_speed = AMMO_SPEED_TIER_5
-	damage = 60
-	penetration = ARMOR_PENETRATION_TIER_2
-
-/datum/ammo/bullet/pistol/heavy/special/on_hit_mob(mob/entity, obj/projectile/bullet)
-	. = ..()
-	slowdown(entity, bullet)
-	pushback(entity, bullet, 2)
-
-/datum/ammo/bullet/pistol/heavy/super //Commander's variant //Not messing with this, it can retain The Funny Values
-	name = ".50 heavy pistol bullet"
-	damage = 60
-	damage_var_low = PROJECTILE_VARIANCE_TIER_8
-	damage_var_high = PROJECTILE_VARIANCE_TIER_6
-	penetration = ARMOR_PENETRATION_TIER_4
-
-/datum/ammo/bullet/pistol/heavy/super/highimpact
-	name = ".50 high-impact pistol bullet"
-	penetration = ARMOR_PENETRATION_TIER_1
-	debilitate = list(0,1.5,0,0,0,1,0,0)
-	flags_ammo_behavior = AMMO_BALLISTIC
-
-/datum/ammo/bullet/pistol/heavy/super/highimpact/ap
-	name = ".50 high-impact armor piercing pistol bullet"
-	penetration = ARMOR_PENETRATION_TIER_10
-	damage = 45
-
-/datum/ammo/bullet/pistol/heavy/super/highimpact/upp
+/datum/ammo/bullet/pistol/heavy/highimpact
 	name = "high-impact pistol bullet"
-	sound_override = 'sound/weapons/gun_DE50.ogg'
-	penetration = ARMOR_PENETRATION_TIER_6
-	debilitate = list(0,1.5,0,0,0,1,0,0)
-	flags_ammo_behavior = AMMO_BALLISTIC
+	debilitate = list(0,1,0,0,0,1,0,0)
 
-/datum/ammo/bullet/pistol/heavy/super/highimpact/New()
-	..()
-	RegisterSignal(src, COMSIG_AMMO_POINT_BLANK, PROC_REF(handle_battlefield_execution))
+/datum/ammo/bullet/pistol/heavy/highimpact/ap
+	name = "high-impact armor-piercing pistol bullet"
+	penetration = ARMOR_PENETRATION_TIER_10
+	damage = 40
 
-/datum/ammo/bullet/pistol/heavy/super/highimpact/on_hit_mob(mob/M, obj/projectile/P)
+/datum/ammo/bullet/pistol/heavy/highimpact/on_hit_mob(mob/M, obj/projectile/P)
 	knockback(M, P, 4)
 
 /datum/ammo/bullet/pistol/deagle
 	name = ".50 heavy pistol bullet"
 	damage = 45
 	headshot_state = HEADSHOT_OVERLAY_HEAVY
-	accuracy = HIT_ACCURACY_TIER_3
+	accuracy = -HIT_ACCURACY_TIER_3
 	accuracy_var_low = PROJECTILE_VARIANCE_TIER_6
-	penetration = ARMOR_PENETRATION_TIER_2
+	penetration = ARMOR_PENETRATION_TIER_6
 	shrapnel_chance = SHRAPNEL_CHANCE_TIER_5
+
+
+/datum/ammo/bullet/pistol/deagle/super //Commander's variant
+	name = ".50 high-velocity pistol bullet"
+	damage = 60
+	headshot_state = HEADSHOT_OVERLAY_HEAVY
+	accuracy = -HIT_ACCURACY_TIER_3
+	accuracy_var_low = PROJECTILE_VARIANCE_TIER_6
+	penetration = ARMOR_PENETRATION_TIER_6
+	shrapnel_chance = SHRAPNEL_CHANCE_TIER_5
+
+/datum/ammo/bullet/pistol/deagle/super/highimpact
+	name = ".50 high-impact pistol bullet"
+	penetration = ARMOR_PENETRATION_TIER_4
+	debilitate = list(0,1.5,0,0,0,1,0,0)
+	flags_ammo_behavior = AMMO_BALLISTIC
+
+/datum/ammo/bullet/pistol/deagle/super/highimpact/ap
+	name = ".50 high-impact armor-piercing pistol bullet"
+	penetration = ARMOR_PENETRATION_TIER_10
+	damage = 50
+
+//Type 73 pistol
+/datum/ammo/bullet/pistol/deagle/super/highimpact/upp
+	name = "high-impact pistol bullet"
+	sound_override = 'sound/weapons/gun_DE50.ogg'
+	penetration = ARMOR_PENETRATION_TIER_6
+	debilitate = list(0,1.5,0,0,0,1,0,0)
+	flags_ammo_behavior = AMMO_BALLISTIC
+
+/datum/ammo/bullet/pistol/deagle/super/highimpact/on_hit_mob(mob/M, obj/projectile/P)
+	knockback(M, P, 4)
 
 /datum/ammo/bullet/pistol/incendiary
 	name = "incendiary pistol bullet"
@@ -189,7 +197,7 @@
 
 	accuracy = HIT_ACCURACY_TIER_3
 	damage = 36
-	penetration = ARMOR_PENETRATION_TIER_2
+	penetration = ARMOR_PENETRATION_TIER_5
 	damage_falloff = DAMAGE_FALLOFF_TIER_7
 
 // Used by VP78 and Auto 9
@@ -198,11 +206,11 @@
 	headshot_state = HEADSHOT_OVERLAY_MEDIUM
 	debilitate = list(0,0,0,0,0,0,0,2)
 
-	accuracy = HIT_ACCURACY_TIER_2
-	damage = 50
-	penetration = ARMOR_PENETRATION_TIER_2
-	shrapnel_chance = SHRAPNEL_CHANCE_TIER_1
-	effective_range_max = 3 //hopefully this fixes the damage woes.
+	effective_range_max = 6
+	accuracy = HIT_ACCURACY_TIER_4
+	damage = 45
+	penetration= ARMOR_PENETRATION_TIER_6
+	shrapnel_chance = SHRAPNEL_CHANCE_TIER_2
 	damage_falloff = DAMAGE_FALLOFF_TIER_6
 
 /datum/ammo/bullet/pistol/squash/toxin
@@ -249,6 +257,20 @@
 		BULLET_TRAIT_ENTRY(/datum/element/bullet_trait_incendiary)
 	))
 
+/datum/ammo/bullet/pistol/squash/heap
+	name = "high-explosive armor-piercing pistol bullet"
+
+	headshot_state = HEADSHOT_OVERLAY_HEAVY
+	damage = 50
+	penetration = ARMOR_PENETRATION_TIER_10
+
+/datum/ammo/bullet/pistol/squash/rubber
+	name = "rubber squash-head pistol bullet"
+	damage_type = BURN
+	shrapnel_chance = 0
+	sound_override = 'sound/weapons/gun_c99.ogg'
+	damage = 2
+	stamina_damage = 40
 
 /datum/ammo/bullet/pistol/mankey
 	name = "live monkey"
@@ -268,10 +290,10 @@
 		BULLET_TRAIT_ENTRY(/datum/element/bullet_trait_incendiary)
 	))
 
-/datum/ammo/bullet/pistol/mankey/on_hit_mob(mob/M,obj/projectile/P)
-	if(P && P.loc && !M.stat && !istype(M,/mob/living/carbon/human/monkey))
-		P.visible_message(SPAN_DANGER("The [src] chimpers furiously!"))
-		new /mob/living/carbon/human/monkey(P.loc)
+/datum/ammo/bullet/pistol/mankey/on_hit_mob(mob/monke, obj/projectile/boolet)
+	if(boolet && boolet.loc && !monke.stat && !istype(monke, /mob/living/carbon/human/monkey))
+		boolet.visible_message(SPAN_DANGER("[src] chimpers furiously!"))
+		new /mob/living/carbon/human/monkey(boolet.loc)
 
 /datum/ammo/bullet/pistol/smart
 	name = "smartpistol bullet"
@@ -282,3 +304,23 @@
 	penetration = 20
 	shrapnel_chance = SHRAPNEL_CHANCE_TIER_2
 
+/datum/ammo/bullet/pistol/l54_custom
+	penetration= ARMOR_PENETRATION_TIER_3
+
+// Used by M10 Auto-Pistol
+
+/datum/ammo/bullet/pistol/m10
+	name = "auto-pistol bullet"
+	damage = 24
+	accurate_range = 2
+	effective_range_max = 3
+	penetration = ARMOR_PENETRATION_TIER_1
+	shell_speed = AMMO_SPEED_TIER_5
+	damage_falloff = DAMAGE_FALLOFF_TIER_4
+	scatter = SCATTER_AMOUNT_TIER_5
+	accuracy = HIT_ACCURACY_TIER_3
+
+/datum/ammo/bullet/pistol/m10/ap
+	name = "armor-piercing auto-pistol bullet"
+	damage = 18
+	penetration = ARMOR_PENETRATION_TIER_6

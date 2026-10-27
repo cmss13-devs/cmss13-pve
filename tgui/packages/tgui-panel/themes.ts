@@ -44,15 +44,6 @@ export const setClientTheme = (name) => {
       'outputwindow.text-color': '#000000',
       'mainwindow.background-color': 'none',
       'split.background-color': 'none',
-      // Buttons
-      'changelog.background-color': 'none',
-      'changelog.text-color': '#000000',
-      'wiki.background-color': 'none',
-      'wiki.text-color': '#000000',
-      'worksheet.background-color': 'none',
-      'worksheet.text-color': '#000000',
-      'github.background-color': 'none',
-      'github.text-color': '#000000',
       // Status and verb tabs
       'output.background-color': 'none',
       'output.text-color': '#000000',
@@ -84,15 +75,6 @@ export const setClientTheme = (name) => {
       'outputwindow.text-color': COLOR_DARK_TEXT,
       'mainwindow.background-color': COLOR_DARK_BG,
       'split.background-color': COLOR_DARK_BG,
-      // Buttons
-      'changelog.background-color': '#494949',
-      'changelog.text-color': COLOR_DARK_TEXT,
-      'wiki.background-color': '#494949',
-      'wiki.text-color': COLOR_DARK_TEXT,
-      'worksheet.background-color': '#494949',
-      'worksheet.text-color': COLOR_DARK_TEXT,
-      'github.background-color': '#492020',
-      'github.text-color': COLOR_DARK_TEXT,
       // Status and verb tabs
       'output.background-color': COLOR_DARK_BG_DARKER,
       'output.text-color': COLOR_DARK_TEXT,

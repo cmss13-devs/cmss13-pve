@@ -6,7 +6,7 @@
 
 /obj/effect/landmark/freed_mob_spawner/Initialize()
 	. = ..()
-	INVOKE_ASYNC(src, PROC_REF(spawn_freed_mob))
+	spawn_freed_mob()
 	return INITIALIZE_HINT_QDEL
 
 /obj/effect/landmark/freed_mob_spawner/Destroy()
@@ -21,3 +21,12 @@
 	arm_equipment(H, equipment_path, TRUE, count_participant)
 	H.free_for_ghosts()
 
+/obj/effect/landmark/freed_mob_spawner/upp_conscript
+	name = "UPP Conscript"
+	equipment_path = /datum/equipment_preset/upp/conscript
+	count_participant = TRUE
+
+/obj/effect/landmark/freed_mob_spawner/upp_soldier
+	name = "UPP Soldier"
+	equipment_path = /datum/equipment_preset/upp/soldier/dressed
+	count_participant = TRUE

@@ -24,11 +24,11 @@ GLOBAL_LIST_EMPTY(co_secure_boxes)
 	name = "commanding officer's secure box"
 	req_access = list(ACCESS_MARINE_CO)
 	desc = "A safe for the Commanding Officer to store any equipment they need to have ready at a moment's notice. There's a note inside saying that whatever was inside it before was moved out."
-	icon = 'icons/obj/structures/marine_closet.dmi'
-	icon_state = "commander_safe"
-	icon_opened = "commander_safe_open"
-	icon_closed = "commander_safe"
-	icon_locked = "commander_safe"
+	icon = 'icons/obj/structures/safes.dmi'
+	icon_state = "safe"
+	icon_opened = "safe-open"
+	icon_closed = "safe"
+	icon_locked = "safe"
 
 /obj/structure/closet/secure_closet/securecom/Initialize()
 	. = ..()
@@ -74,8 +74,8 @@ GLOBAL_LIST_EMPTY(co_secure_boxes)
 	. = ..()
 	new /obj/item/clothing/head/helmet/marine/MP/SO(src)
 	new /obj/item/clothing/head/helmet/marine/MP/SO(src)
-	new /obj/item/clothing/suit/storage/marine/MP/SO(src)
-	new /obj/item/clothing/suit/storage/marine/MP/SO(src)
+	new /obj/item/clothing/suit/storage/marine/CIC(src)
+	new /obj/item/clothing/suit/storage/marine/CIC(src)
 	new /obj/item/device/radio/headset/almayer/mcom(src)
 	new /obj/item/clothing/gloves/marine(src)
 	new /obj/item/clothing/gloves/marine(src)
@@ -106,7 +106,9 @@ GLOBAL_LIST_EMPTY(co_secure_boxes)
 	new /obj/item/clothing/shoes/marine(src)
 	new /obj/item/storage/belt/gun/m4a3(src)
 	new /obj/item/storage/backpack/marine/satchel/intel(src)
-	new /obj/item/clothing/suit/marine/medium/rto/md(src)
+	new /obj/item/clothing/suit/storage/marine/medium/rto/intel(src)
+	new /obj/item/storage/pouch/document(src)
+	new /obj/item/storage/pouch/document(src)
 	new /obj/item/device/motiondetector/intel(src)
 	new /obj/item/tool/crowbar(src)
 	new /obj/item/clothing/accessory/storage/webbing(src)
@@ -128,10 +130,10 @@ GLOBAL_LIST_EMPTY(co_secure_boxes)
 
 /obj/structure/closet/secure_closet/pilot_officer/Initialize()
 	. = ..()
-	new /obj/item/clothing/head/helmet/upp/marinepilot(src)
+	new /obj/item/clothing/head/helmet/marine/pilot(src)
 	new /obj/item/clothing/under/marine/officer/pilot(src)
 	new /obj/item/clothing/shoes/marine(src)
-	new /obj/item/clothing/suit/armor/vest/pilot(src)
+	new /obj/item/clothing/suit/storage/jacket/marine/pilot/armor(src)
 	new /obj/item/storage/belt/gun/m39(src)
 	new /obj/item/storage/backpack/marine/satchel(src)
 	new /obj/item/clothing/gloves/yellow(src)
@@ -196,7 +198,7 @@ GLOBAL_LIST_EMPTY(co_secure_boxes)
 	new /obj/item/storage/belt/security/MP(src)
 	new /obj/item/device/flashlight(src)
 	new /obj/item/clothing/glasses/sunglasses/sechud(src)
-	new /obj/item/device/radio/headset/almayer/cmpcom(src)
+	new /obj/item/device/radio/headset/almayer/mcom/cmp(src)
 	new /obj/item/weapon/gun/energy/taser(src)
 	new /obj/item/weapon/baton(src)
 	new /obj/item/storage/backpack/security (src)
@@ -247,18 +249,18 @@ GLOBAL_LIST_EMPTY(co_secure_boxes)
 	new /obj/item/storage/backpack/marine/satchel(src)
 	if(!is_ground_level(z))
 		new /obj/item/device/radio/headset/almayer/doc(src)
+	new /obj/item/clothing/under/rank/medical(src)
+	new /obj/item/clothing/suit/storage/labcoat(src)
+	new /obj/item/clothing/suit/storage/labcoat/short(src)
+	new /obj/item/clothing/suit/storage/labcoat/long(src)
 	new /obj/item/clothing/shoes/white(src)
-	new /obj/item/clothing/shoes/white(src)
-	new /obj/item/storage/belt/medical/full(src)
-	new /obj/item/clothing/under/rank/medical/green(src)
-	new /obj/item/clothing/under/rank/medical/blue(src)
-	new /obj/item/clothing/under/rank/medical/lightblue(src)
-	new /obj/item/clothing/under/rank/medical/purple(src)
+	new /obj/item/clothing/mask/breath(src)
 	new /obj/item/clothing/mask/surgical(src)
-	new /obj/item/clothing/head/surgery/green(src)
-	new /obj/item/clothing/head/surgery/blue(src)
-	new /obj/item/clothing/head/surgery/purple(src)
 	new /obj/item/clothing/glasses/hud/health(src)
+	new /obj/item/storage/pouch/medical(src)
+	new /obj/item/storage/pouch/syringe(src)
+	new /obj/item/storage/pouch/medkit(src)
+	new /obj/item/storage/pouch/chem(src)
 
 /obj/structure/closet/secure_closet/medical_doctor/select_gamemode_equipment(gamemode)
 	if (SSmapping.configs[GROUND_MAP].environment_traits[MAP_COLD])
@@ -305,11 +307,11 @@ GLOBAL_LIST_EMPTY(co_secure_boxes)
 
 /obj/structure/closet/secure_closet/req_officer/Initialize()
 	. = ..()
-	new /obj/item/device/radio/headset/almayer/qm(src)
-	new /obj/item/clothing/under/marine/officer/qm_suit(src)
+	new /obj/item/device/radio/headset/almayer/mcom/qm(src)
+	new /obj/item/clothing/under/rank/qm_suit(src)
 	new /obj/item/clothing/shoes/marine(src)
 	new /obj/item/storage/belt/marine(src)
-	new /obj/item/clothing/head/cmcap/khaki(src)
+	new /obj/item/clothing/head/cmcap/req(src)
 	new /obj/item/device/flashlight(src)
 	new /obj/item/storage/backpack/marine/satchel(src)
 
@@ -346,19 +348,19 @@ GLOBAL_LIST_EMPTY(co_secure_boxes)
 
 /obj/structure/closet/secure_closet/sea/Initialize()
 	. = ..()
-	new /obj/item/device/whistle(src)
+	new /obj/item/clothing/accessory/device/whistle(src)
 	new /obj/item/device/binoculars/range(src)
 	new /obj/item/clothing/suit/armor/bulletproof/badge(src)
 	new /obj/item/clothing/under/marine/officer/bridge(src)
-	new /obj/item/clothing/shoes/laceup(src)
+	new /obj/item/clothing/shoes/dress(src)
 	new /obj/item/storage/backpack/marine/satchel(src)
 
 /obj/structure/closet/secure_closet/cmdcabinet
-	name = "command tablet cabinet"
-	desc = "A bulletproof cabinet containing the command tablet for usage by the CO and XO. Opens only to them and department heads."
+	name = "heavyduty wall cabinet"
+	desc = "A bulletproof cabinet containing whatever important goodies to justify locking it inside."
+	req_one_access = list(ACCESS_MARINE_SENIOR)
 	density = FALSE
 	store_mobs = FALSE
-	req_access = list(ACCESS_MARINE_SENIOR)
 	icon_state = "secure_locked_cmdcabinet"
 	icon_closed = "secure_unlocked_cmdcabinet"
 	icon_locked = "secure_locked_cmdcabinet"
@@ -367,3 +369,41 @@ GLOBAL_LIST_EMPTY(co_secure_boxes)
 	icon_off = "secure_unlocked_cmdcabinet"
 	wall_mounted = TRUE
 
+/obj/structure/closet/secure_closet/cmdcabinet/marine
+	name = "command tablet cabinet"
+	desc = "A bulletproof cabinet containing the command tablet for usage by the CO and XO. Opens only to them and department heads."
+	req_one_access = list(ACCESS_MARINE_SENIOR)
+
+/obj/structure/closet/secure_closet/cmdcabinet/marine/Initialize()
+	. = ..()
+	new /obj/item/device/radio/headset/almayer/mcom/spare(src)
+	new /obj/item/device/cotablet(src)
+	new /obj/item/device/radio/marine/command(src)
+	new /obj/item/device/radio/marine/command(src)
+	new /obj/item/device/radio/marine/command(src)
+
+/obj/structure/closet/secure_closet/cmdcabinet/comms_mp
+	name = "communications cabinet"
+	desc = "A bulletproof cabinet containing communications equipment."
+	req_one_access = list(ACCESS_MARINE_BRIG)
+
+/obj/structure/closet/secure_closet/cmdcabinet/comms_mp/Initialize()
+	. = ..()
+	new /obj/item/device/radio(src)
+	new /obj/item/device/radio/listening_bug/radio_linked/mp(src)
+	new /obj/item/device/radio/listening_bug/radio_linked/mp(src)
+	new /obj/item/device/motion_sensor/mp(src)
+	new /obj/item/device/motion_sensor/mp(src)
+	new /obj/item/device/motion_sensor/mp(src)
+
+/obj/structure/closet/secure_closet/cmdcabinet/comms_cl
+	name = "communications cabinet"
+	desc = "A bulletproof cabinet containing communications equipment."
+	req_one_access = list(ACCESS_WY_EXEC, ACCESS_WY_SECURITY)
+
+/obj/structure/closet/secure_closet/cmdcabinet/comms_cl/Initialize()
+	. = ..()
+	new /obj/item/device/radio(src)
+	new /obj/item/device/radio/listening_bug/radio_linked/wy(src)
+	new /obj/item/device/radio/listening_bug/radio_linked/wy(src)
+	new /obj/item/device/motion_sensor/wy(src)

@@ -1,6 +1,6 @@
 /obj/structure/roof
 	name = "roof"
-	desc = "A roof"
+	desc = null
 	icon = 'icons/turf/almayer.dmi'
 	icon_state = "plating_catwalk"
 	density = FALSE
@@ -51,6 +51,7 @@
 /obj/structure/roof/Destroy(force, ...)
 	if(linked_master)
 		linked_master.remove_roof(src)
+	linked_master = null;
 	for(var/icon in GLOB.player_list)
 		var/mob/mob = icon
 		mob.client.images -= normal_image
@@ -72,8 +73,6 @@
 
 /obj/effect/roof_node //used for observing if mob is near the roof
 	name = "roof_node"
-	icon = 'icons/landmarks.dmi'
-	icon_state = "roof_node"
 	anchored = TRUE
 	mouse_opacity = MOUSE_OPACITY_TRANSPARENT
 	invisibility = 101
@@ -81,6 +80,7 @@
 	var/datum/roof_master_node/linked_master
 
 /obj/effect/roof_node/Crossed(atom/movable/mover, target_dir)
+	..()
 	if(!linked_master)
 		return
 	if(isliving(mover))
@@ -113,7 +113,7 @@
 	if(connected_nodes)
 		for(var/obj/effect/roof_node/roof_node in connected_nodes)
 			qdel(roof_node)
-	if(connected_nodes)
+	if(connected_roof)
 		for(var/obj/structure/roof/roof in connected_roof)
 			qdel(roof)
 	return ..()

@@ -1,6 +1,0 @@
-[
-	{
-		"type": "include", "name": "Standalone variations",
-		"file": "mapgen_variations.json"
-	}
-]

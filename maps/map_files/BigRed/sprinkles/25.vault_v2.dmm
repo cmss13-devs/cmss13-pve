@@ -72,6 +72,7 @@
 	name = "Observation Shutters";
 	pixel_y = 28
 	},
+/obj/effect/landmark/corpsespawner/pmc,
 /obj/effect/decal/cleanable/vomit,
 /turf/open/floor/darkpurplecorners2,
 /area/bigredv2/caves/lambda/breakroom)
@@ -180,7 +181,7 @@
 	pixel_x = 7;
 	pixel_y = 10
 	},
-/obj/item/clothing/accessory/medal/bronze/science{
+/obj/item/clothing/accessory/medal/bronze{
 	pixel_x = -5
 	},
 /turf/open/floor/strata/white_cyan1/east,

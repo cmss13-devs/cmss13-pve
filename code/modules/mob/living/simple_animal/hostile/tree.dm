@@ -1,7 +1,7 @@
 /mob/living/simple_animal/hostile/tree
 	name = "pine tree"
 	desc = "A pissed off tree-like alien. It seems annoyed with the festivities..."
-	icon = 'icons/obj/structures/props/pinetrees.dmi'
+	icon = 'icons/obj/structures/props/natural/vegetation/pinetrees.dmi'
 	icon_state = "pine_1"
 	icon_living = "pine_1"
 	icon_dead = "pine_1"
@@ -48,7 +48,7 @@
 	if(istype(L))
 		if(prob(15))
 			L.apply_effect(3, WEAKEN)
-			L.visible_message(SPAN_DANGER("\the [src] knocks down \the [L]!"))
+			L.visible_message(SPAN_DANGER("\The [src] knocks down \the [L]!"))
 
 /mob/living/simple_animal/hostile/tree/death()
 	..(null,"is hacked into pieces!")

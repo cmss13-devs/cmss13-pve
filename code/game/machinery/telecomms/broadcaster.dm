@@ -9,7 +9,7 @@
 
 /obj/structure/machinery/telecomms/broadcaster
 	name = "Subspace Broadcaster"
-	icon = 'icons/obj/structures/props/stationobjs.dmi'
+	icon = 'icons/obj/structures/props/server_equipment.dmi'
 	icon_state = "broadcaster"
 	desc = "A dish-shaped machine used to broadcast processed subspace signals."
 	density = TRUE
@@ -83,7 +83,7 @@
 						vmask, vmessage, obj/item/device/radio/radio,
 						message, name, job, realname, vname,
 						data, compression, list/level, freq, verbage = "says",
-						datum/language/speaking = null, volume = RADIO_VOLUME_QUIET, listening_device = FALSE)
+						datum/language/speaking = null, volume = RADIO_VOLUME_QUIET, listening_device = NOT_LISTENING_BUG)
 
 	/* ###### Prepare the radio connection ###### */
 	var/display_freq = freq
@@ -95,24 +95,28 @@
 	// --- Broadcast only to intercom devices ---
 	if(data == RADIO_FILTER_TYPE_INTERCOM)
 		for (var/datum/weakref/device_ref as anything in connection.devices["[RADIO_CHAT]"])
-			var/obj/item/device/radio/intercom/R = device_ref.resolve()
-			if(!R)
+			var/obj/item/device/radio/intercom/radio_device = device_ref.resolve()
+			if(!radio_device)
 				continue
-			var/atom/loc = R.loc
-			if(R.receive_range(display_freq, level) > -1 && OBJECTS_CAN_REACH(loc, radio_loc))
-				radios += R
+			var/atom/loc = radio_device.loc
+			if(!loc)
+				continue
+			if(radio_device.receive_range(display_freq, level) > -1 && OBJECTS_CAN_REACH(loc, radio_loc))
+				radios += radio_device
 
 	// --- Broadcast only to intercoms and shortwave radios ---
 	else if(data == RADIO_FILTER_TYPE_INTERCOM_AND_BOUNCER)
 		for (var/datum/weakref/device_ref as anything in connection.devices["[RADIO_CHAT]"])
-			var/obj/item/device/radio/R = device_ref.resolve()
-			if(!R)
+			var/obj/item/device/radio/radio_device = device_ref.resolve()
+			if(!radio_device)
 				continue
-			if(istype(R, /obj/item/device/radio/headset))
+			if(istype(radio_device, /obj/item/device/radio/headset))
 				continue
-			var/atom/loc = R.loc
-			if(R.receive_range(display_freq, level) > -1 && OBJECTS_CAN_REACH(loc, radio_loc))
-				radios += R
+			var/atom/loc = radio_device.loc
+			if(!loc)
+				continue
+			if(radio_device.receive_range(display_freq, level) > -1 && OBJECTS_CAN_REACH(loc, radio_loc))
+				radios += radio_device
 
 	/* Currently unused, but leaving incase someone revives agents or another use for it.
 	// --- Broadcast to antag radios! ---
@@ -128,15 +132,14 @@
 	// --- Broadcast to ALL radio devices ---
 	else
 		for (var/datum/weakref/device_ref as anything in connection.devices["[RADIO_CHAT]"])
-			var/obj/item/device/radio/R = device_ref.resolve()
-			if(!R)
+			var/obj/item/device/radio/radio_device = device_ref.resolve()
+			if(!radio_device)
 				continue
-			var/atom/loc = R.loc
-			if(R.receive_range(display_freq, level) > -1 && OBJECTS_CAN_REACH(loc, radio_loc))
-				radios += R
-
-		if(GLOB.radio_communication_clarity < 100)
-			message = stars(message, GLOB.radio_communication_clarity)
+			var/atom/loc = radio_device.loc
+			if(!loc)
+				continue
+			if(radio_device.receive_range(display_freq, level) > -1 && OBJECTS_CAN_REACH(loc, radio_loc))
+				radios += radio_device
 
 	// Get a list of mobs who can hear from the radios we collected.
 	var/list/receive = get_mobs_in_radio_ranges(radios)
@@ -155,9 +158,9 @@
 	if(M)
 		if(ishuman(M))
 			var/mob/living/carbon/human/H = M
-			if(skillcheck(H, SKILL_LEADERSHIP, SKILL_LEAD_EXPERT))
+			if(skillcheck(H, SKILL_LEADERSHIP, SKILL_LEAD_SKILLED))
 				volume = max(volume, RADIO_VOLUME_CRITICAL)
-			else if(HAS_TRAIT(M, TRAIT_LEADERSHIP))
+			else if(HAS_TRAIT(M, TRAIT_LEADERSHIP) || HAS_TRAIT(M, TRAIT_ACTING_LEAD))
 				volume = max(volume, RADIO_VOLUME_IMPORTANT)
 
 			comm_title = H.comm_title //Set up [CO] and stuff after frequency
@@ -166,7 +169,10 @@
 					comm_title = H.assigned_squad.name + " " + comm_title
 				else
 					if(H.assigned_fireteam)
-						comm_title = H.comm_title + " [H.assigned_fireteam]"
+						if(H.assigned_squad.fireteam_leaders[H.assigned_fireteam] == H)
+							comm_title = H.comm_title + " [H.assigned_fireteam] TL"
+						else
+							comm_title = H.comm_title + " [H.assigned_fireteam]"
 
 
 		else if(istype(M,/mob/living/silicon/decoy/ship_ai))
@@ -182,7 +188,7 @@
 		// Ghosts hearing all radio chat don't want to hear syndicate intercepts, they're duplicates
 		if(data == 3 && is_ghost && R.client && (R.client.prefs.toggles_chat & CHAT_GHOSTRADIO))
 			continue
-		if(is_ghost && listening_device && !(R.client.prefs.toggles_chat & CHAT_LISTENINGBUG))
+		if(is_ghost && ((listening_device && !(R.client.prefs.toggles_chat & CHAT_LISTENINGBUG)) || listening_device == LISTENING_BUG_NEVER))
 			continue
 		// --- Check for compression ---
 		if(compression > 0)
@@ -190,7 +196,7 @@
 			continue
 
 		// --- Can understand the speech ---
-		if (!M || R.say_understands(M))
+		if (!M || R.say_understands(M, speaking))
 			// - Not human or wearing a voice mask -
 			if (!M || !ishuman(M) || vmask)
 				heard_masked += R

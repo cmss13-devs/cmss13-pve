@@ -51,6 +51,8 @@
 
 	if (reagents.total_volume > 0)
 		var/fullness = M.nutrition + (M.reagents.get_reagent_amount("nutriment") * 25)
+		if(issynth(M) || isyautja(M))
+			fullness = 200 //Synths and yautja never get full
 		if(fullness > NUTRITION_HIGH)
 			to_chat(user, SPAN_WARNING("[user == M ? "You" : "They"] don't feel like eating more right now."))
 			return
@@ -74,22 +76,26 @@
 	name = "fork"
 	desc = "It's a fork. Sure is pointy."
 	icon_state = "fork"
+	item_state = "fork"
 
-/obj/item/tool/kitchen/utensil/pfork
+/obj/item/tool/kitchen/utensil/fork/plastic
 	name = "plastic fork"
 	desc = "Yay, no washing up to do."
 	icon_state = "pfork"
+	item_state = "pfork"
 
 /obj/item/tool/kitchen/utensil/spoon
 	name = "spoon"
 	desc = "It's a spoon. You can see your own upside-down face in it."
 	icon_state = "spoon"
+	item_state = "spoon"
 	attack_verb = list("attacked", "poked")
 
-/obj/item/tool/kitchen/utensil/pspoon
+/obj/item/tool/kitchen/utensil/spoon/plastic
 	name = "plastic spoon"
 	desc = "It's a plastic spoon. How dull."
 	icon_state = "pspoon"
+	item_state = "pspoon"
 	attack_verb = list("attacked", "poked")
 
 /obj/item/tool/kitchen/utensil/mre_spork
@@ -109,6 +115,11 @@
 	name = "knife"
 	desc = "Can cut through any food."
 	icon_state = "knife"
+	item_icons = list(
+		WEAR_L_HAND = 'icons/mob/humans/onmob/inhands/weapons/melee/knives_lefthand.dmi',
+		WEAR_R_HAND = 'icons/mob/humans/onmob/inhands/weapons/melee/knives_righthand.dmi'
+	)
+	item_state = "knife"
 	force = 10
 	throwforce = 10
 	sharp = IS_SHARP_ITEM_ACCURATE
@@ -119,25 +130,29 @@
 	if(.)
 		playsound(loc, 'sound/weapons/bladeslice.ogg', 25, 1, 5)
 
-/obj/item/tool/kitchen/utensil/pknife
+/obj/item/tool/kitchen/utensil/knife/plastic
 	name = "plastic knife"
 	desc = "The bluntest of blades."
 	icon_state = "pknife"
-	force = 10
-	throwforce = 10
-
-/obj/item/tool/kitchen/utensil/pknife/attack(target as mob, mob/living/user as mob)
-	. = ..()
-	if(.)
-		playsound(loc, 'sound/weapons/bladeslice.ogg', 25, 1, 5)
+	item_icons = list(
+		WEAR_L_HAND = 'icons/mob/humans/onmob/inhands/weapons/melee/knives_lefthand.dmi',
+		WEAR_R_HAND = 'icons/mob/humans/onmob/inhands/weapons/melee/knives_righthand.dmi'
+	)
+	item_state = "pknife"
+	sharp = IS_SHARP_ITEM_SIMPLE
+	edge = FALSE
 
 /*
  * Kitchen knives
  */
 /obj/item/tool/kitchen/knife
 	name = "kitchen knife"
-	icon_state = "knife"
 	desc = "A general purpose Chef's Knife made by SpaceCook Incorporated. Guaranteed to stay sharp for years to come."
+	icon_state = "knife"
+	item_icons = list(
+		WEAR_L_HAND = 'icons/mob/humans/onmob/inhands/weapons/melee/knives_lefthand.dmi',
+		WEAR_R_HAND = 'icons/mob/humans/onmob/inhands/weapons/melee/knives_righthand.dmi'
+	)
 	flags_atom = FPRINT|CONDUCT
 	sharp = IS_SHARP_ITEM_ACCURATE
 	edge = 1
@@ -149,15 +164,14 @@
 	matter = list("metal" = 12000)
 
 	attack_verb = list("slashed", "stabbed", "sliced", "torn", "ripped", "diced", "cut")
-	flags_human_ai = MELEE_WEAPON_ITEM | TOOL_ITEM
 
 /*
  * Plastic Pizza Cutter
  */
 /obj/item/tool/kitchen/pizzacutter
 	name = "pizza cutter"
-	icon_state = "plasticpizzacutter"
 	desc = "A circular blade used for cutting pizzas. This one has a cheap plastic handle."
+	icon_state = "plasticpizzacutter"
 	flags_atom = FPRINT|CONDUCT
 	sharp = IS_SHARP_ITEM_ACCURATE
 	edge = TRUE
@@ -175,16 +189,16 @@
  * Wood Pizza Cutter
  */
 /obj/item/tool/kitchen/pizzacutter/wood
-	icon_state = "woodpizzacutter"
 	desc = "A circular blade used for cutting pizzas. This one has an authentic wooden handle."
+	icon_state = "woodpizzacutter"
 
 /*
  * Holy Relic Pizza Cutter
  */
 /obj/item/tool/kitchen/pizzacutter/holyrelic
 	name = "\improper PIZZA TIME"
-	icon_state = "holyrelicpizzacutter"
 	desc = "Before you is a holy relic of a bygone era when the great Pizza Lords reigned supreme. You know either that or it's just a big damn pizza cutter."
+	icon_state = "holyrelicpizzacutter"
 	force = MELEE_FORCE_VERY_STRONG
 
 /*
@@ -192,9 +206,14 @@
  */
 /obj/item/tool/kitchen/knife/butcher
 	name = "butcher's cleaver"
-	icon_state = "butch"
 	desc = "A huge thing used for chopping and chopping up meat. This includes clowns and clown-by-products."
+	item_icons = list(
+		WEAR_L_HAND = 'icons/mob/humans/onmob/inhands/equipment/kitchen_tools_lefthand.dmi',
+		WEAR_R_HAND = 'icons/mob/humans/onmob/inhands/equipment/kitchen_tools_righthand.dmi',
+	)
+	icon_state = "butch"
 	flags_atom = FPRINT|CONDUCT
+	force = MELEE_FORCE_NORMAL
 	w_class = SIZE_SMALL
 	throwforce = 8
 	throw_speed = SPEED_VERY_FAST
@@ -241,9 +260,9 @@
 			M.apply_effect(min(drowsy_threshold, 10) , DROWSY)
 
 		M.apply_damage(force, BRUTE, affecting, sharp=0) //log and damage the custom hit
-		user.attack_log += "\[[time_stamp()]\]<font color='red'> Attacked [key_name(M)] with [name] (INTENT: [uppertext(intent_text(user.a_intent))]) (DAMTYE: [uppertext(damtype)])</font>"
-		M.attack_log += "\[[time_stamp()]\]<font color='orange'> Attacked by  [key_name(user)] with [name] (INTENT: [uppertext(intent_text(user.a_intent))]) (DAMTYE: [uppertext(damtype)])</font>"
-		msg_admin_attack("[key_name(user)] attacked [key_name(M)] with [name] (INTENT: [uppertext(intent_text(user.a_intent))]) (DAMTYE: [uppertext(damtype)]) in [get_area(src)] ([src.loc.x],[src.loc.y],[src.loc.z]).", src.loc.x, src.loc.y, src.loc.z)
+		user.attack_log += "\[[time_stamp()]\]<font color='red'> Attacked [key_name(M)] with [name] (INTENT: [uppertext(intent_text(user.a_intent))]) (DAMTYPE: [uppertext(damtype)])</font>"
+		M.attack_log += "\[[time_stamp()]\]<font color='orange'> Attacked by  [key_name(user)] with [name] (INTENT: [uppertext(intent_text(user.a_intent))]) (DAMTYPE: [uppertext(damtype)])</font>"
+		msg_admin_attack("[key_name(user)] attacked [key_name(M)] with [name] (INTENT: [uppertext(intent_text(user.a_intent))]) (DAMTYPE: [uppertext(damtype)]) in [get_area(src)] ([src.loc.x],[src.loc.y],[src.loc.z]).", src.loc.x, src.loc.y, src.loc.z)
 
 	else //Regular attack text
 		. = ..()
@@ -255,9 +274,9 @@
  */
 /obj/item/tool/kitchen/tray
 	name = "tray"
+	desc = "A metal tray to lay food on."
 	icon = 'icons/obj/items/kitchen_tools.dmi'
 	icon_state = "tray"
-	desc = "A metal tray to lay food on."
 	throwforce = 12
 	throwforce = 10
 	throw_speed = SPEED_FAST

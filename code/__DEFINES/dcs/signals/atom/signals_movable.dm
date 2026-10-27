@@ -4,15 +4,11 @@
 /// From /atom/movable/proc/launch_towards
 #define COMSIG_MOVABLE_PRE_THROW "movable_pre_throw"
 	#define COMPONENT_CANCEL_THROW (1<<0)
-
 ///from base of atom/movable/Moved(): (/atom, dir, forced)
 #define COMSIG_MOVABLE_MOVED "movable_moved"
 /// From /atom/movable/Move(): (atom/NewLoc)
 #define COMSIG_MOVABLE_PRE_MOVE "movable_pre_move"
 	#define COMPONENT_CANCEL_MOVE (1<<0)
-/// From /atom/movable/proc/forceMove(): (atom/NewLoc)
-#define COMSIG_MOVABLE_FORCEMOVED "movable_forcemove"
-
 /// From /turf/open/gm/river/Entered(): (turf/open/gm/river/river, covered)
 #define COMSIG_MOVABLE_ENTERED_RIVER "movable_entered_river"
 /// From /atom/movable/proc/doMove: I think it only works with forceMove so watch out
@@ -23,6 +19,9 @@
 #define COMSIG_MOVABLE_XENO_START_PULLING "movable_xeno_start_pulling"
 	#define COMPONENT_ALLOW_PULL (1<<0)
 
+#define COMSIG_MOVABLE_PRE_PICKUP "movable_pre_pickup"
+	#define COMPONENT_PICKUP_CANCELED_ACID (1<<0)
+
 #define COMSIG_MOVABLE_PULLED "movable_pulled"
 	#define COMPONENT_IGNORE_ANCHORED (1<<0)
 
@@ -32,8 +31,21 @@
 /// shuttle crushing something
 #define COMSIG_MOVABLE_SHUTTLE_CRUSH "movable_shuttle_crush"
 
+/// From base of /atom/movable/afterShuttleMove (turf/oldT)
+#define COMSIG_ATOM_AFTER_SHUTTLE_MOVE "movable_after_shuttle_move"
+
 ///from base of /atom/movable/proc/set_glide_size(): (target)
 #define COMSIG_MOVABLE_UPDATE_GLIDE_SIZE "movable_glide_size"
 
 #define COMSIG_MOVABLE_TURF_ENTER "movable_turf_enter"
 
+#define COMSIG_MOVABLE_PREBUCKLE "prebuckle" // this is the last chance to interrupt and block a buckle before it finishes
+	#define COMPONENT_BLOCK_BUCKLE	(1<<0)
+
+#define COMSIG_MOVABLE_BUCKLE "buckle" //from base of atom/movable/buckle_mob(): (mob, force)
+	#define COMPONENT_MOVABLE_BUCKLE_STOPPED (1<<0)
+
+#define COMSIG_MOVABLE_UNBUCKLE "unbuckle"
+
+/// Fired by the [/datum/mapcoords] component when its attached movable moved on the map irrespective of its exact location
+#define COMSIG_MOVABLE_MAPCOORDS_UPDATED "movable_mapcoords_updated"

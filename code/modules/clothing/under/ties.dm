@@ -1,25 +1,35 @@
 /obj/item/clothing/accessory
-	name = "tie"
-	desc = "A neosilk clip-on tie."
-	icon = 'icons/obj/items/clothing/ties.dmi'
-	icon_state = "bluetie"
+	name = "accessory"
+	desc = "Ahelp if you see this."
+	icon = 'icons/obj/items/clothing/accessory/ties.dmi'
 	w_class = SIZE_SMALL
 	var/image/inv_overlay = null //overlay used when attached to clothing.
 	var/obj/item/clothing/has_suit = null //the suit the tie may be attached to
-	var/slot = ACCESSORY_SLOT_DECOR
 	var/list/mob_overlay = list()
 	var/overlay_state = null
-	var/list/accessory_icons = list(WEAR_BODY = 'icons/mob/humans/onmob/ties.dmi', WEAR_JACKET = 'icons/mob/humans/onmob/ties.dmi')
+	var/inv_overlay_icon = 'icons/obj/items/clothing/accessory/inventory_overlays/ties.dmi'
+	accessory_icons = list(
+		WEAR_BODY = 'icons/mob/humans/onmob/clothing/accessory/ties.dmi',
+		WEAR_JACKET = 'icons/mob/humans/onmob/clothing/accessory/ties.dmi'
+	)
 	///Jumpsuit flags that cause the accessory to be hidden. format: "x" OR "(x|y|z)" (w/o quote marks).
 	var/jumpsuit_hide_states
 	var/high_visibility //if it should appear on examine without detailed view
 	var/removable = TRUE
 	flags_equip_slot = SLOT_ACCESSORY
 	sprite_sheets = list(SPECIES_MONKEY = 'icons/mob/humans/species/monkeys/onmob/ties_monkey.dmi')
+	var/original_item_path = /obj/item/clothing/accessory
+	worn_accessory_slot = 1
+
+/obj/item/clothing/accessory/attack_self(mob/user)
+	if(flags_obj & OBJ_CAN_ACCESSORIZE)
+		revert_from_accessory(user)
+		return
+	return ..()
 
 /obj/item/clothing/accessory/Initialize()
 	. = ..()
-	inv_overlay = image("icon" = 'icons/obj/items/clothing/ties_overlay.dmi', "icon_state" = "[item_state? "[item_state]" : "[icon_state]"]")
+	inv_overlay = image("icon" = inv_overlay_icon, "icon_state" = "[item_state? "[item_state]" : "[icon_state]"]")
 	flags_atom |= USES_HEARING
 
 /obj/item/clothing/accessory/Destroy()
@@ -31,11 +41,11 @@
 /obj/item/clothing/accessory/proc/can_attach_to(mob/user, obj/item/clothing/C)
 	return TRUE
 
-//when user attached an accessory to S
-/obj/item/clothing/accessory/proc/on_attached(obj/item/clothing/S, mob/living/user, silent)
-	if(!istype(S))
+//when user attached an accessory to clothing/clothes
+/obj/item/clothing/accessory/proc/on_attached(obj/item/clothing/clothes, mob/living/user, silent)
+	if(!istype(clothes))
 		return
-	has_suit = S
+	has_suit = clothes
 	forceMove(has_suit)
 	has_suit.overlays += get_inv_overlay()
 
@@ -43,11 +53,24 @@
 		if(!silent)
 			to_chat(user, SPAN_NOTICE("You attach \the [src] to \the [has_suit]."))
 		src.add_fingerprint(user)
+
+	if(ismob(clothes.loc))
+		var/mob/wearer = clothes.loc
+		if(LAZYLEN(actions))
+			for(var/datum/action/action in actions)
+				action.give_to(wearer)
 	return TRUE
 
-/obj/item/clothing/accessory/proc/on_removed(mob/living/user, obj/item/clothing/C)
+/obj/item/clothing/accessory/proc/on_removed(mob/living/user, obj/item/clothing/clothes)
 	if(!has_suit)
 		return
+
+	if(ismob(clothes.loc))
+		var/mob/wearer = clothes.loc
+		if(LAZYLEN(actions))
+			for(var/datum/action/action in actions)
+				action.remove_from(wearer)
+
 	has_suit.overlays -= get_inv_overlay()
 	has_suit = null
 	if(usr)
@@ -71,31 +94,33 @@
 /obj/item/clothing/accessory/proc/additional_examine_text()
 	return "attached to it."
 
-/obj/item/clothing/accessory/blue
+/obj/item/clothing/accessory/tie
 	name = "blue tie"
+	desc = "A neosilk clip-on tie."
 	icon_state = "bluetie"
+	worn_accessory_slot = ACCESSORY_SLOT_TIE
 
-/obj/item/clothing/accessory/red
+/obj/item/clothing/accessory/tie/red
 	name = "red tie"
 	icon_state = "redtie"
 
-/obj/item/clothing/accessory/green
+/obj/item/clothing/accessory/tie/green
 	name = "green tie"
 	icon_state = "greentie"
 
-/obj/item/clothing/accessory/black
+/obj/item/clothing/accessory/tie/black
 	name = "black tie"
 	icon_state = "blacktie"
 
-/obj/item/clothing/accessory/gold
+/obj/item/clothing/accessory/tie/gold
 	name = "gold tie"
 	icon_state = "goldtie"
 
-/obj/item/clothing/accessory/purple
+/obj/item/clothing/accessory/tie/purple
 	name = "purple tie"
 	icon_state = "purpletie"
 
-/obj/item/clothing/accessory/horrible
+/obj/item/clothing/accessory/tie/horrible
 	name = "horrible tie"
 	desc = "A neosilk clip-on tie. This one is disgusting."
 	icon_state = "horribletie"
@@ -104,6 +129,17 @@
 	name = "stethoscope"
 	desc = "An outdated, but still useful, medical apparatus for listening to the sounds of the human body. It also makes you look like you know what you're doing."
 	icon_state = "stethoscope"
+	icon = 'icons/obj/items/clothing/accessory/misc.dmi'
+	inv_overlay_icon = 'icons/obj/items/clothing/accessory/inventory_overlays/misc.dmi'
+	accessory_icons = list(
+		WEAR_BODY = 'icons/mob/humans/onmob/clothing/accessory/misc.dmi',
+		WEAR_JACKET = 'icons/mob/humans/onmob/clothing/accessory/misc.dmi',
+	)
+	item_icons = list(
+		WEAR_L_HAND = 'icons/mob/humans/onmob/inhands/equipment/medical_lefthand.dmi',
+		WEAR_R_HAND = 'icons/mob/humans/onmob/inhands/equipment/medical_righthand.dmi',
+	)
+	worn_accessory_slot = ACCESSORY_SLOT_UTILITY
 
 /obj/item/clothing/accessory/stethoscope/attack(mob/living/carbon/human/being, mob/living/user)
 	if(!ishuman(being) || !isliving(user))
@@ -160,17 +196,27 @@
 			sound = "hear a sound here and there, but none of them give you any good information"
 	user.visible_message("[user] places [src] against [being]'s [body_part] and listens attentively.", "You place [src] against [being.p_their()] [body_part] and... you [sound].")
 
+
 //Medals
 /obj/item/clothing/accessory/medal
 	name = "medal"
 	desc = "A medal."
-	icon_state = "bronze"
+	icon_state = "bronze_service"
+	item_state = "bronze"
+	icon = 'icons/obj/items/clothing/accessory/medals.dmi'
+	inv_overlay_icon = 'icons/obj/items/clothing/accessory/inventory_overlays/medals.dmi'
+	accessory_icons = list(
+		WEAR_BODY = 'icons/mob/humans/onmob/clothing/accessory/medals.dmi',
+		WEAR_JACKET = 'icons/mob/humans/onmob/clothing/accessory/medals.dmi'
+	)
 	var/recipient_name //name of the person this is awarded to.
 	var/recipient_rank
 	var/medal_citation
-	slot = ACCESSORY_SLOT_MEDAL
+	worn_accessory_slot = ACCESSORY_SLOT_MEDAL
 	high_visibility = TRUE
 	jumpsuit_hide_states = UNIFORM_JACKET_REMOVED
+	worn_accessory_limit = 2
+	var/awarding_faction
 
 /obj/item/clothing/accessory/medal/on_attached(obj/item/clothing/S, mob/living/user, silent)
 	. = ..()
@@ -275,80 +321,146 @@
 
 	. += "Awarded to: \'[recipient_rank] [recipient_name]\'. [citation_to_read]"
 
+/obj/item/clothing/accessory/medal/ribbon
+	name = "award ribbon"
+	desc = "A military award ribbon."
+
+/obj/item/clothing/accessory/medal/ribbon/commendation
+	name = MARINE_RIBBON_COMMENDATION
+	desc = "A ribbon awarded to commend conduct and actions of note, often given alongside a formal letter of commendation. This is the most basic award given by the USCM."
+	icon_state = "ribbon_commendation"
+	awarding_faction = FACTION_MARINE
+
+/obj/item/clothing/accessory/medal/ribbon/leadership
+	name = MARINE_RIBBON_LEADERSHIP
+	desc = "A ribbon given to officers, NCOs, or squad leaders whose coordination, decision-making, or morale-keeping played a critical role in their unit's success or survival."
+	icon_state = "ribbon_leadership"
+	awarding_faction = FACTION_MARINE
+
+/obj/item/clothing/accessory/medal/ribbon/proficiency
+	name = MARINE_RIBBON_PROFICIENCY
+	desc = "A ribbon awarded for outstanding technical expertise in the field. Engineering, medical, or logistics personnel whose skill or innovation directly contributed to mission success."
+	icon_state = "ribbon_proficiency"
+	awarding_faction = FACTION_MARINE
+
+/obj/item/clothing/accessory/medal/purple_heart
+	name = MARINE_MEDAL_PURPLE_HEART
+	desc = "Awarded to those wounded or killed in action. A solemn token of sacrifice and resilience given in recognition of the physical and personal cost of service."
+	icon_state = "purple_heart"
+	awarding_faction = FACTION_MARINE
+
 /obj/item/clothing/accessory/medal/bronze
 	name = "bronze medal"
 	desc = "A bronze medal."
-
-/obj/item/clothing/accessory/medal/bronze/conduct
-	name = MARINE_CONDUCT_MEDAL
-	desc = "A bronze medal awarded for distinguished conduct. Whilst a great honor, this is the most basic award given by the USCM"
-	icon_state = "bronze_b"
-
-/obj/item/clothing/accessory/medal/bronze/heart
-	name = MARINE_BRONZE_HEART_MEDAL
-	desc = "A bronze heart-shaped medal awarded for sacrifice. It is often awarded posthumously or for severe injury in the line of duty."
-	icon_state = "bronze_heart"
-
-/obj/item/clothing/accessory/medal/bronze/science
-	name = "nobel sciences award"
-	desc = "A bronze medal which represents significant contributions to the field of science or engineering."
+	icon_state = "bronze"
 
 /obj/item/clothing/accessory/medal/silver
 	name = "silver medal"
 	desc = "A silver medal."
-	icon_state = "silver_b"
+	icon_state = "silver"
+	item_state = "silver"
+
+/obj/item/clothing/accessory/medal/silver/star
+	name = MARINE_MEDAL_SILVER_STAR
+	desc = "Awarded for conspicuous gallantry in action. The Silver Star recognizes those who go beyond the call of duty: charging into danger, holding the line when all seems lost, or saving lives under relentless enemy fire."
+	icon_state = "silver_star"
+	awarding_faction = FACTION_MARINE
 
 /obj/item/clothing/accessory/medal/silver/valor
-	name = MARINE_VALOR_MEDAL
-	desc = "A silver medal awarded for acts of exceptional valor."
+	name = MARINE_MEDAL_VALOR
+	desc = "For acts of courage performed during combat operations. Recognizes marines who display calm, determination, and bravery under fire, contributing to the survival and morale of their squad."
+	awarding_faction = FACTION_MARINE
 
-/obj/item/clothing/accessory/medal/silver/security
-	name = "robust security award"
-	desc = "An award for distinguished combat and sacrifice in defence of Wey-Yu's commercial interests. Often awarded to security staff."
+/obj/item/clothing/accessory/medal/gold/corporate_award
+	name = WY_MEDAL_AWARD_1
+	desc = "A small gold corporate badge awarded for notable service in the interests of Weyland-Yutani."
+	icon_state = "corporate_award"
+	awarding_faction = FACTION_WY
+
+/obj/item/clothing/accessory/medal/gold/corporate_award2
+	name = WY_MEDAL_AWARD_2
+	desc = "A large gold corporate badge awarded for notable service in the interests of Weyland-Yutani."
+	icon_state = "corporate_award2"
+	awarding_faction = FACTION_WY
 
 /obj/item/clothing/accessory/medal/gold
 	name = "gold medal"
 	desc = "A prestigious golden medal."
-	icon_state = "gold_b"
+	icon_state = "gold"
+	item_state = "gold"
 
-/obj/item/clothing/accessory/medal/gold/captain
-	name = "medal of captaincy"
-	desc = "A golden medal awarded exclusively to those promoted to the rank of captain. It signifies the codified responsibilities of a captain to Wey-Yu, and their undisputable authority over their crew."
-
-/obj/item/clothing/accessory/medal/gold/heroism
-	name = MARINE_HEROISM_MEDAL
-	desc = "An extremely rare golden medal awarded only by the USCM. To receive such a medal is the highest honor and as such, very few exist."
+/obj/item/clothing/accessory/medal/gold/cross
+	name = MARINE_MEDAL_GALACTIC_CROSS
+	desc = "The second-highest decoration within the USCM. Granted for acts of valor performed under extreme conditions. When the mission's success or the survival of fellow marines hinged upon extraordinary courage and quick thinking."
+	icon_state = "ua_cross"
+	awarding_faction = FACTION_MARINE
 
 /obj/item/clothing/accessory/medal/platinum
 	name = "platinum medal"
 	desc = "A very prestigious platinum medal, only able to be handed out by generals due to special circumstances."
-	icon_state = "platinum_b"
+	icon_state = "platinum"
+	item_state = "platinum"
 
+/obj/item/clothing/accessory/medal/platinum/honor
+	name = MARINE_MEDAL_HONOR
+	desc = "The highest distinction awarded by the United States Colonial Marine Corps. Bestowed upon those whose actions demonstrate unparalleled bravery, self-sacrifice, and devotion to duty - often in the face of certain death. To wear this medal is to stand among legends of the Corps."
+	awarding_faction = "USCM HC"
+
+//Legacy medals.
+//Keeping in code as to allow medal records to display correctly, but won't be issued further.
+/obj/item/clothing/accessory/medal/legacy
+	name = "legacy medal"
+	desc = "An old and disused award."
+
+/obj/item/clothing/accessory/medal/legacy/distinguished_conduct
+	name = MARINE_LEGACY_MEDAL_CONDUCT
+	desc = "A bronze medal awarded for distinguished conduct. Whilst a great honor, this is one of the most basic awards given by the USCM."
+	icon_state = "conduct"
+
+/obj/item/clothing/accessory/medal/legacy/bronze_heart
+	name = MARINE_LEGACY_MEDAL_BRONZE_HEART
+	desc = "A bronze heart-shaped medal awarded for sacrifice. It is often awarded posthumously or for severe injury in the line of duty."
+	icon_state = "bronze_heart"
+
+/obj/item/clothing/accessory/medal/legacy/heroism
+	name = MARINE_LEGACY_MEDAL_HEROISM
+	desc = "An extremely rare golden medal awarded only by the USCM. To receive such a medal is the highest honor and as such, very few exist."
+	icon_state = "heroism"
+
+//Playtime Service Medals
 /obj/item/clothing/accessory/medal/bronze/service
 	name = "bronze service medal"
 	desc = "A bronze medal awarded for a marine's service within the USCM. It is a very common medal, and is typically the first medal a marine would receive."
-	icon_state = "bronze"
+	icon_state = "bronze_service"
 
 /obj/item/clothing/accessory/medal/silver/service
 	name = "silver service medal"
 	desc = "A shiny silver medal awarded for a marine's service within the USCM. It is a somewhat common medal which signifies the amount of time a marine has spent in the line of duty."
-	icon_state = "silver"
+	icon_state = "silver_service"
+
 /obj/item/clothing/accessory/medal/gold/service
 	name = "gold service medal"
 	desc = "A prestigious gold medal awarded for a marine's service within the USCM. It is a rare medal which signifies the amount of time a marine has spent in the line of duty."
-	icon_state = "gold"
+	icon_state = "gold_service"
+
 /obj/item/clothing/accessory/medal/platinum/service
 	name = "platinum service medal"
 	desc = "The highest service medal that can be awarded to a marine; such medals are hand-given by USCM Generals to a marine. It signifies the sheer amount of time a marine has spent in the line of duty."
-	icon_state = "platinum"
+	icon_state = "platinum_service"
 
 //Armbands
 /obj/item/clothing/accessory/armband
 	name = "red armband"
 	desc = "A fancy red armband!"
 	icon_state = "red"
-	slot = ACCESSORY_SLOT_ARMBAND
-	jumpsuit_hide_states = (UNIFORM_SLEEVE_CUT|UNIFORM_JACKET_REMOVED)
+	icon = 'icons/obj/items/clothing/accessory/armbands.dmi'
+	inv_overlay_icon = 'icons/obj/items/clothing/accessory/inventory_overlays/armbands.dmi'
+	accessory_icons = list(
+		WEAR_BODY = 'icons/mob/humans/onmob/clothing/accessory/armbands.dmi',
+		WEAR_JACKET = 'icons/mob/humans/onmob/clothing/accessory/armbands.dmi'
+	)
+	worn_accessory_slot = ACCESSORY_SLOT_ARMBAND
+	worn_accessory_limit = 2
 
 /obj/item/clothing/accessory/armband/cargo
 	name = "cargo armband"
@@ -385,19 +497,85 @@
 	desc = "An armband, worn by the rookie nurses to display they are still not doctors. This one is dark red."
 	icon_state = "nurse"
 
-/obj/item/clothing/accessory/armband/mpsec
-	name = "military police armband"
-	desc = "An armband used by military police officers to denote their position."
+/obj/item/clothing/accessory/armband/squad
+	name = "squad armband"
+	desc = "An armband in squad colors, worn for ease of identification."
+	icon_state = "armband_squad"
+	var/dummy_icon_state = "armband_%SQUAD%"
+	var/static/list/valid_icon_states
+	item_state_slots = null
+
+/obj/item/clothing/accessory/armband/squad/Initialize(mapload, ...)
+	. = ..()
+	if(!valid_icon_states)
+		valid_icon_states = icon_states(icon)
+	adapt_to_squad()
+
+/obj/item/clothing/accessory/armband/squad/proc/update_clothing_wrapper(mob/living/carbon/human/wearer)
+	SIGNAL_HANDLER
+
+	var/is_worn_by_wearer = recursive_holder_check(src) == wearer
+	if(is_worn_by_wearer)
+		update_clothing_icon()
+	else
+		UnregisterSignal(wearer, COMSIG_SET_SQUAD)
+
+/obj/item/clothing/accessory/armband/squad/update_clothing_icon()
+	adapt_to_squad()
+
+/obj/item/clothing/accessory/armband/squad/pickup(mob/user, silent)
+	. = ..()
+	adapt_to_squad()
+
+/obj/item/clothing/accessory/armband/squad/equipped(mob/user, slot, silent)
+	RegisterSignal(user, COMSIG_SET_SQUAD, PROC_REF(update_clothing_wrapper), TRUE)
+	adapt_to_squad()
+	return ..()
+
+/obj/item/clothing/accessory/armband/squad/proc/adapt_to_squad()
+	if(has_suit)
+		has_suit.overlays -= get_inv_overlay()
+	var/squad_color = "squad"
+	var/mob/living/carbon/human/wearer = recursive_holder_check(src)
+	if(istype(wearer) && wearer.assigned_squad)
+		var/squad_name = lowertext(wearer.assigned_squad.name)
+		if("armband_[squad_name]" in valid_icon_states)
+			squad_color = squad_name
+	icon_state = replacetext(initial(dummy_icon_state), "%SQUAD%", squad_color)
+	inv_overlay = image("icon" = inv_overlay_icon, "icon_state" = "[item_state? "[item_state]" : "[icon_state]"]")
+	if(has_suit)
+		has_suit.overlays += get_inv_overlay()
+
+/obj/item/clothing/accessory/armband/mp
+	name = "MP armband"
+	desc = "An armband worn by USCM Military Police officers on military installations. It is usually also worn by those from the provost office."
 	icon_state = "armband_mp"
-	slot = ACCESSORY_SLOT_ARMBAND
-	jumpsuit_hide_states = (UNIFORM_SLEEVE_CUT|UNIFORM_JACKET_REMOVED)
 
 //patches
 /obj/item/clothing/accessory/patch
+	name = "potato patch"
+	desc = "you shouldnt see this, ahelp if you do."
+	icon = 'icons/obj/items/clothing/accessory/patches.dmi'
+	accessory_icons = list(
+		WEAR_BODY = 'icons/mob/humans/onmob/clothing/accessory/patches.dmi',
+		WEAR_JACKET = 'icons/mob/humans/onmob/clothing/accessory/patches.dmi',
+	)
+	item_icons = list(
+		WEAR_AS_GARB = 'icons/mob/humans/onmob/clothing/helmet_garb/patches_flairs.dmi',
+	)
+	jumpsuit_hide_states = (UNIFORM_SLEEVE_CUT|UNIFORM_JACKET_REMOVED)
+	flags_obj = OBJ_IS_HELMET_GARB
+	worn_accessory_slot = ACCESSORY_SLOT_PATCH
+	worn_accessory_limit = 4
+
+/obj/item/clothing/accessory/patch/uscmpatch
 	name = "USCM patch"
 	desc = "A fire-resistant shoulder patch, worn by the men and women of the United States Colonial Marines."
 	icon_state = "uscmpatch"
-	jumpsuit_hide_states = (UNIFORM_SLEEVE_CUT|UNIFORM_JACKET_REMOVED)
+	item_state = "uscmpatch_right_shoulder"
+	item_state_slots = list(WEAR_AS_GARB = "uscmpatch_right_shoulder")
+	flags_obj = OBJ_IS_STYLISH
+	style_postfix = list("right_shoulder", "left_shoulder", "right_chest", "left_chest")
 
 /obj/item/clothing/accessory/patch/falcon
 	name = "USCM Falling Falcons patch"
@@ -411,23 +589,13 @@
 
 /obj/item/clothing/accessory/patch/forecon
 	name = "USCM Force Reconnaissance patch"
-	desc = "A fire-resistant shoulder patch, worn by the men and women of USCM FORECON. Swift, Silent, Deadly."
+	desc = "A fire-resistant shoulder patch, worn by the men and women of the USS Hanyut, USCM FORECON."
 	icon_state = "forecon_patch"
-
-/obj/item/clothing/accessory/patch/sapper
-	name = "USCM Combat Engineering patch"
-	desc = "A fire-resistant shoulder patch, worn by the men and women of the 4th Combat Engineering Battalion, part of the USCM 2nd Colonial Support Group."
-	icon_state = "sapper_patch"
 
 /obj/item/clothing/accessory/patch/royal_marines
 	name = "TWE Royal Marines Commando patch"
-	desc = "A fire-resistant shoulder patch, worn by the men and women of the Royal Marines Commando."
-	icon_state = "rmcpatch"
-
-/obj/item/clothing/accessory/patch/twe
-	name = "Three World Empire patch"
-	desc = "A fire-resistant shoulder patch, worn by the men and women loyal to the Three World Empire, An older style symbol of the TWE."
-	icon_state = "twepatch"
+	desc = "A fire-resistant shoulder patch, worn by the men and women of the royal marines commando."
+	icon_state = "commandopatch"
 
 /obj/item/clothing/accessory/patch/upp
 	name = "UPP patch"
@@ -444,15 +612,30 @@
 	desc = "A fire-resistant shoulder patch, worn by the men and women of the UPP Naval Infantry."
 	icon_state = "navalpatch"
 
-/obj/item/clothing/accessory/patch/usasf
-	name = "USASF patch"
-	desc = "A fire-resistant shoulder patch, worn by the men and women of the United States Aerospace Force."
-	icon_state = "usasfpatch"
+/obj/item/clothing/accessory/patch/ua
+	name = "United Americas patch"
+	desc = "A fire-resistant shoulder patch, worn by the men and women of the United Americas, An economic and political giant in both the Sol system and throughout the offworld colonies, the military might of the UA is unparalleled.."
+	icon_state = "uapatch"
 
-/obj/item/clothing/accessory/patch/usasf/helljumper
-	name = "Para-Rescue patch"
-	desc = "A fire-resistant shoulder patch, worn by the absolute badasses of the USASF 7th Para-Rescue Battalion. Feet first into hell!"
-	icon_state = "helljumperpatch"
+/obj/item/clothing/accessory/patch/uasquare
+	name = "United Americas patch"
+	desc = "A fire-resistant shoulder patch, worn by the men and women of the United Americas, An economic and political giant in both the Sol system and throughout the offworld colonies, the military might of the UA is unparalleled.."
+	icon_state = "uasquare"
+
+/obj/item/clothing/accessory/patch/falconalt
+	name = "USCM Falling Falcons UA patch"
+	desc = "A fire-resistant shoulder patch, worn by the men and women of the Falling Falcons, the 2nd battalion of the 4th brigade of the USCM."
+	icon_state = "fallingfalconsaltpatch"
+
+/obj/item/clothing/accessory/patch/twe
+	name = "Three World Empire patch"
+	desc = "A fire-resistant shoulder patch, worn by the men and women loyal to the Three World Empire, An older style symbol of the TWE."
+	icon_state = "twepatch"
+
+/obj/item/clothing/accessory/patch/uscmlarge
+	name = "USCM large chest patch"
+	desc = "A fire-resistant chest patch, worn by the men and women of the Falling Falcons, the 2nd battalion of the 4th brigade of the USCM."
+	icon_state = "fallingfalconsbigpatch"
 
 /obj/item/clothing/accessory/patch/army
 	name = "US Army patch"
@@ -464,154 +647,190 @@
 	desc = "A fire-resistant shoulder patch, worn by the men and women of the 1st Cavalry Division."
 	icon_state = "infantrypatch"
 
-/obj/item/clothing/accessory/patch/army/spook
-	name = "Army Intelligence patch"
-	desc = "A fire-resistant shoulder patch, worn by the men and women of the 525th Army Intelligence Brigade."
-	icon_state = "spookpatch"
-
 /obj/item/clothing/accessory/patch/army/armor
 	name = "Army Armor patch"
 	desc = "A fire-resistant shoulder patch, worn by the men and women of the 32nd Armor Brigade."
 	icon_state = "armorpatch"
 
-/obj/item/clothing/accessory/patch/cmb/brazil_police
-	name = "Brazilian Colonial Military Police patch"
-	desc = "A fire-resistant shoulder patch, worn by the men and women of the Brazilian Military Police."
-	icon_state = "brazilpolicepatch"
+/obj/item/clothing/accessory/patch/wy
+	name = "Weyland-Yutani patch"
+	desc = "A fire-resistant black shoulder patch featuring the Weyland-Yutani logo. A symbol of loyalty to the corporation, or perhaps ironic mockery, depending on your viewpoint."
+	icon_state = "wypatch"
 
-//Flag patches
-/obj/item/clothing/accessory/patch/ua
-	name = "UA flag patch"
-	desc = "A fire-resistant shoulder patch with the flag of the United Americas, a superpower composed by North and South America, and their interstellar colonies."
-	icon_state = "uaflagpatch"
+/obj/item/clothing/accessory/patch/wysquare
+	name = "Weyland-Yutani patch"
+	desc = "A fire-resistant black shoulder patch featuring the Weyland-Yutani logo. A symbol of loyalty to the corporation, or perhaps ironic mockery, depending on your viewpoint."
+	icon_state = "wysquare"
 
-/obj/item/clothing/accessory/patch/brazil
+/obj/item/clothing/accessory/patch/wy_faction
+	name = "Weyland-Yutani patch" // For WY factions like PMC's - on the right shoulder rather then left.
+	desc = "A fire-resistant black shoulder patch featuring the Weyland-Yutani logo. A symbol of loyalty to the corporation."
+	icon_state = "wypatch_faction"
 
-	name = "Brazilian flag patch"
-	desc = "A fire-resistant shoulder patch, with the flag of Brazil, a large South American nation of Earth."
-	icon_state = "brazilpatch"
+/obj/item/clothing/accessory/patch/wy_white
+	name = "Weyland-Yutani patch"
+	desc = "A fire-resistant white shoulder patch featuring the Weyland-Yutani logo. A symbol of loyalty to the corporation, or perhaps ironic mockery, depending on your viewpoint."
+	icon_state = "wypatch_white"
 
-/obj/item/clothing/accessory/patch/usa
-	name = "USA flag patch"
-	desc = "A fire-resistant shoulder patch with the flag of the United States of America, a massive North American nation of Earth, and the leading superpower of the United Americas."
-	icon_state = "usaflagpatch"
+/obj/item/clothing/accessory/patch/wyfury
+	name = "Weyland-Yutani Fury '161' patch"
+	desc = "A fire-resistant shoulder patch. Was worn by workers and then later prisoners on the Fiorina 'Fury' 161 facility, a rare relic, after the facility went dark in 2179."
+	icon_state = "fury161patch"
 
-//Ribbons
-/obj/item/clothing/accessory/patch/ribbon/topography
-	name = "USCM Topography Ribbon"
-	desc = "A fire-resistant ribbon, awarded to those marines who have completed selective training at the USCMC Topographic Navigation Course."
-	icon_state = "topography"
+/obj/item/clothing/accessory/patch/upp/alt
+	name = "UPP patch"
+	desc = "An old fire-resistant shoulder patch, worn by the men and women of the Union of Progressive Peoples Armed Collective."
+	icon_state = "upppatch_alt"
 
-/obj/item/clothing/accessory/patch/ribbon/topography/honor
-	name = "USCM Honor Topography Ribbon"
-	desc = "A fire-resistant ribbon, awarded to those marines who have completed selective training at the top of their class at the USCMC Topographic Navigation Course."
-	icon_state = "topography_honor"
+/obj/item/clothing/accessory/patch/falcon/squad_main
+	name = "USCM Falling Falcons squad patch"
+	desc = "A fire-resistant shoulder patch, a squad patch worn by the Falling Falcons—2nd Battalion, 4th Brigade, USCM. Stitched in squad colors."
+	icon_state = "fallingfalcons_squad"
+	var/dummy_icon_state = "fallingfalcons_%SQUAD%"
+	var/static/list/valid_icon_states
+	item_state_slots = null
 
-//misc
+/obj/item/clothing/accessory/patch/falcon/squad_main/Initialize(mapload, ...)
+	. = ..()
+	if(!valid_icon_states)
+		valid_icon_states = icon_states(icon)
+	adapt_to_squad()
+
+/obj/item/clothing/accessory/patch/falcon/squad_main/proc/update_clothing_wrapper(mob/living/carbon/human/wearer)
+	SIGNAL_HANDLER
+
+	var/is_worn_by_wearer = recursive_holder_check(src) == wearer
+	if(is_worn_by_wearer)
+		update_clothing_icon()
+	else
+		UnregisterSignal(wearer, COMSIG_SET_SQUAD) // we can't set this in dropped, because dropping into a helmet unsets it and then it never updates
+
+/obj/item/clothing/accessory/patch/falcon/squad_main/update_clothing_icon()
+	adapt_to_squad()
+	if(istype(loc, /obj/item/storage/internal) && istype(loc.loc, /obj/item/clothing/head/helmet))
+		var/obj/item/clothing/head/helmet/headwear = loc.loc
+		headwear.update_icon()
+	return ..()
+
+/obj/item/clothing/accessory/patch/falcon/squad_main/pickup(mob/user, silent)
+	. = ..()
+	adapt_to_squad()
+
+/obj/item/clothing/accessory/patch/falcon/squad_main/equipped(mob/user, slot, silent)
+	RegisterSignal(user, COMSIG_SET_SQUAD, PROC_REF(update_clothing_wrapper), TRUE)
+	adapt_to_squad()
+	return ..()
+
+/obj/item/clothing/accessory/patch/falcon/squad_main/proc/adapt_to_squad()
+	var/squad_color = "squad"
+	var/mob/living/carbon/human/wearer = recursive_holder_check(src)
+	if(istype(wearer) && wearer.assigned_squad)
+		var/squad_name = lowertext(wearer.assigned_squad.name)
+		if("fallingfalcons_[squad_name]" in valid_icon_states)
+			squad_color = squad_name
+	icon_state = replacetext(initial(dummy_icon_state), "%SQUAD%", squad_color)
+
+/obj/item/clothing/accessory/patch/cec_patch
+	name = "CEC patch"
+	desc = "An old, worn and faded fire-resistant circular patch with a gold star on a split orange and red background. Once worn by members of the Cosmos Exploration Corps (CEC), a division of the UPP dedicated to exploration, resource assessment, and establishing colonies on new worlds. The patch serves as a reminder of the CEC's daring missions aboard aging starships, a symbol of perseverance in the face of adversity."
+	icon_state = "cecpatch"
+	item_state_slots = list(WEAR_AS_GARB = "cecpatch")
+
+/obj/item/clothing/accessory/patch/freelancer_patch
+	name = "Freelancer's Guild patch"
+	desc = "A fire-resistant circular patch featuring a white skull on a vertically split black and blue background. Worn by a skilled mercenary of the Freelancers, a well-equipped group for hire across the outer colonies, known for their professionalism and neutrality. This patch is a personal memento from the wearer’s time with the group, representing a life spent navigating the dangerous world of mercenary contracts."
+	icon_state = "mercpatch"
+	item_state_slots = list(WEAR_AS_GARB = "mercpatch")
+
+/obj/item/clothing/accessory/patch/merc_patch
+	name = "Old Freelancer's Guild patch"
+	desc = "A faded old, worn fire-resistant circular patch featuring a white skull on a vertically split black and red background. Worn by a well-equipped mercenary group for hire across the outer colonies, known for their professionalism and neutrality. The current owner’s connection to the patch is unclear—whether it was once earned as part of service, kept as a memento, or simply found, disconnected from its original wearer."
+	icon_state = "mercpatch_red"
+	item_state_slots = list(WEAR_AS_GARB = "mercpatch_red")
+
+/obj/item/clothing/accessory/patch/medic_patch
+	name = "Field Medic patch"
+	desc = "A circular patch featuring a red cross on a white background with a bold red outline. Universally recognized as a symbol of aid and neutrality, it is worn by medics across the colonies. Whether a sign of true medical expertise, a keepsake, or merely a decoration, its presence offers a glimmer of hope in dire times."
+	icon_state = "medicpatch"
+
+/obj/item/clothing/accessory/patch/clf_patch
+	name = "CLF patch"
+	desc = "A circular, fire-resistant patch with a white border. The design features three white stars and a tricolor background: green, black, and red, symbolizing the Colonial Liberation Front's fight for independence and unity. This patch is worn by CLF fighters as a badge of defiance against corporate and governmental oppression, representing their struggle for a free and self-determined colonial future. Though feared and reviled by some, it remains a powerful symbol of resistance and revolution."
+	icon_state = "clfpatch"
+
+/obj/item/clothing/accessory/patch/msf_patch
+	name = "Marine Space Force Herculis patch"
+	desc = "A fire-resistant shoulder patch, depicting the logo of Marine Space Force III, Herculis, deployed throughout the Anglo-Japanese arm from the outer veil to the ICSC Network, this patch is often worn by any general assigned to the MSF Herculis, US Space Command and UA Allied Command Generals often have their own patches."
+	icon_state = "msfpatch"
+
+/obj/item/clothing/accessory/patch/hyperdyne_patch
+	name = "Hyperdyne Corporation patch"
+	desc = "A sleek corporate patch bearing the logo of the Hyperdyne Corporation—one of the most powerful conglomerates. Known for synthetic production, AI research, and deep-space logistics. Wearing this patch implies loyalty to profit over people."
+	icon_state = "hyperdynepatch"
+
+// Misc
 
 /obj/item/clothing/accessory/dogtags
 	name = "Attachable Dogtags"
 	desc = "A robust pair of dogtags to be worn around the neck of the United States Colonial Marines, however due to a combination of budget reallocation, Marines losing their dogtags, and multiple incidents of marines swallowing their tags, they now attach to the uniform or armor."
 	icon_state = "dogtag"
-	slot = ACCESSORY_SLOT_MEDAL
+	icon = 'icons/obj/items/clothing/accessory/misc.dmi'
+	inv_overlay_icon = 'icons/obj/items/clothing/accessory/inventory_overlays/misc.dmi'
+	accessory_icons = list(
+		WEAR_BODY = 'icons/mob/humans/onmob/clothing/accessory/misc.dmi',
+		WEAR_JACKET = 'icons/mob/humans/onmob/clothing/accessory/misc.dmi'
+	)
+	worn_accessory_slot = ACCESSORY_SLOT_DECOR
 
 /obj/item/clothing/accessory/poncho
 	name = "USCM Poncho"
 	desc = "The standard USCM poncho has variations for every climate. Custom fitted to be attached to standard USCM armor variants it is comfortable, warming or cooling as needed, and well-fit. A marine couldn't ask for more. Affectionately referred to as a \"woobie\"."
 	icon_state = "poncho"
-	slot = ACCESSORY_SLOT_PONCHO
-	var/has_variation = TRUE
+	icon = 'icons/obj/items/clothing/accessory/ponchos.dmi'
+	inv_overlay_icon = 'icons/obj/items/clothing/accessory/inventory_overlays/ponchos.dmi'
+	accessory_icons = list(
+		WEAR_BODY = 'icons/mob/humans/onmob/clothing/accessory/ponchos.dmi',
+		WEAR_JACKET = 'icons/mob/humans/onmob/clothing/accessory/ponchos.dmi',
+		WEAR_L_HAND = 'icons/mob/humans/onmob/inhands/items_by_map/jungle_lefthand.dmi',
+		WEAR_R_HAND = 'icons/mob/humans/onmob/inhands/items_by_map/jungle_righthand.dmi'
+	)
+	worn_accessory_slot = ACCESSORY_SLOT_PONCHO
+	flags_atom = MAP_COLOR_INDEX
 
 /obj/item/clothing/accessory/poncho/Initialize()
 	. = ..()
-	if(has_variation)
-		select_gamemode_skin(/obj/item/clothing/accessory/poncho)
-		inv_overlay = image("icon" = 'icons/obj/items/clothing/ties_overlay.dmi', "icon_state" = "[icon_state]")
-		update_icon()
+	// Only do this for the base type '/obj/item/clothing/accessory/poncho'.
+	select_gamemode_skin(/obj/item/clothing/accessory/poncho)
+	inv_overlay = image("icon" = inv_overlay_icon, "icon_state" = "[icon_state]")
+	update_icon()
 
 /obj/item/clothing/accessory/poncho/green
 	icon_state = "poncho"
-	has_variation = FALSE
 
 /obj/item/clothing/accessory/poncho/brown
 	icon_state = "d_poncho"
-	has_variation = FALSE
 
 /obj/item/clothing/accessory/poncho/black
 	icon_state = "u_poncho"
-	has_variation = FALSE
 
 /obj/item/clothing/accessory/poncho/blue
 	icon_state = "c_poncho"
-	has_variation = FALSE
 
 /obj/item/clothing/accessory/poncho/purple
 	icon_state = "s_poncho"
-	has_variation = FALSE
 
-/obj/item/clothing/accessory/poncho/green/army
-	name = "Well-worn Poncho"
-	desc = "The standard poncho has variations for every climate. Custom fitted to be attached to M3 & M4 armor variants, it is comfortable and warms or cools as needed. A trooper couldn't ask for more. Affectionately referred to as a \"woobie\"."
+/obj/item/clothing/accessory/clf_cape
+	name = "torn CLF flag"
+	desc = "A torn up CLF flag with a pin that allows it to be worn as a cape."
+	icon_state = "clf_cape"
+	icon = 'icons/obj/items/clothing/accessory/ponchos.dmi'
+	inv_overlay_icon = 'icons/obj/items/clothing/accessory/inventory_overlays/ponchos.dmi'
+	accessory_icons = list(
+		WEAR_BODY = 'icons/mob/humans/onmob/clothing/accessory/ponchos.dmi',
+		WEAR_JACKET = 'icons/mob/humans/onmob/clothing/accessory/ponchos.dmi'
+	)
+	worn_accessory_slot = ACCESSORY_SLOT_PONCHO
 
-/obj/item/clothing/accessory/bomb //Suicide vesst
-	name = "explosive vest"
-	desc = "Used by absolute madmen to cause terror and fear against others, haphazardly put together with C4 and a standard webbing vest."
-	icon_state = "bomb_vest"
-	var/datum/action/item_action/activation
-	var/mob/living/wearer
-	slot = ACCESSORY_SLOT_UTILITY
-
-/obj/item/clothing/accessory/bomb/Destroy()
-	wearer = null
-	if(!QDELETED(activation))
-		QDEL_NULL(activation)
-	. = ..()
-
-/obj/item/clothing/accessory/bomb/on_attached(obj/item/clothing/S, mob/living/carbon/human/user)
-	. = ..()
-	wearer = user
-	activation = new /datum/action/item_action/bomb/activate(src)
-	activation.give_to(wearer)
-
-/obj/item/clothing/accessory/bomb/on_removed(mob/living/user, obj/item/clothing/C)
-	. = ..()
-	QDEL_NULL(activation)
-
-/datum/action/item_action/bomb/activate
-	var/activated = FALSE
-
-/datum/action/item_action/bomb/activate/New(mob/living/user, obj/item/holder)
-	..()
-	name = "Activate Bomb Vest"
-	button.name = name
-	button.overlays.Cut()
-	button.overlays += image('icons/obj/items/clothing/ties.dmi', button, "bomb_vest")
-
-/datum/action/item_action/bomb/activate/can_use_action()
-	var/mob/living/carbon/human/H = owner
-	if(!H || H.is_mob_incapacitated(TRUE)) //Can't activate if incapacitated
-
-		return
-	if(activated) //don't detonate twice
-		return
-	return TRUE
-
-/datum/action/item_action/bomb/activate/action_activate()
-	. = ..()
-	var/mob/living/carbon/human/H = owner
-	H.visible_message(SPAN_ALERTWARNING("[H] activates the bomb vest! GET DOWN!"), SPAN_ALERTWARNING("You activate the bomb vest! WITNESS ME!"))
-	playsound(H, 'sound/items/bomb_vest.ogg', 100, 1)
-	activated = TRUE
-
-	addtimer(CALLBACK(src, PROC_REF(detonate), FALSE), 3 SECONDS)
-
-/datum/action/item_action/bomb/activate/proc/detonate()
-	var/mob/living/carbon/human/H = owner
-	var/turf/epicenter = get_turf(H)
-	target.ex_act(400, null, src, H, 100)
-	cell_explosion(epicenter, 150, 50, EXPLOSION_FALLOFF_SHAPE_LINEAR, null, create_cause_data(initial(name), H))
-	H.gib()
-	qdel(src)
 
 //Ties that can store stuff
 
@@ -622,9 +841,15 @@
 	name = "load bearing equipment"
 	desc = "Used to hold things when you don't have enough hands."
 	icon_state = "webbing"
+	icon = 'icons/obj/items/clothing/accessory/webbings.dmi'
+	inv_overlay_icon = 'icons/obj/items/clothing/accessory/inventory_overlays/webbings.dmi'
+	accessory_icons = list(
+		WEAR_BODY = 'icons/mob/humans/onmob/clothing/accessory/webbings.dmi',
+		WEAR_JACKET = 'icons/mob/humans/onmob/clothing/accessory/webbings.dmi'
+	)
 	w_class = SIZE_LARGE //too big to store in other pouches
 	var/obj/item/storage/internal/hold = /obj/item/storage/internal/accessory
-	slot = ACCESSORY_SLOT_UTILITY
+	worn_accessory_slot = ACCESSORY_SLOT_STORAGE
 	high_visibility = TRUE
 
 /obj/item/clothing/accessory/storage/Initialize()
@@ -689,7 +914,6 @@
 		/obj/item/ammo_magazine/rifle,
 		/obj/item/ammo_magazine/smg,
 		/obj/item/ammo_magazine/sniper,
-		/obj/item/ammo_magazine/plasma,
 	)
 
 /obj/item/clothing/accessory/storage/webbing
@@ -697,6 +921,17 @@
 	desc = "A sturdy mess of synthcotton belts and buckles, ready to share your burden."
 	icon_state = "webbing"
 	hold = /obj/item/storage/internal/accessory/webbing
+
+/obj/item/clothing/accessory/storage/webbing/black
+	name = "black webbing"
+	icon_state = "webbing_black"
+	item_state = "webbing_black"
+
+/obj/item/clothing/accessory/storage/webbing/iasf
+	name = "IASF airborne webbing"
+	desc = "A durable harness system issued to IASF airborne forces, designed to distribute weight evenly for comfort and mobility. Fitted with reinforced pouches for carrying essential gear during high-risk insertions."
+	icon_state = "webbing_twe"
+	item_state = "webbing_twe"
 
 /obj/item/clothing/accessory/storage/webbing/five_slots
 	hold = /obj/item/storage/internal/accessory/webbing/five_slots
@@ -716,7 +951,7 @@
 /obj/item/clothing/accessory/storage/black_vest/attackby(obj/item/W, mob/living/user)
 	if(HAS_TRAIT(W, TRAIT_TOOL_WIRECUTTERS) && skillcheck(user, SKILL_RESEARCH, SKILL_RESEARCH_TRAINED))
 		var/components = 0
-		var/obj/item/reagent_container/glass/beaker/vial
+		var/obj/item/reagent_container/glass/beaker/beaker
 		var/obj/item/cell/battery
 		for(var/obj/item in hold.contents)
 			if(istype(item, /obj/item/device/radio) || istype(item, /obj/item/stack/cable_coil) || istype(item, /obj/item/device/healthanalyzer))
@@ -724,7 +959,7 @@
 			else if(istype(item, /obj/item/reagent_container/hypospray) && !istype(item, /obj/item/reagent_container/hypospray/autoinjector))
 				var/obj/item/reagent_container/hypospray/H = item
 				if(H.mag)
-					vial = H.mag
+					beaker = H.mag
 				components++
 			else if(istype(item, /obj/item/cell))
 				battery = item
@@ -737,9 +972,9 @@
 				AH = new /obj/item/clothing/accessory/storage/black_vest/acid_harness/brown(get_turf(loc))
 			else
 				AH = new /obj/item/clothing/accessory/storage/black_vest/acid_harness(get_turf(loc))
-			if(vial)
-				AH.vial = vial
-				AH.hold.handle_item_insertion(vial)
+			if(beaker)
+				AH.beaker = beaker
+				AH.hold.handle_item_insertion(beaker)
 			AH.battery = battery
 			AH.hold.handle_item_insertion(battery)
 			qdel(src)
@@ -760,6 +995,51 @@
 	name = "Tool Webbing"
 	desc = "A brown synthcotton webbing that is similar in function to civilian tool aprons, but is more durable for field usage."
 	hold = /obj/item/storage/internal/accessory/tool_webbing
+	icon_state = "vest_brown"
+
+/obj/item/clothing/accessory/storage/black_vest/leg_pouch
+	name = "Leg Pouch"
+	desc = "A camo conforming leg pouch usually worn by hunters, military and people who dream of being military."
+	icon = 'icons/obj/items/clothing/accessory/legpouch.dmi'
+	icon_state = "leg_pouch"
+	inv_overlay_icon = 'icons/obj/items/clothing/accessory/inventory_overlays/legpouch.dmi'
+	accessory_icons = list(
+		WEAR_BODY = 'icons/mob/humans/onmob/clothing/accessory/legpouch.dmi',
+	)
+	flags_atom = MAP_COLOR_INDEX
+
+/obj/item/clothing/accessory/storage/black_vest/leg_pouch/Initialize()
+	. = ..()
+	select_gamemode_skin(/obj/item/clothing/accessory/storage/black_vest/leg_pouch)
+	inv_overlay = image("icon" = inv_overlay_icon, "icon_state" = "[icon_state]")
+	update_icon()
+
+/obj/item/clothing/accessory/storage/black_vest/leg_pouch/select_gamemode_skin(expected_type, list/override_icon_state, list/override_protection)
+	. = ..()
+	if(flags_atom & MAP_COLOR_INDEX)
+		return
+	switch(SSmapping.configs[GROUND_MAP].camouflage_type)
+		if("jungle")
+			icon_state = "j_leg_pouch"
+		if("classic")
+			icon_state = "c_leg_pouch"
+		if("desert")
+			icon_state = "d_leg_pouch"
+		if("snow")
+			icon_state = "s_leg_pouch"
+		if("urban")
+			icon_state = "u_leg_pouch"
+
+/obj/item/clothing/accessory/storage/black_vest/black_leg_pouch
+	name = "Black Leg Pouch"
+	desc = "A black leg pouch usually worn by hunters, military and people who dream of being military."
+	icon = 'icons/obj/items/clothing/accessory/legpouch.dmi'
+	icon_state = "leg_pouch_black"
+	inv_overlay_icon = 'icons/obj/items/clothing/accessory/inventory_overlays/legpouch.dmi'
+	accessory_icons = list(
+		WEAR_BODY = 'icons/mob/humans/onmob/clothing/accessory/legpouch.dmi',
+	)
+	flags_atom = NO_GAMEMODE_SKIN
 
 /obj/item/clothing/accessory/storage/tool_webbing/small
 	name = "Small Tool Webbing"
@@ -778,6 +1058,8 @@
 		/obj/item/device/multitool,
 		/obj/item/tool/shovel/etool,
 		/obj/item/weapon/gun/smg/nailgun/compact,
+		/obj/item/device/defibrillator/synthetic,
+		/obj/item/stack/rods,
 	)
 
 /obj/item/storage/internal/accessory/tool_webbing/small
@@ -806,17 +1088,21 @@
 	new /obj/item/stack/cable_coil(src)
 	new /obj/item/device/multitool(src)
 
-/obj/item/clothing/accessory/storage/tool_webbing/tactical
-	hold = /obj/item/storage/internal/accessory/tool_webbing/tactical
+/obj/item/clothing/accessory/storage/tool_webbing/yellow_drop
+	name = "Tool Drop Pouch"
+	desc = "A durable pair of drop pouches purpose-made for carrying tools."
+	icon_state = "drop_pouch_engineering"
 
-/obj/item/storage/internal/accessory/tool_webbing/tactical/fill_preset_inventory()
-	new /obj/item/tool/screwdriver/tactical(src)
-	new /obj/item/tool/wrench(src)
-	new /obj/item/tool/weldingtool/largetank(src)
-	new /obj/item/tool/crowbar/tactical(src)
-	new /obj/item/tool/wirecutters/tactical(src)
-	new /obj/item/stack/cable_coil(src)
-	new /obj/item/device/multitool(src)
+/obj/item/clothing/accessory/storage/tool_webbing/yellow_drop/small
+	name = "Small Tool Drop Pouch"
+	desc = "A durable pair of drop pouches purpose-made for carrying tools. These are the slightly smaller budget-version."
+	hold = /obj/item/storage/internal/accessory/tool_webbing/small
+
+/obj/item/clothing/accessory/storage/tool_webbing/yellow_drop/equipped
+	hold = /obj/item/storage/internal/accessory/tool_webbing/equipped
+
+/obj/item/clothing/accessory/storage/tool_webbing/yellow_drop/small/equipped
+	hold = /obj/item/storage/internal/accessory/tool_webbing/small/equipped
 
 /obj/item/storage/internal/accessory/surg_vest
 	storage_slots = 14
@@ -870,22 +1156,6 @@
 /obj/item/clothing/accessory/storage/surg_vest/equipped
 	hold = /obj/item/storage/internal/accessory/surg_vest/equipped
 
-/obj/item/clothing/accessory/storage/surg_vest/blue
-	name = "blue surgical webbing vest"
-	desc = "A matte blue synthcotton vest purpose-made for holding surgical tools."
-	icon_state = "vest_blue"
-
-/obj/item/clothing/accessory/storage/surg_vest/blue/equipped
-	hold = /obj/item/storage/internal/accessory/surg_vest/equipped
-
-/obj/item/clothing/accessory/storage/surg_vest/drop_blue
-	name = "blue surgical drop pouch"
-	desc = "A matte blue synthcotton drop pouch purpose-made for holding surgical tools."
-	icon_state = "drop_pouch_surgical_blue"
-
-/obj/item/clothing/accessory/storage/surg_vest/drop_blue/equipped
-	hold = /obj/item/storage/internal/accessory/surg_vest/equipped
-
 /obj/item/clothing/accessory/storage/surg_vest/drop_green
 	name = "green surgical drop pouch"
 	desc = "A greenish synthcotton drop pouch purpose-made for holding surgical tools."
@@ -913,6 +1183,30 @@
 	new /obj/item/tool/surgery/bonegel(src)
 	new /obj/item/reagent_container/blood/OMinus(src)
 
+/obj/item/clothing/accessory/storage/surg_vest/blue
+	name = "blue surgical webbing vest"
+	desc = "A matte blue synthcotton vest purpose-made for holding surgical tools."
+	icon_state = "vest_blue"
+
+/obj/item/clothing/accessory/storage/surg_vest/blue/equipped
+	hold = /obj/item/storage/internal/accessory/surg_vest/equipped
+
+/obj/item/clothing/accessory/storage/surg_vest/drop_blue
+	name = "blue surgical drop pouch"
+	desc = "A matte blue synthcotton drop pouch purpose-made for holding surgical tools."
+	icon_state = "drop_pouch_surgical_blue"
+
+/obj/item/clothing/accessory/storage/surg_vest/drop_blue/equipped
+	hold = /obj/item/storage/internal/accessory/surg_vest/equipped
+
+/obj/item/clothing/accessory/storage/surg_vest/black
+	name = "black surgical webbing vest"
+	desc = "A tactical black synthcotton vest purpose-made for holding surgical tools."
+	icon_state = "vest_black"
+
+/obj/item/clothing/accessory/storage/surg_vest/black/equipped
+	hold = /obj/item/storage/internal/accessory/surg_vest/equipped
+
 /obj/item/clothing/accessory/storage/surg_vest/drop_black
 	name = "black surgical drop pouch"
 	desc = "A tactical black synthcotton drop pouch purpose-made for holding surgical tools."
@@ -938,7 +1232,6 @@
 	max_storage_space = 5
 	can_hold = list(
 		/obj/item/tool/kitchen/utensil/knife,
-		/obj/item/tool/kitchen/utensil/pknife,
 		/obj/item/tool/kitchen/knife,
 		/obj/item/attachable/bayonet,
 		/obj/item/weapon/throwing_knife,
@@ -970,34 +1263,16 @@
 	..()
 	playsound(src, 'sound/weapons/gun_shotgun_shell_insert.ogg', 15, TRUE)
 
-/obj/item/clothing/accessory/storage/knifeharness/duelling
-	name = "decorated harness"
-	desc = "A heavily decorated harness of sinew and leather with two knife-loops."
-	icon_state = "unathiharness2"
-	hold = /obj/item/storage/internal/accessory/knifeharness/duelling
-
-/obj/item/storage/internal/accessory/knifeharness/duelling
-	storage_slots = 2
-	max_storage_space = 2
-	can_hold = list(
-		/obj/item/weapon/unathiknife,
-	)
-
-/obj/item/storage/internal/accessory/knifeharness/duelling/fill_preset_inventory()
-	new /obj/item/weapon/unathiknife(src)
-	new /obj/item/weapon/unathiknife(src)
-
 /obj/item/clothing/accessory/storage/droppouch
 	name = "drop pouch"
 	desc = "A convenient pouch to carry loose items around."
 	icon_state = "drop_pouch"
+
 	hold = /obj/item/storage/internal/accessory/drop_pouch
 
-/obj/item/clothing/accessory/storage/droppouch/upp
-	icon_state = "upp_drop_pouch_alt"
-
-/obj/item/clothing/accessory/storage/droppouch/rmc
-	icon_state = "rmc_drop_pouch_alt"
+/obj/item/clothing/accessory/storage/droppouch/black
+	name = "black drop pouch"
+	icon_state = "drop_pouch_black"
 
 /obj/item/storage/internal/accessory/drop_pouch
 	w_class = SIZE_LARGE //Allow storage containers that's medium or below
@@ -1009,30 +1284,13 @@
 		/obj/item/storage/bible,
 		/obj/item/storage/toolkit,
 		)
-	storage_flags = NONE //no verb, no quick draw, no tile gathering
-
-/obj/item/clothing/accessory/storage/smallpouch
-	name = "small pouch"
-	desc = "A small pouch to carry a few items, typically the contents of an IFAK."
-	icon_state = "pouch"
-	hold = /obj/item/storage/internal/accessory/smallpouch
-
-/obj/item/clothing/accessory/storage/smallpouch/upp
-	icon_state = "upp_pouch_alt"
-
-/obj/item/clothing/accessory/storage/smallpouch/rmc
-	icon_state = "rmc_pouch_alt"
-
-/obj/item/storage/internal/accessory/smallpouch
-	w_class = SIZE_LARGE
-	max_w_class = SIZE_SMALL
-	storage_flags = NONE
-	storage_slots = 4
+	storage_flags = STORAGE_ALLOW_DRAWING_METHOD_TOGGLE
 
 /obj/item/clothing/accessory/storage/holster
 	name = "shoulder holster"
 	desc = "A handgun holster with an attached pouch, allowing two magazines or speedloaders to be stored along with it."
 	icon_state = "holster"
+	worn_accessory_slot = ACCESSORY_SLOT_STORAGE
 	high_visibility = TRUE
 	hold = /obj/item/storage/internal/accessory/holster
 
@@ -1105,73 +1363,13 @@
 
 /obj/item/clothing/accessory/storage/holster/armpit
 	name = "shoulder holster"
-	desc = "A worn-out handgun holster. Perfect for concealed carry"
+	desc = "A worn-out handgun holster. Perfect for concealed carry."
 	icon_state = "holster"
 
 /obj/item/clothing/accessory/storage/holster/waist
-	name = "waist holster"
-	desc = "A handgun holster."
-	icon_state = "holster_hip"
-	item_state = "holster_hip"
-
-//Knife sheath, for the really big kinds of knives you get in the loadout
-//Butchered holster code
-
-/obj/item/clothing/accessory/storage/sheath
-	name = "large knife sheath"
-	desc = "A well-made leather sheath, looks big enough to hold a proper knife in it, or even a machete at a push."
-	icon_state = "holster_knife"
-	high_visibility = TRUE
-	hold = /obj/item/storage/internal/accessory/sheath
-
-/obj/item/storage/internal/accessory/sheath
-	storage_slots = 1
-	w_class = SIZE_LARGE
-	max_w_class = SIZE_LARGE
-	var/obj/item/weapon/current_blade
-	var/sheatheSound = 'sound/handling/holsterin.ogg'
-	var/drawSound = 'sound/handling/holsterout.ogg'
-	storage_flags = STORAGE_ALLOW_QUICKDRAW
-	can_hold = list(
-		/obj/item/weapon/knife/marine/bowie,
-		/obj/item/weapon/knife/marine/bowie/kukri,
-		/obj/item/weapon/sword/machete,
-		/obj/item/weapon/sword/machete/arnold,
-		/obj/item/weapon/sword/machete/arnold/weak,
-	)
-
-/obj/item/storage/internal/accessory/sheath/on_stored_atom_del(atom/movable/AM)
-	if(AM == current_blade)
-		current_blade = null
-
-/obj/item/clothing/accessory/storage/sheath/attack_hand(mob/user, mods)
-	var/obj/item/storage/internal/accessory/sheath/S = hold
-	if(S.current_blade && ishuman(user) && (loc == user || has_suit))
-		S.current_blade.attack_hand(user)
-		return
-
-	..()
-
-/obj/item/storage/internal/accessory/sheath/can_be_inserted(obj/item/W, mob/user, stop_messages = FALSE)
-	if( ..() ) //If the parent did their thing, this should be fine. It pretty much handles all the checks.
-		if(isweapon(W))
-			if(current_blade)
-				if(!stop_messages)
-					to_chat(usr, SPAN_WARNING("[src] already holds \a [W]."))
-				return
-		return 1
-
-/obj/item/storage/internal/accessory/sheath/_item_insertion(obj/item/W)
-	if(isweapon(W))
-		current_blade = W //If there's no active gun, we want to make this our gun
-		playsound(src, sheatheSound, 15, TRUE)
-	. = ..()
-
-/obj/item/storage/internal/accessory/sheath/_item_removal(obj/item/W)
-	if(isweapon(W))
-		current_blade = null
-		playsound(src, drawSound, 15, TRUE)
-	. = ..()
+	name = "shoulder holster"
+	desc = "A handgun holster. Made of expensive leather."
+	icon_state = "holster"
 
 /*
 	Holobadges are worn on the belt or neck, and can be used to show that the holder is an authorized
@@ -1184,14 +1382,26 @@
 	name = "holobadge"
 	desc = "This glowing blue badge marks the holder as THE LAW."
 	icon_state = "holobadge"
+	icon = 'icons/obj/items/clothing/accessory/misc.dmi'
+	inv_overlay_icon = 'icons/obj/items/clothing/accessory/inventory_overlays/misc.dmi'
+	accessory_icons = list(
+		WEAR_BODY = 'icons/mob/humans/onmob/clothing/accessory/misc.dmi',
+		WEAR_JACKET = 'icons/mob/humans/onmob/clothing/accessory/misc.dmi'
+	)
 	flags_equip_slot = SLOT_WAIST
 	jumpsuit_hide_states = UNIFORM_JACKET_REMOVED
+	worn_accessory_slot = ACCESSORY_SLOT_DECOR
 
 	var/stored_name = null
 
 /obj/item/clothing/accessory/holobadge/cord
 	icon_state = "holobadge-cord"
 	flags_equip_slot = SLOT_FACE
+	accessory_icons = list(
+		WEAR_FACE = 'icons/mob/humans/onmob/clothing/accessory/misc.dmi',
+		WEAR_BODY = 'icons/mob/humans/onmob/clothing/accessory/misc.dmi',
+		WEAR_JACKET = 'icons/mob/humans/onmob/clothing/accessory/misc.dmi'
+	)
 
 /obj/item/clothing/accessory/holobadge/attack_self(mob/user)
 	..()
@@ -1224,7 +1434,7 @@
 	if(isliving(user))
 		user.visible_message(SPAN_DANGER("[user] invades [M]'s personal space, thrusting [src] into their face insistently."),SPAN_DANGER("You invade [M]'s personal space, thrusting [src] into their face insistently. You are the law."))
 
-/obj/item/storage/box/holobadge
+/obj/item/storage/box/holobadge // re-org this out in the future
 	name = "holobadge box"
 	desc = "A box claiming to contain holobadges."
 
@@ -1241,52 +1451,27 @@
 /obj/item/clothing/accessory/storage/owlf_vest
 	name = "\improper OWLF agent vest"
 	desc = "This is a fancy-looking ballistics vest, meant to be attached to a uniform." //No stats for these yet, just placeholder implementation.
-	icon = 'icons/obj/items/clothing/ties.dmi'
 	icon_state = "owlf_vest"
 	item_state = "owlf_vest"
 
-/obj/item/clothing/accessory/flak
-	name = "M67 flak vest"
-	desc = "An older model of flak jacket worn by combat support personnel such as dropship crew, or occasionally by smartgunners. Much comfier than its M70 successor, and can be worn under most combat armor, however, the ballistic protection leaves much to be desired."
-	icon_state = "flak"
-	item_state = "flak"
-	w_class = SIZE_MEDIUM
-	var/tucked_in = FALSE
-
-/obj/item/clothing/accessory/flak/get_examine_text(mob/user)
-	. = ..()
-	. += SPAN_NOTICE("You can wear it differently by <b>using it in hand</b>.")
-
-/obj/item/clothing/accessory/flak/attack_self(mob/user)
-	..()
-
-	tucked_in = !tucked_in
-	if(tucked_in)
-		icon_state = "[initial(icon_state)]_slim"
-		user.visible_message(SPAN_NOTICE("[user] tucks in [src]'s sleeves."), SPAN_NOTICE("You tuck in [src]'s sleeves."))
-	else
-		icon_state = initial(icon_state)
-		user.visible_message(SPAN_NOTICE("[user] decides to keep [src] nice and puffy."), SPAN_NOTICE("You decide to keep [src] nice and puffy."))
-	item_state = icon_state
-
-/obj/item/clothing/accessory/flak/od
-	icon_state = "flakod"
-	item_state = "flakod"
-
-//===========================//Wrist-worn accessories, just watches currently\\================================\\
+/*
+Wrist Accessories
+*/
 
 /obj/item/clothing/accessory/wrist
 	name = "bracelet"
 	desc = "A simple bracelet made from a strip of fabric."
+	icon = 'icons/obj/items/clothing/accessory/wrist_accessories.dmi'
 	icon_state = "bracelet"
-	item_state = null
-	slot = ACCESSORY_SLOT_WRIST_L
+	inv_overlay_icon = null
+	worn_accessory_slot = ACCESSORY_SLOT_WRIST_L
+	worn_accessory_limit = 4
 	var/which_wrist = "left wrist"
 
 /obj/item/clothing/accessory/wrist/get_examine_text(mob/user)
 	. = ..()
 
-	switch(slot)
+	switch(worn_accessory_slot)
 		if(ACCESSORY_SLOT_WRIST_L)
 			which_wrist = "left wrist"
 		if(ACCESSORY_SLOT_WRIST_R)
@@ -1299,21 +1484,20 @@
 /obj/item/clothing/accessory/wrist/attack_self(mob/user)
 	..()
 
-	switch(slot)
+	switch(worn_accessory_slot)
 		if(ACCESSORY_SLOT_WRIST_L)
-			slot = ACCESSORY_SLOT_WRIST_R
+			worn_accessory_slot = ACCESSORY_SLOT_WRIST_R
 			to_chat(user, SPAN_NOTICE("[src] will be worn on the right wrist."))
 		if(ACCESSORY_SLOT_WRIST_R)
-			slot = ACCESSORY_SLOT_WRIST_L
+			worn_accessory_slot = ACCESSORY_SLOT_WRIST_L
 			to_chat(user, SPAN_NOTICE("[src] will be worn on the left wrist."))
 
 /obj/item/clothing/accessory/wrist/watch
-	name = "Seiko Pulsemeter wristwatch"
-	desc = "Model S234-501A, a durable quartz-based wristwatch issued to most Colonial Marines who pass through basic training."
-	icon_state = "wristwatch_basic"
-	item_state = "wristwatch_black"
-	w_class = SIZE_SMALL
-	flags_equip_slot = SLOT_HANDS
+	name = "digital wrist watch"
+	desc = "A cheap 24-hour only digital wrist watch. It has a crappy red display, great for looking at in the dark!"
+	icon = 'icons/obj/items/clothing/accessory/watches.dmi'
+	icon_state = "cheap_watch"
+	worn_accessory_limit = 1 // though, this means you can wear a watch on each wrist, which should be fine, although you might look stupid for doing this
 
 /obj/item/clothing/accessory/wrist/watch/get_examine_text(mob/user)
 	. = ..()
@@ -1325,623 +1509,88 @@
 
 	. += " It reads: [SPAN_NOTICE("[worldtime2text()]")]"
 
-/obj/item/storage/box/watch_box
-	name = "\improper Seiko Pulsemeter wristwatch storage case"
-	desc = "A tough-wearing case to keep an expensive wristwatch safe when not being worn."
-	icon = 'icons/obj/items/storage/kits.dmi'
-	icon_state = "pdt_box"
-	can_hold = list(/obj/item/clothing/accessory/wrist/watch)
-	foldable = /obj/item/stack/sheet/cardboard
-	storage_slots = 1
-	w_class = SIZE_SMALL
-	max_w_class = SIZE_SMALL
+/obj/item/clothing/accessory/rosary
+	name = "rosary"
+	desc = "Jesus Saves Lives!"
+	icon_state = "rosary"
+	item_state = "rosary_neck"
+	icon = 'icons/obj/items/clothing/accessory/misc.dmi'
+	accessory_icons = list(
+		WEAR_BODY = 'icons/mob/humans/onmob/clothing/accessory/misc.dmi',
+		WEAR_JACKET = 'icons/mob/humans/onmob/clothing/accessory/misc.dmi',
+	)
+	item_state_slots = list(WEAR_AS_GARB = "rosary")
+	item_icons = list(
+		WEAR_AS_GARB = 'icons/mob/humans/onmob/clothing/helmet_garb/misc.dmi',
+	)
+	flags_obj = OBJ_IS_STYLISH|OBJ_IS_HELMET_GARB
+	worn_accessory_slot = ACCESSORY_SLOT_DECOR
+	worn_accessory_limit = 2
+	style_postfix = list("neck", "left_wrist", "right_wrist")
 
-/obj/item/storage/box/watch_box/fill_preset_inventory()
-	new /obj/item/clothing/accessory/wrist/watch(src)
+/obj/item/clothing/accessory/rosary/gold
+	name = "golden rosary"
+	desc = "Truly, one can be closest to God when adorned in gold, jewels, and riches whilst flaunting it about."
+	icon_state = "grosary"
+	item_state = "grosary_neck"
+	item_state_slots = list(WEAR_AS_GARB = "grosary")
 
-/obj/item/clothing/accessory/wrist/watch/bishop
-	name = "Seiko 7A28-6000 wristwatch"
-	desc = "A fancy black-bodied wristwatch. Once set correctly, it always holds the right time. For the connoisseurs of precision."
-	icon_state = "wristwatch_bishop"
-	item_state = "wristwatch_black"
+//TEMPORARY
 
-/obj/item/storage/box/watch_box/bishop
-	name = "\improper Seiko 7A28-6000 wristwatch storage case"
-
-/obj/item/storage/box/watch_box/bishop/fill_preset_inventory()
-	new /obj/item/clothing/accessory/wrist/watch/bishop(src)
-
-/obj/item/clothing/accessory/wrist/watch/ripley
-	name = "Seiko 7A28-7000 wristwatch"
-	desc = "With the pioneering design of analog quartz chronographs beating inside it, this asymetric wristwatch is perfect for anyone who can remain standing where others have all fallen."
-	icon_state = "wristwatch_ripley"
-	item_state = "wristwatch_silver"
-
-/obj/item/storage/box/watch_box/ripley
-	name = "\improper Seiko 7A28-7000 wristwatch storage case"
-
-/obj/item/storage/box/watch_box/ripley/fill_preset_inventory()
-	new /obj/item/clothing/accessory/wrist/watch/ripley(src)
-
-/obj/item/clothing/accessory/wrist/watch/burke
-	name = "Seiko H556-5050 wristwatch"
-	desc = "A more upmarket wristwatch tailored towards junior executives & 'company guys' all across the galaxy. Flashy, but not horribly ostentatious."
-	icon_state = "wristwatch_burke"
-	item_state = "wristwatch_silver"
-
-/obj/item/storage/box/watch_box/burke
-	name = "\improper Seiko H556-5050 wristwatch storage case"
-
-/obj/item/storage/box/watch_box/burke/fill_preset_inventory()
-	new /obj/item/clothing/accessory/wrist/watch/burke(src)
-
-/obj/item/clothing/accessory/wrist/watch/dallas
-	name = "Samani E-125 wristwatch"
-	desc = "Advertised as being 'A new dawn of precision digital watches', the E-125 became a popular hit with members of the civil aerospace industry."
-	icon_state = "wristwatch_dallas"
-	item_state = "wristwatch_fancy"
-
-/obj/item/storage/box/watch_box/dallas
-	name = "\improper Samani E-125 wristwatch storage case"
-
-/obj/item/storage/box/watch_box/dallas/fill_preset_inventory()
-	new /obj/item/clothing/accessory/wrist/watch/dallas(src)
-
-//===========================//CUSTOM ARMOR COSMETIC PLATES\\================================\\
-
-/obj/item/clothing/accessory/pads
-	name = "\improper M3 Pauldrons"
-	desc = "Attachable supplementary armor for the M3 armor system. Protects from glancing hits and covers the arm opening in the cuirass against shrapnel."
-	icon_state = "pads"
-	item_state = "pads"
-	slot = ACCESSORY_SLOT_DECORARMOR
-
-/obj/item/clothing/accessory/pads/Initialize(mapload)
-	. = ..()
-	if(!(flags_atom & NO_SNOW_TYPE))
-		select_gamemode_skin(type)
-	update_icon()
-
-/obj/item/clothing/accessory/pads/bracers
-	name = "\improper M3 Vambraces"
-	desc = "Attachable supplementary armor for the M3 armor system. A pair of composite ballistic vambraces to shield the forearms, with straps to ensure it doesn't ride up or down."
-	icon_state = "bracers"
-	item_state = "bracers"
-	slot = ACCESSORY_SLOT_DECORBRACER
-
-/obj/item/clothing/accessory/pads/bracers/standard
-	flags_atom = NO_SNOW_TYPE
-
-/obj/item/clothing/accessory/pads/neckguard
-	name = "\improper M3 Gorget"
-	desc = "Attachable supplementary armor for the M3 armor system. A simple polymer ballistic plate to resist ricochets and shrapnel."
-	icon_state = "neckguard"
-	item_state = "neckguard"
-	slot = ACCESSORY_SLOT_DECORNECK
-
-/obj/item/clothing/accessory/pads/neckguard/uacg
-	desc = "Attachable supplementary armor for the UACG's M3 armor system. A simple polymer ballistic plate to resist ricochets and shrapnel."
-	icon_state = "neckguard_uacg"
-	item_state = "neckguard_uacg"
-	flags_atom = NO_SNOW_TYPE
-
-/obj/item/clothing/accessory/pads/greaves
-	name = "\improper M3 Greaves"
-	desc = "Attachable supplementary armor for the M3 armor system. Lightweight polymer clamshell-style plates enclose the lower legs to provide shrapnel and pistol protection."
-	icon_state = "shinguards"
-	item_state = "shinguards"
-	slot = ACCESSORY_SLOT_DECORSHIN
-
-/obj/item/clothing/accessory/pads/greaves/standard
-	flags_atom = NO_SNOW_TYPE
-
-/obj/item/clothing/accessory/pads/kneepads
-	name = "\improper M3 Kneepads"
-	desc = "Attachable supplementary armor for the M3 armor system. High impact ruggedized outer shell and polymer internals protect from shrapnel as well as low power ballistics."
-	icon_state = "thighguards"
-	item_state = "thighguards"
-	slot = ACCESSORY_SLOT_DECORKNEE
-
-/obj/item/clothing/accessory/pads/kneepads/standard
-	flags_atom = NO_SNOW_TYPE
-
-/obj/item/clothing/accessory/pads/groin
-	name = "\improper M3 Lap Panel"
-	desc = "Attachable supplementary armor for the M3 armor system. Shear thickening liquid armor piece covering the abdomen and groin, with an additional ruggedized boron carbide strike face for the genitals. Clasps to the inside of the M3 cuirass."
-	icon_state = "groinplate"
-	item_state = "groinplate"
-	slot = ACCESSORY_SLOT_DECORGROIN
-
-/obj/item/clothing/accessory/pads/groin/uacg
-	desc = "Attachable supplementary armor for the UACG's M3 armor system. Shear thickening liquid armor piece covering the abdomen and groin, with an additional ruggedized boron carbide strike face for the genitals. Clasps to the inside of the M3 cuirass."
-	icon_state = "groinplate_uacg"
-	item_state = "groinplate_uacg"
-	slot = ACCESSORY_SLOT_DECORGROIN
-	flags_atom = NO_SNOW_TYPE
-
-
-//===========================//USASF CUSTOM ARMOR PLATES\\================================\\
-
-/obj/item/clothing/accessory/pads/navy
-	name = "\improper M4 Pauldrons"
-	desc = "Attachable supplementary armor for the USASF M4 armor system. Protects from glancing hits and covers the arm opening in the cuirass against shrapnel."
-	icon_state = "u_pads"
-	item_state = "u_pads"
-	flags_atom = NO_SNOW_TYPE
-
-/obj/item/clothing/accessory/pads/greaves/navy
-	name = "\improper M4 Greaves"
-	desc = "Attachable supplementary armor for the M4 armor system. Lightweight polymer clamshell-style plates enclose the lower legs to provide shrapnel and pistol protection."
-	icon_state = "u_shinguards"
-	item_state = "u_shinguards"
-	flags_atom = NO_SNOW_TYPE
-
-/obj/item/clothing/accessory/pads/groin/navy
-	name = "\improper M4 Lap Panel"
-	desc = "Attachable supplementary armor for the USASF M4 armor system. Shear thickening liquid armor piece covering the abdomen and groin, with an additional ruggedized carbon-fibre composite strike face for the genitals. Clasps to the inside of the M3 cuirass."
-	icon_state = "u_groinplate"
-	item_state = "u_groinplate"
-	slot = ACCESSORY_SLOT_DECORGROIN
-
-//===========================//UPP CUSTOM ARMOR PLATES\\================================\\
-
-/obj/item/clothing/accessory/upppads
-	name = "\improper 6B90 Arm Plates"
-	desc = "A set of arm plates designed for the 6B90 armor system."
-	icon_state = "upp_arms"
-	item_state = "upp_arms"
-	slot = ACCESSORY_SLOT_DECORARMOR
-
-/obj/item/clothing/accessory/upppads/legs
-	name = "\improper 6B90 Leg Guards"
-	desc = "A set of leg greaves designed for the 6B90 armor system."
-	icon_state = "upp_greaves"
-	item_state = "upp_greaves"
-	slot = ACCESSORY_SLOT_DECORSHIN
-
-/obj/item/clothing/accessory/upppads/crotch
-	name = "\improper 6B90 Crotch Guard"
-	desc = "A crotch plate designed for the 6B90 armor system."
-	icon_state = "upp_crotch"
-	item_state = "upp_crotch"
-	slot = ACCESSORY_SLOT_DECORGROIN
-
-//===========================//TWE CUSTOM ARMOR PLATES\\================================\\
-
-/obj/item/clothing/accessory/twepads
-	name = "\improper Kestrel Shoulder Pads"
-	desc = "A set of ashoulder pads designed for the Kestrel armor system."
-	icon_state = "rmc_arms"
-	item_state = "rmc_arms"
-	slot = ACCESSORY_SLOT_DECORARMOR
-
-/obj/item/clothing/accessory/twepads/legs
-	name = "\improper Kestrel Leg Guards"
-	desc = "A set of leg greaves designed for the Kestrel armor system."
-	icon_state = "rmc_greaves"
-	item_state = "rmc_greaves"
-	slot = ACCESSORY_SLOT_DECORSHIN
-
-//===========================//CUSTOM ARMOR PAINT\\================================\\
-
-/obj/item/clothing/accessory/paint
-	name = "skull armor paint"
-	desc = "A set of paint tones to etch a skull into a Marine's armor."
-	icon_state = "skull"
-	item_state = "skull"
-	slot = ACCESSORY_SLOT_PAINT
-
-/obj/item/clothing/accessory/paint/heart
-	name = "heart armor paint"
-	desc = "A set of paint tones to etch a heart into a Marine's armor."
-	icon_state = "heart"
-	item_state = "heart"
-
-/obj/item/clothing/accessory/paint/medic
-	name = "cross armor paint"
-	desc = "A set of paint tones to etch a red cross into a Marine's armor."
-	icon_state = "medic"
-	item_state = "medic"
-
-/obj/item/clothing/accessory/paint/uaflag
-	name = "UA flag armor paint"
-	desc = "A set of paint tones to etch the red, white, and black into a Marine's armor."
-	icon_state = "uaflag"
-	item_state = "uaflag"
-
-/obj/item/clothing/accessory/paint/usflag
-	name = "US flag armor paint"
-	desc = "A set of paint tones to etch the red, white, and blue into a Marine's armor."
-	icon_state = "usflag"
-	item_state = "usflag"
-
-/obj/item/clothing/accessory/paint/target
-	name = "target armor paint"
-	desc = "A set of paint tones to etch a target pattern into a Marine's armor."
-	icon_state = "target"
-	item_state = "target"
-
-/obj/item/clothing/accessory/paint/alcoholism
-	name = "smileyface armor paint"
-	desc = "A set of paint tones to etch a happy face into a Marine's armor."
-	icon_state = "smileyface"
-	item_state = "smileyface"
-
-/obj/item/clothing/accessory/paint/melancholy
-	name = "neutralface armor paint"
-	desc = "A set of paint tones to etch a happy face into a Marine's armor, though this one carries indifferent energy."
-	icon_state = "neutralface"
-	item_state = "neutralface"
-
-/obj/item/clothing/accessory/paint/cross
-	name = "cross armor paint"
-	desc = "A set of paint tones to etch a religious symbol into a Marine's armor."
-	icon_state = "cross"
-	item_state = "cross"
-
-/obj/item/clothing/accessory/paint/inscription
-	name = "cross armor paint"
-	desc = "A set of paint tones to etch a text phrase into a Marine's armor."
-	icon_state = "inscription"
-	item_state = "inscription"
-
-/obj/item/clothing/accessory/paint/fire
-	name = "flames armor paint"
-	desc = "A set of paint tones to etch straight heat into a Marine's armor."
-	icon_state = "mixtape"
-	item_state = "mixtape"
-
-/obj/item/clothing/accessory/paint/sg
-	name = "camouflage paint"
-	desc = "A set of paints for smartgunners to apply to their harnesses for a darker complextion."
-	icon_state = "blacksg"
-	item_state = "blacksg"
-	slot = ACCESSORY_SLOT_SGPAINT
-
-//===========================//CUSTOM ARMOR WEBBING\\================================\\
-
-/obj/item/clothing/accessory/storage/webbing/m3
-	name = "\improper M3 Pattern Webbing"
-	desc = "A sturdy mess of synthcotton belts and buckles designed to attach to the M3 Pattern Marine armor standard for the USCMC. This one is the slimmed down model designed for general purpose storage."
-	icon_state = "m3webbing"
-	hold = /obj/item/storage/internal/accessory/webbing/m3generic
-	slot = ACCESSORY_SLOT_M3UTILITY
-	flags_atom = NO_SNOW_TYPE
-
-/obj/item/clothing/accessory/storage/webbing/m3/Initialize(mapload)
-	. = ..()
-	if(!(flags_atom & NO_SNOW_TYPE))
-		select_gamemode_skin(type)
-	update_icon()
-
-
-/obj/item/storage/internal/accessory/webbing/m3generic
-	cant_hold = list(
-		/obj/item/ammo_magazine/handful/shotgun,
-		/obj/item/ammo_magazine/rifle,
+/obj/item/clothing/accessory/helmet/cover
+	name = "potato cover"
+	desc = "ahelp if you see this."
+	garbage = TRUE // for all intents and purposes, yes
+	flags_obj = OBJ_IS_HELMET_GARB
+	w_class = SIZE_TINY
+	worn_accessory_slot = ACCESSORY_SLOT_HELM_C
+	worn_accessory_limit = 2 // cover a helmet with a raincover and a netting i guess
+	icon = 'icons/obj/items/clothing/helmet_garb.dmi'
+	accessory_icons = list(
+		WEAR_HEAD = 'icons/mob/humans/onmob/clothing/helmet_garb/helmet_covers.dmi',
+	)
+	item_icons = list(
+		WEAR_AS_GARB = 'icons/mob/humans/onmob/clothing/helmet_garb/helmet_covers.dmi',
 	)
 
-/obj/item/clothing/accessory/storage/webbing/m3/mag
-	name = "\improper M3 Pattern Magazine Webbing"
-	desc = "A variant of the M3 Pattern webbing that features pouches for pulse rifle magazines."
-	icon_state = "m3webbingmag"
-	hold = /obj/item/storage/internal/accessory/webbing/m3mag
+/obj/item/clothing/accessory/helmet/cover/raincover
+	name = "raincover"
+	desc = "The standard M10 combat helmet is already water-resistant at depths of up to 10 meters. This makes the top potentially water-proof. At least it's something."
+	icon_state = "raincover"
 
-/obj/item/storage/internal/accessory/webbing/m3mag
-	can_hold = list(
-		/obj/item/attachable/bayonet,
-		/obj/item/weapon/knife,
-		/obj/item/device/flashlight/flare,
-		/obj/item/ammo_magazine/rifle,
-		/obj/item/ammo_magazine/m60,
-		/obj/item/ammo_magazine/smg,
-		/obj/item/ammo_magazine/pistol,
-		/obj/item/ammo_magazine/revolver,
-		/obj/item/ammo_magazine/sniper,
-		/obj/item/ammo_magazine/handful,
-		/obj/item/explosive/grenade,
-		/obj/item/explosive/mine,
-		/obj/item/reagent_container/food/snacks,
-		/obj/item/ammo_magazine/plasma,
-	)
-	bypass_w_limit = list(
-		/obj/item/ammo_magazine/rifle,
-		/obj/item/ammo_magazine/smg,
-		/obj/item/ammo_magazine/plasma,
-	)
+/obj/item/clothing/accessory/helmet/cover/raincover/jungle
+	name = "jungle raincover"
+	icon_state = "raincover_jungle"
 
-//Partial Pre-load For Props
+/obj/item/clothing/accessory/helmet/cover/raincover/desert
+	name = "desert raincover"
+	icon_state = "raincover_desert"
 
-/obj/item/clothing/accessory/storage/webbing/m3/mag/mk1
-	hold = /obj/item/storage/internal/accessory/webbing/m3mag/mk1
+/obj/item/clothing/accessory/helmet/cover/raincover/urban
+	name = "urban raincover"
+	icon_state = "raincover_urban"
 
-/obj/item/storage/internal/accessory/webbing/m3mag/mk1/fill_preset_inventory()
-	new /obj/item/ammo_magazine/rifle/m41aMK1(src)
-	new /obj/item/ammo_magazine/rifle/m41aMK1(src)
+/obj/item/clothing/accessory/helmet/cover/raincover/snow
+	name = "snow raincover"
+	icon_state = "raincover_snow"
 
-//===
+/obj/item/clothing/accessory/helmet/cover/netting
+	name = "combat netting"
+	desc = "Probably combat netting for a helmet. Probably just an extra hairnet that got ordered for the phantom Almayer cooking staff. Probably useless."
+	icon_state = "netting"
 
-/obj/item/clothing/accessory/storage/webbing/m3/shotgun
-	name = "\improper M3 Pattern Shell Webbing"
-	desc = "A slightly modified variant of the M3 Pattern grenade webbing, fitted for 12 gauge shotgun shells."
-	icon_state = "m3webbingshotgun"
-	hold = /obj/item/storage/internal/accessory/black_vest/m3shotgun
+/obj/item/clothing/accessory/helmet/cover/netting/desert
+	name = "desert combat netting"
+	icon_state = "netting_desert"
 
-/obj/item/storage/internal/accessory/black_vest/m3shotgun
-	can_hold = list(
-		/obj/item/ammo_magazine/handful,
-	)
+/obj/item/clothing/accessory/helmet/cover/netting/jungle
+	name = "jungle combat netting"
+	icon_state = "netting_jungle"
 
-/obj/item/clothing/accessory/storage/webbing/m3/small
-	name = "\improper M3 Pattern Small Pouch Webbing"
-	desc = "A set of M3 pattern webbing fully outfitted with pouches and pockets to carry a whole array of small items."
-	icon_state = "m3webbingsmall"
-	hold = /obj/item/storage/internal/accessory/black_vest/m3generic
-	slot = ACCESSORY_SLOT_M3UTILITY
+/obj/item/clothing/accessory/helmet/cover/netting/urban
+	name = "urban combat netting"
+	icon_state = "netting_urban"
 
-//Pre-load For Army Props
-//===
-/obj/item/clothing/accessory/storage/webbing/m3/small/army
-	name = "\improper PBAS Webbing"
-	desc = "A sturdy set of webbing designed to fit on the US Army's standard body armor system. Fully outfitted with pouches and pockets to carry a whole array of small items."
-	icon_state = "armywebbing"
-	hold = /obj/item/storage/internal/accessory/black_vest/m3generic/army
-
-/obj/item/storage/internal/accessory/black_vest/m3generic/army/fill_preset_inventory()
-	new /obj/item/storage/box/mre(src)
-	new /obj/item/reagent_container/food/drinks/flask/canteen(src)
-	new /obj/item/tool/crowbar/tactical(src)
-	new /obj/item/tool/shovel/etool(src)
-
-/obj/item/clothing/accessory/storage/webbing/m3/small/army/alt
-	hold = /obj/item/storage/internal/accessory/black_vest/m3generic/armyalt
-
-/obj/item/storage/internal/accessory/black_vest/m3generic/armyalt/fill_preset_inventory()
-	new /obj/item/storage/box/mre(src)
-	new /obj/item/reagent_container/food/drinks/flask/canteen(src)
-	new /obj/item/tool/crowbar/tactical(src)
-	new /obj/item/tool/shovel/etool(src)
-	new /obj/item/explosive/plastic/breaching_charge(src)
-
-/obj/item/clothing/accessory/storage/webbing/m3/small/army/leader
-	hold = /obj/item/storage/internal/accessory/black_vest/m3generic/armyleader
-
-/obj/item/storage/internal/accessory/black_vest/m3generic/armyleader/fill_preset_inventory()
-	new /obj/item/storage/box/mre(src)
-	new /obj/item/reagent_container/food/drinks/flask/canteen(src)
-	new /obj/item/tool/crowbar/tactical(src)
-	new /obj/item/tool/shovel/etool(src)
-	new /obj/item/device/binoculars/range/designator(src)
-
-//===
-
-/obj/item/clothing/accessory/storage/webbing/m3/m40
-	name = "\improper M3 Pattern Grenade Webbing"
-	desc = "A variation of the M3 Pattern webbing fitted with loops for storing M40-hull grenades."
-	icon_state = "m3webbingm40"
-	hold = /obj/item/storage/internal/accessory/black_vest/m3grenade
-
-/obj/item/storage/internal/accessory/black_vest/m3grenade
-	storage_slots = 7
-	can_hold = list(
-		/obj/item/explosive/grenade/high_explosive,
-		/obj/item/explosive/grenade/high_explosive/super,
-		/obj/item/explosive/grenade/high_explosive/airburst/canister,
-		/obj/item/explosive/grenade/high_explosive/impact/heap,
-		/obj/item/explosive/grenade/high_explosive/impact/tmfrag,
-		/obj/item/explosive/grenade/high_explosive/impact/flare,
-		/obj/item/explosive/grenade/high_explosive/training,
-		/obj/item/explosive/grenade/incendiary,
-		/obj/item/explosive/grenade/smokebomb,
-		/obj/item/explosive/grenade/smokebomb/green,
-		/obj/item/explosive/grenade/smokebomb/red,
-		/obj/item/explosive/grenade/metal_foam,
-		/obj/item/explosive/grenade/phosphorus,
-		/obj/item/explosive/grenade/slug/baton,
-		/obj/item/explosive/grenade/tear/marine,
-	)
-
-/obj/item/clothing/accessory/storage/webbing/m3/recon
-	name = "\improper M3-R Pattern Magazine Webbing"
-	desc = "A set of magazine webbing made in an alternative configuration for standard M3 Pattern armor. This one is exclusively issued to Force Reconnoissance units."
-	icon_state = "m3rwebbing"
-	hold = /obj/item/storage/internal/accessory/webbing/m3mag/recon
-
-/obj/item/storage/internal/accessory/webbing/m3mag/recon
-	storage_slots = 4
-
-//Pre-load For Props
-//===
-/obj/item/clothing/accessory/storage/webbing/m3/recon/mk1
-	hold = /obj/item/storage/internal/accessory/webbing/m3mag/recon/mk1
-
-/obj/item/storage/internal/accessory/webbing/m3mag/recon/mk1/fill_preset_inventory()
-	new /obj/item/ammo_magazine/rifle/m41aMK1(src)
-	new /obj/item/ammo_magazine/rifle/m41aMK1(src)
-
-/obj/item/clothing/accessory/storage/webbing/m3/recon/m49
-	hold = /obj/item/storage/internal/accessory/webbing/m3mag/recon/m49
-
-/obj/item/storage/internal/accessory/webbing/m3mag/recon/m49/fill_preset_inventory()
-	new /obj/item/ammo_magazine/rifle/m49a/ext(src)
-	new /obj/item/ammo_magazine/rifle/m49a/ext(src)
-	new /obj/item/ammo_magazine/rifle/m49a/heap(src)
-	new /obj/item/ammo_magazine/rifle/m49a/heap(src)
-//===
-
-/obj/item/clothing/accessory/storage/webbing/m3/recon/m40
-	name = "\improper M3-R Pattern Grenade Webbing"
-	desc = "An alternative to the M3-R Pattern webbing fitted to store M40-hull grenades."
-	icon_state = "m3rwebbingm40"
-	hold = /obj/item/storage/internal/accessory/black_vest/m3grenade/recon
-
-/obj/item/storage/internal/accessory/black_vest/m3grenade/recon
-	storage_slots = 10
-
-/obj/item/clothing/accessory/storage/webbing/m3/recon/shotgun
-	name = "\improper M3-R Pattern Shell Webbing"
-	desc = "A modified variant of the M3-R Pattern grenade webbing for FORECON units, this one accepting 12 gauge."
-	icon_state = "m3rwebbingshotgun"
-	hold = /obj/item/storage/internal/accessory/black_vest/m3shotgun/recon
-
-/obj/item/storage/internal/accessory/black_vest/m3shotgun/recon
-	storage_slots = 7
-
-/obj/item/clothing/accessory/storage/webbing/m3/recon/medic
-	name = "\improper M3-R Pattern Corpsman Webbing"
-	desc = "A large pouch with M3-R Pattern webbing clips designed to house surgical tools for Corpsmen attached to FORECON units, where field hospitals are not readily available."
-	icon_state = "m3rwebbingmedic"
-	hold = /obj/item/storage/internal/accessory/black_vest/m3generic/recon
-
-/obj/item/storage/internal/accessory/black_vest/m3generic
-	cant_hold = list(
-		/obj/item/ammo_magazine/handful/shotgun,
-		/obj/item/ammo_magazine/plasma,
-	)
-
-/obj/item/storage/internal/accessory/black_vest/m3generic/recon
-	storage_slots = 6
-	can_hold = list(
-		/obj/item/storage/surgical_case/regular,
-		/obj/item/reagent_container/blood,
-		/obj/item/tool/surgery/surgical_line,
-		/obj/item/tool/surgery/synthgraft,
-		/obj/item/device/healthanalyzer,
-	)
-
-/obj/item/clothing/accessory/storage/webbing/m56
-	name = "\improper Clip-on Pouch"
-	desc = "A clip on synth-leather pouch designed to house a small collection of items for M56 weapon operators."
-	icon_state = "m56pouch"
-	hold = /obj/item/storage/internal/accessory/black_vest/m56
-	slot = ACCESSORY_SLOT_M56UTILITY
-
-/obj/item/clothing/accessory/storage/webbing/m56/Initialize(mapload)
-	. = ..()
-	if(!(flags_atom & NO_SNOW_TYPE))
-		select_gamemode_skin(type)
-	update_icon()
-
-//Pre-load For Props
-
-/obj/item/clothing/accessory/storage/webbing/m56/preset
-	hold = /obj/item/storage/internal/accessory/black_vest/m56/preset
-
-/obj/item/storage/internal/accessory/black_vest/m56
-	storage_slots = 3
-
-/obj/item/storage/internal/accessory/black_vest/m56/preset/fill_preset_inventory()
-	new /obj/item/storage/box/mre(src)
-	new /obj/item/tool/shovel/etool/folded(src)
-	new /obj/item/reagent_container/food/drinks/flask/canteen(src)
-
-//===
-
-/obj/item/clothing/accessory/storage/webbing/m56/grenade
-	name = "\improper Clip-on Grenade Band"
-	desc = "A sturdy mess of synth-leather band designed to store a few grenades for M56 weapon operators."
-	icon_state = "m56grenade"
-	hold = /obj/item/storage/internal/accessory/black_vest/m56/grenade
-
-/obj/item/storage/internal/accessory/black_vest/m56/grenade
-	storage_slots = 4
-	can_hold = list(
-		/obj/item/explosive/grenade/high_explosive,
-		/obj/item/explosive/grenade/high_explosive/super,
-		/obj/item/explosive/grenade/high_explosive/airburst/canister,
-		/obj/item/explosive/grenade/high_explosive/impact/heap,
-		/obj/item/explosive/grenade/high_explosive/impact/tmfrag,
-		/obj/item/explosive/grenade/high_explosive/impact/flare,
-		/obj/item/explosive/grenade/high_explosive/training,
-		/obj/item/explosive/grenade/incendiary,
-		/obj/item/explosive/grenade/smokebomb,
-		/obj/item/explosive/grenade/smokebomb/green,
-		/obj/item/explosive/grenade/smokebomb/red,
-		/obj/item/explosive/grenade/metal_foam,
-		/obj/item/explosive/grenade/phosphorus,
-		/obj/item/explosive/grenade/slug/baton,
-		/obj/item/explosive/grenade/tear/marine,
-	)
-
-//===========================//CUSTOM UPP ARMOR WEBBING\\================================\\
-
-/obj/item/clothing/accessory/storage/webbing/m3/uppmags
-	name = "\improper Type 90 Pattern Magazine Webbing"
-	desc = "A set of UPP magazine webbing that can carry four magazines."
-	icon_state = "upp_webbing_magazine"
-	hold = /obj/item/storage/internal/accessory/webbing/m3mag/upp
-	flags_atom = NO_SNOW_TYPE
-	slot = ACCESSORY_SLOT_M3UTILITY
-
-/obj/item/storage/internal/accessory/webbing/m3mag/upp
-	storage_slots = 4
-	can_hold = list(
-		/obj/item/attachable/bayonet,
-		/obj/item/device/flashlight/flare,
-		/obj/item/ammo_magazine/rifle,
-		/obj/item/ammo_magazine/m60,
-		/obj/item/ammo_magazine/smg,
-		/obj/item/ammo_magazine/pistol,
-		/obj/item/ammo_magazine/revolver,
-		/obj/item/ammo_magazine/sniper,
-		/obj/item/ammo_magazine/handful,
-		/obj/item/explosive/grenade,
-		/obj/item/explosive/mine,
-		/obj/item/reagent_container/food/snacks,
-		/obj/item/ammo_magazine/plasma,
-	)
-	bypass_w_limit = list(
-		/obj/item/ammo_magazine/rifle,
-		/obj/item/ammo_magazine/smg,
-		/obj/item/ammo_magazine/plasma,
-	)
-
-/obj/item/clothing/accessory/storage/webbing/m3/uppsmall
-	name = "\improper Type 78 Pattern Small Pouch Webbing"
-	desc = "A set of UPP webbing fully outfitted with pouches and pockets to carry a while array of small items."
-	icon_state = "upp_webbing_small"
-	hold = /obj/item/storage/internal/accessory/black_vest/m3generic
-	flags_atom = NO_SNOW_TYPE
-	slot = ACCESSORY_SLOT_M3UTILITY
-
-/obj/item/clothing/accessory/storage/webbing/m3/uppgeneral
-	name = "\improper Type 78 Pattern Webbing"
-	desc = "A sturdy mess of synthcotton belts and buckles designed to attach to UPP armor. This one is the slimmed down model designed for general purpose storage."
-	icon_state = "upp_webbing_large"
-	hold = /obj/item/storage/internal/accessory/webbing/m3generic
-	flags_atom = NO_SNOW_TYPE
-	slot = ACCESSORY_SLOT_M3UTILITY
-
-//===========================//CUSTOM RMC ARMOR WEBBING\\================================\\
-
-/obj/item/clothing/accessory/storage/webbing/m3/uppsmall/rmc
-	name = "\improper 67 Pattern Webbing"
-	icon_state = "rmc_webbing_small"
-	desc = "A sturdy mess of synthcotton belts and buckles designed to attach to Royal Marine armor. This one is the slimmed down model designed for general purpose storage."
-
-/obj/item/clothing/accessory/storage/webbing/m3/uppmags/rmc
-	name = "\improper 82 Pattern Magazine Webbing"
-	desc = "A set of webbing pouches that can carry four magazines. Comes with clips to mount to the standard armor system in use by the Royal Marines."
-	icon_state = "rmc_webbing_magazine"
-	hold = /obj/item/storage/internal/accessory/webbing/m3mag/rmc
-
-/obj/item/storage/internal/accessory/webbing/m3mag/rmc
-	storage_slots = 4
-	can_hold = list(
-		/obj/item/ammo_magazine/rifle/nsg23,
-		/obj/item/ammo_magazine/sniper,
-		/obj/item/ammo_magazine/pistol/vp78,
-		/obj/item/ammo_magazine/pistol/vp70,
-		/obj/item/ammo_magazine/smg/m39,
-	)
-
-//Partial Pre-load For Props
-//===
-/obj/item/clothing/accessory/storage/webbing/m3/uppsmall/rmc/preset
-	hold = /obj/item/storage/internal/accessory/black_vest/m3generic/rmc
-
-/obj/item/storage/internal/accessory/black_vest/m3generic/rmc/fill_preset_inventory()
-	new /obj/item/ammo_magazine/pistol/vp78/rmc(src)
-	new /obj/item/ammo_magazine/pistol/vp78/rmc(src)
-	new /obj/item/ammo_magazine/pistol/vp78/rmc(src)
-	new /obj/item/clothing/mask/gas/pmc/royal_marine(src)
+/obj/item/clothing/accessory/helmet/cover/netting/snow
+	name = "snow combat netting"
+	icon_state = "netting_snow"

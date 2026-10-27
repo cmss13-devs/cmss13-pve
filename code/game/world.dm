@@ -10,6 +10,12 @@ GLOBAL_LIST_INIT(reboot_sfx, file2list("config/reboot_sfx.txt"))
 	view = "15x15"
 	cache_lifespan = 0 //stops player uploaded stuff from being kept in the rsc past the current session
 	hub = "Exadv1.spacestation13"
+// tick checking during reference finding in unit tests can cause knock-on failures elsewhere
+// and really loop checks in CI can just do that too, so it's best to have them off
+// todo: determine if this should just be #ifdef UNIT_TESTS for simplicity
+#ifdef FIND_REF_NO_CHECK_TICK
+	loop_checks = FALSE
+#endif
 
 /world/New()
 	var/debug_server = world.GetConfig("env", "AUXTOOLS_DEBUG_DLL")
@@ -54,25 +60,20 @@ GLOBAL_LIST_INIT(reboot_sfx, file2list("config/reboot_sfx.txt"))
 
 	init_global_referenced_datums()
 
-	var/testing_locally = (world.params && world.params["local_test"])
-	var/running_tests = (world.params && world.params["run_tests"])
 	#if defined(AUTOWIKI) || defined(UNIT_TESTS)
-	running_tests = TRUE
+	sleep_offline = FALSE
 	#endif
-	// Only do offline sleeping when the server isn't running unit tests or hosting a local dev test
-	sleep_offline = (!running_tests && !testing_locally)
 
 	if(!GLOB.RoleAuthority)
 		GLOB.RoleAuthority = new /datum/authority/branch/role()
-		to_world(SPAN_DANGER("\b Job setup complete"))
+		to_world(SPAN_DANGER("\b Job setup complete."))
 
 	initiate_minimap_icons()
 
 	change_tick_lag(CONFIG_GET(number/ticklag))
 
-	// As of byond 515.1637 time2text now treats 0 like it does negative numbers so the hour is wrong
-	// We could instead use world.timezone but IMO better to not assume lummox will keep time2text in parity with it
-	GLOB.timezoneOffset = text2num(time2text(10,"hh")) * 36000
+	// I hate that this logic keeps having to change
+	GLOB.timezoneOffset = world.timezone * 36000
 
 	Master.Initialize(10, FALSE, TRUE)
 
@@ -87,21 +88,9 @@ GLOBAL_LIST_INIT(reboot_sfx, file2list("config/reboot_sfx.txt"))
 	update_status()
 
 	//Scramble the coords obsfucator
-	GLOB.obfs_x = rand(-500, 500) //A number between -100 and 100
-	GLOB.obfs_y = rand(-500, 500) //A number between -100 and 100
-
-	// If the server's configured for local testing, get everything set up ASAP.
-	// Shamelessly stolen from the test manager's host_tests() proc
-	if(testing_locally)
-		GLOB.master_mode = "Extended"
-
-		// Wait for the game ticker to initialize
-		while(!SSticker.initialized)
-			sleep(10)
-
-		// Start the game ASAP
-		SSticker.request_start()
-	return
+	GLOB.obfs_x = rand(-500, 500) //A number between -500 and 500
+	GLOB.obfs_y = rand(-500, 500) //A number between -500 and 500
+	GLOB.obfs_z = rand(-10, 10)   //A number between -10 and 10
 
 /proc/start_logging()
 	GLOB.round_id = SSentity_manager.round.id
@@ -222,30 +211,37 @@ GLOBAL_LIST_INIT(reboot_sfx, file2list("config/reboot_sfx.txt"))
 		return json_encode(response)
 
 /world/Reboot(reason)
-	Master.Shutdown()
+	if(reason == 1 || reason == 2) // host/topic
+		return
+
 	send_reboot_sound()
-	var/server = CONFIG_GET(string/server)
-	for(var/thing in GLOB.clients)
-		if(!thing)
-			continue
-		var/client/C = thing
-		C?.tgui_panel?.send_roundrestart()
-		if(server) //if you set a server location in config.txt, it sends you there instead of trying to reconnect to the same world address. -- NeoFite
-			C << link("byond://[server]")
+	spawn(30)
+		Master.Shutdown()
+		var/server = CONFIG_GET(string/server)
 
-	#ifdef UNIT_TESTS
-	FinishTestRun()
-	return
-	#endif
+		for(var/thing in GLOB.clients)
+			if(!thing)
+				continue
+			var/client/C = thing
+			C.control_server?.restart("Server restarting...")
 
-	shutdown_logging()
+			C?.tgui_panel?.send_roundrestart()
+			if(server) //if you set a server location in config.txt, it sends you there instead of trying to reconnect to the same world address. -- NeoFite
+				C << link("byond://[server]")
 
-	if(TgsAvailable())
-		send_tgs_restart()
-		TgsReboot()
-		TgsEndProcess()
-	else
-		shutdown()
+		#ifdef UNIT_TESTS
+		FinishTestRun()
+		return
+		#endif
+
+		shutdown_logging()
+
+		if(TgsAvailable())
+			send_tgs_restart()
+			TgsReboot()
+			TgsEndProcess()
+		else
+			shutdown()
 
 /world/proc/send_tgs_restart()
 	if(!CONFIG_GET(string/new_round_alert_channel))
@@ -277,11 +273,14 @@ GLOBAL_LIST_INIT(reboot_sfx, file2list("config/reboot_sfx.txt"))
 	var/s = ""
 
 	if(CONFIG_GET(string/servername))
-		s += "<a href=\"[CONFIG_GET(string/discordurl)]\"><b>[CONFIG_GET(string/servername)]</b></a>"
-		s += "<br>Hosted by: <b>[CONFIG_GET(string/hostedby)]</b>"
+		s += "<a href=\"[CONFIG_GET(string/forumurl)]\"><b>[CONFIG_GET(string/servername)]</b></a>"
+
+	if(SSmapping?.configs)
+		var/datum/map_config/MG = SSmapping.configs[GROUND_MAP]
+		s += "<br>Map: [MG?.map_name ? "<b>[MG.map_name]</b>" : ""]"
+	if(SSticker?.mode)
+		s += "<br>Mode: <b>[SSticker.mode.name]</b>"
 		s += "<br>Round time: <b>[duration2text()]</b>"
-		s += "<br>An RP server focused on a tight knit platoon fighting xenos!"
-		s += "<br>Shoot the shit *and* shoot shit."
 
 	world.status = s
 
@@ -320,7 +319,7 @@ GLOBAL_LIST_INIT(reboot_sfx, file2list("config/reboot_sfx.txt"))
 	SStimer.reset_buckets()
 
 /**
- * Handles incresing the world's maxx var and intializing the new turfs and assigning them to the global area.
+ * Handles incresing the world's maxx var and initializing the new turfs and assigning them to the global area.
  * If map_load_z_cutoff is passed in, it will only load turfs up to that z level, inclusive.
  * This is because maploading will handle the turfs it loads itself.
  */
@@ -370,15 +369,28 @@ GLOBAL_LIST_INIT(reboot_sfx, file2list("config/reboot_sfx.txt"))
 /world/proc/HandleTestRun()
 	// Wait for the game ticker to initialize
 	Master.sleep_offline_after_initializations = FALSE
+
+#ifdef UNIT_TESTS
+	SSticker.delay_start = TRUE
+#else
 	SSticker.start_immediately = TRUE
+#endif
 	UNTIL(SSticker.initialized)
+
+	// Run unit tests on lobby as needed
+#ifdef UNIT_TESTS
+	RunUnitTests(TEST_STAGE_PREGAME)
+	UNTIL(!SSticker.delay_start)
+	SSticker.start_immediately = TRUE
+#endif
 
 	//trigger things to run the whole process
 	SSticker.request_start()
 	CONFIG_SET(number/round_end_countdown, 0)
+
 	var/datum/callback/cb
 #ifdef UNIT_TESTS
-	cb = CALLBACK(GLOBAL_PROC, GLOBAL_PROC_REF(RunUnitTests))
+	cb = CALLBACK(GLOBAL_PROC, GLOBAL_PROC_REF(RunUnitTests), TEST_STAGE_GAME)
 #else
 	cb = VARSET_CALLBACK(SSticker, force_ending, TRUE)
 #endif

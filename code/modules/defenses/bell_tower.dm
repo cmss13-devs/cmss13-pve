@@ -25,7 +25,6 @@
 		SENTRY_CATEGORY_IFF = FACTION_MARINE,
 	)
 
-
 /obj/structure/machinery/defenses/bell_tower/Initialize()
 	. = ..()
 
@@ -85,7 +84,7 @@
 	invisibility = 101
 	unacidable = TRUE
 	var/obj/structure/machinery/defenses/bell_tower/linked_bell
-	var/faction = FACTION_LIST_UA
+	var/faction = FACTION_LIST_MARINE
 
 /obj/effect/bell_tripwire/New(turf/T, faction = null)
 	..(T)
@@ -99,6 +98,7 @@
 	. = ..()
 
 /obj/effect/bell_tripwire/Crossed(atom/movable/A)
+	..()
 	if(!linked_bell)
 		qdel(src)
 		return
@@ -158,6 +158,9 @@
 		to_chat(to_apply, SPAN_WARNING("You feel very heavy."))
 		sound_to(to_apply, 'sound/items/detector.ogg')
 
+	var/minimap_flag = get_minimap_flag_for_faction(linked_tower.selected_categories[SENTRY_CATEGORY_IFF])
+	new /obj/effect/temp_visual/minimap_blip(get_turf(target), minimap_flag)
+
 /obj/structure/machinery/defenses/bell_tower/md
 	name = "R-1NG motion detector tower"
 	desc = "A tactical advanced version of the motion detector. Has an increased range, disrupts the activity of hostiles nearby."
@@ -171,6 +174,9 @@
 	md.iff_signal = LAZYACCESS(faction_group, 1)
 	md.toggle_active(null, FALSE)
 
+	var/minimap_flag = get_minimap_flag_for_faction(selected_categories[SENTRY_CATEGORY_IFF])
+	SSminimaps.add_marker(src, minimap_flag, image('icons/ui_icons/map_blips.dmi', null, "md", HIGH_FLOAT_LAYER, dir = src.dir))
+
 	if(!md.iff_signal)
 		md.iff_signal = FACTION_MARINE
 
@@ -178,7 +184,7 @@
 	if(md)
 		md.linked_tower = null
 		QDEL_NULL(md)
-
+	SSminimaps.remove_marker(src)
 
 
 /obj/structure/machinery/defenses/bell_tower/cloaker
@@ -223,7 +229,10 @@
 
 /obj/item/storage/backpack/imp
 	name = "IMP frame mount"
-	icon = 'icons/obj/items/clothing/backpacks.dmi'
+	icon = 'icons/obj/items/clothing/backpack/backpacks_by_faction/UA.dmi'
+	item_icons = list(
+		WEAR_BACK = 'icons/mob/humans/onmob/clothing/back/backpacks_by_faction/UA.dmi'
+	)
 	icon_state = "bell_backpack"
 	max_storage_space = 10
 	worn_accessible = TRUE
@@ -257,10 +266,7 @@
 		STOP_PROCESSING(SSobj, src)
 		return
 
-	var/list/targets = SSquadtree.players_in_range(SQUARE(M.x, M.y, area_range), M.z, QTREE_SCAN_MOBS | QTREE_EXCLUDE_OBSERVER)
-	if(!targets)
-		return
-
+	var/list/atom/movable/targets = SSmapgrids.get_movables_in_region(M.z, M.x - area_range, M.x + area_range, M.y - area_range, M.y + area_range)
 	for(var/mob/living/carbon/xenomorph/X in targets)
 		to_chat(X, SPAN_XENOWARNING("Augh! You are slowed by the incessant ringing!"))
 		X.set_effect(slowdown_amount, SUPERSLOW)

@@ -2,8 +2,8 @@
 #define PDT_BATTERY_DEFAULT_CAPACITY 500
 #define PDT_BATTERY_WARNING_CAPACITY 250
 
-#define PDT_BATTERY_SCREEN_DRAW 1
-#define PDT_BATTERY_LOCATE_DRAW 4
+#define PDT_BATTERY_SCREEN_DRAW 10
+#define PDT_BATTERY_LOCATE_DRAW 25
 #define PDT_BATTERY_TOTAL_DRAW PDT_BATTERY_SCREEN_DRAW + PDT_BATTERY_LOCATE_DRAW
 
 
@@ -145,6 +145,13 @@
 /obj/item/clothing/accessory/wrist/pdt_bracelet
 	name = "\improper PDT bracelet"
 	desc = "A personal data transmitter bracelet, also known as a PDT, is a form of personal locator typically surgically implanted into the body of extrasolar colonists, among others. Its purpose is to allow rapid location of the associated personnel anywhere within a certain radius of the receiving equipment, sometimes up to 30km distance. This bracelet forms part of the PDT/L variant, which is a wearable version of the PDT technology. Both it and the linked locator tube share a serial number for ease of detection in case of mixup."
+	icon = 'icons/obj/items/clothing/accessory/watches.dmi'
+	icon_state = ""
+	worn_accessory_limit = 1
+	accessory_icons = list(
+		WEAR_BODY = 'icons/mob/humans/onmob/clothing/accessory/watches.dmi',
+		WEAR_JACKET = 'icons/mob/humans/onmob/clothing/accessory/watches.dmi'
+	)
 	var/dummy_icon_state = "pdt_watch"
 	var/copied_serial_number = null
 

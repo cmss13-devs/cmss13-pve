@@ -18,6 +18,8 @@
 			admin_cancel_evacuation()
 		if("add_req_points")
 			add_req_points()
+		if("add_upp_req_points")
+			add_upp_req_points()
 		if("check_req_heat")
 			check_req_heat()
 		if("medal")
@@ -92,15 +94,21 @@
 			if(amount != 0) //can add negative numbers too!
 				message_admins("[key_name_admin(usr)] added [amount] research credits.")
 				GLOB.chemical_data.update_credits(amount)
+		if("reroll_contracts")
+			var/confirm = tgui_alert(usr, "This will immediately reroll the contract chemicals, Confirm?", "Reroll Contracts", list("Yes", "No"), 30 SECONDS)
+			if(confirm != "Yes")
+				return
+			GLOB.chemical_data.reroll_chemicals()
+			message_admins("[key_name_admin(usr)] rerolled research contracts.")
 
 		if("xenothumbs")
-			var/grant = alert(usr, "Do you wish to grant or revoke Xenomorph firearms permits?", "Give or Take", "Grant", "Revoke", "Cancel")
+			var/grant = tgui_alert(owner, "Do you wish to grant or revoke Xenomorph firearms permits?", "Give or Take", list("Grant", "Revoke", "Cancel"))
 			if(grant == "Cancel")
 				return
 
 			var/list/mob/living/carbon/xenomorph/permit_recipients = list()
 			var/list/datum/hive_status/permit_hives = list()
-			switch(alert(usr, "Do you wish to do this for one Xeno or an entire hive?", "Recipients", "Xeno", "Hive", "All Xenos"))
+			switch(tgui_alert(owner, "Do you wish to do this for one Xeno or an entire hive?", "Recipients", list("Xeno", "Hive", "All Xenos")))
 				if("Xeno")
 					permit_recipients += tgui_input_list(usr, "Select recipient Xenomorph:", "Armed Xenomorph", GLOB.living_xeno_list)
 					if(isnull(permit_recipients[1])) //Cancel button.
@@ -112,31 +120,31 @@
 					permit_recipients = permit_hives[1].totalXenos.Copy()
 				if("All Xenos")
 					permit_recipients = GLOB.living_xeno_list.Copy()
-					for(var/H in GLOB.hive_datum)
-						permit_hives += GLOB.hive_datum[H]
+					for(var/hive in GLOB.hive_datum)
+						permit_hives += GLOB.hive_datum[hive]
 
 			var/list/handled_xenos = list()
 
 			for(var/mob/living/carbon/xenomorph/xeno as anything in permit_recipients)
 				if(QDELETED(xeno) || xeno.stat == DEAD) //Xenos might die before the admin picks them.
-					to_chat(usr, SPAN_HIGHDANGER("[xeno] died before her firearms permit could be issued!"))
+					to_chat(usr, SPAN_HIGHDANGER("[xeno] died before their firearms permit could be issued!"))
 					continue
 				if(HAS_TRAIT(xeno, TRAIT_OPPOSABLE_THUMBS))
 					if(grant == "Revoke")
 						REMOVE_TRAIT(xeno, TRAIT_OPPOSABLE_THUMBS, TRAIT_SOURCE_HIVE)
-						to_chat(xeno, SPAN_XENOANNOUNCE("You forget how thumbs work. You feel a terrible sense of loss."))
+						to_chat(xeno, SPAN_XENOANNOUNCE("We forget how thumbs work. We feel a terrible sense of loss."))
 						handled_xenos += xeno
 				else if(grant == "Grant")
 					ADD_TRAIT(xeno, TRAIT_OPPOSABLE_THUMBS, TRAIT_SOURCE_HIVE)
-					to_chat(xeno, SPAN_XENOANNOUNCE("You suddenly comprehend the magic of opposable thumbs along with surprising kinesthetic intelligence. You could do... <b><i>so much</b></i> with this knowledge."))
+					to_chat(xeno, SPAN_XENOANNOUNCE("We suddenly comprehend the magic of opposable thumbs along with surprising kinesthetic intelligence. We could do... <b><i>so much</b></i> with this knowledge."))
 					handled_xenos += xeno
 
 			for(var/datum/hive_status/permit_hive as anything in permit_hives)
 				//Give or remove the trait from newly-born xenos in this hive.
 				if(grant == "Grant")
-					LAZYADD(permit_hive.hive_inherant_traits, TRAIT_OPPOSABLE_THUMBS)
+					LAZYADD(permit_hive.hive_inherited_traits, TRAIT_OPPOSABLE_THUMBS)
 				else
-					LAZYREMOVE(permit_hive.hive_inherant_traits, TRAIT_OPPOSABLE_THUMBS)
+					LAZYREMOVE(permit_hive.hive_inherited_traits, TRAIT_OPPOSABLE_THUMBS)
 
 			if(!length(handled_xenos) && !length(permit_hives))
 				return
@@ -149,6 +157,60 @@
 					[length(permit_hives) > 1 ? " in all hives, and from any new xenos." : "[length(permit_hives) == 1 ? " in [permit_hives[1]], and from any new xenos in that hive." : "."]"]")
 
 
+		if("xenocards")
+			var/grant = tgui_alert(owner, "Do you wish to grant or revoke Xenomorph card playing abilities?", "Give or Take", list("Grant", "Revoke", "Cancel"))
+			if(grant == "Cancel")
+				return
+
+			var/list/mob/living/carbon/xenomorph/permit_recipients = list()
+			var/list/datum/hive_status/permit_hives = list()
+			switch(tgui_alert(owner, "Do you wish to do this for one Xeno or an entire hive?", "Recipients", list("Xeno", "Hive", "All Xenos")))
+				if("Xeno")
+					permit_recipients += tgui_input_list(usr, "Select recipient Xenomorph:", "Ace Xenomorph", GLOB.living_xeno_list)
+					if(isnull(permit_recipients[1])) //Cancel button.
+						return
+				if("Hive")
+					permit_hives += GLOB.hive_datum[tgui_input_list(usr, "Select recipient hive:", "Ace Hive", GLOB.hive_datum)]
+					if(isnull(permit_hives[1])) //Cancel button.
+						return
+					permit_recipients = permit_hives[1].totalXenos.Copy()
+				if("All Xenos")
+					permit_recipients = GLOB.living_xeno_list.Copy()
+					for(var/hive in GLOB.hive_datum)
+						permit_hives += GLOB.hive_datum[hive]
+
+			var/list/handled_xenos = list()
+
+			for(var/mob/living/carbon/xenomorph/xeno as anything in permit_recipients)
+				if(QDELETED(xeno) || xeno.stat == DEAD) //Xenos might die before the admin picks them.
+					to_chat(usr, SPAN_HIGHDANGER("[xeno] died before they could get a royal flush!"))
+					continue
+				if(HAS_TRAIT(xeno, TRAIT_CARDPLAYING_THUMBS))
+					if(grant == "Revoke")
+						REMOVE_TRAIT(xeno, TRAIT_CARDPLAYING_THUMBS, TRAIT_SOURCE_HIVE)
+						to_chat(xeno, SPAN_XENOANNOUNCE("We forget how cards work. We feel a terrible sense of loss."))
+						handled_xenos += xeno
+				else if(grant == "Grant")
+					ADD_TRAIT(xeno, TRAIT_CARDPLAYING_THUMBS, TRAIT_SOURCE_HIVE)
+					to_chat(xeno, SPAN_XENOANNOUNCE("We suddenly comprehend the magic of playing cards along with a little kinesthetic intelligence. We could do... <b><i>very little</b></i> with this knowledge."))
+					handled_xenos += xeno
+
+			for(var/datum/hive_status/permit_hive as anything in permit_hives)
+				//Give or remove the trait from newly-born xenos in this hive.
+				if(grant == "Grant")
+					LAZYADD(permit_hive.hive_inherited_traits, TRAIT_CARDPLAYING_THUMBS)
+				else
+					LAZYREMOVE(permit_hive.hive_inherited_traits, TRAIT_CARDPLAYING_THUMBS)
+
+			if(!length(handled_xenos) && !length(permit_hives))
+				return
+
+			if(grant == "Grant")
+				message_admins("[usr] granted card playing rights to [length(handled_xenos) > 1 ? "[length(handled_xenos)] xenos" : "[length(handled_xenos) == 1 ? "[handled_xenos[1]]" : "no xenos"]"]\
+					[length(permit_hives) > 1 ? " in all hives, and to any new xenos. Quite possibly we will all enjoy this." : "[length(permit_hives) == 1 ? " in [permit_hives[1]], and to any new xenos in that hive." : "."]"]")
+			else
+				message_admins("[usr] revoked card playing rights from [length(handled_xenos) > 1 ? "[length(handled_xenos)] xenos" : "[length(handled_xenos) == 1 ? "[handled_xenos[1]]" : "no xenos"]"]\
+					[length(permit_hives) > 1 ? " in all hives, and from any new xenos." : "[length(permit_hives) == 1 ? " in [permit_hives[1]], and from any new xenos in that hive." : "."]"]")
 
 /datum/admins/proc/create_humans_list(href_list)
 	if(SSticker?.current_state < GAME_STATE_PLAYING)
@@ -170,35 +232,23 @@
 
 	var/free_the_humans = FALSE
 	var/offer_as_ert = FALSE
-	var/make_hai = FALSE
+	var/play_as = FALSE
+
 	if(href_list["spawn_as"] == "freed")
 		free_the_humans = TRUE
 
 	else if(href_list["spawn_as"] == "ert")
 		offer_as_ert = TRUE
 
-	if(href_list["spawn_as"] == "hai")
-		make_hai = TRUE
-
+	else if(href_list["spawn_as"] == "play")
+		play_as = TRUE
 	var/strip_the_humans = FALSE
 	var/strip_weapons = FALSE
-	var/paradropping = FALSE
 	if(href_list["equip_with"] == "no_weapons")
 		strip_weapons = TRUE
 
 	if(href_list["equip_with"] == "no_equipment")
 		strip_the_humans = TRUE
-
-	if(href_list["equip_with"] == "parachute")
-		paradropping = TRUE
-
-	var/kill_the_humans = FALSE
-	var/burst_the_humans = FALSE
-	if(href_list["mob_status"] == "dead")
-		kill_the_humans = TRUE
-
-	if(href_list["mob_status"] == "burst")
-		burst_the_humans = TRUE
 
 	if(humans_to_spawn)
 		var/list/turfs = list()
@@ -222,23 +272,21 @@
 		for(var/i = 0 to humans_to_spawn-1)
 			spawn_turf = pick(turfs)
 			spawned_human = new(spawn_turf)
-			arm_equipment(spawned_human, job_name, TRUE, FALSE)
+
 			if(!spawned_human.hud_used)
 				spawned_human.create_hud()
+
 			if(free_the_humans)
 				owner.free_for_ghosts(spawned_human)
-			if(make_hai)
-				spawned_human.AddComponent(/datum/component/human_ai)
-				spawned_human.get_ai_brain().appraise_inventory(armor = TRUE)
-			if(paradropping)
-				spawn_turf.ceiling_debris_check(2)
-				spawned_human.handle_paradrop(spawn_turf)
-				var/obj/item/to_move = spawned_human.back
-				spawned_human.temp_drop_inv_item(to_move, 0)
-				spawned_human.equip_to_slot_or_del(to_move, WEAR_R_HAND)
-				spawned_human.equip_to_slot_or_del(new /obj/item/parachute(spawned_human), WEAR_BACK)
-				if(make_hai) //have to do this again because slot swapping fucks with hAI
-					spawned_human.get_ai_brain().appraise_inventory(armor = TRUE)
+
+			arm_equipment(spawned_human, job_name, TRUE, FALSE)
+
+			// Ensure created humans get proper minimap integration
+			var/obj/item/device/radio/headset/headset = spawned_human.wear_l_ear
+			if(!headset || !istype(headset, /obj/item/device/radio/headset))
+				headset = spawned_human.wear_r_ear
+			if(headset && istype(headset, /obj/item/device/radio/headset) && headset.minimap_type)
+				headset.add_minimap(spawned_human)
 
 			humans += spawned_human
 
@@ -270,30 +318,12 @@
 					if(istype(current_item, /obj/item/explosive))
 						qdel(current_item)
 
-				for(var/obj/item/hand_item in spawned_human.hands)
-					if(istype(hand_item, /obj/item/weapon))
-						qdel(hand_item)
-						continue
-
-					if(istype(hand_item, /obj/item/explosive))
-						qdel(hand_item)
-
-			if(kill_the_humans)
-				spawned_human.death(create_cause_data("existing"), TRUE)
-				spawned_human.apply_damage(100, BRUTE)
-				spawned_human.apply_damage(100, BRUTE)
-				spawned_human.apply_damage(100, BRUTE)
-				spawned_human.updatehealth()
-				spawned_human.pulse = PULSE_NONE
-
-			if(burst_the_humans)
-				spawned_human.death(create_cause_data("existing"), TRUE)
-				spawned_human.chestburst = 2
-				spawned_human.update_burst()
-				spawned_human.updatehealth()
-				spawned_human.pulse = PULSE_NONE
+		if(play_as)
+			spawned_human.ckey = owner.ckey
 
 		if (offer_as_ert)
+			var/time_to_decide = 15 SECONDS
+
 			var/datum/emergency_call/custom/em_call = new()
 			var/name = input(usr, "Please name your ERT", "ERT Name", "Admin spawned humans")
 			em_call.name = name
@@ -302,16 +332,23 @@
 			em_call.owner = owner
 
 			var/quiet_launch = TRUE
-			var/ql_prompt = tgui_alert(usr, "Would you like to broadcast the beacon launch? This will reveal the distress beacon to all players.", "Announce distress beacon?", list("No", "Yes"), 20 SECONDS)
-			if(ql_prompt == "Yes")
-				quiet_launch = FALSE
+			if(!SShijack.in_ftl)
+				var/ql_prompt = tgui_alert(usr, "Would you like to broadcast the beacon launch? This will reveal the distress beacon to all players.", "Announce distress beacon?", list("Yes", "No"), time_to_decide)
+				if(ql_prompt == "Yes")
+					quiet_launch = FALSE
 
 			var/announce_receipt = FALSE
-			var/ar_prompt = tgui_alert(usr, "Would you like to announce the beacon received message? This will reveal the distress beacon to all players.", "Announce beacon received?", list("No", "Yes"), 20 SECONDS)
-			if(ar_prompt == "Yes")
-				announce_receipt = TRUE
+			if(!SShijack.in_ftl)
+				var/ar_prompt = tgui_alert(usr, "Would you like to announce the beacon received message? This will reveal the distress beacon to all players.", "Announce beacon received?", list("Yes", "No"), time_to_decide)
+				if(ar_prompt == "Yes")
+					announce_receipt = TRUE
 
-			em_call.activate(quiet_launch, announce_receipt)
+			var/delete_midless_mobs = FALSE
+			var/del_prompt = tgui_alert(usr, "Would you like to delete mindless mobs? This will remove all mobs that did not get a mind upon spawn. If not, the mobs will be offered to ghosts.", "Delete mindless mobs?", list("Yes", "No"), time_to_decide)
+			if(del_prompt == "Yes")
+				delete_midless_mobs = TRUE
+
+			em_call.activate(quiet_launch, announce_receipt, delete_midless_mobs)
 
 		message_admins("[key_name_admin(usr)] created [humans_to_spawn] humans as [job_name] at [get_area(initial_spot)]")
 
@@ -342,11 +379,16 @@
 
 	var/free_the_xenos = FALSE
 	var/offer_as_ert = FALSE
+	var/play_as = FALSE
+
 	if(href_list["spawn_as"] == "freed")
 		free_the_xenos = TRUE
 
 	else if(href_list["spawn_as"] == "ert")
 		offer_as_ert = TRUE
+
+	else if(href_list["spawn_as"] == "play")
+		play_as = TRUE
 
 	if(xenos_to_spawn)
 		var/list/turfs = list()
@@ -381,7 +423,12 @@
 
 			xenos += X
 
+		if(play_as)
+			X.ckey = owner.ckey
+
 		if(offer_as_ert)
+			var/time_to_decide = 15 SECONDS
+
 			var/datum/emergency_call/custom/em_call = new()
 			var/name = input(usr, "Please name your ERT", "ERT Name", "Admin spawned xenos")
 			em_call.name = name
@@ -390,15 +437,22 @@
 			em_call.owner = owner
 
 			var/quiet_launch = TRUE
-			var/ql_prompt = tgui_alert(usr, "Would you like to broadcast the beacon launch? This will reveal the distress beacon to all players.", "Announce distress beacon?", list("Yes", "No"), 20 SECONDS)
-			if(ql_prompt == "Yes")
-				quiet_launch = FALSE
+			if(!SShijack.in_ftl)
+				var/ql_prompt = tgui_alert(usr, "Would you like to broadcast the beacon launch? This will reveal the distress beacon to all players.", "Announce distress beacon?", list("Yes", "No"), time_to_decide)
+				if(ql_prompt == "Yes")
+					quiet_launch = FALSE
 
 			var/announce_receipt = FALSE
-			var/ar_prompt = tgui_alert(usr, "Would you like to announce the beacon received message? This will reveal the distress beacon to all players.", "Announce beacon received?", list("Yes", "No"), 20 SECONDS)
-			if(ar_prompt == "Yes")
-				announce_receipt = TRUE
+			if(!SShijack.in_ftl)
+				var/ar_prompt = tgui_alert(usr, "Would you like to announce the beacon received message? This will reveal the distress beacon to all players.", "Announce beacon received?", list("Yes", "No"), time_to_decide)
+				if(ar_prompt == "Yes")
+					announce_receipt = TRUE
 
-			em_call.activate(quiet_launch, announce_receipt)
+			var/delete_midless_mobs = FALSE
+			var/del_prompt = tgui_alert(usr, "Would you like to delete mindless mobs? This will remove all mobs that did not get a mind upon spawn. If not, the mobs will be offered to ghosts.", "Delete mindless mobs?", list("Yes", "No"), time_to_decide)
+			if(del_prompt == "Yes")
+				delete_midless_mobs = TRUE
+
+			em_call.activate(quiet_launch, announce_receipt, delete_midless_mobs)
 
 		message_admins("[key_name_admin(usr)] created [xenos_to_spawn] xenos as [xeno_caste] at [get_area(initial_spot)]")

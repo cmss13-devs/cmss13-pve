@@ -1,9 +1,6 @@
 /// Multiplier for Stun/KD/KO/etc durations in new backend, due to old system being based on life ticks
 #define GLOBAL_STATUS_MULTIPLIER 20 // each in-code unit is worth 20ds of duration
 
-#define HEALTH_THRESHOLD_DEAD -200
-#define HEALTH_THRESHOLD_CRIT -50
-
 //Some mob defines below
 #define AI_CAMERA_LUMINOSITY 6
 
@@ -84,12 +81,14 @@
 #define AGONY "agony" // Added in PAIN!
 #define STUTTER "stutter"
 #define EYE_BLUR "eye_blur"
+#define EYE_BLIND "eye_blind"
 #define DROWSY "drowsy"
 #define SLUR "slur"
 #define DAZE "daze"
 #define SLOW "slow"
 #define SUPERSLOW "superslow"
 #define ROOT "root"
+#define HUSHED "hushed"
 
 //=================================================
 
@@ -113,7 +112,7 @@
 #define CANROOT (1<<6)
 #define GODMODE (1<<12)
 #define FAKEDEATH (1<<13) //Replaces stuff like changeling.changeling_fakedeath
-//#define DISFIGURED (1<<14) //unused
+#define RECENTSPAWN (1<<14) // Temporarily invincible via GODMODE
 #define XENO_HOST (1<<15) //Tracks whether we're gonna be a baby alien's mummy.
 #define IMMOBILE_ACTION (1<<16) // If you are performing an action that prevents you from being pushed by your own people.
 #define PERMANENTLY_DEAD (1<<17)
@@ -121,6 +120,8 @@
 #define CANSLOW (1<<19)
 #define NO_PERMANENT_DAMAGE (1<<20)
 #define CORRUPTED_ALLY (1<<21)
+#define FAKESOUL (1<<22) // Lets things without souls pretend like they do
+// NOTE: Don't add flags past 1<<23, it'll break things due to BYOND limitations. You can usually use a Component instead.
 
 // =============================
 // hive types
@@ -131,16 +132,19 @@
 #define XENO_HIVE_BRAVO "xeno_hive_bravo"
 #define XENO_HIVE_CHARLIE "xeno_hive_charlie"
 #define XENO_HIVE_DELTA "xeno_hive_delta"
+#define XENO_HIVE_K_SERIES "xeno_hive_k_series"
 #define XENO_HIVE_FERAL "xeno_hive_feral"
 #define XENO_HIVE_TAMED "xeno_hive_tamed"
 #define XENO_HIVE_MUTATED "xeno_hive_mutated"
 #define XENO_HIVE_FORSAKEN "xeno_hive_forsaken"
 #define XENO_HIVE_YAUTJA "xeno_hive_yautja"
+#define XENO_HIVE_YAUTJA_BADBLOOD "xeno_hive_yautja_badblood"
+#define XENO_HIVE_HUNTED "xeno_hive_hunted"
 #define XENO_HIVE_RENEGADE "xeno_hive_renegade"
 
 #define XENO_HIVE_TUTORIAL "xeno_hive_tutorial"
 
-#define ALL_XENO_HIVES list(XENO_HIVE_NORMAL, XENO_HIVE_CORRUPTED, XENO_HIVE_ALPHA, XENO_HIVE_BRAVO, XENO_HIVE_CHARLIE, XENO_HIVE_DELTA, XENO_HIVE_FERAL, XENO_HIVE_TAMED, XENO_HIVE_MUTATED, XENO_HIVE_FORSAKEN, XENO_HIVE_YAUTJA, XENO_HIVE_RENEGADE, XENO_HIVE_TUTORIAL)
+#define ALL_XENO_HIVES list(XENO_HIVE_NORMAL, XENO_HIVE_CORRUPTED, XENO_HIVE_ALPHA, XENO_HIVE_BRAVO, XENO_HIVE_CHARLIE, XENO_HIVE_DELTA, XENO_HIVE_K_SERIES, XENO_HIVE_FERAL, XENO_HIVE_TAMED, XENO_HIVE_MUTATED, XENO_HIVE_FORSAKEN, XENO_HIVE_YAUTJA, XENO_HIVE_YAUTJA_BADBLOOD, XENO_HIVE_RENEGADE, XENO_HIVE_TUTORIAL)
 
 //=================================================
 
@@ -187,10 +191,14 @@
 #define SQUEEZE_UNDER_VEHICLES (1<<1)  // Only the van is supported as of now.
 #define EASY_SURGERY (1<<2)  // Surgeries on this mob don't require advanced skills.
 #define SURGERY_MODE_ON (1<<3)  // Mob on surgery mode, will attempt surgery when using relevant items on harm/disarm intent.
-#define MUTINEER (1<<4)  // Part of the Mutiny Gang
-#define GIVING (1<<5) // Is currently trying to give an item to someone
-#define NOBIOSCAN (1<<6)
-#define AI_CONTROLLED (1<<7)
+#define GIVING (1<<4) // Is currently trying to give an item to someone
+#define NOBIOSCAN (1<<5)
+#define HAS_SPAWNED_PET (1<<6) // Has spawned their special pet.
+#define MUTINY_MUTINEER (1<<7)  // Part of the Mutiny Gang
+#define MUTINY_LOYALIST (1<<8) // Allied with command.
+#define MUTINY_NONCOMBAT (1<<9) // NON COMBATANT.
+#define MOB_ABSTRACT (1<<10) //! This mob is a proxy for gameplay functions, it shouldn't be treated as a full-on mob for gameplay
+#define MOB_FLAYED (1<<11)	//set if the mob has been flayed
 
 //=================================================
 
@@ -219,6 +227,7 @@
 #define SPECIAL_BONEBREAK (1<<13) //species do not get their bonebreak chance modified by endurance
 #define NO_SHRAPNEL (1<<14)
 #define HAS_HARDCRIT (1<<15)
+#define NO_OVERLAYS (1<<16) // Stop OnMob overlays from appearing on sprite
 
 //=================================================
 
@@ -260,6 +269,10 @@
 #define ACTION_BLUE_POWER_UP 16
 #define ACTION_PURPLE_POWER_UP 17
 
+#define BUSY_ICON_CLIMBING 18
+
+#define EMOTE_ICON_WALLBOOSTING 19
+
 //defins for datum/hud
 
 #define HUD_STYLE_STANDARD 1
@@ -275,6 +288,9 @@
 #define BLOOD_VOLUME_OKAY 336
 #define BLOOD_VOLUME_BAD 224
 #define BLOOD_VOLUME_SURVIVE 122
+
+//Blood level for a dead xenomorph
+#define BLOOD_VOLUME_DEAD_XENO 60
 
 
 //diseases
@@ -295,6 +311,7 @@
 #define EMOTING_HEADBUTT   (1<<2)
 #define EMOTING_TAIL_SWIPE (1<<3)
 #define EMOTING_ROCK_PAPER_SCISSORS (1<<4)
+#define EMOTING_WALL_BOOSTING (1<<5)
 
 //forcesay types
 #define SUDDEN 0
@@ -313,24 +330,24 @@
 #define CAN_HOLD_ONE_HAND 2
 
 GLOBAL_LIST_INIT(default_onmob_icons, list(
-		WEAR_L_HAND = 'icons/mob/humans/onmob/items_lefthand_0.dmi',
-		WEAR_R_HAND = 'icons/mob/humans/onmob/items_righthand_0.dmi',
-		WEAR_WAIST = 'icons/mob/humans/onmob/belt.dmi',
-		WEAR_BACK = 'icons/mob/humans/onmob/back.dmi',
-		WEAR_L_EAR = 'icons/mob/humans/onmob/ears.dmi',
-		WEAR_R_EAR = 'icons/mob/humans/onmob/ears.dmi',
-		WEAR_EYES = 'icons/mob/humans/onmob/eyes.dmi',
-		WEAR_ID = 'icons/mob/mob.dmi',
-		WEAR_BODY = 'icons/mob/humans/onmob/uniform_0.dmi',
-		WEAR_JACKET = 'icons/mob/humans/onmob/suit_0.dmi',
-		WEAR_HEAD = 'icons/mob/humans/onmob/head_0.dmi',
-		WEAR_FEET = 'icons/mob/humans/onmob/feet.dmi',
-		WEAR_FACE = 'icons/mob/humans/onmob/mask.dmi',
-		WEAR_HANDCUFFED = 'icons/mob/mob.dmi',
-		WEAR_LEGCUFFED = 'icons/mob/mob.dmi',
-		WEAR_HANDS = 'icons/mob/humans/onmob/hands.dmi',
-		WEAR_J_STORE = 'icons/mob/humans/onmob/suit_slot.dmi',
-		WEAR_ACCESSORIES = 'icons/mob/humans/onmob/ties.dmi'
+		WEAR_L_HAND = 'icons/mob/humans/onmob/inhands/items/items_lefthand_64.dmi',
+		WEAR_R_HAND = 'icons/mob/humans/onmob/inhands/items/items_righthand_64.dmi',
+		WEAR_WAIST = 'icons/mob/humans/onmob/clothing/belts/belts.dmi',
+		WEAR_BACK = 'icons/mob/humans/onmob/clothing/back/backpacks.dmi',
+		WEAR_L_EAR = 'icons/mob/humans/onmob/clothing/ears.dmi',
+		WEAR_R_EAR = 'icons/mob/humans/onmob/clothing/ears.dmi',
+		WEAR_EYES = 'icons/mob/humans/onmob/clothing/glasses/glasses.dmi',
+		WEAR_ID = 'icons/mob/humans/onmob/ids.dmi',
+		WEAR_BODY = 'icons/mob/humans/onmob/clothing/uniforms/misc_ert_colony.dmi',
+		WEAR_JACKET = 'icons/mob/humans/onmob/clothing/suits/misc_ert.dmi',
+		WEAR_HEAD = 'icons/mob/humans/onmob/clothing/head/hats.dmi',
+		WEAR_FEET = 'icons/mob/humans/onmob/clothing/feet.dmi',
+		WEAR_FACE = 'icons/mob/humans/onmob/clothing/masks/masks.dmi',
+		WEAR_HANDCUFFED = 'icons/mob/humans/onmob/cuffs.dmi',
+		WEAR_LEGCUFFED = 'icons/mob/humans/onmob/cuffs.dmi',
+		WEAR_HANDS = 'icons/mob/humans/onmob/clothing/hands.dmi',
+		WEAR_J_STORE = 'icons/mob/humans/onmob/clothing/suit_storage/misc.dmi',
+		WEAR_ACCESSORIES = 'icons/mob/humans/onmob/clothing/accessory/ties.dmi'
 		))
 
 GLOBAL_LIST_INIT(default_xeno_onmob_icons, list(
@@ -347,6 +364,7 @@ GLOBAL_LIST_INIT(default_xeno_onmob_icons, list(
 #define SPECIES_HUMAN "Human"
 #define SPECIES_YAUTJA "Yautja"
 #define SPECIES_SYNTHETIC "Synthetic"
+#define SPECIES_SYNTHETIC_K9 "Synthetic K9"
 #define SPECIES_MONKEY "Monkey"
 #define SPECIES_ZOMBIE "Zombie"
 

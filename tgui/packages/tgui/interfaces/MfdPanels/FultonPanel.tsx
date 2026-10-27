@@ -1,12 +1,12 @@
 import { range } from 'common/collections';
 import { useState } from 'react';
+import { useBackend } from 'tgui/backend';
+import { Box, Stack } from 'tgui/components';
+import { Icon } from 'tgui/components';
 
-import { useBackend } from '../../backend';
-import { Box, Stack } from '../../components';
-import { Icon } from '../../components';
-import { MfdPanel, MfdProps } from './MultifunctionDisplay';
+import { MfdPanel, type MfdProps } from './MultifunctionDisplay';
 import { mfdState, useEquipmentState } from './stateManagers';
-import { FultonProps } from './types';
+import type { FultonProps } from './types';
 
 export const FultonMfdPanel = (props: MfdProps) => {
   const { data, act } = useBackend<FultonProps>();
@@ -81,7 +81,7 @@ export const FultonMfdPanel = (props: MfdProps) => {
       <Box className="NavigationMenu">
         <Stack>
           <Stack.Item>
-            <svg width="60px">
+            <svg width="60px" overflow="visible">
               {all_targets.length > 0 && (
                 <path
                   fillOpacity="0"
@@ -132,7 +132,7 @@ export const FultonMfdPanel = (props: MfdProps) => {
             </Stack>
           </Stack.Item>
           <Stack.Item>
-            <svg width="60px">
+            <svg width="60px" overflow="visible">
               {all_targets.length > 5 && (
                 <path
                   fillOpacity="0"

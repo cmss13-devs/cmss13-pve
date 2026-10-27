@@ -7,7 +7,7 @@
 		return
 
 	if(undefibbable && stat == DEAD || spawned_corpse)
-		GLOB.data_core.manifest_modify(real_name, WEAKREF(src), null, null, "*Deceased*")
+		GLOB.data_core.manifest_modify(real_name, WEAKREF(src), null, null, "Deceased")
 		SShuman.processable_human_list -= src
 		if(hardcore)
 			qdel(src) //We just delete the corpse on WO to keep things simple and lag-free
@@ -20,7 +20,7 @@
 
 	//Apparently, the person who wrote this code designed it so that
 	//blinded get reset each cycle and then get activated later in the
-	//code. Very ugly. I dont care. Moving this stuff here so its easy
+	//code. Very ugly. I don't care. Moving this stuff here so its easy
 	//to find it.
 
 	//TODO: separate this out
@@ -63,7 +63,8 @@
 		else //Dead
 			if(!undefibbable)
 				handle_necro_chemicals_in_body(delta_time) //Specifically for chemicals that still work while dead.
-				if(life_tick > 5 && timeofdeath && (timeofdeath < 5 || world.time - timeofdeath > revive_grace_period) && !issynth(src)) //We are dead beyond revival, or we're junk mobs spawned like the clowns on the clown shuttle
+				var/hardcore = HAS_TRAIT(src, TRAIT_HARDCORE) || MODE_HAS_MODIFIER(/datum/gamemode_modifier/permadeath)
+				if(life_tick > 5 && timeofdeath && (timeofdeath < 5 || hardcore || world.time - timeofdeath > revive_grace_period) && !issynth(src)) //We are dead beyond revival, or we're junk mobs spawned like the clowns on the clown shuttle
 					undefibbable = TRUE
 					SEND_SIGNAL(src, COMSIG_HUMAN_SET_UNDEFIBBABLE)
 					med_hud_set_status()
@@ -83,8 +84,6 @@
 	handle_regular_status_updates() //Optimized a bit
 
 	handle_regular_hud_updates()
-
-	pulse = handle_pulse()
 
 	if(!client && !mind && species)
 		species.handle_npc(src)

@@ -26,9 +26,6 @@
 	total_positions = spawn_positions
 
 /datum/job/antag/predator/spawn_and_equip(mob/new_player/player)
-	player.spawning = TRUE
-	player.close_spawn_windows()
-
 	SSticker.mode.attempt_to_join_as_predator(player)
 
 /datum/job/antag/predator/get_whitelist_status(client/player) // Might be a problem waiting here, but we've got no choice
@@ -52,12 +49,127 @@
 
 
 /datum/job/antag/predator/announce_entry_message(mob/new_predator, account, whitelist_status)
-	to_chat(new_predator, SPAN_NOTICE("You are <B>Yautja</b>, a great and noble predator!"))
-	to_chat(new_predator, SPAN_NOTICE("Your job is to first study your opponents. A hunt cannot commence unless intelligence is gathered."))
+	to_chat(new_predator, SPAN_NOTICE("You are <B>Yautja</b>, a great and noble hunter!"))
+	to_chat(new_predator, SPAN_NOTICE("Follow the guidance of your elders and experienced hunters."))
 	to_chat(new_predator, SPAN_NOTICE("Hunt at your discretion, yet be observant rather than violent."))
+	to_chat(new_predator, SPAN_NOTICE("Most importantly, remember that dying in battle is the highest honour a Yautja could ask for."))
 
 /datum/job/antag/predator/generate_entry_conditions(mob/living/M, whitelist_status)
 	. = ..()
 
 	if(SSticker.mode)
-		SSticker.mode.initialize_predator(M, whitelist_status == CLAN_RANK_ADMIN)
+		var/ignore_slot_count = whitelist_status == CLAN_RANK_ADMIN || whitelist_status == CLAN_RANK_LEADER || M?.client?.check_whitelist_status(WHITELIST_YAUTJA_LEADER|WHITELIST_YAUTJA_COUNCIL)
+		SSticker.mode.initialize_predator(M, ignore_slot_count)
+
+/datum/job/antag/young_blood
+	title = ERT_JOB_YOUNGBLOOD
+	selection_class = "ert_job_youngblood"
+	flags_startup_parameters = ROLE_ADD_TO_DEFAULT|ROLE_NO_ACCOUNT|ROLE_CUSTOM_SPAWN
+	supervisors = "Ancients"
+	flags_whitelist = NO_FLAGS
+	gear_preset = /datum/equipment_preset/yautja/non_wl
+
+	handle_spawn_and_equip = TRUE
+
+/datum/job/antag/young_blood/generate_entry_conditions(mob/living/hunter)
+	. = ..()
+
+	if(SSticker.mode)
+		SSticker.mode.initialize_predator(hunter, ignore_pred_num = TRUE)
+
+/datum/timelock/young_blood
+	name = "Young Blood Roles"
+
+/datum/timelock/young_blood/New(name, time_required, list/roles)
+	. = ..()
+	src.roles = JOB_YOUNGBLOOD_ROLES_LIST
+
+/datum/job/antag/pred_surv
+	title = JOB_PRED_SURVIVOR
+	selection_class = "job_predator"
+	supervisors = "Ancients"
+	flags_startup_parameters = ROLE_ADD_TO_DEFAULT|ROLE_WHITELISTED|ROLE_NO_ACCOUNT|ROLE_CUSTOM_SPAWN|ROLE_ADMIN_NOTIFY
+	flags_whitelist = WHITELIST_YAUTJA
+	handle_spawn_and_equip = TRUE
+	gear_preset = /datum/equipment_preset/yautja/stranded
+	var/survivor_job = JOB_STRANDED_PRED
+	var/override_job = FALSE
+
+
+/datum/job/antag/pred_surv/bad_blood
+	title = JOB_BADBLOOD
+	gear_preset = /datum/equipment_preset/yautja/bad_blood
+	survivor_job = JOB_BADBLOOD
+	spawn_positions = 1
+	total_positions = 1
+
+/datum/job/antag/pred_surv/stranded
+	title = JOB_STRANDED_PRED
+	gear_preset = /datum/equipment_preset/yautja/stranded
+	survivor_job = JOB_STRANDED_PRED
+	spawn_positions = 1
+	total_positions = 1
+
+/datum/job/antag/pred_surv/generate_entry_conditions(mob/living/hunter)
+	. = ..()
+	if(SSticker.mode)
+		SSticker.mode.initialize_predator(hunter, ignore_pred_num = TRUE)
+
+/datum/job/antag/pred_surv/spawn_and_equip(mob/new_player/player)
+	player.spawning = TRUE
+	player.close_spawn_windows()
+
+	if(survivor_job == JOB_BADBLOOD)
+		SSticker.mode.attempt_to_join_as_badblood(player)
+	else
+		SSticker.mode.attempt_to_make_stranded_pred(player)
+
+
+/datum/job/antag/pred_surv/set_spawn_positions(mode = YAUTJA_SURV_HUNT)
+	var/slots = CONFIG_GET(number/pred_survivor_slots)
+
+	spawn_positions = slots
+	total_positions = slots
+
+	if(override_job)
+		return
+
+	switch(mode)
+		if(YAUTJA_SURV_HUNT)//Hunt round it's 50/50 by default
+			if(prob(CONFIG_GET(number/pred_survivor_badblood_weight)))
+				survivor_job = JOB_BADBLOOD
+			else
+				survivor_job = JOB_STRANDED_PRED
+		if(YAUTJA_SURV_NO_HUNT)//Non hunt round is less likely to be a stranded hunter.
+			if(prob(CONFIG_GET(number/pred_survivor_badblood_weight_huntless)))
+				survivor_job = JOB_BADBLOOD
+			else
+				survivor_job = JOB_STRANDED_PRED
+
+/datum/timelock/pred_surv
+	name = "Yautja Survivor Roles"
+
+/datum/timelock/pred_surv/New(name, time_required, list/roles)
+	. = ..()
+	src.roles = JOB_PREDSURV_ROLES_LIST
+
+AddTimelock(/datum/job/antag/pred_surv, list(
+	JOB_PREDSURV_ROLES_LIST = JOB_PLAYTIME_TIER_2,
+))
+
+
+/// Does this client have access to Yautja Legacy sets?
+/client/proc/can_use_pred_legacies()
+	return check_whitelist_status(WHITELIST_YAUTJA_LEGACY)
+
+/// Does this client have access to Yautja Special (Elite) sets?
+/client/proc/can_use_pred_specials()
+	var/datum/job/pred_job = GLOB.RoleAuthority.roles_by_name[JOB_PREDATOR]
+	if(!pred_job)
+		return FALSE
+	var/clanrank = pred_job.get_whitelist_status(src)
+
+	if(!(clanrank in list(CLAN_RANK_ELITE, CLAN_RANK_ELDER, CLAN_RANK_LEADER, CLAN_RANK_ADMIN)))
+		return FALSE
+
+	return TRUE

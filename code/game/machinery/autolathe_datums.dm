@@ -17,7 +17,7 @@
 	path = /obj/item/reagent_container/glass/bucket/mopbucket
 	category = AUTOLATHE_CATEGORY_GENERAL
 
-/datum/autolathe/recipe/mopbucket
+/datum/autolathe/recipe/janibucket
 	name = "janitorial bucket"
 	path = /obj/item/reagent_container/glass/bucket/janibucket
 	category = AUTOLATHE_CATEGORY_GENERAL
@@ -49,7 +49,7 @@
 
 /datum/autolathe/recipe/weldertool
 	name = "blowtorch"
-	path = /obj/item/tool/weldingtool
+	path = /obj/item/tool/weldingtool/empty
 	category = AUTOLATHE_CATEGORY_TOOLS
 
 /datum/autolathe/recipe/screwdriver
@@ -65,6 +65,11 @@
 /datum/autolathe/recipe/wrench
 	name = "wrench"
 	path = /obj/item/tool/wrench
+	category = AUTOLATHE_CATEGORY_TOOLS
+
+/datum/autolathe/recipe/lightreplacer
+	name = "light replacer"
+	path = /obj/item/device/lightreplacer/empty
 	category = AUTOLATHE_CATEGORY_TOOLS
 
 /datum/autolathe/recipe/mop
@@ -409,7 +414,7 @@
 	path = /obj/item/reagent_container/blood
 
 /datum/autolathe/recipe/medilathe/bluespace
-	name = "bluespace beaker"
+	name = "high-capacity beaker"
 	path = /obj/item/reagent_container/glass/beaker/bluespace
 
 /datum/autolathe/recipe/medilathe/bonesetter
@@ -492,3 +497,7 @@
 	name = "Pressurized Canister"
 	path = /obj/item/reagent_container/glass/pressurized_canister
 	category = AUTOLATHE_CATEGORY_MEDICAL_CONTAINERS
+
+/datum/autolathe/recipe/medilathe/research_glasses
+	name = "Reagent scanner HUD goggles"
+	path = /obj/item/clothing/glasses/science

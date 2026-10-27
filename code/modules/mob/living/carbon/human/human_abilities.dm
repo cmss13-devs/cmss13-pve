@@ -1,21 +1,12 @@
 /mob/living/carbon/human/proc/set_selected_ability(datum/action/human_action/activable/ability)
 	if(!ability)
 		selected_ability = null
-		client?.set_right_click_menu_mode(shift_only = FALSE)
+		if(client?.prefs.toggle_right_click_menu)
+			client.set_right_click_menu_mode(shift_only = FALSE)
 		return
 	selected_ability = ability
 	if(get_ability_mouse_key() == XENO_ABILITY_CLICK_RIGHT)
 		client?.set_right_click_menu_mode(shift_only = TRUE)
-
-/datum/action/human_action/update_button_icon()
-	if(action_cooldown_check())
-		button.color = rgb(120,120,120,200)
-	else
-		button.color = rgb(255,255,255,255)
-
-/datum/action/human_action/proc/action_cooldown_check()
-	return FALSE
-
 
 /datum/action/human_action/issue_order
 	name = "Issue Order"
@@ -32,14 +23,14 @@
 	. = ..()
 	if(!ishuman(owner))
 		return
-	var/mob/living/carbon/human/H = owner
-	H.issue_order(order_type)
+	var/mob/living/carbon/human/my_owner = owner
+	my_owner.issue_order(order_type)
 
 /datum/action/human_action/issue_order/action_cooldown_check()
 	if(!ishuman(owner))
 		return FALSE
-	var/mob/living/carbon/human/H = owner
-	return !H.command_aura_available
+	var/mob/living/carbon/human/my_owner = owner
+	return my_owner.command_aura_available
 
 /datum/action/human_action/issue_order/move
 	name = "Issue Order - Move"
@@ -56,110 +47,87 @@
 	action_icon_state = "order_focus"
 	order_type = COMMAND_ORDER_FOCUS
 
+/datum/action/human_action/cycle_voice_level
+	name = "Cycle Voice Level"
+	action_icon_state = "leadership_voice_low"
 
-/datum/action/human_action/smartpack/action_cooldown_check()
-	if(!ishuman(owner))
-		return FALSE
-	var/mob/living/carbon/human/H = owner
-	if(istype(H.back, /obj/item/storage/backpack/marine/smartpack))
-		var/obj/item/storage/backpack/marine/smartpack/S = H.back
-		return cooldown_check(S)
-	else
-		return FALSE
-
-/datum/action/human_action/smartpack/action_activate()
+/datum/action/human_action/cycle_voice_level/action_activate()
 	. = ..()
-	if(!istype(owner, /mob/living/carbon/human))
+	if(!ishuman(owner)) // i actually don't know if this is necessary
 		return
-	var/mob/living/carbon/human/H = owner
-	if(istype(H.back, /obj/item/storage/backpack/marine/smartpack))
-		var/obj/item/storage/backpack/marine/smartpack/S = H.back
-		form_call(S, H)
+	var/mob/living/carbon/human/my_voice = owner
+	my_voice.cycle_voice_level()
+	update_button_icon()
 
-/datum/action/human_action/smartpack/give_to(mob/living/L)
-	..()
-	if(!ishuman(L))
-		return
-	var/mob/living/carbon/human/H = L
-	if(istype(H.back, /obj/item/storage/backpack/marine/smartpack))
-		var/obj/item/storage/backpack/marine/smartpack/S = H.back
-		cooldown = set_cooldown(S)
-	else
-		return
+/datum/action/human_action/cycle_voice_level/update_button_icon()
+	var/mob/living/carbon/human/my_voice = owner
+	switch(my_voice.langchat_styles) // honestly, could probably merge this one with the cycle_voice_level proc
+		if("", null)
+			action_icon_state = "leadership_voice_off"
 
-/datum/action/human_action/smartpack/proc/form_call(obj/item/storage/backpack/marine/smartpack/S, mob/living/carbon/human/H)
-	return
+		if("langchat_smaller_bolded")
+			action_icon_state = "leadership_voice_low"
 
-/datum/action/human_action/smartpack/proc/set_cooldown(obj/item/storage/backpack/marine/smartpack/S)
-	return
+		if("langchat_bolded")
+			action_icon_state = "leadership_voice_high"
 
-/datum/action/human_action/smartpack/proc/cooldown_check(obj/item/storage/backpack/marine/smartpack/S)
-	return S.activated_form
-
-
-/datum/action/human_action/smartpack/protective_form
-	name = "Protective Form"
-	action_icon_state = "smartpack_protect"
-
-/datum/action/human_action/smartpack/protective_form/set_cooldown(obj/item/storage/backpack/marine/smartpack/S)
-	return S.protective_form_cooldown
-
-/datum/action/human_action/smartpack/protective_form/form_call(obj/item/storage/backpack/marine/smartpack/S, mob/living/carbon/human/H)
-	S.protective_form(H)
-
-/datum/action/human_action/smartpack/immobile_form
-	name = "Immobile Form"
-	action_icon_state = "smartpack_immobile"
-
-/datum/action/human_action/smartpack/immobile_form/form_call(obj/item/storage/backpack/marine/smartpack/S, mob/living/carbon/human/H)
-	S.immobile_form(H)
-
-/datum/action/human_action/smartpack/repair_form
-	name = "Repair Form"
-	action_icon_state = "smartpack_repair"
-
-/datum/action/human_action/smartpack/repair_form/set_cooldown(obj/item/storage/backpack/marine/smartpack/S)
-	return S.repair_form_cooldown
-
-/datum/action/human_action/smartpack/repair_form/form_call(obj/item/storage/backpack/marine/smartpack/S, mob/living/carbon/human/H)
-	S.repair_form(H)
-
-/datum/action/human_action/smartpack/repair_form/cooldown_check(obj/item/storage/backpack/marine/smartpack/S)
-	return S.repairing
-
+	button.overlays.Cut()
+	button.overlays += image('icons/mob/hud/actions.dmi', button, action_icon_state)
 
 /datum/action/human_action/psychic_whisper
-	name = "Psychic Whipser"
+	name = "Psychic Whisper"
 	action_icon_state = "cultist_channel_hivemind"
 
 /datum/action/human_action/psychic_whisper/action_activate()
 	. = ..()
 	if(!ishuman(owner))
-		return
+		return FALSE
 	var/mob/living/carbon/human/human_owner = owner
 
 	if(human_owner.client.prefs.muted & MUTE_IC)
 		to_chat(human_owner, SPAN_DANGER("You cannot whisper (muted)."))
-		return
+		return FALSE
+
+	if(human_owner.stat == DEAD)
+		to_chat(human_owner, SPAN_WARNING("You cannot talk while dead."))
+		return FALSE
 
 	var/list/target_list = list()
 	for(var/mob/living/carbon/possible_target in view(7, human_owner))
-		if(possible_target == human_owner || !possible_target.client) 
+		if(possible_target == human_owner || !possible_target.client)
 			continue
 		target_list += possible_target
 
-	var/mob/living/carbon/target_mob = tgui_input_list(human_owner, "Target", "Send a Psychic Whisper to whom?", target_list, theme = "hive_status")
-	if(!target_mob) 
-		return
+	var/mob/living/carbon/target_mob = tgui_input_list(human_owner, "Target", "Send a Psychic Whisper to whom?", target_list, theme = "wizard")
+	if(!target_mob)
+		return FALSE
 
 	human_owner.psychic_whisper(target_mob)
+
+
+/datum/action/human_action/psychic_radiance
+	name = "Psychic Radiance"
+	action_icon_state = "cultist_channel_hivemind"
+
+/datum/action/human_action/psychic_radiance/action_activate(atom/A)
+	. = ..()
+	if(!ishuman(owner))
+		return FALSE
+	var/mob/living/carbon/human/human_owner = owner
+
+	if(human_owner.client.prefs.muted & MUTE_IC)
+		to_chat(human_owner, SPAN_DANGER("You cannot whisper (muted)."))
+		return FALSE
+
+	if(human_owner.stat == DEAD)
+		to_chat(human_owner, SPAN_WARNING("You cannot talk while dead."))
+		return FALSE
+
+	human_owner.psychic_radiance()
 
 /*
 CULT
 */
-/datum/action/human_action/activable
-	var/ability_used_time = 0
-
 /datum/action/human_action/activable/can_use_action()
 	var/mob/living/carbon/human/H = owner
 	if(istype(H) && !H.is_mob_incapacitated() && !HAS_TRAIT(H, TRAIT_DAZED))
@@ -198,16 +166,6 @@ CULT
 		button.color = rgb(240,180,0,200)
 	else
 		button.color = rgb(255,255,255,255)
-
-/datum/action/human_action/activable/action_cooldown_check()
-	return ability_used_time <= world.time
-
-/datum/action/human_action/activable/proc/enter_cooldown(amount = cooldown)
-	ability_used_time = world.time + amount
-
-	update_button_icon()
-
-	addtimer(CALLBACK(src, PROC_REF(update_button_icon)), amount)
 
 /datum/action/human_action/activable/droppod
 	name = "Call Droppod"
@@ -253,7 +211,7 @@ CULT
 
 	if(assigned_droppod)
 		if(tgui_alert(H, "Do you want to recall the current pod?",\
-			"Recall Droppod", list("No", "Yes")) == "Yes")
+			"Recall Droppod", list("Yes", "No")) == "Yes")
 			if(!assigned_droppod)
 				return
 
@@ -366,7 +324,7 @@ CULT
 		to_chat(H, SPAN_WARNING("You have decided not to obtain your equipment."))
 		return
 
-	H.visible_message(SPAN_DANGER("[H] gets onto their knees and begins praying."), \
+	H.visible_message(SPAN_DANGER("[H] gets onto their knees and begins praying."),
 	SPAN_WARNING("You get onto your knees to pray."))
 
 	if(!do_after(H, 3 SECONDS, INTERRUPT_ALL, BUSY_ICON_HOSTILE))
@@ -395,20 +353,33 @@ CULT
 /datum/action/human_action/activable/cult_leader
 	name = "Activable Leader Ability"
 
-/datum/action/human_action/activable/cult_leader/proc/can_target(mob/living/carbon/human/H)
+/datum/action/human_action/activable/cult_leader/proc/can_target(mob/living/carbon/human/target)
 	if(!ishuman(owner))
 		return
-	var/mob/living/carbon/human/Hu = owner
 
-	if(H.skills && (skillcheck(H, SKILL_LEADERSHIP, SKILL_LEAD_EXPERT) || skillcheck(H, SKILL_POLICE, SKILL_POLICE_SKILLED)))
-		to_chat(Hu, SPAN_WARNING("This mind is too strong to target with your abilities."))
-		return
+	var/mob/living/carbon/human/cultist = owner
 
-	if(get_dist_sqrd(get_turf(H), get_turf(owner)) > 2)
-		to_chat(Hu, SPAN_WARNING("This target is too far away!"))
-		return
+	if(!ishuman_strict(target)) // No yautja or synths
+		return FALSE
 
-	return H.stat != DEAD && istype(H) && ishuman_strict(H) && H.hivenumber != Hu.hivenumber && !isnull(get_hive())
+	if(target.stat != CONSCIOUS) // No point in stunning dead or unconscious
+		return FALSE
+
+	if(!get_hive()) // Can't use xeno powers without a hive
+		return FALSE
+
+	if(target.hivenumber == cultist.hivenumber) // Can't use xeno powers on a fellow hive member
+		return FALSE
+
+	if(target.skills && (skillcheck(target, SKILL_LEADERSHIP, SKILL_LEAD_SKILLED) || skillcheck(target, SKILL_POLICE, SKILL_POLICE_SKILLED)))
+		to_chat(cultist, SPAN_WARNING("This mind is too strong to target with your abilities."))
+		return FALSE
+
+	if(get_dist_sqrd(get_turf(target), get_turf(owner)) > 2)
+		to_chat(cultist, SPAN_WARNING("This target is too far away!"))
+		return FALSE
+
+	return TRUE
 
 /datum/action/human_action/activable/cult_leader/proc/get_hive()
 	if(!ishuman(owner))
@@ -452,7 +423,7 @@ CULT
 		to_chat(H, SPAN_XENOMINORWARNING("You decide not to convert [chosen]."))
 		return
 
-	var/datum/equipment_preset/preset = GLOB.gear_path_presets_list[/datum/equipment_preset/other/xeno_cultist]
+	var/datum/equipment_preset/preset = GLOB.equipment_presets.gear_path_presets_list[/datum/equipment_preset/other/xeno_cultist]
 	preset.load_race(chosen)
 	preset.load_status(chosen, H.hivenumber)
 
@@ -558,23 +529,74 @@ CULT
 	if(!can_use_action())
 		return
 
-	var/mob/living/carbon/human/H = owner
+	var/mob/living/carbon/human/human_owner = owner
 
-	if(tgui_alert(H, "Are you sure you want to begin the mutiny?", "Begin Mutiny?", list("Yes", "No")) != "Yes")
+	if(tgui_alert(human_owner, "Are you sure you want to begin the mutiny?", "Begin Mutiny?", list("Yes", "No")) != "Yes")
 		return
 
-	shipwide_ai_announcement("DANGER: Communications received; a mutiny is in progress. Code: Detain, Arrest, Defend.")
-	var/datum/equipment_preset/other/mutineer/XC = new()
-
-	XC.load_status(H)
-	for(var/datum/action/human_action/activable/mutineer/mutineer_convert/converted in H.actions)
+	for(var/datum/action/human_action/activable/mutineer/mutineer_convert/converted in human_owner.actions)
 		for(var/mob/living/carbon/human/chosen in converted.converted)
-			XC.load_status(chosen)
-		converted.remove_from(H)
+			chosen.join_mutiny(TRUE, MUTINY_MUTINEER)
+		converted.remove_from(human_owner)
 
-	message_admins("[key_name_admin(H)] has begun the mutiny.")
-	remove_from(H)
+	human_owner.join_mutiny(TRUE, MUTINY_MUTINEER)
+	start_mutiny(human_owner.faction)
+	message_admins("[key_name_admin(human_owner)] has begun the mutiny.")
+	remove_from(human_owner)
 
+/proc/start_mutiny(mutiny_faction = FACTION_MARINE)
+	for(var/mob/living/carbon/human/person in GLOB.alive_human_list)
+		if(!person.client)
+			continue
+		if(person.faction != mutiny_faction)
+			continue
+		if(person.mob_flags & (MUTINY_MUTINEER|MUTINY_LOYALIST|MUTINY_NONCOMBAT))
+			continue
+
+		if(skillcheck(person, SKILL_POLICE, SKILL_POLICE_MAX) || (person.job in MUTINY_LOYALIST_ROLES) || (person.job in PROVOST_JOB_LIST))
+			INVOKE_ASYNC(person, TYPE_PROC_REF(/mob/living/carbon/human, join_mutiny), TRUE, MUTINY_LOYALIST)
+			continue
+
+		INVOKE_ASYNC(person, TYPE_PROC_REF(/mob/living/carbon/human, join_mutiny))
+
+	if(mutiny_faction == FACTION_MARINE)
+		shipwide_ai_announcement("DANGER: Communications received; a mutiny is in progress. Code: Detain, Arrest, Defend.")
+		set_security_level(SEC_LEVEL_RED, TRUE)
+
+/mob/living/carbon/human/proc/join_mutiny(forced = FALSE, forced_side = MUTINY_MUTINEER)
+	if(job == JOB_WORKING_JOE)
+		return FALSE
+	if(forced)
+		switch(forced_side)
+			if(MUTINY_MUTINEER)
+				var/datum/equipment_preset/other/mutiny/mutineer/preset = new()
+				preset.load_status(src)
+				return TRUE
+			if(MUTINY_LOYALIST)
+				var/datum/equipment_preset/other/mutiny/loyalist/preset = new()
+				preset.load_status(src)
+				return TRUE
+			if(MUTINY_NONCOMBAT)
+				var/datum/equipment_preset/other/mutiny/noncombat/preset = new()
+				preset.load_status(src)
+				return TRUE
+
+	var/options = list("MUTINEERS", "LOYALISTS", "REFUSE TO FIGHT")
+	if(job == JOB_SYNTH)
+		options -= "MUTINEERS"
+	switch(tgui_alert(src, "A mutiny has been started, with whom do you stand?", "Choose a Side", options, 20 SECONDS))
+		if("MUTINEERS")
+			var/datum/equipment_preset/other/mutiny/mutineer/preset = new()
+			preset.load_status(src)
+			return TRUE
+		if("LOYALISTS")
+			var/datum/equipment_preset/other/mutiny/loyalist/preset = new()
+			preset.load_status(src)
+			return TRUE
+		else
+			var/datum/equipment_preset/other/mutiny/noncombat/preset = new()
+			preset.load_status(src)
+			return TRUE
 
 /datum/action/human_action/cancel_view // cancel-camera-view, but a button
 	name = "Cancel View"
@@ -598,8 +620,8 @@ CULT
 	H.cancel_camera()
 	H.reset_view()
 	H.client.change_view(GLOB.world_view_size, target)
-	H.client.pixel_x = 0
-	H.client.pixel_y = 0
+	H.client.set_pixel_x(0)
+	H.client.set_pixel_y(0)
 
 //Similar to a cancel-camera-view button, but for mobs that were buckled to special vehicle seats.
 //Unbuckles them, which handles the view and offsets resets and other stuff.
@@ -631,8 +653,8 @@ CULT
 
 	H.unset_interaction()
 	H.client.change_view(GLOB.world_view_size, target)
-	H.client.pixel_x = 0
-	H.client.pixel_y = 0
+	H.client.set_pixel_x(0)
+	H.client.set_pixel_y(0)
 	H.reset_view()
 	remove_from(H)
 

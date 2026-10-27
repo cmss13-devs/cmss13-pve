@@ -13,7 +13,7 @@
 	anchored = TRUE // can't pick it up
 	density = FALSE // can walk through it.
 	unacidable = TRUE
-	indestructible = TRUE
+	explo_proof = TRUE
 
 	/// id of door it controls.
 	var/id = null
@@ -279,7 +279,7 @@
 		var/obj/item/card/id/id_card = human.get_idcard()
 
 		if (id_card)
-			if ((id_card.paygrade in GLOB.co_paygrades) || ((id_card.paygrade in GLOB.platco_paygrades)) || (id_card.paygrade in GLOB.uscm_highcom_paygrades))
+			if ((id_card.paygrade in GLOB.co_paygrades) || (id_card.paygrade in GLOB.uscm_highcom_paygrades))
 				return TRUE
 
 	return FALSE
@@ -325,7 +325,7 @@
 		if (active_report.incident.status & BRIG_SENTENCE_PERMA)
 			disp2 = "PERM"
 		else
-			disp2 = "[add_zero(num2text((time_left / 60) % 60),2)]~[add_zero(num2text(time_left % 60), 2)]"
+			disp2 = "[add_zero(num2text((time_left / 60) % 60),2)]:[add_zero(num2text(time_left % 60), 2)]"
 			if (length(disp2) > 5)
 				disp2 = "Error"
 
@@ -350,7 +350,7 @@
 	overlays += image('icons/obj/structures/machinery/status_display.dmi', icon_state=picture_state)
 
 /obj/structure/machinery/brig_cell/proc/update_display(line1, line2)
-	var/new_text = {"<div style="font-size:'5pt'; color:'#09f'; font:'Arial Black';text-align:center;" valign="top">[line1]<br>[line2]</div>"}
+	var/new_text = {"<div style="font-family:'Roboto', sans-serif; color:#09f;text-align:center;" valign="top">[line1]<br>[line2]</div>"}
 	if(maptext != new_text)
 		maptext = new_text
 

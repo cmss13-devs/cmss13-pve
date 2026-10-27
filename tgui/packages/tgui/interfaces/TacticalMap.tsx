@@ -1,103 +1,29 @@
 import { useState } from 'react';
-
-import { useBackend } from '../backend';
-import {
-  Box,
-  Button,
-  Dropdown,
-  ProgressBar,
-  Section,
-  Stack,
-  Tabs,
-} from '../components';
-import { ByondUi } from '../components';
-import { Window } from '../layouts';
-import { CanvasLayer } from './CanvasLayer';
-import { DrawnMap } from './DrawnMap';
+import { useBackend } from 'tgui/backend';
+import { Section, Stack, Tabs } from 'tgui/components';
+import { ByondUi } from 'tgui/components';
+import { Window } from 'tgui/layouts';
 
 interface TacMapProps {
-  toolbarColorSelection: string;
-  toolbarUpdatedSelection: string;
-  updatedCanvas: boolean;
-  themeId: number;
-  svgData: any;
-  canViewTacmap: boolean;
-  canDraw: boolean;
-  isxeno: boolean;
-  canViewCanvas: boolean;
-  newCanvasFlatImage: string;
-  oldCanvasFlatImage: string;
-  actionQueueChange: number;
-  exportedColor: string;
-  mapFallback: string;
   mapRef: string;
-  currentMenu: string;
-  lastUpdateTime: any;
-  canvasCooldownDuration: any;
-  canvasCooldown: any;
-  exportedTacMapImage: any;
-  tacmapReady: boolean;
+  isXeno: boolean;
+  canChangeZ: boolean;
 }
 
 const PAGES = [
   {
     title: 'Live Tacmap',
-    canOpen: (data: TacMapProps) => {
+    canOpen: () => {
       return true;
     },
     component: () => ViewMapPanel,
     icon: 'map',
-    canAccess: (data: TacMapProps) => {
-      return data.canViewTacmap;
-    },
-  },
-  {
-    title: 'Map View',
-    canOpen: (data: TacMapProps) => {
-      return true;
-    },
-    component: () => OldMapPanel,
-    icon: 'eye',
-    canAccess: (data: TacMapProps) => {
-      return data.canViewCanvas;
-    },
-  },
-  {
-    title: 'Canvas',
-    canOpen: (data: TacMapProps) => {
-      return data.tacmapReady;
-    },
-    component: () => DrawMapPanel,
-    icon: 'paintbrush',
-    canAccess: (data: TacMapProps) => {
-      return data.canDraw;
-    },
   },
 ];
-
-const colorOptions = [
-  'black',
-  'red',
-  'orange',
-  'blue',
-  'purple',
-  'green',
-  'brown',
-];
-
-const colors: Record<string, string> = {
-  black: '#000000',
-  red: '#fc0000',
-  orange: '#f59a07',
-  blue: '#0561f5',
-  purple: '#c002fa',
-  green: '#02c245',
-  brown: '#5c351e',
-};
 
 export const TacticalMap = (props) => {
   const { data, act } = useBackend<TacMapProps>();
-  const [pageIndex, setPageIndex] = useState(data.canViewTacmap ? 0 : 1);
+  const [pageIndex, setPageIndex] = useState(0);
   const PageComponent = PAGES[pageIndex].component();
 
   const handleTacmapOnClick = (i: number, pageTitle: string) => {
@@ -107,55 +33,93 @@ export const TacticalMap = (props) => {
     });
   };
 
+  const getTheme = (props: TacMapProps): string => {
+    if (props.isXeno) {
+      return 'hive_status';
+    } else {
+      return 'crtblue';
+    }
+  };
+
+  const getThemeColor = (props: TacMapProps): string => {
+    if (props.isXeno) {
+      return 'purple';
+    } else {
+      return 'blue';
+    }
+  };
+
+  const tryIncrementZ = () => {
+    act('changeZ', {
+      amount: 1,
+    });
+  };
+
+  const tryDecrementZ = () => {
+    act('changeZ', {
+      amount: -1,
+    });
+  };
+
+  const getZTabs = () => {
+    if (!data.canChangeZ) return;
+
+    return (
+      <>
+        <Tabs.Tab
+          key={PAGES.length}
+          color={getThemeColor(data)}
+          selected={false}
+          icon={'plus'}
+          onClick={() => tryIncrementZ()}
+        >
+          Move up
+        </Tabs.Tab>
+        <Tabs.Tab
+          key={PAGES.length + 1}
+          color={getThemeColor(data)}
+          selected={false}
+          icon={'minus'}
+          onClick={() => tryDecrementZ()}
+        >
+          Move down
+        </Tabs.Tab>
+      </>
+    );
+  };
+
   return (
-    <Window
-      width={700}
-      height={900}
-      theme={data.isxeno ? 'hive_status' : 'crtblue'}
-    >
+    <Window width={700} height={850} theme={getTheme(data)}>
       <Window.Content>
-        <Stack vertical fill>
-          <Stack.Item>
-            <Section
-              fitted
-              width="100%"
-              fontSize="20px"
-              textAlign="center"
-              title="Tactical Map Options"
-            >
-              <Stack fontSize="15px">
-                <Stack.Item width="100%">
-                  <Tabs height="37.5px">
-                    {PAGES.map((page, i) => {
-                      if (!page.canAccess(data)) {
-                        return;
-                      }
-                      return (
-                        <Tabs.Tab
-                          key={i}
-                          color={data.isxeno ? 'purple' : 'blue'}
-                          width="100%"
-                          selected={i === pageIndex}
-                          icon={page.icon}
-                          onClick={() =>
-                            page.canOpen(data)
-                              ? handleTacmapOnClick(i, page.title)
-                              : null
-                          }
-                        >
-                          {page.canOpen(data) ? page.title : 'loading'}
-                        </Tabs.Tab>
-                      );
-                    })}
-                  </Tabs>
-                </Stack.Item>
-              </Stack>
-            </Section>
-          </Stack.Item>
-          <Stack.Item grow>
-            <PageComponent fitted />
-          </Stack.Item>
-        </Stack>
+        <Section
+          fitted
+          width="688px"
+          fontSize="20px"
+          textAlign="center"
+          title="Tactical Map Options"
+        >
+          <Stack justify="center" align="center" fontSize="15px">
+            <Stack.Item>
+              <Tabs height="37.5px">
+                {PAGES.map((page, i) => {
+                  return (
+                    <Tabs.Tab
+                      key={i}
+                      color={getThemeColor(data)}
+                      selected={i === pageIndex}
+                      icon={page.icon}
+                      onClick={() => handleTacmapOnClick(i, page.title)}
+                    >
+                      {page.title}
+                    </Tabs.Tab>
+                  );
+                })}
+                {getZTabs()}
+              </Tabs>
+            </Stack.Item>
+          </Stack>
+        </Section>
+        <PageComponent fitted />
       </Window.Content>
     </Window>
   );
@@ -164,182 +128,41 @@ export const TacticalMap = (props) => {
 const ViewMapPanel = (props) => {
   const { data } = useBackend<TacMapProps>();
 
-  // byond ui can't resist trying to render
-  if (!data.canViewTacmap || data.mapRef === null) {
-    return <OldMapPanel {...props} />;
-  }
-
   return (
-    <Section fill>
-      <ByondUi
-        height="100%"
-        width="100%"
-        params={{
-          id: data.mapRef,
-          type: 'map',
-          'background-color': 'none',
+    <Section fill fitted height="86%">
+      <div
+        style={{
+          display: 'flex',
+          flexDirection: 'row',
+          justifyContent: 'center',
+          height: '100%',
+          width: '100%',
         }}
-        className="TacticalMap"
-      />
-    </Section>
-  );
-};
-
-const OldMapPanel = (props) => {
-  const { data } = useBackend<TacMapProps>();
-  return (
-    <Section fill align="center" fontSize="30px">
-      {data.canViewCanvas ? (
-        <DrawnMap
-          svgData={data.svgData}
-          flatImage={data.oldCanvasFlatImage}
-          backupImage={data.mapFallback}
-        />
-      ) : (
-        <Box my="40%">
-          <h1>Unauthorized.</h1>
-        </Box>
-      )}
-    </Section>
-  );
-};
-
-const DrawMapPanel = (props) => {
-  const { data, act } = useBackend<TacMapProps>();
-
-  const timeLeftPct = data.canvasCooldown / data.canvasCooldownDuration;
-  const canUpdate = data.canvasCooldown <= 0 && !data.updatedCanvas;
-
-  const handleTacMapExport = (image: any) => {
-    data.exportedTacMapImage = image;
-  };
-
-  const handleColorSelection = (dataSelection: string) => {
-    if (colors[dataSelection] !== null && colors[dataSelection] !== undefined) {
-      return colors[dataSelection];
-    } else {
-      return dataSelection;
-    }
-  };
-  const findColorValue = (oldValue: string) => {
-    return (Object.keys(colors) as Array<string>).find(
-      (key) => colors[key] === (oldValue as string),
-    );
-  };
-
-  return (
-    <Section fill>
-      <Stack
-        pl="5px"
-        pr="5px"
-        align="center"
-        height="35px"
-        className="BorederedStack"
       >
-        <Stack.Item grow>
-          {(!data.updatedCanvas && (
-            <Button
-              height="20px"
-              fluid
-              disabled={!canUpdate}
-              color="red"
-              icon="download"
-              className="text-center"
-              onClick={() => act('updateCanvas')}
-            >
-              Update Canvas
-            </Button>
-          )) || (
-            <Button
-              height="20px"
-              fluid
-              color="green"
-              icon="bullhorn"
-              className="text-center"
-              onClick={() =>
-                act('selectAnnouncement', {
-                  image: data.exportedTacMapImage,
-                })
-              }
-            >
-              Announce
-            </Button>
-          )}
-        </Stack.Item>
-        <Stack.Item grow>
-          <Button
-            height="20px"
-            fluid
-            color="grey"
-            icon="trash"
-            className="text-center"
-            onClick={() => act('clearCanvas')}
-          >
-            Clear Canvas
-          </Button>
-        </Stack.Item>
-        <Stack.Item grow>
-          <Button
-            height="20px"
-            fluid
-            color="grey"
-            icon="recycle"
-            className="text-center"
-            onClick={() => act('undoChange')}
-          >
-            Undo
-          </Button>
-        </Stack.Item>
-        <Stack.Item>
-          <Dropdown
-            className="TacticalMapColorPicker"
-            menuWidth="15rem"
-            options={colorOptions}
-            selected={data.toolbarColorSelection}
-            color={data.toolbarColorSelection}
-            onSelected={(value) => act('selectColor', { color: value })}
-            displayText={data.toolbarColorSelection}
+        <div
+          style={{
+            aspectRatio: 1,
+            objectFit: 'contain',
+            height: '100%',
+            width: 'auto',
+            maxWidth: '100%',
+            flexGrow: 1,
+          }}
+        >
+          <ByondUi
+            winsetParams={{
+              id: data.mapRef,
+              type: 'map',
+              'icon-size': 0,
+            }}
+            boxProps={{
+              height: '100%',
+              width: '100%',
+              className: 'TacticalMap',
+            }}
           />
-        </Stack.Item>
-      </Stack>
-      <Stack
-        className={'progress-stack'}
-        position="absolute"
-        width="100%"
-        style={{ zIndex: '1' }}
-        bottom="-40px"
-      >
-        <Stack.Item grow>
-          {data.canvasCooldown > 0 && (
-            <ProgressBar
-              height="20px"
-              value={timeLeftPct}
-              backgroundColor="rgba(0, 0, 0, 0.5)"
-              ranges={{
-                good: [-Infinity, 0.33],
-                average: [0.33, 0.67],
-                bad: [0.67, Infinity],
-              }}
-            >
-              <Box textAlign="center" fontSize="15px" textColor="white">
-                {Math.ceil(data.canvasCooldown / 10)} seconds until the canvas
-                changes can be updated
-              </Box>
-            </ProgressBar>
-          )}
-        </Stack.Item>
-      </Stack>
-      <CanvasLayer
-        selection={handleColorSelection(data.toolbarUpdatedSelection)}
-        actionQueueChange={data.actionQueueChange}
-        imageSrc={data.newCanvasFlatImage}
-        key={data.lastUpdateTime}
-        onImageExport={handleTacMapExport}
-        onUndo={(value: string) =>
-          act('selectColor', { color: findColorValue(value) })
-        }
-        onDraw={() => act('onDraw')}
-      />
+        </div>
+      </div>
     </Section>
   );
 };

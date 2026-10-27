@@ -14,17 +14,17 @@
 	idle_power_usage = 40
 	layer = BELOW_OBJ_LAYER //So beakers reliably appear above it
 	var/req_skill = SKILL_MEDICAL
-	var/req_skill_level = SKILL_MEDICAL_MEDIC
+	var/req_skill_level = SKILL_MEDICAL_DOCTOR
 	var/ui_title = "Chem Dispenser 5000"
 	var/obj/structure/machinery/chem_storage/chem_storage
 	var/network = "Ground"
 	var/amount = 30
 	var/accept_beaker_only = TRUE
 	var/obj/item/reagent_container/beaker = null
-	var/obj/item/reagent_container/food/drinks/plasticcup/plasticcup = null
-	var/obj/item/reagent_container/food/drinks/coffeecup/coffeecup = null
 	var/ui_check = 0
-	var/static/list/possible_transfer_amounts = list(5,10,20,30,40)
+	var/static/list/possible_transfer_amounts = list(5,10,15,20,30,40,60)
+	/// List of typepaths for reagent containers that a chem dispenser will accept; all containers allowed if empty.
+	var/list/whitelisted_containers = list()
 	var/list/dispensable_reagents = list(
 		"hydrogen",
 		"lithium",
@@ -59,18 +59,18 @@
 /obj/structure/machinery/chem_dispenser/research
 	network = "Research"
 
-/obj/structure/machinery/chem_dispenser/process()
-	if(!chem_storage)
-		chem_storage = GLOB.chemical_data.connect_chem_storage(network)
 
 /obj/structure/machinery/chem_dispenser/Initialize()
-	. = ..()
+	..()
 	dispensable_reagents = sortList(dispensable_reagents)
-	start_processing()
+	return INITIALIZE_HINT_LATELOAD
+
+/obj/structure/machinery/chem_dispenser/LateInitialize()
+	chem_storage = GLOB.chemical_data.connect_chem_storage(network)
 
 /obj/structure/machinery/chem_dispenser/Destroy()
-	if(!chem_storage)
-		chem_storage = GLOB.chemical_data.disconnect_chem_storage(network)
+	GLOB.chemical_data.disconnect_chem_storage(network)
+	chem_storage = null
 	return ..()
 
 /obj/structure/machinery/chem_dispenser/ex_act(severity)
@@ -90,6 +90,14 @@
 		overlays += "+beaker[rand(1, 5)]"
 		if(!inoperable())
 			overlays += "+onlight"
+
+/obj/structure/machinery/chem_dispenser/corpsman/update_icon()
+	if(stat & BROKEN)
+		icon_state = (beaker ? "mixer1_b" : "mixer0_b")
+	else if(stat & NOPOWER)
+		icon_state = (beaker ? "[base_state]1_nopower" : "[base_state]0_nopower")
+	else
+		icon_state = (beaker ? "[base_state]1" : "[base_state]0")
 
 /obj/structure/machinery/chem_dispenser/on_stored_atom_del(atom/movable/AM)
 	if(AM == beaker)
@@ -163,6 +171,20 @@
 			chemicals.Add(list(list("title" = chemname, "id" = temp.id)))
 	.["chemicals"] = chemicals
 
+	var/list/additional_chemicals = list()
+	var/obj/structure/machinery/chem_storage/chem_network = GLOB.chemical_data.chemical_networks[network]
+	for(var/chem in chem_network.additional_chemicals)
+		var/amt = chem_network.additional_chemicals[chem]
+		var/datum/reagent/reagent = GLOB.chemical_reagents_list[chem]
+		if(reagent)
+			additional_chemicals += list(list(
+				"title" = reagent.name,
+				"amount" = amt,
+				"max_amount" = chem_network.additional_chemical_volume,
+				"id" = reagent.id
+			))
+	.["additional_chemicals"] = additional_chemicals
+
 /obj/structure/machinery/chem_dispenser/ui_act(action, list/params)
 	. = ..()
 	if(.)
@@ -189,6 +211,29 @@
 				chem_storage.energy = max(chem_storage.energy - min(amount, chem_storage.energy * 10, space) / 10, 0)
 
 			. = TRUE
+		if("dispense_additional")
+			if(inoperable() || QDELETED(beaker))
+				return
+			var/reagent_name = params["reagent"]
+
+			if(!beaker)
+				return TRUE
+			var/obj/structure/machinery/chem_storage/chem_network = GLOB.chemical_data.chemical_networks[network]
+			var/storage_amount = chem_network.additional_chemicals[reagent_name]
+			if(!storage_amount)
+				return TRUE
+
+			var/obj/item/reagent_container/current_beaker = beaker
+			var/datum/reagents/current_reagent = current_beaker.reagents
+			var/space = current_reagent.maximum_volume - current_reagent.total_volume
+
+			// Disallow fractional values from polluting the storage network
+			var/transferring = floor(min(amount, storage_amount, space))
+
+			current_reagent.add_reagent(reagent_name, transferring)
+			chem_network.additional_chemicals[reagent_name] -= transferring
+
+			. = TRUE
 
 		if("remove")
 			if(inoperable())
@@ -205,7 +250,13 @@
 /obj/structure/machinery/chem_dispenser/attackby(obj/item/reagent_container/attacking_object, mob/user)
 	if(istype(attacking_object, /obj/item/reagent_container/glass) || istype(attacking_object, /obj/item/reagent_container/food))
 		if(accept_beaker_only && istype(attacking_object,/obj/item/reagent_container/food))
-			to_chat(user, SPAN_NOTICE("This machine only accepts beakers"))
+			to_chat(user, SPAN_NOTICE("This machine only accepts beakers."))
+			return
+		//If the dispenser has a whitelist with stuff in it, and the attacking object ain't in there, don't accept it.
+		if(length(whitelisted_containers) && !(attacking_object.type in whitelisted_containers))
+			//Currently this is only used for pressurized disepnsers
+			to_chat(user, SPAN_WARNING("This machine doesn't accept that container."))
+			return
 		if(user.drop_inv_item_to_loc(attacking_object, src))
 			var/obj/item/old_beaker = beaker
 			beaker = attacking_object
@@ -261,6 +312,38 @@
 		return
 	tgui_interact(user)
 
+/obj/structure/machinery/chem_dispenser/corpsman
+	name = "pressurized chemical dispenser"
+	desc = "A more basic chemical dispenser, designed for use with pressurized reagent canisters. A Wey-Yu product."
+	icon_state = "mixer0"
+	ui_title = "Chem Dispenser 4000"
+	req_skill_level = SKILL_MEDICAL_MEDIC
+	accept_beaker_only = FALSE
+	whitelisted_containers = list(
+		/obj/item/reagent_container/glass/pressurized_canister,
+		/obj/item/reagent_container/glass/minitank //MS-11 Smart Refill Tank
+	)
+	dispensable_reagents = list(
+		"bicaridine",
+		"kelotane",
+		"anti_toxin",
+		"dexalin",
+		"dexalinp",
+		"inaprovaline",
+		"adrenaline",
+		"peridaxon",
+		"tramadol",
+		"oxycodone",
+		"tricordrazine",
+	)
+
+	var/base_state = "mixer"
+
+/obj/structure/machinery/chem_dispenser/yauja
+
+	icon = 'icons/obj/structures/machinery/yautja_machines.dmi'
+	breakable = FALSE
+
 /obj/structure/machinery/chem_dispenser/soda
 	icon_state = "soda_dispenser"
 	name = "soda fountain"
@@ -295,11 +378,16 @@
 		"grapejuice",
 		"lemonjuice",
 		"banana",
+		"chocolatesyrup",
 	)
 	hacked_reagents = list(
 		"milk",
 		"soymilk",
 	)
+
+/obj/structure/machinery/chem_dispenser/soda/yautja
+	icon = 'icons/obj/structures/machinery/yautja_machines.dmi'
+	breakable = FALSE
 
 /obj/structure/machinery/chem_dispenser/soda/beer
 	icon_state = "booze_dispenser"
@@ -333,62 +421,10 @@
 		"absinthe",
 	)
 
-/obj/structure/machinery/chem_dispenser/canteen
-	name = "NestleCo AutoDrink"
-	desc = "A NestleCo AutoDrink dispenser, capable of making a variety of drinks to consume from a mixture of water and instant flavoring juice and caffeine additives."
-	icon = 'icons/obj/structures/machinery/vending_32x64.dmi'
-	icon_state = "drink"
-	ui_title = "NestleCo AutoDrink Dispenser W-A3"
-	req_skill = null
-	req_skill_level = null
-	wrenchable = FALSE
-	dispensable_reagents = list(
-		"water",
-		"coffee",
-		"cream",
-		"tea",
-		"milk",
-		"soymilk",
-		"orangejuice",
-		"limejuice",
-		"watermelonjuice",
-		"tomatojuice",
-		"carrotjuice",
-		"berryjuice",
-		"grapejuice",
-		"lemonjuice",
-	)
-
-/obj/structure/machinery/chem_dispenser/canteen/update_icon()
-	. = ..()
-	overlays.Cut()
-	if(!beaker)
-		return
-
-	overlays += "+beaker"
-	if(inoperable())
-		return
-
-	overlays += "+onlight"
+/obj/structure/machinery/chem_dispenser/soda/beer/yautja
+	icon = 'icons/obj/structures/machinery/yautja_machines.dmi'
+	breakable = FALSE
 
 #undef DISPENSER_UNHACKABLE
 #undef DISPENSER_NOT_HACKED
 #undef DISPENSER_HACKED
-
-/obj/structure/machinery/chem_dispenser/canteen/upp
-	name = "liquid dispenser"
-	desc = "A liquid dispenser, capable of making a variety of drinks to consume from a mixture of water and instant flavoring juice and caffeine additives."
-	icon_state = "uppdrink"
-	ui_title = "AutoDrink Dispenser"
-
-/obj/structure/machinery/chem_dispenser/canteen/upp/update_icon()
-	. = ..()
-	overlays.Cut()
-	if(!beaker)
-		return
-
-	overlays += "+beaker"
-	if(inoperable())
-		return
-
-	overlays += "+onlightupp"

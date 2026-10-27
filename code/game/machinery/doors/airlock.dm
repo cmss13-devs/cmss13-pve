@@ -58,6 +58,9 @@ GLOBAL_LIST_INIT(airlock_wire_descriptions, flatten_numeric_alist(alist(
 	var/damage_cap = HEALTH_DOOR // Airlock gets destroyed
 	var/autoname = FALSE
 
+	///Whether this is currently being manipulated to prevent doubling up
+	var/construction_busy = FALSE
+
 	var/list/obj/item/device/assembly/signaller/attached_signallers = list()
 
 	var/announce_hacked = TRUE
@@ -98,7 +101,7 @@ GLOBAL_LIST_INIT(airlock_wire_descriptions, flatten_numeric_alist(alist(
 		else if(user.hallucination > 50 && prob(10) && !operating)
 			to_chat(user, SPAN_DANGER("<B>You feel a powerful shock course through your body!</B>"))
 			user.halloss += 10
-			user.apply_effect(3, STUN)
+			user.apply_effect(10, STUN)
 			return
 	..(user)
 
@@ -115,6 +118,8 @@ GLOBAL_LIST_INIT(airlock_wire_descriptions, flatten_numeric_alist(alist(
 		. += SPAN_WARNING("It looks slightly damaged.")
 	if(masterkey_resist)
 		. += SPAN_INFO("It has been reinforced against breaching attempts.")
+	if(secondsElectrified != 0 && arePowerSystemsOn())
+		. += SPAN_DANGER("Violent sparks are firing from the door's machinery.")
 
 /obj/structure/machinery/door/airlock/proc/take_damage(dam, mob/M)
 	if(!dam || unacidable)
@@ -137,14 +142,12 @@ GLOBAL_LIST_INIT(airlock_wire_descriptions, flatten_numeric_alist(alist(
 /obj/structure/machinery/door/airlock/deconstruct(disassembled = TRUE)
 	if(!disassembled)
 		if(width == 1)
-			new /obj/structure/airlock_assembly(loc)
 			new /obj/item/stack/rods(loc)
 			new /obj/item/stack/cable_coil/cut(loc)
 			new /obj/effect/spawner/gibspawner/robot(loc)
 			new /obj/effect/decal/cleanable/blood/oil(loc)
 		else // big airlock, big debris
 			for(var/turf/DT in locs) // locs = covered by airlock bounding box
-				new /obj/structure/airlock_assembly(DT)
 				new /obj/item/stack/rods(DT)
 				new /obj/item/stack/cable_coil/cut(DT)
 				new /obj/effect/spawner/gibspawner/robot(DT)
@@ -208,6 +211,7 @@ GLOBAL_LIST_INIT(airlock_wire_descriptions, flatten_numeric_alist(alist(
 				shockedby += text("\[[time_stamp()]\][key_name(usr)]")
 				usr.attack_log += text("\[[time_stamp()]\] <font color='red'>Electrified the [name] at [x] [y] [z]</font>")
 				secondsElectrified = 30
+				start_processing()
 				visible_message(SPAN_DANGER("Electric arcs shoot off from \the [src] airlock!"))
 				spawn(10)
 					//TODO: Move this into process() and make pulsing reset secondsElectrified to 30
@@ -221,8 +225,10 @@ GLOBAL_LIST_INIT(airlock_wire_descriptions, flatten_numeric_alist(alist(
 			//tries to open the door without ID
 			//will succeed only if the ID wire is cut or the door requires no access
 			if(!requiresID() || check_access(null))
-				if(density) open()
-				else close()
+				if(density)
+					open()
+				else
+					close()
 
 		if(AIRLOCK_WIRE_SAFETY)
 			safe = !safe
@@ -248,7 +254,7 @@ GLOBAL_LIST_INIT(airlock_wire_descriptions, flatten_numeric_alist(alist(
 
 	switch(wire)
 		if(AIRLOCK_WIRE_MAIN_POWER)
-			//Cutting either one disables the main door power, but unless backup power is also cut, the backup power re-powers the door in 10 seconds. While unpowered, the door may be crowbarred open, but bolts-raising will not work. Cutting these wires may electocute the user.
+			//Cutting either one disables the main door power, but unless backup power is also cut, the backup power re-powers the door in 10 seconds. While unpowered, the door may be crowbarred open, but bolts-raising will not work. Cutting these wires may electrocute the user.
 			loseMainPower()
 			shock(usr, 50)
 
@@ -257,7 +263,7 @@ GLOBAL_LIST_INIT(airlock_wire_descriptions, flatten_numeric_alist(alist(
 			lock()
 
 		if(AIRLOCK_WIRE_BACKUP_POWER)
-			//Cutting either one disables the backup door power (allowing it to be crowbarred open, but disabling bolts-raising), but may electocute the user.
+			//Cutting either one disables the backup door power (allowing it to be crowbarred open, but disabling bolts-raising), but may electrocute the user.
 			loseBackupPower()
 			shock(usr, 50)
 
@@ -267,6 +273,7 @@ GLOBAL_LIST_INIT(airlock_wire_descriptions, flatten_numeric_alist(alist(
 				shockedby += text("\[[time_stamp()]\][key_name(usr)]")
 				usr.attack_log += text("\[[time_stamp()]\] <font color='red'>Electrified the [name] at [x] [y] [z]</font>")
 				secondsElectrified = -1
+				start_processing()
 				visible_message(SPAN_DANGER("Electric arcs shoot off from \the [src] airlock!"))
 
 		if(AIRLOCK_WIRE_SAFETY)
@@ -398,7 +405,8 @@ GLOBAL_LIST_INIT(airlock_wire_descriptions, flatten_numeric_alist(alist(
 
 
 /obj/structure/machinery/door/airlock/update_icon()
-	if(overlays) overlays.Cut()
+	if(overlays)
+		overlays.Cut()
 	if(density)
 		if(locked && lights)
 			icon_state = "door_locked"
@@ -418,14 +426,16 @@ GLOBAL_LIST_INIT(airlock_wire_descriptions, flatten_numeric_alist(alist(
 /obj/structure/machinery/door/airlock/do_animate(animation)
 	switch(animation)
 		if("opening")
-			if(overlays) overlays.Cut()
+			if(overlays)
+				overlays.Cut()
 			if(panel_open)
 				spawn(2) // The only work around that works. Downside is that the door will be gone for a millisecond.
 					flick("o_door_opening", src)  //can not use flick due to BYOND bug updating overlays right before flicking
 			else
 				flick("door_opening", src)
 		if("closing")
-			if(overlays) overlays.Cut()
+			if(overlays)
+				overlays.Cut()
 			if(panel_open)
 				flick("o_door_closing", src)
 			else
@@ -457,7 +467,7 @@ GLOBAL_LIST_INIT(airlock_wire_descriptions, flatten_numeric_alist(alist(
 /obj/structure/machinery/door/airlock/tgui_interact(mob/user, datum/tgui/ui)
 	ui = SStgui.try_update_ui(user, src, ui)
 	if (!ui)
-		ui = new(user, src, "Wires", "[name] Wires")
+		ui = new(user, src, "Wires", "[capitalize(name)] Wires")
 		ui.open()
 
 /obj/structure/machinery/door/airlock/ui_data(mob/user)
@@ -471,7 +481,7 @@ GLOBAL_LIST_INIT(airlock_wire_descriptions, flatten_numeric_alist(alist(
 			"attached" = !isnull(getAssembly(wire)),
 		)))
 	.["wires"] = payload
-	.["proper_name"] = name
+	.["proper_name"] = capitalize(name)
 
 /obj/structure/machinery/door/airlock/ui_static_data(mob/user)
 	. = list()
@@ -574,13 +584,13 @@ GLOBAL_LIST_INIT(airlock_wire_descriptions, flatten_numeric_alist(alist(
 	add_fingerprint(user)
 
 	if(istype(attacking_item, /obj/item/weapon/zombie_claws) && (welded || locked))
-		user.visible_message(SPAN_NOTICE("[user] starts tearing into the door on [src]!"), \
-			SPAN_NOTICE("You start prying your hand into the gaps of the door with your fingers... This will take about 30 seconds."), \
+		user.visible_message(SPAN_NOTICE("[user] starts tearing into the door on [src]!"),
+			SPAN_NOTICE("You start prying your hand into the gaps of the door with your fingers... This will take about 30 seconds."),
 			SPAN_NOTICE("You hear tearing noises!"))
 
 		if(do_after(user, 300, INTERRUPT_ALL, BUSY_ICON_HOSTILE))
-			user.visible_message(SPAN_NOTICE("[user] slams the door open [src]!"), \
-			SPAN_NOTICE("You slam the door open!"), \
+			user.visible_message(SPAN_NOTICE("[user] slams the door open [src]!"),
+			SPAN_NOTICE("You slam the door open!"),
 			SPAN_NOTICE("You hear metal screeching!"))
 			locked = 0
 			welded = 0
@@ -588,42 +598,50 @@ GLOBAL_LIST_INIT(airlock_wire_descriptions, flatten_numeric_alist(alist(
 			open()
 			locked = 1
 
-		return
+		return TRUE
 
 	if((iswelder(attacking_item) && !operating && density))
-		var/obj/item/tool/weldingtool/W = attacking_item
+		var/obj/item/tool/weldingtool/welder = attacking_item
 		var/weldtime = 50
-		if(!HAS_TRAIT(W, TRAIT_TOOL_BLOWTORCH))
+		if(!HAS_TRAIT(welder, TRAIT_TOOL_BLOWTORCH))
 			weldtime = 70
 
 		if(not_weldable)
-			to_chat(user, SPAN_WARNING("\The [src] would require something a lot stronger than \the [W] to weld!"))
-			return
-		if(!W.isOn())
-			to_chat(user, SPAN_WARNING("\The [W] needs to be on!"))
-			return
-		if(W.remove_fuel(0,user))
-			user.visible_message(SPAN_NOTICE("[user] starts working on \the [src] with \the [W]."), \
-			SPAN_NOTICE("You start working on \the [src] with \the [W]."), \
+			to_chat(user, SPAN_WARNING("[src] would require something a lot stronger than [welder] to weld!"))
+			return TRUE
+		if(!welder.isOn())
+			to_chat(user, SPAN_WARNING("[welder] needs to be on!"))
+			return TRUE
+		if(construction_busy)
+			to_chat(user, SPAN_WARNING("Someone else is already working on [src]."))
+			return TRUE
+		if(welder.remove_fuel(0,user))
+			user.visible_message(SPAN_NOTICE("[user] starts working on [src] with [welder]."),
+			SPAN_NOTICE("You start working on [src] with [welder]."),
 			SPAN_NOTICE("You hear welding."))
 			playsound(loc, 'sound/items/weldingtool_weld.ogg', 25)
+			construction_busy = TRUE
 			if(do_after(user, weldtime, INTERRUPT_ALL|BEHAVIOR_IMMOBILE, BUSY_ICON_BUILD) && density)
 				if(!welded)
 					welded = 1
 				else
 					welded = null
 				update_icon()
-		return
+			construction_busy = FALSE
+		return TRUE
 
 	else if(HAS_TRAIT(attacking_item, TRAIT_TOOL_SCREWDRIVER))
 		if(no_panel)
-			to_chat(user, SPAN_WARNING("\The [src] has no panel to open!"))
-			return
+			to_chat(user, SPAN_WARNING("[src] has no panel to open!"))
+			return TRUE
+		if(construction_busy)
+			to_chat(user, SPAN_WARNING("Someone else is already working on [src]."))
+			return TRUE
 
 		panel_open = !panel_open
 		to_chat(user, SPAN_NOTICE("You [panel_open ? "open" : "close"] [src]'s panel."))
 		update_icon()
-		return
+		return TRUE
 
 	else if(HAS_TRAIT(attacking_item, TRAIT_TOOL_WIRECUTTERS))
 		return attack_hand(user)
@@ -657,11 +675,16 @@ GLOBAL_LIST_INIT(airlock_wire_descriptions, flatten_numeric_alist(alist(
 		if(attacking_item.pry_capable == IS_PRY_CAPABLE_CROWBAR && panel_open && welded)
 			if(!skillcheck(user, SKILL_ENGINEER, SKILL_ENGINEER_TRAINED))
 				to_chat(user, SPAN_WARNING("You don't seem to know how to deconstruct machines."))
-				return
+				return TRUE
+			if(construction_busy)
+				to_chat(user, SPAN_WARNING("Someone else is already working on [src]."))
+				return TRUE
 			playsound(loc, 'sound/items/Crowbar.ogg', 25, 1)
 			user.visible_message("[user] starts removing the electronics from the airlock assembly.", "You start removing electronics from the airlock assembly.")
-			if(do_after(user, 40, INTERRUPT_ALL|BEHAVIOR_IMMOBILE, BUSY_ICON_BUILD))
-				to_chat(user, SPAN_NOTICE(" You removed the airlock electronics!"))
+			construction_busy = TRUE
+			if(do_after(user, 40, INTERRUPT_ALL|BEHAVIOR_IMMOBILE, BUSY_ICON_BUILD, src))
+				construction_busy = FALSE
+				to_chat(user, SPAN_NOTICE("You removed the airlock electronics!"))
 
 				var/obj/structure/airlock_assembly/doors_assembly = new assembly_type(loc)
 				if(istype(doors_assembly, /obj/structure/airlock_assembly/multi_tile))
@@ -697,10 +720,11 @@ GLOBAL_LIST_INIT(airlock_wire_descriptions, flatten_numeric_alist(alist(
 					airlock_electronics.update_icon()
 					operating = DOOR_OPERATING_IDLE
 
-				msg_admin_niche("[key_name(user)] deconstructed [src] in [get_area(user)] ([user.loc.x],[user.loc.y],[user.loc.z])")
+				msg_admin_niche("[key_name(user)] deconstructed [src] in [ADMIN_VERBOSEJMP(user)]")
 				SEND_SIGNAL(user, COMSIG_MOB_DISASSEMBLE_AIRLOCK, src)
 				deconstruct()
-				return
+			construction_busy = FALSE
+			return TRUE
 
 		else if(arePowerSystemsOn() && attacking_item.pry_capable != IS_PRY_CAPABLE_FORCE)
 			to_chat(user, SPAN_WARNING("The airlock's motors resist your efforts to force it."))
@@ -783,6 +807,8 @@ GLOBAL_LIST_INIT(airlock_wire_descriptions, flatten_numeric_alist(alist(
 
 	for(var/turf/turf in locs)
 		for(var/mob/living/crushed in turf)
+			if(!arePowerSystemsOn() && forced)
+				return
 			if(HAS_TRAIT(crushed, TRAIT_SUPER_STRONG))
 				crushed.apply_damage(DOOR_CRUSH_DAMAGE, BRUTE)
 			else
@@ -896,7 +922,7 @@ GLOBAL_LIST_INIT(airlock_wire_descriptions, flatten_numeric_alist(alist(
 					qdel(x)
 				break
 
-/obj/structure/machinery/door/airlock/handle_tail_stab(mob/living/carbon/xenomorph/xeno)
+/obj/structure/machinery/door/airlock/handle_tail_stab(mob/living/carbon/xenomorph/xeno, blunt_stab)
 	if(isElectrified() && arePowerSystemsOn())
 		var/datum/effect_system/spark_spread/sparks = new /datum/effect_system/spark_spread
 		sparks.set_up(5, 1, src)
@@ -905,8 +931,8 @@ GLOBAL_LIST_INIT(airlock_wire_descriptions, flatten_numeric_alist(alist(
 		xeno.Stun(1)
 
 	playsound(src, 'sound/effects/metalhit.ogg', 50, TRUE)
-	xeno.visible_message(SPAN_XENOWARNING("\The [xeno] strikes \the [src] with its tail!"), SPAN_XENOWARNING("You strike \the [src] with your tail!"))
-	xeno.emote("tail")
+	xeno.visible_message(SPAN_XENOWARNING("[xeno] strikes [src] with its tail!"), SPAN_XENOWARNING("We strike [src] with our tail!"))
+	xeno.tail_stab_animation(src, blunt_stab)
 	var/damage = xeno.melee_damage_upper * TAILSTAB_AIRLOCK_DAMAGE_MULTIPLIER
 	take_damage(damage, xeno)
 	return TAILSTAB_COOLDOWN_NORMAL

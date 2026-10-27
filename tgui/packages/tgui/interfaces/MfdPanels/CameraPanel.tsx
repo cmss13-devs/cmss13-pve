@@ -1,9 +1,10 @@
-import { useBackend } from '../../backend';
-import { ByondUi } from '../../components';
-import { Box } from '../../components';
-import { MfdPanel, MfdProps } from './MultifunctionDisplay';
+import { useBackend } from 'tgui/backend';
+import { ByondUi } from 'tgui/components';
+import { Box } from 'tgui/components';
+
+import { MfdPanel, type MfdProps } from './MultifunctionDisplay';
 import { mfdState } from './stateManagers';
-import { CameraProps } from './types';
+import type { CameraProps } from './types';
 
 export const CameraMfdPanel = (props: MfdProps) => {
   const { act } = useBackend();
@@ -27,10 +28,12 @@ const CameraPanel = () => {
   return (
     <Box className="NavigationMenu">
       <ByondUi
-        className="CameraPanel"
-        params={{
+        winsetParams={{
           id: data.camera_map_ref,
           type: 'map',
+        }}
+        boxProps={{
+          className: 'CameraPanel',
         }}
       />
     </Box>

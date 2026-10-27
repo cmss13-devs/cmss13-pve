@@ -1,7 +1,7 @@
 /obj/structure/dispenser
 	name = "tank storage unit"
 	desc = "A simple yet bulky storage device for gas tanks. Has room for up to ten oxygen tanks, and ten phoron tanks."
-	icon = 'icons/obj/objects.dmi'
+	icon = 'icons/obj/structures/tank_dispenser.dmi'
 	icon_state = "dispenser"
 	density = TRUE
 	anchored = TRUE
@@ -26,11 +26,15 @@
 /obj/structure/dispenser/update_icon()
 	overlays.Cut()
 	switch(oxygentanks)
-		if(1 to 3) overlays += "oxygen-[oxygentanks]"
-		if(4 to INFINITY) overlays += "oxygen-4"
+		if(1 to 3)
+			overlays += "oxygen-[oxygentanks]"
+		if(4 to INFINITY)
+			overlays += "oxygen-4"
 	switch(phorontanks)
-		if(1 to 4) overlays += "phoron-[phorontanks]"
-		if(5 to INFINITY) overlays += "phoron-5"
+		if(1 to 4)
+			overlays += "phoron-[phorontanks]"
+		if(5 to INFINITY)
+			overlays += "phoron-5"
 
 /obj/structure/dispenser/attack_remote(mob/user as mob)
 	if(user.Adjacent(src))

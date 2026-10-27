@@ -30,7 +30,7 @@
 /datum/radar/tgui_interact(mob/user, datum/tgui/ui)
 	ui = SStgui.try_update_ui(user, src, ui)
 	if (!ui)
-		ui = new(user, src, "Radar", "[holder.name]")
+		ui = new(user, src, "Radar", "[capitalize(holder.name)]")
 		ui.open()
 
 /datum/radar/ui_assets(mob/user)
@@ -185,29 +185,6 @@
 		name = bracelet.name,
 	))
 
-//A program that tracks GM objectives
-/datum/radar/signal_tracker
-	var/obj/item/tool/signal_tracker/typed_holder
-
-/datum/radar/signal_tracker/New(atom/holder)
-	. = ..()
-	typed_holder = holder
-
-/datum/radar/signal_tracker/find_atom()
-	for(var/list/cycled_objective in GLOB.game_master_objectives)
-		if(cycled_objective["object_ref"] == selected)
-			return locate(cycled_objective["object_ref"])
-
-/datum/radar/signal_tracker/scan()
-	. = ..()
-	objects = list()
-	for(var/list/cycled_objective in GLOB.game_master_objectives)
-		var/list/crewinfo = list(
-			ref = cycled_objective["object_ref"],
-			name = cycled_objective["objective_info"]
-			)
-		objects += list(crewinfo)
-
 ///A program that tracks crew members via suit sensors
 /datum/radar/lifeline
 	var/faction
@@ -258,3 +235,33 @@
 			if(uniform.has_sensor && uniform.sensor_mode >= SENSOR_MODE_LOCATION) // Suit sensors must be on maximum
 				return TRUE
 	return FALSE
+
+
+//Synthetic K9 Scent Tracking, allows K9s to track CLF, UPP, etc as well as Preds... optic camo can't hide the fact you stink!
+/datum/radar/scenttracker/find_atom()
+	return locate(selected) in GLOB.human_mob_list
+
+/datum/radar/scenttracker/scan()
+	. = ..()
+	objects = list()
+	for(var/mob/living/carbon/human/humanoid as anything in GLOB.human_mob_list)
+		var/crewmember_name = "Unknown"
+		var/crewmember_rank = "Unknown"
+		if(humanoid.get_idcard())
+			var/obj/item/card/id/ID = humanoid.get_idcard()
+			if(ID?.registered_name)
+				crewmember_name = ID.registered_name
+			if(ID?.assignment)
+				crewmember_rank = ID.assignment
+		switch(humanoid.stat)
+			if(CONSCIOUS)
+				crewmember_name = "[crewmember_name] ([crewmember_rank]) (Conscious)"
+			if(UNCONSCIOUS)
+				crewmember_name = "[crewmember_name] ([crewmember_rank]) (Unconscious)"
+			if(DEAD)
+				crewmember_name = "[crewmember_name] ([crewmember_rank]) (DEAD)"
+		var/list/crewinfo = list(
+			ref = REF(humanoid),
+			name = crewmember_name,
+			)
+		objects += list(crewinfo)

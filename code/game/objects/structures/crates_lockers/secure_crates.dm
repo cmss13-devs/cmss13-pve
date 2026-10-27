@@ -29,7 +29,7 @@
 		overlays += "welded"
 
 
-/obj/structure/closet/crate/secure/can_open()
+/obj/structure/closet/crate/secure/can_open(mob/user)
 	return !locked
 
 /obj/structure/closet/crate/secure/proc/togglelock(mob/user as mob)
@@ -46,7 +46,7 @@
 				to_chat(O, SPAN_NOTICE("The crate has been [locked ? null : "un"]locked by [user]."))
 		icon_state = locked ? icon_locked : icon_unlocked
 	else
-		to_chat(user, SPAN_NOTICE("Access Denied"))
+		to_chat(user, SPAN_NOTICE("Access Denied."))
 
 /obj/structure/closet/crate/secure/verb/verb_togglelock()
 	set src in oview(1) // One square distance
@@ -115,30 +115,15 @@
 
 /obj/structure/closet/crate/secure/ammo
 	name = "secure ammunitions crate"
-	desc = "A secure ammunitions crate"
+	desc = "A secure ammunitions crate."
 	icon_state = "secure_locked_ammo"
 	icon_opened = "secure_open_ammo"
 	icon_locked = "secure_locked_ammo"
 	icon_unlocked = "secure_unlocked_ammo"
 
-/obj/structure/closet/crate/secure/upp
-	name = "secure crate"
-	desc = "An electronically locked crate owned by the Union of Progressive Peoples Armed Collective, as denoted by the two large stars on its front."
-	icon_state = "secure_locked_uppcrate"
-	icon_opened = "secure_open_uppcrate"
-	icon_locked = "secure_locked_uppcrate"
-	icon_unlocked = "secure_unlocked_uppcrate"
-
-/obj/structure/closet/crate/secure/upp/alt
-
-	icon_state = "secure_locked_uppcratealt"
-	icon_opened = "secure_open_uppcratealt"
-	icon_locked = "secure_locked_uppcratealt"
-	icon_unlocked = "secure_unlocked_uppcratealt"
-
 /obj/structure/closet/crate/secure/explosives
 	name = "explosives crate"
-	desc = "An explosives crate"
+	desc = "An explosives crate."
 	icon_state = "secure_locked_explosives"
 	icon_opened = "secure_open_explosives"
 	icon_locked = "secure_locked_explosives"
@@ -176,6 +161,14 @@
 	icon_locked = "secure_locked_surgery"
 	icon_unlocked = "secure_unlocked_surgery"
 
+/obj/structure/closet/crate/secure/medical
+	name = "medical crate"
+	desc = "A medical crate with a secure lock on it."
+	icon_state = "secure_locked_medical"
+	icon_opened = "secure_open_medical"
+	icon_locked = "secure_locked_medical"
+	icon_unlocked = "secure_unlocked_medical"
+
 /obj/structure/closet/crate/secure/weapon
 	name = "weapons crate"
 	desc = "A secure weapons crate."
@@ -203,32 +196,6 @@
 /obj/structure/closet/crate/secure/vulture/Initialize()
 	. = ..()
 	new /obj/item/storage/box/guncase/vulture(src)
-
-/obj/structure/closet/crate/secure/rmcnvg
-	name = "secure RMC NVG visors crate"
-	desc = "A secure crate, containing multiple insertable visors for the Mk16 tactical helmet & Mk12 marksman helmets."
-	icon_state = "secure_locked_vulture"
-	icon_opened = "secure_open_vulture"
-	icon_locked = "secure_locked_vulture"
-	icon_unlocked = "secure_unlocked_vulture"
-
-/obj/structure/closet/crate/secure/rmcnvg/Initialize()
-	. = ..()
-	new /obj/item/device/helmet_visor/night_vision/marine_raider/rmc(src)
-	new /obj/item/device/helmet_visor/night_vision/marine_raider/rmc(src)
-	new /obj/item/device/helmet_visor/night_vision/marine_raider/rmc(src)
-	new /obj/item/device/helmet_visor/night_vision/marine_raider/rmc(src)
-	new /obj/item/device/helmet_visor/night_vision/marine_raider/rmc(src)
-	new /obj/item/device/helmet_visor/night_vision/marine_raider/rmc(src)
-	new /obj/item/device/helmet_visor/night_vision/marine_raider/rmc(src)
-	new /obj/item/device/helmet_visor/night_vision/marine_raider/rmc(src)
-	new /obj/item/device/helmet_visor/night_vision/marine_raider/rmc(src)
-	new /obj/item/device/helmet_visor/night_vision/marine_raider/rmc(src)
-	new /obj/item/device/helmet_visor/night_vision/marine_raider/rmc(src)
-	new /obj/item/device/helmet_visor/night_vision/marine_raider/rmc(src)
-	new /obj/item/device/helmet_visor/night_vision/marine_raider/rmc(src)
-	new /obj/item/device/helmet_visor/night_vision/marine_raider/rmc(src)
-	new /obj/item/device/helmet_visor/night_vision/marine_raider/rmc(src)
 
 //special version, able to store OB fuel and warheads only
 /obj/structure/closet/crate/secure/ob

@@ -56,7 +56,7 @@ Please wait until completion...</TT><BR>
 <A href='byond://?src=\ref[src];make=7'>Robot Frame (75,000 cc metal).<BR>
 "}
 
-	user << browse("<HEAD><TITLE>Robotic Fabricator Control Panel</TITLE></HEAD><TT>[dat]</TT>", "window=robot_fabricator")
+	user << browse(HTML_SKELETON_TITLE("Robotic Fabricator Control Panel", "<TT>[dat]</TT>"), "window=robot_fabricator")
 	onclose(user, "robot_fabricator")
 	return
 
@@ -131,7 +131,8 @@ Please wait until completion...</TT><BR>
 						src.update_use_power(USE_POWER_IDLE)
 						src.operating = 0
 						src.overlays -= "fab-active"
-			else return //Someone's doing href fuckery if this gets here.
+			else
+				return //Someone's doing href fuckery if this gets here.
 		return
 
 	for (var/mob/M as anything in viewers(1, src))

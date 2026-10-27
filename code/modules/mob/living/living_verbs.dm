@@ -1,7 +1,7 @@
 /mob/living/can_resist()
 	if(next_move > world.time)
 		return FALSE
-	if(HAS_TRAIT(src, TRAIT_INCAPACITATED))
+	if(HAS_TRAIT(src, TRAIT_INCAPACITATED) || HAS_TRAIT(src, TRAIT_HAULED))
 		return FALSE
 	return TRUE
 
@@ -23,6 +23,10 @@
 		if(HAS_TRAIT(xeno, TRAIT_ABILITY_BURROWED))
 			to_chat(src, SPAN_WARNING("You can't resist in your current state."))
 			return
+
+	if(pulledby && isxeno(pulledby))
+		to_chat(src, SPAN_WARNING("You can't resist while a xeno is grabbing you."))
+		return
 
 	resisting = TRUE
 
@@ -67,14 +71,14 @@
 			return
 		visible_message("[BB] begins to wiggle violently!")
 		if(do_after(src, 5 SECONDS, INTERRUPT_UNCONSCIOUS, BUSY_ICON_HOSTILE, BB))//5 second unzip from inside
-			BB.open()
+			BB.open(src)
 
 		///The medical machines below are listed separately to allow easier changes to each process
 
 	//getting out of hypersleep
 	if(loc && (istype(loc, /obj/structure/machinery/cryopod)))
 		var/obj/structure/machinery/cryopod/BB = loc
-		BB.eject()
+		BB.eject(src)
 
 	//getting out of bodyscanner
 	if(loc && (istype(loc, /obj/structure/machinery/medical_pod/bodyscanner)))
@@ -110,7 +114,7 @@
 
 		var/obj/structure/closet/C = loc
 		if(C.opened)
-			return //Door's open... wait, why are you in it's contents then?
+			return //Door's open... wait, why are you in its contents then?
 		if(istype(loc, /obj/structure/closet/secure_closet))
 			var/obj/structure/closet/secure_closet/SC = loc
 			if(!SC.locked && !SC.welded)
@@ -155,7 +159,7 @@
 			if(istype(SC.loc, /obj/structure/bigDelivery)) //Do this to prevent contents from being opened into nullspace (read: bluespace)
 				var/obj/structure/bigDelivery/BD = SC.loc
 				BD.attack_hand(src)
-			SC.open()
+			SC.open(src)
 			return
 		else
 			C.welded = 0
@@ -166,7 +170,7 @@
 			if(istype(C.loc, /obj/structure/bigDelivery)) //nullspace ect... read the comment above
 				var/obj/structure/bigDelivery/BD = C.loc
 				BD.attack_hand(src)
-			C.open()
+			C.open(src)
 			return
 
 	//breaking out of handcuffs & putting out fires

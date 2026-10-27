@@ -2,9 +2,7 @@
 	name = "Don't see this"
 	desc = "Call for help."
 	icon = 'icons/obj/structures/machinery/defenses/sentry.dmi'
-	icon_state = "defense_base"
-	var/icon_off = "defense_base_off"
-	var/icon_on = "defense_base"
+	icon_state = "defense_base_off"
 	anchored = TRUE
 	unacidable = TRUE
 	density = TRUE
@@ -12,6 +10,8 @@
 	use_power = USE_POWER_NONE
 	stat = DEFENSE_FUNCTIONAL
 	health = 200
+	needs_power = FALSE // these have abstract internal batteries.
+
 	var/list/faction_group
 	var/health_max = 200
 	var/turned_on = FALSE
@@ -42,9 +42,7 @@
 	var/obj/item/device/sentry_computer/linked_laptop = null
 	var/has_camera = FALSE
 	var/list/choice_categories = list()
-
 	var/list/selected_categories = list()
-
 
 /obj/structure/machinery/defenses/Initialize()
 	. = ..()
@@ -52,7 +50,6 @@
 	connect()
 
 /obj/structure/machinery/defenses/Destroy()
-	GLOB.all_active_defenses -= src
 	owner_mob = null
 	HD = null // FIXME: Might also need to delete. Unsure.
 	if(linked_laptop)
@@ -77,9 +74,9 @@
 	if(!composite_icon)
 		icon_state = null
 	else if(turned_on)
-		icon_state = icon_on
+		icon_state = "defense_base"
 	else
-		icon_state = icon_off
+		icon_state = "defense_base_off"
 
 
 /obj/structure/machinery/defenses/get_examine_text(mob/user)
@@ -104,28 +101,17 @@
 		return FALSE
 	if(!(placed||static))
 		return FALSE
-	if(turned_on)
-		return TRUE
 
-	msg_admin_niche("[key_name(usr)] turned on [src] at [get_location_in_text(src)] [ADMIN_JMP(loc)]")
+	msg_admin_niche("[key_name(usr)] turned on [src] at [get_location_in_text(src)]")
 	turned_on = TRUE
 	power_on_action()
 	update_icon()
 
-	GLOB.all_active_defenses += src
-	return TRUE
-
 /obj/structure/machinery/defenses/proc/power_off()
-	if(!turned_on)
-		return TRUE
-
-	msg_admin_niche("[key_name(usr)] turned off [src] at [get_location_in_text(src)] [ADMIN_JMP(loc)]")
+	msg_admin_niche("[key_name(usr)] turned off [src] at [get_location_in_text(src)]")
 	turned_on = FALSE
 	power_off_action()
 	update_icon()
-
-	GLOB.all_active_defenses -= src
-	return TRUE
 
 /**
  * Update state category for this structure.
@@ -134,7 +120,7 @@
  * @param selection: configuration value for category.
  */
 /obj/structure/machinery/defenses/proc/update_choice(mob/user, category, selection)
-	msg_admin_niche("[key_name(user)] changed the [category] of [src] at [get_location_in_text(src)] to [selection] [ADMIN_JMP(loc)]")
+	msg_admin_niche("[key_name(user)] changed the [category] of [src] at [get_location_in_text(src, FALSE)] to [selection] [ADMIN_JMP(loc)]")
 	if(category in selected_categories)
 		selected_categories[category] = selection
 		switch(category)
@@ -156,7 +142,7 @@
 /obj/structure/machinery/defenses/proc/handle_iff(selection)
 	switch(selection)
 		if(FACTION_MARINE)
-			faction_group = FACTION_LIST_UA
+			faction_group = FACTION_LIST_MARINE
 		if(SENTRY_FACTION_HUMAN)
 			faction_group = FACTION_LIST_HUMANOID
 		if(SENTRY_FACTION_COLONY)
@@ -167,19 +153,6 @@
 			faction_group = FACTION_LIST_WY
 		if(FACTION_UPP)
 			faction_group = FACTION_LIST_UPP
-		if(FACTION_UA_REBEL)
-			faction_group = FACTION_LIST_UA_REBEL
-		if(FACTION_TWE_REBEL)
-			faction_group = FACTION_LIST_TWE_REBEL
-		if(FACTION_CANC)
-			faction_group = FACTION_LIST_CANC
-		if(FACTION_FREELANCER)
-			faction_group = FACTION_LIST_FREELANCER
-		if(FACTION_TWE)
-			faction_group = FACTION_LIST_TWE
-		if(FACTION_MERCENARY)
-			faction_group = FACTION_LIST_MERCENARY
-
 
 
 /obj/structure/machinery/defenses/start_processing()
@@ -286,8 +259,42 @@
 				else
 					to_chat(user, SPAN_WARNING("\The [src] is already encrypted by laptop [linked_laptop.serial_number]. You must load its encryption key to decrypt."))
 				return
+		if(health < health_max * 0.25)
+			to_chat(user, SPAN_WARNING("\The [src] is too damaged to pick up!"))
+			return
 
-		disassemble(user)
+		if(static)
+			to_chat(user, SPAN_WARNING("\The [src] is bolted to the ground!"))
+			return
+
+		if(linked_laptop)
+			to_chat(user, SPAN_WARNING("\The [src] is currently encrypted by [linked_laptop]. To deconstruct \the [src] it must first be unlinked."))
+			return
+
+		user.visible_message(SPAN_NOTICE("[user] begins disassembling \the [src]."), SPAN_NOTICE("You begin disassembling \the [src]."))
+
+		if(!do_after(user, disassemble_time * user.get_skill_duration_multiplier(SKILL_CONSTRUCTION), INTERRUPT_ALL|BEHAVIOR_IMMOBILE, BUSY_ICON_BUILD, src))
+			return
+
+		if(health < health_max * 0.25) //repeat check
+			to_chat(user, SPAN_WARNING("\The [src] is too damaged to pick up!"))
+			return
+
+		user.visible_message(SPAN_NOTICE("[user] disassembles [src]."), SPAN_NOTICE("You disassemble [src]."))
+
+		playsound(loc, 'sound/mecha/mechmove04.ogg', 30, 1)
+		var/turf/T = get_turf(src)
+		if(!faction_group) //Littly trolling for stealing marines turrets, bad boys!
+			for(var/i in user.faction_group)
+				LAZYADD(faction_group, i)
+		power_off()
+		HD.forceMove(T)
+		transfer_label_component(HD)
+		HD.dropped = 1
+		HD.update_icon()
+		placed = 0
+		forceMove(HD)
+
 		return
 
 	if(HAS_TRAIT(O, TRAIT_TOOL_WRENCH))
@@ -307,8 +314,12 @@
 			playsound(src.loc, 'sound/items/Ratchet.ogg', 25, 1)
 			return
 		else
+			var/area/area = get_area(src)
+			if(!area.allow_construction)
+				to_chat(user, SPAN_WARNING("You cannot secure \the [src] here, find a more secure surface!"))
+				return
 			var/turf/open/floor = get_turf(src)
-			if(!floor.allow_construction)
+			if(!floor.allow_construction || !floor.validate_deployment(TURF_DEPLOYABLE_SENTRY))
 				to_chat(user, SPAN_WARNING("You cannot secure \the [src] here, find a more secure surface!"))
 				return FALSE
 			user.visible_message(SPAN_NOTICE("[user] begins securing [src] to the ground."),
@@ -349,44 +360,6 @@
 
 	return TRUE
 
-
-/obj/structure/machinery/defenses/proc/disassemble(mob/user)
-	if(health < health_max * 0.25)
-		to_chat(user, SPAN_WARNING("\The [src] is too damaged to pick up!"))
-		return
-
-	if(static)
-		to_chat(user, SPAN_WARNING("\The [src] is bolted to the ground!"))
-		return
-
-	if(linked_laptop)
-		to_chat(user, SPAN_WARNING("\The [src] is currently encrypted by [linked_laptop]. To deconstruct \the [src] it must first be unlinked."))
-		return
-
-	user.visible_message(SPAN_NOTICE("[user] begins disassembling \the [src]."), SPAN_NOTICE("You begin disassembling \the [src]."))
-
-	if(!do_after(user, disassemble_time * user.get_skill_duration_multiplier(SKILL_CONSTRUCTION), INTERRUPT_ALL|BEHAVIOR_IMMOBILE, BUSY_ICON_BUILD, src))
-		return
-
-	if(health < health_max * 0.25) //repeat check
-		to_chat(user, SPAN_WARNING("\The [src] is too damaged to pick up!"))
-		return
-
-	user.visible_message(SPAN_NOTICE("[user] disassembles [src]."), SPAN_NOTICE("You disassemble [src]."))
-
-	playsound(loc, 'sound/mecha/mechmove04.ogg', 30, 1)
-	var/turf/T = get_turf(src)
-	if(!faction_group) //Littly trolling for stealing marines turrets, bad boys!
-		for(var/i in user.faction_group)
-			LAZYADD(faction_group, i)
-	power_off()
-	HD.forceMove(T)
-	transfer_label_component(HD)
-	HD.dropped = 1
-	HD.update_icon()
-	placed = 0
-	forceMove(HD)
-
 /obj/structure/machinery/defenses/attack_hand(mob/user)
 	if(!attack_hand_checks(user))
 		return
@@ -414,7 +387,7 @@
 
 	if(!turned_on)
 		if(!can_be_near_defense)
-			for(var/obj/structure/machinery/defenses/def in urange(defense_check_range, loc))
+			for(var/obj/structure/machinery/defenses/def in long_range(defense_check_range, loc))
 				if(def != src && def.turned_on && !def.can_be_near_defense)
 					to_chat(user, SPAN_WARNING("This is too close to \a [def]!"))
 					return
@@ -478,9 +451,8 @@
 		if(prob(50))
 			visible_message("[icon2html(src, viewers(src))] <span class='danger'>[src] beeps and buzzes wildly, flashing odd symbols on its screen before shutting down!</span>")
 			playsound(loc, 'sound/mecha/critdestrsyndi.ogg', 25, 1)
-			for(var/i = 1 to 6)
+			for(var/i in 1 to 6)
 				setDir(pick(1, 2, 3, 4))
-				sleep(2)
 			turned_on = FALSE
 	if(health > 0)
 		update_health(25)

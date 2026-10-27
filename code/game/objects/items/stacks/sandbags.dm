@@ -4,6 +4,10 @@
 	desc = "Some empty sandbags, best to fill them up if you want to use them."
 	singular_name = "sandbag"
 	icon = 'icons/obj/items/marine-items.dmi'
+	item_icons = list(
+		WEAR_L_HAND = 'icons/mob/humans/onmob/inhands/items/material_stacks_lefthand.dmi',
+		WEAR_R_HAND = 'icons/mob/humans/onmob/inhands/items/material_stacks_righthand.dmi',
+	)
 	icon_state = "sandbag_stack"
 	item_state = "sandbag_stack"
 	w_class = SIZE_SMALL
@@ -16,11 +20,8 @@
 	stack_id = "empty sandbags"
 
 /obj/item/stack/sandbags_empty/attackby(obj/item/W, mob/user)
-	if(istype(W, /obj/item/tool/shovel))
+	if (istype(W, /obj/item/tool/shovel))
 		var/obj/item/tool/shovel/ET = W
-		if(MODE_HAS_TOGGLEABLE_FLAG(MODE_NO_MAKE_BARRICADES))
-			to_chat(usr, SPAN_WARNING("The sandbags cannot be filled!"))
-			return
 		if(ET.dirt_amt)
 			ET.dirt_amt--
 			ET.update_icon()
@@ -61,19 +62,23 @@
 	desc = "Some bags filled with sand. For now, just cumbersome, but soon to be used for fortifications."
 	singular_name = "sandbag"
 	icon = 'icons/obj/items/marine-items.dmi'
+	item_icons = list(
+		WEAR_L_HAND = 'icons/mob/humans/onmob/inhands/items/material_stacks_lefthand.dmi',
+		WEAR_R_HAND = 'icons/mob/humans/onmob/inhands/items/material_stacks_righthand.dmi',
+	)
 	icon_state = "sandbag_pile"
 	item_state = "sandbag_pile"
-	w_class = SIZE_MEDIUM
+	w_class = SIZE_LARGE
 	force = 9
 	throwforce = 15
 	throw_speed = SPEED_VERY_FAST
 	throw_range = 20
-	max_amount = 50
+	max_amount = 25
 	attack_verb = list("hit", "bludgeoned", "whacked")
 	stack_id = "sandbags"
 
 /obj/item/stack/sandbags/large_stack
-	amount = 50
+	amount = 25
 
 /obj/item/stack/sandbags/small_stack
 	amount = 5
@@ -87,9 +92,10 @@
 	if(istype(user.loc, /turf/open/shuttle))
 		to_chat(user, SPAN_WARNING("No. This area is needed for the dropships and personnel."))
 		return
-	if(!istype(user.loc, /turf/open))
+	if(istype(user.loc, /turf/open))
 		var/turf/open/OT = user.loc
-		if(!OT.allow_construction)
+		var/area/area = get_area(user)
+		if(!OT.allow_construction || !area.allow_construction)
 			to_chat(user, SPAN_WARNING("The sandbag barricade must be constructed on a proper surface!"))
 			return
 
@@ -107,10 +113,6 @@
 		if(AC)
 			to_chat(usr, SPAN_WARNING("The [O.name] cannot be built here!"))
 			return
-
-	if(MODE_HAS_TOGGLEABLE_FLAG(MODE_NO_MAKE_BARRICADES))
-		to_chat(usr, SPAN_WARNING("The sandbags cannot be placed."))
-		return
 
 	if(user.action_busy)
 		return

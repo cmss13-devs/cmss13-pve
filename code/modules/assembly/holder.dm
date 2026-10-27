@@ -1,6 +1,10 @@
 /obj/item/device/assembly_holder
 	name = "Assembly"
 	icon = 'icons/obj/items/new_assemblies.dmi'
+	item_icons = list(
+		WEAR_L_HAND = 'icons/mob/humans/onmob/inhands/equipment/devices_lefthand.dmi',
+		WEAR_R_HAND = 'icons/mob/humans/onmob/inhands/equipment/devices_righthand.dmi',
+	)
 	icon_state = "holder"
 	item_state = "assembly"
 	flags_atom = FPRINT|CONDUCT
@@ -51,9 +55,12 @@
 	return TRUE
 
 /obj/item/device/assembly_holder/proc/attach(obj/item/device/D, obj/item/device/D2, mob/user)
-	if((!D)||(!D2)) return 0
-	if((!isassembly(D))||(!isassembly(D2))) return 0
-	if((D:secured)||(D2:secured)) return 0
+	if((!D)||(!D2))
+		return 0
+	if((!isassembly(D))||(!isassembly(D2)))
+		return 0
+	if((D:secured)||(D2:secured))
+		return 0
 	if(user)
 		user.temp_drop_inv_item(D)
 		if(D2.loc == user)
@@ -104,6 +111,7 @@
 		special_assembly.HasProximity(AM)
 
 /obj/item/device/assembly_holder/Crossed(atom/movable/AM as mob|obj)
+	..()
 	if(a_left)
 		a_left.Crossed(AM)
 	if(a_right)

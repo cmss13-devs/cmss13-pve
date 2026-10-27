@@ -8,6 +8,9 @@
 		if(!I)
 			to_chat(H, SPAN_NOTICE("You are not holding anything to equip."))
 			return
+		if(I.last_equipped_slot)
+			if(equip_to_slot_if_possible(I, I.last_equipped_slot, FALSE, FALSE, TRUE))
+				return
 		if(!H.equip_to_appropriate_slot(I, 0))
 			to_chat(H, SPAN_DANGER("You are unable to equip that."))
 
@@ -89,25 +92,19 @@
 		if(WEAR_IN_R_STORE)
 			return 1
 
-/mob/living/carbon/human/put_in_l_hand(obj/item/W)
-	var/obj/limb/O = get_limb("l_hand")
-	if(!O || !O.is_usable())
+/mob/living/carbon/human/put_in_l_hand(obj/item/moved_item)
+	var/obj/limb/check_hand = get_limb("l_hand")
+	if(!check_hand || !check_hand.is_usable())
 		return FALSE
 	. = ..()
 
-/mob/living/carbon/human/put_in_r_hand(obj/item/W)
-	var/obj/limb/O = get_limb("r_hand")
-	if(!O || !O.is_usable())
+/mob/living/carbon/human/put_in_r_hand(obj/item/moved_item)
+	var/obj/limb/check_hand = get_limb("r_hand")
+	if(!check_hand || !check_hand.is_usable())
 		return FALSE
 	. = ..()
 
 /mob/living/carbon/human/u_equip(obj/item/I, atom/newloc, nomoveupdate, force)
-	var/slot
-	if(I)
-		if(I == back)
-			slot = SLOT_BACK
-		else if(I == wear_mask)
-			slot = SLOT_FACE
 	. = ..()
 	if(!. || !I)
 		return FALSE
@@ -125,7 +122,6 @@
 		if(I.flags_inv_hide & HIDEJUMPSUIT)
 			update_inv_w_uniform()
 		update_inv_wear_suit()
-		slot = SLOT_OCLOTHING
 	else if(I == w_uniform)
 		if(r_store)
 			drop_inv_item_on_ground(r_store)
@@ -136,7 +132,6 @@
 		w_uniform = null
 		update_suit_sensors()
 		update_inv_w_uniform()
-		slot = SLOT_ICLOTHING
 	else if(I == head)
 		var/updatename = 0
 		if(head.flags_inv_hide & HIDEFACE)
@@ -154,54 +149,43 @@
 			update_inv_glasses()
 		update_tint()
 		update_inv_head()
-		slot = SLOT_HEAD
 	else if (I == gloves)
 		gloves = null
 		update_inv_gloves()
-		slot = SLOT_HANDS
 	else if (I == glasses)
 		glasses = null
 		update_tint()
 		update_glass_vision(I)
 		update_inv_glasses()
-		slot = SLOT_EYES
 	else if (I == wear_l_ear)
 		wear_l_ear = null
 		update_inv_ears()
-		slot = SLOT_EAR
 	else if (I == wear_r_ear)
 		wear_r_ear = null
 		update_inv_ears()
-		slot = SLOT_EAR
 	else if (I == shoes)
 		shoes = null
 		update_inv_shoes()
-		slot = SLOT_FEET
 	else if (I == belt)
 		belt = null
 		update_inv_belt()
-		slot = SLOT_WAIST
 	else if (I == wear_id)
 		wear_id = null
 		sec_hud_set_ID()
 		hud_set_squad()
 		update_inv_wear_id()
 		name = get_visible_name()
-		slot = SLOT_ID
 	else if (I == r_store)
 		r_store = null
 		update_inv_pockets()
-		slot = SLOT_STORE
 	else if (I == l_store)
 		l_store = null
 		update_inv_pockets()
-		slot = SLOT_STORE
 	else if (I == s_store)
 		s_store = null
 		update_inv_s_store()
-		slot = SLOT_SUIT_STORE
 
-	SEND_SIGNAL(src, COMSIG_HUMAN_UNEQUIPPED_ITEM, I, slot)
+
 
 
 /mob/living/carbon/human/wear_mask_update(obj/item/I, equipping)
@@ -234,32 +218,45 @@
 	if(!has_limb_for_slot(slot))
 		return
 
-	if(equipping_item == l_hand)
-		if(equipping_item.flags_item & NODROP)
-			return
-		l_hand = null
-		update_inv_l_hand()
-		//removes item's actions, may be readded once re-equipped to the new slot
-		for(var/item_actions in equipping_item.actions)
-			var/datum/action/action = item_actions
-			action.remove_from(src)
+	// Already handled within the proc, usually storages that force move the item themselves
+	var/static/list/no_update = list(
+		WEAR_IN_BACK,
+		WEAR_IN_SCABBARD,
+		WEAR_IN_JACKET,
+		WEAR_IN_HELMET,
+		WEAR_IN_BELT,
+		WEAR_IN_J_STORE,
+		WEAR_IN_L_STORE,
+		WEAR_IN_R_STORE
+	)
 
-	else if(equipping_item == r_hand)
-		if(equipping_item.flags_item & NODROP)
-			return
-		r_hand = null
-		update_inv_r_hand()
-		//removes item's actions, may be readded once re-equipped to the new slot
-		for(var/item_actions in equipping_item.actions)
-			var/datum/action/action = item_actions
-			action.remove_from(src)
+	if(!(slot in no_update))
+		if(equipping_item == l_hand)
+			if(equipping_item.flags_item & NODROP)
+				return
+			l_hand = null
+			update_inv_l_hand()
+			//removes item's actions, may be readded once re-equipped to the new slot
+			for(var/item_actions in equipping_item.actions)
+				var/datum/action/action = item_actions
+				action.remove_from(src)
 
-	equipping_item.screen_loc = null
-	if(equipping_item.loc != src)
-		equipping_item.pickup(src, disable_warning)
-	equipping_item.forceMove(src)
-	equipping_item.layer = ABOVE_HUD_LAYER
-	equipping_item.plane = ABOVE_HUD_PLANE
+		else if(equipping_item == r_hand)
+			if(equipping_item.flags_item & NODROP)
+				return
+			r_hand = null
+			update_inv_r_hand()
+			//removes item's actions, may be readded once re-equipped to the new slot
+			for(var/item_actions in equipping_item.actions)
+				var/datum/action/action = item_actions
+				action.remove_from(src)
+
+		equipping_item.screen_loc = null
+		if(equipping_item.loc != src)
+			equipping_item.pickup(src, disable_warning)
+		equipping_item.forceMove(src)
+		equipping_item.layer = ABOVE_HUD_LAYER
+		equipping_item.plane = ABOVE_HUD_PLANE
 
 	switch(slot)
 		if(WEAR_BACK)
@@ -421,7 +418,7 @@
 			r_store.update_icon()
 
 		else
-			to_chat(src, SPAN_DANGER("You are trying to eqip this item to an unsupported inventory slot. How the heck did you manage that? Stop it..."))
+			to_chat(src, SPAN_DANGER("You are trying to equip this item to an unsupported inventory slot. How the heck did you manage that? Stop it..."))
 			return
 
 	SEND_SIGNAL(src, COMSIG_HUMAN_EQUIPPED_ITEM, equipping_item, slot)
@@ -522,7 +519,7 @@
 
 	/// Delay then gets + 0.5s per skill level, so long as not dead or cuffed.
 	if(!(target.stat || target.handcuffed))
-		target_delay += (target_skills * 2)
+		target_delay += (target_skills * 5)
 
 	/// Final result is overall delay * speed multiplier
 	return target_delay * user_speed

@@ -37,18 +37,14 @@
 #define RADIO_CHANNEL_REQ "Req"
 #define RADIO_CHANNEL_SENTRY "Sentry Network"
 #define RADIO_CHANNEL_SPECIAL "special"
-#define RADIO_CHANNEL_USASF "USASF"
-#define RADIO_CHANNEL_US_ARMY "US Army"
-#define RADIO_CHANNEL_UA_GUARD "UA Colonial Guard"
+
 //CLF Comms
 #define RADIO_CHANNEL_CLF_GEN "CLF"
 #define RADIO_CHANNEL_CLF_CMD "CLF Command"
+#define RADIO_CHANNEL_CLF_CCT "CLF CCT"
 #define RADIO_CHANNEL_CLF_MED "CLF Med"
 #define RADIO_CHANNEL_CLF_ENGI "CLF Engi"
 
-//CLF Comms
-#define RADIO_CHANNEL_REBEL_UA "PFA"
-#define RADIO_CHANNEL_REBEL_TWE "JSC"
 //UPP Comms
 #define RADIO_CHANNEL_UPP_GEN "UPP"
 #define RADIO_CHANNEL_UPP_CMD "UPP Command"
@@ -56,9 +52,11 @@
 #define RADIO_CHANNEL_UPP_ENGI "UPP Engi"
 #define RADIO_CHANNEL_UPP_CCT "UPP CCT"
 #define RADIO_CHANNEL_UPP_KDO "UPP Kdo"
-#define RADIO_CHANNEL_UPP_GRD "UPP Guard"
+
 //WY Comms
-#define RADIO_CHANNEL_WY "WY"
+#define RADIO_CHANNEL_WY "WY Corporate"
+#define RADIO_CHANNEL_WY_PUB "WY Public"
+#define RADIO_CHANNEL_WY_SEC "WY Sec"
 #define RADIO_CHANNEL_PMC_GEN "WY PMC"
 #define RADIO_CHANNEL_PMC_CMD "PMC Command"
 #define RADIO_CHANNEL_PMC_MED "PMC Med"
@@ -66,9 +64,18 @@
 #define RADIO_CHANNEL_PMC_CCT "PMC CCT"
 #define RADIO_CHANNEL_WY_WO "SpecOps"
 
+//Hyperdyne Comms
+
+#define RADIO_CHANNEL_HYPERDYNE "Hyperdyne"
+
 //Listening Devices
 #define RADIO_CHANNEL_BUG_A "Listening Device A"
 #define RADIO_CHANNEL_BUG_B "Listening Device B"
+
+//Fax Responder Bugs
+#define RADIO_CHANNEL_FAX_WY "WY Monitor"
+#define RADIO_CHANNEL_FAX_USCM_HC "USCM-HC Monitor"
+#define RADIO_CHANNEL_FAX_USCM_PVST "Provost Monitor"
 
 //1-Channel ERTs
 #define RADIO_CHANNEL_DUTCH_DOZEN "DD"
@@ -76,6 +83,15 @@
 #define RADIO_CHANNEL_CMB "CMB"
 #define RADIO_CHANNEL_ROYAL_MARINE "Royal Marine"
 #define RADIO_CHANNEL_CIA "CIA"
-#define RADIO_CHANNEL_MERC "Mercenaries"
 
 #define RADIO_CHANNEL_YAUTJA "Yautja"
+#define RADIO_CHANNEL_YAUTJA_OVERSEER "Overseer"
+#define RADIO_CHANNEL_YAUTJA_SPECOPS "Military"
+#define RADIO_CHANNEL_YAUTJA_STRANDED "Stranded"
+#define RADIO_CHANNEL_YAUTJA_BADBLOOD "Bad Blood"
+
+
+// Listening bug broadcast setting. Whether or not it plays only to ghosts with preferences, or doesn't show to ghosts at all.
+#define NOT_LISTENING_BUG 0
+#define LISTENING_BUG_PREF 1
+#define LISTENING_BUG_NEVER 2

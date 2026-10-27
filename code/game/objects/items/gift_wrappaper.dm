@@ -10,7 +10,7 @@
 /obj/item/a_gift
 	name = "gift"
 	desc = "PRESENTS!!!! eek!"
-	icon = 'icons/obj/items/items.dmi'
+	icon = 'icons/obj/items/gifts.dmi'
 	icon_state = "gift1"
 	item_state = "gift1"
 
@@ -42,21 +42,21 @@
 /obj/effect/spresent/relaymove(mob/user)
 	if (user.stat)
 		return
-	to_chat(user, SPAN_NOTICE(" You can't move."))
+	to_chat(user, SPAN_NOTICE("You can't move."))
 
 /obj/effect/spresent/attackby(obj/item/W as obj, mob/user as mob)
 	..()
 
 	if (!HAS_TRAIT(W, TRAIT_TOOL_WIRECUTTERS))
-		to_chat(user, SPAN_NOTICE(" I need wirecutters for that."))
+		to_chat(user, SPAN_NOTICE("I need wirecutters for that."))
 		return
 
-	to_chat(user, SPAN_NOTICE(" You cut open the present."))
+	to_chat(user, SPAN_NOTICE("You cut open the present."))
 
 	for(var/mob/M in src) //Should only be one but whatever.
 		M.forceMove(src.loc)
 		if (M.client)
-			M.client.eye = M.client.mob
+			M.client.set_eye(M.client.mob)
 			M.client.perspective = MOB_PERSPECTIVE
 
 	deconstruct()
@@ -72,7 +72,7 @@
 		/obj/item/storage/belt/champion,
 		/obj/item/tool/soap/deluxe,
 		/obj/item/tool/pickaxe/silver,
-		/obj/item/tool/pen/invisible,
+		/obj/item/tool/pen/white,
 		/obj/item/explosive/grenade/smokebomb,
 		/obj/item/corncob,
 		/obj/item/poster,
@@ -101,9 +101,10 @@
 		/obj/item/toy/sword,
 		/obj/item/reagent_container/food/snacks/grown/ambrosiadeus,
 		/obj/item/reagent_container/food/snacks/grown/ambrosiavulgaris,
-		/obj/item/clothing/accessory/horrible)
+		/obj/item/clothing/accessory/tie/horrible)
 
-	if(!ispath(gift_type,/obj/item)) return
+	if(!ispath(gift_type,/obj/item))
+		return
 
 	var/obj/item/I = new gift_type(M)
 	M.temp_drop_inv_item(src)
@@ -118,21 +119,21 @@
 /obj/item/wrapping_paper
 	name = "wrapping paper"
 	desc = "You can use this to wrap items in."
-	icon = 'icons/obj/items/items.dmi'
+	icon = 'icons/obj/items/tools.dmi'
 	icon_state = "wrap_paper"
 	var/amount = 20
 
 /obj/item/wrapping_paper/attackby(obj/item/W as obj, mob/user as mob)
 	..()
 	if (!( locate(/obj/structure/surface/table, src.loc) ))
-		to_chat(user, SPAN_NOTICE(" You MUST put the paper on a table!"))
+		to_chat(user, SPAN_NOTICE("You MUST put the paper on a table!"))
 	if (W.w_class < 4)
 		var/obj/item/left_item = user.l_hand
 		var/obj/item/right_item = user.r_hand
 		if ( (left_item && HAS_TRAIT(left_item, TRAIT_TOOL_WIRECUTTERS)) || (right_item && HAS_TRAIT(right_item, TRAIT_TOOL_WIRECUTTERS)) )
 			var/a_used = 2 ** (src.w_class - 1)
 			if (src.amount < a_used)
-				to_chat(user, SPAN_NOTICE(" You need more paper!"))
+				to_chat(user, SPAN_NOTICE("You need more paper!"))
 				return
 			else
 				if(istype(W, /obj/item/smallDelivery) || istype(W, /obj/item/gift)) //No gift wrapping gifts!
@@ -153,9 +154,9 @@
 				deconstruct(TRUE)
 				return
 		else
-			to_chat(user, SPAN_NOTICE(" You need scissors!"))
+			to_chat(user, SPAN_NOTICE("You need scissors!"))
 	else
-		to_chat(user, SPAN_NOTICE(" The object is FAR too large!"))
+		to_chat(user, SPAN_NOTICE("The object is FAR too large!"))
 	return
 
 /obj/item/wrapping_paper/deconstruct(disassembled = TRUE)
@@ -179,7 +180,7 @@
 
 			if (H.client)
 				H.client.perspective = EYE_PERSPECTIVE
-				H.client.eye = present
+				H.client.set_eye(present)
 
 			H.forceMove(present)
 
@@ -188,6 +189,6 @@
 			msg_admin_attack("[key_name(user)] used [src] to wrap [key_name(H)] in [get_area(user)] ([user.loc.x], [user.loc.y], [user.loc.z]).", user.loc.x, user.loc.y, user.loc.z)
 
 		else
-			to_chat(user, SPAN_NOTICE(" You need more paper."))
+			to_chat(user, SPAN_NOTICE("You need more paper."))
 	else
 		to_chat(user, "They are moving around too much. A straightjacket would help.")

@@ -7,11 +7,11 @@
 	disp_icon_state = "ace_autocannon"
 	activation_sounds = list('sound/weapons/vehicles/autocannon_fire.ogg')
 
-	health = 2000
-	firing_arc = 75
+	health = 500
+	firing_arc = 60
 
 	ammo = new /obj/item/ammo_magazine/hardpoint/ace_autocannon
-	max_clips = 5
+	max_clips = 2
 
 	px_offsets = list(
 		"1" = list(0, 22),
@@ -25,11 +25,4 @@
 	gun_firemode_list = list(
 		GUN_FIREMODE_AUTOMATIC,
 	)
-	fire_delay = 0.5 SECONDS
-
-/obj/item/hardpoint/primary/autocannon/set_bullet_traits()
-	..()
-	LAZYADD(traits_to_give, list(
-		BULLET_TRAIT_ENTRY(/datum/element/bullet_trait_iff),
-		BULLET_TRAIT_ENTRY_ID("vehicles", /datum/element/bullet_trait_damage_boost, 20, GLOB.damage_boost_vehicles),
-	))
+	fire_delay = 0.7 SECONDS

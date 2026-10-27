@@ -54,6 +54,7 @@
 	if(!faction_group)
 		faction_group = list(faction)
 
+	vis_flags |= VIS_INHERIT_PLANE
 	GLOB.last_mob_gid++
 	gid = GLOB.last_mob_gid
 
@@ -103,14 +104,17 @@
 			if(HUNTER_CLAN,HUNTER_HUD)
 				I = image('icons/mob/hud/hud_yautja.dmi', src, "")
 			if(HOLOCARD_HUD)
-				I = image('icons/mob/hud/marine_hud.dmi', src, "")
+				I = image('icons/mob/hud/human_status.dmi', src, "")
+		if(hud in /datum/mob_hud/xeno::hud_icons)
+			I.appearance_flags |= RESET_ALPHA
 		I.appearance_flags |= NO_CLIENT_COLOR|KEEP_APART|RESET_COLOR
 		hud_list[hud] = I
 
 
-/mob/proc/show_message(msg, type, alt, alt_type, message_flags = CHAT_TYPE_OTHER)//Message, type of message (1 or 2), alternative message, alt message type (1 or 2)
+/mob/proc/show_message(msg, type, alt, alt_type, message_flags = CHAT_TYPE_OTHER, chat_type) //Message, type of message (1 or 2), alternative message, alt message type (1 or 2)
 
-	if(!client || !client.prefs) return
+	if(!client || !client.prefs)
+		return
 
 	if (type)
 		if(type & SHOW_MESSAGE_VISIBLE && (sdisabilities & DISABILITY_BLIND || blinded) )//Vision related
@@ -130,6 +134,8 @@
 	if(message_flags == CHAT_TYPE_OTHER || client.prefs && (message_flags & client.prefs.chat_display_preferences) > 0) // or logic between types
 		if(stat == UNCONSCIOUS)
 			to_chat(src, "<I>... You can almost hear someone talking ...</I>")
+		else if(chat_type) // probably best to deprecate below but im too lazy for it
+			to_chat(src, msg, type = chat_type)
 		else if(message_flags & CHAT_TYPE_ALL_COMBAT) // Pre-tag combat messages for tgchat
 			to_chat(src, html = msg, type = MESSAGE_TYPE_COMBAT)
 		else
@@ -147,7 +153,8 @@
 
 	var/view_dist = 7
 	var/flags = message_flags
-	if(max_distance) view_dist = max_distance
+	if(max_distance)
+		view_dist = max_distance
 	for(var/mob/M as anything in viewers(view_dist, src))
 		var/msg = message
 		if(self_message && M == src)
@@ -204,15 +211,10 @@
 // deaf_message (optional) is what deaf people will see e.g. "[X] shouts something silently."
 /atom/proc/audible_message(message, deaf_message, max_distance, message_flags = CHAT_TYPE_OTHER)
 	var/hear_dist = 7
-	if(max_distance) hear_dist = max_distance
-	for(var/mob/M as anything in hearers(hear_dist, src.loc))
-		M.show_message(message, SHOW_MESSAGE_AUDIBLE, deaf_message, SHOW_MESSAGE_VISIBLE, message_flags = message_flags)
-
-/atom/proc/ranged_message(message, blind_message, max_distance, message_flags = CHAT_TYPE_OTHER)
-	var/view_dist = 7
-	if(max_distance) view_dist = max_distance
-	for(var/mob/M in orange(view_dist, src))
-		M.show_message(message, SHOW_MESSAGE_VISIBLE, blind_message, SHOW_MESSAGE_AUDIBLE, message_flags)
+	if(max_distance)
+		hear_dist = max_distance
+	for(var/mob/current in hearers(hear_dist, loc))
+		current.show_message(message, SHOW_MESSAGE_AUDIBLE, deaf_message, SHOW_MESSAGE_VISIBLE, message_flags = message_flags)
 
 
 /mob/proc/findname(msg)
@@ -232,10 +234,12 @@
 
 
 /mob/proc/Life(delta_time)
+	SHOULD_CALL_PARENT(TRUE)
 	SHOULD_NOT_SLEEP(TRUE)
 	if(client == null)
 		away_timer++
-	if(client == null || (client.inactivity > 1 && world.time > 20 MINUTES)) //Do not start away_timer on connected clients until 20 minutes has passed.
+	var/game_started = SSticker.current_state == GAME_STATE_PLAYING && ROUND_TIME > 3 MINUTES
+	if(client == null || (client.inactivity > 1 && game_started)) //Do not start away_timer on connected clients until the round has been active for 3 mins.
 		away_timer++
 	else
 		away_timer = 0
@@ -318,7 +322,7 @@
 		if(W.flags_item & TWOHANDED)
 			W.unwield(src)
 
-//This is an UNSAFE proc. It merely handles the actual job of equipping. All the checks on whether you can or can't eqip need to be done before! Use mob_can_equip() for that task.
+//This is an UNSAFE proc. It merely handles the actual job of equipping. All the checks on whether you can or can't equip need to be done before! Use mob_can_equip() for that task.
 //In most cases you will want to use equip_to_slot_if_possible()
 /mob/proc/equip_to_slot(obj/item/W as obj, slot, disable_warning = FALSE)
 	return
@@ -340,7 +344,8 @@
 //puts the item "W" into an appropriate slot in a human's inventory
 //returns 0 if it cannot, 1 if successful
 /mob/proc/equip_to_appropriate_slot(obj/item/W, ignore_delay = 1, list/slot_equipment_priority = DEFAULT_SLOT_PRIORITY)
-	if(!istype(W)) return 0
+	if(!istype(W))
+		return 0
 
 	for(var/slot in slot_equipment_priority)
 		if(equip_to_slot_if_possible(W, slot, ignore_delay, 0, 1, 1)) //del_on_fail = 0; disable_warning = 0; redraw_mob = 1
@@ -355,14 +360,14 @@
 	if(client)
 		if(istype(focus, /atom/movable))
 			client.perspective = EYE_PERSPECTIVE
-			client.eye = focus
+			client.set_eye(focus)
 		else
 			if(isturf(loc))
-				client.eye = client.mob
+				client.set_eye(client.mob)
 				client.perspective = MOB_PERSPECTIVE
 			else
 				client.perspective = EYE_PERSPECTIVE
-				client.eye = loc
+				client.set_eye(loc)
 
 		client.mouse_pointer_icon = initial(client.mouse_pointer_icon)
 
@@ -373,20 +378,44 @@
 	SIGNAL_HANDLER
 	reset_view(null)
 
-/mob/proc/point_to_atom(atom/A, turf/T)
-	//Squad Leaders and above have reduced cooldown and get a bigger arrow
-	if(check_improved_pointing())
-		recently_pointed_to = world.time + 10
-		new /obj/effect/overlay/temp/point/big(T, src, A)
-	else
+/mob/proc/point_to_atom(atom/pointed_at, turf/turf_pointed_at)
+	var/mob/living/carbon/human/mob = src
+	var/datum/squad/squad = null
+	if(ishuman(mob))
+		squad = mob.assigned_squad
+	if(!check_improved_pointing()) //Squad Leaders and above have reduced cooldown and get a bigger arrow
 		recently_pointed_to = world.time + 2.5 SECONDS
-		new /obj/effect/overlay/temp/point(T, src, A)
-	visible_message("<b>[src]</b> points to [A]", null, null, 5)
+		new /obj/effect/overlay/temp/point(turf_pointed_at, src, pointed_at)
+	else
+		recently_pointed_to = world.time + 10
+		var/outline_color = "#282d8f" // Default color for people with command skill but no squad
+		if(isnull(squad)) //If they get the big arrow but aren't in a squad, they get the default green arrow
+			new /obj/effect/overlay/temp/point/big(turf_pointed_at, src, pointed_at)
+		else
+			new /obj/effect/overlay/temp/point/big/squad(turf_pointed_at, src, pointed_at, squad.equipment_color)
+			outline_color = squad.equipment_color
+
+		if(ismob(pointed_at) && ishuman(mob))
+			var/outline_name = "point_outline_[REF(src)]"
+			var/outline_size = 0.25
+			if(skills)
+				var/leadership_level = skills.get_skill_level(SKILL_LEADERSHIP)
+				outline_size += leadership_level * 0.25
+
+			pointed_at.add_filter(outline_name, 2, list("type" = "outline", "color" = outline_color, "size" = outline_size))
+			addtimer(CALLBACK(pointed_at, PROC_REF(disable_point_outline), outline_name), 4.5 SECONDS)
+
+	visible_message("<b>[src]</b> points to [pointed_at]", null, null, 5)
 	return TRUE
+
+/mob/proc/disable_point_outline(outline_name)
+	remove_filter(outline_name)
 
 ///Is this mob important enough to point with big arrows?
 /mob/proc/check_improved_pointing()
 	if(HAS_TRAIT(src, TRAIT_LEADERSHIP))
+		return TRUE
+	if(skillcheck(src, SKILL_OVERWATCH, SKILL_OVERWATCH_TRAINED))
 		return TRUE
 
 /mob/proc/update_flavor_text()
@@ -396,7 +425,7 @@
 	var/msg = input(usr,"Set the flavor text in your 'examine' verb. Can also be used for OOC notes about your character.","Flavor Text",html_decode(flavor_text)) as message|null
 
 	if(msg != null)
-		msg = copytext(msg, 1, MAX_FLAVOR_MESSAGE_LEN)
+		msg = copytext(msg, 1, MAX_MESSAGE_LEN)
 		msg = html_encode(msg)
 
 		flavor_text = msg
@@ -439,6 +468,10 @@
 			client.prefs.process_link(src, href_list)
 		return TRUE
 
+	if(href_list["poll"])
+		SSpolls.tgui_interact(src)
+		return TRUE
+
 /mob/proc/swap_hand()
 	hand = !hand
 	SEND_SIGNAL(src, COMSIG_MOB_SWAPPED_HAND)
@@ -451,13 +484,16 @@
 	if(istype(AM, /atom/movable/clone))
 		AM = AM.mstr //If AM is a clone, refer to the real target
 
-	if (QDELETED(AM) || src == AM || !isturf(loc) || !isturf(AM.loc)) //if there's no person pulling OR the person is pulling themself OR the object being pulled is inside something: abort!
+	if ( QDELETED(AM) || !usr || src==AM || !isturf(loc) || !isturf(AM.loc) ) //if there's no person pulling OR the person is pulling themself OR the object being pulled is inside something: abort!
 		return
 
-	if (AM.anchored || AM.throwing)
+	if (AM.anchored || HAS_TRAIT(AM, TRAIT_LAUNCHED))
 		return
 
-	if(throwing || is_mob_incapacitated())
+	if(HAS_TRAIT(src, TRAIT_LAUNCHED) || is_mob_incapacitated())
+		return
+
+	if(HAS_TRAIT(src, TRAIT_HAULED))
 		return
 
 	if(pulling)
@@ -484,10 +520,9 @@
 			return FALSE
 		recently_grabbed = world.time + 6
 		AM.add_fingerprint(src)
-
-	if(!QDELETED(AM.pulledby) && !QDELETED(M))
-		visible_message(SPAN_WARNING("[src] has broken [AM.pulledby]'s grip on [M]!"), null, null, 5)
-		AM.pulledby.stop_pulling()
+		animation_attack_on(AM)
+		playsound(loc, 'sound/weapons/thudswoosh.ogg', 25, 1, 7)
+		flick_attack_overlay(AM, "grab")
 
 	var/pull_response = AM.pull_response(src)
 	if(!pull_response) // If I'm not allowed to pull you I won't. Stop here.
@@ -495,34 +530,6 @@
 
 	return do_pull(AM, lunge, no_msg)
 
-/mob/proc/stop_pulling(bumped_movement = FALSE)
-	if(!pulling)
-		return
-
-	REMOVE_TRAIT(pulling, TRAIT_FLOORED, CHOKEHOLD_TRAIT)
-
-	var/mob/M = pulling
-	pulling.pulledby = null
-	pulling = null
-
-	grab_level = 0
-	if(client)
-		client.recalculate_move_delay()
-		// When you stop pulling a mob after you move a tile with it your next movement will still include
-		// the grab delay so we have to fix it here (we love code)
-		client.next_movement = world.time + client.move_delay
-	if(hud_used && hud_used.pull_icon)
-		hud_used.pull_icon.icon_state = "pull0"
-	if(istype(r_hand, /obj/item/grab))
-		temp_drop_inv_item(r_hand)
-	else if(istype(l_hand, /obj/item/grab))
-		temp_drop_inv_item(l_hand)
-	if(istype(M))
-		if(M.client)
-			//resist_grab uses long movement cooldown durations to prevent message spam
-			//so we must undo it here so the victim can move right away
-			M.client.next_movement = world.time
-		M.update_transform(TRUE)
 
 /mob/living/vv_get_header()
 	. = ..()
@@ -553,6 +560,11 @@
 	else if(istype(AM, /obj))
 		AM.add_fingerprint(src)
 
+	if(!QDELETED(AM.pulledby) && AM.pulledby != src)
+		var/mob/previous_puller = AM.pulledby
+		visible_message(SPAN_WARNING("[src] has broken [AM.pulledby]'s grip on [M]!"), null, null, 5)
+		previous_puller.stop_pulling()
+
 	pulling = AM
 	AM.pulledby = src
 
@@ -575,6 +587,7 @@
 		msg_admin_attack("[key_name(src)] grabbed [key_name(M)] in [get_area(src)] ([src.loc.x],[src.loc.y],[src.loc.z]).", src.loc.x, src.loc.y, src.loc.z)
 
 		if(!no_msg)
+			animation_attack_on(M)
 			visible_message(SPAN_WARNING("[src] has grabbed [M] passively!"), null, null, 5)
 
 		if(M.mob_size > MOB_SIZE_HUMAN || !(M.status_flags & CANPUSH))
@@ -619,23 +632,23 @@ note dizziness decrements automatically in the mob's Life() proc.
 /mob/proc/dizzy_process()
 	is_dizzy = 1
 	while(dizziness > 100)
-		SEND_SIGNAL(src, COMSIG_MOB_ANIMATING)
 		if(client)
+			SEND_SIGNAL(client, COMSIG_CLIENT_ANIMATING)
 			if(buckled || resting)
-				client.pixel_x = 0
-				client.pixel_y = 0
+				client.set_pixel_x(0)
+				client.set_pixel_y(0)
 			else
 				var/amplitude = dizziness*(sin(dizziness * 0.044 * world.time) + 1) / 70
-				client.pixel_x = amplitude * sin(0.008 * dizziness * world.time)
-				client.pixel_y = amplitude * cos(0.008 * dizziness * world.time)
+				client.set_pixel_x(amplitude * sin(0.008 * dizziness * world.time))
+				client.set_pixel_y(amplitude * cos(0.008 * dizziness * world.time))
 				if(prob(1))
 					to_chat(src, "The dizziness is becoming unbearable! It should pass faster if you lie down.")
 		sleep(1)
 	//endwhile - reset the pixel offsets to zero
 	is_dizzy = 0
 	if(client)
-		client.pixel_x = 0
-		client.pixel_y = 0
+		client.set_pixel_x(0)
+		client.set_pixel_y(0)
 		to_chat(src, "The dizziness has passed, you're starting to feel better.")
 
 // jitteriness - copy+paste of dizziness
@@ -648,7 +661,8 @@ note dizziness decrements automatically in the mob's Life() proc.
 	return
 
 /mob/living/carbon/human/make_jittery(amount)
-	if(stat == DEAD) return //dead humans can't jitter
+	if(stat == DEAD)
+		return //dead humans can't jitter
 	jitteriness = min(1000, jitteriness + amount) // store what will be new value
 													// clamped to max 1000
 	if(jitteriness > 100 && !is_jittery)
@@ -657,20 +671,18 @@ note dizziness decrements automatically in the mob's Life() proc.
 
 // Typo from the oriignal coder here, below lies the jitteriness process. So make of his code what you will, the previous comment here was just a copypaste of the above.
 /mob/proc/jittery_process()
-	var/jittering_old_x = pixel_x
-	var/jittering_old_y = pixel_y
 	is_jittery = 1
 	while(jitteriness > 100)
 		SEND_SIGNAL(src, COMSIG_MOB_ANIMATING)
 		var/amplitude = min(4, jitteriness / 100)
-		pixel_x = jittering_old_x + rand(-amplitude, amplitude)
-		pixel_y = jittering_old_y + rand(-amplitude/3, amplitude/3)
+		pixel_x = old_x + rand(-amplitude, amplitude)
+		pixel_y = old_y + rand(-amplitude/3, amplitude/3)
 
 		sleep(1)
 	//endwhile - reset the pixel offsets to zero
 	is_jittery = 0
-	pixel_x = jittering_old_x
-	pixel_y = jittering_old_y
+	pixel_x = old_x
+	pixel_y = old_y
 
 //handles up-down floaty effect in space
 /mob/proc/make_floating(n)
@@ -705,18 +717,26 @@ note dizziness decrements automatically in the mob's Life() proc.
 
 // facing verbs
 /mob/proc/canface()
-	if(client?.moving) return 0
-	if(stat==2) return 0
-	if(anchored) return 0
-	if(monkeyizing) return 0
-	if(is_mob_restrained()) return 0
+	if(client?.moving)
+		return 0
+	if(stat==2)
+		return 0
+	if(anchored)
+		return 0
+	if(monkeyizing)
+		return 0
+	if(is_mob_restrained())
+		return 0
 	if(HAS_TRAIT(src, TRAIT_INCAPACITATED)) // We allow rotation if simply floored
 		return FALSE
 	return 1
 
 /mob/proc/face_dir(ndir, specific_dir)
-	if(!canface()) return 0
+	if(!canface())
+		return 0
 	if(dir != ndir)
+		if(HAS_TRAIT(src, TRAIT_ABILITY_REFLECTIVE_PLATES))
+			return
 		flags_atom &= ~DIRLOCK
 		setDir(ndir)
 	if(buckled && !buckled.anchored)
@@ -804,7 +824,7 @@ note dizziness decrements automatically in the mob's Life() proc.
 			return FALSE
 		to_chat(usr, SPAN_WARNING("You attempt to get a good grip on [selection] in [src]'s body."))
 
-	if(!do_after(usr, 80 * usr.get_skill_duration_multiplier(SKILL_SURGERY), INTERRUPT_ALL, BUSY_ICON_FRIENDLY))
+	if(!do_after(usr, 2 SECONDS * selection.w_class * usr.get_skill_duration_multiplier(SKILL_SURGERY), INTERRUPT_ALL, BUSY_ICON_FRIENDLY))
 		return
 	if(!selection || !src || !usr || !istype(selection))
 		return
@@ -842,7 +862,8 @@ note dizziness decrements automatically in the mob's Life() proc.
 			affected.wounds += I
 			H.custom_pain("Something tears wetly in your [affected] as [selection] is pulled free!", 1)
 
-	selection.forceMove(get_turf(src))
+	playsound(loc, 'sound/weapons/bladeslice.ogg', 25)
+	usr.put_in_hands(selection)
 	return TRUE
 
 ///Can this mob resist (default FALSE)
@@ -856,6 +877,7 @@ note dizziness decrements automatically in the mob's Life() proc.
 	handle_slurring()
 	handle_slowed()
 	handle_superslowed()
+	handle_hushed()
 
 /mob/living/proc/handle_slowed()
 	if(slowed)
@@ -866,6 +888,11 @@ note dizziness decrements automatically in the mob's Life() proc.
 	if(superslowed)
 		adjust_effect(-1, SUPERSLOW)
 	return superslowed
+
+/mob/living/proc/handle_hushed()
+	if(hushed)
+		adjust_effect(-1, HUSHED)
+	return hushed
 
 /mob/living/proc/handle_stuttering()
 	if(stuttering)
@@ -972,12 +999,14 @@ note dizziness decrements automatically in the mob's Life() proc.
 			end_of_conga = TRUE //Only mobs can continue the cycle.
 	var/area/new_area = get_area(destination)
 	for(var/atom/movable/AM in conga_line)
-		var/oldLoc
+		var/atom/oldLoc
 		if(AM.loc)
 			oldLoc = AM.loc
 			AM.loc.Exited(AM,destination)
 		AM.loc = destination
 		AM.loc.Entered(AM,oldLoc)
+		if(oldLoc.z != destination.z)
+			AM.onTransitZ(oldLoc.z, destination.z)
 		var/area/old_area
 		if(oldLoc)
 			old_area = get_area(oldLoc)
@@ -1022,26 +1051,26 @@ note dizziness decrements automatically in the mob's Life() proc.
 			//Set the thing unless it's us
 			if(A != src)
 				client.perspective = EYE_PERSPECTIVE
-				client.eye = A
+				client.set_eye(A)
 			else
-				client.eye = client.mob
+				client.set_eye(client.mob)
 				client.perspective = MOB_PERSPECTIVE
 		else if(isturf(A))
 			//Set to the turf unless it's our current turf
 			if(A != loc)
 				client.perspective = EYE_PERSPECTIVE
-				client.eye = A
+				client.set_eye(A)
 			else
-				client.eye = client.mob
+				client.set_eye(client.mob)
 				client.perspective = MOB_PERSPECTIVE
 	else
 		//Reset to common defaults: mob if on turf, otherwise current loc
 		if(isturf(loc))
-			client.eye = client.mob
+			client.set_eye(client.mob)
 			client.perspective = MOB_PERSPECTIVE
 		else
 			client.perspective = EYE_PERSPECTIVE
-			client.eye = loc
+			client.set_eye(loc)
 
 	return TRUE
 
@@ -1065,3 +1094,20 @@ note dizziness decrements automatically in the mob's Life() proc.
 	mind.transfer_to(new_player)
 
 	qdel(src)
+
+/mob/proc/update_cursor()
+
+	client?.mouse_pointer_icon = client?.prefs.chosen_pointer
+
+/// To be used when displaying a mobs "username" to players
+/mob/proc/username()
+	if(client)
+		return client.username()
+
+	return key
+
+/mob/relaymove(mob/living/user, direction)
+	. = ..()
+	if(user.is_mob_incapacitated())
+		return
+	return relaydrive(user, direction)

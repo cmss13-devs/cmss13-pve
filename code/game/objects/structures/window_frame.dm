@@ -1,6 +1,6 @@
 /obj/structure/window_frame
 	name = "window frame"
-	desc = "A big hole in the wall that used to sport a large window. Can be vaulted through"
+	desc = "A big hole in the wall that used to sport a large window. Can be vaulted through."
 	icon = 'icons/turf/walls/window_frames.dmi'
 	icon_state = "window0_frame"
 	layer = WINDOW_FRAME_LAYER
@@ -88,11 +88,11 @@
 		if(sheet.get_amount() < 2)
 			to_chat(user, SPAN_WARNING("You need more [W.name] to install a new window."))
 			return
-		user.visible_message(SPAN_NOTICE("[user] starts installing a new glass window on the frame."), \
+		user.visible_message(SPAN_NOTICE("[user] starts installing a new glass window on the frame."),
 		SPAN_NOTICE("You start installing a new window on the frame."))
 		playsound(src, 'sound/items/Deconstruct.ogg', 25, 1)
 		if(do_after(user, 20 * user.get_skill_duration_multiplier(SKILL_CONSTRUCTION), INTERRUPT_ALL|BEHAVIOR_IMMOBILE, BUSY_ICON_BUILD))
-			user.visible_message(SPAN_NOTICE("[user] installs a new glass window on the frame."), \
+			user.visible_message(SPAN_NOTICE("[user] installs a new glass window on the frame."),
 			SPAN_NOTICE("You install a new window on the frame."))
 			sheet.use(2)
 			new window_type(loc) //This only works on Almayer windows!
@@ -101,9 +101,9 @@
 
 	else if(HAS_TRAIT(W, TRAIT_TOOL_WRENCH))
 		if(buildstacktype)
-			to_chat(user, SPAN_NOTICE(" You start to deconstruct [src]."))
+			to_chat(user, SPAN_NOTICE("You start to deconstruct [src]."))
 			playsound(loc, 'sound/items/Ratchet.ogg', 25, 1)
-			if(do_after(user, 240 * user.get_skill_duration_multiplier(SKILL_CONSTRUCTION), INTERRUPT_ALL|BEHAVIOR_IMMOBILE, BUSY_ICON_BUILD)) // takes 3 seconds to deconstruct
+			if(do_after(user, 30 * user.get_skill_duration_multiplier(SKILL_CONSTRUCTION), INTERRUPT_ALL|BEHAVIOR_IMMOBILE, BUSY_ICON_BUILD, src)) // takes 3 seconds to deconstruct
 				playsound(loc, 'sound/items/Ratchet.ogg', 25, 1)
 				to_chat(user, SPAN_NOTICE("You deconstruct [src]."))
 				SEND_SIGNAL(user, COMSIG_MOB_DISASSEMBLE_W_FRAME, src)
@@ -111,7 +111,8 @@
 
 	else if(istype(W, /obj/item/grab))
 		var/obj/item/grab/G = W
-		if(isxeno(user)) return
+		if(isxeno(user))
+			return
 		if(isliving(G.grabbed_thing))
 			var/mob/living/M = G.grabbed_thing
 			if(user.grab_level >= GRAB_AGGRESSIVE)
@@ -135,18 +136,30 @@
 		. = ..()
 
 /obj/structure/window_frame/attack_alien(mob/living/carbon/xenomorph/user)
-	if(!reinforced && user.claw_type >= CLAW_TYPE_SHARP)
-		user.animation_attack_on(src)
-		playsound(src, 'sound/effects/metalhit.ogg', 25, 1)
-		take_damage((max_health / XENO_HITS_TO_DESTROY_WINDOW_FRAME) + 1)
-		return XENO_ATTACK_ACTION
-	else if (reinforced && user.claw_type >= CLAW_TYPE_SHARP)
-		user.animation_attack_on(src)
-		playsound(src, 'sound/effects/metalhit.ogg', 25, 1)
-		take_damage((max_health / XENO_HITS_TO_DESTROY_R_WINDOW_FRAME) + 1)
-		return XENO_ATTACK_ACTION
+	if(user.claw_type < CLAW_TYPE_SHARP)
+		return ..()
+	user.animation_attack_on(src)
+	playsound(src, 'sound/effects/metalhit.ogg', 25, 1)
+	var/hits_divisor = reinforced ? XENO_HITS_TO_DESTROY_R_WINDOW_FRAME : XENO_HITS_TO_DESTROY_WINDOW_FRAME
+	take_damage((max_health / hits_divisor) + 1)
+	return XENO_ATTACK_ACTION
 
-	. = ..()
+/obj/structure/window_frame/handle_tail_stab(mob/living/carbon/xenomorph/xeno, blunt_stab)
+	if(unslashable || health <= 0)
+		return TAILSTAB_COOLDOWN_NONE
+	if(xeno.claw_type < CLAW_TYPE_SHARP)
+		return TAILSTAB_COOLDOWN_NONE
+	playsound(src, 'sound/effects/metalhit.ogg', 25, 1)
+	var/hits_divisor = reinforced ? XENO_HITS_TO_DESTROY_R_WINDOW_FRAME : XENO_HITS_TO_DESTROY_WINDOW_FRAME
+	take_damage((max_health / hits_divisor) + 1)
+	if(health <= 0)
+		xeno.visible_message(SPAN_DANGER("[xeno] destroys [src] with its tail!"),
+		SPAN_DANGER("We destroy [src] with our tail!"), null, 5, CHAT_TYPE_XENO_COMBAT)
+	else
+		xeno.visible_message(SPAN_DANGER("[xeno] strikes [src] with its tail!"),
+		SPAN_DANGER("We strike [src] with our tail!"), null, 5, CHAT_TYPE_XENO_COMBAT)
+	xeno.tail_stab_animation(src, blunt_stab)
+	return TAILSTAB_COOLDOWN_NORMAL
 
 /obj/structure/window_frame/bullet_act(obj/projectile/P)
 	bullet_ping(P)
@@ -164,6 +177,8 @@
 	if(disassembled)
 		new buildstacktype(loc, buildstackamount)
 	return ..()
+
+//Almayer frames
 
 /obj/structure/window_frame/almayer
 	icon_state = "alm_window0_frame"
@@ -193,107 +208,162 @@
 	if(istype(W, sheet_type))
 		to_chat(user, SPAN_WARNING("You can't repair this window."))
 		return
-	..()
+	. = ..()
+
+//Colony frames
 
 /obj/structure/window_frame/colony
 	icon_state = "col_window0_frame"
 	basestate = "col_window"
+	window_type = /obj/structure/window/framed/colony
 
 /obj/structure/window_frame/colony/reinforced
 	icon_state = "col_rwindow0_frame"
 	basestate = "col_rwindow"
 	reinforced = TRUE
+	window_type = /obj/structure/window/framed/colony/reinforced
+
+//Chigusa frames
 
 /obj/structure/window_frame/chigusa
 	icon_state = "chig_window0_frame"
 	basestate = "chig_window"
+	window_type = /obj/structure/window/framed/chigusa
 
-/obj/structure/window_frame/wood
-	icon_state = "wood_window0_frame"
-	basestate = "wood_window"
-
-/obj/structure/window_frame/prison
-	icon_state = "prison_rwindow0_frame"
-	basestate = "prison_rwindow"
-
-/obj/structure/window_frame/prison/reinforced
-	icon_state = "prison_rwindow0_frame"
-	basestate = "prison_rwindow"
-	reinforced = TRUE
+//Triject Dam windows
 
 /obj/structure/window_frame/hangar
 	icon_state = "hngr_window0_frame"
 	basestate = "hngr_window"
+	window_type = /obj/structure/window/framed/hangar
 
 /obj/structure/window_frame/hangar/reinforced
 	icon_state = "hngr_rwindow0_frame"
 	basestate = "hngr_rwindow"
 	reinforced = TRUE
+	window_type = /obj/structure/window/framed/hangar/reinforced
 
 /obj/structure/window_frame/bunker
 	icon_state = "bnkr_window0_frame"
 	basestate = "bnkr_window"
+	window_type = /obj/structure/window/framed/bunker
 
 /obj/structure/window_frame/bunker/reinforced
 	icon_state = "bnkr_rwindow0_frame"
 	basestate = "bnkr_rwindow"
 	reinforced = TRUE
+	window_type = /obj/structure/window/framed/bunker/reinforced
 
-//strata frames
+/obj/structure/window_frame/wood
+	icon_state = "wood_window0_frame"
+	basestate = "wood_window"
+	window_type = /obj/structure/window/framed/wood
+
+/obj/structure/window_frame/wood/reinforced
+	icon_state = "wood_window0_frame"
+	basestate = "wood_window"
+	reinforced = TRUE
+	window_type = /obj/structure/window/framed/wood/reinforced
+
+//Sorokyne Strata frames
 
 /obj/structure/window_frame/strata
 	icon = 'icons/turf/walls/strata_windows.dmi'
 	icon_state = "strata_window0_frame"
 	basestate = "strata_window"
+	window_type = /obj/structure/window/framed/strata
 
 /obj/structure/window_frame/strata/reinforced
 	icon_state = "strata_window0_frame"
 	basestate = "strata_window"
 	reinforced = TRUE
+	window_type = /obj/structure/window/framed/strata/reinforced
 
 /obj/structure/window_frame/strata/hull
 	icon_state = "strata_window0_frame"
 	basestate = "strata_window"
 	unslashable = TRUE
 	unacidable = TRUE
+	window_type = /obj/structure/window/framed/strata/hull
 
-//Kutjevo frames
+//Kutjevo Refinery frames
 
 /obj/structure/window_frame/kutjevo
 	icon = 'icons/turf/walls/kutjevo/kutjevo_windows.dmi'
 	icon_state = "kutjevo_window0_frame"
 	basestate = "kutjevo_window"
+	window_type = /obj/structure/window/framed/kutjevo
 
 /obj/structure/window_frame/kutjevo/reinforced
 	icon_state = "kutjevo_window_alt0_frame"
 	basestate = "kutjevo_window_alt"
 	reinforced = TRUE
+	window_type = /obj/structure/window/framed/kutjevo/reinforced
 
-//Shivas Snowball (Ice v3) frame
+//Shivas Snowball (Ice v3) frames
 
 /obj/structure/window_frame/shiva
 	name = "poly-kevlon window frame"
 	icon = 'icons/turf/walls/ice_colony/shiva_windows.dmi'
 	icon_state = "shiva_window0_frame"
 	basestate = "shiva_window"
+	window_type = /obj/structure/window/framed/shiva
 
-/obj/structure/window_frame/prefab
-	name = "poly-kevlon window frame"
-	icon = 'icons/turf/walls/ice_colony/shiva_windows.dmi'
-	icon_state = "prefab_window0_frame"
-	basestate = "prefab_window"
+/obj/structure/window_frame/shiva/reinforced
+	icon_state = "shiva_window_r0_frame"
+	basestate = "shiva_window_r"
+	reinforced = TRUE
+	window_type = /obj/structure/window/framed/shiva/reinforced
 
-//Solaris frames
+/obj/structure/window_frame/shiva/grey
+	icon_state = "shiva_window_gr0_frame"
+	basestate = "shiva_window_gr"
+	window_type = /obj/structure/window/framed/shiva/grey
+
+/obj/structure/window_frame/shiva/reinforced/grey
+	icon_state = "shiva_window_gr_r0_frame"
+	basestate = "shiva_window_gr_r"
+	reinforced = TRUE
+	window_type = /obj/structure/window/framed/shiva/reinforced/grey
+
+/obj/structure/window_frame/shiva/orange
+	icon_state = "shiva_window_oj0_frame"
+	basestate = "shiva_window_oj"
+	window_type = /obj/structure/window/framed/shiva/orange
+
+/obj/structure/window_frame/shiva/blue
+	icon_state = "shiva_window_blu0_frame"
+	basestate = "shiva_window_blu"
+	window_type = /obj/structure/window/framed/shiva/blue
+
+/obj/structure/window_frame/shiva/pink
+	icon_state = "shiva_window_pnk0_frame"
+	basestate = "shiva_window_pnk"
+	window_type = /obj/structure/window/framed/shiva/pink
+
+/obj/structure/window_frame/shiva/white
+	icon_state = "shiva_window_wht0_frame"
+	basestate = "shiva_window_wht"
+	window_type = /obj/structure/window/framed/shiva/white
+
+/obj/structure/window_frame/shiva/red
+	icon_state = "shiva_window_red0_frame"
+	basestate = "shiva_window_red"
+	window_type = /obj/structure/window/framed/shiva/red
+
+//Solaris Ridge frames
 
 /obj/structure/window_frame/solaris
 	icon = 'icons/turf/walls/solaris/solaris_windows.dmi'
 	icon_state = "solaris_window0_frame"
 	basestate = "solaris_window"
+	window_type = /obj/structure/window/framed/solaris
 
 /obj/structure/window_frame/solaris/reinforced
-	icon_state = "solaris_window0_frame"
-	basestate = "solaris_window"
+	icon_state = "solaris_rwindow0_frame"
+	basestate = "solaris_rwindow"
 	reinforced = TRUE
+	window_type = /obj/structure/window/framed/solaris/reinforced
 
 //Greybox development windows
 
@@ -301,11 +371,26 @@
 	icon = 'icons/turf/walls/dev/dev_windows.dmi'
 	icon_state = "dev_window0_frame"
 	basestate = "dev_window"
+	window_type = /obj/structure/window/framed/dev
 
 /obj/structure/window_frame/dev/reinforced
 	icon_state = "dev_rwindow0_frame"
 	basestate = "dev_rwindow"
 	reinforced = TRUE
+	window_type = /obj/structure/window/framed/dev/reinforced
+
+//Prison frames
+
+/obj/structure/window_frame/prison
+	icon_state = "prison_rwindow0_frame"
+	basestate = "prison_rwindow"
+	window_type = /obj/structure/window/framed/prison
+
+/obj/structure/window_frame/prison/reinforced
+	icon_state = "prison_rwindow0_frame"
+	basestate = "prison_rwindow"
+	reinforced = TRUE
+	window_type = /obj/structure/window/framed/prison/reinforced
 
 //Corsat frames
 
@@ -322,17 +407,171 @@
 /obj/structure/window_frame/corsat/security
 	window_type = /obj/structure/window/framed/corsat/security
 
-/obj/structure/window_frame/upp
-	name = "military grade window frame"
+//UPP frames
+
+/obj/structure/window_frame/upp_ship
+	icon = 'icons/turf/walls/upp_windows.dmi'
+	icon_state = "uppwall_window0_frame"
+	basestate = "uppwall_window"
+	window_type = /obj/structure/window/framed/upp_ship
+
+/obj/structure/window_frame/upp_ship/reinforced
 	reinforced = TRUE
+	window_type = /obj/structure/window/framed/upp_ship/reinforced
 
-/obj/structure/window_frame/upp/green
-	icon = 'icons/turf/walls/upp_green_windows.dmi'
-	icon_state = "uppwall_window0_frame"
-	basestate = "uppwall_window"
+/obj/structure/window_frame/upp_ship/hull
+	unslashable = TRUE
+	unacidable = TRUE
+	window_type = /obj/structure/window/framed/upp_ship/hull
 
+//UPP Almayer retexture frames
 
-/obj/structure/window_frame/upp/grey
-	icon = 'icons/turf/walls/upp_grey_windows.dmi'
-	icon_state = "uppwall_window0_frame"
-	basestate = "uppwall_window"
+/obj/structure/window_frame/upp
+	icon = 'icons/turf/walls/upp_almayer_windows.dmi'
+	icon_state = "upp_window0_frame"
+	basestate = "upp_window0"
+	window_type = /obj/structure/window/framed/upp
+
+/obj/structure/window_frame/upp/reinforced
+	icon_state = "upp_window0_frame"
+	basestate = "upp_rwindow0"
+	reinforced = TRUE
+	window_type = /obj/structure/window/framed/upp/reinforced
+
+/obj/structure/window_frame/upp/hull
+	icon_state = "upp_window0_frame"
+	basestate = "upp_rwindow0"
+	unslashable = TRUE
+	unacidable = TRUE
+	window_type = /obj/structure/window/framed/upp/hull
+
+// Hybrisa Window Frames
+
+// Colony
+/obj/structure/window_frame/hybrisa/colony
+	icon = 'icons/turf/walls/hybrisa_colony_window.dmi'
+	icon_state = "strata_window0_frame"
+	basestate = "strata_window"
+	window_type = /obj/structure/window/framed/hybrisa/colony
+
+/obj/structure/window_frame/hybrisa/colony/reinforced
+	icon_state = "strata_window0_frame"
+	basestate = "strata_window"
+	reinforced = TRUE
+	window_type = /obj/structure/window/framed/hybrisa/colony/reinforced
+
+/obj/structure/window_frame/hybrisa/colony/hull
+	icon_state = "strata_window0_frame"
+	basestate = "strata_window"
+	unslashable = TRUE
+	unacidable = TRUE
+	window_type = /obj/structure/window/framed/hybrisa/colony/hull
+
+// Research
+/obj/structure/window_frame/hybrisa/research
+	icon = 'icons/turf/walls/hybrisaresearchbrown_windows.dmi'
+	icon_state = "strata_window0_frame"
+	basestate = "strata_window"
+	window_type = /obj/structure/window/framed/hybrisa/research
+
+/obj/structure/window_frame/hybrisa/research/reinforced
+	icon_state = "strata_window0_frame"
+	basestate = "strata_window"
+	reinforced = TRUE
+	window_type = /obj/structure/window/framed/hybrisa/research/reinforced
+
+/obj/structure/window_frame/hybrisa/research/hull
+	icon_state = "strata_window0_frame"
+	basestate = "strata_window"
+	unslashable = TRUE
+	unacidable = TRUE
+	window_type = /obj/structure/window/framed/hybrisa/research/hull
+
+// Marshals
+/obj/structure/window_frame/hybrisa/marshalls
+	icon = 'icons/turf/walls/hybrisa_marshalls_windows.dmi'
+	icon_state = "prison_rwindow0_frame"
+	basestate = "prison_rwindow"
+	window_type = /obj/structure/window/framed/hybrisa/marshalls
+
+/obj/structure/window_frame/hybrisa/marshalls/reinforced
+	icon = 'icons/turf/walls/hybrisa_marshalls_windows.dmi'
+	icon_state = "prison_rwindow0_frame"
+	basestate = "prison_rwindow"
+	reinforced = TRUE
+	window_type = /obj/structure/window/framed/hybrisa/marshalls/reinforced
+
+// Hospital
+
+/obj/structure/window_frame/hybrisa/colony/hospital
+	icon = 'icons/turf/walls/hybrisa_hospital_colonywindows.dmi'
+	icon_state = "strata_window0_frame"
+	basestate = "strata_window"
+	window_type = /obj/structure/window/framed/hybrisa/colony/hospital
+
+/obj/structure/window_frame/hybrisa/colony/hospital/reinforced
+	icon_state = "strata_window0_frame"
+	basestate = "strata_window"
+	reinforced = TRUE
+	window_type = /obj/structure/window/framed/hybrisa/colony/hospital/reinforced
+
+/obj/structure/window_frame/hybrisa/colony/hospital/hull
+	icon_state = "strata_window0_frame"
+	basestate = "strata_window"
+	unslashable = TRUE
+	unacidable = TRUE
+	window_type = /obj/structure/window/framed/hybrisa/colony/hospital/hull
+
+// Offices
+/obj/structure/window_frame/hybrisa/colony/office
+	icon = 'icons/turf/walls/hybrisa_offices_windows.dmi'
+	icon_state = "strata_window0_frame"
+	basestate = "strata_window"
+	window_type = /obj/structure/window/framed/hybrisa/colony/office
+
+/obj/structure/window_frame/hybrisa/colony/office/reinforced
+	icon_state = "strata_window0_frame"
+	basestate = "strata_window"
+	reinforced = TRUE
+	window_type = /obj/structure/window/framed/hybrisa/colony/office/reinforced
+
+/obj/structure/window_frame/hybrisa/colony/office/hull
+	icon_state = "strata_window0_frame"
+	basestate = "strata_window"
+	unslashable = TRUE
+	unacidable = TRUE
+	window_type = /obj/structure/window/framed/hybrisa/colony/office/hull
+
+// Engineering
+/obj/structure/window_frame/hybrisa/colony/engineering
+	icon = 'icons/turf/walls/hybrisa_engineering_windows.dmi'
+	icon_state = "strata_window0_frame"
+	basestate = "strata_window"
+	window_type = /obj/structure/window/framed/hybrisa/colony/engineering
+
+/obj/structure/window_frame/hybrisa/colony/engineering/reinforced
+	icon_state = "strata_window0_frame"
+	basestate = "strata_window"
+	reinforced = TRUE
+	window_type = /obj/structure/window/framed/hybrisa/colony/engineering/reinforced
+
+/obj/structure/window_frame/hybrisa/colony/engineering/hull
+	icon_state = "strata_window0_frame"
+	basestate = "strata_window"
+	unslashable = TRUE
+	unacidable = TRUE
+	window_type = /obj/structure/window/framed/hybrisa/colony/engineering/hull
+
+// Space-Port
+/obj/structure/window_frame/hybrisa/spaceport
+	icon = 'icons/turf/walls/hybrisa_spaceport_windows.dmi'
+	icon_state = "prison_rwindow0_frame"
+	basestate = "prison_rwindow"
+	window_type = /obj/structure/window/framed/hybrisa/spaceport
+
+/obj/structure/window_frame/hybrisa/spaceport/reinforced
+	icon = 'icons/turf/walls/hybrisa_spaceport_windows.dmi'
+	icon_state = "prison_rwindow0_frame"
+	basestate = "prison_rwindow"
+	reinforced = TRUE
+	window_type = /obj/structure/window/framed/hybrisa/spaceport/reinforced

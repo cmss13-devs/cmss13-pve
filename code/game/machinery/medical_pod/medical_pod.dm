@@ -31,6 +31,9 @@
 /obj/structure/machinery/medical_pod/attack_alien(mob/living/carbon/xenomorph/M)
 	eject()
 
+/obj/structure/machinery/medical_pod/handle_tail_stab(mob/living/carbon/xenomorph/xeno, blunt_stab)
+	return TAILSTAB_COOLDOWN_NONE
+
 /obj/structure/machinery/medical_pod/update_icon()
 	if(occupant)
 		icon_state = "[base_icon_state]_closed"
@@ -61,6 +64,10 @@
 		if(src.occupant)
 			to_chat(usr, SPAN_NOTICE("\The [src] is already occupied!"))
 			return
+	if(skilllock)
+		if(!skillcheck(usr, SKILL_SURGERY, skilllock))
+			to_chat(usr, SPAN_WARNING("You're going to need someone trained in the use of \the [src] to help you get into it."))
+			return
 	go_in(usr)
 	add_fingerprint(usr)
 
@@ -84,6 +91,10 @@
 		return
 	if(!ishuman(usr))
 		return
+	if(skilllock)
+		if(!skillcheck(usr, SKILL_SURGERY, skilllock))
+			to_chat(usr, SPAN_WARNING("You don't have the training to use this."))
+			return
 
 	if(!extra_eject_checks())
 		return
@@ -173,12 +184,16 @@
 				to_chat(user, SPAN_WARNING("\The [C] is empty!"))
 				return
 			to_put_in = C.stasis_mob
-			C.open()
+			C.open(user)
 			user.start_pulling(to_put_in)
 		else if(ismob(G.grabbed_thing))
 			to_put_in = G.grabbed_thing
 		else
 			return
+		if(skilllock)
+			if(!skillcheck(usr, SKILL_SURGERY, skilllock))
+				to_chat(usr, SPAN_WARNING("You don't have the training to use \the [src]!"))
+				return
 		if(occupant)
 			to_chat(user, SPAN_WARNING("\The [src] is already occupied!"))
 			return

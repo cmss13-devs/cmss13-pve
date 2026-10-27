@@ -35,9 +35,9 @@
 	if(!forward.fishing_allowed)
 		to_chat(user, SPAN_WARNING("You can not fish here!"))
 		return
-
+	
 	user.visible_message(SPAN_NOTICE("[user] starts setting up \the [src]..."))
-
+	
 	if(!do_after(user, 3 SECONDS, show_busy_icon = BUSY_ICON_BUILD))
 		return
 

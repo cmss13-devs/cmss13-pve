@@ -3,6 +3,8 @@
 	layer = TURF_LAYER
 	anchored = TRUE
 
+
+
 /obj/effect/decal/strata_decals/catwalk/prison //For finding and replacing prison catwalk objects since they nasty
 	icon = 'icons/turf/floors/strata_floor.dmi'
 	icon_state = "catwalk"
@@ -28,7 +30,21 @@
 /obj/effect/decal/strata_decals/grasses
 	icon_state = "tufts"
 	name = "some foliage"
-	desc = "A few brave tufts of snow grass."
+	desc = "A few brave tufts of grass."
+
+/obj/effect/decal/strata_decals/mud_corner
+	icon_state = "soro_mud_innercorner"
+	name = "mud"
+	desc = null
+	mouse_opacity = MOUSE_OPACITY_TRANSPARENT
+	keep_as_object = TRUE
+
+/obj/effect/decal/strata_decals/tyrargo_mud_corner
+	icon_state = "tyrargo_mud_innercorner"
+	name = "mud"
+	desc = null
+	mouse_opacity = MOUSE_OPACITY_TRANSPARENT
+	keep_as_object = TRUE
 
 ////////////////INDOORS STUFF////////////////////
 
@@ -36,7 +52,6 @@
 	icon_state = ""
 	name = "a stain"
 	desc = "A nasty looking brown stain, could be coffee, soot, water damage. Who knows."
-	mouse_opacity = MOUSE_OPACITY_TRANSPARENT
 
 /obj/effect/decal/strata_decals/grime/grime1
 	icon_state = "grime1"
@@ -49,7 +64,3 @@
 
 /obj/effect/decal/strata_decals/grime/grime4
 	icon_state = "grime4"
-
-/obj/effect/decal/strata_decals/grime/grime4/game_plane
-	icon_state = "grime4"
-	plane = GAME_PLANE

@@ -4,14 +4,10 @@
 	name = "\improper magazine_box"
 	icon = 'icons/obj/items/weapons/guns/ammo_boxes/boxes_and_lids.dmi'
 	icon_state = "base_m41"
-	unslashable = TRUE
 	var/obj/item/ammo_box/magazine/item_box
-	var/obj/item/ammo_box/magazine/nade_box/boom_box
 	var/can_explode = TRUE
 	var/burning = FALSE
 	var/limit_per_tile = 1 //this is inherited from the item when deployed
-	var/holds_ammo = TRUE
-	var/holds_grenades = FALSE
 	layer = LOWER_ITEM_LAYER //to not hide other items
 
 	var/text_markings_icon = 'icons/obj/items/weapons/guns/ammo_boxes/text.dmi'
@@ -85,48 +81,31 @@
 /obj/structure/magazine_box/MouseDrop(over_object, src_location, over_location)
 	..()
 	if(over_object == usr && Adjacent(usr))
-		if(burning && holds_ammo)
+		if(burning)
 			to_chat(usr, SPAN_DANGER("It's on fire and might explode!"))
-			return
-		if(burning && holds_grenades)
-			to_chat(usr, SPAN_DANGER("It's on fire and the grenades inside might explode at any time!"))
 			return
 
 		if(!ishuman(usr))
 			return
 		visible_message(SPAN_NOTICE("[usr] picks up the [name]."))
 
-		if(holds_ammo)
-			usr.put_in_hands(item_box)
-			item_box = null
-			qdel(src)
-		else if(holds_grenades)
-			usr.put_in_hands(boom_box)
-			boom_box = null
-			qdel(src)
-
+		usr.put_in_hands(item_box)
+		item_box = null
+		qdel(src)
 
 /obj/structure/magazine_box/get_examine_text(mob/user)
 	. = ..()
-	if(holds_ammo)
-		if(get_dist(src,user) > 2 && !isobserver(user))
-			return
-		. += SPAN_INFO("[SPAN_HELPFUL("Click")] on the box with an empty hand to take a magazine out. [SPAN_HELPFUL("Drag")] it onto yourself to pick it up.")
-		if(item_box.handfuls)
-			var/obj/item/ammo_magazine/AM = locate(/obj/item/ammo_magazine) in item_box.contents
-			if(AM)
-				. +=  SPAN_INFO("It has roughly [floor(AM.current_rounds/AM.transfer_handful_amount)] handfuls remaining.")
-		else
-			. +=  SPAN_INFO("It has [length(item_box.contents)] magazines out of [item_box.num_of_magazines].")
-		if(burning)
-			. +=  SPAN_DANGER("It's on fire and might explode!")
-	if(holds_grenades)
-		if(get_dist(src,user) > 2 && !isobserver(user))
-			return
-		. += SPAN_INFO("[SPAN_HELPFUL("Click")] on the box with an empty hand to take a grenade out. [SPAN_HELPFUL("Drag")] it onto yourself to pick it up.")
-		. +=  SPAN_INFO("It has [length(boom_box.contents)] grenades out of [boom_box.num_of_magazines].")
-		if(burning)
-			. +=  SPAN_DANGER("It's on fire and the grenades inside might explode at any time!")
+	if(get_dist(src,user) > 2 && !isobserver(user))
+		return
+	. += SPAN_INFO("[SPAN_HELPFUL("Click")] on the box with an empty hand to take a magazine out. [SPAN_HELPFUL("Drag")] it onto yourself to pick it up.")
+	if(item_box.handfuls)
+		var/obj/item/ammo_magazine/AM = locate(/obj/item/ammo_magazine) in item_box.contents
+		if(AM)
+			. +=  SPAN_INFO("It has roughly [floor(AM.current_rounds/AM.transfer_handful_amount)] handfuls remaining.")
+	else
+		. +=  SPAN_INFO("It has [length(item_box.contents)] magazines out of [item_box.num_of_magazines].")
+	if(burning)
+		. +=  SPAN_DANGER("It's on fire and might explode!")
 
 /obj/structure/magazine_box/attack_hand(mob/living/user)
 	if(burning)
@@ -151,14 +130,14 @@
 		to_chat(user, SPAN_DANGER("It's on fire and might explode!"))
 		return
 	if(!item_box.handfuls)
-		if(istypestrict(W,item_box.magazine_type) || is_type_in_list(W, item_box.allowed_magazines))
-			if(istype(W, /obj/item/storage/box/flare))
-				var/obj/item/storage/box/flare/flare_pack = W
+		if(istypestrict(W,item_box.magazine_type))
+			if(istype(W, /obj/item/storage/box/m94))
+				var/obj/item/storage/box/m94/flare_pack = W
 				if(length(flare_pack.contents) < flare_pack.max_storage_space)
 					to_chat(user, SPAN_WARNING("[W] is not full."))
 					return
 				var/flare_type
-				if(istype(W, /obj/item/storage/box/flare/signal))
+				if(istype(W, /obj/item/storage/box/m94/signal))
 					flare_type = /obj/item/device/flashlight/flare/signal
 				else
 					flare_type = /obj/item/device/flashlight/flare
@@ -180,8 +159,7 @@
 					to_chat(user, SPAN_WARNING("[W] needs to be fully charged before it can be stored in [src]."))
 					return
 			if(length(item_box.contents) < item_box.num_of_magazines)
-				user.drop_inv_item_to_loc(W, src)
-				item_box.contents += W
+				user.drop_inv_item_to_loc(W, item_box)
 				to_chat(user, SPAN_NOTICE("You put \a [W] into [src]"))
 				update_icon()
 			else
@@ -189,9 +167,9 @@
 		else
 			to_chat(user, SPAN_WARNING("You don't want to mix different magazines in one box."))
 	else
-		if(istype(W, /obj/item/ammo_magazine/shotgun))
+		if(istype(W, /obj/item/ammo_magazine/shotgun) || istype(W, /obj/item/ammo_magazine/lever_action) )
 			var/obj/item/ammo_magazine/O = W
-			var/obj/item/ammo_magazine/AM = locate(/obj/item/ammo_magazine/shotgun) in item_box.contents
+			var/obj/item/ammo_magazine/AM = locate(/obj/item/ammo_magazine) in item_box.contents
 			if(!O || !W)
 				return
 			if(O.default_ammo == AM.default_ammo)
@@ -208,11 +186,11 @@
 					var/S = min(O.current_rounds, AM.max_rounds - AM.current_rounds)
 					AM.current_rounds += S
 					O.current_rounds -= S
-					to_chat(user, SPAN_NOTICE("You transfer shells from [O] into [src]"))
+					to_chat(user, SPAN_NOTICE("You transfer [O.description_ammo] from [O] into [src]."))
 					update_icon()
 					O.update_icon()
 			else
-				to_chat(user, SPAN_WARNING("Wrong type of shells."))
+				to_chat(user, SPAN_WARNING("Wrong type of [O.description_ammo]."))
 
 		if(istype(W, /obj/item/ammo_magazine/handful))
 			var/obj/item/ammo_magazine/AM = locate(/obj/item/ammo_magazine) in item_box.contents
@@ -224,10 +202,7 @@
 	if(burning || !item_box)
 		return
 	burning = TRUE
-	if(holds_ammo)
-		item_box.flamer_fire_act(damage, flame_cause_data)
-	if(holds_grenades)
-		boom_box.flamer_fire_act(damage, flame_cause_data)
+	item_box.flamer_fire_act(damage, flame_cause_data)
 	return
 
 /obj/structure/magazine_box/proc/apply_fire_overlay(will_explode = FALSE)
@@ -241,9 +216,5 @@
 	else if(istype(src, /obj/item/ammo_box/magazine/nailgun)) //this snowflake again
 		offset_y += -2
 
-	if(holds_ammo)
-		var/image/fire_overlay = image(flames_icon, icon_state = will_explode ? "on_fire_explode_overlay" : "on_fire_overlay", pixel_x = offset_x, pixel_y = offset_y)
-		overlays += (fire_overlay)
-	else if(holds_grenades)
-		var/image/nade_fire_overlay = image(flames_icon, icon_state = "on_fire_grenade_overlay")
-		overlays += (nade_fire_overlay)
+	var/image/fire_overlay = image(flames_icon, icon_state = will_explode ? "on_fire_explode_overlay" : "on_fire_overlay", pixel_x = offset_x, pixel_y = offset_y)
+	overlays += (fire_overlay)

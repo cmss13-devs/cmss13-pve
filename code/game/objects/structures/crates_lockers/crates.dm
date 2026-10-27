@@ -11,7 +11,7 @@
 	anchored = FALSE
 	throwpass = 1 //prevents moving crates by hurling things at them
 	store_mobs = FALSE
-	var/rigged = 0
+	var/rigged = FALSE
 	/// Types this crate can be made into
 	var/list/crate_customizing_types = list(
 		"Plain" = /obj/structure/closet/crate,
@@ -32,19 +32,17 @@
 		"Charlie" = /obj/structure/closet/crate/charlie,
 		"Delta" = /obj/structure/closet/crate/delta,
 	)
+	COOLDOWN_DECLARE(rigged_activation_cooldown)
 
 /obj/structure/closet/crate/initialize_pass_flags(datum/pass_flags_container/PF)
 	..()
 	if (PF)
 		PF.flags_can_pass_all = PASS_OVER|PASS_AROUND
 
-/obj/structure/closet/crate/can_open()
-	return 1
-
-/obj/structure/closet/crate/can_close()
-	for(var/mob/living/L in get_turf(src)) //Can't close if someone is standing inside it. This is to prevent "crate traps" (let someone step in, close, open for 30 damage)
-		return 0
-	return 1
+/obj/structure/closet/crate/can_close(mob/user)
+	if(locate(/mob/living) in get_turf(src)) //Can't close if someone is standing inside it. This is to prevent "crate traps" (let someone step in, close, open for 30 damage)
+		return FALSE
+	return TRUE
 
 /obj/structure/closet/crate/BlockedPassDirs(atom/movable/mover, target_dir)
 	for(var/obj/structure/S in get_turf(mover))
@@ -55,32 +53,34 @@
 
 	return ..()
 
-/obj/structure/closet/crate/open()
+/obj/structure/closet/crate/open(mob/user, force)
 	if(opened)
-		return 0
-	if(!can_open())
-		return 0
+		return FALSE
+	if(!force && !can_open(user))
+		return FALSE
 
 	if(rigged && locate(/obj/item/device/radio/electropack) in src)
-		if(isliving(usr))
-			var/mob/living/L = usr
-			if(L.electrocute_act(17, src))
-				var/datum/effect_system/spark_spread/s = new /datum/effect_system/spark_spread
-				s.set_up(5, 1, src)
-				s.start()
-				return 2
+		if(isliving(user) && COOLDOWN_FINISHED(src, rigged_activation_cooldown))
+			var/mob/living/living_user = user
+			if(living_user.electrocute_act(17, src))
+				COOLDOWN_START(src, rigged_activation_cooldown, 3 SECONDS)
+				var/datum/effect_system/spark_spread/sparker = new /datum/effect_system/spark_spread
+				sparker.set_up(5, 1, src)
+				sparker.start()
+				if(!force)
+					return 2
 
 	playsound(src.loc, 'sound/machines/click.ogg', 15, 1)
-	for(var/obj/O in src)
-		O.forceMove(get_turf(src))
-	opened = 1
+	for(var/obj/thing in src)
+		thing.forceMove(get_turf(src))
+	opened = TRUE
 	update_icon()
 	if(climbable)
 		structure_shaken()
-		climbable = 0 //Open crate is not a surface that works when climbing around
-	return 1
+		climbable = FALSE //Open crate is not a surface that works when climbing around
+	return TRUE
 
-/obj/structure/closet/crate/close()
+/obj/structure/closet/crate/close(mob/user)
 	if(!opened)
 		return 0
 	if(!can_close())
@@ -97,7 +97,7 @@
 			var/obj/structure/bed/B = O
 			if(B.buckled_mob)
 				continue
-		if(istype(O, /obj/item/handset))
+		if(istype(O, /obj/item/phone))
 			continue
 		O.forceMove(src)
 		itemcount++
@@ -107,34 +107,68 @@
 	update_icon()
 	return 1
 
-/obj/structure/closet/crate/attackby(obj/item/W as obj, mob/user as mob)
-	if(W.flags_item & ITEM_ABSTRACT) return
-	if(opened)
-		user.drop_inv_item_to_loc(W, loc)
-	else if(istype(W, /obj/item/packageWrap) || istype(W, /obj/item/stack/fulton))
+/obj/structure/closet/crate/attackby(obj/item/object, mob/user)
+	if(object.flags_item & ITEM_ABSTRACT)
 		return
-	else if(istype(W, /obj/item/stack/cable_coil))
-		var/obj/item/stack/cable_coil/C = W
+	if(opened)
+		user.drop_inv_item_to_loc(object, loc)
+		return
+	if(istype(object, /obj/item/packageWrap) || istype(object, /obj/item/stack/fulton) || istype(object, /obj/item/tool/hand_labeler)) //If it does something to the crate, don't open it.
+		return
+	if(attempt_rigging(object, user))
+		return
+	return attack_hand(user)
+
+/// Returns TRUE if any rigging handling was performed (even if nothing changed)
+/obj/structure/closet/crate/proc/attempt_rigging(obj/item/object, mob/user)
+	if(istype(object, /obj/item/stack/cable_coil))
+		var/obj/item/stack/cable_coil/cable = object
 		if(rigged)
-			to_chat(user, SPAN_NOTICE("[src] is already rigged!"))
-			return
-		if (C.use(1))
-			to_chat(user, SPAN_NOTICE("You rig [src]."))
-			rigged = 1
-			return
-	else if(istype(W, /obj/item/device/radio/electropack))
-		if(rigged)
-			to_chat(user, SPAN_NOTICE("You attach [W] to [src]."))
+			to_chat(user, SPAN_NOTICE("[src] is already wired for rigging!"))
+			return TRUE
+		if(cable.use(1))
+			var/pack = locate(/obj/item/device/radio/electropack) in src
+			if(pack)
+				to_chat(user, SPAN_NOTICE("You wire [src] and rig it with [pack]."))
+			else
+				to_chat(user, SPAN_NOTICE("You wire [src] for rigging."))
+			rigged = TRUE
+			update_icon()
+		return TRUE
+	if(istype(object, /obj/item/device/radio/electropack))
+		if(rigged && !(locate(/obj/item/device/radio/electropack) in src))
+			to_chat(user, SPAN_NOTICE("You attach [object] to [src] and rig it."))
 			user.drop_held_item()
-			W.forceMove(src)
-			return
-	else if(HAS_TRAIT(W, TRAIT_TOOL_WIRECUTTERS))
+			object.forceMove(src)
+		return TRUE
+	if(HAS_TRAIT(object, TRAIT_TOOL_WIRECUTTERS))
 		if(rigged)
 			to_chat(user, SPAN_NOTICE("You cut away the wiring."))
 			playsound(loc, 'sound/items/Wirecutter.ogg', 25, 1)
-			rigged = 0
-			return
-	else return attack_hand(user)
+			rigged = FALSE
+			update_icon()
+		return TRUE
+	return FALSE
+
+/obj/structure/closet/crate/foodcart/attempt_rigging(obj/item/object, mob/user)
+	return FALSE // No rigging
+
+/obj/structure/closet/crate/miningcar/attempt_rigging(obj/item/object, mob/user)
+	return FALSE // No rigging
+
+/obj/structure/closet/crate/trashcart/attempt_rigging(obj/item/object, mob/user)
+	return FALSE // No rigging
+
+/obj/structure/closet/crate/freezer/cooler/attempt_rigging(obj/item/object, mob/user)
+	return FALSE // No rigging
+
+/obj/structure/closet/crate/supply/attempt_rigging(obj/item/object, mob/user)
+	return FALSE // No rigging because its wooden I guess
+
+/obj/structure/closet/crate/update_icon()
+	. = ..()
+	if(rigged)
+		overlays += "securecrate_tampered"
 
 /obj/structure/closet/crate/ex_act(severity)
 	switch(severity)
@@ -153,14 +187,14 @@
 
 /obj/structure/closet/crate/alpha
 	name = "alpha squad crate"
-	desc = "A crate with alpha squad's symbol on it. "
+	desc = "A crate with alpha squad's symbol on it."
 	icon_state = "closed_alpha"
 	icon_opened = "open_alpha"
 	icon_closed = "closed_alpha"
 
 /obj/structure/closet/crate/ammo
 	name = "ammunitions crate"
-	desc = "An ammunitions crate"
+	desc = "An ammunitions crate."
 	icon_state = "closed_ammo"
 	icon_opened = "open_ammo"
 	icon_closed = "closed_ammo"
@@ -188,35 +222,35 @@
 
 /obj/structure/closet/crate/bravo
 	name = "bravo squad crate"
-	desc = "A crate with bravo squad's symbol on it. "
+	desc = "A crate with bravo squad's symbol on it."
 	icon_state = "closed_bravo"
 	icon_opened = "open_bravo"
 	icon_closed = "closed_bravo"
 
 /obj/structure/closet/crate/charlie
 	name = "charlie squad crate"
-	desc = "A crate with charlie squad's symbol on it. "
+	desc = "A crate with charlie squad's symbol on it."
 	icon_state = "closed_charlie"
 	icon_opened = "open_charlie"
 	icon_closed = "closed_charlie"
 
 /obj/structure/closet/crate/construction
 	name = "construction crate"
-	desc = "A construction crate"
+	desc = "A construction crate."
 	icon_state = "closed_construction"
 	icon_opened = "open_construction"
 	icon_closed = "closed_construction"
 
 /obj/structure/closet/crate/delta
 	name = "delta squad crate"
-	desc = "A crate with delta squad's symbol on it. "
+	desc = "A crate with delta squad's symbol on it."
 	icon_state = "closed_delta"
 	icon_opened = "open_delta"
 	icon_closed = "closed_delta"
 
 /obj/structure/closet/crate/explosives
 	name = "explosives crate"
-	desc = "An explosives crate"
+	desc = "An explosives crate."
 	icon_state = "closed_explosives"
 	icon_opened = "open_explosives"
 	icon_closed = "closed_explosives"
@@ -334,6 +368,22 @@
 	icon_opened = "open_trashcart"
 	icon_closed = "closed_trashcart"
 
+/obj/structure/closet/crate/foodcart
+	name = "food cart"
+	desc = "A heavy, metal foodcart with wheels."
+	icon_state = "foodcart2"
+	icon_opened = "foodcart2_open"
+	icon_closed = "foodcart2"
+
+/obj/structure/closet/crate/foodcart/Initialize()
+	. = ..()
+	AddElement(/datum/element/corp_label/wy)
+
+/obj/structure/closet/crate/foodcart/alt
+	icon_state = "foodcart1"
+	icon_opened = "foodcart1_open"
+	icon_closed = "foodcart1"
+
 /obj/structure/closet/crate/weapon
 	name = "weapons crate"
 	desc = "A weapons crate."
@@ -354,7 +404,7 @@
 
 /obj/structure/closet/crate/empexplosives
 	name = "electromagnetic explosives crate"
-	desc = "An explosives crate, containing EMP grenades"
+	desc = "An explosives crate, containing EMP grenades."
 	icon_state = "closed_explosives"
 	icon_opened = "open_explosives"
 	icon_closed = "closed_explosives"
@@ -378,11 +428,11 @@
 	weapon_type = /obj/item/weapon/gun/rifle/m41a/training
 	ammo_type = /obj/item/ammo_magazine/rifle/rubber
 
-/obj/structure/closet/crate/weapon/training/m49a
-	name = "training M49A crate"
-	desc = "A crate with an M49A battle rifle and nonlethal ammunition for it. Intended for use in combat exercises."
-	weapon_type = /obj/item/weapon/gun/rifle/m49a/training
-	ammo_type = /obj/item/ammo_magazine/rifle/m49a/rubber
+/obj/structure/closet/crate/weapon/training/m4ra
+	name = "training M4RA crate"
+	desc = "A crate with an M4RA battle rifle and nonlethal ammunition for it. Intended for use in combat exercises."
+	weapon_type = /obj/item/weapon/gun/rifle/m4ra/training
+	ammo_type = /obj/item/ammo_magazine/rifle/m4ra/rubber
 
 /obj/structure/closet/crate/weapon/training/l42a
 	name = "training L42A crate"
@@ -402,11 +452,11 @@
 	weapon_type = /obj/item/weapon/gun/pistol/m4a3/training
 	ammo_type = /obj/item/ammo_magazine/pistol/rubber
 
-/obj/structure/closet/crate/weapon/training/vp70
-	name = "training VP70 crate"
-	desc = "A crate with an VP70 pistol and nonlethal ammunition for it. Intended for use in combat exercises."
-	weapon_type = /obj/item/weapon/gun/pistol/vp70/training
-	ammo_type = /obj/item/ammo_magazine/pistol/vp70/rubber
+/obj/structure/closet/crate/weapon/training/mod88
+	name = "training 88 mod 4 crate"
+	desc = "A crate with an 88 mod 4 pistol and nonlethal ammunition for it. Intended for use in combat exercises."
+	weapon_type = /obj/item/weapon/gun/pistol/mod88/training
+	ammo_type = /obj/item/ammo_magazine/pistol/mod88/rubber
 
 /obj/structure/closet/crate/weapon/training/grenade
 	name = "rubber pellet M15 grenades crate"
@@ -430,11 +480,3 @@
 	density = TRUE
 	icon_opened = "open_mcart_y"
 	icon_closed = "closed_mcart_y"
-
-/obj/structure/closet/crate/upp
-	name = "secure military crate"
-	desc = "A secure military crate"
-	icon_state = "closed_uppcrate"
-	density = TRUE
-	icon_opened = "open_uppcrate"
-	icon_closed =  "close_uppcrate"

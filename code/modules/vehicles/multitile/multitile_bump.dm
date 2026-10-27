@@ -16,7 +16,7 @@
 
 
 /turf/closed/wall/handle_vehicle_bump(obj/vehicle/multitile/V)
-	if(!hull && !(V.vehicle_flags & VEHICLE_CLASS_WEAK))
+	if(!(turf_flags & TURF_HULL) && !(V.vehicle_flags & VEHICLE_CLASS_WEAK))
 		take_damage(V.wall_ram_damage)
 		V.take_damage_type(10, "blunt", src)
 		playsound(V, 'sound/effects/metal_crash.ogg', 35)
@@ -38,7 +38,7 @@
 //-------------------------STRUCTURES------------------------
 
 /obj/structure/handle_vehicle_bump(obj/vehicle/multitile/V)
-	if(!indestructible && !unacidable && !(V.vehicle_flags & VEHICLE_CLASS_WEAK))
+	if(!explo_proof && !unacidable && !(V.vehicle_flags & VEHICLE_CLASS_WEAK))
 		visible_message(SPAN_DANGER("\The [V] crushes [src]!"))
 		playsound(V, 'sound/effects/metal_crash.ogg', 20)
 		qdel(src)
@@ -133,7 +133,7 @@
 	qdel(src)
 	return TRUE
 
-/obj/structure/reagent_dispensers/fueltank/handle_vehicle_bump(obj/vehicle/multitile/V)
+/obj/structure/reagent_dispensers/tank/fuel/handle_vehicle_bump(obj/vehicle/multitile/V)
 	reagents.source_mob = V.seats[VEHICLE_DRIVER]
 	if(reagents.handle_volatiles())
 		if(V.seats[VEHICLE_DRIVER])
@@ -329,6 +329,22 @@
 			qdel(src)
 	return FALSE
 
+/obj/structure/machinery/door/poddoor/hybrisa/handle_vehicle_bump(obj/vehicle/multitile/V)
+	if(!unacidable)
+		if(vehicle_resistant)
+			visible_message(SPAN_DANGER("\The [V] can't destroy [src]!"))
+			playsound(V, 'sound/effects/metal_crash.ogg', 35)
+		else
+			visible_message(SPAN_DANGER("\The [V] crushes [src]!"))
+			playsound(V, 'sound/effects/metal_crash.ogg', 35)
+			qdel(src)
+	return FALSE
+
+/obj/structure/machinery/fuelpump/handle_vehicle_bump(obj/vehicle/multitile/vehicle)
+	visible_message(SPAN_DANGER("[vehicle] can't destroy [src]!"))
+	playsound(vehicle, 'sound/effects/metal_crash.ogg', 35)
+	return FALSE
+
 /obj/structure/machinery/cm_vending/handle_vehicle_bump(obj/vehicle/multitile/V)
 	visible_message(SPAN_DANGER("\The [V] pushes [src] over!"))
 	playsound(V, 'sound/effects/metal_crash.ogg', 20)
@@ -519,7 +535,7 @@
 
 /mob/living/handle_vehicle_bump(obj/vehicle/multitile/V)
 	if(is_mob_incapacitated(1))
-		apply_damage((7 + rand(0, 5)*V.vehicle_ram_multiplier), BRUTE)
+		apply_damage(7 + rand(0, 5), BRUTE)
 		return TRUE
 
 	var/mob/living/driver = V.get_seat_mob(VEHICLE_DRIVER)
@@ -542,17 +558,17 @@
 			apply_effect(0.5, WEAKEN)
 		else
 			apply_effect(2, WEAKEN)
-			apply_damage((5 + rand(0, 10)*V.vehicle_ram_multiplier), BRUTE)
+			apply_damage(5 + rand(0, 10), BRUTE)
 			dmg = TRUE
 
 	else if(V.vehicle_flags & VEHICLE_CLASS_MEDIUM)
 		apply_effect(3, WEAKEN)
-		apply_damage((10 + rand(0, 10)*V.vehicle_ram_multiplier), BRUTE)
+		apply_damage(10 + rand(0, 10), BRUTE)
 		dmg = TRUE
 
 	else if(V.vehicle_flags & VEHICLE_CLASS_HEAVY)
 		apply_effect(5, WEAKEN)
-		apply_damage((15 + rand(0, 10)*V.vehicle_ram_multiplier), BRUTE)
+		apply_damage(15 + rand(0, 10), BRUTE)
 		dmg = TRUE
 
 	var/list/slots = V.get_activatable_hardpoints()
@@ -563,7 +579,7 @@
 		H.livingmob_interact(src)
 
 	apply_effect(3, WEAKEN)
-	apply_damage((7 + rand(0, 5)*V.vehicle_ram_multiplier), BRUTE)
+	apply_damage(7 + rand(0, 5), BRUTE)
 	var/mob_moved = step(src, V.last_move_dir)
 
 	visible_message(SPAN_DANGER("\The [V] rams \the [src]!"), SPAN_DANGER("\The [V] rams you! Get out of the way!"))
@@ -572,7 +588,7 @@
 		last_damage_data = create_cause_data("[initial(V.name)] roadkill", driver)
 		log_attack("[key_name(src)] was rammed by [key_name(driver)] with [V].")
 		if(faction == driver.faction)
-			msg_admin_ff("[key_name(driver)] rammed [key_name(src)] with \the [V] in [get_area(src)] [ADMIN_JMP(driver)] [ADMIN_PM(driver)]")
+			msg_admin_ff("[key_name(driver)] rammed [key_name(src)] with \the [V] in [get_area(src)] [ADMIN_JMP(driver)] [ADMIN_PM(driver)]", TRUE, loc.z)
 	else
 		log_attack("[key_name(src)] was friendly pushed by [key_name(driver)] with [V].") //to be able to determine whether vehicle was pushign friendlies
 
@@ -584,11 +600,15 @@
 	var/mob/living/driver = V.get_seat_mob(VEHICLE_DRIVER)
 	var/dmg = FALSE
 
+	var/mob_moved = FALSE
+	var/mob_knocked_down = is_mob_incapacitated()
+
 	if(V.vehicle_flags & VEHICLE_CLASS_WEAK)
-		if(driver && get_target_lock(driver.faction))
-			apply_effect(0.5, WEAKEN)
-		else
-			apply_effect(1, WEAKEN)
+		if(!mob_knocked_down)
+			var/direction_taken = pick(45, 0, -45)
+			mob_moved = step(src, turn(V.last_move_dir, direction_taken))
+			if(!mob_moved)
+				mob_moved = step(src, turn(V.last_move_dir, -direction_taken))
 	else if(V.vehicle_flags & VEHICLE_CLASS_LIGHT)
 		dmg = TRUE
 		if(get_target_lock(driver.faction))
@@ -615,9 +635,14 @@
 		last_damage_data = create_cause_data("[initial(V.name)] roadkill", driver)
 		log_attack("[key_name(src)] was rammed by [key_name(driver)] with [V].")
 		if(faction == driver.faction)
-			msg_admin_ff("[key_name(driver)] rammed and damaged member of allied faction [key_name(src)] with \the [V] in [get_area(src)] [ADMIN_JMP(driver)] [ADMIN_PM(driver)]")
+			msg_admin_ff("[key_name(driver)] rammed and damaged member of allied faction [key_name(src)] with \the [V] in [get_area(src)] [ADMIN_JMP(driver)] [ADMIN_PM(driver)]", TRUE, loc.z)
 	else
 		log_attack("[key_name(src)] was friendly pushed by [key_name(driver)] with [V].") //to be able to determine whether vehicle was pushing friendlies
+
+	if(mob_knocked_down)
+		return TRUE
+	else if (mob_moved)
+		playsound(loc, "punch", 25, 1)
 
 	return TRUE
 
@@ -629,7 +654,7 @@
 	var/is_knocked_down = FALSE
 	//whether xeno takes damage
 	var/takes_damage = FALSE
-	//whether vehicle is being "stopped in it's tracks"
+	//whether vehicle is being "stopped in its tracks"
 	var/blocked = FALSE
 	//whether vehicle receives momentum penalty
 	var/momentum_penalty = FALSE
@@ -651,8 +676,8 @@
 				momentum_penalty = TRUE
 
 		if(blocked)
-			visible_message(SPAN_DANGER("\The [src] digs it's claws into the ground, anchoring itself in place and halting \the [V] in it's tracks!"),
-			SPAN_DANGER("You dig your claws into the ground, stopping \the [V] in it's tracks!"))
+			visible_message(SPAN_DANGER("\The [src] digs its claws into the ground, anchoring itself in place and halting \the [V] in its tracks!"),
+			SPAN_DANGER("You dig your claws into the ground, stopping \the [V] in its tracks!"))
 			return FALSE
 
 	else
@@ -696,7 +721,8 @@
 	var/list/slots = V.get_activatable_hardpoints()
 	for(var/slot in slots)
 		var/obj/item/hardpoint/H = V.hardpoints[slot]
-		if(!H) continue
+		if(!H)
+			continue
 		H.livingmob_interact(src)
 
 	if(takes_damage)
@@ -749,11 +775,11 @@
 /mob/living/carbon/xenomorph/defender/handle_vehicle_bump(obj/vehicle/multitile/V)
 	if(fortify)
 		if(V.vehicle_flags & VEHICLE_CLASS_WEAK) //defenders being able to completely block armored vehicles by crawling into a boulder is ridiculous
-			visible_message(SPAN_DANGER("[src] digs it's claws into the ground, anchoring itself in place and halting [V] in it's tracks!"),
-			SPAN_DANGER("You dig your claws into the ground, stopping [V] in it's tracks!"))
+			visible_message(SPAN_DANGER("[src] digs its claws into the ground, anchoring itself in place and halting [V] in its tracks!"),
+			SPAN_DANGER("You dig your claws into the ground, stopping [V] in its tracks!"))
 			return FALSE
 		else if(V.vehicle_flags & VEHICLE_CLASS_LIGHT)
-			visible_message(SPAN_DANGER("[src] digs it's claws into the ground, slowing [V]'s movement!"),
+			visible_message(SPAN_DANGER("[src] digs its claws into the ground, slowing [V]'s movement!"),
 			SPAN_DANGER("You dig your claws into the ground, slowing [V]'s movement!"))
 			var/mob_moved = step(src, V.last_move_dir)
 			V.move_momentum = floor(V.move_momentum/3)
@@ -767,7 +793,8 @@
 			var/list/slots = V.get_activatable_hardpoints()
 			for(var/slot in slots)
 				var/obj/item/hardpoint/H = V.hardpoints[slot]
-				if(!H) continue
+				if(!H)
+					continue
 				H.livingmob_interact(src)
 
 			var/mob_moved = step(src, V.last_move_dir)
@@ -783,7 +810,7 @@
 
 	if(iscrusher(A))
 		var/mob/living/carbon/xenomorph/crusher/C = A
-		if(!C.throwing)
+		if(!HAS_TRAIT(C, TRAIT_LAUNCHED))
 			return
 		var/do_move = TRUE
 		if(health > 0)

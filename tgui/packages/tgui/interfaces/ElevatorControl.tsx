@@ -1,7 +1,7 @@
-import { useBackend } from '../backend';
-import { Box, Button, Flex, Stack } from '../components';
-import { Window } from '../layouts';
-import { logger } from '../logging';
+import { useBackend } from 'tgui/backend';
+import { Box, Button, Flex, Stack } from 'tgui/components';
+import { Window } from 'tgui/layouts';
+import { logger } from 'tgui/logging';
 
 interface Destination {
   id: string;
@@ -63,7 +63,7 @@ const ElevatorPanel = (props) => {
 
       {data.mode === 'recharging' && (
         <Stack.Item>
-          <InfoBox title="Curtesy Time" text={data.eta} />
+          <InfoBox title="Courtesy Time" text={data.eta} />
         </Stack.Item>
       )}
       {data.mode === 'igniting' && (

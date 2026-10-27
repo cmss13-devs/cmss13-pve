@@ -1,6 +1,6 @@
 /obj/vehicle/train/cargo/engine
 	name = "cargo train tug"
-	desc = "A ridable electric car designed for pulling cargo trolleys."
+	desc = "A rideable electric car designed for pulling cargo trolleys."
 	icon = 'icons/obj/vehicles/vehicles.dmi'
 	icon_state = "cargo_engine"
 	on = 0
@@ -45,6 +45,11 @@
 		set_light_on(TRUE)
 
 	turn_off() //so engine verbs are correctly set
+
+/obj/vehicle/train/cargo/engine/Destroy(force)
+	. = ..()
+	if(!QDELETED(key))
+		QDEL_NULL(key)
 
 /obj/vehicle/train/cargo/engine/Move()
 	if(on && cell.charge < charge_use)

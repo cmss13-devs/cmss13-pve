@@ -283,7 +283,8 @@
 	var/list/mobs = sortmobs()
 
 	for(var/mob/M in mobs)
-		if(!M.ckey) continue
+		if(!M.ckey)
+			continue
 
 		dat += "<tr><td>[(M.client ? "[M.client]" : "No client")]</td>"
 		dat += "<td><a href='byond://?src=\ref[usr];priv_msg=[M.ckey]'>[M.name]</a></td>"
@@ -389,7 +390,8 @@
 			dat += "<A href='byond://?_src_=admin_holder;[HrefToken(forceGlobal = TRUE)];evac_authority=init_evac'>Initiate Evacuation</a><br>"
 			dat += "<A href='byond://?_src_=admin_holder;[HrefToken(forceGlobal = TRUE)];evac_authority=cancel_evac'>Cancel Evacuation</a><br>"
 			dat += "<A href='byond://?_src_=admin_holder;[HrefToken(forceGlobal = TRUE)];evac_authority=toggle_evac'>Toggle Evacuation Permission (does not affect evac in progress)</a><br>"
-			if(check_rights(R_ADMIN, 0)) dat += "<A href='byond://?_src_=admin_holder;[HrefToken(forceGlobal = TRUE)];evac_authority=force_evac'>Force Evacuation Now</a><br>"
+			if(check_rights(R_ADMIN, 0))
+				dat += "<A href='byond://?_src_=admin_holder;[HrefToken(forceGlobal = TRUE)];evac_authority=force_evac'>Force Evacuation Now</a><br>"
 
 		dat += "<br><A href='byond://?_src_=admin_holder;[HrefToken(forceGlobal = TRUE)];delay_round_end=1'>[SSticker.delay_end ? "End Round Normally" : "Delay Round End"]</A><br>"
 		dat += "</body></html>"
@@ -451,20 +453,20 @@
 
 	ui = SStgui.try_update_ui(user, src, ui)
 	if (!ui)
-		ui = new(user, src, "PlayerPanel", "[targetMob.name] Player Panel")
+		ui = new(user, src, "PlayerPanel", "[capitalize(targetMob.name)] Player Panel")
 		ui.open()
 		ui.set_autoupdate(FALSE)
 
 // Player panel
 /datum/player_panel/ui_data(mob/user)
 	. = list()
-	.["mob_name"] = targetMob.name
+	.["mob_name"] = capitalize(targetMob.name)
 
 	if(istype(targetMob, /mob/living))
 		var/mob/living/livingTarget = targetMob
-		.["mob_sleeping"] = livingTarget.sleeping
+		.["mob_sleeping"] = livingTarget.is_admin_slept()
 	else
-		.["mob_sleeping"] = 0
+		.["mob_sleeping"] = FALSE
 
 	.["mob_frozen"] = HAS_TRAIT_FROM(targetMob, TRAIT_IMMOBILIZED, TRAIT_SOURCE_ADMIN)
 
@@ -482,12 +484,12 @@
 
 		.["client_key"] = targetClient.key
 		.["client_ckey"] = targetClient.ckey
+		.["client_username"] = targetClient.username()
 
 		.["client_muted"] = targetClient.prefs.muted
 		.["client_age"] = targetClient.player_data.byond_account_age
 		.["first_join"] = targetClient.player_data.first_join_date
 		.["client_rank"] = targetClient.admin_holder ? targetClient.admin_holder.rank : "Player"
-		.["client_muted"] = targetClient.prefs.muted
 
 		.["client_name_banned_status"] = targetClient.human_name_ban
 

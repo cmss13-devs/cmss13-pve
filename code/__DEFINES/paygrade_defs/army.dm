@@ -1,21 +1,20 @@
 // Paygrade shorthand defines, to allow clearer designation.
 
-// US Army
-
+// US Army Soldiers
 /// AE1, Private
 #define PAY_SHORT_AE1 "AE1"
 
-/// AE2, Private
+/// AE2, Private Second Class
 #define PAY_SHORT_AE2 "AE2"
 
 /// AE3, Private First Class
 #define PAY_SHORT_AE3 "AE3"
 
-/// AE4, Corporal
-#define PAY_SHORT_AE4 "AE4"
-
 /// AE4E, Specialist
 #define PAY_SHORT_AE4E "AE4E"
+
+/// AE4, Corporal
+#define PAY_SHORT_AE4 "AE4"
 
 /// AE5, Sergeant
 #define PAY_SHORT_AE5 "AE5"
@@ -23,7 +22,7 @@
 /// AE6, Staff Sergeant
 #define PAY_SHORT_AE6 "AE6"
 
-/// AE7, Sergeant First Class
+/// AE7, Gunnery Sergeant
 #define PAY_SHORT_AE7 "AE7"
 
 /// AE8, Master Sergeant
@@ -32,29 +31,20 @@
 /// AE8E, First Sergeant
 #define PAY_SHORT_AE8E "AE8E"
 
-/// AE9, Sergeant Major
+/// AE9, Master Gunnery Sergeant
 #define PAY_SHORT_AE9 "AE9"
 
-/// AE9E, Command Sergeant Major
+/// AE9E, Sergeant Major
 #define PAY_SHORT_AE9E "AE9E"
 
 /// AE9C, Sergeant Major of the Army
 #define PAY_SHORT_AE9C "AE9C"
 
-/// AW1, Warrant Officer 1
-#define PAY_SHORT_AW1 "AW1"
+/// AWO, Warrant Officer
+#define PAY_SHORT_AWO "AWO"
 
-/// AW1, Chief Warrant Officer 2
-#define PAY_SHORT_AW2 "ACW2"
-
-/// AW1, Chief Warrant Officer 3
-#define PAY_SHORT_AW3 "ACW3"
-
-/// AW1, Chief Warrant Officer 4
-#define PAY_SHORT_AW4 "ACW4"
-
-/// AW1, Chief Warrant Officer 5
-#define PAY_SHORT_AW5 "ACW5"
+/// ACWO, Chief Warrant Officer
+#define PAY_SHORT_ACWO "ACWO"
 
 /// AO1, Second Lieutenant
 #define PAY_SHORT_AO1 "AO1"
@@ -92,5 +82,5 @@
 /// AO10, General
 #define PAY_SHORT_AO10 "AO10"
 
-/// AO10C, General of the Army
-#define PAY_SHORT_AO10C "AO10C"
+/// AO10S, General of the Army
+#define PAY_SHORT_AO10S "AO10S"

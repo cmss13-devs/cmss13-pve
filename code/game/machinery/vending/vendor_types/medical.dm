@@ -15,7 +15,7 @@
 	unacidable = TRUE
 
 /obj/structure/medical_supply_link/ex_act(severity, direction)
-	return FALSE
+	return
 
 /obj/structure/medical_supply_link/Initialize()
 	. = ..()
@@ -54,9 +54,8 @@
 /obj/structure/restock_cart
 	name = "restock cart"
 	desc = "A rather heavy cart filled with various supplies to restock a vendor with."
-	icon = 'icons/obj/objects.dmi'
-	icon_state = "tank_normal" // Temporary
-	var/overlay_color = rgb(252, 186, 3) // Temporary
+	icon = 'icons/obj/structures/restock_carts.dmi'
+	icon_state = "medcart"
 
 	density = TRUE
 	anchored = FALSE
@@ -82,8 +81,7 @@
 /obj/structure/restock_cart/medical
 	name = "\improper Wey-Yu restock cart"
 	desc = "A rather heavy cart filled with various supplies to restock a vendor with. Provided by Wey-Yu Pharmaceuticals Division(TM)."
-	icon = 'icons/obj/objects.dmi'
-	icon_state = "tank_normal" // Temporary
+	icon_state = "medcart"
 
 	supplies_remaining = 20
 	supplies_max = 20
@@ -94,14 +92,13 @@
 		/obj/item/stack/medical/ointment = 3,
 		/obj/item/stack/medical/bruise_pack = 2,
 		/obj/item/stack/medical/splint = 2,
-		/obj/item/device/healthanalyzer/soul = 1,
+		/obj/item/device/healthanalyzer = 1,
 	)
 
 /obj/structure/restock_cart/medical/reagent
 	name = "\improper Wey-Yu reagent restock cart"
 	desc = "A rather heavy cart filled with various reagents to restock a vendor with. Provided by Wey-Yu Pharmaceuticals Division(TM)."
-	icon_state = "tank_normal" // Temporary
-	overlay_color = rgb(252, 115, 3) // Temporary
+	icon_state = "reagentcart" // Temporary
 
 	supplies_remaining = 1200
 	supplies_max = 1200
@@ -115,10 +112,24 @@
 	update_icon()
 
 /obj/structure/restock_cart/update_icon()
+	overlays.Cut()
 	. = ..()
-	var/image/overlay_image = image(icon, icon_state = "tn_color") // Temporary
-	overlay_image.color = overlay_color
-	overlays += overlay_image
+	if(supplies_remaining && supplies_max)
+		var/image/filled
+		var/percent = floor((supplies_remaining / supplies_max * 100))
+		switch(percent)
+			if(1 to 25)
+				filled = image(icon, src, "[icon_state]_1")
+			if(26 to 50)
+				filled = image(icon, src, "[icon_state]_2")
+			if(51 to 75)
+				filled = image(icon, src, "[icon_state]_3")
+			if(76 to INFINITY)
+				filled = image(icon, src, "[icon_state]_4")
+			else
+				return
+
+		overlays += filled
 
 /obj/structure/restock_cart/get_examine_text(mob/user)
 	. = ..()
@@ -156,16 +167,16 @@
 		if(user.action_busy)
 			return
 		playsound(src, 'sound/items/Ratchet.ogg', 25, 1)
-		user.visible_message(SPAN_NOTICE("[user] starts to deconstruct [src]."), \
+		user.visible_message(SPAN_NOTICE("[user] starts to deconstruct [src]."),
 		SPAN_NOTICE("You start deconstructing [src]."))
 		if(!do_after(user, 5 SECONDS, INTERRUPT_ALL|BEHAVIOR_IMMOBILE, BUSY_ICON_BUILD, src))
 			return
-		user.visible_message(SPAN_NOTICE("[user] deconstructs [src]."), \
+		user.visible_message(SPAN_NOTICE("[user] deconstructs [src]."),
 		SPAN_NOTICE("You deconstruct [src]."))
 		playsound(src, 'sound/items/Crowbar.ogg', 25, 1)
 		new /obj/item/stack/sheet/metal(loc)
 		if(supplies_remaining)
-			msg_admin_niche("[key_name(user)] deconstructed [src] with [supplies_remaining] [supply_descriptor] remaining in [get_area(src)] [ADMIN_JMP(loc)]", loc.x, loc.y, loc.z)
+			msg_admin_niche("[key_name(user)] deconstructed [src] with [supplies_remaining] [supply_descriptor] remaining in [ADMIN_VERBOSEJMP(src)]")
 		deconstruct(TRUE)
 		return
 
@@ -174,7 +185,7 @@
 /obj/structure/restock_cart/proc/healthcheck(mob/user)
 	if(health <= 0)
 		if(supplies_remaining && ishuman(user))
-			msg_admin_niche("[key_name(user)] destroyed [src] with [supplies_remaining] [supply_descriptor] remaining in [get_area(src)] [ADMIN_JMP(loc)]", loc.x, loc.y, loc.z)
+			msg_admin_niche("[key_name(user)] destroyed [src] with [supplies_remaining] [supply_descriptor] remaining in [ADMIN_VERBOSEJMP(src)]")
 		deconstruct(FALSE)
 
 /obj/structure/restock_cart/bullet_act(obj/projectile/Proj)
@@ -189,13 +200,28 @@
 	user.animation_attack_on(src)
 	health -= (rand(user.melee_damage_lower, user.melee_damage_upper))
 	playsound(src, attacked_sound, 25, 1)
-	user.visible_message(SPAN_DANGER("[user] slashes [src]!"), \
+	user.visible_message(SPAN_DANGER("[user] slashes [src]!"),
 	SPAN_DANGER("You slash [src]!"), null, 5, CHAT_TYPE_XENO_COMBAT)
 	healthcheck(user)
 	return XENO_ATTACK_ACTION
 
+/obj/structure/restock_cart/handle_tail_stab(mob/living/carbon/xenomorph/xeno, blunt_stab)
+	if(unslashable || health <= 0)
+		return TAILSTAB_COOLDOWN_NONE
+	playsound(src, attacked_sound, 25, 1)
+	health -= xeno.melee_damage_upper
+	if(health <= 0)
+		xeno.visible_message(SPAN_DANGER("[xeno] destroys [src] with its tail!"),
+		SPAN_DANGER("We destroy [src] with our tail!"), null, 5, CHAT_TYPE_XENO_COMBAT)
+	else
+		xeno.visible_message(SPAN_DANGER("[xeno] strikes [src] with its tail!"),
+		SPAN_DANGER("We strike [src] with our tail!"), null, 5, CHAT_TYPE_XENO_COMBAT)
+	xeno.tail_stab_animation(src, blunt_stab)
+	healthcheck(xeno)
+	return TAILSTAB_COOLDOWN_NORMAL
+
 /obj/structure/restock_cart/ex_act(severity)
-	if(indestructible)
+	if(explo_proof)
 		return
 
 	switch(severity)
@@ -242,10 +268,12 @@
 	var/list/chem_refill = list(
 		/obj/item/reagent_container/hypospray/autoinjector/bicaridine,
 		/obj/item/reagent_container/hypospray/autoinjector/dexalinp,
+		/obj/item/reagent_container/hypospray/autoinjector/antitoxin,
 		/obj/item/reagent_container/hypospray/autoinjector/adrenaline,
 		/obj/item/reagent_container/hypospray/autoinjector/inaprovaline,
 		/obj/item/reagent_container/hypospray/autoinjector/kelotane,
 		/obj/item/reagent_container/hypospray/autoinjector/oxycodone,
+		/obj/item/reagent_container/hypospray/autoinjector/peridaxon,
 		/obj/item/reagent_container/hypospray/autoinjector/tramadol,
 		/obj/item/reagent_container/hypospray/autoinjector/tricord,
 
@@ -253,9 +281,12 @@
 		/obj/item/reagent_container/hypospray/autoinjector/skillless/tramadol,
 
 		/obj/item/reagent_container/hypospray/autoinjector/bicaridine/skillless,
+		/obj/item/reagent_container/hypospray/autoinjector/antitoxin/skillless,
 		/obj/item/reagent_container/hypospray/autoinjector/kelotane/skillless,
 		/obj/item/reagent_container/hypospray/autoinjector/tramadol/skillless,
 		/obj/item/reagent_container/hypospray/autoinjector/tricord/skillless,
+
+		/obj/item/reagent_container/hypospray/tricordrazine,
 
 		/obj/item/reagent_container/glass/bottle/bicaridine,
 		/obj/item/reagent_container/glass/bottle/antitoxin,
@@ -274,8 +305,12 @@
 
 /obj/structure/machinery/cm_vending/sorted/medical/get_examine_text(mob/living/carbon/human/user)
 	. = ..()
+	if(inoperable())
+		return .
 	if(healthscan)
 		. += SPAN_NOTICE("[src] offers assisted medical scans, for ease of use with minimal training. Present the target in front of the scanner to scan.")
+	if(allow_supply_link_restock && get_supply_link())
+		. += SPAN_NOTICE("A supply link is connected.")
 
 /obj/structure/machinery/cm_vending/sorted/medical/ui_data(mob/user)
 	. = ..()
@@ -285,13 +320,11 @@
 
 /// checks if there is a supply link in our location and we are anchored to it
 /obj/structure/machinery/cm_vending/sorted/medical/proc/get_supply_link()
-	/*
 	if(!anchored)
 		return FALSE
 	var/obj/structure/medical_supply_link/linkpoint = locate() in loc
 	if(!linkpoint)
 		return FALSE
-	*/
 	return TRUE
 
 /obj/structure/machinery/cm_vending/sorted/medical/additional_restock_checks(obj/item/item_to_stock, mob/user, list/vendspec)
@@ -323,14 +356,12 @@
 	return TRUE
 
 /// Attempts to consume our reagents needed for the container (doesn't actually change the container)
-/// Will return TRUE if reagents were deducated or no reagents were needed
+/// Will return TRUE if reagents were deducted or no reagents were needed
 /obj/structure/machinery/cm_vending/sorted/medical/proc/try_deduct_chem(obj/item/reagent_container/container, mob/user)
 	var/missing_reagents = container.reagents.maximum_volume - container.reagents.total_volume
 	if(missing_reagents <= 0)
 		return TRUE
 	if(!LAZYLEN(chem_refill) || !(container.type in chem_refill))
-		if(container.reagents.total_volume == initial(container.reagents.total_volume))
-			return TRUE
 		to_chat(user, SPAN_WARNING("[src] cannot refill [container]."))
 		return FALSE
 	if(chem_refill_volume < missing_reagents)
@@ -358,19 +389,19 @@
 		to_chat(user, SPAN_WARNING("[src] doesn't use [cart.supply_descriptor]!"))
 		return
 
-	user.visible_message(SPAN_NOTICE("[user] starts stocking [cart.supply_descriptor] supplies into [src]."), \
+	user.visible_message(SPAN_NOTICE("[user] starts stocking [cart.supply_descriptor] supplies into [src]."),
 	SPAN_NOTICE("You start stocking [cart.supply_descriptor] into [src]."))
 	being_restocked = TRUE
 
 	while(cart.supplies_remaining > 0)
 		if(!do_after(user, 1 SECONDS, INTERRUPT_ALL, BUSY_ICON_GENERIC, src))
 			being_restocked = FALSE
-			user.visible_message(SPAN_NOTICE("[user] stopped stocking [src] with [cart.supply_descriptor]."), \
+			user.visible_message(SPAN_NOTICE("[user] stopped stocking [src] with [cart.supply_descriptor]."),
 			SPAN_NOTICE("You stop stocking [src] with [cart.supply_descriptor]."))
 			return
 		if(QDELETED(cart) || get_dist(user, cart) > 1)
 			being_restocked = FALSE
-			user.visible_message(SPAN_NOTICE("[user] stopped stocking [src] with [cart.supply_descriptor]."), \
+			user.visible_message(SPAN_NOTICE("[user] stopped stocking [src] with [cart.supply_descriptor]."),
 			SPAN_NOTICE("You stop stocking [src] with [cart.supply_descriptor]."))
 			return
 
@@ -384,8 +415,11 @@
 				break // All done
 			cart.supplies_remaining--
 
+		cart.update_icon()
+
 	being_restocked = FALSE
-	user.visible_message(SPAN_NOTICE("[user] finishes stocking [src] with [cart.supply_descriptor]."), \
+	cart.update_icon()
+	user.visible_message(SPAN_NOTICE("[user] finishes stocking [src] with [cart.supply_descriptor]."),
 	SPAN_NOTICE("You finish stocking [src] with [cart.supply_descriptor]."))
 
 /obj/structure/machinery/cm_vending/sorted/medical/attackby(obj/item/I, mob/user)
@@ -418,6 +452,9 @@
 
 		// Since the reagent is deleted on use it's easier to make a new one instead of snowflake checking
 		var/obj/item/reagent_container/new_container = new container.type(src)
+		// Preserve transfer amount from the original container
+		if(istype(container, /obj/item/reagent_container) && istype(new_container, /obj/item/reagent_container))
+			new_container.amount_per_transfer_from_this = container.amount_per_transfer_from_this
 		qdel(container)
 		user.put_in_hands(new_container)
 		return
@@ -477,16 +514,18 @@
 		list("Ointment", floor(scale * 10), /obj/item/stack/medical/ointment, VENDOR_ITEM_REGULAR),
 		list("Roll of Gauze", floor(scale * 10), /obj/item/stack/medical/bruise_pack, VENDOR_ITEM_REGULAR),
 		list("Splints", floor(scale * 10), /obj/item/stack/medical/splint, VENDOR_ITEM_REGULAR),
-		list("Saline IV bag", floor(scale * 4), /obj/item/reagent_container/blood/saline, VENDOR_ITEM_REGULAR),
 
 		list("AUTOINJECTORS", -1, null, null),
 		list("Autoinjector (Bicaridine)", floor(scale * 5), /obj/item/reagent_container/hypospray/autoinjector/bicaridine, VENDOR_ITEM_REGULAR),
 		list("Autoinjector (Dexalin+)", floor(scale * 5), /obj/item/reagent_container/hypospray/autoinjector/dexalinp, VENDOR_ITEM_REGULAR),
+		list("Autoinjector (Dylovene)", floor(scale * 5), /obj/item/reagent_container/hypospray/autoinjector/antitoxin, VENDOR_ITEM_REGULAR),
+		list("Autoinjector (Epinephrine)", floor(scale * 5), /obj/item/reagent_container/hypospray/autoinjector/adrenaline, VENDOR_ITEM_REGULAR),
 		list("Autoinjector (Inaprovaline)", floor(scale * 5), /obj/item/reagent_container/hypospray/autoinjector/inaprovaline, VENDOR_ITEM_REGULAR),
 		list("Autoinjector (Kelotane)", floor(scale * 5), /obj/item/reagent_container/hypospray/autoinjector/kelotane, VENDOR_ITEM_REGULAR),
 		list("Autoinjector (Oxycodone)", floor(scale * 5), /obj/item/reagent_container/hypospray/autoinjector/oxycodone, VENDOR_ITEM_REGULAR),
+		list("Autoinjector (Peridaxon)", floor(scale * 5), /obj/item/reagent_container/hypospray/autoinjector/peridaxon, VENDOR_ITEM_REGULAR),
 		list("Autoinjector (Tramadol)", floor(scale * 5), /obj/item/reagent_container/hypospray/autoinjector/tramadol, VENDOR_ITEM_REGULAR),
-		list("Autoinjector (Tricord)", floor(scale * 5), /obj/item/reagent_container/hypospray/autoinjector/tricord, VENDOR_ITEM_REGULAR),
+		list("Autoinjector (Tricordrazine)", floor(scale * 5), /obj/item/reagent_container/hypospray/autoinjector/tricord, VENDOR_ITEM_REGULAR),
 
 		list("LIQUID BOTTLES", -1, null, null),
 		list("Bottle (Bicaridine)", floor(scale * 3), /obj/item/reagent_container/glass/bottle/bicaridine, VENDOR_ITEM_REGULAR),
@@ -504,18 +543,20 @@
 		list("Pill Bottle (Dylovene)", floor(scale * 4), /obj/item/storage/pill_bottle/antitox, VENDOR_ITEM_REGULAR),
 		list("Pill Bottle (Inaprovaline)", floor(scale * 4), /obj/item/storage/pill_bottle/inaprovaline, VENDOR_ITEM_REGULAR),
 		list("Pill Bottle (Kelotane)", floor(scale * 4), /obj/item/storage/pill_bottle/kelotane, VENDOR_ITEM_REGULAR),
+		list("Pill Bottle (Oxycodone)", floor(scale * 3), /obj/item/storage/pill_bottle/oxycodone, VENDOR_ITEM_REGULAR),
 		list("Pill Bottle (Peridaxon)", floor(scale * 3), /obj/item/storage/pill_bottle/peridaxon, VENDOR_ITEM_REGULAR),
 		list("Pill Bottle (Tramadol)", floor(scale * 4), /obj/item/storage/pill_bottle/tramadol, VENDOR_ITEM_REGULAR),
-		list("Pill Bottle (Tricordazine)", floor(scale * 3), /obj/item/storage/pill_bottle/tricord, VENDOR_ITEM_REGULAR),
 
 		list("MEDICAL UTILITIES", -1, null, null),
+		list("Emergency Defibrillator", floor(scale * 3), /obj/item/device/defibrillator, VENDOR_ITEM_REGULAR),
 		list("Surgical Line", floor(scale * 2), /obj/item/tool/surgery/surgical_line, VENDOR_ITEM_REGULAR),
 		list("Synth-Graft", floor(scale * 2), /obj/item/tool/surgery/synthgraft, VENDOR_ITEM_REGULAR),
 		list("Hypospray", floor(scale * 3), /obj/item/reagent_container/hypospray/tricordrazine, VENDOR_ITEM_REGULAR),
-		list("Health Diagnostic Equipment", floor(scale * 3), /obj/item/device/healthanalyzer/soul, VENDOR_ITEM_REGULAR),
+		list("Health Analyzer", floor(scale * 5), /obj/item/device/healthanalyzer, VENDOR_ITEM_REGULAR),
 		list("M276 Pattern Medical Storage Rig", floor(scale * 2), /obj/item/storage/belt/medical, VENDOR_ITEM_REGULAR),
 		list("Medical HUD Glasses", floor(scale * 3), /obj/item/clothing/glasses/hud/health, VENDOR_ITEM_REGULAR),
-		list("Syringe", floor(scale * 7), /obj/item/reagent_container/syringe, VENDOR_ITEM_REGULAR),
+		list("Stasis Bag", floor(scale * 3), /obj/item/bodybag/cryobag, VENDOR_ITEM_REGULAR),
+		list("Syringe", floor(scale * 7), /obj/item/reagent_container/syringe, VENDOR_ITEM_REGULAR)
 	)
 
 /obj/structure/machinery/cm_vending/sorted/medical/populate_product_list_and_boxes(scale)
@@ -533,6 +574,7 @@
 /obj/structure/machinery/cm_vending/sorted/medical/Initialize()
 	. = ..()
 
+	AddElement(/datum/element/corp_label/wy)
 	// If this is a medlinked vendor (that needs a link) and isn't dynamically changing it will periodically restock itself
 	if(vend_flags & VEND_STOCK_DYNAMIC)
 		return
@@ -656,8 +698,7 @@
 		list("Beaker, Large (120 Units)", floor(scale * 3), /obj/item/reagent_container/glass/beaker/large, VENDOR_ITEM_REGULAR),
 		list("Box of Pill Bottles", floor(scale * 2), /obj/item/storage/box/pillbottles, VENDOR_ITEM_REGULAR),
 		list("Dropper", floor(scale * 3), /obj/item/reagent_container/dropper, VENDOR_ITEM_REGULAR),
-		list("Syringe", floor(scale * 7), /obj/item/reagent_container/syringe, VENDOR_ITEM_REGULAR),
-
+		list("Syringe", floor(scale * 7), /obj/item/reagent_container/syringe, VENDOR_ITEM_REGULAR)
 	)
 
 /obj/structure/machinery/cm_vending/sorted/medical/no_access
@@ -665,58 +706,6 @@
 
 /obj/structure/machinery/cm_vending/sorted/medical/bolted
 	wrenchable = FALSE
-
-/obj/structure/machinery/cm_vending/sorted/medical/no_access/upp
-	name = "MinZdrav Plus"
-	desc = "Medical Pharmaceutical dispenser. Provided by Ministry of Health of UPP."
-	vendor_theme = VENDOR_THEME_UPP
-
-/obj/structure/machinery/cm_vending/sorted/medical/no_access/upp/populate_product_list(scale)
-	listed_products = list(
-		list("FIELD SUPPLIES", -1, null, null),
-		list("Burn Kit", round(scale * 7), /obj/item/stack/medical/advanced/ointment, VENDOR_ITEM_REGULAR),
-		list("Trauma Kit", round(scale * 7), /obj/item/stack/medical/advanced/bruise_pack, VENDOR_ITEM_REGULAR),
-		list("Ointment", round(scale * 7), /obj/item/stack/medical/ointment, VENDOR_ITEM_REGULAR),
-		list("Roll of Gauze", round(scale * 7), /obj/item/stack/medical/bruise_pack, VENDOR_ITEM_REGULAR),
-		list("Splints", round(scale * 7), /obj/item/stack/medical/splint, VENDOR_ITEM_REGULAR),
-
-		list("AUTOINJECTORS", -1, null, null),
-		list("Autoinjector (Bicaridine)", floor(scale * 5), /obj/item/reagent_container/hypospray/autoinjector/bicaridine, VENDOR_ITEM_REGULAR),
-		list("Autoinjector (Dexalin+)", floor(scale * 5), /obj/item/reagent_container/hypospray/autoinjector/dexalinp, VENDOR_ITEM_REGULAR),
-		list("Autoinjector (Inaprovaline)", floor(scale * 5), /obj/item/reagent_container/hypospray/autoinjector/inaprovaline, VENDOR_ITEM_REGULAR),
-		list("Autoinjector (Kelotane)", floor(scale * 5), /obj/item/reagent_container/hypospray/autoinjector/kelotane, VENDOR_ITEM_REGULAR),
-		list("Autoinjector (Oxycodone)", floor(scale * 5), /obj/item/reagent_container/hypospray/autoinjector/oxycodone, VENDOR_ITEM_REGULAR),
-		list("Autoinjector (Tramadol)", floor(scale * 5), /obj/item/reagent_container/hypospray/autoinjector/tramadol, VENDOR_ITEM_REGULAR),
-		list("Autoinjector (Tricord)", floor(scale * 5), /obj/item/reagent_container/hypospray/autoinjector/tricord, VENDOR_ITEM_REGULAR),
-
-		list("LIQUID BOTTLES", -1, null, null),
-		list("Bottle (Bicaridine)", floor(scale * 5), /obj/item/reagent_container/glass/bottle/bicaridine, VENDOR_ITEM_REGULAR),
-		list("Bottle (Dylovene)", floor(scale * 5), /obj/item/reagent_container/glass/bottle/antitoxin, VENDOR_ITEM_REGULAR),
-		list("Bottle (Dexalin)", floor(scale * 5), /obj/item/reagent_container/glass/bottle/dexalin, VENDOR_ITEM_REGULAR),
-		list("Bottle (Inaprovaline)", floor(scale * 5), /obj/item/reagent_container/glass/bottle/inaprovaline, VENDOR_ITEM_REGULAR),
-		list("Bottle (Kelotane)", floor(scale * 5), /obj/item/reagent_container/glass/bottle/kelotane, VENDOR_ITEM_REGULAR),
-		list("Bottle (Oxycodone)", floor(scale * 5), /obj/item/reagent_container/glass/bottle/oxycodone, VENDOR_ITEM_REGULAR),
-		list("Bottle (Peridaxon)", floor(scale * 5), /obj/item/reagent_container/glass/bottle/peridaxon, VENDOR_ITEM_REGULAR),
-		list("Bottle (Tramadol)", floor(scale * 5), /obj/item/reagent_container/glass/bottle/tramadol, VENDOR_ITEM_REGULAR),
-
-		list("PILL BOTTLES", -1, null, null),
-		list("Pill Bottle (Bicaridine)", floor(scale * 3), /obj/item/storage/pill_bottle/bicaridine, VENDOR_ITEM_REGULAR),
-		list("Pill Bottle (Dexalin)", floor(scale * 3), /obj/item/storage/pill_bottle/dexalin, VENDOR_ITEM_REGULAR),
-		list("Pill Bottle (Dylovene)", floor(scale * 3), /obj/item/storage/pill_bottle/antitox, VENDOR_ITEM_REGULAR),
-		list("Pill Bottle (Inaprovaline)", floor(scale * 3), /obj/item/storage/pill_bottle/inaprovaline, VENDOR_ITEM_REGULAR),
-		list("Pill Bottle (Kelotane)", floor(scale * 3), /obj/item/storage/pill_bottle/kelotane, VENDOR_ITEM_REGULAR),
-		list("Pill Bottle (Peridaxon)", floor(scale * 2), /obj/item/storage/pill_bottle/peridaxon, VENDOR_ITEM_REGULAR),
-		list("Pill Bottle (Tramadol)", floor(scale * 3), /obj/item/storage/pill_bottle/tramadol, VENDOR_ITEM_REGULAR),
-
-		list("MEDICAL UTILITIES", -1, null, null),
-		list("Surgical Line", floor(scale * 2), /obj/item/tool/surgery/surgical_line, VENDOR_ITEM_REGULAR),
-		list("Synth-Graft", floor(scale * 2), /obj/item/tool/surgery/synthgraft, VENDOR_ITEM_REGULAR),
-		list("Hypospray", floor(scale * 2), /obj/item/reagent_container/hypospray/tricordrazine, VENDOR_ITEM_REGULAR),
-		list("Health Diagnostic Equipment", floor(scale * 3), /obj/item/device/healthanalyzer/soul, VENDOR_ITEM_REGULAR),
-		list("Type 41 Pattern Medical Storage Rig", floor(scale * 2), /obj/item/storage/belt/medical/upp, VENDOR_ITEM_REGULAR),
-		list("Medical HUD Glasses", floor(scale * 3), /obj/item/clothing/glasses/hud/health, VENDOR_ITEM_REGULAR),
-		list("Syringe", floor(scale * 7), /obj/item/reagent_container/syringe, VENDOR_ITEM_REGULAR)
-	)
 
 /obj/structure/machinery/cm_vending/sorted/medical/chemistry/no_access
 	req_access = list()
@@ -728,6 +717,13 @@
 	req_access = null
 	vendor_theme = VENDOR_THEME_CLF
 	allow_supply_link_restock = FALSE
+
+/obj/structure/machinery/cm_vending/sorted/medical/upp
+	name = "\improper Medical Equipment Vendor"
+	desc = "A vending machine dispensing various pieces of medical equipment."
+	req_one_access = list(ACCESS_UPP_GENERAL)
+	req_access = null
+	vendor_theme = VENDOR_THEME_UPP
 
 /obj/structure/machinery/cm_vending/sorted/medical/marinemed
 	name = "\improper ColMarTech MarineMed"
@@ -749,13 +745,13 @@
 		list("Pain-Stop Autoinjector", floor(scale * 5), /obj/item/reagent_container/hypospray/autoinjector/skillless/tramadol, VENDOR_ITEM_REGULAR),
 
 		list("DEVICES", -1, null, null),
-		list("Health Diagnostic Equipment", floor(scale * 2), /obj/item/device/healthanalyzer/soul, VENDOR_ITEM_REGULAR),
+		list("Health Analyzer", floor(scale * 3), /obj/item/device/healthanalyzer, VENDOR_ITEM_REGULAR),
+
 		list("FIELD SUPPLIES", -1, null, null),
 		list("Fire Extinguisher (portable)", 5, /obj/item/tool/extinguisher/mini, VENDOR_ITEM_REGULAR),
 		list("Ointment", floor(scale * 8), /obj/item/stack/medical/ointment, VENDOR_ITEM_REGULAR),
 		list("Roll of Gauze", floor(scale * 8), /obj/item/stack/medical/bruise_pack, VENDOR_ITEM_REGULAR),
-		list("Splints", floor(scale * 8), /obj/item/stack/medical/splint, VENDOR_ITEM_REGULAR),
-		list("M5 Gasmask", 4, /obj/item/clothing/mask/gas/military, VENDOR_ITEM_REGULAR)
+		list("Splints", floor(scale * 8), /obj/item/stack/medical/splint, VENDOR_ITEM_REGULAR)
 	)
 
 /obj/structure/machinery/cm_vending/sorted/medical/marinemed/antag
@@ -766,6 +762,13 @@
 	vendor_theme = VENDOR_THEME_CLF
 	allow_supply_link_restock = FALSE
 
+/obj/structure/machinery/cm_vending/sorted/medical/marinemed/upp
+	name = "\improper Basic Medical Supplies Vendor"
+	desc = "A vending machine dispensing basic medical supplies."
+	req_one_access = list(ACCESS_UPP_GENERAL)
+	req_access = null
+	vendor_theme = VENDOR_THEME_UPP
+
 /obj/structure/machinery/cm_vending/sorted/medical/blood
 	name = "\improper MM Blood Dispenser"
 	desc = "The MarineMed brand blood dispensary is the premier, top-of-the-line blood dispenser of 2105! Get yours today!" //Don't update this year, the joke is it's old.
@@ -773,7 +776,7 @@
 	wrenchable = TRUE
 	hackable = TRUE
 	healthscan = FALSE
-	allow_supply_link_restock = FALSE
+	allow_supply_link_restock = TRUE
 	chem_refill = null
 
 /obj/structure/machinery/cm_vending/sorted/medical/blood/bolted
@@ -799,6 +802,11 @@
 	vendor_theme = VENDOR_THEME_CLF
 	allow_supply_link_restock = FALSE
 
+/obj/structure/machinery/cm_vending/sorted/medical/blood/upp
+	req_one_access = list(ACCESS_UPP_GENERAL)
+	req_access = null
+	vendor_theme = VENDOR_THEME_UPP
+
 
 //------------WALL MED VENDORS------------
 
@@ -812,6 +820,7 @@
 	wrenchable = FALSE
 	vend_delay = 0.7 SECONDS
 	allow_supply_link_restock = FALSE
+	untippable = TRUE
 
 	listed_products = list(
 		list("SUPPLIES", -1, null, null),
@@ -820,11 +829,9 @@
 		list("Roll Of Gauze", 4, /obj/item/stack/medical/bruise_pack, VENDOR_ITEM_REGULAR),
 		list("Ointment", 4, /obj/item/stack/medical/ointment, VENDOR_ITEM_REGULAR),
 		list("Medical Splints", 4, /obj/item/stack/medical/splint, VENDOR_ITEM_REGULAR),
-		list("Saline IV bag", 2, /obj/item/reagent_container/blood/saline, VENDOR_ITEM_REGULAR),
 
 		list("UTILITY", -1, null, null),
-		list("Health Diagnostic Equipment", 1, /obj/item/device/healthanalyzer/soul, VENDOR_ITEM_REGULAR),
-		list("Gas Mask", 2, /obj/item/clothing/mask/gas, VENDOR_ITEM_REGULAR),
+		list("HF2 Health Analyzer", 2, /obj/item/device/healthanalyzer, VENDOR_ITEM_REGULAR)
 	)
 
 	chem_refill_volume = 250
@@ -834,6 +841,7 @@
 		/obj/item/reagent_container/hypospray/autoinjector/skillless/tramadol,
 		/obj/item/reagent_container/hypospray/autoinjector/tricord/skillless,
 		/obj/item/reagent_container/hypospray/autoinjector/bicaridine/skillless,
+		/obj/item/reagent_container/hypospray/autoinjector/antitoxin/skillless,
 		/obj/item/reagent_container/hypospray/autoinjector/kelotane/skillless,
 		/obj/item/reagent_container/hypospray/autoinjector/tramadol/skillless,
 	)
@@ -864,7 +872,8 @@
 		list("Pain-Stop Autoinjector", 8, /obj/item/reagent_container/hypospray/autoinjector/skillless/tramadol, VENDOR_ITEM_REGULAR),
 
 		list("DEVICES", -1, null, null),
-		list("Health Diagnostic Equipment", 2, /obj/item/device/healthanalyzer/soul, VENDOR_ITEM_REGULAR),
+		list("Health Analyzer", 8, /obj/item/device/healthanalyzer, VENDOR_ITEM_REGULAR),
+
 		list("FIELD SUPPLIES", -1, null, null),
 		list("Burn Kit", 8, /obj/item/stack/medical/advanced/ointment, VENDOR_ITEM_REGULAR),
 		list("Trauma Kit", 8, /obj/item/stack/medical/advanced/bruise_pack, VENDOR_ITEM_REGULAR),
@@ -904,3 +913,7 @@
 		list("Souto Grape", 1, /obj/item/reagent_container/food/drinks/cans/souto/grape, VENDOR_ITEM_REGULAR),
 		list("Diet Souto Grape", 1, /obj/item/reagent_container/food/drinks/cans/souto/diet/grape, VENDOR_ITEM_REGULAR)
 	)
+
+/obj/structure/machinery/cm_vending/sorted/medical/wall_med/souto/Initialize()
+	. = ..()
+	AddElement(/datum/element/corp_label/souta)

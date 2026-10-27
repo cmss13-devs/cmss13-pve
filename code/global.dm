@@ -1,15 +1,6 @@
 //This file was auto-corrected by findeclaration.exe on 25.5.2012 20:42:31
 #define MAIN_SHIP_NAME SSmapping.get_main_ship_name()
-#define MAIN_SHIP_DEFAULT_NAME "USS Golden Arrow"
-#define SHIP_MAP_NAMES list("USS Almayer", "USS Golden Arrow",  "USS Golden Arrow (Classic)", "SSV Chapaev", "USS Rover", "USCSS Firefly", "USCSS Obsidian Falk", "USCSS Onyx Karain", "HMS Brynhild")
-
-#define MAIN_SHIP_PLATOON text2path(SSmapping.get_main_ship_platoon())
-#define MAIN_SHIP_DEFAULT_PLATOON "/datum/squad/marine/alpha"
-#define USCM_AUXILIARY_PLATOON new /datum/squad/marine/bravo
-#define FORECON_AUXILIARY_PLATOON new /datum/squad/marine/sof/forecon
-#define UPP_AUXILIARY_PLATOON new /datum/squad/marine/upp/secondary
-#define PMC_AUXILIARY_PLATOON new /datum/squad/marine/pmc/secondary
-
+#define MAIN_SHIP_DEFAULT_NAME "USS Almayer"
 //=================================================
 //Please don't edit these values without speaking to Errorage first ~Carn
 //Admin Permissions
@@ -36,6 +27,10 @@
 #define RL_EVERYTHING (R_BUILDMODE|R_ADMIN|R_BAN|R_SERVER|R_DEBUG|R_PERMISSIONS|R_POSSESS|R_STEALTH|R_COLOR|R_VAREDIT|R_EVENT|R_SOUNDS|R_NOLOCK|R_SPAWN|R_MOD|R_MENTOR)
 /// Truely everything
 #define RL_HOST (RL_EVERYTHING|R_HOST|R_PROFILER)
+
+#define RL_HARMLESS (R_MENTOR|R_COLOR|R_NOLOCK)
+
+
 // 512.1430 increases maximum bit flags from 16 to 24, so the following flags should be available for future changes:
 //=================================================
 
@@ -43,6 +38,7 @@
 #define CLIENT_IS_STAFF(cli) (cli?.admin_holder?.rights & (R_MOD|R_ADMIN))
 #define CLIENT_IS_MENTOR(cli) CLIENT_HAS_RIGHTS(cli, R_MENTOR)
 #define CLIENT_IS_STEALTHED(cli) (CLIENT_HAS_RIGHTS(cli, R_STEALTH) && cli.prefs?.toggles_admin & ADMIN_STEALTHMODE)
+#define CLIENT_IS_AFK_SAFE(cli) (CLIENT_IS_STAFF(cli) && cli.prefs?.toggles_admin & ADMIN_AFK_SAFE)
 
 #define AHOLD_IS_MOD(ahold) (ahold && (ahold.rights & R_MOD))
 #define AHOLD_IS_ADMIN(ahold) (ahold && (ahold.rights & R_ADMIN))

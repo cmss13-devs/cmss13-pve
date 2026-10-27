@@ -22,21 +22,6 @@
 	set category = "IC"
 	return
 
-/mob
-	var/picksay_cooldown = 0
-
-/mob/verb/picksay_verb(message as text)
-	set name = "Pick-Say"
-	set category = "IC"
-
-	if(picksay_cooldown > world.time)
-		return
-
-	var/list/possible_phrases = splittext(message, ";")
-	if(length(possible_phrases))
-		say_verb(pick(possible_phrases))
-		picksay_cooldown = world.time + 1.5 SECONDS
-
 /mob/verb/say_verb(message as text)
 	set name = "Say"
 	set category = "IC"
@@ -65,12 +50,9 @@
 	if(!src.client) //Somehow
 		return
 
-	if(SEND_SIGNAL(src, COMSIG_DEAD_SPEAK, message) & COMPONENT_OVERRIDE_DEAD_SPEAK)
-		return
-
 	if(!src.client.admin_holder || !(client.admin_holder.rights & R_MOD))
 		if(!GLOB.dsay_allowed)
-			to_chat(src, SPAN_DANGER("Deadchat is globally muted"))
+			to_chat(src, SPAN_DANGER("Deadchat is globally muted."))
 			return
 
 	if(client && client.prefs && !(client.prefs.toggles_chat & CHAT_DEAD))
@@ -107,29 +89,21 @@
 		langchat_speech(message, langchat_listeners, GLOB.all_languages, skip_language_check = TRUE)
 
 /mob/proc/say_understands(mob/other, datum/language/speaking = null)
-	if (src.stat == 2) //Dead
-		return 1
+	if(stat == DEAD) //Dead
+		return TRUE
 
-	//Universal speak makes everything understandable, for obvious reasons.
-	else if(src.universal_speak || src.universal_understand)
-		return 1
+	if(universal_understand)
+		return TRUE
 
-	//Languages are handled after.
-	if (!speaking)
-		if(!other)
-			return 1
-		if(other.universal_speak)
-			return 1
-		if (istype(other, src.type) || istype(src, other.type))
-			return 1
-		return 0
-
+	if(istype(other) && other.universal_speak)
+		return TRUE
 	//Language check.
-	for(var/datum/language/L in src.languages)
-		if(speaking.name == L.name)
-			return 1
+	if(speaking)
+		for(var/datum/language/known_languages as anything in languages)
+			if(speaking.name == known_languages.name)
+				return TRUE
 
-	return 0
+	return FALSE
 
 /*
 ***Deprecated***
@@ -164,7 +138,7 @@ for it but just ignore it.
 		return "1"
 	else if (ending == "!")
 		return "2"
-	return "0"
+	return "4"
 
 //parses the message mode code (e.g. :h, :w) from text, such as that supplied to say.
 //returns the message mode string or null for no message mode.

@@ -53,7 +53,7 @@
 	dir = 8
 	},
 /obj/structure/bed/chair,
-/obj/structure/phone_base/tent{
+/obj/structure/transmitter/tent{
 	pixel_y = 30;
 	pixel_x = 16;
 	phone_category = "Command";
@@ -65,7 +65,7 @@
 /obj/structure/blocker/tent{
 	dir = 1
 	},
-/obj/structure/machinery/computer/ordercomp/tent{
+/obj/structure/machinery/computer/supply/tent{
 	pixel_y = 25
 	},
 /turf/template_noop,

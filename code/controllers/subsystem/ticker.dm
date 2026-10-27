@@ -21,11 +21,7 @@ SUBSYSTEM_DEF(ticker)
 	var/list/login_music = null //Music played in pregame lobby
 
 	var/delay_end = FALSE //If set true, the round will not restart on it's own
-#if defined(UNIT_TESTS) //must be FALSE for unit tests else they hang indefinitely
 	var/delay_start = FALSE
-#else
-	var/delay_start = TRUE
-#endif
 	var/admin_delay_notice = "" //A message to display to anyone who tries to restart the world after a delay
 
 	var/time_left //Pre-game timer
@@ -56,8 +52,6 @@ SUBSYSTEM_DEF(ticker)
 	var/totalPlayersReady = 0 //used for pregame stats on statpanel
 	var/tutorial_disabled = FALSE
 
-	var/intro_sequence = TRUE
-
 /datum/controller/subsystem/ticker/Initialize(timeofday)
 	load_mode()
 
@@ -78,6 +72,11 @@ SUBSYSTEM_DEF(ticker)
 			to_chat_spaced(world, type = MESSAGE_TYPE_SYSTEM, margin_top = 0, html = SPAN_ROUNDBODY("Please, setup your character and select ready. Game will start in [floor(time_left / 10) || CONFIG_GET(number/lobby_countdown)] seconds."))
 			SEND_GLOBAL_SIGNAL(COMSIG_GLOB_MODE_PREGAME_LOBBY)
 			current_state = GAME_STATE_PREGAME
+
+			#ifdef QUICK_START
+			request_start()
+			#endif
+
 			fire()
 
 		if(GAME_STATE_PREGAME)
@@ -114,8 +113,16 @@ SUBSYSTEM_DEF(ticker)
 				current_state = GAME_STATE_FINISHED
 				GLOB.ooc_allowed = TRUE
 				mode.declare_completion(force_ending)
-				REDIS_PUBLISH("byond.round", "type" = "round-complete", "round_name" = GLOB.round_statistics.round_name)
+				REDIS_PUBLISH("byond.round", "type" = "round-complete", "round_name" = GLOB.round_statistics.round_name, "round_finished" = mode.round_finished)
 				flash_clients()
+				addtimer(CALLBACK(
+					SSvote,
+					/datum/controller/subsystem/vote/proc/initiate_vote,
+					"gamemode",
+					"SERVER",
+					CALLBACK(src, PROC_REF(handle_map_reboot)),
+					TRUE
+				), 3 SECONDS)
 				Master.SetRunLevel(RUNLEVEL_POSTGAME)
 
 /// Attempt to start game asynchronously if applicable
@@ -142,10 +149,6 @@ SUBSYSTEM_DEF(ticker)
 
 	REDIS_PUBLISH("byond.round", "type" = "round-start")
 
-	for(var/client/C in GLOB.admins)
-		remove_verb(C, GLOB.roundstart_mod_verbs)
-	GLOB.admin_verbs_minor_event -= GLOB.roundstart_mod_verbs
-
 	return TRUE
 
 /// Try to effectively setup gamemode and start now
@@ -161,6 +164,16 @@ SUBSYSTEM_DEF(ticker)
 		return FALSE
 	return TRUE
 
+/datum/controller/subsystem/ticker/proc/handle_map_reboot()
+	addtimer(CALLBACK(
+		SSvote,
+		/datum/controller/subsystem/vote/proc/initiate_vote,
+		"groundmap",
+		"SERVER",
+		CALLBACK(src, PROC_REF(Reboot)),
+		TRUE
+	), 3 SECONDS)
+
 /datum/controller/subsystem/ticker/proc/setup()
 	to_chat(world, SPAN_BOLDNOTICE("Enjoy the game!"))
 	var/init_start = world.timeofday
@@ -174,8 +187,20 @@ SUBSYSTEM_DEF(ticker)
 		if(world.time - 2 * wait > CONFIG_GET(number/lobby_countdown) SECONDS)
 			flash_clients()
 			delay_start = TRUE
-			to_chat(world, SPAN_CENTERBOLD("The game start has been delayed."))
-			message_admins(SPAN_ADMINNOTICE("Alert: Insufficent players ready to start [GLOB.master_mode].\nEither change mode and map or start round and bypass checks."))
+			var/active_admins = 0
+			for(var/client/admin_client in GLOB.admins)
+				if(!admin_client.is_afk() && check_client_rights(admin_client, R_SERVER, FALSE))
+					active_admins = TRUE
+					break
+			if(active_admins)
+				to_chat(world, SPAN_CENTERBOLD("The game start has been delayed."))
+				message_admins(SPAN_ADMINNOTICE("Alert: Insufficient players ready to start [GLOB.master_mode].\nEither change mode and map or start round and bypass checks."))
+			else
+				var/fallback_mode = CONFIG_GET(string/gamemode_default)
+				SSticker.save_mode(fallback_mode)
+				GLOB.master_mode = fallback_mode
+				to_chat(world, SPAN_BOLDNOTICE("Notice: The Gamemode for next round has been set to [fallback_mode]"))
+				handle_map_reboot()
 		else
 			to_chat(world, "Attempting again...")
 		QDEL_NULL(mode)
@@ -236,9 +261,6 @@ SUBSYSTEM_DEF(ticker)
 
 	CHECK_TICK
 
-	for(var/mob/new_player/np in GLOB.new_player_list)
-		INVOKE_ASYNC(np, TYPE_PROC_REF(/mob/new_player, new_player_panel_proc), TRUE)
-
 	setup_economy()
 
 	SSoldshuttle.shuttle_controller?.setup_shuttle_docks()
@@ -261,6 +283,7 @@ SUBSYSTEM_DEF(ticker)
 		to_chat_spaced(world, html = FONT_SIZE_BIG(SPAN_ROLE_BODY("<B>Welcome to [GLOB.round_statistics.round_name]</B>")))
 
 	GLOB.supply_controller.start_processing()
+	GLOB.supply_controller_upp.start_processing()
 
 	for(var/i in GLOB.closet_list) //Set up special equipment for lockers and vendors, depending on gamemode
 		var/obj/structure/closet/C = i
@@ -339,7 +362,7 @@ SUBSYSTEM_DEF(ticker)
 	if(mode)
 		GLOB.master_mode = SSmapping.configs[GROUND_MAP].force_mode ? SSmapping.configs[GROUND_MAP].force_mode : mode
 	else
-		GLOB.master_mode = "Distress Signal: Lowpop"
+		GLOB.master_mode = GAMEMODE_EXTENDED
 	log_game("Saved mode is '[GLOB.master_mode]'")
 
 
@@ -347,11 +370,46 @@ SUBSYSTEM_DEF(ticker)
 	fdel("data/mode.txt")
 	WRITE_FILE(file("data/mode.txt"), the_mode)
 
+
+/datum/controller/subsystem/ticker/proc/Reboot(reason, delay)
+	set waitfor = FALSE
+
+	if(usr && !check_rights(R_SERVER))
+		return
+
+	if(graceful)
+		to_chat_forced(world, "<h3>[SPAN_BOLDNOTICE("Shutting down...")]</h3>")
+		world.Reboot()
+		return
+
+	if(!delay)
+		delay = CONFIG_GET(number/round_end_countdown) * 10
+
+	var/skip_delay = check_rights()
+	if(delay_end && !skip_delay)
+		to_chat(world, SPAN_BOLDNOTICE("An admin has delayed the round end."))
+		return
+
+	to_chat(world, SPAN_BOLDNOTICE("Rebooting World in [DisplayTimeText(delay)]. [reason]"))
+
+	var/start_wait = world.time
+	sleep(delay - (world.time - start_wait))
+
+	if(delay_end && !skip_delay)
+		to_chat(world, SPAN_BOLDNOTICE("Reboot was cancelled by an admin."))
+		return
+
+	log_game("Rebooting World. [reason]")
+	to_chat_forced(world, "<h3>[SPAN_BOLDNOTICE("Rebooting...")]</h3>")
+
+	world.Reboot()
+
 /datum/controller/subsystem/ticker/proc/create_characters()
 	if(!GLOB.RoleAuthority)
 		return
 
-	for(var/mob/new_player/player in GLOB.player_list)
+	var/list/random_players = shuffle(GLOB.player_list)
+	for(var/mob/new_player/player in random_players)
 		if(!player || !player.ready || !player.mind || !player.job)
 			continue
 
@@ -359,6 +417,9 @@ SUBSYSTEM_DEF(ticker)
 
 /datum/controller/subsystem/ticker/proc/spawn_and_equip_char(mob/new_player/player)
 	var/datum/job/J = GLOB.RoleAuthority.roles_for_mode[player.job]
+
+	player.client?.prefs.update_slot(J.title, 10 SECONDS)
+
 	if(J.job_options && player?.client?.prefs?.pref_special_job_options[J.title])
 		J.handle_job_options(player.client.prefs.pref_special_job_options[J.title])
 	if(J.handle_spawn_and_equip)
@@ -367,12 +428,15 @@ SUBSYSTEM_DEF(ticker)
 		var/mob/M = J.spawn_in_player(player)
 		if(istype(M))
 			J.equip_job(M)
+			if(player.ckey in GLOB.donator_items)
+				to_chat(player, SPAN_BOLDNOTICE("You have gear available in the personal gear vendor near Requisitions."))
 
 			if(M.client)
 				var/client/C = M.client
 				if(C.player_data && C.player_data.playtime_loaded && length(C.player_data.playtimes) == 0)
 					msg_admin_niche("NEW PLAYER: <b>[key_name(player, 1, 1, 0)]</b>. IP: [player.lastKnownIP], CID: [player.computer_id]")
-	QDEL_IN(player, 5)
+	if(!QDELETED(player))
+		QDEL_IN(player, 5 SECONDS)
 
 /datum/controller/subsystem/ticker/proc/old_create_characters()
 	for(var/mob/new_player/player in GLOB.player_list)
@@ -390,12 +454,16 @@ SUBSYSTEM_DEF(ticker)
 	if(mode && istype(mode,/datum/game_mode/huntergames)) // || istype(mode,/datum/game_mode/whiskey_outpost)
 		return
 
-	for(var/mob/living/carbon/human/player in GLOB.human_mob_list)
+	var/list/random_players = shuffle(GLOB.human_mob_list)
+	for(var/mob/living/carbon/human/player in random_players)
 		if(player.mind)
 			if(player.job == JOB_CO)
 				captainless = FALSE
 			if(player.job)
-				GLOB.RoleAuthority.equip_role(player, GLOB.RoleAuthority.roles_by_name[player.job], late_join = FALSE)
+				INVOKE_ASYNC(GLOB.RoleAuthority, TYPE_PROC_REF(/datum/authority/branch/role, equip_role), player, GLOB.RoleAuthority.roles_by_name[player.job], FALSE)
+				if(player.ckey in GLOB.donator_items)
+					to_chat(player, SPAN_BOLDNOTICE("You have gear available in the personal gear vendor near Requisitions."))
+
 			if(player.client)
 				var/client/C = player.client
 				if(C.player_data && C.player_data.playtime_loaded && length(C.player_data.playtimes) == 0)
@@ -409,7 +477,7 @@ SUBSYSTEM_DEF(ticker)
 
 /datum/controller/subsystem/ticker/proc/send_tip_of_the_round()
 	var/message
-	var/tip_file = pick("strings/pvetips.txt")
+	var/tip_file = pick("strings/xenotips.txt", "strings/marinetips.txt", "strings/metatips.txt", 15;"strings/memetips.txt")
 	var/list/tip_list = file2list(tip_file)
 	if(length(tip_file))
 		message = pick(tip_list)
@@ -417,7 +485,7 @@ SUBSYSTEM_DEF(ticker)
 		CRASH("send_tip_of_the_round() failed somewhere")
 
 	if(message)
-		to_chat(world, SPAN_PURPLE("<b>Tidbit of the round: </b>[html_encode(message)]"))
+		to_chat(world, SPAN_PURPLE("<b>Tip of the round: </b>[html_encode(message)]"))
 		return TRUE
 	else
 		return FALSE
@@ -431,7 +499,6 @@ SUBSYSTEM_DEF(ticker)
 	 * SScellauto: can't touch this because it would directly affect explosion spread speed
 	 */
 
-	SSquadtree?.wait    = 0.8 SECONDS // From 0.5, relevant based on player movement speed (higher = more error in sound location, motion detector pings, sentries target acquisition)
 	SSlighting?.wait    = 0.6 SECONDS // From 0.4, same but also heavily scales on player/scene density (higher = less frequent lighting updates which is very noticeable as you move)
 	SSstatpanels?.wait  = 1.5 SECONDS // From 0.6, refresh rate mainly matters for ALT+CLICK turf contents (which gens icons, intensive)
 	SSsoundscape?.wait  =   2 SECONDS // From 1, soudscape triggering checks, scales on player count
@@ -449,6 +516,6 @@ SUBSYSTEM_DEF(ticker)
 	winset(C, null, "mainwindow.icon=[SSticker.mode.taskbar_icon]")
 
 /datum/controller/subsystem/ticker/proc/hijack_ocurred()
-	if(mode)
+	if(mode && !mode.is_in_endgame)
 		mode.is_in_endgame = TRUE
 		mode.force_end_at = (world.time + 25 MINUTES)

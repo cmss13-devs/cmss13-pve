@@ -1,6 +1,6 @@
 /client/proc/adjust_predator_round()
 	set name = "Adjust Predator Slots"
-	set desc = "Adjust the extra slots for predators."
+	set desc = "Adjust the slot modifier for predators."
 	set category = "Server.Round"
 
 	if(!admin_holder)
@@ -10,10 +10,12 @@
 		to_chat(src, SPAN_WARNING("The game hasn't started yet!"))
 		return
 
-	var/cur_extra = SSticker.mode.pred_additional_max
+	var/cur_extra = SSticker.mode.pred_count_modifier
 	var/cur_count = SSticker.mode.pred_current_num
 	var/cur_max = SSticker.mode.calculate_pred_max()
-	var/value = tgui_input_number(src, "How many additional predators can join? Current predator count: [cur_count]/[cur_max] Current setting: [cur_extra]", "Input:", default = cur_extra, min_value = 0, integer_only = TRUE)
+	var/real_count = length(SSticker.mode.yautja_hunters)
+	var/possible_min = min(cur_count - cur_max, cur_extra)
+	var/value = tgui_input_number(src, "How many additional predators can join? Current predator count: [cur_count]/[cur_max] (Real: [real_count]) Current setting: [cur_extra]", "Input:", default = cur_extra, min_value = possible_min, integer_only = TRUE)
 
 	if(isnull(value))
 		return
@@ -23,14 +25,14 @@
 
 	cur_count = SSticker.mode.pred_current_num // values could have changed since asking
 	cur_max = SSticker.mode.calculate_pred_max()
-	var/free_extra = max(min(cur_extra, cur_max - cur_count), 0) // how much we could potentionally reduce pred_additional_max
+	possible_min = min(cur_count - cur_max, cur_extra)
 
 	// If we are reducing the count and that exceeds how much we could reduce it by
-	if(value < cur_extra && (cur_extra - value) > free_extra)
+	if(value < possible_min)
 		to_chat(src, SPAN_NOTICE("Aborting. Number cannot result in a max less than current pred count. (current: [cur_count]/[cur_max], current extra: [cur_extra], attempted: [value])"))
 		return
 
-	SSticker.mode.pred_additional_max = value
+	SSticker.mode.pred_count_modifier = value
 	message_admins("[key_name_admin(usr)] adjusted the additional pred amount from [cur_extra] to [value].")
 
 /datum/admins/proc/force_predator_round()
@@ -43,19 +45,20 @@
 		var/enabled = FALSE
 		if(SSnightmare.get_scenario_value("predator_round"))
 			enabled = TRUE
-		var/ret = alert("Nightmare Scenario has the upcoming round being a [(enabled ? "PREDATOR" : "NORMAL")] round. Do you want to toggle this?", "Toggle Predator Round", "Yes", "No")
+		var/ret = tgui_alert(usr, "Are you sure you want to force-toggle a predator round? Nightmare Scenario has the upcoming round as a [(enabled ? "PREDATOR" : "NORMAL")] round.", "Toggle Predator Round", list("Yes", "No"))
 		if(ret == "Yes")
 			SSnightmare.set_scenario_value("predator_round", !enabled)
+			message_admins("[key_name_admin(usr)] has [!enabled ? "allowed predators to spawn" : "prevented predators from spawning"].")
 		return
 
 	var/datum/game_mode/predator_round = SSticker.mode
-	if(alert("Are you sure you want to force-toggle a predator round? Predators currently: [(predator_round.flags_round_type & MODE_PREDATOR) ? "Enabled" : "Disabled"]",, "Yes", "No") != "Yes")
+	if(tgui_alert(usr, "Are you sure you want to force-toggle a predator round? Predators are currently [(predator_round.flags_round_type & MODE_PREDATOR) ? "ENABLED" : "DISABLED"].", "Toggle Predator Round", list("Yes", "No")) != "Yes")
 		return
 
 	if(!(predator_round.flags_round_type & MODE_PREDATOR))
-		var/datum/job/PJ = GLOB.RoleAuthority.roles_for_mode[JOB_PREDATOR]
-		if(istype(PJ) && !PJ.spawn_positions)
-			PJ.set_spawn_positions(GLOB.players_preassigned)
+		var/datum/job/pred_job = GLOB.RoleAuthority.roles_for_mode[JOB_PREDATOR]
+		if(istype(pred_job) && !pred_job.spawn_positions)
+			pred_job.set_spawn_positions(GLOB.players_preassigned)
 		predator_round.flags_round_type |= MODE_PREDATOR
 		REDIS_PUBLISH("byond.round", "type" = "predator-round", "map" = SSmapping.configs[GROUND_MAP].map_name)
 	else
@@ -63,6 +66,31 @@
 
 	message_admins("[key_name_admin(usr)] has [(predator_round.flags_round_type & MODE_PREDATOR) ? "allowed predators to spawn" : "prevented predators from spawning"].")
 	SEND_GLOBAL_SIGNAL(COMSIG_GLOB_PREDATOR_ROUND_TOGGLED)
+
+/datum/admins/proc/force_colony_joe_round()
+	set name = "Toggle Colony Working Joe Spawning"
+	set desc = "Force-toggle a colony joe round for the round type. Only works on maps that support colony joe spawns."
+	set category = "Server.Round"
+
+	if(!SSticker || SSticker.current_state < GAME_STATE_PLAYING || !SSticker.mode)
+		to_chat(usr, SPAN_WARNING("Wait for the round to start!"))
+		return
+
+	if(length(SSmapping.configs[GROUND_MAP].colony_joe_types) == 0)
+		to_chat(usr, SPAN_WARNING("This map doesn't support colony joes!"))
+		return
+
+	var/datum/game_mode/joe_round = SSticker.mode
+	if(tgui_alert(usr, "Are you sure you want to force-toggle Colony Joe spawning? Colony Joes are currently [(joe_round.flags_round_type & MODE_COLONY_JOE) ? "ENABLED" : "DISABLED"].", "Toggle Colony Joe Spawning", list("Yes", "No")) != "Yes")
+		return
+
+	if(!(joe_round.flags_round_type & MODE_COLONY_JOE))
+		joe_round.flags_round_type |= MODE_COLONY_JOE
+	else
+		joe_round.flags_round_type &= ~MODE_COLONY_JOE
+
+	message_admins("[key_name_admin(usr)] has [(joe_round.flags_round_type & MODE_COLONY_JOE) ? "allowed colony joes to spawn" : "prevented colony joes from spawning"].")
+	SEND_GLOBAL_SIGNAL(COMSIG_GLOB_COLONY_JOE_ROUND_TOGGLED)
 
 /client/proc/free_slot()
 	set name = "Free Job Slots"
@@ -85,7 +113,8 @@
 		return
 	GLOB.RoleAuthority.free_role_admin(GLOB.RoleAuthority.roles_for_mode[role], TRUE, src)
 
-/client/proc/modify_slot()
+
+/client/proc/modify_job_slot()
 	set name = "Adjust Job Slots"
 	set category = "Server.Round"
 
@@ -93,7 +122,7 @@
 		return
 
 	var/roles[] = new
-	var/datum/job/J
+	var/datum/job/selected_job
 
 	var/active_role_names = GLOB.gamemode_roles[GLOB.master_mode]
 	if(!active_role_names)
@@ -105,17 +134,32 @@
 			continue
 		roles += role_name
 
-	var/role = input("Please select role slot to modify", "Modify amount of slots")  as null|anything in roles
+	var/role = tgui_input_list(src, "Select a role to modify.", "Modify amount of slots", roles, 60 SECONDS)
 	if(!role)
 		return
-	J = GLOB.RoleAuthority.roles_by_name[role]
-	var/tpos = J.spawn_positions
-	var/num = tgui_input_number(src, "How many slots role [J.title] should have?\nCurrently taken slots: [J.current_positions]\nTotal amount of slots opened this round: [J.total_positions_so_far]","Number:", tpos)
-	if(isnull(num))
+
+	selected_job = GLOB.RoleAuthority.roles_by_name[role]
+
+	var/slot_type = tgui_input_list(src, "Modify roundstart or latejoin slots?", "Modify which slots?", list("Roundstart", "Latejoin"), 30 SECONDS)
+	if(!slot_type)
 		return
-	if(!GLOB.RoleAuthority.modify_role(J, num))
-		to_chat(usr, SPAN_BOLDNOTICE("Can't set job slots to be less than amount of log-ins or you are setting amount of slots less than minimal. Free slots first."))
-	message_admins("[key_name(usr)] adjusted job slots of [J.title] to be [num].")
+
+	var/tpos  = selected_job.spawn_positions
+	var/slot_number = tgui_input_number(src, "How many slots should [selected_job.title] have?\nCurrently taken slots: [selected_job.current_positions]\nTotal amount of slots opened this round: [selected_job.total_positions_so_far]\nAmount of roundstart slots available: [selected_job.spawn_positions]", "Number", tpos)
+	if(isnull(slot_number))
+		return
+
+	if(slot_type == "Roundstart")
+		var/confirmation = tgui_alert(src, "Altering roundstart slots will disable automatic slot scaling, are you sure?", "Confirm?", list("Yes", "No"), 30 SECONDS)
+		if(!confirmation || (confirmation == "No"))
+			return
+		selected_job.spawn_positions = slot_number
+		selected_job.scaled = FALSE
+	else if(slot_type == "Latejoin")
+		if(!GLOB.RoleAuthority.modify_role(selected_job, slot_number))
+			to_chat(usr, SPAN_BOLDNOTICE("Can't set job slots to be less than amount of log-ins or you are setting amount of slots less than minimal. Free slots first."))
+	message_admins("[key_name(usr)] adjusted [slot_type] job slots of [selected_job.title] to be [slot_number].")
+
 
 /client/proc/check_antagonists()
 	set name = "Check Antagonists"
@@ -135,31 +179,41 @@
 
 /datum/admins/proc/end_round()
 	set name = "End Round"
-	set desc = "Immediately ends the round, be very careful"
+	set desc = "Immediately ends the round, be very careful."
 	set category = "Server.Round"
 
 	if(!check_rights(R_SERVER) || !SSticker.mode)
 		return
 
-	if(alert("Are you sure you want to end the round?",,"Yes","No") != "Yes")
-		return
 	// trying to end the round before it even starts. bruh
 	if(!SSticker.mode)
 		return
 
-	SSticker.mode.round_finished = MODE_INFESTATION_DRAW_DEATH
-	message_admins("[key_name(usr)] has made the round end early.")
+	if(tgui_alert(usr, "Are you sure you want to end the round?", "End Round", list("Yes", "No"), 0) != "Yes")
+		return
+
+	var/winstate = tgui_input_list(usr, "What do you want the round end state to be?", "End Round", list("Custom", "Admin Intervention", MODE_INFESTATION_X_MAJOR, MODE_INFESTATION_X_MINOR, MODE_INFESTATION_M_MAJOR, MODE_INFESTATION_M_MINOR, MODE_INFESTATION_DRAW_DEATH, MODE_FACTION_CLASH_UPP_MAJOR, MODE_FACTION_CLASH_UPP_MINOR, MODE_INFECTION_ZOMBIE_WIN, MODE_GENERIC_DRAW_NUKE, MODE_BATTLEFIELD_W_MAJOR, MODE_BATTLEFIELD_W_MINOR, MODE_BATTLEFIELD_DRAW_STALEMATE, MODE_BATTLEFIELD_DRAW_DEATH))
+
+	if(winstate == "Custom")
+		winstate = tgui_input_text(usr, "Please enter a custom round end state.", "End Round", timeout = 0)
+	if(!winstate)
+		return
+
+	SSticker.force_ending = TRUE
+	SSticker.mode.round_finished = winstate
+
+	message_admins("[key_name(usr)] has made the round end early - [winstate].")
 	for(var/client/C in GLOB.admins)
 		to_chat(C, {"
 		<hr>
-		[SPAN_CENTERBOLD("Staff-Only Alert: <EM>[usr.key]</EM> has made the round end early")]
+		[SPAN_CENTERBOLD("Staff-Only Alert: <EM>[usr.key]</EM> has made the round end early - [winstate]")]
 		<hr>
 		"})
 	return
 
 /datum/admins/proc/delay()
 	set name = "Delay Round Start/End"
-	set desc = "Delay the game start/end"
+	set desc = "Delay the game start/end."
 	set category = "Server.Round"
 
 	if(!check_rights(R_SERVER))
@@ -203,19 +257,6 @@
 		to_chat(usr, "<font color='red'>Error: Start Now: Game has already started.</font>")
 		return FALSE
 
-/datum/admins/proc/toggle_intro()
-	set name = "Toggle Intro Sequence"
-	set desc = "Toggle whether the cryosleep intro sequence plays"
-	set category = "Server.Round"
-
-	if(SSticker.current_state != GAME_STATE_PREGAME)
-		to_chat(usr, "<font color='red'>Error: Toggle Intro Sequence: Game has already started or has not finished setting up.</font>")
-		return
-	else
-		SSticker.intro_sequence = !SSticker.intro_sequence
-		message_admins("[SPAN_NOTICE("[key_name(usr)] [SSticker.intro_sequence ? "has enabled the cryo intro sequence" : "disabled the cryo intro sequence"].")]")
-		return
-
 /client/proc/toggle_cdn()
 	set name = "Toggle CDN"
 	set category = "Server"
@@ -230,14 +271,12 @@
 			admin_disabled_cdn_transport = null
 			SSassets.OnConfigLoad()
 			message_admins("[key_name_admin(usr)] re-enabled the CDN asset transport")
-			log_admin("[key_name(usr)] re-enabled the CDN asset transport")
 			return
 
 		to_chat(usr, SPAN_ADMINNOTICE("The CDN is not enabled!"))
 		if(alert(usr, "CDN asset transport is not enabled! If you're having issues with assets, you can also try disabling filename mutations.", "CDN asset transport is not enabled!", "Try disabling filename mutations", "Nevermind") == "Try disabling filename mutations")
 			SSassets.transport.dont_mutate_filenames = !SSassets.transport.dont_mutate_filenames
 			message_admins("[key_name_admin(usr)] [(SSassets.transport.dont_mutate_filenames ? "disabled" : "re-enabled")] asset filename transforms.")
-			log_admin("[key_name(usr)] [(SSassets.transport.dont_mutate_filenames ? "disabled" : "re-enabled")] asset filename transforms.")
 		return
 
 	admin_disabled_cdn_transport = current_transport
@@ -245,4 +284,3 @@
 	SSassets.OnConfigLoad()
 	SSassets.transport.dont_mutate_filenames = TRUE
 	message_admins("[key_name_admin(usr)] disabled CDN asset transport")
-	log_admin("[key_name(usr)] disabled CDN asset transport")

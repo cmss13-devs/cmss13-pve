@@ -107,15 +107,15 @@
 				entrance_used = entrance
 				break
 		if(entrance_used) //if we are at a door, throw it in, else do nothing.
-			user.visible_message(SPAN_WARNING("[user] takes position to throw [nade] through the door of the [src]."),
-			SPAN_WARNING("You take position to throw [nade] through the door of the [src]."))
+			user.visible_message(SPAN_WARNING("[user] takes position to throw [nade] through the door of [src]."),
+			SPAN_WARNING("You take position to throw [nade] through the door of [src]."))
 			if(!do_after(user, 1 SECONDS, INTERRUPT_ALL, BUSY_ICON_HOSTILE))
 				return
 			if(mob_x != user.x - x || mob_y != user.y - y)
 				return
 
-			user.visible_message(SPAN_WARNING("[user] throws [nade] through the door of the [src]!"),
-			SPAN_WARNING("You throw [nade] through the door of the [src]."))
+			user.visible_message(SPAN_WARNING("[user] throws [nade] through the door of [src]!"),
+			SPAN_WARNING("You throw [nade] through the door of [src]."))
 
 			user.drop_held_item()
 			interior.enter(nade, entrance_used)
@@ -170,23 +170,22 @@
 	take_damage_type(O.force * 0.05, "blunt", user) //Melee weapons from people do very little damage
 
 // Frame repairs on the vehicle itself
-/obj/vehicle/multitile/proc/handle_repairs(obj/item/repairing_item, mob/user)
+/obj/vehicle/multitile/proc/handle_repairs(obj/item/O, mob/user)
 	if(user.action_busy)
 		return
-
 	var/max_hp = initial(health)
 	if(health > max_hp)
 		health = max_hp
 		to_chat(user, SPAN_NOTICE("The hull is fully intact."))
 		for(var/obj/item/hardpoint/holder/H in hardpoints)
 			if(H.health > 0)
-				if(!iswelder(repairing_item))
-					to_chat(user, SPAN_WARNING("You need welding tool to repair [H.name]."))
+				if(!iswelder(O))
+					to_chat(user, SPAN_WARNING("You need welding tool to repair \the [H.name]."))
 					return
-				if(!HAS_TRAIT(repairing_item, TRAIT_TOOL_BLOWTORCH))
+				if(!HAS_TRAIT(O, TRAIT_TOOL_BLOWTORCH))
 					to_chat(user, SPAN_WARNING("You need a stronger blowtorch!"))
 					return
-				H.handle_repair(repairing_item, user)
+				H.handle_repair(O, user)
 				update_icon()
 				return
 			else
@@ -195,25 +194,25 @@
 
 	var/repair_message = "welding structural struts back in place"
 	var/sound_file = 'sound/items/weldingtool_weld.ogg'
-	var/obj/item/tool/weldingtool/welder
+	var/obj/item/tool/weldingtool/WT
 
 	// For health < 75%, the frame needs welderwork, otherwise wrench
 	if(health < max_hp * 0.75)
-		if(!iswelder(repairing_item))
+		if(!iswelder(O))
 			to_chat(user, SPAN_NOTICE("The frame is way too busted! Try using a [SPAN_HELPFUL("welder")]."))
 			return
 
-		if(!HAS_TRAIT(repairing_item, TRAIT_TOOL_BLOWTORCH))
+		if(!HAS_TRAIT(O, TRAIT_TOOL_BLOWTORCH))
 			to_chat(user, SPAN_NOTICE("You need a more powerful blowtorch!"))
 			return
 
-		welder = repairing_item
-		if(!welder.isOn())
-			to_chat(user, SPAN_WARNING("[welder] needs to be on!"))
+		WT = O
+		if(!WT.isOn())
+			to_chat(user, SPAN_WARNING("\The [WT] needs to be on!"))
 			return
 
 	else
-		if(!HAS_TRAIT(repairing_item, TRAIT_TOOL_WRENCH))
+		if(!HAS_TRAIT(O, TRAIT_TOOL_WRENCH))
 			to_chat(user, SPAN_NOTICE("The frame is structurally sound, but there are a lot of loose nuts and bolts. Try using a [SPAN_HELPFUL("wrench")]."))
 			return
 
@@ -221,7 +220,7 @@
 		sound_file = 'sound/items/Ratchet.ogg'
 
 	var/amount_fixed_adjustment = user.get_skill_duration_multiplier(SKILL_ENGINEER)
-	user.visible_message(SPAN_WARNING("[user] [repair_message] on [src]."), SPAN_NOTICE("You begin [repair_message] on [src]."))
+	user.visible_message(SPAN_WARNING("[user] [repair_message] on \the [src]."), SPAN_NOTICE("You begin [repair_message] on \the [src]."))
 	playsound(get_turf(user), sound_file, 25)
 
 	while(health < max_hp)
@@ -229,33 +228,30 @@
 			playsound(get_turf(user), sound_file, 25)
 
 		if(!do_after(user, 1 SECONDS, INTERRUPT_ALL, BUSY_ICON_BUILD))
-			user.visible_message(SPAN_WARNING("[user] stops [repair_message] on [src]."), SPAN_NOTICE("You stop [repair_message] on [src]. Hull integrity is at [SPAN_HELPFUL(100.0*health/max_hp)]%."))
+			user.visible_message(SPAN_WARNING("[user] stops [repair_message] on \the [src]."), SPAN_NOTICE("You stop [repair_message] on \the [src]. Hull integrity is at [SPAN_HELPFUL(100.0*health/max_hp)]%."))
 			return
 
 		health = min(health + max_hp/100 * (5 / amount_fixed_adjustment), max_hp)
-		if(health >= max_hp * 0.50)
-			set_light_on(vehicle_light_range && vehicle_light_power)
-			light_holder.set_light_on(vehicle_light_range && vehicle_light_power)
-			to_chat(user, SPAN_NOTICE("[src]'s lights flicker to life!"))
+		if(!lighting_holder.light)
+			update_minimap_icon()
+			lighting_holder.set_light_on(TRUE)
+
+		if(WT)
+			WT.remove_fuel(1, user)
+			if(WT.get_fuel() < 1)
+				user.visible_message(SPAN_WARNING("[user] stops [repair_message] on \the [src]."), SPAN_NOTICE("You stop [repair_message] on \the [src]. Hull integrity is at [SPAN_HELPFUL(100.0*health/max_hp)]%."))
+				return
+			if(health >= max_hp * 0.75)
+				user.visible_message(SPAN_WARNING("[user] finishes [repair_message] on \the [src]."), SPAN_NOTICE("You finish [repair_message] on \the [src]. The frame is structurally sound now, but there are a lot of loose nuts and bolts. Try using a [SPAN_HELPFUL("wrench")]."))
+				return
 
 		to_chat(user, SPAN_NOTICE("Hull integrity is at [SPAN_HELPFUL(100.0*health/max_hp)]%."))
 
-		if(!welder)
-			continue
-
-		welder.remove_fuel(1, user)
-		if(welder.get_fuel() < 1)
-			user.visible_message(SPAN_WARNING("[user] stops [repair_message] on [src]."), SPAN_NOTICE("You stop [repair_message] on [src]. Hull integrity is at [SPAN_HELPFUL(100.0*health/max_hp)]%."))
-			return
-		if(health >= max_hp * 0.75)
-			user.visible_message(SPAN_WARNING("[user] finishes [repair_message] on [src]."), SPAN_NOTICE("You finish [repair_message] on [src]. The frame is structurally sound now, but there are a lot of loose nuts and bolts. Try using a [SPAN_HELPFUL("wrench")]."))
-			return
-
 	health = initial(health)
-
+	lighting_holder.set_light_range(vehicle_light_range)
 	toggle_cameras_status(TRUE)
 	update_icon()
-	user.visible_message(SPAN_NOTICE("[user] finishes [repair_message] on [src]."), SPAN_NOTICE("You finish [repair_message] on [src]. Hull integrity is at [SPAN_HELPFUL(100.0*health/max_hp)]%. "))
+	user.visible_message(SPAN_NOTICE("[user] finishes [repair_message] on \the [src]."), SPAN_NOTICE("You finish [repair_message] on \the [src]. Hull integrity is at [SPAN_HELPFUL(100.0*health/max_hp)]%."))
 	return
 
 //Special case for entering the vehicle without using the verb
@@ -302,7 +298,7 @@
 	if(X.caste == XENO_CASTE_RAVAGER || X.caste == XENO_CASTE_QUEEN)
 		damage_mult = 2
 
-	//Frenzy auras stack in a way, then the raw value is multipled by two to get the additive modifier
+	//Frenzy auras stack in a way, then the raw value is multiplied by two to get the additive modifier
 	if(X.frenzy_aura > 0)
 		damage += (X.frenzy_aura * FRENZY_DAMAGE_MULTIPLIER)
 
@@ -311,11 +307,11 @@
 	//Somehow we will deal no damage on this attack
 	if(!damage)
 		playsound(X.loc, 'sound/weapons/alien_claw_swipe.ogg', 25, 1)
-		X.visible_message(SPAN_DANGER("\The [X] swipes at \the [src] to no effect!"), \
+		X.visible_message(SPAN_DANGER("\The [X] swipes at \the [src] to no effect!"),
 		SPAN_DANGER("We swipe at \the [src] to no effect!"))
 		return XENO_ATTACK_ACTION
 
-	X.visible_message(SPAN_DANGER("\The [X] slashes \the [src]!"), \
+	X.visible_message(SPAN_DANGER("\The [X] slashes \the [src]!"),
 	SPAN_DANGER("We slash \the [src]!"))
 	playsound(X.loc, pick('sound/effects/metalhit.ogg', 'sound/weapons/alien_claw_metal1.ogg', 'sound/weapons/alien_claw_metal2.ogg', 'sound/weapons/alien_claw_metal3.ogg'), 25, 1)
 
@@ -430,7 +426,8 @@
 	hardpoint.start_fire(source, object, location, control, params)
 
 /obj/vehicle/multitile/proc/handle_player_entrance(mob/M)
-	if(!M || M.client == null) return
+	if(!M || M.client == null)
+		return
 
 	var/mob_x = M.x - src.x
 	var/mob_y = M.y - src.y
@@ -545,7 +542,7 @@
 		currently_dragged = G.grabbed_thing
 
 	if(currently_dragged != dragged_atom)
-		to_chat(user, SPAN_WARNING("You stop fiting [dragged_atom] inside \the [src]!"))
+		to_chat(user, SPAN_WARNING("You stop fitting [dragged_atom] inside \the [src]!"))
 		return
 
 	var/success = interior.enter(dragged_atom, entrance_used)

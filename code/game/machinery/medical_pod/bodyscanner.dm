@@ -46,10 +46,10 @@
 		return
 	go_out()
 
-/obj/structure/machinery/medical_pod/bodyscanner/ex_act(severity, datum/cause_data/cause_data)
+/obj/structure/machinery/medical_pod/bodyscanner/ex_act(severity, direction, datum/cause_data/cause_data)
 	for(var/atom/movable/A as mob|obj in src)
 		A.forceMove(loc)
-		A.ex_act(severity, , cause_data)
+		A.ex_act(severity, cause_data=cause_data)
 	switch(severity)
 		if(0 to EXPLOSION_THRESHOLD_LOW)
 			if (prob(25))
@@ -85,7 +85,6 @@
 	var/delete
 	var/temphtml
 	var/datum/health_scan/last_health_display
-	var/paper_left = 20
 
 /obj/structure/machinery/body_scanconsole/Initialize()
 	. = ..()
@@ -112,23 +111,6 @@
 		connected.connected = null
 		QDEL_NULL(connected)
 	. = ..()
-
-/obj/structure/machinery/body_scanconsole/proc/print_report(mob/living/user)
-	if(!last_health_display)
-		to_chat(user, "There is no scan data to print.")
-		return
-	if(paper_left <= 0)
-		to_chat(user, "[src] ran out of paper, and cannot print a report")
-		return
-	var/obj/item/paper/print_report = new /obj/item/paper
-	var/last_scan = last_health_display.ui_data(user, DETAIL_LEVEL_BODYSCAN)
-	print_report.info += ("Device ID:" + get_area_name() + "\n" + jointext(health_scan_table(last_scan) + "\n EXTERNAL APPEARANCE AND INJURIES MUST BE \n MANUALLY WRITTEN BY PHYSICIAN: \n","<br>"))
-	print_report.info_links += ("Device ID:" + get_area_name() + "\n" + jointext(health_scan_table(last_scan) + "\n EXTERNAL APPEARANCE AND INJURIES MUST BE \n MANUALLY WRITTEN BY PHYSICIAN: \n","<br>"))
-	print_report.update_icon()
-	print_report.name = "\improper scan print-out of " + last_scan["patient"]
-	user.put_in_hands(print_report)
-	paper_left--
-	visible_message("\The [src] spits out a piece of paper.")
 
 
 /obj/structure/machinery/body_scanconsole/ex_act(severity)
@@ -199,12 +181,16 @@
 	else
 		last_health_display.target_mob = H
 
+	// Handle automatic holotags
+	if (user.client?.prefs.auto_holotag >= BODYSCAN_TAG_PATIENTS)
+		H.auto_assign_holotag(user, HOLOCARD_ACCURACY_BODYSCANNER)
+
 	N.fields["last_tgui_scan_result"] = last_health_display.ui_data(user, DETAIL_LEVEL_BODYSCAN)
 	N.fields["autodoc_data"] = generate_autodoc_surgery_list(H)
 	visible_message(SPAN_NOTICE("\The [src] pings as it stores the scan report of [H.real_name]"))
 	playsound(src.loc, 'sound/machines/screen_output1.ogg', 25)
 
-	last_health_display.look_at(user, DETAIL_LEVEL_BODYSCAN, bypass_checks = TRUE, associated_equipment = src)
+	last_health_display.look_at(user, DETAIL_LEVEL_BODYSCAN, bypass_checks = TRUE)
 
 	return
 
@@ -408,3 +394,9 @@
 	dat += "</body></html>"
 	return dat
 
+/obj/structure/machinery/medical_pod/bodyscanner/yautja
+	icon = 'icons/obj/structures/machinery/yautja_machines.dmi'
+
+/obj/structure/machinery/body_scanconsole/yautja
+	icon = 'icons/obj/structures/machinery/yautja_machines.dmi'
+	icon_state = "sleeperconsole"

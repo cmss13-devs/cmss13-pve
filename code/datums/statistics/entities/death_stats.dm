@@ -14,7 +14,7 @@
 	var/cause_role_name
 	var/cause_faction_name
 
-	var/total_steps = 0
+	var/total_steps
 	var/total_kills = 0
 	var/time_of_death
 	var/total_time_alive
@@ -81,9 +81,6 @@
 		log_message += " from [key_name(cause_data.resolve_mob())]"
 		cause_mob.attack_log += "\[[time_stamp()]\] [key_name(cause_mob)] killed [key_name(src)] with [cause_data.cause_name]."
 
-		if(iscarbon(src)) // no mice overkill sadly
-			cause_mob.life_kills_total += life_value
-
 	attack_log += "[log_message]."
 
 	if(!mind || statistic_exempt)
@@ -114,6 +111,9 @@
 	new_death.cause_role_name = cause_data?.role
 	new_death.cause_faction_name = cause_data?.faction
 
+	if(cause_mob)
+		cause_mob.life_kills_total += life_value
+
 	if(getBruteLoss())
 		new_death.total_brute = floor(getBruteLoss())
 	if(getFireLoss())
@@ -140,7 +140,6 @@
 		GLOB.round_statistics.track_death(new_death)
 
 	new_death.save()
-	new_death.detach()
 	return new_death
 
 /mob/living/carbon/human/track_mob_death(datum/cause_data/cause_data, turf/death_loc)

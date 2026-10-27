@@ -21,7 +21,7 @@
 	var/turf/target
 	var/turf/oldtarget
 	var/oldloc = null
-	req_access = list(ACCESS_CIVILIAN_ENGINEERING)
+	req_one_access = list(ACCESS_CIVILIAN_ENGINEERING, ACCESS_MARINE_ENGINEERING)
 	var/path[] = new()
 	var/targetdirection
 
@@ -87,7 +87,7 @@
 	else if(istype(W, /obj/item/card/id))
 		if(src.allowed(usr) && !open)
 			src.locked = !src.locked
-			to_chat(user, SPAN_NOTICE("You [src.locked ? "lock" : "unlock"] the [src] behaviour controls."))
+			to_chat(user, SPAN_NOTICE("You [src.locked ? "lock" : "unlock"] [src]'s behaviour controls."))
 		else
 			if(open)
 				to_chat(user, SPAN_WARNING("Please close the access panel before locking it."))
@@ -95,7 +95,7 @@
 				to_chat(user, SPAN_WARNING("Access denied."))
 		src.updateUsrDialog()
 	else
-		..()
+		. = ..()
 
 /obj/structure/machinery/bot/floorbot/Topic(href, href_list)
 	if(..())
@@ -241,7 +241,7 @@
 	src.anchored = TRUE
 	src.icon_state = "floorbot-c"
 	if(istype(target, /turf/open/space/))
-		visible_message(SPAN_DANGER("[src] begins to repair the hole"))
+		visible_message(SPAN_DANGER("[src] begins to repair the hole."))
 		var/obj/item/stack/tile/plasteel/T = new /obj/item/stack/tile/plasteel
 		src.repairing = 1
 		spawn(50)

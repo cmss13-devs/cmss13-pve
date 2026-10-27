@@ -3,8 +3,6 @@
 #define GRAB_AGGRESSIVE 1
 #define GRAB_CARRY   2
 #define GRAB_CHOKE   3
-/// Alien-specific grab, somewhat between an aggressive and choke. Limited to AI only for the moment.
-#define GRAB_XENO	 4
 
 //Ammo defines for gun/projectile related things.
 
@@ -14,7 +12,7 @@
 #define HEADSHOT_OVERLAY_HEAVY "heavy_headshot"
 
 // flags_ammo_behaviour
-#define AMMO_EXPLOSIVE (1<<0)
+// (1<<0) was formerly AMMO_EXPLOSIVE. Reuse it only if you must. I encourage you to use components.
 #define AMMO_ACIDIC (1<<1)
 #define AMMO_XENO (1<<2)
 #define AMMO_LASER (1<<3)
@@ -36,8 +34,7 @@
 /// Whether or not the bullet hits the target that was clicked or if it keeps travelling
 #define AMMO_HITS_TARGET_TURF (1<<17)
 #define AMMO_ALWAYS_FF (1<<18)
-// This one is for ammo that ignores prone. Includes landmine shrapnel and BFAB. previously was AMMO_HOMING
-#define AMMO_PRONETARGET (1<<19)
+//                              (1<<19) unused, previously was AMMO_HOMING
 /// Can't be deflected
 #define AMMO_NO_DEFLECT (1<<20)
 ///Can only hit people with criminal status
@@ -45,13 +42,21 @@
 /// Handles sentry flamers glob
 #define AMMO_FLAME (1<<22)
 // If the projectile hits a dense turf it'll do on_hit_turf on the turf just in front of the turf instead of on the turf itself (This one does not work on mobs)
-#define AMMO_STRIKES_SURFACE_ONLY (1<<23)
+#define AMMO_STRIKES_SURFACE_ONLY	(1<<23)
 // NOTE: Don't add flags past 1<<23, it'll break things due to BYOND limitations. You can usually use a Component instead.
+
 
 /// Projectile is shrpanel which allow it to skip some collisions
 #define PROJECTILE_SHRAPNEL  (1<<0)
 /// Apply additional effects upon hitting clicked target
 #define PROJECTILE_BULLSEYE  (1<<1)
+/// Reflected projectiles
+#define PROJECTILE_REFLECTED (1<<2)
+
+///Bonus Projectile Check Defines
+#define PROJECTILE_LONE 0
+#define PROJECTILE_ORIGINAL 1
+#define PROJECTILE_BONUS 2
 
 //Gun defines for gun related thing. More in the projectile folder.
 
@@ -78,8 +83,12 @@
 #define GUN_SUPPORT_PLATFORM (1<<16)
 /// No gun description, only base desc
 #define GUN_NO_DESCRIPTION (1<<17)
-/// Automatically eject shell casings
-#define GUN_AUTO_EJECT_CASINGS (1<<18)
+/// If the gun can do battlefield executions
+#define GUN_BATTLEFIELD_EXECUTION (1<<18)
+/// If the gun can perform tricks
+#define GUN_TRICKSTER (1<<19)
+/// If the gun can perform a warning shot
+#define GUN_CAN_WARNING_SHOT (1<<20)
 // NOTE: Don't add flags past 1<<23, it'll break things due to BYOND limitations. You can usually use a Component instead.
 
 #define USES_STREAKS (1<<0)
@@ -124,7 +133,6 @@
 #define SLOWDOWN_ARMOR_LOWHEAVY 0.75
 #define SLOWDOWN_ARMOR_HEAVY 1
 #define SLOWDOWN_ARMOR_VERY_HEAVY 1.15
-#define SLOWDOWN_ARMOR_CLOAKED_GHILLIE 2.25
 
 #define SLOWDOWN_ADS_NONE 0
 #define SLOWDOWN_ADS_QUICK 0.35
@@ -134,22 +142,20 @@
 #define SLOWDOWN_ADS_RIFLE 1
 #define SLOWDOWN_AMT_GREENFIRE 1.5
 #define SLOWDOWN_ADS_SCOPE 1.20
-#define SLOWDOWN_ADS_SMARTGUN 1.55 //accounting for light-to-med slowdown change on armor
 #define SLOWDOWN_ADS_LMG 1.75
 #define SLOWDOWN_ADS_INCINERATOR 1.75
 #define SLOWDOWN_ADS_SPECIALIST 1.75
 #define SLOWDOWN_ADS_MINISCOPE_DYNAMIC 1.8
 #define SLOWDOWN_ADS_SUPERWEAPON 2.75
 
-//Wield delays, in milliseconds. 10 is 1 second
-#define WIELD_DELAY_NONE 0
-#define WIELD_DELAY_MIN 1
-#define WIELD_DELAY_VERY_FAST 2
-#define WIELD_DELAY_FAST 4
-#define WIELD_DELAY_NORMAL 6
-#define WIELD_DELAY_SLOW 8
-#define WIELD_DELAY_VERY_SLOW 10
-#define WIELD_DELAY_HORRIBLE 12
+#define WEAPON_DELAY_NONE 0
+#define WEAPON_DELAY_MIN 1
+#define WEAPON_DELAY_VERY_FAST 2
+#define WEAPON_DELAY_FAST 4
+#define WEAPON_DELAY_NORMAL 6
+#define WEAPON_DELAY_SLOW 8
+#define WEAPON_DELAY_VERY_SLOW 10
+#define WEAPON_DELAY_HORRIBLE 12
 
 ///This is how long you must wait to throw again after throwing two things
 #define THROW_DELAY (1.5 SECONDS)
@@ -251,15 +257,16 @@
 //Health of various items
 #define HEALTH_WALL 3000
 #define HEALTH_WALL_REINFORCED 9000
+#define HEALTH_WALL_ULTRA_REINFORCED 12000
 #define HEALTH_WALL_XENO 900
 #define HEALTH_WALL_XENO_WEAK 100
 #define HEALTH_WALL_XENO_THICK 1350
 #define HEALTH_WALL_XENO_MEMBRANE 300
 #define HEALTH_WALL_XENO_REFLECTIVE 300
 #define HEALTH_WALL_XENO_MEMBRANE_THICK 600
+#define HEALTH_WALL_XENO_REFLECTIVE_WEAK 80
 
-#define HEALTH_DOOR 2400
-#define HEALTH_ASSEMBLY 400
+#define HEALTH_DOOR 1200
 #define HEALTH_DOOR_XENO 600
 #define HEALTH_DOOR_XENO_THICK 900
 
@@ -289,7 +296,7 @@
 #define MOLOTOV_POTENCY_MAX 20
 #define MOLOTOV_TIME_MAX 20
 
-/// A gun filled with this percentage of it's total ammo or lower is considered to have low ammo
+/// A gun filled with this percentage of its total ammo or lower is considered to have low ammo
 #define GUN_LOW_AMMO_PERCENTAGE 0.25
 
 // Fire
