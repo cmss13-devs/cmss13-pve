@@ -20,7 +20,7 @@
 	assignment = "Rifleman"
 
 /datum/equipment_preset/canc/remnant/load_gear(mob/living/carbon/human/new_human)
-	new_human.undershirt = "undershirt"
+	add_civilian_underwear(new_human)
 	//back
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/lightpack/upp(new_human), WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/roller/bedroll(new_human), WEAR_IN_BACK)
@@ -61,7 +61,6 @@
 	skills = /datum/skills/tl
 
 /datum/equipment_preset/canc/remnant/leader/load_gear(mob/living/carbon/human/new_human)
-	new_human.undershirt = "undershirt"
 	//back
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/lightpack/upp(new_human), WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/roller/bedroll(new_human), WEAR_IN_BACK)
@@ -103,7 +102,6 @@
 	assignment = "Marksman"
 
 /datum/equipment_preset/canc/remnant/marksman/load_gear(mob/living/carbon/human/new_human)
-	new_human.undershirt = "undershirt"
 	//back
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/lightpack/upp(new_human), WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/roller/bedroll(new_human), WEAR_IN_BACK)
@@ -154,7 +152,7 @@
 	access = list(ACCESS_UPP_GENERAL, ACCESS_UPP_MACHINEGUN)
 
 /datum/equipment_preset/canc/machinegunner/load_gear(mob/living/carbon/human/new_human)
-	new_human.undershirt = "undershirt"
+	add_civilian_underwear(new_human)
 	//face
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/almayer/marine/solardevils/canc(new_human), WEAR_L_EAR)
 	var/random_neckwear_canc = rand(1,4)
@@ -191,7 +189,7 @@
 	assignment = "Anti-Tank Rifleman"
 
 /datum/equipment_preset/canc/at/load_gear(mob/living/carbon/human/new_human)
-	new_human.undershirt = "undershirt"
+	add_civilian_underwear(new_human)
 	//back
 	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/launcher/rocket/upp, WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/box/mre/upp, WEAR_IN_ACCESSORY)
@@ -237,7 +235,7 @@
 	paygrades = list(PAY_SHORT_CA2 = JOB_PLAYTIME_TIER_0)
 
 /datum/equipment_preset/canc/medic/load_gear(mob/living/carbon/human/new_human)
-	new_human.undershirt = "undershirt"
+	add_civilian_underwear(new_human)
 	//back
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/lightpack/upp, WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/firstaid/softpack/adv, WEAR_IN_BACK)
@@ -294,7 +292,7 @@
 
 /datum/equipment_preset/canc/newblood/load_gear(mob/living/carbon/human/new_human)
 
-	new_human.undershirt = "undershirt"
+	add_civilian_underwear(new_human)
 	//back
 	add_random_satchel(new_human)
 	//face
@@ -332,7 +330,7 @@
 
 /datum/equipment_preset/canc/newblood_machinegunner/load_gear(mob/living/carbon/human/new_human)
 
-	new_human.undershirt = "undershirt"
+	add_civilian_underwear(new_human)
 	//back
 	add_random_satchel(new_human)
 	//face

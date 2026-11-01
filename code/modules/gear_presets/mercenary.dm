@@ -61,7 +61,7 @@
 	faction = FACTION_MERCENARY
 
 /datum/equipment_preset/mercenary/grunt/load_gear(mob/living/carbon/human/new_human)
-	new_human.undershirt = "undershirt"
+	add_civilian_underwear(new_human)
 	//back
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/satchel/black, WEAR_BACK)
 	//face
@@ -98,7 +98,6 @@
 	faction = FACTION_MERCENARY
 
 /datum/equipment_preset/mercenary/grunt/doctor/load_gear(mob/living/carbon/human/new_human)
-	new_human.undershirt = "undershirt"
 	//back
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/satchel/black, WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/firstaid/regular, WEAR_IN_BACK)
@@ -140,7 +139,7 @@
 	faction = FACTION_MERCENARY
 
 /datum/equipment_preset/mercenary/pilot/load_gear(mob/living/carbon/human/new_human)
-	new_human.undershirt = "undershirt"
+	add_civilian_underwear(new_human)
 	//back
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/satchel/black, WEAR_BACK)
 	//face
@@ -177,7 +176,6 @@
 	faction = FACTION_MERCENARY
 
 /datum/equipment_preset/mercenary/pilot/driver/load_gear(mob/living/carbon/human/new_human)
-	new_human.undershirt = "undershirt"
 	//back
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/satchel/black, WEAR_BACK)
 	//face
@@ -215,7 +213,7 @@
 	faction = FACTION_MERCENARY
 
 /datum/equipment_preset/mercenary/sentinel/load_gear(mob/living/carbon/human/new_human)
-	new_human.undershirt = "undershirt"
+	add_civilian_underwear(new_human)
 	//back
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/satchel/black, WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/tool/crowbar, WEAR_IN_BACK)
@@ -259,7 +257,6 @@
 	faction = FACTION_MERCENARY
 
 /datum/equipment_preset/mercenary/sentinel/response/load_gear(mob/living/carbon/human/new_human)
-	new_human.undershirt = "undershirt"
 	//back
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/satchel/black, WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/tool/crowbar/tactical, WEAR_IN_BACK)
@@ -314,7 +311,6 @@
 	faction = FACTION_MERCENARY
 
 /datum/equipment_preset/mercenary/sentinel/response/carbine/load_gear(mob/living/carbon/human/new_human)
-	new_human.undershirt = "undershirt"
 	//back
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/satchel/black, WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/tool/crowbar/tactical, WEAR_IN_BACK)
@@ -368,7 +364,6 @@
 	faction = FACTION_MERCENARY
 
 /datum/equipment_preset/mercenary/sentinel/response/sadar/load_gear(mob/living/carbon/human/new_human)
-	new_human.undershirt = "undershirt"
 	//back
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/satchel/black, WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/tool/crowbar/tactical, WEAR_IN_BACK)
@@ -428,7 +423,6 @@
 	faction = FACTION_MERCENARY
 
 /datum/equipment_preset/mercenary/sentinel/response/medic/load_gear(mob/living/carbon/human/new_human)
-	new_human.undershirt = "undershirt"
 	//back
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/satchel/black, WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/tool/crowbar/tactical, WEAR_IN_BACK)
@@ -479,7 +473,6 @@
 	faction = FACTION_MERCENARY
 
 /datum/equipment_preset/mercenary/sentinel/riot/load_gear(mob/living/carbon/human/new_human)
-	new_human.undershirt = "undershirt"
 	//back
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/satchel/black, WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/tool/crowbar, WEAR_IN_BACK)
@@ -527,7 +520,6 @@
 	faction = FACTION_MERCENARY
 
 /datum/equipment_preset/mercenary/sentinel/riot/grenadier/load_gear(mob/living/carbon/human/new_human)
-	new_human.undershirt = "undershirt"
 	//back
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/satchel/black, WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/explosive/grenade/tear/marine, WEAR_IN_BACK)
@@ -586,7 +578,7 @@
 	faction = FACTION_MERCENARY
 
 /datum/equipment_preset/mercenary/supervisor/load_gear(mob/living/carbon/human/new_human)
-	new_human.undershirt = "undershirt"
+	add_civilian_underwear(new_human)
 	//back
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/satchel/black, WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/weapon/telebaton, WEAR_IN_BACK)
@@ -621,7 +613,6 @@
 	faction = FACTION_MERCENARY
 
 /datum/equipment_preset/mercenary/supervisor/patrol/load_gear(mob/living/carbon/human/new_human)
-	new_human.undershirt = "undershirt"
 	//back
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/satchel/black, WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/tool/crowbar, WEAR_IN_BACK)
@@ -664,7 +655,6 @@
 	faction = FACTION_MERCENARY
 
 /datum/equipment_preset/mercenary/supervisor/response/load_gear(mob/living/carbon/human/new_human)
-	new_human.undershirt = "undershirt"
 	//back
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/satchel/black,, WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/tool/crowbar/tactical, WEAR_IN_BACK)
@@ -831,7 +821,7 @@
 	faction = FACTION_MERCENARY
 
 /datum/equipment_preset/mercenary/bulwark/load_gear(mob/living/carbon/human/new_human)
-	new_human.undershirt = "undershirt"
+	add_civilian_underwear(new_human)
 	//back
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine/standard, WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/tool/crowbar/tactical, WEAR_IN_BACK)
@@ -895,7 +885,6 @@
 	faction = FACTION_MERCENARY
 
 /datum/equipment_preset/mercenary/bulwark/machinegun/load_gear(mob/living/carbon/human/new_human)
-	new_human.undershirt = "undershirt"
 	//back
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine/standard, WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/tool/crowbar/tactical, WEAR_IN_BACK)
@@ -949,7 +938,7 @@
 	faction = FACTION_MERCENARY
 
 /datum/equipment_preset/mercenary/overseer/load_gear(mob/living/carbon/human/new_human)
-	new_human.undershirt = "undershirt"
+	add_civilian_underwear(new_human)
 	//back
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/satchel/black,, WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/tool/crowbar/tactical, WEAR_IN_BACK)
@@ -985,7 +974,7 @@
 	faction = FACTION_MERCENARY
 
 /datum/equipment_preset/mercenary/infiltrator/load_gear(mob/living/carbon/human/new_human)
-	new_human.undershirt = "Undershirt (Black, Long Sleeved)"
+	add_civilian_underwear(new_human)
 	//back
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/satchel/black, WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/tool/crowbar/tactical, WEAR_IN_BACK)
@@ -1046,7 +1035,6 @@
 	faction = FACTION_MERCENARY
 
 /datum/equipment_preset/mercenary/sentinel/space/load_gear(mob/living/carbon/human/new_human)
-	new_human.undershirt = "undershirt"
 	//back
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/satchel/black, WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/tool/crowbar/tactical, WEAR_IN_BACK)

@@ -8,7 +8,7 @@
 	skills = /datum/skills/researcher
 
 /datum/equipment_preset/goon/researcher/load_gear(mob/living/carbon/human/new_human)
-	new_human.undershirt = "undershirt"
+	add_civilian_underwear(new_human)
 	//back
 	add_random_satchel(new_human)
 	//face

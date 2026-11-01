@@ -6,6 +6,9 @@
 	idtype = /obj/item/card/id/lanyard
 	origin_override = ORIGIN_CIVILIAN
 
+/datum/equipment_preset/colonist/load_underwear(mob/living/carbon/human/new_human, client/mob_client)
+	add_civilian_underwear(new_human)
+
 /datum/equipment_preset/colonist/bluecollar
 
 	name = "US Civilian Colonist, Blue-Collar"
@@ -23,7 +26,6 @@
 
 /datum/equipment_preset/colonist/bluecollar/load_gear(mob/living/carbon/human/new_human)
 
-	new_human.undershirt = "undershirt"
 	//back
 	add_random_satchel(new_human)
 	//face
@@ -62,7 +64,6 @@
 	access = list(ACCESS_CIVILIAN_PUBLIC)
 
 /datum/equipment_preset/colonist/miner/load_gear(mob/living/carbon/human/new_human)
-	new_human.undershirt = "undershirt"
 
 	//back
 	add_random_satchel(new_human)
@@ -103,7 +104,6 @@
 
 /datum/equipment_preset/colonist/construction/load_gear(mob/living/carbon/human/new_human)
 
-	new_human.undershirt = "undershirt"
 	//back
 	add_random_satchel(new_human)
 	//face
@@ -151,7 +151,6 @@
 
 /datum/equipment_preset/colonist/roughneck/load_gear(mob/living/carbon/human/new_human)
 
-	new_human.undershirt = "undershirt"
 	//back
 	add_random_satchel(new_human)
 	//face
@@ -198,7 +197,6 @@
 
 /datum/equipment_preset/colonist/cook/load_gear(mob/living/carbon/human/new_human)
 
-	new_human.undershirt = "undershirt"
 	//back
 	add_random_satchel(new_human)
 	//face
@@ -238,7 +236,6 @@
 
 /datum/equipment_preset/colonist/chef/load_gear(mob/living/carbon/human/new_human)
 
-	new_human.undershirt = "undershirt"
 	//back
 	add_random_satchel(new_human)
 	//face
@@ -276,7 +273,6 @@
 
 /datum/equipment_preset/colonist/priest/load_gear(mob/living/carbon/human/new_human)
 
-	new_human.undershirt = "undershirt"
 	//back
 	add_random_satchel(new_human)
 	//face
@@ -319,7 +315,6 @@
 
 /datum/equipment_preset/colonist/whitecollar/load_gear(mob/living/carbon/human/new_human)
 
-	new_human.undershirt = "undershirt"
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress, WEAR_L_EAR)
 	//back
 	add_random_satchel(new_human)
@@ -367,7 +362,6 @@
 
 /datum/equipment_preset/colonist/whitecollar/exec/load_gear(mob/living/carbon/human/new_human)
 
-	new_human.undershirt = "undershirt"
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress, WEAR_L_EAR)
 	//back
 	add_random_satchel(new_human)
@@ -410,7 +404,6 @@
 
 /datum/equipment_preset/colonist/researcher/load_gear(mob/living/carbon/human/new_human)
 
-	new_human.undershirt = "undershirt"
 	//back
 	add_random_satchel(new_human)
 	//face
@@ -470,7 +463,6 @@
 
 /datum/equipment_preset/colonist/doctor/load_gear(mob/living/carbon/human/new_human)
 
-	new_human.undershirt = "undershirt"
 	//back
 	add_random_satchel(new_human)
 	//face
@@ -503,7 +495,6 @@
 
 /datum/equipment_preset/colonist/doctor/scrubs/load_gear(mob/living/carbon/human/new_human)
 
-	new_human.undershirt = "undershirt"
 	//back
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/satchel/blue(new_human), WEAR_BACK)
 	//face
@@ -551,7 +542,6 @@
 
 /datum/equipment_preset/colonist/admin/load_gear(mob/living/carbon/human/new_human)
 
-	new_human.undershirt = "undershirt"
 	//back
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/satchel/black(new_human), WEAR_BACK)
 	//face
@@ -587,7 +577,6 @@
 
 /datum/equipment_preset/colonist/cargo/load_gear(mob/living/carbon/human/new_human)
 
-	new_human.undershirt = "undershirt"
 	//back
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine/satchel(new_human), WEAR_BACK)
 	//face
@@ -633,7 +622,6 @@
 
 /datum/equipment_preset/colonist/technician/load_gear(mob/living/carbon/human/new_human)
 
-	new_human.undershirt = "undershirt"
 	//back
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine/satchel(new_human), WEAR_BACK)
 	//face
@@ -680,7 +668,6 @@
 	return "Foreman"
 
 /datum/equipment_preset/colonist/engineer/load_gear(mob/living/carbon/human/new_human)
-	new_human.undershirt = "undershirt"
 	//back
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine/satchel(new_human), WEAR_BACK)
 	//face
@@ -733,7 +720,6 @@
 
 /datum/equipment_preset/colonist/operations/load_gear(mob/living/carbon/human/new_human)
 
-	new_human.undershirt = "undershirt"
 	//back
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/satchel/black(new_human), WEAR_BACK)
 	//face
@@ -770,7 +756,6 @@
 
 /datum/equipment_preset/colonist/prisoner/load_gear(mob/living/carbon/human/new_human)
 
-	new_human.undershirt = "undershirt"
 	//uniform
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/colonist/prison_boiler(new_human), WEAR_BODY)
 	//limb
@@ -802,7 +787,6 @@
 
 /datum/equipment_preset/colonist/security/load_gear(mob/living/carbon/human/new_human)
 
-	new_human.undershirt = "undershirt"
 	//back
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/satchel/black, WEAR_BACK)
 	//face
@@ -849,7 +833,6 @@
 
 /datum/equipment_preset/colonist/security/weyland/load_gear(mob/living/carbon/human/new_human)
 
-	new_human.undershirt = "undershirt"
 	//back
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/satchel/black, WEAR_BACK)
 	//face
@@ -981,7 +964,6 @@
 
 /datum/equipment_preset/colonist/security/trijent/load_gear(mob/living/carbon/human/new_human)
 
-	new_human.undershirt = "undershirt"
 	//back
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/satchel/black, WEAR_BACK)
 	//face
@@ -1017,7 +999,6 @@
 
 /datum/equipment_preset/colonist/security/prison/load_gear(mob/living/carbon/human/new_human)
 
-	new_human.undershirt = "undershirt"
 	//back
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/satchel/black, WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/box/mre(new_human), WEAR_IN_BACK)
@@ -1073,7 +1054,6 @@
 
 /datum/equipment_preset/colonist/security/guard/load_gear(mob/living/carbon/human/new_human)
 
-	new_human.undershirt = "undershirt"
 	//back
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine/satchel, WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/box/mre(new_human), WEAR_IN_BACK)
@@ -1134,7 +1114,6 @@
 
 /datum/equipment_preset/colonist/security/guard/marksman/load_gear(mob/living/carbon/human/new_human)
 
-	new_human.undershirt = "undershirt"
 	//back
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine/satchel, WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/box/mre(new_human), WEAR_IN_BACK)
@@ -1189,7 +1168,6 @@
 
 /datum/equipment_preset/colonist/security/guard/medic/load_gear(mob/living/carbon/human/new_human)
 
-	new_human.undershirt = "undershirt"
 	//back
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine/satchel, WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/box/mre(new_human), WEAR_IN_BACK)
@@ -1255,7 +1233,6 @@
 
 /datum/equipment_preset/colonist/security/guard/tech/load_gear(mob/living/carbon/human/new_human)
 
-	new_human.undershirt = "undershirt"
 	//back
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine/satchel, WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/box/mre(new_human), WEAR_IN_BACK)
@@ -1324,7 +1301,6 @@
 
 /datum/equipment_preset/colonist/security/guard/nco/load_gear(mob/living/carbon/human/new_human)
 
-	new_human.undershirt = "undershirt"
 	//back
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine/satchel, WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/box/mre(new_human), WEAR_IN_BACK)
@@ -1392,7 +1368,6 @@
 
 /datum/equipment_preset/colonist/security/guard/co/load_gear(mob/living/carbon/human/new_human)
 
-	new_human.undershirt = "undershirt"
 	//back
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine/satchel/rto, WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/box/mre(new_human), WEAR_IN_BACK)

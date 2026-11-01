@@ -18,6 +18,9 @@
 			uniform.sensor_faction = FACTION_MARINE
 	return ..()
 
+/datum/equipment_preset/cmb/load_underwear(mob/living/carbon/human/new_human, client/mob_client)
+	add_civilian_underwear(new_human)
+
 //*****************************************************************************************************/
 /datum/equipment_preset/cmb/deputy
 	name = "CMB - US Colonial Marshals Deputy"
@@ -29,7 +32,6 @@
 	skills = /datum/skills/cmb
 
 /datum/equipment_preset/cmb/deputy/load_gear(mob/living/carbon/human/new_human)
-	new_human.undershirt = "undershirt"
 	//back
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/satchel/black, WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/tool/crowbar/tactical, WEAR_IN_BACK)
@@ -71,7 +73,6 @@
 	paygrades = list(PAY_SHORT_AE2 = JOB_PLAYTIME_TIER_0)
 
 /datum/equipment_preset/cmb/deputy/brazilian/load_gear(mob/living/carbon/human/new_human)
-	new_human.undershirt = "undershirt"
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/colonist/boilersuit/grey, WEAR_BODY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/ranks/army/e2, WEAR_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/cmb/brazil_police, WEAR_ACCESSORY)
@@ -88,7 +89,6 @@
 	name = "CMB - US Colonial Marshals Deputy (Emergency, SMG)"
 
 /datum/equipment_preset/cmb/deputy/emergency/load_gear(mob/living/carbon/human/new_human)
-	new_human.undershirt = "undershirt"
 	//back
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/satchel/black, WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/tool/crowbar/tactical, WEAR_IN_BACK)
@@ -149,7 +149,6 @@
 	paygrades = list(PAY_SHORT_AE4 = JOB_PLAYTIME_TIER_0)
 
 /datum/equipment_preset/cmb/deputy/emergency/brazilian/load_gear(mob/living/carbon/human/new_human)
-	new_human.undershirt = "undershirt"
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/colonist/boilersuit/grey, WEAR_BODY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/ranks/army/e4, WEAR_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/cmb/brazil_police, WEAR_ACCESSORY)
@@ -165,7 +164,6 @@
 	name = "CMB - US Colonial Marshals Deputy (Emergency, Shotgun)"
 
 /datum/equipment_preset/cmb/deputy/emergency/shotgunner/load_gear(mob/living/carbon/human/new_human)
-	new_human.undershirt = "undershirt"
 	//back
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/satchel/black, WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/tool/crowbar/tactical, WEAR_IN_BACK)
@@ -231,7 +229,6 @@
 	paygrades = list(PAY_SHORT_AE5 = JOB_PLAYTIME_TIER_0)
 
 /datum/equipment_preset/cmb/deputy/emergency/shotgunner/brazilian/load_gear(mob/living/carbon/human/new_human)
-	new_human.undershirt = "undershirt"
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/colonist/boilersuit/grey, WEAR_BODY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/ranks/army/e5, WEAR_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/cmb/brazil_police, WEAR_ACCESSORY)
@@ -258,7 +255,6 @@
 	languages = list(LANGUAGE_ENGLISH, LANGUAGE_SPANISH, LANGUAGE_JAPANESE, LANGUAGE_PORTUGUESE)
 
 /datum/equipment_preset/cmb/marshal/load_gear(mob/living/carbon/human/new_human)
-	new_human.undershirt = "undershirt"
 	//back
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/satchel/black, WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/device/flashlight/tnr, WEAR_IN_BACK)
@@ -301,7 +297,6 @@
 	paygrades = list(PAY_SHORT_AO3 = JOB_PLAYTIME_TIER_0)
 
 /datum/equipment_preset/cmb/marshal/brazilian/load_gear(mob/living/carbon/human/new_human)
-	new_human.undershirt = "undershirt"
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/colonist/boilersuit/grey, WEAR_BODY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/ranks/army/o3, WEAR_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/cmb/brazil_police, WEAR_ACCESSORY)
@@ -356,7 +351,6 @@
 	new_human.set_species(SYNTH_COLONY)
 
 /datum/equipment_preset/cmb/synth/load_gear(mob/living/carbon/human/new_human)
-	new_human.undershirt = "undershirt"
 	//back
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/satchel/black, WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/device/flashlight/tnr, WEAR_IN_BACK)

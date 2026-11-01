@@ -44,8 +44,7 @@
 	flags = EQUIPMENT_PRESET_EXTRA
 
 /datum/equipment_preset/zombie/ua_marine/load_gear(mob/living/carbon/human/new_human)
-	new_human.undershirt = "Marine Undershirt"
-	new_human.underwear = "Marine Boxers"
+	add_uscm_underwear(new_human)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine/satchel(new_human), WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/tool/weldingtool(new_human), WEAR_IN_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/tool/wirecutters(new_human), WEAR_IN_BACK)
@@ -70,8 +69,7 @@
 	flags = EQUIPMENT_PRESET_EXTRA
 
 /datum/equipment_preset/zombie/ua_marine_eva/load_gear(mob/living/carbon/human/new_human)
-	new_human.undershirt = "Marine Undershirt"
-	new_human.underwear = "Marine Boxers"
+	add_uscm_underwear(new_human)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine/satchel(new_human), WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/tool/weldingtool(new_human), WEAR_IN_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/tool/wirecutters(new_human), WEAR_IN_BACK)
@@ -101,7 +99,7 @@
 	return "Class C Inhabitant"
 
 /datum/equipment_preset/zombie/bluecollar/load_gear(mob/living/carbon/human/new_human)
-	new_human.undershirt = "undershirt"
+	add_civilian_underwear(new_human)
 	//back
 	add_random_satchel(new_human)
 	//face
@@ -121,7 +119,7 @@
 	flags = EQUIPMENT_PRESET_EXTRA
 
 /datum/equipment_preset/zombie/upp_rifleman/load_gear(mob/living/carbon/human/new_human)
-	new_human.undershirt = "Naval Infantry Telnyashka"
+	add_upp_underwear(new_human)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/lightpack/upp(new_human), WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/reagent_container/food/drinks/flask/canteen, WEAR_IN_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/box/packet/high_explosive/upp/impact, WEAR_IN_BACK)
@@ -139,7 +137,7 @@
 	name = "Zombie - UPP EVA Marine"
 
 /datum/equipment_preset/zombie/upp_eva/load_gear(mob/living/carbon/human/new_human)
-	new_human.undershirt = "Naval Infantry Telnyashka"
+	add_upp_underwear(new_human)
 	//back
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/lightpack/upp(new_human), WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/reagent_container/food/drinks/flask/canteen, WEAR_IN_BACK)
@@ -166,7 +164,7 @@
 	flags = EQUIPMENT_PRESET_EXTRA
 
 /datum/equipment_preset/zombie/upp_colonist/load_gear(mob/living/carbon/human/new_human)
-	new_human.undershirt = "undershirt"
+	add_civilian_underwear(new_human)
 	//back
 	add_random_satchel(new_human)
 	//face
@@ -229,7 +227,7 @@
 	flags = EQUIPMENT_PRESET_EXTRA
 
 /datum/equipment_preset/zombie/researcher/load_gear(mob/living/carbon/human/new_human)
-	new_human.undershirt = "undershirt"
+	add_civilian_underwear(new_human)
 	//back
 	add_random_satchel(new_human)
 	//face
@@ -267,7 +265,7 @@
 	flags = EQUIPMENT_PRESET_EXTRA
 
 /datum/equipment_preset/zombie/cmb/load_gear(mob/living/carbon/human/new_human)
-	new_human.undershirt = "undershirt"
+	add_civilian_underwear(new_human)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/satchel/black, WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/tool/crowbar/tactical, WEAR_IN_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/device/flashlight/tnr, WEAR_IN_BACK)
@@ -286,7 +284,7 @@
 	name = "Zombie - US Colonial Guard"
 
 /datum/equipment_preset/zombie/guard/load_gear(mob/living/carbon/human/new_human)
-	new_human.undershirt = "undershirt"
+	add_civilian_underwear(new_human)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine/satchel, WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/guard, WEAR_L_EAR)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/colonist/boilersuit/khaki, WEAR_BODY)
@@ -301,7 +299,7 @@
 	name = "Zombie CANC"
 
 /datum/equipment_preset/zombie/canc/load_gear(mob/living/carbon/human/new_human)
-	new_human.undershirt = "undershirt"
+	add_civilian_underwear(new_human)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/lightpack/upp(new_human), WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/roller/bedroll(new_human), WEAR_IN_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/box/mre/upp(new_human), WEAR_IN_BACK)
