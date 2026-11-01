@@ -21,7 +21,9 @@
 	armor_rad = CLOTHING_ARMOR_NONE
 	armor_internaldamage = CLOTHING_ARMOR_NONE
 	siemens_coefficient = 0.9
-	vision_impair = VISION_IMPAIR_NONE
+	vision_impair = VISION_IMPAIR_STRONG // putting them on for their benefits should have a drawback and feel more immersive
+	var/vision_impair_on_store = VISION_IMPAIR_NONE
+	var/ignore_zoom_tint_on_store = FALSE
 	var/gas_filter_strength = 1 //For gas mask filters
 	var/list/filtered_gases = list("phoron", "sleeping_agent", "carbon_dioxide")
 
@@ -51,6 +53,15 @@
 	helmet_item.flags_inventory |= BLOCKGASEFFECT
 	helmet_item.flags_inv_hide |= HIDEFACE
 
+	vision_impair_on_store = helmet_item.vision_impair
+	ignore_zoom_tint_on_store = helmet_item.ignore_zoom_tint
+	helmet_item.vision_impair = vision_impair
+	helmet_item.ignore_zoom_tint = ignore_zoom_tint
+
+	var/mob/living/carbon/human/H = helmet_item.loc
+	if(H)
+		H.update_tint()
+
 /obj/item/clothing/mask/gas/military/on_exit_storage(obj/item/storage/internal/helmet_internal_inventory)
 	..()
 	if(!istype(helmet_internal_inventory))
@@ -62,6 +73,15 @@
 
 	helmet_item.flags_inventory &= ~(BLOCKGASEFFECT)
 	helmet_item.flags_inv_hide &= ~(HIDEFACE)
+
+	helmet_item.vision_impair = vision_impair_on_store
+	helmet_item.ignore_zoom_tint = ignore_zoom_tint_on_store
+	vision_impair_on_store = VISION_IMPAIR_NONE
+	ignore_zoom_tint_on_store = FALSE
+
+	var/mob/living/carbon/human/H = helmet_item.loc
+	if(H)
+		H.update_tint()
 
 /obj/item/clothing/mask/gas/military/upp
 	name = "\improper ShMB/4 gasmask"
@@ -86,7 +106,8 @@
 	item_state = "helmet"
 	icon_state = "pmc_mask"
 	anti_hug = 3
-	vision_impair = VISION_IMPAIR_NONE
+	vision_impair = VISION_IMPAIR_MIN // best in the biz
+	ignore_zoom_tint = TRUE // they can use scopes
 	armor_melee = CLOTHING_ARMOR_LOW
 	armor_bullet = CLOTHING_ARMOR_NONE
 	armor_laser = CLOTHING_ARMOR_NONE
@@ -206,3 +227,37 @@
 	icon_state = "rmc_mask"
 	flags_atom = NO_NAME_OVERRIDE|NO_SNOW_TYPE
 	flags_inventory = COVERMOUTH|COVEREYES|ALLOWINTERNALS|BLOCKGASEFFECT|ALLOWREBREATH|ALLOWCPR
+	vision_impair = VISION_IMPAIR_WEAK // not as good as PMC but good
+	ignore_zoom_tint = TRUE // they can use scopes
+	flags_atom = NO_NAME_OVERRIDE|NO_SNOW_TYPE
+
+//= UPP =\\
+
+/obj/item/clothing/mask/gas/upp_pfb
+	name = "\improper ShMB/4 gasmask"
+	desc = "The standard issue gasmask utilized by the UPP Armed Collective and many UPP civilian organizations."
+	icon_state = "pfb"
+	item_state = "pfb"
+	flags_atom = NO_NAME_OVERRIDE|NO_SNOW_TYPE
+	flags_inv_hide = HIDEEARS|HIDEFACE|HIDEALLHAIR
+
+//= CLF =\\
+
+/obj/item/clothing/mask/gas/riot
+	name = "riot mask"
+	desc = "A mask of colonial riot control department, with red laser shield lenses for eye protection due a somewhat often use of RXF-M5 EVA by colonial rioters. Riot gear is also often seen in hands of CLF terrorists, due to large surplus of it being captured in colonial rebellions."
+	icon_state = "carbon_mask"
+	item_state = "balaclava"
+	vision_impair = VISION_IMPAIR_NONE
+	eye_protection = EYE_PROTECTION_FLAVOR
+	flags_inv_hide = HIDEEARS|HIDEFACE
+
+//= Security =\\
+
+/obj/item/clothing/mask/gas/sec_mask
+	name = "\improper Sec Mask"
+	desc = "Standard issue mask issued to Con-Am security forces. Typically locks in with the standard issue helmet Voice modulator appears to be disabled."
+	icon_state = "sec_mask"
+	item_state = "sec_mask"
+	flags_atom = NO_NAME_OVERRIDE|NO_SNOW_TYPE
+	flags_inv_hide = HIDEFACE

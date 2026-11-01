@@ -570,6 +570,78 @@
 	spawn_nothing_percentage = 20
 	icon_state = "claymore_80"
 
+/obj/effect/spawner/random/claymore/clf
+	name = "Random CLF Claymore"
+
+/obj/effect/spawner/random/claymore/clf/item_to_spawn()
+	return pick(/obj/item/explosive/mine/active/clf)
+
+/obj/effect/spawner/random/claymore/clf/lowchance
+	spawn_nothing_percentage = 80
+	icon_state = "claymore_20"
+
+/obj/effect/spawner/random/claymore/clf/midchance
+	spawn_nothing_percentage = 50
+	icon_state = "claymore_50"
+
+/obj/effect/spawner/random/claymore/clf/highchance
+	spawn_nothing_percentage = 20
+	icon_state = "claymore_80"
+
+/obj/effect/spawner/random/medical
+	name = "Random Medical equipment"
+	desc = "This is a random medical item."
+	icon_state = "intel_med"
+
+/obj/effect/spawner/random/medical/spawn_item()
+	var/list/medical_weights = list(
+		/obj/effect/spawner/random/medical/lite = 21,
+		/obj/item/bodybag = 2,
+		/obj/item/reagent_container/glass/bottle/inaprovaline = 2,
+		/obj/item/reagent_container/glass/bottle/antitoxin = 2,
+		/obj/item/storage/pill_bottle = 2,
+		/obj/item/storage/pill_bottle/tramadol = 1,
+		/obj/item/storage/pill_bottle/citalopram = 2,
+		/obj/item/storage/pill_bottle/dexalinplus = 1,
+		/obj/item/storage/pill_bottle/keloderm = 1,
+		/obj/item/storage/pill_bottle/bicaridine = 1,
+		/obj/item/reagent_container/syringe/antitoxin = 2,
+		/obj/item/reagent_container/syringe/antiviral = 1,
+		/obj/item/reagent_container/syringe/inaprovaline = 2,
+		/obj/item/stack/nanopaste = 1
+	)
+
+	var/build_type = pick_weight(medical_weights)
+
+	new build_type(src.loc)
+	return
+
+/obj/effect/spawner/random/medical/lite
+	name = "Random Medical equipment"
+	desc = "This is a random medical item."
+	icon_state = "intel_med"
+	spawn_nothing_percentage = 25
+
+/obj/effect/spawner/random/medical/lite/spawn_item()
+	var/list/medical_weights = list(/obj/item/stack/medical/bruise_pack = 4,
+				/obj/item/stack/medical/ointment = 4,
+				/obj/item/storage/pill_bottle/paracetamol = 2,
+				/obj/item/stack/medical/advanced/bruise_pack = 2,
+				/obj/item/stack/medical/advanced/ointment = 2,
+				/obj/item/stack/medical/splint = 1,
+				/obj/item/reagent_container/hypospray/autoinjector/inaprovaline = 3,
+				/obj/item/storage/pill_bottle/kelotane = 2,
+				/obj/item/storage/pill_bottle/antitox = 2,
+				/obj/item/storage/firstaid/regular = 2,
+				/obj/item/storage/firstaid/fire = 2,
+				/obj/item/storage/firstaid/toxin = 2,
+				/obj/item/storage/firstaid/rad = 2,
+				/obj/item/storage/firstaid/o2 = 2)
+
+	var/build_type = pick_weight(medical_weights)
+
+	new build_type(src.loc)
+	return
 
 /*
 // OB spawners
@@ -596,3 +668,67 @@ GLOBAL_VAR_INIT(spawn_ob, TRUE)
 		/obj/structure/ob_ammo/warhead/cluster
 	)
 	return pick(spawnables)
+
+/obj/effect/spawner/random/trash
+	name = "Random Trash"
+	desc = "This is random trash"
+	icon_state = "random_kit"
+
+/obj/effect/spawner/random/trash/item_to_spawn()
+	return pick(/obj/item/trash/barcardine,\
+				/obj/item/trash/boonie,\
+				/obj/item/trash/burger,\
+				/obj/item/trash/buritto,\
+				/obj/item/trash/c_tube,\
+				/obj/item/trash/candy,\
+				/obj/item/trash/ceramic_plate,\
+				/obj/item/trash/cheesie,\
+				/obj/item/trash/chunk,\
+				/obj/item/trash/chunk/hunk,\
+				/obj/item/trash/cigbutt,\
+				/obj/item/trash/cigbutt/bcigbutt,\
+				/obj/item/trash/cigbutt/cigarbutt,\
+				/obj/item/trash/cigbutt/ucigbutt,\
+				/obj/item/trash/crushed_cup,\
+				/obj/item/trash/eat,\
+				/obj/item/trash/hotdog,\
+				/obj/item/trash/kepler,\
+				/obj/item/trash/kepler/flamehot,\
+				/obj/item/trash/liquidfood,\
+				/obj/item/trash/pistachios,\
+				/obj/item/trash/plate,\
+				/obj/item/trash/popcorn,\
+				/obj/item/trash/candle)
+
+// Materials
+
+/obj/effect/spawner/random/mats
+	name = "random mats"
+	desc = "This is a random material spawner."
+	icon_state = "supply"
+
+/obj/effect/spawner/random/mats/item_to_spawn()
+	var/list/spawnables = list(
+		/obj/item/stack/sheet/plasteel/med_small_stack,
+		/obj/item/stack/sheet/plasteel/medium_stack,
+		/obj/item/stack/sheet/metal/small_stack,
+		/obj/item/stack/sheet/metal/med_small_stack,
+		/obj/item/stack/sheet/metal/medium_stack,
+		/obj/item/stack/sheet/metal/large_stack,
+		/obj/item/stack/sheet/wood/large_stack,
+		/obj/item/stack/sheet/cardboard/small_stack,
+		/obj/item/stack/sheet/cardboard/full_stack,
+		/obj/item/stack/sandbags/small_stack,
+		/obj/item/stack/sandbags/large_stack,
+		/obj/item/stack/sandbags_empty/full
+		)
+	return pick(spawnables)
+
+/obj/effect/spawner/random/mats/lowchance
+	spawn_nothing_percentage = 80
+
+/obj/effect/spawner/random/mats/midchance
+	spawn_nothing_percentage = 50
+
+/obj/effect/spawner/random/mats/highchance
+	spawn_nothing_percentage = 20

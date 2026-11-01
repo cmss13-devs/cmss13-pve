@@ -7,6 +7,9 @@
 /// CNUR, Nurse
 #define PAY_SHORT_CNUR "CNUR"
 
+///CPARA, Paramedic
+#define PAY_SHORT_CPARA "CPARA"
+
 /// CDOC, Doctor
 #define PAY_SHORT_CDOC "CDOC"
 
@@ -36,3 +39,24 @@
 
 /// REBC, Rebel Commander "REBC"
 #define PAY_SHORT_REBC "REBC"
+
+
+// Nerva
+
+#define PAY_SHORT_CREW "CREW"
+
+#define PAY_SHORT_CAPT "CPT"
+
+#define PAY_SHORT_CMO "CMO"
+
+#define PAY_SHORT_HOS "HOS"
+
+#define PAY_SHORT_CE "CE"
+
+#define PAY_SHORT_BO "BO"
+
+#define PAY_SHORT_SEC "SEC"
+
+#define PAY_SHORT_MED "MED"
+
+#define PAY_SHORT_ENG "ENG"

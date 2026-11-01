@@ -345,6 +345,8 @@
 	var/atom/movable/vis_obj/xeno_pack/backpack_icon_holder
 	/// If TRUE, the xeno cannot slash anything
 	var/cannot_slash = FALSE
+	// If specified, will always default to that name.
+	var/preset_name = null
 
 /mob/living/carbon/xenomorph/Initialize(mapload, mob/living/carbon/xenomorph/old_xeno, hivenumber, ai_hard_off = FALSE)
 
@@ -573,6 +575,11 @@
 
 	//Im putting this in here, because this proc gets called when a player inhabits a SSD xeno and it needs to go somewhere (sorry)
 	hud_set_marks()
+
+	if(preset_name)
+		change_real_name(src, preset_name)
+		in_hive.hive_ui.update_xeno_info()
+		return
 
 	var/name_prefix = in_hive.prefix
 	var/name_client_prefix = ""
@@ -1117,3 +1124,12 @@
 	if(new_player.mind)
 		new_player.mind_initialize()
 		new_player.mind.transfer_to(target, TRUE)
+
+/mob/living/carbon/xenomorph/onZImpact(turf/impact_turf, height)
+	if(mob_size >= MOB_SIZE_BIG)
+		KnockDown(height * 5)
+		Stun(height * 5)
+
+		var/total_damage = (60 * height) ** 1.3
+		apply_damage(total_damage / 2, BRUTE)
+		playsound(impact_turf.loc, "slam", 50, 1)

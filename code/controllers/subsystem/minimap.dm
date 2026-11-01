@@ -69,7 +69,10 @@ SUBSYSTEM_DEF(minimaps)
 					continue
 
 				if(istype(location, /turf/open/space))
-					continue
+					if(istype(get_area(location), /area/space/minimap_show))
+
+					else
+						continue
 
 				var/atom/movable/alttarget = (locate(/obj/structure/machinery/door) in location) || (locate(/obj/structure/fence) in location)
 				if(alttarget)
@@ -1133,6 +1136,8 @@ SUBSYSTEM_DEF(minimaps)
 			return MINIMAP_FLAG_XENO_CHARLIE
 		if(XENO_HIVE_DELTA)
 			return MINIMAP_FLAG_XENO_DELTA
+		if(XENO_HIVE_K_SERIES)
+			return MINIMAP_FLAG_XENO_K_SERIES
 		if(XENO_HIVE_FERAL)
 			return MINIMAP_FLAG_XENO_FERAL
 		if(XENO_HIVE_TAMED)

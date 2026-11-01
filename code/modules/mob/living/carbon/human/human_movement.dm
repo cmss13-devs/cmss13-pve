@@ -1,4 +1,6 @@
 /mob/living/carbon/human/movement_delay()
+	speed = 0.8
+
 	. = ..()
 
 	recalculate_move_delay = FALSE
