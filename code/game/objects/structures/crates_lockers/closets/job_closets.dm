@@ -288,3 +288,8 @@
 	chosen_kit = spec_equipment_list[chosen_kit]
 	claimed = TRUE
 	new chosen_kit(src)
+
+/obj/structure/closet/secure_closet/platoon_sergeant_squad_lead
+	name = "squad leader locker"
+	desc = "A secure storage unit for the squad leader."
+	req_one_access = list(ACCESS_MARINE_LEADER)

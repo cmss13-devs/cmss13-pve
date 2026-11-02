@@ -496,7 +496,7 @@
 /obj/item/device/helmet_visor/night_vision/stormtrooper/activate_visor(obj/item/clothing/head/helmet/marine/attached_helmet, mob/living/carbon/human/user)
 	RegisterSignal(user, COMSIG_HUMAN_POST_UPDATE_SIGHT, PROC_REF(on_update_sight))
 
-	user.add_client_color_matrix("nvg_visor", 90, color_matrix_multiply(color_matrix_saturation(0.02), color_matrix_from_string("#7aff7a")))
+	user.add_client_color_matrix("nvg_visor", 90, color_matrix_multiply(color_matrix_saturation(0.02), color_matrix_from_string("#fe9898")))
 	user.overlay_fullscreen("nvg_visor", /atom/movable/screen/fullscreen/flash/noise/nvg)
 	user.update_sight()
 	if(visor_glows)

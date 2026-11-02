@@ -249,7 +249,7 @@
 	icon_state = "pistol"
 	use_sound = null
 	max_w_class = SIZE_MEDIUM
-	can_hold = list(/obj/item/weapon/gun/pistol, /obj/item/weapon/gun/revolver,/obj/item/weapon/gun/flare)
+	can_hold = list(/obj/item/weapon/gun/pistol, /obj/item/weapon/gun/revolver,/obj/item/weapon/gun/flare, /obj/item/weapon/gun/lasgun/laspistol)
 	storage_flags = STORAGE_FLAGS_POUCH|STORAGE_USING_DRAWING_METHOD|STORAGE_ALLOW_QUICKDRAW
 	flap = FALSE
 

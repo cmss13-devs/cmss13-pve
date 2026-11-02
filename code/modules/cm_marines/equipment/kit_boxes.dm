@@ -624,3 +624,27 @@
 	new /obj/item/ammo_magazine/lasgun/hellgun/volleygun(src)
 	new /obj/item/ammo_magazine/lasgun/hellgun/volleygun(src)
 	new /obj/item/ammo_magazine/lasgun/hellgun/volleygun(src)
+
+/obj/item/storage/box/spec/imperial_plasma_pistol
+	name = "\improper Plasma pistol equipment case"
+	desc = "A large case containing a specialist pistol, namely an Imperial Guard plasma pistol and ammo."
+	kit_overlay = "grenadier"
+
+/obj/item/storage/box/spec/imperial_plasma_pistol/fill_preset_inventory()
+	new /obj/item/weapon/gun/plasmagun/pistol(src)
+	new /obj/item/ammo_magazine/plasmagun(src)
+	new /obj/item/ammo_magazine/plasmagun(src)
+	new /obj/item/ammo_magazine/plasmagun(src)
+	new /obj/item/ammo_magazine/plasmagun(src)
+
+/obj/item/storage/box/spec/imperial_bolt_pistol
+	name = "\improper Bolt Pistol equipment case"
+	desc = "A large case containing a specialist pistol, namely an Imperial Guard bolt pistol and ammo."
+	kit_overlay = "grenadier"
+
+/obj/item/storage/box/spec/imperial_boltpistol/fill_preset_inventory()
+	new /obj/item/weapon/gun/pistol/boltpistol(src)
+	new /obj/item/ammo_magazine/pistol/boltpistol(src)
+	new /obj/item/ammo_magazine/pistol/boltpistol(src)
+	new /obj/item/ammo_magazine/pistol/boltpistol(src)
+	new /obj/item/ammo_magazine/pistol/boltpistol(src)
