@@ -2008,8 +2008,8 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	flags_inv_hide = HIDEEARS|HIDEEYES|HIDEFACE|HIDEMASK|HIDEALLHAIR
 	flags_marine_helmet = HELMET_DAMAGE_OVERLAY
 	flags_atom = NO_NAME_OVERRIDE|NO_SNOW_TYPE
-	built_in_visors = list(new /obj/item/device/helmet_visor/night_vision/marine_raider/rmc/imperial)
-	start_down_visor_type = /obj/item/device/helmet_visor/night_vision/marine_raider/rmc/imperial
+	built_in_visors = list(new /obj/item/device/helmet_visor/night_vision/stormtrooper)
+	start_down_visor_type = /obj/item/device/helmet_visor/night_vision/stormtrooper
 
 
 /obj/item/clothing/head/helmet/marine/veteran/guard/traitor
