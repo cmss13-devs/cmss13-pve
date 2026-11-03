@@ -164,6 +164,12 @@
 	arm_sound = 'sound/weapons/pinpull.ogg'
 	falloff_mode = EXPLOSION_FALLOFF_SHAPE_LINEAR
 
+/obj/item/explosive/grenade/high_explosive/m15/imperial
+	name = "\improper Arkadas MK.II fragmentation grenade"
+	desc = "A rather outdated fragmentation grenade manufactured on the forge world of Arkadas, yet still finds much use within the hands of the Imperial Guard."
+	icon_state = "imperial_frag_grenade"
+	item_state = "imperial_frag_grenade"
+
 /*
 +//================================================
 +				Canister Grenade
@@ -698,6 +704,12 @@
 	icon_state = "grenade_smoke_red"
 	smoke_type = /datum/effect_system/smoke_spread/bad/red
 	smoke_radius = 2
+
+/obj/item/explosive/grenade/smokebomb/imperial
+	name = "\improper Orobian MK.IV smoke grenade"
+	desc = "A smoke grenade used by the imperial guard manufactured on the forge world of Orobus. It explodes 3 seconds after the pin has been pulled."
+	icon_state = "imperial_grenade"
+	item_state = "imperial_grenade"
 
 /obj/item/explosive/grenade/smokebomb/upp
 	name = "RDG-17 smoke grenade"

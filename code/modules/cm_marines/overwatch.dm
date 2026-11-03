@@ -944,6 +944,8 @@
 	faction = FACTION_TWE
 /obj/structure/machinery/computer/overwatch/freelance
 	faction = FACTION_FREELANCER
+/obj/structure/machinery/computer/overwatch/imperial
+	faction = FACTION_IMPERIAL_GUARD
 
 /obj/structure/machinery/computer/overwatch/toc
 	name = "TOC Overwatch Console"

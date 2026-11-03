@@ -881,6 +881,11 @@
 	desc = "A cheap, reliable  chambered in 8.8x29mm. Commonly found in the hands of slightly better funded criminals. This one has been equipped with an after-market ammo-counter."
 	starting_attachment_types = list(/obj/item/attachable/mar50barrel, /obj/item/attachable/bipod, /obj/item/attachable/magnetic_harness)
 	flags_gun_features = GUN_AMMO_COUNTER|GUN_CAN_POINTBLANK|GUN_WIELDED_FIRING_ONLY|GUN_AUTO_EJECT_CASINGS
+
+/obj/item/weapon/gun/rifle/mar40/stub
+	name = "\improper Peridos pattern automatic stubgun"
+	desc = "A cheap, semi-reliable stubgun chambered in 8.8x29mm, produced en-mass and often found in the hands of criminals within hiveworlds. The stubby barrel make it a poor choice for long-range engagements, but it is still a capable weapon in the right hands."
+
 //-------------------------------------------------------
 //M16 RIFLE
 

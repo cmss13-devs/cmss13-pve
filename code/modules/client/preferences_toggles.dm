@@ -701,6 +701,8 @@
 			H = GLOB.huds[MOB_HUD_FACTION_CLF]
 		if("Faction UACG HUD")
 			H = GLOB.huds[MOB_HUD_FACTION_UACG]
+		if("Faction Imperial HUD")
+			H = GLOB.huds[MOB_HUD_FACTION_IMPERIAL]
 
 	observer_user.HUD_toggled[hud_choice] = prefs.observer_huds[hud_choice]
 	if(observer_user.HUD_toggled[hud_choice])

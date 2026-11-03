@@ -450,6 +450,9 @@
 	accuracy_mult = BASE_ACCURACY_MULT + HIT_ACCURACY_MULT_TIER_4
 	damage_mult = BASE_BULLET_DAMAGE_MULT + BULLET_DAMAGE_MULT_TIER_2
 
+/obj/item/weapon/gun/revolver/m44/stub
+	name = "\improper Urian Mk.XI stubrevolver"
+	desc = "The Urian Mk.XI stubrevolver is a light but reliable stubrevolver, often seen in the hands of hiveworld gangs and the occassional guardsman. Fires .44 Magnum rounds."
 
 //-------------------------------------------------------
 //RUSSIAN REVOLVER //Based on the 7.62mm Russian revolvers.

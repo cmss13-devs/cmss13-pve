@@ -283,6 +283,8 @@ GLOBAL_LIST_EMPTY(all_static_telecomms_towers)
 					freq_listening |= PMC_FREQS
 				if(FACTION_TWE)
 					freq_listening |= RMC_FREQ
+				if(FACTION_IMPERIAL_GUARD)
+					freq_listening |= IMP_GUARD_FREQ
 				if(FACTION_YAUTJA)
 					to_chat(user, SPAN_WARNING("You decide to leave the human machine alone."))
 					return

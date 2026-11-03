@@ -543,3 +543,108 @@
 	new /obj/item/storage/pouch/construction/low_grade_full(src)
 	new /obj/item/storage/pouch/electronics/full(src)
 	new /obj/item/clothing/glasses/welding(src)
+
+//----------------------------------
+//40k Specialist Gear
+/obj/item/storage/box/spec/imperial_launcher
+	name = "\improper Rocket launcher equipment case"
+	desc = "A large case containing a heavy-weapon, namely an Imperial Guard rocket launcher and ammo."
+	kit_overlay = "demo"
+
+/obj/item/storage/box/spec/imperial_launcher/fill_preset_inventory()
+	new /obj/item/weapon/gun/launcher/rocket/imperial(src)
+	new /obj/item/storage/backpack/marine/rocketpack(src)
+	new /obj/item/ammo_magazine/rocket/imperial(src)
+	new /obj/item/ammo_magazine/rocket/imperial(src)
+	new /obj/item/ammo_magazine/rocket/imperial(src)
+	new /obj/item/ammo_magazine/rocket/imperial/at(src)
+	new /obj/item/ammo_magazine/rocket/imperial/at(src)
+	new /obj/item/ammo_magazine/rocket/imperial/at(src)
+
+/obj/item/storage/box/spec/imperial_plasma
+	name = "\improper Plasmagun equipment case"
+	desc = "A large case containing a heavy-weapon, namely an Imperial Guard plasma gun and ammo."
+	kit_overlay = "grenadier"
+
+/obj/item/storage/box/spec/imperial_plasma/fill_preset_inventory()
+	new /obj/item/weapon/gun/plasmagun(src)
+	new /obj/item/ammo_magazine/plasmagun(src)
+	new /obj/item/ammo_magazine/plasmagun(src)
+	new /obj/item/ammo_magazine/plasmagun(src)
+	new /obj/item/ammo_magazine/plasmagun(src)
+
+/obj/item/storage/box/spec/imperial_flamer
+	name = "\improper Flamer equipment case"
+	desc = "A large case containing a heavy-weapon, namely an Imperial Guard flamer and ammo."
+	kit_overlay = "pyro"
+
+/obj/item/storage/box/spec/imperial_flamer/fill_preset_inventory()
+	new /obj/item/weapon/gun/flamer/imperial(src)
+	new /obj/item/ammo_magazine/flamer_tank/imperial(src)
+	new /obj/item/ammo_magazine/flamer_tank/imperial(src)
+	new /obj/item/ammo_magazine/flamer_tank/imperial(src)
+	new /obj/item/tool/extinguisher/mini(src)
+
+/obj/item/storage/box/spec/imperial_volleygun
+	name = "\improper Volleygun equipment case"
+	desc = "A large case containing a heavy-weapon, namely an Imperial Guard volleygun and ammo."
+	kit_overlay = "spotter"
+
+/obj/item/storage/box/spec/imperial_volleygun/fill_preset_inventory()
+	new /obj/item/weapon/gun/lasgun/volleygun(src)
+	new /obj/item/ammo_magazine/lasgun/volleygun(src)
+	new /obj/item/ammo_magazine/lasgun/volleygun(src)
+	new /obj/item/ammo_magazine/lasgun/volleygun(src)
+	new /obj/item/ammo_magazine/lasgun/volleygun(src)
+	new /obj/item/ammo_magazine/lasgun/volleygun(src)
+	new /obj/item/ammo_magazine/lasgun/volleygun(src)
+
+/obj/item/storage/box/spec/imperial_melta
+	name = "\improper Meltagun equipment case"
+	desc = "A large case containing a heavy-weapon, namely an Imperial Guard melta gun and ammo."
+	kit_overlay = "grenadier"
+
+/obj/item/storage/box/spec/imperial_melta/fill_preset_inventory()
+	new /obj/item/weapon/gun/melta(src)
+	new /obj/item/ammo_magazine/melta(src)
+	new /obj/item/ammo_magazine/melta(src)
+	new /obj/item/ammo_magazine/melta(src)
+	new /obj/item/ammo_magazine/melta(src)
+
+/obj/item/storage/box/spec/imperial_volleygun_elite
+	name = "\improper Hellgun Volleygun equipment case"
+	desc = "A large case containing a heavy-weapon, namely an Imperial Guard volleygun and ammo."
+	kit_overlay = "spotter"
+
+/obj/item/storage/box/spec/imperial_volleygun_elite/fill_preset_inventory()
+	new /obj/item/weapon/gun/lasgun/volleygun/hellgun(src)
+	new /obj/item/ammo_magazine/lasgun/hellgun/volleygun(src)
+	new /obj/item/ammo_magazine/lasgun/hellgun/volleygun(src)
+	new /obj/item/ammo_magazine/lasgun/hellgun/volleygun(src)
+	new /obj/item/ammo_magazine/lasgun/hellgun/volleygun(src)
+	new /obj/item/ammo_magazine/lasgun/hellgun/volleygun(src)
+	new /obj/item/ammo_magazine/lasgun/hellgun/volleygun(src)
+
+/obj/item/storage/box/spec/imperial_plasma_pistol
+	name = "\improper Plasma pistol equipment case"
+	desc = "A large case containing a specialist pistol, namely an Imperial Guard plasma pistol and ammo."
+	kit_overlay = "grenadier"
+
+/obj/item/storage/box/spec/imperial_plasma_pistol/fill_preset_inventory()
+	new /obj/item/weapon/gun/plasmagun/pistol(src)
+	new /obj/item/ammo_magazine/plasmagun(src)
+	new /obj/item/ammo_magazine/plasmagun(src)
+	new /obj/item/ammo_magazine/plasmagun(src)
+	new /obj/item/ammo_magazine/plasmagun(src)
+
+/obj/item/storage/box/spec/imperial_bolt_pistol
+	name = "\improper Bolt Pistol equipment case"
+	desc = "A large case containing a specialist pistol, namely an Imperial Guard bolt pistol and ammo."
+	kit_overlay = "grenadier"
+
+/obj/item/storage/box/spec/imperial_boltpistol/fill_preset_inventory()
+	new /obj/item/weapon/gun/pistol/boltpistol(src)
+	new /obj/item/ammo_magazine/pistol/boltpistol(src)
+	new /obj/item/ammo_magazine/pistol/boltpistol(src)
+	new /obj/item/ammo_magazine/pistol/boltpistol(src)
+	new /obj/item/ammo_magazine/pistol/boltpistol(src)

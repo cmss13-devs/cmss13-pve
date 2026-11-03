@@ -53,3 +53,32 @@
 	name = "Rebel Commander"
 	prefix = "CMDR."
 	officer_grade = GRADE_OFFICER
+
+/datum/paygrade/civilian/traitor
+	paygrade = PAY_SHORT_TRA
+	name = "Traitor"
+
+/datum/paygrade/civilian/traitor/guardsman
+	paygrade = PAY_SHORT_TRAG
+	name = "Traitor Guardsman"
+
+/datum/paygrade/civilian/traitor/enforcer
+	paygrade = PAY_SHORT_TRAE
+	name = "Traitor Enforcer"
+
+/datum/paygrade/civilian/traitor/leader
+	paygrade = PAY_SHORT_TRAO
+	name = "Traitor Officer"
+	prefix = "LT."
+	officer_grade = GRADE_OFFICER
+
+/datum/paygrade/civilian/commissar
+	paygrade = PAY_SHORT_CMR
+	name = "Imperial Commissar"
+	prefix = "Commissar."
+	officer_grade = GRADE_OFFICER
+
+/datum/paygrade/civilian/enginseer
+	paygrade = PAY_SHORT_ENGINSEER
+	name = "Mechanicus Enginseer"
+	prefix = "Eng."

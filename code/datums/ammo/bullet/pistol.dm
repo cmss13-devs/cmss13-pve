@@ -282,3 +282,13 @@
 	penetration = 20
 	shrapnel_chance = SHRAPNEL_CHANCE_TIER_2
 
+
+/datum/ammo/bullet/pistol/boltpistol
+	name = "boltpistol bullet"
+	headshot_state = HEADSHOT_OVERLAY_HEAVY
+	accuracy = HIT_ACCURACY_TIER_3
+	accuracy_var_low = PROJECTILE_VARIANCE_TIER_6
+	damage = 160
+	penetration = ARMOR_PENETRATION_TIER_6
+	flags_ammo_behavior = AMMO_BALLISTIC
+	shell_casing = /obj/effect/decal/ammo_casing/cartridge
