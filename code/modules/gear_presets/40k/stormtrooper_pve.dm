@@ -31,7 +31,7 @@
 	skills = /datum/skills/rmc/leader
 
 /datum/equipment_preset/uscm/stormtrooper/specialist
-	name = "Imperial Guardsman, Weapons Specialist"
+	name = "Imperial Stormtrooper, Weapons Specialist"
 	paygrades = list(PAY_SHORT_ME5 = JOB_PLAYTIME_TIER_0)
 	access = list(ACCESS_MARINE_PREP, ACCESS_MARINE_SPECPREP)
 	role_comm_title = "Spc."
@@ -40,7 +40,7 @@
 	skills = /datum/skills/rmc/smartgun
 
 /datum/equipment_preset/uscm/stormtrooper/med
-	name = "Imperial Guardsman, Medicae"
+	name = "Imperial Stormtrooper, Medicae"
 	paygrades = list(PAY_SHORT_ME5 = JOB_PLAYTIME_TIER_0)
 	access = list(ACCESS_MARINE_PREP, ACCESS_CIVILIAN_MEDBAY, ACCESS_MARINE_MEDBAY)
 	role_comm_title = "Med."
