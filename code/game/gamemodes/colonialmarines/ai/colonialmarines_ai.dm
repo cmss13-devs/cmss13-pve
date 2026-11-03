@@ -154,7 +154,7 @@ GLOBAL_LIST_INIT(platoon_to_role_list, list(/datum/squad/marine/alpha = ROLES_AI
 												/datum/squad/marine/pmc/small = ROLES_PMCPLT_SMALL,\
 												/datum/squad/marine/rmc = ROLES_RMCTROOP,\
 												/datum/squad/marine/imperial = ROLES_IMPPLT,\
-												/datum/squad/marine/imperial = ROLES_STRMPLT))
+												/datum/squad/marine/stormtrooper = ROLES_STRMPLT))
 
 
 GLOBAL_LIST_INIT(personal_weapons_list, list("Ithaca 37 shotgun-stakeout" = /obj/item/storage/large_holster/m37/full/noammo,\
