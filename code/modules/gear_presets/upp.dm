@@ -731,6 +731,7 @@
 	rank = JOB_SQUAD_TEAM_LEADER
 	faction_group = list(FACTION_UPP)
 	faction = FACTION_UPP
+	skills = /datum/skills/tl
 	role_comm_title = "SQSGT"
 
 /datum/equipment_preset/upp/squadlead/load_gear(mob/living/carbon/human/new_human)
