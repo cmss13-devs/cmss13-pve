@@ -201,6 +201,28 @@ GLOBAL_LIST_INIT(cm_vending_clothing_leader, list(
 	req_access = list(ACCESS_MARINE_LEADER, ACCESS_MARINE_DELTA)
 	headset_type = /obj/item/device/radio/headset/almayer/marine/delta/lead
 
+GLOBAL_LIST_INIT(cm_vending_clothing_strm_lead, list(
+		list("ARMOR (CHOOSE 1)", 0, null, null, null),
+		list("Laser Designator", 5, /obj/item/device/binoculars/range/designator, MARINE_CAN_BUY_ARMOR, VENDOR_ITEM_RECOMMENDED),
+
+		list("MELEE (CHOOSE 1)", 0, null, null, null),
+		list("Power Sword", 0, /obj/item/weapon/powersword, MARINE_CAN_BUY_ATTACHMENT, VENDOR_ITEM_MANDATORY),
+		list("Chain Sword", 0, /obj/item/weapon/chainsword, MARINE_CAN_BUY_ATTACHMENT, VENDOR_ITEM_MANDATORY),
+
+		list("WEAPONRY (CHOOSE 1)", 0, null, null, null),
+		list("Plasma Pistol", 0, /obj/item/storage/box/spec/imperial_plasma_pistol, MARINE_CAN_BUY_ACCESSORY, VENDOR_ITEM_MANDATORY),
+		list("Bolt Pistol", 0, /obj/item/storage/box/spec/imperial_bolt_pistol, MARINE_CAN_BUY_ACCESSORY, VENDOR_ITEM_MANDATORY),
+	))
+
+/obj/structure/machinery/cm_vending/clothing/leader/strm
+	name = "\improper Imperial Stormtrooper Lead Gear Rack"
+	desc = "A rack of medical equipment for any medic's needs."
+	req_access = list(ACCESS_MARINE_LEADER)
+	vendor_role = list(JOB_SQUAD_LEADER)
+
+/obj/structure/machinery/cm_vending/clothing/leader/strm/get_listed_products(mob/user)
+	return GLOB.cm_vending_clothing_strm_lead
+
 //------------ESSENTIAL SETS---------------
 
 /obj/effect/essentials_set/leader

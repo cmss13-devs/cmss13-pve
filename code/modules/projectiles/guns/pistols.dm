@@ -105,6 +105,9 @@
 	scatter_unwielded = SCATTER_AMOUNT_TIER_6
 	damage_mult = BASE_BULLET_DAMAGE_MULT
 
+/obj/item/weapon/gun/pistol/m4a3/stub
+	name = "\improper Terkin Model 32 stub pistol"
+	desc = "A compact stubpistol often seen in the hands of gangers for close combat, putting out a decent punch."
 
 //L54A2, browning hi-power but in space
 
@@ -242,6 +245,10 @@
 	desc = "A timeless classic since the first World War, the M1911A1 has limited use with the USCM, and is often used as a sidearm by non-governmental bodies due to its reliability. An adaptation of the M48A4, with a reinforced chamber, barrel and slide to handle higher pressure loads, designated the M48A5. Chambered in .45 Super, but can load normal .45 ACP also."
 	starting_attachment_types = list(/obj/item/attachable/lasersight)
 	current_mag = /obj/item/ammo_magazine/pistol/m1911/super
+
+/obj/item/weapon/gun/pistol/m1911/stub
+	name = "\improper M1911 stubpistol"
+	desc = "An extremely old stubpistol, with it's origins dating back to early Terra. It is a semi-automatic pistol chambered in .45 ACP, often used by hiveworld gangs."
 
 //.45 MARSHALS PISTOL //Inspired by the Browning Hipower
 // rebalanced - singlefire, very strong bullets but slow to fire and heavy recoil
@@ -515,6 +522,10 @@
 	var/obj/item/attachable/flashlight/flashlight = new(src)
 	flashlight.Attach(src)
 	update_attachable(flashlight.slot)
+
+/obj/item/weapon/gun/pistol/holdout/stub
+	name = "holdout stubpistol"
+	desc = "A tiny stubpistol meant for hiding in hard-to-reach areas. Best not ask where it came from."
 
 //-------------------------------------------------------
 //CLF HOLDOUT PISTOL

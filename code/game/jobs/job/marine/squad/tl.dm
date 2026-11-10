@@ -138,6 +138,32 @@
 	squad = SQUAD_RMC
 	job = /datum/job/marine/tl/ai/rmc2ic
 
+/datum/job/marine/tl/ai/imperial
+	title = JOB_IMPPLAT_FTL
+	gear_preset = /datum/equipment_preset/uscm/imperial/tl
+	job_options = null
+	supervisors = "the squad leader and team leader"
+	entry_message_body = "You are a team leader of the Astra Militarum, better known as the Imperial Guard. Responsible for your team within the squad, your job is to ensure cohesion within it's members to ensure the operation's success.</b>"
+	prime_priority = FALSE
+
+/obj/effect/landmark/start/marine/tl/imperial
+	name = JOB_IMPPLAT_FTL
+	squad = SQUAD_IMPPLT
+	job = /datum/job/marine/tl/ai/imperial
+
+/datum/job/marine/tl/ai/stormtrooper
+	title = JOB_STRMPLAT_FTL
+	gear_preset = /datum/equipment_preset/uscm/stormtrooper/tl
+	job_options = null
+	supervisors = "the squad leader and team leader"
+	entry_message_body = "You are a team leader of some of the Astra Militarum's best, the Stormtroopers. Responsible for your team within the squad, your job is to ensure cohesion within it's members to ensure the operation's success.</b>"
+	prime_priority = FALSE
+
+/obj/effect/landmark/start/marine/tl/stormtrooper
+	name = JOB_STRMPLAT_FTL
+	squad = SQUAD_STRMPLT
+	job = /datum/job/marine/tl/ai/stormtrooper
+
 #undef SSGT_VARIANT
 #undef SGT_VARIANT
 #undef CPL_VARIANT

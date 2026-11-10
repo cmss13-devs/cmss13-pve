@@ -23,7 +23,10 @@
 #define SQUAD_RMC "Gamma Troop"
 #define SQUAD_LRRP "Snake Eaters"
 #define SQUAD_LRRP_2 "Ocelot Grapplers"
-
+#define SQUAD_IMPPLT "Viridian Guard Alpha Squad"
+#define SQUAD_IMPPLT_2 "Viridian Guard Bravo Squad"
+#define SQUAD_STRMPLT "Crystaline Barons"
+#define SQUAD_STRMPLT_2 "Nexus Hunters"
 // Job name defines
 #define JOB_SQUAD_MARINE "Rifleman"
 #define JOB_SQUAD_LEADER "Section Sergeant"
@@ -455,6 +458,46 @@ GLOBAL_LIST_INIT(job_command_roles, JOB_COMMAND_ROLES_LIST)
 #define JOB_DUTCH_MEDIC "Dutch's Dozen - Medic"
 
 #define DUTCH_JOB_LIST list(JOB_DUTCH_ARNOLD, JOB_DUTCH_RIFLEMAN, JOB_DUTCH_MINIGUNNER, JOB_DUTCH_FLAMETHROWER, JOB_DUTCH_MEDIC)
+
+//-------- 40k Imperial Guard --------//
+#define JOB_IMP_CONSCRIPT "Imperial Guard Conscript"
+#define JOB_IMP_GUARDSMAN "Imperial Guard Guardsman"
+#define JOB_IMP_MEDICAE "Imperial Guard Medic"
+#define JOB_IMP_VOX_OPERATOR "Imperial Guard Vox Operator"
+#define JOB_IMP_TL "Imperial Guard Team Leader"
+#define JOB_IMP_SPECIALIST "Imperial Guard Specialist"
+#define JOB_IMP_SL "Imperial Guard Squad Leader"
+#define JOB_IMP_LT "Imperial Guard Platoon Leader"
+#define JOB_IMP_CPT "Imperial Guard Captain"
+#define JOB_IMP_MJR "Imperial Guard Major"
+#define JOB_IMP_CMR "Imperial Commissar"
+#define JOB_IMP_ENGI "Mechanicus Enginseer"
+
+#define IMPERIAL_GUARD_JOB_LIST list(JOB_IMP_CONSCRIPT, JOB_IMP_GUARDSMAN, JOB_IMP_VOX_OPERATOR, JOB_IMP_TL, JOB_IMP_SPECIALIST, JOB_IMP_SL, JOB_IMP_LT, JOB_IMP_CPT, JOB_IMP_MJR, JOB_IMP_CMR, JOB_IMP_ENGI, JOB_IMP_MEDICAE)
+
+//-------- 40k Elite Stormtroopers --------//
+#define JOB_STRM_RIFLEMAN "Imperial Stormtrooper Rifleman"
+#define JOB_STRM_SPECALIST "Imperial Stormtrooper Specialist"
+#define JOB_STRM_MEDICAE "Imperial Stormtrooper Medicae"
+#define JOB_STRM_TL "Imperial Stormtrooper Team Leader"
+#define JOB_STRM_SL "Imperial Stormtrooper Squad Leader"
+
+#define STORMTROOPER_JOB_LIST list(JOB_STRM_RIFLEMAN, JOB_STRM_SPECIALIST, JOB_STRM_MEDICAE, JOB_STRM_TL, JOB_STRM_SL)
+
+////-------- IMPERIAL GUARD SQUAD --------//
+
+#define JOB_IMPPLAT_LEADER "Guard Squad Leader"
+#define JOB_IMPPLAT_FTL "Guard Team Leader"
+#define JOB_IMPPLAT_SPECIALIST "Guard Specialist"
+#define JOB_IMPPLAT_VOX "Guard Vox Operator"
+#define JOB_IMPPLAT_STANDARD "Guardsman"
+#define JOB_IMPPLAT_MEDICAE "Guard Medicae"
+
+#define JOB_STRMPLAT_LEADER "Stormtrooper Squad Leader"
+#define JOB_STRMPLAT_FTL "Stormtrooper Team Leader"
+#define JOB_STRMPLAT_SPECIALIST "Stormtrooper Specialist"
+#define JOB_STRMPLAT_STANDARD "Stormtrooper"
+#define JOB_STRMPLAT_MEDICAE "Stormtrooper Medicae"
 
 #define JOB_PREDATOR "Predator"
 #define JOB_XENOMORPH    "Xenomorph"

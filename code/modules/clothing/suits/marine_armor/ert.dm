@@ -894,4 +894,66 @@
 	time_to_unequip = 20
 	time_to_equip = 20
 
+/obj/item/clothing/suit/storage/marine/veteran/guard
+	name = "imperial guardsman armor"
+	desc = "The standard flak armor that is extremely common among guard regiments. Often given to most decently equipped world's PDFs, it's not much but it'll do the job."
+	icon = 'icons/obj/items/clothing/cm_suits.dmi'
+	item_icons = list(
+		WEAR_JACKET = 'icons/mob/humans/onmob/suit_1.dmi'
+	)
+	icon_state = "armor_guard"
+	item_state = "armor_guard"
+	armor_melee = CLOTHING_ARMOR_MEDIUMLOW
+	armor_bullet = CLOTHING_ARMOR_MEDIUMHIGH
+	armor_laser = CLOTHING_ARMOR_MEDIUM
+	armor_energy = CLOTHING_ARMOR_MEDIUM
+	armor_bomb = CLOTHING_ARMOR_MEDIUMLOW
+	armor_bio = CLOTHING_ARMOR_MEDIUM
+	armor_rad = CLOTHING_ARMOR_NONE
+	armor_internaldamage = CLOTHING_ARMOR_MEDIUM
+	flags_armor_protection = BODY_FLAG_CHEST|BODY_FLAG_ARMS|BODY_FLAG_GROIN
 
+/obj/item/clothing/suit/storage/marine/veteran/guard/elite
+	name = "stormtrooper carapace armor"
+	desc = "Stormtrooper carapace armor that is far sturdier and protective than that of the standard guard flak armor. Whilst it won't protect you from a bolt round, it'll be more than enough for what stormtroopers go up against on the average."
+	icon_state = "armor_elite"
+	item_state = "armor_elite"
+	armor_melee = CLOTHING_ARMOR_HIGH
+	armor_bullet = CLOTHING_ARMOR_VERYHIGH
+	armor_laser = CLOTHING_ARMOR_MEDIUMHIGH
+	armor_energy = CLOTHING_ARMOR_HIGH
+	armor_bomb = CLOTHING_ARMOR_HIGH
+	armor_bio = CLOTHING_ARMOR_MEDIUM
+	armor_rad = CLOTHING_ARMOR_NONE
+	armor_internaldamage = CLOTHING_ARMOR_MEDIUM
+	flags_armor_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN|BODY_FLAG_LEGS|BODY_FLAG_FEET|BODY_FLAG_ARMS|BODY_FLAG_HANDS
+	flags_inventory = BLOCK_KNOCKDOWN
+	time_to_unequip = 8
+	time_to_equip = 8
+
+/obj/item/clothing/suit/storage/marine/veteran/guard/whiteshield
+	name = "flak armor vest"
+	desc = "A simpler armor vest, which gives adequate protection over the chest and groin. It's very basic, and mostly ever given to auxiliary or underequipped troops."
+	icon_state = "armor_whiteshield"
+	item_state = "armor_whiteshield"
+	armor_melee = CLOTHING_ARMOR_MEDIUMLOW
+	armor_bullet = CLOTHING_ARMOR_MEDIUM
+	armor_laser = CLOTHING_ARMOR_MEDIUMLOW
+	armor_energy = CLOTHING_ARMOR_LOW
+	armor_bomb = CLOTHING_ARMOR_LOW
+	flags_armor_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN
+
+/obj/item/clothing/suit/storage/marine/veteran/guard/traitor
+	name = "traitor guardsman armor"
+	icon_state = "armor_guard_heretic"
+	item_state = "armor_guard_heretic"
+	armor_melee = CLOTHING_ARMOR_MEDIUMLOW
+	armor_bullet = CLOTHING_ARMOR_MEDIUM
+	armor_laser = CLOTHING_ARMOR_MEDIUMLOW
+	armor_energy = CLOTHING_ARMOR_MEDIUM
+	armor_bomb = CLOTHING_ARMOR_LOW
+
+/obj/item/clothing/suit/storage/marine/veteran/guard/elite/traitor
+	name = "traitor elite armor"
+	icon_state = "armor_elite_heretic"
+	item_state = "armor_elite_heretic"

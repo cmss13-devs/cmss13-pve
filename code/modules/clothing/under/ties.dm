@@ -1049,8 +1049,10 @@
 	/obj/item/weapon/gun/pistol,
 	/obj/item/weapon/gun/energy/taser,
 	/obj/item/weapon/gun/revolver,
+	/obj/item/weapon/gun/lasgun/laspistol,
 	/obj/item/ammo_magazine/pistol,
 	/obj/item/ammo_magazine/revolver,
+	/obj/item/ammo_magazine/lasgun/laspistol,
 	/obj/item/weapon/gun/flare,
 	/obj/item/device/flashlight/flare
 	)

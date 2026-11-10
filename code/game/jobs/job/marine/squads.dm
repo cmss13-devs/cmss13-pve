@@ -52,6 +52,13 @@
 	sub_squad = "Section"
 	sub_leader = "Section Leader"
 
+/datum/squad_type/imperial_squad
+	name = "Squad"
+	lead_name = "Squad Leader"
+	lead_icon = "leader"
+	sub_squad = "Team"
+	sub_leader = "Team Leader"
+
 /datum/squad
 	/// Name of the squad
 	var/name
@@ -459,6 +466,54 @@
 /datum/squad/clf/four
 	name = "Boa"
 //###############################
+
+/datum/squad/marine/imperial
+	name = SQUAD_IMPPLT
+	access = list(ACCESS_MARINE_ALPHA)
+	radio_freq = IMP_GUARD_FREQ
+	use_stripe_overlay = FALSE
+	equipment_color = "#62a759"
+	chat_color = "#62a759"
+	minimap_color = MINIMAP_SQUAD_INTEL
+	usable = TRUE
+	faction = FACTION_IMPERIAL_GUARD
+	squad_type = "Squad"
+
+/datum/squad/marine/imperial/secondary
+	name = SQUAD_IMPPLT_2
+	chat_color = "#fe7b2e"
+	minimap_color = MINIMAP_SQUAD_FOXTROT
+	usable = FALSE
+
+/datum/squad/marine/imperial/New()
+	. = ..()
+
+	UnregisterSignal(SSdcs, COMSIG_GLOB_PLATOON_NAME_CHANGE, PROC_REF(rename_platoon))
+
+/datum/squad/marine/stormtrooper
+	name = SQUAD_STRMPLT
+	access = list(ACCESS_MARINE_ALPHA)
+	radio_freq = STORMTROOPER_FREQ
+	use_stripe_overlay = FALSE
+	equipment_color = "#1c798a"
+	chat_color = "#1c798a"
+	minimap_color = MINIMAP_SQUAD_ALPHA
+	usable = TRUE
+	faction = FACTION_IMPERIAL_GUARD
+	squad_type = "Squad"
+
+/datum/squad/marine/stormtrooper/secondary
+	name = SQUAD_STRMPLT_2
+	chat_color = "#2f239d"
+	minimap_color = MINIMAP_SQUAD_DELTA
+	usable = FALSE
+
+/datum/squad/marine/stormtrooper/New()
+	. = ..()
+
+	UnregisterSignal(SSdcs, COMSIG_GLOB_PLATOON_NAME_CHANGE, PROC_REF(rename_platoon))
+
+//##############################
 /datum/squad/New()
 	. = ..()
 

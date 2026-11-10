@@ -86,6 +86,20 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 		set_light(0)
 		STOP_PROCESSING(SSobj, src)
 
+/obj/item/tool/candle/tall
+	name = "tall yellow candle"
+	desc = "a tall candle"
+	icon = 'icons/obj/items/candle.dmi'
+	icon_state = "candle1_tall"
+	item_state = "candle1_tall"
+
+/obj/item/tool/candle/tall/update_icon()
+	var/i
+	if(wax>1500)
+		i = 1
+	else i = 2
+	icon_state = "candle[i]_tall[heat_source ? "_lit" : ""]"
+
 ///////////
 //MATCHES//
 ///////////
