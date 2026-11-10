@@ -1,0 +1,140 @@
+2025-06-01:
+  AlanParkerMasters:
+  - rscadd: day-night settings for GMs
+  - maptweak: calliope maps de-dayified
+  Yorkoh:
+  - balance: dropped PAIN_XENO_DRAG and PAIN_XENO_GRAB by 5 each
+2025-06-02:
+  BonniePandora:
+  - qol: Honey is now more filling when consumed
+  - rscadd: Shotgun shell pouch added to the USCM & FORECON gear vendor in the restricted
+      pouches section
+  - rscdel: Pressurized Reagent Canister pouches removed from FORECON & PMC medic
+      gear vendor
+  - qol: See above, both QoL changes
+  Ediblebomb:
+  - qol: Allows you to put the blackbox in a bag
+  MistChristmas:
+  - bugfix: Base UGL - formerly the "U1 grenade launcher" gets it's attached icon
+      using the right sprite. Mk2 gets the Mk1 as they should be the same UGL in lore.
+  - bugfix: 'Sanity for contributors: No marines no longer causes an Exception on
+      roundstart. Personal Weapon preference of None loads correctly.'
+  - code_imp: Use a temporary list and iterate through the length of the marine list
+      to find a heirloom weapon instead of just iterating 10 times.
+  Yorkoh:
+  - bugfix: fixed missing weight class on some neckwear
+  joookschad:
+  - soundadd: Added whistling. Use this to get people's attention.
+2025-06-03:
+  SpartanBobby:
+  - rscadd: Makes subtypes for the directions of heavy-duty cabes
+2025-06-08:
+  BonniePandora:
+  - balance: hAI using autoshotguns have dialed back their rate of fire from _insane_
+      to _reasonable but still threatening_
+  - balance: hAI UA & TWE rebel skillsets tweaked, making them no longer on-par or
+      better than the basic player skillsets
+  - bugfix: hAI now toggle on their suit lights when in the dark once more
+  Ical92:
+  - bugfix: fixed incorrect space turfs on PMC Dropship
+  - bugfix: fixed towels having lids
+  - bugfix: fixed matchbooks being able to hold other items
+  Yorkoh:
+  - balance: Reduced AG80 rounds armor pen (2->1 for normal, 9->7 for AP) and shrapnel
+      chance for HEAP (9->2)
+  - balance: updated the AG80 description a tad to clarify its role as a carbine
+  - bugfix: AG80 actually references the right bullet type now
+  - balance: made all disks a smaller size rather than just one of them
+2025-06-12:
+  BonniePandora:
+  - bugfix: FS Portraits default to off
+  tyeagg:
+  - rscadd: fire support binos and system
+  - soundadd: fire support sounds
+  - imageadd: fire support radials
+  - imageadd: dropship shadows for krokodil and ud
+2025-06-13:
+  Ical92:
+  - rscadd: Added a tank crew equipment preset for the US Army
+  tyeagg:
+  - soundadd: ports tgmcs bullet miss and ricochet sounds
+  - sounddel: old bullet miss and ricochet sounds
+2025-06-16:
+  BonniePandora:
+  - bugfix: Projectiles, mainly shrapnel, now properly respects those who are vertically
+      impaired (laying down), unless it has the AMMO_PRONETARGET flag
+  ItsTisme:
+  - rscadd: Added new button for GM's to quickly add records based on certain mob
+  ihatethisengine:
+  - bugfix: Respondable Emotes don't default to High Five
+2025-06-17:
+  AlanParkerMasters:
+  - config: Silences the announcer for power restoration in Events Panel
+  Ediblebomb:
+  - qol: Gave the Golden Arrow an extra box of grenades so you can take more than
+      one UBGL load without taking somebody else's
+  - balance: Buffed the grenade belt to 14 grenades
+2025-06-19:
+  CometBlaze, MistChristmas:
+  - qol: RTO Packs use a button now, meaning you can left-click open your bag, unless
+      you're being called
+  The32bitguy:
+  - balance: All marines can now use the weapons console on the dropship. Primarily
+      for the live tac map.
+  Yorkoh:
+  - balance: added +1 to the skill level of all the usual suspects in the uscm.dm
+      skills list, but I ignored MPs and officers aside from the SO.
+  - balance: army SNCO and Heavy Gunner have been buffed (master)
+  - balance: civs are largely END 0. Police & Miners have END 1. When would they have
+      done bootcamp?
+  - bugfix: Cleaned up the survivor-marshal list which had some dupes.
+  - balance: reduced endurance on cmb deputies and marshals - they were higher than
+      most marines
+  - balance: balanced some of the contractor endurance - largely lowered to END1 but
+      the heavy/gunners have END2
+  - balance: mercenary/PMC dropped across the board. Mostly END1 but heavy/elite have
+      END2
+  - balance: gave tank crew endurance in misc
+2025-06-20:
+  BonniePandora:
+  - qol: Changes UPP rank titles to properly translated ones, rather than anglicized
+      Russian titles
+  Karmac:
+  - mapadd: adds Oread Garrison, a USCM facility abandoned after the Dog War.
+  The32bitguy:
+  - rscadd: Added options for USCM Rifleman to pick Lance Corporal (ME3) rank. FORECON
+      Rifleman the Corporal (ME4) rank. UPP Rifleman their Corporal (UE3) rank.
+  - qol: Role preference now accurately shows the rank of the character you picked
+      rather than "PVT" for a PFC FORECON Rifleman and so on.
+  - qol: Removed rank selection from PMCs because it did not do anything.
+  - bugfix: FORECON SGs can no longer be Privates.
+  - balance: Player role corpsman now have medical 3 instead of 2. Potential oversight.
+2025-06-22:
+  KoishiVibe:
+  - rscadd: New lorebits and names
+  - rscdel: Previous lorebits and names
+  - qol: Smartgunners can now Armor.
+  - code_imp: Added groin, neck armor support to the M56 harness.
+  - refactor: Just cleaned up the lists to make them as readable as the others.
+  SpartanBobby:
+  - rscadd: Makes VP70 Automatic
+2025-06-23:
+  BonniePandora:
+  - qol: UPP Riflemen can no longer pick their E3 corporal rank, limited to E1 or
+      E2 (USCM standard & FORECON retain the three option pick)
+  - qol: Smartgunners/Machinegunners and Corpsmen/sanitars can pick between the E1,
+      E2, E3 & E4 ranks as standard (E2-E5 for FORECON)
+  - qol: FORECON RTO can pick between E2, E3 & E4 ranks now
+  - code_imp: tidied up alt-rank subtypes for player jobs & removed un-needed gear_secondary
+      entries for the PMC roles
+  Yorkoh:
+  - balance: Upped queen's speed a smidge. Quadrupled her health max. Tripled her
+      plasma max. Upped her armor and damage tiers. Also she has mega acid blood dmg
+      so don't get close.
+2025-06-28:
+  Ducky-Momo:
+  - rscadd: added new SG sounds, removed rattle/low ammo sound
+  Foxglove9:
+  - balance: tripled the flask size across the board.
+  Private Tristan, TyeAgg:
+  - rscadd: waking up from cryo fullscreen animation
