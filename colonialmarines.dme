@@ -2707,4 +2707,5 @@
 #include "interface\interface.dm"
 #include "interface\skin.dmf"
 #include "maps\_basemap.dm"
+#include "modular_pve\code\game\objects\structures\crates_lockers\secure\marine_personal.dm"
 // END_INCLUDE
