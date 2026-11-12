@@ -23,6 +23,8 @@ Basics, the most important.
 
 /datum/config_entry/string/wikiarticleurl
 
+/datum/config_entry/string/wikiurl_home_page
+
 /datum/config_entry/string/forumurl
 
 /datum/config_entry/string/staffreport
