@@ -408,14 +408,14 @@ I hope it's easier to tell what the heck this proc is even doing, unlike previou
 	message_admins("[key_name(user)] freed the [J.title] job slot[sq ? " in [sq.name] Squad" : ""].")
 	return 1
 
-/datum/authority/branch/role/proc/modify_role(datum/job/J, amount)
-	if(!istype(J))
-		return 0
-	if(amount < J.current_positions) //we should be able to slot everyone
-		return 0
-	J.total_positions = amount
-	J.total_positions_so_far = amount
-	return 1
+/datum/authority/branch/role/proc/modify_role(datum/job/job, amount)
+	if(!istype(job))
+		return FALSE
+	if(amount < job.current_positions && amount != -1) //we should be able to slot everyone
+		return FALSE
+	job.total_positions = amount
+	job.total_positions_so_far = amount
+	return TRUE
 
 //I'm not entirely sure why this proc exists. //TODO Figure this out.
 /datum/authority/branch/role/proc/reset_roles()

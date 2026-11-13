@@ -7,7 +7,6 @@
 	title = JOB_SQUAD_TEAM_LEADER
 	total_positions = 8
 	spawn_positions = 8
-	allow_additional = 1
 	flags_startup_parameters = ROLE_ADD_TO_DEFAULT|ROLE_ADD_TO_SQUAD
 	gear_preset = /datum/equipment_preset/uscm/tl
 	gear_preset_secondary = /datum/equipment_preset/uscm/tl/corporal
