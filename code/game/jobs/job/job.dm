@@ -7,8 +7,7 @@
 	var/total_positions = 0 //How many players can be this job
 	var/spawn_positions = 0 //How many players can spawn in as this job
 	var/total_positions_so_far = 0 //How many slots were open in this round. Used to prevent slots locking with decreasing amount of alive players
-	var/allow_additional = 0 //Can admins modify positions to it
-	var/scaled = 0
+	var/scaled = FALSE
 	var/current_positions = 0 //How many players have this job
 	var/supervisors = "" //Supervisors, who this person answers to directly. Should be a string, shown to the player when they enter the game.
 	var/selection_class = "" // Job Selection span class (for background color)
@@ -172,7 +171,7 @@
 	return ""
 
 /datum/job/proc/set_spawn_positions(count)
-	return spawn_positions
+	spawn_positions = initial(spawn_positions)
 
 /datum/job/proc/spawn_and_equip(mob/new_player/player)
 	CRASH("A job without a set spawn_and_equip proc has handle_spawn_and_equip set to TRUE!")

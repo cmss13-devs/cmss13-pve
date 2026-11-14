@@ -85,15 +85,19 @@
 		return
 	GLOB.RoleAuthority.free_role_admin(GLOB.RoleAuthority.roles_for_mode[role], TRUE, src)
 
-/client/proc/modify_slot()
+/client/proc/modify_job_slot()
 	set name = "Adjust Job Slots"
 	set category = "Server.Round"
 
 	if(!admin_holder)
 		return
 
+	if(!SSticker || SSticker.current_state == GAME_STATE_STARTUP)
+		to_chat(src, SPAN_WARNING("The game is still setting up, please try again later."))
+		return
+
 	var/roles[] = new
-	var/datum/job/J
+	var/datum/job/selected_job
 
 	var/active_role_names = GLOB.gamemode_roles[GLOB.master_mode]
 	if(!active_role_names)
@@ -105,17 +109,43 @@
 			continue
 		roles += role_name
 
-	var/role = input("Please select role slot to modify", "Modify amount of slots")  as null|anything in roles
+	var/role = tgui_input_list(src, "Select a role to modify.", "Modify amount of slots", roles, 60 SECONDS)
 	if(!role)
 		return
-	J = GLOB.RoleAuthority.roles_by_name[role]
-	var/tpos = J.spawn_positions
-	var/num = tgui_input_number(src, "How many slots role [J.title] should have?\nCurrently taken slots: [J.current_positions]\nTotal amount of slots opened this round: [J.total_positions_so_far]","Number:", tpos)
-	if(isnull(num))
+	selected_job = GLOB.RoleAuthority.roles_by_name[role]
+
+	if(isnull(selected_job.scaled) && SSticker.current_state == GAME_STATE_PREGAME)
+		if(tgui_alert(src, "[selected_job.title] is overriden.\nAmount of roundstart slots available: [selected_job.spawn_positions]\nDo you want to reset the override?", "Reset job slot override?", list("Yes", "No"), 30 SECONDS) == "Yes")
+			if(SSticker.current_state != GAME_STATE_PREGAME)
+				to_chat(usr, SPAN_BOLDNOTICE("Resetting the job's slots is no longer available because the game has started."))
+				return
+			selected_job.spawn_positions = initial(selected_job.spawn_positions)
+			selected_job.total_positions = initial(selected_job.total_positions)
+			selected_job.scaled = initial(selected_job.scaled)
+			message_admins("[key_name(usr)] reset the override of job slots for [selected_job.title].")
+			return
+
+	var/existing_positions = selected_job.total_positions
+	var/scaled_state = selected_job.scaled ? "Yes" : isnull(selected_job.scaled) ? "Forced False" : "No"
+	var/slot_number = tgui_input_number(src, "How many slots should [selected_job.title] have?\nCurrently taken slots: [selected_job.current_positions]\nTotal amount of slots opened this round: [selected_job.total_positions_so_far]\nAmount of roundstart slots available: [selected_job.spawn_positions]\nCurrently scaled? [scaled_state]", "Number of slots", existing_positions, min_value=-1)
+	if(isnull(slot_number))
 		return
-	if(!GLOB.RoleAuthority.modify_role(J, num))
-		to_chat(usr, SPAN_BOLDNOTICE("Can't set job slots to be less than amount of log-ins or you are setting amount of slots less than minimal. Free slots first."))
-	message_admins("[key_name(usr)] adjusted job slots of [J.title] to be [num].")
+
+	if(tgui_alert(src, "Altering slots will disable automatic slot scaling, are you sure?", "Confirm?", list("Yes", "No"), 30 SECONDS) != "Yes")
+		return
+
+	UNTIL(SSticker.current_state != GAME_STATE_SETTING_UP)
+
+	if(SSticker.current_state == GAME_STATE_PREGAME)
+		selected_job.spawn_positions = slot_number
+		selected_job.total_positions = slot_number
+		selected_job.scaled = null
+	else
+		if(!GLOB.RoleAuthority.modify_role(selected_job, slot_number))
+			to_chat(usr, SPAN_BOLDNOTICE("Can't set job slots to be less than amount of log-ins or you are setting amount of slots less than minimal. Free slots first."))
+			return
+		selected_job.scaled = null
+	message_admins("[key_name(usr)] adjusted job slots of [selected_job.title] to be [slot_number] [SSticker.current_state == GAME_STATE_PREGAME ? "during pregame" : "after roundstart"].")
 
 /client/proc/check_antagonists()
 	set name = "Check Antagonists"

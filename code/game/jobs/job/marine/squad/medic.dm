@@ -10,7 +10,6 @@
 	title = JOB_SQUAD_MEDIC
 	total_positions = 16
 	spawn_positions = 16
-	allow_additional = 1
 	flags_startup_parameters = ROLE_ADD_TO_DEFAULT|ROLE_ADD_TO_SQUAD
 	gear_preset = /datum/equipment_preset/uscm/medic
 	gear_preset_secondary = /datum/equipment_preset/uscm/medic/lance_corporal
@@ -21,12 +20,13 @@
 	job_options = list(PVT_VARIANT = "PVT", PFC_VARIANT = "PFC", LCPL_VARIANT = "LCPL", CPL_VARIANT = "CPL")
 
 /datum/job/marine/medic/set_spawn_positions(count)
-	for(var/datum/squad/sq in GLOB.RoleAuthority.squads)
-		if(sq)
-			sq.max_medics = medic_slot_formula(count)
+	var/slots = isnull(scaled) ? spawn_positions : medic_slot_formula(count)
+	for(var/datum/squad/target_squad in GLOB.RoleAuthority.squads)
+		target_squad.max_medics = slots
 
-/datum/job/marine/medic/get_total_positions(latejoin=0)
-	var/slots = medic_slot_formula(get_total_marines())
+/datum/job/marine/medic/get_total_positions(latejoin)
+	var/normal_positions = ..()
+	var/slots = isnull(scaled) ? normal_positions : medic_slot_formula(get_total_marines())
 
 	if(slots <= total_positions_so_far)
 		slots = total_positions_so_far
@@ -34,9 +34,8 @@
 		total_positions_so_far = slots
 
 	if(latejoin)
-		for(var/datum/squad/sq in GLOB.RoleAuthority.squads)
-			if(sq)
-				sq.max_medics = slots
+		for(var/datum/squad/target_squad in GLOB.RoleAuthority.squads)
+			target_squad.max_medics = slots
 
 	return (slots*4)
 
@@ -80,9 +79,9 @@
 	spawn_positions = 1
 
 /datum/job/marine/medic/ai/set_spawn_positions(count)
-	return spawn_positions
+	spawn_positions = initial(spawn_positions)
 
-/datum/job/marine/medic/ai/get_total_positions(latejoin=0)
+/datum/job/marine/medic/ai/get_total_positions(latejoin)
 	return latejoin ? total_positions : spawn_positions
 
 /datum/job/marine/medic/ai/upp
