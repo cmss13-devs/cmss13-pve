@@ -61,9 +61,9 @@ OverrideTimelock(/datum/job/command/bridge, list(
 	prime_priority = TRUE
 
 /datum/job/command/bridge/ai/set_spawn_positions(count)
-	return spawn_positions
+	spawn_positions = initial(spawn_positions)
 
-/datum/job/command/bridge/ai/get_total_positions(latejoin = 0)
+/datum/job/command/bridge/ai/get_total_positions(latejoin)
 	return latejoin ? total_positions : spawn_positions
 
 /datum/job/command/bridge/ai/generate_entry_conditions(mob/living/M, whitelist_status)

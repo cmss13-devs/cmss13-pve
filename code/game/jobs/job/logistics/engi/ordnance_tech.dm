@@ -15,7 +15,7 @@
 
 /datum/job/logistics/otech/get_total_positions(latejoin)
 	var/normal_positions = ..()
-	var/positions = isnull(scaled) ? normal_positions : ct_slot_formula(get_total_marines())
+	var/positions = isnull(scaled) ? normal_positions : ot_slot_formula(get_total_marines())
 
 	if(positions <= total_positions_so_far)
 		positions = total_positions_so_far

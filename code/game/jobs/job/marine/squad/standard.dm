@@ -61,7 +61,7 @@
 	spawn_positions = 4
 
 /datum/job/marine/standard/ai/set_spawn_positions(count)
-	return spawn_positions
+	spawn_positions = initial(spawn_positions)
 
 /datum/job/marine/standard/ai/upp
 	title = JOB_SQUAD_MARINE_UPP

@@ -74,9 +74,9 @@
 	spawn_positions = 2
 
 /datum/job/marine/smartgunner/ai/set_spawn_positions(count)
-	return spawn_positions
+	spawn_positions = initial(spawn_positions)
 
-/datum/job/marine/smartgunner/ai/get_total_positions(latejoin = 0)
+/datum/job/marine/smartgunner/ai/get_total_positions(latejoin)
 	return latejoin ? total_positions : spawn_positions
 
 /datum/job/marine/smartgunner/ai/upp
