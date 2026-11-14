@@ -1,5 +1,0 @@
-author: "Yorkoh"
-delete-after: True
-changes:
-  - rscadd: "signal tracker TGUI item"
-  - rscadd: "signal tracker radar code"
