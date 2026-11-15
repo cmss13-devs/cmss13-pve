@@ -805,6 +805,18 @@
 	},
 /turf/open/floor/prison/darkbrownfull2,
 /area/whiskey_outpost/blackstone/inside/armory/weapons)
+"ace" = (
+/obj/item/tool/carpenters_hammer,
+/turf/open/gm/dirt,
+/area/whiskey_outpost/blackstone/underground/excavation_site)
+"acf" = (
+/obj/item/tool/pickaxe,
+/turf/closed/wall/strata_ice/jungle,
+/area/whiskey_outpost/blackstone/underground)
+"acg" = (
+/obj/item/tool/minihoe,
+/turf/open/gm/dirt,
+/area/whiskey_outpost/blackstone/underground/excavation_site)
 "acp" = (
 /obj/item/lightstick/red/planted,
 /turf/open/gm/dirt,
@@ -5567,7 +5579,6 @@
 /turf/open/floor/prison/sterile_white,
 /area/whiskey_outpost/blackstone/inside/visitor_dormitory)
 "eFC" = (
-/obj/item/tool/pen/green/clicky,
 /obj/structure/machinery/power/apc/uscm_ground{
 	dir = 4
 	},
@@ -5815,13 +5826,24 @@
 /area/whiskey_outpost/blackstone/inside/senior_enlisted_east)
 "ePl" = (
 /obj/item/spacecash/c20{
-	pixel_x = -4
+	pixel_x = -6;
+	pixel_y = -8
 	},
 /obj/item/clothing/head/bowlerhat{
-	pixel_x = 9
+	pixel_x = 10;
+	pixel_y = 15
 	},
 /obj/structure/machinery/light/small{
 	dir = 8
+	},
+/obj/structure/surface/rack,
+/obj/item/storage/fancy/candle_box{
+	pixel_x = -8;
+	pixel_y = 10
+	},
+/obj/item/storage/box/matches{
+	pixel_x = 1;
+	pixel_y = 5
 	},
 /turf/open/floor/carpet6_2,
 /area/whiskey_outpost/blackstone/inside/visitor_dormitory/room_two)
@@ -10292,7 +10314,9 @@
 /turf/open/floor/wood,
 /area/whiskey_outpost/blackstone/inside/commander_office)
 "jyc" = (
-/obj/structure/closet/cabinet,
+/obj/structure/closet/cabinet{
+	storage_capacity = 40
+	},
 /obj/item/clothing/under/color/blue,
 /obj/item/clothing/under/color/grey,
 /obj/item/clothing/under/suit_jacket/female,
@@ -10308,6 +10332,13 @@
 /obj/item/clothing/shoes/black,
 /obj/item/clothing/shoes/laceup/brown,
 /obj/item/clothing/shoes/sandal,
+/obj/item/clothing/head/cowboy/light,
+/obj/item/clothing/head/flatcap,
+/obj/item/clothing/head/ushanka,
+/obj/item/clothing/under/colonist/boilersuit/khaki,
+/obj/item/clothing/under/colonist/workwear/blue,
+/obj/item/clothing/under/shorts/black,
+/obj/item/clothing/under/twe_suit,
 /turf/open/floor,
 /area/whiskey_outpost/blackstone/inside/visitor_dormitory/room_one)
 "jzd" = (
@@ -12465,12 +12496,24 @@
 /turf/open/gm/grass,
 /area/whiskey_outpost/blackstone/underground/crab_shack)
 "lzJ" = (
-/obj/structure/surface/rack,
-/obj/item/storage/fancy/candle_box{
-	pixel_x = -3;
-	pixel_y = 7
+/obj/structure/surface/table,
+/obj/item/paper_bin{
+	pixel_x = 14;
+	pixel_y = 8
 	},
-/obj/item/storage/box/matches,
+/obj/item/tool/pen/fountain{
+	pixel_x = -6;
+	pixel_y = 11
+	},
+/obj/item/tool/candle{
+	pixel_x = -9;
+	pixel_y = -3
+	},
+/obj/item/paper/research_notes/grant{
+	pixel_x = 8;
+	pixel_y = -2
+	},
+/obj/item/paper/research_notes,
 /turf/open/floor,
 /area/whiskey_outpost/blackstone/inside/visitor_dormitory/room_two)
 "lzK" = (
@@ -18647,9 +18690,6 @@
 /turf/open/floor/prison/darkbrown2,
 /area/whiskey_outpost/blackstone/inside/warehouse/checkpoint)
 "sgL" = (
-/obj/item/tool/candle{
-	pixel_x = 8
-	},
 /turf/open/floor,
 /area/whiskey_outpost/blackstone/inside/visitor_dormitory/room_two)
 "sgS" = (
@@ -22096,6 +22136,10 @@
 	access_modified = 1;
 	req_access_txt = "55"
 	},
+/obj/item/paper_bin{
+	pixel_x = 16;
+	pixel_y = 13
+	},
 /turf/open/floor,
 /area/whiskey_outpost/blackstone/inside/visitor_dormitory/room_one)
 "vxq" = (
@@ -23107,6 +23151,7 @@
 	pixel_y = 9;
 	pixel_x = 15
 	},
+/obj/item/prop/almayer/handheld1,
 /turf/open/gm/dirt,
 /area/whiskey_outpost/blackstone/underground/excavation_site)
 "wul" = (
@@ -24372,11 +24417,6 @@
 /turf/closed/wall/wood,
 /area/whiskey_outpost/blackstone/outside/jungle/south_west)
 "xAs" = (
-/obj/item/paper/research_notes,
-/obj/item/paper/research_notes/grant{
-	pixel_x = 8;
-	pixel_y = -2
-	},
 /turf/open/floor/carpet9_4,
 /area/whiskey_outpost/blackstone/inside/visitor_dormitory/room_two)
 "xAt" = (
@@ -24687,7 +24727,9 @@
 /turf/open/asphalt,
 /area/whiskey_outpost/blackstone/underground/mountain/tunnel)
 "xRI" = (
-/obj/structure/closet/cabinet,
+/obj/structure/closet/cabinet{
+	storage_capacity = 40
+	},
 /obj/structure/machinery/light/small{
 	dir = 4
 	},
@@ -24712,6 +24754,12 @@
 /obj/structure/sign/poster/io{
 	pixel_y = 30
 	},
+/obj/item/clothing/head/cowboy,
+/obj/item/clothing/head/soft/ferret,
+/obj/item/clothing/under/colonist/boilersuit/darkblue,
+/obj/item/clothing/under/colonist/workwear/green,
+/obj/item/clothing/under/serviceoveralls,
+/obj/item/clothing/under/librarian,
 /turf/open/floor,
 /area/whiskey_outpost/blackstone/inside/visitor_dormitory/room_two)
 "xSm" = (
@@ -24872,8 +24920,8 @@
 /area/whiskey_outpost/blackstone/outside/perimeter_defense)
 "xZK" = (
 /obj/structure/filingcabinet/chestdrawer{
-	pixel_x = 8;
-	pixel_y = 17;
+	pixel_x = 4;
+	pixel_y = 24;
 	density = 0
 	},
 /obj/effect/decal/cleanable/dirt,
@@ -24881,7 +24929,25 @@
 	pixel_x = 21
 	},
 /obj/item/tool/extinguisher{
-	pixel_x = 7
+	pixel_x = 9;
+	pixel_y = -7
+	},
+/obj/structure/surface/table,
+/obj/item/tool/pen/red/clicky{
+	pixel_x = -7;
+	pixel_y = 3
+	},
+/obj/item/tool/pen/blue/clicky{
+	pixel_x = -3;
+	pixel_y = 3
+	},
+/obj/item/tool/pen/clicky{
+	pixel_x = 1;
+	pixel_y = 3
+	},
+/obj/item/tool/pen/green/clicky{
+	pixel_x = 5;
+	pixel_y = 3
 	},
 /turf/open/floor,
 /area/whiskey_outpost/blackstone/inside/visitor_dormitory/room_one)
@@ -54776,7 +54842,7 @@ eOk
 lLi
 icw
 jfe
-icw
+ace
 oKK
 icw
 nbM
@@ -55377,7 +55443,7 @@ srs
 rKB
 icw
 icw
-icw
+acg
 icw
 icw
 icw
@@ -56190,7 +56256,7 @@ rzi
 aaN
 oKK
 lHH
-gQb
+acf
 lHH
 lWS
 oKK

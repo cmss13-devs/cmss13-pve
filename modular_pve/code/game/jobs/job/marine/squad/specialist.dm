@@ -7,7 +7,7 @@
 	entry_message_body = "You have received specialized training to field test unique, experimental loadouts. You can serve a variety of roles, so decide accordingly."
 
 /obj/effect/landmark/start/marine/specialist/uscm_ground
-	name = JOB_USCM_GROUND_SQUAD_SMARTGUNNER
+	name = JOB_USCM_GROUND_SQUAD_SPECIALIST
 	job = /datum/job/marine/specialist/ai/uscm_ground
 
 /obj/effect/landmark/start/marine/specialist/uscm_ground/copperheads

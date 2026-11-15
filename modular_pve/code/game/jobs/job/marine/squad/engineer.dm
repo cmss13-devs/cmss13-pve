@@ -1,3 +1,6 @@
+#define LCPL_VARIANT "Lance Corporal"
+#define PFC_VARIANT "Private First Class"
+
 /datum/job/marine/engineer/ai/uscm_ground
 	title = JOB_USCM_GROUND_SQUAD_ENGI
 	gear_preset = /datum/equipment_preset/uscm/engineer/uscm_ground
@@ -16,3 +19,6 @@
 /obj/effect/landmark/start/marine/engineer/ai/uscm_ground/rattlesnakes
 	icon_state = "engi_spawn_delta"
 	squad = SQUAD_MARINE_4
+
+#undef LCPL_VARIANT
+#undef PFC_VARIANT

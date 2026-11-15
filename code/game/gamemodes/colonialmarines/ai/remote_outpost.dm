@@ -160,9 +160,9 @@ GLOBAL_LIST_INIT(outpost_jobs, list(/datum/squad/marine/charlie = list(/datum/jo
 	if(SSitem_cleanup)
 		//Cleaning stuff more aggressively
 		SSitem_cleanup.start_processing_time = 0
-		SSitem_cleanup.percentage_of_garbage_to_delete = 1
-		SSitem_cleanup.wait = 1 MINUTES
-		SSitem_cleanup.next_fire = 1 MINUTES
+		SSitem_cleanup.percentage_of_garbage_to_delete = 0.5
+		SSitem_cleanup.wait = 10 MINUTES
+		SSitem_cleanup.next_fire = 10 MINUTES
 		spawn(0)
 			//Deleting shipmap, for performance!
 			SSitem_cleanup.delete_almayer()

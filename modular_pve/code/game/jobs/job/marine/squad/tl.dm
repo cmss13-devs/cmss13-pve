@@ -1,3 +1,6 @@
+#define SGT_VARIANT "Sergeant"
+#define CPL_VARIANT "Corporal"
+
 /datum/job/marine/tl/ai/uscm_ground
 	title = JOB_USCM_GROUND_SQUAD_TEAM_LEADER
 	total_positions = 4
@@ -19,3 +22,6 @@
 /obj/effect/landmark/start/marine/tl/uscm_ground/rattlesnakes
 	icon_state = "tl_spawn_delta"
 	squad = SQUAD_MARINE_4
+
+#undef SGT_VARIANT
+#undef CPL_VARIANT

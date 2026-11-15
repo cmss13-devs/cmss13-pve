@@ -1,3 +1,8 @@
+#define CPL_VARIANT "Corporal"
+#define LCPL_VARIANT "Lance Corporal"
+#define PFC_VARIANT "Private First Class"
+#define PVT_VARIANT "Private"
+
 /datum/job/marine/smartgunner/ai/uscm_ground
 	title = JOB_USCM_GROUND_SQUAD_SMARTGUNNER
 	total_positions = 4
@@ -21,3 +26,8 @@
 /obj/effect/landmark/start/marine/smartgunner/uscm_ground/rattlesnakes
 	icon_state = "smartgunner_spawn_delta"
 	squad = SQUAD_MARINE_4
+
+#undef CPL_VARIANT
+#undef LCPL_VARIANT
+#undef PFC_VARIANT
+#undef PVT_VARIANT

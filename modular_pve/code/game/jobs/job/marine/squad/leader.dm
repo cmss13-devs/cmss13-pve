@@ -1,3 +1,6 @@
+#define GYSGT_VARIANT "Gunnery Sergeant"
+#define SSGT_VARIANT "Staff Sergeant"
+
 /datum/job/marine/leader/ai/uscm_ground
 	title = JOB_USCM_GROUND_SQUAD_LEADER
 	total_positions = 2
@@ -21,3 +24,6 @@
 /obj/effect/landmark/start/marine/leader/uscm_ground/rattlesnakes
 	icon_state = "leader_spawn_delta"
 	squad = SQUAD_MARINE_4
+
+#undef GYSGT_VARIANT
+#undef SSGT_VARIANT

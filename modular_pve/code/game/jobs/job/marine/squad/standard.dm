@@ -1,3 +1,7 @@
+#define LCPL_VARIANT "Lance Corporal"
+#define PFC_VARIANT "Private First Class"
+#define PVT_VARIANT "Private"
+
 /datum/job/marine/standard/ai/uscm_ground
 	title = JOB_USCM_GROUND_SQUAD_MARINE
 	total_positions = 8
@@ -19,3 +23,7 @@
 /obj/effect/landmark/start/marine/uscm_ground/rattlesnakes
 	icon_state = "marine_spawn_delta"
 	squad = SQUAD_MARINE_4
+
+#undef LCPL_VARIANT
+#undef PFC_VARIANT
+#undef PVT_VARIANT
