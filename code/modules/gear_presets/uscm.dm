@@ -1503,6 +1503,17 @@
 	if(SSmapping.configs[GROUND_MAP].environment_traits[MAP_COLD])
 		new_human.equip_to_slot_or_del(new /obj/item/clothing/mask/rebreather/scarf, WEAR_FACE)
 
+/datum/equipment_preset/uscm/specialist/uscm
+	name = "USCM Weapons Specialist"
+	flags = EQUIPMENT_PRESET_EXTRA|EQUIPMENT_PRESET_MARINE
+	access = list(ACCESS_MARINE_PREP, ACCESS_MARINE_SPECPREP)
+	assignment = JOB_SQUAD_SPECIALIST
+	rank = JOB_SQUAD_SPECIALIST
+	paygrades = list(PAY_SHORT_ME3 = JOB_PLAYTIME_TIER_0)
+	role_comm_title = "Spc"
+	skills = /datum/skills/specialist
+	minimap_icon = "spec"
+
 //*****************************************************************************************************/
 
 /datum/equipment_preset/uscm/specialist_equipped/eva

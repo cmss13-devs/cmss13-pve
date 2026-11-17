@@ -68,6 +68,18 @@
 /datum/job/marine/specialist/ai/get_total_positions(latejoin=0)
 	return latejoin ? total_positions : spawn_positions
 
+/datum/job/marine/specialist/ai/uscm
+	title = JOB_SQUAD_SPECIALIST
+	total_positions = 0
+	spawn_positions = 0
+	flags_startup_parameters = ROLE_ADD_TO_DEFAULT|ROLE_ADD_TO_SQUAD
+	gear_preset = /datum/equipment_preset/uscm/specialist/uscm
+	entry_message_body = "You have received specialized training to field test unique, experimental loadouts. You can serve a variety of roles, so decide accordingly."
+
+/obj/effect/landmark/start/marine/specialist/uscm
+	name = JOB_SQUAD_SPECIALIST
+	job = /datum/equipment_preset/uscm/specialist/uscm
+
 /datum/job/marine/specialist/ai/rmc
 	total_positions = 1
 	spawn_positions = 1

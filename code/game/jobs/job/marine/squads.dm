@@ -173,7 +173,7 @@
 	radio_freq = FIRE_FREQ
 	minimap_color = MINIMAP_SQUAD_FIRE
 	use_stripe_overlay = FALSE
-	usable = TRUE
+	usable = FALSE
 
 /datum/squad/marine/upp
 	name = SQUAD_UPP

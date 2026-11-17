@@ -1136,6 +1136,15 @@
 /obj/item/ammo_box/magazine/type64/empty
 	empty = TRUE
 
+/obj/item/ammo_box/magazine/type64/overpressure
+    name = "magazine box (Type64 +P Bizon x 10)"
+    overlay_ammo_type = "_type71_super"
+    overlay_content = "_type71_super"
+    magazine_type = /obj/item/ammo_magazine/smg/bizon/overpressure
+
+/obj/item/ammo_box/magazine/type64/overpressure
+    empty = TRUE
+
 /obj/item/ammo_box/magazine/type64/ap
 	name = "magazine box (Type64 AP Bizon x 10)"
 	overlay_ammo_type = "_type71_ap"

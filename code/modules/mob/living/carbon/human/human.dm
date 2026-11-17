@@ -1181,6 +1181,7 @@
 		TRACKER_DSL = /datum/squad/marine/delta,
 		TRACKER_ESL = /datum/squad/marine/echo,
 		TRACKER_FSL = /datum/squad/marine/cryo,
+		TRACKER_TSL = /datum/squad/marine/fire,
 		TRACKER_RSL = /datum/squad/marine/forecon,
 		TRACKER_R2SL = /datum/squad/marine/sof/forecon,
 		TRACKER_RMCSL = /datum/squad/marine/rmc,

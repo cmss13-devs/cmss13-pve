@@ -68,6 +68,7 @@
 #define TRACKER_DSL "_dsl" // Delta Squad Leader
 #define TRACKER_ESL "_esl" // Echo Squad Leader
 #define TRACKER_FSL "_fsl" // Cryo Squad Leader
+#define TRACKER_TSL "_tsl" // Fire Bearer Squad Leader
 #define TRACKER_RSL "_rsl" // FORECON Snake Eaters Squad Leader
 #define TRACKER_R2SL "_r2sl" // FORECON Ocelot Grapplers Squad Leader
 #define TRACKER_RMCSL "_rmcsl" // RMC Gamma Troop Commander

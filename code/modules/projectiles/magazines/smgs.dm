@@ -203,6 +203,13 @@
 	max_rounds = 64
 	gun_type = /obj/item/weapon/gun/smg/bizon
 
+/obj/item/ammo_magazine/smg/bizon/overpressure
+    name = "\improper Type 64 +P Helical Magazine (7.62x19mm)"
+    desc = "A 64 round magazine of +P rounds for the Type 64 submachinegun, the standard SMG of the UPP armed forces.<br><span class='blue'>Greater effective range, speed and damage over AP ammo. Slightly worse accuracy, damage and AP over HEAP.</span>"
+    default_ammo = /datum/ammo/bullet/smg/overpressure
+    ammo_band_color = AMMO_BAND_COLOR_SUPER
+    bonus_overlay = "type64_super"
+
 /obj/item/ammo_magazine/smg/bizon/ap
 	name = "\improper Type 64 AP Helical Magazine (7.62x19mm)"
 	desc = "A 64 round magazine of armor piercing rounds for the Type 64 submachinegun, the standard SMG of the UPP armed forces."

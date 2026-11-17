@@ -23,6 +23,16 @@
 	accuracy = HIT_ACCURACY_TIER_3
 	shell_casing = /obj/effect/decal/ammo_casing //We back on that cased 9mm grind for the M39 series
 
+/datum/ammo/bullet/smg/overpressure
+    name = "overpressure submachinegun bullet"
+    damage = 40
+    penetration = ARMOR_PENETRATION_TIER_3
+    shell_speed = AMMO_SPEED_TIER_5
+    effective_range_max = 7
+    damage_falloff = DAMAGE_FALLOFF_TIER_6
+    scatter = SCATTER_AMOUNT_TIER_5
+    accuracy = HIT_ACCURACY_TIER_2
+
 /datum/ammo/bullet/smg/m39
 	name = "high-velocity submachinegun bullet" //i don't want all smgs to inherit 'high velocity'
 
