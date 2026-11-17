@@ -1,3 +1,8 @@
+/datum/ammo/bullet/rifle/tracer
+	icon_state = "bullet_red"
+	ammo_glowing = TRUE
+	bullet_light_color = COLOR_SOFT_RED
+
 /datum/ammo/bullet/rifle/heavy/tracer
 	icon_state = "bullet_red"
 	ammo_glowing = TRUE
