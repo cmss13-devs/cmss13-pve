@@ -1142,7 +1142,7 @@
     overlay_content = "_type71_super"
     magazine_type = /obj/item/ammo_magazine/smg/bizon/overpressure
 
-/obj/item/ammo_box/magazine/type64/overpressure
+/obj/item/ammo_box/magazine/type64/overpressure/empty
     empty = TRUE
 
 /obj/item/ammo_box/magazine/type64/ap
@@ -1151,7 +1151,7 @@
 	overlay_content = "_type71_ap"
 	magazine_type = /obj/item/ammo_magazine/smg/bizon/ap
 
-/obj/item/ammo_box/magazine/type64/ap
+/obj/item/ammo_box/magazine/type64/ap/empty
 	empty = TRUE
 
 /obj/item/ammo_box/magazine/type64/heap
@@ -1160,7 +1160,7 @@
 	overlay_content = "_type71_heap"
 	magazine_type = /obj/item/ammo_magazine/smg/bizon/heap
 
-/obj/item/ammo_box/magazine/type64/heap
+/obj/item/ammo_box/magazine/type64/heap/empty
 	empty = TRUE
 
 //-----------------------ZhNK-72 Revolver Speedloader Box-----------------------
