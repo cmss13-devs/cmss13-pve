@@ -120,6 +120,12 @@
 	default_ammo = /datum/ammo/bullet/rifle/incendiary
 	ammo_band_color = AMMO_BAND_COLOR_INCENDIARY
 
+/obj/item/ammo_magazine/rifle/m41aMK1/incendiary/heap
+	name = "\improper M41A MK1 Dragoon magazine (10x24mm)"
+	desc = "A long rectangular box magazine for the M41A. Holds 99 caseless 10x24mm dragoon rounds, Otherwise known as High Explosive Incendiary Armor Piercing or HEIAP."
+	default_ammo = /datum/ammo/bullet/rifle/incendiary/heap
+	ammo_band_color = AMMO_BAND_COLOR_HEAP_INCENDIARY
+
 /obj/item/ammo_magazine/rifle/m41aMK1/toxin
 	name = "\improper M41A MK1 toxin magazine (10x24mm)"
 	desc = "A long rectangular box of rounds that is only compatible with the older M41A MK1. Holds up to 99 rounds. This one contains toxic bullets."

@@ -903,6 +903,7 @@ GLOBAL_LIST_INIT(allowed_helmet_items, list(
 	force = 20
 	flags_atom = NO_NAME_OVERRIDE|NO_SNOW_TYPE
 	flags_inventory = COVEREYES|COVERMOUTH|BLOCKSHARPOBJ|BLOCKGASEFFECT|ALLOWCPR
+	flags_inv_hide = HIDEEARS|HIDEEYES|HIDEFACE|HIDEMASK|HIDEALLHAIR
 
 /obj/item/clothing/head/helmet/marine/grenadier
 	name = "\improper M12 grenadier helmet"

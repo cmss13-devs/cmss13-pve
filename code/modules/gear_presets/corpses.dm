@@ -868,26 +868,6 @@
 	name = "Corpse - USCM Dropship Pilot (Burst)"
 	xenovictim = TRUE
 
-/datum/equipment_preset/corpse/uscm_unequipped	//Used for POWs
-	name = "USCM Squad Rifleman"
-	idtype = /obj/item/card/id/dogtag
-	flags = EQUIPMENT_PRESET_START_OF_ROUND|EQUIPMENT_PRESET_MARINE|EQUIPMENT_PRESET_STUB
-	access = list(ACCESS_MARINE_PREP)
-	assignment = JOB_SQUAD_MARINE
-	rank = JOB_SQUAD_MARINE
-	paygrades = list(PAY_SHORT_ME2 = JOB_PLAYTIME_TIER_0)
-	role_comm_title = "RFN"
-	skills = /datum/skills/pfc
-
-	minimap_icon = "private"
-	dress_under = list(/obj/item/clothing/under/marine/dress/blues)
-	dress_over = list(/obj/item/clothing/suit/storage/jacket/marine/dress/blues)
-
-/datum/equipment_preset/corpse/uscm_unequipped/burst
-	name = "Corpse - Unequipped USCM Squad Rifleman (Burst)"
-	xenovictim = TRUE
-
-
 //*****************************************************************************************************/
 //Freelancer
 

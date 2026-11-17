@@ -79,6 +79,16 @@
 	icon_state = "cbrn"
 	item_state = "cbrn"
 
+/obj/item/clothing/gloves/marine/pve_mopp/fireproof
+	name = "\improper M2B MOPP gloves"
+	desc = "M2B MOPP gloves to protect your insides from nerve gas and deadly chemicals. You'd probably feel safer if there was duct tape wrapped around these. This one is a B variant, well known for its usage in special operations including pyrotechnics."
+	fire_intensity_resistance = BURN_LEVEL_TIER_9
+	max_heat_protection_temperature = FIRESUIT_MAX_HEAT_PROT
+	flags_heat_protection = BODY_FLAG_HANDS
+	flags_cold_protection = BODY_FLAG_HANDS
+	unacidable = TRUE
+	var/shields_from_fire = TRUE
+
 /obj/item/clothing/gloves/marine/veteran/pmc
 	name = "\improper WY PMC gloves"
 	desc = "Standard issue kevlon fiber gloves manufactured for and by Weyland-Yutani PMC dispatch division."

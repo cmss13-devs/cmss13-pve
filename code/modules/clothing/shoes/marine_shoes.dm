@@ -91,6 +91,17 @@
 	armor_rad = CLOTHING_ARMOR_GIGAHIGHPLUS
 	armor_bio = CLOTHING_ARMOR_GIGAHIGHPLUS
 
+/obj/item/clothing/shoes/marine/pve_mopp/fireproof
+	name = "\improper M2B MOPP boots"
+	desc = "M2B MOPP boots excel at keeping viscera or other biological contaminants away from your feet. This one is a B variant, well known for its usage in special operations including pyrotechnics."
+	fire_intensity_resistance = BURN_LEVEL_TIER_9
+	max_heat_protection_temperature = FIRESUIT_MAX_HEAT_PROT
+	flags_heat_protection = BODY_FLAG_FEET
+	flags_cold_protection = BODY_FLAG_FEET
+	unacidable = TRUE
+	var/shields_from_fire = TRUE
+
+
 /obj/item/clothing/shoes/veteran/pmc
 	name = "polished shoes"
 	desc = "The height of fashion, but these look to be woven with protective fiber."

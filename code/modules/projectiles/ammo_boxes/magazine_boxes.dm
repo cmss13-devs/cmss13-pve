@@ -806,6 +806,13 @@
 /obj/item/ammo_box/magazine/mk1/heap/empty
 	empty = TRUE
 
+/obj/item/ammo_box/magazine/mk1/incen/heap
+	name = "magazine box (Dragoon M41A MK1 x 10)"
+	flags_equip_slot = SLOT_BACK
+	overlay_ammo_type = "_hp"
+	overlay_content = "_hp"
+	magazine_type = /obj/item/ammo_magazine/rifle/m41aMK1/incendiary/heap
+
 /obj/item/ammo_box/magazine/mk1/rubber
 	name = "magazine box (Rubber M41A MK1 X 10)"
 	overlay_ammo_type = "_rubber_mk1"
@@ -865,6 +872,12 @@
 	overlay_ammo_type = "_heaplarge"
 	overlay_content = "_heaplarge"
 	magazine_type = /obj/item/ammo_magazine/rifle/m41aMK1/heap
+
+/obj/item/ammo_box/magazine/mk1/large/incen/heap
+	name = "magazine box (Dragoon M41A MK1 x 32)"
+	overlay_ammo_type = "_heapincindlarge"
+	overlay_content = "_heapincindlarge"
+	magazine_type = /obj/item/ammo_magazine/rifle/m41aMK1/incendiary/heap
 
 /obj/item/ammo_box/magazine/mk1/large/heap/empty
 	empty = TRUE

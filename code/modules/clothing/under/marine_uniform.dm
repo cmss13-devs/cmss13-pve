@@ -1198,6 +1198,17 @@
 	)
 
 
+/obj/item/clothing/under/marine/pve_mopp/fireproof
+	name = "\improper M2B MOPP suit"
+	desc = "M2B MOPP suits are purpose built to defend the wearer against biological and radioactive contaminants, from nerve gas to nuclear fallout. This one is a B variant, well known for its usage in special operations including pyrotechnics."
+	fire_intensity_resistance = BURN_LEVEL_TIER_9
+	max_heat_protection_temperature = FIRESUIT_MAX_HEAT_PROT
+	flags_heat_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN|BODY_FLAG_ARMS|BODY_FLAG_LEGS
+	flags_cold_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN|BODY_FLAG_ARMS|BODY_FLAG_LEGS
+	unacidable = TRUE
+	var/shields_from_fire = TRUE
+
+
 /obj/item/clothing/under/marine/cbrn //CBRN MOPP suit
 	name = "\improper M3 MOPP suit"
 	desc = "M3 MOPP suits are specially designed and engineered to protect the wearer from unshielded exposure to any Chemical, Biological, Radiological, or Nuclear (CBRN) threats in the field. The suit has a recommended lifespan of twenty-four hours once contact with a toxic environment is made, but depending on the severity this can be shortened to eight hours or less."

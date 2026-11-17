@@ -107,6 +107,16 @@
 		WEAR_FACE = 'icons/mob/humans/onmob/head_1.dmi'
 	)
 
+/obj/item/clothing/mask/gas/pve_mopp/fireproof
+	name = "\improper M2B MOPP mask"
+	desc = "The M2B MOPP mask includes a full covering cowl that securely attaches to the MOPP suit. It is capable of protecting of a variety of radiological and biological threats. This one is a B variant, well known for its usage in special operations including pyrotechnics."
+	fire_intensity_resistance = BURN_LEVEL_TIER_9
+	max_heat_protection_temperature = FIRESUIT_MAX_HEAT_PROT
+	flags_heat_protection = BODY_FLAG_FACE|BODY_FLAG_HEAD|BODY_FLAG_EYES
+	flags_cold_protection = BODY_FLAG_FACE|BODY_FLAG_HEAD|BODY_FLAG_EYES
+	unacidable = TRUE
+	var/shields_from_fire = TRUE
+
 /obj/item/clothing/mask/gas/pmc
 	name = "\improper tactical filtration mask"
 	desc = "A sophisticated filtration mask being tested for the military market but presently limited to Weyland-Yutani tactical teams."

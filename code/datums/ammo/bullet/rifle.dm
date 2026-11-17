@@ -149,6 +149,15 @@
 	damage_falloff = DAMAGE_FALLOFF_TIER_10
 
 
+/datum/ammo/bullet/rifle/incendiary/heap
+	name = "dragoon 10x24 bullet"
+	icon_state = "bullet_red"
+	headshot_state = HEADSHOT_OVERLAY_HEAVY
+	damage = 50
+	damage_type = BRUTE
+	penetration = ARMOR_PENETRATION_TIER_7
+	shrapnel_chance = SHRAPNEL_CHANCE_TIER_2
+
 /datum/ammo/bullet/rifle/incendiary/set_bullet_traits()
 	. = ..()
 	LAZYADD(traits_to_give, list(
