@@ -122,7 +122,7 @@
 
 /datum/species/human/hero/pathogen
 	name = "Pathogen Infected Human"
-	name_plural = "Pathogen Infected Humans
+	name_plural = "Pathogen Infected Humans"
 	burn_mod = 1.5
 	weed_slowdown_mult = 0
 	darksight = 8
