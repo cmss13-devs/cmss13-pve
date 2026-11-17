@@ -8,6 +8,7 @@
 #define SQUAD_MARINE_3 "Charlie"
 #define SQUAD_MARINE_4 "Delta"
 #define SQUAD_MARINE_5 "Echo"
+#define SQUAD_MARINE_6 "Fire Bearers"
 #define SQUAD_MARINE_CRYO "Foxtrot"
 #define SQUAD_MARINE_INTEL "Intel"
 #define SQUAD_SOF "SOF"

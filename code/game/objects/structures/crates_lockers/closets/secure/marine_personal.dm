@@ -47,6 +47,9 @@
 /obj/structure/closet/secure_closet/marine_personal/smartgunner
 	job = JOB_SQUAD_SMARTGUN
 
+/obj/structure/closet/secure_closet/marine_personal/specialist
+	job = JOB_SQUAD_SPECIALIST
+
 /obj/structure/closet/secure_closet/marine_personal/corpsman
 	job = JOB_SQUAD_MEDIC
 

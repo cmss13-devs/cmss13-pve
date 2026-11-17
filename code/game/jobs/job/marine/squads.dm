@@ -165,6 +165,16 @@
 	use_stripe_overlay = FALSE
 	usable = TRUE
 
+/datum/squad/marine/fire
+	name = SQUAD_MARINE_6
+	equipment_color = "#792020"
+	chat_color = "#944b4b"
+	access = list(ACCESS_MARINE_ALPHA)
+	radio_freq = FIRE_FREQ
+	minimap_color = MINIMAP_SQUAD_FIRE
+	use_stripe_overlay = FALSE
+	usable = TRUE
+
 /datum/squad/marine/upp
 	name = SQUAD_UPP
 	equipment_color = "#8B0000"

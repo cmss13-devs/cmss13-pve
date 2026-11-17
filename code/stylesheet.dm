@@ -63,6 +63,7 @@ em {font-style: normal; font-weight: bold;}
 .deltaradio {color: #007FCF;}
 .echoradio {color: #3EB489;}
 .cryoradio {color: #4a4740;}
+.fireradio {color: #792020;}
 .hcradio {color: #318779;}
 .pvstradio {color: #9b0612;}
 .ciaradio {color: #e6754c;}

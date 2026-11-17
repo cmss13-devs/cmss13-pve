@@ -147,6 +147,7 @@ Radiochat range: 1441 to 1489 (most devices refuse to be tune to other frequency
 #define DELTA_FREQ 1494
 #define ECHO_FREQ 1495
 #define CRYO_FREQ 1496
+#define FIRE_FREQ 1497
 
 //Civilian channels
 #define COLONY_FREQ 1469
@@ -184,6 +185,7 @@ GLOBAL_LIST_INIT(radiochannels, list(
 	SQUAD_MARINE_3 = CHARLIE_FREQ,
 	SQUAD_MARINE_4 = DELTA_FREQ,
 	SQUAD_MARINE_5 = ECHO_FREQ,
+	SQUAD_MARINE_6 = FIRE_FREQ,
 	SQUAD_MARINE_CRYO = CRYO_FREQ,
 	SQUAD_SOF = SOF_FREQ,
 	SQUAD_CBRN = CBRN_FREQ,
@@ -247,7 +249,7 @@ GLOBAL_LIST_INIT(radiochannels, list(
 #define BUG_FREQS list(BUG_A_FREQ, BUG_B_FREQ)
 
 //Depts - used for colors in headset.dm, as well as deciding what the marine comms tower can listen into
-#define DEPT_FREQS list(COMM_FREQ, MED_FREQ, ENG_FREQ, SEC_FREQ, SENTRY_FREQ, ALPHA_FREQ, BRAVO_FREQ, CHARLIE_FREQ, DELTA_FREQ, ECHO_FREQ, CRYO_FREQ, REQ_FREQ, JTAC_FREQ, INTEL_FREQ, WY_FREQ, ASF_FREQ, ARM_FREQ)
+#define DEPT_FREQS list(COMM_FREQ, MED_FREQ, ENG_FREQ, SEC_FREQ, SENTRY_FREQ, ALPHA_FREQ, BRAVO_FREQ, CHARLIE_FREQ, DELTA_FREQ, ECHO_FREQ, FIRE_FREQ, CRYO_FREQ, REQ_FREQ, JTAC_FREQ, INTEL_FREQ, WY_FREQ, ASF_FREQ, ARM_FREQ)
 
 #define TRANSMISSION_WIRE 0
 #define TRANSMISSION_RADIO 1
@@ -309,6 +311,7 @@ SUBSYSTEM_DEF(radio)
 		"[DELTA_FREQ]" = "deltaradio",
 		"[ECHO_FREQ]" = "echoradio",
 		"[CRYO_FREQ]" = "cryoradio",
+		"[FIRE_FREQ]" = "fireradio",
 		"[CBRN_FREQ]" = "hcradio",
 		"[FORECON_FREQ]" = "hcradio",
 		"[SOF_FREQ]" = "hcradio",

@@ -1452,11 +1452,10 @@
 
 //*****************************************************************************************************/
 
-/datum/equipment_preset/uscm/specialist_equipped
+/datum/equipment_preset/uscm/specialist
 	name = "USCM Specialized Weapons Operator, M5 RPG (Equipped)"
-	flags = EQUIPMENT_PRESET_EXTRA|EQUIPMENT_PRESET_MARINE
+	flags = EQUIPMENT_PRESET_START_OF_ROUND|EQUIPMENT_PRESET_MARINE
 	access = list(ACCESS_MARINE_PREP, ACCESS_MARINE_SPECPREP)
-	assignment = "Rocketeer"
 	rank = JOB_SQUAD_SPECIALIST
 	paygrades = list(PAY_SHORT_ME3 = JOB_PLAYTIME_TIER_0) //Gives them reason as to why they'll have a loader to boss about without impinging on overall rank structure of a section
 	role_comm_title = "Spc"
@@ -1466,12 +1465,12 @@
 	dress_under = list(/obj/item/clothing/under/marine/dress/blues)
 	dress_over = list(/obj/item/clothing/suit/storage/jacket/marine/dress/blues)
 
-/datum/equipment_preset/uscm/specialist_equipped/load_status(mob/living/carbon/human/new_human)
+/datum/equipment_preset/uscm/specialist/equipped/load_status(mob/living/carbon/human/new_human)
 	new_human.nutrition = NUTRITION_NORMAL
 
-/datum/equipment_preset/uscm/specialist_equipped/load_gear(mob/living/carbon/human/new_human)
-	new_human.underwear = "Marine Boxers"
-	new_human.undershirt = "Marine Undershirt"
+/datum/equipment_preset/uscm/specialist/equipped/load_gear(mob/living/carbon/human/new_human)
+	flags = EQUIPMENT_PRESET_EXTRA|EQUIPMENT_PRESET_MARINE
+	assignment = "Rocketeer"
 	//back
 	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/launcher/rocket/marine(new_human), WEAR_BACK)
 	//face
