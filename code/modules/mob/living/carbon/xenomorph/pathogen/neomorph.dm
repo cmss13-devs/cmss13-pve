@@ -41,7 +41,6 @@
 		/datum/action/xeno_action/onclick/xeno_resting,
 		/datum/action/xeno_action/watch_xeno,
 		/datum/action/xeno_action/activable/tail_stab,
-		/datum/action/xeno_action/activable/pounce/runner/neomorph,
 		/datum/action/xeno_action/activable/headbite,
 		/datum/action/xeno_action/onclick/blight_slash,
 		/datum/action/xeno_action/onclick/tacmap,
@@ -87,12 +86,3 @@
 		new /datum/effects/xeno_slow(target_carbon, bound_xeno, null, null, get_xeno_stun_duration(target_carbon, slash_slow_duration))
 
 	return
-
-/datum/action/xeno_action/activable/pounce/runner/neomorph
-	xeno_cooldown = 5 SECONDS
-	knockdown = TRUE // Should we knock down the target?
-	knockdown_duration = 1
-	slash = TRUE // Do we slash upon reception?
-	freeze_self = TRUE // Should we freeze ourselves after the lunge?
-	freeze_time = 5
-	can_be_shield_blocked = TRUE // Some legacy stuff, self explanatory
