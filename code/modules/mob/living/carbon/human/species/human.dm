@@ -120,6 +120,20 @@
 	H.status_flags &= ~STATUS_FLAGS_DEBILITATE
 	return ..()
 
+/datum/species/human/hero/pathogen
+	name = "Pathogen Infected Human"
+	name_plural = "Pathogen Infected Humans
+	burn_mod = 1.5
+	weed_slowdown_mult = 0
+	darksight = 8
+	unarmed_type = /datum/unarmed_attack/claws/strong/pathogen
+	secondary_unarmed_type = /datum/unarmed_attack/bite/strong/pathogen
+	death_message = "seizes up as a mixture of black fluid and grey mold pours from its every orfice."
+
+
+/datum/species/human/hero/pathogen/handle_post_spawn(mob/living/carbon/human/H)
+	H.status_flags |= GODMODE
+
 //Various horrors that spawn in and haunt the living.
 /datum/species/human/spook
 	name = "Horror"
