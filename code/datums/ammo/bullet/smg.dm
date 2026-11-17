@@ -30,7 +30,7 @@
     shell_speed = AMMO_SPEED_TIER_5
     effective_range_max = 7
     damage_falloff = DAMAGE_FALLOFF_TIER_6
-    scatter = SCATTER_AMOUNT_TIER_5
+    scatter = SCATTER_AMOUNT_TIER_6
     accuracy = HIT_ACCURACY_TIER_2
 
 /datum/ammo/bullet/smg/m39
