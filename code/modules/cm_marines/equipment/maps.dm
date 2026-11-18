@@ -1,3 +1,5 @@
+GLOBAL_LIST_INIT(mapless_maps, list(MAP_RUNTIME, MAP_CHINOOK, MAIN_SHIP_DEFAULT_NAME) | SHIP_MAP_NAMES)
+
 /obj/item/map
 	name = "map"
 	icon = 'icons/obj/items/marine-items.dmi'
@@ -12,7 +14,7 @@
 
 /obj/item/map/attack_self(mob/user) //Open the map
 	..()
-	user.visible_message(SPAN_NOTICE("[user] opens the [src.name]. "))
+	user.visible_message(SPAN_NOTICE("[user] opens the [src.name]."))
 	initialize_map()
 
 /obj/item/map/attack()
@@ -20,7 +22,7 @@
 
 /obj/item/map/proc/initialize_map()
 	var/wikiurl = CONFIG_GET(string/wikiurl)
-	if(wikiurl)
+	if(wikiurl && html_link)
 		dat = {"
 				<!DOCTYPE html>
 				<html>
@@ -67,10 +69,12 @@
 	color = "cyan"
 
 /obj/item/map/ice_colony_map/v1
-	html_link = "https://cm-ss13.com/w/images/8/88/Ice_V1.png"
+	name = "\improper Blank Map"
+	html_link = ""
 
 /obj/item/map/ice_colony_map/v2
-	html_link = "https://cm-ss13.com/w/images/c/cf/Ice_Colony_v2.png"
+	name = "\improper Blank Map"
+	html_link = ""
 
 /obj/item/map/ice_colony_map_v3
 	name = "\improper Shivas Snowball map"
@@ -86,13 +90,13 @@
 
 /obj/item/map/big_red_map
 	name = "\improper Solaris Ridge Map"
-	desc = "A censored blueprint of the Solaris Ridge facility"
+	desc = "A censored blueprint of the Solaris Ridge facility."
 	html_link = "images/9/9e/Solaris_Ridge.png"
 	color = "#e88a10"
 
 /obj/item/map/FOP_map
 	name = "\improper Fiorina Orbital Penitentiary Map"
-	desc = "A labelled interior scan of Fiorina Orbital Penitentiary"
+	desc = "A labelled interior scan of Fiorina Orbital Penitentiary."
 	html_link = "images/4/4c/Map_Prison.png"
 	color = "#e88a10"
 
@@ -116,13 +120,13 @@
 
 /obj/item/map/corsat
 	name = "\improper CORSAT map"
-	desc = "A blueprint of CORSAT station"
+	desc = "A blueprint of CORSAT station."
 	html_link = "images/8/8e/CORSAT_Satellite.png"
 	color = "red"
 
 /obj/item/map/kutjevo_map
 	name = "\improper Kutjevo Refinery map"
-	desc = "An orbital scan of Kutjevo Refinery"
+	desc = "An orbital scan of Kutjevo Refinery."
 	html_link = "images/0/0d/Kutjevo_a1.jpg"
 	color = "red"
 
@@ -134,7 +138,7 @@
 
 /obj/item/map/new_varadero
 	name = "\improper New Varadero map"
-	desc = "A labeled blueprint of the UA outpost New Varadero"
+	desc = "A labeled blueprint of the UA outpost New Varadero."
 	html_link = "images/9/94/New_Varadero.png"
 	color = "red"
 
@@ -152,13 +156,12 @@
 
 /obj/item/map/taipei
 	name = "\improper Taipei Way-Station map"
-	desc = "A labelled print out of the anterior scan of Taipei Station, An unassuming waystation."
-	html_link = ""
+	desc = "A labelled print out of the interior scan of Taipei Station, an unassuming waystation."
+	html_link = "images/f/f2/Taipei.png"
 	color = "cyan"
-	desc_lore = "https://github.com/user-attachments/assets/bfe1a3dd-f737-4b89-a030-ff819e320dea"
 
 /obj/item/map/oread_map
-	name = "\improper Oread Garrison map"
+	name = "\improper Blank Map" // name = "\improper Oread Garrison map"
 	desc = "A distorted orbital scan of the Oread Garrison"
 	html_link = ""
 	color = "cyan"
@@ -208,7 +211,7 @@ GLOBAL_LIST_INIT_TYPED(map_type_list, /obj/item/map, setup_all_maps())
 
 	var/map_name = SSmapping.configs[GROUND_MAP].map_name
 	var/obj/item/map/map = GLOB.map_type_list[map_name]
-	if (!map && (map_name == MAP_RUNTIME || map_name == MAP_CHINOOK || (map_name in SHIP_MAP_NAMES)))
+	if (!map && (map_name in GLOB.mapless_maps))
 		return // "Maps" we don't have maps for so we don't need to throw a runtime for (namely in unit_testing)
 	name = map.name
 	desc = map.desc
