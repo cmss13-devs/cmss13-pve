@@ -60,6 +60,14 @@
 	gun_type = /obj/item/weapon/gun/rifle/lmg
 	ammo_band_color = AMMO_BAND_COLOR_HEAP
 
+/obj/item/ammo_magazine/hpr_box/heap/incendiary
+	name = "\improper M41AE2 Dragoon ammo box (10x24mm)"
+	desc = "A magazine of M903 armor piercing incendiary high explosive rounds for the M41AE2 Heavy Pulse Rifle."
+	default_ammo = /datum/ammo/bullet/rifle/incendiary/heap
+	max_rounds = 300
+	gun_type = /obj/item/weapon/gun/rifle/lmg
+	ammo_band_color = AMMO_BAND_COLOR_HEAP_INCENDIARY
+
 /obj/item/ammo_magazine/hpr_box/recon
 	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/1218_uscm.dmi'
 	icon_state = "m41ae2_recon"

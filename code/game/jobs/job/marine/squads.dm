@@ -170,7 +170,7 @@
 	equipment_color = "#792020"
 	chat_color = "#944b4b"
 	access = list(ACCESS_MARINE_ALPHA)
-	radio_freq = FIRE_FREQ
+	radio_freq = CBRN_FREQ
 	minimap_color = MINIMAP_SQUAD_FIRE
 	use_stripe_overlay = FALSE
 	usable = FALSE

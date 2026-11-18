@@ -752,6 +752,12 @@
 /obj/item/ammo_box/magazine/m41ae2/heap/empty
 	empty = TRUE
 
+/obj/item/ammo_box/magazine/m41ae2/heap/incendiary
+	name = "magazine box (M41AE2 Dragoon x 8)"
+	overlay_ammo_type = "_heap_heavy"
+	overlay_content = "_m41ae2_heiap"
+	magazine_type = /obj/item/ammo_magazine/hpr_box/heap/incendiary
+
 //-----------------------Flamer Fuel Tank Box-----------------------
 
 /obj/item/ammo_box/magazine/flamer
