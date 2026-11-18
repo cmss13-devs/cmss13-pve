@@ -115,6 +115,7 @@
 	flags_heat_protection = BODY_FLAG_FACE|BODY_FLAG_HEAD|BODY_FLAG_EYES
 	flags_cold_protection = BODY_FLAG_FACE|BODY_FLAG_HEAD|BODY_FLAG_EYES
 	unacidable = TRUE
+	vision_impair = VISION_IMPAIR_NONE
 	var/shields_from_fire = TRUE
 
 /obj/item/clothing/mask/gas/pmc
