@@ -40,6 +40,15 @@
 /obj/item/ammo_box/rounds/heap/empty
 	empty = TRUE
 
+/obj/item/ammo_box/rounds/incen/heap
+	name = "rifle ammunition box (10x24mm Dragoon)"
+	desc = "A 10x24mm 'Dragoon' ammunition box, otherwise known as High Explosive Incendiary Armor Piercing. Or HEIAP, if you aren't a nerd. Used to refill magazines. It comes with a leather strap allowing to wear it on the back."
+	overlay_content = "_hp"
+	default_ammo = /datum/ammo/bullet/rifle/incendiary/heap
+
+/obj/item/ammo_box/rounds/incen/heap/empty
+	empty = TRUE
+
 //----------------10x28mm Ammunition Boxes (for smartguns)------------------
 
 /obj/item/ammo_box/rounds/smartgun

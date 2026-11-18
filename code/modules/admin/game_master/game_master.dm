@@ -42,9 +42,9 @@ GLOBAL_VAR_INIT(radio_communication_clarity, 100)
 	message_admins("[src] has [MODE_HAS_TOGGLEABLE_FLAG(MODE_NO_MAKE_BARRICADES) ? "disabled" : "enabled"] Barricade Creation.")
 
 // Spawn stuff
-#define DEFAULT_SPAWN_XENO_STRING XENO_CASTE_DRONE
-#define GAME_MASTER_AI_XENOS list(XENO_CASTE_DRONE, XENO_CASTE_SOLDIER, XENO_CASTE_RUNNER, RUNNER_ACIDER, XENO_CASTE_LURKER, XENO_CASTE_CRUSHER, XENO_CASTE_FACEHUGGER)
-#define DEFAULT_SPAWN_HIVE_STRING XENO_HIVE_NORMAL
+#define DEFAULT_SPAWN_XENO_STRING PATHOGEN_CREATURE_BURSTER
+#define GAME_MASTER_AI_XENOS list(PATHOGEN_CREATURE_VENATOR, PATHOGEN_CREATURE_BRUTE, PATHOGEN_CREATURE_BLIGHT, PATHOGEN_CREATURE_NEOMORPH, PATHOGEN_CREATURE_POPPER, PATHOGEN_CREATURE_SPRINTER, PATHOGEN_CREATURE_BURSTER, XENO_CASTE_DRONE, XENO_CASTE_WARRIOR_DRONE, XENO_CASTE_SOLDIER, XENO_CASTE_RUNNER, RUNNER_ACIDER, XENO_CASTE_LURKER, XENO_CASTE_CRUSHER, XENO_CASTE_FACEHUGGER, XENO_CASTE_PRAETORIAN, XENO_CASTE_RAVAGER, XENO_CASTE_SENTINEL, XENO_CASTE_SPITTER, XENO_CASTE_QUEEN)
+#define DEFAULT_SPAWN_HIVE_STRING XENO_HIVE_PATHOGEN
 
 #define DEFAULT_XENO_AMOUNT_TO_SPAWN 1
 
@@ -73,6 +73,7 @@ GLOBAL_VAR_INIT(radio_communication_clarity, 100)
 	var/list/submenu_types = list(
 		/obj/structure/pipes/vents = /datum/game_master_submenu/ambush/vents,
 		/obj/structure/tunnel = /datum/game_master_submenu/ambush/tunnels,
+		/obj/structure/ladder = /datum/game_master_submenu/ambush/ladders,
 		/mob/living/carbon/human = /datum/game_master_submenu/infest,
 	)
 
@@ -135,7 +136,7 @@ GLOBAL_VAR_INIT(radio_communication_clarity, 100)
 	current_submenus = list()
 
 	game_master_phone = new(null)
-	game_master_phone.AddComponent(/datum/component/phone/virtual, "Game Master", "white", "Company Command", null, PHONE_DND_ON, list(FACTION_MARINE, FACTION_COLONIST, FACTION_WY), list(FACTION_MARINE, FACTION_COLONIST, FACTION_WY), null, using_client)
+	game_master_phone.AddComponent(/datum/component/phone/virtual, "Game Master", "white", "Company Command", null, PHONE_DND_ON, list(FACTION_MARINE, FACTION_UPP, FACTION_COLONIST, FACTION_WY), list(FACTION_MARINE, FACTION_UPP, FACTION_COLONIST, FACTION_WY), null, using_client)
 
 	game_master_client.click_intercept = src
 

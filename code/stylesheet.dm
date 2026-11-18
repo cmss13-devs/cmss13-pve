@@ -63,6 +63,7 @@ em {font-style: normal; font-weight: bold;}
 .deltaradio {color: #007FCF;}
 .echoradio {color: #3EB489;}
 .cryoradio {color: #4a4740;}
+.fireradio {color: #792020;}
 .hcradio {color: #318779;}
 .pvstradio {color: #9b0612;}
 .ciaradio {color: #e6754c;}
@@ -136,7 +137,8 @@ h1.alert, h2.alert {color: #000000;}
 .event_announcement {color: #600d48; font-family: arial-narrow; font-weight: bold; font-size: 3;}
 
 .announce_header {color: #000000; font-weight: bold; font-size: 3;}
-.announce_header_blue {color: #000099; font-weight: bold; font-size: 3;}
+.announce_header_blue {color: #c6c8a3; font-weight: bold; font-size: 3;}
+.announce_header_beige {color: #000099; font-weight: bold; font-size: 3;}
 .announce_body {color: #ff0000; font-weight: normal;}
 
 .centerbold { text-align: center; font-weight: bold;}

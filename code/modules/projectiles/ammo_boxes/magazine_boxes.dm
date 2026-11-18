@@ -806,6 +806,13 @@
 /obj/item/ammo_box/magazine/mk1/heap/empty
 	empty = TRUE
 
+/obj/item/ammo_box/magazine/mk1/incen/heap
+	name = "magazine box (Dragoon M41A MK1 x 10)"
+	flags_equip_slot = SLOT_BACK
+	overlay_ammo_type = "_hp"
+	overlay_content = "_hp"
+	magazine_type = /obj/item/ammo_magazine/rifle/m41aMK1/incendiary/heap
+
 /obj/item/ammo_box/magazine/mk1/rubber
 	name = "magazine box (Rubber M41A MK1 X 10)"
 	overlay_ammo_type = "_rubber_mk1"
@@ -865,6 +872,12 @@
 	overlay_ammo_type = "_heaplarge"
 	overlay_content = "_heaplarge"
 	magazine_type = /obj/item/ammo_magazine/rifle/m41aMK1/heap
+
+/obj/item/ammo_box/magazine/mk1/large/incen/heap
+	name = "magazine box (Dragoon M41A MK1 x 32)"
+	overlay_ammo_type = "_heapincindlarge"
+	overlay_content = "_heapincindlarge"
+	magazine_type = /obj/item/ammo_magazine/rifle/m41aMK1/incendiary/heap
 
 /obj/item/ammo_box/magazine/mk1/large/heap/empty
 	empty = TRUE
@@ -1123,13 +1136,22 @@
 /obj/item/ammo_box/magazine/type64/empty
 	empty = TRUE
 
+/obj/item/ammo_box/magazine/type64/overpressure
+    name = "magazine box (Type64 +P Bizon x 10)"
+    overlay_ammo_type = "_type71_super"
+    overlay_content = "_type71_super"
+    magazine_type = /obj/item/ammo_magazine/smg/bizon/overpressure
+
+/obj/item/ammo_box/magazine/type64/overpressure/empty
+    empty = TRUE
+
 /obj/item/ammo_box/magazine/type64/ap
 	name = "magazine box (Type64 AP Bizon x 10)"
 	overlay_ammo_type = "_type71_ap"
 	overlay_content = "_type71_ap"
 	magazine_type = /obj/item/ammo_magazine/smg/bizon/ap
 
-/obj/item/ammo_box/magazine/type64/ap
+/obj/item/ammo_box/magazine/type64/ap/empty
 	empty = TRUE
 
 /obj/item/ammo_box/magazine/type64/heap
@@ -1138,7 +1160,7 @@
 	overlay_content = "_type71_heap"
 	magazine_type = /obj/item/ammo_magazine/smg/bizon/heap
 
-/obj/item/ammo_box/magazine/type64/heap
+/obj/item/ammo_box/magazine/type64/heap/empty
 	empty = TRUE
 
 //-----------------------ZhNK-72 Revolver Speedloader Box-----------------------
@@ -1352,6 +1374,27 @@
 	overlays += image(text_markings_icon, icon_state = "text[overlay_gun_type]") //adding text
 
 /obj/item/ammo_box/magazine/fp9000/empty
+	empty = TRUE
+
+//-----------------------FN P90 SMG Mag Box-----------------------
+
+/obj/item/ammo_box/magazine/p90
+	name = "magazine box (FN P90 x 12)"
+	icon_state = "base_fn"
+	flags_equip_slot = SLOT_BACK
+	overlay_ammo_type = ""
+	overlay_gun_type = "_fnfp9000"
+	overlay_content = "_fn"
+	num_of_magazines = 12
+	magazine_type = /obj/item/ammo_magazine/smg/p90
+
+/obj/item/ammo_box/magazine/p90/update_icon()
+	if(overlays)
+		overlays.Cut()
+	overlays += image(icon, icon_state = "[icon_state]_lid") //adding lid
+	overlays += image(text_markings_icon, icon_state = "text[overlay_gun_type]") //adding text
+
+/obj/item/ammo_box/magazine/p90/empty
 	empty = TRUE
 
 //-----------------------MAR30/40 Mag Box-----------------------
