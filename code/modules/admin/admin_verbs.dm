@@ -1,8 +1,5 @@
 //admin verb groups - They can overlap if you so wish. Only one of each verb will exist in the verbs list regardless
-GLOBAL_LIST_INIT(admin_verbs_default, setup_admin_verbs_default()) // PVE EDIT
-
-/datum/controller/global_vars/proc/setup_admin_verbs_default() // PVE EDIT
-	. = list( // PVE EDIT
+GLOBAL_LIST_INIT(admin_verbs_default, list(
 	/datum/admins/proc/show_player_panel, /*shows an interface for individual players, with various links (links require additional flags*/
 	/client/proc/toggleadminhelpsound, /*toggles whether we hear a sound when adminhelps/PMs are used*/
 	/client/proc/becomelarva, /*lets you forgo your larva protection as staff member. */
@@ -76,7 +73,7 @@ GLOBAL_LIST_INIT(admin_verbs_default, setup_admin_verbs_default()) // PVE EDIT
 	/client/proc/cmd_mod_say, /* alternate way of typing asay, no different than cmd_admin_say  */
 	/client/proc/cmd_admin_tacmaps_panel,
 	/client/proc/other_records,
-	) // PVE EDIT
+	))
 
 
 GLOBAL_LIST_INIT(admin_verbs_admin, list(
@@ -112,10 +109,7 @@ GLOBAL_LIST_INIT(admin_verbs_sounds, list(
 	/client/proc/cmd_admin_vox_panel
 ))
 
-GLOBAL_LIST_INIT(admin_verbs_minor_event, setup_admin_verbs_minor_event()) // PVE EDIT
-
-/datum/controller/global_vars/proc/setup_admin_verbs_minor_event() // PVE EDIT
-	. = list( // PVE EDIT
+GLOBAL_LIST_INIT(admin_verbs_minor_event, list(
 	/client/proc/cmd_admin_change_custom_event,
 	/datum/admins/proc/admin_force_distress,
 	/datum/admins/proc/admin_force_ERT_shuttle,
@@ -150,7 +144,7 @@ GLOBAL_LIST_INIT(admin_verbs_minor_event, setup_admin_verbs_minor_event()) // PV
 	/client/proc/toggle_bypass_joe_restriction,
 	/client/proc/toggle_joe_respawns,
 	/datum/admins/proc/open_shuttlepanel
-) // PVE EDIT
+))
 
 GLOBAL_LIST_INIT(admin_verbs_major_event, list(
 	/client/proc/cmd_admin_dress_all,
@@ -180,10 +174,7 @@ GLOBAL_LIST_INIT(admin_verbs_spawn, list(
 	/client/proc/create_xenos
 ))
 
-GLOBAL_LIST_INIT(admin_verbs_server, setup_admin_verbs_server()) // PVE EDIT
-
-/datum/controller/global_vars/proc/setup_admin_verbs_server() // PVE EDIT
-	. = list( // PVE EDIT
+GLOBAL_LIST_INIT(admin_verbs_server, list(
 	/datum/admins/proc/startnow,
 	/datum/admins/proc/restart,
 	/datum/admins/proc/delay,
@@ -197,7 +188,7 @@ GLOBAL_LIST_INIT(admin_verbs_server, setup_admin_verbs_server()) // PVE EDIT
 	/client/proc/cmd_debug_del_all,
 	/datum/admins/proc/togglejoin,
 	/client/proc/toggle_cdn,
-) // PVE EDIT
+))
 
 GLOBAL_LIST_INIT(admin_verbs_debug, list(
 	/client/proc/debug_role_authority,
@@ -286,10 +277,7 @@ GLOBAL_LIST_INIT(admin_mob_event_verbs_hideable, list(
 ))
 
 //verbs which can be hidden - needs work
-GLOBAL_LIST_INIT(admin_verbs_hideable, setup_admin_verbs_hideable()) // PVE EDIT
-
-/datum/controller/global_vars/proc/setup_admin_verbs_hideable() // PVE EDIT
-	. = list( // PVE EDIT
+GLOBAL_LIST_INIT(admin_verbs_hideable, list(
 	/client/proc/cmd_assume_direct_control,
 	/client/proc/release,
 	/client/proc/possess,
@@ -309,7 +297,7 @@ GLOBAL_LIST_INIT(admin_verbs_hideable, setup_admin_verbs_hideable()) // PVE EDIT
 	/datum/admins/proc/togglesleep,
 	/client/proc/debug_variables,
 	/client/proc/debug_global_variables,
-) // PVE EDIT
+))
 
 GLOBAL_LIST_INIT(admin_verbs_teleport, list(
 	/client/proc/teleport_panel, /*teleport panel, for jumping to things/places and getting things/places */
