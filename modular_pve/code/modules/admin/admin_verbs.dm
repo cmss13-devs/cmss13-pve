@@ -31,7 +31,7 @@
 		/datum/admins/proc/toggle_intro,
 	)
 
-	GLOB.admin_verbs_server += list(
+	GLOB.admin_verbs_hideable += list(
 		/client/proc/make_human_ai,
 	)
 
