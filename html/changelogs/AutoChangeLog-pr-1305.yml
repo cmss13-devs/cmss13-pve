@@ -1,5 +1,0 @@
-author: "Drathek"
-delete-after: True
-changes:
-  - admin: "Added a Change Daytime Base Lighting GM proc"
-  - code_imp: "Optimized the Change Daytime GM proc"
