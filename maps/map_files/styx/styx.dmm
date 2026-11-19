@@ -2270,6 +2270,10 @@
 /area/golden_arrow{
 	unlimited_power = 1
 	})
+"wW" = (
+/obj/structure/machinery/cm_vending/gear/spec/marsoc,
+/turf/open/floor/almayer_hull/blackfull,
+/area/space)
 "wY" = (
 /obj/structure/machinery/light/double/blue,
 /obj/structure/cable/heavyduty{
@@ -3346,6 +3350,10 @@
 /area/golden_arrow{
 	unlimited_power = 1
 	})
+"Ig" = (
+/obj/structure/machinery/cm_vending/gear/engi/marsoc,
+/turf/open/floor/almayer_hull/blackfull,
+/area/space)
 "Io" = (
 /obj/structure/machinery/door/airlock/almayer/medical/glass{
 	dir = 1;
@@ -4272,6 +4280,10 @@
 /area/golden_arrow{
 	unlimited_power = 1
 	})
+"Pc" = (
+/obj/structure/machinery/cm_vending/gear/smartgun/marsoc,
+/turf/open/floor/almayer_hull/blackfull,
+/area/space)
 "Pf" = (
 /obj/structure/extinguisher_cabinet/alt{
 	pixel_x = -27;
@@ -4736,9 +4748,6 @@
 	unlimited_power = 1
 	})
 "UB" = (
-/obj/structure/bed/chair/comfy/black{
-	dir = 1
-	},
 /obj/structure/cable/heavyduty{
 	icon_state = "0-4"
 	},
@@ -6903,7 +6912,7 @@ Se
 Se
 Ak
 Se
-Se
+wW
 Ak
 Ak
 Ak
@@ -7913,17 +7922,17 @@ Ak
 Ak
 Ak
 Ak
-Se
-Se
-Ak
-Se
-Se
-Se
-Se
+Ig
 Se
 Ak
 Se
 Se
+Se
+Se
+Se
+Ak
+Se
+Pc
 Ak
 Ak
 Ak

@@ -102,6 +102,50 @@ GLOBAL_LIST_INIT(cm_vending_gear_engi, list(
 /obj/structure/machinery/cm_vending/gear/engi/get_listed_products(mob/user)
 	return GLOB.cm_vending_gear_engi
 
+GLOBAL_LIST_INIT(cm_vending_gear_engi_marsoc, list(
+		list("ENGINEER SET (MANDATORY)", 0, null, null, null),
+		list("Essential Engineer Set", 0, /obj/effect/essentials_set/marsoc, MARINE_CAN_BUY_ESSENTIALS, VENDOR_ITEM_MANDATORY),
+
+		list("HANDHELD DEFENSE (CHOOSE 1)", 0, null, null, null),
+		list("UA 42-F Sentry Flamer", 0, /obj/item/defenses/handheld/sentry/flamer, MARINE_CAN_BUY_ATTACHMENT, VENDOR_ITEM_MANDATORY),
+		list("UA 725-D Sniper Sentry", 0, /obj/item/defenses/handheld/sentry/dmr, MARINE_CAN_BUY_ATTACHMENT, VENDOR_ITEM_MANDATORY),
+		list("UA 12-G Shotgun Sentry", 0, /obj/item/defenses/handheld/sentry/shotgun, MARINE_CAN_BUY_ATTACHMENT, VENDOR_ITEM_MANDATORY),
+		list("21S Overclocked Tesla Coil", 0, /obj/item/defenses/handheld/tesla_coil/stun, MARINE_CAN_BUY_ATTACHMENT, VENDOR_ITEM_MANDATORY),
+
+		list("HEAVY-DUTY BREACHING EQUIPMENT (CHOOSE 1)", 0, null, null, null),
+		list("Breaching Hammer", 0, /obj/item/weapon/twohanded/breacher, MARINE_CAN_BUY_ATTACHMENT, VENDOR_ITEM_RECOMMENDED),
+
+		list("EXPLOSIVES", 0, null, null, null),
+		list("M79 Grenade Launcher", 1, /obj/item/weapon/gun/launcher/grenade/m81/m79/modified, null, VENDOR_ITEM_RECOMMENDED),
+		list("M40 HEDP High Explosive Packet (x3 grenades)", 18, /obj/item/storage/box/packet/high_explosive, null, VENDOR_ITEM_REGULAR),
+		list("M40 HIDP Incendiary Packet (x3 grenades)", 18, /obj/item/storage/box/packet/incendiary, null, VENDOR_ITEM_REGULAR),
+		list("M40 WPDP White Phosphorus Packet (x3 grenades)", 18, /obj/item/storage/box/packet/phosphorus, null, VENDOR_ITEM_REGULAR),
+		list("M40 HSDP Smoke Packet (x3 grenades)", 9, /obj/item/storage/box/packet/smoke, null, VENDOR_ITEM_REGULAR),
+		list("M20 Mine Box (x5 mines)", 18, /obj/item/storage/box/explosive_mines, null, VENDOR_ITEM_REGULAR),
+		list("M40 MFHS Metal Foam Grenade", 5, /obj/item/explosive/grenade/metal_foam, null, VENDOR_ITEM_REGULAR),
+		list("G2 Electroshock Grenade Packet (x3 grenades)",  16, /obj/item/storage/box/packet/sebb, null, VENDOR_ITEM_REGULAR),
+
+		list("ENGINEERING SUPPLIES", 0, null, null, null),
+		list("Nailgun Magazine", 10, /obj/item/ammo_magazine/smg/nailgun, null, VENDOR_ITEM_REGULAR),
+		list("Airlock Circuit Board", 6, /obj/item/circuitboard/airlock, null, VENDOR_ITEM_REGULAR),
+		list("APC Circuit Board", 6, /obj/item/circuitboard/apc, null, VENDOR_ITEM_REGULAR),
+		list("Entrenching Tool (ET)", 2, /obj/item/tool/shovel/etool, null, VENDOR_ITEM_REGULAR),
+		list("High-Capacity Power Cell", 5, /obj/item/cell/high, null, VENDOR_ITEM_REGULAR),
+		list("Metal x10", 10, /obj/item/stack/sheet/metal/small_stack, null, VENDOR_ITEM_RECOMMENDED),
+		list("Plasteel x10", 5, /obj/item/stack/sheet/plasteel/small_stack, null, VENDOR_ITEM_RECOMMENDED),
+		list("Plastic Explosive", 5, /obj/item/explosive/plastic, null, VENDOR_ITEM_REGULAR),
+		list("Breaching Charge", 10, /obj/item/explosive/plastic/breaching_charge, null, VENDOR_ITEM_RECOMMENDED),
+		list("Sandbags x25", 10, /obj/item/stack/sandbags_empty/half, null, VENDOR_ITEM_RECOMMENDED),
+		list("ES-11 Mobile Fuel Canister", 4, /obj/item/tool/weldpack/minitank, null, VENDOR_ITEM_REGULAR),
+	))
+
+/obj/structure/machinery/cm_vending/gear/engi/marsoc
+	name = "\improper ColMarTech MARSOC Sapper Gear Rack"
+	desc = "An automated gear rack for MARSOC Sappers."
+
+/obj/structure/machinery/cm_vending/gear/engi/marsoc/get_listed_products(mob/user)
+	return GLOB.cm_vending_gear_engi_marsoc
+
 //------------CLOTHING VENDOR---------------
 
 GLOBAL_LIST_INIT(cm_vending_clothing_engi, list(
@@ -211,6 +255,16 @@ GLOBAL_LIST_INIT(cm_vending_clothing_engi, list(
 		/obj/item/cell/high,
 		/obj/item/tool/shovel/etool/folded,
 		/obj/item/device/lightreplacer,
+		/obj/item/weapon/gun/smg/nailgun/compact/tactical,
+	)
+
+/obj/effect/essentials_set/marsoc
+	spawned_gear_list = list(
+		/obj/item/clothing/accessory/storage/tool_webbing/tactical,
+		/obj/item/storage/pouch/tools/tactical,
+		/obj/item/storage/box/guncase/heavy/sentry,
+		/obj/item/storage/backpack/marine/satchel/big
+		/obj/item/storage/belt/gun/m4a3/nailgun,
 		/obj/item/weapon/gun/smg/nailgun/compact/tactical,
 	)
 

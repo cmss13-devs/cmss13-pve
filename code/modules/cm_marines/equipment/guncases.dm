@@ -600,6 +600,18 @@
 	new /obj/item/ammo_magazine/hpr_box/recon(src)
 	new /obj/item/ammo_magazine/hpr_box/recon(src)
 
+/obj/item/storage/box/guncase/heavy/hpr/marsoc
+	storage_slots = 7
+
+/obj/item/storage/box/guncase/heavy/hpr/marsoc/fill_preset_inventory()
+	new /obj/item/weapon/gun/rifle/lmg(src)
+	new /obj/item/ammo_magazine/hpr_box/heap(src)
+	new /obj/item/ammo_magazine/hpr_box/heap(src)
+	new /obj/item/ammo_magazine/hpr_box/heap(src)
+	new /obj/item/ammo_magazine/hpr_box/heap(src)
+	new /obj/item/ammo_magazine/hpr_box/heap(src)
+	new /obj/item/ammo_magazine/hpr_box/heap(src)
+
 /obj/item/storage/box/guncase/heavy/rmcsmg
 	name = "\improper L6A2 SMG CQWS case"
 	desc = "A heavy case for storing an L6A2 Close-Quarters-Weapon-System, along with several magazines of squad-head ammunition for it."
