@@ -1,0 +1,9 @@
+{
+    "map_name": "HMS Brynhild",
+    "map_path": "map_files/HMS_Brynhild",
+    "map_file": "HMS_Brynhild.dmm",
+    "webmap_url": "GoldenArrow",
+    "traits": [{"Marine Main Ship": true}],
+    "nightmare_path": "maps/Nightmare/maps/hms_brynhild/",
+    "platoon": "/datum/squad/marine/rmc"
+}

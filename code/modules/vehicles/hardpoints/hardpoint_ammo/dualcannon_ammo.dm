@@ -1,7 +1,7 @@
 /obj/item/ammo_magazine/hardpoint/boyars_dualcannon
 	name = "PARS-159 Dualcannon IFF Magazine"
-	desc = "A magazine for PARS-159 Boyars Dualcannon filled with 20mm rounds. Slightly contuses targets upon hit. Supports IFF."
-	caliber = "20mm"
+	desc = "A magazine for the PARS-159 Boyars Dualcannon filled with telescoped 40mm rounds. Slightly contuses targets upon hit. Supports IFF."
+	caliber = "40mm"
 	icon_state = "ace_autocannon"
 	w_class = SIZE_LARGE
 	default_ammo = /datum/ammo/bullet/tank/dualcannon

@@ -1,5 +1,5 @@
 /obj/item/hardpoint/primary/aa_quadcannon
-	name = "Bleihagel RE-RE965 Aerial-Defence System"
+	name = "\improper Bleihagel RE-RE965 Aerial-Defence System"
 	desc = "A compact turret with four 20mm rotary cannons mounted in it. Normally slaved to the vehicles tracking systems, this one seems to be lacking the electronics required for such."
 	icon = 'icons/obj/vehicles/hardpoints/apc.dmi'
 
@@ -16,7 +16,7 @@
 	allowed_seat = VEHICLE_GUNNER
 
 	ammo = new /obj/item/ammo_magazine/hardpoint/m56_cupola/quad_cannon
-	max_clips = 1
+	max_clips = 2
 
 	use_muzzle_flash = TRUE
 	angle_muzzleflash = FALSE

@@ -319,3 +319,20 @@
 	desc = "The flag of the Union of Progressive Peoples. Unity through Strength, Freedom through Unity."
 	icon_state = "flag_upp_planted"
 	flag_type = /obj/item/flag/plantable/upp
+
+// BRAZIL FLAG //
+//////////////////////////
+
+/obj/item/flag/plantable/brazil
+	name = "\improper Brazil flag"
+	desc = "The flag of Brazil. This one looks ready to be planted into the ground."
+	icon = 'icons/obj/structures/plantable_flag.dmi'
+	icon_state = "flag_brazil"
+	flag_type = /obj/structure/flag/plantable/brazil
+	faction = FACTION_COLONIST
+
+/obj/structure/flag/plantable/brazil
+	name = "\improper Brazil flag"
+	desc = "The flag of Brazil."
+	icon_state = "flag_brazil_planted"
+	flag_type = /obj/item/flag/plantable/brazil

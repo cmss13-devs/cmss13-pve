@@ -10,3 +10,6 @@
 	icon_state = "upptank_chassis"
 	layer = ABOVE_TURF_LAYER
 	mouse_opacity = FALSE
+
+/obj/structure/prop/vehicle/upptank/command
+	icon_state = "upptank_chassis1"

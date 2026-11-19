@@ -24,10 +24,7 @@
 	COOLDOWN_DECLARE(distress_cooldown)
 
 /obj/item/device/cotablet/Initialize()
-	if(announcement_faction == FACTION_MARINE)
-		tacmap = new /datum/tacmap/drawing(src, minimap_type)
-	else
-		tacmap = new(src, minimap_type) // Non-drawing version
+	tacmap = new /datum/tacmap/drawing(src, minimap_type)
 	if(SSticker.mode && MODE_HAS_FLAG(MODE_FACTION_CLASH))
 		add_pmcs = FALSE
 	else if(SSticker.current_state < GAME_STATE_PLAYING)
@@ -189,3 +186,14 @@
 	req_access = list(ACCESS_UPP_LEADERSHIP)
 
 	minimap_type = MINIMAP_FLAG_UPP
+
+/obj/item/device/cotablet/rmc
+
+	desc = "A special device used by field RMC commanders."
+
+	tablet_name = "RMC Field Commander's Tablet"
+
+	announcement_title = TWE_COMMAND_ANNOUNCE
+	announcement_faction = FACTION_TWE
+	req_access = list(ACCESS_TWE_LEADERSHIP)
+	minimap_type = MINIMAP_FLAG_TWE

@@ -94,15 +94,28 @@ OverrideTimelock(/datum/job/command/bridge, list(
 
 /datum/job/command/bridge/ai/pmc
 	title = JOB_PMCPLAT_OW
-// todo: funny AR goggles perma cyan 	gear_preset =
-// todo: above	gear_preset_secondary = /datum/equipment_preset/uscm_ship/so/upp/lesser_rank
-
 	gear_preset = /datum/equipment_preset/uscm_ship/so/pmc
 	job_options = null
 
 /obj/effect/landmark/start/bridge/pmc
 	name = JOB_PMCPLAT_OW
 	job = /datum/job/command/bridge/ai/pmc
+
+//-- RMC Platoon --//
+//Groundside command, no overwatch. Lead by example, chip chip cheerio and all that rubbish//
+
+/datum/job/command/bridge/ai/rmc
+	title = JOB_TWE_RMC_LIEUTENANT
+	flags_startup_parameters = ROLE_ADD_TO_DEFAULT|ROLE_ADD_TO_SQUAD
+	gear_preset = /datum/equipment_preset/uscm_ship/so/rmc
+	job_options = null
+	supervisors = "the squadron commander and RMC high command"
+	entry_message_body = "Your job is to conduct the briefing for the troop, lead the operation, and listen to your superior officers.</a> You are in charge of the troop for the current operation and are supported by your Squadron Command.<br>They will give your orders VIA the telephone in your quarters once they are ready.<br><b>You remember that you've stored your personal gear and uniform in the locker rooms, and that your equipment can be located in the Officers Quarters.</b><br>Your job involves heavy roleplay, requires you to behave like an officer and to stay in character at all times."
+
+/obj/effect/landmark/start/bridge/rmc
+	name = JOB_TWE_RMC_LIEUTENANT
+	squad = SQUAD_RMC
+	job = /datum/job/command/bridge/ai/rmc
 
 #undef FIRST_LT_VARIANT
 #undef SR_LT_VARIANT

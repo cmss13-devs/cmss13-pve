@@ -1,6 +1,7 @@
 /obj/item/hardpoint/secondary/t60p3m
 	name = "\improper T6OP-3M 'Buzzard' RWS"
-	desc = "An older, albeit modernized remote machinegun seen in use by the Cheetah 2A. This Russo-Polish developed machinegun features robust autonomous fire capability, and was commonly used to intercept low-threat projectiles, though thanks to the superior active and passive systems in most vehicles, tankists now prefer to simply fire it at infantry and soft targets instead. Known for an annoying tendency for drifting off target in certain high temperature environments."
+	desc = "A secondary remotely-controlled weapon system for UPP tanks using an older-model machine gun."
+	desc_lore = "An older, albeit modernized remote machinegun seen in use by the Cheetah 2A. This Russo-Polish developed machinegun features robust autonomous fire capability, and was commonly used to intercept low-threat projectiles, though thanks to the superior active and passive systems in most vehicles, tankists now prefer to simply fire it at infantry and soft targets instead. Known for an annoying tendency for drifting off target in certain high temperature environments."
 
 	icon = 'icons/obj/vehicles/hardpoints/upptank.dmi'
 	icon_state = "t60p3m"

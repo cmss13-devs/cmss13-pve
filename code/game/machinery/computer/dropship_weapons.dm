@@ -954,6 +954,17 @@
 	icon_state = "cameras"
 	density = FALSE
 
+/obj/structure/machinery/computer/dropship_weapons/gibraltar
+	name = "\improper 'Gibraltar' weapons controls"
+	req_one_access = list(ACCESS_TWE_LEADERSHIP, ACCESS_TWE_ARMORY, ACCESS_WY_FLIGHT)
+	firemission_envelope = new /datum/cas_fire_envelope/uscm_dropship()
+	shuttle_tag = DROPSHIP_GIBRALTAR
+
+/obj/structure/machinery/computer/dropship_weapons/gibraltar/small
+	icon = 'icons/obj/structures/machinery/computer.dmi'
+	icon_state = "cameras"
+	density = FALSE
+
 /obj/structure/machinery/computer/dropship_weapons/proc/simulate_firemission(mob/living/user)
 	if(!configuration)
 		to_chat(user, SPAN_WARNING("Configure a firemission before attempting to run the simulation"))

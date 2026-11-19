@@ -117,8 +117,8 @@ export const RADIO_PREFIXES = {
     label: 'Delta',
   },
   '#d ': {
-    id: 'clf-cct',
-    label: 'CLF CCT',
+    id: 'merc',
+    label: 'Mercenary',
   },
   ':e ': {
     id: 'echo',

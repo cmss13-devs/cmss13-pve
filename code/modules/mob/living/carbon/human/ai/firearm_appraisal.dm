@@ -103,6 +103,7 @@ GLOBAL_LIST_INIT_TYPED(firearm_appraisals, /datum/firearm_appraisal, build_firea
 	burst_amount_max = 18
 	gun_types = list(
 		/obj/item/weapon/gun/smartgun,
+		/obj/item/weapon/gun/pkp,
 	)
 	primary_weight = 10
 

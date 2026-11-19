@@ -77,6 +77,12 @@
 	default_ammo = /datum/ammo/bullet/smg/pve
 	ammo_band_color = AMMO_BAND_COLOR_LIGHT_EXPLOSIVE
 
+/obj/item/ammo_magazine/smg/m39/squash
+	name = "\improper L6A2 Squash-Head magazine (9mm)"
+	max_rounds = 48
+	default_ammo = /datum/ammo/bullet/smg/squash
+	ammo_band_color = AMMO_BAND_COLOR_IMPACT
+
 //-------------------------------------------------------
 //M5, a classic SMG used in a lot of action movies.
 

@@ -127,6 +127,7 @@ their unique feature is that a direct hit will buff your damage and firerate
 	wield_delay = 0 //for one-handed levering
 
 /obj/item/weapon/gun/lever_action/proc/reset_hit_buff(mob/user, one_hand_lever)
+	SIGNAL_HANDLER
 	if(!(flags_gun_lever_action & USES_STREAKS))
 		return
 	streak = 0
@@ -484,6 +485,7 @@ their unique feature is that a direct hit will buff your damage and firerate
 	return empty_chamber(user)
 
 /obj/item/weapon/gun/lever_action/xm88/reset_hit_buff(mob/user, one_hand_lever)
+	..()
 	if(!(flags_gun_lever_action & USES_STREAKS))
 		return
 	if(streak > 0)

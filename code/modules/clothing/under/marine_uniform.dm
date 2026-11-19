@@ -435,8 +435,8 @@
 
 /obj/item/clothing/under/marine/veteran/marsoc
 	name = "black uniform"
-	desc = "Black BDU utilized by USCM forces on night operations."
-	flags_jumpsuit = UNIFORM_SLEEVE_ROLLABLE
+	desc = "Non-standard black battle dress uniform, with venlar armor inserts at critical areas to protect from blades and ballistics."
+	flags_jumpsuit = UNIFORM_SLEEVE_ROLLABLE|UNIFORM_JACKET_REMOVABLE
 	icon_state = "marsoc_jumpsuit"
 	worn_state = "marsoc_jumpsuit"
 	flags_item = NO_SNOW_TYPE
@@ -1069,23 +1069,26 @@
 //=ROYAL MARINES=\\
 
 /obj/item/clothing/under/marine/veteran/royal_marine
-	name = "royal marines commando uniform"
-	desc = "The field uniform of the royal marines commando. They have shards of light Kevlar to help protect against stabbing weapons and bullets. Onpar with similar USCM equipment."
+	name = "marine commando uniform"
+	desc = "Subdued-camouflage field uniform of the royal marine commandos. Has venlar armor inserts at critical areas to protect from blades and ballistics."
 	icon_state = "rmc_uniform"
 	worn_state = "rmc_uniform"
 	flags_atom = NO_NAME_OVERRIDE|NO_SNOW_TYPE
 	contained_sprite = TRUE
 	icon = 'icons/mob/humans/onmob/contained/royal_marines_commando.dmi'
 
-/obj/item/clothing/under/marine/veteran/royal_marine/tl
-	icon_state = "rmc_uniform_teaml"
-	worn_state = "rmc_uniform_teaml"
-
 /obj/item/clothing/under/marine/veteran/royal_marine/lt
-	name = "royal marines commando officers uniform"
-	desc = "The officers uniform of the royal marines commando. They have shards of light Kevlar to help protect against stabbing weapons and bullets. Onpar with similar USCM equipment."
+	name = "marine commando officer field uniform"
+	desc = "Subdued-camouflage field-officer uniform of the royal marine commandos. Has venlar armor inserts at critical areas to protect from blades and ballistics."
 	icon_state = "rmc_uniform_lt"
 	worn_state = "rmc_uniform_lt"
+
+/obj/item/clothing/under/marine/veteran/royal_marine/lt/service
+	name = "marine commando officers service uniform"
+	desc = "The officers uniform of the royal marine commandos. Commonly seen worn by high-ranking officers who don't typically take to the field."
+	flags_jumpsuit = UNIFORM_SLEEVE_ROLLABLE
+	icon_state = "rmc_service_uniform"
+	worn_state = "rmc_service_uniform"
 
 /obj/item/clothing/under/marine/pve_mopp
 	name = "\improper M2 MOPP suit"

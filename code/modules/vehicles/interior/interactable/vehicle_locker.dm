@@ -36,7 +36,8 @@
 									/obj/item/ammo_magazine/hardpoint,
 									/obj/item/tool/weldpack,
 									/obj/item/ammo_box,
-									/obj/item/storage/box
+									/obj/item/storage/box,
+									/obj/item/storage/toolbox
 									)
 	flags_atom |= USES_HEARING
 

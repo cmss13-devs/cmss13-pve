@@ -48,7 +48,7 @@
 
 /datum/human_ai_equipment_preset/upp/machinegunner
 	name = "UPP Squad Machinegunner"
-	desc = "The UPP's answer to the USCM's smartgunner. About as strong, can gun down unaware marines easily."
+	desc = "The UPP’s answer to the USCM’s smartgunner. About as strong, can gun down unaware marines easily. This one shoots standard 10x27mm."
 	path = /datum/equipment_preset/upp/machinegunner
 
 /datum/human_ai_equipment_preset/upp/at

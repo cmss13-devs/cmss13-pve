@@ -1,0 +1,27 @@
+/datum/weather_event/dust
+	name = "Duststorm"
+	display_name = "Duststorm"
+	length = 6 MINUTES
+	turf_overlay_icon_state = "bigred_dust"
+
+	effect_message = "You feel dust blow into every crevice of your body, annoying."
+	damage_per_tick = 0
+	damage_type = BRUTE
+
+	ambience = 'sound/ambience/strata/strata_snow.ogg'
+
+	fire_smothering_strength = 1
+
+/datum/weather_event/rock
+	name = "Rockstorm"
+	display_name = "Rockstorm"
+	length = 2 MINUTES
+	turf_overlay_icon_state = "bigred_rocks"
+
+	effect_message = "You feel multiple small rocks hit all over your body!"
+	damage_per_tick = 3
+	damage_type = BRUTE
+
+	ambience = 'sound/ambience/strata/strata_blizzard.ogg'
+
+	fire_smothering_strength = 3

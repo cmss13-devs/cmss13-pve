@@ -191,14 +191,6 @@
 	default_ammo = /datum/ammo/bullet/rifle/incendiary
 	ammo_band_color = AMMO_BAND_COLOR_INCENDIARY
 
-/obj/item/ammo_magazine/rifle/m49a/pve
-	name = "\improper M49A depleted uranium magazine (10x28mm)"
-	desc = "A magazine of wall-penetrating, body-penetrating, toxic 10x28mm rounds for use in the M49A-R2 battle rifle."
-	icon_state = "m49a"
-	default_ammo = /datum/ammo/bullet/rifle/heavy/du
-	gun_type = /obj/item/weapon/gun/rifle/m49a/pve
-	ammo_band_color = AMMO_BAND_COLOR_TOXIN
-
 //-------------------------------------------------------
 //XM40 AKA SOF RIFLE FROM HELL (It's an EM-2, a prototype of the real world L85A1 way back from the 1940s. We've given it a blue plastic shell and an integral suppressor)
 /obj/item/ammo_magazine/rifle/xm40
@@ -494,35 +486,28 @@
 // NSG 23 ASSAULT RIFLE - PMC PRIMARY RIFLE
 
 /obj/item/ammo_magazine/rifle/nsg23
-	name = "\improper NSG 23 magazine (10x24mm)"
-	desc = "An NSG 23 assault rifle magazine."
-	caliber = "10x24mm"
+	name = "\improper NSG 23 magazine (8.5x33mm)"
+	desc = "A high-capacity drum magazine designed to fit the NSG 23 & L23A1 assault rifles."
+	caliber = "8.5x33mm"
+	default_ammo = /datum/ammo/bullet/rifle/twe
 	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/wy.dmi'
 	icon_state = "nsg23"
 	item_state = "nsg23"
 	bonus_overlay = "nsg23_mag_overlay" //needs to be an overlay, as the mag has a hole that would be filled over by the ext overlay
-	max_rounds = 30
+	max_rounds = 65
 	gun_type = /obj/item/weapon/gun/rifle/nsg23
 	ammo_band_icon = "+nsg23_band"
 	ammo_band_icon_empty = "+nsg23_band_e"
 
-/obj/item/ammo_magazine/rifle/nsg23/extended
-	name = "\improper NSG 23 extended magazine (10x24mm)"
-	desc = "An NSG 23 assault rifle magazine. This one contains 45 bullets."
-	icon_state = "nsg23_ext"
-	item_state = "nsg23_ext"
-	bonus_overlay = "nsg23_ext_overlay"
-	max_rounds = 45
-
 /obj/item/ammo_magazine/rifle/nsg23/ap
-	name = "\improper NSG 23 armor-piercing magazine (10x24mm)"
-	desc = "An NSG 23 assault rifle magazine. This one is armor piercing."
+	name = "\improper NSG 23 armor-piercing magazine (8.5x33mm)"
+	desc = "A high-capacity drum magazine designed to fit the NSG 23 & L23A1 assault rifles. This one is loaded with armor piercing rounds."
 	default_ammo = /datum/ammo/bullet/rifle/ap
 	ammo_band_color = AMMO_BAND_COLOR_AP
 
 /obj/item/ammo_magazine/rifle/nsg23/heap
-	name = "\improper NSG 23 HEAP magazine (10x24mm)"
-	desc = "An NSG 23 assault rifle magazine. This one is loaded with armor-piercing explosive tipped rounds."
+	name = "\improper NSG 23 HEAP magazine (8.5x33mm)"
+	desc = "A high-capacity drum magazine designed to fit the NSG 23 & L23A1 assault rifles. This one is loaded with armor-piercing explosive tipped rounds."
 	default_ammo = /datum/ammo/bullet/rifle/heap
 	ammo_band_color = AMMO_BAND_COLOR_HEAP
 
@@ -614,3 +599,14 @@
 	max_rounds = 12
 	gun_type = /obj/item/weapon/gun/rifle/xm51
 	transfer_handful_amount = 6
+
+/obj/item/ammo_magazine/rifle/isr
+	name = "\improper ISR box magazine (9.2x34mm)"
+	desc = "A 9.2x34mm box magazine for the ISR LMG."
+	caliber = "9.2x34mm"
+	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/colony.dmi'
+	icon_state = "isr"
+	item_state = "isr"
+	default_ammo = /datum/ammo/bullet/rifle/isr
+	max_rounds = 80
+	gun_type = /obj/item/weapon/gun/rifle/isr

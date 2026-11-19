@@ -427,3 +427,6 @@
 
 /obj/item/rappel_harness/extract/nauk
 	shuttle_id = DROPSHIP_UPP
+
+/obj/item/rappel_harness/extract/rmc
+	shuttle_id = DROPSHIP_GIBRALTAR

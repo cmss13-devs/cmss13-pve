@@ -13,12 +13,12 @@ GLOBAL_LIST_INIT(cm_vending_gear_medic, list(
 		list("Blood Bag (O-)", 4, /obj/item/reagent_container/blood/OMinus, null, VENDOR_ITEM_REGULAR),
 
 		list("FIRSTAID KITS", 0, null, null, null),
-		list("Advanced Firstaid Kit", 12, /obj/item/storage/firstaid/adv, null, VENDOR_ITEM_RECOMMENDED),
-		list("Firstaid Kit", 5, /obj/item/storage/firstaid/regular, null, VENDOR_ITEM_REGULAR),
-		list("Fire Firstaid Kit", 6, /obj/item/storage/firstaid/fire, null, VENDOR_ITEM_REGULAR),
-		list("Toxin Firstaid Kit", 6, /obj/item/storage/firstaid/toxin, null, VENDOR_ITEM_REGULAR),
-		list("Oxygen Firstaid Kit", 6, /obj/item/storage/firstaid/o2, null, VENDOR_ITEM_REGULAR),
-		list("Radiation Firstaid Kit", 6, /obj/item/storage/firstaid/rad, null, VENDOR_ITEM_REGULAR),
+		list("Advanced Firstaid Kit", 12, /obj/item/storage/firstaid/softpack/adv, null, VENDOR_ITEM_RECOMMENDED),
+		list("Firstaid Kit", 5, /obj/item/storage/firstaid/softpack/regular, null, VENDOR_ITEM_REGULAR),
+		list("Fire Firstaid Kit", 6, /obj/item/storage/firstaid/softpack/fire, null, VENDOR_ITEM_REGULAR),
+		list("Toxin Firstaid Kit", 6, /obj/item/storage/firstaid/softpack/toxin, null, VENDOR_ITEM_REGULAR),
+		list("Oxygen Firstaid Kit", 6, /obj/item/storage/firstaid/softpack/o2, null, VENDOR_ITEM_REGULAR),
+		list("Radiation Firstaid Kit", 6, /obj/item/storage/firstaid/softpack/rad, null, VENDOR_ITEM_REGULAR),
 
 		list("AUTOINJECTORS", 0, null, null, null),
 		list("Autoinjector (Bicaridine)", 1, /obj/item/reagent_container/hypospray/autoinjector/bicaridine, null, VENDOR_ITEM_REGULAR),
@@ -191,8 +191,8 @@ GLOBAL_LIST_INIT(cm_vending_clothing_medic, list(
 
 /obj/effect/essentials_set/medic
 	spawned_gear_list = list(
-		/obj/item/storage/firstaid/adv,
-		/obj/item/storage/firstaid/adv,
+		/obj/item/storage/firstaid/softpack/adv,
+		/obj/item/storage/firstaid/softpack/adv,
 		/obj/item/device/healthanalyzer/soul,
 		/obj/item/roller,
 		/obj/item/tool/surgery/surgical_line,
@@ -286,33 +286,17 @@ GLOBAL_LIST_INIT(cm_vending_clothing_forecon_medic, list(
 	return GLOB.cm_vending_clothing_forecon_medic
 
 GLOBAL_LIST_INIT(cm_vending_clothing_pmc_medic, list(
-		list("MEDICAL SET (MANDATORY)", 0, null, null, null),
-		list("Essential Medical Set", 0, /obj/effect/essentials_set/medic, MARINE_CAN_BUY_ESSENTIALS, VENDOR_ITEM_MANDATORY),
 
 		list("BELT (CHOOSE 1)", 0, null, null, null),
-		list("M276 Ammo Load Rig", 0, /obj/item/storage/belt/marine/standard, MARINE_CAN_BUY_BELT, VENDOR_ITEM_REGULAR),
-		list("M276 General Pistol Holster Rig", 0, /obj/item/storage/belt/gun/m4a3/standard, MARINE_CAN_BUY_BELT, VENDOR_ITEM_REGULAR),
 		list("M276 Lifesaver Bag (Full)", 0, /obj/item/storage/belt/medical/lifesaver/standard/full, MARINE_CAN_BUY_BELT, VENDOR_ITEM_RECOMMENDED),
 		list("M276 Medical Storage Rig (Full)", 0, /obj/item/storage/belt/medical/full, MARINE_CAN_BUY_BELT, VENDOR_ITEM_RECOMMENDED),
-		list("M276 M82F Holster Rig", 0, /obj/item/storage/belt/gun/flaregun, MARINE_CAN_BUY_BELT, VENDOR_ITEM_REGULAR),
 
 		list("POUCHES (CHOOSE 2)", 0, null, null, null),
 		list("Autoinjector Pouch", 0, /obj/item/storage/pouch/autoinjector, MARINE_CAN_BUY_POUCH, VENDOR_ITEM_REGULAR),
-		list("First-Aid Pouch (Refillable Injectors)", 0, /obj/item/storage/pouch/firstaid/full, MARINE_CAN_BUY_POUCH, VENDOR_ITEM_REGULAR),
-		list("First-Aid Pouch (Splints, Gauze, Ointment)", 0, /obj/item/storage/pouch/firstaid/full/alternate, MARINE_CAN_BUY_POUCH, VENDOR_ITEM_REGULAR),
-		list("First-Aid Pouch (Pill Packets)", 0, /obj/item/storage/pouch/firstaid/full/pills, MARINE_CAN_BUY_POUCH, VENDOR_ITEM_REGULAR),
-		list("First Responder Pouch", 0, /obj/item/storage/pouch/first_responder, MARINE_CAN_BUY_POUCH, VENDOR_ITEM_REGULAR),
-		list("Flare Pouch (Full)", 0, /obj/item/storage/pouch/flare/full, MARINE_CAN_BUY_POUCH, VENDOR_ITEM_REGULAR),
-		list("Sling Pouch", 0, /obj/item/storage/pouch/sling, MARINE_CAN_BUY_POUCH, VENDOR_ITEM_REGULAR),
-		list("Large Pistol Magazine Pouch", 0, /obj/item/storage/pouch/magazine/pistol/large, MARINE_CAN_BUY_POUCH, VENDOR_ITEM_REGULAR),
-		list("Magazine Pouch", 0, /obj/item/storage/pouch/magazine, MARINE_CAN_BUY_POUCH, VENDOR_ITEM_REGULAR),
-		list("Shotgun Shell Pouch", 0, /obj/item/storage/pouch/shotgun, MARINE_CAN_BUY_POUCH, VENDOR_ITEM_REGULAR),
-		list("Medical Pouch", 0, /obj/item/storage/pouch/medical, MARINE_CAN_BUY_POUCH, VENDOR_ITEM_RECOMMENDED),
 		list("Medical Kit Pouch", 0, /obj/item/storage/pouch/medkit, MARINE_CAN_BUY_POUCH, VENDOR_ITEM_RECOMMENDED),
 		list("Pressurized Reagent Canister Pouch (Bicaridine)", 0, /obj/item/storage/pouch/pressurized_reagent_canister/bicaridine, MARINE_CAN_BUY_POUCH, VENDOR_ITEM_RECOMMENDED),
 		list("Pressurized Reagent Canister Pouch (Kelotane)", 0, /obj/item/storage/pouch/pressurized_reagent_canister/kelotane, MARINE_CAN_BUY_POUCH, VENDOR_ITEM_RECOMMENDED),
 		list("Pressurized Reagent Canister Pouch (Tricordrazine)", 0, /obj/item/storage/pouch/pressurized_reagent_canister/tricordrazine, MARINE_CAN_BUY_POUCH, VENDOR_ITEM_RECOMMENDED),
-		list("Pistol Pouch", 0, /obj/item/storage/pouch/pistol, MARINE_CAN_BUY_POUCH, VENDOR_ITEM_REGULAR),
 		list("Vial Pouch (Full)", 0, /obj/item/storage/pouch/vials/full, MARINE_CAN_BUY_POUCH, VENDOR_ITEM_REGULAR),
 
 		list("ACCESSORIES (CHOOSE 1)", 0, null, null, null),
@@ -326,9 +310,57 @@ GLOBAL_LIST_INIT(cm_vending_clothing_pmc_medic, list(
 /obj/structure/machinery/cm_vending/clothing/medic/pmc
 	name = "\improper PMC Medical Gear Rack"
 	icon_state = "pmc_gear"
+	vendor_theme = VENDOR_THEME_COMPANY
 
 /obj/structure/machinery/cm_vending/clothing/medic/pmc/get_listed_products(mob/user)
 	return GLOB.cm_vending_clothing_pmc_medic
+
+// RMC med-vendor
+
+/obj/effect/essentials_set/rmcmedic
+	spawned_gear_list = list(
+		/obj/item/storage/surgical_case/rmc_surgical_case/full,
+		/obj/item/device/healthanalyzer/soul,
+		/obj/item/tool/surgery/synthgraft,
+		/obj/item/device/flashlight/pen,
+		/obj/item/clothing/accessory/stethoscope,
+	)
+
+GLOBAL_LIST_INIT(cm_vending_clothing_rmc_medic, list(
+		list("MEDICAL SET (MANDATORY)", 0, null, null, null),
+		list("Essential Medical Set", 0, /obj/effect/essentials_set/rmcmedic, MARINE_CAN_BUY_ESSENTIALS, VENDOR_ITEM_MANDATORY),
+
+		list("BACKPACK (CHOOSE 1)", 0, null, null, null),
+		list("Heavy-duty Medical Backpack", 0, /obj/item/storage/backpack/rmc/medic, MARINE_CAN_BUY_BACKPACK, VENDOR_ITEM_RECOMMENDED),
+
+		list("BELT (CHOOSE 1)", 0, null, null, null),
+		list("L75 Pattern Medical Storage Rig (Empty)", 0, /obj/item/storage/belt/medical/rmc, MARINE_CAN_BUY_BELT, VENDOR_ITEM_RECOMMENDED),
+		list("L26 Pattern General Utility Belt", 0, /obj/item/storage/backpack/general_belt/rmc, MARINE_CAN_BUY_BELT, VENDOR_ITEM_REGULAR),
+
+		list("POUCHES (CHOOSE 2)", 0, null, null, null),
+		list("Autoinjector Pouch", 0, /obj/item/storage/pouch/autoinjector, MARINE_CAN_BUY_POUCH, VENDOR_ITEM_REGULAR),
+		list("Medical Kit Pouch", 0, /obj/item/storage/pouch/medkit, MARINE_CAN_BUY_POUCH, VENDOR_ITEM_RECOMMENDED),
+		list("Pressurized Reagent Canister Pouch (Bicaridine)", 0, /obj/item/storage/pouch/pressurized_reagent_canister/bicaridine, MARINE_CAN_BUY_POUCH, VENDOR_ITEM_RECOMMENDED),
+		list("Pressurized Reagent Canister Pouch (Kelotane)", 0, /obj/item/storage/pouch/pressurized_reagent_canister/kelotane, MARINE_CAN_BUY_POUCH, VENDOR_ITEM_RECOMMENDED),
+		list("Pressurized Reagent Canister Pouch (Tricordrazine)", 0, /obj/item/storage/pouch/pressurized_reagent_canister/tricordrazine, MARINE_CAN_BUY_POUCH, VENDOR_ITEM_RECOMMENDED),
+		list("Vial Pouch (Full)", 0, /obj/item/storage/pouch/vials/full, MARINE_CAN_BUY_POUCH, VENDOR_ITEM_REGULAR),
+
+		list("ACCESSORIES (CHOOSE 1)", 0, null, null, null),
+		list("Drop Pouch", 0, /obj/item/clothing/accessory/storage/droppouch/rmc, MARINE_CAN_BUY_ACCESSORY, VENDOR_ITEM_RECOMMENDED),
+		list("Small Pouch", 0, /obj/item/clothing/accessory/storage/smallpouch/rmc, MARINE_CAN_BUY_ACCESSORY, VENDOR_ITEM_REGULAR),
+		list("Waist Holster", 0, /obj/item/clothing/accessory/storage/holster/waist, MARINE_CAN_BUY_ACCESSORY, VENDOR_ITEM_REGULAR),
+	))
+
+/obj/structure/machinery/cm_vending/clothing/medic/rmc
+	name = "\improper WeyTech Section Medical Equipment Rack"
+	desc = "An automated rack hooked up to a colossal storage of standard-issue medical equipment."
+	icon_state = "rmc_gear"
+	req_access = list(ACCESS_TWE_MEDPREP)
+	vendor_role = list(JOB_TWE_RMC_MEDIC)
+	vendor_theme = VENDOR_THEME_COMPANY
+
+/obj/structure/machinery/cm_vending/clothing/medic/rmc/get_listed_products(mob/user)
+	return GLOB.cm_vending_clothing_rmc_medic
 
 // Chemical vendor
 
@@ -367,7 +399,12 @@ GLOBAL_LIST_INIT(cm_vending_chemical_medic, list(
 	return GLOB.cm_vending_chemical_medic
 
 /obj/structure/machinery/cm_vending/gear/medic_chemical/upp
-	name = "\improper UnTech Squad Medical Equipment Rack"
+	name = "\improper UnTech Squad Medical Chemical Rack"
 	req_access = list(ACCESS_UPP_MEDPREP)
 	vendor_theme = VENDOR_THEME_UPP
 
+/obj/structure/machinery/cm_vending/gear/medic_chemical/rmc
+	name = "\improper WeyTech Section Medical Chemical Rack"
+	req_access = list(ACCESS_TWE_MEDPREP)
+	vendor_theme = VENDOR_THEME_COMPANY
+	vendor_role = list(JOB_TWE_RMC_MEDIC)

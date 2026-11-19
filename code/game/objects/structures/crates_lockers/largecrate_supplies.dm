@@ -215,6 +215,11 @@
 	desc = "An ammunition case containing 20 Type 71 magazines."
 	supplies = list(/obj/item/ammo_magazine/rifle/type71 = 20)
 
+/obj/structure/largecrate/supply/ammo/nsg23
+	name = "\improper NSG L23A1 magazine case (x20)"
+	desc = "An ammunition case containing 20 NSG L23A1 magazines."
+	supplies = list(/obj/item/ammo_magazine/rifle/nsg23 = 20)
+
 /obj/structure/largecrate/supply/ammo/supply_drop
 	icon_state = "secure_crate_strapped"
 	desc = "An ammunition case containing everything you need."

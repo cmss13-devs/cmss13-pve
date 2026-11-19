@@ -160,6 +160,14 @@
 	defense_type = /obj/structure/machinery/defenses/sentry/dmr/wy
 	deployment_time = 10 SECONDS
 
+/obj/item/defenses/handheld/sentry/pmc_platoon
+	name = "handheld UA 571-C-WY sentry gun"
+	desc = "A compact version of the Weyland-Yutani defenses. Designed for deployment in the field."
+	icon = 'icons/obj/structures/machinery/defenses/wy_defenses.dmi'
+	icon_state = "Normal wy_sentry_handheld"
+	defense_type = /obj/structure/machinery/defenses/sentry/platoon_pmc
+	deployment_time = 5 SECONDS
+
 /obj/item/defenses/handheld/sentry/upp
 	name = "handheld UPPA 32-H sentry gun"
 	desc = "A compact version of the UPPA defenses. Designed for quick deployment of the associated type in the field."
@@ -263,6 +271,10 @@
 	name = "handheld 21S overclocked tesla coil"
 	icon_state = "Stun tesla_coil_handheld"
 	defense_type = /obj/structure/machinery/defenses/tesla_coil/stun
+
+/obj/item/defenses/handheld/tesla_coil/stun/rmc
+	name = "handheld L33A1 TED device"
+	defense_type = /obj/structure/machinery/defenses/tesla_coil/stun/rmc
 
 /obj/item/defenses/handheld/tesla_coil/micro
 	name = "handheld 25S micro tesla coil"

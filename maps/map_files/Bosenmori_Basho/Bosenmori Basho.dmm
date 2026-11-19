@@ -23914,9 +23914,9 @@
 /obj/item/clothing/shoes/marine/rmc,
 /obj/item/storage/backpack/rmc/light,
 /obj/item/attachable/bayonet/rmc,
-/obj/item/clothing/head/helmet/marine/veteran/royal_marine,
+/obj/item/clothing/head/helmet/marine/veteran/pmc/gunner/rmc,
 /obj/item/clothing/gloves/marine/brown,
-/obj/item/clothing/suit/storage/marine/veteran/royal_marine/light,
+/obj/item/clothing/suit/marine/veteran/royal_marine,
 /turf/open/floor/almayer/test_floor4,
 /area/bosenmori/interior_heavy/Mai_armory)
 "mvf" = (
@@ -24082,11 +24082,11 @@
 	pixel_x = -2;
 	pixel_y = -2
 	},
-/obj/item/clothing/head/helmet/marine/veteran/royal_marine/breacher{
+/obj/item/clothing/head/helmet/marine/veteran/pmc/sniper/rmc{
 	pixel_x = 7;
 	pixel_y = 0
 	},
-/obj/item/clothing/head/helmet/marine/veteran/royal_marine{
+/obj/item/clothing/head/helmet/marine/veteran/pmc/gunner/rmc{
 	pixel_x = -2;
 	pixel_y = 8
 	},
@@ -25846,7 +25846,7 @@
 /obj/item/storage/backpack/general_belt/rmc,
 /obj/item/attachable/bayonet/rmc,
 /obj/item/clothing/gloves/marine/brown/fingerless,
-/obj/item/clothing/suit/storage/marine/veteran/royal_marine/light,
+/obj/item/clothing/suit/marine/veteran/royal_marine,
 /turf/open/floor/almayer/test_floor4,
 /area/bosenmori/interior_heavy/Mai_armory)
 "nCa" = (
@@ -32173,9 +32173,9 @@
 	},
 /obj/item/storage/backpack/rmc/light,
 /obj/item/attachable/bayonet/rmc,
-/obj/item/clothing/head/helmet/marine/veteran/royal_marine,
+/obj/item/clothing/head/helmet/marine/veteran/pmc/gunner/rmc,
 /obj/item/clothing/gloves/marine/brown,
-/obj/item/clothing/suit/storage/marine/veteran/royal_marine/light,
+/obj/item/clothing/suit/marine/veteran/royal_marine,
 /turf/open/floor/almayer/test_floor4,
 /area/bosenmori/interior_heavy/Mai_armory)
 "qJC" = (
@@ -42019,8 +42019,8 @@
 	req_one_access = list(203);
 	req_access = null
 	},
-/obj/item/weapon/gun/rifle/nsg23/no_lock/stripped,
-/obj/item/weapon/gun/rifle/nsg23/no_lock/stripped,
+/obj/item/weapon/gun/rifle/nsg23/no_lock,
+/obj/item/weapon/gun/rifle/nsg23/no_lock,
 /obj/item/ammo_magazine/rifle/nsg23{
 	pixel_x = 7;
 	pixel_y = 6
@@ -43938,7 +43938,7 @@
 /obj/item/attachable/bayonet/rmc,
 /obj/item/clothing/mask/gas/swat,
 /obj/item/clothing/gloves/marine/brown,
-/obj/item/clothing/suit/storage/marine/veteran/royal_marine/pointman,
+/obj/item/clothing/suit/marine/veteran/royal_marine/heavy,
 /obj/item/toy/plush/barricade,
 /turf/open/floor/almayer/test_floor4,
 /area/bosenmori/interior_heavy/Mai_armory)

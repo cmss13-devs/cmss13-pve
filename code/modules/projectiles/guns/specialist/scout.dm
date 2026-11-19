@@ -12,7 +12,6 @@
 	indestructible = 1
 	force = 26
 	flags_gun_features = GUN_AUTO_EJECTOR|GUN_SPECIALIST|GUN_CAN_POINTBLANK|GUN_AMMO_COUNTER
-	map_specific_decoration = TRUE
 	aim_slowdown = SLOWDOWN_ADS_QUICK
 	flags_item = TWOHANDED|NO_CRYO_STORE
 
@@ -26,7 +25,7 @@
 		/obj/item/ammo_magazine/rifle/m49a/penetrating,
 		/obj/item/ammo_magazine/rifle/m49a/custom,
 		/obj/item/ammo_magazine/rifle/m49a/custom/incendiary,
-		/obj/item/ammo_magazine/rifle/m49a/custom/impact,
+		/obj/item/ammo_magazine/rifle/m49a/custom/explosive,
 	)
 
 	fire_sound = 'sound/weapons/gun_m49a.ogg'
@@ -49,25 +48,31 @@
 		/obj/item/attachable/scope/pve,
 		/obj/item/attachable/scope/mini_iff,
 		/obj/item/attachable/sling,
+		/obj/item/attachable/scope/mini/scout,
 		/obj/item/attachable/bipod, // Under
 		/obj/item/attachable/verticalgrip,
 		/obj/item/attachable/angledgrip,
 		/obj/item/attachable/flashlight/grip,
 		/obj/item/attachable/attached_gun/shotgun,
 		/obj/item/attachable/attached_gun/grenade/mk1,
+		/obj/item/attachable/attached_gun/grenade/mk1/recon,
 		/obj/item/attachable/lasersight, // Side Rail
 		/obj/item/attachable/flashlight,
 	)
 
+/obj/item/weapon/gun/rifle/m49a_custom/set_gun_attachment_offsets()
+	attachable_offset = list("muzzle_x" = 43, "muzzle_y" = 17,"rail_x" = 23, "rail_y" = 23, "under_x" = 30, "under_y" = 11, "stock_x" = 24, "stock_y" = 13, "side_rail_x" = 31, "side_rail_y" = 18, "special_x" = 37, "special_y" = 16)
+
 /obj/item/weapon/gun/rifle/m49a_custom/handle_starting_attachment()
 	..()
 	var/obj/item/attachable/m49a_barrel_custom/integrated = new(src)
+	var/obj/item/attachable/scope/mini/scout/integrated_scope = new(src)
 	integrated.flags_attach_features &= ~ATTACH_REMOVABLE
+	integrated_scope.flags_attach_features &= ~ATTACH_REMOVABLE
 	integrated.Attach(src)
+	integrated_scope.Attach(src)
 	update_attachable(integrated.slot)
-
-/obj/item/weapon/gun/rifle/m49a_custom/set_gun_attachment_offsets()
-	attachable_offset = list("muzzle_x" = 43, "muzzle_y" = 17,"rail_x" = 23, "rail_y" = 21, "under_x" = 30, "under_y" = 11, "stock_x" = 24, "stock_y" = 13, "side_rail_x" = 31, "side_rail_y" = 18, "special_x" = 37, "special_y" = 16)
+	update_attachable(integrated_scope.slot)
 
 /obj/item/weapon/gun/rifle/m49a_custom/set_gun_config_values()
 	..()
@@ -82,4 +87,4 @@
 	damage_falloff_mult = 0
 
 /obj/item/weapon/gun/rifle/m49a_custom/tactical
-	starting_attachment_types = list(/obj/item/attachable/magnetic_harness, /obj/item/attachable/bayonet, /obj/item/attachable/angledgrip)
+	starting_attachment_types = list(/obj/item/attachable/suppressor, /obj/item/attachable/lasersight, /obj/item/attachable/attached_gun/grenade/mk1/preloaded)

@@ -7299,7 +7299,7 @@
 	layer = 3.5;
 	pixel_y = 13
 	},
-/obj/item/clothing/head/beret/royal_marine,
+/obj/item/clothing/head/cmcap/royal_marine,
 /obj/structure/disposalpipe/segment,
 /turf/open/floor/almayer/emerald/southwest,
 /area/almayer/living/port_emb)

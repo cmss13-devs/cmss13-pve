@@ -233,7 +233,7 @@
 		list("M41A MK2 Extended Magazine (10x24mm)", 0, /obj/item/ammo_magazine/rifle/extended, VENDOR_ITEM_REGULAR),
 
 		list("SPECIALIST AMMUNITION", -1, null, null),
-		list("A19 High Velocity Impact Magazine (10x24mm)", 0, /obj/item/ammo_magazine/rifle/m49a/custom/impact, VENDOR_ITEM_REGULAR),
+		list("A19 High Velocity Impact Magazine (10x24mm)", 0, /obj/item/ammo_magazine/rifle/m49a/custom/explosive, VENDOR_ITEM_REGULAR),
 		list("A19 High Velocity Incendiary Magazine (10x24mm)", 0, /obj/item/ammo_magazine/rifle/m49a/custom/incendiary, VENDOR_ITEM_REGULAR),
 		list("A19 High Velocity Magazine (10x24mm)", 0, /obj/item/ammo_magazine/rifle/m49a/custom, VENDOR_ITEM_REGULAR),
 		list("M42A Flak Magazine (10x28mm)", 0, /obj/item/ammo_magazine/sniper/flak, VENDOR_ITEM_REGULAR),

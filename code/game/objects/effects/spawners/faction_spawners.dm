@@ -112,7 +112,7 @@
 		/obj/item/weapon/gun/smg/m39/elite = /obj/item/ammo_magazine/smg/m39/ap,
 		/obj/item/weapon/gun/smg/m39/elite = /obj/item/ammo_magazine/smg/m39/extended,
 		/obj/item/weapon/gun/rifle/nsg23 = /obj/item/ammo_magazine/rifle/nsg23/ap,
-		/obj/item/weapon/gun/rifle/nsg23 = /obj/item/ammo_magazine/rifle/nsg23/extended
+		/obj/item/weapon/gun/rifle/nsg23 = /obj/item/ammo_magazine/rifle/nsg23
 	)
 
 /obj/effect/spawner/random/gun/pmc_primary/lowchance

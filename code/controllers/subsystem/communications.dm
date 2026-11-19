@@ -73,6 +73,7 @@ Radiochat range: 1441 to 1489 (most devices refuse to be tune to other frequency
 //Misc channels
 #define YAUT_FREQ 1205
 #define DUT_FREQ 1210
+#define MERC_FREQ 1212
 #define VAI_FREQ 1215
 #define RMC_FREQ 1216
 #define CMB_FREQ 1220
@@ -104,7 +105,6 @@ Radiochat range: 1441 to 1489 (most devices refuse to be tune to other frequency
 #define CLF_CMD_FREQ 1272
 #define CLF_ENGI_FREQ 1273
 #define CLF_MED_FREQ 1274
-#define CLF_CCT_FREQ 1275
 #define PFA_FREQ 1278
 #define JSC_FREQ 1279
 
@@ -163,6 +163,7 @@ GLOBAL_LIST_INIT(radiochannels, list(
 	RADIO_CHANNEL_DUTCH_DOZEN = DUT_FREQ,
 	RADIO_CHANNEL_ROYAL_MARINE = RMC_FREQ,
 	RADIO_CHANNEL_CIA = CIA_FREQ,
+	RADIO_CHANNEL_MERC = MERC_FREQ,
 
 	RADIO_CHANNEL_HIGHCOM = HC_FREQ,
 	RADIO_CHANNEL_PROVOST = PVST_FREQ,
@@ -223,13 +224,13 @@ GLOBAL_LIST_INIT(radiochannels, list(
 ))
 
 // Response Teams
-#define ERT_FREQS list(VAI_FREQ, DUT_FREQ, YAUT_FREQ, CMB_FREQ, RMC_FREQ)
+#define ERT_FREQS list(VAI_FREQ, DUT_FREQ, YAUT_FREQ, CMB_FREQ, RMC_FREQ, MERC_FREQ)
 
 // UPP Frequencies
 #define UPP_FREQS list(UPP_FREQ, UPP_CMD_FREQ, UPP_ENGI_FREQ, UPP_MED_FREQ, UPP_CCT_FREQ, UPP_KDO_FREQ, UPP_GRD_FREQ)
 
 // CLF Frequencies
-#define CLF_FREQS list(CLF_FREQ, CLF_CMD_FREQ, CLF_ENGI_FREQ, CLF_MED_FREQ, CLF_CCT_FREQ)
+#define CLF_FREQS list(CLF_FREQ, CLF_CMD_FREQ, CLF_ENGI_FREQ, CLF_MED_FREQ)
 
 // Rebel Frequencies
 #define REBEL_FREQS list(PFA_FREQ, JSC_FREQ)
@@ -296,6 +297,7 @@ SUBSYSTEM_DEF(radio)
 		"[ASF_FREQ]" = "usasfradio",
 		"[ARM_FREQ]" = "armyradio",
 		"[GRD_FREQ]" = "guardradio",
+		"[MERC_FREQ]" = "mercradio",
 		"[ALPHA_FREQ]" = "alpharadio",
 		"[BRAVO_FREQ]" = "bravoradio",
 		"[CHARLIE_FREQ]" = "charlieradio",
@@ -321,7 +323,6 @@ SUBSYSTEM_DEF(radio)
 		"[CLF_CMD_FREQ]" = "opforcmd",
 		"[CLF_ENGI_FREQ]" = "opforeng",
 		"[CLF_MED_FREQ]" = "opformed",
-		"[CLF_CCT_FREQ]" = "opforcct",
 		"[PFA_FREQ]" = "pfaradio",
 		"[JSC_FREQ]" = "jscradio",
 	)

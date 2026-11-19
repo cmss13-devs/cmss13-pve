@@ -1,0 +1,14 @@
+{
+    "map_name": "Binhai Supply Station",
+    "short_name": "Binhai",
+    "map_path": "map_files/binhai_supply_station",
+    "map_file": "binhai_supply_station.dmm",
+    "webmap_url": "Solaris",
+
+    "weather_holder": "/datum/weather_ss_map_holder/binhai_supply_station",
+
+    "map_item_type": "/obj/item/map/big_red_map",
+
+    "camouflage": "desert"
+
+}

@@ -63,6 +63,27 @@
 	ethnicity = LATIN_AMERICAN_ETHNICITY
 	languages = list(LANGUAGE_SPANISH, LANGUAGE_ENGLISH)
 
+/datum/equipment_preset/cmb/deputy/brazilian
+	name = "CMB - Brazilian Colonial Marshals Deputy"
+	ethnicity = BRAZILIAN_ETHNICITY
+	languages = list(LANGUAGE_PORTUGUESE, LANGUAGE_ENGLISH)
+	assignment = "Brazilian Colonial Military Police Patrolman"
+	paygrades = list(PAY_SHORT_AE2 = JOB_PLAYTIME_TIER_0)
+
+/datum/equipment_preset/cmb/deputy/brazilian/load_gear(mob/living/carbon/human/new_human)
+	new_human.undershirt = "undershirt"
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/colonist/boilersuit/grey, WEAR_BODY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/ranks/army/e2, WEAR_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/cmb/brazil_police, WEAR_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/brazil, WEAR_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/reagent_container/food/snacks/mre_food/uscm/entree/feijoada, WEAR_IN_BACK)
+	if(prob(60))
+		new_human.equip_to_slot_or_del(new /obj/item/clothing/head/beret/cm/black, WEAR_HEAD)
+	else
+		new_human.equip_to_slot_or_del(new /obj/item/clothing/head/cmcap/corrections, WEAR_HEAD)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/marine/lamp, WEAR_JACKET)
+	..()
+
 /datum/equipment_preset/cmb/deputy/emergency
 	name = "CMB - US Colonial Marshals Deputy (Emergency, SMG)"
 
@@ -119,6 +140,26 @@
 	name = "CMB - LatAm Colonial Marshals Deputy (Emergency, SMG)"
 	ethnicity = LATIN_AMERICAN_ETHNICITY
 	languages = list(LANGUAGE_SPANISH, LANGUAGE_ENGLISH)
+
+/datum/equipment_preset/cmb/deputy/emergency/brazilian
+	name = "CMB - Brazilian Colonial Marshals Deputy (Emergency, SMG)"
+	ethnicity = BRAZILIAN_ETHNICITY
+	languages = list(LANGUAGE_PORTUGUESE, LANGUAGE_ENGLISH)
+	assignment = "Brazilian Colonial Military Police Responder"
+	paygrades = list(PAY_SHORT_AE4 = JOB_PLAYTIME_TIER_0)
+
+/datum/equipment_preset/cmb/deputy/emergency/brazilian/load_gear(mob/living/carbon/human/new_human)
+	new_human.undershirt = "undershirt"
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/colonist/boilersuit/grey, WEAR_BODY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/ranks/army/e4, WEAR_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/cmb/brazil_police, WEAR_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/brazil, WEAR_ACCESSORY)
+	if(prob(65))
+		new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/veteran/ua_riot, WEAR_HEAD)
+		new_human.equip_to_slot_or_del(new /obj/item/prop/helmetgarb/riot_shield, WEAR_IN_HELMET)
+	else
+		new_human.equip_to_slot_or_del(new /obj/item/clothing/head/beret/cm/black, WEAR_HEAD)
+	..()
 
 /datum/equipment_preset/cmb/deputy/emergency/shotgunner
 	name = "CMB - US Colonial Marshals Deputy (Emergency, Shotgun)"
@@ -181,6 +222,27 @@
 	name = "CMB - LatAm Colonial Marshals Deputy (Emergency, Shotgun)"
 	ethnicity = LATIN_AMERICAN_ETHNICITY
 	languages = list(LANGUAGE_SPANISH, LANGUAGE_ENGLISH)
+
+/datum/equipment_preset/cmb/deputy/emergency/shotgunner/brazilian
+	name = "CMB - Brazilian Colonial Marshals Deputy (Emergency, Shotgun)"
+	ethnicity = BRAZILIAN_ETHNICITY
+	languages = list(LANGUAGE_PORTUGUESE, LANGUAGE_ENGLISH)
+	assignment = "Brazilian Colonial Military Police Responder"
+	paygrades = list(PAY_SHORT_AE5 = JOB_PLAYTIME_TIER_0)
+
+/datum/equipment_preset/cmb/deputy/emergency/shotgunner/brazilian/load_gear(mob/living/carbon/human/new_human)
+	new_human.undershirt = "undershirt"
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/colonist/boilersuit/grey, WEAR_BODY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/ranks/army/e5, WEAR_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/cmb/brazil_police, WEAR_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/brazil, WEAR_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/reagent_container/food/snacks/mre_food/uscm/entree/feijoada, WEAR_IN_BACK)
+	if(prob(65))
+		new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/veteran/ua_riot, WEAR_HEAD)
+		new_human.equip_to_slot_or_del(new /obj/item/prop/helmetgarb/riot_shield, WEAR_IN_HELMET)
+	else
+		new_human.equip_to_slot_or_del(new /obj/item/clothing/head/beret/cm/black, WEAR_HEAD)
+	..()
 //*****************************************************************************************************/
 
 /datum/equipment_preset/cmb/marshal
@@ -193,7 +255,7 @@
 	rank = JOB_CMB_TL
 	skills = /datum/skills/cmb/leader
 	minimum_age = 30
-	languages = list(LANGUAGE_ENGLISH, LANGUAGE_SPANISH, LANGUAGE_JAPANESE)
+	languages = list(LANGUAGE_ENGLISH, LANGUAGE_SPANISH, LANGUAGE_JAPANESE, LANGUAGE_PORTUGUESE)
 
 /datum/equipment_preset/cmb/marshal/load_gear(mob/living/carbon/human/new_human)
 	new_human.undershirt = "undershirt"
@@ -230,6 +292,24 @@
 	name = "CMB - LatAm Colonial Marshal"
 	ethnicity = LATIN_AMERICAN_ETHNICITY
 	languages = list(LANGUAGE_SPANISH, LANGUAGE_ENGLISH, LANGUAGE_JAPANESE)
+
+/datum/equipment_preset/cmb/marshal/brazilian
+	name = "CMB - Brazilian Colonial Marshal"
+	ethnicity = BRAZILIAN_ETHNICITY
+	languages = list(LANGUAGE_PORTUGUESE, LANGUAGE_ENGLISH, LANGUAGE_JAPANESE)
+	assignment = "Brazilian Colonial Military Police Marshal" //despite the name, they're a law enforcement force and have the same authority as the CMBs
+	paygrades = list(PAY_SHORT_AO3 = JOB_PLAYTIME_TIER_0)
+
+/datum/equipment_preset/cmb/marshal/brazilian/load_gear(mob/living/carbon/human/new_human)
+	new_human.undershirt = "undershirt"
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/colonist/boilersuit/grey, WEAR_BODY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/ranks/army/o3, WEAR_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/cmb/brazil_police, WEAR_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/patch/brazil, WEAR_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/beret/cm/black, WEAR_HEAD)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/marine/lamp, WEAR_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/reagent_container/food/snacks/mre_food/uscm/entree/feijoada, WEAR_IN_BACK)
+	..()
 
 //*****************************************************************************************************/
 /datum/equipment_preset/cmb/synth

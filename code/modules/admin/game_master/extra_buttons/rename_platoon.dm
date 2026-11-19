@@ -103,17 +103,20 @@ GLOBAL_VAR_INIT(main_platoon_initial_name, GLOB.main_platoon_name)
 
 /proc/change_dropship_name(name, mob/renamer)
 	var/obj/docking_port/mobile/marine_dropship/midway/port = locate(/obj/docking_port/mobile/marine_dropship/midway)
-	port.name = name
-	var/area/area_to_change = get_area(port)
-	area_to_change.name = "Dropship [name]"
-	for(var/turf/closed/shuttle/midway/midway_turfs in area_to_change)
-		midway_turfs.name = name
-	for(var/obj/structure/shuttle/part/midway/midway_parts in area_to_change)
-		midway_parts.name = name
-	for(var/obj/structure/machinery/door/airlock/multi_tile/almayer/dropshiprear/cargo in area_to_change)
-		cargo.name = "[name] cargo door"
-	for(var/obj/structure/machinery/computer/dropship_weapons/midway/console in area_to_change)
-		console.name = "'[name]' weapons controls"
+	if(!port)
+		return
+	else
+		port.name = name
+		var/area/area_to_change = get_area(port)
+		area_to_change.name = "Dropship [name]"
+		for(var/turf/closed/shuttle/midway/midway_turfs in area_to_change)
+			midway_turfs.name = name
+		for(var/obj/structure/shuttle/part/midway/midway_parts in area_to_change)
+			midway_parts.name = name
+		for(var/obj/structure/machinery/door/airlock/multi_tile/almayer/dropshiprear/cargo in area_to_change)
+			cargo.name = "[name] cargo door"
+		for(var/obj/structure/machinery/computer/dropship_weapons/midway/console in area_to_change)
+			console.name = "'[name]' weapons controls"
 
-	for(var/obj/structure/machinery/camera/autoname/golden_arrow/midway/camera in area_to_change)
-		camera.c_tag = "Dropship [name] #[camera.autonumber]"
+		for(var/obj/structure/machinery/camera/autoname/golden_arrow/midway/camera in area_to_change)
+			camera.c_tag = "Dropship [name] #[camera.autonumber]"

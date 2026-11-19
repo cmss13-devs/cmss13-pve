@@ -127,14 +127,13 @@
 /datum/specialist_set/proc/get_available_vendor_num() as num
 	return available_vendor_num
 
-/datum/specialist_set/sadar
-	name = "Demolitionist Set"
-	role_name = "Demo"
-	skill_to_give = SKILL_SPEC_ROCKET
+/datum/specialist_set/rpg
+	name = "Rocketeer Set"
+	role_name = "Rockteer"
 	trait_to_give = "demo"
-	kit_typepath = /obj/item/storage/box/spec/demolitionist
+	kit_typepath = /obj/item/storage/box/spec/rocketeer
 
-/datum/specialist_set/sadar/redeem_set(mob/living/redeemer, kit)
+/datum/specialist_set/rpg/redeem_set(mob/living/redeemer, kit)
 	. = ..()
 	if(!.)
 		return .
@@ -143,14 +142,13 @@
 		redeemer.skills?.set_skill(SKILL_ENGINEER, SKILL_ENGINEER_TRAINED)
 	return TRUE
 
-/datum/specialist_set/scout
-	name = "Scout Set"
-	role_name = "Scout"
-	skill_to_give = SKILL_SPEC_SCOUT
+/datum/specialist_set/spotter
+	name = "Scout-Sniper (Spotter) Set"
+	role_name = "Scout-Sniper"
 	trait_to_give = "scout"
-	kit_typepath = /obj/item/storage/box/spec/scout
+	kit_typepath = /obj/item/storage/box/spec/spotter
 
-/datum/specialist_set/scout/redeem_set(mob/living/redeemer, kit)
+/datum/specialist_set/spotter/redeem_set(mob/living/redeemer, kit)
 	. = ..()
 	if(!.)
 		return .
@@ -160,9 +158,8 @@
 	return TRUE
 
 /datum/specialist_set/sniper
-	name = "Sniper Set"
+	name = "Scout-Sniper (Shooter) Set"
 	role_name = "Sniper"
-	skill_to_give = SKILL_SPEC_SNIPER
 	trait_to_give = "sniper"
 	kit_typepath = /obj/item/storage/box/spec/sniper
 	incompatible_sets = list(
@@ -170,9 +167,8 @@
 	)
 
 /datum/specialist_set/anti_mat_sniper
-	name = "Anti-Materiel Sniper Set"
+	name = "Scout-Sniper (Anti-Materiel Shooter) Set"
 	role_name = "Heavy Sniper"
-	skill_to_give = SKILL_SPEC_SNIPER
 	trait_to_give = "antimat_sniper"
 	kit_typepath = /obj/item/storage/box/spec/sniper/anti_materiel
 	incompatible_sets = list(

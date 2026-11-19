@@ -292,12 +292,12 @@
 	health = 140;
 	icon_state = "folding_2"
 	},
-/obj/item/weapon/gun/rifle/nsg23/no_lock,
+/obj/item/weapon/gun/rifle/nsg23,
 /obj/item/ammo_magazine/rifle/nsg23,
 /turf/open/floor/plating/panelscorched,
 /area/lv624/lazarus/hydroponics)
 "Aj" = (
-/obj/item/ammo_magazine/rifle/nsg23/extended,
+/obj/item/ammo_magazine/rifle/nsg23,
 /obj/item/stack/sheet/wood,
 /turf/open/floor/plating/panelscorched,
 /area/lv624/lazarus/hydroponics)
@@ -403,7 +403,6 @@
 /obj/structure/barricade/wooden{
 	dir = 4
 	},
-/obj/item/weapon/gun/rifle/nsg23/no_lock,
 /turf/open/floor/plating/platingdmg3,
 /area/lv624/lazarus/hydroponics)
 "MW" = (
