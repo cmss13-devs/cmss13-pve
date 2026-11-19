@@ -33,14 +33,10 @@
 
 /obj/item/storage/box/m56_system/marsoc/Initialize()
 	. = ..()
-	new /obj/item/clothing/suit/storage/marine/smartgunner(src)
 	new /obj/item/clothing/accessory/storage/webbing/m56(src)
 	new /obj/item/clothing/accessory/storage/webbing/m56/grenade(src)
 	new /obj/item/storage/large_holster/machete/smartgunner/full(src)
-	new /obj/item/weapon/gun/smartgun(src)
-	new /obj/item/clothing/glasses/night/m56_goggles(src)
-	new /obj/item/smartgun_battery(src)
-	new /obj/item/storage/belt/gun/smartgunner/garrow/marsoc(src)
+	new /obj/item/storage/belt/gun/smartgunner/garrow(src)
 	update_icon()
 
 /obj/item/storage/box/m56_system/marsoc/update_icon()

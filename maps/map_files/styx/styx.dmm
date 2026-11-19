@@ -1602,7 +1602,7 @@
 	pixel_x = 9;
 	pixel_y = -2;
 	density = 0;
-	job = "Combat Technician";
+	job = "Section Sergeant";
 	has_cryo_gear = 0
 	},
 /obj/item/clothing/under/marine/veteran/marsoc,
@@ -1721,7 +1721,7 @@
 	pixel_x = 9;
 	pixel_y = -2;
 	density = 0;
-	job = "Section Sergeant";
+	job = "Combat Engineer";
 	has_cryo_gear = 0
 	},
 /obj/item/clothing/under/marine/veteran/marsoc,
@@ -10992,8 +10992,8 @@ DI
 DI
 bb
 ot
-pK
 zu
+pK
 zM
 QS
 Ya

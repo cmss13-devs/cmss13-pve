@@ -358,10 +358,10 @@
 
 	access = list(ACCESS_MARINE_PREP, ACCESS_MARINE_MEDPREP, ACCESS_MARINE_MEDBAY)
 	languages = list(LANGUAGE_ENGLISH, LANGUAGE_TSL)
-	assignment = "SARC"
+	assignment = "ARC"
 	rank = JOB_SQUAD_MEDIC
 	paygrades = list(PAY_SHORT_ME5 = JOB_PLAYTIME_TIER_0)
-	role_comm_title = "SARC"
+	role_comm_title = "ARC"
 	skills = /datum/skills/marsoc/medic
 	minimap_icon = "medic"
 

@@ -50,6 +50,12 @@
 /obj/structure/closet/secure_closet/marine_personal/corpsman
 	job = JOB_SQUAD_MEDIC
 
+/obj/structure/closet/secure_closet/marine_personal/engineer
+	job = JOB_SQUAD_ENGI
+
+/obj/structure/closet/secure_closet/marine_personal/specialist
+	job = JOB_SQUAD_SPECIALIST
+
 /obj/structure/closet/secure_closet/marine_personal/squad_leader
 	job = JOB_SQUAD_TEAM_LEADER
 
