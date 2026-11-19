@@ -65,12 +65,6 @@
 	total_positions = 0
 	spawn_positions = 0
 
-/datum/job/marine/specialist/ai/set_spawn_positions(count)
-	return spawn_positions
-
-/datum/job/marine/specialist/ai/get_total_positions(latejoin=0)
-	return latejoin ? total_positions : spawn_positions
-
 /datum/job/marine/specialist/ai/rmc
 	total_positions = 1
 	spawn_positions = 1

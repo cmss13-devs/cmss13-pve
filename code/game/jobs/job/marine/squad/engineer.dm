@@ -75,12 +75,6 @@
 /obj/effect/landmark/start/marine/engineer/ai
 	job = /datum/job/marine/engineer/ai
 
-/datum/job/marine/engineer/ai/set_spawn_positions(count)
-	return spawn_positions
-
-/datum/job/marine/engineer/ai/get_total_positions(latejoin=0)
-	return latejoin ? total_positions : spawn_positions
-
 /datum/job/marine/engineer/ai/rmc
 	total_positions = 1
 	spawn_positions = 1
