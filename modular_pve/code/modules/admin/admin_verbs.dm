@@ -66,6 +66,7 @@
 			/client/proc/toggle_portrait,
 			/client/proc/toggle_intro,
 			/client/proc/gm_lighting,
+			/client/proc/gm_base_lighting,
 		))
 
 /client/remove_admin_verbs()
