@@ -1,4 +1,4 @@
-/setup_admin_verbs_default()
+/datum/controller/global_vars/setup_admin_verbs_default()
 	. = ..()
 	. += list(
 		/datum/admins/proc/setlooccooldoown,
@@ -22,20 +22,20 @@
 		/client/proc/toggle_barricade_creation, // Stops cades from being built
 	)
 
-/setup_admin_verbs_minor_event()
+/datum/controller/global_vars/setup_admin_verbs_minor_event()
 	. = ..()
 	. += list(
 		/client/proc/cmd_admin_ground_narrate,
 		/client/proc/shakegroundverb,
 	)
 
-/setup_admin_verbs_server()
+/datum/controller/global_vars/setup_admin_verbs_server()
 	. = ..()
 	. += list(
 		/datum/admins/proc/toggle_intro,
 	)
 
-/setup_admin_verbs_hideable()
+/datum/controller/global_vars/setup_admin_verbs_hideable()
 	. = ..()
 	. += list(
 		/client/proc/make_human_ai,
