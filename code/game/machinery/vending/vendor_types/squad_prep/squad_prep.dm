@@ -604,10 +604,11 @@
 		list("Bedroll", round(scale * 20), /obj/item/roller/bedroll, VENDOR_ITEM_REGULAR),
 		list("Canteen", round(scale * 20), /obj/item/reagent_container/food/drinks/flask/canteen, VENDOR_ITEM_REGULAR),
 		)
+
 /obj/structure/machinery/cm_vending/sorted/uniform_supply/squad_prep/marsoc
 	name = "\improper ColMarTech MARSOC Uniform Vendor"
 	icon_state = "marsoc_gear"
-	desc = "A slightly dated version of the well known 'Colonial Marine Tech' vendor line. This one appears to have received unique modifications to its storage unit and shelves. And someone spray painted it matte black, because of course they did."
+	desc = "A slightly dated version of the well known 'Colonial Marine Tech' vendor line. This one appears to have received unique modifications to its storage unit and shelves."
 
 
 /obj/structure/machinery/cm_vending/sorted/uniform_supply/squad_prep/marsoc/populate_product_list(scale)
@@ -622,6 +623,7 @@
 		list("Marine Combat Gloves, Brown", floor(scale * 15), /obj/item/clothing/gloves/marine/brown, VENDOR_ITEM_REGULAR),
 		list("Marine Radio Headset", floor(scale * 15), /obj/item/device/radio/headset/almayer/sof, VENDOR_ITEM_REGULAR),
 		list("M5 Pattern Camera Headset", floor(scale * 15), /obj/item/device/overwatch_camera, VENDOR_ITEM_REGULAR),
+		list("Modified M3 Night Vision Goggles", floor(scale * 15), /obj/item/prop/helmetgarb/helmet_nvg/marsoc, VENDOR_ITEM_RECOMMENDED),
 
 		list("NON-STANDARD EQUIPMENT", -1, null, null, null),
 		list("Marine Combat Gloves, Black Fingerless", floor(scale * 15), /obj/item/clothing/gloves/marine/fingerless, VENDOR_ITEM_REGULAR),
@@ -712,7 +714,6 @@
 
 		list("RESTRICTED POUCHES", -1, null, null, null),
 		list("Tools Pouch", 1.25, /obj/item/storage/pouch/tools, VENDOR_ITEM_REGULAR),
-		list("Large Pistol Magazine Pouch", floor(scale * 2), /obj/item/storage/pouch/magazine/pistol/large, VENDOR_ITEM_REGULAR),
 		list("Sling Pouch", 1.25, /obj/item/storage/pouch/sling, VENDOR_ITEM_REGULAR),
 		list("Incinerator Fuel Tank Pouch", 1.25, /obj/item/storage/pouch/flamertank, VENDOR_ITEM_REGULAR),
 		list("Large Shotgun Shell Pouch", 1.25, /obj/item/storage/pouch/shotgun/large, VENDOR_ITEM_REGULAR),
@@ -733,6 +734,7 @@
 		list("M10 Helmet Desert Cover", round(scale * 10), /obj/item/prop/helmetgarb/camocover/desert, VENDOR_ITEM_REGULAR),
 		list("M10 Helmet Netting", round(scale * 10), /obj/item/prop/helmetgarb/netting, VENDOR_ITEM_REGULAR),
 		list("M10 Helmet Rain Cover", round(scale * 10), /obj/item/prop/helmetgarb/raincover, VENDOR_ITEM_REGULAR),
+		list("MARSOC Shoulder Patch", round(scale * 15), /obj/item/clothing/accessory/patch/marsoc, VENDOR_ITEM_REGULAR),
 		list("UA Shoulder Patch", round(scale * 15), /obj/item/clothing/accessory/patch/ua, VENDOR_ITEM_REGULAR),
 		list("USA Shoulder Patch", round(scale * 15), /obj/item/clothing/accessory/patch/usa, VENDOR_ITEM_REGULAR),
 		list("USCM Shoulder Patch", round(scale * 15), /obj/item/clothing/accessory/patch, VENDOR_ITEM_REGULAR),
@@ -1163,8 +1165,11 @@
 		list("Burn Kit", round(scale * 15), /obj/item/stack/medical/advanced/ointment, VENDOR_ITEM_REGULAR),
 		list("Splints", round(scale * 15), /obj/item/stack/medical/splint, VENDOR_ITEM_REGULAR),
 		list("Meralyne Autoinjector", round(scale * 15), /obj/item/reagent_container/hypospray/autoinjector/meralyne, VENDOR_ITEM_REGULAR),
+		list("Bicaridine Autoinjector", round(scale * 15), /obj/item/reagent_container/hypospray/autoinjector/bicaridine, VENDOR_ITEM_REGULAR),
 		list("Dermaline Autoinjector", round(scale * 15), /obj/item/reagent_container/hypospray/autoinjector/dermaline, VENDOR_ITEM_REGULAR),
+		list("Kelotane Autoinjector", round(scale * 15), /obj/item/reagent_container/hypospray/autoinjector/kelotane, VENDOR_ITEM_REGULAR),
 		list("Tricordrazine Autoinjector", round(scale * 15), /obj/item/reagent_container/hypospray/autoinjector/tricord/skillless, VENDOR_ITEM_REGULAR),
+		list("Iron Injector", round(scale * 15), /obj/item/reagent_container/hypospray/autoinjector/iron, VENDOR_ITEM_REGULAR),
 		list("Oxycodone Injector", round(scale * 15), /obj/item/reagent_container/hypospray/autoinjector/oxycodone, VENDOR_ITEM_REGULAR),
 
 		list("TOOLS", -1, null, null),
@@ -1252,6 +1257,57 @@
 		list("M39 Stock", 1.5, /obj/item/attachable/stock/smg, VENDOR_ITEM_REGULAR),
 		list("M41A Solid Stock", 1.5, /obj/item/attachable/stock/rifle, VENDOR_ITEM_REGULAR),
 		list("M44 Magnum Sharpshooter Stock", 1.5, /obj/item/attachable/stock/revolver, VENDOR_ITEM_REGULAR)
+		)
+
+
+/obj/structure/machinery/cm_vending/sorted/attachments/squad/marsoc
+	name = "\improper ARMAT Systems Attachment Vendor"
+	desc = "An automated supply rack hooked up to a small storage of weapons attachments. Christmas came early."
+	req_access = null
+	req_one_access = null
+	hackable = TRUE
+	vend_flags = VEND_CLUTTER_PROTECTION | VEND_TO_HAND | VEND_STOCK_DYNAMIC
+
+
+/obj/structure/machinery/cm_vending/sorted/attachments/squad/marsoc/populate_product_list(scale)
+	listed_products = list(
+		list("BARREL", -1, null, null),
+		list("Extended Barrel", 10, /obj/item/attachable/extended_barrel, VENDOR_ITEM_REGULAR),
+		list("Recoil Compensator", 10, /obj/item/attachable/compensator, VENDOR_ITEM_REGULAR),
+		list("Suppressor", 10, /obj/item/attachable/suppressor, VENDOR_ITEM_REGULAR),
+		list("Bayonet", 10, /obj/item/attachable/bayonet, VENDOR_ITEM_REGULAR),
+		list("Barrel Charger", 10, /obj/item/attachable/heavy_barrel, VENDOR_ITEM_REGULAR),
+
+
+		list("RAIL", -1, null, null),
+		list("B8 Smart-Scope", 10, /obj/item/attachable/scope/mini_iff, VENDOR_ITEM_REGULAR),
+		list("Magnetic Harness", 10, /obj/item/attachable/magnetic_harness, VENDOR_ITEM_REGULAR),
+		list("S4 2x Telescopic Mini-Scope", 10, /obj/item/attachable/scope/mini, VENDOR_ITEM_REGULAR),
+		list("S5 Red-Dot Sight", 10, /obj/item/attachable/reddot, VENDOR_ITEM_REGULAR),
+		list("S6 Reflex Sight", 10, /obj/item/attachable/reflex, VENDOR_ITEM_REGULAR),
+		list("S8 4x Telescopic Scope", 10, /obj/item/attachable/scope, VENDOR_ITEM_REGULAR),
+		list("Rail Flashlight", 10, /obj/item/attachable/flashlight, VENDOR_ITEM_REGULAR),
+
+
+		list("UNDERBARREL", -1, null, null),
+		list("Angled Grip", 10, /obj/item/attachable/angledgrip, VENDOR_ITEM_REGULAR),
+		list("Bipod", 10, /obj/item/attachable/bipod, VENDOR_ITEM_REGULAR),
+		list("Burst Fire Assembly", 10, /obj/item/attachable/burstfire_assembly, VENDOR_ITEM_REGULAR),
+		list("Gyroscopic Stabilizer", 10, /obj/item/attachable/gyro, VENDOR_ITEM_REGULAR),
+		list("Laser Sight", 10, /obj/item/attachable/lasersight, VENDOR_ITEM_REGULAR),
+		list("Mini Flamethrower", 10, /obj/item/attachable/attached_gun/flamer, VENDOR_ITEM_REGULAR),
+		list("XM-VESG-1 Flamer Nozzle", 10, /obj/item/attachable/attached_gun/flamer_nozzle, VENDOR_ITEM_REGULAR),
+		list("U7 Underbarrel Shotgun", 10, /obj/item/attachable/attached_gun/shotgun, VENDOR_ITEM_REGULAR),
+		list("Underbarrel Extinguisher", 10, /obj/item/attachable/attached_gun/extinguisher, VENDOR_ITEM_REGULAR),
+		list("Vertical Grip", 10, /obj/item/attachable/verticalgrip, VENDOR_ITEM_REGULAR),
+		list("Underbarrel Flashlight Grip", 10, /obj/item/attachable/flashlight/grip, VENDOR_ITEM_REGULAR),
+
+		list("STOCK", -1, null, null),
+		list("M37 Wooden Stock", 10, /obj/item/attachable/stock/shotgun, VENDOR_ITEM_REGULAR),
+		list("M39 Arm Brace", 10, /obj/item/attachable/stock/smg/collapsible/brace, VENDOR_ITEM_REGULAR),
+		list("M39 Stock", 10, /obj/item/attachable/stock/smg, VENDOR_ITEM_REGULAR),
+		list("M41A Solid Stock", 10, /obj/item/attachable/stock/rifle, VENDOR_ITEM_REGULAR),
+		list("M44 Magnum Sharpshooter Stock", 10, /obj/item/attachable/stock/revolver, VENDOR_ITEM_REGULAR)
 		)
 
 //------------ESSENTIAL SETS---------------

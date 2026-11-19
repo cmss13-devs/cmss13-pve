@@ -410,6 +410,7 @@
 /datum/equipment_preset/uscm/tl/forecon/sergeant
 	name = parent_type::name + " (E5 Rank)"
 	paygrades = list(PAY_SHORT_ME5 = JOB_PLAYTIME_TIER_0)
+
 /datum/equipment_preset/uscm/tl/marsoc
 	name = "MARSOC Assistant Element Lead"
 	flags = EQUIPMENT_PRESET_EXTRA|EQUIPMENT_PRESET_MARINE

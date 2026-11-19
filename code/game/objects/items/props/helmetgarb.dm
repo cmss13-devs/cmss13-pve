@@ -479,7 +479,7 @@
 /obj/item/prop/helmetgarb/helmet_nvg/marsoc //for Marine Raiders
 	name = "\improper Tactical M3 night vision goggles"
 	desc = "With an integrated self-recharging battery, nothing can stop you. Put them on your helmet and press the button and it's go-time."
-	cell_max_charge = -1
+	cell_max_charge = 9999999
 
 #undef NVG_SHAPE_COSMETIC
 #undef NVG_SHAPE_BROKEN

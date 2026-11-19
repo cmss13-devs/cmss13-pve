@@ -69,6 +69,15 @@
 	new /obj/item/ammo_magazine/hpr_box(src)
 	new /obj/item/ammo_magazine/hpr_box(src)
 
+/obj/item/storage/box/guncase/lmg/marsoc
+	can_hold = list(/obj/item/weapon/gun/rifle/lmg, /obj/item/ammo_magazine/hpr_box/heap)
+
+/obj/item/storage/box/guncase/lmg/marsoc/fill_preset_inventory()
+	new /obj/item/weapon/gun/rifle/lmg(src)
+	new /obj/item/ammo_magazine/hpr_box/heap(src)
+	new /obj/item/ammo_magazine/hpr_box/heap(src)
+	new /obj/item/ammo_magazine/hpr_box/heap(src)
+
 //------------
 /obj/item/storage/box/guncase/m41aMK1
 	name = "\improper M41A pulse rifle MK1 case"
