@@ -5,8 +5,11 @@
 	allow_additional = 1
 	scaled = 1
 	flags_startup_parameters = ROLE_ADD_TO_DEFAULT|ROLE_ADD_TO_SQUAD
-	gear_preset = /datum/equipment_preset/uscm/specialist_equipped
+	gear_preset = /datum/equipment_preset/uscm/specialist/equipped
 	entry_message_body = "<a href='"+WIKI_PLACEHOLDER+"'>You are the very rare and valuable weapon expert</a>, trained to use special equipment. You can serve a variety of roles, so choose carefully."
+
+/datum/job/marine/specialist/unequipped
+	gear_preset = /datum/equipment_preset/uscm/specialist
 
 /datum/job/marine/specialist/set_spawn_positions(count)
 	spawn_positions = spec_slot_formula(count)
@@ -37,7 +40,7 @@
 /obj/effect/landmark/start/marine/spec
 	name = JOB_SQUAD_SPECIALIST
 	icon_state = "spec_spawn"
-	job = /datum/job/marine/specialist
+	job = /datum/job/marine/specialist/unequipped
 
 /obj/effect/landmark/start/marine/spec/alpha
 	icon_state = "spec_spawn_alpha"
@@ -64,6 +67,18 @@
 
 /datum/job/marine/specialist/ai/get_total_positions(latejoin=0)
 	return latejoin ? total_positions : spawn_positions
+
+/datum/job/marine/specialist/ai/uscm
+	title = JOB_SQUAD_SPECIALIST
+	total_positions = 0
+	spawn_positions = 0
+	flags_startup_parameters = ROLE_ADD_TO_DEFAULT|ROLE_ADD_TO_SQUAD
+	gear_preset = /datum/equipment_preset/uscm/specialist/uscm
+	entry_message_body = "You have received specialized training to field test unique, experimental loadouts. You can serve a variety of roles, so decide accordingly."
+
+/obj/effect/landmark/start/marine/specialist/uscm
+	name = JOB_SQUAD_SPECIALIST
+	job = /datum/equipment_preset/uscm/specialist/uscm
 
 /datum/job/marine/specialist/ai/rmc
 	total_positions = 1

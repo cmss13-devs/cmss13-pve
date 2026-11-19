@@ -4,7 +4,7 @@
 
 // Takes care blood loss and regeneration
 /mob/living/carbon/human/handle_blood()
-	if((species.flags & NO_BLOOD) && !(species.flags & IS_SYNTHETIC))
+	if((species.flags & NO_BLOOD) && !(species.flags & IS_SYNTHETIC) || iszombie(src))
 		return
 
 	if(stat != DEAD && bodytemperature >= 170) //Dead or cryosleep people do not pump the blood.
@@ -119,6 +119,20 @@
 	H.status_flags |= NO_PERMANENT_DAMAGE //John Wick doesn't get internal bleeding from a grazing gunshot
 	H.status_flags &= ~STATUS_FLAGS_DEBILITATE
 	return ..()
+
+/datum/species/human/hero/pathogen
+	name = "Pathogen Infected Human"
+	name_plural = "Pathogen Infected Humans"
+	burn_mod = 1.5
+	weed_slowdown_mult = 0
+	darksight = 8
+	unarmed_type = /datum/unarmed_attack/claws/strong/pathogen
+	secondary_unarmed_type = /datum/unarmed_attack/bite/strong/pathogen
+	death_message = "seizes up as a mixture of black fluid and grey mold pours from its every orfice."
+
+
+/datum/species/human/hero/pathogen/handle_post_spawn(mob/living/carbon/human/H)
+	H.status_flags |= GODMODE
 
 //Various horrors that spawn in and haunt the living.
 /datum/species/human/spook
