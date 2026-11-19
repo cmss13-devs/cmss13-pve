@@ -142,6 +142,7 @@ GLOBAL_LIST_INIT(cm_vending_gear_engi_marsoc, list(
 /obj/structure/machinery/cm_vending/gear/engi/marsoc
 	name = "\improper ColMarTech MARSOC Sapper Gear Rack"
 	desc = "An automated gear rack for MARSOC Sappers."
+	use_points = FALSE
 
 /obj/structure/machinery/cm_vending/gear/engi/marsoc/get_listed_products(mob/user)
 	return GLOB.cm_vending_gear_engi_marsoc
@@ -263,7 +264,7 @@ GLOBAL_LIST_INIT(cm_vending_clothing_engi, list(
 		/obj/item/clothing/accessory/storage/tool_webbing/tactical,
 		/obj/item/storage/pouch/tools/tactical,
 		/obj/item/storage/box/guncase/heavy/sentry,
-		/obj/item/storage/backpack/marine/satchel/big
+		/obj/item/storage/backpack/marine/satchel/big,
 		/obj/item/storage/belt/gun/m4a3/nailgun,
 		/obj/item/weapon/gun/smg/nailgun/compact/tactical,
 	)
