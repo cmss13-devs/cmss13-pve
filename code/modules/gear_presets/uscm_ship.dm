@@ -49,6 +49,8 @@
 	dress_gloves = list(/obj/item/clothing/gloves/marine/dress)
 	dress_shoes = list(/obj/item/clothing/shoes/laceup)
 
+/datum/equipment_preset/uscm_ship/load_underwear(mob/living/carbon/human/new_human, client/mob_client)
+	add_uscm_underwear(new_human)
 //*****************************************************************************************************/
 
 /datum/equipment_preset/uscm_ship/liaison
@@ -197,6 +199,7 @@
 	dress_hat = list()
 
 /datum/equipment_preset/uscm_ship/reporter/load_gear(mob/living/carbon/human/new_human)
+	add_civilian_underwear(new_human)
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/almayer/reporter(new_human), WEAR_L_EAR)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/reporter(new_human), WEAR_BODY)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/jacket/marine/reporter(new_human), WEAR_JACKET)

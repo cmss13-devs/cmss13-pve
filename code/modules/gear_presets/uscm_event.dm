@@ -5,7 +5,8 @@
 	minimum_age = 30
 	languages = list(LANGUAGE_ENGLISH)
 
-
+/datum/equipment_preset/uscm_event/load_underwear(mob/living/carbon/human/new_human, client/mob_client)
+	add_civilian_underwear(new_human)
 /*****************************************************************************************************/
 
 /datum/equipment_preset/uscm_event/colonel
