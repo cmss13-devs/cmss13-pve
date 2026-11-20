@@ -1702,6 +1702,9 @@
 		if(FACTION_TWE)
 			alert_type = /atom/movable/screen/text/screen_text/picture/starting/twe
 			platoon = "Gamma Troop"
+		if(FACTION_IMPERIAL_GUARD)
+			alert_type = /atom/movable/screen/text/screen_text/picture/starting/imperial
+			platoon = "Cadian Alpha Squad, 1st Platoon"
 	play_screen_text("<u>[SSmapping.configs[SHIP_MAP].map_name]<br></u>" + "[platoon]<br><br>" + human_manifest, alert_type)
 
 /mob/living/carbon/human/point_to_atom(atom/A, turf/T)

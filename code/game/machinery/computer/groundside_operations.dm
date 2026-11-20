@@ -400,6 +400,14 @@
 	has_squad_overwatch = FALSE
 	minimap_type = MINIMAP_FLAG_TWE
 
+/obj/structure/machinery/computer/groundside_operations/imperial
+	announcement_title = IMPERIAL_COMMAND_ANNOUNCE
+	announcement_faction = FACTION_IMPERIAL_GUARD
+	add_pmcs = FALSE
+	lz_selection = FALSE
+	has_squad_overwatch = FALSE
+	minimap_type = MINIMAP_FLAG_IMPERIAL_GUARD
+
 /obj/structure/machinery/computer/groundside_operations/arc
 	icon = 'icons/obj/vehicles/interiors/arc.dmi'
 	icon_state = "groundsideop_computer"

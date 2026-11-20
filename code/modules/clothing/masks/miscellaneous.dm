@@ -97,3 +97,14 @@
 	desc = "Worn by robust fighters who are willing to do anything to win."
 	icon_state = "luchar"
 	item_state = "luchar"
+
+/obj/item/clothing/mask/skull
+	name = "skull mask"
+	desc = "A skull mask made from the skull of some sort of animal."
+	icon_state = "skull"
+	item_state = "skull"
+	flags_inventory = COVERMOUTH|COVEREYES
+	flags_inv_hide = HIDEFACE|HIDEEYES
+	w_class = SIZE_SMALL
+	siemens_coefficient = 0.9
+	flags_armor_protection = BODY_FLAG_HEAD|BODY_FLAG_FACE|BODY_FLAG_EYES

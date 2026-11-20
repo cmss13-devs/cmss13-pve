@@ -1,0 +1,8 @@
+{
+    "map_name": "Outpost Tertius Decimus",
+    "map_path": "map_files/Outpost_Tertius_Decimus",
+    "map_file": "Outpost_Tertius_Decimus.dmm",
+    "webmap_url": "GoldenArrow",
+    "traits": [{"Marine Main Ship": true}],
+    "platoon": "/datum/squad/marine/imperial"
+}

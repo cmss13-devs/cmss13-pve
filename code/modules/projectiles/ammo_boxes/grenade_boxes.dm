@@ -395,3 +395,25 @@
 	allowed_magazines = list(/obj/item/explosive/grenade/nerve_gas/xeno/rmc)
 	overlay_icon_type = "rmcgas"
 	overlay_grenade_type = "rmc_cn20"
+
+//--------------------IMPERIAL GUARD GRENADE BOXES
+
+/obj/item/ammo_box/magazine/nade_box/imperial
+	name = "\improper imperial frag grenade box"
+	desc = "A secure box holding 18 imperial frag grenades. Highly explosive, don't store near open flames."
+	num_of_magazines = 18
+	magazine_type = /obj/item/explosive/grenade/high_explosive/m15/imperial
+	allowed_magazines = list(/obj/item/explosive/grenade/high_explosive/m15/imperial)
+	icon_state = "base_imperial_nade"
+	overlay_icon_type = "40mmhe"
+	overlay_model_type = null
+	overlay_grenade_type = "upp_40mm_he"
+
+/obj/item/ammo_box/magazine/nade_box/imperial/smoke
+	name = "\improper imperial smoke grenade box"
+	desc = "A secure box holding 18 imperial smoke grenades. Highly explosive, don't store near open flames."
+	num_of_magazines = 18
+	magazine_type = /obj/item/explosive/grenade/smokebomb/imperial
+	allowed_magazines = list(/obj/item/explosive/grenade/smokebomb/imperial)
+	overlay_icon_type = "typesmoke"
+	overlay_grenade_type = "typesmoke"

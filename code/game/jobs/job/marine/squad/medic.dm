@@ -165,6 +165,32 @@
 	squad = SQUAD_RMC
 	job = /datum/job/marine/medic/ai/rmc
 
+/datum/job/marine/medic/ai/imperial
+	title = JOB_IMPPLAT_MEDICAE
+	gear_preset = /datum/equipment_preset/uscm/imperial/med
+	job_options = null
+	supervisors = "the platoon leader and command"
+	entry_message_body = "You are a medicae of the Astra Militarum, better known as the Imperial Guard. You have been attached to this squad by your platoon to support it's operations within the AO. You should try your best to keep your fellows in a 'living' state enough to complete their objectives.</b>"
+	prime_priority = FALSE
+
+/obj/effect/landmark/start/marine/medic/imperial
+	name = JOB_IMPPLAT_MEDICAE
+	squad = SQUAD_IMPPLT
+	job = /datum/job/marine/medic/ai/imperial
+
+/datum/job/marine/medic/ai/stormtrooper
+	title = JOB_STRMPLAT_MEDICAE
+	gear_preset = /datum/equipment_preset/uscm/stormtrooper/med
+	job_options = null
+	supervisors = "the squad leader"
+	entry_message_body = "You are a medicae of some of the Astra Militarum's best, the Stormtroopers. Your primary responsibility is ensuring the squad is in physical and mental fighting order and able to fufill their objective.</b>"
+	prime_priority = FALSE
+
+/obj/effect/landmark/start/marine/medic/stormtrooper
+	name = JOB_STRMPLAT_MEDICAE
+	squad = SQUAD_STRMPLT
+	job = /datum/job/marine/medic/ai/stormtrooper
+
 #undef SGT_VARIANT
 #undef JSGT_VARIANT
 #undef CPL_VARIANT
