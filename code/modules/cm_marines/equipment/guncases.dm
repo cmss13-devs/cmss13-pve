@@ -284,6 +284,30 @@
 	if(locate(/obj/item/device/sentry_computer) in contents)
 		overlays += image(icon, "+sentrycomp")
 
+/obj/item/storage/box/guncase/heavy/sentry/flamer
+	name = "\improper UA 42-F sentry flamer case"
+	desc = "A gun case containing the UA 42-F sentry unit, a spare drum, and a sentry laptop."
+	icon_state = "sentrycase"
+	storage_slots = 3
+	can_hold = list(/obj/item/defenses/handheld/sentry/flamer, /obj/item/ammo_magazine/sentry_flamer, /obj/item/device/sentry_computer)
+
+/obj/item/storage/box/guncase/heavy/sentry/flamer/fill_preset_inventory()
+	new /obj/item/defenses/handheld/sentry/flamer(src)
+	new /obj/item/ammo_magazine/sentry_flamer(src)
+	new /obj/item/device/sentry_computer(src)
+
+/obj/item/storage/box/guncase/heavy/sentry/shotgun
+	name = "\improper UA 12-G shotgun sentry case"
+	desc = "A gun case containing the UA 12-G sentry unit, a spare drum, and a sentry laptop."
+	icon_state = "sentrycase"
+	storage_slots = 3
+	can_hold = list(/obj/item/defenses/handheld/sentry/shotgun, /obj/item/ammo_magazine/shotgun, /obj/item/device/sentry_computer)
+
+/obj/item/storage/box/guncase/heavy/sentry/shotgun/fill_preset_inventory()
+	new /obj/item/defenses/handheld/sentry/shotgun(src)
+	new /obj/item/ammo_magazine/sentry/shotgun(src)
+	new /obj/item/device/sentry_computer(src)
+
 /obj/item/storage/box/guncase/heavy/sentry/pmc_platoon
 	name = "\improper UA 571-C-WY sentry guncase"
 	desc = "A gun case containing the UA 571-C-WY sentry gun, a spare drum, and a sentry laptop."

@@ -621,7 +621,7 @@
 		list("Marine Uniform, Matte Black", floor(scale * 15), /obj/item/clothing/under/marine/veteran/marsoc, VENDOR_ITEM_REGULAR),
 		list("Marine Combat Gloves, Black", floor(scale * 15), /obj/item/clothing/gloves/marine, VENDOR_ITEM_REGULAR),
 		list("Marine Combat Gloves, Brown", floor(scale * 15), /obj/item/clothing/gloves/marine/brown, VENDOR_ITEM_REGULAR),
-		list("Marine Radio Headset", floor(scale * 15), /obj/item/device/radio/headset/almayer/sof, VENDOR_ITEM_REGULAR),
+		list("Marine Radio Headset", floor(scale * 15), /obj/item/device/radio/headset/almayer/sof/survivor_forecon, VENDOR_ITEM_REGULAR),
 		list("M5 Pattern Camera Headset", floor(scale * 15), /obj/item/device/overwatch_camera, VENDOR_ITEM_REGULAR),
 		list("Modified M3 Night Vision Goggles", floor(scale * 15), /obj/item/prop/helmetgarb/helmet_nvg/marsoc, VENDOR_ITEM_RECOMMENDED),
 
@@ -719,10 +719,13 @@
 		list("Large Shotgun Shell Pouch", 1.25, /obj/item/storage/pouch/shotgun/large, VENDOR_ITEM_REGULAR),
 
 		list("MASKS", -1, null, null, null),
-		list("Tactical Filtration Mask", floor(scale * 15), /obj/item/clothing/mask/gas/swat, VENDOR_ITEM_REGULAR),
 		list("M5 Gas Mask", floor(scale * 15), /obj/item/clothing/mask/gas/military, VENDOR_ITEM_REGULAR),
-		list("Tactical Wrap", floor(scale * 10), /obj/item/clothing/mask/rebreather/scarf/tacticalmask, VENDOR_ITEM_REGULAR),
 		list("Heat Absorbent Coif", floor(scale * 10), /obj/item/clothing/mask/rebreather/scarf, VENDOR_ITEM_REGULAR),
+		list("Tactical Wrap", floor(scale * 10), /obj/item/clothing/mask/rebreather/scarf/tacticalmask, VENDOR_ITEM_REGULAR),
+		list("Tactical Wrap (Red)", floor(scale * 10), /obj/item/clothing/mask/rebreather/scarf/tacticalmask/red, VENDOR_ITEM_REGULAR),
+		list("Tactical Wrap (Green)", floor(scale * 10), /obj/item/clothing/mask/rebreather/scarf/tacticalmask/green, VENDOR_ITEM_REGULAR),
+		list("Tactical Wrap (Tan)", floor(scale * 10), /obj/item/clothing/mask/rebreather/scarf/tacticalmask/tan, VENDOR_ITEM_REGULAR),
+		list("Tactical Wrap (Black)", floor(scale * 10), /obj/item/clothing/mask/rebreather/scarf/tacticalmask/black, VENDOR_ITEM_REGULAR),
 
 		list("MISCELLANEOUS", -1, null, null, null),
 		list("Ballistic goggles", round(scale * 10), /obj/item/clothing/glasses/mgoggles, VENDOR_ITEM_REGULAR),
@@ -1266,7 +1269,7 @@
 	req_access = null
 	req_one_access = null
 	hackable = TRUE
-	vend_flags = VEND_CLUTTER_PROTECTION | VEND_TO_HAND | VEND_STOCK_DYNAMIC
+	vend_flags = VEND_CLUTTER_PROTECTION | VEND_TO_HAND | VEND_LIMITED_INVENTORY | VEND_STOCK_DYNAMIC
 
 
 /obj/structure/machinery/cm_vending/sorted/attachments/squad/marsoc/populate_product_list(scale)
@@ -1298,6 +1301,7 @@
 		list("Mini Flamethrower", 10, /obj/item/attachable/attached_gun/flamer, VENDOR_ITEM_REGULAR),
 		list("XM-VESG-1 Flamer Nozzle", 10, /obj/item/attachable/attached_gun/flamer_nozzle, VENDOR_ITEM_REGULAR),
 		list("U7 Underbarrel Shotgun", 10, /obj/item/attachable/attached_gun/shotgun, VENDOR_ITEM_REGULAR),
+		list("PN 30mm Underslung Grenade Launcher", 10, 	/obj/item/attachable/attached_gun/grenade/mk1, VENDOR_ITEM_REGULAR),
 		list("Underbarrel Extinguisher", 10, /obj/item/attachable/attached_gun/extinguisher, VENDOR_ITEM_REGULAR),
 		list("Vertical Grip", 10, /obj/item/attachable/verticalgrip, VENDOR_ITEM_REGULAR),
 		list("Underbarrel Flashlight Grip", 10, /obj/item/attachable/flashlight/grip, VENDOR_ITEM_REGULAR),
@@ -1307,6 +1311,7 @@
 		list("M39 Arm Brace", 10, /obj/item/attachable/stock/smg/collapsible/brace, VENDOR_ITEM_REGULAR),
 		list("M39 Stock", 10, /obj/item/attachable/stock/smg, VENDOR_ITEM_REGULAR),
 		list("M41A Solid Stock", 10, /obj/item/attachable/stock/rifle, VENDOR_ITEM_REGULAR),
+		list("M41A Extendable Stock", 10, /obj/item/attachable/stock/rifle/collapsible, VENDOR_ITEM_REGULAR),
 		list("M44 Magnum Sharpshooter Stock", 10, /obj/item/attachable/stock/revolver, VENDOR_ITEM_REGULAR)
 		)
 

@@ -61,34 +61,24 @@ GLOBAL_LIST_INIT(cm_vending_gear_marsoc_spec, list(
 		list("Heavy Grenadier Set", 0, /obj/item/storage/box/spec/heavy_grenadier, MARINE_CAN_BUY_ESSENTIALS, VENDOR_ITEM_REGULAR),
 		list("Pyrotechnican Set", 0, /obj/item/storage/box/spec/pyro, MARINE_CAN_BUY_ESSENTIALS, VENDOR_ITEM_REGULAR),
 
-		list("EXTRA SCOUT AMMUNITION", 0, null, null, null),
-		list("A19 High Velocity Explosive Magazine (10x24mm)", 0, /obj/item/ammo_magazine/rifle/m49a/custom/explosive, null, VENDOR_ITEM_REGULAR),
-		list("A19 High Velocity Incendiary Magazine (10x24mm)", 0, /obj/item/ammo_magazine/rifle/m49a/custom/incendiary, null, VENDOR_ITEM_REGULAR),
-		list("A19 High Velocity Magazine (10x24mm)", 0, /obj/item/ammo_magazine/rifle/m49a/custom, null, VENDOR_ITEM_REGULAR),
-
-		list("EXTRA SNIPER AMMUNITION", 0, null, null, null),
-		list("M42A Flak Magazine (10x28mm)", 0, /obj/item/ammo_magazine/sniper/flak, null, VENDOR_ITEM_REGULAR),
-		list("M42A Incendiary Magazine (10x28mm)", 0, /obj/item/ammo_magazine/sniper/incendiary, null, VENDOR_ITEM_REGULAR),
-		list("M42A Marksman Magazine (10x28mm Caseless)", 0, /obj/item/ammo_magazine/sniper, null, VENDOR_ITEM_REGULAR),
-
 		list("EXTRA ROCKETEER AMMUNITION", 0, null, null, null),
-		list("84mm Anti-Armor Rocket", 0, /obj/item/ammo_magazine/rocket/ap, null, VENDOR_ITEM_REGULAR),
-		list("84mm High-Explosive Rocket", 0, /obj/item/ammo_magazine/rocket, null, VENDOR_ITEM_REGULAR),
-		list("84mm White-Phosphorus Rocket", 0, /obj/item/ammo_magazine/rocket/wp, null, VENDOR_ITEM_REGULAR),
+		list("84mm Anti-Armor Rocket", 30, /obj/item/ammo_magazine/rocket/ap, null, VENDOR_ITEM_REGULAR),
+		list("84mm High-Explosive Rocket", 30, /obj/item/ammo_magazine/rocket, null, VENDOR_ITEM_REGULAR),
+		list("84mm White-Phosphorus Rocket", 30, /obj/item/ammo_magazine/rocket/wp, null, VENDOR_ITEM_REGULAR),
 
 		list("EXTRA GRENADES", 0, null, null, null),
-		list("M40 HEDP Grenades x6", 0, /obj/effect/essentials_set/hedp_6_pack, null, VENDOR_ITEM_REGULAR),
-		list("M40 HIDP Incendiary Grenades x6", 0, /obj/effect/essentials_set/hidp_6_pack, null, VENDOR_ITEM_REGULAR),
-		list("M40 CCDP Chemical Compound Grenades x6", 0, /obj/effect/essentials_set/ccdp_6_pack, null, VENDOR_ITEM_REGULAR),
-		list("M74 AGM-F Fragmentation Grenades x6", 0, /obj/effect/essentials_set/agmf_6_pack, null, VENDOR_ITEM_REGULAR),
-		list("M74 AGM-I Incendiary Grenades x6", 0, /obj/effect/essentials_set/agmi_6_pack, null, VENDOR_ITEM_REGULAR),
-		list("M74 AGM-S Smoke Grenades x6", 0, /obj/effect/essentials_set/agms_6_pack, null, VENDOR_ITEM_REGULAR),
-		list("G2 Electroshock Grenade Pack x6", 0, /obj/effect/essentials_set/sebb_6_pack, null, VENDOR_ITEM_REGULAR),
+		list("M40 HEDP Grenades x6", 30, /obj/effect/essentials_set/hedp_6_pack, null, VENDOR_ITEM_REGULAR),
+		list("M40 HIDP Incendiary Grenades x6", 30, /obj/effect/essentials_set/hidp_6_pack, null, VENDOR_ITEM_REGULAR),
+		list("M40 CCDP Chemical Compound Grenades x6", 30, /obj/effect/essentials_set/ccdp_6_pack, null, VENDOR_ITEM_REGULAR),
+		list("M74 AGM-F Fragmentation Grenades x6", 30, /obj/effect/essentials_set/agmf_6_pack, null, VENDOR_ITEM_REGULAR),
+		list("M74 AGM-I Incendiary Grenades x6", 30, /obj/effect/essentials_set/agmi_6_pack, null, VENDOR_ITEM_REGULAR),
+		list("M74 AGM-S Smoke Grenades x6", 20, /obj/effect/essentials_set/agms_6_pack, null, VENDOR_ITEM_REGULAR),
+		list("G2 Electroshock Grenade Pack x6", 30, /obj/effect/essentials_set/sebb_6_pack, null, VENDOR_ITEM_REGULAR),
 
 		list("EXTRA FLAMETHROWER TANKS", 0, null, null, null),
-		list("Large Incinerator Tank", 0, /obj/item/ammo_magazine/flamer_tank/large, null, VENDOR_ITEM_REGULAR),
-		list("Large Incinerator Tank (B) (Green Flame)", 0, /obj/item/ammo_magazine/flamer_tank/large/B, null, VENDOR_ITEM_REGULAR),
-		list("Large Incinerator Tank (X) (Blue Flame)", 0, /obj/item/ammo_magazine/flamer_tank/large/X, null, VENDOR_ITEM_REGULAR),
+		list("Large Incinerator Tank", 30, /obj/item/ammo_magazine/flamer_tank/large, null, VENDOR_ITEM_REGULAR),
+		list("Large Incinerator Tank (B) (Green Flame)", 30, /obj/item/ammo_magazine/flamer_tank/large/B, null, VENDOR_ITEM_REGULAR),
+		list("Large Incinerator Tank (X) (Blue Flame)", 30, /obj/item/ammo_magazine/flamer_tank/large/X, null, VENDOR_ITEM_REGULAR),
 
 	))
 

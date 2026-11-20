@@ -231,8 +231,8 @@
 /obj/structure/gun_rack/m41/m41b
 	name = "M41B pulse rifle rack"
 	desc = "ARMAT-produced gun rack for storage of long guns. One of the very rare early-model designs, adjusted to hold M41B pulse rifles for MARSOC teams."
-	allowed_type = /obj/item/weapon/gun/rifle/m41aMK1/marsoc/unmodified
-	populate_type = /obj/item/weapon/gun/rifle/m41aMK1/marsoc/unmodified
+	allowed_type = /obj/item/weapon/gun/rifle/m41aMK1/marsoc
+	populate_type = /obj/item/weapon/gun/rifle/m41aMK1/marsoc
 
 /obj/structure/gun_rack/m41/m41b/empty
 	initial_stored = 0

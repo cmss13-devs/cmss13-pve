@@ -396,7 +396,7 @@
 	name = "\improper M41B pulse rifle"
 	desc = "A modified weapons platform based on the highly regarded M41A. Designed with additional attachment mounts to be more versatile, it ultimately never took off due to patent issues. A limited amount still float around due to back-stock."
 	starting_attachment_types = null
-	current_mag = /obj/item/ammo_magazine/rifle/m41aMK1/heap
+	current_mag = null
 	attachable_allowed = list(
 		/obj/item/attachable/scope,
 		/obj/item/attachable/attached_gun/flamer,
@@ -412,8 +412,14 @@
 		/obj/item/attachable/gyro,
 		/obj/item/attachable/lasersight,
 		/obj/item/attachable/bipod,
-		/obj/item/attachable/burstfire_assembly
+		/obj/item/attachable/burstfire_assembly,
+		/obj/item/attachable/scope/mini_iff
 	)
+
+/obj/item/weapon/gun/rifle/m41aMK1/marsoc/modified
+	name = "\improper M41B pulse rifle"
+	desc = "A modified weapons platform based on the highly regarded M41A. Designed with additional attachment mounts to be more versatile, it ultimately never took off due to patent issues. A limited amount still float around due to back-stock."
+	current_mag = /obj/item/ammo_magazine/rifle/m41aMK1/heap
 	random_spawn_chance = 100
 	random_rail_chance = 50
 	random_spawn_rail = list(
@@ -441,12 +447,6 @@
 		/obj/item/attachable/stock/rifle/collapsible,
 		/obj/item/attachable/stock/rifle,
 	)
-
-/obj/item/weapon/gun/rifle/m41aMK1/marsoc/unmodified
-	name = "\improper M41B pulse rifle"
-	desc = "A modified weapons platform based on the highly regarded M41A. Designed with additional attachment mounts to be more versatile, it ultimately never took off due to patent issues. A limited amount still float around due to back-stock."
-	starting_attachment_types = null
-	current_mag = null
 
 /obj/item/weapon/gun/rifle/m41aMK1/elite
 	name = "\improper M41A2 pulse rifle"
