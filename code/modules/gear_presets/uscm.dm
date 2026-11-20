@@ -153,7 +153,7 @@
 	access = list(ACCESS_MARINE_PREP)
 	languages = list(LANGUAGE_ENGLISH, LANGUAGE_TSL)
 	assignment = "Element Member"
-	rank = JOB_SQUAD_MARINE
+	rank = JOB_SQUAD_ELEMENT_MEMBER_MARSOC
 	paygrades = list(PAY_SHORT_ME3 = JOB_PLAYTIME_TIER_0)
 	role_comm_title = "ELM"
 	skills = /datum/skills/marsoc
@@ -237,7 +237,7 @@
 	access = list(ACCESS_MARINE_PREP, ACCESS_MARINE_SMARTPREP)
 	languages = list(LANGUAGE_ENGLISH, LANGUAGE_TSL)
 	assignment = "Heavy Weapons Operator"
-	rank = JOB_SQUAD_SMARTGUN
+	rank = JOB_SQUAD_HEAVY_WEAPONS_OPERATOR_MARSOC
 	paygrades = list(PAY_SHORT_ME4 = JOB_PLAYTIME_TIER_0)
 	role_comm_title = "HWO"
 	skills = /datum/skills/marsoc
@@ -273,7 +273,7 @@
 	access = list(ACCESS_MARINE_PREP, ACCESS_MARINE_SPECPREP)
 	languages = list(LANGUAGE_ENGLISH, LANGUAGE_TSL)
 	assignment = "Special Weapons Operator"
-	rank = JOB_SQUAD_SPECIALIST
+	rank = JOB_SQUAD_SPECIAL_WEAPONS_OPERATOR_MARSOC
 	paygrades = list(PAY_SHORT_ME4 = JOB_PLAYTIME_TIER_0)
 	role_comm_title = "SWO"
 	skills = /datum/skills/marsoc
@@ -359,7 +359,7 @@
 	access = list(ACCESS_MARINE_PREP, ACCESS_MARINE_MEDPREP, ACCESS_MARINE_MEDBAY)
 	languages = list(LANGUAGE_ENGLISH, LANGUAGE_TSL)
 	assignment = "ARC"
-	rank = JOB_SQUAD_MEDIC
+	rank = JOB_SQUAD_SARC_MARSOC
 	paygrades = list(PAY_SHORT_ME5 = JOB_PLAYTIME_TIER_0)
 	role_comm_title = "ARC"
 	skills = /datum/skills/marsoc/medic
@@ -417,7 +417,7 @@
 
 	access = list(ACCESS_MARINE_PREP, ACCESS_MARINE_TL_PREP, ACCESS_MARINE_DROPSHIP)
 	assignment = "MARSOC Assistant Element Lead"
-	rank = JOB_SQUAD_TEAM_LEADER
+	rank = JOB_SQUAD_ASSISTANT_ELEMENT_LEAD_MARSOC
 	paygrades = list(PAY_SHORT_ME6 = JOB_PLAYTIME_TIER_0)
 	role_comm_title = "AEL"
 	skills = /datum/skills/marsoc/assist_lead
@@ -457,20 +457,7 @@
 
 	access = list(ACCESS_MARINE_PREP, ACCESS_MARINE_ENGPREP, ACCESS_CIVILIAN_ENGINEERING)
 	assignment = "Sapper"
-	rank = JOB_SQUAD_ENGI
-	paygrades = list(PAY_SHORT_ME5 = JOB_PLAYTIME_TIER_0)
-	role_comm_title = "SPR"
-	skills = /datum/skills/marsoc/engineer
-
-	minimap_icon = "engi"
-
-/datum/equipment_preset/uscm/engineer/marsoc
-	name = "MARSOC Sapper"
-	flags = EQUIPMENT_PRESET_EXTRA|EQUIPMENT_PRESET_MARINE
-
-	access = list(ACCESS_MARINE_PREP, ACCESS_MARINE_ENGPREP, ACCESS_CIVILIAN_ENGINEERING)
-	assignment = "Sapper"
-	rank = JOB_SQUAD_ENGI
+	rank = JOB_SQUAD_SAPPER_MARSOC
 	paygrades = list(PAY_SHORT_ME5 = JOB_PLAYTIME_TIER_0)
 	role_comm_title = "SPR"
 	skills = /datum/skills/marsoc/engineer
@@ -528,7 +515,7 @@
 	flags = EQUIPMENT_PRESET_EXTRA|EQUIPMENT_PRESET_MARINE
 	access = list(ACCESS_MARINE_PREP, ACCESS_MARINE_LEADER, ACCESS_MARINE_DROPSHIP)
 	assignment = "MARSOC Element Lead"
-	rank = JOB_SQUAD_LEADER
+	rank = JOB_SQUAD_ELEMENT_LEADER_MARSOC
 	paygrades = list(PAY_SHORT_ME7 = JOB_PLAYTIME_TIER_0)
 	role_comm_title = "EL"
 	minimum_age = 27

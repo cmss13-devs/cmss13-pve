@@ -505,6 +505,27 @@
 	if(locate(/obj/item/weapon/gun/rifle/m49a/pve) in src.contents)
 		overlays += image(src.icon, "+r2")
 
+
+/obj/item/storage/box/guncase/heavy/m49a_pve/custom
+	name = "\improper M49A5 battle rifle case"
+	desc = "A large case for storing an M49A5, a modified USCM battle rifle capable of medium-long range engagements."
+	icon_state = "r2case"
+	storage_slots = 8
+	can_hold = list(/obj/item/weapon/gun/rifle/m49a_custom/tactical, /obj/item/clothing/glasses/night/M49A/no_wallhacks, /obj/item/ammo_magazine/rifle/m49a)
+
+/obj/item/storage/box/guncase/heavy/m49a_pve/custom/fill_preset_inventory()
+	new /obj/item/weapon/gun/rifle/m49a_custom/tactical(src)
+	new /obj/item/clothing/glasses/night/M49A/no_wallhacks(src)
+	new /obj/item/ammo_magazine/rifle/m49a/heap(src)
+	new /obj/item/ammo_magazine/rifle/m49a/heap(src)
+	new /obj/item/ammo_magazine/rifle/m49a/heap(src)
+	new /obj/item/ammo_magazine/rifle/m49a/heap(src)
+	new /obj/item/ammo_magazine/rifle/m49a/heap(src)
+	new /obj/item/ammo_magazine/rifle/m49a/custom/explosive(src)
+	new /obj/item/ammo_magazine/rifle/m49a/custom/explosive(src)
+	new /obj/item/ammo_magazine/rifle/m49a/custom/incendiary(src)
+	new /obj/item/ammo_magazine/rifle/m49a/custom/incendiary(src)
+
 /obj/item/storage/box/guncase/heavy/sniper
 	name = "\improper M42A sniper case"
 	desc = "A case for storing an M42A sniper rifle."

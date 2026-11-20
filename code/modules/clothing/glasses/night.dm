@@ -55,6 +55,18 @@
 	actions_types = list(/datum/action/item_action/toggle)
 	headcam = TRUE
 
+/obj/item/clothing/glasses/night/M49A/no_wallhacks
+	name = "\improper M49A Battle sight"
+	gender = NEUTER
+	desc = "A headset and night vision system for the M49A Battle Rifle. Allows highlighted imaging of surroundings, the ability to view the biofunction monitor readouts of other marines, and linking to the Command & Control network. Click it to toggle."
+	icon_state = "m49a_goggles"
+	deactive_state = "m49a_goggles_0"
+	hud_type = list(MOB_HUD_FACTION_MARINE, MOB_HUD_FACTION_ARMY, MOB_HUD_FACTION_NAVY, MOB_HUD_MEDICAL_BASIC)
+	toggleable = TRUE
+	fullscreen_vision = null
+	actions_types = list(/datum/action/item_action/toggle)
+	headcam = TRUE
+
 /obj/item/clothing/glasses/night/medhud
 	name = "\improper Mark 4 Battle Medic sight"
 	gender = NEUTER
