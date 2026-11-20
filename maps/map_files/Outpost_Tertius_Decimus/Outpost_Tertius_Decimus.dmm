@@ -607,7 +607,9 @@
 /area/tertius_decimus/generators)
 "ha" = (
 /obj/structure/surface/table/reinforced/almayer_B,
-/obj/structure/machinery/computer3,
+/obj/structure/machinery/computer3{
+	name = "cogitator"
+	},
 /turf/open/floor/strata/floor3/east,
 /area/tertius_decimus/command)
 "hc" = (
@@ -3162,7 +3164,7 @@
 /obj/structure/surface/table/reinforced/almayer_B,
 /obj/structure/machinery/computer/cameras/almayer/vehicle{
 	network = list("Outpost_Tertius");
-	name = "Camera system";
+	name = "cogitator camera system";
 	desc = "Used to access the various cameras on the outpost."
 	},
 /turf/open/floor/strata/floor3/east,
