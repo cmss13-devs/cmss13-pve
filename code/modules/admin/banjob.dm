@@ -107,7 +107,8 @@ GLOBAL_LIST_EMPTY(jobban_keylist)
 WARNING!*/
 //Regular jobs
 //Command (Blue)
-	jobs += generate_job_ban_list(M, P, GLOB.ROLES_CIC, "CIC", "ddddff")
+//PVE EDIT - Relevant command jbans for us
+	jobs += generate_job_ban_list(M, P, GLOB.ROLES_PVE_COMMAND, "CIC", "ddddff")
 	jobs += "<br>"
 // SUPPORT
 	jobs += generate_job_ban_list(M, P, GLOB.ROLES_AUXIL_SUPPORT, "Support", "ccccff")
