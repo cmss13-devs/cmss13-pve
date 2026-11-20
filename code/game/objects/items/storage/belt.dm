@@ -1453,9 +1453,9 @@
 		new /obj/item/ammo_magazine/smg/nailgun(src)
 
 /obj/item/storage/belt/gun/m4a3/nailgun/tactical/prefilled/fill_preset_inventory()
-	handle_item_insertion(new /obj/item/weapon/gun/smg/nailgun/compact/tactical())
-	for(var/i = 1 to storage_slots - 1)
-		new /obj/item/ammo_magazine/smg/nailgun(src)
+	new /obj/item/weapon/gun/smg/nailgun/compact/tactical
+	new /obj/item/ammo_magazine/smg/nailgun
+	new /obj/item/ammo_magazine/smg/nailgun
 
 /obj/item/storage/belt/gun/m39
 	name = "\improper M276 pattern M39 holster rig"

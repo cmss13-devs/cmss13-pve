@@ -395,8 +395,8 @@
 /obj/item/weapon/gun/rifle/m41aMK1/marsoc
 	name = "\improper M41B pulse rifle"
 	desc = "A modified weapons platform based on the highly regarded M41A. Designed with additional attachment mounts to be more versatile, it ultimately never took off due to patent issues. A limited amount still float around due to back-stock."
-	starting_attachment_types = null
 	current_mag = null
+	starting_attachment_types = list(/obj/item/attachable/stock/rifle/collapsible)
 	attachable_allowed = list(
 		/obj/item/attachable/scope,
 		/obj/item/attachable/attached_gun/flamer,
@@ -774,7 +774,28 @@
 		remove_bullet_trait("iff")
 	SEND_SIGNAL(src, COMSIG_GUN_IFF_TOGGLED, iff_enabled)
 
-/obj/item/weapon/gun/rifle/m46c/unloaded
+/obj/item/weapon/gun/rifle/m46c/marsoc
+	starting_attachment_types = null
+	attachable_allowed = list(
+		/obj/item/attachable/scope,
+		/obj/item/attachable/attached_gun/flamer,
+		/obj/item/attachable/attached_gun/shotgun,
+		/obj/item/attachable/attached_gun/grenade/mk1,
+		/obj/item/attachable/extended_barrel,
+		/obj/item/attachable/compensator,
+		/obj/item/attachable/heavy_barrel,
+		/obj/item/attachable/stock/rifle,
+		/obj/item/attachable/attached_gun/extinguisher,
+		/obj/item/attachable/verticalgrip,
+		/obj/item/attachable/angledgrip,
+		/obj/item/attachable/gyro,
+		/obj/item/attachable/lasersight,
+		/obj/item/attachable/bipod,
+		/obj/item/attachable/burstfire_assembly,
+		/obj/item/attachable/scope/mini_iff
+	)
+
+/obj/item/weapon/gun/rifle/m46c/marsoc/unloaded
 	current_mag = null
 
 //-------------------------------------------------------

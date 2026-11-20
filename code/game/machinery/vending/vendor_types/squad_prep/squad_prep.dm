@@ -623,6 +623,7 @@
 		list("Marine Combat Gloves, Brown", floor(scale * 15), /obj/item/clothing/gloves/marine/brown, VENDOR_ITEM_REGULAR),
 		list("Marine Radio Headset", floor(scale * 15), /obj/item/device/radio/headset/almayer/sof/survivor_forecon, VENDOR_ITEM_REGULAR),
 		list("M5 Pattern Camera Headset", floor(scale * 15), /obj/item/device/overwatch_camera, VENDOR_ITEM_REGULAR),
+		list("M10 Night Optical HUD", floor(scale * 15), /obj/item/device/helmet_visor/night_vision/marine_raider, VENDOR_ITEM_RECOMMENDED),
 		list("Modified M3 Night Vision Goggles", floor(scale * 15), /obj/item/prop/helmetgarb/helmet_nvg/marsoc, VENDOR_ITEM_RECOMMENDED),
 
 		list("NON-STANDARD EQUIPMENT", -1, null, null, null),
@@ -1171,7 +1172,7 @@
 		list("Bicaridine Autoinjector", round(scale * 15), /obj/item/reagent_container/hypospray/autoinjector/bicaridine, VENDOR_ITEM_REGULAR),
 		list("Dermaline Autoinjector", round(scale * 15), /obj/item/reagent_container/hypospray/autoinjector/dermaline, VENDOR_ITEM_REGULAR),
 		list("Kelotane Autoinjector", round(scale * 15), /obj/item/reagent_container/hypospray/autoinjector/kelotane, VENDOR_ITEM_REGULAR),
-		list("Tricordrazine Autoinjector", round(scale * 15), /obj/item/reagent_container/hypospray/autoinjector/tricord/skillless, VENDOR_ITEM_REGULAR),
+		list("Tricordrazine Autoinjector", round(scale * 15), /obj/item/reagent_container/hypospray/autoinjector/tricord, VENDOR_ITEM_REGULAR),
 		list("Iron Injector", round(scale * 15), /obj/item/reagent_container/hypospray/autoinjector/iron, VENDOR_ITEM_REGULAR),
 		list("Oxycodone Injector", round(scale * 15), /obj/item/reagent_container/hypospray/autoinjector/oxycodone, VENDOR_ITEM_REGULAR),
 
@@ -1290,6 +1291,7 @@
 		list("S6 Reflex Sight", 10, /obj/item/attachable/reflex, VENDOR_ITEM_REGULAR),
 		list("S8 4x Telescopic Scope", 10, /obj/item/attachable/scope, VENDOR_ITEM_REGULAR),
 		list("Rail Flashlight", 10, /obj/item/attachable/flashlight, VENDOR_ITEM_REGULAR),
+		list("Two-Point Sling", 10, /obj/item/attachable/sling, VENDOR_ITEM_REGULAR),
 
 
 		list("UNDERBARREL", -1, null, null),
@@ -1301,17 +1303,19 @@
 		list("Mini Flamethrower", 10, /obj/item/attachable/attached_gun/flamer, VENDOR_ITEM_REGULAR),
 		list("XM-VESG-1 Flamer Nozzle", 10, /obj/item/attachable/attached_gun/flamer_nozzle, VENDOR_ITEM_REGULAR),
 		list("U7 Underbarrel Shotgun", 10, /obj/item/attachable/attached_gun/shotgun, VENDOR_ITEM_REGULAR),
-		list("PN 30mm Underslung Grenade Launcher", 10, 	/obj/item/attachable/attached_gun/grenade/mk1, VENDOR_ITEM_REGULAR),
+		list("PN 30mm Underslung Grenade Launcher", 10, /obj/item/attachable/attached_gun/grenade/mk1, VENDOR_ITEM_REGULAR),
+		list("PN 30mm Underslung Grenade Launcher (Green)", 10, /obj/item/attachable/attached_gun/grenade/mk1/recon, VENDOR_ITEM_REGULAR),
 		list("Underbarrel Extinguisher", 10, /obj/item/attachable/attached_gun/extinguisher, VENDOR_ITEM_REGULAR),
 		list("Vertical Grip", 10, /obj/item/attachable/verticalgrip, VENDOR_ITEM_REGULAR),
 		list("Underbarrel Flashlight Grip", 10, /obj/item/attachable/flashlight/grip, VENDOR_ITEM_REGULAR),
+
 
 		list("STOCK", -1, null, null),
 		list("M37 Wooden Stock", 10, /obj/item/attachable/stock/shotgun, VENDOR_ITEM_REGULAR),
 		list("M39 Arm Brace", 10, /obj/item/attachable/stock/smg/collapsible/brace, VENDOR_ITEM_REGULAR),
 		list("M39 Stock", 10, /obj/item/attachable/stock/smg, VENDOR_ITEM_REGULAR),
-		list("M41A Solid Stock", 10, /obj/item/attachable/stock/rifle, VENDOR_ITEM_REGULAR),
-		list("M41A Extendable Stock", 10, /obj/item/attachable/stock/rifle/collapsible, VENDOR_ITEM_REGULAR),
+		list("M41A Solid Stock", 1.5, /obj/item/attachable/stock/rifle, VENDOR_ITEM_REGULAR),
+		list("M41A Collapsible Stock", 1.5, /obj/item/attachable/stock/rifle/collapsible, VENDOR_ITEM_REGULAR),
 		list("M44 Magnum Sharpshooter Stock", 10, /obj/item/attachable/stock/revolver, VENDOR_ITEM_REGULAR)
 		)
 
