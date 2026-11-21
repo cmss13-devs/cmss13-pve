@@ -167,8 +167,7 @@ GLOBAL_LIST_INIT(cm_vending_clothing_medic, list(
 /obj/structure/machinery/cm_vending/clothing/medic/marsoc
 	name = "\improper ColMarTech MARSOC Medical Equipment Rack"
 	desc = "An automated rack hooked up to a colossal storage of SARC standard-issue equipment."
-	req_access = list(ACCESS_MARINE_MEDPREP)
-	vendor_role = list(JOB_SQUAD_MEDIC)
+	vendor_role = list(JOB_SQUAD_SARC_MARSOC)
 
 GLOBAL_LIST_INIT(cm_vending_clothing_marsoc_medic, list(
 		list("ARMOR PAINT (CHOOSE 1)", 0, null, null, null),

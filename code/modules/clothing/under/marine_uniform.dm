@@ -441,6 +441,13 @@
 	worn_state = "marsoc_jumpsuit"
 	flags_item = NO_SNOW_TYPE
 
+
+/obj/item/clothing/under/marine/veteran/marsoc/lighter
+	name = "MARSOC fatigues"
+	desc = "Non-standard battle dress uniform, with venlar armor inserts at critical areas to protect from blades and ballistics."
+	icon_state = "d_MP_jumpsuit"
+	worn_state = "d_MP_jumpsuit"
+
 //=========================//PMC\\================================\\
 
 /obj/item/clothing/under/marine/veteran/pmc

@@ -122,6 +122,7 @@
 	total_positions = 1
 	spawn_positions = 1
 	gear_preset = /datum/equipment_preset/uscm/sg/marsoc
+	job_options = list(CPL_VARIANT = "CPL")
 
 /obj/effect/landmark/start/marine/smartgunner/upp
 	name = JOB_SQUAD_SMARTGUN_UPP

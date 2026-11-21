@@ -399,9 +399,18 @@
 	starting_attachment_types = list(/obj/item/attachable/stock/rifle/collapsible)
 	attachable_allowed = list(
 		/obj/item/attachable/scope,
+		/obj/item/attachable/scope/mini_iff,
+		/obj/item/attachable/scope/mini,
+		/obj/item/attachable/reddot,
+		/obj/item/attachable/reflex,
+		/obj/item/attachable/flashlight,
+		/obj/item/attachable/sling,
+		/obj/item/attachable/magnetic_harness,
 		/obj/item/attachable/attached_gun/flamer,
 		/obj/item/attachable/attached_gun/shotgun,
 		/obj/item/attachable/attached_gun/grenade/mk1,
+		/obj/item/attachable/attached_gun/flamer_nozzle,
+		/obj/item/attachable/suppressor,
 		/obj/item/attachable/extended_barrel,
 		/obj/item/attachable/compensator,
 		/obj/item/attachable/heavy_barrel,
@@ -409,11 +418,11 @@
 		/obj/item/attachable/attached_gun/extinguisher,
 		/obj/item/attachable/verticalgrip,
 		/obj/item/attachable/angledgrip,
+		/obj/item/attachable/flashlight/grip,
 		/obj/item/attachable/gyro,
 		/obj/item/attachable/lasersight,
 		/obj/item/attachable/bipod,
 		/obj/item/attachable/burstfire_assembly,
-		/obj/item/attachable/scope/mini_iff
 	)
 
 /obj/item/weapon/gun/rifle/m41aMK1/marsoc/modified
@@ -778,9 +787,19 @@
 	starting_attachment_types = null
 	attachable_allowed = list(
 		/obj/item/attachable/scope,
+		/obj/item/attachable/scope/mini_iff,
+		/obj/item/attachable/scope/mini,
+		/obj/item/attachable/reddot,
+		/obj/item/attachable/reflex,
+		/obj/item/attachable/flashlight,
+		/obj/item/attachable/sling,
+		/obj/item/attachable/magnetic_harness,
 		/obj/item/attachable/attached_gun/flamer,
 		/obj/item/attachable/attached_gun/shotgun,
 		/obj/item/attachable/attached_gun/grenade/mk1,
+		/obj/item/attachable/attached_gun/grenade/mk1/recon,
+		/obj/item/attachable/attached_gun/flamer_nozzle,
+		/obj/item/attachable/suppressor,
 		/obj/item/attachable/extended_barrel,
 		/obj/item/attachable/compensator,
 		/obj/item/attachable/heavy_barrel,
@@ -788,11 +807,13 @@
 		/obj/item/attachable/attached_gun/extinguisher,
 		/obj/item/attachable/verticalgrip,
 		/obj/item/attachable/angledgrip,
+		/obj/item/attachable/flashlight/grip,
 		/obj/item/attachable/gyro,
 		/obj/item/attachable/lasersight,
 		/obj/item/attachable/bipod,
 		/obj/item/attachable/burstfire_assembly,
-		/obj/item/attachable/scope/mini_iff
+		/obj/item/attachable/stock/rifle,
+		/obj/item/attachable/stock/rifle/collapsible
 	)
 
 /obj/item/weapon/gun/rifle/m46c/marsoc/unloaded

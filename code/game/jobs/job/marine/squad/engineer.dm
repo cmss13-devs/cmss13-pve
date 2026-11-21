@@ -37,6 +37,7 @@
 	total_positions = 1
 	spawn_positions = 1
 	gear_preset = /datum/equipment_preset/uscm/engineer/marsoc
+	job_options = list(SGT_VARIANT = "SGT")
 
 /obj/effect/landmark/start/marine/engineer
 	name = JOB_SQUAD_ENGI

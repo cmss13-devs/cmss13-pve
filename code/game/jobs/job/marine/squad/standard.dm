@@ -95,6 +95,12 @@
 	total_positions = 2
 	spawn_positions = 2
 	gear_preset = /datum/equipment_preset/uscm/pfc/marsoc
+	job_options = list(LCPL_VARIANT = "LCPL")
+
+/obj/effect/landmark/start/marine/marsoc
+	name = JOB_SQUAD_ELEMENT_MEMBER_MARSOC
+	squad = SQUAD_MRR
+	job = /datum/equipment_preset/uscm/pfc/marsoc
 
 /datum/job/marine/standard/ai/rto
 	total_positions = 1
@@ -166,11 +172,6 @@
 
 #undef CPL_VARIANT
 #undef LCPL_VARIANT
-/obj/effect/landmark/start/marine/marsoc
-	name = JOB_SQUAD_ELEMENT_MEMBER_MARSOC
-	squad = SQUAD_MRR
-	job = /datum/equipment_preset/uscm/pfc/marsoc
-
 #undef PFC_VARIANT
 #undef SR_PVT_VARIANT
 #undef PVT_VARIANT

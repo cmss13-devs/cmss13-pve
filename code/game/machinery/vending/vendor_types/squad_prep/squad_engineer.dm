@@ -140,6 +140,7 @@ GLOBAL_LIST_INIT(cm_vending_gear_engi_marsoc, list(
 /obj/structure/machinery/cm_vending/gear/engi/marsoc
 	name = "\improper ColMarTech MARSOC Sapper Gear Rack"
 	desc = "An automated gear rack for MARSOC Sappers."
+	vendor_role = list(JOB_SQUAD_SAPPER_MARSOC)
 
 /obj/structure/machinery/cm_vending/gear/engi/marsoc/get_listed_products(mob/user)
 	return GLOB.cm_vending_gear_engi_marsoc

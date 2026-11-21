@@ -86,6 +86,7 @@ OverrideTimelock(/datum/job/marine/leader, list(
 	total_positions = 1
 	spawn_positions = 1
 	gear_preset = /datum/equipment_preset/uscm/leader/marsoc
+	job_options = list(GYSGT_VARIANT = "GYSGT")
 
 /obj/effect/landmark/start/marine/leader/upp
 	name = JOB_SQUAD_LEADER_UPP

@@ -122,6 +122,7 @@
 /datum/job/marine/medic/ai/marsoc
 	title = JOB_SQUAD_SARC_MARSOC
 	gear_preset = /datum/equipment_preset/uscm/medic/marsoc
+	job_options = list(SGT_VARIANT = "SGT")
 
 /obj/effect/landmark/start/marine/medic/upp
 	name = JOB_SQUAD_MEDIC_UPP
