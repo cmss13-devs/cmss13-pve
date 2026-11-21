@@ -276,6 +276,14 @@
 	new /obj/item/reagent_container/hypospray/autoinjector/oxycodone(src)
 	new /obj/item/reagent_container/hypospray/autoinjector/dexalinp(src)
 
+/obj/item/storage/firstaid/softpack_empty
+	name = "standard-issue first-aid pack"
+	desc = "A soft first-aid pack typically containing essential medical supplies for use in the field."
+	icon_state = "softpack"
+	w_class = SIZE_MEDIUM
+	open_state = "softpack_empty"
+	use_sound = 'sound/items/zip.ogg'
+
 /obj/item/storage/firstaid/softpack/upp
 	icon_state = "softpack_upp"
 	open_state = "softpack_empty_upp"
@@ -310,6 +318,11 @@
 	new /obj/item/stack/medical/advanced/ointment(src)
 	new /obj/item/stack/medical/advanced/ointment(src)
 	new /obj/item/stack/medical/splint(src)
+
+/obj/item/storage/firstaid/softpack_empty/adv
+	name = "advanced first-aid pack"
+	desc = "A soft first-aid pack containing sophisticated equipment for all-around treatment in the field."
+	icon_state = "softpack_darkred"
 
 /obj/item/storage/firstaid/softpack/adv/upp
 	icon_state = "softpack_darkred_upp"

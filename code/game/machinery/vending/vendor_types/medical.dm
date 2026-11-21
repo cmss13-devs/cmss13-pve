@@ -841,6 +841,9 @@
 		list("Autoinjector (Ultrazine)", 2, /obj/item/reagent_container/hypospray/autoinjector/ultrazine, VENDOR_ITEM_REGULAR),
 		list("Autoinjector (Iron)", 5, /obj/item/reagent_container/hypospray/autoinjector/iron, VENDOR_ITEM_REGULAR),
 
+		list("STORAGE APPLICATION(S)", -1, null, null),
+		list("Medical Softpack Storage Solution (EMPTY)", floor(scale * 4), /obj/item/storage/firstaid/softpack_empty/adv, VENDOR_ITEM_REGULAR),
+
 		list("EQUIPMENT", -1, null, null),
 		list("Health Diagnostic Equipment", floor(scale * 4), /obj/item/device/healthanalyzer/soul, VENDOR_ITEM_REGULAR),
 		list("Health Diagnostic Silencer Chip", 4, /obj/item/device/quiet_silent_healthanalyzer, VENDOR_ITEM_REGULAR),

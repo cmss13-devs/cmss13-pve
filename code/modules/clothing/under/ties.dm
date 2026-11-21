@@ -415,7 +415,7 @@
 	icon_state = "forecon_patch"
 
 /obj/item/clothing/accessory/patch/marsoc
-	name = "USCM Marine Forces Special Operations Command patch"
+	name = "USCM Marine Special Operations Command patch"
 	desc = "A durable shoulder patch, worn by the valiant men and women of USCM MARSOC. Spiritus Invictus."
 	icon_state = "marsocpatch"
 
