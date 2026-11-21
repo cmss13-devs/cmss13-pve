@@ -44,6 +44,14 @@
 			if(JOB_FORECON_RIFLEMAN) marine_rk = null
 			if(JOB_FORECON_CO) marine_rk = "co"
 
+			if(JOB_SQUAD_ELEMENT_LEADER_MARSOC) marine_rk = "soctl"
+			if(JOB_SQUAD_ASSISTANT_ELEMENT_LEAD_MARSOC) marine_rk = "tl"
+			if(JOB_SQUAD_SARC_MARSOC) marine_rk = "med"
+			if(JOB_SQUAD_SAPPER_MARSOC) marine_rk = "tech"
+			if(JOB_SQUAD_HEAVY_WEAPONS_OPERATOR_MARSOC) marine_rk = "gun"
+			if(JOB_SQUAD_SPECIAL_WEAPONS_OPERATOR_MARSOC) marine_rk = "spec"
+			if(JOB_SQUAD_ELEMENT_MEMBER_MARSOC) marine_rk = null
+
 		if(squad.squad_leader == current_human)
 			switch(squad.squad_type)
 				if("Section") marine_rk = "leader_a"
@@ -51,6 +59,7 @@
 				if("Platoon") marine_rk = "leader_a"
 				if("Squad") marine_rk = "leader_a"
 				if("Taskforce") marine_rk = "leader_a"
+				if("Element") marine_rk = "soctl_a"
 			current_human.langchat_styles = "langchat_bolded" // bold text for bold leaders
 		else if(squad.fireteam_leaders["SQ1"] == current_human || squad.fireteam_leaders["SQ2"] == current_human)
 			current_human.langchat_styles = "langchat_smaller_bolded"
@@ -233,6 +242,18 @@
 				marine_rk = "tl"
 			if(JOB_SQUAD_LEADER)
 				marine_rk = "leader"
+			if(JOB_SQUAD_ELEMENT_LEADER_MARSOC)
+				marine_rk = "soctl"
+			if(JOB_SQUAD_ASSISTANT_ELEMENT_LEAD_MARSOC)
+				marine_rk = "tl"
+			if(JOB_SQUAD_SARC_MARSOC)
+				marine_rk = "med"
+			if(JOB_SQUAD_SAPPER_MARSOC)
+				marine_rk = "tech"
+			if(JOB_SQUAD_HEAVY_WEAPONS_OPERATOR_MARSOC)
+				marine_rk = "gun"
+			if(JOB_SQUAD_SPECIAL_WEAPONS_OPERATOR_MARSOC)
+				marine_rk = "spec"
 			// FORECON surv specific stuff
 			if(JOB_FORECON_SL)
 				marine_rk = "leader"
