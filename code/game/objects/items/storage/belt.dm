@@ -1452,6 +1452,11 @@
 	for(var/i = 1 to storage_slots - 1)
 		new /obj/item/ammo_magazine/smg/nailgun(src)
 
+/obj/item/storage/belt/gun/m4a3/nailgun/tactical/prefilled/fill_preset_inventory()
+	new /obj/item/weapon/gun/smg/nailgun/compact/tactical
+	new /obj/item/ammo_magazine/smg/nailgun
+	new /obj/item/ammo_magazine/smg/nailgun
+
 /obj/item/storage/belt/gun/m39
 	name = "\improper M276 pattern M39 holster rig"
 	desc = "Special issue variant of the M276 designed to holster a M39 submachine gun and two spare magazines. Uncommonly issued to USCM support and specialist personnel."
@@ -2013,6 +2018,13 @@
 		magazines--
 
 #undef MAXIMUM_MAGAZINE_COUNT
+
+/obj/item/storage/belt/gun/smartgunner/garrow/marsoc
+
+/obj/item/storage/belt/gun/smartgunner/garrow/marsoc/fill_preset_inventory()
+	new /obj/item/ammo_magazine/smartgun(src)
+	new /obj/item/ammo_magazine/smartgun(src)
+	new /obj/item/ammo_magazine/smartgun(src)
 
 /obj/item/storage/belt/gun/smartgunner/pmc
 	name = "\improper M802 pattern 'Dirty' smartgunner sidearm rig"

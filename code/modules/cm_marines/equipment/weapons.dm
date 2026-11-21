@@ -28,6 +28,58 @@
 	else
 		icon_state = "kit_case_e"
 
+/obj/item/storage/box/m56_system/marsoc
+	storage_slots = 12
+
+/obj/item/storage/box/m56_system/marsoc/Initialize()
+	. = ..()
+	new /obj/item/clothing/accessory/storage/webbing/m56(src)
+	new /obj/item/clothing/accessory/storage/webbing/m56/grenade(src)
+	new /obj/item/storage/large_holster/machete/smartgunner/full(src)
+	new /obj/item/storage/belt/gun/smartgunner/garrow(src)
+	new /obj/item/smartgun_battery(src)
+	update_icon()
+
+/obj/item/storage/box/m56_system/marsoc/update_icon()
+	LAZYCLEARLIST(overlays)
+	if(length(contents))
+		icon_state = "kit_case"
+		overlays += image(icon, "smartgun")
+	else
+		icon_state = "kit_case_e"
+
+/obj/item/storage/box/m56_system_suppressed
+	name = "\improper XM56A4 smartgun system case"
+	desc = "A large case containing an XM56A4 Smartgun, M56 combat harness, head mounted sight and powerpack.\nDrag this sprite into you to open it up! NOTE: You cannot put items back inside this case."
+	icon = 'icons/obj/items/storage/kits.dmi'
+	icon_state = "kit_case"
+	w_class = SIZE_HUGE
+	storage_slots = 9
+	slowdown = 1
+	can_hold = list() //Nada. Once you take the stuff out it doesn't fit back in.
+	foldable = null
+
+/obj/item/storage/box/m56_system_suppressed/update_icon()
+	LAZYCLEARLIST(overlays)
+	if(length(contents))
+		icon_state = "kit_case"
+		overlays += image(icon, "smartgun")
+	else
+		icon_state = "kit_case_e"
+
+/obj/item/storage/box/m56_system_suppressed/Initialize()
+	. = ..()
+	new /obj/item/clothing/suit/marine/smartgunner(src)
+	new /obj/item/weapon/gun/smartgun/silenced(src)
+	new /obj/item/clothing/accessory/storage/webbing/m56(src)
+	new /obj/item/clothing/accessory/storage/webbing/m56/grenade(src)
+	new /obj/item/storage/large_holster/machete/smartgunner/full(src)
+	new /obj/item/storage/belt/gun/smartgunner/garrow/marsoc(src)
+	new /obj/item/clothing/glasses/night/m56_goggles/no_nightvision(src)
+	new /obj/item/smartgun_battery(src)
+	new /obj/item/smartgun_battery(src)
+	update_icon()
+
 /obj/item/storage/box/m56c_system
 	name = "\improper M56C smartgun system case"
 	desc = "A large case containing an M56C Smartgun, M56 combat harness, head mounted sight, M280 Smartgunner Drum Belt and powerpack.\nDrag this sprite into you to open it up! NOTE: You cannot put items back inside this case."

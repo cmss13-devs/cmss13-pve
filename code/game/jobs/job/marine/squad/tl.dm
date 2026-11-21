@@ -66,8 +66,13 @@
 	spawn_positions = 1
 	title = JOB_SQUAD_TEAM_LEADER_FORECON
 	gear_preset = /datum/equipment_preset/uscm/tl/forecon
-	gear_preset_secondary = /datum/equipment_preset/uscm/tl/forecon/sergeant
-	job_options = list(SGT_VARIANT = "SGT", SSGT_VARIANT = "SSGT")
+
+/datum/job/marine/tl/ai/marsoc
+	title = JOB_SQUAD_ASSISTANT_ELEMENT_LEAD_MARSOC
+	total_positions = 1
+	spawn_positions = 1
+	gear_preset = /datum/equipment_preset/uscm/tl/marsoc
+	job_options = list(SSGT_VARIANT = "SSGT")
 
 /datum/job/marine/tl/ai/forecon/handle_job_options(option)
 	gear_preset = initial(gear_preset)
@@ -106,6 +111,11 @@
 	name = JOB_SQUAD_TEAM_LEADER_FORECON
 	squad = SQUAD_LRRP
 	job = /datum/job/marine/tl/ai/forecon
+
+/obj/effect/landmark/start/marine/tl/marsoc
+	name = JOB_SQUAD_ASSISTANT_ELEMENT_LEAD_MARSOC
+	squad = SQUAD_MRR
+	job = /datum/equipment_preset/uscm/tl/marsoc
 
 //-- RMC Platoon --//
 //Section/squad leader & team leader//

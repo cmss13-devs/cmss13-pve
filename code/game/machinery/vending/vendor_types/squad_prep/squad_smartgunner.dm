@@ -71,6 +71,24 @@ GLOBAL_LIST_INIT(cm_vending_gear_smartgun, list(
 /obj/structure/machinery/cm_vending/gear/smartgun/get_listed_products(mob/user)
 	return GLOB.cm_vending_gear_smartgun
 
+GLOBAL_LIST_INIT(cm_vending_gear_marsoc_smartgun, list(
+	list("EQUIPMENT BOX (CHOOSE 1)", 0, null, null, null),
+	list("Smartgunner Equipment Box", 0, /obj/item/storage/box/m56_system/marsoc, MARINE_CAN_BUY_ESSENTIALS, VENDOR_ITEM_MANDATORY),
+	list("Smartgunner Equipment Box (Suppressed)", 0, /obj/item/storage/box/m56_system_suppressed, MARINE_CAN_BUY_ESSENTIALS, VENDOR_ITEM_MANDATORY),
+	list("Heavy Pulse Rifle Equipment Box (HEAP)", 0, /obj/item/storage/box/guncase/heavy/hpr/marsoc, MARINE_CAN_BUY_ESSENTIALS, VENDOR_ITEM_MANDATORY),
+	list("XM99A Plasma Rifle Equipment Box", 0, /obj/item/storage/box/guncase/heavy/XM99, MARINE_CAN_BUY_ESSENTIALS, VENDOR_ITEM_MANDATORY),
+	list("M49A5 Tactical DMR Equipment Box (HEAP)", 0, /obj/item/storage/box/guncase/heavy/m49a_pve/custom, MARINE_CAN_BUY_ESSENTIALS, VENDOR_ITEM_MANDATORY),
+))
+
+/obj/structure/machinery/cm_vending/gear/smartgun/marsoc
+	name = "\improper ColMarTech MARSOC Heavy Weapon Operator Gear Rack"
+	desc = "An automated gear rack for MARSOC Heavy Weapon Operators"
+	vendor_role = list(JOB_SQUAD_HEAVY_WEAPONS_OPERATOR_MARSOC)
+	icon_state = "marsoc_hwo"
+
+/obj/structure/machinery/cm_vending/gear/smartgun/marsoc/get_listed_products(mob/user)
+	return GLOB.cm_vending_gear_marsoc_smartgun
+
 //------------CLOTHING VENDOR---------------
 
 GLOBAL_LIST_INIT(cm_vending_clothing_smartgun, list(

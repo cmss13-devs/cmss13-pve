@@ -55,6 +55,42 @@ GLOBAL_LIST_INIT(cm_vending_gear_spec, list(
 	return GLOB.cm_vending_gear_spec
 
 
+GLOBAL_LIST_INIT(cm_vending_gear_marsoc_spec, list(
+		list("SPECIAL WEAPON OPERATOR EQUIPMENT SETS (CHOOSE 1)", 0, null, null, null),
+		list("Rocketeer Set", 0, /obj/item/storage/box/spec/rocketeer, MARINE_CAN_BUY_ESSENTIALS, VENDOR_ITEM_REGULAR),
+		list("Heavy Grenadier Set", 0, /obj/item/storage/box/spec/heavy_grenadier, MARINE_CAN_BUY_ESSENTIALS, VENDOR_ITEM_REGULAR),
+		list("Pyrotechnican Set", 0, /obj/item/storage/box/spec/pyro, MARINE_CAN_BUY_ESSENTIALS, VENDOR_ITEM_REGULAR),
+
+		list("EXTRA ROCKETEER AMMUNITION", 0, null, null, null),
+		list("84mm Anti-Armor Rocket", 30, /obj/item/ammo_magazine/rocket/ap, null, VENDOR_ITEM_REGULAR),
+		list("84mm High-Explosive Rocket", 30, /obj/item/ammo_magazine/rocket, null, VENDOR_ITEM_REGULAR),
+		list("84mm White-Phosphorus Rocket", 30, /obj/item/ammo_magazine/rocket/wp, null, VENDOR_ITEM_REGULAR),
+
+		list("EXTRA GRENADES", 0, null, null, null),
+		list("M40 HEDP Grenades x6", 30, /obj/effect/essentials_set/hedp_6_pack, null, VENDOR_ITEM_REGULAR),
+		list("M40 HIDP Incendiary Grenades x6", 30, /obj/effect/essentials_set/hidp_6_pack, null, VENDOR_ITEM_REGULAR),
+		list("M40 CCDP Chemical Compound Grenades x6", 30, /obj/effect/essentials_set/ccdp_6_pack, null, VENDOR_ITEM_REGULAR),
+		list("M74 AGM-F Fragmentation Grenades x6", 30, /obj/effect/essentials_set/agmf_6_pack, null, VENDOR_ITEM_REGULAR),
+		list("M74 AGM-I Incendiary Grenades x6", 30, /obj/effect/essentials_set/agmi_6_pack, null, VENDOR_ITEM_REGULAR),
+		list("M74 AGM-S Smoke Grenades x6", 20, /obj/effect/essentials_set/agms_6_pack, null, VENDOR_ITEM_REGULAR),
+		list("G2 Electroshock Grenade Pack x6", 30, /obj/effect/essentials_set/sebb_6_pack, null, VENDOR_ITEM_REGULAR),
+
+		list("EXTRA FLAMETHROWER TANKS", 0, null, null, null),
+		list("Large Incinerator Tank", 30, /obj/item/ammo_magazine/flamer_tank/large, null, VENDOR_ITEM_REGULAR),
+		list("Large Incinerator Tank (B) (Green Flame)", 30, /obj/item/ammo_magazine/flamer_tank/large/B, null, VENDOR_ITEM_REGULAR),
+		list("Large Incinerator Tank (X) (Blue Flame)", 30, /obj/item/ammo_magazine/flamer_tank/large/X, null, VENDOR_ITEM_REGULAR),
+
+	))
+
+/obj/structure/machinery/cm_vending/gear/spec/marsoc
+	name = "\improper ColMarTech MARSOC Special Weapons Operator Gear Rack"
+	desc = "An automated gear rack for MARSOC Special Weapons Operators."
+	vendor_role = list(JOB_SQUAD_SPECIAL_WEAPONS_OPERATOR_MARSOC)
+
+
+/obj/structure/machinery/cm_vending/gear/spec/marsoc/get_listed_products(mob/user)
+	return GLOB.cm_vending_gear_marsoc_spec
+
 //------------CLOTHING VENDOR---------------
 
 GLOBAL_LIST_INIT(cm_vending_clothing_specialist, list(

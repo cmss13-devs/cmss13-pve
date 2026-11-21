@@ -392,6 +392,71 @@
 	desc = "A variant of the M41A pulse rifle adopted for use by USASF personnel whose duties take them off ships frequently. Features an integrated 30mm grenade launcher, flash & sound suppressor, and a carry-handle mounted mag-clamp."
 	starting_attachment_types = list(/obj/item/attachable/attached_gun/grenade/mk1/preloaded, /obj/item/attachable/suppressor, /obj/item/attachable/magnetic_harness, /obj/item/attachable/stock/rifle/collapsible)
 
+/obj/item/weapon/gun/rifle/m41aMK1/marsoc
+	name = "\improper M41B pulse rifle"
+	desc = "A modified weapons platform based on the highly regarded M41A. Designed with additional attachment mounts to be more versatile, it ultimately never took off due to patent issues. A limited amount still float around due to back-stock."
+	current_mag = null
+	starting_attachment_types = list(/obj/item/attachable/stock/rifle/collapsible)
+	attachable_allowed = list(
+		/obj/item/attachable/scope,
+		/obj/item/attachable/scope/mini_iff,
+		/obj/item/attachable/scope/mini,
+		/obj/item/attachable/reddot,
+		/obj/item/attachable/reflex,
+		/obj/item/attachable/flashlight,
+		/obj/item/attachable/sling,
+		/obj/item/attachable/magnetic_harness,
+		/obj/item/attachable/attached_gun/flamer,
+		/obj/item/attachable/attached_gun/shotgun,
+		/obj/item/attachable/attached_gun/grenade/mk1,
+		/obj/item/attachable/attached_gun/flamer_nozzle,
+		/obj/item/attachable/suppressor,
+		/obj/item/attachable/extended_barrel,
+		/obj/item/attachable/compensator,
+		/obj/item/attachable/heavy_barrel,
+		/obj/item/attachable/stock/rifle,
+		/obj/item/attachable/attached_gun/extinguisher,
+		/obj/item/attachable/verticalgrip,
+		/obj/item/attachable/angledgrip,
+		/obj/item/attachable/flashlight/grip,
+		/obj/item/attachable/gyro,
+		/obj/item/attachable/lasersight,
+		/obj/item/attachable/bipod,
+		/obj/item/attachable/burstfire_assembly,
+	)
+
+/obj/item/weapon/gun/rifle/m41aMK1/marsoc/modified
+	name = "\improper M41B pulse rifle"
+	desc = "A modified weapons platform based on the highly regarded M41A. Designed with additional attachment mounts to be more versatile, it ultimately never took off due to patent issues. A limited amount still float around due to back-stock."
+	current_mag = /obj/item/ammo_magazine/rifle/m41aMK1/heap
+	random_spawn_chance = 100
+	random_rail_chance = 50
+	random_spawn_rail = list(
+		/obj/item/attachable/reddot,
+		/obj/item/attachable/reflex,
+		/obj/item/attachable/magnetic_harness,
+		/obj/item/attachable/sling,
+		/obj/item/attachable/scope/mini,
+	)
+	random_under_chance = 100
+	random_spawn_under = list(
+		/obj/item/attachable/attached_gun/grenade/mk1/preloaded,
+		/obj/item/attachable/attached_gun/flamer,
+		/obj/item/attachable/attached_gun/shotgun,
+	)
+	random_muzzle_chance = 50
+	random_spawn_muzzle = list(
+		/obj/item/attachable/suppressor,
+		/obj/item/attachable/bayonet,
+		/obj/item/attachable/extended_barrel,
+		/obj/item/attachable/compensator,
+	)
+	random_stock_chance = 100
+	random_spawn_stock = list(
+		/obj/item/attachable/stock/rifle/collapsible,
+		/obj/item/attachable/stock/rifle,
+	)
+
 /obj/item/weapon/gun/rifle/m41aMK1/elite
 	name = "\improper M41A2 pulse rifle"
 	desc = "A modified version M41A pulse rifle re-engineered for better weight and handling, and an high degree of accuracy brought about by a precise two-round burst system."
@@ -717,6 +782,42 @@
 	else
 		remove_bullet_trait("iff")
 	SEND_SIGNAL(src, COMSIG_GUN_IFF_TOGGLED, iff_enabled)
+
+/obj/item/weapon/gun/rifle/m46c/marsoc
+	starting_attachment_types = null
+	attachable_allowed = list(
+		/obj/item/attachable/scope,
+		/obj/item/attachable/scope/mini_iff,
+		/obj/item/attachable/scope/mini,
+		/obj/item/attachable/reddot,
+		/obj/item/attachable/reflex,
+		/obj/item/attachable/flashlight,
+		/obj/item/attachable/sling,
+		/obj/item/attachable/magnetic_harness,
+		/obj/item/attachable/attached_gun/flamer,
+		/obj/item/attachable/attached_gun/shotgun,
+		/obj/item/attachable/attached_gun/grenade/mk1,
+		/obj/item/attachable/attached_gun/grenade/mk1/recon,
+		/obj/item/attachable/attached_gun/flamer_nozzle,
+		/obj/item/attachable/suppressor,
+		/obj/item/attachable/extended_barrel,
+		/obj/item/attachable/compensator,
+		/obj/item/attachable/heavy_barrel,
+		/obj/item/attachable/stock/rifle,
+		/obj/item/attachable/attached_gun/extinguisher,
+		/obj/item/attachable/verticalgrip,
+		/obj/item/attachable/angledgrip,
+		/obj/item/attachable/flashlight/grip,
+		/obj/item/attachable/gyro,
+		/obj/item/attachable/lasersight,
+		/obj/item/attachable/bipod,
+		/obj/item/attachable/burstfire_assembly,
+		/obj/item/attachable/stock/rifle,
+		/obj/item/attachable/stock/rifle/collapsible
+	)
+
+/obj/item/weapon/gun/rifle/m46c/marsoc/unloaded
+	current_mag = null
 
 //-------------------------------------------------------
 //MAR-40 AK CLONE //AK47 and FN FAL together as one.

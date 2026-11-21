@@ -50,6 +50,12 @@
 /obj/structure/closet/secure_closet/marine_personal/corpsman
 	job = JOB_SQUAD_MEDIC
 
+/obj/structure/closet/secure_closet/marine_personal/engineer
+	job = JOB_SQUAD_ENGI
+
+/obj/structure/closet/secure_closet/marine_personal/specialist
+	job = JOB_SQUAD_SPECIALIST
+
 /obj/structure/closet/secure_closet/marine_personal/squad_leader
 	job = JOB_SQUAD_TEAM_LEADER
 
@@ -211,3 +217,31 @@
 
 /obj/structure/closet/secure_closet/marine_personal/rmc/troop_commander
 	job = JOB_TWE_RMC_LIEUTENANT
+
+// ==MARSOC== //
+
+/obj/structure/closet/secure_closet/marine_personal/marsoc/spawn_gear()
+	new /obj/item/clothing/under/marine/veteran/marsoc/lighter(src)
+	new /obj/item/device/radio/headset/almayer/sof/survivor_forecon(src)
+	new /obj/item/clothing/shoes/marine/knife(src)
+
+/obj/structure/closet/secure_closet/marine_personal/marsoc/element
+	job = JOB_SQUAD_ELEMENT_MEMBER_MARSOC
+
+/obj/structure/closet/secure_closet/marine_personal/marsoc/heavy_weapons_operator
+	job = JOB_SQUAD_HEAVY_WEAPONS_OPERATOR_MARSOC
+
+/obj/structure/closet/secure_closet/marine_personal/marsoc/special_weapons_operator
+	job = JOB_SQUAD_SPECIAL_WEAPONS_OPERATOR_MARSOC
+
+/obj/structure/closet/secure_closet/marine_personal/marsoc/sarc
+	job = JOB_SQUAD_SARC_MARSOC
+
+/obj/structure/closet/secure_closet/marine_personal/marsoc/sapper
+	job = JOB_SQUAD_SAPPER_MARSOC
+
+/obj/structure/closet/secure_closet/marine_personal/marsoc/assistant_element_lead
+	job = JOB_SQUAD_ASSISTANT_ELEMENT_LEAD_MARSOC
+
+/obj/structure/closet/secure_closet/marine_personal/marsoc/element_lead
+	job = JOB_SQUAD_ELEMENT_LEADER_MARSOC

@@ -81,6 +81,13 @@ OverrideTimelock(/datum/job/marine/leader, list(
 	else
 		gear_preset = gear_preset_secondary
 
+/datum/job/marine/leader/ai/marsoc
+	title = JOB_SQUAD_ELEMENT_LEADER_MARSOC
+	total_positions = 1
+	spawn_positions = 1
+	gear_preset = /datum/equipment_preset/uscm/leader/marsoc
+	job_options = list(GYSGT_VARIANT = "GYSGT")
+
 /obj/effect/landmark/start/marine/leader/upp
 	name = JOB_SQUAD_LEADER_UPP
 	squad = SQUAD_UPP
@@ -126,7 +133,12 @@ OverrideTimelock(/datum/job/marine/leader, list(
 	job = /datum/job/marine/leader/ai/rmc
 
 #undef MSSGT_VARIANT
+/obj/effect/landmark/start/marine/leader/marsoc
+	name = JOB_SQUAD_ELEMENT_LEADER_MARSOC
+	squad = SQUAD_MRR
+	job = /datum/job/marine/leader/ai/marsoc
+
+#undef SSGT_VARIANT
 #undef GYSGT_VARIANT
 #undef SGTMJR_VARIANT
-#undef SSGT_VARIANT
 #undef SRSGT_VARIANT

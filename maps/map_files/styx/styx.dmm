@@ -1,0 +1,11966 @@
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"ab" = (
+/obj/structure/closet/secure_closet/marine_personal/marsoc/sarc{
+	pixel_x = 9;
+	pixel_y = -2
+	},
+/turf/open/floor/almayer/edge/smooth/east,
+/area/styx/cryo_cells)
+"ah" = (
+/turf/open/floor/almayer/plate{
+	color = "#A9A9A9"
+	},
+/area/styx/hangar)
+"ap" = (
+/turf/closed/wall/almayer/outer,
+/area/styx/hangar)
+"at" = (
+/obj/structure/machinery/power/apc/almayer/north,
+/obj/structure/cable{
+	icon_state = "0-2"
+	},
+/turf/open/floor/almayer/plate{
+	color = "#A9A9A9"
+	},
+/area/styx/cryo_cells)
+"aE" = (
+/obj/structure/machinery/cm_vending/sorted/uniform_supply/squad_prep/marsoc,
+/turf/open/floor/almayer/plate{
+	color = "#A9A9A9"
+	},
+/area/styx/platoonarmory)
+"aK" = (
+/obj/structure/bed/bedroll{
+	pixel_y = 12;
+	color = "#333333";
+	name = "gym mat";
+	buckle_lying = null;
+	can_buckle = 0;
+	foldabletype = null;
+	desc = "A black gym mat, useful if you don't want to use the cold hard floor for exercise.";
+	pixel_x = 6
+	},
+/turf/open/floor/plating,
+/area/styx/dorms)
+"aM" = (
+/obj/structure/machinery/door/firedoor/border_only/almayer{
+	layer = 1.9
+	},
+/turf/open/floor/almayer/plating,
+/area/styx/prep_hallway)
+"aQ" = (
+/obj/effect/decal/warning_stripes/asteroid{
+	icon_state = "cargo_arrow";
+	pixel_x = 9;
+	pixel_y = 12
+	},
+/obj/effect/decal/warning_stripes/asteroid{
+	icon_state = "W"
+	},
+/obj/structure/sign/safety/cryo{
+	name = "hypersleep semiotic";
+	pixel_x = -16;
+	pixel_y = -8;
+	desc = "Semiotic Standard denoting the nearby presence of a hypersleep bay."
+	},
+/turf/open/floor/almayer_hull/blackfull,
+/area/styx/cryo_cells)
+"aT" = (
+/obj/structure/ladder{
+	id = "mission2";
+	height = 1
+	},
+/turf/open/floor/almayer_hull/blackfull,
+/area/styx/platoonarmory)
+"aV" = (
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/structure/machinery/light/double/blue{
+	dir = 8;
+	pixel_x = -4;
+	pixel_y = 0;
+	color = "#8B0000";
+	light_color = "#8B0000";
+	name = "red"
+	},
+/turf/open/floor/almayer_hull/blackfull,
+/area/styx/platoonarmory)
+"bb" = (
+/turf/closed/wall/almayer/outer,
+/area/styx/cryo_cells)
+"bc" = (
+/obj/structure/largecrate/random/case/double{
+	pixel_x = -3;
+	pixel_y = 6
+	},
+/turf/open/floor/plating,
+/area/styx/dorms)
+"bk" = (
+/obj/structure/machinery/alarm/almayer{
+	dir = 1;
+	pixel_x = 0;
+	pixel_y = 21
+	},
+/turf/open/floor/almayer/plating,
+/area/styx/prep_hallway)
+"bw" = (
+/obj/structure/machinery/light/double/blue{
+	dir = 8;
+	pixel_x = -4;
+	pixel_y = 0;
+	color = "#8B0000";
+	light_color = "#8B0000";
+	name = "red"
+	},
+/obj/structure/pipes/vents/pump,
+/obj/effect/decal/warning_stripes/asteroid{
+	icon_state = "S"
+	},
+/turf/open/floor/almayer/plating,
+/area/styx/cryo_cells)
+"bL" = (
+/obj/structure/closet/secure_closet/surgical{
+	pixel_x = -1;
+	pixel_y = 31
+	},
+/turf/open/floor/almayer/sterile_green,
+/area/styx/medical)
+"bQ" = (
+/obj/effect/decal/warning_stripes/asteroid{
+	icon_state = "S"
+	},
+/obj/structure/pipes/standard/simple/hidden/scrubbers,
+/obj/structure/pipes/standard/simple/hidden/supply,
+/turf/open/floor/almayer/plate{
+	color = "#A9A9A9"
+	},
+/area/styx/prep_hallway)
+"bS" = (
+/obj/structure/bed/bedroll{
+	pixel_y = -12;
+	color = "#333333";
+	name = "gym mat";
+	buckle_lying = null;
+	can_buckle = 0;
+	foldabletype = null;
+	desc = "A black gym mat, useful if you don't want to use the cold hard floor for exercise.";
+	pixel_x = -14
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "2-4"
+	},
+/turf/open/floor/plating,
+/area/styx/dorms)
+"cp" = (
+/obj/structure/window/framed/almayer,
+/obj/structure/pipes/standard/simple/hidden/supply,
+/obj/structure/pipes/standard/simple/hidden/scrubbers{
+	dir = 1
+	},
+/obj/structure/machinery/door/firedoor/border_only/almayer,
+/turf/open/floor/almayer_hull/blackfull,
+/area/styx/cryo_cells)
+"cz" = (
+/obj/structure/window/framed/almayer,
+/turf/open/floor/almayer/plate{
+	color = "#A9A9A9"
+	},
+/area/styx/medical)
+"cA" = (
+/obj/structure/machinery/door/airlock/almayer/medical{
+	dir = 1;
+	name = "\improper Medical Office Storage";
+	req_one_access = list();
+	req_one_access_txt = "8;12"
+	},
+/turf/open/floor/almayer/research,
+/area/styx/medical)
+"cB" = (
+/obj/effect/decal/warning_stripes/asteroid{
+	icon_state = "cargo_arrow";
+	dir = 2
+	},
+/obj/effect/decal/warning_stripes/asteroid{
+	icon_state = "S"
+	},
+/turf/open/floor/almayer_hull/blackfull,
+/area/styx/prep_hallway)
+"cD" = (
+/turf/open/floor/almayer_hull/blackfull,
+/area/styx/hangar)
+"cH" = (
+/obj/structure/machinery/light/double/blue{
+	dir = 8;
+	pixel_x = -4;
+	pixel_y = -17;
+	color = "#8B0000";
+	light_color = "#8B0000";
+	name = "red"
+	},
+/obj/effect/decal/warning_stripes/asteroid{
+	icon_state = "W"
+	},
+/turf/open/floor/almayer_hull/blackfull,
+/area/styx/cryo_cells)
+"cT" = (
+/obj/structure/pipes/standard/simple/hidden/supply,
+/obj/structure/pipes/standard/simple/hidden/scrubbers{
+	dir = 1
+	},
+/turf/open/floor/almayer/plating,
+/area/styx/canteen)
+"db" = (
+/obj/structure/pipes/vents/scrubber{
+	pixel_y = 15
+	},
+/turf/open/floor/almayer/plate{
+	color = "#A9A9A9"
+	},
+/area/styx/cryo_cells)
+"dc" = (
+/obj/structure/pipes/vents/scrubber,
+/turf/open/floor/almayer/edge/smooth{
+	dir = 10
+	},
+/area/styx/cryo_cells)
+"dd" = (
+/obj/structure/sign/safety/cryo{
+	name = "hypersleep semiotic";
+	pixel_x = -17;
+	pixel_y = 38;
+	desc = "Semiotic Standard denoting the nearby presence of a hypersleep bay."
+	},
+/turf/open/floor/almayer/plating_striped/north,
+/area/styx/cryo_cells)
+"dg" = (
+/obj/structure/closet/crate/medical{
+	name = "anesthetic crate"
+	},
+/obj/item/tank/anesthetic,
+/obj/item/tank/anesthetic{
+	pixel_x = 7;
+	pixel_y = 0
+	},
+/obj/item/tank/anesthetic{
+	pixel_x = -6;
+	pixel_y = -3
+	},
+/obj/item/clothing/mask/breath/medical,
+/turf/open/floor/almayer/sterile_green,
+/area/styx/medical)
+"dv" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
+	},
+/obj/effect/decal/warning_stripes/asteroid{
+	icon_state = "E"
+	},
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 8
+	},
+/obj/structure/pipes/standard/simple/hidden/scrubbers{
+	dir = 4
+	},
+/turf/open/floor/almayer/edge/smooth/east,
+/area/styx/cryo_cells)
+"dB" = (
+/obj/structure/machinery/washing_machine,
+/obj/structure/machinery/washing_machine{
+	pixel_x = 0;
+	pixel_y = 15
+	},
+/obj/structure/machinery/light/small{
+	dir = 1;
+	pixel_x = 16;
+	pixel_y = 11
+	},
+/turf/open/floor/almayer/sterile,
+/area/styx/dorms)
+"dI" = (
+/obj/structure/pipes/vents/scrubber{
+	dir = 8
+	},
+/turf/open/floor/almayer_hull/blackfull,
+/area/styx/dorms)
+"dJ" = (
+/obj/structure/machinery/washing_machine,
+/obj/structure/machinery/washing_machine{
+	pixel_x = 0;
+	pixel_y = 15
+	},
+/turf/open/floor/almayer/sterile,
+/area/styx/dorms)
+"dT" = (
+/obj/structure/machinery/door_control{
+	name = "Hypersleep Access Release";
+	pixel_x = 1;
+	pixel_y = 27;
+	id = "hypersleep"
+	},
+/obj/structure/extinguisher_cabinet/alt{
+	pixel_x = -11;
+	pixel_y = 29
+	},
+/obj/structure/sign/safety/water{
+	pixel_x = -16;
+	pixel_y = 23
+	},
+/obj/structure/sign/safety/bathunisex{
+	pixel_y = 35;
+	pixel_x = -16
+	},
+/obj/effect/decal/warning_stripes/asteroid{
+	icon_state = "NE-out";
+	pixel_x = 0;
+	pixel_y = 1
+	},
+/turf/open/floor/almayer/plating,
+/area/styx/cryo_cells)
+"dX" = (
+/obj/structure/machinery/door_control/brbutton{
+	pixel_x = 0;
+	pixel_y = 25;
+	name = "autodoc";
+	id = "autodoc";
+	needs_power = 0
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "cargo_arrow";
+	color = "#E10600";
+	dir = 1
+	},
+/turf/open/floor/almayer/plate{
+	color = "#A9A9A9"
+	},
+/area/styx/medical)
+"ec" = (
+/obj/structure/sign/safety/refridgeration{
+	pixel_x = -2;
+	pixel_y = 7
+	},
+/turf/closed/wall/almayer/outer,
+/area/styx/canteen)
+"ed" = (
+/turf/open/floor/almayer/plate{
+	color = "#A9A9A9"
+	},
+/area/styx/dorms)
+"eF" = (
+/obj/effect/decal/warning_stripes/asteroid{
+	icon_state = "cargo_arrow";
+	dir = 1
+	},
+/obj/effect/decal/warning_stripes/asteroid{
+	icon_state = "N";
+	pixel_x = 0;
+	pixel_y = 1
+	},
+/obj/structure/machinery/door_control/brbutton{
+	id = "Hangar Upper";
+	name = "Hangar Access Control";
+	pixel_x = -24;
+	pixel_y = 6
+	},
+/obj/structure/sign/safety/manualopenclose{
+	pixel_x = -29;
+	pixel_y = 6
+	},
+/obj/structure/sign/safety/bulkhead_door{
+	pixel_x = -29;
+	pixel_y = -6
+	},
+/turf/open/floor/almayer_hull/blackfull,
+/area/styx/hangar)
+"eG" = (
+/obj/effect/decal/warning_stripes/asteroid{
+	icon_state = "cargo_arrow";
+	pixel_x = -9;
+	pixel_y = 12
+	},
+/obj/effect/decal/warning_stripes/asteroid{
+	icon_state = "E"
+	},
+/obj/structure/pipes/standard/simple/hidden/scrubbers,
+/obj/structure/machinery/firealarm{
+	dir = 4;
+	pixel_x = 25;
+	pixel_y = 0
+	},
+/turf/open/floor/almayer_hull/blackfull,
+/area/styx/cryo_cells)
+"eS" = (
+/obj/structure/cable{
+	layer = 2.36
+	},
+/turf/open/floor/almayer/edge/smooth,
+/area/styx/dorms)
+"fa" = (
+/obj/effect/decal/warning_stripes/asteroid{
+	icon_state = "S"
+	},
+/turf/open/floor/almayer/plate{
+	color = "#A9A9A9"
+	},
+/area/styx/hangar)
+"fb" = (
+/obj/structure/pipes/standard/manifold/hidden/supply{
+	dir = 8
+	},
+/turf/open/floor/almayer_hull/blackfull,
+/area/styx/dorms)
+"fe" = (
+/obj/structure/window/framed/almayer,
+/turf/open/floor/almayer/plate{
+	color = "#A9A9A9"
+	},
+/area/styx/dorms)
+"ff" = (
+/obj/structure/machinery/landinglight/ds1/delayone,
+/obj/structure/roof/cargocrane_tracks/horizontal{
+	pixel_y = 14
+	},
+/obj/structure/largecrate/random/case/small{
+	layer = 6;
+	density = 0;
+	icon_state = "mini_chest_c";
+	pixel_x = 12;
+	pixel_y = 26
+	},
+/turf/open/floor/almayer/plate{
+	color = "#A9A9A9"
+	},
+/area/styx/hangar)
+"fh" = (
+/obj/structure/machinery/door/poddoor/almayer/blended{
+	name = "Hangar Access Lockdown";
+	id = "Hangar"
+	},
+/obj/structure/machinery/door/firedoor/border_only/almayer{
+	dir = 2
+	},
+/turf/open/floor/almayer_hull/blackfull,
+/area/styx/prep_hallway)
+"fk" = (
+/obj/structure/pipes/vents/pump{
+	pixel_x = 0;
+	pixel_y = -14
+	},
+/obj/structure/pipes/vents/scrubber{
+	pixel_x = 0;
+	pixel_y = 11
+	},
+/turf/open/floor/almayer/dark_sterile,
+/area/styx/cryo_cells)
+"fp" = (
+/obj/structure/machinery/door/firedoor/border_only/almayer{
+	layer = 1.9
+	},
+/turf/open/floor/almayer/plating,
+/area/styx/dorms)
+"fw" = (
+/obj/effect/decal/warning_stripes/asteroid{
+	icon_state = "SW-out"
+	},
+/obj/structure/pipes/vents/pump{
+	pixel_x = 0;
+	pixel_y = 15
+	},
+/turf/open/floor/almayer_hull/blackfull,
+/area/styx/cryo_cells)
+"fy" = (
+/turf/open/floor/plating{
+	color = "#A9A9A9"
+	},
+/area/styx/hangar)
+"fC" = (
+/obj/structure/bed/chair{
+	dir = 4;
+	pixel_y = 15;
+	pixel_x = 6
+	},
+/turf/open/floor/almayer/plate{
+	color = "#A9A9A9"
+	},
+/area/styx/dorms)
+"fL" = (
+/obj/structure/reagent_dispensers/water_cooler/stacks{
+	density = 0;
+	pixel_x = -5;
+	pixel_y = 19
+	},
+/obj/structure/machinery/light/double/blue{
+	dir = 1;
+	light_color = "#dae2ff";
+	light_power = 0.7;
+	pixel_x = 0;
+	pixel_y = 20
+	},
+/obj/structure/sign/safety/water{
+	pixel_x = 14;
+	pixel_y = 41
+	},
+/turf/open/floor/almayer/plating_striped/east,
+/area/styx/canteen)
+"fP" = (
+/obj/effect/decal/warning_stripes/asteroid{
+	icon_state = "N";
+	pixel_x = 0;
+	pixel_y = 1
+	},
+/turf/open/floor/almayer/plate{
+	color = "#A9A9A9"
+	},
+/area/styx/platoonarmory)
+"fS" = (
+/obj/structure/machinery/cryopod/big/flipped{
+	pixel_x = -9;
+	pixel_y = -1
+	},
+/turf/open/floor/almayer_hull/blackfull,
+/area/styx/cryo_cells)
+"gb" = (
+/obj/structure/pipes/vents/pump,
+/turf/open/floor/almayer/sterile,
+/area/styx/dorms)
+"gd" = (
+/obj/structure/machinery/door/poddoor/almayer/blended{
+	dir = 4;
+	name = "Vessel Access Lockdown";
+	id = "outer-1"
+	},
+/turf/open/floor/almayer/plating,
+/area/styx/dorms)
+"ge" = (
+/obj/structure/machinery/door/airlock/almayer/secure{
+	req_access = null;
+	dir = 1;
+	name = "Hypersleep Bay"
+	},
+/obj/structure/machinery/door/poddoor/almayer/blended{
+	id = "hypersleep";
+	name = "Hypersleep Bay"
+	},
+/obj/structure/machinery/door/firedoor/border_only/almayer{
+	dir = 2
+	},
+/turf/open/floor/almayer/plating,
+/area/styx/cryo_cells)
+"gl" = (
+/obj/structure/ladder{
+	id = "mission1"
+	},
+/turf/open/floor/almayer_hull/blackfull,
+/area/styx/prep_hallway)
+"gq" = (
+/obj/structure/window/framed/almayer,
+/turf/open/floor/almayer_hull/blackfull,
+/area/styx/hangar)
+"gt" = (
+/obj/effect/decal/warning_stripes/asteroid{
+	icon_state = "cargo_arrow";
+	dir = 2
+	},
+/turf/open/floor/almayer_hull/blackfull,
+/area/styx/prep_hallway)
+"gw" = (
+/obj/structure/pipes/standard/simple/hidden/supply,
+/obj/structure/pipes/standard/simple/hidden/scrubbers{
+	dir = 1
+	},
+/turf/open/floor/almayer_hull/blackfull,
+/area/styx/prep_hallway)
+"gx" = (
+/obj/structure/machinery/light/double/blue{
+	dir = 1;
+	pixel_x = 0;
+	pixel_y = 10;
+	color = "#8B0000";
+	light_color = "#8B0000";
+	name = "red"
+	},
+/obj/structure/sign/safety/cryo{
+	name = "hypersleep semiotic";
+	pixel_x = 0;
+	pixel_y = 39
+	},
+/obj/structure/machinery/firealarm{
+	pixel_y = 34;
+	pixel_x = 5
+	},
+/obj/effect/decal/warning_stripes/asteroid{
+	icon_state = "NW-out";
+	pixel_x = -1;
+	pixel_y = 1
+	},
+/turf/open/floor/almayer/plating,
+/area/styx/cryo_cells)
+"gC" = (
+/turf/open/floor/almayer/black{
+	dir = 8
+	},
+/area/styx/canteen)
+"gF" = (
+/obj/structure/bed/chair/comfy/bench/north,
+/obj/structure/machinery/alarm/almayer{
+	dir = 1;
+	pixel_x = 0;
+	pixel_y = 21
+	},
+/turf/open/floor/almayer/edge/smooth{
+	dir = 9
+	},
+/area/styx/cryo_cells)
+"gG" = (
+/obj/structure/machinery/landinglight/ds1{
+	dir = 4
+	},
+/obj/structure/machinery/floodlight/landing/floor{
+	color = "#dae2ff";
+	light_color = "#dae2ff"
+	},
+/turf/open/floor/almayer/plating,
+/area/styx/hangar)
+"gP" = (
+/obj/structure/stairs/perspective{
+	color = "#A9A9A9"
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
+	},
+/turf/open/floor/almayer/plate{
+	color = "#A9A9A9"
+	},
+/area/styx/canteen)
+"gQ" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "1-4"
+	},
+/obj/structure/pipes/standard/simple/hidden/supply,
+/obj/structure/pipes/standard/simple/hidden/scrubbers{
+	dir = 1
+	},
+/turf/open/floor/almayer/plating_striped,
+/area/styx/cryo_cells)
+"gS" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
+	},
+/obj/structure/pipes/standard/simple/hidden/supply,
+/turf/open/floor/almayer/mono,
+/area/styx/cryo_cells)
+"gX" = (
+/obj/structure/machinery/cm_vending/sorted/medical{
+	pixel_y = 18;
+	density = 0
+	},
+/turf/open/floor/almayer/research,
+/area/styx/medical)
+"gZ" = (
+/obj/effect/landmark/observer_start,
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
+	},
+/obj/structure/pipes/standard/manifold/fourway/hidden/supply,
+/obj/structure/pipes/standard/manifold/fourway/hidden/scrubbers,
+/turf/open/floor/almayer/plate{
+	color = "#A9A9A9"
+	},
+/area/styx/prep_hallway)
+"ha" = (
+/obj/structure/machinery/light/double/blue{
+	light_color = "#dae2ff";
+	dir = 4;
+	light_power = 0.3;
+	pixel_x = 5;
+	pixel_y = 0
+	},
+/turf/open/floor/almayer_hull/blackfull,
+/area/styx/hangar)
+"hh" = (
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 10
+	},
+/obj/structure/pipes/standard/simple/hidden/scrubbers{
+	dir = 6
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
+	},
+/turf/open/floor/almayer/plate{
+	color = "#A9A9A9"
+	},
+/area/styx/cryo_cells)
+"hk" = (
+/obj/structure/platform/strata/metal{
+	pixel_x = -5;
+	pixel_y = 0
+	},
+/obj/item/storage/bag/trash{
+	pixel_x = 2;
+	pixel_y = 0
+	},
+/obj/item/storage/bag/trash{
+	pixel_x = 8;
+	pixel_y = 1
+	},
+/turf/open/floor/almayer/plating_striped/east,
+/area/styx/canteen)
+"hl" = (
+/turf/closed/wall/almayer/outer,
+/area/styx/medical)
+"hx" = (
+/obj/structure/pipes/vents/scrubber,
+/obj/structure/machinery/light/double/blue{
+	dir = 8;
+	light_color = "#dae2ff";
+	light_power = 0.3;
+	pixel_x = -10;
+	pixel_y = -1
+	},
+/turf/open/floor/almayer/edge/smooth{
+	dir = 9
+	},
+/area/styx/cryo_cells)
+"hz" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "2-8"
+	},
+/turf/open/floor/almayer/plating_striped,
+/area/styx/cryo_cells)
+"hH" = (
+/turf/open/floor/almayer/blackcorner/west{
+	dir = 2
+	},
+/area/styx/dorms)
+"hM" = (
+/obj/structure/machinery/door/poddoor/almayer/blended{
+	name = "Hangar Access Lockdown";
+	id = "Hangar Upper"
+	},
+/turf/open/floor/almayer_hull/blackfull,
+/area/styx/hangar)
+"hS" = (
+/obj/effect/decal/warning_stripes/asteroid{
+	icon_state = "SE-out"
+	},
+/obj/structure/machinery/door_control/brbutton/alt{
+	id = "Hangar";
+	name = "Hangar Access Control";
+	pixel_x = 7;
+	pixel_y = -22
+	},
+/obj/structure/sign/safety/manualopenclose{
+	pixel_x = 2;
+	pixel_y = -23
+	},
+/turf/open/floor/almayer/plating,
+/area/styx/prep_hallway)
+"hU" = (
+/turf/open/floor/almayer/sterile_green_side/west{
+	dir = 1
+	},
+/area/styx/medical)
+"hY" = (
+/obj/structure/sign/banners/colonial_marines_flag{
+	pixel_x = 6;
+	pixel_y = 32
+	},
+/turf/open/floor/almayer/plating,
+/area/styx/prep_hallway)
+"if" = (
+/obj/structure/surface/table/reinforced/prison,
+/obj/item/roller{
+	pixel_y = 6
+	},
+/obj/item/roller{
+	pixel_y = 11;
+	pixel_x = 0
+	},
+/obj/item/roller{
+	pixel_y = 17;
+	pixel_x = 0
+	},
+/obj/item/storage/box/bodybags{
+	pixel_y = 1;
+	pixel_x = -3
+	},
+/obj/item/storage/box/bodybags{
+	pixel_y = 11;
+	pixel_x = 3
+	},
+/turf/open/floor/almayer/research,
+/area/styx/medical)
+"ig" = (
+/turf/open/floor/almayer_hull/blackfull,
+/area/styx/dorms)
+"ii" = (
+/obj/structure/pipes/standard/simple/hidden/scrubbers,
+/turf/open/floor/almayer,
+/area/styx/cryo_cells)
+"im" = (
+/obj/structure/closet/coffin/woodencrate,
+/obj/item/clothing/shoes/marine,
+/obj/item/clothing/shoes/marine,
+/obj/item/clothing/shoes/marine,
+/obj/item/clothing/shoes/marine,
+/obj/item/clothing/shoes/marine,
+/obj/item/clothing/shoes/marine,
+/turf/open/floor/almayer/sterile,
+/area/styx/dorms)
+"io" = (
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 9
+	},
+/obj/structure/pipes/standard/simple/hidden/scrubbers{
+	dir = 5
+	},
+/obj/structure/pipes/standard/simple/hidden/scrubbers,
+/obj/structure/pipes/standard/simple/hidden/supply,
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
+	},
+/turf/open/floor/almayer/plate{
+	color = "#A9A9A9"
+	},
+/area/styx/cryo_cells)
+"ir" = (
+/obj/effect/decal/warning_stripes/asteroid{
+	icon_state = "cargo_arrow";
+	pixel_x = 9;
+	pixel_y = 12
+	},
+/obj/effect/decal/warning_stripes/asteroid{
+	icon_state = "W"
+	},
+/obj/structure/pipes/standard/simple/hidden/supply,
+/turf/open/floor/almayer_hull/blackfull,
+/area/styx/cryo_cells)
+"iF" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "cargo_arrow";
+	color = "#E10600";
+	dir = 1
+	},
+/obj/structure/machinery/door_control/brbutton{
+	pixel_x = 0;
+	pixel_y = 26;
+	name = "Additional Equipment";
+	id = "equip";
+	needs_power = 0
+	},
+/turf/open/floor/almayer_hull,
+/area/styx/platoonarmory)
+"iJ" = (
+/obj/structure/bedsheetbin{
+	pixel_x = 6;
+	pixel_y = -1
+	},
+/obj/structure/bedsheetbin{
+	pixel_x = -16;
+	pixel_y = -1
+	},
+/obj/structure/machinery/light/small{
+	pixel_x = -16;
+	pixel_y = 0
+	},
+/turf/open/floor/almayer/sterile,
+/area/styx/dorms)
+"iL" = (
+/turf/closed/wall/almayer/outer,
+/area/styx/prep_hallway)
+"iM" = (
+/obj/structure/machinery/prop/almayer/CICmap/table/horizontal/segment/three,
+/turf/open/floor/almayer_hull/blackfull,
+/area/styx/hangar)
+"iN" = (
+/obj/structure/ladder{
+	id = "hangar4";
+	height = 1
+	},
+/turf/open/floor/almayer_hull/blackfull,
+/area/styx/hangar)
+"iP" = (
+/obj/structure/machinery/door/poddoor/almayer/blended{
+	dir = 4;
+	name = "Vessel Access Lockdown";
+	id = "inner-1"
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
+	},
+/turf/open/floor/almayer/plating,
+/area/styx/dorms)
+"iT" = (
+/obj/structure/platform/strata/metal,
+/obj/structure/platform/strata/metal{
+	dir = 4
+	},
+/obj/structure/platform_decoration/strata/metal{
+	pixel_x = -7;
+	pixel_y = 7
+	},
+/turf/open/floor/almayer/plating,
+/area/styx/canteen)
+"jc" = (
+/obj/structure/bed/chair/office/light{
+	pixel_x = -16;
+	pixel_y = 14;
+	buckling_x = -16;
+	dir = 1;
+	buckling_y = 14
+	},
+/turf/open/floor/almayer/research,
+/area/styx/medical)
+"jg" = (
+/obj/structure/bed/chair/comfy/black{
+	dir = 4
+	},
+/turf/open/floor/almayer_hull/blackfull,
+/area/styx/canteen)
+"jh" = (
+/obj/structure/window/framed/almayer,
+/obj/structure/pipes/standard/simple/hidden/supply,
+/obj/structure/pipes/standard/simple/hidden/scrubbers{
+	dir = 1
+	},
+/turf/open/floor/almayer/plate{
+	color = "#A9A9A9"
+	},
+/area/styx/canteen)
+"ji" = (
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 4
+	},
+/obj/structure/pipes/standard/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/structure/machinery/door/firedoor/border_only/almayer{
+	layer = 1.9
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
+	},
+/turf/open/floor/almayer/plate{
+	color = "#A9A9A9"
+	},
+/area/styx/dorms)
+"jo" = (
+/turf/open/floor/almayer/dark_sterile,
+/area/styx/cryo_cells)
+"jp" = (
+/obj/effect/decal/warning_stripes/asteroid{
+	icon_state = "E"
+	},
+/obj/effect/landmark/late_join,
+/obj/effect/landmark/late_join/marsoc,
+/obj/effect/landmark/start/marine/marsoc,
+/obj/effect/landmark/start/marine/smartgunner/marsoc,
+/turf/open/floor/almayer_hull/blackfull,
+/area/styx/cryo_cells)
+"js" = (
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 4
+	},
+/obj/structure/pipes/standard/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
+	},
+/turf/open/floor/almayer/plate{
+	color = "#A9A9A9"
+	},
+/area/styx/dorms)
+"ju" = (
+/obj/structure/machinery/light/double/blue{
+	dir = 1;
+	light_color = "#dae2ff";
+	light_power = 0.7;
+	pixel_x = 0;
+	pixel_y = 20
+	},
+/turf/open/floor/almayer/plating,
+/area/styx/prep_hallway)
+"jw" = (
+/turf/open/floor/almayer,
+/area/styx/dorms)
+"jx" = (
+/obj/effect/decal/warning_stripes/asteroid{
+	icon_state = "S"
+	},
+/obj/effect/decal/warning_stripes/asteroid{
+	icon_state = "cargo_arrow";
+	dir = 1
+	},
+/obj/structure/machinery/door_control/brbutton/alt{
+	id = "Hangar Upper";
+	name = "Hangar Access Control";
+	pixel_x = -27;
+	pixel_y = 6
+	},
+/obj/structure/sign/safety/bulkhead_door{
+	pixel_x = -32;
+	pixel_y = -7
+	},
+/turf/open/floor/almayer_hull/blackfull,
+/area/styx/hangar)
+"jy" = (
+/obj/structure/machinery/door/airlock/almayer/secure/glass{
+	req_access = null;
+	dir = 1;
+	name = "Dormitories"
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
+	},
+/obj/structure/pipes/standard/simple/hidden/scrubbers,
+/obj/structure/machinery/door/firedoor/border_only/almayer{
+	dir = 2
+	},
+/turf/open/floor/almayer/plate{
+	color = "#A9A9A9"
+	},
+/area/styx/dorms)
+"jC" = (
+/obj/structure/bed/bedroll{
+	pixel_y = -4;
+	color = "#333333";
+	name = "gym mat";
+	buckle_lying = null;
+	can_buckle = 0;
+	foldabletype = null;
+	desc = "A black gym mat, useful if you don't want to use the cold hard floor for exercise."
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "0-4"
+	},
+/obj/structure/cable{
+	icon_state = "0-2"
+	},
+/turf/open/floor/almayer/mono,
+/area/styx/dorms)
+"jF" = (
+/obj/structure/closet{
+	desc = "It's a fancy storage unit for long-life foodstuffs.";
+	name = "long-life foodstuff storage";
+	pixel_x = 0;
+	pixel_y = -2
+	},
+/obj/item/reagent_container/food/snacks/meat/synthmeat,
+/obj/item/reagent_container/food/snacks/meat/synthmeat,
+/obj/item/reagent_container/food/snacks/meat/synthmeat,
+/obj/item/reagent_container/food/snacks/meat/synthmeat,
+/obj/item/reagent_container/food/snacks/meat/synthmeat,
+/obj/item/reagent_container/food/snacks/meat/synthmeat,
+/obj/item/reagent_container/food/snacks/carpmeat/processed{
+	name = "synthetic carp fillet";
+	desc = "A fillet of 'carp' meat. Sadly it's not the real thing and has that signature fabricated taste."
+	},
+/obj/item/reagent_container/food/snacks/carpmeat/processed{
+	name = "synthetic carp fillet";
+	desc = "A fillet of 'carp' meat. Sadly it's not the real thing and has that signature fabricated taste."
+	},
+/obj/item/reagent_container/food/snacks/carpmeat/processed{
+	name = "synthetic carp fillet";
+	desc = "A fillet of 'carp' meat. Sadly it's not the real thing and has that signature fabricated taste."
+	},
+/obj/item/reagent_container/food/snacks/carpmeat/processed{
+	name = "synthetic carp fillet";
+	desc = "A fillet of 'carp' meat. Sadly it's not the real thing and has that signature fabricated taste."
+	},
+/obj/item/reagent_container/food/snacks/meat/fish/crab{
+	name = "synthetic crab meat";
+	desc = "Gourmet 'crab' that's obviously synthetic. It tastes horrible, even when cooked."
+	},
+/obj/item/reagent_container/food/snacks/meat/fish/crab{
+	name = "synthetic crab meat";
+	desc = "Gourmet 'crab' that's obviously synthetic. It tastes horrible, even when cooked."
+	},
+/obj/item/reagent_container/food/snacks/meat/fish/crab{
+	name = "synthetic crab meat";
+	desc = "Gourmet 'crab' that's obviously synthetic. It tastes horrible, even when cooked."
+	},
+/obj/structure/machinery/light/double/blue{
+	light_color = "#dae2ff";
+	light_power = 0.3
+	},
+/turf/open/floor/almayer/black,
+/area/styx/canteen)
+"jL" = (
+/turf/open/floor/almayer/plating_striped/north,
+/area/styx/cryo_cells)
+"jO" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "NW-out";
+	layer = 2.5;
+	pixel_y = 2;
+	pixel_x = -1
+	},
+/turf/open/floor/almayer/plate{
+	color = "#A9A9A9"
+	},
+/area/styx/hangar)
+"jQ" = (
+/obj/structure/platform_decoration/strata/metal{
+	pixel_x = -33;
+	pixel_y = 1
+	},
+/turf/open/floor/almayer/plating,
+/area/styx/canteen)
+"jX" = (
+/obj/structure/pipes/standard/simple/hidden/scrubbers{
+	dir = 10
+	},
+/turf/open/floor/almayer/sterile,
+/area/styx/dorms)
+"kc" = (
+/turf/open/floor/almayer/plating,
+/area/styx/hangar)
+"kd" = (
+/turf/open/floor/almayer/plating_striped/east,
+/area/styx/canteen)
+"ke" = (
+/obj/structure/surface/table/almayer,
+/obj/item/tool/wet_sign{
+	pixel_x = 6;
+	pixel_y = 6
+	},
+/obj/item/tool/wet_sign{
+	pixel_x = -8;
+	pixel_y = 4
+	},
+/obj/item/tool/wet_sign{
+	pixel_x = 10;
+	pixel_y = -8
+	},
+/turf/open/floor/almayer/sterile,
+/area/styx/dorms)
+"ky" = (
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/item/ammo_box/magazine/m1911{
+	pixel_x = 0;
+	pixel_y = 18
+	},
+/obj/item/ammo_box/magazine/m44{
+	pixel_x = 0;
+	pixel_y = 9
+	},
+/obj/item/ammo_magazine/pistol/highpower{
+	pixel_x = 7;
+	pixel_y = 0
+	},
+/obj/item/ammo_magazine/pistol/highpower{
+	pixel_x = 7;
+	pixel_y = 0
+	},
+/obj/item/ammo_magazine/pistol/highpower{
+	pixel_x = 7;
+	pixel_y = 0
+	},
+/obj/item/ammo_magazine/pistol/highpower{
+	pixel_x = 7;
+	pixel_y = 0
+	},
+/obj/item/ammo_magazine/pistol/highpower{
+	pixel_x = 7;
+	pixel_y = 0
+	},
+/obj/item/ammo_magazine/pistol/highpower{
+	pixel_x = 7;
+	pixel_y = 0
+	},
+/obj/item/ammo_magazine/pistol/highpower{
+	pixel_x = 7;
+	pixel_y = 0
+	},
+/obj/item/ammo_magazine/pistol/highpower{
+	pixel_x = 7;
+	pixel_y = 0
+	},
+/obj/item/ammo_magazine/pistol/highpower{
+	pixel_x = 7;
+	pixel_y = 0
+	},
+/obj/item/ammo_magazine/pistol/highpower{
+	pixel_x = 7;
+	pixel_y = 0
+	},
+/obj/item/ammo_magazine/pistol/highpower{
+	pixel_x = 7;
+	pixel_y = 0
+	},
+/obj/item/ammo_magazine/pistol/highpower{
+	pixel_x = 7;
+	pixel_y = 0
+	},
+/obj/item/ammo_magazine/pistol/highpower{
+	pixel_x = 7;
+	pixel_y = 0
+	},
+/obj/item/ammo_magazine/pistol/highpower{
+	pixel_x = 7;
+	pixel_y = 0
+	},
+/obj/item/ammo_magazine/pistol/highpower{
+	pixel_x = 7;
+	pixel_y = 0
+	},
+/obj/item/ammo_magazine/pistol/highpower{
+	pixel_x = 7;
+	pixel_y = 0
+	},
+/obj/item/ammo_magazine/pistol/highpower/automag{
+	pixel_x = -7;
+	pixel_y = 0
+	},
+/obj/item/ammo_magazine/pistol/highpower/automag{
+	pixel_x = -7;
+	pixel_y = 0
+	},
+/obj/item/ammo_magazine/pistol/highpower/automag{
+	pixel_x = -7;
+	pixel_y = 0
+	},
+/obj/item/ammo_magazine/pistol/highpower/automag{
+	pixel_x = -7;
+	pixel_y = 0
+	},
+/obj/item/ammo_magazine/pistol/highpower/automag{
+	pixel_x = -7;
+	pixel_y = 0
+	},
+/obj/item/ammo_magazine/pistol/highpower/automag{
+	pixel_x = -7;
+	pixel_y = 0
+	},
+/obj/item/ammo_magazine/pistol/highpower/automag{
+	pixel_x = -7;
+	pixel_y = 0
+	},
+/obj/item/ammo_magazine/pistol/highpower/automag{
+	pixel_x = -7;
+	pixel_y = 0
+	},
+/obj/item/ammo_magazine/pistol/highpower/automag{
+	pixel_x = -7;
+	pixel_y = 0
+	},
+/obj/item/ammo_magazine/pistol/highpower/automag{
+	pixel_x = -7;
+	pixel_y = 0
+	},
+/obj/item/ammo_magazine/pistol/highpower/automag{
+	pixel_x = -7;
+	pixel_y = 0
+	},
+/obj/item/ammo_magazine/pistol/highpower/automag{
+	pixel_x = -7;
+	pixel_y = 0
+	},
+/obj/item/ammo_magazine/pistol/highpower/automag{
+	pixel_x = -7;
+	pixel_y = 0
+	},
+/obj/item/ammo_magazine/pistol/highpower/automag{
+	pixel_x = -7;
+	pixel_y = 0
+	},
+/obj/item/ammo_magazine/pistol/highpower/automag{
+	pixel_x = -7;
+	pixel_y = 0
+	},
+/obj/item/ammo_magazine/pistol/highpower/automag{
+	pixel_x = -7;
+	pixel_y = 0
+	},
+/turf/open/floor/almayer_hull/blackfull,
+/area/styx/platoonarmory)
+"kz" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
+	},
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 8
+	},
+/obj/structure/pipes/standard/simple/hidden/scrubbers{
+	dir = 4
+	},
+/turf/open/floor/almayer/plating,
+/area/styx/cryo_cells)
+"kA" = (
+/obj/structure/machinery/light/double/blue,
+/turf/open/floor/almayer_hull/blackfull,
+/area/styx/hangar)
+"kH" = (
+/obj/structure/machinery/door/airlock/almayer/medical/glass{
+	req_one_access = null;
+	name = "Medical Bay"
+	},
+/turf/open/floor/almayer/silver/east,
+/area/styx/medical)
+"kI" = (
+/obj/structure/machinery/power/apc/almayer/north,
+/obj/structure/cable{
+	icon_state = "0-2"
+	},
+/obj/structure/sign/banners/united_americas_flag{
+	pixel_x = -19;
+	pixel_y = 63
+	},
+/turf/open/floor/almayer/plate{
+	color = "#A9A9A9"
+	},
+/area/styx/dorms)
+"kT" = (
+/obj/structure/machinery/door/poddoor/shutters/almayer{
+	name = "Auto-Doctor Theatre";
+	id = "autodoc";
+	indestructible = 1;
+	needs_power = 0
+	},
+/turf/open/floor/almayer/test_floor4,
+/area/styx/medical)
+"kZ" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
+	},
+/turf/open/floor/almayer/plating,
+/area/styx/canteen)
+"lb" = (
+/obj/structure/largecrate/random/case/double{
+	pixel_x = -4;
+	pixel_y = -2
+	},
+/turf/open/floor/plating,
+/area/styx/dorms)
+"lf" = (
+/obj/structure/sign/safety/storage{
+	pixel_x = 45;
+	pixel_y = -5
+	},
+/obj/structure/sign/safety/ammunition{
+	pixel_x = 32;
+	pixel_y = -5
+	},
+/turf/open/floor/almayer/plate{
+	color = "#A9A9A9"
+	},
+/area/styx/platoonarmory)
+"ln" = (
+/obj/structure/largecrate/random/case/small{
+	pixel_x = 0;
+	pixel_y = 18
+	},
+/turf/open/floor/almayer,
+/area/styx/dorms)
+"lu" = (
+/obj/structure/bed/chair,
+/turf/open/floor/almayer/sterile,
+/area/styx/medical)
+"lv" = (
+/turf/open/floor/almayer/plating_striped/east,
+/area/styx/dorms)
+"lx" = (
+/obj/effect/decal/warning_stripes/asteroid{
+	icon_state = "NE-out"
+	},
+/turf/open/floor/almayer_hull/blackfull,
+/area/styx/cryo_cells)
+"lE" = (
+/obj/structure/machinery/door/airlock/multi_tile/almayer/almayer/glass{
+	name = "Canteen"
+	},
+/obj/structure/machinery/door/firedoor/border_only/almayer{
+	dir = 2
+	},
+/turf/open/floor/almayer/plate{
+	color = "#A9A9A9"
+	},
+/area/styx/canteen)
+"lG" = (
+/obj/structure/machinery/landinglight/ds1/delaytwo{
+	dir = 4
+	},
+/turf/open/floor/almayer/plate{
+	color = "#A9A9A9"
+	},
+/area/styx/hangar)
+"lN" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "cargo_arrow";
+	color = "#E10600";
+	dir = 4
+	},
+/obj/structure/machinery/light/double/blue{
+	color = "#8B0000";
+	light_color = "#8B0000";
+	name = "red"
+	},
+/turf/open/floor/almayer/plating,
+/area/styx/dorms)
+"lT" = (
+/obj/structure/machinery/door/airlock/multi_tile/almayer/almayer{
+	dir = 1;
+	name = "Hypersleep Bay Lockers"
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
+	},
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 4
+	},
+/obj/structure/pipes/standard/simple/hidden/scrubbers{
+	dir = 8
+	},
+/obj/structure/machinery/door/firedoor/border_only/almayer{
+	layer = 1.9
+	},
+/turf/open/floor/almayer/plating,
+/area/styx/cryo_cells)
+"lV" = (
+/obj/structure/pipes/standard/simple/hidden/supply,
+/obj/structure/pipes/standard/simple/hidden/scrubbers,
+/obj/effect/decal/warning_stripes/asteroid{
+	icon_state = "S"
+	},
+/turf/open/floor/almayer/plate{
+	color = "#A9A9A9"
+	},
+/area/styx/prep_hallway)
+"md" = (
+/obj/effect/decal/warning_stripes/asteroid{
+	icon_state = "cargo_arrow";
+	pixel_x = -9;
+	pixel_y = 12
+	},
+/obj/effect/decal/warning_stripes/asteroid{
+	icon_state = "E"
+	},
+/obj/structure/sign/safety/cryo{
+	name = "hypersleep semiotic";
+	pixel_x = 31;
+	pixel_y = -8;
+	desc = "Semiotic Standard denoting the nearby presence of a hypersleep bay."
+	},
+/turf/open/floor/almayer_hull/blackfull,
+/area/styx/cryo_cells)
+"mi" = (
+/obj/structure/machinery/door/firedoor/border_only/almayer{
+	dir = 2
+	},
+/turf/open/floor/almayer/plate{
+	color = "#A9A9A9"
+	},
+/area/styx/dorms)
+"mj" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
+	},
+/turf/open/floor/almayer,
+/area/styx/dorms)
+"mq" = (
+/obj/structure/cable{
+	icon_state = "0-2"
+	},
+/turf/open/floor/almayer/sterile,
+/area/styx/dorms)
+"mt" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2-8"
+	},
+/obj/structure/pipes/standard/manifold/fourway/hidden/scrubbers,
+/obj/structure/pipes/standard/manifold/fourway/hidden/supply,
+/turf/open/floor/almayer/plate{
+	color = "#A9A9A9"
+	},
+/area/styx/prep_hallway)
+"mz" = (
+/obj/structure/pipes/standard/simple/hidden/supply,
+/obj/structure/pipes/standard/simple/hidden/scrubbers{
+	dir = 9
+	},
+/turf/open/floor/almayer/edge/smooth{
+	dir = 5
+	},
+/area/styx/cryo_cells)
+"mD" = (
+/turf/open/floor/almayer/sterile_green_side/west{
+	dir = 4
+	},
+/area/styx/medical)
+"mI" = (
+/turf/open/floor/almayer/black/west,
+/area/styx/canteen)
+"mS" = (
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/item/ammo_box/magazine/nade_box/phophorus{
+	pixel_x = -1;
+	pixel_y = 2
+	},
+/obj/item/ammo_box/magazine/nade_box/heap{
+	pixel_x = -1;
+	pixel_y = 7
+	},
+/obj/item/ammo_box/magazine/nade_box{
+	pixel_x = -1;
+	pixel_y = 12
+	},
+/turf/open/floor/almayer_hull/blackfull,
+/area/styx/platoonarmory)
+"nb" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
+	},
+/obj/structure/pipes/standard/simple/hidden/scrubbers,
+/obj/structure/machinery/light/double/blue{
+	light_color = "#dae2ff";
+	dir = 4;
+	light_power = 0.3;
+	pixel_x = 5;
+	pixel_y = 0
+	},
+/turf/open/floor/almayer_hull/blackfull,
+/area/styx/dorms)
+"nd" = (
+/obj/structure/window/framed/almayer,
+/turf/open/floor/almayer/plate{
+	color = "#A9A9A9"
+	},
+/area/styx/platoonarmory)
+"ng" = (
+/obj/structure/machinery/door_control{
+	name = "Inner Podlock";
+	id = "inner-1";
+	pixel_x = 0;
+	pixel_y = 23;
+	needs_power = 0
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "cargo_arrow";
+	dir = 1
+	},
+/turf/open/floor/almayer/plating,
+/area/styx/dorms)
+"ni" = (
+/obj/structure/machinery/light/double/blue{
+	dir = 1;
+	pixel_x = 0;
+	pixel_y = 10;
+	color = "#8B0000";
+	light_color = "#8B0000";
+	name = "red"
+	},
+/turf/open/floor/almayer/plate{
+	color = "#A9A9A9"
+	},
+/area/styx/platoonarmory)
+"nm" = (
+/obj/structure/pipes/standard/simple/hidden/scrubbers{
+	dir = 8
+	},
+/turf/open/floor/almayer/plating,
+/area/styx/canteen)
+"nq" = (
+/obj/structure/machinery/light/small/red{
+	dir = 8;
+	pixel_x = 0;
+	pixel_y = 16
+	},
+/turf/open/floor/almayer/edge/smooth{
+	dir = 8
+	},
+/area/styx/dorms)
+"nB" = (
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/item/tool/kitchen/rollingpin{
+	pixel_y = -1;
+	pixel_x = 7;
+	layer = 4
+	},
+/obj/item/tool/kitchen/knife{
+	pixel_x = 12;
+	pixel_y = 12
+	},
+/obj/item/tool/kitchen/knife/butcher{
+	pixel_x = 3;
+	pixel_y = 11
+	},
+/obj/structure/sink/kitchen{
+	dir = 8;
+	pixel_x = -11;
+	pixel_y = 5
+	},
+/turf/open/floor/almayer,
+/area/styx/canteen)
+"nD" = (
+/obj/effect/decal/warning_stripes/asteroid{
+	icon_state = "SE-out"
+	},
+/obj/structure/pipes/standard/simple/hidden/scrubbers,
+/turf/open/floor/almayer_hull/blackfull,
+/area/styx/cryo_cells)
+"nQ" = (
+/obj/structure/vehicle_locker/cabinet/cups{
+	pixel_y = 27;
+	pixel_x = -8
+	},
+/obj/structure/vehicle_locker/cabinet/cups/flip{
+	pixel_x = 7;
+	pixel_y = 27
+	},
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/item/reagent_container/food/condiment/saltshaker{
+	pixel_x = -8;
+	pixel_y = 16
+	},
+/obj/item/reagent_container/food/condiment/saltshaker{
+	pixel_x = -2;
+	pixel_y = 16
+	},
+/obj/item/reagent_container/food/condiment/saltshaker{
+	pixel_x = -5;
+	pixel_y = 16
+	},
+/obj/item/reagent_container/food/condiment/saltshaker{
+	pixel_x = -11;
+	pixel_y = 16
+	},
+/obj/item/reagent_container/food/condiment/peppermill{
+	pixel_x = 14;
+	pixel_y = 16;
+	layer = 4
+	},
+/obj/item/reagent_container/food/condiment/peppermill{
+	pixel_x = 2;
+	pixel_y = 16
+	},
+/obj/item/reagent_container/food/condiment/peppermill{
+	pixel_x = 6;
+	pixel_y = 16
+	},
+/obj/item/reagent_container/food/condiment/peppermill{
+	pixel_x = 10;
+	pixel_y = 16
+	},
+/turf/open/floor/almayer/edge/smooth{
+	dir = 1
+	},
+/area/styx/canteen)
+"nT" = (
+/obj/effect/decal/warning_stripes/asteroid{
+	icon_state = "N";
+	pixel_x = 0;
+	pixel_y = 1
+	},
+/turf/open/floor/almayer/plate{
+	color = "#A9A9A9"
+	},
+/area/styx/hangar)
+"nW" = (
+/obj/structure/pipes/standard/simple/hidden/supply,
+/turf/open/floor/almayer/mono,
+/area/styx/cryo_cells)
+"oe" = (
+/obj/effect/decal/warning_stripes/asteroid{
+	icon_state = "E"
+	},
+/obj/effect/landmark/late_join,
+/obj/effect/landmark/late_join/marsoc,
+/obj/effect/landmark/start/marine/medic/marsoc,
+/turf/open/floor/almayer_hull/blackfull,
+/area/styx/cryo_cells)
+"ok" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
+	},
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 9
+	},
+/turf/open/floor/almayer/mono,
+/area/styx/cryo_cells)
+"oq" = (
+/obj/structure/largecrate/random/secure,
+/obj/structure/largecrate/random/secure{
+	pixel_y = 13;
+	pixel_x = 6
+	},
+/turf/open/floor/almayer_hull/blackfull,
+/area/styx/hangar)
+"ot" = (
+/obj/structure/closet/secure_closet/marine_personal/marsoc/element_lead{
+	pixel_y = -2;
+	pixel_x = 9
+	},
+/turf/open/floor/almayer/edge/smooth{
+	dir = 5
+	},
+/area/styx/cryo_cells)
+"ov" = (
+/obj/structure/pipes/standard/manifold/hidden/scrubbers{
+	dir = 8
+	},
+/turf/open/floor/almayer/edge/smooth{
+	dir = 8
+	},
+/area/styx/cryo_cells)
+"oy" = (
+/obj/structure/machinery/door/firedoor/border_only/almayer{
+	layer = 1.9
+	},
+/obj/structure/machinery/light/double/blue{
+	light_color = "#dae2ff";
+	light_power = 0.3
+	},
+/turf/open/floor/almayer/plating,
+/area/styx/dorms)
+"oz" = (
+/obj/structure/janitorialcart/brown,
+/turf/open/floor/almayer/sterile,
+/area/styx/dorms)
+"oK" = (
+/turf/open/floor/almayer/black{
+	dir = 5
+	},
+/area/styx/canteen)
+"oL" = (
+/turf/closed/wall/almayer/outer,
+/area/styx/canteen)
+"oN" = (
+/obj/structure/gun_rack/flamer/unloaded{
+	pixel_x = 10;
+	pixel_y = 0
+	},
+/obj/structure/gun_rack/flamer/unloaded{
+	pixel_x = -8;
+	pixel_y = 0
+	},
+/turf/open/floor/almayer_hull/blackfull,
+/area/styx/platoonarmory)
+"oQ" = (
+/obj/structure/roof/cargocrane_tracks/horizontal/endcap2{
+	pixel_y = 14
+	},
+/turf/open/floor/almayer/plate{
+	color = "#A9A9A9"
+	},
+/area/styx/hangar)
+"oS" = (
+/obj/structure/sign/safety/west,
+/turf/closed/wall/almayer/outer,
+/area/styx/dorms)
+"oY" = (
+/obj/structure/roof/cargocrane_tracks/tjoint2{
+	pixel_y = 14
+	},
+/turf/open/floor/almayer/plate{
+	color = "#A9A9A9"
+	},
+/area/styx/hangar)
+"oZ" = (
+/obj/structure/sign/catclock{
+	pixel_x = -1;
+	pixel_y = 11
+	},
+/turf/closed/wall/almayer/outer,
+/area/styx/dorms)
+"pl" = (
+/obj/structure/reagent_dispensers/water_cooler/stacks{
+	pixel_y = 18;
+	layer = 3.6;
+	density = 0
+	},
+/turf/open/floor/plating,
+/area/styx/dorms)
+"pm" = (
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 10
+	},
+/obj/structure/pipes/standard/simple/hidden/scrubbers{
+	dir = 9
+	},
+/turf/open/floor/almayer/plating,
+/area/styx/prep_hallway)
+"pn" = (
+/obj/structure/machinery/light/double/blue{
+	light_color = "#dae2ff";
+	light_power = 0.3
+	},
+/obj/structure/sign/safety/ladder{
+	pixel_x = 7;
+	pixel_y = -32
+	},
+/turf/open/floor/almayer/plate{
+	color = "#A9A9A9"
+	},
+/area/styx/hangar)
+"pt" = (
+/obj/structure/machinery/light/double/blue{
+	dir = 1;
+	light_color = "#dae2ff";
+	light_power = 0.7;
+	pixel_x = 0;
+	pixel_y = 20
+	},
+/obj/structure/machinery/alarm/almayer{
+	dir = 1;
+	pixel_x = 0;
+	pixel_y = 17
+	},
+/turf/open/floor/almayer/plating_striped/west,
+/area/styx/canteen)
+"pD" = (
+/obj/effect/decal/warning_stripes/asteroid{
+	icon_state = "NE-out"
+	},
+/obj/structure/pipes/standard/simple/hidden/scrubbers{
+	dir = 9
+	},
+/turf/open/floor/almayer_hull/blackfull,
+/area/styx/cryo_cells)
+"pJ" = (
+/obj/structure/machinery/shower{
+	dir = 4
+	},
+/obj/effect/decal/warning_stripes/asteroid{
+	icon_state = "E"
+	},
+/turf/open/floor/plating/plating_catwalk,
+/area/styx/cryo_cells)
+"pK" = (
+/obj/structure/machinery/cm_vending/sorted/medical/marinemed/marsoc{
+	pixel_y = 18;
+	density = 0;
+	pixel_x = -4
+	},
+/obj/structure/machinery/cm_vending/sorted/medical/blood{
+	pixel_x = 6;
+	pixel_y = 0;
+	density = 0;
+	layer = 3
+	},
+/turf/open/floor/almayer_hull/blackfull,
+/area/styx/platoonarmory)
+"pR" = (
+/obj/structure/pipes/standard/simple/hidden/supply,
+/obj/structure/pipes/standard/simple/hidden/scrubbers,
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
+	},
+/turf/open/floor/almayer_hull/blackfull,
+/area/styx/cryo_cells)
+"qh" = (
+/obj/structure/machinery/prop/almayer/CICmap/table/horizontal/segment/one,
+/obj/structure/phone_base/rotary{
+	phone_id = "Briefing";
+	pixel_x = -3;
+	pixel_y = 9
+	},
+/turf/open/floor/almayer_hull/blackfull,
+/area/styx/hangar)
+"qo" = (
+/obj/structure/largecrate/random/secure{
+	pixel_x = -5;
+	pixel_y = 20
+	},
+/obj/structure/largecrate/random/secure{
+	pixel_y = 17;
+	pixel_x = 1
+	},
+/turf/open/floor/almayer_hull/blackfull,
+/area/styx/hangar)
+"qy" = (
+/obj/structure/machinery/light/double/blue{
+	dir = 8;
+	pixel_x = -4;
+	pixel_y = -3;
+	color = "#8B0000";
+	light_color = "#8B0000";
+	name = "red"
+	},
+/obj/structure/machinery/door_control{
+	name = "Hypersleep Access Release";
+	id = "hypersleep";
+	pixel_x = -31;
+	pixel_y = 12
+	},
+/turf/open/floor/almayer/plating_striped,
+/area/styx/cryo_cells)
+"qz" = (
+/obj/structure/machinery/landinglight/ds1{
+	dir = 8
+	},
+/turf/open/floor/almayer/plate{
+	color = "#A9A9A9"
+	},
+/area/styx/hangar)
+"qA" = (
+/turf/open/floor/almayer/sterile_green_side/west{
+	dir = 2
+	},
+/area/styx/medical)
+"qD" = (
+/turf/open/floor/almayer_hull,
+/area/styx/platoonarmory)
+"qE" = (
+/obj/structure/machinery/vending/snack/packaged{
+	pixel_x = -22;
+	pixel_y = 1
+	},
+/obj/structure/machinery/vending/coffee{
+	pixel_x = 21;
+	pixel_y = 0
+	},
+/obj/structure/machinery/vending/cigarette{
+	pixel_x = -1;
+	pixel_y = -1
+	},
+/obj/structure/machinery/light/double/blue{
+	light_color = "#dae2ff";
+	light_power = 0.3
+	},
+/turf/open/floor/almayer/black,
+/area/styx/canteen)
+"qH" = (
+/obj/structure/filingcabinet/medical{
+	pixel_y = 17;
+	pixel_x = -8;
+	name = "medical records";
+	density = 0
+	},
+/obj/structure/filingcabinet{
+	pixel_y = 17;
+	pixel_x = 8;
+	density = 0
+	},
+/turf/open/floor/almayer/research,
+/area/styx/medical)
+"qJ" = (
+/obj/structure/pipes/standard/simple/hidden/supply,
+/obj/structure/machinery/door/firedoor/border_only/almayer{
+	dir = 2
+	},
+/turf/open/floor/almayer/plating,
+/area/styx/dorms)
+"qS" = (
+/obj/structure/sign/safety/storage{
+	pixel_x = 45;
+	pixel_y = 4
+	},
+/obj/structure/sign/safety/ammunition{
+	pixel_x = 32;
+	pixel_y = 4
+	},
+/turf/open/floor/almayer/plate{
+	color = "#A9A9A9"
+	},
+/area/styx/platoonarmory)
+"qW" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "0-2"
+	},
+/obj/structure/cable{
+	layer = 2.36
+	},
+/turf/open/floor/almayer/plate{
+	color = "#A9A9A9"
+	},
+/area/styx/cryo_cells)
+"rf" = (
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/item/ammo_box/magazine/shotgun/special_buck,
+/obj/item/ammo_box/magazine/shotgun/special_buck{
+	pixel_x = 0;
+	pixel_y = 8
+	},
+/obj/structure/machinery/light/double/blue{
+	dir = 4;
+	pixel_x = 4;
+	pixel_y = 0;
+	color = "#8B0000";
+	light_color = "#8B0000";
+	name = "red"
+	},
+/turf/open/floor/almayer_hull/blackfull,
+/area/styx/platoonarmory)
+"rj" = (
+/turf/open/floor/almayer/plating_striped,
+/area/styx/cryo_cells)
+"rr" = (
+/obj/structure/machinery/door/poddoor/almayer/blended{
+	dir = 4;
+	name = "Vessel Access Lockdown";
+	id = "inner-1"
+	},
+/turf/open/floor/almayer/plating,
+/area/styx/dorms)
+"rv" = (
+/obj/structure/pipes/vents/pump,
+/obj/structure/pipes/standard/simple/hidden/scrubbers{
+	dir = 8
+	},
+/turf/open/floor/almayer/sterile,
+/area/styx/dorms)
+"rw" = (
+/obj/structure/machinery/light/double/blue{
+	light_color = "#dae2ff";
+	light_power = 0.3
+	},
+/obj/effect/decal/warning_stripes/asteroid{
+	icon_state = "E"
+	},
+/turf/open/floor/almayer/edge/smooth,
+/area/styx/cryo_cells)
+"rB" = (
+/obj/structure/ladder{
+	id = "mission3"
+	},
+/turf/open/floor/almayer_hull/blackfull,
+/area/styx/prep_hallway)
+"rH" = (
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 4
+	},
+/obj/structure/pipes/standard/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
+	},
+/turf/open/floor/almayer/plate{
+	color = "#A9A9A9"
+	},
+/area/styx/prep_hallway)
+"rN" = (
+/obj/effect/decal/warning_stripes/asteroid{
+	icon_state = "S"
+	},
+/obj/effect/decal/warning_stripes/asteroid{
+	icon_state = "cargo_arrow";
+	dir = 1
+	},
+/obj/structure/machinery/door_control/brbutton/alt{
+	name = "Mission Preparation Control";
+	id = "Mission Preparation";
+	pixel_x = -25;
+	pixel_y = -3
+	},
+/turf/open/floor/almayer_hull/blackfull,
+/area/styx/prep_hallway)
+"rO" = (
+/obj/structure/closet/crate/freezer{
+	name = "blood freezer crate"
+	},
+/obj/item/reagent_container/blood/OMinus,
+/obj/item/reagent_container/blood/OMinus,
+/obj/item/reagent_container/blood/OMinus{
+	pixel_x = -5
+	},
+/obj/item/reagent_container/blood/OMinus{
+	pixel_x = 7
+	},
+/turf/open/floor/almayer/research,
+/area/styx/medical)
+"rQ" = (
+/obj/structure/machinery/firealarm{
+	pixel_y = 28;
+	pixel_x = 1
+	},
+/turf/open/floor/almayer_hull/blackfull,
+/area/styx/prep_hallway)
+"rT" = (
+/obj/structure/machinery/light/double/blue{
+	light_color = "#dae2ff";
+	light_power = 0.3
+	},
+/obj/structure/sign/safety/ladder{
+	pixel_x = 7;
+	pixel_y = -32
+	},
+/turf/open/floor/almayer/plate{
+	color = "#A9A9A9"
+	},
+/area/styx/prep_hallway)
+"rU" = (
+/obj/structure/machinery/light/double/blue{
+	light_color = "#dae2ff";
+	light_power = 0.7
+	},
+/obj/structure/pipes/vents/pump,
+/turf/open/floor/almayer/edge/smooth,
+/area/styx/cryo_cells)
+"so" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
+	},
+/turf/open/floor/almayer/plating_striped/east,
+/area/styx/dorms)
+"sr" = (
+/turf/open/floor/almayer/sterile,
+/area/styx/dorms)
+"su" = (
+/obj/structure/ladder{
+	id = "hangar3"
+	},
+/turf/open/floor/almayer_hull/blackfull,
+/area/styx/prep_hallway)
+"sy" = (
+/obj/effect/decal/warning_stripes/asteroid{
+	icon_state = "cargo_arrow";
+	dir = 4
+	},
+/turf/open/floor/almayer_hull/blackfull,
+/area/styx/prep_hallway)
+"sL" = (
+/obj/structure/sign/safety/storage{
+	pixel_x = -25;
+	pixel_y = -4
+	},
+/turf/open/floor/almayer/plate{
+	color = "#A9A9A9"
+	},
+/area/styx/platoonarmory)
+"sN" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
+	},
+/obj/structure/pipes/standard/manifold/hidden/scrubbers{
+	dir = 8
+	},
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 4
+	},
+/turf/open/floor/almayer_hull/blackfull,
+/area/styx/dorms)
+"sS" = (
+/obj/structure/closet/coffin/woodencrate,
+/obj/item/clothing/under/marine/veteran/marsoc,
+/obj/item/clothing/under/marine/veteran/marsoc,
+/obj/item/clothing/under/marine/veteran/marsoc,
+/obj/item/clothing/under/marine/veteran/marsoc,
+/obj/item/clothing/under/marine/veteran/marsoc,
+/obj/item/clothing/under/marine/veteran/marsoc,
+/obj/item/clothing/under/marine/veteran/marsoc,
+/obj/structure/machinery/alarm/almayer{
+	dir = 1;
+	pixel_x = 0;
+	pixel_y = 21
+	},
+/turf/open/floor/almayer/sterile,
+/area/styx/dorms)
+"sT" = (
+/obj/structure/bed/bedroll{
+	pixel_y = -4;
+	color = "#333333";
+	name = "gym mat";
+	buckle_lying = null;
+	can_buckle = 0;
+	foldabletype = null;
+	desc = "A black gym mat, useful if you don't want to use the cold hard floor for exercise."
+	},
+/turf/open/floor/plating,
+/area/styx/dorms)
+"sV" = (
+/obj/structure/closet/secure_closet{
+	pixel_x = -7;
+	pixel_y = 14
+	},
+/obj/structure/closet/secure_closet{
+	pixel_x = 8;
+	pixel_y = 14
+	},
+/turf/open/floor/almayer/plate{
+	color = "#A9A9A9"
+	},
+/area/styx/dorms)
+"tb" = (
+/obj/item/tool/mop{
+	pixel_x = -16;
+	pixel_y = -2
+	},
+/obj/item/tool/wet_sign{
+	pixel_x = 12;
+	pixel_y = -7
+	},
+/obj/item/tool/wet_sign{
+	pixel_x = -10;
+	pixel_y = -7
+	},
+/obj/structure/pipes/vents/scrubber{
+	dir = 8
+	},
+/obj/structure/machinery/light/small/blue{
+	dir = 4;
+	light_color = "#dae2ff";
+	light_power = 0.25;
+	pixel_x = 5;
+	pixel_y = 0
+	},
+/turf/open/floor/almayer/sterile,
+/area/styx/dorms)
+"tf" = (
+/obj/structure/machinery/light/double/blue{
+	color = "#8B0000";
+	light_color = "#8B0000";
+	name = "red"
+	},
+/obj/structure/sign/safety/ladder{
+	pixel_x = 7;
+	pixel_y = -32
+	},
+/turf/open/floor/almayer/plate{
+	color = "#A9A9A9"
+	},
+/area/styx/platoonarmory)
+"tk" = (
+/obj/structure/machinery/power/apc/power/north,
+/turf/open/floor/almayer_hull,
+/area/styx/platoonarmory)
+"tq" = (
+/obj/structure/pipes/standard/simple/hidden/scrubbers{
+	dir = 6
+	},
+/obj/structure/sign/safety/bathunisex{
+	pixel_y = 27;
+	pixel_x = 16
+	},
+/obj/structure/machinery/firealarm{
+	pixel_y = 25;
+	pixel_x = -9
+	},
+/turf/open/floor/almayer/edge/smooth{
+	dir = 9
+	},
+/area/styx/cryo_cells)
+"tu" = (
+/obj/structure/roof/cargocrane_tracks/vertical/endcap1{
+	pixel_y = 14
+	},
+/turf/open/floor/almayer_hull/blackfull,
+/area/styx/hangar)
+"tx" = (
+/obj/effect/decal/warning_stripes/asteroid{
+	icon_state = "cargo_arrow";
+	dir = 1;
+	pixel_x = 0;
+	pixel_y = -6
+	},
+/obj/effect/decal/warning_stripes/asteroid{
+	icon_state = "N";
+	pixel_x = 0;
+	pixel_y = 1
+	},
+/obj/structure/sign/safety/ammunition{
+	pixel_x = 32;
+	pixel_y = -5
+	},
+/obj/structure/sign/safety/storage{
+	pixel_x = 32;
+	pixel_y = 7
+	},
+/turf/open/floor/almayer_hull/blackfull,
+/area/styx/platoonarmory)
+"tG" = (
+/obj/effect/decal/warning_stripes/asteroid{
+	icon_state = "W"
+	},
+/obj/structure/sign/safety/terminal{
+	pixel_x = 15;
+	pixel_y = -26
+	},
+/turf/open/floor/almayer/sterile,
+/area/styx/medical)
+"tI" = (
+/obj/structure/ladder{
+	id = "mission2"
+	},
+/turf/open/floor/almayer_hull/blackfull,
+/area/styx/prep_hallway)
+"tM" = (
+/obj/structure/machinery/cm_vending/sorted/attachments/squad/marsoc,
+/turf/open/floor/almayer_hull/blackfull,
+/area/styx/platoonarmory)
+"tV" = (
+/obj/effect/decal/warning_stripes/asteroid{
+	icon_state = "W"
+	},
+/obj/effect/landmark/late_join,
+/obj/effect/landmark/late_join/marsoc,
+/obj/effect/landmark/start/marine/leader/marsoc,
+/obj/effect/landmark/start/marine/tl/marsoc,
+/turf/open/floor/almayer_hull/blackfull,
+/area/styx/cryo_cells)
+"tX" = (
+/obj/structure/closet/secure_closet/marine_personal/marsoc/element{
+	pixel_x = 9;
+	pixel_y = -2
+	},
+/turf/open/floor/almayer/edge/smooth{
+	dir = 6
+	},
+/area/styx/cryo_cells)
+"ud" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
+	},
+/obj/structure/pipes/standard/simple/hidden/scrubbers,
+/turf/open/floor/almayer/plate{
+	color = "#A9A9A9"
+	},
+/area/styx/dorms)
+"ue" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
+	},
+/turf/open/floor/almayer_hull/blackfull,
+/area/styx/cryo_cells)
+"ui" = (
+/obj/structure/sign/safety/food_storage{
+	pixel_x = 18;
+	pixel_y = 9
+	},
+/turf/closed/wall/almayer/outer,
+/area/styx/canteen)
+"uo" = (
+/obj/structure/surface/table,
+/obj/effect/decal/warning_stripes/asteroid{
+	icon_state = "NE-out"
+	},
+/obj/item/tool/soap/deluxe,
+/obj/item/tool/soap/deluxe{
+	pixel_x = -6;
+	pixel_y = 0
+	},
+/obj/item/tool/soap/deluxe{
+	pixel_x = 6;
+	pixel_y = 0
+	},
+/obj/item/tool/soap/deluxe{
+	pixel_x = 6;
+	pixel_y = 10
+	},
+/obj/item/tool/soap/deluxe{
+	pixel_x = -6;
+	pixel_y = 10
+	},
+/obj/item/tool/soap/deluxe{
+	pixel_x = 0;
+	pixel_y = 4
+	},
+/turf/open/floor/almayer/edge/smooth/southeast,
+/area/styx/cryo_cells)
+"ut" = (
+/obj/structure/machinery/light/double/blue{
+	dir = 8;
+	light_color = "#dae2ff";
+	light_power = 0.3;
+	pixel_x = -15;
+	pixel_y = -3
+	},
+/turf/open/floor/almayer/dark_sterile,
+/area/styx/cryo_cells)
+"uC" = (
+/obj/structure/machinery/power/apc/almayer/south,
+/obj/structure/cable{
+	layer = 2.36
+	},
+/turf/open/floor/almayer/plate{
+	color = "#A9A9A9"
+	},
+/area/styx/canteen)
+"uO" = (
+/obj/structure/machinery/medical_pod/autodoc{
+	dir = 8
+	},
+/turf/open/floor/almayer/plate{
+	color = "#A9A9A9"
+	},
+/area/styx/medical)
+"uQ" = (
+/obj/structure/machinery/firealarm{
+	pixel_y = 25;
+	pixel_x = 7
+	},
+/turf/open/floor/almayer/plating,
+/area/styx/prep_hallway)
+"uU" = (
+/obj/structure/machinery/light/small/red,
+/turf/open/floor/plating,
+/area/styx/dorms)
+"vi" = (
+/obj/structure/machinery/landinglight/ds1/delayone,
+/obj/structure/roof/cargocrane_tracks/horizontal{
+	pixel_y = 14
+	},
+/obj/structure/largecrate/random/case/small{
+	layer = 6;
+	density = 0;
+	icon_state = "mini_case_b";
+	pixel_x = -7;
+	pixel_y = 27
+	},
+/turf/open/floor/almayer/plate{
+	color = "#A9A9A9"
+	},
+/area/styx/hangar)
+"vp" = (
+/obj/structure/machinery/door/firedoor/border_only/almayer{
+	dir = 2
+	},
+/turf/open/floor/almayer_hull/blackfull,
+/area/styx/cryo_cells)
+"vs" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "W"
+	},
+/turf/open/floor/almayer/plate{
+	color = "#A9A9A9"
+	},
+/area/styx/hangar)
+"vG" = (
+/obj/structure/machinery/landinglight/ds1{
+	dir = 1
+	},
+/turf/open/floor/almayer/plate{
+	color = "#A9A9A9"
+	},
+/area/styx/hangar)
+"vN" = (
+/obj/effect/decal/warning_stripes/asteroid{
+	icon_state = "SE-out"
+	},
+/obj/structure/pipes/vents/scrubber{
+	pixel_y = 15
+	},
+/turf/open/floor/almayer_hull/blackfull,
+/area/styx/cryo_cells)
+"vO" = (
+/obj/structure/pipes/standard/simple/hidden/scrubbers,
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
+	},
+/turf/open/floor/almayer/blackcorner/west{
+	dir = 1
+	},
+/area/styx/dorms)
+"vS" = (
+/obj/structure/platform_decoration/strata/metal{
+	dir = 1;
+	pixel_x = 33;
+	pixel_y = 1
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
+	},
+/turf/open/floor/almayer/plating,
+/area/styx/canteen)
+"wh" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
+	},
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 4
+	},
+/obj/structure/pipes/standard/simple/hidden/scrubbers{
+	dir = 4
+	},
+/turf/open/floor/almayer/plate{
+	color = "#A9A9A9"
+	},
+/area/styx/prep_hallway)
+"wj" = (
+/obj/structure/pipes/standard/simple/hidden/supply,
+/turf/open/floor/almayer/plating,
+/area/styx/dorms)
+"wn" = (
+/obj/structure/ladder{
+	id = "hangar1"
+	},
+/turf/open/floor/almayer_hull/blackfull,
+/area/styx/prep_hallway)
+"wp" = (
+/obj/structure/bed/chair/comfy/bench/south,
+/turf/open/floor/almayer_hull,
+/area/styx/platoonarmory)
+"ws" = (
+/obj/structure/pipes/standard/simple/hidden/scrubbers,
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
+	},
+/obj/structure/machinery/door/firedoor/border_only/almayer{
+	dir = 2
+	},
+/turf/open/floor/almayer/plating,
+/area/styx/dorms)
+"wx" = (
+/obj/structure/pipes/standard/simple/hidden/scrubbers,
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
+	},
+/turf/open/floor/almayer/plate{
+	color = "#A9A9A9"
+	},
+/area/styx/dorms)
+"wz" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "2-4"
+	},
+/turf/open/floor/almayer_hull/blackfull,
+/area/styx/dorms)
+"wJ" = (
+/obj/structure/machinery/chem_dispenser/canteen,
+/turf/open/floor/almayer,
+/area/styx/canteen)
+"wL" = (
+/obj/structure/bed/chair{
+	dir = 1;
+	pixel_x = 8;
+	pixel_y = 0
+	},
+/turf/open/floor/almayer/plate{
+	color = "#A9A9A9"
+	},
+/area/styx/dorms)
+"wO" = (
+/obj/structure/closet/secure_closet{
+	pixel_x = 8;
+	pixel_y = 14
+	},
+/obj/structure/closet/secure_closet{
+	pixel_x = -7;
+	pixel_y = 14
+	},
+/turf/open/floor/almayer/plate{
+	color = "#A9A9A9"
+	},
+/area/styx/dorms)
+"wP" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
+	},
+/turf/open/floor/almayer/mono,
+/area/styx/dorms)
+"wU" = (
+/obj/structure/toilet,
+/obj/structure/machinery/light/small/blue{
+	dir = 8;
+	light_color = "#dae2ff";
+	light_power = 0.5;
+	pixel_x = -6;
+	pixel_y = 0
+	},
+/turf/open/floor/almayer/dark_sterile,
+/area/styx/cryo_cells)
+"wV" = (
+/obj/structure/machinery/light/small/blue{
+	dir = 1;
+	light_color = "#dae2ff";
+	light_power = 0.5
+	},
+/turf/closed/wall/almayer/outer,
+/area/styx/cryo_cells)
+"wW" = (
+/obj/structure/machinery/landinglight/ds1{
+	dir = 4
+	},
+/turf/open/floor/almayer/plate{
+	color = "#A9A9A9"
+	},
+/area/styx/hangar)
+"wY" = (
+/obj/structure/machinery/light/double/blue,
+/obj/structure/cable/heavyduty{
+	icon_state = "1-8"
+	},
+/turf/open/floor/almayer/plate{
+	color = "#A9A9A9"
+	},
+/area/styx/canteen)
+"xk" = (
+/obj/structure/sign/safety/bulkhead_door{
+	pixel_x = -1;
+	pixel_y = 40
+	},
+/turf/open/floor/almayer_hull/blackfull,
+/area/styx/hangar)
+"xv" = (
+/obj/structure/machinery/light/double/blue{
+	dir = 8;
+	pixel_x = -4;
+	pixel_y = -17;
+	color = "#8B0000";
+	light_color = "#8B0000";
+	name = "red"
+	},
+/obj/effect/decal/warning_stripes/asteroid{
+	icon_state = "W"
+	},
+/obj/structure/sign/safety/cryo{
+	name = "hypersleep semiotic";
+	pixel_x = -16;
+	pixel_y = 7
+	},
+/obj/structure/pipes/standard/simple/hidden/supply,
+/turf/open/floor/almayer_hull/blackfull,
+/area/styx/cryo_cells)
+"xy" = (
+/obj/structure/pipes/standard/simple/hidden/scrubbers{
+	dir = 6
+	},
+/turf/open/floor/almayer/plating,
+/area/styx/canteen)
+"xA" = (
+/obj/structure/bed/chair/comfy/bench/mid,
+/turf/open/floor/almayer/edge/smooth{
+	dir = 8
+	},
+/area/styx/cryo_cells)
+"xG" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "0-4"
+	},
+/obj/structure/cable{
+	layer = 2.36
+	},
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 6
+	},
+/turf/open/floor/almayer/sterile,
+/area/styx/dorms)
+"xJ" = (
+/obj/structure/machinery/landinglight/ds1,
+/obj/structure/roof/cargocrane_tracks/tjoint{
+	pixel_y = 14
+	},
+/turf/open/floor/almayer/plate{
+	color = "#A9A9A9"
+	},
+/area/styx/hangar)
+"xK" = (
+/turf/open/floor/almayer/mono,
+/area/styx/cryo_cells)
+"xL" = (
+/obj/structure/bed/roller/hospital_empty{
+	dir = 1
+	},
+/obj/structure/machinery/power/apc/power/east,
+/turf/open/floor/almayer/sterile_green,
+/area/styx/medical)
+"xP" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
+	},
+/obj/structure/pipes/standard/simple/hidden/scrubbers{
+	dir = 4
+	},
+/turf/open/floor/almayer/plate{
+	color = "#A9A9A9"
+	},
+/area/styx/dorms)
+"xT" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "1-4"
+	},
+/obj/structure/pipes/standard/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/structure/pipes/standard/manifold/hidden/supply{
+	dir = 8
+	},
+/turf/open/floor/almayer/mono,
+/area/styx/cryo_cells)
+"xV" = (
+/obj/structure/machinery/light/small/blue,
+/obj/structure/machinery/iv_drip,
+/turf/open/floor/almayer/sterile_green_side/west{
+	dir = 2
+	},
+/area/styx/medical)
+"xX" = (
+/obj/structure/ladder{
+	id = "hangar3";
+	height = 1
+	},
+/turf/open/floor/almayer_hull/blackfull,
+/area/styx/hangar)
+"ye" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "NE-out";
+	pixel_x = 1;
+	pixel_y = 1
+	},
+/turf/open/floor/almayer/plate{
+	color = "#A9A9A9"
+	},
+/area/styx/hangar)
+"yf" = (
+/obj/structure/sign/safety/bulkhead_door{
+	pixel_x = -30;
+	pixel_y = 3
+	},
+/turf/open/floor/almayer_hull/blackfull,
+/area/styx/hangar)
+"yk" = (
+/turf/open/floor/almayer_hull/blackfull,
+/area/styx/canteen)
+"yl" = (
+/obj/structure/machinery/landinglight/ds1/delaythree{
+	dir = 8
+	},
+/turf/open/floor/almayer/plate{
+	color = "#A9A9A9"
+	},
+/area/styx/hangar)
+"yw" = (
+/obj/structure/sign/safety/medical{
+	pixel_x = 32;
+	pixel_y = -1
+	},
+/turf/open/floor/almayer/sterile,
+/area/styx/medical)
+"yy" = (
+/obj/structure/window/framed/almayer,
+/obj/structure/machinery/door/poddoor/almayer/blended{
+	id = "hypersleep";
+	name = "Hypersleep Bay"
+	},
+/obj/structure/pipes/standard/simple/hidden/supply,
+/obj/structure/pipes/standard/simple/hidden/scrubbers,
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
+	},
+/obj/structure/machinery/door/firedoor/border_only/almayer{
+	dir = 2
+	},
+/turf/open/floor/almayer/plating,
+/area/styx/cryo_cells)
+"yz" = (
+/obj/structure/pipes/standard/simple/hidden/supply,
+/obj/structure/pipes/standard/simple/hidden/scrubbers,
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
+	},
+/turf/open/floor/almayer/plating_striped,
+/area/styx/cryo_cells)
+"yG" = (
+/obj/structure/window/framed/almayer,
+/obj/structure/machinery/light/double/blue{
+	dir = 1;
+	pixel_x = 0;
+	pixel_y = 10;
+	color = "#8B0000";
+	light_color = "#8B0000";
+	name = "red";
+	alpha = 0;
+	mouse_opacity = 0
+	},
+/turf/open/floor/almayer/plate{
+	color = "#A9A9A9"
+	},
+/area/styx/platoonarmory)
+"yH" = (
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 5
+	},
+/obj/structure/pipes/standard/simple/hidden/scrubbers{
+	dir = 9
+	},
+/turf/open/floor/almayer/plating,
+/area/styx/canteen)
+"yM" = (
+/obj/structure/machinery/landinglight/ds1/delaytwo,
+/obj/structure/roof/cargocrane_tracks/horizontal{
+	pixel_y = 14
+	},
+/turf/open/floor/almayer/plate{
+	color = "#A9A9A9"
+	},
+/area/styx/hangar)
+"yP" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "1-8"
+	},
+/turf/open/floor/plating,
+/area/styx/dorms)
+"yS" = (
+/turf/open/floor/almayer/edge/smooth/corner{
+	dir = 4
+	},
+/area/styx/dorms)
+"yW" = (
+/obj/structure/prop/ice_colony/tiger_rug{
+	pixel_x = -16;
+	pixel_y = -10;
+	desc = "Accorfing to some this is an actual Tiger rug! You have your doubts, though. Especially considering the smell..."
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "1-4"
+	},
+/turf/open/floor/kutjevo/colors/red/tile{
+	color = "#A9A9A9"
+	},
+/area/styx/dorms)
+"zc" = (
+/obj/structure/sign/safety/bulkhead_door{
+	pixel_x = 35;
+	pixel_y = 0
+	},
+/turf/open/floor/almayer_hull/blackfull,
+/area/styx/hangar)
+"zj" = (
+/obj/structure/machinery/light/double/blue{
+	dir = 4;
+	pixel_x = 4;
+	pixel_y = -17;
+	color = "#8B0000";
+	light_color = "#8B0000";
+	name = "red"
+	},
+/obj/effect/decal/warning_stripes/asteroid{
+	icon_state = "E"
+	},
+/turf/open/floor/almayer_hull/blackfull,
+/area/styx/cryo_cells)
+"zo" = (
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/item/ammo_box/magazine/nade_box/flare{
+	pixel_x = -8;
+	pixel_y = -1
+	},
+/obj/item/ammo_box/magazine/nade_box/smoke{
+	pixel_x = 12;
+	pixel_y = 6
+	},
+/obj/item/ammo_box/magazine/nade_box/smoke{
+	pixel_x = 12;
+	pixel_y = 11
+	},
+/turf/open/floor/almayer_hull/blackfull,
+/area/styx/platoonarmory)
+"zs" = (
+/obj/effect/decal/warning_stripes/asteroid{
+	icon_state = "N";
+	pixel_x = 0;
+	pixel_y = 1
+	},
+/obj/structure/pipes/standard/simple/hidden/supply,
+/obj/structure/pipes/standard/simple/hidden/scrubbers,
+/turf/open/floor/almayer/plate{
+	color = "#A9A9A9"
+	},
+/area/styx/prep_hallway)
+"zu" = (
+/obj/structure/closet/secure_closet/marine_personal/marsoc/assistant_element_lead{
+	pixel_y = -2;
+	pixel_x = 9
+	},
+/turf/open/floor/almayer/edge/smooth/east,
+/area/styx/cryo_cells)
+"zz" = (
+/obj/structure/machinery/landinglight/ds1/delaytwo{
+	dir = 8
+	},
+/turf/open/floor/almayer/plate{
+	color = "#A9A9A9"
+	},
+/area/styx/hangar)
+"zH" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
+	},
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 4
+	},
+/turf/open/floor/almayer/sterile,
+/area/styx/dorms)
+"zI" = (
+/obj/structure/platform_decoration/strata/metal,
+/obj/structure/pipes/vents/scrubber,
+/turf/open/floor/almayer/plating,
+/area/styx/canteen)
+"zK" = (
+/turf/open/floor/almayer/blackcorner/west,
+/area/styx/dorms)
+"zM" = (
+/obj/structure/closet/secure_closet/marine_personal/marsoc/sapper{
+	pixel_x = 9;
+	pixel_y = -2
+	},
+/turf/open/floor/almayer/edge/smooth/east,
+/area/styx/cryo_cells)
+"zS" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2-8"
+	},
+/obj/structure/pipes/standard/manifold/hidden/scrubbers{
+	dir = 4
+	},
+/turf/open/floor/almayer/plating,
+/area/styx/dorms)
+"zU" = (
+/obj/structure/machinery/medical_pod/sleeper,
+/turf/open/floor/almayer/sterile_green,
+/area/styx/medical)
+"zW" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
+	},
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 4
+	},
+/obj/structure/pipes/standard/simple/hidden/scrubbers{
+	dir = 8
+	},
+/turf/open/floor/almayer/plating,
+/area/styx/cryo_cells)
+"zY" = (
+/obj/structure/machinery/power/apc/almayer/east,
+/obj/structure/cable{
+	icon_state = "0-8";
+	layer = 2.36
+	},
+/obj/effect/decal/warning_stripes/asteroid{
+	icon_state = "SE-out"
+	},
+/obj/structure/machinery/alarm/almayer{
+	dir = 1;
+	pixel_x = 0;
+	pixel_y = 21
+	},
+/obj/structure/surface/rack,
+/obj/item/reagent_container/glass/rag/polishing_rag{
+	pixel_x = 8;
+	pixel_y = -8;
+	name = "towel"
+	},
+/obj/item/reagent_container/glass/rag/polishing_rag{
+	pixel_x = -4;
+	pixel_y = -8;
+	name = "towel"
+	},
+/obj/item/reagent_container/glass/rag/polishing_rag{
+	pixel_x = 7;
+	pixel_y = 3;
+	name = "towel"
+	},
+/obj/item/reagent_container/glass/rag/polishing_rag{
+	pixel_x = -6;
+	pixel_y = 3;
+	name = "towel"
+	},
+/turf/open/floor/almayer/mono,
+/area/styx/cryo_cells)
+"Af" = (
+/obj/structure/closet/secure_closet{
+	pixel_x = 7;
+	pixel_y = -3
+	},
+/obj/structure/closet/secure_closet{
+	pixel_x = -8;
+	pixel_y = -3
+	},
+/turf/open/floor/almayer/plating,
+/area/styx/dorms)
+"Aj" = (
+/obj/structure/ladder{
+	id = "mission3";
+	height = 1
+	},
+/turf/open/floor/almayer_hull/blackfull,
+/area/styx/platoonarmory)
+"Ak" = (
+/turf/closed/wall/almayer/outer,
+/area/space)
+"AC" = (
+/obj/structure/pipes/vents/scrubber{
+	dir = 8
+	},
+/turf/open/floor/almayer/sterile,
+/area/styx/dorms)
+"AJ" = (
+/obj/structure/roof/cargocrane_tracks/horizontal{
+	pixel_y = 14
+	},
+/turf/closed/wall/almayer/outer,
+/area/styx/hangar)
+"AO" = (
+/obj/structure/surface/table/reinforced/prison,
+/obj/item/storage/firstaid/adv{
+	pixel_x = -4;
+	pixel_y = 9
+	},
+/obj/item/storage/firstaid/fire{
+	pixel_x = 3;
+	pixel_y = 4
+	},
+/obj/item/storage/firstaid/o2{
+	pixel_x = -4;
+	pixel_y = 0
+	},
+/obj/item/storage/firstaid/toxin{
+	pixel_x = 7;
+	pixel_y = -3
+	},
+/obj/structure/machinery/light/small/blue{
+	pixel_x = 16;
+	pixel_y = 0
+	},
+/turf/open/floor/almayer/research,
+/area/styx/medical)
+"Bc" = (
+/turf/open/floor/almayer/black/east,
+/area/styx/canteen)
+"Bd" = (
+/obj/effect/decal/warning_stripes/asteroid{
+	icon_state = "W"
+	},
+/obj/effect/landmark/late_join,
+/obj/effect/landmark/late_join/marsoc,
+/obj/effect/landmark/start/marine/medic/marsoc,
+/turf/open/floor/almayer_hull/blackfull,
+/area/styx/cryo_cells)
+"Bn" = (
+/obj/structure/machinery/door/firedoor/border_only/almayer{
+	layer = 1.9
+	},
+/turf/open/floor/almayer/plating,
+/area/styx/cryo_cells)
+"Br" = (
+/obj/item/storage/bag/trash{
+	pixel_x = -14;
+	pixel_y = 16
+	},
+/obj/structure/reagent_dispensers/watertank,
+/turf/open/floor/almayer/sterile,
+/area/styx/dorms)
+"BF" = (
+/obj/structure/machinery/landinglight/ds1/delayone{
+	dir = 4
+	},
+/turf/open/floor/almayer/plate{
+	color = "#A9A9A9"
+	},
+/area/styx/hangar)
+"BG" = (
+/obj/structure/machinery/light/small/red{
+	dir = 1
+	},
+/turf/open/floor/almayer/edge/smooth{
+	dir = 9
+	},
+/area/styx/dorms)
+"BJ" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
+	},
+/obj/structure/pipes/standard/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 4
+	},
+/turf/open/floor/almayer/plate{
+	color = "#A9A9A9"
+	},
+/area/styx/prep_hallway)
+"BK" = (
+/obj/structure/machinery/light/double/blue{
+	light_color = "#dae2ff";
+	light_power = 0.3
+	},
+/turf/open/floor/almayer/dark_sterile,
+/area/styx/cryo_cells)
+"BL" = (
+/obj/structure/roof/cargocrane_tracks/vertical{
+	pixel_y = 14
+	},
+/obj/structure/largecrate/random/case/small{
+	layer = 6;
+	density = 0;
+	icon_state = "mini_case_c";
+	pixel_x = 0;
+	pixel_y = 10
+	},
+/turf/open/floor/almayer/plate{
+	color = "#A9A9A9"
+	},
+/area/styx/hangar)
+"BM" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "cargo_arrow";
+	color = "#E10600";
+	dir = 4
+	},
+/turf/open/floor/almayer/plating,
+/area/styx/dorms)
+"BO" = (
+/turf/open/floor/almayer/edge/smooth,
+/area/styx/cryo_cells)
+"BR" = (
+/obj/structure/pipes/standard/simple/hidden/supply,
+/obj/structure/pipes/standard/simple/hidden/scrubbers,
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
+	},
+/turf/open/floor/almayer/plate{
+	color = "#A9A9A9"
+	},
+/area/styx/cryo_cells)
+"BS" = (
+/obj/structure/machinery/light/small/blue{
+	dir = 1;
+	light_color = "#dae2ff";
+	light_power = 0.5
+	},
+/obj/structure/sign/safety/autodoc{
+	pixel_x = -1;
+	pixel_y = 28
+	},
+/turf/open/floor/almayer/sterile_green_side/west{
+	dir = 1
+	},
+/area/styx/medical)
+"BX" = (
+/obj/structure/machinery/light/double/blue,
+/turf/open/floor/almayer/plate{
+	color = "#A9A9A9"
+	},
+/area/styx/canteen)
+"Ca" = (
+/obj/structure/machinery/door/airlock/multi_tile/almayer/almayer/glass{
+	name = "Hypersleep Bay Preparations"
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
+	},
+/obj/structure/machinery/door/firedoor/border_only/almayer{
+	dir = 2
+	},
+/turf/open/floor/almayer_hull/blackfull,
+/area/styx/cryo_cells)
+"Cb" = (
+/obj/structure/machinery/door/poddoor/almayer/blended{
+	name = "Hangar Access Lockdown";
+	id = "Hangar"
+	},
+/obj/structure/machinery/door/firedoor/border_only/almayer{
+	dir = 2
+	},
+/obj/structure/pipes/standard/simple/hidden/supply,
+/obj/structure/pipes/standard/simple/hidden/scrubbers,
+/turf/open/floor/almayer/plate{
+	color = "#A9A9A9"
+	},
+/area/styx/prep_hallway)
+"Cc" = (
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 10
+	},
+/turf/open/floor/almayer/plating,
+/area/styx/canteen)
+"Ch" = (
+/obj/structure/ladder{
+	id = "hangar2";
+	height = 1
+	},
+/turf/open/floor/almayer_hull/blackfull,
+/area/styx/hangar)
+"Cj" = (
+/obj/structure/machinery/light,
+/turf/open/floor/almayer_hull/blackfull,
+/area/styx/dorms)
+"Cm" = (
+/obj/structure/sign/safety/bulkhead_door{
+	pixel_x = 0;
+	pixel_y = -27
+	},
+/obj/structure/sign/safety/ladder{
+	pixel_x = 13;
+	pixel_y = -27
+	},
+/turf/open/floor/almayer/plating,
+/area/styx/prep_hallway)
+"Cn" = (
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 8
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
+	},
+/turf/open/floor/almayer/plate{
+	color = "#A9A9A9"
+	},
+/area/styx/dorms)
+"Co" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
+	},
+/turf/open/floor/almayer/plate{
+	color = "#A9A9A9"
+	},
+/area/styx/prep_hallway)
+"Cp" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
+	},
+/obj/structure/pipes/standard/manifold/hidden/supply{
+	dir = 4
+	},
+/obj/structure/pipes/standard/simple/hidden/scrubbers{
+	dir = 4
+	},
+/turf/open/floor/almayer/plating,
+/area/styx/dorms)
+"Cx" = (
+/turf/open/floor/almayer/plating,
+/area/styx/canteen)
+"Cz" = (
+/obj/effect/decal/warning_stripes/asteroid{
+	icon_state = "W"
+	},
+/obj/effect/landmark/late_join,
+/obj/effect/landmark/late_join/marsoc,
+/obj/effect/landmark/start/marine/engineer/marsoc,
+/obj/effect/landmark/start/marine/spec/marsoc,
+/turf/open/floor/almayer_hull/blackfull,
+/area/styx/cryo_cells)
+"CE" = (
+/obj/structure/surface/table/reinforced/prison,
+/obj/item/device/flashlight/pen{
+	pixel_y = 6;
+	pixel_x = -5
+	},
+/obj/item/clothing/accessory/stethoscope,
+/obj/structure/machinery/light/small/blue{
+	dir = 8;
+	light_color = "#dae2ff";
+	light_power = 0.5;
+	pixel_x = -6;
+	pixel_y = 17
+	},
+/turf/open/floor/almayer/research,
+/area/styx/medical)
+"CS" = (
+/obj/effect/decal/warning_stripes/asteroid{
+	icon_state = "W"
+	},
+/obj/effect/landmark/late_join,
+/obj/effect/landmark/late_join/marsoc,
+/obj/effect/landmark/start/marine/marsoc,
+/obj/effect/landmark/start/marine/smartgunner/marsoc,
+/turf/open/floor/almayer_hull/blackfull,
+/area/styx/cryo_cells)
+"CU" = (
+/obj/structure/pipes/vents/pump,
+/obj/structure/cable/heavyduty{
+	icon_state = "2-8"
+	},
+/turf/open/floor/almayer_hull/blackfull,
+/area/styx/dorms)
+"Df" = (
+/obj/structure/machinery/cm_vending/sorted/cargo_guns/squad/marsoc,
+/turf/open/floor/almayer/plate{
+	color = "#A9A9A9"
+	},
+/area/styx/platoonarmory)
+"Dg" = (
+/obj/structure/machinery/floodlight/landing/floor,
+/turf/open/floor/almayer/plating,
+/area/styx/hangar)
+"Di" = (
+/obj/structure/stairs/perspective{
+	color = "#A9A9A9"
+	},
+/turf/open/floor/almayer/plate{
+	color = "#A9A9A9"
+	},
+/area/styx/canteen)
+"Dj" = (
+/obj/structure/gun_rack/xm46a,
+/obj/structure/gun_rack/m41/m41b{
+	pixel_x = 0;
+	pixel_y = 27
+	},
+/obj/structure/sign/banners/usa_flag{
+	pixel_x = 15;
+	pixel_y = 42
+	},
+/turf/open/floor/almayer_hull/blackfull,
+/area/styx/platoonarmory)
+"Dq" = (
+/turf/closed/wall/almayer/outer,
+/area/styx/dorms)
+"Du" = (
+/obj/structure/machinery/floodlight/landing/floor,
+/obj/structure/roof/cargocrane_tracks/horizontal{
+	pixel_y = 14
+	},
+/turf/open/floor/almayer/plating,
+/area/styx/hangar)
+"Dy" = (
+/obj/effect/decal/warning_stripes/asteroid{
+	icon_state = "E"
+	},
+/obj/effect/landmark/late_join,
+/obj/effect/landmark/late_join/marsoc,
+/obj/effect/landmark/start/marine/engineer/marsoc,
+/obj/effect/landmark/start/marine/spec/marsoc,
+/turf/open/floor/almayer_hull/blackfull,
+/area/styx/cryo_cells)
+"DD" = (
+/obj/structure/machinery/body_scanconsole{
+	dir = 1
+	},
+/turf/open/floor/almayer/sterile_green_corner,
+/area/styx/medical)
+"DF" = (
+/turf/open/floor/almayer/edge/smooth{
+	dir = 4
+	},
+/area/styx/dorms)
+"DI" = (
+/turf/closed/wall/almayer/outer,
+/area/styx/platoonarmory)
+"DJ" = (
+/obj/structure/pipes/standard/simple/hidden/scrubbers{
+	dir = 1
+	},
+/turf/open/floor/almayer/edge/smooth{
+	dir = 8
+	},
+/area/styx/cryo_cells)
+"DK" = (
+/obj/structure/pipes/vents/pump,
+/turf/open/floor/almayer,
+/area/styx/cryo_cells)
+"DW" = (
+/obj/structure/machinery/door/poddoor/almayer/blended{
+	dir = 4;
+	name = "Vessel Access Lockdown";
+	id = "outer-1"
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
+	},
+/turf/open/floor/almayer/plating,
+/area/styx/dorms)
+"DY" = (
+/obj/structure/sign/catclock{
+	pixel_x = 21;
+	pixel_y = 1
+	},
+/turf/open/floor/almayer/plate{
+	color = "#A9A9A9"
+	},
+/area/styx/canteen)
+"Ea" = (
+/obj/structure/surface/table/reinforced/almayer_B,
+/turf/open/floor/almayer_hull/blackfull,
+/area/styx/platoonarmory)
+"Ef" = (
+/obj/structure/pipes/standard/simple/hidden/scrubbers,
+/turf/open/floor/almayer/plate{
+	color = "#A9A9A9"
+	},
+/area/styx/cryo_cells)
+"Eh" = (
+/obj/structure/machinery/light/small/red{
+	dir = 1
+	},
+/obj/structure/sign/safety/bulkhead_door{
+	pixel_x = 14;
+	pixel_y = 32
+	},
+/turf/open/floor/almayer/plating_striped/west,
+/area/styx/dorms)
+"Eo" = (
+/obj/structure/ladder{
+	id = "hangar4"
+	},
+/turf/open/floor/almayer_hull/blackfull,
+/area/styx/prep_hallway)
+"Eq" = (
+/obj/effect/decal/warning_stripes/asteroid{
+	icon_state = "S"
+	},
+/obj/structure/pipes/standard/simple/hidden/supply,
+/obj/structure/pipes/standard/simple/hidden/scrubbers,
+/turf/open/floor/almayer/plate{
+	color = "#A9A9A9"
+	},
+/area/styx/prep_hallway)
+"Es" = (
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/item/storage/box/guncase/heavy/fuel{
+	pixel_y = 0;
+	pixel_x = 0
+	},
+/obj/item/storage/box/guncase/heavy/fuel{
+	pixel_y = 4;
+	pixel_x = 3
+	},
+/obj/item/storage/box/guncase/heavy/motiondetectors{
+	pixel_x = 0;
+	pixel_y = 18
+	},
+/turf/open/floor/almayer_hull/blackfull,
+/area/styx/platoonarmory)
+"Ex" = (
+/obj/structure/closet{
+	desc = "It's a fancy storage unit for long-life foodstuffs.";
+	name = "long-life foodstuff storage";
+	pixel_x = 0;
+	pixel_y = -2
+	},
+/obj/item/reagent_container/food/snacks/flour,
+/obj/item/reagent_container/food/snacks/flour,
+/obj/item/reagent_container/food/snacks/flour,
+/obj/item/reagent_container/food/snacks/flour,
+/obj/item/reagent_container/food/snacks/flour,
+/obj/item/reagent_container/food/snacks/flour,
+/obj/item/reagent_container/food/condiment/enzyme,
+/obj/item/reagent_container/food/condiment/enzyme,
+/obj/item/storage/fancy/egg_box,
+/obj/item/storage/fancy/egg_box,
+/obj/item/reagent_container/food/drinks/milk{
+	name = "Milk Carton"
+	},
+/obj/item/reagent_container/food/drinks/milk{
+	name = "Milk Carton"
+	},
+/obj/item/reagent_container/food/drinks/milk{
+	name = "Milk Carton"
+	},
+/obj/item/reagent_container/food/drinks/milk{
+	name = "Milk Carton"
+	},
+/obj/structure/sign/safety/fridge{
+	pixel_x = -2;
+	pixel_y = -23
+	},
+/turf/open/floor/almayer/black{
+	dir = 10
+	},
+/area/styx/canteen)
+"EA" = (
+/obj/structure/machinery/light/double/blue{
+	light_color = "#dae2ff";
+	dir = 4;
+	light_power = 0.3;
+	pixel_x = 5;
+	pixel_y = 0
+	},
+/obj/structure/pipes/standard/simple/hidden/supply,
+/turf/open/floor/almayer/edge/smooth{
+	dir = 4
+	},
+/area/styx/cryo_cells)
+"EG" = (
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/item/ammo_box/magazine/mk1/large/heap,
+/obj/item/ammo_box/magazine/mk1/large/heap{
+	pixel_x = 0;
+	pixel_y = 6
+	},
+/turf/open/floor/almayer_hull/blackfull,
+/area/styx/platoonarmory)
+"EH" = (
+/obj/structure/bed/chair/comfy/black{
+	dir = 8
+	},
+/turf/open/floor/almayer_hull/blackfull,
+/area/styx/canteen)
+"ES" = (
+/obj/structure/machinery/light/double/blue{
+	dir = 1;
+	light_color = "#dae2ff";
+	light_power = 0.7
+	},
+/obj/effect/decal/warning_stripes/asteroid{
+	icon_state = "E"
+	},
+/turf/open/floor/almayer/edge/smooth{
+	dir = 1
+	},
+/area/styx/cryo_cells)
+"Fa" = (
+/obj/structure/pipes/standard/simple/hidden/supply,
+/turf/open/floor/almayer/plate{
+	color = "#A9A9A9"
+	},
+/area/styx/dorms)
+"FD" = (
+/obj/structure/machinery/cm_vending/gear/spec/marsoc,
+/turf/open/floor/almayer_hull/blackfull,
+/area/styx/platoonarmory)
+"FP" = (
+/obj/structure/machinery/alarm/almayer{
+	dir = 1;
+	pixel_x = 0;
+	pixel_y = 21
+	},
+/turf/open/floor/almayer_hull/blackfull,
+/area/styx/prep_hallway)
+"FR" = (
+/obj/structure/pipes/vents/scrubber{
+	dir = 8
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "1-8"
+	},
+/turf/open/floor/almayer/plating,
+/area/styx/dorms)
+"FS" = (
+/obj/structure/machinery/light/double/blue{
+	light_color = "#dae2ff";
+	dir = 4;
+	light_power = 0.3;
+	pixel_x = 5;
+	pixel_y = 0
+	},
+/obj/structure/sign/safety/med_life_support{
+	pixel_x = 36;
+	pixel_y = 0
+	},
+/turf/open/floor/almayer/sterile_green,
+/area/styx/medical)
+"FV" = (
+/obj/effect/decal/warning_stripes/asteroid{
+	icon_state = "N";
+	pixel_x = 0;
+	pixel_y = 1
+	},
+/obj/structure/machinery/door_control/brbutton{
+	id = "Hangar";
+	name = "Hangar Access Control";
+	pixel_x = -21;
+	pixel_y = 6
+	},
+/obj/structure/sign/safety/manualopenclose{
+	pixel_x = -26;
+	pixel_y = 7
+	},
+/turf/open/floor/almayer/plating,
+/area/styx/prep_hallway)
+"Ga" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
+	},
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 4
+	},
+/obj/structure/pipes/standard/simple/hidden/scrubbers{
+	dir = 5
+	},
+/turf/open/floor/almayer/sterile,
+/area/styx/dorms)
+"Go" = (
+/obj/structure/machinery/landinglight/ds1/delaythree{
+	dir = 1
+	},
+/turf/open/floor/almayer/plate{
+	color = "#A9A9A9"
+	},
+/area/styx/hangar)
+"Gv" = (
+/obj/structure/machinery/door/airlock/almayer/maint,
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 4
+	},
+/obj/structure/pipes/standard/simple/hidden/scrubbers{
+	dir = 8
+	},
+/obj/structure/machinery/door/firedoor/border_only/almayer,
+/turf/open/floor/almayer/plating,
+/area/styx/dorms)
+"GM" = (
+/obj/structure/machinery/door/firedoor/border_only/almayer{
+	layer = 1.9
+	},
+/obj/structure/sign/safety/galley{
+	pixel_x = 0;
+	pixel_y = -25
+	},
+/obj/effect/decal/warning_stripes/asteroid{
+	icon_state = "cargo_arrow";
+	dir = 4
+	},
+/obj/structure/sign/safety/east{
+	pixel_x = 15;
+	pixel_y = -25
+	},
+/turf/open/floor/almayer_hull/blackfull,
+/area/styx/prep_hallway)
+"Hj" = (
+/obj/structure/pipes/standard/simple/hidden/supply,
+/obj/structure/pipes/standard/simple/hidden/scrubbers,
+/turf/open/floor/almayer/dark_sterile,
+/area/styx/cryo_cells)
+"Hk" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "2-8"
+	},
+/turf/open/floor/almayer/plate{
+	color = "#A9A9A9"
+	},
+/area/styx/canteen)
+"Hr" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
+	},
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 4
+	},
+/obj/structure/pipes/standard/simple/hidden/scrubbers{
+	dir = 9
+	},
+/turf/open/floor/almayer,
+/area/styx/cryo_cells)
+"Hy" = (
+/obj/structure/machinery/light/double/blue{
+	dir = 4;
+	pixel_x = 4;
+	pixel_y = 0;
+	color = "#8B0000";
+	light_color = "#8B0000";
+	name = "red"
+	},
+/obj/effect/decal/warning_stripes/asteroid{
+	icon_state = "S"
+	},
+/obj/structure/pipes/vents/scrubber,
+/obj/structure/machinery/alarm/almayer{
+	dir = 1;
+	pixel_x = 0;
+	pixel_y = 21
+	},
+/turf/open/floor/almayer/plating,
+/area/styx/cryo_cells)
+"HC" = (
+/obj/structure/machinery/cm_vending/sorted/marine_food,
+/turf/open/floor/almayer,
+/area/styx/canteen)
+"HG" = (
+/turf/open/floor/almayer/black{
+	dir = 6
+	},
+/area/styx/canteen)
+"HJ" = (
+/obj/structure/machinery/door/airlock/almayer/secure/glass{
+	req_access = null;
+	dir = 1;
+	name = "Gym"
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
+	},
+/turf/open/floor/almayer/plating,
+/area/styx/dorms)
+"HM" = (
+/obj/structure/machinery/disposal{
+	pixel_x = -6;
+	pixel_y = -3
+	},
+/obj/item/trash/uscm_mre{
+	pixel_y = 14;
+	pixel_x = 9
+	},
+/obj/item/trash/crushed_cup{
+	pixel_y = 18;
+	pixel_x = -13
+	},
+/obj/structure/machinery/light{
+	dir = 8
+	},
+/turf/open/floor/almayer/plating,
+/area/styx/dorms)
+"HV" = (
+/obj/structure/machinery/landinglight/ds1/delayone{
+	dir = 8
+	},
+/turf/open/floor/almayer/plate{
+	color = "#A9A9A9"
+	},
+/area/styx/hangar)
+"If" = (
+/obj/structure/machinery/door/airlock/multi_tile/almayer/almayer/glass{
+	name = "Hypersleep Bay Preparations"
+	},
+/obj/structure/machinery/door/firedoor/border_only/almayer{
+	dir = 2
+	},
+/turf/open/floor/almayer_hull/blackfull,
+/area/styx/cryo_cells)
+"Ih" = (
+/obj/effect/decal/warning_stripes/asteroid{
+	icon_state = "cargo_arrow";
+	dir = 1;
+	pixel_x = 0;
+	pixel_y = -6
+	},
+/obj/structure/machinery/door_control/brbutton{
+	name = "Mission Preparation Control";
+	id = "Mission Preparation 2";
+	pixel_x = -24;
+	pixel_y = 3
+	},
+/obj/effect/decal/warning_stripes/asteroid{
+	icon_state = "N";
+	pixel_x = 0;
+	pixel_y = 1
+	},
+/obj/structure/sign/safety/bulkhead_door{
+	pixel_x = -30;
+	pixel_y = 3
+	},
+/obj/structure/sign/safety/manualopenclose{
+	pixel_x = -17;
+	pixel_y = -10
+	},
+/turf/open/floor/almayer_hull/blackfull,
+/area/styx/platoonarmory)
+"Io" = (
+/obj/structure/machinery/door/airlock/almayer/medical/glass{
+	dir = 1;
+	req_one_access = list();
+	req_one_access_txt = "8;12";
+	name = "Medical Office"
+	},
+/turf/open/floor/almayer/research,
+/area/styx/medical)
+"Ip" = (
+/obj/structure/machinery/door/poddoor/almayer/blended{
+	name = "Mission Preparation Access Lockdown";
+	id = "Mission Preparation"
+	},
+/obj/structure/machinery/door/firedoor/border_only/almayer{
+	dir = 2
+	},
+/obj/structure/pipes/standard/simple/hidden/supply,
+/obj/structure/pipes/standard/simple/hidden/scrubbers,
+/turf/open/floor/almayer/plate{
+	color = "#A9A9A9"
+	},
+/area/styx/prep_hallway)
+"Ix" = (
+/obj/effect/decal/warning_stripes/asteroid{
+	icon_state = "N";
+	pixel_x = 0;
+	pixel_y = 1
+	},
+/turf/open/floor/almayer/plating,
+/area/styx/prep_hallway)
+"Iz" = (
+/obj/effect/decal/warning_stripes/asteroid{
+	icon_state = "E"
+	},
+/obj/effect/landmark/late_join,
+/obj/effect/landmark/late_join/marsoc,
+/obj/effect/landmark/start/marine/leader/marsoc,
+/obj/effect/landmark/start/marine/tl/marsoc,
+/turf/open/floor/almayer_hull/blackfull,
+/area/styx/cryo_cells)
+"IB" = (
+/turf/open/floor/almayer_hull/blackfull,
+/area/styx/platoonarmory)
+"II" = (
+/obj/structure/machinery/light/double/blue{
+	dir = 1;
+	light_color = "#dae2ff";
+	light_power = 0.7;
+	pixel_x = 15;
+	pixel_y = 10
+	},
+/obj/structure/sign/safety/ammunition{
+	pixel_x = -1;
+	pixel_y = 28
+	},
+/obj/structure/sign/safety/bulkhead_door{
+	pixel_x = -1;
+	pixel_y = 40
+	},
+/turf/open/floor/almayer/plating,
+/area/styx/prep_hallway)
+"IM" = (
+/obj/structure/machinery/light/double/blue{
+	dir = 1;
+	pixel_x = 0;
+	pixel_y = 10;
+	color = "#8B0000";
+	light_color = "#8B0000";
+	name = "red"
+	},
+/obj/structure/pipes/standard/simple/hidden/supply,
+/obj/structure/pipes/standard/simple/hidden/scrubbers,
+/obj/structure/sign/safety/ladder{
+	pixel_x = 7;
+	pixel_y = 35
+	},
+/turf/open/floor/almayer/plate{
+	color = "#A9A9A9"
+	},
+/area/styx/prep_hallway)
+"IN" = (
+/obj/structure/machinery/alarm/almayer{
+	dir = 1;
+	pixel_x = 0;
+	pixel_y = 21
+	},
+/obj/structure/machinery/light{
+	dir = 4
+	},
+/obj/structure/machinery/vending/walkman{
+	pixel_y = 21;
+	pixel_x = 0;
+	density = 0;
+	layer = 4
+	},
+/turf/open/floor/almayer/plate{
+	color = "#A9A9A9"
+	},
+/area/styx/dorms)
+"IQ" = (
+/obj/effect/decal/warning_stripes/asteroid{
+	icon_state = "E"
+	},
+/turf/open/floor/almayer/edge/smooth{
+	dir = 8
+	},
+/area/styx/cryo_cells)
+"IR" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "N";
+	pixel_y = 1
+	},
+/turf/open/floor/almayer/plate{
+	color = "#A9A9A9"
+	},
+/area/styx/hangar)
+"IS" = (
+/obj/structure/machinery/light/small/blue{
+	dir = 4;
+	light_color = "#dae2ff";
+	light_power = 0.25;
+	pixel_x = 5;
+	pixel_y = 16
+	},
+/turf/open/floor/almayer/research,
+/area/styx/medical)
+"IT" = (
+/obj/effect/decal/warning_stripes/asteroid{
+	icon_state = "S"
+	},
+/obj/effect/decal/warning_stripes/asteroid{
+	icon_state = "cargo_arrow";
+	dir = 2;
+	pixel_x = 0;
+	pixel_y = 6
+	},
+/turf/open/floor/almayer_hull/blackfull,
+/area/styx/prep_hallway)
+"IU" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
+	},
+/turf/open/floor/almayer/plating,
+/area/styx/dorms)
+"IY" = (
+/turf/open/floor/almayer/silverfull,
+/area/styx/medical)
+"Jc" = (
+/obj/structure/machinery/light/double/blue{
+	dir = 4;
+	pixel_x = 4;
+	pixel_y = -17;
+	color = "#8B0000";
+	light_color = "#8B0000";
+	name = "red"
+	},
+/obj/effect/decal/warning_stripes/asteroid{
+	icon_state = "E"
+	},
+/obj/structure/sign/safety/cryo{
+	name = "hypersleep semiotic";
+	pixel_x = 31;
+	pixel_y = 8;
+	desc = "Semiotic Standard denoting the nearby presence of a hypersleep bay."
+	},
+/obj/structure/pipes/standard/simple/hidden/scrubbers,
+/turf/open/floor/almayer_hull/blackfull,
+/area/styx/cryo_cells)
+"Jf" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
+	},
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 4
+	},
+/obj/structure/pipes/standard/simple/hidden/scrubbers{
+	dir = 4
+	},
+/turf/open/floor/almayer_hull/blackfull,
+/area/styx/dorms)
+"Jg" = (
+/obj/structure/bed{
+	icon_state = "psychbed";
+	name = "soft bed";
+	desc = "It actually feels like a bed... What a wonder."
+	},
+/obj/structure/bed{
+	icon_state = "psychbed";
+	name = "soft bed";
+	desc = "It actually feels like a bed... What a wonder.";
+	pixel_x = 0;
+	pixel_y = 13;
+	layer = 4;
+	buckling_y = 13
+	},
+/obj/structure/barricade/handrail/type_b{
+	dir = 8;
+	layer = 5;
+	pixel_x = -3;
+	pixel_y = 1
+	},
+/obj/item/bedsheet/yellow{
+	layer = 3
+	},
+/obj/item/bedsheet/yellow{
+	pixel_x = 0;
+	pixel_y = 12
+	},
+/obj/structure/curtain/red{
+	pixel_x = 0;
+	pixel_y = 2
+	},
+/turf/open/floor/almayer/plating,
+/area/styx/dorms)
+"Jl" = (
+/obj/structure/pipes/standard/simple/hidden/scrubbers,
+/obj/structure/pipes/standard/simple/hidden/scrubbers{
+	dir = 5
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
+	},
+/obj/structure/pipes/standard/manifold/hidden/supply{
+	dir = 4
+	},
+/turf/open/floor/almayer/plate{
+	color = "#A9A9A9"
+	},
+/area/styx/cryo_cells)
+"Jr" = (
+/obj/structure/sign/safety/bulkhead_door{
+	pixel_x = -31;
+	pixel_y = -25
+	},
+/turf/open/floor/almayer/plate{
+	color = "#A9A9A9"
+	},
+/area/styx/platoonarmory)
+"Jv" = (
+/obj/structure/machinery/light/double/blue{
+	dir = 8;
+	pixel_x = -10;
+	pixel_y = -3;
+	color = "#8B0000";
+	light_color = "#8B0000";
+	name = "red"
+	},
+/turf/open/floor/almayer/plating_striped,
+/area/styx/cryo_cells)
+"JA" = (
+/obj/structure/machinery/cryopod/big{
+	pixel_x = -9;
+	pixel_y = -1
+	},
+/turf/open/floor/almayer_hull/blackfull,
+/area/styx/cryo_cells)
+"JD" = (
+/turf/open/floor/almayer/plating,
+/area/styx/prep_hallway)
+"JE" = (
+/obj/effect/decal/warning_stripes/asteroid{
+	icon_state = "cargo_arrow";
+	dir = 2
+	},
+/obj/structure/machinery/light/double/blue{
+	dir = 8;
+	light_color = "#dae2ff";
+	light_power = 0.3;
+	pixel_x = -15;
+	pixel_y = -3
+	},
+/turf/open/floor/almayer_hull/blackfull,
+/area/styx/prep_hallway)
+"JF" = (
+/obj/structure/machinery/door/poddoor/almayer/blended{
+	name = "Mission Preparation Access Lockdown";
+	id = "Mission Preparation 2"
+	},
+/turf/open/floor/almayer_hull/blackfull,
+/area/styx/platoonarmory)
+"JH" = (
+/obj/effect/decal/warning_stripes/asteroid{
+	icon_state = "NE-out";
+	pixel_x = 0;
+	pixel_y = 1
+	},
+/obj/structure/machinery/door_control/brbutton{
+	name = "Mission Preparation Control";
+	id = "Mission Preparation";
+	pixel_x = 6;
+	pixel_y = 26
+	},
+/obj/structure/sign/safety/storage{
+	pixel_x = 13;
+	pixel_y = 39
+	},
+/obj/structure/sign/safety/ladder{
+	pixel_x = 1;
+	pixel_y = 39
+	},
+/obj/structure/sign/safety/manualopenclose{
+	pixel_x = 1;
+	pixel_y = 27
+	},
+/turf/open/floor/almayer/plating,
+/area/styx/prep_hallway)
+"JI" = (
+/obj/effect/decal/warning_stripes{
+	icon_state = "E";
+	pixel_x = 1;
+	pixel_y = 1
+	},
+/turf/open/floor/almayer/plate{
+	color = "#A9A9A9"
+	},
+/area/styx/hangar)
+"JN" = (
+/obj/structure/machinery/door/poddoor/almayer/blended{
+	name = "Hangar Access"
+	},
+/turf/open/floor/almayer/plate{
+	color = "#A9A9A9"
+	},
+/area/styx/hangar)
+"JP" = (
+/obj/structure/machinery/door_control/brbutton/alt{
+	name = "Mission Preparation Control";
+	id = "Mission Preparation 2";
+	pixel_x = 8;
+	pixel_y = -24
+	},
+/obj/structure/sign/safety/manualopenclose{
+	pixel_x = 15;
+	pixel_y = -37
+	},
+/turf/open/floor/almayer_hull,
+/area/styx/platoonarmory)
+"JQ" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
+	},
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 8
+	},
+/turf/open/floor/almayer/plating,
+/area/styx/canteen)
+"JV" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "0-2"
+	},
+/obj/structure/cable{
+	layer = 2.36
+	},
+/turf/open/floor/almayer_hull/blackfull,
+/area/styx/dorms)
+"JZ" = (
+/obj/structure/platform/strata/metal{
+	pixel_x = 5;
+	pixel_y = 0;
+	layer = 3.1
+	},
+/turf/open/floor/almayer/plating_striped/west,
+/area/styx/canteen)
+"Kk" = (
+/obj/structure/bed{
+	icon_state = "psychbed";
+	name = "soft bed";
+	desc = "It actually feels like a bed... What a wonder."
+	},
+/obj/structure/bed{
+	icon_state = "psychbed";
+	name = "soft bed";
+	desc = "It actually feels like a bed... What a wonder.";
+	pixel_x = 0;
+	pixel_y = 13;
+	layer = 4;
+	buckling_y = 13
+	},
+/obj/structure/barricade/handrail/type_b{
+	dir = 4;
+	layer = 5;
+	pixel_x = 3;
+	pixel_y = 1
+	},
+/obj/structure/machinery/light/small{
+	dir = 1;
+	pixel_x = 0;
+	pixel_y = 11
+	},
+/obj/item/bedsheet/blue{
+	layer = 3
+	},
+/obj/item/bedsheet/blue{
+	pixel_x = 0;
+	pixel_y = 12
+	},
+/obj/structure/curtain/red{
+	pixel_x = 0;
+	pixel_y = 2
+	},
+/turf/open/floor/almayer/plating,
+/area/styx/dorms)
+"Kt" = (
+/obj/structure/machinery/landinglight/ds1/delaytwo{
+	dir = 8
+	},
+/obj/structure/machinery/floodlight/landing/floor{
+	color = "#dae2ff";
+	light_color = "#dae2ff"
+	},
+/turf/open/floor/almayer/plating,
+/area/styx/hangar)
+"Kv" = (
+/obj/structure/closet/secure_closet{
+	pixel_x = -8;
+	pixel_y = -3
+	},
+/obj/structure/closet/secure_closet{
+	pixel_x = 7;
+	pixel_y = -3
+	},
+/turf/open/floor/almayer/plating,
+/area/styx/dorms)
+"Kz" = (
+/obj/structure/machinery/door/airlock/almayer/secure/glass{
+	req_access = null;
+	dir = 1;
+	name = "Dormitories"
+	},
+/obj/structure/pipes/standard/simple/hidden/supply,
+/obj/structure/machinery/door/firedoor/border_only/almayer{
+	dir = 2
+	},
+/turf/open/floor/almayer/plate{
+	color = "#A9A9A9"
+	},
+/area/styx/dorms)
+"KD" = (
+/obj/structure/ladder{
+	id = "hangar2"
+	},
+/turf/open/floor/almayer_hull/blackfull,
+/area/styx/prep_hallway)
+"KH" = (
+/obj/structure/bed/chair/comfy/bench/south,
+/turf/open/floor/almayer/edge/smooth{
+	dir = 8
+	},
+/area/styx/cryo_cells)
+"KO" = (
+/obj/structure/bed/chair/comfy/bench/north,
+/turf/open/floor/almayer_hull,
+/area/styx/platoonarmory)
+"KQ" = (
+/obj/structure/machinery/landinglight/ds1/delayone{
+	dir = 1
+	},
+/turf/open/floor/almayer/plate{
+	color = "#A9A9A9"
+	},
+/area/styx/hangar)
+"KR" = (
+/obj/structure/machinery/light/double/blue,
+/turf/open/floor/almayer/plating,
+/area/styx/prep_hallway)
+"KU" = (
+/obj/structure/machinery/door/firedoor/border_only/almayer{
+	layer = 1.9
+	},
+/obj/structure/machinery/light/double/blue,
+/obj/structure/sign/safety/galley{
+	pixel_x = 16;
+	pixel_y = -24
+	},
+/turf/open/floor/almayer/plating,
+/area/styx/prep_hallway)
+"La" = (
+/obj/structure/pipes/standard/simple/hidden/supply,
+/obj/structure/machinery/light/double/blue{
+	dir = 8;
+	light_color = "#dae2ff";
+	light_power = 0.3;
+	pixel_x = -10;
+	pixel_y = -1
+	},
+/turf/open/floor/almayer/plate{
+	color = "#A9A9A9"
+	},
+/area/styx/dorms)
+"Lg" = (
+/obj/structure/platform_decoration/strata/metal{
+	pixel_x = 5;
+	pixel_y = 0
+	},
+/obj/structure/machinery/firealarm{
+	pixel_y = -28;
+	pixel_x = -3
+	},
+/turf/open/floor/almayer/black{
+	dir = 6
+	},
+/area/styx/canteen)
+"Lh" = (
+/obj/structure/surface/table/reinforced/prison,
+/obj/item/ashtray/bronze{
+	pixel_x = 4;
+	pixel_y = 5
+	},
+/turf/open/floor/almayer/research,
+/area/styx/medical)
+"Lj" = (
+/obj/structure/bedsheetbin{
+	pixel_x = -6;
+	pixel_y = -1
+	},
+/turf/open/floor/almayer/sterile,
+/area/styx/dorms)
+"Lo" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
+	},
+/turf/open/floor/almayer/plate{
+	color = "#A9A9A9"
+	},
+/area/styx/canteen)
+"Lr" = (
+/obj/structure/machinery/light/small/red,
+/obj/structure/sign/safety/bulkhead_door{
+	pixel_x = 14;
+	pixel_y = -32
+	},
+/turf/open/floor/almayer/plating_striped/west,
+/area/styx/dorms)
+"Lt" = (
+/obj/structure/machinery/firealarm{
+	dir = 8;
+	pixel_x = -24
+	},
+/turf/open/floor/almayer/sterile_green_side/west{
+	dir = 2
+	},
+/area/styx/medical)
+"Lv" = (
+/turf/open/floor/almayer/mono,
+/area/styx/dorms)
+"Lw" = (
+/obj/structure/machinery/cryopod/big/flipped{
+	pixel_x = -9;
+	pixel_y = 15
+	},
+/turf/open/floor/almayer_hull/blackfull,
+/area/styx/cryo_cells)
+"Lx" = (
+/obj/structure/machinery/landinglight/ds1/delaythree,
+/obj/structure/roof/cargocrane_tracks/horizontal{
+	pixel_y = 14
+	},
+/turf/open/floor/almayer/plate{
+	color = "#A9A9A9"
+	},
+/area/styx/hangar)
+"Ly" = (
+/obj/structure/roof/cargocrane_tracks/horizontal{
+	pixel_y = 14
+	},
+/turf/open/floor/almayer_hull/blackfull,
+/area/styx/hangar)
+"LA" = (
+/obj/structure/machinery/landinglight/ds1/delaythree{
+	dir = 4
+	},
+/turf/open/floor/almayer/plate{
+	color = "#A9A9A9"
+	},
+/area/styx/hangar)
+"LH" = (
+/obj/structure/machinery/optable,
+/turf/open/floor/almayer/silverfull,
+/area/styx/medical)
+"LI" = (
+/obj/effect/decal/warning_stripes/asteroid{
+	icon_state = "N";
+	pixel_x = 0;
+	pixel_y = 1
+	},
+/obj/effect/decal/warning_stripes/asteroid{
+	icon_state = "cargo_arrow";
+	dir = 1;
+	pixel_x = 0;
+	pixel_y = -6
+	},
+/turf/open/floor/almayer_hull/blackfull,
+/area/styx/prep_hallway)
+"LP" = (
+/obj/structure/machinery/door/poddoor/almayer{
+	dir = 8;
+	name = "Additional Equipment";
+	id = "equip"
+	},
+/turf/open/floor/almayer_hull/blackfull,
+/area/styx/platoonarmory)
+"LQ" = (
+/obj/structure/machinery/door/poddoor/almayer/blended{
+	name = "Hangar Access Lockdown";
+	id = "Hangar Upper"
+	},
+/turf/open/floor/almayer/plate{
+	color = "#A9A9A9"
+	},
+/area/styx/hangar)
+"LT" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "1-8"
+	},
+/turf/open/floor/almayer,
+/area/styx/dorms)
+"LX" = (
+/obj/effect/decal/warning_stripes/asteroid{
+	icon_state = "cargo_arrow";
+	dir = 4
+	},
+/obj/structure/sign/safety/east{
+	pixel_x = 7;
+	pixel_y = 31
+	},
+/turf/open/floor/almayer_hull/blackfull,
+/area/styx/prep_hallway)
+"Mj" = (
+/obj/structure/machinery/light/small/red{
+	dir = 4;
+	pixel_x = 0;
+	pixel_y = 16
+	},
+/turf/open/floor/almayer/edge/smooth{
+	dir = 6
+	},
+/area/styx/dorms)
+"Ml" = (
+/obj/structure/machinery/door/airlock/almayer/generic{
+	id = "Delta_1";
+	name = "Stall-2";
+	dir = 2
+	},
+/turf/open/floor/almayer/dark_sterile,
+/area/styx/cryo_cells)
+"Mr" = (
+/obj/structure/bed{
+	icon_state = "psychbed";
+	name = "soft bed";
+	desc = "It actually feels like a bed... What a wonder."
+	},
+/obj/structure/bed{
+	icon_state = "psychbed";
+	name = "soft bed";
+	desc = "It actually feels like a bed... What a wonder.";
+	pixel_x = 0;
+	pixel_y = 13;
+	layer = 4;
+	buckling_y = 13
+	},
+/obj/structure/barricade/handrail/type_b{
+	dir = 8;
+	layer = 5;
+	pixel_x = -3;
+	pixel_y = 1
+	},
+/obj/structure/machinery/light/small{
+	dir = 1;
+	pixel_x = 0;
+	pixel_y = 11
+	},
+/obj/item/bedsheet/purple{
+	layer = 3
+	},
+/obj/item/bedsheet/purple{
+	pixel_x = 0;
+	pixel_y = 13
+	},
+/obj/structure/curtain/red{
+	pixel_x = 0;
+	pixel_y = 2
+	},
+/turf/open/floor/almayer/plating,
+/area/styx/dorms)
+"Mt" = (
+/obj/structure/closet/coffin/woodencrate{
+	name = "gym equipment"
+	},
+/obj/item/clothing/under/shorts/black,
+/obj/item/clothing/under/shorts/black,
+/obj/item/clothing/under/shorts/black,
+/obj/item/clothing/under/shorts/black,
+/obj/item/clothing/under/shorts/black,
+/obj/item/clothing/under/shorts/black,
+/obj/item/clothing/under/shorts/black,
+/obj/item/clothing/under/shorts/black,
+/obj/item/clothing/under/shorts/black,
+/obj/item/clothing/under/shorts/black,
+/obj/item/clothing/under/shorts/black,
+/obj/item/clothing/gloves/boxing,
+/obj/item/clothing/gloves/boxing,
+/obj/item/clothing/gloves/boxing/green,
+/obj/item/clothing/gloves/boxing/blue,
+/turf/open/floor/almayer/mono,
+/area/styx/dorms)
+"MK" = (
+/obj/structure/machinery/light/double/blue{
+	dir = 8;
+	light_color = "#dae2ff";
+	light_power = 0.3;
+	pixel_x = -10;
+	pixel_y = -16
+	},
+/turf/open/floor/almayer/plate{
+	color = "#A9A9A9"
+	},
+/area/styx/canteen)
+"MP" = (
+/obj/structure/vehicle_locker/cabinet/utensils/flip{
+	pixel_x = 8;
+	pixel_y = 27
+	},
+/obj/structure/vehicle_locker/cabinet/utensils{
+	pixel_x = -7;
+	pixel_y = 27
+	},
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/item/reagent_container/food/condiment/hotsauce/franks{
+	pixel_x = -9;
+	pixel_y = 18;
+	layer = 5
+	},
+/obj/item/reagent_container/food/condiment/hotsauce/franks/macho{
+	layer = 5;
+	pixel_x = -9;
+	pixel_y = 9
+	},
+/obj/item/reagent_container/food/condiment/hotsauce/sriracha{
+	pixel_x = -1;
+	pixel_y = 18;
+	layer = 5
+	},
+/obj/item/reagent_container/food/condiment/hotsauce/cholula{
+	layer = 5;
+	pixel_x = -1;
+	pixel_y = 9
+	},
+/obj/item/reagent_container/food/condiment/sugar{
+	name = "Sugar Container";
+	desc = "Someone dumped a load of sugar into here. Wow.";
+	pixel_x = 6;
+	pixel_y = 9;
+	layer = 5
+	},
+/turf/open/floor/almayer/edge/smooth{
+	dir = 1
+	},
+/area/styx/canteen)
+"MW" = (
+/obj/structure/machinery/light/double/blue{
+	dir = 8;
+	light_color = "#dae2ff";
+	light_power = 0.3;
+	pixel_x = -15;
+	pixel_y = -3
+	},
+/turf/open/floor/almayer_hull/blackfull,
+/area/styx/hangar)
+"Nd" = (
+/obj/structure/machinery/light/double/blue{
+	color = "#8B0000";
+	light_color = "#8B0000";
+	name = "red"
+	},
+/turf/open/floor/almayer/plate{
+	color = "#A9A9A9"
+	},
+/area/styx/platoonarmory)
+"Ng" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "1-4"
+	},
+/turf/open/floor/almayer_hull/blackfull,
+/area/styx/canteen)
+"Nh" = (
+/obj/structure/surface/table/reinforced/prison,
+/obj/structure/machinery/recharger{
+	pixel_y = 3
+	},
+/turf/open/floor/almayer/sterile,
+/area/styx/medical)
+"Ni" = (
+/obj/structure/pipes/standard/manifold/hidden/supply,
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
+	},
+/turf/open/floor/almayer_hull/blackfull,
+/area/styx/dorms)
+"Nm" = (
+/turf/open/floor/almayer/edge/smooth/corner{
+	dir = 8
+	},
+/area/styx/dorms)
+"No" = (
+/obj/structure/platform/strata/metal{
+	pixel_x = 0;
+	pixel_y = 0
+	},
+/obj/structure/platform/strata/metal{
+	dir = 8
+	},
+/obj/structure/platform_decoration/strata/metal{
+	dir = 1;
+	pixel_x = 7;
+	pixel_y = 7
+	},
+/turf/open/floor/almayer/plating,
+/area/styx/canteen)
+"Nq" = (
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/structure/machinery/microwave{
+	density = 0;
+	pixel_y = 16;
+	pixel_x = 0
+	},
+/obj/structure/machinery/reagentgrinder{
+	pixel_x = 0;
+	pixel_y = 1
+	},
+/turf/open/floor/almayer/edge/smooth{
+	dir = 9
+	},
+/area/styx/canteen)
+"Nu" = (
+/obj/structure/machinery/cm_vending/gear/engi/marsoc,
+/turf/open/floor/almayer_hull/blackfull,
+/area/styx/platoonarmory)
+"Nv" = (
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 4
+	},
+/obj/structure/pipes/standard/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
+	},
+/turf/open/floor/almayer_hull/blackfull,
+/area/styx/prep_hallway)
+"NE" = (
+/obj/structure/toilet,
+/obj/structure/machinery/light/small/blue{
+	dir = 4;
+	light_color = "#dae2ff";
+	light_power = 0.25;
+	pixel_x = 5;
+	pixel_y = 0
+	},
+/turf/open/floor/almayer/dark_sterile,
+/area/styx/cryo_cells)
+"NG" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "0-2"
+	},
+/obj/structure/cable{
+	icon_state = "0-4";
+	layer = 2.36
+	},
+/obj/structure/pipes/standard/simple/hidden/supply,
+/turf/open/floor/almayer,
+/area/styx/cryo_cells)
+"NH" = (
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 4
+	},
+/obj/structure/pipes/standard/manifold/hidden/scrubbers{
+	dir = 8
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2-4-8"
+	},
+/turf/open/floor/almayer_hull/blackfull,
+/area/styx/dorms)
+"NM" = (
+/obj/structure/sign/safety/west{
+	pixel_x = 7;
+	pixel_y = -32
+	},
+/turf/open/floor/almayer/plating,
+/area/styx/dorms)
+"NR" = (
+/obj/effect/decal/warning_stripes/asteroid{
+	icon_state = "S"
+	},
+/obj/effect/decal/warning_stripes/asteroid{
+	icon_state = "cargo_arrow";
+	dir = 2;
+	pixel_x = 0;
+	pixel_y = 6
+	},
+/obj/structure/pipes/vents/scrubber,
+/turf/open/floor/almayer_hull/blackfull,
+/area/styx/prep_hallway)
+"NX" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
+	},
+/turf/open/floor/almayer_hull/blackfull,
+/area/styx/canteen)
+"Ol" = (
+/obj/structure/gun_rack/xm46a{
+	pixel_x = -1;
+	pixel_y = 0
+	},
+/obj/structure/gun_rack/m41/m41b{
+	pixel_x = -1;
+	pixel_y = 27
+	},
+/turf/open/floor/almayer_hull/blackfull,
+/area/styx/platoonarmory)
+"Oq" = (
+/obj/effect/decal/warning_stripes/asteroid{
+	icon_state = "W"
+	},
+/turf/open/floor/almayer/sterile,
+/area/styx/medical)
+"Ou" = (
+/obj/structure/sign/safety/manualopenclose{
+	pixel_x = 0;
+	pixel_y = -27
+	},
+/turf/open/floor/almayer_hull/blackfull,
+/area/styx/hangar)
+"Oz" = (
+/obj/structure/bed{
+	icon_state = "psychbed";
+	name = "soft bed";
+	desc = "It actually feels like a bed... What a wonder."
+	},
+/obj/structure/bed{
+	icon_state = "psychbed";
+	name = "soft bed";
+	desc = "It actually feels like a bed... What a wonder.";
+	pixel_x = 0;
+	pixel_y = 13;
+	layer = 4;
+	buckling_y = 13
+	},
+/obj/structure/barricade/handrail/type_b{
+	dir = 4;
+	layer = 5;
+	pixel_x = 3;
+	pixel_y = 1
+	},
+/obj/item/bedsheet/red{
+	pixel_x = 0;
+	pixel_y = 13
+	},
+/obj/item/bedsheet/red{
+	layer = 3
+	},
+/obj/structure/curtain/red{
+	pixel_x = 0;
+	pixel_y = 1
+	},
+/turf/open/floor/almayer/plating,
+/area/styx/dorms)
+"OA" = (
+/obj/structure/window/framed/almayer,
+/turf/open/floor/almayer/plating,
+/area/styx/dorms)
+"OB" = (
+/obj/structure/pipes/standard/simple/hidden/supply,
+/obj/structure/pipes/standard/simple/hidden/scrubbers,
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
+	},
+/turf/open/floor/almayer/plating_striped/north,
+/area/styx/cryo_cells)
+"OG" = (
+/obj/structure/platform_decoration/strata/metal{
+	dir = 1;
+	pixel_x = -5;
+	pixel_y = 0
+	},
+/obj/structure/closet/crate/trashcart{
+	pixel_x = -12;
+	pixel_y = 0
+	},
+/turf/open/floor/almayer/black{
+	dir = 10
+	},
+/area/styx/canteen)
+"OQ" = (
+/obj/structure/machinery/sleep_console{
+	dir = 8
+	},
+/turf/open/floor/almayer/sterile_green_corner{
+	dir = 4
+	},
+/area/styx/medical)
+"OW" = (
+/turf/open/floor/almayer/edge/smooth/corner,
+/area/styx/dorms)
+"OY" = (
+/obj/structure/ladder{
+	id = "mission4";
+	height = 1
+	},
+/turf/open/floor/almayer_hull/blackfull,
+/area/styx/platoonarmory)
+"Pc" = (
+/obj/structure/machinery/landinglight/ds1/delaytwo{
+	dir = 1
+	},
+/turf/open/floor/almayer/plate{
+	color = "#A9A9A9"
+	},
+/area/styx/hangar)
+"Pf" = (
+/obj/structure/extinguisher_cabinet/alt{
+	pixel_x = -27;
+	pixel_y = -1
+	},
+/turf/open/floor/almayer/research,
+/area/styx/medical)
+"Pl" = (
+/obj/structure/closet/secure_closet/marine_personal/marsoc/element{
+	pixel_x = 9;
+	pixel_y = -2
+	},
+/turf/open/floor/almayer/edge/smooth/east,
+/area/styx/cryo_cells)
+"Pn" = (
+/turf/open/floor/almayer/plate{
+	color = "#A9A9A9"
+	},
+/area/styx/canteen)
+"Pp" = (
+/obj/structure/machinery/door/poddoor/almayer/blended{
+	dir = 4;
+	name = "Hangar Access"
+	},
+/turf/closed/wall/almayer/outer,
+/area/styx/hangar)
+"Pr" = (
+/obj/structure/machinery/light/small/blue{
+	pixel_x = 16;
+	pixel_y = 0
+	},
+/turf/open/floor/almayer/research,
+/area/styx/medical)
+"Ps" = (
+/obj/structure/surface/table/almayer,
+/obj/item/tool/soap,
+/obj/item/tool/soap{
+	pixel_x = 6;
+	pixel_y = 10
+	},
+/obj/item/tool/soap{
+	pixel_x = -8;
+	pixel_y = 8
+	},
+/obj/structure/machinery/firealarm{
+	dir = 4;
+	pixel_x = 21
+	},
+/turf/open/floor/almayer/sterile,
+/area/styx/dorms)
+"Pt" = (
+/obj/structure/machinery/door/airlock/almayer/secure/glass{
+	req_access = null;
+	dir = 8;
+	name = "Laundry Room"
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
+	},
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 4
+	},
+/obj/structure/pipes/standard/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/structure/machinery/door/firedoor/border_only/almayer,
+/turf/open/floor/almayer/plating,
+/area/styx/dorms)
+"PC" = (
+/obj/structure/machinery/power/reactor{
+	name = "\improper S-52 fusion reactor 17"
+	},
+/turf/open/floor/almayer,
+/area/styx/dorms)
+"PL" = (
+/obj/structure/largecrate/random/case/small,
+/obj/structure/largecrate/random/mini/small_case{
+	pixel_y = 11
+	},
+/turf/open/floor/almayer,
+/area/styx/dorms)
+"PO" = (
+/turf/open/floor/almayer/plating_striped/west,
+/area/styx/canteen)
+"PZ" = (
+/obj/structure/platform_decoration/strata/metal{
+	dir = 1
+	},
+/obj/structure/pipes/vents/pump,
+/turf/open/floor/almayer/plating,
+/area/styx/canteen)
+"Qb" = (
+/obj/structure/largecrate/random/secure{
+	pixel_x = -5;
+	pixel_y = 20
+	},
+/turf/open/floor/almayer/edge/smooth{
+	dir = 10
+	},
+/area/styx/dorms)
+"Qf" = (
+/obj/structure/machinery/door/poddoor/almayer/blended{
+	name = "Mission Preparation Access Lockdown";
+	id = "Mission Preparation"
+	},
+/obj/structure/machinery/door/firedoor/border_only/almayer{
+	dir = 2
+	},
+/turf/open/floor/almayer_hull/blackfull,
+/area/styx/prep_hallway)
+"Qk" = (
+/turf/open/floor/almayer/sterile,
+/area/styx/medical)
+"Qo" = (
+/obj/structure/machinery/door/firedoor/border_only/almayer{
+	dir = 2
+	},
+/turf/open/floor/almayer/plate{
+	color = "#A9A9A9"
+	},
+/area/styx/canteen)
+"QB" = (
+/turf/open/floor/plating,
+/area/styx/dorms)
+"QE" = (
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/item/tool/kitchen/tray{
+	pixel_x = 0;
+	pixel_y = 10
+	},
+/obj/item/tool/kitchen/tray{
+	pixel_x = 0;
+	pixel_y = 12
+	},
+/obj/item/tool/kitchen/tray{
+	pixel_x = 0;
+	pixel_y = 14
+	},
+/obj/item/tool/kitchen/tray{
+	pixel_x = 0;
+	pixel_y = 16
+	},
+/obj/item/trash/plate{
+	pixel_x = 2;
+	pixel_y = -2
+	},
+/obj/item/trash/plate{
+	pixel_x = 2;
+	pixel_y = 0
+	},
+/obj/item/trash/plate{
+	pixel_x = 2;
+	pixel_y = 2
+	},
+/obj/item/trash/plate{
+	pixel_x = 2;
+	pixel_y = 4
+	},
+/obj/item/trash/plate{
+	pixel_x = 2;
+	pixel_y = 6
+	},
+/obj/item/trash/plate{
+	pixel_x = 2;
+	pixel_y = 6
+	},
+/obj/item/trash/plate{
+	pixel_x = 2;
+	pixel_y = 8
+	},
+/obj/item/trash/plate{
+	pixel_x = 2;
+	pixel_y = 9
+	},
+/obj/item/trash/plate{
+	pixel_x = 2;
+	pixel_y = 11
+	},
+/obj/item/trash/plate{
+	pixel_x = 2;
+	pixel_y = 12
+	},
+/obj/structure/machinery/light/double/blue{
+	dir = 8;
+	light_color = "#dae2ff";
+	light_power = 0.3;
+	pixel_x = -10;
+	pixel_y = -1
+	},
+/turf/open/floor/almayer,
+/area/styx/canteen)
+"QG" = (
+/obj/structure/machinery/floodlight/landing/floor{
+	color = "#dae2ff";
+	light_color = "#dae2ff"
+	},
+/turf/open/floor/almayer/plating,
+/area/styx/hangar)
+"QK" = (
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/item/ammo_box/magazine/vp70{
+	pixel_x = 0;
+	pixel_y = 17
+	},
+/obj/item/ammo_box/magazine/m4a3{
+	pixel_x = 0;
+	pixel_y = 9
+	},
+/obj/item/ammo_box/magazine/vp78{
+	pixel_x = 0;
+	pixel_y = 1
+	},
+/turf/open/floor/almayer_hull/blackfull,
+/area/styx/platoonarmory)
+"QO" = (
+/turf/open/floor/almayer/plate{
+	color = "#A9A9A9"
+	},
+/area/styx/platoonarmory)
+"QS" = (
+/obj/structure/machinery/light/double/blue{
+	light_color = "#dae2ff";
+	dir = 4;
+	light_power = 0.3;
+	pixel_x = 10;
+	pixel_y = 17
+	},
+/obj/structure/closet/secure_closet/marine_personal/marsoc/heavy_weapons_operator{
+	pixel_y = -2;
+	pixel_x = 9
+	},
+/turf/open/floor/almayer/edge/smooth/east,
+/area/styx/cryo_cells)
+"QT" = (
+/obj/structure/mirror{
+	pixel_x = -27
+	},
+/obj/structure/sink{
+	dir = 8;
+	pixel_x = -9;
+	pixel_y = 0
+	},
+/turf/open/floor/almayer/dark_sterile,
+/area/styx/cryo_cells)
+"QU" = (
+/obj/structure/machinery/light/double/blue{
+	dir = 4;
+	pixel_x = 4;
+	pixel_y = -3;
+	color = "#8B0000";
+	light_color = "#8B0000";
+	name = "red"
+	},
+/turf/open/floor/almayer/plating_striped,
+/area/styx/cryo_cells)
+"Rb" = (
+/obj/structure/pipes/standard/simple/hidden/supply,
+/turf/open/floor/almayer/plate{
+	color = "#A9A9A9"
+	},
+/area/styx/cryo_cells)
+"Rz" = (
+/obj/effect/decal/warning_stripes/asteroid{
+	icon_state = "E"
+	},
+/turf/open/floor/almayer/edge/smooth/east,
+/area/styx/cryo_cells)
+"RA" = (
+/obj/structure/machinery/door/poddoor/almayer/blended{
+	dir = 4;
+	name = "Hangar Access"
+	},
+/obj/structure/roof/cargocrane_tracks/horizontal{
+	pixel_y = 14
+	},
+/turf/closed/wall/almayer/outer,
+/area/styx/hangar)
+"RH" = (
+/obj/structure/machinery/prop/almayer/CICmap/table/horizontal/segment/two,
+/turf/open/floor/almayer_hull/blackfull,
+/area/styx/hangar)
+"RJ" = (
+/obj/structure/ladder{
+	id = "mission4"
+	},
+/turf/open/floor/almayer_hull/blackfull,
+/area/styx/prep_hallway)
+"RM" = (
+/obj/structure/machinery/prop/almayer/CICmap/table/horizontal/segment/four,
+/turf/open/floor/almayer_hull/blackfull,
+/area/styx/hangar)
+"RO" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2-4-8"
+	},
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 4
+	},
+/obj/structure/pipes/standard/simple/hidden/scrubbers{
+	dir = 4
+	},
+/turf/open/floor/almayer/plate{
+	color = "#A9A9A9"
+	},
+/area/styx/prep_hallway)
+"RS" = (
+/obj/structure/machinery/cryopod/big{
+	pixel_x = -9;
+	pixel_y = 15
+	},
+/turf/open/floor/almayer_hull/blackfull,
+/area/styx/cryo_cells)
+"Se" = (
+/turf/open/floor/almayer_hull/blackfull,
+/area/styx/prep_hallway)
+"Sz" = (
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 10
+	},
+/obj/structure/pipes/standard/simple/hidden/scrubbers{
+	dir = 10
+	},
+/obj/structure/machinery/firealarm{
+	dir = 4;
+	pixel_x = 21
+	},
+/turf/open/floor/almayer/dark_sterile,
+/area/styx/cryo_cells)
+"SJ" = (
+/obj/effect/decal/warning_stripes/asteroid{
+	icon_state = "N";
+	pixel_x = 0;
+	pixel_y = 1
+	},
+/obj/effect/decal/warning_stripes/asteroid{
+	icon_state = "cargo_arrow";
+	dir = 1;
+	pixel_x = 0;
+	pixel_y = -6
+	},
+/obj/structure/pipes/vents/pump,
+/turf/open/floor/almayer_hull/blackfull,
+/area/styx/prep_hallway)
+"SS" = (
+/obj/structure/extinguisher_cabinet/alt{
+	pixel_x = -22;
+	pixel_y = 25
+	},
+/obj/structure/phone_base{
+	pixel_x = -8;
+	pixel_y = 31;
+	phone_category = "Styx";
+	phone_id = "Medical Bay"
+	},
+/obj/structure/sign/safety/commline_connection{
+	name = "communication line semiotic";
+	pixel_y = 40;
+	pixel_x = 12
+	},
+/turf/open/floor/almayer/sterile_green_side/west{
+	dir = 1
+	},
+/area/styx/medical)
+"SV" = (
+/obj/structure/pipes/vents/pump,
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
+	},
+/turf/open/floor/almayer/plating,
+/area/styx/dorms)
+"SW" = (
+/obj/structure/machinery/door/poddoor/almayer/blended{
+	name = "Hangar Access"
+	},
+/obj/structure/roof/cargocrane_tracks/vertical{
+	pixel_y = 14
+	},
+/turf/open/floor/almayer/plate{
+	color = "#A9A9A9"
+	},
+/area/styx/hangar)
+"SZ" = (
+/obj/structure/machinery/prop/almayer/CICmap/table/horizontal/segment/six,
+/turf/open/floor/almayer_hull/blackfull,
+/area/styx/hangar)
+"Tc" = (
+/obj/effect/decal/warning_stripes/asteroid{
+	icon_state = "E"
+	},
+/turf/open/floor/almayer/mono,
+/area/styx/cryo_cells)
+"Tq" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
+	},
+/obj/structure/pipes/standard/simple/hidden/scrubbers,
+/turf/open/floor/almayer/plating,
+/area/styx/dorms)
+"Tv" = (
+/obj/structure/bed/roller/hospital_empty,
+/turf/open/floor/almayer/sterile_green,
+/area/styx/medical)
+"TD" = (
+/obj/structure/roof/cargocrane_tracks/horizontal{
+	pixel_y = 14
+	},
+/obj/structure/largecrate/random/case/small{
+	layer = 6;
+	density = 0;
+	pixel_x = 17;
+	pixel_y = 27
+	},
+/turf/open/floor/almayer/plate{
+	color = "#A9A9A9"
+	},
+/area/styx/hangar)
+"TM" = (
+/obj/structure/machinery/door/airlock/almayer/generic{
+	id = "Delta_1";
+	name = "Stall-1";
+	dir = 1
+	},
+/turf/open/floor/almayer/dark_sterile,
+/area/styx/cryo_cells)
+"TP" = (
+/obj/structure/roof/cargocrane_tracks/vertical{
+	pixel_y = 14
+	},
+/turf/open/floor/almayer/plate{
+	color = "#A9A9A9"
+	},
+/area/styx/hangar)
+"TQ" = (
+/obj/structure/roof/cargocrane_tracks/vertical{
+	pixel_y = 14
+	},
+/turf/open/floor/almayer_hull/blackfull,
+/area/styx/hangar)
+"TR" = (
+/obj/structure/ladder{
+	id = "mission1";
+	height = 1
+	},
+/turf/open/floor/almayer_hull/blackfull,
+/area/styx/platoonarmory)
+"Ue" = (
+/obj/effect/decal/warning_stripes/asteroid{
+	icon_state = "S"
+	},
+/obj/effect/decal/warning_stripes/asteroid{
+	icon_state = "cargo_arrow";
+	dir = 1
+	},
+/turf/open/floor/almayer_hull/blackfull,
+/area/styx/prep_hallway)
+"Ug" = (
+/obj/structure/machinery/autodoc_console{
+	dir = 8
+	},
+/obj/structure/machinery/light/small/red{
+	dir = 1;
+	pixel_x = 16;
+	pixel_y = 10
+	},
+/turf/open/floor/almayer/plate{
+	color = "#A9A9A9"
+	},
+/area/styx/medical)
+"Ui" = (
+/obj/structure/machinery/door/airlock/almayer/generic{
+	dir = 1;
+	id = "Delta_1";
+	name = "Private Washroom"
+	},
+/obj/structure/pipes/standard/simple/hidden/supply,
+/obj/structure/pipes/standard/simple/hidden/scrubbers,
+/obj/structure/machinery/door/firedoor/border_only/almayer{
+	dir = 2
+	},
+/turf/open/floor/almayer/dark_sterile,
+/area/styx/cryo_cells)
+"Uq" = (
+/obj/structure/machinery/door/firedoor/border_only/almayer{
+	layer = 1.9
+	},
+/obj/structure/machinery/light/double/blue{
+	dir = 1;
+	light_color = "#dae2ff";
+	light_power = 0.7;
+	pixel_x = 0;
+	pixel_y = 20
+	},
+/obj/effect/decal/warning_stripes/asteroid{
+	icon_state = "cargo_arrow";
+	dir = 4
+	},
+/turf/open/floor/almayer_hull/blackfull,
+/area/styx/prep_hallway)
+"UB" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "0-4"
+	},
+/obj/structure/cable{
+	icon_state = "0-2"
+	},
+/turf/open/floor/almayer_hull/blackfull,
+/area/styx/canteen)
+"UE" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
+	},
+/turf/open/floor/almayer/plate{
+	color = "#A9A9A9"
+	},
+/area/styx/canteen)
+"UJ" = (
+/turf/open/floor/almayer/plating,
+/area/styx/platoonarmory)
+"UL" = (
+/obj/structure/bed/chair/comfy/bench/mid,
+/obj/structure/machinery/firealarm{
+	dir = 8;
+	pixel_x = -23;
+	pixel_y = 0
+	},
+/turf/open/floor/almayer/edge/smooth{
+	dir = 8
+	},
+/area/styx/cryo_cells)
+"UY" = (
+/obj/structure/pipes/standard/simple/hidden/supply,
+/turf/open/floor/almayer/blackcorner/west{
+	dir = 4
+	},
+/area/styx/dorms)
+"Vh" = (
+/obj/structure/machinery/door_control{
+	name = "Outer Podlock";
+	id = "outer-1";
+	pixel_x = 0;
+	pixel_y = -21;
+	needs_power = 0
+	},
+/obj/effect/decal/warning_stripes{
+	icon_state = "cargo_arrow"
+	},
+/turf/open/floor/almayer/plating,
+/area/styx/dorms)
+"Vk" = (
+/obj/structure/machinery/door/firedoor/border_only/almayer{
+	layer = 1.9
+	},
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 4
+	},
+/obj/structure/pipes/standard/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
+	},
+/turf/open/floor/almayer/plate{
+	color = "#A9A9A9"
+	},
+/area/styx/prep_hallway)
+"Vn" = (
+/turf/open/floor/almayer/plate{
+	color = "#A9A9A9"
+	},
+/area/styx/prep_hallway)
+"Vo" = (
+/obj/effect/decal/warning_stripes/asteroid{
+	icon_state = "SW-out"
+	},
+/obj/structure/pipes/standard/simple/hidden/supply,
+/turf/open/floor/almayer_hull/blackfull,
+/area/styx/cryo_cells)
+"Vt" = (
+/obj/structure/closet/crate/trashcart,
+/turf/open/floor/almayer/research,
+/area/styx/medical)
+"VA" = (
+/obj/structure/machinery/medical_pod/bodyscanner,
+/turf/open/floor/almayer/sterile_green,
+/area/styx/medical)
+"VJ" = (
+/turf/open/floor/almayer/plating_striped/west,
+/area/styx/dorms)
+"VW" = (
+/obj/structure/surface/table/reinforced/almayer_B,
+/turf/open/floor/almayer_hull/blackfull,
+/area/styx/canteen)
+"Wa" = (
+/obj/structure/roof/cargocrane_tracks/tjoint3{
+	pixel_y = 14
+	},
+/turf/open/floor/almayer/plate{
+	color = "#A9A9A9"
+	},
+/area/styx/hangar)
+"Wc" = (
+/obj/structure/machinery/telecomms/relay/preset/tower,
+/turf/open/floor/almayer,
+/area/styx/dorms)
+"We" = (
+/turf/open/floor/almayer/research,
+/area/styx/medical)
+"Wn" = (
+/obj/structure/machinery/alarm/almayer{
+	dir = 1;
+	pixel_x = 0;
+	pixel_y = 21
+	},
+/obj/structure/sign/safety/hvac_old{
+	pixel_x = 39;
+	pixel_y = 31
+	},
+/turf/open/floor/almayer/sterile,
+/area/styx/dorms)
+"Ws" = (
+/turf/open/floor/almayer/black{
+	dir = 9
+	},
+/area/styx/canteen)
+"Wt" = (
+/obj/structure/pipes/vents/pump{
+	pixel_x = 0;
+	pixel_y = 15
+	},
+/turf/open/floor/almayer/plate{
+	color = "#A9A9A9"
+	},
+/area/styx/cryo_cells)
+"Wu" = (
+/obj/structure/machinery/door/airlock/multi_tile/almayer/almayer{
+	dir = 1;
+	name = "Hypersleep Bay Washroom"
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
+	},
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 8
+	},
+/obj/structure/pipes/standard/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/structure/machinery/door/firedoor/border_only/almayer{
+	layer = 1.9
+	},
+/turf/open/floor/almayer/plating,
+/area/styx/cryo_cells)
+"Wy" = (
+/obj/structure/machinery/landinglight/ds1,
+/obj/structure/roof/cargocrane_tracks/horizontal{
+	pixel_y = 14
+	},
+/turf/open/floor/almayer/plate{
+	color = "#A9A9A9"
+	},
+/area/styx/hangar)
+"WH" = (
+/obj/structure/gun_rack/xm38{
+	pixel_x = 7;
+	pixel_y = 0
+	},
+/obj/structure/gun_rack/xm38{
+	pixel_x = -11;
+	pixel_y = 0
+	},
+/turf/open/floor/almayer_hull/blackfull,
+/area/styx/platoonarmory)
+"Xa" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2-4-8"
+	},
+/obj/structure/pipes/standard/manifold/fourway/hidden/supply,
+/obj/structure/pipes/standard/manifold/fourway/hidden/scrubbers,
+/turf/open/floor/almayer/plating,
+/area/styx/cryo_cells)
+"Xe" = (
+/obj/structure/machinery/landinglight/ds1/delaytwo,
+/obj/structure/roof/cargocrane_tracks/tjoint{
+	pixel_y = 14
+	},
+/turf/open/floor/almayer/plate{
+	color = "#A9A9A9"
+	},
+/area/styx/hangar)
+"Xf" = (
+/obj/structure/pipes/standard/simple/hidden/supply,
+/turf/open/floor/almayer_hull/blackfull,
+/area/styx/dorms)
+"Xi" = (
+/obj/effect/decal/warning_stripes/asteroid{
+	icon_state = "NW-out"
+	},
+/turf/open/floor/almayer_hull/blackfull,
+/area/styx/cryo_cells)
+"Xl" = (
+/obj/structure/machinery/cm_vending/gear/smartgun/marsoc,
+/turf/open/floor/almayer_hull/blackfull,
+/area/styx/platoonarmory)
+"Xq" = (
+/obj/structure/ladder{
+	id = "hangar1";
+	height = 1
+	},
+/turf/open/floor/almayer_hull/blackfull,
+/area/styx/hangar)
+"Xt" = (
+/turf/open/floor/almayer/plating,
+/area/styx/dorms)
+"Xu" = (
+/obj/item/storage/beer_pack{
+	pixel_x = -5;
+	pixel_y = 12
+	},
+/obj/structure/machinery/light{
+	dir = 8
+	},
+/obj/structure/machinery/firealarm{
+	pixel_y = 28;
+	pixel_x = 1
+	},
+/turf/open/floor/almayer/plate{
+	color = "#A9A9A9"
+	},
+/area/styx/dorms)
+"Xx" = (
+/obj/structure/pipes/standard/simple/hidden/supply,
+/obj/structure/pipes/standard/simple/hidden/scrubbers,
+/turf/open/floor/almayer/plate{
+	color = "#A9A9A9"
+	},
+/area/styx/prep_hallway)
+"XG" = (
+/obj/effect/decal/warning_stripes/asteroid{
+	icon_state = "S"
+	},
+/obj/effect/decal/warning_stripes/asteroid{
+	icon_state = "cargo_arrow";
+	dir = 1
+	},
+/turf/open/floor/almayer_hull/blackfull,
+/area/styx/hangar)
+"XL" = (
+/obj/structure/machinery/door/airlock/multi_tile/almayer/almayer/glass{
+	name = "Canteen"
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
+	},
+/obj/structure/machinery/door/firedoor/border_only/almayer{
+	dir = 2
+	},
+/turf/open/floor/almayer/plate{
+	color = "#A9A9A9"
+	},
+/area/styx/canteen)
+"XR" = (
+/obj/structure/roof/cargocrane_tracks/vertical/endcap2{
+	pixel_y = 14
+	},
+/obj/structure/largecrate/random/case/double{
+	layer = 3.2;
+	pixel_x = 3;
+	pixel_y = 0
+	},
+/obj/structure/largecrate/random/case/double{
+	pixel_y = 11;
+	layer = 3.1;
+	pixel_x = -5
+	},
+/obj/structure/largecrate/random/case/double{
+	pixel_y = -1;
+	layer = 3.1;
+	pixel_x = -5
+	},
+/turf/open/floor/almayer/plate{
+	color = "#A9A9A9"
+	},
+/area/styx/hangar)
+"XX" = (
+/obj/structure/machinery/door/poddoor/almayer/blended{
+	name = "Mission Preparation Access Lockdown";
+	id = "Mission Preparation 2"
+	},
+/turf/open/floor/almayer/plate{
+	color = "#A9A9A9"
+	},
+/area/styx/platoonarmory)
+"XY" = (
+/obj/structure/sign/banners/maximumeffort{
+	pixel_y = 29;
+	desc = "A large banner strung up on the wall intended to give the marines a boost in confidence."
+	},
+/turf/open/floor/almayer/plating,
+/area/styx/prep_hallway)
+"Ya" = (
+/obj/structure/closet/secure_closet/marine_personal/marsoc/special_weapons_operator{
+	pixel_y = -2;
+	pixel_x = 9
+	},
+/turf/open/floor/almayer/edge/smooth/east,
+/area/styx/cryo_cells)
+"Yb" = (
+/obj/structure/machinery/floodlight/landing/floor,
+/obj/structure/machinery/landinglight/ds1/delaythree,
+/obj/structure/roof/cargocrane_tracks/horizontal{
+	pixel_y = 14
+	},
+/turf/open/floor/almayer/plating,
+/area/styx/hangar)
+"Yj" = (
+/obj/effect/decal/warning_stripes/asteroid{
+	icon_state = "NW-out"
+	},
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 5
+	},
+/turf/open/floor/almayer_hull/blackfull,
+/area/styx/cryo_cells)
+"Yt" = (
+/obj/structure/machinery/light/small/red{
+	dir = 1
+	},
+/turf/open/floor/plating,
+/area/styx/dorms)
+"Yv" = (
+/obj/structure/surface/table/reinforced/almayer_B{
+	pixel_x = 0;
+	pixel_y = 0
+	},
+/obj/item/ashtray/plastic{
+	icon_state = "ashtray_full_bl";
+	pixel_x = 7;
+	pixel_y = 1
+	},
+/obj/item/ashtray/plastic{
+	pixel_x = -7;
+	pixel_y = -5
+	},
+/obj/item/trash/cigbutt{
+	pixel_y = 15;
+	pixel_x = -3
+	},
+/obj/item/trash/cigbutt,
+/obj/item/clothing/mask/cigarette{
+	pixel_x = -9;
+	pixel_y = 9
+	},
+/obj/item/clothing/mask/cigarette{
+	pixel_x = 9;
+	pixel_y = 15
+	},
+/obj/structure/machinery/light{
+	dir = 4
+	},
+/turf/open/floor/almayer/plating,
+/area/styx/dorms)
+"YB" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
+	},
+/turf/open/floor/almayer/plating_striped/west,
+/area/styx/dorms)
+"YE" = (
+/obj/structure/surface/table/reinforced/prison,
+/obj/structure/machinery/computer/med_data/laptop{
+	pixel_x = 15;
+	pixel_y = 1
+	},
+/obj/item/paper_bin/uscm{
+	pixel_x = -6;
+	pixel_y = 5
+	},
+/obj/item/tool/pen/fountain{
+	pixel_x = -6;
+	pixel_y = 7
+	},
+/turf/open/floor/almayer/research,
+/area/styx/medical)
+"YH" = (
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 4
+	},
+/turf/open/floor/almayer/plate{
+	color = "#A9A9A9"
+	},
+/area/styx/dorms)
+"YQ" = (
+/obj/structure/machinery/door/poddoor/almayer/blended{
+	dir = 4;
+	name = "Hangar Access"
+	},
+/turf/open/floor/almayer/plate{
+	color = "#A9A9A9"
+	},
+/area/styx/hangar)
+"YT" = (
+/obj/docking_port/stationary/marine_dropship/golden_arrow_hangar{
+	roundstart_template = /datum/map_template/shuttle/cyclone;
+	id = "Styx LZ"
+	},
+/turf/open/floor/plating{
+	color = "#A9A9A9"
+	},
+/area/styx/hangar)
+"YU" = (
+/obj/structure/machinery/shower{
+	dir = 4
+	},
+/obj/effect/decal/warning_stripes/asteroid{
+	icon_state = "E"
+	},
+/obj/structure/machinery/light/double/blue{
+	dir = 8;
+	light_color = "#dae2ff";
+	light_power = 0.3;
+	pixel_x = -8;
+	pixel_y = -15
+	},
+/turf/open/floor/plating/plating_catwalk,
+/area/styx/cryo_cells)
+"YW" = (
+/obj/structure/bed/chair/comfy/bench/mid,
+/turf/open/floor/almayer/plate{
+	color = "#A9A9A9"
+	},
+/area/styx/platoonarmory)
+"Zb" = (
+/obj/structure/machinery/light/double/blue{
+	light_color = "#dae2ff";
+	dir = 4;
+	light_power = 0.3;
+	pixel_x = 6;
+	pixel_y = -11
+	},
+/turf/open/floor/almayer/plate{
+	color = "#A9A9A9"
+	},
+/area/styx/canteen)
+"Zf" = (
+/obj/structure/machinery/door/firedoor/border_only/almayer{
+	layer = 1.9
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
+	},
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 4
+	},
+/obj/structure/pipes/standard/simple/hidden/scrubbers{
+	dir = 4
+	},
+/turf/open/floor/almayer/plate{
+	color = "#A9A9A9"
+	},
+/area/styx/prep_hallway)
+"Zk" = (
+/obj/effect/decal/warning_stripes/asteroid{
+	icon_state = "cargo_arrow";
+	dir = 1
+	},
+/obj/effect/decal/warning_stripes/asteroid{
+	icon_state = "N";
+	pixel_x = 0;
+	pixel_y = 1
+	},
+/turf/open/floor/almayer_hull/blackfull,
+/area/styx/hangar)
+"Zs" = (
+/obj/structure/machinery/prop/almayer/CICmap/table/horizontal/segment/five,
+/turf/open/floor/almayer_hull/blackfull,
+/area/styx/hangar)
+"Zx" = (
+/obj/structure/sign/safety/west{
+	pixel_x = 7;
+	pixel_y = 31
+	},
+/turf/open/floor/almayer/plating,
+/area/styx/prep_hallway)
+"Zy" = (
+/obj/structure/machinery/cm_vending/clothing/medic/marsoc{
+	pixel_y = 18;
+	density = 0
+	},
+/turf/open/floor/almayer_hull/blackfull,
+/area/styx/platoonarmory)
+"ZH" = (
+/obj/structure/sign/safety/storage{
+	pixel_x = -25;
+	pixel_y = 6
+	},
+/turf/open/floor/almayer/plate{
+	color = "#A9A9A9"
+	},
+/area/styx/platoonarmory)
+"ZI" = (
+/obj/structure/machinery/light/double/blue{
+	light_color = "#dae2ff";
+	dir = 4;
+	light_power = 0.3;
+	pixel_x = 5;
+	pixel_y = 0
+	},
+/obj/structure/sign/safety/coffee{
+	pixel_x = 31;
+	pixel_y = -22
+	},
+/turf/open/floor/almayer/black{
+	dir = 4
+	},
+/area/styx/canteen)
+"ZK" = (
+/turf/open/floor/almayer/black{
+	dir = 1
+	},
+/area/styx/canteen)
+"ZY" = (
+/obj/structure/machinery/light/small{
+	dir = 8
+	},
+/turf/open/floor/almayer/sterile,
+/area/styx/dorms)
+
+(1,1,1) = {"
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+"}
+(2,1,1) = {"
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+"}
+(3,1,1) = {"
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+"}
+(4,1,1) = {"
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+"}
+(5,1,1) = {"
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+"}
+(6,1,1) = {"
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+"}
+(7,1,1) = {"
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+"}
+(8,1,1) = {"
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+"}
+(9,1,1) = {"
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+"}
+(10,1,1) = {"
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+AJ
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+"}
+(11,1,1) = {"
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+Pp
+RA
+Pp
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+"}
+(12,1,1) = {"
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+cD
+cD
+Ly
+cD
+yf
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+"}
+(13,1,1) = {"
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+ap
+ap
+ap
+ap
+tu
+Wa
+TP
+TP
+TP
+TP
+TP
+TP
+TQ
+TQ
+TP
+oY
+TP
+TQ
+TQ
+TP
+TP
+TP
+TP
+BL
+TP
+TP
+XR
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+"}
+(14,1,1) = {"
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+ap
+ap
+ap
+cD
+cD
+TD
+ah
+ah
+ah
+ah
+ah
+ah
+ah
+ah
+ah
+ah
+ah
+ah
+ah
+ah
+ah
+ah
+ah
+ah
+cD
+cD
+cD
+cD
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+"}
+(15,1,1) = {"
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+ap
+ap
+ap
+xk
+ah
+Du
+wW
+BF
+lG
+LA
+wW
+BF
+lG
+LA
+gG
+BF
+lG
+LA
+wW
+BF
+lG
+LA
+wW
+BF
+Dg
+cD
+cD
+cD
+MW
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+"}
+(16,1,1) = {"
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+ap
+ap
+JN
+cD
+ah
+Lx
+fy
+fy
+fy
+fy
+fy
+fy
+fy
+fy
+fy
+fy
+fy
+fy
+fy
+fy
+fy
+fy
+fy
+fy
+vG
+JI
+ye
+cD
+cD
+cD
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+"}
+(17,1,1) = {"
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+ap
+ap
+SW
+TQ
+TP
+Xe
+fy
+fy
+fy
+fy
+fy
+fy
+fy
+fy
+fy
+fy
+fy
+fy
+fy
+fy
+fy
+fy
+fy
+fy
+KQ
+ap
+IR
+ah
+ah
+cD
+kA
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+"}
+(18,1,1) = {"
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+ap
+ap
+JN
+cD
+ah
+vi
+fy
+fy
+fy
+fy
+fy
+fy
+fy
+fy
+fy
+fy
+fy
+fy
+fy
+fy
+fy
+fy
+fy
+fy
+Pc
+gq
+IR
+ah
+ah
+ah
+cD
+Ou
+ap
+ap
+ap
+iN
+ap
+ap
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+"}
+(19,1,1) = {"
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+ap
+ap
+ap
+cD
+cD
+Wy
+fy
+fy
+fy
+fy
+fy
+fy
+fy
+fy
+fy
+fy
+fy
+fy
+fy
+fy
+fy
+fy
+fy
+fy
+Go
+gq
+IR
+RM
+qh
+ah
+ah
+cD
+jx
+hM
+eF
+kc
+xX
+ap
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+"}
+(20,1,1) = {"
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+ap
+ap
+ap
+ap
+cD
+Yb
+fy
+fy
+fy
+fy
+fy
+fy
+fy
+fy
+fy
+YT
+fy
+fy
+fy
+fy
+fy
+fy
+fy
+fy
+vG
+gq
+IR
+Zs
+RH
+ah
+ah
+ah
+fa
+LQ
+nT
+pn
+ap
+ap
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+"}
+(21,1,1) = {"
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+ap
+ap
+ap
+cD
+cD
+yM
+fy
+fy
+fy
+fy
+fy
+fy
+fy
+fy
+fy
+fy
+fy
+fy
+fy
+fy
+fy
+fy
+fy
+fy
+KQ
+gq
+IR
+SZ
+iM
+ah
+ah
+cD
+XG
+hM
+Zk
+kc
+Ch
+ap
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+"}
+(22,1,1) = {"
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+ap
+ap
+JN
+cD
+ah
+ff
+fy
+fy
+fy
+fy
+fy
+fy
+fy
+fy
+fy
+fy
+fy
+fy
+fy
+fy
+fy
+fy
+fy
+fy
+Pc
+gq
+IR
+ah
+ah
+ah
+cD
+cD
+ap
+ap
+ap
+Xq
+ap
+ap
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+"}
+(23,1,1) = {"
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+ap
+ap
+SW
+TQ
+TP
+xJ
+fy
+fy
+fy
+fy
+fy
+fy
+fy
+fy
+fy
+fy
+fy
+fy
+fy
+fy
+fy
+fy
+fy
+fy
+Go
+ap
+IR
+ah
+ah
+cD
+kA
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+"}
+(24,1,1) = {"
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+ap
+ap
+JN
+cD
+ah
+Lx
+fy
+fy
+fy
+fy
+fy
+fy
+fy
+fy
+fy
+fy
+fy
+fy
+fy
+fy
+fy
+fy
+fy
+fy
+vG
+vs
+jO
+cD
+cD
+cD
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+"}
+(25,1,1) = {"
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+ap
+ap
+ap
+xk
+ah
+Du
+zz
+HV
+qz
+yl
+zz
+HV
+qz
+yl
+Kt
+HV
+qz
+yl
+zz
+HV
+qz
+yl
+zz
+HV
+QG
+cD
+cD
+cD
+ha
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+"}
+(26,1,1) = {"
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+ap
+ap
+ap
+qo
+cD
+oQ
+ah
+ah
+ah
+ah
+ah
+ah
+ah
+ah
+ah
+ah
+ah
+ah
+ah
+ah
+ah
+ah
+ah
+ah
+cD
+cD
+cD
+ah
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+"}
+(27,1,1) = {"
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+ap
+ap
+ap
+ap
+oq
+ah
+ah
+ah
+ah
+ah
+ah
+ah
+cD
+cD
+ah
+ah
+ah
+cD
+cD
+ah
+ah
+ah
+ah
+ah
+ah
+ah
+ah
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+"}
+(28,1,1) = {"
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+cD
+cD
+cD
+cD
+zc
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+"}
+(29,1,1) = {"
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+YQ
+YQ
+YQ
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+"}
+(30,1,1) = {"
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+gd
+DW
+gd
+Dq
+Dq
+ap
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+"}
+(31,1,1) = {"
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Dq
+Dq
+Dq
+Dq
+Dq
+Dq
+Dq
+Dq
+VJ
+YB
+VJ
+Dq
+ng
+ap
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+"}
+(32,1,1) = {"
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Dq
+Dq
+sS
+ZY
+im
+Dq
+Vh
+Dq
+BM
+IU
+lN
+Dq
+Dq
+ap
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+"}
+(33,1,1) = {"
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Dq
+Dq
+Dq
+Dq
+Dq
+Dq
+Dq
+Dq
+Dq
+mq
+xG
+gb
+Dq
+Dq
+Dq
+lv
+so
+lv
+Dq
+Dq
+ap
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+"}
+(34,1,1) = {"
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Dq
+Dq
+Xu
+Kv
+Dq
+Dq
+Dq
+Dq
+dB
+sr
+zH
+sr
+Lj
+Dq
+Dq
+rr
+iP
+rr
+Dq
+Dq
+Dq
+Dq
+Dq
+Dq
+Dq
+Dq
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+"}
+(35,1,1) = {"
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Dq
+Mr
+ig
+ed
+HM
+Dq
+Dq
+Dq
+dJ
+AC
+Ga
+sr
+iJ
+Dq
+oS
+Eh
+YB
+Lr
+oS
+Dq
+bc
+QB
+nq
+Qb
+Dq
+Dq
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+"}
+(36,1,1) = {"
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Dq
+Oz
+ig
+ed
+ed
+ed
+Cj
+Dq
+Dq
+OA
+Pt
+OA
+OA
+Dq
+Dq
+Xt
+SV
+Xt
+Dq
+BG
+jw
+Lv
+jC
+eS
+Dq
+Dq
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+"}
+(37,1,1) = {"
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Dq
+oZ
+sV
+hH
+dI
+UY
+Fa
+Kz
+wj
+Xf
+Cp
+wj
+fb
+La
+qJ
+wj
+Ni
+Xt
+OA
+ln
+jw
+bS
+LT
+yS
+lb
+Dq
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+"}
+(38,1,1) = {"
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Dq
+Dq
+kI
+JV
+yW
+ig
+ed
+fe
+ig
+ed
+xP
+ed
+YH
+ig
+mi
+ig
+Cn
+wz
+HJ
+mj
+wP
+yP
+Mt
+Lv
+uU
+Dq
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+"}
+(39,1,1) = {"
+Ak
+Ak
+Ak
+Ak
+Ak
+PC
+PC
+PC
+PC
+PC
+PC
+Dq
+Dq
+wO
+zK
+CU
+vO
+wx
+jy
+Tq
+nb
+zS
+Tq
+sN
+ud
+ws
+Tq
+NH
+FR
+OA
+jw
+OW
+PL
+jw
+Nm
+sT
+Dq
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+"}
+(40,1,1) = {"
+Ak
+Ak
+Ak
+Ak
+Ak
+PC
+PC
+PC
+PC
+PC
+PC
+Dq
+Jg
+ig
+ed
+fC
+wL
+Cj
+Dq
+Dq
+Dq
+Dq
+OA
+Gv
+Dq
+Dq
+fp
+ji
+oy
+Dq
+Yt
+aK
+Lv
+Lv
+QB
+Dq
+Dq
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+"}
+(41,1,1) = {"
+Ak
+Ak
+Ak
+Ak
+Ak
+PC
+PC
+Wc
+PC
+PC
+PC
+Dq
+Kk
+ig
+ed
+Yv
+Dq
+Dq
+Dq
+Dq
+Dq
+Dq
+Br
+rv
+oz
+OA
+Xt
+js
+NM
+Dq
+Dq
+pl
+DF
+Mj
+Dq
+Dq
+Dq
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+"}
+(42,1,1) = {"
+Ak
+Ak
+Ak
+Ak
+Ak
+PC
+PC
+PC
+PC
+PC
+PC
+Dq
+Dq
+IN
+Af
+Dq
+Dq
+Dq
+Dq
+Dq
+Dq
+Dq
+Wn
+jX
+tb
+OA
+Xt
+Jf
+Xt
+Dq
+Dq
+Dq
+Dq
+Dq
+Dq
+Dq
+Dq
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+"}
+(43,1,1) = {"
+Ak
+Ak
+Ak
+Ak
+Ak
+PC
+PC
+PC
+PC
+PC
+PC
+Dq
+Dq
+Dq
+Dq
+Dq
+Dq
+Dq
+Dq
+Dq
+Dq
+Dq
+ke
+Ps
+Dq
+Dq
+FP
+rH
+Se
+iL
+iL
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+"}
+(44,1,1) = {"
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+bb
+bb
+bb
+bb
+bb
+bb
+bb
+bb
+bb
+bb
+bb
+bb
+bb
+bb
+bb
+bb
+bb
+ju
+rH
+JD
+oL
+oL
+oL
+oL
+oL
+oL
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+"}
+(45,1,1) = {"
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+bb
+bb
+bb
+bb
+NE
+Ml
+ut
+QT
+QT
+bb
+pJ
+pJ
+YU
+pJ
+pJ
+pJ
+bb
+hY
+rH
+JD
+oL
+oL
+nB
+QE
+oL
+oL
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+"}
+(46,1,1) = {"
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+bb
+bb
+bb
+bb
+bb
+wV
+jo
+fk
+BK
+bb
+tq
+DJ
+DJ
+DJ
+ov
+dc
+bb
+JD
+rH
+JD
+oL
+Nq
+Ws
+gC
+Ex
+oL
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+"}
+(47,1,1) = {"
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+bb
+bb
+bb
+bb
+wU
+TM
+jo
+Sz
+Hj
+Ui
+mz
+EA
+NG
+gS
+xT
+rU
+bb
+rQ
+rH
+Se
+oL
+nQ
+ZK
+yk
+jF
+ui
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+"}
+(48,1,1) = {"
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+bb
+bb
+bb
+bb
+bb
+bb
+bb
+bb
+bb
+bb
+bb
+bb
+zY
+Rz
+dv
+uo
+bb
+Zx
+Nv
+JD
+oL
+MP
+oK
+Bc
+Lg
+oL
+oL
+oL
+oL
+oL
+oL
+oL
+oL
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+"}
+(49,1,1) = {"
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+bb
+bb
+RS
+JA
+bb
+bb
+RS
+JA
+bb
+bb
+RS
+JA
+bb
+bb
+Bn
+Wu
+bb
+bb
+aM
+Vk
+KU
+oL
+ec
+pt
+PO
+JZ
+Pn
+Pn
+MK
+Pn
+Pn
+oL
+oL
+oL
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+"}
+(50,1,1) = {"
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+bb
+bb
+jp
+oe
+bb
+bb
+oe
+Dy
+bb
+bb
+Iz
+jp
+bb
+bb
+dT
+kz
+Jv
+If
+Vn
+rH
+Vn
+lE
+Cx
+xy
+zI
+iT
+Pn
+yk
+yk
+yk
+Pn
+BX
+oL
+oL
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+"}
+(51,1,1) = {"
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+bb
+bw
+Rb
+Vo
+xv
+ir
+Yj
+fw
+cH
+aQ
+Xi
+Wt
+qy
+ge
+dd
+kz
+rj
+vp
+Vn
+rH
+Vn
+Qo
+Cx
+nm
+jQ
+Di
+yk
+jg
+jg
+jg
+jg
+Pn
+Pn
+oL
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+"}
+(52,1,1) = {"
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+bb
+bb
+at
+qW
+ue
+ue
+hh
+Jl
+pR
+pR
+BR
+io
+yz
+yy
+OB
+Xa
+gQ
+cp
+gw
+gZ
+gw
+jh
+cT
+yH
+Cx
+Di
+yk
+VW
+VW
+VW
+VW
+UB
+uC
+oL
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+"}
+(53,1,1) = {"
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+bb
+Hy
+Ef
+nD
+Jc
+eG
+pD
+vN
+zj
+md
+lx
+db
+QU
+ge
+jL
+zW
+hz
+Ca
+Co
+RO
+Co
+XL
+kZ
+JQ
+vS
+gP
+Ng
+EH
+EH
+EH
+EH
+Lo
+Pn
+oL
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+"}
+(54,1,1) = {"
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+bb
+bb
+Cz
+tV
+bb
+bb
+tV
+CS
+bb
+bb
+Bd
+Cz
+bb
+bb
+gx
+zW
+rj
+vp
+Vn
+wh
+Vn
+Qo
+Cx
+Cc
+PZ
+No
+Hk
+NX
+NX
+NX
+UE
+wY
+oL
+oL
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+"}
+(55,1,1) = {"
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+bb
+bb
+Lw
+fS
+bb
+bb
+Lw
+fS
+bb
+bb
+Lw
+fS
+bb
+bb
+Bn
+lT
+bb
+bb
+Uq
+Zf
+GM
+oL
+oL
+fL
+kd
+hk
+Pn
+DY
+Zb
+Pn
+Pn
+oL
+oL
+oL
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+"}
+(56,1,1) = {"
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+bb
+bb
+bb
+bb
+bb
+bb
+bb
+bb
+bb
+bb
+bb
+bb
+hx
+ii
+Hr
+xK
+bb
+XY
+wh
+JD
+oL
+HC
+Ws
+mI
+OG
+oL
+oL
+oL
+oL
+oL
+oL
+oL
+oL
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+"}
+(57,1,1) = {"
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+bb
+bb
+bb
+bb
+bb
+bb
+bb
+bb
+gF
+UL
+xA
+KH
+DK
+nW
+ok
+BO
+bb
+JD
+wh
+JD
+oL
+wJ
+ZK
+yk
+qE
+oL
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+"}
+(58,1,1) = {"
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+bb
+bb
+bb
+bb
+bb
+bb
+bb
+bb
+ES
+Tc
+IQ
+IQ
+IQ
+IQ
+IQ
+rw
+bb
+bk
+wh
+JD
+oL
+HC
+oK
+ZI
+HG
+oL
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+"}
+(59,1,1) = {"
+Ak
+Ak
+Ak
+Ak
+Ak
+DI
+DI
+DI
+DI
+DI
+DI
+DI
+DI
+DI
+DI
+DI
+bb
+ot
+zu
+ab
+zM
+QS
+Ya
+Pl
+tX
+bb
+LX
+wh
+sy
+oL
+oL
+oL
+oL
+oL
+oL
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+"}
+(60,1,1) = {"
+Ak
+Ak
+Ak
+Ak
+Ak
+DI
+DI
+DI
+DI
+DI
+DI
+iF
+DI
+DI
+DI
+DI
+bb
+bb
+bb
+bb
+bb
+bb
+bb
+bb
+bb
+bb
+JD
+wh
+KR
+iL
+iL
+iL
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+"}
+(61,1,1) = {"
+Ak
+Ak
+Ak
+Ak
+Ak
+DI
+DI
+DI
+DI
+DI
+DI
+DI
+DI
+DI
+DI
+DI
+Ak
+Ak
+Ak
+Ak
+iL
+iL
+iL
+iL
+iL
+iL
+uQ
+wh
+JD
+iL
+iL
+iL
+Ak
+Ak
+Ak
+Ak
+iL
+iL
+iL
+iL
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+"}
+(62,1,1) = {"
+Ak
+Ak
+Ak
+Ak
+Ak
+DI
+DI
+DI
+DI
+Ea
+Ea
+aV
+Ea
+Ea
+DI
+DI
+DI
+DI
+DI
+Ak
+iL
+iL
+iL
+gl
+iL
+iL
+JH
+BJ
+hS
+iL
+iL
+iL
+iL
+iL
+iL
+iL
+iL
+wn
+iL
+iL
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+"}
+(63,1,1) = {"
+Ak
+Ak
+Ak
+Ak
+Ak
+DI
+DI
+DI
+DI
+Ea
+IB
+IB
+IB
+Ea
+DI
+DI
+DI
+DI
+DI
+Ak
+iL
+iL
+tI
+JD
+rN
+Qf
+LI
+BJ
+IT
+fh
+FV
+JD
+JD
+JE
+JD
+JD
+cB
+JD
+KD
+iL
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+"}
+(64,1,1) = {"
+Ak
+Ak
+Ak
+Ak
+Ak
+DI
+Zy
+Nu
+DI
+LP
+LP
+LP
+LP
+LP
+DI
+DI
+DI
+DI
+DI
+Ak
+iL
+iL
+iL
+IM
+Eq
+Ip
+zs
+mt
+bQ
+Cb
+zs
+Xx
+Xx
+Xx
+Xx
+Xx
+lV
+rT
+iL
+iL
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+"}
+(65,1,1) = {"
+Ak
+Ak
+Ak
+Ak
+Ak
+DI
+pK
+qD
+sL
+qD
+QO
+qD
+QO
+qD
+ZH
+qD
+DI
+DI
+DI
+Ak
+iL
+iL
+rB
+JD
+Ue
+Qf
+SJ
+pm
+NR
+fh
+Ix
+JD
+JD
+gt
+JD
+JD
+cB
+JD
+su
+iL
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+"}
+(66,1,1) = {"
+Ak
+Ak
+Ak
+Ak
+Ak
+DI
+DI
+ni
+qD
+QO
+KO
+YW
+wp
+QO
+qD
+Nd
+DI
+DI
+DI
+DI
+DI
+iL
+iL
+RJ
+iL
+iL
+II
+Vn
+Cm
+iL
+iL
+iL
+iL
+iL
+iL
+iL
+iL
+Eo
+iL
+iL
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+"}
+(67,1,1) = {"
+Ak
+Ak
+Ak
+Ak
+Ak
+DI
+WH
+qD
+QO
+qD
+QO
+qD
+QO
+qD
+QO
+JP
+DI
+DI
+OY
+DI
+DI
+iL
+iL
+iL
+hl
+hl
+Oq
+Oq
+tG
+hl
+hl
+hl
+hl
+hl
+hl
+hl
+hl
+iL
+iL
+iL
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+"}
+(68,1,1) = {"
+Ak
+Ak
+Ak
+Ak
+Ak
+DI
+Dj
+QO
+qD
+QO
+aE
+Df
+aE
+QO
+qD
+Jr
+JF
+Ih
+UJ
+Aj
+DI
+hl
+hl
+hl
+hl
+lu
+Qk
+Qk
+Qk
+Io
+We
+Pf
+hl
+if
+CE
+hl
+hl
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+"}
+(69,1,1) = {"
+Ak
+Ak
+Ak
+Ak
+Ak
+DI
+tM
+qD
+QO
+qD
+nd
+yG
+nd
+qD
+QO
+qD
+XX
+fP
+tf
+DI
+DI
+hl
+hl
+hl
+hl
+lu
+Qk
+Qk
+Qk
+cz
+YE
+Pr
+hl
+gX
+We
+AO
+hl
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+"}
+(70,1,1) = {"
+Ak
+Ak
+Ak
+Ak
+Ak
+DI
+Ol
+QO
+qD
+QO
+aE
+Df
+aE
+QO
+qD
+QO
+JF
+tx
+UJ
+aT
+DI
+hl
+hl
+hl
+hl
+Nh
+Qk
+yw
+Qk
+cz
+Lh
+jc
+hl
+We
+We
+rO
+hl
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+"}
+(71,1,1) = {"
+Ak
+Ak
+Ak
+Ak
+Ak
+DI
+oN
+qD
+QO
+qD
+QO
+qD
+QO
+qD
+QO
+qD
+DI
+DI
+TR
+DI
+DI
+hl
+hl
+hl
+hl
+hl
+kH
+hl
+kH
+hl
+qH
+IS
+cA
+We
+Vt
+hl
+hl
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+"}
+(72,1,1) = {"
+Ak
+Ak
+Ak
+Ak
+Ak
+DI
+DI
+ni
+qD
+QO
+KO
+YW
+wp
+QO
+qD
+Nd
+DI
+DI
+DI
+DI
+DI
+hl
+hl
+hl
+hl
+SS
+IY
+IY
+IY
+hl
+cz
+hl
+hl
+hl
+hl
+hl
+hl
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+"}
+(73,1,1) = {"
+Ak
+Ak
+Ak
+Ak
+Ak
+DI
+DI
+tk
+lf
+qD
+QO
+qD
+QO
+qD
+qS
+qD
+Xl
+DI
+DI
+Ak
+hl
+dX
+hl
+Ug
+kT
+hU
+IY
+IY
+IY
+Lt
+Tv
+hl
+hl
+hl
+hl
+hl
+hl
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+"}
+(74,1,1) = {"
+Ak
+Ak
+Ak
+Ak
+Ak
+DI
+DI
+DI
+DI
+IB
+IB
+IB
+IB
+IB
+DI
+FD
+DI
+DI
+DI
+Ak
+hl
+hl
+hl
+uO
+kT
+hU
+IY
+LH
+IY
+qA
+xL
+hl
+hl
+hl
+hl
+hl
+hl
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+"}
+(75,1,1) = {"
+Ak
+Ak
+Ak
+Ak
+Ak
+DI
+DI
+DI
+DI
+QK
+IB
+IB
+IB
+zo
+DI
+DI
+DI
+DI
+DI
+Ak
+hl
+hl
+hl
+hl
+hl
+BS
+IY
+IY
+IY
+xV
+hl
+hl
+hl
+hl
+hl
+hl
+hl
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+"}
+(76,1,1) = {"
+Ak
+Ak
+Ak
+Ak
+Ak
+DI
+DI
+DI
+DI
+ky
+EG
+rf
+mS
+Es
+DI
+DI
+DI
+DI
+DI
+Ak
+hl
+hl
+hl
+hl
+hl
+bL
+DD
+mD
+OQ
+dg
+hl
+hl
+hl
+hl
+hl
+hl
+hl
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+"}
+(77,1,1) = {"
+Ak
+Ak
+Ak
+Ak
+Ak
+DI
+DI
+DI
+DI
+DI
+DI
+DI
+DI
+DI
+DI
+DI
+DI
+DI
+DI
+Ak
+hl
+hl
+hl
+hl
+hl
+hl
+VA
+FS
+zU
+hl
+hl
+hl
+hl
+hl
+hl
+hl
+hl
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+"}
+(78,1,1) = {"
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+hl
+hl
+hl
+hl
+hl
+hl
+hl
+hl
+hl
+hl
+hl
+hl
+hl
+hl
+hl
+hl
+hl
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+"}
+(79,1,1) = {"
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+"}
+(80,1,1) = {"
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+"}
+(81,1,1) = {"
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+"}
+(82,1,1) = {"
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+"}
+(83,1,1) = {"
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+"}
+(84,1,1) = {"
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+"}
+(85,1,1) = {"
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+"}
+(86,1,1) = {"
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+"}
+(87,1,1) = {"
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+"}
+(88,1,1) = {"
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+"}
+(89,1,1) = {"
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+"}
+(90,1,1) = {"
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+"}
+(91,1,1) = {"
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+"}
+(92,1,1) = {"
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+"}
+(93,1,1) = {"
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+"}
+(94,1,1) = {"
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+"}
+(95,1,1) = {"
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+"}
+(96,1,1) = {"
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+"}
+(97,1,1) = {"
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+"}
+(98,1,1) = {"
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+"}
+(99,1,1) = {"
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+"}
+(100,1,1) = {"
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+"}
