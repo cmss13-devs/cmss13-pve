@@ -41,3 +41,6 @@ endmap
 
 map hms_brynhild
 endmap
+
+map uss_tethers_end
+endmap
