@@ -522,6 +522,39 @@
 		icon_state = "emblr_e"
 
 //-------------------------------------------------------
+//Imperial Rockets
+
+/obj/item/ammo_magazine/rocket/imperial
+	name = "\improper High Explosive Imperial Rocket"
+	desc = "A high-explosive rocket made to be launched via most man-portable launchers. These are often used for the likes of the Imperial Guard forces."
+	caliber = "88mm"
+	icon_state = "imperial_rocket_he"
+	icon = 'icons/obj/items/weapons/guns/ammo_by_faction/uscm.dmi'
+
+	max_rounds = 1
+	default_ammo = /datum/ammo/rocket
+	gun_type = /obj/item/weapon/gun/launcher/rocket/imperial
+	reload_delay = 85
+
+/obj/item/ammo_magazine/rocket/imperial/update_icon()
+	if(current_rounds <= 0)
+		qdel(src)
+	else
+		icon_state = initial(icon_state)
+
+/obj/item/ammo_magazine/rocket/imperial/at
+	name = "\improper High Explosive Imperial Rocket"
+	desc = "A high-explosive rocket made to be launched via most man-portable launchers. These are often used for the likes of the Imperial Guard forces."
+	caliber = "88mm"
+	icon_state = "imperial_rocket_at"
+
+	max_rounds = 1
+	default_ammo = /datum/ammo/rocket/ap/anti_tank
+	gun_type = /obj/item/weapon/gun/launcher/rocket/imperial
+	reload_delay = 85
+
+
+//-------------------------------------------------------
 // XM99 power/fuel cells
 
 /obj/item/ammo_magazine/plasma

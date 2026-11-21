@@ -477,3 +477,30 @@
 	icon_state = "po_visor_yellow"
 	action_icon_string = "po_visor_yellow_down"
 	helmet_overlay = "po_visor_yellow_marine"
+
+//Imperial
+/obj/item/device/helmet_visor/medical/advanced/imperial
+	name = "integrated biometric scanner"
+	helmet_overlay = "med_sight_right"
+	hud_type = list(MOB_HUD_MEDICAL_ADVANCED, MOB_HUD_FACTION_IMPERIAL)
+
+/obj/item/device/helmet_visor/night_vision/stormtrooper
+	name = "multi-spectral occulum"
+	desc = "An integrated part of the omnishield helm, it allows the user to see through low light conditions."
+
+	hud_type = list(MOB_HUD_FACTION_IMPERIAL, MOB_HUD_MEDICAL_ADVANCED)
+	helmet_overlay = null
+	power_use = 0
+	visor_glows = FALSE
+
+/obj/item/device/helmet_visor/night_vision/stormtrooper/activate_visor(obj/item/clothing/head/helmet/marine/attached_helmet, mob/living/carbon/human/user)
+	RegisterSignal(user, COMSIG_HUMAN_POST_UPDATE_SIGHT, PROC_REF(on_update_sight))
+
+	user.add_client_color_matrix("nvg_visor", 90, color_matrix_multiply(color_matrix_saturation(0.02), color_matrix_from_string("#fe9898")))
+	user.overlay_fullscreen("nvg_visor", /atom/movable/screen/fullscreen/flash/noise/nvg)
+	user.update_sight()
+	if(visor_glows)
+		on_light = new(attached_helmet)
+		on_light.set_light_on(TRUE)
+	START_PROCESSING(SSobj, src)
+	RegisterSignal(user, COMSIG_MOB_CHANGE_VIEW, PROC_REF(change_view))

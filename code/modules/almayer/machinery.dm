@@ -251,6 +251,17 @@
 /obj/structure/machinery/prop/almayer/CICmap/table/horizontal/segment/six
 	icon_state = "h_maptable6"
 
+/obj/structure/machinery/prop/almayer/CICmap/table/imperial
+	icon = 'icons/obj/structures/props/tactical_map.dmi'
+	icon_state = "tacmap"
+	light_color = "#45ff74"
+	bound_width = 64
+	bound_height = 64
+	light_pixel_x = 16
+	light_pixel_y = 16
+	minimap_type = MINIMAP_FLAG_IMPERIAL_GUARD
+	faction = FACTION_IMPERIAL_GUARD
+
 //Nonpower using props
 
 /obj/structure/prop/almayer
