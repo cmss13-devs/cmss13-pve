@@ -1259,3 +1259,334 @@
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m41aMK1, WEAR_IN_R_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m41aMK1, WEAR_IN_R_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m41aMK1, WEAR_IN_R_STORE)
+
+/datum/equipment_preset/uscm/esoc
+	name = "ESOC Rifleman"
+	flags = EQUIPMENT_PRESET_EXTRA
+	assignment = "ESOC Rifleman"
+	rank = JOB_MARINE_RAIDER
+	role_comm_title = "RFN"
+	languages = list(LANGUAGE_ENGLISH)
+	skills = /datum/skills/commando/deathsquad
+	auto_squad_name = SQUAD_SOF
+	ert_squad = TRUE
+	paygrades = list(PAY_SHORT_ME4 = JOB_PLAYTIME_TIER_0)
+
+	minimap_icon = "sof_sg"
+
+/datum/equipment_preset/uscm/esoc/New()
+	. = ..()
+	access = get_access(ACCESS_LIST_GLOBAL)
+
+/datum/equipment_preset/uscm/esoc_equipped
+	name = "ESOC Rifleman (Equipped)"
+	flags = EQUIPMENT_PRESET_EXTRA
+	assignment = "ESOC Rifleman"
+	rank = JOB_MARINE_RAIDER
+	role_comm_title = "RFN"
+	languages = list(LANGUAGE_ENGLISH)
+	skills = /datum/skills/commando/deathsquad
+	auto_squad_name = SQUAD_SOF
+	ert_squad = TRUE
+	paygrades = list(PAY_SHORT_ME4 = JOB_PLAYTIME_TIER_0)
+
+	minimap_icon = "sof_sg"
+
+/datum/equipment_preset/uscm/esoc_equipped/load_status(mob/living/carbon/human/new_human)
+	new_human.nutrition = NUTRITION_NORMAL
+
+/datum/equipment_preset/uscm/esoc_equipped/New()
+	. = ..()
+	access = get_access(ACCESS_LIST_GLOBAL)
+
+/datum/equipment_preset/uscm/esoc_equipped/load_gear(mob/living/carbon/human/new_human)
+	//back
+	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine/satchel, WEAR_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/device/motiondetector, WEAR_IN_BACK)
+	//face
+	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/almayer/sof, WEAR_L_EAR)
+	//head
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/leader, WEAR_HEAD)
+	//uniform
+	add_uscm_uniform(new_human)
+	//jacket
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/marine/leader, WEAR_JACKET)
+	add_marsoc_weapon(new_human)
+	//waist
+	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/marine(new_human), WEAR_WAIST)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m41aMK1(new_human), WEAR_IN_BELT)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m41aMK1(new_human), WEAR_IN_BELT)
+	//limbs
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/jungle/knife(new_human), WEAR_FEET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine, WEAR_HANDS)
+	//pockets
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate, WEAR_L_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/magazine, WEAR_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m41aMK1, WEAR_IN_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m41aMK1, WEAR_IN_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m41aMK1, WEAR_IN_R_STORE)
+
+/datum/equipment_preset/uscm/esoc_sniper
+	name = "ESOC Sniper"
+	flags = EQUIPMENT_PRESET_EXTRA
+	assignment = "ESOC Scout Sniper"
+	rank = JOB_MARINE_RAIDER
+	role_comm_title = "SctSnpr"
+	languages = list(LANGUAGE_ENGLISH)
+	skills = /datum/skills/commando/deathsquad
+	auto_squad_name = SQUAD_SOF
+	ert_squad = TRUE
+	paygrades = list(PAY_SHORT_ME4 = JOB_PLAYTIME_TIER_0)
+
+	minimap_icon = "sof_sg"
+
+/datum/equipment_preset/uscm/esoc_sniper/New()
+	. = ..()
+	access = get_access(ACCESS_LIST_GLOBAL)
+
+/datum/equipment_preset/uscm/esoc_sniper_equipped
+	name = "ESOC Sniper (Equipped)"
+	flags = EQUIPMENT_PRESET_EXTRA
+	assignment = "ESOC Scout Sniper"
+	rank = JOB_MARINE_RAIDER
+	role_comm_title = "SctSnpr"
+	languages = list(LANGUAGE_ENGLISH)
+	skills = /datum/skills/commando/deathsquad
+	auto_squad_name = SQUAD_SOF
+	ert_squad = TRUE
+	paygrades = list(PAY_SHORT_ME4 = JOB_PLAYTIME_TIER_0)
+
+	minimap_icon = "sof_sg"
+
+/datum/equipment_preset/uscm/esoc_sniper_equipped/load_status(mob/living/carbon/human/new_human)
+	new_human.nutrition = NUTRITION_NORMAL
+
+/datum/equipment_preset/uscm/esoc_sniper_equipped/New()
+	. = ..()
+	access = get_access(ACCESS_LIST_GLOBAL)
+
+/datum/equipment_preset/uscm/esoc_sniper_equipped/load_gear(mob/living/carbon/human/new_human)
+	//back
+	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine/smock, WEAR_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/device/motiondetector, WEAR_IN_BACK)
+	//face
+	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/almayer/sof, WEAR_L_EAR)
+	//head
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/leader, WEAR_HEAD)
+	//uniform
+	add_uscm_uniform(new_human)
+	//jacket
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/marine/ghillie/forecon, WEAR_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/sniper/M42A, WEAR_J_STORE)
+	//waist
+	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/gun/m4a3/m1911/forecon_officer, WEAR_WAIST)
+	//limbs
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/jungle/knife(new_human), WEAR_FEET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine, WEAR_HANDS)
+	//pockets
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate, WEAR_L_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/magazine, WEAR_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/sniper, WEAR_IN_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/sniper, WEAR_IN_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/sniper, WEAR_IN_R_STORE)
+
+/datum/equipment_preset/uscm/esoc_machinegunner
+	name = "ESOC Machinegunner"
+	flags = EQUIPMENT_PRESET_EXTRA
+	assignment = "ESOC Machinegunner"
+	rank = JOB_MARINE_RAIDER
+	role_comm_title = "MG"
+	languages = list(LANGUAGE_ENGLISH)
+	skills = /datum/skills/commando/deathsquad
+	auto_squad_name = SQUAD_SOF
+	ert_squad = TRUE
+	paygrades = list(PAY_SHORT_ME4 = JOB_PLAYTIME_TIER_0)
+
+	minimap_icon = "sof_sg"
+
+/datum/equipment_preset/uscm/esoc_machinegunner/New()
+	. = ..()
+	access = get_access(ACCESS_LIST_GLOBAL)
+
+/datum/equipment_preset/uscm/esoc_machinegunner_equipped
+	name = "ESOC Machinegunner (Equipped)"
+	flags = EQUIPMENT_PRESET_EXTRA
+	assignment = "ESOC Machinegunner"
+	rank = JOB_MARINE_RAIDER
+	role_comm_title = "MG"
+	languages = list(LANGUAGE_ENGLISH)
+	skills = /datum/skills/commando/deathsquad
+	auto_squad_name = SQUAD_SOF
+	ert_squad = TRUE
+	paygrades = list(PAY_SHORT_ME4 = JOB_PLAYTIME_TIER_0)
+
+	minimap_icon = "sof_sg"
+
+/datum/equipment_preset/uscm/esoc_machinegunner_equipped/load_status(mob/living/carbon/human/new_human)
+	new_human.nutrition = NUTRITION_NORMAL
+
+/datum/equipment_preset/uscm/esoc_machinegunner_equipped/New()
+	. = ..()
+	access = get_access(ACCESS_LIST_GLOBAL)
+
+/datum/equipment_preset/uscm/esoc_machinegunner_equipped/load_gear(mob/living/carbon/human/new_human)
+	//back
+	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine/satchel, WEAR_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/device/motiondetector, WEAR_IN_BACK)
+	//face
+	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/almayer/sof, WEAR_L_EAR)
+	//head
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/leader, WEAR_HEAD)
+	//uniform
+	add_uscm_uniform(new_human)
+	//jacket
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/marine/leader, WEAR_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/lmg, WEAR_J_STORE)
+	//waist
+	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/general_belt, WEAR_WAIST)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/hpr_box, WEAR_IN_BELT)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/hpr_box, WEAR_IN_BELT)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/hpr_box, WEAR_IN_BELT)
+	//limbs
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/jungle/knife(new_human), WEAR_FEET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine, WEAR_HANDS)
+	//pockets
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate, WEAR_L_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/magazine, WEAR_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m41aMK1, WEAR_IN_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m41aMK1, WEAR_IN_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m41aMK1, WEAR_IN_R_STORE)
+
+/datum/equipment_preset/uscm/esoc_medic
+	name = "ESOC Combat Medic"
+	flags = EQUIPMENT_PRESET_EXTRA
+	assignment = "ESOC Combat Medic"
+	rank = JOB_MARINE_RAIDER
+	role_comm_title = "CM"
+	languages = list(LANGUAGE_ENGLISH)
+	skills = /datum/skills/commando/deathsquad
+	auto_squad_name = SQUAD_SOF
+	ert_squad = TRUE
+	paygrades = list(PAY_SHORT_ME4 = JOB_PLAYTIME_TIER_0)
+
+	minimap_icon = "sof_sg"
+
+/datum/equipment_preset/uscm/esoc_medic/New()
+	. = ..()
+	access = get_access(ACCESS_LIST_GLOBAL)
+
+/datum/equipment_preset/uscm/esoc_medic_equipped
+	name = "ESOC Combat Medic (Equipped)"
+	flags = EQUIPMENT_PRESET_EXTRA
+	assignment = "ESOC Combat Medic"
+	rank = JOB_MARINE_RAIDER
+	role_comm_title = "CM"
+	languages = list(LANGUAGE_ENGLISH)
+	skills = /datum/skills/commando/deathsquad
+	auto_squad_name = SQUAD_SOF
+	ert_squad = TRUE
+	paygrades = list(PAY_SHORT_ME4 = JOB_PLAYTIME_TIER_0)
+
+	minimap_icon = "sof_sg"
+
+/datum/equipment_preset/uscm/esoc_medic_equipped/load_status(mob/living/carbon/human/new_human)
+	new_human.nutrition = NUTRITION_NORMAL
+
+/datum/equipment_preset/uscm/esoc_medic_equipped/New()
+	. = ..()
+	access = get_access(ACCESS_LIST_GLOBAL)
+
+/datum/equipment_preset/uscm/esoc_medic_equipped/load_gear(mob/living/carbon/human/new_human)
+	//back
+	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine/satchel/medic(new_human), WEAR_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/box/mre(new_human), WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/tool/surgery/surgical_line(new_human), WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/tool/surgery/synthgraft(new_human), WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/firstaid/softpack/regular(new_human), WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/firstaid/softpack/adv(new_human), WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/device/healthanalyzer/soul(new_human), WEAR_IN_BACK)
+	//face
+	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/almayer/sof, WEAR_L_EAR)
+	//head
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/leader, WEAR_HEAD)
+	new_human.equip_to_slot_or_del(new /obj/item/reagent_container/food/drinks/flask/canteen, WEAR_IN_HELMET)
+	//uniform
+	add_uscm_uniform(new_human)
+	//jacket
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/marine/leader, WEAR_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/storage/webbing/m3/mag/mk1(new_human), WEAR_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/rifle/m41aMK1/preloaded(new_human), WEAR_J_STORE)
+	//waist
+	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/medical/lifesaver/full(new_human), WEAR_WAIST)
+	//limbs
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/jungle/knife(new_human), WEAR_FEET)
+	add_combat_gloves(new_human)
+	//pockets
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/medkit/full(new_human), WEAR_L_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/flare/full(new_human), WEAR_R_STORE)
+
+/datum/equipment_preset/uscm/esoc_leader
+	name = "ESOC Team Leader"
+	flags = EQUIPMENT_PRESET_EXTRA
+	assignment = "ESOC Team Leader"
+	rank = JOB_MARINE_RAIDER
+	role_comm_title = "TL"
+	languages = list(LANGUAGE_ENGLISH)
+	skills = /datum/skills/commando/deathsquad
+	auto_squad_name = SQUAD_SOF
+	ert_squad = TRUE
+	paygrades = list(PAY_SHORT_ME6 = JOB_PLAYTIME_TIER_0)
+
+	minimap_icon = "sof_sg"
+
+/datum/equipment_preset/uscm/esoc/New()
+	. = ..()
+	access = get_access(ACCESS_LIST_GLOBAL)
+
+/datum/equipment_preset/uscm/esoc_leader_equipped
+	name = "ESOC Team Leader (Equipped)"
+	flags = EQUIPMENT_PRESET_EXTRA
+	assignment = "ESOC Team leader"
+	rank = JOB_MARINE_RAIDER
+	role_comm_title = "TL"
+	languages = list(LANGUAGE_ENGLISH)
+	skills = /datum/skills/commando/deathsquad
+	auto_squad_name = SQUAD_SOF
+	ert_squad = TRUE
+	paygrades = list(PAY_SHORT_ME6 = JOB_PLAYTIME_TIER_0)
+
+	minimap_icon = "sof_sg"
+
+/datum/equipment_preset/uscm/uscm/esoc_leader_equipped/load_status(mob/living/carbon/human/new_human)
+	new_human.nutrition = NUTRITION_NORMAL
+
+/datum/equipment_preset/uscm/uscm/esoc_leader_equipped/New()
+	. = ..()
+	access = get_access(ACCESS_LIST_GLOBAL)
+
+/datum/equipment_preset/uscm/esoc_leader_equipped/load_gear(mob/living/carbon/human/new_human)
+	//back
+	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine/satchel, WEAR_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/device/motiondetector, WEAR_IN_BACK)
+	//face
+	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/almayer/sof, WEAR_L_EAR)
+	//head
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/leader, WEAR_HEAD)
+	//uniform
+	add_uscm_uniform(new_human)
+	//jacket
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/marine/leader, WEAR_JACKET)
+	add_marsoc_weapon(new_human)
+	//waist
+	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/marine(new_human), WEAR_WAIST)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m41aMK1(new_human), WEAR_IN_BELT)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m41aMK1(new_human), WEAR_IN_BELT)
+	//limbs
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/jungle/knife(new_human), WEAR_FEET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine, WEAR_HANDS)
+	//pockets
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/firstaid/full/alternate, WEAR_L_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/magazine, WEAR_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m41aMK1, WEAR_IN_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m41aMK1, WEAR_IN_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m41aMK1, WEAR_IN_R_STORE)
