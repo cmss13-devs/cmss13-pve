@@ -247,6 +247,12 @@
 /obj/item/clothing/mask/breath/medical,
 /turf/open/floor/almayer/sterile_green,
 /area/styx/medical)
+"dt" = (
+/obj/structure/machinery/cm_vending/gear/smartgun/marsoc,
+/turf/open/floor/almayer/plate{
+	color = "#A9A9A9"
+	},
+/area/styx/platoonarmory)
 "dv" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "4-8"
@@ -1823,18 +1829,13 @@
 /turf/open/floor/plating/plating_catwalk,
 /area/styx/cryo_cells)
 "pK" = (
-/obj/structure/machinery/cm_vending/sorted/medical/marinemed/marsoc{
-	pixel_y = 18;
-	density = 0;
-	pixel_x = -4
+/obj/structure/machinery/light/small{
+	dir = 8;
+	needs_power = 0.3
 	},
-/obj/structure/machinery/cm_vending/sorted/medical/blood{
-	pixel_x = 6;
-	pixel_y = 0;
-	density = 0;
-	layer = 3
+/turf/open/floor/almayer/plate{
+	color = "#A9A9A9"
 	},
-/turf/open/floor/almayer_hull/blackfull,
 /area/styx/platoonarmory)
 "pR" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
@@ -3480,8 +3481,10 @@
 	},
 /area/styx/dorms)
 "FD" = (
-/obj/structure/machinery/cm_vending/gear/spec/marsoc,
-/turf/open/floor/almayer_hull/blackfull,
+/obj/structure/machinery/cm_vending/gear/engi/marsoc,
+/turf/open/floor/almayer/plate{
+	color = "#A9A9A9"
+	},
 /area/styx/platoonarmory)
 "FP" = (
 /obj/structure/machinery/alarm/almayer{
@@ -3544,6 +3547,15 @@
 	},
 /turf/open/floor/almayer/sterile,
 /area/styx/dorms)
+"Gf" = (
+/obj/structure/machinery/light/small{
+	dir = 4;
+	needs_power = 0.3
+	},
+/turf/open/floor/almayer/plate{
+	color = "#A9A9A9"
+	},
+/area/styx/platoonarmory)
 "Go" = (
 /obj/structure/machinery/landinglight/ds1/delaythree{
 	dir = 1
@@ -3552,6 +3564,12 @@
 	color = "#A9A9A9"
 	},
 /area/styx/hangar)
+"Gq" = (
+/obj/structure/machinery/cm_vending/gear/spec/marsoc,
+/turf/open/floor/almayer/plate{
+	color = "#A9A9A9"
+	},
+/area/styx/platoonarmory)
 "Gv" = (
 /obj/structure/machinery/door/airlock/almayer/maint,
 /obj/structure/pipes/standard/simple/hidden/supply{
@@ -4538,8 +4556,14 @@
 	},
 /area/styx/canteen)
 "Nu" = (
-/obj/structure/machinery/cm_vending/gear/engi/marsoc,
-/turf/open/floor/almayer_hull/blackfull,
+/obj/structure/machinery/cm_vending/sorted/medical/marinemed/marsoc{
+	pixel_y = 18;
+	density = 0;
+	pixel_x = 1
+	},
+/turf/open/floor/almayer/plate{
+	color = "#A9A9A9"
+	},
 /area/styx/platoonarmory)
 "Nv" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
@@ -5114,6 +5138,22 @@
 	},
 /turf/open/floor/almayer/mono,
 /area/styx/cryo_cells)
+"Tg" = (
+/obj/structure/surface/table/reinforced/black,
+/obj/item/facepaint{
+	pixel_x = -8;
+	pixel_y = 6
+	},
+/obj/item/facepaint/black{
+	pixel_x = 4;
+	pixel_y = 0
+	},
+/obj/item/facepaint/brown{
+	pixel_x = 18;
+	pixel_y = 4
+	},
+/turf/open/floor/almayer_hull,
+/area/styx/platoonarmory)
 "Tq" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "1-2"
@@ -5221,6 +5261,17 @@
 	},
 /turf/open/floor/almayer_hull/blackfull,
 /area/styx/prep_hallway)
+"Ur" = (
+/obj/structure/machinery/cm_vending/sorted/medical/blood{
+	pixel_x = -1;
+	pixel_y = 18;
+	density = 0;
+	layer = 3
+	},
+/turf/open/floor/almayer/plate{
+	color = "#A9A9A9"
+	},
+/area/styx/platoonarmory)
 "UB" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "0-4"
@@ -5423,8 +5474,13 @@
 /turf/open/floor/almayer_hull/blackfull,
 /area/styx/cryo_cells)
 "Xl" = (
-/obj/structure/machinery/cm_vending/gear/smartgun/marsoc,
-/turf/open/floor/almayer_hull/blackfull,
+/obj/structure/machinery/cm_vending/clothing/medic/marsoc{
+	pixel_y = 18;
+	density = 0
+	},
+/turf/open/floor/almayer/plate{
+	color = "#A9A9A9"
+	},
 /area/styx/platoonarmory)
 "Xq" = (
 /obj/structure/ladder{
@@ -5709,16 +5765,36 @@
 /turf/open/floor/almayer/plating,
 /area/styx/prep_hallway)
 "Zy" = (
-/obj/structure/machinery/cm_vending/clothing/medic/marsoc{
-	pixel_y = 18;
-	density = 0
+/obj/structure/machinery/light/double{
+	dir = 2;
+	light_power = 0.3
 	},
-/turf/open/floor/almayer_hull/blackfull,
+/obj/structure/surface/table/reinforced/black,
+/obj/item/facepaint/skull{
+	pixel_x = -1;
+	pixel_y = 1
+	},
+/obj/item/facepaint/sniper{
+	pixel_x = 12;
+	pixel_y = -1
+	},
+/turf/open/floor/almayer/plate{
+	color = "#A9A9A9"
+	},
 /area/styx/platoonarmory)
 "ZH" = (
 /obj/structure/sign/safety/storage{
 	pixel_x = -25;
 	pixel_y = 6
+	},
+/obj/structure/surface/table/reinforced/black,
+/obj/item/tool/hand_labeler{
+	pixel_x = -2;
+	pixel_y = 3
+	},
+/obj/item/tool/hand_labeler{
+	pixel_x = 10;
+	pixel_y = 9
 	},
 /turf/open/floor/almayer/plate{
 	color = "#A9A9A9"
@@ -9353,7 +9429,7 @@ Ak
 Ak
 Ak
 Ak
-Ak
+DI
 DI
 DI
 DI
@@ -9415,7 +9491,7 @@ Ak
 Ak
 Ak
 Ak
-Ak
+DI
 DI
 DI
 DI
@@ -9477,7 +9553,6 @@ Ak
 Ak
 Ak
 Ak
-Ak
 DI
 DI
 DI
@@ -9489,10 +9564,11 @@ DI
 DI
 DI
 DI
-Ak
-Ak
-Ak
-Ak
+DI
+DI
+DI
+DI
+DI
 iL
 iL
 iL
@@ -9539,7 +9615,7 @@ Ak
 Ak
 Ak
 Ak
-Ak
+DI
 DI
 DI
 DI
@@ -9554,7 +9630,7 @@ DI
 DI
 DI
 DI
-Ak
+DI
 iL
 iL
 iL
@@ -9601,10 +9677,10 @@ Ak
 Ak
 Ak
 Ak
-Ak
 DI
-DI
-DI
+Xl
+pK
+FD
 DI
 Ea
 IB
@@ -9616,7 +9692,7 @@ DI
 DI
 DI
 DI
-Ak
+DI
 iL
 iL
 tI
@@ -9663,10 +9739,10 @@ Ak
 Ak
 Ak
 Ak
-Ak
 DI
-Zy
 Nu
+qD
+QO
 DI
 LP
 LP
@@ -9678,7 +9754,7 @@ DI
 DI
 DI
 DI
-Ak
+DI
 iL
 iL
 iL
@@ -9725,9 +9801,9 @@ Ak
 Ak
 Ak
 Ak
-Ak
 DI
-pK
+Ur
+QO
 qD
 sL
 qD
@@ -9736,11 +9812,11 @@ qD
 QO
 qD
 ZH
-qD
+Tg
 DI
 DI
 DI
-Ak
+DI
 iL
 iL
 rB
@@ -9787,7 +9863,7 @@ Ak
 Ak
 Ak
 Ak
-Ak
+DI
 DI
 DI
 ni
@@ -9798,7 +9874,7 @@ YW
 wp
 QO
 qD
-Nd
+Zy
 DI
 DI
 DI
@@ -9849,7 +9925,7 @@ Ak
 Ak
 Ak
 Ak
-Ak
+DI
 DI
 WH
 qD
@@ -9911,7 +9987,7 @@ Ak
 Ak
 Ak
 Ak
-Ak
+DI
 DI
 Dj
 QO
@@ -9973,7 +10049,7 @@ Ak
 Ak
 Ak
 Ak
-Ak
+DI
 DI
 tM
 qD
@@ -10035,7 +10111,7 @@ Ak
 Ak
 Ak
 Ak
-Ak
+DI
 DI
 Ol
 QO
@@ -10097,7 +10173,7 @@ Ak
 Ak
 Ak
 Ak
-Ak
+DI
 DI
 oN
 qD
@@ -10159,7 +10235,7 @@ Ak
 Ak
 Ak
 Ak
-Ak
+DI
 DI
 DI
 ni
@@ -10221,7 +10297,7 @@ Ak
 Ak
 Ak
 Ak
-Ak
+DI
 DI
 DI
 tk
@@ -10233,10 +10309,10 @@ QO
 qD
 qS
 qD
-Xl
+QO
+dt
 DI
 DI
-Ak
 hl
 dX
 hl
@@ -10283,7 +10359,7 @@ Ak
 Ak
 Ak
 Ak
-Ak
+DI
 DI
 DI
 DI
@@ -10294,11 +10370,11 @@ IB
 IB
 IB
 DI
-FD
+QO
+qD
+QO
 DI
 DI
-DI
-Ak
 hl
 hl
 hl
@@ -10345,7 +10421,7 @@ Ak
 Ak
 Ak
 Ak
-Ak
+DI
 DI
 DI
 DI
@@ -10356,11 +10432,11 @@ IB
 IB
 zo
 DI
+Gq
+Gf
 DI
 DI
 DI
-DI
-Ak
 hl
 hl
 hl
@@ -10407,7 +10483,7 @@ Ak
 Ak
 Ak
 Ak
-Ak
+DI
 DI
 DI
 DI
@@ -10422,7 +10498,7 @@ DI
 DI
 DI
 DI
-Ak
+DI
 hl
 hl
 hl
@@ -10469,7 +10545,6 @@ Ak
 Ak
 Ak
 Ak
-Ak
 DI
 DI
 DI
@@ -10484,7 +10559,8 @@ DI
 DI
 DI
 DI
-Ak
+DI
+DI
 hl
 hl
 hl
@@ -10531,22 +10607,22 @@ Ak
 Ak
 Ak
 Ak
-Ak
-Ak
-Ak
-Ak
-Ak
-Ak
-Ak
-Ak
-Ak
-Ak
-Ak
-Ak
-Ak
-Ak
-Ak
-Ak
+DI
+DI
+DI
+DI
+DI
+DI
+DI
+DI
+DI
+DI
+DI
+DI
+DI
+DI
+DI
+DI
 hl
 hl
 hl
