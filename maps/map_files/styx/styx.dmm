@@ -344,35 +344,6 @@
 	color = "#A9A9A9"
 	},
 /area/styx/dorms)
-"em" = (
-/obj/structure/sign/banners/colonial_marines_flag{
-	pixel_x = -1;
-	pixel_y = 32
-	},
-/obj/effect/decal/warning_stripes/asteroid{
-	icon_state = "S"
-	},
-/turf/open/floor/almayer/plate{
-	color = "#A9A9A9"
-	},
-/area/styx/platoonarmory)
-"eC" = (
-/obj/structure/surface/table/reinforced/black,
-/obj/item/facepaint{
-	pixel_x = -8;
-	pixel_y = 6
-	},
-/obj/item/facepaint/black{
-	pixel_x = 4;
-	pixel_y = 0
-	},
-/obj/item/facepaint/brown{
-	pixel_x = 18;
-	pixel_y = 4
-	},
-/obj/structure/machinery/power/apc/power/south,
-/turf/open/floor/almayer_hull,
-/area/styx/platoonarmory)
 "eF" = (
 /obj/effect/decal/warning_stripes/asteroid{
 	icon_state = "cargo_arrow";
@@ -416,20 +387,6 @@
 	},
 /turf/open/floor/almayer_hull/blackfull,
 /area/styx/cryo_cells)
-"eN" = (
-/obj/structure/machinery/light/double/blue{
-	dir = 8;
-	pixel_x = -7;
-	pixel_y = -1;
-	color = "#8B0000";
-	light_color = "#8B0000";
-	name = "red";
-	needs_power = 0.3
-	},
-/turf/open/floor/almayer/plate{
-	color = "#A9A9A9"
-	},
-/area/styx/platoonarmory)
 "eS" = (
 /obj/structure/cable{
 	layer = 2.36
@@ -499,6 +456,20 @@
 	},
 /turf/open/floor/almayer/plating,
 /area/styx/dorms)
+"fq" = (
+/obj/structure/machinery/light/double/blue{
+	dir = 8;
+	pixel_x = -7;
+	pixel_y = -1;
+	color = "#8B0000";
+	light_color = "#8B0000";
+	name = "red";
+	needs_power = 0.3
+	},
+/turf/open/floor/almayer/plate{
+	color = "#A9A9A9"
+	},
+/area/styx/platoonarmory)
 "fw" = (
 /obj/effect/decal/warning_stripes/asteroid{
 	icon_state = "SW-out"
@@ -769,15 +740,6 @@
 	},
 /turf/open/floor/almayer/plating_striped,
 /area/styx/cryo_cells)
-"hB" = (
-/obj/structure/machinery/cm_vending/clothing/medic/marsoc{
-	pixel_y = 18;
-	density = 0
-	},
-/turf/open/floor/almayer/plate{
-	color = "#A9A9A9"
-	},
-/area/styx/platoonarmory)
 "hH" = (
 /turf/open/floor/almayer/blackcorner/west{
 	dir = 2
@@ -848,6 +810,28 @@
 /obj/structure/pipes/standard/simple/hidden/scrubbers,
 /turf/open/floor/almayer,
 /area/styx/cryo_cells)
+"ik" = (
+/obj/structure/sign/safety/terminal{
+	pixel_x = 32;
+	pixel_y = 24
+	},
+/obj/structure/sign/safety/bulkhead_door{
+	pixel_x = 31;
+	pixel_y = -9
+	},
+/obj/effect/decal/warning_stripes/asteroid{
+	icon_state = "N";
+	pixel_x = 0;
+	pixel_y = 1
+	},
+/obj/effect/decal/warning_stripes/asteroid{
+	icon_state = "cargo_arrow";
+	dir = 1;
+	pixel_x = 0;
+	pixel_y = -6
+	},
+/turf/open/floor/almayer_hull/blackfull,
+/area/styx/platoonarmory)
 "im" = (
 /obj/structure/closet/coffin/woodencrate,
 /obj/item/clothing/shoes/marine,
@@ -886,6 +870,15 @@
 /obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/floor/almayer_hull/blackfull,
 /area/styx/cryo_cells)
+"iw" = (
+/obj/structure/machinery/cm_vending/clothing/medic/marsoc{
+	pixel_y = 18;
+	density = 0
+	},
+/turf/open/floor/almayer/plate{
+	color = "#A9A9A9"
+	},
+/area/styx/platoonarmory)
 "iF" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "cargo_arrow";
@@ -920,8 +913,12 @@
 /turf/closed/wall/almayer/outer,
 /area/styx/prep_hallway)
 "iM" = (
-/obj/structure/machinery/prop/almayer/CICmap/table/segment/one,
-/turf/open/floor/almayer_hull/blackfull,
+/obj/effect/decal/warning_stripes/asteroid{
+	icon_state = "W"
+	},
+/turf/open/floor/almayer/plate{
+	color = "#A9A9A9"
+	},
 /area/styx/platoonarmory)
 "iN" = (
 /obj/structure/ladder{
@@ -962,6 +959,10 @@
 	},
 /turf/open/floor/almayer/research,
 /area/styx/medical)
+"jf" = (
+/obj/structure/machinery/prop/almayer/CICmap/table/segment/one,
+/turf/open/floor/almayer_hull/blackfull,
+/area/styx/platoonarmory)
 "jg" = (
 /obj/structure/bed/chair/comfy/black{
 	dir = 4
@@ -1187,144 +1188,14 @@
 /turf/open/floor/almayer/sterile,
 /area/styx/dorms)
 "ky" = (
-/obj/structure/surface/table/reinforced/almayer_B,
-/obj/item/ammo_box/magazine/m1911{
+/obj/structure/sign/safety/bulkhead_door{
 	pixel_x = 0;
-	pixel_y = 18
+	pixel_y = -24
 	},
-/obj/item/ammo_box/magazine/m44{
-	pixel_x = 0;
-	pixel_y = 9
+/obj/effect/decal/warning_stripes/asteroid{
+	icon_state = "SW-out"
 	},
-/obj/item/ammo_magazine/pistol/highpower{
-	pixel_x = 7;
-	pixel_y = 0
-	},
-/obj/item/ammo_magazine/pistol/highpower{
-	pixel_x = 7;
-	pixel_y = 0
-	},
-/obj/item/ammo_magazine/pistol/highpower{
-	pixel_x = 7;
-	pixel_y = 0
-	},
-/obj/item/ammo_magazine/pistol/highpower{
-	pixel_x = 7;
-	pixel_y = 0
-	},
-/obj/item/ammo_magazine/pistol/highpower{
-	pixel_x = 7;
-	pixel_y = 0
-	},
-/obj/item/ammo_magazine/pistol/highpower{
-	pixel_x = 7;
-	pixel_y = 0
-	},
-/obj/item/ammo_magazine/pistol/highpower{
-	pixel_x = 7;
-	pixel_y = 0
-	},
-/obj/item/ammo_magazine/pistol/highpower{
-	pixel_x = 7;
-	pixel_y = 0
-	},
-/obj/item/ammo_magazine/pistol/highpower{
-	pixel_x = 7;
-	pixel_y = 0
-	},
-/obj/item/ammo_magazine/pistol/highpower{
-	pixel_x = 7;
-	pixel_y = 0
-	},
-/obj/item/ammo_magazine/pistol/highpower{
-	pixel_x = 7;
-	pixel_y = 0
-	},
-/obj/item/ammo_magazine/pistol/highpower{
-	pixel_x = 7;
-	pixel_y = 0
-	},
-/obj/item/ammo_magazine/pistol/highpower{
-	pixel_x = 7;
-	pixel_y = 0
-	},
-/obj/item/ammo_magazine/pistol/highpower{
-	pixel_x = 7;
-	pixel_y = 0
-	},
-/obj/item/ammo_magazine/pistol/highpower{
-	pixel_x = 7;
-	pixel_y = 0
-	},
-/obj/item/ammo_magazine/pistol/highpower{
-	pixel_x = 7;
-	pixel_y = 0
-	},
-/obj/item/ammo_magazine/pistol/highpower/automag{
-	pixel_x = -7;
-	pixel_y = 0
-	},
-/obj/item/ammo_magazine/pistol/highpower/automag{
-	pixel_x = -7;
-	pixel_y = 0
-	},
-/obj/item/ammo_magazine/pistol/highpower/automag{
-	pixel_x = -7;
-	pixel_y = 0
-	},
-/obj/item/ammo_magazine/pistol/highpower/automag{
-	pixel_x = -7;
-	pixel_y = 0
-	},
-/obj/item/ammo_magazine/pistol/highpower/automag{
-	pixel_x = -7;
-	pixel_y = 0
-	},
-/obj/item/ammo_magazine/pistol/highpower/automag{
-	pixel_x = -7;
-	pixel_y = 0
-	},
-/obj/item/ammo_magazine/pistol/highpower/automag{
-	pixel_x = -7;
-	pixel_y = 0
-	},
-/obj/item/ammo_magazine/pistol/highpower/automag{
-	pixel_x = -7;
-	pixel_y = 0
-	},
-/obj/item/ammo_magazine/pistol/highpower/automag{
-	pixel_x = -7;
-	pixel_y = 0
-	},
-/obj/item/ammo_magazine/pistol/highpower/automag{
-	pixel_x = -7;
-	pixel_y = 0
-	},
-/obj/item/ammo_magazine/pistol/highpower/automag{
-	pixel_x = -7;
-	pixel_y = 0
-	},
-/obj/item/ammo_magazine/pistol/highpower/automag{
-	pixel_x = -7;
-	pixel_y = 0
-	},
-/obj/item/ammo_magazine/pistol/highpower/automag{
-	pixel_x = -7;
-	pixel_y = 0
-	},
-/obj/item/ammo_magazine/pistol/highpower/automag{
-	pixel_x = -7;
-	pixel_y = 0
-	},
-/obj/item/ammo_magazine/pistol/highpower/automag{
-	pixel_x = -7;
-	pixel_y = 0
-	},
-/obj/item/ammo_magazine/pistol/highpower/automag{
-	pixel_x = -7;
-	pixel_y = 0
-	},
-/turf/open/floor/almayer_hull/blackfull,
+/turf/open/floor/almayer_hull,
 /area/styx/platoonarmory)
 "kz" = (
 /obj/structure/cable/heavyduty{
@@ -1509,12 +1380,6 @@
 	},
 /turf/open/floor/almayer,
 /area/styx/dorms)
-"ml" = (
-/obj/structure/machinery/cm_vending/gear/smartgun/marsoc,
-/turf/open/floor/almayer/plate{
-	color = "#A9A9A9"
-	},
-/area/styx/platoonarmory)
 "mq" = (
 /obj/structure/cable{
 	icon_state = "0-2"
@@ -1563,15 +1428,6 @@
 	pixel_y = 12
 	},
 /turf/open/floor/almayer_hull/blackfull,
-/area/styx/platoonarmory)
-"mY" = (
-/obj/structure/machinery/light/small{
-	dir = 4;
-	needs_power = 0.3
-	},
-/turf/open/floor/almayer/plate{
-	color = "#A9A9A9"
-	},
 /area/styx/platoonarmory)
 "nb" = (
 /obj/structure/cable/heavyduty{
@@ -1780,10 +1636,6 @@
 /obj/structure/janitorialcart/brown,
 /turf/open/floor/almayer/sterile,
 /area/styx/dorms)
-"oJ" = (
-/obj/structure/machinery/prop/almayer/CICmap/table/segment/three,
-/turf/open/floor/almayer_hull/blackfull,
-/area/styx/platoonarmory)
 "oK" = (
 /turf/open/floor/almayer/black{
 	dir = 5
@@ -1904,14 +1756,6 @@
 	color = "#A9A9A9"
 	},
 /area/styx/platoonarmory)
-"pL" = (
-/obj/effect/decal/warning_stripes/asteroid{
-	icon_state = "NW-out";
-	pixel_x = 0;
-	pixel_y = 1
-	},
-/turf/open/floor/almayer_hull,
-/area/styx/platoonarmory)
 "pR" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
 /obj/structure/pipes/standard/simple/hidden/scrubbers,
@@ -1922,11 +1766,11 @@
 /area/styx/cryo_cells)
 "qh" = (
 /obj/effect/decal/warning_stripes/asteroid{
-	icon_state = "E"
+	icon_state = "NE-out";
+	pixel_x = 0;
+	pixel_y = 1
 	},
-/turf/open/floor/almayer/plate{
-	color = "#A9A9A9"
-	},
+/turf/open/floor/almayer_hull,
 /area/styx/platoonarmory)
 "qo" = (
 /obj/structure/largecrate/random/secure{
@@ -2056,6 +1900,12 @@
 "rj" = (
 /turf/open/floor/almayer/plating_striped,
 /area/styx/cryo_cells)
+"rq" = (
+/obj/structure/machinery/cm_vending/gear/engi/marsoc,
+/turf/open/floor/almayer/plate{
+	color = "#A9A9A9"
+	},
+/area/styx/platoonarmory)
 "rr" = (
 /obj/structure/machinery/door/poddoor/almayer/blended{
 	dir = 4;
@@ -2159,6 +2009,31 @@
 /obj/structure/pipes/vents/pump,
 /turf/open/floor/almayer/edge/smooth,
 /area/styx/cryo_cells)
+"sm" = (
+/obj/structure/machinery/light/double{
+	dir = 1;
+	light_power = 0.3;
+	pixel_y = 10
+	},
+/obj/structure/machinery/door_control/brbutton{
+	name = "Mission Preparation Control";
+	id = "Mission Preparation 3";
+	pixel_x = 8;
+	pixel_y = 32
+	},
+/obj/structure/sign/safety/manualopenclose{
+	pixel_x = 3;
+	pixel_y = 32
+	},
+/obj/effect/decal/warning_stripes/asteroid{
+	icon_state = "NE-out";
+	pixel_x = 0;
+	pixel_y = 1
+	},
+/turf/open/floor/almayer/plate{
+	color = "#A9A9A9"
+	},
+/area/styx/platoonarmory)
 "so" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "4-8"
@@ -2458,6 +2333,20 @@
 /obj/structure/machinery/light/small/red,
 /turf/open/floor/plating,
 /area/styx/dorms)
+"vb" = (
+/obj/structure/machinery/light/double/blue{
+	dir = 4;
+	pixel_x = 4;
+	pixel_y = 0;
+	color = "#8B0000";
+	light_color = "#8B0000";
+	name = "red";
+	needs_power = 0.3
+	},
+/turf/open/floor/almayer/plate{
+	color = "#A9A9A9"
+	},
+/area/styx/platoonarmory)
 "vi" = (
 /obj/structure/machinery/landinglight/ds1/delayone,
 /obj/structure/roof/cargocrane_tracks/horizontal{
@@ -2525,20 +2414,6 @@
 	},
 /turf/open/floor/almayer/plating,
 /area/styx/canteen)
-"wc" = (
-/obj/structure/machinery/light/double/blue{
-	dir = 4;
-	pixel_x = 4;
-	pixel_y = 0;
-	color = "#8B0000";
-	light_color = "#8B0000";
-	name = "red";
-	needs_power = 0.3
-	},
-/turf/open/floor/almayer/plate{
-	color = "#A9A9A9"
-	},
-/area/styx/platoonarmory)
 "wh" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "4-8"
@@ -2887,20 +2762,6 @@
 	},
 /turf/open/floor/almayer_hull/blackfull,
 /area/styx/hangar)
-"zg" = (
-/obj/effect/decal/warning_stripes/asteroid{
-	icon_state = "N";
-	pixel_x = 0;
-	pixel_y = 1
-	},
-/obj/effect/decal/warning_stripes/asteroid{
-	icon_state = "cargo_arrow";
-	dir = 1;
-	pixel_x = 0;
-	pixel_y = -6
-	},
-/turf/open/floor/almayer_hull/blackfull,
-/area/styx/platoonarmory)
 "zj" = (
 /obj/structure/machinery/light/double/blue{
 	dir = 4;
@@ -3071,16 +2932,6 @@
 	},
 /turf/open/floor/almayer/sterile,
 /area/styx/dorms)
-"AG" = (
-/obj/structure/sign/safety/bulkhead_door{
-	pixel_x = 0;
-	pixel_y = -24
-	},
-/obj/effect/decal/warning_stripes/asteroid{
-	icon_state = "SW-out"
-	},
-/turf/open/floor/almayer_hull,
-/area/styx/platoonarmory)
 "AJ" = (
 /obj/structure/roof/cargocrane_tracks/horizontal{
 	pixel_y = 14
@@ -3129,10 +2980,6 @@
 	},
 /turf/open/floor/almayer/plating,
 /area/styx/cryo_cells)
-"Bq" = (
-/obj/structure/machinery/prop/almayer/CICmap/table/segment/two,
-/turf/open/floor/almayer_hull/blackfull,
-/area/styx/platoonarmory)
 "Br" = (
 /obj/item/storage/bag/trash{
 	pixel_x = -14;
@@ -3228,14 +3075,6 @@
 	dir = 1
 	},
 /area/styx/medical)
-"BW" = (
-/obj/effect/decal/warning_stripes/asteroid{
-	icon_state = "NE-out";
-	pixel_x = 0;
-	pixel_y = 1
-	},
-/turf/open/floor/almayer_hull,
-/area/styx/platoonarmory)
 "BX" = (
 /obj/structure/machinery/light/double/blue,
 /turf/open/floor/almayer/plate{
@@ -3609,9 +3448,87 @@
 	color = "#A9A9A9"
 	},
 /area/styx/dorms)
+"Ff" = (
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/item/ammo_box/magazine/m1911{
+	pixel_x = 0;
+	pixel_y = 18
+	},
+/obj/item/ammo_box/magazine/m44{
+	pixel_x = 0;
+	pixel_y = 9
+	},
+/obj/item/ammo_magazine/pistol/highpower/automag{
+	pixel_x = -15;
+	pixel_y = 0
+	},
+/obj/item/ammo_magazine/pistol/highpower/automag{
+	pixel_x = -15;
+	pixel_y = 0
+	},
+/obj/item/ammo_magazine/pistol/highpower/automag{
+	pixel_x = -15;
+	pixel_y = 0
+	},
+/obj/item/ammo_magazine/pistol/highpower/automag{
+	pixel_x = -15;
+	pixel_y = 0
+	},
+/obj/item/ammo_magazine/pistol/highpower/automag{
+	pixel_x = -15;
+	pixel_y = 0
+	},
+/obj/item/ammo_magazine/pistol/highpower/automag{
+	pixel_x = -15;
+	pixel_y = 0
+	},
+/obj/item/ammo_magazine/pistol/highpower/automag{
+	pixel_x = -15;
+	pixel_y = 0
+	},
+/obj/item/ammo_magazine/pistol/highpower/automag{
+	pixel_x = -15;
+	pixel_y = 0
+	},
+/obj/item/ammo_magazine/pistol/highpower/automag{
+	pixel_x = -15;
+	pixel_y = 0
+	},
+/obj/item/ammo_magazine/pistol/highpower/automag{
+	pixel_x = -15;
+	pixel_y = 0
+	},
+/obj/item/ammo_magazine/pistol/highpower/automag{
+	pixel_x = -15;
+	pixel_y = 0
+	},
+/obj/item/ammo_magazine/pistol/highpower/automag{
+	pixel_x = -15;
+	pixel_y = 0
+	},
+/obj/item/ammo_magazine/pistol/highpower/automag{
+	pixel_x = -15;
+	pixel_y = 0
+	},
+/obj/item/ammo_magazine/pistol/highpower/automag{
+	pixel_x = -15;
+	pixel_y = 0
+	},
+/obj/item/ammo_magazine/pistol/highpower/automag{
+	pixel_x = -15;
+	pixel_y = 0
+	},
+/obj/item/ammo_magazine/pistol/highpower/automag{
+	pixel_x = -15;
+	pixel_y = 0
+	},
+/obj/item/ammo_box/magazine/mk45,
+/turf/open/floor/almayer_hull/blackfull,
+/area/styx/platoonarmory)
 "FD" = (
-/obj/effect/decal/warning_stripes/asteroid{
-	icon_state = "W"
+/obj/structure/machinery/light/small{
+	dir = 4;
+	needs_power = 0.3
 	},
 /turf/open/floor/almayer/plate{
 	color = "#A9A9A9"
@@ -3686,15 +3603,6 @@
 	color = "#A9A9A9"
 	},
 /area/styx/hangar)
-"Gp" = (
-/obj/structure/machinery/prop/almayer/CICmap/table/segment/five,
-/obj/structure/phone_base/rotary{
-	phone_id = "Briefing";
-	pixel_x = -4;
-	pixel_y = 10
-	},
-/turf/open/floor/almayer_hull/blackfull,
-/area/styx/platoonarmory)
 "Gv" = (
 /obj/structure/machinery/door/airlock/almayer/maint,
 /obj/structure/pipes/standard/simple/hidden/supply{
@@ -3706,6 +3614,20 @@
 /obj/structure/machinery/door/firedoor/border_only/almayer,
 /turf/open/floor/almayer/plating,
 /area/styx/dorms)
+"GI" = (
+/obj/effect/decal/warning_stripes/asteroid{
+	icon_state = "N";
+	pixel_x = 0;
+	pixel_y = 1
+	},
+/obj/effect/decal/warning_stripes/asteroid{
+	icon_state = "cargo_arrow";
+	dir = 1;
+	pixel_x = 0;
+	pixel_y = -6
+	},
+/turf/open/floor/almayer_hull/blackfull,
+/area/styx/platoonarmory)
 "GM" = (
 /obj/structure/machinery/door/firedoor/border_only/almayer{
 	layer = 1.9
@@ -3824,6 +3746,12 @@
 	},
 /turf/open/floor/almayer_hull/blackfull,
 /area/styx/cryo_cells)
+"Ig" = (
+/obj/structure/machinery/cm_vending/gear/spec/marsoc,
+/turf/open/floor/almayer/plate{
+	color = "#A9A9A9"
+	},
+/area/styx/platoonarmory)
 "Ih" = (
 /obj/effect/decal/warning_stripes/asteroid{
 	icon_state = "cargo_arrow";
@@ -4475,10 +4403,6 @@
 	},
 /turf/open/floor/almayer_hull/blackfull,
 /area/styx/prep_hallway)
-"Ma" = (
-/obj/structure/machinery/prop/almayer/CICmap/table/segment/six,
-/turf/open/floor/almayer_hull/blackfull,
-/area/styx/platoonarmory)
 "Mj" = (
 /obj/structure/machinery/light/small/red{
 	dir = 4;
@@ -4569,6 +4493,14 @@
 	color = "#A9A9A9"
 	},
 /area/styx/canteen)
+"MM" = (
+/obj/effect/decal/warning_stripes/asteroid{
+	icon_state = "NW-out";
+	pixel_x = 0;
+	pixel_y = 1
+	},
+/turf/open/floor/almayer_hull,
+/area/styx/platoonarmory)
 "MP" = (
 /obj/structure/vehicle_locker/cabinet/utensils/flip{
 	pixel_x = 8;
@@ -4686,24 +4618,17 @@
 /area/styx/canteen)
 "Nu" = (
 /obj/structure/machinery/light/double{
-	dir = 1;
-	light_power = 0.3;
-	pixel_y = 10
+	dir = 2;
+	light_power = 0.3
 	},
-/obj/structure/machinery/door_control/brbutton{
-	name = "Mission Preparation Control";
-	id = "Mission Preparation 3";
-	pixel_x = 8;
-	pixel_y = 32
-	},
-/obj/structure/sign/safety/manualopenclose{
-	pixel_x = 3;
-	pixel_y = 32
-	},
-/obj/effect/decal/warning_stripes/asteroid{
-	icon_state = "NE-out";
-	pixel_x = 0;
+/obj/structure/surface/table/reinforced/black,
+/obj/item/facepaint/skull{
+	pixel_x = -1;
 	pixel_y = 1
+	},
+/obj/item/facepaint/sniper{
+	pixel_x = 12;
+	pixel_y = -1
 	},
 /turf/open/floor/almayer/plate{
 	color = "#A9A9A9"
@@ -4755,6 +4680,12 @@
 	},
 /turf/open/floor/almayer_hull/blackfull,
 /area/styx/dorms)
+"NJ" = (
+/obj/effect/decal/warning_stripes/asteroid{
+	icon_state = "SE-out"
+	},
+/turf/open/floor/almayer_hull,
+/area/styx/platoonarmory)
 "NM" = (
 /obj/structure/sign/safety/west{
 	pixel_x = 7;
@@ -4798,6 +4729,12 @@
 	},
 /turf/open/floor/almayer/sterile,
 /area/styx/medical)
+"Or" = (
+/obj/structure/machinery/cm_vending/gear/smartgun/marsoc,
+/turf/open/floor/almayer/plate{
+	color = "#A9A9A9"
+	},
+/area/styx/platoonarmory)
 "Ou" = (
 /obj/structure/sign/safety/manualopenclose{
 	pixel_x = 0;
@@ -4865,6 +4802,10 @@
 	dir = 10
 	},
 /area/styx/canteen)
+"OI" = (
+/obj/structure/machinery/prop/almayer/CICmap/table/segment/two,
+/turf/open/floor/almayer_hull/blackfull,
+/area/styx/platoonarmory)
 "OQ" = (
 /obj/structure/machinery/sleep_console{
 	dir = 8
@@ -4882,12 +4823,6 @@
 	height = 1
 	},
 /turf/open/floor/almayer_hull/blackfull,
-/area/styx/platoonarmory)
-"Pb" = (
-/obj/effect/decal/warning_stripes/asteroid{
-	icon_state = "SW-out"
-	},
-/turf/open/floor/almayer_hull,
 /area/styx/platoonarmory)
 "Pc" = (
 /obj/structure/machinery/landinglight/ds1/delaytwo{
@@ -4981,15 +4916,6 @@
 "PO" = (
 /turf/open/floor/almayer/plating_striped/west,
 /area/styx/canteen)
-"PT" = (
-/obj/structure/machinery/light/small{
-	dir = 8;
-	needs_power = 0.3
-	},
-/turf/open/floor/almayer/plate{
-	color = "#A9A9A9"
-	},
-/area/styx/platoonarmory)
 "PZ" = (
 /obj/structure/platform_decoration/strata/metal{
 	dir = 1
@@ -5184,26 +5110,22 @@
 /turf/closed/wall/almayer/outer,
 /area/styx/hangar)
 "RH" = (
-/obj/structure/sign/safety/terminal{
-	pixel_x = 32;
-	pixel_y = 24
+/obj/structure/sign/safety/storage{
+	pixel_x = -25;
+	pixel_y = 6
 	},
-/obj/structure/sign/safety/bulkhead_door{
-	pixel_x = 31;
-	pixel_y = -9
+/obj/structure/surface/table/reinforced/black,
+/obj/item/tool/hand_labeler{
+	pixel_x = -2;
+	pixel_y = 3
 	},
-/obj/effect/decal/warning_stripes/asteroid{
-	icon_state = "N";
-	pixel_x = 0;
-	pixel_y = 1
+/obj/item/tool/hand_labeler{
+	pixel_x = 10;
+	pixel_y = 9
 	},
-/obj/effect/decal/warning_stripes/asteroid{
-	icon_state = "cargo_arrow";
-	dir = 1;
-	pixel_x = 0;
-	pixel_y = -6
+/turf/open/floor/almayer/plate{
+	color = "#A9A9A9"
 	},
-/turf/open/floor/almayer_hull/blackfull,
 /area/styx/platoonarmory)
 "RJ" = (
 /obj/structure/ladder{
@@ -5213,7 +5135,7 @@
 /area/styx/prep_hallway)
 "RM" = (
 /obj/effect/decal/warning_stripes/asteroid{
-	icon_state = "S"
+	icon_state = "E"
 	},
 /turf/open/floor/almayer/plate{
 	color = "#A9A9A9"
@@ -5240,6 +5162,10 @@
 	},
 /turf/open/floor/almayer_hull/blackfull,
 /area/styx/cryo_cells)
+"RX" = (
+/obj/structure/machinery/prop/almayer/CICmap/table/segment/six,
+/turf/open/floor/almayer_hull/blackfull,
+/area/styx/platoonarmory)
 "Se" = (
 /turf/open/floor/almayer_hull/blackfull,
 /area/styx/prep_hallway)
@@ -5310,20 +5236,13 @@
 	},
 /area/styx/hangar)
 "SZ" = (
-/obj/structure/machinery/door_control/brbutton/alt{
-	name = "Mission Preparation Control";
-	id = "Mission Preparation 3";
-	pixel_x = 8;
-	pixel_y = -21
+/obj/structure/machinery/prop/almayer/CICmap/table/segment/five,
+/obj/structure/phone_base/rotary{
+	phone_id = "Briefing";
+	pixel_x = -4;
+	pixel_y = 10
 	},
-/obj/structure/sign/safety/manualopenclose{
-	pixel_x = 3;
-	pixel_y = -22
-	},
-/obj/effect/decal/warning_stripes/asteroid{
-	icon_state = "SE-out"
-	},
-/turf/open/floor/almayer_hull,
+/turf/open/floor/almayer_hull/blackfull,
 /area/styx/platoonarmory)
 "Tc" = (
 /obj/effect/decal/warning_stripes/asteroid{
@@ -5338,12 +5257,6 @@
 /obj/structure/pipes/standard/simple/hidden/scrubbers,
 /turf/open/floor/almayer/plating,
 /area/styx/dorms)
-"Tr" = (
-/obj/effect/decal/warning_stripes/asteroid{
-	icon_state = "SE-out"
-	},
-/turf/open/floor/almayer_hull,
-/area/styx/platoonarmory)
 "Tv" = (
 /obj/structure/bed/roller/hospital_empty,
 /turf/open/floor/almayer/sterile_green,
@@ -5444,24 +5357,6 @@
 	},
 /turf/open/floor/almayer_hull/blackfull,
 /area/styx/prep_hallway)
-"Uw" = (
-/obj/structure/machinery/light/double{
-	dir = 2;
-	light_power = 0.3
-	},
-/obj/structure/surface/table/reinforced/black,
-/obj/item/facepaint/skull{
-	pixel_x = -1;
-	pixel_y = 1
-	},
-/obj/item/facepaint/sniper{
-	pixel_x = 12;
-	pixel_y = -1
-	},
-/turf/open/floor/almayer/plate{
-	color = "#A9A9A9"
-	},
-/area/styx/platoonarmory)
 "UB" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "0-4"
@@ -5552,9 +5447,11 @@
 "VJ" = (
 /turf/open/floor/almayer/plating_striped/west,
 /area/styx/dorms)
-"VP" = (
-/obj/structure/machinery/prop/almayer/CICmap/table/segment/four,
-/turf/open/floor/almayer_hull/blackfull,
+"VU" = (
+/obj/effect/decal/warning_stripes/asteroid{
+	icon_state = "SW-out"
+	},
+/turf/open/floor/almayer_hull,
 /area/styx/platoonarmory)
 "VW" = (
 /obj/structure/surface/table/reinforced/almayer_B,
@@ -5640,6 +5537,14 @@
 	},
 /turf/open/floor/almayer_hull/blackfull,
 /area/styx/platoonarmory)
+"WR" = (
+/obj/effect/decal/warning_stripes/asteroid{
+	icon_state = "S"
+	},
+/turf/open/floor/almayer/plate{
+	color = "#A9A9A9"
+	},
+/area/styx/platoonarmory)
 "Xa" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "1-2-4-8"
@@ -5668,22 +5573,21 @@
 /turf/open/floor/almayer_hull/blackfull,
 /area/styx/cryo_cells)
 "Xl" = (
-/obj/structure/sign/safety/storage{
-	pixel_x = -25;
+/obj/structure/surface/table/reinforced/black,
+/obj/item/facepaint{
+	pixel_x = -8;
 	pixel_y = 6
 	},
-/obj/structure/surface/table/reinforced/black,
-/obj/item/tool/hand_labeler{
-	pixel_x = -2;
-	pixel_y = 3
+/obj/item/facepaint/black{
+	pixel_x = 4;
+	pixel_y = 0
 	},
-/obj/item/tool/hand_labeler{
-	pixel_x = 10;
-	pixel_y = 9
+/obj/item/facepaint/brown{
+	pixel_x = 18;
+	pixel_y = 4
 	},
-/turf/open/floor/almayer/plate{
-	color = "#A9A9A9"
-	},
+/obj/structure/machinery/power/apc/power/south,
+/turf/open/floor/almayer_hull,
 /area/styx/platoonarmory)
 "Xq" = (
 /obj/structure/ladder{
@@ -5718,6 +5622,15 @@
 	color = "#A9A9A9"
 	},
 /area/styx/prep_hallway)
+"XE" = (
+/obj/structure/machinery/light/small{
+	dir = 8;
+	needs_power = 0.3
+	},
+/turf/open/floor/almayer/plate{
+	color = "#A9A9A9"
+	},
+/area/styx/platoonarmory)
 "XG" = (
 /obj/effect/decal/warning_stripes/asteroid{
 	icon_state = "S"
@@ -5742,6 +5655,18 @@
 	color = "#A9A9A9"
 	},
 /area/styx/canteen)
+"XN" = (
+/obj/structure/sign/banners/colonial_marines_flag{
+	pixel_x = -1;
+	pixel_y = 32
+	},
+/obj/effect/decal/warning_stripes/asteroid{
+	icon_state = "S"
+	},
+/turf/open/floor/almayer/plate{
+	color = "#A9A9A9"
+	},
+/area/styx/platoonarmory)
 "XR" = (
 /obj/structure/roof/cargocrane_tracks/vertical/endcap2{
 	pixel_y = 14
@@ -5957,10 +5882,20 @@
 /turf/open/floor/almayer_hull/blackfull,
 /area/styx/hangar)
 "Zs" = (
-/obj/structure/machinery/cm_vending/gear/spec/marsoc,
-/turf/open/floor/almayer/plate{
-	color = "#A9A9A9"
+/obj/structure/machinery/door_control/brbutton/alt{
+	name = "Mission Preparation Control";
+	id = "Mission Preparation 3";
+	pixel_x = 8;
+	pixel_y = -21
 	},
+/obj/structure/sign/safety/manualopenclose{
+	pixel_x = 3;
+	pixel_y = -22
+	},
+/obj/effect/decal/warning_stripes/asteroid{
+	icon_state = "SE-out"
+	},
+/turf/open/floor/almayer_hull,
 /area/styx/platoonarmory)
 "Zx" = (
 /obj/structure/sign/safety/west{
@@ -5980,10 +5915,8 @@
 	},
 /area/styx/platoonarmory)
 "ZH" = (
-/obj/structure/machinery/cm_vending/gear/engi/marsoc,
-/turf/open/floor/almayer/plate{
-	color = "#A9A9A9"
-	},
+/obj/structure/machinery/prop/almayer/CICmap/table/segment/four,
+/turf/open/floor/almayer_hull/blackfull,
 /area/styx/platoonarmory)
 "ZI" = (
 /obj/structure/machinery/light/double/blue{
@@ -6006,6 +5939,10 @@
 	dir = 1
 	},
 /area/styx/canteen)
+"ZU" = (
+/obj/structure/machinery/prop/almayer/CICmap/table/segment/three,
+/turf/open/floor/almayer_hull/blackfull,
+/area/styx/platoonarmory)
 "ZY" = (
 /obj/structure/machinery/light/small{
 	dir = 8
@@ -9864,9 +9801,9 @@ DI
 DI
 DI
 DI
-hB
-PT
-ZH
+iw
+XE
+rq
 DI
 Ea
 IB
@@ -9997,8 +9934,8 @@ QO
 qD
 QO
 qD
+RH
 Xl
-eC
 DI
 DI
 DI
@@ -10060,7 +9997,7 @@ YW
 wp
 QO
 qD
-Uw
+Nu
 DI
 DI
 DI
@@ -10357,7 +10294,7 @@ Ak
 DI
 qD
 qD
-eN
+fq
 QO
 qD
 DI
@@ -10417,14 +10354,14 @@ Ak
 "}
 (72,1,1) = {"
 DI
-Tr
+NJ
+RM
+RM
+RM
 qh
-qh
-qh
-BW
-SZ
+Zs
 DI
-Nu
+sm
 qD
 QO
 KO
@@ -10479,14 +10416,14 @@ Ak
 "}
 (73,1,1) = {"
 DI
-em
-Gp
-oJ
-iM
+XN
+SZ
+ZU
+jf
 fP
-RM
+WR
 tk
-zg
+GI
 lf
 qD
 QO
@@ -10496,7 +10433,7 @@ qD
 qS
 qD
 QO
-ml
+Or
 DI
 hl
 dX
@@ -10541,14 +10478,14 @@ Ak
 "}
 (74,1,1) = {"
 DI
-RM
-Ma
-VP
-Bq
+WR
+RX
+ZH
+OI
 fP
-RM
+WR
 tk
-RH
+ik
 DI
 IB
 IB
@@ -10603,12 +10540,12 @@ Ak
 "}
 (75,1,1) = {"
 DI
-Pb
-FD
-FD
-FD
-pL
-AG
+VU
+iM
+iM
+iM
+MM
+ky
 DI
 DI
 DI
@@ -10618,8 +10555,8 @@ IB
 IB
 zo
 DI
-Zs
-mY
+Ig
+FD
 DI
 DI
 hl
@@ -10667,14 +10604,14 @@ Ak
 DI
 qD
 qD
-wc
+vb
 QO
 qD
 DI
 DI
 DI
 DI
-ky
+Ff
 EG
 rf
 mS
