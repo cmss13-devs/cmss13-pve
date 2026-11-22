@@ -247,12 +247,6 @@
 /obj/item/clothing/mask/breath/medical,
 /turf/open/floor/almayer/sterile_green,
 /area/styx/medical)
-"dt" = (
-/obj/structure/machinery/cm_vending/gear/smartgun/marsoc,
-/turf/open/floor/almayer/plate{
-	color = "#A9A9A9"
-	},
-/area/styx/platoonarmory)
 "dv" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "4-8"
@@ -350,6 +344,35 @@
 	color = "#A9A9A9"
 	},
 /area/styx/dorms)
+"em" = (
+/obj/structure/sign/banners/colonial_marines_flag{
+	pixel_x = -1;
+	pixel_y = 32
+	},
+/obj/effect/decal/warning_stripes/asteroid{
+	icon_state = "S"
+	},
+/turf/open/floor/almayer/plate{
+	color = "#A9A9A9"
+	},
+/area/styx/platoonarmory)
+"eC" = (
+/obj/structure/surface/table/reinforced/black,
+/obj/item/facepaint{
+	pixel_x = -8;
+	pixel_y = 6
+	},
+/obj/item/facepaint/black{
+	pixel_x = 4;
+	pixel_y = 0
+	},
+/obj/item/facepaint/brown{
+	pixel_x = 18;
+	pixel_y = 4
+	},
+/obj/structure/machinery/power/apc/power/south,
+/turf/open/floor/almayer_hull,
+/area/styx/platoonarmory)
 "eF" = (
 /obj/effect/decal/warning_stripes/asteroid{
 	icon_state = "cargo_arrow";
@@ -393,6 +416,20 @@
 	},
 /turf/open/floor/almayer_hull/blackfull,
 /area/styx/cryo_cells)
+"eN" = (
+/obj/structure/machinery/light/double/blue{
+	dir = 8;
+	pixel_x = -7;
+	pixel_y = -1;
+	color = "#8B0000";
+	light_color = "#8B0000";
+	name = "red";
+	needs_power = 0.3
+	},
+/turf/open/floor/almayer/plate{
+	color = "#A9A9A9"
+	},
+/area/styx/platoonarmory)
 "eS" = (
 /obj/structure/cable{
 	layer = 2.36
@@ -732,6 +769,15 @@
 	},
 /turf/open/floor/almayer/plating_striped,
 /area/styx/cryo_cells)
+"hB" = (
+/obj/structure/machinery/cm_vending/clothing/medic/marsoc{
+	pixel_y = 18;
+	density = 0
+	},
+/turf/open/floor/almayer/plate{
+	color = "#A9A9A9"
+	},
+/area/styx/platoonarmory)
 "hH" = (
 /turf/open/floor/almayer/blackcorner/west{
 	dir = 2
@@ -874,9 +920,9 @@
 /turf/closed/wall/almayer/outer,
 /area/styx/prep_hallway)
 "iM" = (
-/obj/structure/machinery/prop/almayer/CICmap/table/horizontal/segment/three,
+/obj/structure/machinery/prop/almayer/CICmap/table/segment/one,
 /turf/open/floor/almayer_hull/blackfull,
-/area/styx/hangar)
+/area/styx/platoonarmory)
 "iN" = (
 /obj/structure/ladder{
 	id = "hangar4";
@@ -1463,6 +1509,12 @@
 	},
 /turf/open/floor/almayer,
 /area/styx/dorms)
+"ml" = (
+/obj/structure/machinery/cm_vending/gear/smartgun/marsoc,
+/turf/open/floor/almayer/plate{
+	color = "#A9A9A9"
+	},
+/area/styx/platoonarmory)
 "mq" = (
 /obj/structure/cable{
 	icon_state = "0-2"
@@ -1511,6 +1563,15 @@
 	pixel_y = 12
 	},
 /turf/open/floor/almayer_hull/blackfull,
+/area/styx/platoonarmory)
+"mY" = (
+/obj/structure/machinery/light/small{
+	dir = 4;
+	needs_power = 0.3
+	},
+/turf/open/floor/almayer/plate{
+	color = "#A9A9A9"
+	},
 /area/styx/platoonarmory)
 "nb" = (
 /obj/structure/cable/heavyduty{
@@ -1719,6 +1780,10 @@
 /obj/structure/janitorialcart/brown,
 /turf/open/floor/almayer/sterile,
 /area/styx/dorms)
+"oJ" = (
+/obj/structure/machinery/prop/almayer/CICmap/table/segment/three,
+/turf/open/floor/almayer_hull/blackfull,
+/area/styx/platoonarmory)
 "oK" = (
 /turf/open/floor/almayer/black{
 	dir = 5
@@ -1829,13 +1894,23 @@
 /turf/open/floor/plating/plating_catwalk,
 /area/styx/cryo_cells)
 "pK" = (
-/obj/structure/machinery/light/small{
-	dir = 8;
-	needs_power = 0.3
+/obj/structure/machinery/cm_vending/sorted/medical/blood{
+	pixel_x = -1;
+	pixel_y = 18;
+	density = 0;
+	layer = 3
 	},
 /turf/open/floor/almayer/plate{
 	color = "#A9A9A9"
 	},
+/area/styx/platoonarmory)
+"pL" = (
+/obj/effect/decal/warning_stripes/asteroid{
+	icon_state = "NW-out";
+	pixel_x = 0;
+	pixel_y = 1
+	},
+/turf/open/floor/almayer_hull,
 /area/styx/platoonarmory)
 "pR" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
@@ -1846,14 +1921,13 @@
 /turf/open/floor/almayer_hull/blackfull,
 /area/styx/cryo_cells)
 "qh" = (
-/obj/structure/machinery/prop/almayer/CICmap/table/horizontal/segment/one,
-/obj/structure/phone_base/rotary{
-	phone_id = "Briefing";
-	pixel_x = -3;
-	pixel_y = 9
+/obj/effect/decal/warning_stripes/asteroid{
+	icon_state = "E"
 	},
-/turf/open/floor/almayer_hull/blackfull,
-/area/styx/hangar)
+/turf/open/floor/almayer/plate{
+	color = "#A9A9A9"
+	},
+/area/styx/platoonarmory)
 "qo" = (
 /obj/structure/largecrate/random/secure{
 	pixel_x = -5;
@@ -2205,8 +2279,13 @@
 	},
 /area/styx/platoonarmory)
 "tk" = (
-/obj/structure/machinery/power/apc/power/north,
-/turf/open/floor/almayer_hull,
+/obj/structure/machinery/door/poddoor/almayer/blended{
+	name = "Mission Preparation Access Lockdown";
+	id = "Mission Preparation 3"
+	},
+/turf/open/floor/almayer/plate{
+	color = "#A9A9A9"
+	},
 /area/styx/platoonarmory)
 "tq" = (
 /obj/structure/pipes/standard/simple/hidden/scrubbers{
@@ -2446,6 +2525,20 @@
 	},
 /turf/open/floor/almayer/plating,
 /area/styx/canteen)
+"wc" = (
+/obj/structure/machinery/light/double/blue{
+	dir = 4;
+	pixel_x = 4;
+	pixel_y = 0;
+	color = "#8B0000";
+	light_color = "#8B0000";
+	name = "red";
+	needs_power = 0.3
+	},
+/turf/open/floor/almayer/plate{
+	color = "#A9A9A9"
+	},
+/area/styx/platoonarmory)
 "wh" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "4-8"
@@ -2794,6 +2887,20 @@
 	},
 /turf/open/floor/almayer_hull/blackfull,
 /area/styx/hangar)
+"zg" = (
+/obj/effect/decal/warning_stripes/asteroid{
+	icon_state = "N";
+	pixel_x = 0;
+	pixel_y = 1
+	},
+/obj/effect/decal/warning_stripes/asteroid{
+	icon_state = "cargo_arrow";
+	dir = 1;
+	pixel_x = 0;
+	pixel_y = -6
+	},
+/turf/open/floor/almayer_hull/blackfull,
+/area/styx/platoonarmory)
 "zj" = (
 /obj/structure/machinery/light/double/blue{
 	dir = 4;
@@ -2964,6 +3071,16 @@
 	},
 /turf/open/floor/almayer/sterile,
 /area/styx/dorms)
+"AG" = (
+/obj/structure/sign/safety/bulkhead_door{
+	pixel_x = 0;
+	pixel_y = -24
+	},
+/obj/effect/decal/warning_stripes/asteroid{
+	icon_state = "SW-out"
+	},
+/turf/open/floor/almayer_hull,
+/area/styx/platoonarmory)
 "AJ" = (
 /obj/structure/roof/cargocrane_tracks/horizontal{
 	pixel_y = 14
@@ -3012,6 +3129,10 @@
 	},
 /turf/open/floor/almayer/plating,
 /area/styx/cryo_cells)
+"Bq" = (
+/obj/structure/machinery/prop/almayer/CICmap/table/segment/two,
+/turf/open/floor/almayer_hull/blackfull,
+/area/styx/platoonarmory)
 "Br" = (
 /obj/item/storage/bag/trash{
 	pixel_x = -14;
@@ -3107,6 +3228,14 @@
 	dir = 1
 	},
 /area/styx/medical)
+"BW" = (
+/obj/effect/decal/warning_stripes/asteroid{
+	icon_state = "NE-out";
+	pixel_x = 0;
+	pixel_y = 1
+	},
+/turf/open/floor/almayer_hull,
+/area/styx/platoonarmory)
 "BX" = (
 /obj/structure/machinery/light/double/blue,
 /turf/open/floor/almayer/plate{
@@ -3481,7 +3610,9 @@
 	},
 /area/styx/dorms)
 "FD" = (
-/obj/structure/machinery/cm_vending/gear/engi/marsoc,
+/obj/effect/decal/warning_stripes/asteroid{
+	icon_state = "W"
+	},
 /turf/open/floor/almayer/plate{
 	color = "#A9A9A9"
 	},
@@ -3547,15 +3678,6 @@
 	},
 /turf/open/floor/almayer/sterile,
 /area/styx/dorms)
-"Gf" = (
-/obj/structure/machinery/light/small{
-	dir = 4;
-	needs_power = 0.3
-	},
-/turf/open/floor/almayer/plate{
-	color = "#A9A9A9"
-	},
-/area/styx/platoonarmory)
 "Go" = (
 /obj/structure/machinery/landinglight/ds1/delaythree{
 	dir = 1
@@ -3564,11 +3686,14 @@
 	color = "#A9A9A9"
 	},
 /area/styx/hangar)
-"Gq" = (
-/obj/structure/machinery/cm_vending/gear/spec/marsoc,
-/turf/open/floor/almayer/plate{
-	color = "#A9A9A9"
+"Gp" = (
+/obj/structure/machinery/prop/almayer/CICmap/table/segment/five,
+/obj/structure/phone_base/rotary{
+	phone_id = "Briefing";
+	pixel_x = -4;
+	pixel_y = 10
 	},
+/turf/open/floor/almayer_hull/blackfull,
 /area/styx/platoonarmory)
 "Gv" = (
 /obj/structure/machinery/door/airlock/almayer/maint,
@@ -4350,6 +4475,10 @@
 	},
 /turf/open/floor/almayer_hull/blackfull,
 /area/styx/prep_hallway)
+"Ma" = (
+/obj/structure/machinery/prop/almayer/CICmap/table/segment/six,
+/turf/open/floor/almayer_hull/blackfull,
+/area/styx/platoonarmory)
 "Mj" = (
 /obj/structure/machinery/light/small/red{
 	dir = 4;
@@ -4556,10 +4685,25 @@
 	},
 /area/styx/canteen)
 "Nu" = (
-/obj/structure/machinery/cm_vending/sorted/medical/marinemed/marsoc{
-	pixel_y = 18;
-	density = 0;
-	pixel_x = 1
+/obj/structure/machinery/light/double{
+	dir = 1;
+	light_power = 0.3;
+	pixel_y = 10
+	},
+/obj/structure/machinery/door_control/brbutton{
+	name = "Mission Preparation Control";
+	id = "Mission Preparation 3";
+	pixel_x = 8;
+	pixel_y = 32
+	},
+/obj/structure/sign/safety/manualopenclose{
+	pixel_x = 3;
+	pixel_y = 32
+	},
+/obj/effect/decal/warning_stripes/asteroid{
+	icon_state = "NE-out";
+	pixel_x = 0;
+	pixel_y = 1
 	},
 /turf/open/floor/almayer/plate{
 	color = "#A9A9A9"
@@ -4739,6 +4883,12 @@
 	},
 /turf/open/floor/almayer_hull/blackfull,
 /area/styx/platoonarmory)
+"Pb" = (
+/obj/effect/decal/warning_stripes/asteroid{
+	icon_state = "SW-out"
+	},
+/turf/open/floor/almayer_hull,
+/area/styx/platoonarmory)
 "Pc" = (
 /obj/structure/machinery/landinglight/ds1/delaytwo{
 	dir = 1
@@ -4831,6 +4981,15 @@
 "PO" = (
 /turf/open/floor/almayer/plating_striped/west,
 /area/styx/canteen)
+"PT" = (
+/obj/structure/machinery/light/small{
+	dir = 8;
+	needs_power = 0.3
+	},
+/turf/open/floor/almayer/plate{
+	color = "#A9A9A9"
+	},
+/area/styx/platoonarmory)
 "PZ" = (
 /obj/structure/platform_decoration/strata/metal{
 	dir = 1
@@ -5025,9 +5184,27 @@
 /turf/closed/wall/almayer/outer,
 /area/styx/hangar)
 "RH" = (
-/obj/structure/machinery/prop/almayer/CICmap/table/horizontal/segment/two,
+/obj/structure/sign/safety/terminal{
+	pixel_x = 32;
+	pixel_y = 24
+	},
+/obj/structure/sign/safety/bulkhead_door{
+	pixel_x = 31;
+	pixel_y = -9
+	},
+/obj/effect/decal/warning_stripes/asteroid{
+	icon_state = "N";
+	pixel_x = 0;
+	pixel_y = 1
+	},
+/obj/effect/decal/warning_stripes/asteroid{
+	icon_state = "cargo_arrow";
+	dir = 1;
+	pixel_x = 0;
+	pixel_y = -6
+	},
 /turf/open/floor/almayer_hull/blackfull,
-/area/styx/hangar)
+/area/styx/platoonarmory)
 "RJ" = (
 /obj/structure/ladder{
 	id = "mission4"
@@ -5035,9 +5212,13 @@
 /turf/open/floor/almayer_hull/blackfull,
 /area/styx/prep_hallway)
 "RM" = (
-/obj/structure/machinery/prop/almayer/CICmap/table/horizontal/segment/four,
-/turf/open/floor/almayer_hull/blackfull,
-/area/styx/hangar)
+/obj/effect/decal/warning_stripes/asteroid{
+	icon_state = "S"
+	},
+/turf/open/floor/almayer/plate{
+	color = "#A9A9A9"
+	},
+/area/styx/platoonarmory)
 "RO" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "1-2-4-8"
@@ -5129,31 +5310,27 @@
 	},
 /area/styx/hangar)
 "SZ" = (
-/obj/structure/machinery/prop/almayer/CICmap/table/horizontal/segment/six,
-/turf/open/floor/almayer_hull/blackfull,
-/area/styx/hangar)
+/obj/structure/machinery/door_control/brbutton/alt{
+	name = "Mission Preparation Control";
+	id = "Mission Preparation 3";
+	pixel_x = 8;
+	pixel_y = -21
+	},
+/obj/structure/sign/safety/manualopenclose{
+	pixel_x = 3;
+	pixel_y = -22
+	},
+/obj/effect/decal/warning_stripes/asteroid{
+	icon_state = "SE-out"
+	},
+/turf/open/floor/almayer_hull,
+/area/styx/platoonarmory)
 "Tc" = (
 /obj/effect/decal/warning_stripes/asteroid{
 	icon_state = "E"
 	},
 /turf/open/floor/almayer/mono,
 /area/styx/cryo_cells)
-"Tg" = (
-/obj/structure/surface/table/reinforced/black,
-/obj/item/facepaint{
-	pixel_x = -8;
-	pixel_y = 6
-	},
-/obj/item/facepaint/black{
-	pixel_x = 4;
-	pixel_y = 0
-	},
-/obj/item/facepaint/brown{
-	pixel_x = 18;
-	pixel_y = 4
-	},
-/turf/open/floor/almayer_hull,
-/area/styx/platoonarmory)
 "Tq" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "1-2"
@@ -5161,6 +5338,12 @@
 /obj/structure/pipes/standard/simple/hidden/scrubbers,
 /turf/open/floor/almayer/plating,
 /area/styx/dorms)
+"Tr" = (
+/obj/effect/decal/warning_stripes/asteroid{
+	icon_state = "SE-out"
+	},
+/turf/open/floor/almayer_hull,
+/area/styx/platoonarmory)
 "Tv" = (
 /obj/structure/bed/roller/hospital_empty,
 /turf/open/floor/almayer/sterile_green,
@@ -5261,12 +5444,19 @@
 	},
 /turf/open/floor/almayer_hull/blackfull,
 /area/styx/prep_hallway)
-"Ur" = (
-/obj/structure/machinery/cm_vending/sorted/medical/blood{
+"Uw" = (
+/obj/structure/machinery/light/double{
+	dir = 2;
+	light_power = 0.3
+	},
+/obj/structure/surface/table/reinforced/black,
+/obj/item/facepaint/skull{
 	pixel_x = -1;
-	pixel_y = 18;
-	density = 0;
-	layer = 3
+	pixel_y = 1
+	},
+/obj/item/facepaint/sniper{
+	pixel_x = 12;
+	pixel_y = -1
 	},
 /turf/open/floor/almayer/plate{
 	color = "#A9A9A9"
@@ -5362,6 +5552,10 @@
 "VJ" = (
 /turf/open/floor/almayer/plating_striped/west,
 /area/styx/dorms)
+"VP" = (
+/obj/structure/machinery/prop/almayer/CICmap/table/segment/four,
+/turf/open/floor/almayer_hull/blackfull,
+/area/styx/platoonarmory)
 "VW" = (
 /obj/structure/surface/table/reinforced/almayer_B,
 /turf/open/floor/almayer_hull/blackfull,
@@ -5474,9 +5668,18 @@
 /turf/open/floor/almayer_hull/blackfull,
 /area/styx/cryo_cells)
 "Xl" = (
-/obj/structure/machinery/cm_vending/clothing/medic/marsoc{
-	pixel_y = 18;
-	density = 0
+/obj/structure/sign/safety/storage{
+	pixel_x = -25;
+	pixel_y = 6
+	},
+/obj/structure/surface/table/reinforced/black,
+/obj/item/tool/hand_labeler{
+	pixel_x = -2;
+	pixel_y = 3
+	},
+/obj/item/tool/hand_labeler{
+	pixel_x = 10;
+	pixel_y = 9
 	},
 /turf/open/floor/almayer/plate{
 	color = "#A9A9A9"
@@ -5754,9 +5957,11 @@
 /turf/open/floor/almayer_hull/blackfull,
 /area/styx/hangar)
 "Zs" = (
-/obj/structure/machinery/prop/almayer/CICmap/table/horizontal/segment/five,
-/turf/open/floor/almayer_hull/blackfull,
-/area/styx/hangar)
+/obj/structure/machinery/cm_vending/gear/spec/marsoc,
+/turf/open/floor/almayer/plate{
+	color = "#A9A9A9"
+	},
+/area/styx/platoonarmory)
 "Zx" = (
 /obj/structure/sign/safety/west{
 	pixel_x = 7;
@@ -5765,37 +5970,17 @@
 /turf/open/floor/almayer/plating,
 /area/styx/prep_hallway)
 "Zy" = (
-/obj/structure/machinery/light/double{
-	dir = 2;
-	light_power = 0.3
-	},
-/obj/structure/surface/table/reinforced/black,
-/obj/item/facepaint/skull{
-	pixel_x = -1;
-	pixel_y = 1
-	},
-/obj/item/facepaint/sniper{
-	pixel_x = 12;
-	pixel_y = -1
+/obj/structure/machinery/cm_vending/sorted/medical/marinemed/marsoc{
+	pixel_y = 18;
+	density = 0;
+	pixel_x = 1
 	},
 /turf/open/floor/almayer/plate{
 	color = "#A9A9A9"
 	},
 /area/styx/platoonarmory)
 "ZH" = (
-/obj/structure/sign/safety/storage{
-	pixel_x = -25;
-	pixel_y = 6
-	},
-/obj/structure/surface/table/reinforced/black,
-/obj/item/tool/hand_labeler{
-	pixel_x = -2;
-	pixel_y = 3
-	},
-/obj/item/tool/hand_labeler{
-	pixel_x = 10;
-	pixel_y = 9
-	},
+/obj/structure/machinery/cm_vending/gear/engi/marsoc,
 /turf/open/floor/almayer/plate{
 	color = "#A9A9A9"
 	},
@@ -6980,8 +7165,8 @@ fy
 Go
 gq
 IR
-RM
-qh
+ah
+ah
 ah
 ah
 cD
@@ -7042,8 +7227,8 @@ fy
 vG
 gq
 IR
-Zs
-RH
+ah
+ah
 ah
 ah
 ah
@@ -7104,8 +7289,8 @@ fy
 KQ
 gq
 IR
-SZ
-iM
+ah
+ah
 ah
 ah
 cD
@@ -9425,10 +9610,10 @@ Ak
 Ak
 "}
 (59,1,1) = {"
-Ak
-Ak
-Ak
-Ak
+DI
+DI
+DI
+DI
 DI
 DI
 DI
@@ -9487,10 +9672,10 @@ Ak
 Ak
 "}
 (60,1,1) = {"
-Ak
-Ak
-Ak
-Ak
+DI
+DI
+DI
+DI
 DI
 DI
 DI
@@ -9549,10 +9734,10 @@ Ak
 Ak
 "}
 (61,1,1) = {"
-Ak
-Ak
-Ak
-Ak
+DI
+DI
+DI
+DI
 DI
 DI
 DI
@@ -9611,10 +9796,11 @@ Ak
 Ak
 "}
 (62,1,1) = {"
-Ak
-Ak
-Ak
-Ak
+DI
+DI
+DI
+DI
+DI
 DI
 DI
 DI
@@ -9625,7 +9811,6 @@ Ea
 aV
 Ea
 Ea
-DI
 DI
 DI
 DI
@@ -9673,21 +9858,21 @@ Ak
 Ak
 "}
 (63,1,1) = {"
-Ak
-Ak
-Ak
-Ak
 DI
-Xl
-pK
-FD
+DI
+DI
+DI
+DI
+DI
+hB
+PT
+ZH
 DI
 Ea
 IB
 IB
 IB
 Ea
-DI
 DI
 DI
 DI
@@ -9735,12 +9920,13 @@ Ak
 Ak
 "}
 (64,1,1) = {"
-Ak
-Ak
-Ak
-Ak
 DI
-Nu
+DI
+DI
+DI
+DI
+DI
+Zy
 qD
 QO
 DI
@@ -9749,7 +9935,6 @@ LP
 LP
 LP
 LP
-DI
 DI
 DI
 DI
@@ -9797,12 +9982,13 @@ Ak
 Ak
 "}
 (65,1,1) = {"
-Ak
-Ak
-Ak
-Ak
 DI
-Ur
+DI
+DI
+DI
+DI
+DI
+pK
 QO
 qD
 sL
@@ -9811,9 +9997,8 @@ QO
 qD
 QO
 qD
-ZH
-Tg
-DI
+Xl
+eC
 DI
 DI
 DI
@@ -9859,10 +10044,11 @@ Ak
 Ak
 "}
 (66,1,1) = {"
-Ak
-Ak
-Ak
-Ak
+DI
+DI
+DI
+DI
+DI
 DI
 DI
 DI
@@ -9874,8 +10060,7 @@ YW
 wp
 QO
 qD
-Zy
-DI
+Uw
 DI
 DI
 DI
@@ -9921,10 +10106,11 @@ Ak
 Ak
 "}
 (67,1,1) = {"
-Ak
-Ak
-Ak
-Ak
+DI
+DI
+DI
+DI
+DI
 DI
 DI
 WH
@@ -9940,7 +10126,6 @@ JP
 DI
 DI
 OY
-DI
 DI
 iL
 iL
@@ -9983,10 +10168,11 @@ Ak
 Ak
 "}
 (68,1,1) = {"
-Ak
-Ak
-Ak
-Ak
+DI
+DI
+DI
+DI
+DI
 DI
 DI
 Dj
@@ -10003,7 +10189,6 @@ JF
 Ih
 UJ
 Aj
-DI
 hl
 hl
 hl
@@ -10045,10 +10230,11 @@ Ak
 Ak
 "}
 (69,1,1) = {"
-Ak
-Ak
-Ak
-Ak
+DI
+DI
+DI
+DI
+DI
 DI
 DI
 tM
@@ -10064,7 +10250,6 @@ qD
 XX
 fP
 tf
-DI
 DI
 hl
 hl
@@ -10107,10 +10292,11 @@ Ak
 Ak
 "}
 (70,1,1) = {"
-Ak
-Ak
-Ak
-Ak
+DI
+DI
+DI
+DI
+DI
 DI
 DI
 Ol
@@ -10127,7 +10313,6 @@ JF
 tx
 UJ
 aT
-DI
 hl
 hl
 hl
@@ -10169,11 +10354,12 @@ Ak
 Ak
 "}
 (71,1,1) = {"
-Ak
-Ak
-Ak
-Ak
 DI
+qD
+qD
+eN
+QO
+qD
 DI
 oN
 qD
@@ -10188,7 +10374,6 @@ qD
 DI
 DI
 TR
-DI
 DI
 hl
 hl
@@ -10231,14 +10416,15 @@ Ak
 Ak
 "}
 (72,1,1) = {"
-Ak
-Ak
-Ak
-Ak
 DI
+Tr
+qh
+qh
+qh
+BW
+SZ
 DI
-DI
-ni
+Nu
 qD
 QO
 KO
@@ -10247,7 +10433,6 @@ wp
 QO
 qD
 Nd
-DI
 DI
 DI
 DI
@@ -10293,14 +10478,15 @@ Ak
 Ak
 "}
 (73,1,1) = {"
-Ak
-Ak
-Ak
-Ak
 DI
-DI
-DI
+em
+Gp
+oJ
+iM
+fP
+RM
 tk
+zg
 lf
 qD
 QO
@@ -10310,8 +10496,7 @@ qD
 qS
 qD
 QO
-dt
-DI
+ml
 DI
 hl
 dX
@@ -10355,14 +10540,15 @@ Ak
 Ak
 "}
 (74,1,1) = {"
-Ak
-Ak
-Ak
-Ak
 DI
-DI
-DI
-DI
+RM
+Ma
+VP
+Bq
+fP
+RM
+tk
+RH
 DI
 IB
 IB
@@ -10373,7 +10559,6 @@ DI
 QO
 qD
 QO
-DI
 DI
 hl
 hl
@@ -10417,12 +10602,13 @@ Ak
 Ak
 "}
 (75,1,1) = {"
-Ak
-Ak
-Ak
-Ak
 DI
-DI
+Pb
+FD
+FD
+FD
+pL
+AG
 DI
 DI
 DI
@@ -10432,9 +10618,8 @@ IB
 IB
 zo
 DI
-Gq
-Gf
-DI
+Zs
+mY
 DI
 DI
 hl
@@ -10479,11 +10664,12 @@ Ak
 Ak
 "}
 (76,1,1) = {"
-Ak
-Ak
-Ak
-Ak
 DI
+qD
+qD
+wc
+QO
+qD
 DI
 DI
 DI
@@ -10493,7 +10679,6 @@ EG
 rf
 mS
 Es
-DI
 DI
 DI
 DI
@@ -10541,10 +10726,10 @@ Ak
 Ak
 "}
 (77,1,1) = {"
-Ak
-Ak
-Ak
-Ak
+DI
+DI
+DI
+DI
 DI
 DI
 DI
@@ -10603,10 +10788,10 @@ Ak
 Ak
 "}
 (78,1,1) = {"
-Ak
-Ak
-Ak
-Ak
+DI
+DI
+DI
+DI
 DI
 DI
 DI
