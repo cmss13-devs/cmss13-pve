@@ -72,7 +72,7 @@
 	total_positions = 1
 	spawn_positions = 1
 	gear_preset = /datum/equipment_preset/uscm/tl/marsoc
-	job_options = list(SSGT_VARIANT = "SSGT")
+	job_options = list(null)
 
 /datum/job/marine/tl/ai/forecon/handle_job_options(option)
 	gear_preset = initial(gear_preset)

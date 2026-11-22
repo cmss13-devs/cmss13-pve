@@ -47,7 +47,7 @@
 			if(JOB_SQUAD_ELEMENT_LEADER_MARSOC) marine_rk = "soctl"
 			if(JOB_SQUAD_ASSISTANT_ELEMENT_LEAD_MARSOC) marine_rk = "tl"
 			if(JOB_SQUAD_SARC_MARSOC) marine_rk = "med"
-			if(JOB_SQUAD_SAPPER_MARSOC) marine_rk = "tech"
+			if(JOB_SQUAD_SAPPER_MARSOC) marine_rk = "engi"
 			if(JOB_SQUAD_HEAVY_WEAPONS_OPERATOR_MARSOC) marine_rk = "gun"
 			if(JOB_SQUAD_SPECIAL_WEAPONS_OPERATOR_MARSOC) marine_rk = "spec"
 			if(JOB_SQUAD_ELEMENT_MEMBER_MARSOC) marine_rk = null
@@ -249,7 +249,7 @@
 			if(JOB_SQUAD_SARC_MARSOC)
 				marine_rk = "med"
 			if(JOB_SQUAD_SAPPER_MARSOC)
-				marine_rk = "tech"
+				marine_rk = "engi"
 			if(JOB_SQUAD_HEAVY_WEAPONS_OPERATOR_MARSOC)
 				marine_rk = "gun"
 			if(JOB_SQUAD_SPECIAL_WEAPONS_OPERATOR_MARSOC)

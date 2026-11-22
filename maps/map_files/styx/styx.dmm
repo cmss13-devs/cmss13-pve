@@ -1541,13 +1541,10 @@
 /turf/open/floor/almayer/plating,
 /area/styx/dorms)
 "ni" = (
-/obj/structure/machinery/light/double/blue{
+/obj/structure/machinery/light/double{
 	dir = 1;
-	pixel_x = 0;
-	pixel_y = 10;
-	color = "#8B0000";
-	light_color = "#8B0000";
-	name = "red"
+	light_power = 0.3;
+	pixel_y = 10
 	},
 /turf/open/floor/almayer/plate{
 	color = "#A9A9A9"
@@ -2197,11 +2194,7 @@
 /turf/open/floor/almayer/sterile,
 /area/styx/dorms)
 "tf" = (
-/obj/structure/machinery/light/double/blue{
-	color = "#8B0000";
-	light_color = "#8B0000";
-	name = "red"
-	},
+/obj/structure/machinery/light/small/red,
 /obj/structure/sign/safety/ladder{
 	pixel_x = 7;
 	pixel_y = -32
@@ -2742,15 +2735,10 @@
 /area/styx/cryo_cells)
 "yG" = (
 /obj/structure/window/framed/almayer,
-/obj/structure/machinery/light/double/blue{
+/obj/structure/machinery/light/double{
 	dir = 1;
-	pixel_x = 0;
-	pixel_y = 10;
-	color = "#8B0000";
-	light_color = "#8B0000";
-	name = "red";
-	alpha = 0;
-	mouse_opacity = 0
+	light_power = 0.3;
+	alpha = 0
 	},
 /turf/open/floor/almayer/plate{
 	color = "#A9A9A9"
@@ -3262,7 +3250,9 @@
 	},
 /area/styx/platoonarmory)
 "Dg" = (
-/obj/structure/machinery/floodlight/landing/floor,
+/obj/structure/machinery/floodlight/landing/floor{
+	light_color = "#8B0000"
+	},
 /turf/open/floor/almayer/plating,
 /area/styx/hangar)
 "Di" = (
@@ -3289,7 +3279,9 @@
 /turf/closed/wall/almayer/outer,
 /area/styx/dorms)
 "Du" = (
-/obj/structure/machinery/floodlight/landing/floor,
+/obj/structure/machinery/floodlight/landing/floor{
+	light_color = "#8B0000"
+	},
 /obj/structure/roof/cargocrane_tracks/horizontal{
 	pixel_y = 14
 	},
@@ -3780,13 +3772,8 @@
 /turf/open/floor/almayer/plating,
 /area/styx/prep_hallway)
 "IM" = (
-/obj/structure/machinery/light/double/blue{
-	dir = 1;
-	pixel_x = 0;
-	pixel_y = 10;
-	color = "#8B0000";
-	light_color = "#8B0000";
-	name = "red"
+/obj/structure/machinery/light/small/red{
+	dir = 1
 	},
 /obj/structure/pipes/standard/simple/hidden/supply,
 /obj/structure/pipes/standard/simple/hidden/scrubbers,
@@ -4487,10 +4474,9 @@
 /turf/open/floor/almayer_hull/blackfull,
 /area/styx/hangar)
 "Nd" = (
-/obj/structure/machinery/light/double/blue{
-	color = "#8B0000";
-	light_color = "#8B0000";
-	name = "red"
+/obj/structure/machinery/light/double{
+	dir = 2;
+	light_power = 0.3
 	},
 /turf/open/floor/almayer/plate{
 	color = "#A9A9A9"
@@ -5544,7 +5530,9 @@
 /turf/open/floor/almayer/edge/smooth/east,
 /area/styx/cryo_cells)
 "Yb" = (
-/obj/structure/machinery/floodlight/landing/floor,
+/obj/structure/machinery/floodlight/landing/floor{
+	light_color = "#8B0000"
+	},
 /obj/structure/machinery/landinglight/ds1/delaythree,
 /obj/structure/roof/cargocrane_tracks/horizontal{
 	pixel_y = 14

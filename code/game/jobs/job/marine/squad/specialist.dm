@@ -55,7 +55,7 @@
 	total_positions = 1
 	spawn_positions = 1
 	gear_preset = /datum/equipment_preset/uscm/spec/marsoc
-	job_options = list(CPL_VARIANT = "CPL")
+	job_options = list(null)
 
 /obj/effect/landmark/start/marine/spec/marsoc
 	name = JOB_SQUAD_SPECIAL_WEAPONS_OPERATOR_MARSOC

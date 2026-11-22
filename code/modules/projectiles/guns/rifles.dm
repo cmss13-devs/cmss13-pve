@@ -396,7 +396,7 @@
 	name = "\improper M41B pulse rifle"
 	desc = "A modified weapons platform based on the highly regarded M41A. Designed with additional attachment mounts to be more versatile, it ultimately never took off due to patent issues. A limited amount still float around due to back-stock."
 	current_mag = null
-	starting_attachment_types = list(/obj/item/attachable/stock/rifle/collapsible)
+	starting_attachment_types = null
 	attachable_allowed = list(
 		/obj/item/attachable/scope,
 		/obj/item/attachable/scope/mini_iff,
@@ -783,7 +783,23 @@
 		remove_bullet_trait("iff")
 	SEND_SIGNAL(src, COMSIG_GUN_IFF_TOGGLED, iff_enabled)
 
+/obj/item/weapon/gun/rifle/m46c/marsoc/set_gun_config_values()
+	..()
+	set_fire_delay(FIRE_DELAY_TIER_10)
+	set_burst_delay(FIRE_DELAY_TIER_10)
+	accuracy_mult = BASE_ACCURACY_MULT + HIT_ACCURACY_MULT_TIER_4
+	accuracy_mult_unwielded = BASE_ACCURACY_MULT - HIT_ACCURACY_MULT_TIER_8
+	scatter = SCATTER_AMOUNT_TIER_8
+	burst_scatter_mult = SCATTER_AMOUNT_TIER_8
+	scatter_unwielded = SCATTER_AMOUNT_TIER_2
+	damage_mult = BASE_BULLET_DAMAGE_MULT
+	recoil_unwielded = RECOIL_AMOUNT_TIER_2
+	fa_max_scatter = SCATTER_AMOUNT_TIER_8
+
+
 /obj/item/weapon/gun/rifle/m46c/marsoc
+	name = "\improper XM46A/2 pulse rifle"
+	desc = "An experimental iteration of what was already a rarely utilized weapon, which of course drew interest from a few parties. The XM46A/2 was unfortunately designed upon the basis of its predecessor taking off, which it never did. This weapons platform exchanges its prowess of slinging rounds down range with something of arguably even greater value: The ability to customize almost every exterior feature of its chassis with attachments."
 	starting_attachment_types = null
 	attachable_allowed = list(
 		/obj/item/attachable/scope,
@@ -813,7 +829,7 @@
 		/obj/item/attachable/bipod,
 		/obj/item/attachable/burstfire_assembly,
 		/obj/item/attachable/stock/rifle,
-		/obj/item/attachable/stock/rifle/collapsible
+		/obj/item/attachable/stock/rifle/collapsible,
 	)
 
 /obj/item/weapon/gun/rifle/m46c/marsoc/unloaded

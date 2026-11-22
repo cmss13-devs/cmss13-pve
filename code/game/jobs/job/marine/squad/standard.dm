@@ -95,7 +95,7 @@
 	total_positions = 2
 	spawn_positions = 2
 	gear_preset = /datum/equipment_preset/uscm/pfc/marsoc
-	job_options = list(LCPL_VARIANT = "LCPL")
+	job_options = list(null)
 
 /obj/effect/landmark/start/marine/marsoc
 	name = JOB_SQUAD_ELEMENT_MEMBER_MARSOC
