@@ -263,7 +263,9 @@ GLOBAL_LIST_INIT(cm_vending_clothing_engi, list(
 		/obj/item/storage/pouch/tools/tactical/marsoc,
 		/obj/item/storage/box/guncase/heavy/sentry,
 		/obj/item/storage/backpack/marine/satchel/big,
-		/obj/item/storage/belt/gun/m4a3/nailgun/tactical,
+		/obj/item/weapon/gun/smg/nailgun/compact/tactical,
+		/obj/item/ammo_magazine/smg/nailgun,
+		/obj/item/ammo_magazine/smg/nailgun,
 	)
 
 // RMC engi-vendor

@@ -90,6 +90,9 @@
 	vision_flags = 0
 	lighting_alpha = 255
 
+/obj/item/clothing/glasses/night/medhud/no_wallhacks
+	vision_flags = null
+
 /obj/item/clothing/glasses/night/ghillie_goggles
 	name = "\improper BiMex M3 day/night goggles"
 	desc = "A set of enhanced-vision goggles often issued to the marksman of USCM scout-sniper teams. Allows highlighted imaging of surroundings. Click it to toggle."

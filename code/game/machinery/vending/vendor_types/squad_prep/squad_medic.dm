@@ -176,7 +176,7 @@ GLOBAL_LIST_INIT(cm_vending_clothing_marsoc_medic, list(
 		list("Target Paint", 0, /obj/item/clothing/accessory/paint/target, MARINE_CAN_BUY_PAINT, VENDOR_ITEM_RECOMMENDED),
 
 		list("OVERWATCH & HUD EQUIPMENT (CHOOSE 1)", 0, null, null, null),
-		list("Mark 2 Battle Medic sight", 0, /obj/item/clothing/glasses/night/medhud/no_nvg, MARINE_CAN_BUY_GLASSES, VENDOR_ITEM_MANDATORY),
+		list("Mark 4 Battle Medic sight", 0, /obj/item/clothing/glasses/night/medhud/no_wallhacks, MARINE_CAN_BUY_GLASSES, VENDOR_ITEM_REGULAR),
 
 		list("BACKPACK (CHOOSE 1)", 0, null, null, null),
 		list("Logistics IMP Backpack", 0, /obj/item/storage/backpack/marine/satchel/big, MARINE_CAN_BUY_BACKPACK, VENDOR_ITEM_RECOMMENDED),
