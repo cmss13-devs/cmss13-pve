@@ -7,7 +7,7 @@
 	spawn_positions = 1
 
 /datum/job/antag/xenos/queen/set_spawn_positions(count)
-	return spawn_positions
+	spawn_positions = initial(spawn_positions)
 
 /datum/job/antag/xenos/queen/transform_to_xeno(mob/living/carbon/human/human_to_transform, hive_index)
 	SSticker.mode.pick_queen_spawn(human_to_transform, hive_index)
