@@ -242,18 +242,6 @@
 				marine_rk = "tl"
 			if(JOB_SQUAD_LEADER)
 				marine_rk = "leader"
-			if(JOB_SQUAD_ELEMENT_LEADER_MARSOC)
-				marine_rk = "soctl"
-			if(JOB_SQUAD_ASSISTANT_ELEMENT_LEAD_MARSOC)
-				marine_rk = "tl"
-			if(JOB_SQUAD_SARC_MARSOC)
-				marine_rk = "med"
-			if(JOB_SQUAD_SAPPER_MARSOC)
-				marine_rk = "engi"
-			if(JOB_SQUAD_HEAVY_WEAPONS_OPERATOR_MARSOC)
-				marine_rk = "gun"
-			if(JOB_SQUAD_SPECIAL_WEAPONS_OPERATOR_MARSOC)
-				marine_rk = "spec"
 			// FORECON surv specific stuff
 			if(JOB_FORECON_SL)
 				marine_rk = "leader"
@@ -271,7 +259,19 @@
 				marine_rk = null
 			if(JOB_FORECON_CO)
 				marine_rk = "co"
-
+			// MARSOC platoon roles
+			if(JOB_SQUAD_ELEMENT_LEADER_MARSOC)
+				marine_rk = "soctl"
+			if(JOB_SQUAD_ASSISTANT_ELEMENT_LEAD_MARSOC)
+				marine_rk = "tl"
+			if(JOB_SQUAD_SARC_MARSOC)
+				marine_rk = "med"
+			if(JOB_SQUAD_SAPPER_MARSOC)
+				marine_rk = "engi"
+			if(JOB_SQUAD_HEAVY_WEAPONS_OPERATOR_MARSOC)
+				marine_rk = "gun"
+			if(JOB_SQUAD_SPECIAL_WEAPONS_OPERATOR_MARSOC)
+				marine_rk = "spec"
 		if(marine_rk)
 			var/image/I = image('icons/mob/hud/marine_hud.dmi', current_human, "hudsquad")
 			I.color = "#5A934A"
