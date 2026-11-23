@@ -52,7 +52,7 @@
 	if(picked_spawner.roundstart_damage_max > 0)
 		if(istype(picked_spawner) && picked_spawner.roundstart_damage_max > 0)
 			for(var/i in 0 to picked_spawner.roundstart_damage_times)
-			H.take_limb_damage(rand(picked_spawner.roundstart_damage_min, picked_spawner.roundstart_damage_max), 0)
+				H.take_limb_damage(rand(picked_spawner.roundstart_damage_min, picked_spawner.roundstart_damage_max), 0)
 
 	H.name = H.get_visible_name()
 
@@ -151,7 +151,7 @@
 	job_options = null
 
 /datum/job/civilian/survivor/synth/set_spawn_positions(count)
-	return spawn_positions
+	spawn_positions = initial(spawn_positions)
 
 /datum/job/civilian/survivor/synth/handle_equip_gear(mob/living/carbon/human/equipping_human, obj/effect/landmark/survivor_spawner/picked_spawner)
 	if(picked_spawner.synth_equipment)
@@ -178,11 +178,12 @@
 	job_options = null
 
 /datum/job/civilian/survivor/commanding_officer/set_spawn_positions()
+	spawn_positions = initial(spawn_positions)
 	var/list/CO_survivor_types = SSmapping.configs[GROUND_MAP].CO_survivor_types
-	if(length(CO_survivor_types))
-		total_positions = 1
-		spawn_positions = 1
-	return spawn_positions
+	if(!length(CO_survivor_types) && !length(CO_survivor_types))
+		return
+	total_positions = 1
+	spawn_positions = 1
 
 /datum/job/civilian/survivor/commanding_officer/handle_equip_gear(mob/living/carbon/human/equipping_human, obj/effect/landmark/survivor_spawner/picked_spawner)
 	if(picked_spawner.CO_equipment)
