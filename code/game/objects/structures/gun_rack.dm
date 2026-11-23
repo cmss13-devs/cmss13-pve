@@ -251,3 +251,15 @@
 
 /obj/structure/gun_rack/nsg/Empty
 	initial_stored = 0
+
+/obj/structure/gun_rack/m39b
+	name = "M39B/3 submachinegun rack"
+	icon_state = "m39b"
+	desc = "ARMAT-produced gun rack for storage of long guns. This one is configured to hold up to five M39B/3 submachineguns."
+	initial_stored = 5
+	max_stored = 5
+	allowed_type = /obj/item/weapon/gun/smg/m39/elite/pve
+	populate_type = /obj/item/weapon/gun/smg/m39/elite/pve/unloaded
+
+/obj/structure/gun_rack/m39b/empty
+	initial_stored = 0

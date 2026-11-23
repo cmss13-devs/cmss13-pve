@@ -108,11 +108,10 @@ GLOBAL_LIST_INIT(cm_vending_gear_engi_marsoc, list(
 
 		list("HANDHELD DEFENSE (CHOOSE 1)", 0, null, null, null),
 		list("UA 42-F Sentry Flamer Case", 0, /obj/item/storage/box/guncase/heavy/sentry/flamer, MARINE_CAN_BUY_ATTACHMENT, VENDOR_ITEM_MANDATORY),
-		list("UA 12-G Shotgun Sentry Case", 0, /obj/item/storage/box/guncase/heavy/sentry/shotgun, MARINE_CAN_BUY_ATTACHMENT, VENDOR_ITEM_MANDATORY),
 		list("21S Overclocked Tesla Coil", 0, /obj/item/defenses/handheld/tesla_coil/stun, MARINE_CAN_BUY_ATTACHMENT, VENDOR_ITEM_MANDATORY),
 
 		list("EXPLOSIVE DISPERSAL ARMAMENT (CHOOSE 1)", 0, null, null, null),
-		list("M79 Grenade Launcher", 0, /obj/item/weapon/gun/launcher/grenade/m81/m79/modified, MARINE_CAN_BUY_SECONDARY, VENDOR_ITEM_RECOMMENDED),
+		list("M79 Grenade Launcher (Sawnoff)", 0, /obj/item/weapon/gun/launcher/grenade/m81/m79/modified/sawnoff, MARINE_CAN_BUY_SECONDARY, VENDOR_ITEM_RECOMMENDED),
 
 		list("EXPLOSIVES", 0, null, null, null),
 		list("M40 HEDP High Explosive Packet (x3 grenades)", 5, /obj/item/storage/box/packet/high_explosive, null, VENDOR_ITEM_REGULAR),
