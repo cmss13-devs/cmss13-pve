@@ -2,7 +2,6 @@
 	title = JOB_MESS_SERGEANT
 	total_positions = 2
 	spawn_positions = 1
-	allow_additional = TRUE
 	scaled = TRUE
 	selection_class = "job_ot"
 	flags_startup_parameters = ROLE_ADD_TO_DEFAULT
@@ -13,14 +12,12 @@
 /datum/job/civilian/chef/set_spawn_positions(count)
 	spawn_positions = mess_sergeant_slot_formula(count)
 
-/datum/job/civilian/chef/get_total_positions(latejoin = FALSE)
-	var/positions = spawn_positions
-	if(latejoin)
-		positions = mess_sergeant_slot_formula(get_total_marines())
-		if(positions <= total_positions_so_far)
-			positions = total_positions_so_far
-		else
-			total_positions_so_far = positions
+/datum/job/civilian/chef/get_total_positions(latejoin)
+	var/normal_positions = ..()
+	var/positions = isnull(scaled) ? normal_positions : mess_sergeant_slot_formula(get_total_marines())
+
+	if(positions <= total_positions_so_far)
+		positions = total_positions_so_far
 	else
 		total_positions_so_far = positions
 

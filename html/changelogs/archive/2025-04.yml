@@ -1,0 +1,188 @@
+2025-04-01:
+  BonniePandora:
+  - maptweak: Fixes for Otogi so github checks & the mapmerge tool don't complain
+  fira:
+  - bugfix: Fixed improper concurrent reading on map files, notably for Vans on Otogi.
+2025-04-02:
+  BonniePandora:
+  - rscadd: New smartgun ammo type; Impact Detonating. Negative AP, slows down non-huge
+      bugs
+  - balance: smartguns now use more power depending on the ammo type selected. Baseline
+      usage is increased too
+  - imageadd: Icon for the ammo mode when toggled to
+  DimDimich, Alming, AmoryBlaine:
+  - rscadd: UPP AG80 pulse rifle and ammo, attachments
+  - rscdel: Type71 Carbine (made into UPP commando carbine), Type71 flamer
+2025-04-05:
+  AmoryBlaine:
+  - bugfix: AG80 mags can fit in UPP magazine webbing
+2025-04-06:
+  BonniePandora:
+  - rscadd: Logistics presets for Army & Marines, pilot presets for USASF, redone
+      mortar operator preset for Marines
+  - rscadd: Custom-armor compliant versions of the army & usasf M4 armour
+  - rscadd: US Army & USASF hAI faction datums, so they shouldn't spawn immediately
+      hostile to USCM forces
+  - rscadd: CMB & UACG hAI faction datum, allied to all the UA armed forces
+  - rscadd: '''Voicelines'' for the above factions when spawned as hAI'
+  - rscadd: Various colonist 'squds' added to the hAI squad spawner, in English, LatAm,
+      Japanese & UPP flavours where available
+  - qol: ComTech is now a Combat Engineer, to seperate them as a specialist attached
+      to the section. They get slightly better engi-skills, materials & a sentry-gun
+  - qol: The USASF Para-rescue set up has been split in two, one kitted for medical
+      work, the other kitted for engineering works. Both retain the combined skillsets
+      so they can do the work the other sort is expected of doing
+  - qol: SEA has been rebranded into a Drill Instructor
+  - bugfix: Warrant Officer rank-boards now use the right sprite for non-marine ones
+  - imageadd: Sprites for logistics guys on the HUD, along with a new patch for the
+      engineers
+  - imageadd: Army & USASF HUD icons, displaying correctly in-game
+  - maptweak: Removed the now non-existant spawners from maps they were present on
+  Ediblebomb:
+  - spellcheck: Fixes a one letter typo in the hypersleep pod description
+  lordloko:
+  - rscadd: Added USCM Headset to FORECON vendor. Adjusted the description.
+2025-04-07:
+  The32bitguy:
+  - bugfix: Human Ai being unable to shoot guns set to burst fire mode.
+2025-04-08:
+  Dimich:
+  - rscadd: UPP flares, UPP boxes of flares, UPP boxes of survival rations, UPP security
+      access tuners, UPP binoculars
+2025-04-09:
+  AmoryBlaine:
+  - rscdel: Dust Raider presets
+  - rscadd: new sprites for each platoon, made all gear vendors use the upp_gear sprite
+  AndroBetel:
+  - rscadd: M112 HIMAT
+  BonniePandora:
+  - qol: hAI will no longer throw grenades made to be impact-fused by a UGL back at
+      players
+  - balance: As above, is a balance change too
+  tyeagg:
+  - bugfix: Fix Portrait Announcements being Cut Off
+2025-04-10:
+  Blundir, Crowford, Nauticall, Cuberound, Triiodine, LC4492:
+  - rscadd: added UPP, WY, PMC, TWE, WY emergency, Generic food rations, floor boxes
+      for them
+  - rscadd: US Military MRE now has cheese spread in multiple variations, beverage
+      bag in multiple variations (you need to pour water into it)
+  - rscadd: balaji imperial 4 packs and matches, matches added to WY vendor, both
+      matches and cigs can appear in TWE ration
+  - rscadd: US Military MRE now has an iconic MRE spoon
+  - rscadd: added numerous new mains, sides, snacks and desserts to US Military MRE
+  - rscadd: all ration food now has unique descriptions and reagents inside them having
+      custom reagents now displays food taste correctly
+  - rscadd: new rations to loadouts that should logically have them
+  - rscadd: The Rover vendors supply FSR ration packs instead of US-Mil Rations.
+  - rscdel: WY brand MRE box got removed and replaced with an actual WY rations
+  - rscdel: USCM tray boxes got removed and replaced with an actual MREs
+  - refactor: mre backend changed severely and moved to separate .dm files
+  - rscdel: core nutrient reagent is no longer used for mre foods, apart from some
+      exceptions
+  BonniePandora:
+  - rscadd: Grenade boxes for the Type 6, RDG-17, Type 8 WP, VOG 73 grenades, M42
+      MFHS, G-2 SEBB, M15 frag, M74 AGMF/AGMI/AGMS and 40mm HEDP/HEFA/baton/buckshot/incen,
+      featuring closed, open, half-full & empty states
+  - rscadd: All other grenade boxes got a similar treatment, having sprites for their
+      various states.
+  - qol: Fixed the grenade armor webbings to accept the new grenade types
+  - code_imp: Grenade boxes swapped over to be magazine_box subtypes, with all the
+      havoc that brings
+  - rscdel: The M40 HEFA box is no more. Let that meme die already
+  - imageadd: Sprites for the UPP boxes & contents
+  - imageadd: Sprite for cooking-off grenade boxes
+  - qol: Vomit & door-shock stuns are lessened considerably
+  - balance: As above, technically a balance thing too
+2025-04-13:
+  AndroBetel:
+  - bugfix: HIMAT correctly deafens people around it.
+  KoishiVibe:
+  - rscadd: Ammo flag AMMO_PRONETARGET, which ignores prone hitprotection.
+  - rscadd: '''confetti'' M20 landmines, which do very low damage.'
+  - balance: Claymores now deal more damage in blast
+  - balance: Claymores now have more lethal and numerous shrapnel
+2025-04-15:
+  tyeagg:
+  - rscadd: more seamless looking blood decals
+2025-04-16:
+  BonniePandora:
+  - rscadd: The XM99A Phased Plasma Pulse Rifle and it's corresponding ammo
+  - code_imp: Various things changed behind the curtain for the above weapon system
+  - soundadd: 'Firing, reloading and unloading sounds for the XM99A, taken from Aliens:
+      Colonial Marines'
+  - imageadd: Sprites for the XM99A in various camos, along with the battery cell,
+      done by Triiodine
+  - imageadd: Guncase sprite for the weapon
+2025-04-17:
+  Harry Drathek Kashargul:
+  - bugfix: mouse 4/5 presses no longer count as mouse 1 presses
+  - bugfix: the audio player shouldn't blow up in weird circumstances
+  - bugfix: Dropship equipment weapons that aren't in a weapon slot now get defaulted
+      gimbal offsets (none) instead of crashing
+  - ui: Tweaked the size of gauges in the ping relay browser
+  - bugfix: large batch processes offsetting the chat scrollbar
+2025-04-18:
+  Drathek:
+  - ui: The ghost observer tacmap will now scroll both horizontally and vertically
+      as needed to display a large map.
+  - ui: The TGUI panels for tacmaps and drawings have been polished to utilize more
+      minimap space fully.
+  - refactor: Refactored minimap generation code to calculate min and max faster,
+      to more aggressively trim minimaps, and to support larger minimaps (was 480px
+      now 512px).
+  - bugfix: Fixes an issue where predator tacmap would take over the ghost tacmap
+      preventing it from opening for observers
+  MistChristmas:
+  - bugfix: Fixes Examining whilst a weapon is in your off-hand.
+  - rscadd: Examine IFF now works with non Alt-IFF weapons like the SU-6 Smartpistol
+2025-04-21:
+  BonniePandora:
+  - qol: PMC armor can hold a greater variety of things, namely holster belts & the
+      general belt
+  - bugfix: Fixes the M39 holster-belt overlaying the stored gun icon above everything
+  - bugfix: Corrects the PLU lamp rig name & slowdown
+  - bugfix: The ADM is now goop-proof
+  - spellcheck: Fixes the lore-description of the M39B/3 and the M39 duplex magazines
+      description
+  - imageadd: Adds the missing icon-states & renames a few incorrect ones for water
+      bottles
+  Yorkoh:
+  - balance: made some Recreational stuff cheaper
+  - balance: made some Miscellaneous stuff cheaper
+  nauticall:
+  - maptweak: Revised USS Rover, for FORECON operations.
+  - imageadd: Added segmented vertical tactical map table variant.
+2025-04-22:
+  BonniePandora:
+  - qol: Salt no longer makes you yawn when consumed
+  - bugfix: Incendiary buckshot has the correct pellet-spread type
+  - balance: Flechette now imparts a small knockback upon hit
+  - balance: Tweaks the incen buckshot projectile damage
+  - rscadd: USASF M41 subtype
+  - imageadd: Recoloured sprites for the USASF OFSLO jumpsuit & US Army jumpsuit
+2025-04-23:
+  AndroBetel:
+  - code_imp: ' makes personal closets subtypes for each and every role of each faction'
+  BonniePandora:
+  - bugfix: USASF Para-rescue presets are properly equipped now
+  banana-battery:
+  - rscadd: adds GM tools and extra information for shake
+2025-04-27:
+  Ediblebomb:
+  - bugfix: Platoon Commanders now use the proper equipped preset in the setup menu.
+  Lakynet:
+  - mapadd: Calliope Highway, Calliope Desert Bus
+2025-04-28:
+  BonniePandora:
+  - bugfix: Can no longer fit UPP caseless 40mm grenades or old-style cased 40mm grenades
+      into the USCM 30mm UGL and vice versa. Use the right kind of launcher, stinky.
+2025-04-29:
+  Ediblebomb:
+  - spellcheck: Changes "cyrostasis" in POSSIBLE_DREAM_TOPICS to "hypersleep"
+2025-04-30:
+  BonniePandora:
+  - rscadd: Insurgent factions for each of the major factions
+  - rscadd: L54 TWE pistol
+  - rscdel: CLF as an entity
+  - code_imp: Insurgents added to the hAI faction stuff so they have 'voice lines'
