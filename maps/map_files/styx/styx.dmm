@@ -116,14 +116,6 @@
 /turf/open/floor/almayer/edge/smooth/southeast,
 /area/styx/dorms)
 "bw" = (
-/obj/structure/machinery/light/double/blue{
-	dir = 8;
-	pixel_x = -4;
-	pixel_y = 0;
-	color = "#8B0000";
-	light_color = "#8B0000";
-	name = "red"
-	},
 /obj/structure/pipes/vents/pump,
 /obj/effect/decal/warning_stripes/asteroid{
 	icon_state = "S"
@@ -771,6 +763,10 @@
 	},
 /turf/open/floor/almayer/plating_striped,
 /area/styx/cryo_cells)
+"hG" = (
+/obj/structure/machinery/cm_vending/sorted/cargo_guns/squad/marsoc/foreign_weaponry,
+/turf/open/floor/corsat/plate,
+/area/styx/platoonarmory)
 "hH" = (
 /turf/open/floor/almayer/blackcorner,
 /area/styx/dorms)
@@ -1888,14 +1884,6 @@
 /turf/open/floor/almayer_hull/blackfull,
 /area/styx/hangar)
 "qy" = (
-/obj/structure/machinery/light/double/blue{
-	dir = 8;
-	pixel_x = -4;
-	pixel_y = -3;
-	color = "#8B0000";
-	light_color = "#8B0000";
-	name = "red"
-	},
 /obj/structure/machinery/door_control{
 	name = "Hypersleep Access Release";
 	id = "hypersleep";
@@ -2355,6 +2343,10 @@
 /area/styx/prep_hallway)
 "tM" = (
 /obj/structure/machinery/cm_vending/sorted/attachments/squad/marsoc,
+/obj/structure/machinery/cm_vending/sorted/attachments/squad/marsoc/foreign_weaponry{
+	pixel_x = 0;
+	pixel_y = 25
+	},
 /turf/open/floor/almayer_hull/blackfull,
 /area/styx/platoonarmory)
 "tV" = (
@@ -3418,7 +3410,7 @@
 	},
 /obj/structure/sign/banners/usa_flag{
 	pixel_x = 15;
-	pixel_y = 42
+	pixel_y = 49
 	},
 /turf/open/floor/almayer_hull/blackfull,
 /area/styx/platoonarmory)
@@ -3824,15 +3816,15 @@
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/styx/cryo_cells)
-"Hy" = (
-/obj/structure/machinery/light/double/blue{
-	dir = 4;
-	pixel_x = 4;
-	pixel_y = 0;
-	color = "#8B0000";
-	light_color = "#8B0000";
-	name = "red"
+"Ht" = (
+/obj/structure/machinery/light/double{
+	dir = 2;
+	light_power = 0.3
 	},
+/obj/structure/machinery/cm_vending/clothing/marine/snowflake/marsoc,
+/turf/open/floor/corsat/plate,
+/area/styx/platoonarmory)
+"Hy" = (
 /obj/effect/decal/warning_stripes/asteroid{
 	icon_state = "S"
 	},
@@ -4787,22 +4779,6 @@
 	},
 /turf/open/space/basic,
 /area/styx/canteen)
-"Nu" = (
-/obj/structure/machinery/light/double{
-	dir = 2;
-	light_power = 0.3
-	},
-/obj/structure/surface/table/reinforced/black,
-/obj/item/facepaint/skull{
-	pixel_x = -1;
-	pixel_y = 1
-	},
-/obj/item/facepaint/sniper{
-	pixel_x = 12;
-	pixel_y = -1
-	},
-/turf/open/floor/corsat/plate,
-/area/styx/platoonarmory)
 "Nv" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 4
@@ -5244,16 +5220,11 @@
 /turf/open/floor/almayer/dark_sterile,
 /area/styx/cryo_cells)
 "QU" = (
-/obj/structure/machinery/light/double/blue{
-	dir = 4;
-	pixel_x = 4;
-	pixel_y = -3;
-	color = "#8B0000";
-	light_color = "#8B0000";
-	name = "red"
+/obj/structure/machinery/door/poddoor/almayer{
+	dir = 4
 	},
-/turf/open/floor/almayer/plating_striped,
-/area/styx/cryo_cells)
+/turf/open/floor/corsat/squares,
+/area/styx/prep_hallway)
 "Rb" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/floor/corsat/plate,
@@ -5297,11 +5268,11 @@
 	},
 /obj/structure/surface/table/reinforced/black,
 /obj/item/tool/hand_labeler{
-	pixel_x = -2;
+	pixel_x = -6;
 	pixel_y = 3
 	},
 /obj/item/tool/hand_labeler{
-	pixel_x = 10;
+	pixel_x = 8;
 	pixel_y = 9
 	},
 /turf/open/floor/corsat/plate,
@@ -5794,7 +5765,7 @@
 	pixel_x = -11;
 	pixel_y = 0
 	},
-/obj/structure/gun_rack/m39b{
+/obj/structure/gun_rack/m39b3{
 	pixel_x = 0;
 	pixel_y = 27
 	},
@@ -5844,16 +5815,16 @@
 "Xl" = (
 /obj/structure/surface/table/reinforced/black,
 /obj/item/facepaint{
-	pixel_x = -8;
+	pixel_x = -14;
 	pixel_y = 6
 	},
 /obj/item/facepaint/black{
-	pixel_x = 4;
-	pixel_y = 0
+	pixel_x = -1;
+	pixel_y = 5
 	},
 /obj/item/facepaint/brown{
-	pixel_x = 18;
-	pixel_y = 4
+	pixel_x = 9;
+	pixel_y = 1
 	},
 /obj/structure/machinery/power/apc/power/south,
 /turf/open/floor/almayer_hull,
@@ -9484,7 +9455,7 @@ zj
 md
 lx
 db
-QU
+rj
 ge
 jL
 jq
@@ -10286,7 +10257,7 @@ YW
 wp
 lf
 qD
-Nu
+Ht
 DI
 DI
 DI
@@ -10467,7 +10438,7 @@ tM
 qD
 lf
 qD
-nd
+hG
 yG
 nd
 qD
@@ -10838,7 +10809,7 @@ ky
 DI
 DI
 DI
-Ea
+IB
 IB
 IB
 IB
@@ -10932,8 +10903,8 @@ iL
 iL
 iL
 iL
-iL
-iL
+QU
+QU
 iL
 iL
 iL

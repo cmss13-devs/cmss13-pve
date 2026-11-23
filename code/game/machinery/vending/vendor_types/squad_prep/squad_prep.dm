@@ -1208,6 +1208,7 @@
 		list("M44 Combat Revolver", round(scale * 5), /obj/item/weapon/gun/revolver/m44, VENDOR_ITEM_REGULAR),
 		list("M4A3 Service Pistol", round(scale * 5), /obj/item/weapon/gun/pistol/m4a3, VENDOR_ITEM_REGULAR),
 		list("VP78 pistol", round(scale * 5), /obj/item/weapon/gun/pistol/vp78, VENDOR_ITEM_REGULAR),
+		list("Beretta 92FS M9 Pistol", round(scale * 5), /obj/item/weapon/gun/pistol/b92fs, VENDOR_ITEM_REGULAR),
 		list("M82F Flare Gun", round(scale * 3), /obj/item/weapon/gun/flare, VENDOR_ITEM_REGULAR),
 
 		list("SIDEARM MUNITIONS", -1, null, null),
@@ -1218,6 +1219,7 @@
 		list("M44 Speedloader", round(scale * 15), /obj/item/ammo_magazine/revolver, VENDOR_ITEM_REGULAR),
 		list("M4A3 Magazine", round(scale * 15), /obj/item/ammo_magazine/pistol, VENDOR_ITEM_REGULAR),
 		list("VP78 Magazine", round(scale * 15), /obj/item/ammo_magazine/pistol/vp78, VENDOR_ITEM_REGULAR),
+		list("Beretta 92FS Magazine", round(scale * 15), /obj/item/ammo_magazine/pistol/b92fs, VENDOR_ITEM_REGULAR),
 
 		list("MISCELLANEOUS", -1, null, null),
 		list("Fire Extinguisher (Portable)", round(scale * 5), /obj/item/tool/extinguisher/mini, VENDOR_ITEM_REGULAR),
@@ -1228,6 +1230,37 @@
 		list("M13 Fighting Knife", round(scale * 25), /obj/item/weapon/knife/marine, VENDOR_ITEM_REGULAR),
 		)
 
+/obj/structure/machinery/cm_vending/sorted/cargo_guns/squad/marsoc/foreign_weaponry
+	name = "\improper ARMAT Systems Automated Non-Standard Weapon Storage Rack"
+	desc = "An automated supply rack with access to the ship's storage bays. This one has the brand of ARMAT painted across it and looks to have been modified for a whole host of weaponry."
+	icon_state = "antag_guns"
+
+/obj/structure/machinery/cm_vending/sorted/cargo_guns/squad/marsoc/foreign_weaponry/populate_product_list(scale)
+	listed_products = list(
+		list("FOREIGN PRIMARY WEAPON SELECTION (CHOOSE 1)", -1, null, null),
+		list("Type 71 Pulse Rifle (UPP)", 0, /obj/item/weapon/gun/rifle/type71, MARINE_CAN_BUY_ESSENTIALS, VENDOR_ITEM_MANDATORY),
+		list("KS-29 Riot Shotgun (UPP)", 0, /obj/item/weapon/gun/shotgun/pump/type23, MARINE_CAN_BUY_ESSENTIALS, VENDOR_ITEM_MANDATORY),
+		list("Type 64 Submachinegun (UPP)", 0, /obj/item/weapon/gun/smg/bizon, MARINE_CAN_BUY_ESSENTIALS, VENDOR_ITEM_MANDATORY),
+		list("NSG L23A1 Pulse Rifle (TWE)", 0, /obj/item/weapon/gun/rifle/nsg23/rmc, MARINE_CAN_BUY_ESSENTIALS, VENDOR_ITEM_MANDATORY),
+		list("L6A2 Submachinegun (TWE)", 0, /obj/item/weapon/gun/smg/m39/elite/rmc, MARINE_CAN_BUY_ESSENTIALS, VENDOR_ITEM_MANDATORY),
+
+		list("FOREIGN SECONDARY WEAPON SELECTION (CHOOSE 1)", -1, null, null),
+		list("Type 73 Pistol (UPP)", 0, /obj/item/weapon/gun/pistol/t73, MARINE_CAN_BUY_SECONDARY, VENDOR_ITEM_MANDATORY),
+		list("ZHNK-72 Revolver (UPP)", 0, /obj/item/weapon/gun/revolver/upp, MARINE_CAN_BUY_SECONDARY, VENDOR_ITEM_MANDATORY),
+		list("L165A1 Service Pistol (TWE)", 0, /obj/item/weapon/gun/pistol/vp78/rmc, MARINE_CAN_BUY_SECONDARY, VENDOR_ITEM_MANDATORY),
+
+		list("FOREIGN PRIMARY MUNITIONS", -1, null, null),
+		list("Type 71 HEAP magazine (UPP)", 64, /obj/item/ammo_magazine/rifle/type71/heap, VENDOR_ITEM_REGULAR),
+		list("Heavy Buckshot Box (UPP)", 5, /obj/item/ammo_magazine/shotgun/buckshot/heavy, VENDOR_ITEM_REGULAR),
+		list("Heavy Slug Shell Box (UPP)", 5, /obj/item/ammo_magazine/shotgun/slug/heavy, VENDOR_ITEM_REGULAR),
+		list("Heavy Dragonsbreath Slug Shell Box (UPP)", 5, /obj/item/ammo_magazine/shotgun/slug/dragonsbreath, VENDOR_ITEM_REGULAR),
+		list("NSG L23A1 HEAP Magazine (TWE)", 64, /obj/item/ammo_magazine/rifle/nsg23/heap, VENDOR_ITEM_REGULAR),
+
+		list("FOREIGN SECONDARY MUNITIONS", -1, null, null),
+		list("Type 73 Magazine (UPP)", 32, /obj/item/ammo_magazine/pistol/t73, VENDOR_ITEM_REGULAR),
+		list("ZHNK-72 Speed Loader (UPP)", 32, /obj/item/ammo_magazine/revolver/upp, VENDOR_ITEM_REGULAR),
+		list("L165A1 Squash-Head Magazine (TWE)", 32, /obj/item/ammo_magazine/pistol/vp78/rmc, VENDOR_ITEM_REGULAR),
+	)
 //--------------SQUAD ATTACHMENTS VENDOR--------------
 
 /obj/structure/machinery/cm_vending/sorted/attachments/squad
@@ -1315,7 +1348,7 @@
 		list("Burst Fire Assembly", 15, /obj/item/attachable/burstfire_assembly, VENDOR_ITEM_REGULAR),
 		list("Gyroscopic Stabilizer", 15, /obj/item/attachable/gyro, VENDOR_ITEM_REGULAR),
 		list("Laser Sight", 15, /obj/item/attachable/lasersight, VENDOR_ITEM_REGULAR),
-		list("Mini Flamethrower", 15, /obj/item/attachable/attached_gun/flamer, VENDOR_ITEM_REGULAR),
+		list("Advanced Mini Flamethrower", 15, /obj/item/attachable/attached_gun/flamer/advanced, VENDOR_ITEM_REGULAR),
 		list("XM-VESG-1 Flamer Nozzle", 15, /obj/item/attachable/attached_gun/flamer_nozzle, VENDOR_ITEM_REGULAR),
 		list("PN 30mm Underslung Grenade Launcher (NON-DETACHABLE)", 15, /obj/item/attachable/attached_gun/grenade/mk1, VENDOR_ITEM_REGULAR),
 		list("PN 30mm Underslung Grenade Launcher (Green) ((NON-DETACHABLE))", 15, /obj/item/attachable/attached_gun/grenade/mk1/recon, VENDOR_ITEM_REGULAR),
@@ -1332,6 +1365,30 @@
 		list("M41A Collapsible Stock", 15, /obj/item/attachable/stock/rifle/collapsible, VENDOR_ITEM_REGULAR),
 		list("M44 Magnum Sharpshooter Stock", 15, /obj/item/attachable/stock/revolver, VENDOR_ITEM_REGULAR)
 		)
+
+/obj/structure/machinery/cm_vending/sorted/attachments/squad/marsoc/foreign_weaponry
+	name = "\improper ARMAT Systems Non-Standard Attachment Vendor"
+	desc = "An automated supply rack hooked up to a storage of non-standard weapons attachments. Christmas came early."
+
+/obj/structure/machinery/cm_vending/sorted/attachments/squad/marsoc/foreign_weaponry/populate_product_list(scale)
+	listed_products = list(
+		list("RAIL", -1, null, null),
+		list("PO-M 4x Optic (UPP)", 15, /obj/item/attachable/scope/upp, VENDOR_ITEM_REGULAR),
+		list("1P93 2x Optic (UPP)", 15, /obj/item/attachable/scope/mini/upp, VENDOR_ITEM_REGULAR),
+		list("EKP-9-M Red Dot Sight (UPP)", 15, /obj/item/attachable/reddot/upp, VENDOR_ITEM_REGULAR),
+		list("PK-12 Reflex Sight (UPP)", 15, /obj/item/attachable/reflex/upp, VENDOR_ITEM_REGULAR),
+		list("Zvezda Laser Module (UPP)", 15, /obj/item/attachable/lasersight/upp, VENDOR_ITEM_REGULAR),
+		list("L4A5 SUMSA Mini-Scope (TWE)", 15, /obj/item/attachable/scope/mini/nsg23/rmc, VENDOR_ITEM_REGULAR),
+
+
+		list("UNDERBARREL", -1, null, null),
+		list("RK-5 Vertical Grip (UPP)", 15, /obj/item/attachable/verticalgrip/upp, VENDOR_ITEM_REGULAR),
+		list("RK-9 Angled Grip (UPP)", 15, /obj/item/attachable/angledgrip/upp, VENDOR_ITEM_REGULAR),
+		list("RK-5A Flashlight Grip (UPP)", 15, /obj/item/attachable/flashlight/grip/upp, VENDOR_ITEM_REGULAR),
+		list("Type 83 Overslung Grenade Launcher (UPP)", 15, /obj/item/attachable/attached_gun/grenade/type71, VENDOR_ITEM_REGULAR),
+		list("L34 30mm Underslung Grenade Launcher (TWE)", 15, /obj/item/attachable/attached_gun/grenade/nsg, VENDOR_ITEM_REGULAR),
+
+	)
 
 //------------ESSENTIAL SETS---------------
 /obj/effect/essentials_set/random/uscm_light_armor
@@ -1447,3 +1504,117 @@ GLOBAL_LIST_INIT(cm_vending_clothing_marine_snowflake, list(
 
 /obj/structure/machinery/cm_vending/clothing/marine/snowflake/get_listed_products(mob/user)
 	return GLOB.cm_vending_clothing_marine_snowflake
+
+GLOBAL_LIST_INIT(cm_vending_clothing_marine_snowflake_marsoc, list(
+	list("SHIRTS AND UNIFORMS", 0, null, null, null),
+	list("White T-Shirt and Brown Jeans", 12, /obj/item/clothing/under/tshirt/w_br, null, VENDOR_ITEM_REGULAR),
+	list("Gray T-Shirt and Blue Jeans", 12, /obj/item/clothing/under/tshirt/gray_blu, null, VENDOR_ITEM_REGULAR),
+	list("Red T-Shirt and Black Jeans", 12, /obj/item/clothing/under/tshirt/r_bla, null, VENDOR_ITEM_REGULAR),
+	list("Frontier Jumpsuit", 12, /obj/item/clothing/under/rank/synthetic/frontier, null, VENDOR_ITEM_REGULAR),
+	list("UA Grey Jumpsuit", 12, /obj/item/clothing/under/colonist/ua_civvies, null, VENDOR_ITEM_REGULAR),
+	list("UA Brown Jumpsuit", 12, /obj/item/clothing/under/colonist/wy_davisone, null, VENDOR_ITEM_REGULAR),
+	list("UA Green Utility Uniform", 12, /obj/item/clothing/under/rank/synthetic/utility, null, VENDOR_ITEM_REGULAR),
+	list("Grey Utilities", 12, /obj/item/clothing/under/rank/synthetic/utility/yellow, null, VENDOR_ITEM_REGULAR),
+	list("Grey Utilities and Blue Jeans", 12, /obj/item/clothing/under/rank/synthetic/utility/red, null, VENDOR_ITEM_REGULAR),
+	list("Blue Utilities and Brown Jeans", 12, /obj/item/clothing/under/rank/synthetic/utility/blue, null, VENDOR_ITEM_REGULAR),
+	list("Light-Blue Boilersuit", 12, /obj/item/clothing/under/colonist/boilersuit, null, VENDOR_ITEM_REGULAR),
+	list("Cyan Boilersuit", 12, /obj/item/clothing/under/colonist/boilersuit/cyan, null, VENDOR_ITEM_REGULAR),
+	list("Dark-Blue Boilersuit", 12, /obj/item/clothing/under/colonist/boilersuit/darkblue, null, VENDOR_ITEM_REGULAR),
+	list("Grey Boilersuit", 12, /obj/item/clothing/under/colonist/boilersuit/grey, null, VENDOR_ITEM_REGULAR),
+	list("Khaki Boilersuit", 12, /obj/item/clothing/under/colonist/boilersuit/khaki, null, VENDOR_ITEM_REGULAR),
+	list("White Boilersuit", 12, /obj/item/clothing/under/colonist/boilersuit/white, null, VENDOR_ITEM_REGULAR),
+	list("Grey Workwear", 12, /obj/item/clothing/under/colonist/workwear, null, VENDOR_ITEM_REGULAR),
+	list("Blue Workwear", 12, /obj/item/clothing/under/colonist/workwear/blue, null, VENDOR_ITEM_REGULAR),
+	list("Green Workwear", 12, /obj/item/clothing/under/colonist/workwear/green, null, VENDOR_ITEM_REGULAR),
+	list("Khaki Workwear", 12, /obj/item/clothing/under/colonist/workwear/khaki, null, VENDOR_ITEM_REGULAR),
+	list("Pink Workwear", 12, /obj/item/clothing/under/colonist/workwear/pink, null, VENDOR_ITEM_REGULAR),
+	list("White Service Uniform", 12, /obj/item/clothing/under/colonist/white_service, null, VENDOR_ITEM_REGULAR),
+	list("Steward Clothes", 12, /obj/item/clothing/under/colonist/wy_joliet_shopsteward, null, VENDOR_ITEM_REGULAR),
+	list("Red Dress Skirt", 12, /obj/item/clothing/under/blackskirt, null, VENDOR_ITEM_REGULAR),
+	list("Blue Suit Pants", 12, /obj/item/clothing/under/liaison_suit/blue, null, VENDOR_ITEM_REGULAR),
+	list("Brown Suit Pants", 12, /obj/item/clothing/under/liaison_suit/brown, null, VENDOR_ITEM_REGULAR),
+	list("White Suit Pants", 12, /obj/item/clothing/under/liaison_suit/corporate_formal, null, VENDOR_ITEM_REGULAR),
+	list("Hard-Worn Suit", 12, /obj/item/clothing/under/det/black, null, VENDOR_ITEM_REGULAR),
+
+	list("GLASSES", 0, null, null, null),
+	list("Marine RPG Glasses", 12, /obj/item/clothing/glasses/regular, null, VENDOR_ITEM_REGULAR),
+	list("Prescription Glasses", 12, /obj/item/clothing/glasses/regular/hipster, null, VENDOR_ITEM_REGULAR),
+	list("Sunglasses", 12, /obj/item/clothing/glasses/sunglasses, null, VENDOR_ITEM_REGULAR),
+	list("BiMex Polarized Shades", 12, /obj/item/clothing/glasses/sunglasses/big, null, VENDOR_ITEM_REGULAR),
+	list("BiMex Classic Ballistic Sunglasses", 12, /obj/item/clothing/glasses/sunglasses/big/classic, null, VENDOR_ITEM_REGULAR),
+	list("BiMex Tactical Shades", 12, /obj/item/clothing/glasses/sunglasses/big/orange, null, VENDOR_ITEM_REGULAR),
+	list("Aviator Shades", 12, /obj/item/clothing/glasses/sunglasses/aviator, null, VENDOR_ITEM_REGULAR),
+
+	list("SHOES", 0, null, null, null),
+	list("Boots", 12, /obj/item/clothing/shoes/marine/civilian, null, VENDOR_ITEM_REGULAR),
+	list("Boots, Rugged", 12, /obj/item/clothing/shoes/combat, null, VENDOR_ITEM_REGULAR),
+	list("Boots, Jackboots", 12, /obj/item/clothing/shoes/jackboots, null, VENDOR_ITEM_REGULAR),
+	list("Shoes, Black", 12, /obj/item/clothing/shoes/black, null, VENDOR_ITEM_REGULAR),
+	list("Shoes, Blue", 12, /obj/item/clothing/shoes/blue, null, VENDOR_ITEM_REGULAR),
+	list("Shoes, Brown", 12, /obj/item/clothing/shoes/brown, null, VENDOR_ITEM_REGULAR),
+	list("Shoes, Green", 12, /obj/item/clothing/shoes/green, null, VENDOR_ITEM_REGULAR),
+	list("Shoes, Purple", 12, /obj/item/clothing/shoes/purple, null, VENDOR_ITEM_REGULAR),
+	list("Shoes, Red", 12, /obj/item/clothing/shoes/red, null, VENDOR_ITEM_REGULAR),
+	list("Shoes, White", 12, /obj/item/clothing/shoes/white, null, VENDOR_ITEM_REGULAR),
+	list("Shoes, Yellow", 12, /obj/item/clothing/shoes/yellow, null, VENDOR_ITEM_REGULAR),
+	list("Shoes, Laceup", 12, /obj/item/clothing/shoes/laceup, null, VENDOR_ITEM_REGULAR),
+	list("Shoes, Laceup Brown", 12, /obj/item/clothing/shoes/laceup/brown, null, VENDOR_ITEM_REGULAR),
+	list("Shoes, Reebok Stompers", 12, /obj/item/clothing/shoes/stompers, null, VENDOR_ITEM_REGULAR),
+
+	list("HEADWEAR", 0, null, null, null),
+	list("Beanie", 12, /obj/item/clothing/head/beanie, null, VENDOR_ITEM_REGULAR),
+	list("Beret, Engineering", 12, /obj/item/clothing/head/beret/eng, null, VENDOR_ITEM_REGULAR),
+	list("Beret, Purple", 12, /obj/item/clothing/head/beret/jan, null, VENDOR_ITEM_REGULAR),
+	list("Beret, Red", 12, /obj/item/clothing/head/beret/cm/red, null, VENDOR_ITEM_REGULAR),
+	list("Beret, Standard", 12, /obj/item/clothing/head/beret/cm, null, VENDOR_ITEM_REGULAR),
+	list("Beret, Tan", 12, /obj/item/clothing/head/beret/cm/tan, null, VENDOR_ITEM_REGULAR),
+	list("Beret, Green", 12, /obj/item/clothing/head/beret/cm, MARINE_CAN_BUY_HELMET, VENDOR_ITEM_REGULAR),
+	list("Beret, Black", 12, /obj/item/clothing/head/beret/cm/black, null, VENDOR_ITEM_REGULAR),
+	list("Beret, White", 12, /obj/item/clothing/head/beret/cm/white, null, VENDOR_ITEM_REGULAR),
+	list("Ushanka", 12, /obj/item/clothing/head/ushanka, null, VENDOR_ITEM_REGULAR),
+	list("Cap", 12, /obj/item/clothing/head/cmcap, null, VENDOR_ITEM_REGULAR),
+	list("Fedora", 12, /obj/item/clothing/head/fedora, null, VENDOR_ITEM_REGULAR),
+
+	list("SUIT", 0, null, null, null),
+	list("Bomber Jacket, Brown", 12, /obj/item/clothing/suit/storage/bomber, null, VENDOR_ITEM_REGULAR),
+	list("Bomber Jacket, Black", 12, /obj/item/clothing/suit/storage/bomber/alt, null, VENDOR_ITEM_REGULAR),
+	list("Bomber Jacket, Grey", 12, /obj/item/clothing/suit/storage/jacket/marine/bomber/grey, null, VENDOR_ITEM_REGULAR),
+	list("Bomber Jacket, Khaki", 12, /obj/item/clothing/suit/storage/jacket/marine/bomber, null, VENDOR_ITEM_REGULAR),
+	list("Bomber Jacket, Red", 12, /obj/item/clothing/suit/storage/jacket/marine/bomber/red, null, VENDOR_ITEM_REGULAR),
+	list("Windbreaker, Brown", 12, /obj/item/clothing/suit/storage/windbreaker/windbreaker_brown, null, VENDOR_ITEM_REGULAR),
+	list("Windbreaker, Grey", 12, /obj/item/clothing/suit/storage/windbreaker/windbreaker_gray, null, VENDOR_ITEM_REGULAR),
+	list("Windbreaker, Green", 12, /obj/item/clothing/suit/storage/windbreaker/windbreaker_green, null, VENDOR_ITEM_REGULAR),
+	list("Windbreaker, First Responder", 12, /obj/item/clothing/suit/storage/windbreaker/windbreaker_fr, null, VENDOR_ITEM_REGULAR),
+	list("Windbreaker, Exploration", 12, /obj/item/clothing/suit/storage/windbreaker/windbreaker_covenant, null, VENDOR_ITEM_REGULAR),
+	list("Black Suit Jacket", 12, /obj/item/clothing/suit/storage/jacket/marine/corporate/black, null, VENDOR_ITEM_REGULAR),
+	list("Grey Suit Jacket", 12, /obj/item/clothing/suit/storage/jacket/marine/corporate/grey, null, VENDOR_ITEM_REGULAR),
+	list("Brown Suit Jacket", 12, /obj/item/clothing/suit/storage/jacket/marine/corporate/brown, null, VENDOR_ITEM_REGULAR),
+	list("Blue Suit Jacket", 12, /obj/item/clothing/suit/storage/jacket/marine/corporate/blue, null, VENDOR_ITEM_REGULAR),
+	list("Formal Suit Jacket", 12, /obj/item/clothing/suit/storage/jacket/marine/corporate/formal, null, VENDOR_ITEM_REGULAR),
+	list("Brown Vest", 12, /obj/item/clothing/suit/storage/jacket/marine/vest, null, VENDOR_ITEM_REGULAR),
+	list("Tan Vest", 12, /obj/item/clothing/suit/storage/jacket/marine/vest/tan, null, VENDOR_ITEM_REGULAR),
+	list("Grey Vest", 12, /obj/item/clothing/suit/storage/jacket/marine/vest/grey, null, VENDOR_ITEM_REGULAR),
+
+	list("BACKPACK", 0, null, null, null),
+	list("Satchel, Leather", 12, /obj/item/storage/backpack/satchel, null, VENDOR_ITEM_REGULAR),
+	list("Satchel, Black Leather", 12, /obj/item/storage/backpack/satchel/black, null, VENDOR_ITEM_REGULAR),
+	list("Satchel, Blue Leather", 12, /obj/item/storage/backpack/satchel/blue, null, VENDOR_ITEM_REGULAR),
+
+	list("OTHER", 0, null, null, null),
+	list("Red Armband", 6, /obj/item/clothing/accessory/armband, null, VENDOR_ITEM_REGULAR),
+	list("Purple Armband", 6, /obj/item/clothing/accessory/armband/science, null, VENDOR_ITEM_REGULAR),
+	list("Yellow Armband", 6, /obj/item/clothing/accessory/armband/engine, null, VENDOR_ITEM_REGULAR),
+	list("Green Armband", 6, /obj/item/clothing/accessory/armband/medgreen, null, VENDOR_ITEM_REGULAR),
+	list("Dress Gloves", 6, /obj/item/clothing/gloves/marine/dress, null, VENDOR_ITEM_REGULAR),
+
+))
+
+/obj/structure/machinery/cm_vending/clothing/marine/snowflake/marsoc
+	name = "\improper Civilian Clothing Storage Unit"
+	desc = "An unbranded vendor connected deep into this vessels storage unit. It looks to contain an entire host of various civilian and casual clothing."
+	icon_state = "civilian_clothing"
+	show_points = FALSE
+	use_snowflake_points = FALSE
+
+/obj/structure/machinery/cm_vending/clothing/marine/snowflake/marsoc/get_listed_products(mob/user)
+	return GLOB.cm_vending_clothing_marine_snowflake_marsoc
