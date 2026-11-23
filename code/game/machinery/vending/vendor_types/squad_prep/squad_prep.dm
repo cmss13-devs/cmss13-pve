@@ -1230,6 +1230,24 @@
 		list("M13 Fighting Knife", round(scale * 25), /obj/item/weapon/knife/marine, VENDOR_ITEM_REGULAR),
 		)
 
+/obj/structure/machinery/cm_vending/sorted/cargo_guns/squad/marsoc/utility
+	name = "\improper ARMAT Systems Automated Element Utility MARSOC Vendor"
+	icon_state = "intel_gear"
+
+/obj/structure/machinery/cm_vending/sorted/cargo_guns/squad/marsoc/utility/populate_product_list(scale)
+	listed_products = list(
+	list("ELEMENT ARMAMENT KITS", 0, null, null, null),
+	list("Heavy Pulse Rifle Equipment Box", 1, /obj/item/storage/box/guncase/heavy/hpr/marsoc, VENDOR_ITEM_REGULAR),
+	list("M1771 Shotgun Case", 1, /obj/item/storage/box/guncase/xm51, VENDOR_ITEM_REGULAR),
+	list("M56D Heavy Machine Gun Case", 1, /obj/item/storage/box/guncase/m56d, VENDOR_ITEM_REGULAR),
+
+	list("ELEMENT UTILITIES", 0, null, null, null),
+	list("M83 SADAR", 8, /obj/item/prop/folded_anti_tank_sadar, VENDOR_ITEM_REGULAR),
+	list("SIM-118 Anti-Air Missile Launcher", 1, /obj/item/weapon/gun/launcher/rocket/anti_air/uscm, VENDOR_ITEM_REGULAR),
+	list("M717 Pocket Motion Detector", 1, /obj/item/device/motiondetector/m717, VENDOR_ITEM_REGULAR),
+	list("Signal Tracking Device", 1, /obj/item/tool/signal_tracker, VENDOR_ITEM_REGULAR),
+	)
+
 /obj/structure/machinery/cm_vending/sorted/cargo_guns/squad/marsoc/foreign_weaponry
 	name = "\improper ARMAT Systems Automated Non-Standard Weapon Storage Rack"
 	desc = "An automated supply rack with access to the ship's storage bays. This one has the brand of ARMAT painted across it and looks to have been modified for a whole host of weaponry."

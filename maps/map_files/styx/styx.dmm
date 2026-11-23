@@ -1322,6 +1322,18 @@
 	},
 /turf/open/floor/plating/plating_catwalk/prison,
 /area/styx/prep_hallway)
+"ld" = (
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/item/ammo_box/magazine/nade_box/smoke{
+	pixel_x = 2;
+	pixel_y = 5
+	},
+/obj/item/ammo_box/magazine/nade_box/smoke{
+	pixel_x = 3;
+	pixel_y = 11
+	},
+/turf/open/floor/almayer_hull/blackfull,
+/area/styx/platoonarmory)
 "lf" = (
 /turf/open/floor/corsat/plate,
 /area/styx/platoonarmory)
@@ -1507,7 +1519,7 @@
 /turf/open/floor/plating/plating_catwalk/strata,
 /area/styx/dorms)
 "nd" = (
-/obj/structure/window/framed/almayer,
+/obj/structure/machinery/cm_vending/sorted/cargo_guns/squad/marsoc/utility,
 /turf/open/floor/corsat/plate,
 /area/styx/platoonarmory)
 "ng" = (
@@ -1813,6 +1825,14 @@
 	},
 /turf/open/floor/almayer/edge/smooth/west,
 /area/styx/dorms)
+"pA" = (
+/obj/structure/machinery/light/double{
+	dir = 2;
+	light_power = 0.3
+	},
+/obj/structure/machinery/cm_vending/clothing/marine/snowflake/marsoc,
+/turf/open/floor/corsat/plate,
+/area/styx/platoonarmory)
 "pD" = (
 /obj/effect/decal/warning_stripes/asteroid{
 	icon_state = "NE-out"
@@ -2939,16 +2959,8 @@
 "zo" = (
 /obj/structure/surface/table/reinforced/almayer_B,
 /obj/item/ammo_box/magazine/nade_box/flare{
-	pixel_x = -8;
-	pixel_y = -1
-	},
-/obj/item/ammo_box/magazine/nade_box/smoke{
-	pixel_x = 12;
+	pixel_x = 4;
 	pixel_y = 6
-	},
-/obj/item/ammo_box/magazine/nade_box/smoke{
-	pixel_x = 12;
-	pixel_y = 11
 	},
 /turf/open/floor/almayer_hull/blackfull,
 /area/styx/platoonarmory)
@@ -3816,14 +3828,6 @@
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/styx/cryo_cells)
-"Ht" = (
-/obj/structure/machinery/light/double{
-	dir = 2;
-	light_power = 0.3
-	},
-/obj/structure/machinery/cm_vending/clothing/marine/snowflake/marsoc,
-/turf/open/floor/corsat/plate,
-/area/styx/platoonarmory)
 "Hy" = (
 /obj/effect/decal/warning_stripes/asteroid{
 	icon_state = "S"
@@ -10257,7 +10261,7 @@ YW
 wp
 lf
 qD
-Ht
+pA
 DI
 DI
 DI
@@ -10809,7 +10813,7 @@ ky
 DI
 DI
 DI
-IB
+ld
 IB
 IB
 IB
