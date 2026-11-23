@@ -72,18 +72,6 @@
 	},
 /turf/open/floor/almayer_hull/blackfull,
 /area/styx/platoonarmory)
-"aZ" = (
-/obj/structure/cable/heavyduty{
-	icon_state = "4-8"
-	},
-/obj/structure/pipes/standard/simple/hidden/supply{
-	dir = 4
-	},
-/obj/structure/pipes/standard/simple/hidden/scrubbers{
-	dir = 8
-	},
-/turf/open/floor/plating/plating_catwalk/prison,
-/area/styx/cryo_cells)
 "bb" = (
 /turf/closed/wall/almayer/outer,
 /area/styx/cryo_cells)
@@ -114,20 +102,6 @@
 	},
 /turf/open/floor/almayer/plating,
 /area/styx/prep_hallway)
-"bp" = (
-/obj/effect/decal/cleanable/dirt{
-	layer = 2.52
-	},
-/obj/structure/cable/heavyduty{
-	icon_state = "1-2-8"
-	},
-/obj/structure/machinery/light/small/red{
-	dir = 4;
-	pixel_x = 0;
-	pixel_y = 16
-	},
-/turf/open/floor/plating/plating_catwalk/prison,
-/area/styx/medical)
 "bw" = (
 /obj/structure/machinery/light/double/blue{
 	dir = 8;
@@ -216,6 +190,18 @@
 	},
 /turf/open/floor/almayer_hull/blackfull,
 /area/styx/cryo_cells)
+"cI" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2-4-8"
+	},
+/obj/structure/machinery/light/small/red{
+	dir = 4
+	},
+/turf/open/floor/plating/plating_catwalk/prison,
+/area/styx/prep_hallway)
 "cT" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
 /obj/structure/pipes/standard/simple/hidden/scrubbers{
@@ -258,6 +244,12 @@
 /obj/item/clothing/mask/breath/medical,
 /turf/open/floor/almayer/sterile_green,
 /area/styx/medical)
+"dr" = (
+/obj/structure/machinery/door/airlock/almayer/maint{
+	dir = 1
+	},
+/turf/open/floor/corsat/squares,
+/area/styx/prep_hallway)
 "dv" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "4-8"
@@ -273,18 +265,6 @@
 	},
 /turf/open/floor/almayer/edge/smooth/east,
 /area/styx/cryo_cells)
-"dy" = (
-/obj/structure/bed/bedroll{
-	pixel_y = -4;
-	color = "#333333";
-	name = "gym mat";
-	buckle_lying = null;
-	can_buckle = 0;
-	foldabletype = null;
-	desc = "A black gym mat, useful if you don't want to use the cold hard floor for exercise."
-	},
-/turf/open/floor/almayer/edge/smooth/north,
-/area/styx/dorms)
 "dB" = (
 /obj/structure/machinery/washing_machine,
 /obj/structure/machinery/washing_machine{
@@ -298,15 +278,6 @@
 	},
 /turf/open/floor/almayer/sterile,
 /area/styx/dorms)
-"dG" = (
-/obj/structure/machinery/door/airlock/almayer/maint{
-	dir = 1
-	},
-/obj/effect/decal/cleanable/dirt{
-	layer = 2.52
-	},
-/turf/open/floor/corsat/squares,
-/area/styx/medical)
 "dI" = (
 /obj/structure/pipes/vents/scrubber{
 	dir = 8
@@ -321,18 +292,6 @@
 	},
 /turf/open/floor/almayer/sterile,
 /area/styx/dorms)
-"dN" = (
-/obj/structure/pipes/standard/simple/hidden/supply{
-	dir = 4
-	},
-/obj/structure/pipes/standard/simple/hidden/scrubbers{
-	dir = 4
-	},
-/obj/structure/cable/heavyduty{
-	icon_state = "1-2-4-8"
-	},
-/turf/open/floor/plating/plating_catwalk/strata,
-/area/styx/prep_hallway)
 "dT" = (
 /obj/structure/machinery/door_control{
 	name = "Hypersleep Access Release";
@@ -359,15 +318,6 @@
 	},
 /turf/open/floor/almayer/plating,
 /area/styx/cryo_cells)
-"dV" = (
-/obj/effect/decal/cleanable/dirt{
-	layer = 2.52
-	},
-/obj/structure/machinery/light/small/red{
-	dir = 1
-	},
-/turf/open/floor/corsat/squares,
-/area/styx/prep_hallway)
 "dX" = (
 /obj/structure/machinery/door_control/brbutton{
 	pixel_x = 0;
@@ -383,9 +333,6 @@
 	},
 /turf/open/floor/corsat/plate,
 /area/styx/medical)
-"dZ" = (
-/turf/open/floor/almayer/edge/smooth,
-/area/styx/dorms)
 "ec" = (
 /obj/structure/sign/safety/refridgeration{
 	pixel_x = -2;
@@ -396,8 +343,27 @@
 "ed" = (
 /turf/open/floor/corsat/plate,
 /area/styx/dorms)
-"eD" = (
-/turf/open/floor/almayer/edge/smooth/southeast,
+"ej" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
+	},
+/turf/open/floor/almayer/plating,
+/area/styx/dorms)
+"eq" = (
+/obj/structure/machinery/door/airlock/almayer/secure/glass{
+	req_access = null;
+	dir = 8;
+	name = "Office"
+	},
+/obj/structure/cable/heavyduty/west_east,
+/obj/structure/pipes/standard/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 4
+	},
+/obj/structure/machinery/door/firedoor/border_only/almayer,
+/turf/open/floor/almayer/plating,
 /area/styx/dorms)
 "eF" = (
 /obj/effect/decal/warning_stripes/asteroid{
@@ -506,6 +472,16 @@
 	},
 /turf/open/floor/almayer/dark_sterile,
 /area/styx/cryo_cells)
+"fo" = (
+/obj/effect/decal/warning_stripes/asteroid{
+	icon_state = "N";
+	pixel_x = 0;
+	pixel_y = 1
+	},
+/obj/structure/pipes/standard/simple/hidden/supply,
+/obj/structure/pipes/standard/simple/hidden/scrubbers,
+/turf/open/floor/plating/plating_catwalk/strata,
+/area/styx/prep_hallway)
 "fp" = (
 /obj/structure/machinery/door/firedoor/border_only/almayer{
 	layer = 1.9
@@ -537,16 +513,6 @@
 "fy" = (
 /turf/open/floor/plating/prison,
 /area/styx/hangar)
-"fA" = (
-/obj/effect/decal/warning_stripes/asteroid{
-	icon_state = "N";
-	pixel_x = 0;
-	pixel_y = 1
-	},
-/obj/structure/pipes/standard/simple/hidden/supply,
-/obj/structure/pipes/standard/simple/hidden/scrubbers,
-/turf/open/floor/plating/plating_catwalk/strata,
-/area/styx/prep_hallway)
 "fC" = (
 /obj/structure/bed/chair{
 	dir = 4;
@@ -618,6 +584,18 @@
 	},
 /turf/open/floor/almayer/plating,
 /area/styx/cryo_cells)
+"gg" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
+	},
+/obj/structure/machinery/light/small/red{
+	dir = 4
+	},
+/turf/open/floor/plating/plating_catwalk/prison,
+/area/styx/prep_hallway)
 "gl" = (
 /obj/structure/ladder{
 	id = "mission1"
@@ -668,10 +646,16 @@
 /turf/open/floor/almayer/plating,
 /area/styx/cryo_cells)
 "gC" = (
-/obj/effect/decal/cleanable/dirt{
-	layer = 2.52
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 4
 	},
-/turf/open/floor/corsat/squares,
+/obj/structure/pipes/standard/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
+	},
+/turf/open/floor/corsat/plate,
 /area/styx/prep_hallway)
 "gF" = (
 /obj/structure/bed/chair/comfy/bench/north,
@@ -774,6 +758,31 @@
 "hl" = (
 /turf/closed/wall/almayer/outer,
 /area/styx/medical)
+"hp" = (
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/item/reagent_container/food/drinks/coffeecup/wy{
+	pixel_x = 6;
+	pixel_y = 5
+	},
+/obj/effect/decal/strata_decals/grime/grime4/game_plane{
+	layer = 2.9;
+	pixel_y = 2
+	},
+/turf/open/floor/almayer_hull/blackfull,
+/area/styx/canteen)
+"hv" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/pipes/standard/simple/hidden/supply,
+/obj/structure/pipes/standard/simple/hidden/scrubbers,
+/obj/structure/machinery/light/small/red{
+	dir = 8;
+	pixel_x = 0;
+	pixel_y = -15
+	},
+/turf/open/floor/plating/plating_catwalk/prison,
+/area/styx/prep_hallway)
 "hx" = (
 /obj/structure/pipes/vents/scrubber,
 /obj/structure/machinery/light/double/blue{
@@ -821,6 +830,9 @@
 	},
 /turf/open/floor/almayer/plating,
 /area/styx/prep_hallway)
+"hT" = (
+/turf/open/floor/almayer/edge/smooth,
+/area/styx/dorms)
 "hU" = (
 /turf/open/floor/almayer/sterile_green_side/north,
 /area/styx/medical)
@@ -831,46 +843,6 @@
 	},
 /turf/open/floor/almayer/plating,
 /area/styx/prep_hallway)
-"hZ" = (
-/obj/structure/surface/table/almayer,
-/obj/item/prop/tableflag/uscm2{
-	pixel_x = -12;
-	pixel_y = 15
-	},
-/obj/item/paper_bin{
-	pixel_y = 9;
-	pixel_x = 8
-	},
-/obj/item/tool/pen/fountain{
-	pixel_x = 2;
-	pixel_y = 1
-	},
-/obj/item/tool/pen/fountain{
-	pixel_x = -1;
-	pixel_y = 4
-	},
-/obj/item/tool/pen/fountain{
-	pixel_x = -2;
-	pixel_y = 9
-	},
-/obj/structure/pipes/standard/simple/hidden/supply{
-	dir = 6
-	},
-/obj/structure/machinery/alarm/almayer{
-	dir = 1;
-	pixel_x = 0;
-	pixel_y = 21
-	},
-/obj/item/folder/red{
-	pixel_x = -10;
-	pixel_y = -3
-	},
-/obj/item/folder/black{
-	pixel_x = -10;
-	pixel_y = 2
-	},
-/turf/open/floor/plating/plating_catwalk,
-/area/styx/dorms)
 "if" = (
 /obj/structure/surface/table/reinforced/prison,
 /obj/item/roller{
@@ -902,13 +874,9 @@
 /turf/open/floor/almayer/edge/smooth/west,
 /area/styx/cryo_cells)
 "ik" = (
-/obj/structure/sign/safety/terminal{
-	pixel_x = 32;
-	pixel_y = 24
-	},
 /obj/structure/sign/safety/bulkhead_door{
-	pixel_x = 31;
-	pixel_y = -9
+	pixel_x = 32;
+	pixel_y = 8
 	},
 /obj/effect/decal/warning_stripes/asteroid{
 	icon_state = "N";
@@ -923,7 +891,7 @@
 	},
 /obj/structure/sign/safety/conference_room{
 	pixel_x = 31;
-	pixel_y = 6
+	pixel_y = 25
 	},
 /turf/open/floor/almayer_hull/blackfull,
 /area/styx/platoonarmory)
@@ -1097,6 +1065,16 @@
 /obj/effect/landmark/start/marine/smartgunner/marsoc,
 /turf/open/floor/almayer_hull/blackfull,
 /area/styx/cryo_cells)
+"jq" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
+	},
+/obj/structure/pipes/standard/simple/hidden/scrubbers{
+	dir = 6
+	},
+/obj/structure/pipes/standard/simple/hidden/supply,
+/turf/open/floor/plating/plating_catwalk,
+/area/styx/dorms)
 "js" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 4
@@ -1233,27 +1211,6 @@
 	},
 /turf/open/floor/almayer/plating,
 /area/styx/canteen)
-"jU" = (
-/obj/structure/surface/table/almayer,
-/obj/structure/machinery/computer/secure_data/noaccess{
-	dir = 4;
-	pixel_x = 1;
-	pixel_y = 8
-	},
-/obj/structure/machinery/computer/skills{
-	req_one_access = null;
-	dir = 4;
-	pixel_x = 1;
-	pixel_y = -6
-	},
-/turf/open/space/basic,
-/area/styx/dorms)
-"jW" = (
-/obj/effect/decal/cleanable/dirt{
-	layer = 2.52
-	},
-/turf/open/floor/corsat/squares,
-/area/styx/medical)
 "jX" = (
 /obj/structure/pipes/standard/simple/hidden/scrubbers{
 	dir = 10
@@ -1328,6 +1285,11 @@
 	pixel_x = -19;
 	pixel_y = 63
 	},
+/obj/structure/machinery/light/small{
+	dir = 1;
+	pixel_x = -1;
+	pixel_y = 27
+	},
 /turf/open/floor/corsat/plate,
 /area/styx/dorms)
 "kT" = (
@@ -1346,28 +1308,18 @@
 /turf/open/floor/almayer/plating,
 /area/styx/canteen)
 "lb" = (
-/obj/structure/surface/table/reinforced/almayer_B,
-/obj/item/prop/tableflag{
-	pixel_x = 10;
-	pixel_y = 12
+/obj/structure/machinery/door/airlock/almayer/maint,
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
 	},
-/obj/item/reagent_container/food/drinks/coffeecup/uscm{
-	pixel_x = -5;
-	pixel_y = 8
-	},
-/turf/open/floor/almayer_hull/blackfull,
-/area/styx/canteen)
+/turf/open/floor/corsat/squares,
+/area/styx/prep_hallway)
 "lf" = (
-/obj/structure/sign/safety/storage{
-	pixel_x = 45;
-	pixel_y = -5
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
 	},
-/obj/structure/sign/safety/ammunition{
-	pixel_x = 32;
-	pixel_y = -5
-	},
-/turf/open/floor/corsat/plate,
-/area/styx/platoonarmory)
+/turf/open/floor/corsat/squares,
+/area/styx/prep_hallway)
 "ln" = (
 /turf/open/floor/almayer/edge/smooth/north,
 /area/styx/dorms)
@@ -1384,16 +1336,14 @@
 	},
 /turf/open/floor/almayer_hull/blackfull,
 /area/styx/cryo_cells)
-"lD" = (
+"lz" = (
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
 	},
 /obj/structure/cable/heavyduty{
-	icon_state = "1-2"
+	icon_state = "4-8"
 	},
-/obj/structure/machinery/light/small/red{
-	dir = 4
-	},
+/obj/structure/machinery/light/small/red,
 /turf/open/floor/plating/plating_catwalk/prison,
 /area/styx/prep_hallway)
 "lE" = (
@@ -1411,14 +1361,6 @@
 	},
 /turf/open/floor/corsat/plate,
 /area/styx/hangar)
-"lK" = (
-/obj/effect/decal/cleanable/dirt{
-	layer = 2.52
-	},
-/obj/structure/pipes/standard/simple/hidden/supply,
-/obj/structure/pipes/standard/simple/hidden/scrubbers,
-/turf/open/floor/plating/plating_catwalk/prison,
-/area/styx/medical)
 "lN" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "cargo_arrow";
@@ -1451,6 +1393,14 @@
 	},
 /turf/open/floor/almayer/plating,
 /area/styx/cryo_cells)
+"lU" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/pipes/standard/simple/hidden/supply,
+/obj/structure/pipes/standard/simple/hidden/scrubbers,
+/turf/open/floor/plating/plating_catwalk/prison,
+/area/styx/prep_hallway)
 "lV" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
 /obj/structure/pipes/standard/simple/hidden/scrubbers,
@@ -1459,6 +1409,26 @@
 	},
 /turf/open/floor/plating/plating_catwalk/strata,
 /area/styx/prep_hallway)
+"lW" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
+	},
+/obj/structure/pipes/standard/simple/hidden/scrubbers,
+/obj/structure/pipes/standard/simple/hidden/supply,
+/turf/open/floor/plating/plating_catwalk/strata,
+/area/styx/dorms)
+"lZ" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
+	},
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 4
+	},
+/obj/structure/pipes/standard/simple/hidden/scrubbers{
+	dir = 8
+	},
+/turf/open/floor/plating/plating_catwalk/prison,
+/area/styx/cryo_cells)
 "md" = (
 /obj/effect/decal/warning_stripes/asteroid{
 	icon_state = "cargo_arrow";
@@ -1537,18 +1507,19 @@
 	},
 /turf/open/floor/almayer_hull/blackfull,
 /area/styx/platoonarmory)
-"mV" = (
-/obj/structure/pipes/vents/scrubber{
-	dir = 8
+"mW" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
 	},
-/obj/structure/machinery/light/small{
-	dir = 4;
-	needs_power = 0.3;
-	pixel_x = -1;
-	pixel_y = 15
+/obj/structure/pipes/standard/simple/hidden/supply,
+/obj/structure/pipes/standard/simple/hidden/scrubbers,
+/obj/structure/machinery/light/small/red{
+	dir = 8;
+	pixel_x = 0;
+	pixel_y = 16
 	},
-/turf/open/floor/almayer/edge/smooth/east,
-/area/styx/dorms)
+/turf/open/floor/plating/plating_catwalk/prison,
+/area/styx/prep_hallway)
 "nb" = (
 /obj/structure/cable/heavyduty/north_east_south,
 /obj/structure/pipes/standard/manifold/hidden/scrubbers{
@@ -1629,12 +1600,17 @@
 /obj/structure/pipes/standard/simple/hidden/scrubbers,
 /turf/open/floor/plating/plating_catwalk/prison,
 /area/styx/cryo_cells)
-"nH" = (
-/obj/structure/surface/table/almayer,
-/obj/structure/machinery/faxmachine/uscm/command/capt{
-	pixel_y = 7
+"nO" = (
+/obj/structure/pipes/vents/scrubber{
+	dir = 8
 	},
-/turf/open/floor/almayer/edge/smooth/northwest,
+/obj/structure/machinery/light/small{
+	dir = 4;
+	needs_power = 0.3;
+	pixel_x = -1;
+	pixel_y = 15
+	},
+/turf/open/floor/almayer/edge/smooth/east,
 /area/styx/dorms)
 "nQ" = (
 /obj/structure/vehicle_locker/cabinet/cups{
@@ -1751,8 +1727,9 @@
 /turf/open/floor/almayer/sterile,
 /area/styx/dorms)
 "oK" = (
-/obj/structure/machinery/door/poddoor/almayer,
-/turf/open/floor/corsat/squares,
+/obj/structure/pipes/standard/simple/hidden/supply,
+/obj/structure/pipes/standard/simple/hidden/scrubbers,
+/turf/open/floor/corsat/plate,
 /area/styx/prep_hallway)
 "oL" = (
 /turf/closed/wall/almayer/outer,
@@ -1810,7 +1787,7 @@
 /obj/structure/pipes/standard/simple/hidden/scrubbers{
 	dir = 9
 	},
-/turf/open/floor/almayer/plating,
+/turf/open/floor/corsat/plate,
 /area/styx/prep_hallway)
 "pn" = (
 /obj/structure/machinery/light/double/blue{
@@ -1865,38 +1842,22 @@
 	},
 /turf/open/floor/corsat/plate,
 /area/styx/platoonarmory)
-"pR" = (
-/obj/effect/decal/cleanable/dirt{
-	layer = 2.52
+"pL" = (
+/obj/structure/bed/chair/office/light{
+	dir = 8
 	},
-/obj/structure/cable/heavyduty{
-	icon_state = "4-8"
-	},
-/obj/structure/machinery/light/small/red,
-/turf/open/floor/plating/plating_catwalk/prison,
-/area/styx/prep_hallway)
-"qd" = (
-/obj/structure/filingcabinet/chestdrawer{
-	density = 0;
-	pixel_x = -8;
-	pixel_y = 16
-	},
-/obj/structure/filingcabinet{
-	density = 0;
-	pixel_x = 8;
-	pixel_y = 16
-	},
-/obj/item/device/flashlight/lamp/on{
-	pixel_y = 22;
-	pixel_x = -9
-	},
-/obj/structure/pipes/vents/pump,
-/obj/item/folder/blue{
-	pixel_x = 8;
-	pixel_y = 31
-	},
-/turf/open/floor/almayer/edge/smooth/northeast,
+/obj/structure/cable/heavyduty/south,
+/obj/structure/pipes/standard/simple/hidden/supply,
+/turf/open/floor/almayer,
 /area/styx/dorms)
+"pR" = (
+/obj/structure/pipes/standard/simple/hidden/supply,
+/obj/structure/pipes/standard/simple/hidden/scrubbers,
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
+	},
+/turf/open/floor/plating/plating_catwalk/prison,
+/area/styx/cryo_cells)
 "qh" = (
 /obj/effect/decal/warning_stripes/asteroid{
 	icon_state = "NE-out";
@@ -1904,6 +1865,16 @@
 	pixel_y = 1
 	},
 /turf/open/floor/almayer_hull,
+/area/styx/platoonarmory)
+"qk" = (
+/obj/effect/decal/warning_stripes/asteroid{
+	icon_state = "S"
+	},
+/obj/effect/decal/warning_stripes/asteroid{
+	icon_state = "cargo_arrow";
+	dir = 1
+	},
+/turf/open/floor/almayer_hull/blackfull,
 /area/styx/platoonarmory)
 "qo" = (
 /obj/structure/largecrate/random/secure{
@@ -1978,12 +1949,6 @@
 	},
 /turf/open/floor/almayer/research,
 /area/styx/medical)
-"qI" = (
-/obj/structure/machinery/door/airlock/almayer/maint{
-	dir = 1
-	},
-/turf/open/floor/corsat/squares,
-/area/styx/prep_hallway)
 "qJ" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
 /obj/structure/machinery/door/firedoor/border_only/almayer{
@@ -2015,14 +1980,10 @@
 	},
 /turf/open/floor/corsat/plate,
 /area/styx/cryo_cells)
-"rb" = (
-/obj/structure/surface/table/reinforced/almayer_B,
-/obj/item/prop/tableflag/uscm2{
-	pixel_x = -12;
-	pixel_y = -5
-	},
-/turf/open/floor/almayer_hull/blackfull,
-/area/styx/canteen)
+"qZ" = (
+/obj/structure/machinery/photocopier/wyphotocopier,
+/turf/open/floor/almayer/edge/smooth/southeast,
+/area/styx/dorms)
 "rf" = (
 /obj/structure/surface/table/reinforced/almayer_B,
 /obj/item/ammo_box/magazine/shotgun/special_buck,
@@ -2090,16 +2051,6 @@
 	},
 /turf/open/floor/plating/plating_catwalk/strata,
 /area/styx/prep_hallway)
-"rM" = (
-/obj/structure/cable/heavyduty/north_west,
-/obj/structure/pipes/standard/simple/hidden/scrubbers{
-	dir = 9
-	},
-/obj/structure/pipes/standard/simple/hidden/supply{
-	dir = 9
-	},
-/turf/open/floor/almayer/edge/smooth,
-/area/styx/dorms)
 "rN" = (
 /obj/effect/decal/warning_stripes/asteroid{
 	icon_state = "S"
@@ -2201,10 +2152,23 @@
 	},
 /turf/open/floor/almayer_hull/blackfull,
 /area/styx/prep_hallway)
+"sA" = (
+/obj/structure/cable/heavyduty/west_east,
+/obj/structure/pipes/standard/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 4
+	},
+/turf/open/floor/plating/plating_catwalk,
+/area/styx/dorms)
 "sL" = (
 /obj/structure/sign/safety/storage{
 	pixel_x = -25;
 	pixel_y = -4
+	},
+/obj/effect/decal/warning_stripes/asteroid{
+	icon_state = "SW-out"
 	},
 /turf/open/floor/corsat/plate,
 /area/styx/platoonarmory)
@@ -2241,13 +2205,13 @@
 /turf/open/floor/almayer/sterile,
 /area/styx/dorms)
 "sT" = (
+/obj/structure/machinery/door/airlock/almayer/maint{
+	dir = 1
+	},
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
 	},
-/obj/structure/cable/heavyduty{
-	icon_state = "1-2"
-	},
-/turf/open/floor/plating/plating_catwalk/prison,
+/turf/open/floor/corsat/squares,
 /area/styx/prep_hallway)
 "sV" = (
 /obj/structure/closet/secure_closet{
@@ -2297,6 +2261,18 @@
 	},
 /turf/open/floor/corsat/plate,
 /area/styx/platoonarmory)
+"tg" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
+	},
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 4
+	},
+/obj/structure/pipes/standard/simple/hidden/scrubbers{
+	dir = 4
+	},
+/turf/open/floor/plating/plating_catwalk/strata,
+/area/styx/prep_hallway)
 "tk" = (
 /obj/structure/machinery/door/poddoor/almayer/blended{
 	name = "Mission Preparation Access Lockdown";
@@ -2383,6 +2359,17 @@
 	},
 /turf/open/floor/almayer/edge/smooth/southeast,
 /area/styx/cryo_cells)
+"ua" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/machinery/light/small/red{
+	dir = 1;
+	pixel_x = -16;
+	pixel_y = 1
+	},
+/turf/open/floor/corsat/squares,
+/area/styx/prep_hallway)
 "ud" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "1-2"
@@ -2400,12 +2387,6 @@
 	},
 /turf/open/floor/almayer_hull/blackfull,
 /area/styx/cryo_cells)
-"uf" = (
-/obj/structure/cable/heavyduty{
-	icon_state = "1-2"
-	},
-/turf/open/floor/almayer/plating,
-/area/styx/dorms)
 "ui" = (
 /obj/structure/sign/safety/food_storage{
 	pixel_x = 18;
@@ -2413,6 +2394,15 @@
 	},
 /turf/closed/wall/almayer/outer,
 /area/styx/canteen)
+"uj" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/machinery/light/small/red{
+	dir = 1
+	},
+/turf/open/floor/corsat/arrow_west,
+/area/styx/prep_hallway)
 "uo" = (
 /obj/structure/surface/table,
 /obj/effect/decal/warning_stripes/asteroid{
@@ -2441,6 +2431,13 @@
 	},
 /turf/open/floor/almayer/edge/smooth/southeast,
 /area/styx/cryo_cells)
+"us" = (
+/obj/structure/surface/table/almayer,
+/obj/structure/machinery/faxmachine/uscm/command/capt{
+	pixel_y = 7
+	},
+/turf/open/floor/almayer/edge/smooth/northwest,
+/area/styx/dorms)
 "ut" = (
 /obj/structure/machinery/light/double/blue{
 	dir = 8;
@@ -2458,14 +2455,6 @@
 	},
 /turf/open/floor/corsat/plate,
 /area/styx/canteen)
-"uD" = (
-/obj/structure/cable/heavyduty{
-	icon_state = "1-2"
-	},
-/obj/structure/pipes/standard/simple/hidden/scrubbers,
-/obj/structure/pipes/standard/simple/hidden/supply,
-/turf/open/floor/plating/plating_catwalk/strata,
-/area/styx/dorms)
 "uO" = (
 /obj/structure/machinery/medical_pod/autodoc{
 	dir = 8
@@ -2484,17 +2473,12 @@
 /turf/open/floor/almayer/plating,
 /area/styx/prep_hallway)
 "uU" = (
-/obj/structure/cable/heavyduty{
-	icon_state = "4-8"
+/obj/structure/machinery/door/airlock/almayer/maint,
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
 	},
-/obj/structure/pipes/standard/simple/hidden/supply{
-	dir = 4
-	},
-/obj/structure/pipes/standard/simple/hidden/scrubbers{
-	dir = 4
-	},
-/turf/open/floor/corsat/plate,
-/area/styx/prep_hallway)
+/turf/open/floor/corsat/squares,
+/area/styx/canteen)
 "vb" = (
 /obj/structure/machinery/light/double/blue{
 	dir = 4;
@@ -2507,16 +2491,6 @@
 	},
 /turf/open/floor/corsat/plate,
 /area/styx/platoonarmory)
-"vh" = (
-/obj/structure/cable/heavyduty{
-	icon_state = "1-2"
-	},
-/obj/structure/pipes/standard/simple/hidden/scrubbers{
-	dir = 6
-	},
-/obj/structure/pipes/standard/simple/hidden/supply,
-/turf/open/floor/plating/plating_catwalk,
-/area/styx/dorms)
 "vi" = (
 /obj/structure/machinery/landinglight/ds1/delayone,
 /obj/structure/roof/cargocrane_tracks/horizontal{
@@ -2543,13 +2517,6 @@
 	},
 /turf/open/floor/corsat/plate,
 /area/styx/hangar)
-"vt" = (
-/obj/structure/machinery/door/airlock/almayer/maint,
-/obj/effect/decal/cleanable/dirt{
-	layer = 2.52
-	},
-/turf/open/floor/corsat/squares,
-/area/styx/canteen)
 "vG" = (
 /obj/structure/machinery/landinglight/ds1{
 	dir = 1
@@ -2583,18 +2550,6 @@
 	},
 /turf/open/floor/almayer/plating,
 /area/styx/canteen)
-"vW" = (
-/obj/structure/surface/table/reinforced/almayer_B,
-/obj/item/reagent_container/food/drinks/coffeecup/wy{
-	pixel_x = 6;
-	pixel_y = 5
-	},
-/obj/effect/decal/strata_decals/grime/grime4/game_plane{
-	layer = 2.9;
-	pixel_y = 2
-	},
-/turf/open/floor/almayer_hull/blackfull,
-/area/styx/canteen)
 "wh" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "4-8"
@@ -2605,8 +2560,14 @@
 /obj/structure/pipes/standard/simple/hidden/scrubbers{
 	dir = 4
 	},
-/turf/open/floor/plating/plating_catwalk/strata,
+/turf/open/floor/corsat/plate,
 /area/styx/prep_hallway)
+"wi" = (
+/obj/effect/decal/warning_stripes/asteroid{
+	icon_state = "S"
+	},
+/turf/open/floor/almayer_hull,
+/area/styx/platoonarmory)
 "wj" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/floor/almayer/plating,
@@ -2732,6 +2693,18 @@
 	},
 /turf/open/floor/almayer_hull/blackfull,
 /area/styx/hangar)
+"xq" = (
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/item/prop/tableflag{
+	pixel_x = 10;
+	pixel_y = 12
+	},
+/obj/item/reagent_container/food/drinks/coffeecup/uscm{
+	pixel_x = -5;
+	pixel_y = 8
+	},
+/turf/open/floor/almayer_hull/blackfull,
+/area/styx/canteen)
 "xv" = (
 /obj/structure/machinery/light/double/blue{
 	dir = 8;
@@ -2762,6 +2735,9 @@
 /obj/structure/bed/chair/comfy/bench/mid,
 /turf/open/floor/almayer/edge/smooth/west,
 /area/styx/cryo_cells)
+"xF" = (
+/turf/open/floor/almayer/edge/smooth/southeast,
+/area/styx/dorms)
 "xG" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "0-4"
@@ -2839,17 +2815,6 @@
 	},
 /turf/open/floor/almayer_hull/blackfull,
 /area/styx/hangar)
-"yj" = (
-/obj/effect/decal/cleanable/dirt{
-	layer = 2.52
-	},
-/obj/structure/machinery/light/small/red{
-	dir = 1;
-	pixel_x = -16;
-	pixel_y = 1
-	},
-/turf/open/floor/corsat/squares,
-/area/styx/prep_hallway)
 "yk" = (
 /turf/open/floor/almayer_hull/blackfull,
 /area/styx/canteen)
@@ -2859,19 +2824,6 @@
 	},
 /turf/open/floor/corsat/plate,
 /area/styx/hangar)
-"yu" = (
-/obj/effect/decal/cleanable/dirt{
-	layer = 2.52
-	},
-/obj/structure/pipes/standard/simple/hidden/supply,
-/obj/structure/pipes/standard/simple/hidden/scrubbers,
-/obj/structure/machinery/light/small/red{
-	dir = 8;
-	pixel_x = 0;
-	pixel_y = -15
-	},
-/turf/open/floor/plating/plating_catwalk/prison,
-/area/styx/prep_hallway)
 "yw" = (
 /obj/structure/sign/safety/medical{
 	pixel_x = 32;
@@ -2896,13 +2848,17 @@
 /turf/open/floor/almayer/plating,
 /area/styx/cryo_cells)
 "yz" = (
-/obj/structure/pipes/standard/simple/hidden/supply,
-/obj/structure/pipes/standard/simple/hidden/scrubbers,
-/obj/structure/cable/heavyduty{
-	icon_state = "1-2"
+/obj/structure/bed/bedroll{
+	pixel_y = -4;
+	color = "#333333";
+	name = "gym mat";
+	buckle_lying = null;
+	can_buckle = 0;
+	foldabletype = null;
+	desc = "A black gym mat, useful if you don't want to use the cold hard floor for exercise."
 	},
-/turf/open/floor/plating/plating_catwalk/prison,
-/area/styx/cryo_cells)
+/turf/open/floor/almayer/edge/smooth/corner/west,
+/area/styx/dorms)
 "yG" = (
 /obj/structure/window/framed/almayer,
 /obj/structure/machinery/light/double{
@@ -2944,11 +2900,8 @@
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
 	},
-/obj/structure/cable/heavyduty{
-	icon_state = "4-8"
-	},
-/turf/open/floor/plating/plating_catwalk/prison,
-/area/styx/prep_hallway)
+/turf/open/floor/corsat/arrow_north,
+/area/styx/medical)
 "yW" = (
 /obj/structure/prop/ice_colony/tiger_rug{
 	pixel_x = -16;
@@ -3111,6 +3064,14 @@
 	},
 /turf/open/floor/almayer/edge/northeast,
 /area/styx/cryo_cells)
+"Ae" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/pipes/standard/simple/hidden/supply,
+/obj/structure/pipes/standard/simple/hidden/scrubbers,
+/turf/open/floor/plating/plating_catwalk/prison,
+/area/styx/medical)
 "Af" = (
 /obj/structure/closet/secure_closet{
 	pixel_x = 7;
@@ -3138,6 +3099,18 @@
 	},
 /turf/open/floor/almayer/sterile,
 /area/styx/dorms)
+"AD" = (
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 4
+	},
+/obj/structure/pipes/standard/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2-4-8"
+	},
+/turf/open/floor/plating/plating_catwalk/strata,
+/area/styx/prep_hallway)
 "AJ" = (
 /obj/structure/roof/cargocrane_tracks/horizontal{
 	pixel_y = 14
@@ -3252,11 +3225,13 @@
 /turf/open/floor/almayer/edge/smooth,
 /area/styx/cryo_cells)
 "BR" = (
-/obj/structure/machinery/door/airlock/almayer/maint,
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
 	},
-/turf/open/floor/corsat/squares,
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
+	},
+/turf/open/floor/plating/plating_catwalk/prison,
 /area/styx/prep_hallway)
 "BS" = (
 /obj/structure/machinery/light/small/blue{
@@ -3270,12 +3245,6 @@
 	},
 /turf/open/floor/almayer/sterile_green_side/north,
 /area/styx/medical)
-"BW" = (
-/obj/effect/decal/cleanable/dirt{
-	layer = 2.52
-	},
-/turf/open/floor/corsat/arrow_west,
-/area/styx/prep_hallway)
 "BX" = (
 /obj/structure/machinery/light/double/blue,
 /turf/open/floor/corsat/plate,
@@ -3318,16 +3287,10 @@
 /turf/open/floor/almayer_hull/blackfull,
 /area/styx/hangar)
 "Cj" = (
-/obj/structure/pipes/standard/simple/hidden/supply{
-	dir = 4
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
 	},
-/obj/structure/pipes/standard/simple/hidden/scrubbers{
-	dir = 4
-	},
-/obj/structure/cable/heavyduty{
-	icon_state = "4-8"
-	},
-/turf/open/floor/corsat/plate,
+/turf/open/floor/corsat/arrow_west,
 /area/styx/prep_hallway)
 "Cm" = (
 /obj/structure/sign/safety/bulkhead_door{
@@ -3403,6 +3366,46 @@
 	},
 /turf/open/floor/almayer/research,
 /area/styx/medical)
+"CO" = (
+/obj/structure/surface/table/almayer,
+/obj/item/prop/tableflag/uscm2{
+	pixel_x = -12;
+	pixel_y = 15
+	},
+/obj/item/paper_bin{
+	pixel_y = 9;
+	pixel_x = 8
+	},
+/obj/item/tool/pen/fountain{
+	pixel_x = 2;
+	pixel_y = 1
+	},
+/obj/item/tool/pen/fountain{
+	pixel_x = -1;
+	pixel_y = 4
+	},
+/obj/item/tool/pen/fountain{
+	pixel_x = -2;
+	pixel_y = 9
+	},
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 6
+	},
+/obj/structure/machinery/alarm/almayer{
+	dir = 1;
+	pixel_x = 0;
+	pixel_y = 21
+	},
+/obj/item/folder/red{
+	pixel_x = -10;
+	pixel_y = -3
+	},
+/obj/item/folder/black{
+	pixel_x = -10;
+	pixel_y = 2
+	},
+/turf/open/floor/plating/plating_catwalk,
+/area/styx/dorms)
 "CS" = (
 /obj/effect/decal/warning_stripes/asteroid{
 	icon_state = "W"
@@ -3580,12 +3583,6 @@
 	},
 /turf/open/floor/almayer_hull/blackfull,
 /area/styx/platoonarmory)
-"Ev" = (
-/obj/effect/decal/cleanable/dirt{
-	layer = 2.52
-	},
-/turf/open/floor/corsat/arrow_west,
-/area/styx/medical)
 "Ex" = (
 /obj/structure/closet{
 	desc = "It's a fancy storage unit for long-life foodstuffs.";
@@ -3647,6 +3644,15 @@
 	},
 /turf/open/floor/almayer_hull/blackfull,
 /area/styx/canteen)
+"EO" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/machinery/light/small/red{
+	dir = 1
+	},
+/turf/open/floor/corsat/squares,
+/area/styx/prep_hallway)
 "ES" = (
 /obj/structure/machinery/light/double/blue{
 	dir = 1;
@@ -3826,26 +3832,15 @@
 /obj/structure/machinery/door/firedoor/border_only/almayer,
 /turf/open/floor/almayer/plating,
 /area/styx/dorms)
-"Gz" = (
-/obj/structure/cable/heavyduty/west_east,
-/obj/structure/pipes/standard/simple/hidden/scrubbers{
-	dir = 4
-	},
-/obj/structure/pipes/standard/simple/hidden/supply{
-	dir = 4
-	},
-/turf/open/floor/plating/plating_catwalk,
-/area/styx/dorms)
-"GF" = (
+"GE" = (
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
 	},
-/obj/structure/pipes/standard/simple/hidden/supply,
-/obj/structure/pipes/standard/simple/hidden/scrubbers,
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
+	},
 /obj/structure/machinery/light/small/red{
-	dir = 8;
-	pixel_x = 0;
-	pixel_y = 16
+	dir = 8
 	},
 /turf/open/floor/plating/plating_catwalk/prison,
 /area/styx/prep_hallway)
@@ -3881,6 +3876,15 @@
 	},
 /turf/open/floor/almayer_hull/blackfull,
 /area/styx/prep_hallway)
+"Hi" = (
+/obj/structure/target{
+	name = "punching bag";
+	layer = 3.1;
+	pixel_x = 0;
+	pixel_y = -3
+	},
+/turf/open/floor/almayer/edge/smooth/southwest,
+/area/styx/dorms)
 "Hj" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
 /obj/structure/pipes/standard/simple/hidden/scrubbers,
@@ -3892,17 +3896,6 @@
 	},
 /turf/open/floor/corsat/plate,
 /area/styx/canteen)
-"Ho" = (
-/obj/structure/machinery/light{
-	light_power = 0.3
-	},
-/obj/structure/machinery/firealarm{
-	dir = 8;
-	pixel_x = -23;
-	pixel_y = 0
-	},
-/turf/open/floor/corsat/plate,
-/area/styx/dorms)
 "Hr" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "4-8"
@@ -3943,10 +3936,10 @@
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
 	},
-/obj/structure/machinery/light/small/red{
-	dir = 1
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
 	},
-/turf/open/floor/corsat/arrow_west,
+/turf/open/floor/plating/plating_catwalk/prison,
 /area/styx/prep_hallway)
 "HJ" = (
 /obj/structure/machinery/door/airlock/almayer/secure/glass{
@@ -3976,12 +3969,33 @@
 	},
 /turf/open/floor/almayer/plating,
 /area/styx/dorms)
+"HR" = (
+/obj/structure/surface/table/almayer,
+/obj/structure/machinery/computer/secure_data/noaccess{
+	dir = 4;
+	pixel_x = 1;
+	pixel_y = 8
+	},
+/obj/structure/machinery/computer/skills{
+	req_one_access = null;
+	dir = 4;
+	pixel_x = 1;
+	pixel_y = -6
+	},
+/turf/open/space/basic,
+/area/styx/dorms)
 "HV" = (
 /obj/structure/machinery/landinglight/ds1/delayone{
 	dir = 8
 	},
 /turf/open/floor/corsat/plate,
 /area/styx/hangar)
+"HZ" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/turf/open/floor/corsat/arrow_west,
+/area/styx/medical)
 "If" = (
 /obj/structure/machinery/door/airlock/multi_tile/almayer/almayer/glass{
 	name = "Hypersleep Bay Preparations"
@@ -4023,15 +4037,6 @@
 	},
 /turf/open/floor/almayer_hull/blackfull,
 /area/styx/platoonarmory)
-"In" = (
-/obj/structure/target{
-	name = "punching bag";
-	layer = 3.1;
-	pixel_x = 0;
-	pixel_y = -3
-	},
-/turf/open/floor/almayer/edge/smooth/southwest,
-/area/styx/dorms)
 "Io" = (
 /obj/structure/machinery/door/airlock/almayer/medical/glass{
 	dir = 1;
@@ -4052,12 +4057,6 @@
 /obj/structure/pipes/standard/simple/hidden/supply,
 /obj/structure/pipes/standard/simple/hidden/scrubbers,
 /turf/open/floor/corsat/plate,
-/area/styx/prep_hallway)
-"It" = (
-/obj/effect/decal/cleanable/dirt{
-	layer = 2.52
-	},
-/turf/open/floor/corsat/arrow_north,
 /area/styx/prep_hallway)
 "Ix" = (
 /obj/effect/decal/warning_stripes/asteroid{
@@ -4080,6 +4079,12 @@
 "IB" = (
 /turf/open/floor/almayer_hull/blackfull,
 /area/styx/platoonarmory)
+"ID" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/turf/open/floor/corsat/squares,
+/area/styx/medical)
 "II" = (
 /obj/structure/machinery/light/double/blue{
 	dir = 1;
@@ -4252,19 +4257,19 @@
 	},
 /turf/open/floor/plating/plating_catwalk/prison,
 /area/styx/cryo_cells)
-"Jm" = (
-/obj/structure/machinery/firealarm{
-	dir = 4;
-	pixel_x = 21
-	},
-/turf/open/floor/almayer/edge/smooth/east,
-/area/styx/dorms)
 "Jr" = (
 /obj/structure/sign/safety/bulkhead_door{
 	pixel_x = -31;
 	pixel_y = -25
 	},
-/turf/open/floor/corsat/plate,
+/obj/effect/decal/warning_stripes/asteroid{
+	icon_state = "S"
+	},
+/obj/effect/decal/warning_stripes/asteroid{
+	icon_state = "cargo_arrow";
+	dir = 1
+	},
+/turf/open/floor/almayer_hull/blackfull,
 /area/styx/platoonarmory)
 "Jv" = (
 /obj/structure/machinery/light/double/blue{
@@ -4359,6 +4364,9 @@
 	pixel_x = 15;
 	pixel_y = -37
 	},
+/obj/effect/decal/warning_stripes/asteroid{
+	icon_state = "SE-out"
+	},
 /turf/open/floor/almayer_hull,
 /area/styx/platoonarmory)
 "JQ" = (
@@ -4387,18 +4395,6 @@
 	},
 /turf/open/floor/almayer/plating_striped/west,
 /area/styx/canteen)
-"Ka" = (
-/obj/structure/cable/heavyduty{
-	icon_state = "4-8"
-	},
-/obj/structure/pipes/standard/simple/hidden/supply{
-	dir = 8
-	},
-/obj/structure/pipes/standard/simple/hidden/scrubbers{
-	dir = 4
-	},
-/turf/open/floor/plating/plating_catwalk/prison,
-/area/styx/cryo_cells)
 "Kk" = (
 /obj/structure/bed{
 	icon_state = "psychbed";
@@ -4419,11 +4415,6 @@
 	layer = 5;
 	pixel_x = 3;
 	pixel_y = 1
-	},
-/obj/structure/machinery/light/small{
-	dir = 1;
-	pixel_x = 0;
-	pixel_y = 11
 	},
 /obj/item/bedsheet/blue{
 	layer = 3
@@ -4482,18 +4473,6 @@
 /obj/structure/bed/chair/comfy/bench/south,
 /turf/open/floor/almayer/edge/smooth/west,
 /area/styx/cryo_cells)
-"KM" = (
-/obj/effect/decal/cleanable/dirt{
-	layer = 2.52
-	},
-/obj/structure/cable/heavyduty{
-	icon_state = "1-2-4-8"
-	},
-/obj/structure/machinery/light/small/red{
-	dir = 4
-	},
-/turf/open/floor/plating/plating_catwalk/prison,
-/area/styx/prep_hallway)
 "KO" = (
 /obj/structure/bed/chair/comfy/bench/north,
 /turf/open/floor/almayer_hull,
@@ -4609,6 +4588,12 @@
 	},
 /turf/open/floor/corsat/plate,
 /area/styx/hangar)
+"LD" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/turf/open/floor/corsat/arrow_north,
+/area/styx/prep_hallway)
 "LH" = (
 /obj/structure/machinery/optable,
 /turf/open/floor/almayer/silverfull,
@@ -4668,6 +4653,29 @@
 	},
 /turf/open/floor/almayer_hull/blackfull,
 /area/styx/prep_hallway)
+"Mf" = (
+/obj/structure/machinery/light{
+	light_power = 0.3
+	},
+/obj/structure/machinery/firealarm{
+	dir = 8;
+	pixel_x = -23;
+	pixel_y = 0
+	},
+/turf/open/floor/corsat/plate,
+/area/styx/dorms)
+"Mh" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
+	},
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 8
+	},
+/obj/structure/pipes/standard/simple/hidden/scrubbers{
+	dir = 4
+	},
+/turf/open/floor/plating/plating_catwalk/prison,
+/area/styx/cryo_cells)
 "Mj" = (
 /obj/structure/target{
 	name = "punching bag";
@@ -4685,11 +4693,6 @@
 	},
 /turf/open/floor/almayer/dark_sterile,
 /area/styx/cryo_cells)
-"Mm" = (
-/obj/structure/pipes/standard/simple/hidden/supply,
-/obj/structure/pipes/standard/simple/hidden/scrubbers,
-/turf/open/floor/corsat/plate,
-/area/styx/prep_hallway)
 "Mr" = (
 /obj/structure/bed{
 	icon_state = "psychbed";
@@ -4710,11 +4713,6 @@
 	layer = 5;
 	pixel_x = -3;
 	pixel_y = 1
-	},
-/obj/structure/machinery/light/small{
-	dir = 1;
-	pixel_x = 0;
-	pixel_y = 11
 	},
 /obj/item/bedsheet/purple{
 	layer = 3
@@ -4811,18 +4809,6 @@
 	},
 /turf/open/space/basic,
 /area/styx/canteen)
-"MT" = (
-/obj/structure/bed/bedroll{
-	pixel_y = -4;
-	color = "#333333";
-	name = "gym mat";
-	buckle_lying = null;
-	can_buckle = 0;
-	foldabletype = null;
-	desc = "A black gym mat, useful if you don't want to use the cold hard floor for exercise."
-	},
-/turf/open/floor/almayer/edge/smooth/corner/west,
-/area/styx/dorms)
 "MW" = (
 /obj/structure/machinery/light/double/blue{
 	dir = 8;
@@ -4860,14 +4846,15 @@
 	},
 /turf/open/floor/plating/plating_catwalk/strata,
 /area/styx/dorms)
+"Nl" = (
+/obj/structure/machinery/door/poddoor/almayer,
+/turf/open/floor/corsat/squares,
+/area/styx/prep_hallway)
 "Nm" = (
-/obj/structure/machinery/door/airlock/almayer/maint{
-	dir = 1
-	},
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
 	},
-/turf/open/floor/corsat/squares,
+/turf/open/floor/corsat/arrow_east,
 /area/styx/prep_hallway)
 "No" = (
 /obj/structure/platform/strata/metal{
@@ -4897,15 +4884,6 @@
 	},
 /turf/open/space/basic,
 /area/styx/canteen)
-"Nr" = (
-/obj/effect/decal/cleanable/dirt{
-	layer = 2.52
-	},
-/obj/structure/machinery/light/small/red{
-	dir = 4
-	},
-/turf/open/floor/corsat/squares,
-/area/styx/canteen)
 "Nu" = (
 /obj/structure/machinery/light/double{
 	dir = 2;
@@ -4933,6 +4911,18 @@
 	icon_state = "4-8"
 	},
 /turf/open/floor/almayer_hull/blackfull,
+/area/styx/prep_hallway)
+"ND" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 4
+	},
+/obj/structure/pipes/standard/simple/hidden/scrubbers{
+	dir = 4
+	},
+/turf/open/floor/plating/plating_catwalk/prison,
 /area/styx/prep_hallway)
 "NE" = (
 /obj/structure/toilet,
@@ -4992,6 +4982,15 @@
 /obj/structure/pipes/vents/scrubber,
 /turf/open/floor/almayer_hull/blackfull,
 /area/styx/prep_hallway)
+"NT" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/machinery/light/small/red{
+	dir = 4
+	},
+/turf/open/floor/corsat/squares,
+/area/styx/canteen)
 "NX" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "1-2"
@@ -5072,6 +5071,15 @@
 	},
 /turf/open/floor/almayer/plating_striped/north,
 /area/styx/cryo_cells)
+"OE" = (
+/obj/structure/machinery/door/airlock/almayer/maint{
+	dir = 1
+	},
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/turf/open/floor/corsat/squares,
+/area/styx/medical)
 "OG" = (
 /obj/structure/platform_decoration/strata/metal{
 	dir = 1;
@@ -5124,6 +5132,13 @@
 	},
 /turf/open/floor/almayer/edge/smooth/east,
 /area/styx/cryo_cells)
+"Pm" = (
+/obj/structure/machinery/firealarm{
+	dir = 4;
+	pixel_x = 21
+	},
+/turf/open/floor/almayer/edge/smooth/east,
+/area/styx/dorms)
 "Pn" = (
 /turf/open/floor/corsat/plate,
 /area/styx/canteen)
@@ -5185,13 +5200,6 @@
 	},
 /turf/open/floor/almayer,
 /area/styx/dorms)
-"PJ" = (
-/obj/structure/sign/safety/south{
-	pixel_x = 7;
-	pixel_y = -32
-	},
-/turf/open/floor/almayer/plating,
-/area/styx/prep_hallway)
 "PL" = (
 /obj/structure/pipes/standard/simple/hidden/scrubbers{
 	dir = 4
@@ -5201,25 +5209,16 @@
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/styx/dorms)
-"PM" = (
-/obj/structure/machinery/door/airlock/almayer/secure/glass{
-	req_access = null;
-	dir = 8;
-	name = "Office"
-	},
-/obj/structure/cable/heavyduty/west_east,
-/obj/structure/pipes/standard/simple/hidden/scrubbers{
-	dir = 4
-	},
-/obj/structure/pipes/standard/simple/hidden/supply{
-	dir = 4
-	},
-/obj/structure/machinery/door/firedoor/border_only/almayer,
-/turf/open/floor/almayer/plating,
-/area/styx/dorms)
 "PO" = (
 /turf/open/floor/almayer/plating_striped/west,
 /area/styx/canteen)
+"PY" = (
+/obj/structure/sign/safety/south{
+	pixel_x = 7;
+	pixel_y = -32
+	},
+/turf/open/floor/almayer/plating,
+/area/styx/prep_hallway)
 "PZ" = (
 /obj/structure/platform_decoration/strata/metal{
 	dir = 1
@@ -5243,24 +5242,22 @@
 "Qk" = (
 /turf/open/floor/almayer/sterile,
 /area/styx/medical)
-"Qm" = (
-/obj/structure/pipes/vents/scrubber{
-	dir = 8
-	},
-/turf/open/floor/almayer,
-/area/styx/dorms)
 "Qo" = (
 /obj/structure/machinery/door/firedoor/border_only/almayer{
 	dir = 2
 	},
 /turf/open/floor/corsat/plate,
 /area/styx/canteen)
-"Qu" = (
-/obj/effect/decal/cleanable/dirt{
-	layer = 2.52
+"QA" = (
+/obj/structure/cable/heavyduty/north_west,
+/obj/structure/pipes/standard/simple/hidden/scrubbers{
+	dir = 9
 	},
-/turf/open/floor/corsat/arrow_north,
-/area/styx/medical)
+/obj/structure/pipes/standard/simple/hidden/supply{
+	dir = 9
+	},
+/turf/open/floor/almayer/edge/smooth,
+/area/styx/dorms)
 "QB" = (
 /obj/structure/bed/bedroll{
 	pixel_y = -4;
@@ -5276,6 +5273,13 @@
 	},
 /turf/open/floor/almayer/edge/smooth/west,
 /area/styx/dorms)
+"QC" = (
+/obj/structure/machinery/door/airlock/almayer/maint,
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/turf/open/floor/corsat/squares,
+/area/styx/medical)
 "QE" = (
 /obj/structure/surface/table/reinforced/almayer_B,
 /obj/item/tool/kitchen/tray{
@@ -5343,12 +5347,6 @@
 	},
 /turf/open/floor/almayer,
 /area/styx/canteen)
-"QF" = (
-/obj/effect/decal/cleanable/dirt{
-	layer = 2.52
-	},
-/turf/open/floor/corsat/arrow_east,
-/area/styx/prep_hallway)
 "QG" = (
 /obj/structure/machinery/floodlight/landing/floor{
 	color = "#dae2ff";
@@ -5415,6 +5413,17 @@
 /obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/floor/corsat/plate,
 /area/styx/cryo_cells)
+"Rg" = (
+/obj/structure/sign/safety/storage{
+	pixel_x = 45;
+	pixel_y = 3
+	},
+/obj/structure/sign/safety/ammunition{
+	pixel_x = 32;
+	pixel_y = 3
+	},
+/turf/open/floor/corsat/plate,
+/area/styx/platoonarmory)
 "Rz" = (
 /obj/effect/decal/warning_stripes/asteroid{
 	icon_state = "E"
@@ -5485,15 +5494,6 @@
 "Se" = (
 /turf/open/floor/almayer_hull/blackfull,
 /area/styx/prep_hallway)
-"Sh" = (
-/obj/structure/machinery/door/airlock/almayer/maint{
-	dir = 1
-	},
-/obj/effect/decal/cleanable/dirt{
-	layer = 2.52
-	},
-/turf/open/floor/corsat/plate,
-/area/styx/prep_hallway)
 "Sz" = (
 /obj/structure/pipes/standard/simple/hidden/supply{
 	dir = 10
@@ -5507,6 +5507,15 @@
 	},
 /turf/open/floor/almayer/dark_sterile,
 /area/styx/cryo_cells)
+"SC" = (
+/obj/structure/machinery/door/airlock/almayer/maint{
+	dir = 1
+	},
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/turf/open/floor/corsat/plate,
+/area/styx/prep_hallway)
 "SJ" = (
 /obj/effect/decal/warning_stripes/asteroid{
 	icon_state = "N";
@@ -5621,6 +5630,28 @@
 	},
 /turf/open/floor/almayer_hull/blackfull,
 /area/styx/platoonarmory)
+"Ub" = (
+/obj/structure/filingcabinet/chestdrawer{
+	density = 0;
+	pixel_x = -8;
+	pixel_y = 16
+	},
+/obj/structure/filingcabinet{
+	density = 0;
+	pixel_x = 8;
+	pixel_y = 16
+	},
+/obj/item/device/flashlight/lamp/on{
+	pixel_y = 22;
+	pixel_x = -9
+	},
+/obj/structure/pipes/vents/pump,
+/obj/item/folder/blue{
+	pixel_x = 8;
+	pixel_y = 31
+	},
+/turf/open/floor/almayer/edge/smooth/northeast,
+/area/styx/dorms)
 "Ue" = (
 /obj/effect/decal/warning_stripes/asteroid{
 	icon_state = "S"
@@ -5672,13 +5703,6 @@
 	},
 /turf/open/floor/almayer_hull/blackfull,
 /area/styx/prep_hallway)
-"Uu" = (
-/obj/structure/machinery/door/airlock/almayer/maint,
-/obj/effect/decal/cleanable/dirt{
-	layer = 2.52
-	},
-/turf/open/floor/corsat/squares,
-/area/styx/medical)
 "UB" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "0-4"
@@ -5738,14 +5762,6 @@
 	},
 /turf/open/floor/plating/plating_catwalk/strata,
 /area/styx/prep_hallway)
-"Vm" = (
-/obj/effect/decal/cleanable/dirt{
-	layer = 2.52
-	},
-/obj/structure/pipes/standard/simple/hidden/supply,
-/obj/structure/pipes/standard/simple/hidden/scrubbers,
-/turf/open/floor/plating/plating_catwalk/prison,
-/area/styx/prep_hallway)
 "Vn" = (
 /turf/open/floor/corsat/plate,
 /area/styx/prep_hallway)
@@ -5756,6 +5772,12 @@
 /obj/structure/pipes/standard/simple/hidden/supply,
 /turf/open/floor/plating/plating_catwalk/prison,
 /area/styx/cryo_cells)
+"Vr" = (
+/obj/structure/pipes/vents/scrubber{
+	dir = 8
+	},
+/turf/open/floor/almayer,
+/area/styx/dorms)
 "Vt" = (
 /obj/structure/closet/crate/trashcart,
 /turf/open/floor/almayer/research,
@@ -5764,14 +5786,6 @@
 /obj/structure/machinery/medical_pod/bodyscanner,
 /turf/open/floor/almayer/sterile_green,
 /area/styx/medical)
-"VG" = (
-/obj/structure/bed/chair/office/light{
-	dir = 8
-	},
-/obj/structure/cable/heavyduty/south,
-/obj/structure/pipes/standard/simple/hidden/supply,
-/turf/open/floor/almayer,
-/area/styx/dorms)
 "VJ" = (
 /turf/open/floor/almayer/plating_striped/west,
 /area/styx/dorms)
@@ -5806,18 +5820,20 @@
 	},
 /turf/open/floor/almayer/sterile,
 /area/styx/dorms)
+"Wq" = (
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/item/prop/tableflag/uscm2{
+	pixel_x = -12;
+	pixel_y = -5
+	},
+/turf/open/floor/almayer_hull/blackfull,
+/area/styx/canteen)
 "Ws" = (
-/obj/effect/decal/cleanable/dirt{
-	layer = 2.52
+/obj/effect/decal/warning_stripes/asteroid{
+	icon_state = "W"
 	},
-/obj/structure/pipes/standard/simple/hidden/supply{
-	dir = 4
-	},
-/obj/structure/pipes/standard/simple/hidden/scrubbers{
-	dir = 4
-	},
-/turf/open/floor/plating/plating_catwalk/prison,
-/area/styx/prep_hallway)
+/turf/open/floor/almayer_hull,
+/area/styx/platoonarmory)
 "Wt" = (
 /obj/structure/pipes/vents/pump{
 	pixel_x = 0;
@@ -5851,18 +5867,6 @@
 	},
 /turf/open/floor/corsat/plate,
 /area/styx/hangar)
-"WD" = (
-/obj/effect/decal/cleanable/dirt{
-	layer = 2.52
-	},
-/obj/structure/cable/heavyduty{
-	icon_state = "1-2"
-	},
-/obj/structure/machinery/light/small/red{
-	dir = 8
-	},
-/turf/open/floor/plating/plating_catwalk/prison,
-/area/styx/prep_hallway)
 "WH" = (
 /obj/structure/gun_rack/xm38{
 	pixel_x = 7;
@@ -5880,6 +5884,18 @@
 	},
 /turf/open/floor/corsat/plate,
 /area/styx/platoonarmory)
+"WX" = (
+/obj/structure/bed/bedroll{
+	pixel_y = -4;
+	color = "#333333";
+	name = "gym mat";
+	buckle_lying = null;
+	can_buckle = 0;
+	foldabletype = null;
+	desc = "A black gym mat, useful if you don't want to use the cold hard floor for exercise."
+	},
+/turf/open/floor/almayer/edge/smooth/north,
+/area/styx/dorms)
 "Xa" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "1-2-4-8"
@@ -5948,10 +5964,6 @@
 	},
 /turf/open/floor/corsat/plate,
 /area/styx/dorms)
-"Xw" = (
-/obj/structure/machinery/photocopier/wyphotocopier,
-/turf/open/floor/almayer/edge/smooth/southeast,
-/area/styx/dorms)
 "Xx" = (
 /obj/structure/pipes/standard/simple/hidden/supply,
 /obj/structure/pipes/standard/simple/hidden/scrubbers,
@@ -5996,6 +6008,20 @@
 	},
 /turf/open/floor/corsat/plate,
 /area/styx/platoonarmory)
+"XP" = (
+/obj/effect/decal/cleanable/dirt{
+	layer = 2.52
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2-8"
+	},
+/obj/structure/machinery/light/small/red{
+	dir = 4;
+	pixel_x = 0;
+	pixel_y = 16
+	},
+/turf/open/floor/plating/plating_catwalk/prison,
+/area/styx/medical)
 "XR" = (
 /obj/structure/roof/cargocrane_tracks/vertical/endcap2{
 	pixel_y = 14
@@ -8476,7 +8502,7 @@ Oz
 ig
 ed
 ed
-Ho
+Mf
 Dq
 Dq
 Dq
@@ -8491,7 +8517,7 @@ SV
 Xt
 Dq
 BG
-MT
+yz
 Lv
 jC
 eS
@@ -8656,7 +8682,7 @@ PC
 PC
 PC
 PC
-PC
+Dq
 Dq
 Dq
 wO
@@ -8668,18 +8694,18 @@ jy
 Tq
 nb
 zS
-uD
+lW
 sN
 ud
 ws
-uf
+ej
 NH
 FR
 OA
-dy
+WX
 jw
 PL
-dZ
+hT
 Dq
 Dq
 Dq
@@ -8718,7 +8744,7 @@ PC
 PC
 PC
 PC
-PC
+Dq
 Dq
 Jg
 ig
@@ -8728,7 +8754,7 @@ wL
 Dq
 Dq
 OA
-PM
+eq
 Dq
 OA
 Gv
@@ -8740,9 +8766,9 @@ oy
 Dq
 Yt
 aK
-Qm
+Vr
 OW
-In
+Hi
 Dq
 Dq
 Ak
@@ -8780,7 +8806,7 @@ PC
 Wc
 PC
 PC
-PC
+Dq
 Dq
 Kk
 ig
@@ -8788,9 +8814,9 @@ ed
 Yv
 Dq
 Dq
-jU
-nH
-Gz
+HR
+us
+sA
 Dq
 Br
 rv
@@ -8804,7 +8830,7 @@ Dq
 pl
 DF
 Mj
-eD
+xF
 Dq
 Dq
 Ak
@@ -8842,17 +8868,17 @@ PC
 PC
 PC
 PC
-PC
+Dq
 Dq
 Dq
 IN
 Af
 Dq
 Dq
-hZ
-VG
-vh
-rM
+CO
+pL
+jq
+QA
 Dq
 Wn
 jX
@@ -8904,32 +8930,32 @@ PC
 PC
 PC
 PC
-PC
 Dq
 Dq
 Dq
 Dq
 Dq
 Dq
-qd
-Jm
-mV
-Xw
+Dq
+Ub
+Pm
+nO
+qZ
 Dq
 ke
 Ps
 Dq
 Dq
 FP
-dN
+AD
 Se
-Sh
-It
-gC
-sT
-sT
-gC
-gC
+SC
+LD
+lf
+BR
+BR
+lf
+lf
 iL
 iL
 iL
@@ -8990,19 +9016,19 @@ oL
 oL
 oL
 oL
-Nr
-gC
-sT
-sT
-gC
-qI
-It
-gC
-sT
-WD
-gC
-gC
-oK
+NT
+lf
+BR
+BR
+lf
+dr
+LD
+lf
+BR
+GE
+lf
+lf
+Nl
 iL
 Ak
 Ak
@@ -9053,18 +9079,18 @@ nB
 QE
 oL
 oL
-gC
-Vm
-Vm
-gC
-qI
-It
-gC
-Vm
-Vm
-QF
-QF
-oK
+lf
+lU
+lU
+lf
+dr
+LD
+lf
+lU
+lU
+Nm
+Nm
+Nl
 iL
 Ak
 Ak
@@ -9107,7 +9133,7 @@ ov
 dc
 bb
 JD
-Cj
+gC
 JD
 oL
 Nq
@@ -9118,14 +9144,14 @@ oL
 iL
 iL
 iL
-dV
+EO
 iL
 iL
 iL
 iL
 iL
-BR
-BR
+lb
+lb
 iL
 iL
 Ak
@@ -9169,7 +9195,7 @@ xT
 rU
 bb
 rQ
-Cj
+gC
 Se
 oL
 nQ
@@ -9180,14 +9206,14 @@ ui
 iL
 iL
 iL
-QF
+Nm
 iL
 iL
 iL
 iL
 iL
-gC
-gC
+lf
+lf
 iL
 iL
 Ak
@@ -9242,14 +9268,14 @@ oL
 oL
 oL
 oL
-vt
+uU
 oL
 oL
 oL
 iL
 iL
-Ws
-pR
+ND
+lz
 iL
 iL
 Ak
@@ -9310,8 +9336,8 @@ oL
 oL
 iL
 iL
-Ws
-yS
+ND
+HG
 iL
 iL
 Ak
@@ -9372,8 +9398,8 @@ oL
 oL
 iL
 iL
-gC
-gC
+lf
+lf
 iL
 iL
 Ak
@@ -9413,7 +9439,7 @@ Wt
 qy
 ge
 dd
-Ka
+Mh
 rj
 vp
 Vn
@@ -9434,8 +9460,8 @@ Pn
 oL
 iL
 iL
-gC
-gC
+lf
+lf
 iL
 iL
 Ak
@@ -9468,11 +9494,11 @@ ue
 ue
 hh
 Jl
-yz
-yz
-yz
+pR
+pR
+pR
 io
-yz
+pR
 yy
 OB
 Xa
@@ -9487,17 +9513,17 @@ yH
 Cx
 Di
 yk
-lb
+xq
 VW
-vW
-rb
+hp
+Wq
 UB
 uC
 oL
 iL
 iL
-HG
-QF
+uj
+Nm
 iL
 iL
 Ak
@@ -9537,7 +9563,7 @@ db
 QU
 ge
 jL
-aZ
+lZ
 hz
 Ca
 Co
@@ -9558,8 +9584,8 @@ Pn
 oL
 iL
 iL
-gC
-gC
+lf
+lf
 iL
 iL
 Ak
@@ -9603,7 +9629,7 @@ zW
 rj
 vp
 Vn
-uU
+wh
 Vn
 Qo
 Cx
@@ -9620,8 +9646,8 @@ oL
 oL
 iL
 iL
-gC
-gC
+lf
+lf
 iL
 iL
 Ak
@@ -9682,8 +9708,8 @@ oL
 oL
 iL
 iL
-Ws
-yS
+ND
+HG
 iL
 iL
 Ak
@@ -9727,7 +9753,7 @@ Hr
 xK
 bb
 XY
-wh
+tg
 JD
 oL
 HC
@@ -9738,14 +9764,14 @@ oL
 oL
 oL
 oL
-vt
+uU
 oL
 oL
 oL
 iL
 iL
-Ws
-pR
+ND
+lz
 iL
 iL
 Ak
@@ -9789,7 +9815,7 @@ ok
 BO
 bb
 JD
-wh
+tg
 JD
 oL
 wJ
@@ -9800,14 +9826,14 @@ oL
 iL
 iL
 iL
-BW
+Cj
 iL
 iL
 iL
 iL
 iL
-gC
-gC
+lf
+lf
 iL
 iL
 Ak
@@ -9851,7 +9877,7 @@ IQ
 rw
 bb
 bk
-uU
+wh
 JD
 oL
 HC
@@ -9862,14 +9888,14 @@ oL
 iL
 iL
 iL
-gC
+lf
 iL
 iL
 iL
 iL
 iL
-BR
-BR
+lb
+lb
 iL
 iL
 Ak
@@ -9913,7 +9939,7 @@ Pl
 tX
 bb
 LX
-uU
+wh
 sy
 oL
 oL
@@ -9921,18 +9947,18 @@ oL
 oL
 oL
 oL
-gC
-Vm
-Vm
-gC
-Nm
-It
-gC
-yu
-Vm
-BW
-BW
-oK
+lf
+lU
+lU
+lf
+sT
+LD
+lf
+hv
+lU
+Cj
+Cj
+Nl
 iL
 Ak
 Ak
@@ -9975,7 +10001,7 @@ bb
 bb
 bb
 JD
-uU
+wh
 KR
 iL
 iL
@@ -9983,18 +10009,18 @@ iL
 iL
 iL
 iL
-gC
+lf
+BR
+gg
+lf
 sT
-lD
-gC
+LD
+lf
 Nm
-It
-gC
-QF
-QF
-gC
-gC
-oK
+Nm
+lf
+lf
+Nl
 iL
 Ak
 Ak
@@ -10037,23 +10063,23 @@ iL
 iL
 iL
 uQ
-uU
-PJ
+wh
+PY
 iL
 iL
 iL
 iL
 iL
 iL
-QF
+Nm
 iL
 iL
 iL
 iL
 iL
 iL
-BR
-BR
+lb
+lb
 iL
 iL
 iL
@@ -10107,15 +10133,15 @@ iL
 iL
 iL
 iL
-BR
+lb
 iL
 wn
 iL
 iL
 iL
 iL
-gC
-gC
+lf
+lf
 iL
 iL
 iL
@@ -10176,8 +10202,8 @@ KD
 iL
 iL
 iL
-Ws
-pR
+ND
+lz
 iL
 iL
 iL
@@ -10226,11 +10252,11 @@ zs
 mt
 bQ
 Cb
-fA
+fo
 Xx
-Mm
-Mm
-Mm
+oK
+oK
+oK
 Xx
 lV
 rT
@@ -10238,8 +10264,8 @@ iL
 iL
 iL
 iL
-Ws
-yS
+ND
+HG
 iL
 iL
 iL
@@ -10268,11 +10294,11 @@ pK
 QO
 qD
 sL
-qD
-QO
-qD
-QO
-qD
+Ws
+iM
+Ws
+iM
+Ws
 RH
 Xl
 DI
@@ -10300,8 +10326,8 @@ su
 iL
 iL
 iL
-gC
-gC
+lf
+lf
 iL
 iL
 iL
@@ -10362,8 +10388,8 @@ iL
 iL
 iL
 iL
-gC
-gC
+lf
+lf
 iL
 iL
 iL
@@ -10424,8 +10450,8 @@ iL
 iL
 iL
 iL
-yj
-gC
+ua
+lf
 iL
 iL
 iL
@@ -10486,8 +10512,8 @@ iL
 iL
 iL
 iL
-gC
-gC
+lf
+lf
 iL
 iL
 iL
@@ -10522,7 +10548,7 @@ yG
 nd
 qD
 QO
-qD
+wi
 XX
 fP
 tf
@@ -10548,8 +10574,8 @@ iL
 iL
 iL
 iL
-Ws
-yS
+ND
+HG
 iL
 iL
 iL
@@ -10584,7 +10610,7 @@ Df
 aE
 QO
 qD
-QO
+qk
 JF
 tx
 UJ
@@ -10610,8 +10636,8 @@ iL
 iL
 iL
 iL
-Ws
-pR
+ND
+lz
 iL
 iL
 iL
@@ -10646,7 +10672,7 @@ qD
 QO
 qD
 QO
-qD
+VU
 DI
 DI
 TR
@@ -10672,8 +10698,8 @@ iL
 iL
 iL
 iL
-gC
-gC
+lf
+lf
 iL
 iL
 iL
@@ -10725,7 +10751,7 @@ hl
 cz
 hl
 hl
-Uu
+QC
 hl
 hl
 hl
@@ -10734,8 +10760,8 @@ iL
 iL
 iL
 iL
-QF
-QF
+Nm
+Nm
 iL
 iL
 iL
@@ -10763,7 +10789,7 @@ fP
 WR
 tk
 GI
-lf
+QO
 qD
 QO
 qD
@@ -10787,7 +10813,7 @@ Lt
 Tv
 hl
 hl
-Ev
+HZ
 hl
 hl
 hl
@@ -10796,8 +10822,8 @@ iL
 iL
 iL
 iL
-BR
-BR
+lb
+lb
 iL
 iL
 iL
@@ -10825,7 +10851,7 @@ fP
 WR
 tk
 ik
-DI
+Rg
 IB
 IB
 IB
@@ -10847,19 +10873,19 @@ LH
 IY
 qA
 xL
-dG
-Qu
-lK
-dG
-Qu
-jW
-Vm
-GF
-gC
-gC
-Nm
-It
+OE
 yS
+Ae
+OE
+yS
+ID
+lU
+mW
+lf
+lf
+sT
+LD
+HG
 iL
 iL
 iL
@@ -10911,17 +10937,17 @@ xV
 hl
 hl
 hl
-bp
-dG
-Qu
-jW
+XP
+OE
+yS
+ID
+BR
+BR
+lf
+lf
 sT
-sT
-gC
-gC
-Nm
-It
-KM
+LD
+cI
 iL
 iL
 iL
