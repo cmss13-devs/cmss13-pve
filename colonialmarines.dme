@@ -21,6 +21,7 @@
 #include "code\stylesheet.dm"
 #include "code\__DEFINES\__game.dm"
 #include "code\__DEFINES\__rust_g.dm"
+#include "code\__DEFINES\__rust_g_redis-pubsub.dm"
 #include "code\__DEFINES\__spacemandmm.dm"
 #include "code\__DEFINES\_bitfields.dm"
 #include "code\__DEFINES\_click.dm"
@@ -2708,4 +2709,5 @@
 #include "interface\interface.dm"
 #include "interface\skin.dmf"
 #include "maps\_basemap.dm"
+#include "modular_pve\code\modules\admin\admin_verbs.dm"
 // END_INCLUDE

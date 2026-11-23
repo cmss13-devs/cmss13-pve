@@ -1,4 +1,0 @@
-author: "AmoryBlaine"
-delete-after: True
-changes:
-  - rscadd: "new sprites for each platoon, made all gear vendors use the upp_gear sprite"
