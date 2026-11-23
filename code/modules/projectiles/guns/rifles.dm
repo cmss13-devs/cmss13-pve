@@ -404,7 +404,7 @@
 		/obj/item/attachable/scope/mini,
 		/obj/item/attachable/scope/mini/upp,
 		/obj/item/attachable/reddot,
-		/obj/item/attachable/reddot/upp
+		/obj/item/attachable/reddot/upp,
 		/obj/item/attachable/scope/mini/nsg23/rmc,
 		/obj/item/attachable/reflex,
 		/obj/item/attachable/flashlight,
@@ -426,7 +426,7 @@
 		/obj/item/attachable/angledgrip,
 		/obj/item/attachable/flashlight/grip,
 		/obj/item/attachable/verticalgrip/upp,
-		/obj/item/attachable/angledgrip/upp
+		/obj/item/attachable/angledgrip/upp,
 		/obj/item/attachable/flashlight/grip/upp,
 		/obj/item/attachable/gyro,
 		/obj/item/attachable/lasersight,
@@ -845,7 +845,7 @@
 		/obj/item/attachable/angledgrip,
 		/obj/item/attachable/flashlight/grip,
 		/obj/item/attachable/verticalgrip/upp,
-		/obj/item/attachable/angledgrip/upp
+		/obj/item/attachable/angledgrip/upp,
 		/obj/item/attachable/flashlight/grip/upp,
 		/obj/item/attachable/gyro,
 		/obj/item/attachable/lasersight,

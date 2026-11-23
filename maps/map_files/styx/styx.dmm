@@ -1163,10 +1163,6 @@
 	name = "synthetic crab meat";
 	desc = "Gourmet 'crab' that's obviously synthetic. It tastes horrible, even when cooked."
 	},
-/obj/structure/machinery/light/double/blue{
-	light_color = "#dae2ff";
-	light_power = 0.3
-	},
 /turf/open/floor/almayer/black,
 /area/styx/canteen)
 "jL" = (
@@ -1322,18 +1318,6 @@
 	},
 /turf/open/floor/plating/plating_catwalk/prison,
 /area/styx/prep_hallway)
-"ld" = (
-/obj/structure/surface/table/reinforced/almayer_B,
-/obj/item/ammo_box/magazine/nade_box/smoke{
-	pixel_x = 2;
-	pixel_y = 5
-	},
-/obj/item/ammo_box/magazine/nade_box/smoke{
-	pixel_x = 3;
-	pixel_y = 11
-	},
-/turf/open/floor/almayer_hull/blackfull,
-/area/styx/platoonarmory)
 "lf" = (
 /turf/open/floor/corsat/plate,
 /area/styx/platoonarmory)
@@ -1937,10 +1921,6 @@
 	pixel_x = -1;
 	pixel_y = -1
 	},
-/obj/structure/machinery/light/double/blue{
-	light_color = "#dae2ff";
-	light_power = 0.3
-	},
 /turf/open/floor/almayer/black,
 /area/styx/canteen)
 "qH" = (
@@ -2453,6 +2433,7 @@
 /obj/structure/cable{
 	layer = 2.36
 	},
+/obj/structure/machinery/light/double/blue,
 /turf/open/floor/corsat/plate,
 /area/styx/canteen)
 "uO" = (
@@ -2708,7 +2689,6 @@
 /turf/open/floor/corsat/plate,
 /area/styx/hangar)
 "wY" = (
-/obj/structure/machinery/light/double/blue,
 /obj/structure/cable/heavyduty{
 	icon_state = "1-8"
 	},
@@ -2873,7 +2853,8 @@
 /obj/structure/machinery/light/double{
 	dir = 1;
 	light_power = 0.3;
-	alpha = 0
+	alpha = 0;
+	mouse_opacity = 0
 	},
 /turf/open/floor/corsat/plate,
 /area/styx/platoonarmory)
@@ -3261,9 +3242,17 @@
 /turf/open/floor/almayer/sterile_green_side/north,
 /area/styx/medical)
 "BX" = (
-/obj/structure/machinery/light/double/blue,
-/turf/open/floor/corsat/plate,
-/area/styx/canteen)
+/obj/structure/surface/table/reinforced/almayer_B,
+/obj/item/ammo_box/magazine/nade_box/smoke{
+	pixel_x = 2;
+	pixel_y = 5
+	},
+/obj/item/ammo_box/magazine/nade_box/smoke{
+	pixel_x = 3;
+	pixel_y = 11
+	},
+/turf/open/floor/almayer_hull/blackfull,
+/area/styx/platoonarmory)
 "Ca" = (
 /obj/structure/machinery/door/airlock/multi_tile/almayer/almayer/glass{
 	name = "Hypersleep Bay Preparations"
@@ -9292,7 +9281,7 @@ yk
 yk
 yk
 Pn
-BX
+Pn
 oL
 oL
 iL
@@ -10813,7 +10802,7 @@ ky
 DI
 DI
 DI
-ld
+BX
 IB
 IB
 IB

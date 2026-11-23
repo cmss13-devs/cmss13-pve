@@ -1238,7 +1238,6 @@
 	listed_products = list(
 	list("ELEMENT ARMAMENT KITS", 0, null, null, null),
 	list("Heavy Pulse Rifle Equipment Box", 1, /obj/item/storage/box/guncase/heavy/hpr/marsoc, VENDOR_ITEM_REGULAR),
-	list("M1771 Shotgun Case", 1, /obj/item/storage/box/guncase/xm51, VENDOR_ITEM_REGULAR),
 	list("M56D Heavy Machine Gun Case", 1, /obj/item/storage/box/guncase/m56d, VENDOR_ITEM_REGULAR),
 
 	list("ELEMENT UTILITIES", 0, null, null, null),
@@ -1248,6 +1247,7 @@
 	list("Signal Tracking Device", 1, /obj/item/tool/signal_tracker, VENDOR_ITEM_REGULAR),
 	)
 
+
 /obj/structure/machinery/cm_vending/sorted/cargo_guns/squad/marsoc/foreign_weaponry
 	name = "\improper ARMAT Systems Automated Non-Standard Weapon Storage Rack"
 	desc = "An automated supply rack with access to the ship's storage bays. This one has the brand of ARMAT painted across it and looks to have been modified for a whole host of weaponry."
@@ -1255,29 +1255,28 @@
 
 /obj/structure/machinery/cm_vending/sorted/cargo_guns/squad/marsoc/foreign_weaponry/populate_product_list(scale)
 	listed_products = list(
-		list("FOREIGN PRIMARY WEAPON SELECTION (CHOOSE 1)", -1, null, null),
-		list("Type 71 Pulse Rifle (UPP)", 0, /obj/item/weapon/gun/rifle/type71, MARINE_CAN_BUY_ESSENTIALS, VENDOR_ITEM_MANDATORY),
-		list("KS-29 Riot Shotgun (UPP)", 0, /obj/item/weapon/gun/shotgun/pump/type23, MARINE_CAN_BUY_ESSENTIALS, VENDOR_ITEM_MANDATORY),
-		list("Type 64 Submachinegun (UPP)", 0, /obj/item/weapon/gun/smg/bizon, MARINE_CAN_BUY_ESSENTIALS, VENDOR_ITEM_MANDATORY),
-		list("NSG L23A1 Pulse Rifle (TWE)", 0, /obj/item/weapon/gun/rifle/nsg23/rmc, MARINE_CAN_BUY_ESSENTIALS, VENDOR_ITEM_MANDATORY),
-		list("L6A2 Submachinegun (TWE)", 0, /obj/item/weapon/gun/smg/m39/elite/rmc, MARINE_CAN_BUY_ESSENTIALS, VENDOR_ITEM_MANDATORY),
+		list("FOREIGN PRIMARY WEAPONS", -1, null, null),
+		list("Type 71 Pulse Rifle (UPP)", 3, /obj/item/weapon/gun/rifle/type71, MARINE_CAN_BUY_ESSENTIALS, VENDOR_ITEM_MANDATORY),
+		list("KS-29 Riot Shotgun (UPP)", 2, /obj/item/weapon/gun/shotgun/pump/type23, MARINE_CAN_BUY_ESSENTIALS, VENDOR_ITEM_MANDATORY),
+		list("Type 64 Submachinegun (UPP)", 5, /obj/item/weapon/gun/smg/bizon, MARINE_CAN_BUY_ESSENTIALS, VENDOR_ITEM_MANDATORY),
+		list("NSG L23A1 Pulse Rifle (TWE)", 3, /obj/item/weapon/gun/rifle/nsg23/rmc, MARINE_CAN_BUY_ESSENTIALS, VENDOR_ITEM_MANDATORY),
+		list("L6A2 Submachinegun (TWE)", 3, /obj/item/weapon/gun/smg/m39/elite/rmc, MARINE_CAN_BUY_ESSENTIALS, VENDOR_ITEM_MANDATORY),
 
-		list("FOREIGN SECONDARY WEAPON SELECTION (CHOOSE 1)", -1, null, null),
-		list("Type 73 Pistol (UPP)", 0, /obj/item/weapon/gun/pistol/t73, MARINE_CAN_BUY_SECONDARY, VENDOR_ITEM_MANDATORY),
-		list("ZHNK-72 Revolver (UPP)", 0, /obj/item/weapon/gun/revolver/upp, MARINE_CAN_BUY_SECONDARY, VENDOR_ITEM_MANDATORY),
-		list("L165A1 Service Pistol (TWE)", 0, /obj/item/weapon/gun/pistol/vp78/rmc, MARINE_CAN_BUY_SECONDARY, VENDOR_ITEM_MANDATORY),
+		list("FOREIGN SECONDARY WEAPONS", -1, null, null),
+		list("Type 73 Pistol (UPP)", 5, /obj/item/weapon/gun/pistol/t73, MARINE_CAN_BUY_SECONDARY, VENDOR_ITEM_MANDATORY),
+		list("ZHNK-72 Revolver (UPP)", 3, /obj/item/weapon/gun/revolver/upp, MARINE_CAN_BUY_SECONDARY, VENDOR_ITEM_MANDATORY),
 
 		list("FOREIGN PRIMARY MUNITIONS", -1, null, null),
 		list("Type 71 HEAP magazine (UPP)", 64, /obj/item/ammo_magazine/rifle/type71/heap, VENDOR_ITEM_REGULAR),
 		list("Heavy Buckshot Box (UPP)", 5, /obj/item/ammo_magazine/shotgun/buckshot/heavy, VENDOR_ITEM_REGULAR),
 		list("Heavy Slug Shell Box (UPP)", 5, /obj/item/ammo_magazine/shotgun/slug/heavy, VENDOR_ITEM_REGULAR),
 		list("Heavy Dragonsbreath Slug Shell Box (UPP)", 5, /obj/item/ammo_magazine/shotgun/slug/dragonsbreath, VENDOR_ITEM_REGULAR),
+		list("Type 64 HEAP Helical Magazine (UPP)", 32, /obj/item/ammo_magazine/smg/bizon/heap, VENDOR_ITEM_REGULAR),
 		list("NSG L23A1 HEAP Magazine (TWE)", 64, /obj/item/ammo_magazine/rifle/nsg23/heap, VENDOR_ITEM_REGULAR),
 
 		list("FOREIGN SECONDARY MUNITIONS", -1, null, null),
 		list("Type 73 Magazine (UPP)", 32, /obj/item/ammo_magazine/pistol/t73, VENDOR_ITEM_REGULAR),
 		list("ZHNK-72 Speed Loader (UPP)", 32, /obj/item/ammo_magazine/revolver/upp, VENDOR_ITEM_REGULAR),
-		list("L165A1 Squash-Head Magazine (TWE)", 32, /obj/item/ammo_magazine/pistol/vp78/rmc, VENDOR_ITEM_REGULAR),
 	)
 //--------------SQUAD ATTACHMENTS VENDOR--------------
 

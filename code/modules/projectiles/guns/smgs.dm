@@ -192,6 +192,7 @@
 	current_mag = /obj/item/ammo_magazine/smg/m39/pve
 	random_spawn_chance = 0
 	fire_sound = 'sound/weapons/gun_m39.ogg'
+	flags_gun_features = GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK|GUN_AMMO_COUNTER|GUN_AUTO_EJECT_CASINGS
 
 /obj/item/weapon/gun/smg/m39/elite/whiteout//attachies + heap mag for whiteout.
 	starting_attachment_types = list(/obj/item/attachable/stock/smg, /obj/item/attachable/suppressor, /obj/item/attachable/angledgrip, /obj/item/attachable/magnetic_harness)
