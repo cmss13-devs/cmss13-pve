@@ -1260,10 +1260,10 @@
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m41aMK1, WEAR_IN_R_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m41aMK1, WEAR_IN_R_STORE)
 
-/datum/equipment_preset/uscm/esoc
-	name = "ESOC Rifleman"
+/datum/equipment_preset/uscm/emag
+	name = "emag Rifleman"
 	flags = EQUIPMENT_PRESET_EXTRA
-	assignment = "ESOC Rifleman"
+	assignment = "emag Rifleman"
 	rank = JOB_MARINE_RAIDER
 	role_comm_title = "RFN"
 	languages = list(LANGUAGE_ENGLISH)
@@ -1274,14 +1274,14 @@
 
 	minimap_icon = "sof_sg"
 
-/datum/equipment_preset/uscm/esoc/New()
+/datum/equipment_preset/uscm/emag/New()
 	. = ..()
 	access = get_access(ACCESS_LIST_GLOBAL)
 
-/datum/equipment_preset/uscm/esoc_equipped
-	name = "ESOC Rifleman (Equipped)"
+/datum/equipment_preset/uscm/emag_equipped
+	name = "emag Rifleman (Equipped)"
 	flags = EQUIPMENT_PRESET_EXTRA
-	assignment = "ESOC Rifleman"
+	assignment = "emag Rifleman"
 	rank = JOB_MARINE_RAIDER
 	role_comm_title = "RFN"
 	languages = list(LANGUAGE_ENGLISH)
@@ -1292,14 +1292,14 @@
 
 	minimap_icon = "sof_sg"
 
-/datum/equipment_preset/uscm/esoc_equipped/load_status(mob/living/carbon/human/new_human)
+/datum/equipment_preset/uscm/emag_equipped/load_status(mob/living/carbon/human/new_human)
 	new_human.nutrition = NUTRITION_NORMAL
 
-/datum/equipment_preset/uscm/esoc_equipped/New()
+/datum/equipment_preset/uscm/emag_equipped/New()
 	. = ..()
 	access = get_access(ACCESS_LIST_GLOBAL)
 
-/datum/equipment_preset/uscm/esoc_equipped/load_gear(mob/living/carbon/human/new_human)
+/datum/equipment_preset/uscm/emag_equipped/load_gear(mob/living/carbon/human/new_human)
 	//back
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine/satchel, WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/device/motiondetector, WEAR_IN_BACK)
@@ -1326,10 +1326,10 @@
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m41aMK1, WEAR_IN_R_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m41aMK1, WEAR_IN_R_STORE)
 
-/datum/equipment_preset/uscm/esoc_sniper
-	name = "ESOC Sniper"
+/datum/equipment_preset/uscm/emag_sniper
+	name = "emag Sniper"
 	flags = EQUIPMENT_PRESET_EXTRA
-	assignment = "ESOC Scout Sniper"
+	assignment = "emag Scout Sniper"
 	rank = JOB_MARINE_RAIDER
 	role_comm_title = "SctSnpr"
 	languages = list(LANGUAGE_ENGLISH)
@@ -1340,14 +1340,14 @@
 
 	minimap_icon = "sof_sg"
 
-/datum/equipment_preset/uscm/esoc_sniper/New()
+/datum/equipment_preset/uscm/emag_sniper/New()
 	. = ..()
 	access = get_access(ACCESS_LIST_GLOBAL)
 
-/datum/equipment_preset/uscm/esoc_sniper_equipped
-	name = "ESOC Sniper (Equipped)"
+/datum/equipment_preset/uscm/emag_sniper_equipped
+	name = "emag Sniper (Equipped)"
 	flags = EQUIPMENT_PRESET_EXTRA
-	assignment = "ESOC Scout Sniper"
+	assignment = "emag Scout Sniper"
 	rank = JOB_MARINE_RAIDER
 	role_comm_title = "SctSnpr"
 	languages = list(LANGUAGE_ENGLISH)
@@ -1358,14 +1358,14 @@
 
 	minimap_icon = "sof_sg"
 
-/datum/equipment_preset/uscm/esoc_sniper_equipped/load_status(mob/living/carbon/human/new_human)
+/datum/equipment_preset/uscm/emag_sniper_equipped/load_status(mob/living/carbon/human/new_human)
 	new_human.nutrition = NUTRITION_NORMAL
 
-/datum/equipment_preset/uscm/esoc_sniper_equipped/New()
+/datum/equipment_preset/uscm/emag_sniper_equipped/New()
 	. = ..()
 	access = get_access(ACCESS_LIST_GLOBAL)
 
-/datum/equipment_preset/uscm/esoc_sniper_equipped/load_gear(mob/living/carbon/human/new_human)
+/datum/equipment_preset/uscm/emag_sniper_equipped/load_gear(mob/living/carbon/human/new_human)
 	//back
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine/smock, WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/device/motiondetector, WEAR_IN_BACK)
@@ -1390,10 +1390,10 @@
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/sniper, WEAR_IN_R_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/sniper, WEAR_IN_R_STORE)
 
-/datum/equipment_preset/uscm/esoc_machinegunner
-	name = "ESOC Machinegunner"
+/datum/equipment_preset/uscm/emag_machinegunner
+	name = "emag Machinegunner"
 	flags = EQUIPMENT_PRESET_EXTRA
-	assignment = "ESOC Machinegunner"
+	assignment = "emag Machinegunner"
 	rank = JOB_MARINE_RAIDER
 	role_comm_title = "MG"
 	languages = list(LANGUAGE_ENGLISH)
@@ -1404,14 +1404,14 @@
 
 	minimap_icon = "sof_sg"
 
-/datum/equipment_preset/uscm/esoc_machinegunner/New()
+/datum/equipment_preset/uscm/emag_machinegunner/New()
 	. = ..()
 	access = get_access(ACCESS_LIST_GLOBAL)
 
-/datum/equipment_preset/uscm/esoc_machinegunner_equipped
-	name = "ESOC Machinegunner (Equipped)"
+/datum/equipment_preset/uscm/emag_machinegunner_equipped
+	name = "emag Machinegunner (Equipped)"
 	flags = EQUIPMENT_PRESET_EXTRA
-	assignment = "ESOC Machinegunner"
+	assignment = "emag Machinegunner"
 	rank = JOB_MARINE_RAIDER
 	role_comm_title = "MG"
 	languages = list(LANGUAGE_ENGLISH)
@@ -1422,14 +1422,14 @@
 
 	minimap_icon = "sof_sg"
 
-/datum/equipment_preset/uscm/esoc_machinegunner_equipped/load_status(mob/living/carbon/human/new_human)
+/datum/equipment_preset/uscm/emag_machinegunner_equipped/load_status(mob/living/carbon/human/new_human)
 	new_human.nutrition = NUTRITION_NORMAL
 
-/datum/equipment_preset/uscm/esoc_machinegunner_equipped/New()
+/datum/equipment_preset/uscm/emag_machinegunner_equipped/New()
 	. = ..()
 	access = get_access(ACCESS_LIST_GLOBAL)
 
-/datum/equipment_preset/uscm/esoc_machinegunner_equipped/load_gear(mob/living/carbon/human/new_human)
+/datum/equipment_preset/uscm/emag_machinegunner_equipped/load_gear(mob/living/carbon/human/new_human)
 	//back
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine/satchel, WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/device/motiondetector, WEAR_IN_BACK)
@@ -1457,10 +1457,10 @@
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m41aMK1, WEAR_IN_R_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m41aMK1, WEAR_IN_R_STORE)
 
-/datum/equipment_preset/uscm/esoc_medic
-	name = "ESOC Combat Medic"
+/datum/equipment_preset/uscm/emag_medic
+	name = "emag Combat Medic"
 	flags = EQUIPMENT_PRESET_EXTRA
-	assignment = "ESOC Combat Medic"
+	assignment = "emag Combat Medic"
 	rank = JOB_MARINE_RAIDER
 	role_comm_title = "CM"
 	languages = list(LANGUAGE_ENGLISH)
@@ -1471,14 +1471,14 @@
 
 	minimap_icon = "sof_sg"
 
-/datum/equipment_preset/uscm/esoc_medic/New()
+/datum/equipment_preset/uscm/emag_medic/New()
 	. = ..()
 	access = get_access(ACCESS_LIST_GLOBAL)
 
-/datum/equipment_preset/uscm/esoc_medic_equipped
-	name = "ESOC Combat Medic (Equipped)"
+/datum/equipment_preset/uscm/emag_medic_equipped
+	name = "emag Combat Medic (Equipped)"
 	flags = EQUIPMENT_PRESET_EXTRA
-	assignment = "ESOC Combat Medic"
+	assignment = "emag Combat Medic"
 	rank = JOB_MARINE_RAIDER
 	role_comm_title = "CM"
 	languages = list(LANGUAGE_ENGLISH)
@@ -1489,14 +1489,14 @@
 
 	minimap_icon = "sof_sg"
 
-/datum/equipment_preset/uscm/esoc_medic_equipped/load_status(mob/living/carbon/human/new_human)
+/datum/equipment_preset/uscm/emag_medic_equipped/load_status(mob/living/carbon/human/new_human)
 	new_human.nutrition = NUTRITION_NORMAL
 
-/datum/equipment_preset/uscm/esoc_medic_equipped/New()
+/datum/equipment_preset/uscm/emag_medic_equipped/New()
 	. = ..()
 	access = get_access(ACCESS_LIST_GLOBAL)
 
-/datum/equipment_preset/uscm/esoc_medic_equipped/load_gear(mob/living/carbon/human/new_human)
+/datum/equipment_preset/uscm/emag_medic_equipped/load_gear(mob/living/carbon/human/new_human)
 	//back
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine/satchel/medic(new_human), WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/box/mre(new_human), WEAR_IN_BACK)
@@ -1525,10 +1525,10 @@
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/medkit/full(new_human), WEAR_L_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/flare/full(new_human), WEAR_R_STORE)
 
-/datum/equipment_preset/uscm/esoc_leader
-	name = "ESOC Team Leader"
+/datum/equipment_preset/uscm/emag_leader
+	name = "emag Team Leader"
 	flags = EQUIPMENT_PRESET_EXTRA
-	assignment = "ESOC Team Leader"
+	assignment = "emag Team Leader"
 	rank = JOB_MARINE_RAIDER
 	role_comm_title = "TL"
 	languages = list(LANGUAGE_ENGLISH)
@@ -1539,14 +1539,14 @@
 
 	minimap_icon = "sof_sg"
 
-/datum/equipment_preset/uscm/esoc/New()
+/datum/equipment_preset/uscm/emag/New()
 	. = ..()
 	access = get_access(ACCESS_LIST_GLOBAL)
 
-/datum/equipment_preset/uscm/esoc_leader_equipped
-	name = "ESOC Team Leader (Equipped)"
+/datum/equipment_preset/uscm/emag_leader_equipped
+	name = "emag Team Leader (Equipped)"
 	flags = EQUIPMENT_PRESET_EXTRA
-	assignment = "ESOC Team leader"
+	assignment = "emag Team leader"
 	rank = JOB_MARINE_RAIDER
 	role_comm_title = "TL"
 	languages = list(LANGUAGE_ENGLISH)
@@ -1557,14 +1557,14 @@
 
 	minimap_icon = "sof_sg"
 
-/datum/equipment_preset/uscm/uscm/esoc_leader_equipped/load_status(mob/living/carbon/human/new_human)
+/datum/equipment_preset/uscm/uscm/emag_leader_equipped/load_status(mob/living/carbon/human/new_human)
 	new_human.nutrition = NUTRITION_NORMAL
 
-/datum/equipment_preset/uscm/uscm/esoc_leader_equipped/New()
+/datum/equipment_preset/uscm/uscm/emag_leader_equipped/New()
 	. = ..()
 	access = get_access(ACCESS_LIST_GLOBAL)
 
-/datum/equipment_preset/uscm/esoc_leader_equipped/load_gear(mob/living/carbon/human/new_human)
+/datum/equipment_preset/uscm/emag_leader_equipped/load_gear(mob/living/carbon/human/new_human)
 	//back
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine/satchel, WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/device/motiondetector, WEAR_IN_BACK)
