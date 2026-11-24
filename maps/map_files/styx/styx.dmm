@@ -1303,6 +1303,13 @@
 	},
 /turf/open/floor/almayer/test_floor4,
 /area/styx/medical)
+"kY" = (
+/obj/item/storage/backpack/marine/ammo_rack{
+	pixel_x = 8;
+	pixel_y = 22
+	},
+/turf/open/floor/almayer_hull/blackfull,
+/area/styx/platoonarmory)
 "kZ" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "1-2"
@@ -1479,6 +1486,11 @@
 /obj/item/ammo_box/magazine/nade_box{
 	pixel_x = -1;
 	pixel_y = 12
+	},
+/obj/item/ammo_box/magazine/nade_box/m15{
+	pixel_x = -1;
+	pixel_y = 17;
+	layer = 3
 	},
 /turf/open/floor/almayer_hull/blackfull,
 /area/styx/platoonarmory)
@@ -1970,10 +1982,13 @@
 /area/styx/cryo_cells)
 "rf" = (
 /obj/structure/surface/table/reinforced/almayer_B,
-/obj/item/ammo_box/magazine/shotgun/special_buck,
 /obj/item/ammo_box/magazine/shotgun/special_buck{
 	pixel_x = 0;
-	pixel_y = 8
+	pixel_y = 13
+	},
+/obj/item/ammo_box/magazine/shotgun/special_buck{
+	pixel_x = 0;
+	pixel_y = 7
 	},
 /obj/structure/machinery/light/double/blue{
 	dir = 4;
@@ -1982,6 +1997,10 @@
 	color = "#8B0000";
 	light_color = "#8B0000";
 	name = "red"
+	},
+/obj/item/ammo_box/magazine/shotgun/special_buck{
+	pixel_x = 0;
+	pixel_y = 0
 	},
 /turf/open/floor/almayer_hull/blackfull,
 /area/styx/platoonarmory)
@@ -2940,8 +2959,12 @@
 "zo" = (
 /obj/structure/surface/table/reinforced/almayer_B,
 /obj/item/ammo_box/magazine/nade_box/flare{
-	pixel_x = 4;
+	pixel_x = 7;
 	pixel_y = 6
+	},
+/obj/item/ammo_box/magazine/nade_box/smoke{
+	pixel_x = -7;
+	pixel_y = 2
 	},
 /turf/open/floor/almayer_hull/blackfull,
 /area/styx/platoonarmory)
@@ -3129,7 +3152,7 @@
 	pixel_x = 1;
 	pixel_y = -6
 	},
-/turf/open/space/basic,
+/turf/open/floor/almayer/edge/smooth/northwest,
 /area/styx/dorms)
 "Bc" = (
 /turf/open/floor/almayer/black/east,
@@ -3243,13 +3266,13 @@
 /area/styx/medical)
 "BX" = (
 /obj/structure/surface/table/reinforced/almayer_B,
-/obj/item/ammo_box/magazine/nade_box/smoke{
-	pixel_x = 2;
-	pixel_y = 5
+/obj/item/ammo_box/magazine/mk1/heap{
+	pixel_x = 10;
+	pixel_y = 8
 	},
-/obj/item/ammo_box/magazine/nade_box/smoke{
-	pixel_x = 3;
-	pixel_y = 11
+/obj/item/ammo_box/magazine/mk1/heap{
+	pixel_x = 10;
+	pixel_y = 0
 	},
 /turf/open/floor/almayer_hull/blackfull,
 /area/styx/platoonarmory)
@@ -3545,8 +3568,8 @@
 	pixel_x = 0
 	},
 /obj/item/storage/box/guncase/heavy/fuel{
-	pixel_y = 4;
-	pixel_x = 3
+	pixel_y = 3;
+	pixel_x = 4
 	},
 /obj/item/storage/box/guncase/heavy/motiondetectors{
 	pixel_x = 0;
@@ -3646,14 +3669,17 @@
 /area/styx/dorms)
 "Ff" = (
 /obj/structure/surface/table/reinforced/almayer_B,
-/obj/item/ammo_box/magazine/m39/heap,
-/obj/item/ammo_box/magazine/m39/heap{
+/obj/item/ammo_box/magazine/m39/pve{
 	pixel_x = 0;
-	pixel_y = 8
+	pixel_y = 10
 	},
-/obj/item/ammo_box/magazine/m39/heap{
+/obj/item/ammo_box/magazine/m39/pve{
 	pixel_x = 0;
-	pixel_y = 16
+	pixel_y = 2
+	},
+/obj/item/ammo_box/magazine/m39/pve{
+	pixel_x = 0;
+	pixel_y = -6
 	},
 /turf/open/floor/almayer_hull/blackfull,
 /area/styx/platoonarmory)
@@ -5760,7 +5786,8 @@
 	},
 /obj/structure/gun_rack/m39b3{
 	pixel_x = 0;
-	pixel_y = 27
+	pixel_y = 27;
+	layer = 4
 	},
 /turf/open/floor/almayer_hull/blackfull,
 /area/styx/platoonarmory)
@@ -5807,13 +5834,13 @@
 /area/styx/cryo_cells)
 "Xl" = (
 /obj/structure/surface/table/reinforced/black,
-/obj/item/facepaint{
-	pixel_x = -14;
-	pixel_y = 6
+/obj/item/facepaint/green{
+	pixel_x = -10;
+	pixel_y = 4
 	},
 /obj/item/facepaint/black{
-	pixel_x = -1;
-	pixel_y = 5
+	pixel_x = 1;
+	pixel_y = 3
 	},
 /obj/item/facepaint/brown{
 	pixel_x = 9;
@@ -10803,7 +10830,7 @@ DI
 DI
 DI
 BX
-IB
+kY
 IB
 IB
 zo

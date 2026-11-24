@@ -75,7 +75,7 @@ GLOBAL_LIST_INIT(cm_vending_gear_marsoc_smartgun, list(
 	list("EQUIPMENT BOX (CHOOSE 1)", 0, null, null, null),
 	list("Smartgunner Equipment Box", 0, /obj/item/storage/box/m56_system/marsoc, MARINE_CAN_BUY_ESSENTIALS, VENDOR_ITEM_MANDATORY),
 	list("Smartgunner Equipment Box (Suppressed)", 0, /obj/item/storage/box/m56_system_suppressed, MARINE_CAN_BUY_ESSENTIALS, VENDOR_ITEM_MANDATORY),
-	list("XM99A Plasma Rifle Equipment Box", 0, /obj/item/storage/box/guncase/heavy/XM99, MARINE_CAN_BUY_ESSENTIALS, VENDOR_ITEM_MANDATORY),
+	list("XM99A Plasma Rifle Equipment Box", 0, /obj/item/storage/box/guncase/heavy/xm99, MARINE_CAN_BUY_ESSENTIALS, VENDOR_ITEM_MANDATORY),
 	list("M49A5 Tactical DMR Equipment Box (HEAP)", 0, /obj/item/storage/box/guncase/heavy/m49a_pve/custom, MARINE_CAN_BUY_ESSENTIALS, VENDOR_ITEM_MANDATORY),
 ))
 
