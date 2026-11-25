@@ -1238,16 +1238,16 @@
 
 /obj/structure/machinery/cm_vending/sorted/cargo_guns/squad/marsoc/utility/populate_product_list(scale)
 	listed_products = list(
-	list("ELEMENT ARMAMENT KITS", 0, null, null, null),
-	list("Heavy Pulse Rifle Equipment Box", 1, /obj/item/storage/box/guncase/heavy/hpr/marsoc, VENDOR_ITEM_REGULAR),
-	list("M56D Heavy Machine Gun Case", 1, /obj/item/storage/box/guncase/m56d, VENDOR_ITEM_REGULAR),
+		list("ELEMENT ARMAMENT KITS", 0, null, null, null),
+		list("Heavy Pulse Rifle Equipment Box", 1, /obj/item/storage/box/guncase/heavy/hpr/marsoc, VENDOR_ITEM_REGULAR),
+		list("M56D Heavy Machine Gun Case", 1, /obj/item/storage/box/guncase/m56d, VENDOR_ITEM_REGULAR),
 
-	list("ELEMENT UTILITIES", 0, null, null, null),
-	list("M83 SADAR", 8, /obj/item/prop/folded_anti_tank_sadar, VENDOR_ITEM_REGULAR),
-	list("SIM-118 Anti-Air Missile Launcher", 1, /obj/item/weapon/gun/launcher/rocket/anti_air/uscm, VENDOR_ITEM_REGULAR),
-	list("M717 Pocket Motion Detector", 1, /obj/item/device/motiondetector/m717, VENDOR_ITEM_REGULAR),
-	list("Signal Tracking Device", 1, /obj/item/tool/signal_tracker, VENDOR_ITEM_REGULAR),
-	)
+		list("ELEMENT UTILITIES", 0, null, null, null),
+		list("M83 SADAR", 8, /obj/item/prop/folded_anti_tank_sadar, VENDOR_ITEM_REGULAR),
+		list("SIM-118 Anti-Air Missile Launcher", 1, /obj/item/weapon/gun/launcher/rocket/anti_air/uscm, VENDOR_ITEM_REGULAR),
+		list("M717 Pocket Motion Detector", 1, /obj/item/device/motiondetector/m717, VENDOR_ITEM_REGULAR),
+		list("Signal Tracking Device", 1, /obj/item/tool/signal_tracker, VENDOR_ITEM_REGULAR),
+		)
 
 
 /obj/structure/machinery/cm_vending/sorted/cargo_guns/squad/marsoc/foreign_weaponry
