@@ -1229,6 +1229,10 @@
 
 /obj/structure/machinery/cm_vending/sorted/cargo_guns/squad/marsoc/civilian_prep/populate_product_list(scale)
 	listed_products = list(
+
+		list("UNIFORM ARMOR PLATE INSERTION", -1, null, null),
+		list("ASAPP/2 Armor Plate", round(scale * 16), /obj/item/clothing/accessory/health/ceramic_plate/marine/marsoc, VENDOR_ITEM_MANDATORY),
+
 		list("RATIONS", -1, null, null),
 		list("W-Y Brand Ration Pack", round(scale * 8), /obj/item/storage/box/mre/wy, VENDOR_ITEM_REGULAR),
 		list("UA Hmanitarian Daily Ration", round(scale * 8), /obj/item/storage/box/mre/hdr, VENDOR_ITEM_REGULAR),

@@ -5947,7 +5947,8 @@
 	indestructible = 1;
 	needs_power = 0;
 	pixel_x = -16;
-	pixel_y = 0
+	pixel_y = 0;
+	layer = 3
 	},
 /obj/structure/machinery/door/poddoor/almayer/open{
 	name = "Armament Lockdown Blastdoor";
