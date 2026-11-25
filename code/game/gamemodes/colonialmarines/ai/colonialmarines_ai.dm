@@ -141,12 +141,20 @@ GLOBAL_LIST_INIT(platoon_to_jobs, list(/datum/squad/marine/alpha = list(/datum/j
 		/datum/job/marine/engineer/ai/rmc = JOB_TWE_RMC_ENGI,\
 		/datum/job/marine/engineer/ai/rmcmortar = JOB_TWE_RMC_BREACHER,\
 		/datum/job/marine/specialist/ai/rmc = JOB_TWE_RMC_MARKSMAN,\
-		/datum/job/marine/standard/ai/rmc = JOB_TWE_RMC_RIFLEMAN)))
+		/datum/job/marine/standard/ai/rmc = JOB_TWE_RMC_RIFLEMAN),\
+		/datum/squad/marine/marsoc = list(/datum/job/marine/standard/ai/marsoc = JOB_SQUAD_ELEMENT_MEMBER_MARSOC,\
+		/datum/job/marine/smartgunner/ai/marsoc = JOB_SQUAD_HEAVY_WEAPONS_OPERATOR_MARSOC,\
+		/datum/job/marine/specialist/ai/marsoc = JOB_SQUAD_SPECIAL_WEAPONS_OPERATOR_MARSOC,\
+		/datum/job/marine/medic/ai/marsoc = JOB_SQUAD_SARC_MARSOC,\
+		/datum/job/marine/engineer/ai/marsoc = JOB_SQUAD_SAPPER_MARSOC,\
+		/datum/job/marine/tl/ai/marsoc = JOB_SQUAD_ASSISTANT_ELEMENT_LEAD_MARSOC,\
+		/datum/job/marine/leader/ai/marsoc = JOB_SQUAD_ELEMENT_LEADER_MARSOC)))
 
 GLOBAL_LIST_INIT(platoon_to_role_list, list(/datum/squad/marine/alpha = ROLES_AI,\
 												/datum/squad/marine/upp = ROLES_AI_UPP,\
 												/datum/squad/marine/pmc = ROLES_PMCPLT,\
 												/datum/squad/marine/forecon = ROLES_AI_FORECON,\
+												/datum/squad/marine/marsoc = ROLES_AI_MARSOC,\
 												/datum/squad/marine/pmc/small = ROLES_PMCPLT_SMALL,\
 												/datum/squad/marine/upp/forecon = ROLES_AI_UPP_FORECON,\
 												/datum/squad/marine/rmc = ROLES_RMCTROOP))

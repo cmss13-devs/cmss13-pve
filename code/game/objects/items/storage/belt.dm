@@ -2480,6 +2480,13 @@
 
 #undef MAXIMUM_MAGAZINE_COUNT
 
+/obj/item/storage/belt/gun/smartgunner/garrow/marsoc
+
+/obj/item/storage/belt/gun/smartgunner/garrow/marsoc/fill_preset_inventory()
+	new /obj/item/ammo_magazine/smartgun(src)
+	new /obj/item/ammo_magazine/smartgun(src)
+	new /obj/item/ammo_magazine/smartgun(src)
+
 /obj/item/storage/belt/gun/smartgunner/pmc
 	name = "\improper WY-TM410 pattern smartgunner sidearm rig"
 	desc = "A special pattern of W-Y made combat belt, designed to carry smartgun ammunition and a sidearm."

@@ -68,3 +68,7 @@ endmap
 
 map badayaga_ship
 endmap
+
+
+map styx
+endmap

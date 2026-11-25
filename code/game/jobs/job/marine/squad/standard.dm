@@ -59,7 +59,7 @@
 	spawn_positions = 4
 
 /datum/job/marine/standard/ai/set_spawn_positions(count)
-	return spawn_positions
+	spawn_positions = initial(spawn_positions)
 
 /datum/job/marine/standard/ai/upp
 	title = JOB_SQUAD_MARINE_UPP
@@ -87,6 +87,18 @@
 		gear_preset = gear_preset_secondary
 	if(option == CPL_VARIANT)
 		gear_preset = gear_preset_tertiary
+
+/datum/job/marine/standard/ai/marsoc
+	title = JOB_SQUAD_ELEMENT_MEMBER_MARSOC
+	total_positions = 2
+	spawn_positions = 2
+	gear_preset = /datum/equipment_preset/uscm/pfc/marsoc
+	job_options = list(null)
+
+/obj/effect/landmark/start/marine/marsoc
+	name = JOB_SQUAD_ELEMENT_MEMBER_MARSOC
+	squad = SQUAD_MRR
+	job = /datum/equipment_preset/uscm/pfc/marsoc
 
 /datum/job/marine/standard/ai/rto
 	total_positions = 1

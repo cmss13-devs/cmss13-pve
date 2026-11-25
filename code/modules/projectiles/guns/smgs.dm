@@ -200,6 +200,7 @@
 	current_mag = /obj/item/ammo_magazine/smg/m39/pve
 	random_spawn_chance = 0
 	fire_sound = 'sound/weapons/gun_m39.ogg'
+	flags_gun_features = GUN_AUTO_EJECTOR|GUN_CAN_POINTBLANK|GUN_AMMO_COUNTER|GUN_AUTO_EJECT_CASINGS
 
 /obj/item/weapon/gun/smg/m39/elite/compact
 	starting_attachment_types = list(/obj/item/attachable/stock/smg/collapsible, /obj/item/attachable/suppressor, /obj/item/attachable/reflex, /obj/item/attachable/lasersight)
@@ -214,6 +215,9 @@
 /obj/item/weapon/gun/smg/m39/elite/whiteout//attachies + heap mag for whiteout.
 	starting_attachment_types = list(/obj/item/attachable/stock/smg, /obj/item/attachable/suppressor, /obj/item/attachable/angledgrip, /obj/item/attachable/magnetic_harness)
 	current_mag = /obj/item/ammo_magazine/smg/m39/heap
+
+/obj/item/weapon/gun/smg/m39/elite/pve/unloaded
+	current_mag = null
 
 //-------------------------------------------------------
 //M5, a classic SMG used in a lot of action movies.
@@ -675,6 +679,7 @@
 		/obj/item/attachable/lasersight,
 		/obj/item/attachable/extended_barrel,
 		/obj/item/attachable/heavy_barrel,
+		/obj/item/attachable/suppressor,
 	)
 	random_spawn_chance = 65
 	random_spawn_siderail = list(
@@ -711,6 +716,9 @@
 	scatter_unwielded = SCATTER_AMOUNT_TIER_4
 	damage_mult = BASE_BULLET_DAMAGE_MULT + BULLET_DAMAGE_MULT_TIER_1
 	recoil_unwielded = RECOIL_AMOUNT_TIER_5
+
+/obj/item/weapon/gun/smg/fp9000/no_attachments
+	random_spawn_chance = 0
 
 /obj/item/weapon/gun/smg/fp9000/pmc
 	name = "\improper FN FP9000/2 Submachinegun"

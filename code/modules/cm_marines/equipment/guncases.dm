@@ -69,6 +69,15 @@
 	new /obj/item/ammo_magazine/hpr_box(src)
 	new /obj/item/ammo_magazine/hpr_box(src)
 
+/obj/item/storage/box/guncase/lmg/marsoc
+	can_hold = list(/obj/item/weapon/gun/rifle/lmg, /obj/item/ammo_magazine/hpr_box/heap)
+
+/obj/item/storage/box/guncase/lmg/marsoc/fill_preset_inventory()
+	new /obj/item/weapon/gun/rifle/lmg(src)
+	new /obj/item/ammo_magazine/hpr_box/heap(src)
+	new /obj/item/ammo_magazine/hpr_box/heap(src)
+	new /obj/item/ammo_magazine/hpr_box/heap(src)
+
 //------------
 /obj/item/storage/box/guncase/m41aMK1
 	name = "\improper M41A pulse rifle MK1 case"
@@ -315,6 +324,30 @@
 	if(locate(/obj/item/device/sentry_computer) in contents)
 		overlays += image(icon, "+sentrycomp")
 
+/obj/item/storage/box/guncase/heavy/sentry/flamer
+	name = "\improper UA 42-F sentry flamer case"
+	desc = "A gun case containing the UA 42-F sentry unit, a spare drum, and a sentry laptop."
+	icon_state = "sentrycase"
+	storage_slots = 3
+	can_hold = list(/obj/item/defenses/handheld/sentry/flamer, /obj/item/ammo_magazine/sentry_flamer, /obj/item/device/sentry_computer)
+
+/obj/item/storage/box/guncase/heavy/sentry/flamer/fill_preset_inventory()
+	new /obj/item/defenses/handheld/sentry/flamer(src)
+	new /obj/item/ammo_magazine/sentry_flamer(src)
+	new /obj/item/device/sentry_computer(src)
+
+/obj/item/storage/box/guncase/heavy/sentry/shotgun
+	name = "\improper UA 12-G shotgun sentry case"
+	desc = "A gun case containing the UA 12-G sentry unit, a spare drum, and a sentry laptop."
+	icon_state = "sentrycase"
+	storage_slots = 3
+	can_hold = list(/obj/item/defenses/handheld/sentry/shotgun, /obj/item/ammo_magazine/shotgun, /obj/item/device/sentry_computer)
+
+/obj/item/storage/box/guncase/heavy/sentry/shotgun/fill_preset_inventory()
+	new /obj/item/defenses/handheld/sentry/shotgun(src)
+	new /obj/item/ammo_magazine/sentry/shotgun(src)
+	new /obj/item/device/sentry_computer(src)
+
 /obj/item/storage/box/guncase/heavy/sentry/pmc_platoon
 	name = "\improper UA 571-C-WY sentry guncase"
 	desc = "A gun case containing the UA 571-C-WY sentry gun, a spare drum, and a sentry laptop."
@@ -514,6 +547,27 @@
 	if(locate(/obj/item/weapon/gun/rifle/m49a/pve) in src.contents)
 		overlays += image(src.icon, "+r2")
 
+
+/obj/item/storage/box/guncase/heavy/m49a_pve/custom
+	name = "\improper M49A5 battle rifle case"
+	desc = "A large case for storing an M49A5, a modified USCM battle rifle capable of medium-long range engagements."
+	icon_state = "r2case"
+	storage_slots = 8
+	can_hold = list(/obj/item/weapon/gun/rifle/m49a_custom/tactical, /obj/item/clothing/glasses/night/M49A/no_wallhacks, /obj/item/ammo_magazine/rifle/m49a)
+
+/obj/item/storage/box/guncase/heavy/m49a_pve/custom/fill_preset_inventory()
+	new /obj/item/weapon/gun/rifle/m49a_custom/tactical(src)
+	new /obj/item/clothing/glasses/night/M49A/no_wallhacks(src)
+	new /obj/item/ammo_magazine/rifle/m49a/heap(src)
+	new /obj/item/ammo_magazine/rifle/m49a/heap(src)
+	new /obj/item/ammo_magazine/rifle/m49a/heap(src)
+	new /obj/item/ammo_magazine/rifle/m49a/heap(src)
+	new /obj/item/ammo_magazine/rifle/m49a/heap(src)
+	new /obj/item/ammo_magazine/rifle/m49a/custom/explosive(src)
+	new /obj/item/ammo_magazine/rifle/m49a/custom/explosive(src)
+	new /obj/item/ammo_magazine/rifle/m49a/custom/incendiary(src)
+	new /obj/item/ammo_magazine/rifle/m49a/custom/incendiary(src)
+
 /obj/item/storage/box/guncase/heavy/sniper
 	name = "\improper M42A sniper case"
 	desc = "A case for storing an M42A sniper rifle."
@@ -632,6 +686,18 @@
 	new /obj/item/weapon/gun/rifle/lmg/recon(src)
 	new /obj/item/ammo_magazine/hpr_box/recon(src)
 	new /obj/item/ammo_magazine/hpr_box/recon(src)
+
+/obj/item/storage/box/guncase/heavy/hpr/marsoc
+	storage_slots = 7
+
+/obj/item/storage/box/guncase/heavy/hpr/marsoc/fill_preset_inventory()
+	new /obj/item/weapon/gun/rifle/lmg(src)
+	new /obj/item/ammo_magazine/hpr_box/heap(src)
+	new /obj/item/ammo_magazine/hpr_box/heap(src)
+	new /obj/item/ammo_magazine/hpr_box/heap(src)
+	new /obj/item/ammo_magazine/hpr_box/heap(src)
+	new /obj/item/ammo_magazine/hpr_box/heap(src)
+	new /obj/item/ammo_magazine/hpr_box/heap(src)
 
 /obj/item/storage/box/guncase/heavy/rmcsmg
 	name = "\improper L6A2 SMG CQWS case"

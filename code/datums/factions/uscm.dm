@@ -57,6 +57,14 @@
 			if(JOB_ARMY_SNCO) marine_rk = "sl_army"
 			if(JOB_ARMY_CO) marine_rk = "co_army"
 			if(JOB_ARMY_SYN) marine_rk = "syn_army"
+			if(JOB_SQUAD_ELEMENT_LEADER_MARSOC) marine_rk = "soctl"
+			if(JOB_SQUAD_ASSISTANT_ELEMENT_LEAD_MARSOC) marine_rk = "tl"
+			if(JOB_SQUAD_SARC_MARSOC) marine_rk = "med"
+			if(JOB_SQUAD_SAPPER_MARSOC) marine_rk = "engi"
+			if(JOB_SQUAD_HEAVY_WEAPONS_OPERATOR_MARSOC) marine_rk = "gun"
+			if(JOB_SQUAD_SPECIAL_WEAPONS_OPERATOR_MARSOC) marine_rk = "spec"
+			if(JOB_SQUAD_ELEMENT_MEMBER_MARSOC) marine_rk = null
+
 		if(squad.squad_leader == current_human)
 			switch(squad.squad_type)
 				if("Section") marine_rk = "leader_a"
@@ -64,6 +72,7 @@
 				if("Platoon") marine_rk = "leader_a"
 				if("Squad") marine_rk = "leader_a"
 				if("Taskforce") marine_rk = "leader_a"
+				if("Element") marine_rk = "soctl_a"
 			current_human.langchat_styles = "langchat_bolded" // bold text for bold leaders
 		else if(squad.fireteam_leaders["SQ1"] == current_human || squad.fireteam_leaders["SQ2"] == current_human)
 			current_human.langchat_styles = "langchat_smaller_bolded"
@@ -298,7 +307,19 @@
 				marine_rk = null
 			if(JOB_FORECON_CO)
 				marine_rk = "co"
-
+			// MARSOC platoon roles
+			if(JOB_SQUAD_ELEMENT_LEADER_MARSOC)
+				marine_rk = "soctl"
+			if(JOB_SQUAD_ASSISTANT_ELEMENT_LEAD_MARSOC)
+				marine_rk = "tl"
+			if(JOB_SQUAD_SARC_MARSOC)
+				marine_rk = "med"
+			if(JOB_SQUAD_SAPPER_MARSOC)
+				marine_rk = "engi"
+			if(JOB_SQUAD_HEAVY_WEAPONS_OPERATOR_MARSOC)
+				marine_rk = "gun"
+			if(JOB_SQUAD_SPECIAL_WEAPONS_OPERATOR_MARSOC)
+				marine_rk = "spec"
 		if(marine_rk)
 			var/image/I = image('icons/mob/hud/marine_hud.dmi', current_human, "hudsquad")
 			I.color = "#5A934A"

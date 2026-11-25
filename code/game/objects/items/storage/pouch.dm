@@ -1562,6 +1562,15 @@
 	new /obj/item/explosive/plastic(src)
 	new /obj/item/explosive/plastic(src)
 
+/obj/item/storage/pouch/tools/tactical/marsoc/fill_preset_inventory()
+	new /obj/item/tool/extinguisher/mini(src)
+	new /obj/item/tool/shovel/etool/folded(src)
+	new /obj/item/explosive/plastic(src)
+	new /obj/item/explosive/plastic(src)
+	new /obj/item/explosive/plastic/breaching_charge(src)
+	new /obj/item/explosive/plastic/breaching_charge(src)
+	new /obj/item/explosive/plastic/breaching_charge(src)
+
 /obj/item/storage/pouch/tools/tactical/rmc/fill_preset_inventory()
 	new /obj/item/weapon/gun/smg/nailgun/compact(src)
 	new /obj/item/tool/extinguisher/mini(src)

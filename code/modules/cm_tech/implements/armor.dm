@@ -181,6 +181,35 @@
 	armor_health = 300
 	armor_maxhealth = 300
 
+/obj/item/clothing/accessory/health/ceramic_plate/marine/marsoc
+	name = "ASAPP/2 armor plate"
+	desc = "A revolutionary improvement over the standard ASAPP armor insert, this thing can be slipped into your uniform to provide unmatched protective ability. Too bad it's expensive as all hell."
+	icon_state = "armor_plate_100"
+	base_icon_state = "armor_plate"
+	overlay_state = "armor_plate_100"
+	slot = ACCESSORY_SLOT_PLATE
+	armor_health = 300
+	armor_maxhealth = 300
+
+/obj/item/clothing/accessory/health/ceramic_plate/marine/marsoc/Initialize(mapload)
+	. = ..()
+	addtimer(CALLBACK(src, PROC_REF(regenerate_armor)), 1 SECONDS, TIMER_LOOP)
+
+/obj/item/clothing/accessory/health/ceramic_plate/marine/marsoc/proc/regenerate_armor()
+	if(armor_health < armor_maxhealth)
+		armor_health = min(armor_health + 15, armor_maxhealth)
+		update_icon()
+
+/obj/item/clothing/accessory/health/ceramic_plate/marine
+	name = "ASAPP armor plate"
+	desc = "Advanced Small Arms Protective Plate is a modular clip-on armor plate, designed to provide additional protection for USCMC combat personell, gives you extremely good protection against any bullet types, stops full metal jacket, armor piercing and even HEAP rounds."
+	icon_state = "armor_plate_100"
+	base_icon_state = "armor_plate"
+	overlay_state = "armor_plate_100"
+	slot = ACCESSORY_SLOT_PLATE
+	armor_health = 300
+	armor_maxhealth = 300
+
 /obj/item/clothing/accessory/health/ceramic_plate/twe
 	name = "HASP armor plate"
 	desc = "Hyper Advanced Shield Plate is a modular clip-on armor plate, designed to provide additional protection for RMC combat personell, gives you extremely good protection against any bullet types, stops full metal jacket, armor piercing and even HEAP rounds. This plate includes titanium and can stop even super sonic rounds."

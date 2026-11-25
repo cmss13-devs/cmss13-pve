@@ -75,6 +75,9 @@
 /obj/item/stack/sandbags/large_stack
 	amount = 50
 
+/obj/item/stack/sandbags/half_stack
+	amount = 25
+
 /obj/item/stack/sandbags/small_stack
 	amount = 5
 

@@ -23,6 +23,7 @@
 #define SQUAD_PMCPLT_SMALL "AZURE-16"
 #define SQUAD_RMC "Gamma Troop"
 #define SQUAD_LRRP "Snake Eaters"
+#define SQUAD_MRR "Void Seekers"
 #define SQUAD_LRRP_2 "Ocelot Grapplers"
 #define SQUAD_SISSI "Fox Stalkers"
 
@@ -53,6 +54,14 @@
 #define JOB_SQUAD_RTO "Recon Radio Telephone Operator"
 #define JOB_SQUAD_MARINE_FORECON "Recon Rifleman"
 #define JOB_SQUAD_SMARTGUN_FORECON "Recon Smartgunner"
+
+#define JOB_SQUAD_ELEMENT_LEADER_MARSOC "MARSOC Element Lead"
+#define JOB_SQUAD_ASSISTANT_ELEMENT_LEAD_MARSOC "MARSOC Assistant Element Lead"
+#define JOB_SQUAD_SARC_MARSOC "MARSOC Amphibious Reconnaissance Corpsman"
+#define JOB_SQUAD_HEAVY_WEAPONS_OPERATOR_MARSOC "MARSOC Heavy Weapons Operator"
+#define JOB_SQUAD_SPECIAL_WEAPONS_OPERATOR_MARSOC "MARSOC Special Weapons Operator"
+#define JOB_SQUAD_SAPPER_MARSOC "MARSOC Sapper"
+#define JOB_SQUAD_ELEMENT_MEMBER_MARSOC "MARSOC Element Member"
 
 GLOBAL_LIST_INIT(job_squad_roles, JOB_SQUAD_ROLES_LIST)
 
