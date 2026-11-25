@@ -145,12 +145,6 @@
 	},
 /turf/open/floor/plating/plating_catwalk,
 /area/styx/dorms)
-"ca" = (
-/obj/structure/machinery/cm_vending/sorted/cargo_guns/squad/marsoc/civilian_prep{
-	icon_state = "prep"
-	},
-/turf/open/floor/almayer_hull/blackfull,
-/area/styx/platoonarmory)
 "cn" = (
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
@@ -665,15 +659,14 @@
 /turf/open/floor/almayer/edge/smooth/northwest,
 /area/styx/cryo_cells)
 "gG" = (
-/obj/structure/machinery/landinglight/ds1{
-	dir = 4
+/obj/structure/machinery/light/double{
+	dir = 8;
+	light_power = 0.3;
+	pixel_y = 0;
+	pixel_x = -9
 	},
-/obj/structure/machinery/floodlight/landing/floor{
-	color = "#dae2ff";
-	light_color = "#dae2ff"
-	},
-/turf/open/floor/almayer/plating,
-/area/styx/hangar)
+/turf/open/floor/almayer_hull/blackfull,
+/area/styx/platoonarmory)
 "gI" = (
 /obj/effect/decal/cleanable/dirt{
 	layer = 2.52
@@ -941,7 +934,7 @@
 	needs_power = 0
 	},
 /turf/open/floor/almayer_hull,
-/area/styx/platoonarmory)
+/area/styx/cryo_cells)
 "iJ" = (
 /obj/structure/bedsheetbin{
 	pixel_x = -1;
@@ -1781,14 +1774,16 @@
 	name = "Armament Lockdown Blastdoor";
 	id = "preplock";
 	indestructible = 1;
-	needs_power = 0
+	needs_power = 0;
+	pixel_x = 0;
+	pixel_y = 0
 	},
 /obj/structure/machinery/door/poddoor/almayer/open{
 	name = "Armament Lockdown Blastdoor";
 	id = "preplock";
 	indestructible = 1;
 	needs_power = 0;
-	pixel_x = 7;
+	pixel_x = 16;
 	pixel_y = 0;
 	layer = 3.18
 	},
@@ -1884,7 +1879,7 @@
 	dir = 2;
 	light_power = 0.3
 	},
-/obj/structure/machinery/cm_vending/clothing/marine/snowflake/marsoc,
+/obj/structure/machinery/cm_vending/sorted/uniform_supply/squad_prep/marsoc/civilian,
 /turf/open/floor/corsat/plate,
 /area/styx/platoonarmory)
 "pD" = (
@@ -2432,6 +2427,14 @@
 	id = "preplock";
 	indestructible = 1;
 	needs_power = 0
+	},
+/obj/structure/machinery/door/poddoor/almayer/open{
+	name = "Armament Lockdown Blastdoor";
+	id = "preplock";
+	indestructible = 1;
+	needs_power = 0;
+	pixel_x = 0;
+	pixel_y = 29
 	},
 /turf/open/floor/almayer_hull/blackfull,
 /area/styx/platoonarmory)
@@ -3343,6 +3346,10 @@
 	},
 /turf/open/floor/almayer_hull/blackfull,
 /area/styx/platoonarmory)
+"BY" = (
+/obj/structure/machinery/cm_vending/sorted/attachments/squad/marsoc,
+/turf/open/floor/almayer_hull/blackfull,
+/area/styx/platoonarmory)
 "Ca" = (
 /obj/structure/machinery/door/airlock/multi_tile/almayer/almayer/glass{
 	name = "Hypersleep Bay Preparations"
@@ -3516,6 +3523,14 @@
 	indestructible = 1;
 	needs_power = 0
 	},
+/obj/structure/machinery/door/poddoor/almayer/open{
+	name = "Armament Lockdown Blastdoor";
+	id = "preplock";
+	indestructible = 1;
+	needs_power = 0;
+	pixel_x = 0;
+	pixel_y = 29
+	},
 /turf/open/floor/almayer_hull/blackfull,
 /area/styx/platoonarmory)
 "Dp" = (
@@ -3606,7 +3621,7 @@
 /turf/open/floor/corsat/plate,
 /area/styx/canteen)
 "Ea" = (
-/obj/structure/machinery/cm_vending/clothing/marine/snowflake/marsoc,
+/obj/structure/machinery/cm_vending/sorted/uniform_supply/squad_prep/marsoc/civilian,
 /turf/open/floor/almayer_hull/blackfull,
 /area/styx/platoonarmory)
 "Ef" = (
@@ -3718,18 +3733,6 @@
 	},
 /turf/open/floor/almayer_hull/blackfull,
 /area/styx/canteen)
-"ER" = (
-/obj/structure/machinery/light/double/blue{
-	dir = 8;
-	pixel_x = -7;
-	pixel_y = -1;
-	color = "#8B0000";
-	light_color = "#8B0000";
-	name = "red";
-	needs_power = 0.3
-	},
-/turf/open/floor/almayer_hull/blackfull,
-/area/styx/platoonarmory)
 "ES" = (
 /obj/structure/machinery/light/double/blue{
 	dir = 1;
@@ -4457,8 +4460,7 @@
 	dir = 8
 	},
 /obj/structure/machinery/floodlight/landing/floor{
-	color = "#dae2ff";
-	light_color = "#dae2ff"
+	light_color = "#8B0000"
 	},
 /turf/open/floor/almayer/plating,
 /area/styx/hangar)
@@ -4917,6 +4919,15 @@
 	},
 /turf/open/floor/almayer_hull/blackfull,
 /area/styx/prep_hallway)
+"NA" = (
+/obj/structure/machinery/landinglight/ds1{
+	dir = 4
+	},
+/obj/structure/machinery/floodlight/landing/floor{
+	light_color = "#8B0000"
+	},
+/turf/open/floor/almayer/plating,
+/area/styx/hangar)
 "NE" = (
 /obj/structure/toilet,
 /obj/structure/machinery/light/small/blue{
@@ -4995,6 +5006,14 @@
 	id = "preplock";
 	indestructible = 1;
 	needs_power = 0
+	},
+/obj/structure/machinery/door/poddoor/almayer/open{
+	name = "Armament Lockdown Blastdoor";
+	id = "preplock";
+	indestructible = 1;
+	needs_power = 0;
+	pixel_x = 0;
+	pixel_y = 29
 	},
 /turf/open/floor/almayer_hull/blackfull,
 /area/styx/platoonarmory)
@@ -5321,12 +5340,9 @@
 /turf/open/floor/almayer,
 /area/styx/canteen)
 "QG" = (
-/obj/structure/machinery/floodlight/landing/floor{
-	color = "#dae2ff";
-	light_color = "#dae2ff"
-	},
-/turf/open/floor/almayer/plating,
-/area/styx/hangar)
+/obj/structure/machinery/cm_vending/sorted/cargo_guns/squad/marsoc/civilian_prep,
+/turf/open/floor/almayer_hull/blackfull,
+/area/styx/platoonarmory)
 "QO" = (
 /obj/effect/decal/warning_stripes/asteroid{
 	icon_state = "S"
@@ -5914,7 +5930,7 @@
 /obj/structure/gun_rack/m39b3{
 	pixel_x = 0;
 	pixel_y = 27;
-	layer = 4
+	layer = 3.9
 	},
 /obj/structure/machinery/door/poddoor/almayer/open{
 	name = "Armament Lockdown Blastdoor";
@@ -5932,6 +5948,15 @@
 	needs_power = 0;
 	pixel_x = -16;
 	pixel_y = 0
+	},
+/obj/structure/machinery/door/poddoor/almayer/open{
+	name = "Armament Lockdown Blastdoor";
+	id = "preplock";
+	indestructible = 1;
+	needs_power = 0;
+	layer = 4.01;
+	pixel_x = 0;
+	pixel_y = 29
 	},
 /turf/open/floor/almayer_hull/blackfull,
 /area/styx/platoonarmory)
@@ -6066,21 +6091,6 @@
 "XR" = (
 /obj/structure/roof/cargocrane_tracks/vertical/endcap2{
 	pixel_y = 14
-	},
-/obj/structure/largecrate/random/case/double{
-	layer = 3.2;
-	pixel_x = 3;
-	pixel_y = 0
-	},
-/obj/structure/largecrate/random/case/double{
-	pixel_y = 11;
-	layer = 3.1;
-	pixel_x = -5
-	},
-/obj/structure/largecrate/random/case/double{
-	pixel_y = -1;
-	layer = 3.1;
-	pixel_x = -5
 	},
 /turf/open/floor/corsat/plate,
 /area/styx/hangar)
@@ -6240,6 +6250,10 @@
 	},
 /turf/open/floor/corsat/arrow_east,
 /area/styx/prep_hallway)
+"YN" = (
+/obj/structure/machinery/cm_vending/sorted/attachments/squad/marsoc/foreign_weaponry,
+/turf/open/floor/almayer_hull/blackfull,
+/area/styx/platoonarmory)
 "YQ" = (
 /obj/structure/machinery/door/poddoor/almayer/blended{
 	dir = 4;
@@ -6980,9 +6994,9 @@ ap
 ap
 ap
 ap
+ap
+ap
 AJ
-ap
-ap
 ap
 ap
 ap
@@ -7041,11 +7055,11 @@ ap
 ap
 ap
 ap
+ap
+ap
 Pp
 RA
 Pp
-ap
-ap
 ap
 ap
 ap
@@ -7102,13 +7116,13 @@ ap
 ap
 ap
 ap
+ap
+ap
 cD
 cD
 Ly
 cD
 yf
-ap
-ap
 ap
 ap
 ap
@@ -7155,6 +7169,8 @@ ap
 ap
 ap
 ap
+ap
+ap
 tu
 Wa
 TP
@@ -7175,8 +7191,6 @@ TP
 TP
 TP
 BL
-TP
-TP
 XR
 ap
 ap
@@ -7216,6 +7230,8 @@ Ak
 ap
 ap
 ap
+ap
+ap
 cD
 cD
 TD
@@ -7237,8 +7253,6 @@ ah
 ah
 ah
 ah
-cD
-cD
 cD
 cD
 ap
@@ -7278,6 +7292,8 @@ Ak
 ap
 ap
 ap
+ap
+ap
 xk
 ah
 Du
@@ -7289,7 +7305,7 @@ wW
 BF
 lG
 LA
-gG
+NA
 BF
 lG
 LA
@@ -7300,8 +7316,6 @@ LA
 wW
 BF
 Dg
-cD
-cD
 cD
 MW
 ap
@@ -7339,6 +7353,8 @@ Ak
 Ak
 ap
 ap
+ap
+ap
 JN
 cD
 ah
@@ -7362,8 +7378,6 @@ fy
 fy
 fy
 vG
-JI
-ye
 cD
 cD
 cD
@@ -7401,6 +7415,8 @@ Ak
 Ak
 ap
 ap
+ap
+ap
 SW
 TQ
 TP
@@ -7424,10 +7440,8 @@ fy
 fy
 fy
 KQ
-ap
-IR
-ah
-ah
+JI
+ye
 cD
 kA
 ap
@@ -7463,6 +7477,8 @@ Ak
 Ak
 ap
 ap
+ap
+ap
 JN
 cD
 ah
@@ -7486,10 +7502,8 @@ fy
 fy
 fy
 Pc
-gq
+ap
 IR
-ah
-ah
 ah
 cD
 Ou
@@ -7526,6 +7540,8 @@ Ak
 ap
 ap
 ap
+ap
+ap
 cD
 cD
 Wy
@@ -7550,8 +7566,6 @@ fy
 Go
 gq
 IR
-ah
-ah
 ah
 ah
 cD
@@ -7589,6 +7603,8 @@ ap
 ap
 ap
 ap
+ap
+ap
 cD
 Yb
 fy
@@ -7612,8 +7628,6 @@ fy
 vG
 gq
 IR
-ah
-ah
 ah
 ah
 ah
@@ -7650,6 +7664,8 @@ Ak
 ap
 ap
 ap
+ap
+ap
 cD
 cD
 yM
@@ -7674,8 +7690,6 @@ fy
 KQ
 gq
 IR
-ah
-ah
 ah
 ah
 cD
@@ -7711,6 +7725,8 @@ Ak
 Ak
 ap
 ap
+ap
+ap
 JN
 cD
 ah
@@ -7734,10 +7750,8 @@ fy
 fy
 fy
 Pc
-gq
+ap
 IR
-ah
-ah
 ah
 cD
 cD
@@ -7773,6 +7787,8 @@ Ak
 Ak
 ap
 ap
+ap
+ap
 SW
 TQ
 TP
@@ -7796,10 +7812,8 @@ fy
 fy
 fy
 Go
-ap
-IR
-ah
-ah
+vs
+jO
 cD
 kA
 ap
@@ -7835,6 +7849,8 @@ Ak
 Ak
 ap
 ap
+ap
+ap
 JN
 cD
 ah
@@ -7858,8 +7874,6 @@ fy
 fy
 fy
 vG
-vs
-jO
 cD
 cD
 cD
@@ -7898,6 +7912,8 @@ Ak
 ap
 ap
 ap
+ap
+ap
 xk
 ah
 Du
@@ -7919,9 +7935,7 @@ qz
 yl
 zz
 HV
-QG
-cD
-cD
+Dg
 cD
 ha
 ap
@@ -7960,6 +7974,8 @@ Ak
 ap
 ap
 ap
+ap
+ap
 qo
 cD
 oQ
@@ -7981,8 +7997,6 @@ ah
 ah
 ah
 ah
-cD
-cD
 cD
 ah
 ap
@@ -8023,6 +8037,8 @@ ap
 ap
 ap
 ap
+ap
+ap
 oq
 ah
 ah
@@ -8038,8 +8054,6 @@ ah
 ah
 cD
 cD
-ah
-ah
 ah
 ah
 ah
@@ -8094,13 +8108,13 @@ ap
 ap
 ap
 ap
+ap
+ap
 cD
 cD
 cD
 cD
 zc
-ap
-ap
 ap
 ap
 ap
@@ -8157,11 +8171,11 @@ ap
 ap
 ap
 ap
-YQ
-YQ
-YQ
 ap
 ap
+YQ
+YQ
+YQ
 ap
 ap
 ap
@@ -9944,7 +9958,7 @@ Ak
 Ak
 bb
 bb
-bb
+iF
 bb
 bb
 bb
@@ -10006,7 +10020,7 @@ DI
 DI
 DI
 DI
-iF
+DI
 DI
 DI
 DI
@@ -10067,13 +10081,13 @@ DI
 DI
 DI
 DI
+IB
+YN
+DI
+BY
+IB
 DI
 DI
-DI
-DI
-DI
-DI
-bb
 bb
 bb
 bb
@@ -10128,13 +10142,13 @@ DI
 DI
 DI
 DI
-DI
 IB
 IB
-ER
+IB
+gG
 IB
 IB
-DI
+IB
 DI
 DI
 DI
@@ -10190,13 +10204,13 @@ DI
 DI
 DI
 DI
-ca
+QG
 IB
 Ea
 aV
 Ea
 IB
-ca
+QG
 DI
 DI
 DI

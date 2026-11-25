@@ -1114,6 +1114,9 @@
 	damage_mult = BASE_BULLET_DAMAGE_MULT
 	recoil_unwielded = RECOIL_AMOUNT_TIER_2
 
+/obj/item/weapon/gun/rifle/m16/no_attachments
+	random_spawn_chance = 0
+
 /obj/item/weapon/gun/rifle/m16/grenadier
 	name = "\improper M16 grenadier rifle"
 	desc = "The little worn and faded sticker on the lower receiver claims that this is a Mustang Special, Little Friend Edition. Point is, it's an M16 repro with an irremovable M203 underslung. 40mm, careful where you point it."

@@ -1341,11 +1341,6 @@
 		list("ZHNK-72 Speed Loader (UPP)", 32, /obj/item/ammo_magazine/revolver/upp, VENDOR_ITEM_REGULAR),
 	)
 
-/obj/structure/machinery/cm_vending/sorted/cargo_guns/squad/marsoc/civilian_prep
-	name = "\improper ARMAT Systems Automated Non-Standard Civilian Preparation Storage Rack"
-	desc = "An automated supply rack with access to the ship's storage bays. This one has the brand of ARMAT painted across it and looks to have been modified for a whole host of different equipment."
-	icon_state = "antag_guns"
-
 
 /obj/structure/machinery/cm_vending/sorted/cargo_guns/squad/marsoc/civilian_weaponry
 	name = "\improper ARMAT Systems Automated Non-Standard Civilian Armament Storage Rack"
@@ -1358,7 +1353,7 @@
 		list("M20A Pulse Rifle", 8, /obj/item/weapon/gun/rifle/m20a, VENDOR_ITEM_REGULAR),
 		list("L42A Pulse Rifle", 8, /obj/item/weapon/gun/rifle/l42a, VENDOR_ITEM_REGULAR),
 		list("ABR-40 Hunting Rifle", 8, /obj/item/weapon/gun/rifle/l42a/abr40, VENDOR_ITEM_REGULAR),
-		list("M16 Assault Rifle", 8, /obj/item/weapon/gun/rifle/m16, VENDOR_ITEM_REGULAR),
+		list("M16 Assault Rifle", 8, /obj/item/weapon/gun/rifle/m16/no_attachments, VENDOR_ITEM_REGULAR),
 
 		list("LIGHT MACHINE GUNS", -1, null, null),
 		list("MK.7 ISR LMG", 2, /obj/item/weapon/gun/rifle/isr, VENDOR_ITEM_REGULAR),
@@ -1366,7 +1361,7 @@
 
 		list("SUBMACHINEGUNS", -1, null, null),
 		list("MP5 Submachinegun", 8, /obj/item/weapon/gun/smg/mp5, VENDOR_ITEM_REGULAR),
-		list("FN FP9000 Submachinegun", 8, /obj/item/weapon/gun/smg/fp9000, VENDOR_ITEM_REGULAR),
+		list("FN FP9000 Submachinegun", 8, /obj/item/weapon/gun/smg/fp9000/no_attachments, VENDOR_ITEM_REGULAR),
 		list("Viper 9 Submachinegun", 8, /obj/item/weapon/gun/smg/m39, VENDOR_ITEM_REGULAR),
 		list("MAC-15 Submachinegun", 8, /obj/item/weapon/gun/smg/mac15, VENDOR_ITEM_REGULAR),
 		list("MP27 Submachinegun", 8, /obj/item/weapon/gun/smg/mp27, VENDOR_ITEM_REGULAR),
@@ -1678,7 +1673,8 @@ GLOBAL_LIST_INIT(cm_vending_clothing_marine_snowflake, list(
 /obj/structure/machinery/cm_vending/clothing/marine/snowflake/get_listed_products(mob/user)
 	return GLOB.cm_vending_clothing_marine_snowflake
 
-GLOBAL_LIST_INIT(cm_vending_clothing_marine_snowflake_marsoc, list(
+/obj/structure/machinery/cm_vending/sorted/uniform_supply/squad_prep/marsoc/civilian/populate_product_list(scale)
+	listed_products = list(
 	list("SHIRTS AND UNIFORMS", 0, null, null, null),
 	list("White T-Shirt and Brown Jeans", 12, /obj/item/clothing/under/tshirt/w_br, null, VENDOR_ITEM_REGULAR),
 	list("Gray T-Shirt and Blue Jeans", 12, /obj/item/clothing/under/tshirt/gray_blu, null, VENDOR_ITEM_REGULAR),
@@ -1803,14 +1799,9 @@ GLOBAL_LIST_INIT(cm_vending_clothing_marine_snowflake_marsoc, list(
 	list("Armband, Yellow", 8, /obj/item/clothing/accessory/armband/engine, null, VENDOR_ITEM_REGULAR),
 	list("Armband, Green", 8, /obj/item/clothing/accessory/armband/medgreen, null, VENDOR_ITEM_REGULAR),
 	list("Armband, White", 8, /obj/item/clothing/accessory/armband/med, null, VENDOR_ITEM_REGULAR),
-))
+)
 
-/obj/structure/machinery/cm_vending/clothing/marine/snowflake/marsoc
+/obj/structure/machinery/cm_vending/sorted/uniform_supply/squad_prep/marsoc/civilian
 	name = "\improper Civilian Clothing Storage Unit"
 	desc = "An unbranded vendor connected deep into this vessels storage unit. It looks to contain an entire host of various civilian and casual clothing."
 	icon_state = "civilian_clothing"
-	show_points = FALSE
-	use_snowflake_points = FALSE
-
-/obj/structure/machinery/cm_vending/clothing/marine/snowflake/marsoc/get_listed_products(mob/user)
-	return GLOB.cm_vending_clothing_marine_snowflake_marsoc
