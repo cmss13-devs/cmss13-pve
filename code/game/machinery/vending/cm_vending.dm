@@ -562,11 +562,6 @@ GLOBAL_LIST_EMPTY(vending_products)
 								vend_fail()
 								return FALSE
 
-							else if(!user.skills || user.skills.get_skill_level(SKILL_SPEC_WEAPONS) != SKILL_SPEC_TRAINED)
-								to_chat(user, SPAN_WARNING("You already have a specialization."))
-								vend_fail()
-								return FALSE
-
 							var/p_name = itemspec[1]
 							if(!(p_name in GLOB.specialist_set_name_dict))
 								return

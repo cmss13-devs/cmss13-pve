@@ -31,6 +31,13 @@
 	sub_squad = "Team"
 	sub_leader = "Team Leader"
 
+/datum/squad_type/marsoc_element
+	name = "Element"
+	lead_name = "Element Lead"
+	lead_icon = "soctl"
+	sub_squad = "Tactical Elements"
+	sub_leader = "Assistant Element Lead"
+
 /datum/squad_type/upp_squad
 	name = "Platoon"
 	lead_name = "Platoon Sergeant"
@@ -165,6 +172,16 @@
 	use_stripe_overlay = FALSE
 	usable = TRUE
 
+/datum/squad/marine/fire
+	name = SQUAD_MARINE_6
+	equipment_color = "#792020"
+	chat_color = "#944b4b"
+	access = list(ACCESS_MARINE_ALPHA)
+	radio_freq = CBRN_FREQ
+	minimap_color = MINIMAP_SQUAD_FIRE
+	use_stripe_overlay = FALSE
+	usable = FALSE
+
 /datum/squad/marine/upp
 	name = SQUAD_UPP
 	equipment_color = "#8B0000"
@@ -205,6 +222,18 @@
 	minimap_color = "#32CD32"
 	usable = TRUE
 	squad_type = "Squad"
+
+/datum/squad/marine/upp/forecon
+	name = SQUAD_SISSI
+	equipment_color = "#07770d"
+	chat_color = "#07770d"
+	minimap_color = "#07770d"
+	access = list(ACCESS_UPP_GENERAL)
+	radio_freq = UPP_FORECON_FREQ
+	minimap_color = MINIMAP_SQUAD_UPP
+	use_stripe_overlay = FALSE
+	usable = TRUE
+	faction = FACTION_UPP
 
 /datum/squad/marine/bravo
 	name = SQUAD_MARINE_2
@@ -276,18 +305,15 @@
 	max_smartgun = 0
 	max_leaders = 0
 
-/datum/squad/marine/sof
-	name = SQUAD_SOF
-	equipment_color = "#400000"
-	chat_color = "#400000"
+/datum/squad/marine/marsoc
+	name = SQUAD_MRR
+	access = list(ACCESS_MARINE_ALPHA)
 	radio_freq = SOF_FREQ
-	squad_type = "Team"
-	lead_icon = "soctl"
-	minimap_color = MINIMAP_SQUAD_SOF
-
-	active = FALSE
-	roundstart = FALSE
-	locked = TRUE
+	use_stripe_overlay = FALSE
+	equipment_color = "#61111b"
+	chat_color = "#660f0f"
+	minimap_color = "#490505"
+	usable = TRUE
 
 /datum/squad/marine/sof/forecon
 	name = SQUAD_LRRP_2
@@ -333,6 +359,17 @@
 	active = TRUE
 	roundstart = FALSE
 	usable = TRUE
+
+/datum/squad/marine/army
+	name = SQUAD_ARMY
+	equipment_color = "#349c30"
+	chat_color = "#349c30"
+	radio_freq = ARMY_FREQ
+	minimap_color = "#349c30"
+	minimap_color = MINIMAP_SQUAD_ARMY
+
+	active = FALSE
+	roundstart = FALSE
 	locked = TRUE
 
 //############################### UPP Squads
@@ -408,6 +445,7 @@
 
 /datum/squad/marine/pmc/secondary
 	name = SQUAD_PMCPLT_2
+	equipment_color = "#67d692"
 	chat_color = "#0fc777"
 	minimap_color = MINIMAP_SQUAD_ECHO
 	usable = FALSE
@@ -703,6 +741,10 @@
 			assignment = JOB_MARINE_RAIDER
 			if(name == JOB_MARINE_RAIDER)
 				assignment = "Special Operator"
+		if(JOB_MARINE_RAIDER_MED)
+			assignment = JOB_MARINE_RAIDER_MED
+			if(name == JOB_MARINE_RAIDER_MED)
+				assignment = "Special Amphibious Reconnaissance Corpsman"
 		if(JOB_MARINE_RAIDER_SL)
 			assignment = JOB_MARINE_RAIDER_SL
 			if(name == JOB_MARINE_RAIDER)
@@ -768,6 +810,47 @@
 			num_engineers++
 		if(JOB_TWE_RMC_TROOPLEADER)
 			assignment = JOB_TWE_RMC_TROOPLEADER
+
+//God forgive me.
+		if(JOB_SQUAD_ELEMENT_MEMBER_MARSOC)
+			assignment = JOB_SQUAD_ELEMENT_MEMBER_MARSOC
+			num_riflemen++
+			assign_fireteam("SQ1", M)
+		if(JOB_SQUAD_SAPPER_MARSOC)
+			assignment = JOB_SQUAD_SAPPER_MARSOC
+			num_engineers++
+			assign_fireteam("SQ1", M)
+			C.claimedgear = FALSE
+		if(JOB_SQUAD_SARC_MARSOC)
+			assignment = JOB_SQUAD_SARC_MARSOC
+			num_medics++
+			assign_fireteam("SQ1", M)
+			C.claimedgear = FALSE
+		if(JOB_SQUAD_SPECIAL_WEAPONS_OPERATOR_MARSOC)
+			assignment = JOB_SQUAD_SPECIAL_WEAPONS_OPERATOR_MARSOC
+			num_specialists++
+			assign_fireteam("SQ1", M)
+		if(JOB_SQUAD_ASSISTANT_ELEMENT_LEAD_MARSOC)
+			assignment = JOB_SQUAD_ASSISTANT_ELEMENT_LEAD_MARSOC
+			num_tl++
+			M.important_radio_channels += radio_freq
+			assign_fireteam("SQ1", M)
+			assign_ft_leader("SQ1", M)
+		if(JOB_SQUAD_HEAVY_WEAPONS_OPERATOR_MARSOC)
+			assignment = JOB_SQUAD_HEAVY_WEAPONS_OPERATOR_MARSOC
+			num_smartgun++
+			assign_fireteam("SQ1", M)
+		if(JOB_SQUAD_ELEMENT_LEADER_MARSOC)
+			if(squad_leader && GET_DEFAULT_ROLE(squad_leader.job) != JOB_SQUAD_ELEMENT_LEADER_MARSOC) //field promoted SL
+				var/old_lead = squad_leader
+				demote_squad_leader() //replaced by the real one
+				SStracking.start_tracking(tracking_id, old_lead)
+			assignment = squad_type + " Sergeant"
+			squad_leader = M
+			SStracking.set_leader(tracking_id, M)
+			SStracking.start_tracking("marine_sl", M)
+			if(GET_DEFAULT_ROLE(M.job) == JOB_SQUAD_ELEMENT_LEADER_MARSOC) //field promoted SL don't count as real ones
+				num_leaders++
 
 	RegisterSignal(M, COMSIG_PARENT_QDELETING, PROC_REF(personnel_deleted), override = TRUE)
 	if(assignment != JOB_SQUAD_LEADER)

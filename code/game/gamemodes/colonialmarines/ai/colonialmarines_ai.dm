@@ -44,6 +44,7 @@
 			GLOB.main_platoon_initial_name = sq.name
 
 	squad_limit += USCM_AUXILIARY_PLATOON
+	squad_limit += USCM_SPECIAL_PLATOON
 	squad_limit += FORECON_AUXILIARY_PLATOON
 	squad_limit += UPP_AUXILIARY_PLATOON
 	squad_limit += PMC_AUXILIARY_PLATOON
@@ -55,10 +56,12 @@
 		GLOB.RoleAuthority.squads_by_type -= squad.type
 
 	GLOB.RoleAuthority.squads += USCM_AUXILIARY_PLATOON
+	GLOB.RoleAuthority.squads += USCM_SPECIAL_PLATOON
 	GLOB.RoleAuthority.squads += FORECON_AUXILIARY_PLATOON
 	GLOB.RoleAuthority.squads += UPP_AUXILIARY_PLATOON
 	GLOB.RoleAuthority.squads += PMC_AUXILIARY_PLATOON
 	GLOB.RoleAuthority.squads_by_type += USCM_AUXILIARY_PLATOON
+	GLOB.RoleAuthority.squads_by_type += USCM_SPECIAL_PLATOON
 	GLOB.RoleAuthority.squads_by_type += FORECON_AUXILIARY_PLATOON
 	GLOB.RoleAuthority.squads_by_type += UPP_AUXILIARY_PLATOON
 	GLOB.RoleAuthority.squads_by_type += PMC_AUXILIARY_PLATOON
@@ -104,6 +107,7 @@ GLOBAL_LIST_INIT(platoon_to_jobs, list(/datum/squad/marine/alpha = list(/datum/j
 		/datum/job/marine/medic/ai/upp = JOB_SQUAD_MEDIC,\
 		/datum/job/marine/tl/ai/upp = JOB_SQUAD_TEAM_LEADER,\
 		/datum/job/marine/smartgunner/ai/upp = JOB_SQUAD_SMARTGUN,\
+		/datum/job/marine/standard/ai/upp/rto = JOB_SQUAD_RTO,\
 		/datum/job/marine/standard/ai/upp = JOB_SQUAD_MARINE),\
 		/datum/squad/marine/pmc = list(/datum/job/marine/tl/ai/pmc = JOB_SQUAD_TEAM_LEADER,\
 		/datum/job/marine/standard/ai/pmc =  JOB_SQUAD_MARINE,\
@@ -122,6 +126,12 @@ GLOBAL_LIST_INIT(platoon_to_jobs, list(/datum/squad/marine/alpha = list(/datum/j
 		/datum/job/marine/medic/ai/pmc/small = JOB_SQUAD_MEDIC,\
 		/datum/job/marine/smartgunner/ai/pmc/small = JOB_SQUAD_SMARTGUN,\
 		/datum/job/marine/leader/ai/pmc/small = JOB_SQUAD_LEADER),\
+		/datum/squad/marine/upp/forecon = list(/datum/job/marine/standard/ai/upp/forecon = JOB_SQUAD_MARINE,\
+		/datum/job/marine/standard/ai/upp/rto/forecon = JOB_SQUAD_RTO,\
+		/datum/job/marine/leader/ai/upp/forecon = JOB_SQUAD_LEADER,\
+		/datum/job/marine/medic/ai/upp/forecon = JOB_SQUAD_MEDIC,\
+		/datum/job/marine/tl/ai/upp/forecon = JOB_SQUAD_TEAM_LEADER,\
+		/datum/job/marine/smartgunner/ai/upp/forecon = JOB_SQUAD_SMARTGUN),\
 		/datum/squad/marine/rmc = list(/datum/job/command/bridge/ai/rmc = JOB_TWE_RMC_LIEUTENANT,\
 		/datum/job/marine/leader/ai/rmc = JOB_TWE_RMC_TROOPLEADER,\
 		/datum/job/marine/tl/ai/rmc = JOB_TWE_RMC_SECTIONLEADER,\
@@ -131,13 +141,22 @@ GLOBAL_LIST_INIT(platoon_to_jobs, list(/datum/squad/marine/alpha = list(/datum/j
 		/datum/job/marine/engineer/ai/rmc = JOB_TWE_RMC_ENGI,\
 		/datum/job/marine/engineer/ai/rmcmortar = JOB_TWE_RMC_BREACHER,\
 		/datum/job/marine/specialist/ai/rmc = JOB_TWE_RMC_MARKSMAN,\
-		/datum/job/marine/standard/ai/rmc = JOB_TWE_RMC_RIFLEMAN)))
+		/datum/job/marine/standard/ai/rmc = JOB_TWE_RMC_RIFLEMAN),\
+		/datum/squad/marine/marsoc = list(/datum/job/marine/standard/ai/marsoc = JOB_SQUAD_ELEMENT_MEMBER_MARSOC,\
+		/datum/job/marine/smartgunner/ai/marsoc = JOB_SQUAD_HEAVY_WEAPONS_OPERATOR_MARSOC,\
+		/datum/job/marine/specialist/ai/marsoc = JOB_SQUAD_SPECIAL_WEAPONS_OPERATOR_MARSOC,\
+		/datum/job/marine/medic/ai/marsoc = JOB_SQUAD_SARC_MARSOC,\
+		/datum/job/marine/engineer/ai/marsoc = JOB_SQUAD_SAPPER_MARSOC,\
+		/datum/job/marine/tl/ai/marsoc = JOB_SQUAD_ASSISTANT_ELEMENT_LEAD_MARSOC,\
+		/datum/job/marine/leader/ai/marsoc = JOB_SQUAD_ELEMENT_LEADER_MARSOC)))
 
 GLOBAL_LIST_INIT(platoon_to_role_list, list(/datum/squad/marine/alpha = ROLES_AI,\
 												/datum/squad/marine/upp = ROLES_AI_UPP,\
 												/datum/squad/marine/pmc = ROLES_PMCPLT,\
 												/datum/squad/marine/forecon = ROLES_AI_FORECON,\
+												/datum/squad/marine/marsoc = ROLES_AI_MARSOC,\
 												/datum/squad/marine/pmc/small = ROLES_PMCPLT_SMALL,\
+												/datum/squad/marine/upp/forecon = ROLES_AI_UPP_FORECON,\
 												/datum/squad/marine/rmc = ROLES_RMCTROOP))
 
 

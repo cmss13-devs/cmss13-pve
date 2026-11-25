@@ -69,6 +69,15 @@
 	new /obj/item/ammo_magazine/hpr_box(src)
 	new /obj/item/ammo_magazine/hpr_box(src)
 
+/obj/item/storage/box/guncase/lmg/marsoc
+	can_hold = list(/obj/item/weapon/gun/rifle/lmg, /obj/item/ammo_magazine/hpr_box/heap)
+
+/obj/item/storage/box/guncase/lmg/marsoc/fill_preset_inventory()
+	new /obj/item/weapon/gun/rifle/lmg(src)
+	new /obj/item/ammo_magazine/hpr_box/heap(src)
+	new /obj/item/ammo_magazine/hpr_box/heap(src)
+	new /obj/item/ammo_magazine/hpr_box/heap(src)
+
 //------------
 /obj/item/storage/box/guncase/m41aMK1
 	name = "\improper M41A pulse rifle MK1 case"
@@ -119,7 +128,7 @@
 /obj/item/storage/box/guncase/heavy/m92_upp/update_icon()
 	overlays.Cut()
 	if(opened)
-		overlays += image(icon, "uppbigcasealt_lid_open")
+		overlays += image(icon, "uppbigcase_lid_open")
 	else
 		overlays += image(icon, "m92uppcase_lid")
 		return
@@ -137,6 +146,46 @@
 
 /obj/item/storage/box/guncase/heavy/m92_upp/preloaded/fill_preset_inventory()
 	new /obj/item/weapon/gun/launcher/grenade/m92/upp/stored(src)
+	new /obj/item/storage/pouch/explosive/upp/impact(src)
+	new /obj/item/storage/box/packet/high_explosive/upp/impact(src)
+	new /obj/item/storage/box/packet/high_explosive/upp/ap(src)
+	new /obj/item/storage/box/packet/high_explosive/upp/incend(src)
+
+/obj/item/storage/box/guncase/heavy/upp_forecon
+	name = "\improper OG-74 grenade launcher case"
+	desc = "A case for storing an OG-74 grenade launcher."
+	icon_state = "og74case"
+	storage_slots = 3
+	can_hold = list(/obj/item/weapon/gun/launcher/grenade/m92/upp_forecon, /obj/item/storage/pouch/explosive, /obj/item/storage/large_holster/m39/upp, /obj/item/storage/box/packet/high_explosive/upp)
+	max_w_class = SIZE_HUGE
+
+/obj/item/storage/box/guncase/heavy/upp_forecon/fill_preset_inventory()
+	new /obj/item/weapon/gun/launcher/grenade/m92/upp_forecon/stored(src)
+	new /obj/item/storage/large_holster/m39/upp(src)
+	new /obj/item/storage/pouch/explosive(src)
+
+/obj/item/storage/box/guncase/heavy/upp_forecon/update_icon()
+	overlays.Cut()
+	if(opened)
+		overlays += image(icon, "uppbigcase_lid_open")
+	else
+		overlays += image(icon, "og74case_lid")
+		return
+	if(locate(/obj/item/weapon/gun/launcher/grenade/m92/upp_forecon) in contents)
+		overlays += image(icon, "+og74")
+	var/obj/item/storage/pouch/explosive/nade_pouch = locate(/obj/item/storage/pouch/explosive) in contents
+	if(nade_pouch)
+		if(!nade_pouch.contents.len)
+			overlays += image(icon, "+nade_pouch")
+		else
+			overlays += image(icon, "+nade_pouch_full")
+
+/obj/item/storage/box/guncase/heavy/upp_forecon/preloaded
+	storage_slots = 6
+
+/obj/item/storage/box/guncase/heavy/upp_forecon/preloaded/fill_preset_inventory()
+	new /obj/item/weapon/gun/launcher/grenade/m92/upp_forecon/stored(src)
+	new /obj/item/storage/large_holster/m39/upp(src)
 	new /obj/item/storage/pouch/explosive/upp/impact(src)
 	new /obj/item/storage/box/packet/high_explosive/upp/impact(src)
 	new /obj/item/storage/box/packet/high_explosive/upp/ap(src)
@@ -275,6 +324,30 @@
 	if(locate(/obj/item/device/sentry_computer) in contents)
 		overlays += image(icon, "+sentrycomp")
 
+/obj/item/storage/box/guncase/heavy/sentry/flamer
+	name = "\improper UA 42-F sentry flamer case"
+	desc = "A gun case containing the UA 42-F sentry unit, a spare drum, and a sentry laptop."
+	icon_state = "sentrycase"
+	storage_slots = 3
+	can_hold = list(/obj/item/defenses/handheld/sentry/flamer, /obj/item/ammo_magazine/sentry_flamer, /obj/item/device/sentry_computer)
+
+/obj/item/storage/box/guncase/heavy/sentry/flamer/fill_preset_inventory()
+	new /obj/item/defenses/handheld/sentry/flamer(src)
+	new /obj/item/ammo_magazine/sentry_flamer(src)
+	new /obj/item/device/sentry_computer(src)
+
+/obj/item/storage/box/guncase/heavy/sentry/shotgun
+	name = "\improper UA 12-G shotgun sentry case"
+	desc = "A gun case containing the UA 12-G sentry unit, a spare drum, and a sentry laptop."
+	icon_state = "sentrycase"
+	storage_slots = 3
+	can_hold = list(/obj/item/defenses/handheld/sentry/shotgun, /obj/item/ammo_magazine/shotgun, /obj/item/device/sentry_computer)
+
+/obj/item/storage/box/guncase/heavy/sentry/shotgun/fill_preset_inventory()
+	new /obj/item/defenses/handheld/sentry/shotgun(src)
+	new /obj/item/ammo_magazine/sentry/shotgun(src)
+	new /obj/item/device/sentry_computer(src)
+
 /obj/item/storage/box/guncase/heavy/sentry/pmc_platoon
 	name = "\improper UA 571-C-WY sentry guncase"
 	desc = "A gun case containing the UA 571-C-WY sentry gun, a spare drum, and a sentry laptop."
@@ -398,7 +471,7 @@
 /obj/item/storage/box/guncase/heavy/smg/type64/update_icon()
 	overlays.Cut()
 	if(opened)
-		overlays += image(icon, "uppbigcasealt_lid_open")
+		overlays += image(icon, "uppbigcase_lid_open")
 	else
 		overlays += image(icon, "t64case_lid")
 		return
@@ -428,6 +501,7 @@
 
 
 /obj/item/storage/box/guncase/heavy/smg/type64/fill_preset_inventory()
+	new /obj/item/storage/belt/gun/bizon(src)
 	new /obj/item/weapon/gun/smg/bizon/upp/stored(src)
 	new /obj/item/ammo_magazine/smg/bizon(src)
 	new /obj/item/ammo_magazine/smg/bizon(src)
@@ -437,6 +511,7 @@
 	new /obj/item/ammo_magazine/smg/bizon(src)
 
 /obj/item/storage/box/guncase/heavy/smg/type64/heap/fill_preset_inventory()
+	new /obj/item/storage/belt/gun/bizon(src)
 	new /obj/item/weapon/gun/smg/bizon/upp/stored(src)
 	new /obj/item/ammo_magazine/smg/bizon/heap(src)
 	new /obj/item/ammo_magazine/smg/bizon/heap(src)
@@ -471,6 +546,27 @@
 		return
 	if(locate(/obj/item/weapon/gun/rifle/m49a/pve) in src.contents)
 		overlays += image(src.icon, "+r2")
+
+
+/obj/item/storage/box/guncase/heavy/m49a_pve/custom
+	name = "\improper M49A5 battle rifle case"
+	desc = "A large case for storing an M49A5, a modified USCM battle rifle capable of medium-long range engagements."
+	icon_state = "r2case"
+	storage_slots = 8
+	can_hold = list(/obj/item/weapon/gun/rifle/m49a_custom/tactical, /obj/item/clothing/glasses/night/M49A/no_wallhacks, /obj/item/ammo_magazine/rifle/m49a)
+
+/obj/item/storage/box/guncase/heavy/m49a_pve/custom/fill_preset_inventory()
+	new /obj/item/weapon/gun/rifle/m49a_custom/tactical(src)
+	new /obj/item/clothing/glasses/night/M49A/no_wallhacks(src)
+	new /obj/item/ammo_magazine/rifle/m49a/heap(src)
+	new /obj/item/ammo_magazine/rifle/m49a/heap(src)
+	new /obj/item/ammo_magazine/rifle/m49a/heap(src)
+	new /obj/item/ammo_magazine/rifle/m49a/heap(src)
+	new /obj/item/ammo_magazine/rifle/m49a/heap(src)
+	new /obj/item/ammo_magazine/rifle/m49a/custom/explosive(src)
+	new /obj/item/ammo_magazine/rifle/m49a/custom/explosive(src)
+	new /obj/item/ammo_magazine/rifle/m49a/custom/incendiary(src)
+	new /obj/item/ammo_magazine/rifle/m49a/custom/incendiary(src)
 
 /obj/item/storage/box/guncase/heavy/sniper
 	name = "\improper M42A sniper case"
@@ -511,7 +607,7 @@
 /obj/item/storage/box/guncase/heavy/sniper/svd_iff/update_icon()
 	overlays.Cut()
 	if(opened)
-		overlays += image(icon, "uppbigcasealt_lid_open")
+		overlays += image(icon, "uppbigcase_lid_open")
 	else
 		overlays += image(icon, "t88case_lid")
 		return
@@ -590,6 +686,18 @@
 	new /obj/item/weapon/gun/rifle/lmg/recon(src)
 	new /obj/item/ammo_magazine/hpr_box/recon(src)
 	new /obj/item/ammo_magazine/hpr_box/recon(src)
+
+/obj/item/storage/box/guncase/heavy/hpr/marsoc
+	storage_slots = 7
+
+/obj/item/storage/box/guncase/heavy/hpr/marsoc/fill_preset_inventory()
+	new /obj/item/weapon/gun/rifle/lmg(src)
+	new /obj/item/ammo_magazine/hpr_box/heap(src)
+	new /obj/item/ammo_magazine/hpr_box/heap(src)
+	new /obj/item/ammo_magazine/hpr_box/heap(src)
+	new /obj/item/ammo_magazine/hpr_box/heap(src)
+	new /obj/item/ammo_magazine/hpr_box/heap(src)
+	new /obj/item/ammo_magazine/hpr_box/heap(src)
 
 /obj/item/storage/box/guncase/heavy/rmcsmg
 	name = "\improper L6A2 SMG CQWS case"

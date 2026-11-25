@@ -31,18 +31,39 @@
 			if(JOB_DROPSHIP_CREW_CHIEF) marine_rk = "dcc"
 			if(JOB_SQUAD_RTO) marine_rk = "rto"
 			if(JOB_MARINE_RAIDER) marine_rk = "soc"
+			if(JOB_MARINE_RAIDER_MED) marine_rk = "socmed"
 			if(JOB_MARINE_RAIDER_SL) marine_rk = "soctl"
 			if(JOB_MARINE_RAIDER_CMD) marine_rk = "soccmd"
 			if(JOB_SQUAD_TECH) marine_rk = "tech"
 
 			if(JOB_FORECON_SL) marine_rk = "leader"
 			if(JOB_FORECON_SNIPER) marine_rk = "spec"
+			if(JOB_FORECON_SPOTTER) marine_rk = "ass"
+			if(JOB_FORECON_RTO) marine_rk = "rto"
+			if(JOB_FORECON_CORPSMAN) marine_rk = "med"
+			if(JOB_FORECON_XO) marine_rk = "xo"
 			if(JOB_FORECON_SYN) marine_rk = "syn"
 			if(JOB_FORECON_SUPPORT) marine_rk = "tech"
 			if(JOB_FORECON_SMARTGUNNER) marine_rk = "gun"
-			if(JOB_FORECON_MARKSMAN) marine_rk = "ass"
+			if(JOB_FORECON_MARKSMAN) marine_rk = "soc"
 			if(JOB_FORECON_RIFLEMAN) marine_rk = null
 			if(JOB_FORECON_CO) marine_rk = "co"
+
+			if(JOB_ARMY_TROOPER) marine_rk = "trpr"
+			if(JOB_ARMY_ENGI) marine_rk = "cet"
+			if(JOB_ARMY_MEDIC) marine_rk = "cmt"
+			if(JOB_ARMY_MARKSMAN) marine_rk = "snpr"
+			if(JOB_ARMY_SMARTGUNNER) marine_rk = "mmg"
+			if(JOB_ARMY_SNCO) marine_rk = "sl_army"
+			if(JOB_ARMY_CO) marine_rk = "co_army"
+			if(JOB_ARMY_SYN) marine_rk = "syn_army"
+			if(JOB_SQUAD_ELEMENT_LEADER_MARSOC) marine_rk = "soctl"
+			if(JOB_SQUAD_ASSISTANT_ELEMENT_LEAD_MARSOC) marine_rk = "tl"
+			if(JOB_SQUAD_SARC_MARSOC) marine_rk = "med"
+			if(JOB_SQUAD_SAPPER_MARSOC) marine_rk = "engi"
+			if(JOB_SQUAD_HEAVY_WEAPONS_OPERATOR_MARSOC) marine_rk = "gun"
+			if(JOB_SQUAD_SPECIAL_WEAPONS_OPERATOR_MARSOC) marine_rk = "spec"
+			if(JOB_SQUAD_ELEMENT_MEMBER_MARSOC) marine_rk = null
 
 		if(squad.squad_leader == current_human)
 			switch(squad.squad_type)
@@ -51,6 +72,7 @@
 				if("Platoon") marine_rk = "leader_a"
 				if("Squad") marine_rk = "leader_a"
 				if("Taskforce") marine_rk = "leader_a"
+				if("Element") marine_rk = "soctl_a"
 			current_human.langchat_styles = "langchat_bolded" // bold text for bold leaders
 		else if(squad.fireteam_leaders["SQ1"] == current_human || squad.fireteam_leaders["SQ2"] == current_human)
 			current_human.langchat_styles = "langchat_smaller_bolded"
@@ -111,6 +133,22 @@
 				marine_rk = "leader"
 			if(JOB_SQUAD_TECH)
 				marine_rk = "tech"
+			if(JOB_ARMY_TROOPER)
+				marine_rk = "trpr"
+			if(JOB_ARMY_MEDIC)
+				marine_rk = "cmt"
+			if(JOB_ARMY_ENGI)
+				marine_rk = "cet"
+			if(JOB_ARMY_MARKSMAN)
+				marine_rk = "snpr"
+			if(JOB_ARMY_SMARTGUNNER)
+				marine_rk = "mmg"
+			if(JOB_ARMY_SNCO)
+				marine_rk = "sl_army"
+			if(JOB_ARMY_CO)
+				marine_rk = "co_army"
+			if(JOB_ARMY_SYN)
+				marine_rk = "syn_army"
 			if(JOB_INTEL)
 				marine_rk = "io"
 			if(JOB_CAS_PILOT)
@@ -233,9 +271,28 @@
 				marine_rk = "tl"
 			if(JOB_SQUAD_LEADER)
 				marine_rk = "leader"
+			if(JOB_SQUAD_RTO)
+				marine_rk = "rto"
+			// MARSOC stuff
+			if(JOB_MARINE_RAIDER)
+				marine_rk = "soc"
+			if(JOB_MARINE_RAIDER_MED)
+				marine_rk = "socmed"
+			if(JOB_MARINE_RAIDER_SL)
+				marine_rk = "soctl"
+			if(JOB_MARINE_RAIDER_CMD)
+				marine_rk = "soccmd"
 			// FORECON surv specific stuff
 			if(JOB_FORECON_SL)
 				marine_rk = "leader"
+			if(JOB_FORECON_CORPSMAN)
+				marine_rk = "med"
+			if(JOB_FORECON_SPOTTER)
+				marine_rk = "ass"
+			if(JOB_FORECON_RTO)
+				marine_rk = "rto"
+			if(JOB_FORECON_XO)
+				marine_rk = "xo"
 			if(JOB_FORECON_SNIPER)
 				marine_rk = "spec"
 			if(JOB_FORECON_SYN)
@@ -250,7 +307,19 @@
 				marine_rk = null
 			if(JOB_FORECON_CO)
 				marine_rk = "co"
-
+			// MARSOC platoon roles
+			if(JOB_SQUAD_ELEMENT_LEADER_MARSOC)
+				marine_rk = "soctl"
+			if(JOB_SQUAD_ASSISTANT_ELEMENT_LEAD_MARSOC)
+				marine_rk = "tl"
+			if(JOB_SQUAD_SARC_MARSOC)
+				marine_rk = "med"
+			if(JOB_SQUAD_SAPPER_MARSOC)
+				marine_rk = "engi"
+			if(JOB_SQUAD_HEAVY_WEAPONS_OPERATOR_MARSOC)
+				marine_rk = "gun"
+			if(JOB_SQUAD_SPECIAL_WEAPONS_OPERATOR_MARSOC)
+				marine_rk = "spec"
 		if(marine_rk)
 			var/image/I = image('icons/mob/hud/marine_hud.dmi', current_human, "hudsquad")
 			I.color = "#5A934A"

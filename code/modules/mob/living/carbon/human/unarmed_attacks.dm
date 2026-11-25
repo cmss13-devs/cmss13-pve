@@ -57,7 +57,17 @@
 	damage = 10
 	shredding = TRUE
 
+/datum/unarmed_attack/claws/strong/pathogen
+	attack_verb = list("slash", "eviscerate", "skewer", "claw")
+	damage = 25
+	shredding = TRUE
+
 /datum/unarmed_attack/bite/strong
 	attack_verb = list("maul")
 	damage = 15
+	shredding = TRUE
+
+/datum/unarmed_attack/bite/strong/pathogen
+	attack_verb = list("maul")
+	damage = 30
 	shredding = TRUE

@@ -592,6 +592,14 @@ I hope it's easier to tell what the heck this proc is even doing, unlike previou
 		rmc_squad.put_marine_in_squad(H) //Found one, finish up
 		return
 
+	if(MAIN_SHIP_PLATOON == /datum/squad/marine/marsoc)
+		var/datum/squad/marsoc_squad = get_squad_by_name(SQUAD_MRR)
+		if(!marsoc_squad || !istype(marsoc_squad)) //Something went horribly wrong!
+			to_chat(H, "Something went wrong with randomize_squad()! Tell a coder!")
+			return
+		marsoc_squad.put_marine_in_squad(H) //Found one, finish up
+		return
+
 	//Deal with non-standards first.
 	//Non-standards are distributed regardless of squad population.
 	//If the number of available positions for the job are more than max_whatever, it will break.
@@ -756,6 +764,24 @@ I hope it's easier to tell what the heck this proc is even doing, unlike previou
 			M = /mob/living/carbon/xenomorph/king
 		if(RUNNER_ACIDER)
 			M = /mob/living/carbon/xenomorph/runner/acider
+		if(PATHOGEN_CREATURE_BURSTER)
+			M = /mob/living/carbon/xenomorph/bloodburster
+		if(PATHOGEN_CREATURE_POPPER)
+			M = /mob/living/carbon/xenomorph/popper
+		if(PATHOGEN_CREATURE_SPRINTER)
+			M = /mob/living/carbon/xenomorph/sprinter
+		if(PATHOGEN_CREATURE_NEOMORPH)
+			M = /mob/living/carbon/xenomorph/neomorph
+		if(PATHOGEN_CREATURE_BLIGHT)
+			M = /mob/living/carbon/xenomorph/blight
+		if(PATHOGEN_CREATURE_VENATOR)
+			M = /mob/living/carbon/xenomorph/venator
+		if(PATHOGEN_CREATURE_BRUTE)
+			M = /mob/living/carbon/xenomorph/brute
+		if(XENO_CASTE_ALIEN)
+			M = /mob/living/carbon/xenomorph/alien
+		if(XENO_CASTE_WARRIOR_DRONE)
+			M = /mob/living/carbon/xenomorph/warrior_drone
 	return M
 
 

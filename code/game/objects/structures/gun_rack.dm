@@ -70,6 +70,20 @@
 /obj/structure/gun_rack/type71/empty
 	initial_stored = 0
 
+/obj/structure/gun_rack/type71/commando
+	allowed_type = /obj/item/weapon/gun/rifle/type71/commando
+	populate_type = /obj/item/weapon/gun/rifle/type71/commando
+
+/obj/structure/gun_rack/type71/carbine
+	allowed_type = /obj/item/weapon/gun/rifle/type71/carbine
+	populate_type = /obj/item/weapon/gun/rifle/type71/carbine
+
+/obj/structure/gun_rack/type71/carbine/unloaded
+	populate_type = /obj/item/weapon/gun/rifle/type71/carbine/unloaded
+
+/obj/structure/gun_rack/type71/carbine/recon
+	populate_type = /obj/item/weapon/gun/rifle/type71/carbine/recon/unloaded
+
 /obj/structure/gun_rack/apc
 	name = "APC ammo compartment"
 	icon_state = "frontal"
@@ -151,7 +165,7 @@
 	max_stored = 2
 	initial_stored = 2
 	allowed_type = /obj/item/weapon/gun/shotgun/combat
-	populate_type = /obj/item/weapon/gun/shotgun/combat
+	populate_type = /obj/item/weapon/gun/shotgun/combat/unloaded //Todo after Ody's op; make this into a /unloaded subtype of rack instead
 
 /obj/structure/gun_rack/mk221/empty
 	initial_stored = 0
@@ -203,6 +217,40 @@
 /obj/structure/gun_rack/ag80/empty
 	initial_stored = 0
 
+
+/obj/structure/gun_rack/xm46a
+	name = "XM46A pulse rifle rack"
+	desc = "ARMAT-produced gun rack for storage of long guns. One of the very rare early-model designs, adjusted to hold XM46A pulse rifles for MARSOC teams."
+	icon_state = "xm46a"
+	max_stored = 5
+	initial_stored = 5
+	allowed_type = /obj/item/weapon/gun/rifle/m46c/marsoc/unloaded
+	populate_type = /obj/item/weapon/gun/rifle/m46c/marsoc/unloaded
+
+/obj/structure/gun_rack/xm46a/empty
+	initial_stored = 0
+
+/obj/structure/gun_rack/xm38
+	name = "XM38 shotgun rack"
+	icon_state = "xm38"
+	desc = "ARMAT-produced gun rack for storage of long guns. One of the very rare early-model designs, adjusted to hold XM38 shotguns for MARSOC teams."
+	max_stored = 2
+	initial_stored = 2
+	allowed_type = /obj/item/weapon/gun/shotgun/combat/marsoc
+	populate_type = /obj/item/weapon/gun/shotgun/combat/marsoc
+
+/obj/structure/gun_rack/xm38/empty
+	initial_stored = 0
+
+/obj/structure/gun_rack/m41/m41b
+	name = "M41B pulse rifle rack"
+	desc = "ARMAT-produced gun rack for storage of long guns. One of the very rare early-model designs, adjusted to hold M41B pulse rifles for MARSOC teams."
+	allowed_type = /obj/item/weapon/gun/rifle/m41aMK1/marsoc
+	populate_type = /obj/item/weapon/gun/rifle/m41aMK1/marsoc
+
+/obj/structure/gun_rack/m41/m41b/empty
+	initial_stored = 0
+
 /obj/structure/gun_rack/nsg
 	name = "NSG L23A1 pulse rifle rack"
 	icon_state = "nsg"
@@ -216,4 +264,16 @@
 	populate_type = /obj/item/weapon/gun/rifle/nsg23/rmc/unloaded
 
 /obj/structure/gun_rack/nsg/Empty
+	initial_stored = 0
+
+/obj/structure/gun_rack/m39b3
+	name = "M39B/3 submachinegun rack"
+	icon_state = "m39b2"
+	desc = "ARMAT-produced gun rack for storage of long guns. This one is configured to hold up to five M39B/3 submachineguns."
+	initial_stored = 5
+	max_stored = 5
+	allowed_type = /obj/item/weapon/gun/smg/m39/elite/pve
+	populate_type = /obj/item/weapon/gun/smg/m39/elite/pve/unloaded
+
+/obj/structure/gun_rack/m39b3/empty
 	initial_stored = 0
