@@ -244,6 +244,38 @@
 	name = parent_type::name + " (E2 Rank)"
 	paygrades = list(PAY_SHORT_ME2 = JOB_PLAYTIME_TIER_0)
 
+/datum/equipment_preset/uscm/sg/upp/forecon
+	name = "UPP Recon Machinegunner"
+	assignment = JOB_SQUAD_SMARTGUN_FORECON_UPP
+	paygrades = list(PAY_SHORT_UE5 = JOB_PLAYTIME_TIER_0)
+	skills = /datum/skills/smartgunner/recon
+
+/datum/equipment_preset/uscm/sg/upp/forecon/junior_sergeant
+	name = parent_type::name + " (E4 Rank)"
+	paygrades = list(PAY_SHORT_UE4 = JOB_PLAYTIME_TIER_0)
+
+/datum/equipment_preset/uscm/sg/upp/forecon/corporal
+	name = parent_type::name + " (E3 Rank)"
+	paygrades = list(PAY_SHORT_UE3 = JOB_PLAYTIME_TIER_0)
+
+/datum/equipment_preset/uscm/sg/upp/forecon/senior_private
+	name = parent_type::name + " (E2 Rank)"
+	paygrades = list(PAY_SHORT_UE2 = JOB_PLAYTIME_TIER_0)
+
+
+/datum/equipment_preset/uscm/sg/marsoc
+	name = "MARSOC Heavy Weapons Operator"
+	flags = EQUIPMENT_PRESET_START_OF_ROUND|EQUIPMENT_PRESET_MARINE
+
+	access = list(ACCESS_MARINE_PREP, ACCESS_MARINE_SMARTPREP)
+	languages = list(LANGUAGE_ENGLISH, LANGUAGE_TSL)
+	assignment = JOB_SQUAD_HEAVY_WEAPONS_OPERATOR_MARSOC
+	rank = JOB_SQUAD_HEAVY_WEAPONS_OPERATOR_MARSOC
+	paygrades = list(PAY_SHORT_ME4 = JOB_PLAYTIME_TIER_0)
+	role_comm_title = "HWO"
+	skills = /datum/skills/marsoc
+	minimap_icon = "smartgunner"
+
 //*****************************************************************************************************/
 
 /datum/equipment_preset/uscm/rto
@@ -266,6 +298,40 @@
 /datum/equipment_preset/uscm/rto/pfc
 	name = parent_type::name + " (E2 Rank)"
 	paygrades = list(PAY_SHORT_ME2 = JOB_PLAYTIME_TIER_0)
+
+/datum/equipment_preset/uscm/rto/upp
+	name = "UPP Radio Transmissions Operator"
+	assignment = JOB_SQUAD_UPP_RTO
+	paygrades = list(PAY_SHORT_UE2 = JOB_PLAYTIME_TIER_0)
+	access = list(ACCESS_UPP_GENERAL)
+	languages = list(LANGUAGE_RUSSIAN, LANGUAGE_CHINESE)
+	faction_group = list(FACTION_UPP)
+	faction = FACTION_UPP
+	role_comm_title = "RTO"
+	skills = /datum/skills/pfc
+
+	minimap_icon = "rto"
+
+/datum/equipment_preset/uscm/rto/upp/corporal
+	name = parent_type::name + " (E3 Rank)"
+	paygrades = list(PAY_SHORT_UE3 = JOB_PLAYTIME_TIER_0)
+
+/datum/equipment_preset/uscm/rto/upp/load_gear(mob/living/carbon/human/new_human)
+	new_human.undershirt = "Naval Infantry Telnyashka"
+
+/datum/equipment_preset/uscm/rto/upp/forecon
+	name = "UPP Recon Radio Transmissions Operator"
+	assignment = JOB_SQUAD_RTO_FORECON_UPP
+	paygrades = list(PAY_SHORT_UE4 = JOB_PLAYTIME_TIER_0)
+
+/datum/equipment_preset/uscm/rto/upp/forecon/corporal
+	name = parent_type::name + " (E3 Rank)"
+	paygrades = list(PAY_SHORT_UE3 = JOB_PLAYTIME_TIER_0)
+
+/datum/equipment_preset/uscm/rto/upp/forecon/senior_private
+	name = parent_type::name + " (E2 Rank)"
+	paygrades = list(PAY_SHORT_UE2 = JOB_PLAYTIME_TIER_0)
+
 
 //*****************************************************************************************************/
 
@@ -340,6 +406,52 @@
 	name = parent_type::name + " (E2 Rank)"
 	paygrades = list(PAY_SHORT_ME4 = JOB_PLAYTIME_TIER_0)
 
+/datum/equipment_preset/uscm/medic/upp/forecon
+	name = "UPP Recon Sanitar"
+	assignment = JOB_SQUAD_MEDIC_FORECON_UPP
+	paygrades = list(PAY_SHORT_UE5 = JOB_PLAYTIME_TIER_0)
+	skills = /datum/skills/combat_medic/recon
+
+/datum/equipment_preset/uscm/medic/upp/forecon/junior_sergeant
+	name = parent_type::name + " (E4 Rank)"
+	paygrades = list(PAY_SHORT_UE4 = JOB_PLAYTIME_TIER_0)
+
+/datum/equipment_preset/uscm/medic/upp/forecon/corporal
+	name = parent_type::name + " (E3 Rank)"
+	paygrades = list(PAY_SHORT_UE4 = JOB_PLAYTIME_TIER_0)
+
+/datum/equipment_preset/uscm/medic/upp/forecon/senior_private
+	name = parent_type::name + " (E2 Rank)"
+	paygrades = list(PAY_SHORT_UE4 = JOB_PLAYTIME_TIER_0)
+
+/datum/equipment_preset/uscm/pfc/upp/forecon
+	name = "UPP Recon Infantryman"
+	assignment = JOB_SQUAD_MARINE_FORECON_UPP
+	paygrades = list(PAY_SHORT_UE3 = JOB_PLAYTIME_TIER_0)
+	skills = /datum/skills/pfc/recon
+
+/datum/equipment_preset/uscm/pfc/upp/forecon/senior_private
+	name = parent_type::name + " (E2 Rank)"
+	paygrades = list(PAY_SHORT_UE2 = JOB_PLAYTIME_TIER_0)
+
+/datum/equipment_preset/uscm/pfc/upp/forecon/junior_sergeant
+	name = parent_type::name + " (E4 Rank)"
+	paygrades = list(PAY_SHORT_UE4 = JOB_PLAYTIME_TIER_0)
+
+
+/datum/equipment_preset/uscm/medic/marsoc
+	name = "MARSOC SARC"
+	flags = EQUIPMENT_PRESET_START_OF_ROUND|EQUIPMENT_PRESET_MARINE
+
+	access = list(ACCESS_MARINE_PREP, ACCESS_MARINE_MEDPREP, ACCESS_MARINE_MEDBAY)
+	languages = list(LANGUAGE_ENGLISH, LANGUAGE_TSL)
+	assignment = JOB_SQUAD_SARC_MARSOC
+	rank = JOB_SQUAD_SARC_MARSOC
+	paygrades = list(PAY_SHORT_ME5 = JOB_PLAYTIME_TIER_0)
+	role_comm_title = "ARC"
+	skills = /datum/skills/marsoc/medic
+	minimap_icon = "medic"
+
 //*****************************************************************************************************/
 
 /datum/equipment_preset/uscm/tl
@@ -386,6 +498,30 @@
 	name = parent_type::name + " (E5 Rank)"
 	paygrades = list(PAY_SHORT_ME5 = JOB_PLAYTIME_TIER_0)
 
+/datum/equipment_preset/uscm/tl/upp/forecon
+	name = "UPP Assistant Recon Squad Sergeant"
+	assignment = JOB_SQUAD_TEAM_LEADER_FORECON_UPP
+	paygrades = list(PAY_SHORT_UE6 = JOB_PLAYTIME_TIER_0)
+	role_comm_title = "ARSS"
+	skills = /datum/skills/tl/recon
+
+/datum/equipment_preset/uscm/tl/upp/forecon/sergeant
+	name = parent_type::name + " (E5 Rank)"
+	paygrades = list(PAY_SHORT_UE5 = JOB_PLAYTIME_TIER_0)
+
+/datum/equipment_preset/uscm/tl/marsoc
+	name = "MARSOC Assistant Element Lead"
+	flags = EQUIPMENT_PRESET_EXTRA|EQUIPMENT_PRESET_MARINE
+
+	access = list(ACCESS_MARINE_PREP, ACCESS_MARINE_TL_PREP, ACCESS_MARINE_DROPSHIP)
+	languages = list(LANGUAGE_ENGLISH, LANGUAGE_TSL)
+	assignment = JOB_SQUAD_ASSISTANT_ELEMENT_LEAD_MARSOC
+	rank = JOB_SQUAD_ASSISTANT_ELEMENT_LEAD_MARSOC
+	paygrades = list(PAY_SHORT_ME6 = JOB_PLAYTIME_TIER_0)
+	role_comm_title = "AEL"
+	skills = /datum/skills/marsoc/assist_lead
+	minimap_icon = "tl"
+
 /*****************************************************************************************************/
 
 /datum/equipment_preset/uscm/engineer
@@ -413,6 +549,12 @@
 /datum/equipment_preset/uscm/engineer/pfc
 	name = parent_type::name + " (E2 Rank)"
 	paygrades = list(PAY_SHORT_ME2 = JOB_PLAYTIME_TIER_0)
+
+/datum/equipment_preset/uscm/leader/upp/forecon
+	name = "UPP Recon Squad Sergeant"
+	assignment = JOB_SQUAD_LEADER_FORECON_UPP
+	paygrades = list(PAY_SHORT_UE7 = JOB_PLAYTIME_TIER_0)
+	role_comm_title = "RSS"
 
 /datum/equipment_preset/uscm/engineer/marsoc
 	name = "MARSOC Sapper"
@@ -473,6 +615,19 @@
 /datum/equipment_preset/uscm/leader/forecon/gunnery_sergeant
 	name = parent_type::name + " (E7 Rank)"
 	paygrades = list(PAY_SHORT_ME7 = JOB_PLAYTIME_TIER_0)
+
+/datum/equipment_preset/uscm/leader/marsoc
+	name = "MARSOC Element Lead"
+	flags = EQUIPMENT_PRESET_EXTRA|EQUIPMENT_PRESET_MARINE
+	access = list(ACCESS_MARINE_PREP, ACCESS_MARINE_LEADER, ACCESS_MARINE_DROPSHIP)
+	languages = list(LANGUAGE_ENGLISH, LANGUAGE_TSL)
+	assignment = JOB_SQUAD_ELEMENT_LEADER_MARSOC
+	rank = JOB_SQUAD_ELEMENT_LEADER_MARSOC
+	paygrades = list(PAY_SHORT_ME7 = JOB_PLAYTIME_TIER_0)
+	role_comm_title = "EL"
+	minimum_age = 27
+	skills = /datum/skills/marsoc/leader
+	minimap_icon = "soctl"
 
 //*****************************************************************************************************/
 // ERT members that spawn with full gear from DEFCON
@@ -1451,6 +1606,19 @@
 	paygrades = list(PAY_SHORT_ME3 = JOB_PLAYTIME_TIER_0)
 	role_comm_title = "Spc"
 	skills = /datum/skills/specialist
+	minimap_icon = "spec"
+
+/datum/equipment_preset/uscm/spec/marsoc
+	name = "MARSOC Special Weapons Operator"
+	flags = EQUIPMENT_PRESET_START_OF_ROUND|EQUIPMENT_PRESET_MARINE
+
+	access = list(ACCESS_MARINE_PREP, ACCESS_MARINE_SPECPREP)
+	languages = list(LANGUAGE_ENGLISH, LANGUAGE_TSL)
+	assignment = JOB_SQUAD_SPECIAL_WEAPONS_OPERATOR_MARSOC
+	rank = JOB_SQUAD_SPECIAL_WEAPONS_OPERATOR_MARSOC
+	paygrades = list(PAY_SHORT_ME4 = JOB_PLAYTIME_TIER_0)
+	role_comm_title = "SWO"
+	skills = /datum/skills/marsoc
 	minimap_icon = "spec"
 
 //*****************************************************************************************************/
