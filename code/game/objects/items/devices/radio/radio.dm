@@ -440,3 +440,7 @@
 
 /obj/item/device/radio/marine
 	frequency = PUB_FREQ
+
+/obj/item/device/radio/marsoc_civilian
+	frequency = MERC_FREQ
+

@@ -747,9 +747,6 @@
 		list("UA Shoulder Patch", round(scale * 15), /obj/item/clothing/accessory/patch/ua, VENDOR_ITEM_REGULAR),
 		list("USA Shoulder Patch", round(scale * 15), /obj/item/clothing/accessory/patch/usa, VENDOR_ITEM_REGULAR),
 		list("USCM Shoulder Patch", round(scale * 15), /obj/item/clothing/accessory/patch, VENDOR_ITEM_REGULAR),
-		list("Poncho, Green", round(scale * 10), /obj/item/clothing/accessory/poncho/green, VENDOR_ITEM_REGULAR),
-		list("Poncho, Brown", round(scale * 10), /obj/item/clothing/accessory/poncho/brown, VENDOR_ITEM_REGULAR),
-		list("Poncho, Black", round(scale * 10), /obj/item/clothing/accessory/poncho/black, VENDOR_ITEM_REGULAR),
 		list("Firearm Lubricant", round(scale * 15), /obj/item/prop/helmetgarb/gunoil, VENDOR_ITEM_REGULAR),
 		list("LRRP Bedroll", round(scale * 15), /obj/item/roller/bedroll, VENDOR_ITEM_REGULAR),
 		list("Marine Issue Compass", round(scale * 15), /obj/item/prop/helmetgarb/compass, VENDOR_ITEM_REGULAR),
@@ -1158,10 +1155,7 @@
 		list("Fairbairn-Sykes Fighting Knife", round(scale * 25), /obj/item/weapon/knife/marine/sas, VENDOR_ITEM_REGULAR),
 		)
 
-/obj/structure/machinery/cm_vending/sorted/cargo_guns/squad/marsoc
-	name = "\improper ARMAT Systems Automated Utilities MARSOC Vendor"
-	desc = "An automated supply rack with access to the ship's storage bays. This one bears the brand of ARMAT and appears especially modified for a MARSOC Element. Judging by the UI, it's running on out-of-date software."
-	icon_state = "marsoc_prep"
+// MARSOC specific vendors
 
 /obj/structure/machinery/cm_vending/sorted/cargo_guns/squad/marsoc/populate_product_list(scale)
 	listed_products = list(
@@ -1232,6 +1226,72 @@
 		list("M13 Fighting Knife", round(scale * 25), /obj/item/weapon/knife/marine, VENDOR_ITEM_REGULAR),
 		)
 
+
+/obj/structure/machinery/cm_vending/sorted/cargo_guns/squad/marsoc/civilian_prep/populate_product_list(scale)
+	listed_products = list(
+		list("RATIONS", -1, null, null),
+		list("W-Y Brand Ration Pack", round(scale * 8), /obj/item/storage/box/mre/wy, VENDOR_ITEM_REGULAR),
+		list("UA Hmanitarian Daily Ration", round(scale * 8), /obj/item/storage/box/mre/hdr, VENDOR_ITEM_REGULAR),
+
+		list("MEDICAL SUPPLIES", -1, null, null),
+		list("Gauze", round(scale * 15), /obj/item/stack/medical/bruise_pack, VENDOR_ITEM_REGULAR),
+		list("Ointment", round(scale * 15), /obj/item/stack/medical/ointment, VENDOR_ITEM_REGULAR),
+		list("Splints", round(scale * 15), /obj/item/stack/medical/splint, VENDOR_ITEM_REGULAR),
+		list("Emergency Autoinjector", round(scale * 15), /obj/item/reagent_container/hypospray/autoinjector/emergency, VENDOR_ITEM_REGULAR),
+		list("Bicaridine Autoinjector", round(scale * 15), /obj/item/reagent_container/hypospray/autoinjector/bicaridine, VENDOR_ITEM_REGULAR),
+		list("Kelotane Autoinjector", round(scale * 15), /obj/item/reagent_container/hypospray/autoinjector/kelotane, VENDOR_ITEM_REGULAR),
+		list("Tricordrazine Autoinjector", round(scale * 15), /obj/item/reagent_container/hypospray/autoinjector/tricord, VENDOR_ITEM_REGULAR),
+		list("Tramadol Injector", round(scale * 15), /obj/item/reagent_container/hypospray/autoinjector/tramadol, VENDOR_ITEM_REGULAR),
+
+		list("TOOLS", -1, null, null),
+		list("Screwdriver", round(scale * 5), /obj/item/tool/screwdriver, VENDOR_ITEM_REGULAR),
+		list("Wirecutters", round(scale * 5), /obj/item/tool/wirecutters, VENDOR_ITEM_REGULAR),
+		list("Crowbar", round(scale * 5), /obj/item/tool/crowbar, VENDOR_ITEM_REGULAR),
+		list("Wrench", round(scale * 5), /obj/item/tool/wrench, VENDOR_ITEM_REGULAR),
+		list("Multitool", round(scale * 2), /obj/item/device/multitool, VENDOR_ITEM_REGULAR),
+		list("Welding Tool", round(scale * 3), /obj/item/tool/weldingtool, VENDOR_ITEM_REGULAR),
+
+		list("EQUIPMENT", -1, null, null),
+		list("Encrypted Hand-Held Radio", round(scale * 8), /obj/item/device/radio/marsoc_civilian, VENDOR_ITEM_MANDATORY),
+		list("Combat Flashlight", round(scale * 8), /obj/item/device/flashlight/combat, VENDOR_ITEM_REGULAR),
+		list("M94 Marking Flare Pack", round(scale * 10), /obj/item/storage/box/flare, VENDOR_ITEM_REGULAR),
+		list("Binoculars", round(scale * 2), /obj/item/device/binoculars/civ, VENDOR_ITEM_REGULAR),
+		list("Bowie Fighting Knife", round(scale * 5), /obj/item/weapon/knife/marine/bowie, VENDOR_ITEM_REGULAR),
+		list("Kukri Utility Knife", round(scale * 5), /obj/item/weapon/knife/marine/bowie/kukri, VENDOR_ITEM_REGULAR),
+
+		list("CLOTHING ACCESSORIES", -1, null, null),
+		list("Drop Pouch", 4, /obj/item/clothing/accessory/storage/droppouch, VENDOR_ITEM_REGULAR),
+		list("Leg Pouch", 4, /obj/item/clothing/accessory/storage/smallpouch, VENDOR_ITEM_REGULAR),
+		list("Shoulder Holster", 4, /obj/item/clothing/accessory/storage/holster, VENDOR_ITEM_REGULAR),
+		list("Waist Holster", 4, /obj/item/clothing/accessory/storage/holster/waist, VENDOR_ITEM_REGULAR),
+		list("Knife Sheath", 4, /obj/item/clothing/accessory/storage/sheath, VENDOR_ITEM_REGULAR),
+
+		list("POUCHES", -1, null, null),
+		list("Pistol Pouch", floor(scale * 15), /obj/item/storage/pouch/pistol, VENDOR_ITEM_REGULAR),
+		list("First-Aid Pouch", floor(scale * 15), /obj/item/storage/pouch/firstaid, VENDOR_ITEM_REGULAR),
+		list("Flare Pouch (Full)", floor(scale * 15), /obj/item/storage/pouch/flare/full, VENDOR_ITEM_REGULAR),
+		list("Tools Pouch", floor(scale * 15), /obj/item/storage/pouch/tools, VENDOR_ITEM_REGULAR),
+		list("Magazine Pouch", floor(scale * 15), /obj/item/storage/pouch/magazine, VENDOR_ITEM_REGULAR),
+		list("Medium General Pouch", floor(scale * 15), /obj/item/storage/pouch/general/medium, VENDOR_ITEM_REGULAR),
+		list("Pistol Magazine Pouch", floor(scale * 15), /obj/item/storage/pouch/magazine/pistol, VENDOR_ITEM_REGULAR),
+		list("Shotgun Shell Pouch", 15, /obj/item/storage/pouch/shotgun, VENDOR_ITEM_REGULAR),
+
+		list("BELTS", -1, null, null),
+		list("General Belt", 15, /obj/item/storage/belt, VENDOR_ITEM_REGULAR),
+		list("Toolbelt Rig", 15, /obj/item/storage/belt/utility, VENDOR_ITEM_REGULAR),
+		list("Pistol Holster Belt", 15, /obj/item/storage/belt/gun, VENDOR_ITEM_REGULAR),
+		list("L70 Pattern Ammo Load Rig", 15, /obj/item/storage/belt/marine/rmc, VENDOR_ITEM_REGULAR),
+		list("Type 41 Pattern Load Rig", 15, /obj/item/storage/belt/marine/upp, VENDOR_ITEM_REGULAR),
+		list("Type 42 pattern Shotgun Shell Loading Rig", 15, /obj/item/storage/belt/shotgun/upp, VENDOR_ITEM_REGULAR),
+		list("Type 41 Pattern Medical Storage Rig", 15, /obj/item/storage/belt/medical/upp, VENDOR_ITEM_REGULAR),
+		list("L75 Pattern Medical Storage Rig", 15, /obj/item/storage/belt/medical/rmc, VENDOR_ITEM_REGULAR),
+	)
+
+/obj/structure/machinery/cm_vending/sorted/cargo_guns/squad/marsoc/civilian_prep
+	name = "\improper Non-Standard Preparation Vendor"
+	desc = "An automated supply rack with access to the ship's storage bays. This one lacks any markings or branding and seems to be packing a whole lot of non-standard equipment."
+	icon_state = "prep"
+
 /obj/structure/machinery/cm_vending/sorted/cargo_guns/squad/marsoc/utility
 	name = "\improper ARMAT Systems Automated Element Utility MARSOC Vendor"
 	icon_state = "intel_gear"
@@ -1258,15 +1318,15 @@
 /obj/structure/machinery/cm_vending/sorted/cargo_guns/squad/marsoc/foreign_weaponry/populate_product_list(scale)
 	listed_products = list(
 		list("FOREIGN PRIMARY WEAPONS", -1, null, null),
-		list("Type 71 Pulse Rifle (UPP)", 3, /obj/item/weapon/gun/rifle/type71, MARINE_CAN_BUY_ESSENTIALS, VENDOR_ITEM_MANDATORY),
-		list("KS-29 Riot Shotgun (UPP)", 2, /obj/item/weapon/gun/shotgun/pump/type23, MARINE_CAN_BUY_ESSENTIALS, VENDOR_ITEM_MANDATORY),
-		list("Type 64 Submachinegun (UPP)", 5, /obj/item/weapon/gun/smg/bizon, MARINE_CAN_BUY_ESSENTIALS, VENDOR_ITEM_MANDATORY),
-		list("NSG L23A1 Pulse Rifle (TWE)", 3, /obj/item/weapon/gun/rifle/nsg23/rmc, MARINE_CAN_BUY_ESSENTIALS, VENDOR_ITEM_MANDATORY),
-		list("L6A2 Submachinegun (TWE)", 3, /obj/item/weapon/gun/smg/m39/elite/rmc, MARINE_CAN_BUY_ESSENTIALS, VENDOR_ITEM_MANDATORY),
+		list("Type 71 Pulse Rifle (UPP)", 3, /obj/item/weapon/gun/rifle/type71, VENDOR_ITEM_REGULAR),
+		list("KS-29 Riot Shotgun (UPP)", 2, /obj/item/weapon/gun/shotgun/pump/type23, VENDOR_ITEM_REGULAR),
+		list("Type 64 Submachinegun (UPP)", 5, /obj/item/weapon/gun/smg/bizon, VENDOR_ITEM_REGULAR),
+		list("NSG L23A1 Pulse Rifle (TWE)", 3, /obj/item/weapon/gun/rifle/nsg23/rmc, VENDOR_ITEM_REGULAR),
+		list("L6A2 Submachinegun (TWE)", 3, /obj/item/weapon/gun/smg/m39/elite/rmc, VENDOR_ITEM_REGULAR),
 
 		list("FOREIGN SECONDARY WEAPONS", -1, null, null),
-		list("Type 73 Pistol (UPP)", 5, /obj/item/weapon/gun/pistol/t73, MARINE_CAN_BUY_SECONDARY, VENDOR_ITEM_MANDATORY),
-		list("ZHNK-72 Revolver (UPP)", 3, /obj/item/weapon/gun/revolver/upp, MARINE_CAN_BUY_SECONDARY, VENDOR_ITEM_MANDATORY),
+		list("Type 73 Pistol (UPP)", 5, /obj/item/weapon/gun/pistol/t73, VENDOR_ITEM_REGULAR),
+		list("ZHNK-72 Revolver (UPP)", 3, /obj/item/weapon/gun/revolver/upp, VENDOR_ITEM_REGULAR),
 
 		list("FOREIGN PRIMARY MUNITIONS", -1, null, null),
 		list("Type 71 HEAP magazine (UPP)", 64, /obj/item/ammo_magazine/rifle/type71/heap, VENDOR_ITEM_REGULAR),
@@ -1279,6 +1339,100 @@
 		list("FOREIGN SECONDARY MUNITIONS", -1, null, null),
 		list("Type 73 Magazine (UPP)", 32, /obj/item/ammo_magazine/pistol/t73, VENDOR_ITEM_REGULAR),
 		list("ZHNK-72 Speed Loader (UPP)", 32, /obj/item/ammo_magazine/revolver/upp, VENDOR_ITEM_REGULAR),
+	)
+
+/obj/structure/machinery/cm_vending/sorted/cargo_guns/squad/marsoc/civilian_prep
+	name = "\improper ARMAT Systems Automated Non-Standard Civilian Preparation Storage Rack"
+	desc = "An automated supply rack with access to the ship's storage bays. This one has the brand of ARMAT painted across it and looks to have been modified for a whole host of different equipment."
+	icon_state = "antag_guns"
+
+
+/obj/structure/machinery/cm_vending/sorted/cargo_guns/squad/marsoc/civilian_weaponry
+	name = "\improper ARMAT Systems Automated Non-Standard Civilian Armament Storage Rack"
+	desc = "An automated supply rack with access to the ship's storage bays. This one has the brand of ARMAT painted across it and looks to have been modified for a whole host of weaponry."
+	icon_state = "antag_guns"
+
+/obj/structure/machinery/cm_vending/sorted/cargo_guns/squad/marsoc/civilian_weaponry/populate_product_list(scale)
+	listed_products = list(
+		list("RIFLES", -1, null, null),
+		list("M20A Pulse Rifle", 8, /obj/item/weapon/gun/rifle/m20a, VENDOR_ITEM_REGULAR),
+		list("L42A Pulse Rifle", 8, /obj/item/weapon/gun/rifle/l42a, VENDOR_ITEM_REGULAR),
+		list("ABR-40 Hunting Rifle", 8, /obj/item/weapon/gun/rifle/l42a/abr40, VENDOR_ITEM_REGULAR),
+		list("M16 Assault Rifle", 8, /obj/item/weapon/gun/rifle/m16, VENDOR_ITEM_REGULAR),
+
+		list("LIGHT MACHINE GUNS", -1, null, null),
+		list("MK.7 ISR LMG", 2, /obj/item/weapon/gun/rifle/isr, VENDOR_ITEM_REGULAR),
+		list("MAR-40 Battle Rifle", 2, /obj/item/weapon/gun/rifle/mar40, VENDOR_ITEM_REGULAR),
+
+		list("SUBMACHINEGUNS", -1, null, null),
+		list("MP5 Submachinegun", 8, /obj/item/weapon/gun/smg/mp5, VENDOR_ITEM_REGULAR),
+		list("FN FP9000 Submachinegun", 8, /obj/item/weapon/gun/smg/fp9000, VENDOR_ITEM_REGULAR),
+		list("Viper 9 Submachinegun", 8, /obj/item/weapon/gun/smg/m39, VENDOR_ITEM_REGULAR),
+		list("MAC-15 Submachinegun", 8, /obj/item/weapon/gun/smg/mac15, VENDOR_ITEM_REGULAR),
+		list("MP27 Submachinegun", 8, /obj/item/weapon/gun/smg/mp27, VENDOR_ITEM_REGULAR),
+		list("Type-19 Submachinegun", 8, /obj/item/weapon/gun/smg/pps43, VENDOR_ITEM_REGULAR),
+		list("PPSh-17b Submachinegun", 8, /obj/item/weapon/gun/smg/ppsh, VENDOR_ITEM_REGULAR),
+
+		list("SHOTGUNS", -1, null, null),
+		list("Spearhead Rival 78", 2, /obj/item/weapon/gun/shotgun/double, VENDOR_ITEM_REGULAR),
+		list("MOU53 Break Action Shotgun", 2, /obj/item/weapon/gun/shotgun/double/mou53, VENDOR_ITEM_REGULAR),
+		list("MP-122 'Olympiets' Hunting Shotgun", 2, /obj/item/weapon/gun/shotgun/double/upp, VENDOR_ITEM_REGULAR),
+		list("Ithaca 37 Pump-Action Shotgun", 2, /obj/item/weapon/gun/shotgun/pump, VENDOR_ITEM_REGULAR),
+		list("M1771 Shotgun", 2, /obj/item/weapon/gun/rifle/xm51, VENDOR_ITEM_REGULAR),
+
+		list("SIDEARMS", -1, null, null),
+		list("Hummingbird Pistol", 10, /obj/item/weapon/gun/pistol/clfpistol, VENDOR_ITEM_REGULAR),
+		list("HG45 Pistol", round(scale * 10), /obj/item/weapon/gun/pistol/highpower, VENDOR_ITEM_REGULAR),
+		list("HG44 Pistol", round(scale * 10), /obj/item/weapon/gun/pistol/highpower/automag, VENDOR_ITEM_REGULAR),
+		list("VP78 Pistol", round(scale * 10), /obj/item/weapon/gun/pistol/vp78, VENDOR_ITEM_REGULAR),
+		list("L54A2 Service Pistol", round(scale * 10), /obj/item/weapon/gun/pistol/l54, VENDOR_ITEM_REGULAR),
+		list("CZ-81 Machine Pistol", round(scale * 10), /obj/item/weapon/gun/pistol/skorpion, VENDOR_ITEM_REGULAR),
+		list("Vintage Desert Eagle", round(scale * 1), /obj/item/weapon/gun/pistol/heavy, VENDOR_ITEM_REGULAR),
+
+		list("MISCELLANEOUS WEAPONRY", -1, null, null),
+		list("R4T Lever-Action", 4, /obj/item/weapon/gun/lever_action/r4t, VENDOR_ITEM_REGULAR),
+		list("Basira-Armstrong Bolt-Action Hunting Rifle", 2, /obj/item/weapon/gun/boltaction, VENDOR_ITEM_REGULAR),
+		list("MAR-30 Battle Carbine", 8, /obj/item/weapon/gun/rifle/mar40/carbine, VENDOR_ITEM_REGULAR),
+
+
+		list("RIFLE MUNITIONS", -1, null, null),
+		list("M20A Magazine", 32, /obj/item/ammo_magazine/rifle/m20a, VENDOR_ITEM_REGULAR),
+		list("L42A Magazine", 32, /obj/item/ammo_magazine/rifle/l42a, VENDOR_ITEM_REGULAR),
+		list("ABR-40 Magazine", 32, /obj/item/ammo_magazine/rifle/l42a/abr40, VENDOR_ITEM_REGULAR),
+		list("M16 Magazine", 32, /obj/item/ammo_magazine/rifle/m16, VENDOR_ITEM_REGULAR),
+
+		list("LIGHT MACHINE GUN MUNITIONS", -1, null, null),
+		list("ISR Box Magazine", 16, /obj/item/ammo_magazine/rifle/isr, VENDOR_ITEM_REGULAR),
+		list("MAR Drum Magazine", 16, /obj/item/ammo_magazine/rifle/mar40/lmg, VENDOR_ITEM_REGULAR),
+
+		list("SUBMACHINEGUN MUNITIONS", -1, null, null),
+		list("MP5 Magazine", 64, /obj/item/ammo_magazine/smg/mp5, VENDOR_ITEM_REGULAR),
+		list("FN FP9000 Magazine", 64, /obj/item/ammo_magazine/smg/fp9000, VENDOR_ITEM_REGULAR),
+		list("Viper 9 Magazine", 64, /obj/item/ammo_magazine/smg/m39, VENDOR_ITEM_REGULAR),
+		list("MAC-15 Magazine", 64, /obj/item/ammo_magazine/smg/mac15, VENDOR_ITEM_REGULAR),
+		list("MP27 Magazine", 64, /obj/item/ammo_magazine/smg/mp27, VENDOR_ITEM_REGULAR),
+		list("Type-19 Magazine", 64, /obj/item/ammo_magazine/smg/pps43, VENDOR_ITEM_REGULAR),
+		list("PPSh-17b Magazine", 64, /obj/item/ammo_magazine/smg/ppsh, VENDOR_ITEM_REGULAR),
+
+		list("SHOTGUN MUNITIONS", -1, null, null),
+		list("Shotgun Shell Box (Buckshot)", 16, /obj/item/ammo_magazine/shotgun/buckshot, VENDOR_ITEM_REGULAR),
+		list("Shotgun Shell Box (Slug)", 8, /obj/item/ammo_magazine/shotgun/slugs, VENDOR_ITEM_REGULAR),
+		list("Shotgun Shell Box (Flechette)", 8, /obj/item/ammo_magazine/shotgun/flechette, VENDOR_ITEM_REGULAR),
+		list("Shotgun Shell Box (M1771)", 8, /obj/item/ammo_magazine/shotgun/buckshot/light, VENDOR_ITEM_REGULAR),
+
+		list("SIDEARM MUNITIONS", -1, null, null),
+		list("Hummingbird Pistol Magazine", 64, /obj/item/ammo_magazine/pistol/clfpistol, VENDOR_ITEM_REGULAR),
+		list("HG45 Pistol Magazine", round(scale * 64), /obj/item/ammo_magazine/pistol/highpower, VENDOR_ITEM_REGULAR),
+		list("HG44 Pistol Magazine", round(scale * 64), /obj/item/ammo_magazine/pistol/highpower/automag, VENDOR_ITEM_REGULAR),
+		list("VP78 Pistol Magazine", round(scale * 64), /obj/item/ammo_magazine/pistol/vp78, VENDOR_ITEM_REGULAR),
+		list("L54A2 Service Pistol Magazine", round(scale * 64), /obj/item/ammo_magazine/pistol/l54, VENDOR_ITEM_REGULAR),
+		list("CZ-81 Machine Pistol Magazine", round(scale * 64), /obj/item/ammo_magazine/pistol/skorpion, VENDOR_ITEM_REGULAR),
+		list("Vintage Desert Eagle Magazine", round(scale * 8), /obj/item/ammo_magazine/pistol/heavy, VENDOR_ITEM_REGULAR),
+
+		list("MISCELLANEOUS MUNITIONS", -1, null, null),
+		list("R4T Lever-Action Round Box", 6, /obj/item/ammo_magazine/lever_action, VENDOR_ITEM_REGULAR),
+		list("Basira-Armstrong Bolt-Action Hunting Rifle Magazine", 32, /obj/item/ammo_magazine/rifle/boltaction, VENDOR_ITEM_REGULAR),
+		list("MAR-30 Battle Carbine Magazine", 32, /obj/item/ammo_magazine/rifle/mar40, VENDOR_ITEM_REGULAR),
 	)
 //--------------SQUAD ATTACHMENTS VENDOR--------------
 
@@ -1592,7 +1746,31 @@ GLOBAL_LIST_INIT(cm_vending_clothing_marine_snowflake_marsoc, list(
 	list("Beret, White", 12, /obj/item/clothing/head/beret/cm/white, null, VENDOR_ITEM_REGULAR),
 	list("Ushanka", 12, /obj/item/clothing/head/ushanka, null, VENDOR_ITEM_REGULAR),
 	list("Cap", 12, /obj/item/clothing/head/cmcap, null, VENDOR_ITEM_REGULAR),
+	list("Cap, Khaki", 12, /obj/item/clothing/head/cmcap/khaki, null, VENDOR_ITEM_REGULAR),
+	list("Cap, Snow", 12, /obj/item/clothing/head/cmcap/snow, null, VENDOR_ITEM_REGULAR),
+	list("Cap, Weyland-Yutani", 12, /obj/item/clothing/head/cmcap/weyyu, null, VENDOR_ITEM_REGULAR),
+	list("Boonie Hat", 12, /obj/item/clothing/head/cmcap/boonie, null, VENDOR_ITEM_REGULAR),
+	list("Boonie Hat, Tan", 12, /obj/item/clothing/head/cmcap/boonie/tan, null, VENDOR_ITEM_REGULAR),
+	list("Boonie Hat, Snow", 12, /obj/item/clothing/head/cmcap/boonie/snow, null, VENDOR_ITEM_REGULAR),
 	list("Fedora", 12, /obj/item/clothing/head/fedora, null, VENDOR_ITEM_REGULAR),
+	list("Headband, Brown", 12, /obj/item/clothing/head/headband/brown, VENDOR_ITEM_REGULAR),
+	list("Headband, Gray", 12, /obj/item/clothing/head/headband/brown, VENDOR_ITEM_REGULAR),
+	list("Headband, Red", 12, /obj/item/clothing/head/headband/red, VENDOR_ITEM_REGULAR),
+	list("Headband, Green", 12, /obj/item/clothing/head/headband, VENDOR_ITEM_REGULAR),
+	list("Headband, Tan", 12, /obj/item/clothing/head/headband/tan, VENDOR_ITEM_REGULAR),
+	list("Bandana, Jungle", 12, /obj/item/clothing/head/cmbandana, VENDOR_ITEM_REGULAR),
+	list("Bandana, Desert", 12, /obj/item/clothing/head/cmbandana/tan, VENDOR_ITEM_REGULAR),
+	list("Beanie, Jungle", 12, /obj/item/clothing/head/beanie/green, VENDOR_ITEM_REGULAR),
+	list("Beanie, Urban", 12, /obj/item/clothing/head/beanie/gray, VENDOR_ITEM_REGULAR),
+	list("Beanie, Desert", 12, /obj/item/clothing/head/beanie/tan, VENDOR_ITEM_REGULAR),
+	list("Durag, Black", 12, /obj/item/clothing/head/durag/black, VENDOR_ITEM_REGULAR),
+
+	list("FACEWEAR", 0, null, null, null),
+	list("Neckerchief, Standard", 12, /obj/item/clothing/mask/neckerchief, VENDOR_ITEM_REGULAR),
+	list("Neckerchief, Black", 12, /obj/item/clothing/mask/neckerchief/black, VENDOR_ITEM_REGULAR),
+	list("Neckerchief, Gray", 12, /obj/item/clothing/mask/neckerchief/gray, VENDOR_ITEM_REGULAR),
+	list("Neckerchief, Red", 12, /obj/item/clothing/mask/neckerchief/red, VENDOR_ITEM_REGULAR),
+	list("Neckerchief, Green", 12, /obj/item/clothing/mask/neckerchief/green, VENDOR_ITEM_REGULAR),
 
 	list("SUIT", 0, null, null, null),
 	list("Bomber Jacket, Brown", 12, /obj/item/clothing/suit/storage/bomber, null, VENDOR_ITEM_REGULAR),
@@ -1619,13 +1797,12 @@ GLOBAL_LIST_INIT(cm_vending_clothing_marine_snowflake_marsoc, list(
 	list("Satchel, Black Leather", 12, /obj/item/storage/backpack/satchel/black, null, VENDOR_ITEM_REGULAR),
 	list("Satchel, Blue Leather", 12, /obj/item/storage/backpack/satchel/blue, null, VENDOR_ITEM_REGULAR),
 
-	list("OTHER", 0, null, null, null),
-	list("Red Armband", 6, /obj/item/clothing/accessory/armband, null, VENDOR_ITEM_REGULAR),
-	list("Purple Armband", 6, /obj/item/clothing/accessory/armband/science, null, VENDOR_ITEM_REGULAR),
-	list("Yellow Armband", 6, /obj/item/clothing/accessory/armband/engine, null, VENDOR_ITEM_REGULAR),
-	list("Green Armband", 6, /obj/item/clothing/accessory/armband/medgreen, null, VENDOR_ITEM_REGULAR),
-	list("Dress Gloves", 6, /obj/item/clothing/gloves/marine/dress, null, VENDOR_ITEM_REGULAR),
-
+	list("ARMBANDS", 0, null, null, null),
+	list("Armband, Red", 8, /obj/item/clothing/accessory/armband, null, VENDOR_ITEM_REGULAR),
+	list("Armband, Purple", 8, /obj/item/clothing/accessory/armband/science, null, VENDOR_ITEM_REGULAR),
+	list("Armband, Yellow", 8, /obj/item/clothing/accessory/armband/engine, null, VENDOR_ITEM_REGULAR),
+	list("Armband, Green", 8, /obj/item/clothing/accessory/armband/medgreen, null, VENDOR_ITEM_REGULAR),
+	list("Armband, White", 8, /obj/item/clothing/accessory/armband/med, null, VENDOR_ITEM_REGULAR),
 ))
 
 /obj/structure/machinery/cm_vending/clothing/marine/snowflake/marsoc
