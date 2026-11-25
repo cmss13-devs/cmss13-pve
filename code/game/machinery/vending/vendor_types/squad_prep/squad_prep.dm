@@ -622,9 +622,11 @@
 		list("Marine Combat Gloves, Black", floor(scale * 15), /obj/item/clothing/gloves/marine, VENDOR_ITEM_REGULAR),
 		list("Marine Combat Gloves, Brown", floor(scale * 15), /obj/item/clothing/gloves/marine/brown, VENDOR_ITEM_REGULAR),
 		list("Marine Radio Headset", floor(scale * 15), /obj/item/device/radio/headset/almayer/sof/survivor_forecon, VENDOR_ITEM_REGULAR),
-		list("M5 Pattern Camera Headset", floor(scale * 15), /obj/item/device/overwatch_camera, VENDOR_ITEM_REGULAR),
+
+		list("NIGHT OPTICAL EQUIPMENT", -1, null, null, null),
 		list("M10 Night Optical HUD", floor(scale * 15), /obj/item/device/helmet_visor/night_vision/marine_raider, VENDOR_ITEM_RECOMMENDED),
 		list("Modified M3 Night Vision Goggles", floor(scale * 15), /obj/item/prop/helmetgarb/helmet_nvg/marsoc, VENDOR_ITEM_RECOMMENDED),
+		list("TV-1 Night Vision Goggles", floor(scale * 15), /obj/item/clothing/glasses/night, VENDOR_ITEM_RECOMMENDED),
 
 		list("NON-STANDARD EQUIPMENT", -1, null, null, null),
 		list("Marine Combat Gloves, Black Fingerless", floor(scale * 15), /obj/item/clothing/gloves/marine/fingerless, VENDOR_ITEM_REGULAR),

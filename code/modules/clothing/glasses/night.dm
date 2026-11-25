@@ -61,6 +61,7 @@
 	desc = "A headset and night vision system for the M49A Battle Rifle. Allows highlighted imaging of surroundings, the ability to view the biofunction monitor readouts of other marines, and linking to the Command & Control network. Click it to toggle."
 	icon_state = "m49a_goggles"
 	deactive_state = "m49a_goggles_0"
+	vision_flags = null
 	hud_type = list(MOB_HUD_FACTION_MARINE, MOB_HUD_FACTION_ARMY, MOB_HUD_FACTION_NAVY, MOB_HUD_MEDICAL_BASIC)
 	toggleable = TRUE
 	fullscreen_vision = null
