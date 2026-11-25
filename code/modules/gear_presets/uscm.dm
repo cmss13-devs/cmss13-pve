@@ -1469,7 +1469,7 @@
 	ert_squad = TRUE
 	paygrades = list(PAY_SHORT_ME4 = JOB_PLAYTIME_TIER_0)
 
-	minimap_icon = "sof_medic"
+	minimap_icon = "sof_sg"
 
 /datum/equipment_preset/uscm/emag_medic/New()
 	. = ..()
@@ -1487,7 +1487,7 @@
 	ert_squad = TRUE
 	paygrades = list(PAY_SHORT_ME4 = JOB_PLAYTIME_TIER_0)
 
-	minimap_icon = "sof_medic"
+	minimap_icon = "sof_sg"
 
 /datum/equipment_preset/uscm/emag_medic_equipped/load_status(mob/living/carbon/human/new_human)
 	new_human.nutrition = NUTRITION_NORMAL
@@ -1537,7 +1537,7 @@
 	ert_squad = TRUE
 	paygrades = list(PAY_SHORT_ME6 = JOB_PLAYTIME_TIER_0)
 
-	minimap_icon = "sof_leader"
+	minimap_icon = "sof_sg"
 
 /datum/equipment_preset/uscm/emag/New()
 	. = ..()
@@ -1555,7 +1555,7 @@
 	ert_squad = TRUE
 	paygrades = list(PAY_SHORT_ME6 = JOB_PLAYTIME_TIER_0)
 
-	minimap_icon = "sof_leader"
+	minimap_icon = "sof_sg"
 
 /datum/equipment_preset/uscm/uscm/emag_leader_equipped/load_status(mob/living/carbon/human/new_human)
 	new_human.nutrition = NUTRITION_NORMAL
