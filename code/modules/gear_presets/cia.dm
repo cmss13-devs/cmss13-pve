@@ -126,7 +126,7 @@
 	access = get_access(ACCESS_LIST_CLF_BASE) + list(ACCESS_CIA)
 
 /datum/equipment_preset/rebel/cia/load_gear(mob/living/carbon/human/new_human, client/mob_client)
-	new_human.undershirt = "undershirt"
+	add_civilian_underwear(new_human)
 
 	//head
 	if(prob(45))
@@ -180,7 +180,7 @@
 	access = get_access(ACCESS_LIST_CLF_BASE) + list(ACCESS_CIA)
 
 /datum/equipment_preset/clf/engineer/cia/load_gear(mob/living/carbon/human/new_human, client/mob_client)
-	new_human.undershirt = "undershirt"
+	add_civilian_underwear(new_human)
 
 	//head
 	if(prob(45))

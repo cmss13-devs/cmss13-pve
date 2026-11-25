@@ -33,6 +33,7 @@
 		new_human.h_style = pick("Side Undercut", "Side Hang Undercut (Reverse)", "Undercut, Top", "CIA", "Mulder", "Pvt. Redding", "Pixie Cut Left", "Pixie Cut Right", "Bun", "Ponytail 1", "Ponytail 2", "Ponytail 3", "Ponytail 4", "Pvt. Clarison", "Cpl. Dietrich", "Pvt. Vasquez", "Marine Bun", "Marine Bun 2", "Marine Flat Top",)
 	new_human.change_real_name(new_human, random_name)
 	new_human.age = rand(20,35)
+	add_army_underwear(new_human)
 
 //*****************************************************************************************************/
 

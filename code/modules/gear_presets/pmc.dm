@@ -47,6 +47,8 @@
 			uniform.sensor_faction = FACTION_PMC
 	return ..()
 
+/datum/equipment_preset/pmc/load_underwear(mob/living/carbon/human/new_human, client/mob_client)
+	add_civilian_underwear(new_human)
 
 //*****************************************************************************************************/
 /datum/equipment_preset/pmc/standard

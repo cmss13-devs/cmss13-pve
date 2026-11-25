@@ -54,7 +54,7 @@
 	random_name = "[first_name] [last_name]"
 	new_human.change_real_name(new_human, random_name)
 	new_human.age = rand(20,45)
-
+	add_civilian_underwear(new_human)
 
 //*****************************************************************************************************/
 
@@ -71,7 +71,6 @@
 	return "Class C Inhabitant"
 
 /datum/equipment_preset/clf/guerilla/load_gear(mob/living/carbon/human/new_human)
-	new_human.undershirt = "undershirt"
 	//back
 	add_random_satchel(new_human)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/box/mre/upp(new_human), WEAR_IN_BACK)
@@ -114,7 +113,6 @@
 	skills = /datum/skills/clf/specialist
 
 /datum/equipment_preset/clf/engineer/load_gear(mob/living/carbon/human/new_human)
-	new_human.undershirt = "undershirt"
 	//back
 	add_random_satchel(new_human)
 	new_human.equip_to_slot_or_del(new /obj/item/tool/weldingtool(new_human), WEAR_IN_BACK)
@@ -157,7 +155,6 @@
 	assignment = "Revolutionary Guard Medic"
 
 /datum/equipment_preset/clf/medic/load_gear(mob/living/carbon/human/new_human)
-	new_human.undershirt = "undershirt"
 	//back
 	add_random_satchel(new_human)
 	new_human.equip_to_slot_or_del(new /obj/item/reagent_container/food/drinks/flask/canteen, WEAR_IN_BACK)
@@ -206,7 +203,6 @@
 	access = get_access(ACCESS_LIST_CLF_BASE) + list(ACCESS_CLF_ARMORY)
 
 /datum/equipment_preset/clf/soldier/load_gear(mob/living/carbon/human/new_human)
-	new_human.undershirt = "undershirt"
 	//back
 	add_random_satchel(new_human)
 	new_human.equip_to_slot_or_del(new /obj/item/tool/weldingtool(new_human), WEAR_IN_BACK)
@@ -246,7 +242,6 @@
 	name = "TWE Rebel, Soldier (Shotgun)"
 
 /datum/equipment_preset/clf/soldier/shotgun/load_gear(mob/living/carbon/human/new_human)
-	new_human.undershirt = "undershirt"
 	//back
 	add_random_satchel(new_human)
 	new_human.equip_to_slot_or_del(new /obj/item/tool/weldingtool(new_human), WEAR_IN_BACK)
@@ -282,7 +277,6 @@
 	name = "TWE Rebel, Soldier (Machinegunner)"
 
 /datum/equipment_preset/clf/soldier/machinegunner/load_gear(mob/living/carbon/human/new_human)
-	new_human.undershirt = "undershirt"
 	//back
 	add_random_satchel(new_human)
 	new_human.equip_to_slot_or_del(new /obj/item/tool/weldingtool(new_human), WEAR_IN_BACK)
@@ -319,7 +313,6 @@
 	skills = /datum/skills/clf/specialist
 
 /datum/equipment_preset/clf/soldier/flamer/load_gear(mob/living/carbon/human/new_human)
-	new_human.undershirt = "undershirt"
 	//back
 	add_random_satchel(new_human)
 	new_human.equip_to_slot_or_del(new /obj/item/tool/weldingtool(new_human), WEAR_IN_BACK)
@@ -358,7 +351,6 @@
 	skills = /datum/skills/clf/sniper
 
 /datum/equipment_preset/clf/soldier/bolt/load_gear(mob/living/carbon/human/new_human)
-	new_human.undershirt = "undershirt"
 	//back
 	add_random_satchel(new_human)
 	new_human.equip_to_slot_or_del(new /obj/item/tool/weldingtool(new_human), WEAR_IN_BACK)
@@ -401,7 +393,6 @@
 	skills = /datum/skills/clf/sniper
 
 /datum/equipment_preset/clf/soldier/svd/load_gear(mob/living/carbon/human/new_human)
-	new_human.undershirt = "undershirt"
 	//back
 	add_random_satchel(new_human)
 	new_human.equip_to_slot_or_del(new /obj/item/tool/weldingtool(new_human), WEAR_IN_BACK)
@@ -454,7 +445,6 @@
 	access = get_access(ACCESS_LIST_CLF_BASE) + list(ACCESS_CLF_ARMORY, ACCESS_CLF_LEADERSHIP, ACCESS_CLF_FLIGHT)
 
 /datum/equipment_preset/clf/leader/load_gear(mob/living/carbon/human/new_human)
-	new_human.undershirt = "undershirt"
 	//back
 	add_random_satchel(new_human)
 	new_human.equip_to_slot_or_del(new /obj/item/tool/weldingtool(new_human), WEAR_IN_BACK)
@@ -512,7 +502,6 @@
 	new_human.allow_gun_usage = FALSE
 
 /datum/equipment_preset/clf/synth/load_gear(mob/living/carbon/human/new_human)
-	new_human.undershirt = "undershirt"
 	//back
 	add_random_satchel(new_human)
 	new_human.equip_to_slot_or_del(new /obj/item/tool/weldingtool(new_human), WEAR_IN_BACK)
@@ -548,7 +537,6 @@
 	new_human.allow_gun_usage = TRUE
 
 /datum/equipment_preset/clf/synth/combat/load_gear(mob/living/carbon/human/new_human)
-	new_human.undershirt = "undershirt"
 	//back
 	add_random_satchel(new_human)
 	new_human.equip_to_slot_or_del(new /obj/item/tool/weldingtool(new_human), WEAR_IN_BACK)
@@ -593,7 +581,6 @@
 	assignment = "Revolutionary Commander"
 
 /datum/equipment_preset/clf/commander/load_gear(mob/living/carbon/human/new_human)
-	new_human.undershirt = "undershirt"
 	//back
 	add_random_satchel(new_human)
 	new_human.equip_to_slot_or_del(new /obj/item/tool/weldingtool(new_human), WEAR_IN_BACK)

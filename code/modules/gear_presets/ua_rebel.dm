@@ -12,6 +12,7 @@
 	. = ..()
 	access = get_access(ACCESS_LIST_CLF_BASE)
 
+
 /datum/equipment_preset/rebel/guerilla
 	name = "UA Rebel, Guerilla"
 	flags = EQUIPMENT_PRESET_EXTRA
@@ -20,7 +21,7 @@
 	paygrades = list(PAY_SHORT_REB = JOB_PLAYTIME_TIER_0)
 
 /datum/equipment_preset/rebel/guerilla/load_gear(mob/living/carbon/human/new_human)
-	new_human.undershirt = "undershirt"
+	add_civilian_underwear(new_human)
 	//back
 	add_random_satchel(new_human)
 	//face
@@ -55,7 +56,7 @@
 	return "Rifleman"
 
 /datum/equipment_preset/rebel/soldier/load_gear(mob/living/carbon/human/new_human)
-	new_human.undershirt = "undershirt"
+	add_civilian_underwear(new_human)
 	//back
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine/satchel(new_human), WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/tool/weldingtool(new_human), WEAR_IN_BACK)
@@ -91,7 +92,6 @@
 	name = "UA Rebel, Soldier (Shotgun)"
 
 /datum/equipment_preset/rebel/soldier/shotgun/load_gear(mob/living/carbon/human/new_human)
-	new_human.undershirt = "undershirt"
 	//back
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine/satchel(new_human), WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/tool/weldingtool(new_human), WEAR_IN_BACK)
@@ -123,7 +123,6 @@
 	name = "UA Rebel, Soldier (Machinegunner)"
 
 /datum/equipment_preset/rebel/soldier/machinegunner/load_gear(mob/living/carbon/human/new_human)
-	new_human.undershirt = "undershirt"
 	//back
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine/satchel(new_human), WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/tool/weldingtool(new_human), WEAR_IN_BACK)
@@ -160,7 +159,6 @@
 	skills = /datum/skills/clf/specialist
 
 /datum/equipment_preset/rebel/soldier/flamer/load_gear(mob/living/carbon/human/new_human)
-	new_human.undershirt = "undershirt"
 	//back
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine/satchel(new_human), WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/tool/weldingtool(new_human), WEAR_IN_BACK)
@@ -199,7 +197,6 @@
 	return "Squad Leader"
 
 /datum/equipment_preset/rebel/soldier/leader/load_gear(mob/living/carbon/human/new_human)
-	new_human.undershirt = "undershirt"
 	//back
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine/satchel(new_human), WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/tool/weldingtool(new_human), WEAR_IN_BACK)
@@ -245,7 +242,7 @@
 	return "Corpsman"
 
 /datum/equipment_preset/rebel/medic/load_gear(mob/living/carbon/human/new_human)
-	new_human.undershirt = "undershirt"
+	add_civilian_underwear(new_human)
 	//back
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine/satchel(new_human), WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/tool/shovel/etool/folded(new_human), WEAR_IN_BACK)
@@ -293,7 +290,7 @@
 	return "Rocketeer"
 
 /datum/equipment_preset/rebel/at/load_gear(mob/living/carbon/human/new_human)
-	new_human.undershirt = "undershirt"
+	add_civilian_underwear(new_human)
 	//back
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine/satchel/intel/chestrig(new_human), WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/tool/weldingtool(new_human), WEAR_IN_BACK)
@@ -331,7 +328,7 @@
 	return "Commander"
 
 /datum/equipment_preset/rebel/commander/load_gear(mob/living/carbon/human/new_human)
-	new_human.undershirt = "undershirt"
+	add_civilian_underwear(new_human)
 	//back
 	//face
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/rebel_ua(new_human), WEAR_L_EAR)
@@ -380,7 +377,7 @@
 	return "Marksman"
 
 /datum/equipment_preset/rebel/sniper/load_gear(mob/living/carbon/human/new_human)
-	new_human.undershirt = "undershirt"
+	add_civilian_underwear(new_human)
 	//back
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine/satchel(new_human), WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/tool/weldingtool(new_human), WEAR_IN_BACK)

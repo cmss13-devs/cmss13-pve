@@ -309,6 +309,9 @@
 /datum/equipment_preset/proc/load_skills(mob/living/carbon/human/new_human, client/mob_client)
 	new_human.set_skills(skills)
 
+/datum/equipment_preset/proc/load_underwear(mob/living/carbon/human/new_human, client/mob_client)
+	return
+
 /datum/equipment_preset/proc/load_id(mob/living/carbon/human/new_human, client/mob_client)
 	if(!idtype)
 		return
@@ -354,6 +357,7 @@
 	load_race(new_human, mob_client)
 	if(randomise || uses_special_name)
 		load_name(new_human, randomise, mob_client)
+		load_underwear(new_human, randomise, mob_client)
 	else if(origin_override)
 		var/datum/origin/origin = GLOB.origins[origin_override]
 		new_human.name = origin.correct_name(new_human.name, new_human.gender)
@@ -1852,3 +1856,30 @@ GLOBAL_LIST_INIT(rebel_ua_pistols, list(
 		/obj/item/clothing/glasses/sunglasses/aviator,
 	)
 	new_human.equip_to_slot_or_del(new helmeteyewearpath, WEAR_IN_HELMET)
+
+/datum/equipment_preset/proc/add_civilian_underwear(mob/living/carbon/human/new_human)
+	if(new_human.gender == MALE)
+		new_human.undershirt = pick("None","White Undershirt","White Undershirt (Sleeveless)")
+		new_human.underwear = pick("White Briefs","White Boxers")
+	else
+		new_human.undershirt = pick("White Undershirt","White Undershirt (Sleeveless)","White Sports Bra","Black Sports Bra")
+		new_human.underwear = pick("White Briefs","White Boxers","White Panties","Black Panties")
+
+
+/datum/equipment_preset/proc/add_uscm_underwear(mob/living/carbon/human/new_human)
+	if(new_human.gender == MALE)
+		new_human.undershirt = pick("USCM Undershirt","USCM Undershirt (Sleeveless)","None","White Undershirt","White Undershirt (Sleeveless)")
+	else
+		new_human.undershirt = pick("USCM Undershirt","USCM Undershirt (Sleeveless)","White Undershirt","White Undershirt (Sleeveless)","USCM Sports Bra")
+	new_human.underwear = "USCM Boxers"
+
+/datum/equipment_preset/proc/add_upp_underwear(mob/living/carbon/human/new_human)
+	new_human.undershirt = "Naval Infantry Telnyashka"
+	new_human.underwear = "UPP Boxers"
+
+/datum/equipment_preset/proc/add_army_underwear(mob/living/carbon/human/new_human)
+	if(new_human.gender == MALE)
+		new_human.undershirt = pick("US Army Undershirt","US Army Undershirt (Sleeveless)","None","White Undershirt","White Undershirt (Sleeveless)")
+	else
+		new_human.undershirt = pick("US Army Undershirt","US Army Undershirt (Sleeveless)","White Undershirt","White Undershirt (Sleeveless)")
+	new_human.underwear = "USA Boxers"

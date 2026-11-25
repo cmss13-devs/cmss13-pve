@@ -866,8 +866,7 @@
 	return
 
 /datum/equipment_preset/synth/working_joe/security_android/load_gear(mob/living/carbon/human/new_human)
-	new_human.undershirt = "Marine Undershirt"
-	new_human.underwear = "Marine Boxers"
+	add_uscm_underwear(new_human)
 	//back
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine/satchel(new_human), WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/tool/weldingtool(new_human), WEAR_IN_BACK)
@@ -913,7 +912,7 @@
 	skills = /datum/skills/pfc
 
 /datum/equipment_preset/synth/working_joe/upp/combat/load_gear(mob/living/carbon/human/new_human)
-	new_human.undershirt = "Naval Infantry Telnyashka"
+	add_upp_underwear(new_human)
 	//back
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/lightpack/upp(new_human), WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/reagent_container/food/drinks/flask/canteen, WEAR_IN_BACK)
@@ -972,7 +971,7 @@
 	faction_group = list(FACTION_LIST_CANC)
 
 /datum/equipment_preset/synth/working_joe/upp/combat/canc/load_gear(mob/living/carbon/human/new_human)
-	new_human.undershirt = "undershirt"
+	add_civilian_underwear(new_human)
 	//back
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/lightpack/upp(new_human), WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/roller/bedroll(new_human), WEAR_IN_BACK)
@@ -1003,7 +1002,7 @@
 	faction_group = list(FACTION_LIST_TWE_REBEL)
 
 /datum/equipment_preset/synth/working_joe/upp/combat/twe_rebel/load_gear(mob/living/carbon/human/new_human)
-	new_human.undershirt = "undershirt"
+	add_civilian_underwear(new_human)
 	//back
 	add_random_satchel(new_human)
 	new_human.equip_to_slot_or_del(new /obj/item/tool/weldingtool(new_human), WEAR_IN_BACK)
@@ -1046,7 +1045,7 @@
 	faction_group = list(FACTION_UA_REBEL)
 
 /datum/equipment_preset/synth/working_joe/security_android/ua_rebel/load_gear(mob/living/carbon/human/new_human)
-	new_human.undershirt = "undershirt"
+	add_civilian_underwear(new_human)
 	//back
 	new_human.equip_to_slot_or_del(new /obj/item/storage/backpack/marine/satchel(new_human), WEAR_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/tool/weldingtool(new_human), WEAR_IN_BACK)
