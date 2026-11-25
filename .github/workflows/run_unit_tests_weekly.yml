@@ -7,7 +7,7 @@ on:
 jobs:
   find_all_maps:
     name: Find Maps to Test
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     outputs:
       maps: ${{ steps.map_finder.outputs.maps }}
       work_needed: ${{ steps.check_commits.outputs.WORK_NEEDED }}
