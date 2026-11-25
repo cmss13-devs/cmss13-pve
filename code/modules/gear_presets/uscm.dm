@@ -1261,9 +1261,9 @@
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m41aMK1, WEAR_IN_R_STORE)
 
 /datum/equipment_preset/uscm/emag
-	name = "emag Rifleman"
+	name = "EMAG/RAT Rifleman"
 	flags = EQUIPMENT_PRESET_EXTRA
-	assignment = "emag Rifleman"
+	assignment = "EMAG/RAT Rifleman"
 	rank = JOB_MARINE_RAIDER
 	role_comm_title = "RFN"
 	languages = list(LANGUAGE_ENGLISH)
@@ -1279,9 +1279,9 @@
 	access = get_access(ACCESS_LIST_GLOBAL)
 
 /datum/equipment_preset/uscm/emag_equipped
-	name = "emag Rifleman (Equipped)"
+	name = "EMAG/RAT Rifleman (Equipped)"
 	flags = EQUIPMENT_PRESET_EXTRA
-	assignment = "emag Rifleman"
+	assignment = "EMAG/RAT Rifleman"
 	rank = JOB_MARINE_RAIDER
 	role_comm_title = "RFN"
 	languages = list(LANGUAGE_ENGLISH)
@@ -1327,9 +1327,9 @@
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m41aMK1, WEAR_IN_R_STORE)
 
 /datum/equipment_preset/uscm/emag_sniper
-	name = "emag Sniper"
+	name = "EMAG/RAT Sniper"
 	flags = EQUIPMENT_PRESET_EXTRA
-	assignment = "emag Scout Sniper"
+	assignment = "EMAG/RAT Scout Sniper"
 	rank = JOB_MARINE_RAIDER
 	role_comm_title = "SctSnpr"
 	languages = list(LANGUAGE_ENGLISH)
@@ -1345,9 +1345,9 @@
 	access = get_access(ACCESS_LIST_GLOBAL)
 
 /datum/equipment_preset/uscm/emag_sniper_equipped
-	name = "emag Sniper (Equipped)"
+	name = "EMAG/RAT Sniper (Equipped)"
 	flags = EQUIPMENT_PRESET_EXTRA
-	assignment = "emag Scout Sniper"
+	assignment = "EMAG/RAT Scout Sniper"
 	rank = JOB_MARINE_RAIDER
 	role_comm_title = "SctSnpr"
 	languages = list(LANGUAGE_ENGLISH)
@@ -1391,9 +1391,9 @@
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/sniper, WEAR_IN_R_STORE)
 
 /datum/equipment_preset/uscm/emag_machinegunner
-	name = "emag Machinegunner"
+	name = "EMAG/RAT Machinegunner"
 	flags = EQUIPMENT_PRESET_EXTRA
-	assignment = "emag Machinegunner"
+	assignment = "EMAG/RAT Machinegunner"
 	rank = JOB_MARINE_RAIDER
 	role_comm_title = "MG"
 	languages = list(LANGUAGE_ENGLISH)
@@ -1409,9 +1409,9 @@
 	access = get_access(ACCESS_LIST_GLOBAL)
 
 /datum/equipment_preset/uscm/emag_machinegunner_equipped
-	name = "emag Machinegunner (Equipped)"
+	name = "EMAG/RAT Machinegunner (Equipped)"
 	flags = EQUIPMENT_PRESET_EXTRA
-	assignment = "emag Machinegunner"
+	assignment = "EMAG/RAT Machinegunner"
 	rank = JOB_MARINE_RAIDER
 	role_comm_title = "MG"
 	languages = list(LANGUAGE_ENGLISH)
@@ -1458,36 +1458,36 @@
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rifle/m41aMK1, WEAR_IN_R_STORE)
 
 /datum/equipment_preset/uscm/emag_medic
-	name = "emag Combat Medic"
+	name = "EMAG/RAT Combat Medic"
 	flags = EQUIPMENT_PRESET_EXTRA
-	assignment = "emag Combat Medic"
+	assignment = "EMAG/RAT Combat Medic"
 	rank = JOB_MARINE_RAIDER
 	role_comm_title = "CM"
 	languages = list(LANGUAGE_ENGLISH)
-	skills = /datum/skills/commando/deathsquad
+	skills = /datum/skills/para_tech
 	auto_squad_name = SQUAD_SOF
 	ert_squad = TRUE
 	paygrades = list(PAY_SHORT_ME4 = JOB_PLAYTIME_TIER_0)
 
-	minimap_icon = "sof_sg"
+	minimap_icon = "sof_medic"
 
 /datum/equipment_preset/uscm/emag_medic/New()
 	. = ..()
 	access = get_access(ACCESS_LIST_GLOBAL)
 
 /datum/equipment_preset/uscm/emag_medic_equipped
-	name = "emag Combat Medic (Equipped)"
+	name = "EMAG/RAT Combat Medic (Equipped)"
 	flags = EQUIPMENT_PRESET_EXTRA
-	assignment = "emag Combat Medic"
+	assignment = "EMAG/RAT Combat Medic"
 	rank = JOB_MARINE_RAIDER
 	role_comm_title = "CM"
 	languages = list(LANGUAGE_ENGLISH)
-	skills = /datum/skills/commando/deathsquad
+	skills = /datum/skills/para_tech
 	auto_squad_name = SQUAD_SOF
 	ert_squad = TRUE
 	paygrades = list(PAY_SHORT_ME4 = JOB_PLAYTIME_TIER_0)
 
-	minimap_icon = "sof_sg"
+	minimap_icon = "sof_medic"
 
 /datum/equipment_preset/uscm/emag_medic_equipped/load_status(mob/living/carbon/human/new_human)
 	new_human.nutrition = NUTRITION_NORMAL
@@ -1526,9 +1526,9 @@
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/flare/full(new_human), WEAR_R_STORE)
 
 /datum/equipment_preset/uscm/emag_leader
-	name = "emag Team Leader"
+	name = "EMAG/RAT Team Leader"
 	flags = EQUIPMENT_PRESET_EXTRA
-	assignment = "emag Team Leader"
+	assignment = "EMAG/RAT Team Leader"
 	rank = JOB_MARINE_RAIDER
 	role_comm_title = "TL"
 	languages = list(LANGUAGE_ENGLISH)
@@ -1537,16 +1537,16 @@
 	ert_squad = TRUE
 	paygrades = list(PAY_SHORT_ME6 = JOB_PLAYTIME_TIER_0)
 
-	minimap_icon = "sof_sg"
+	minimap_icon = "sof_leader"
 
 /datum/equipment_preset/uscm/emag/New()
 	. = ..()
 	access = get_access(ACCESS_LIST_GLOBAL)
 
 /datum/equipment_preset/uscm/emag_leader_equipped
-	name = "emag Team Leader (Equipped)"
+	name = "EMAG/RAT Team Leader (Equipped)"
 	flags = EQUIPMENT_PRESET_EXTRA
-	assignment = "emag Team leader"
+	assignment = "EMAG/RAT Team leader"
 	rank = JOB_MARINE_RAIDER
 	role_comm_title = "TL"
 	languages = list(LANGUAGE_ENGLISH)
@@ -1555,7 +1555,7 @@
 	ert_squad = TRUE
 	paygrades = list(PAY_SHORT_ME6 = JOB_PLAYTIME_TIER_0)
 
-	minimap_icon = "sof_sg"
+	minimap_icon = "sof_leader"
 
 /datum/equipment_preset/uscm/uscm/emag_leader_equipped/load_status(mob/living/carbon/human/new_human)
 	new_human.nutrition = NUTRITION_NORMAL
