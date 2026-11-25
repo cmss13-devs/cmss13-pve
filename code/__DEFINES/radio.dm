@@ -80,4 +80,3 @@
 #define RADIO_CHANNEL_MERC "Mercenaries"
 
 #define RADIO_CHANNEL_YAUTJA "Yautja"
-
