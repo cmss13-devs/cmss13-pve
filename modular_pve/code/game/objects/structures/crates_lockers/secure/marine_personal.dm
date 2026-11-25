@@ -47,7 +47,7 @@
 /obj/structure/closet/secure_closet/marine_personal/engineer
 	job = JOB_SQUAD_ENGI
 
-/obj/structure/closet/secure_closet/marine_personal/platoon_leader/spawn_gear()
+/obj/structure/closet/secure_closet/marine_personal/engineer/spawn_gear()
 	new /obj/item/clothing/under/marine(src)
 	new /obj/item/clothing/shoes/marine/knife(src)
 	new /obj/item/device/radio/headset/almayer/marine/solardevils(src)
