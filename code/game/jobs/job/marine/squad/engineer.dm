@@ -6,7 +6,6 @@
 	total_positions = 12
 	spawn_positions = 12
 	flags_startup_parameters = ROLE_ADD_TO_DEFAULT|ROLE_ADD_TO_SQUAD
-	gear_preset = /datum/equipment_preset/uscm/engineer
 	entry_message_body = "You have the <a href='"+WIKI_PLACEHOLDER+"'>equipment and skill</a> to build fortifications, reroute power lines, and bunker down. Your squaddies will look to you when it comes to construction in the field of battle."
 
 /datum/job/marine/engineer/set_spawn_positions(count)
@@ -34,6 +33,13 @@
 	flags_startup_parameters = ROLE_ADD_TO_SQUAD
 	gear_preset = /datum/equipment_preset/wo/marine/engineer
 
+/datum/job/marine/engineer/ai/marsoc
+	title = JOB_SQUAD_SAPPER_MARSOC
+	total_positions = 1
+	spawn_positions = 1
+	gear_preset = /datum/equipment_preset/uscm/engineer/marsoc
+	job_options = list(null)
+
 /obj/effect/landmark/start/marine/engineer
 	name = JOB_SQUAD_ENGI
 	icon_state = "engi_spawn"
@@ -54,6 +60,11 @@
 /obj/effect/landmark/start/marine/engineer/delta
 	icon_state = "engi_spawn_delta"
 	squad = SQUAD_MARINE_4
+
+/obj/effect/landmark/start/marine/engineer/marsoc
+	name = JOB_SQUAD_SAPPER_MARSOC
+	squad = SQUAD_MRR
+	job = /datum/equipment_preset/uscm/engineer/marsoc
 
 //Having to add a /ai subtype before the /rmc one, might as well make it viable for use
 /datum/job/marine/engineer/ai

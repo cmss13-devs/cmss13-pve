@@ -2014,6 +2014,13 @@
 
 #undef MAXIMUM_MAGAZINE_COUNT
 
+/obj/item/storage/belt/gun/smartgunner/garrow/marsoc
+
+/obj/item/storage/belt/gun/smartgunner/garrow/marsoc/fill_preset_inventory()
+	new /obj/item/ammo_magazine/smartgun(src)
+	new /obj/item/ammo_magazine/smartgun(src)
+	new /obj/item/ammo_magazine/smartgun(src)
+
 /obj/item/storage/belt/gun/smartgunner/pmc
 	name = "\improper M802 pattern 'Dirty' smartgunner sidearm rig"
 	desc = "A modification of the standard M802 load-bearing equipment, designed to carry smartgun ammunition and a sidearm."

@@ -41,3 +41,7 @@ endmap
 
 map hms_brynhild
 endmap
+
+
+map styx
+endmap

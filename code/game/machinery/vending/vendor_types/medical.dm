@@ -766,6 +766,102 @@
 	vendor_theme = VENDOR_THEME_CLF
 	allow_supply_link_restock = FALSE
 
+/obj/structure/machinery/cm_vending/sorted/medical/marinemed/marsoc
+	name = "\improper ColMarTech MARSOCMed"
+	desc = "A modified medical pharmaceutical dispenser with complex medical supplies for specialized medical personnel."
+	icon_state = "marinemed"
+	req_access = list(10)
+	req_one_access = list(10)
+	vendor_theme = VENDOR_THEME_USCM
+
+	chem_refill = list(
+		/obj/item/reagent_container/hypospray/autoinjector/skillless,
+		/obj/item/reagent_container/hypospray/autoinjector/skillless/tramadol,
+	)
+
+/obj/structure/machinery/cm_vending/sorted/medical/marinemed/marsoc/populate_product_list(scale)
+	listed_products = list(
+		list("GENERAL PHYSICAL TREATMENT SUPPLIES", -1, null, null),
+		list("Burn Kit", round(scale * 30), /obj/item/stack/medical/advanced/ointment, VENDOR_ITEM_REGULAR),
+		list("Trauma Kit", round(scale * 30), /obj/item/stack/medical/advanced/bruise_pack, VENDOR_ITEM_REGULAR),
+		list("Ointment", round(scale * 30), /obj/item/stack/medical/ointment, VENDOR_ITEM_REGULAR),
+		list("Roll of Gauze", round(scale * 30), /obj/item/stack/medical/bruise_pack, VENDOR_ITEM_REGULAR),
+		list("Splints", round(scale * 30), /obj/item/stack/medical/splint, VENDOR_ITEM_REGULAR),
+
+		list("ADVANCED PHYSICAL TREATMENT SUPPLIES", -1, null, null),
+		list("Advanced Trauma Kit", 15, /obj/item/stack/medical/advanced/bruise_pack/upgraded, VENDOR_ITEM_REGULAR),
+		list("Advanced Burn Kit", 15, /obj/item/stack/medical/advanced/ointment/upgraded, VENDOR_ITEM_REGULAR),
+		list("Advanced Splint", 15, /obj/item/stack/medical/splint/nano, VENDOR_ITEM_REGULAR),
+
+		list("PILL BOTTLES", -1, null, null),
+		list("Pill Bottle (Bicaridine)", floor(scale * 4), /obj/item/storage/pill_bottle/bicaridine, VENDOR_ITEM_REGULAR),
+		list("Pill Bottle (Dexalin)", floor(scale * 4), /obj/item/storage/pill_bottle/dexalin, VENDOR_ITEM_REGULAR),
+		list("Pill Bottle (Dylovene)", floor(scale * 4), /obj/item/storage/pill_bottle/antitox, VENDOR_ITEM_REGULAR),
+		list("Pill Bottle (Inaprovaline)", floor(scale * 4), /obj/item/storage/pill_bottle/inaprovaline, VENDOR_ITEM_REGULAR),
+		list("Pill Bottle (Kelotane)", floor(scale * 4), /obj/item/storage/pill_bottle/kelotane, VENDOR_ITEM_REGULAR),
+		list("Pill Bottle (Tramadol)", floor(scale * 4), /obj/item/storage/pill_bottle/tramadol, VENDOR_ITEM_REGULAR),
+		list("Pill Bottle (Tricordazine)", floor(scale * 3), /obj/item/storage/pill_bottle/tricord, VENDOR_ITEM_REGULAR),
+
+		list("ADVANCED PILL BOTTLES", -1, null, null),
+		list("Pill Bottle (Iron)", 3, /obj/item/storage/pill_bottle/iron, VENDOR_ITEM_REGULAR),
+		list("Pill Bottle (Peridaxon)", floor(scale * 3), /obj/item/storage/pill_bottle/peridaxon, VENDOR_ITEM_REGULAR),
+		list("Pill Bottle (Dexalin-Plus)", 2, /obj/item/storage/pill_bottle/dexalinplus, VENDOR_ITEM_REGULAR),
+		list("Pill Bottle (Meralyne-Bicaridine)", 2, /obj/item/storage/pill_bottle/merabica, VENDOR_ITEM_REGULAR),
+		list("Pill Bottle (Kelotane-Dermaline)", 2, /obj/item/storage/pill_bottle/keloderm, VENDOR_ITEM_REGULAR),
+		list("Pill Bottle (Imidazoline-Alkysine)", 2, /obj/item/storage/pill_bottle/imialk, VENDOR_ITEM_REGULAR),
+		list("Pill Bottle (Nitrogen-Water)", 2, /obj/item/storage/pill_bottle/nitrogenwater, VENDOR_ITEM_REGULAR),
+
+		list("LIQUID BOTTLES", -1, null, null),
+		list("Bottle (Bicaridine)", floor(scale * 3), /obj/item/reagent_container/glass/bottle/bicaridine, VENDOR_ITEM_REGULAR),
+		list("Bottle (Dylovene)", floor(scale * 3), /obj/item/reagent_container/glass/bottle/antitoxin, VENDOR_ITEM_REGULAR),
+		list("Bottle (Dexalin)", floor(scale * 3), /obj/item/reagent_container/glass/bottle/dexalin, VENDOR_ITEM_REGULAR),
+		list("Bottle (Inaprovaline)", floor(scale * 3), /obj/item/reagent_container/glass/bottle/inaprovaline, VENDOR_ITEM_REGULAR),
+		list("Bottle (Kelotane)", floor(scale * 3), /obj/item/reagent_container/glass/bottle/kelotane, VENDOR_ITEM_REGULAR),
+		list("Bottle (Tramadol)", floor(scale * 3), /obj/item/reagent_container/glass/bottle/tramadol, VENDOR_ITEM_REGULAR),
+
+		list("ADVANCED LIQUID BOTTLES", -1, null, null),
+		list("Bottle (Peridaxon)", floor(scale * 3), /obj/item/reagent_container/glass/bottle/peridaxon, VENDOR_ITEM_REGULAR),
+		list("Bottle (Oxycodone)", floor(scale * 3), /obj/item/reagent_container/glass/bottle/oxycodone, VENDOR_ITEM_REGULAR),
+		list("Bottle (Dexalin-Plus)", 2, /obj/item/reagent_container/glass/bottle/dexalinplus, VENDOR_ITEM_REGULAR),
+		list("Bottle (Imidazoline-Alkysine)", 2, /obj/item/reagent_container/glass/bottle/imialk, VENDOR_ITEM_REGULAR),
+		list("Bottle (Meralyne-Bicaridine)", 2, /obj/item/reagent_container/glass/bottle/merabica, VENDOR_ITEM_REGULAR),
+		list("Bottle (Kelotane-Dermaline)", 2, /obj/item/reagent_container/glass/bottle/keloderm, VENDOR_ITEM_REGULAR),
+
+		list("AUTOINJECTORS", -1, null, null),
+		list("Autoinjector (Bicaridine)", floor(scale * 5), /obj/item/reagent_container/hypospray/autoinjector/bicaridine, VENDOR_ITEM_REGULAR),
+		list("Autoinjector (Inaprovaline)", floor(scale * 5), /obj/item/reagent_container/hypospray/autoinjector/inaprovaline, VENDOR_ITEM_REGULAR),
+		list("Autoinjector (Kelotane)", floor(scale * 5), /obj/item/reagent_container/hypospray/autoinjector/kelotane, VENDOR_ITEM_REGULAR),
+		list("Autoinjector (Tramadol)", floor(scale * 5), /obj/item/reagent_container/hypospray/autoinjector/tramadol, VENDOR_ITEM_REGULAR),
+		list("Autoinjector (Tricord)", floor(scale * 5), /obj/item/reagent_container/hypospray/autoinjector/tricord, VENDOR_ITEM_REGULAR),
+
+		list("ADVANCED AUTOINJECTORS", -1, null, null),
+		list("Autoinjector (Oxycodone)", floor(scale * 5), /obj/item/reagent_container/hypospray/autoinjector/oxycodone, VENDOR_ITEM_REGULAR),
+		list("Autoinjector (Dexalin+)", floor(scale * 5), /obj/item/reagent_container/hypospray/autoinjector/dexalinp, VENDOR_ITEM_REGULAR),
+		list("Autoinjector (Concentrated Adrenaline)", 4, /obj/item/reagent_container/hypospray/autoinjector/adrenaline_concentrated, VENDOR_ITEM_REGULAR),
+		list("Autoinjector (Ultrazine)", 2, /obj/item/reagent_container/hypospray/autoinjector/ultrazine, VENDOR_ITEM_REGULAR),
+		list("Autoinjector (Iron)", 5, /obj/item/reagent_container/hypospray/autoinjector/iron, VENDOR_ITEM_REGULAR),
+
+		list("STORAGE APPLICATION(S)", -1, null, null),
+		list("Medical Softpack Storage Solution (EMPTY)", floor(scale * 4), /obj/item/storage/firstaid/softpack_empty/adv, VENDOR_ITEM_REGULAR),
+
+		list("EQUIPMENT", -1, null, null),
+		list("Health Diagnostic Equipment", floor(scale * 4), /obj/item/device/healthanalyzer/soul, VENDOR_ITEM_REGULAR),
+		list("Health Diagnostic Silencer Chip", 4, /obj/item/device/quiet_silent_healthanalyzer, VENDOR_ITEM_REGULAR),
+		list("Medical HUD Glasses", floor(scale * 3), /obj/item/clothing/glasses/hud/health, VENDOR_ITEM_REGULAR),
+		list("Surgical Line", floor(scale * 2), /obj/item/tool/surgery/surgical_line, VENDOR_ITEM_REGULAR),
+		list("Synth-Graft", floor(scale * 2), /obj/item/tool/surgery/synthgraft, VENDOR_ITEM_REGULAR),
+		list("Hypospray", floor(scale * 3), /obj/item/reagent_container/hypospray/tricordrazine, VENDOR_ITEM_REGULAR),
+		list("Syringe", floor(scale * 7), /obj/item/reagent_container/syringe, VENDOR_ITEM_REGULAR),
+		list("Penlight", floor(scale * 7), /obj/item/device/flashlight/pen, VENDOR_ITEM_REGULAR),
+		list("Stethoscope", floor(scale * 7), /obj/item/clothing/accessory/stethoscope, VENDOR_ITEM_REGULAR),
+
+		list("ADVANCED EQUIPMENT", -1, null, null),
+		list("Portable Dialysis Machine", floor(scale * 1), /obj/item/tool/portadialysis, VENDOR_ITEM_REGULAR),
+		list("Crew Monitor", floor(scale * 2), /obj/item/tool/crew_monitor, VENDOR_ITEM_REGULAR),
+		list("Auto Compressor", floor(scale * 2), /obj/item/clothing/suit/auto_cpr, VENDOR_ITEM_REGULAR),
+	)
+
+
 /obj/structure/machinery/cm_vending/sorted/medical/blood
 	name = "\improper MM Blood Dispenser"
 	desc = "The MarineMed brand blood dispensary is the premier, top-of-the-line blood dispenser of 2105! Get yours today!" //Don't update this year, the joke is it's old.

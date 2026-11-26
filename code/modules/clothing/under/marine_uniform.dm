@@ -23,7 +23,7 @@
 	///List of map variants that use sleeve rolling on something else, like snow uniforms rolling the collar, and therefore shouldn't hide patches etc when rolled.
 	var/list/map_variants_roll_accessories = list("s_")
 	layer = UPPER_ITEM_LAYER
-
+	valid_accessory_slots = list(ACCESSORY_SLOT_UTILITY, ACCESSORY_SLOT_ARMBAND, ACCESSORY_SLOT_RANK, ACCESSORY_SLOT_DECOR, ACCESSORY_SLOT_MEDAL, ACCESSORY_SLOT_UTILITY, ACCESSORY_SLOT_ARMOR_C, ACCESSORY_SLOT_HOLSTER, ACCESSORY_SLOT_WRIST_L, ACCESSORY_SLOT_WRIST_R, ACCESSORY_SLOT_PLATE)
 	//speciality does NOTHING if you have NO_NAME_OVERRIDE
 
 /obj/item/clothing/under/marine/Initialize(mapload, new_protection[] = list(MAP_ICE_COLONY = ICE_PLANET_MIN_COLD_PROT), override_icon_state[] = null)
@@ -440,6 +440,13 @@
 	icon_state = "marsoc_jumpsuit"
 	worn_state = "marsoc_jumpsuit"
 	flags_item = NO_SNOW_TYPE
+
+
+/obj/item/clothing/under/marine/veteran/marsoc/lighter
+	name = "MARSOC fatigues"
+	desc = "Non-standard battle dress uniform, with venlar armor inserts at critical areas to protect from blades and ballistics."
+	icon_state = "d_MP_jumpsuit"
+	worn_state = "d_MP_jumpsuit"
 
 //=========================//PMC\\================================\\
 

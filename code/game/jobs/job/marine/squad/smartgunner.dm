@@ -115,6 +115,13 @@
 	if(option == CPL_VARIANT)
 		gear_preset = gear_preset_secondary
 
+/datum/job/marine/smartgunner/ai/marsoc
+	title = JOB_SQUAD_HEAVY_WEAPONS_OPERATOR_MARSOC
+	total_positions = 1
+	spawn_positions = 1
+	gear_preset = /datum/equipment_preset/uscm/sg/marsoc
+	job_options = list(null)
+
 /obj/effect/landmark/start/marine/smartgunner/upp
 	name = JOB_SQUAD_SMARTGUN_UPP
 	job = JOB_SQUAD_SMARTGUN_UPP
@@ -165,6 +172,11 @@
 
 #undef SGT_VARIANT
 #undef JSGT_VARIANT
+/obj/effect/landmark/start/marine/smartgunner/marsoc
+	name = JOB_SQUAD_HEAVY_WEAPONS_OPERATOR_MARSOC
+	squad = SQUAD_MRR
+	job = /datum/equipment_preset/uscm/sg/marsoc
+
 #undef CPL_VARIANT
 #undef LCPL_VARIANT
 #undef PFC_VARIANT
