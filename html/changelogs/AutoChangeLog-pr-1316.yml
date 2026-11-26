@@ -1,5 +1,0 @@
-author: "KCartridge"
-delete-after: True
-changes:
-  - rscadd: "new squad locker for mapping"
-  - refactor: "modularized marine_personal.dm"

@@ -11,3 +11,7 @@
       to a job's slots
   - code_imp: set_spawn_positions should now always reset the spawn count to initial
   - code_imp: Cleaned up some 0/1 usage to TRUE/FALSE
+2026-11-26:
+  KCartridge:
+  - rscadd: new squad locker for mapping
+  - refactor: modularized marine_personal.dm
